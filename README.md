@@ -1,15 +1,16 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-10: the [constrained clock response](notes/collective-clock-response.md)
-includes the real dispersive shift and absorptive resonance in its defined
-inverse-tail channel model. The [shrinking-sector theorem](notes/long-return-sector.md)
-controls local Dirac packets with effective parameter `q u`; endpoint/throat
-matching and the physical state remain open. No physical damping or novelty
-acceptance is claimed. [Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-collective-clock-and-sector-audit.md).
+Current continuation, 2026-10-10: the [coupled singlet and stress calculation](notes/schwinger-return-feedback.md)
+includes the throat photon in the Gaussian return problem and derives the
+oscillator stress spectrum and contact term. Unequal return lengths
+invalidate a general `q` to `q-1` response replacement. The damping-scale
+continuum limit and physical state/matching errors remain open; no physical
+damping or novelty acceptance is claimed.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-schwinger-return-audit.md).
 
-Remaining to-do list: close the full return, state and interaction bounds,
-finish novelty and the physical result, then verify, GCP-certify suitable
-endpoints and prepare the manuscript.
+Remaining to-do list: control the coupled continuum stress response and
+physical matching/state errors, finish novelty and the consequential result,
+then verify, GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
