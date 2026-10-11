@@ -1,0 +1,66 @@
+{
+  "status": "passed_one_Dirac_loop_throat_trace_matching",
+  "script_sha256": "fbdda15aa14b41da488541e0bffb240d59ce207504ece492b7b464408e79c5c7",
+  "sympy_version": "1.14.0",
+  "checks": {
+    "identities": {
+      "product_scalar": "exact_zero",
+      "product_Ricci_squared": "exact_zero",
+      "product_Riemann_squared": "exact_zero",
+      "product_Euler": "exact_zero",
+      "product_Weyl_squared": "exact_zero",
+      "magnetic_invariant": "exact_zero",
+      "endomorphism_trace": "exact_zero",
+      "endomorphism_square_trace": "exact_zero",
+      "connection_curvature_square_trace": "exact_zero",
+      "independent_heat_kernel_vs_anomaly_coefficients": "exact_zero",
+      "unequal_radius_trace": "exact_zero",
+      "equal_radius_trace": "exact_zero",
+      "integer_flux_nonzero_trace": "positive_shifted_polynomial",
+      "generic_spherical_scalar": "exact_zero",
+      "W22_background_scalar_at_zero": "exact_zero",
+      "W22_background_scalar_first_order": "exact_zero",
+      "W22_lifted_stress_four_trace": "exact_zero",
+      "necessary_radius_ratio_first_order": "exact_zero",
+      "radius_shift_over_Casimir_order": "exact_zero",
+      "fixed_screening_radius_shift": "exact_zero",
+      "running_coupling_does_not_remove_gauge_trace": "exact_zero"
+    },
+    "equal_radius_anomaly": "-(15*q**2 - 11)/(720*pi**2*b**4)",
+    "unequal_radius_anomaly": "-(15*a**4*q**2 - 3*a**4 - 5*a**2*b**2 - 3*b**4)/(720*pi**2*a**4*b**4)",
+    "required_radius_ratio_shift_first_order": "g_c**2*(15*q**2 - 11)/(180*pi**2*q**2)",
+    "order_comparison_samples": [
+      {
+        "q": 3,
+        "required_radius_shift_over_alpha_exact": "124/135",
+        "ratio_float": 0.9185185185185185
+      },
+      {
+        "q": 8,
+        "required_radius_shift_over_alpha_exact": "949/360",
+        "ratio_float": 2.636111111111111
+      },
+      {
+        "q": 64,
+        "required_radius_shift_over_alpha_exact": "61429/2880",
+        "ratio_float": 21.32951388888889
+      },
+      {
+        "q": 256,
+        "required_radius_shift_over_alpha_exact": "983029/11520",
+        "ratio_float": 85.33237847222222
+      }
+    ],
+    "inputs": "universal local heat-kernel a4; one free unit-charge Dirac determinant; no photon/graviton loops",
+    "not_established": [
+      "complete renormalized stress tensor",
+      "corrected wormhole existence",
+      "physical stability or instability",
+      "novelty",
+      "global shortcut"
+    ]
+  },
+  "lean_certified": false,
+  "necessary_background_condition_only": true,
+  "physical_wormhole_obstruction_proved": false
+}

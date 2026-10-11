@@ -2,7 +2,15 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [Ward and sign audit](notes/casimir-cylinder-ward-completion.md)
+The current [trace-matching audit](notes/throat-trace-anomaly.md) identifies
+a necessary correction to the quantum reference background. The full
+massless charged Dirac anomaly is nonzero on the equal-radius magnetic
+throat, while the displayed LLL lift is traceless. The required leading
+radius-ratio correction is of order `g_c^2`, preceding the retained
+`g_c^2/q` Casimir backreaction at large flux. This is an application of the
+known anomaly, not a wormhole no-go or a complete corrected solution.
+
+The preserved [Ward and sign audit](notes/casimir-cylinder-ward-completion.md)
 restores the angular partners of the selected axial-metric/polar-gauge
 sector, including exact background stress tadpoles. It proves that two
 metric families with the same linear perturbation have opposite static
@@ -43,6 +51,7 @@ python checks/finite_flux_energy.py --output evidence/finite-flux-energy.json
 python checks/casimir_cylinder_twist.py --output evidence/casimir-cylinder-twist.json
 python checks/casimir_cylinder_response.py --output evidence/casimir-cylinder-response.json
 python checks/casimir_cylinder_ward.py --output evidence/casimir-cylinder-ward.json
+python checks/throat_trace_anomaly.py --output evidence/throat-trace-anomaly.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -58,6 +67,6 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-derive the curved total response in a controlled joint finite-flux/backreaction
-expansion and resolve global physical completion,
+compute the renormalized reference stress and matched background, derive
+the curved total response and resolve global physical completion,
 then pursue and verify the selected primary and fallback questions.
