@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "gapless_transverse_audit_and_finite_band_target_verified",
+  "status": "exact_exterior_operator_and_closed_window_target_verified",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Known gapless mechanism reproduced; explicit profile and conditional finite-band budget retained as model-closure audit. No standalone planar adiabatic or formalization expansion.",
+  "novelty": "Exact leading flat-exterior operator and conditional stable energy window verified; curved-edge propagation is established prior work. Physical return/error and novelty remain unresolved.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,9 +17,9 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Complete decisive source proof/edition/citation comparisons and select primary plus fallback",
-    "Derive or refute the physical finite-band exterior-power comparison, including continuum coupling and physical ports; do not assume a transverse spectral gap",
-    "Bound total energy corrections against the finite-band geometric margin and establish a consequential physical result",
+    "Complete decisive literature proofs/editions and select the primary question plus fallback",
+    "Derive the physical flux-normalized mouth return using the exact axial operator; bound approximation error on 0.05<=xi*D<=4",
+    "Bound total energy and common-observer corrections against the positive margin and establish the consequential result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
   "baseline_note": "notes/axial-baseline-and-throat-energy.md",
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/dipole-transverse-modes.md",
-  "current_verification": "evidence/dipole-transverse-modes.json",
+  "current_note": "notes/exterior-dirac-window.md",
+  "current_verification": "evidence/exterior-dirac-window.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -366,5 +366,39 @@
     "lean_invocations": 0,
     "contribution_decision": "Known gapless mechanism reproduced; explicit profile and conditional finite-band budget retained as model-closure audit. No standalone planar adiabatic or formalization expansion.",
     "next_decisive_question": "Derive the static field-aligned exterior Dirac return between finite mouth ports for xi*d<=4, including continuum coupling, and test the full exterior-power comparison before extending toy calculations."
+  },
+  "exterior_dirac_window": {
+    "note": "notes/exterior-dirac-window.md",
+    "receipt": "evidence/exterior-dirac-window.json",
+    "exact_flat_exterior_differential_reduction": true,
+    "reduced_operator": "H_ell=-i sigma_x partial_r-i sigma_z partial_z+sigma_y(ell-A_phi)/r",
+    "derived_mass_zero_contours": "Midpoint flux labels (k+1/2)/q; not isolated propagating modes",
+    "field_aligned_spin_and_measure_terms_retained": true,
+    "ordinary_norm_stable_window_bound": true,
+    "window_example": {
+      "xi_d_min": 0.05,
+      "xi_d_max": 4.0,
+      "return_operator_error": 0.001,
+      "delay_cdf_error": 0.05,
+      "margin_times_d_squared_over_q": 0.0035763707692077606
+    },
+    "verification_counts": {
+      "exact_identities": 12,
+      "cartesian_reductions": 18,
+      "field_line_cases": 30,
+      "derivative_resolutions_per_case": 3,
+      "noncommuting_matrix_cases": 24,
+      "integral_cases": 5
+    },
+    "physical_port_return_derived": false,
+    "physical_return_error_bounded": false,
+    "complete_four_dimensional_energy_derived": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "Exact leading flat-exterior operator and conditional stable energy window verified; curved-edge propagation is established prior work. Physical return/error and novelty remain unresolved.",
+    "next_decisive_question": "Prove uniform prepared-input propagation and actual mouth matching sufficient for the return norm on 0.05<=xi*D<=4, then control total energy and observer corrections.",
+    "finite_port_chord_comparison": "For flat spherical ports of radius r_p, D=d-2r_p and L_port(u)>=d/u-2r_p>=D/u. Common observer events and lapse still unresolved.",
+    "window_front_convention": "Use the actual front D in the generic window example; xi_d keys in the receipt denote the generic comparison front, not a finite-port center separation."
   }
 }

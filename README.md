@@ -2,7 +2,19 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The [transverse-mode audit](notes/dipole-transverse-modes.md) finds the
+The [exterior Dirac audit](notes/exterior-dirac-window.md) derives the
+exact two-dimensional operator in each angular sector of the leading flat
+dipole exterior, including spin/measure and curvature terms. Its mass-zero
+contours have the midpoint flux labels. A conditional energy bound now
+tolerates a return error of `0.001 exp(-xi*D)` on `0.05<=xi*D<=4`, with
+delay-CDF error at most 0.05. The remaining no-shortcut margin is about
+`0.00357637 q/D^2`, plus the classical contribution. The actual port return
+and its error remain unproved; known curved-edge propagation methods are
+credited and under comparison.
+
+Here `D` is the common exterior front time between the selected ports.
+
+The preserved [transverse-mode audit](notes/dipole-transverse-modes.md) finds the
 known gapless Aharonov-Casher structure in the exact dipole midplane:
 `q-1` normalizable modes and a weak outer tail. A globally gapped channel
 reduction is unavailable. A conditional finite-frequency estimate retains
