@@ -1,17 +1,15 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [angular current audit](notes/angular-current-renormalization.md)
-bounds the complete rotation-invariant one-loop coupling flow and shows
-why a single contact coupling and a cutoff-uniform bare free-energy form
-bound are insufficient. The next nonspherical response step retains photon
-propagation or supplies an equivalent renormalized matching estimate.
-The Gaussian singlet decay result is preserved; physical damping and
-final novelty remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-angular-current-audit.md).
+Current continuation, 2026-10-11: the [propagating photon argument](notes/propagating-photon-polarization.md)
+controls free projected current polarization and quadratic photon
+resummation with unequal returns and all angular vertices. The correction
+is small at damping resolution in the working family. Renormalized clock
+stress, higher current terms and physical matching remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-propagating-photon-audit.md).
 
-Remaining to-do list: control the full nonspherical photon/current response
-and physical matching, finish novelty and the consequential result, then
-independently verify, GCP-certify suitable endpoints and prepare the manuscript.
+Remaining to-do list: control renormalized clock stress and higher current
+terms, close physical matching and the state, finish novelty and the
+consequential result, then verify, GCP-certify and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

@@ -1,0 +1,782 @@
+{
+  "status": "passed_propagating_photon_checks",
+  "date": "2026-10-11",
+  "note_sha256": "cba9fdae849dfb74cd66af9ddfdf1d53968c613fb76d5e467de092d824b874a5",
+  "script_sha256": "d1d797e7a0fdd047235f060109958d40491f13c6d8a12ebc80010c5f0fbfb77e",
+  "dependency_hashes": {
+    "checks/angular_current_renormalization.py": "a6ac4cc2c51146633a820279115136039631274c530bb6d9f482c31df8e8980f"
+  },
+  "scope": "Free projected current polarization and quadratic photon resummation with dual Dirichlet comparator boundaries",
+  "current_frequency_cutoff_removed_in_ordinary_proof": true,
+  "full_interacting_stress_controlled": false,
+  "physical_matching_proved": false,
+  "higher_current_remainder_controlled": false,
+  "physical_damping_proved": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "exact_checks": [
+    {
+      "name": "local_contact_and_Ward_identity",
+      "exact": true
+    },
+    {
+      "name": "Sommerfield_mass_shift",
+      "exact": true
+    },
+    {
+      "name": "dressed_current_residue",
+      "exact": true
+    },
+    {
+      "name": "independent_positive_two_scalar_propagator",
+      "exact": true
+    }
+  ],
+  "frame_cases": [
+    {
+      "Li": 2.61,
+      "Lj": 2.61,
+      "pair_count": 36,
+      "count_bound_ratio": 0.22817711019853562,
+      "unit_bin_bound_ratio": 0.17615054689889154,
+      "frame_bound_ratios": [
+        1.6014145431946795e-06,
+        0.0013089499633684905
+      ]
+    },
+    {
+      "Li": 2.9,
+      "Lj": 7.3,
+      "pair_count": 106,
+      "count_bound_ratio": 0.1807121302187728,
+      "unit_bin_bound_ratio": 0.09435875477821884,
+      "frame_bound_ratios": [
+        0.00212141643534695,
+        0.0030768971200430813
+      ]
+    },
+    {
+      "Li": 3.0,
+      "Lj": 91.0,
+      "pair_count": 1378,
+      "count_bound_ratio": 0.1270652629134275,
+      "unit_bin_bound_ratio": 0.10019463542521763,
+      "frame_bound_ratios": [
+        0.002627571513548717,
+        0.0034867287892395506
+      ]
+    },
+    {
+      "Li": 43.0,
+      "Lj": 91.0,
+      "pair_count": 19823,
+      "count_bound_ratio": 0.2173345408789581,
+      "unit_bin_bound_ratio": 0.07382289049695236,
+      "frame_bound_ratios": [
+        0.00639631484071765,
+        0.006541433102667854
+      ]
+    }
+  ],
+  "fock_cases": [
+    {
+      "q": 2,
+      "ns_modes_per_sign": 1,
+      "excited_states": 8,
+      "explicit_CAR_susceptibility_error": 7.410741937918042e-18
+    },
+    {
+      "q": 2,
+      "ns_modes_per_sign": 2,
+      "excited_states": 32,
+      "explicit_CAR_susceptibility_error": 1.4821483875836085e-17
+    },
+    {
+      "q": 2,
+      "ns_modes_per_sign": 3,
+      "excited_states": 72,
+      "explicit_CAR_susceptibility_error": 2.5033568429418485e-17
+    },
+    {
+      "q": 3,
+      "ns_modes_per_sign": 1,
+      "excited_states": 18,
+      "explicit_CAR_susceptibility_error": 4.443059973708341e-17
+    },
+    {
+      "q": 3,
+      "ns_modes_per_sign": 2,
+      "excited_states": 72,
+      "explicit_CAR_susceptibility_error": 1.193812447098184e-16
+    },
+    {
+      "q": 3,
+      "ns_modes_per_sign": 3,
+      "excited_states": 162,
+      "explicit_CAR_susceptibility_error": 8.092071311423672e-17
+    }
+  ],
+  "photon_cases": [
+    {
+      "N": 12,
+      "l": 1,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 1.3074323046159681e-14,
+      "weighted_norm": 1.4017544900312269,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 4.079346967156702
+    },
+    {
+      "N": 12,
+      "l": 1,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 7.332947569994276e-15,
+      "weighted_norm": 1.2020559995986861,
+      "norm_bound": 2.5,
+      "smallest_H": 4.079346967156702
+    },
+    {
+      "N": 12,
+      "l": 2,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 2.083583762087139e-15,
+      "weighted_norm": 1.1399517066858935,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 8.9853235780134
+    },
+    {
+      "N": 12,
+      "l": 2,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 1.836080395617783e-15,
+      "weighted_norm": 1.0788447694067804,
+      "norm_bound": 2.5,
+      "smallest_H": 8.9853235780134
+    },
+    {
+      "N": 12,
+      "l": 4,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 6.060387535151423e-16,
+      "weighted_norm": 1.0442610529328042,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 24.927105160635804
+    },
+    {
+      "N": 12,
+      "l": 4,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 5.913972390332145e-16,
+      "weighted_norm": 1.0262990071955038,
+      "norm_bound": 2.5,
+      "smallest_H": 24.927105160635804
+    },
+    {
+      "N": 24,
+      "l": 1,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 7.593180078570496e-14,
+      "weighted_norm": 1.4005347816364457,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 4.089212538870577
+    },
+    {
+      "N": 24,
+      "l": 1,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 5.634362443011035e-14,
+      "weighted_norm": 1.201582375184397,
+      "norm_bound": 2.5,
+      "smallest_H": 4.089212538870577
+    },
+    {
+      "N": 24,
+      "l": 2,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 8.565188359459323e-15,
+      "weighted_norm": 1.1396046219117257,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 9.00578756122824
+    },
+    {
+      "N": 24,
+      "l": 2,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 1.0932937816883585e-14,
+      "weighted_norm": 1.0786651412432098,
+      "norm_bound": 2.5,
+      "smallest_H": 9.00578756122824
+    },
+    {
+      "N": 24,
+      "l": 4,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 2.88240200956737e-15,
+      "weighted_norm": 1.0441652401687744,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 24.98050578794635
+    },
+    {
+      "N": 24,
+      "l": 4,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 2.8620785532590763e-15,
+      "weighted_norm": 1.0262389682164779,
+      "norm_bound": 2.5,
+      "smallest_H": 24.98050578794635
+    },
+    {
+      "N": 48,
+      "l": 1,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 4.653469512595224e-13,
+      "weighted_norm": 1.400223874555531,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 4.091646855452294
+    },
+    {
+      "N": 48,
+      "l": 1,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 2.931324816183742e-13,
+      "weighted_norm": 1.2014606122644227,
+      "norm_bound": 2.5,
+      "smallest_H": 4.091646855452294
+    },
+    {
+      "N": 48,
+      "l": 2,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 5.309128830123967e-14,
+      "weighted_norm": 1.1395104599377244,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 9.011234058461627
+    },
+    {
+      "N": 48,
+      "l": 2,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 4.665046612441987e-14,
+      "weighted_norm": 1.0786161755407206,
+      "norm_bound": 2.5,
+      "smallest_H": 9.011234058461627
+    },
+    {
+      "N": 48,
+      "l": 4,
+      "w": [
+        1.0,
+        0.15
+      ],
+      "inverse_error": 1.3224492856904757e-14,
+      "weighted_norm": 1.0441393354872117,
+      "norm_bound": 2.686817800167926,
+      "smallest_H": 24.995048090473826
+    },
+    {
+      "N": 48,
+      "l": 4,
+      "w": [
+        0.8,
+        0.4
+      ],
+      "inverse_error": 1.2344059542512628e-14,
+      "weighted_norm": 1.0262227642133694,
+      "norm_bound": 2.5,
+      "smallest_H": 24.995048090473826
+    }
+  ],
+  "angular_cases": [
+    {
+      "q": 2,
+      "N": 12,
+      "cutoff": 64.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.49452403673713496,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.110925171586726e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.8138268712198706e-16,
+      "probe_correction": [
+        8.618201503770705e-06,
+        1.5161215360221956e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 12,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 1.3074323046159681e-14,
+          "weighted_norm": 1.4017544900312269,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.079346967156702
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 12,
+      "cutoff": 64.0,
+      "equal_returns": true,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.5435066065428893,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 1.6807743410464786e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.1331903163453541e-16,
+      "probe_correction": [
+        7.2491264233863135e-06,
+        1.1556994250969905e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 12,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 1.3074323046159681e-14,
+          "weighted_norm": 1.4017544900312269,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.079346967156702
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "N": 12,
+      "cutoff": 64.0,
+      "equal_returns": false,
+      "angular_gram_error": 3.3306696652159694e-15,
+      "current_norm": 0.7258789724166488,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.11631340813061027,
+      "photon_correction_norm": 6.9102918435129e-05,
+      "photon_correction_bound": 0.35364679993889775,
+      "angular_mixing_norm": 0.20253745705071682,
+      "probe_correction": [
+        2.7419216503212977e-05,
+        -2.463655357501559e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 12,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 1.3074323046159681e-14,
+          "weighted_norm": 1.4017544900312269,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.079346967156702
+        },
+        {
+          "N": 12,
+          "l": 2,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 2.083583762087139e-15,
+          "weighted_norm": 1.1399517066858935,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 8.9853235780134
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "N": 12,
+      "cutoff": 64.0,
+      "equal_returns": true,
+      "angular_gram_error": 3.3306696652159694e-15,
+      "current_norm": 0.5435066065428897,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.11631340813061027,
+      "photon_correction_norm": 3.781682842680722e-05,
+      "photon_correction_bound": 0.35364679993889775,
+      "angular_mixing_norm": 4.73290073027532e-16,
+      "probe_correction": [
+        1.6310278284744442e-05,
+        2.6002702853932495e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 12,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 1.3074323046159681e-14,
+          "weighted_norm": 1.4017544900312269,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.079346967156702
+        },
+        {
+          "N": 12,
+          "l": 2,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 2.083583762087139e-15,
+          "weighted_norm": 1.1399517066858935,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 8.9853235780134
+        }
+      ]
+    }
+  ],
+  "ultraviolet_refinement": [
+    {
+      "q": 2,
+      "N": 48,
+      "cutoff": 16.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.503935798698956,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.227578638401782e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.1421870451415015e-16,
+      "probe_correction": [
+        8.724592076822466e-06,
+        1.5348152353404833e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 48,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 4.653469512595224e-13,
+          "weighted_norm": 1.400223874555531,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.091646855452294
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 48,
+      "cutoff": 32.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.5048179276102771,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.2106470598433707e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.1874538038114717e-16,
+      "probe_correction": [
+        8.71425196326927e-06,
+        1.5297556201373884e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 48,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 4.653469512595224e-13,
+          "weighted_norm": 1.400223874555531,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.091646855452294
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 48,
+      "cutoff": 64.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.5052088204048893,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.1999750009459022e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.4498612686543124e-16,
+      "probe_correction": [
+        8.7100571764081e-06,
+        1.5276153806753486e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 48,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 4.653469512595224e-13,
+          "weighted_norm": 1.400223874555531,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.091646855452294
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 48,
+      "cutoff": 128.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.5056676285975416,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.1968912267051645e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.3160187645196448e-16,
+      "probe_correction": [
+        8.70461175091498e-06,
+        1.5257241802483423e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 48,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 4.653469512595224e-13,
+          "weighted_norm": 1.400223874555531,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.091646855452294
+        }
+      ]
+    }
+  ],
+  "spatial_refinement": [
+    {
+      "q": 2,
+      "N": 12,
+      "cutoff": 128.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.49553051908335205,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.1069256978798292e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.793796931042375e-16,
+      "probe_correction": [
+        8.602449226212993e-06,
+        1.5117332018052002e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 12,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 1.3074323046159681e-14,
+          "weighted_norm": 1.4017544900312269,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.079346967156702
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 24,
+      "cutoff": 128.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.502361339888531,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.1662851679214438e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.8319441299950632e-16,
+      "probe_correction": [
+        8.683232400998194e-06,
+        1.5227034153241017e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 24,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 7.593180078570496e-14,
+          "weighted_norm": 1.4005347816364457,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.089212538870577
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 48,
+      "cutoff": 128.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.5056676285975416,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.1968912267051645e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.3160187645196448e-16,
+      "probe_correction": [
+        8.70461175091498e-06,
+        1.5257241802483423e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 48,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 4.653469512595224e-13,
+          "weighted_norm": 1.400223874555531,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.091646855452294
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "N": 96,
+      "cutoff": 128.0,
+      "equal_returns": false,
+      "angular_gram_error": 1.776364432333432e-15,
+      "current_norm": 0.5072467208285374,
+      "current_bound": 362.66877838338814,
+      "epsilon": 0.051694848058049005,
+      "photon_correction_norm": 2.2124540268452006e-05,
+      "photon_correction_bound": 0.14646618512502255,
+      "angular_mixing_norm": 1.26890822817809e-16,
+      "probe_correction": [
+        8.710278794747765e-06,
+        1.5265621584557724e-06
+      ],
+      "photon_checks": [
+        {
+          "N": 96,
+          "l": 1,
+          "w": [
+            1.0,
+            0.15
+          ],
+          "inverse_error": 2.502346687514048e-12,
+          "weighted_norm": 1.4001449862004007,
+          "norm_bound": 2.686817800167926,
+          "smallest_H": 4.092255743918285
+        }
+      ]
+    }
+  ],
+  "ultraviolet_probe_relative_changes": [
+    0.0013011161500117614,
+    0.0005325375854392692,
+    0.0006522894405930207
+  ],
+  "spatial_probe_relative_changes": [
+    0.00924763019825756,
+    0.0024432429632769916,
+    0.0006478161879418734
+  ],
+  "probe_acceptance_tolerance": 0.01,
+  "asymptotic_cases": [
+    {
+      "q": 16,
+      "delta": 0.8408964152537145,
+      "epsilon_bound": 3.4306151034931784,
+      "scaled_epsilon": 46.156671082282635
+    },
+    {
+      "q": 256,
+      "delta": 0.7071067811865476,
+      "epsilon_bound": 0.27030420098222985,
+      "scaled_epsilon": 48.93028697542302
+    },
+    {
+      "q": 4096,
+      "delta": 0.5946035575013605,
+      "epsilon_bound": 0.01920396321368733,
+      "scaled_epsilon": 46.77117888505342
+    },
+    {
+      "q": 65536,
+      "delta": 0.5,
+      "epsilon_bound": 0.0013633292463057576,
+      "scaled_epsilon": 44.673572742947066
+    },
+    {
+      "q": 16777216,
+      "delta": 0.3535533905932738,
+      "epsilon_bound": 6.9786042813260045e-06,
+      "scaled_epsilon": 41.39457947562906
+    }
+  ]
+}
