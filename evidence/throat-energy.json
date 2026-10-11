@@ -1,0 +1,43 @@
+{
+  "status": "passed_first_order_energy_structure_checks",
+  "source": "https://arxiv.org/abs/2610.09847v1",
+  "script_sha256": "0225e53ca872587c1bcaba519873d1f31cbe0764fc9338ad2b05b07f65ff7e50",
+  "sympy_version": "1.14.0",
+  "checks": {
+    "identities": {
+      "friction_removal": "exact_zero",
+      "published_potential_conversion": "exact_zero",
+      "leading_weighted_symmetry": "exact_zero",
+      "first_order_weighted_symmetry": "exact_zero",
+      "first_order_kinetic_symmetry": "exact_zero",
+      "neutral_leading_mode": "exact_zero",
+      "published_neutral_projection": "exact_zero",
+      "published_neutral_frequency_coefficient": "exact_zero",
+      "neutral_deformed_first_order": "exact_zero",
+      "leading_gram_identity": "exact_zero",
+      "first_order_gram_identity": "exact_zero",
+      "explicit_second_order_square_remainder": "exact_zero"
+    },
+    "positive_weight_domain": "L>2, s>0, real rho, 0<=alpha<1",
+    "H_alpha_diagonal": [
+      "(L-2)*(1-alpha/6)",
+      "1",
+      "L*s*(1-alpha/6)"
+    ],
+    "kinetic_diagonal": [
+      "(L-2)*(1-alpha/6)",
+      "1-alpha/(1+rho^2)",
+      "L*s*(1-alpha/6)"
+    ],
+    "sample_truncated_deformed_determinant": "256*alpha**2*(3*alpha - 2)/3",
+    "sample": "rho=0, L=6, s=1; determinant negative at alpha=1/100",
+    "sample_implication": "Pointwise indefiniteness at second order; no spectral instability claim",
+    "square_identity_order": "exact coefficients of alpha^0 and alpha^1 only"
+  },
+  "novelty": "unresolved; established matrix S-deformation method",
+  "independent_tensor_derivation_of_throat": false,
+  "finite_alpha_positivity_proved": false,
+  "global_stability_proved": false,
+  "quantum_closure_validity_established": false,
+  "lean_certified": false
+}

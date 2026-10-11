@@ -131,13 +131,16 @@ and the exact check-script hash.
 No claim is made here about low multipoles outside the source reduction,
 nonlinear disturbances, quantum-state closure, corrected full-throat spectra,
 the full three-dimensional exterior, formation, or a travel-time shortcut.
-The source's master equations still need independent derivation checks.
+The [baseline audit](axial-baseline-and-throat-energy.md) now independently
+reproduces the classical mouth tensors and the nonzero-frequency master
+reconstruction, conditional on the prescribed quantum current. The physical
+quantum approximation and corrected throat still require their own audit.
 This bound also supplies no uniform spectral gap: a massless channel can
 approach zero energy. It cannot automatically control arbitrary small omitted
 terms. The observation that $M_0$ cancels from the deformed bracket only covers
 mass changes inside the stated operator, not all corrections at that order.
 
 Remaining to-do list: complete the novelty and physical-source audit; reproduce
-the source calculation; establish or reject the matching and correction
+the corrected throat calculation; establish or reject the matching and correction
 control needed for a global stability result; certify a suitable complete
 endpoint on GCP only after that argument and its payoff are clear.

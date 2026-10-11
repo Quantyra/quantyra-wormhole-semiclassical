@@ -1,0 +1,46 @@
+{
+  "status": "passed_independent_linear_geometry_derivation",
+  "source": "https://arxiv.org/abs/2610.09847v1",
+  "coordinates": "t,r,u=cos(theta),phi; time dependence exp(p t)",
+  "normalization": "q=4; kappa/g_c^2=e^2/2; gauge amplitudes w",
+  "script_sha256": "5fb629ad42908076505a62d2655f41b0728debdbff5cc494cca352b6a9070202",
+  "comparison_module_sha256": "f8c60c892827e9f7ad3f07daa12dd1074724d618f844355b3b0d482f8c9cefd5",
+  "sympy_version": "1.14.0",
+  "checks": {
+    "radial_matches": {
+      "Einstein_t_phi_A1": {
+        "residual": "exact_zero",
+        "normalization_factor": "(u - 1)*(u + 1)*Derivative(Y(u), u)/(2*r**4)"
+      },
+      "Einstein_r_phi_A2": {
+        "residual": "exact_zero",
+        "normalization_factor": "(u - 1)*(u + 1)*Derivative(Y(u), u)/(2*r**4*(-2*M0*r + e**2 + r**2))"
+      },
+      "Einstein_angular_A3": {
+        "residual": "exact_zero",
+        "normalization_factor": "(-L*Y(u) + 2*u*Derivative(Y(u), u))/(2*r**3*(-2*M0*r + e**2 + r**2))"
+      },
+      "Maxwell_t_A13": {
+        "residual": "exact_zero",
+        "normalization_factor": "Y(u)/(-2*M0*r + e**2 + r**2)"
+      },
+      "Maxwell_r_A14": {
+        "residual": "exact_zero",
+        "normalization_factor": "Y(u)/r**4"
+      },
+      "Maxwell_angular_A6": {
+        "residual": "exact_zero",
+        "normalization_factor": "-(u - 1)*(u + 1)*Derivative(Y(u), u)/(r**5*(-2*M0*r + e**2 + r**2))"
+      }
+    },
+    "background_Einstein_Maxwell": "exact_zero",
+    "linear_volume_variation": "exact_zero",
+    "scalar_curvature_and_linear_variation": "exact_zero",
+    "forbidden_Einstein_components": 7,
+    "forbidden_Maxwell_phi": "exact_zero",
+    "linear_charge_conservation": "exact_zero"
+  },
+  "assumed_quantum_closure": "zero first-order quantum stress in the mouth; line-density Schwinger current",
+  "quantum_truncation_validity_established": false,
+  "lean_certified": false
+}
