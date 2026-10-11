@@ -7,6 +7,15 @@ matrix also admits a positive symmetrizing weight and an energy factorization
 advance the global stability feasibility test; they do not establish global
 stability, the quantum closure, or novelty.
 
+Later milestone on the same date: the corrected throat tensors and full
+master reconstruction also reproduce through first order, using
+[throat_geometry.py](../checks/throat_geometry.py) and
+[throat_reduction.py](../checks/throat_reduction.py). The
+[exact drift-model theorem](global-drift-energy.md) derives a global energy
+for a prescribed response class in variables that avoid frequency division.
+It does not supply the missing quantum derivation or global MMP background.
+The first-order calculations and their truncation warning below are retained.
+
 The baseline is Sadhukhan,
 [arXiv:2610.09847v1](https://arxiv.org/html/2610.09847v1), especially
 sections 3, 5-7 and Appendices A-D. All its main text and appendices have
@@ -162,12 +171,14 @@ The neutral channel has no uniform global spectral gap with which to
 absorb an arbitrary error. The throat expansion also requires
 $|\alpha\rho|\ll1$; it cannot be extended to either infinity.
 
-The next scientific test is to derive a global energy domain and a relative
-bound for interface and omitted terms, including the neutral channel.
+For the physical wormhole, the remaining scientific test is a global energy
+domain and a relative bound for interface and omitted response terms,
+including the neutral channel.
 Throat and mouth fields, weights, tortoise coordinates and endpoint signs
 must be transformed consistently. Merely joining two positive boxes would
-not establish these physical conditions. Reproducing the throat's tensors
-with the stated quantum response remains part of that test.
+not establish these physical conditions. The later throat tensor check
+reproduces the source's equations with the stated quantum response; its
+microscopic derivation remains open.
 
 ## Quantum closure question for finite disturbances
 
@@ -200,5 +211,5 @@ worldsheets at finite amplitude. It is not a novelty claim or a wormhole
 no-go theorem.
 
 Remaining to-do list: complete the quantum-response and novelty audit,
-reproduce the corrected throat tensors, and establish or reject global
-matching and a useful error bound before selecting formalization or a manuscript.
+and establish or reject global physical completion and a useful error bound
+before selecting formalization or a manuscript.

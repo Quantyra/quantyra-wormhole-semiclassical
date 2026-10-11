@@ -1,0 +1,37 @@
+{
+  "status": "passed_corrected_throat_master_reconstruction",
+  "source": "https://arxiv.org/abs/2610.09847v1",
+  "source_equations": [
+    "3.5",
+    "7.3-7.5",
+    "B.12-B.14",
+    "C.1-C.8",
+    "D.1-D.8"
+  ],
+  "script_sha256": "1602fb21f675f83f8d8185f66e00326dff2770301bcd79187de888228a8721b2",
+  "dependency_sha256": {
+    "throat_geometry": "69a9d8f97754b7d135f5b37c9b698680360897eff4d1322f4f3f14a572743c86",
+    "throat_energy": "0225e53ca872587c1bcaba519873d1f31cbe0764fc9338ad2b05b07f65ff7e50"
+  },
+  "sympy_version": "1.14.0",
+  "restrictions": [
+    "p != 0",
+    "L != 0",
+    "formal expansion through alpha^1"
+  ],
+  "residuals": {
+    "Einstein_tau_phi": "both_orders_exact_zero",
+    "Einstein_rho_phi": "both_orders_exact_zero",
+    "Einstein_angular": "both_orders_exact_zero",
+    "Maxwell_tau": "both_orders_exact_zero",
+    "Maxwell_rho": "both_orders_exact_zero",
+    "Maxwell_angular": "both_orders_exact_zero",
+    "charge_anomaly": "both_orders_exact_zero",
+    "electric_definition": "both_orders_exact_zero",
+    "gravitational_master_definition": "both_orders_exact_zero",
+    "displacement_master_definition": "both_orders_exact_zero"
+  },
+  "quantum_closure_derived_from_Dirac_theory": false,
+  "global_matching_verified": false,
+  "lean_certified": false
+}
