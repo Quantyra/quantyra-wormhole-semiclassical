@@ -351,7 +351,13 @@ The [full static Dirac vertex check](../checks/lll_axial_vertex.py) verifies
 both angular chiralities. Numerical quadrature is supplementary to the
 ordinary sign proof; no Lean certificate exists yet.
 
+The subsequent [angular Ward and sign audit](casimir-cylinder-ward-completion.md)
+completes this sector's angular partners and background tadpoles. It also
+proves a positive coefficient on a completed-shift metric family with the
+same linear source. Both signs remain valid for their specified paths;
+the isolated off-shell matter curvature is not a physical instability test.
+
 Remaining to-do list: complete the closest-source novelty comparison;
-complete the full Ward identities for the extended response; assess the
+derive the curved total response; assess the
 curved-background and stability consequence; then select and GCP-certify
 the complete surviving endpoint and prepare the manuscript.

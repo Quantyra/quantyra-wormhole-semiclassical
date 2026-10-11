@@ -282,17 +282,18 @@ the warped-background curl term from the tetrad and spin connection. The
 new source and the static script it imports are hash-pinned in the receipt.
 No Lean compiler was invoked.
 
-The next physical requirement is to restore the angular gauge and axial
-tensor partner sources, include background tadpole terms in the
-charge/diffeomorphism Ward identities, and transport the response to a
-controlled curved background. These angular partners matter for $l=2$;
-a longitudinal four-source kernel alone cannot certify the full Ward
-identities. Internal gauge interactions, renormalized infinite-line
+The subsequent [Ward completion](casimir-cylinder-ward-completion.md)
+restores the angular gauge and axial tensor partner sources and includes
+background tadpole terms for this selected six-source block. Its finite
+pullback and independent Dirac commutator checks also expose opposite
+static matter curvatures on metric paths with the same linear tangent.
+The next physical requirement is a controlled curved total response.
+Other perturbation sectors, internal gauge interactions, renormalized infinite-line
 response, gravity and global exterior matching also remain outside this
 free-cylinder result. The static negative sign still cannot be interpreted
 as a physical wormhole instability.
 
-Remaining to-do list: finish the full Ward audit and curved response;
+Remaining to-do list: derive the curved total response;
 complete the closest-source contribution comparison and primary/fallback
 selection; establish the physical consequence; then GCP-certify suitable
 complete endpoints and prepare the manuscript.

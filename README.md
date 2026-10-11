@@ -2,14 +2,16 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [Euclidean axial response](notes/casimir-cylinder-dynamical-response.md)
-includes both longitudinal metric/gauge components and the Dirac curl
-vertex. The mixed Landau-level kernel is exact, with an analytic bound on
-the entire remaining massive sector. It reproduces the
-[static negative Casimir coefficient](notes/casimir-cylinder-twist-response.md)
-and establishes a subthreshold analytic domain for the retarded axial
-finite-size response. The full four-dimensional Ward audit, curved response
-and total gravitational energy remain unresolved.
+The current [Ward and sign audit](notes/casimir-cylinder-ward-completion.md)
+restores the angular partners of the selected axial-metric/polar-gauge
+sector, including exact background stress tadpoles. It proves that two
+metric families with the same linear perturbation have opposite static
+Casimir curvatures: the affine family is negative and the completed-shift
+family positive, with all massive levels bounded. This isolated off-shell
+matter sign is therefore insufficient to establish a physical instability.
+The [Euclidean axial response](notes/casimir-cylinder-dynamical-response.md)
+and its subthreshold analytic domain are preserved. Curved total response,
+other perturbation sectors and global gravitational stability remain open.
 
 The [finite-flux audit](notes/finite-flux-response-audit.md) and
 [conditional positive-energy theorem](notes/global-drift-energy.md) are
@@ -40,6 +42,7 @@ python checks/lll_axial_vertex.py --output evidence/lll-axial-vertex.json
 python checks/finite_flux_energy.py --output evidence/finite-flux-energy.json
 python checks/casimir_cylinder_twist.py --output evidence/casimir-cylinder-twist.json
 python checks/casimir_cylinder_response.py --output evidence/casimir-cylinder-response.json
+python checks/casimir_cylinder_ward.py --output evidence/casimir-cylinder-ward.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -55,6 +58,6 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-complete the Ward identities and control a joint finite-flux/backreaction
-expansion on the curved physical domain,
+derive the curved total response in a controlled joint finite-flux/backreaction
+expansion and resolve global physical completion,
 then pursue and verify the selected primary and fallback questions.

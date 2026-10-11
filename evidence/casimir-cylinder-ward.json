@@ -1,0 +1,193 @@
+{
+  "status": "passed_selected_sector_Ward_completion",
+  "script_sha256": "073e3a50ec4ecdae8ecfd89accb4a8caf6dcb3754d96f820f05cee4a3a2b6cc9",
+  "dependency_sha256": {
+    "casimir_cylinder_twist.py": "5aa6c15c8626d74ed232a1a5f4c880549916258692d970db1d49a3645aea2755"
+  },
+  "sympy_version": "1.14.0",
+  "numpy_version": "2.5.3",
+  "scipy_version": "1.18.1",
+  "operator_checks": {
+    "independent_Dirac_commutator_entries": 16,
+    "residual": "exact_zero",
+    "angular_displacement": "arbitrary smooth axisymmetric psi(tau,z,theta)",
+    "background": "Euclidean product cylinder, fixed R; monopole A_phi=q cos(theta)/2",
+    "generator": "-i psi (m-q cos(theta)/2)"
+  },
+  "geometric_checks": {
+    "first_metric_pullback_entries": 16,
+    "second_metric_pullback_entries": 16,
+    "exact_finite_pullback_entries": 16,
+    "gauge_potential_entries": 4,
+    "invariant_combinations": 4,
+    "warped_radius_retained": true,
+    "angular_norm_cases": [
+      {
+        "l": 2,
+        "w": "6/5",
+        "v": "24/5"
+      },
+      {
+        "l": 3,
+        "w": "12/7",
+        "v": "120/7"
+      },
+      {
+        "l": 4,
+        "w": "20/9",
+        "v": "40"
+      },
+      {
+        "l": 5,
+        "w": "30/11",
+        "v": "840/11"
+      },
+      {
+        "l": 6,
+        "w": "42/13",
+        "v": "1680/13"
+      },
+      {
+        "l": 7,
+        "w": "56/15",
+        "v": "1008/5"
+      }
+    ],
+    "tadpole_contraction": "exact_zero",
+    "finite_pure_gauge_orbit_cancellation": "exact_zero"
+  },
+  "numerical_checks": {
+    "massive_energy_cases": [
+      {
+        "M": 0.4,
+        "L": 2.0,
+        "energy_derivatives": [
+          -0.19438161707766,
+          0.1407791815489248,
+          -0.08717674602018964
+        ],
+        "Bessel_max_residual": 2.7755575615628914e-17,
+        "finite_difference_relative_errors": [
+          3.8578248697257084e-08,
+          3.4044612031302745e-08
+        ]
+      },
+      {
+        "M": 2.0,
+        "L": 3.0,
+        "energy_derivatives": [
+          -0.0017096753335451053,
+          0.0037321043208721006,
+          -0.009486637629071197
+        ],
+        "Bessel_max_residual": 4.336808689942018e-19,
+        "finite_difference_relative_errors": [
+          2.984395631245959e-07,
+          1.673423659447543e-08
+        ]
+      },
+      {
+        "M": 2.0,
+        "L": 16.0,
+        "energy_derivatives": [
+          -3.6139621968256305e-15,
+          7.34342816269573e-15,
+          -1.1388088840630609e-13
+        ],
+        "Bessel_max_residual": 5.048709793414476e-29,
+        "finite_difference_relative_errors": [
+          7.057274525103742e-06,
+          5.390182964665844e-06
+        ]
+      }
+    ],
+    "pressure_tail_samples": [
+      {
+        "q": 3,
+        "R": 1.0,
+        "L": 2.0,
+        "retained_levels": 2,
+        "partial_tail_pressures": [
+          -0.0013492179045282596,
+          0.012731572353082903,
+          -0.005691177224277324
+        ],
+        "analytic_all_level_bounds": [
+          0.0015169539735459068,
+          0.015374185895857729,
+          0.006785331317970991
+        ]
+      },
+      {
+        "q": 3,
+        "R": 1.0,
+        "L": 16.0,
+        "retained_levels": 0,
+        "partial_tail_pressures": [
+          -1.1293632031149596e-15,
+          3.671714166215544e-14,
+          -1.7793889229520244e-14
+        ],
+        "analytic_all_level_bounds": [
+          1.4174822485938784e-15,
+          5.76203023897755e-14,
+          2.791012692762478e-14
+        ]
+      },
+      {
+        "q": 8,
+        "R": 1.0,
+        "L": 16.0,
+        "retained_levels": 0,
+        "partial_tail_pressures": [
+          -3.101300104801478e-22,
+          1.50436792558042e-20,
+          -7.366774622662028e-21
+        ],
+        "analytic_all_level_bounds": [
+          5.182726658216025e-22,
+          4.190505812538283e-20,
+          2.0516081182226267e-20
+        ]
+      }
+    ],
+    "numerics_are_interval_certified": false
+  },
+  "path_sign_checks": {
+    "GTT_gt_one_quarter_shifted_numerator": "6*v**5 + 85*v**4 + 474*v**3 + 1285*v**2 + 1572*v + 502",
+    "mixed_loop_at_least_seven_eighths_leading": true,
+    "completed_shift_positive_uniform_coefficient": "Q_shift(0,h)>pi*h^2/(16*R^2*L^2), q>=3, L/R>=16",
+    "same_linear_tangent_opposite_quadratic_signs": true,
+    "samples": [
+      {
+        "q": 3,
+        "R": 1.0,
+        "L": 16.0,
+        "affine_coefficient_upper_bound": -0.0024443110233269612,
+        "completed_shift_coefficient_lower_bound": 0.0012372428341205493,
+        "uniform_completed_shift_lower_bound": 0.0007669903939428206
+      },
+      {
+        "q": 8,
+        "R": 1.0,
+        "L": 16.0,
+        "affine_coefficient_upper_bound": -0.004594219476980212,
+        "completed_shift_coefficient_lower_bound": 0.00522325756516491,
+        "uniform_completed_shift_lower_bound": 0.0007669903939428206
+      },
+      {
+        "q": 64,
+        "R": 1.0,
+        "L": 16.0,
+        "affine_coefficient_upper_bound": -0.0071988030653564366,
+        "completed_shift_coefficient_lower_bound": 0.0713410132699827,
+        "uniform_completed_shift_lower_bound": 0.0007669903939428206
+      }
+    ]
+  },
+  "lean_certified": false,
+  "selected_axial_polar_Ward_completion": true,
+  "all_four_dimensional_perturbation_sectors_checked": false,
+  "curved_quantum_response_computed": false,
+  "physical_stability_proved": false
+}
