@@ -2,7 +2,16 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [warped-circle winding bound](notes/warped-winding-bound.md)
+The current [LLL return-phase diagnostic](notes/lll-return-holonomy.md)
+shows that a general unitary return need not preserve the angularly
+averaged negative support in the free equal-length channel model. A
+common electromagnetic phase cannot cancel relative eigenphases. A
+cyclic return has best support coefficient `-1/3+4/(3q^2)`, while a
+sufficiently narrow phase spread preserves support. MMP already discusses
+the qualitative long-cycle mechanism. The actual exterior return map,
+interacting vacuum and consequential new physical result remain open.
+
+The preserved [warped-circle winding bound](notes/warped-winding-bound.md)
 controls both the energy and local radial null stress of every higher
 angular fermion mode in a prescribed static spherical circle. It uses an
 integrated throat barrier and permits a small angular mass elsewhere.
@@ -83,6 +92,7 @@ python checks/throat_trace_anomaly.py --output evidence/throat-trace-anomaly.jso
 python checks/magnetic_product_vacuum.py --output evidence/magnetic-product-vacuum.json
 python checks/casimir_reference_matching.py --output evidence/casimir-reference-matching.json
 python checks/warped_winding_bound.py --output evidence/warped-winding-bound.json
+python checks/lll_return_holonomy.py --output evidence/lll-return-holonomy.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -98,6 +108,7 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-resolve exterior angular mixing and the reference-state comparison,
+derive or bound the physical exterior return phases, delays and leakage,
+close the reference/interacting-state comparison,
 derive the curved total response,
 then pursue and verify the selected primary and fallback questions.

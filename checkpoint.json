@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "conditional_warped_winding_energy_and_null_stress_bound_verified",
+  "status": "LLL_return_holonomy_diagnostic_verified_physical_exterior_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Conditional warped-circle winding bound under comparison; transfer/Casimir methods and monopole suppression have precedents. Actual MMP bridge and final contribution selection remain open.",
+  "novelty": "Long-cycle mixing suppression is already in MMP; phase criterion is a diagnostic using known twisted-boundary ingredients. Actual exterior control and final contribution selection remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,7 +18,7 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive proof/edition/citation comparisons and select primary plus fallback",
-    "Resolve exterior angular mixing and the reference-state comparison for the conditional winding bound",
+    "Derive or bound the physical exterior return phases, delays and leakage; close the reference/interacting-state comparison",
     "Derive total coupled response and establish a consequential stability, transport or obstruction result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/warped-winding-bound.md",
-  "current_verification": "evidence/warped-winding-bound.json",
+  "current_note": "notes/lll-return-holonomy.md",
+  "current_verification": "evidence/lll-return-holonomy.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -265,5 +265,30 @@
     "lean_invocations": 0,
     "next_decisive_question": "Extend/control the exterior angular-mixing operator and compare the holonomy-average reference with the actual support state before a physical consequence.",
     "independent_spectral_winding_residual": 3.612609287238777e-10
+  },
+  "LLL_return_holonomy": {
+    "note": "notes/lll-return-holonomy.md",
+    "receipt": "evidence/lll-return-holonomy.json",
+    "model": "q free complex massless 2D Dirac channels, equal optical length, fixed energy-independent unitary return and common U(1) phase",
+    "support_observable": "Angular trace / spherical average only",
+    "reference": "LLL state difference relative to q identical conformally transformed reflecting strips; negligible exterior optical length",
+    "ordinary_phase_criterion": "chi=1-4 D2/(q pi^2)",
+    "optimized_q_cycle_chi": "-1/3+4/(3q^2)",
+    "arbitrary_unitary_support_preservation_refuted_in_model": true,
+    "small_wavepacket_displacement_alone_sufficient": false,
+    "rigid_rotation_sufficient_control": "q delta bounded sufficiently small; phase spread is the relevant free-channel quantity",
+    "exact_identities": 7,
+    "cyclic_phase_minima_cases": 7,
+    "matrix_determinant_cases": 3,
+    "independent_regulated_spectrum_cases": 3,
+    "max_refined_spectral_residual": 1.5253416307814405e-08,
+    "actual_MMP_return_map_derived": false,
+    "actual_MMP_support_refuted": false,
+    "full_support_stress_controlled": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "Diagnostic application of known twist/cycle ingredients; no standalone novel-paper or formalization selection",
+    "next_decisive_question": "Derive or bound actual exterior return phases and delays, beginning with the static axisymmetric case, then screened slow rotation; retain only a consequence beyond the established MMP regime."
   }
 }
