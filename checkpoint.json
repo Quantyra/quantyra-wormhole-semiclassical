@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "free_inverse_tail_finite_channel_decay_interval_proved_physical_transfer_pending",
+  "status": "gaussian_singlet_complex_response_controlled_static_and_physical_transfer_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue the existing physical damping/fallback target. Finite-channel decay is now proved for the free inverse-tail model; its spectral mechanism is prior art and physical transfer and final novelty remain open.",
+  "novelty": "Continue the existing physical damping/fallback target. The Gaussian dynamical singlet correction is now controlled, including its real part; physical transfer and final novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control interacting stress and the full physical response at damping resolution; close background, complete channel return and state matching.",
+    "Derive the singlet static-curvature bound, control nonspherical interactions, and close physical background, complete return and state matching.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/finite-channel-decay.md",
-  "current_verification": "evidence/finite-channel-decay.json",
+  "current_note": "notes/singlet-complex-response.md",
+  "current_verification": "evidence/singlet-complex-response.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -991,5 +991,35 @@
     "numerical_limit": "At delta=0.08 and q=8192, sampled envelope error including omitted mass is below 0.1 for one leading lifetime, about 0.50 for three; no uniform numerical certificate.",
     "next_decisive_question": "Control interacting stress and the full physical response at damping resolution; close background, complete channel return and state matching.",
     "contribution_decision": "Continue the existing physical damping/fallback target. Finite-channel decay is now proved for the free inverse-tail model; its spectral mechanism is prior art and physical transfer and final novelty remain open."
+  },
+  "singlet_complex_response": {
+    "note": "notes/singlet-complex-response.md",
+    "verification": "evidence/singlet-complex-response.json",
+    "source_review": "evidence/singlet-complex-source-review.json",
+    "date": "2026-10-11",
+    "full_subtracted_gaussian_singlet_response_controlled": true,
+    "real_dispersive_part_included": true,
+    "mass_uniform_bound": "C(1+eta^-4), independent of finite channel count, return lengths and bounded mass profile",
+    "damping_resolution_condition": "q delta^5 -> infinity",
+    "decay_transfer_static_premise": "Derived renormalized K0_m-K0_free=o(q delta); not yet proved",
+    "static_curvature_bound_proved": false,
+    "nonspherical_interaction_bound_proved": false,
+    "physical_state_constructed": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "exact_checks": 5,
+      "axis_cases": 4,
+      "annular_cases": 9,
+      "tail_cases": 6,
+      "resonance_cases": 4,
+      "finite_rank_cases": 6,
+      "finite_element_cases": 12,
+      "mesh_refinements": 4
+    },
+    "supplemental_unique_queries": 3,
+    "next_decisive_question": "Derive the singlet static-curvature bound, control nonspherical interactions, and close physical background, complete return and state matching.",
+    "contribution_decision": "Continue the existing physical damping/fallback target. The Gaussian dynamical singlet correction is now controlled, including its real part; physical transfer and final novelty remain open."
   }
 }

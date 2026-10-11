@@ -1,15 +1,15 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [finite-channel proof](notes/finite-channel-decay.md)
-establishes a linear decay interval in the free inverse-tail JT/channel
-model when delta tends to zero and q delta^3 tends to infinity. Each
-fixed finite system remains recurrent. Interactions, full physical matching
-and novelty acceptance remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-finite-channel-decay-audit.md).
+Current continuation, 2026-10-11: the [full singlet-response proof](notes/singlet-complex-response.md)
+controls the Gaussian spherical-photon correction, including its real
+dispersive part, at damping resolution when q delta^5 tends to infinity.
+Its renormalized static curvature and nonspherical interactions remain
+unresolved. The physical damping and matching claims remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-singlet-complex-response-audit.md).
 
-Remaining to-do list: control interacting stress and the physical response,
-close matching, finish novelty and the consequential result, then verify,
-GCP-certify suitable endpoints and prepare the manuscript.
+Remaining to-do list: derive the singlet static curvature, bound remaining
+interactions and physical matching, finish novelty and the consequential
+result, then verify, GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
