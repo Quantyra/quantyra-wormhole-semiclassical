@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "conditional_dipole_delay_comparison_verified",
+  "status": "gapless_transverse_audit_and_finite_band_target_verified",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Conditional analytic robustness extension of established MMP dipole result using known matrix/passivity methods; full physical consequence and novelty remain unresolved",
+  "novelty": "Known gapless mechanism reproduced; explicit profile and conditional finite-band budget retained as model-closure audit. No standalone planar adiabatic or formalization expansion.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,9 +17,9 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Complete decisive proof/edition/citation comparisons and select primary plus fallback",
-    "Derive or bound the physical chiral exterior return and Gaussian energy; control omitted derivatives against the geometric margin",
-    "Establish a consequential stability, transport or obstruction result with controlled physical assumptions",
+    "Complete decisive source proof/edition/citation comparisons and select primary plus fallback",
+    "Derive or refute the physical finite-band exterior-power comparison, including continuum coupling and physical ports; do not assume a transverse spectral gap",
+    "Bound total energy corrections against the finite-band geometric margin and establish a consequential physical result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
   "baseline_note": "notes/axial-baseline-and-throat-energy.md",
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/dipole-delay-bound.md",
-  "current_verification": "evidence/dipole-delay-bound.json",
+  "current_note": "notes/dipole-transverse-modes.md",
+  "current_verification": "evidence/dipole-transverse-modes.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -340,5 +340,31 @@
     "lean_invocations": 0,
     "contribution_decision": "Conditional analytic robustness extension of established MMP dipole result using known matrix/passivity methods; full physical consequence and novelty remain unresolved",
     "next_decisive_question": "Derive or bound the projected chiral transport and omitted energy derivatives against the geometric margin, then complete contribution selection."
+  },
+  "dipole_transverse_modes": {
+    "note": "notes/dipole-transverse-modes.md",
+    "receipt": "evidence/dipole-transverse-modes.json",
+    "exact_midplane_kernel": "q-1 normalizable modes for integer q>=1; noncompact plane",
+    "positive_transverse_spectral_gap": false,
+    "exact_localization_and_dilation_source": true,
+    "critical_mode_second_moment": "logarithmically divergent",
+    "ordinary_finite_band_energy_bound": true,
+    "comparison_hypothesis": "Full-return exterior-power bound on 0<xi*d<=4; common-front passivity at all frequencies",
+    "reserved_mode_comparison": "q-2 labels j/q, j=2,...,q-1, plus two labels 1; CDF discrepancy 2/q; physical realization not proved",
+    "sufficient_charge": 21,
+    "continuum_margin_coefficient": 0.013063071302763206,
+    "exact_identities": 14,
+    "independent_radial_integral_cases": 15,
+    "critical_tail_cases": 9,
+    "finite_band_envelope_cases": 9,
+    "threshold_resolvent_import": "W73/W74 displayed expansions require faster than r^-7 magnetic decay; actual midplane has r^-3",
+    "actual_four_dimensional_projection_derived": false,
+    "complete_four_dimensional_energy_derived": false,
+    "actual_omitted_derivatives_bounded": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "Known gapless mechanism reproduced; explicit profile and conditional finite-band budget retained as model-closure audit. No standalone planar adiabatic or formalization expansion.",
+    "next_decisive_question": "Derive the static field-aligned exterior Dirac return between finite mouth ports for xi*d<=4, including continuum coupling, and test the full exterior-power comparison before extending toy calculations."
   }
 }

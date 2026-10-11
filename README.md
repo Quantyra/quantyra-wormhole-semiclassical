@@ -2,7 +2,17 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [dipole-delay comparison](notes/dipole-delay-bound.md) gives a
+The [transverse-mode audit](notes/dipole-transverse-modes.md) finds the
+known gapless Aharonov-Casher structure in the exact dipole midplane:
+`q-1` normalizable modes and a weak outer tail. A globally gapped channel
+reduction is unavailable. A conditional finite-frequency estimate retains
+the no-shortcut margin with stronger delay control only for `xi*d<=4`,
+reserving two modes at the common-front bound for `q>=21`. The physical
+exterior Dirac return and total energy corrections remain unresolved;
+that finite-band return is the next test. No new physical no-go or novelty
+acceptance is claimed.
+
+The preserved [dipole-delay comparison](notes/dipole-delay-bound.md) gives a
 conditional stationary transit ratio above 2.1489 in the point-dipole
 continuum, and a correction budget
 of order `q/d^2`. It allows distributed Hermitian mixing in a specified
