@@ -1,0 +1,458 @@
+{
+  "status": "passed_conditional_model_checks",
+  "script_sha256": "74fb7ebdac8d36006fe1b4baeb46fcc807c06ee13628660d936b040d5d4a994d",
+  "model": "Leading MMP Gaussian energy with exterior-power delay control from factored networks or specified local chiral propagation; point-dipole continuum for geometry",
+  "checks": {
+    "symbolic": {
+      "integral_primitive": "exact_zero",
+      "integral_endpoints": "exact_zero",
+      "logistic_convexity": "exact_zero",
+      "point_dipole_relation": "exact_zero",
+      "gap_at_one": "exact_zero",
+      "gap_at_two": "exact_zero",
+      "J_integrand_derivative": "exact_zero",
+      "local_speed_lower_bound": "exact_zero"
+    },
+    "exact_positive_margin_certificates": {
+      "kappa_lower_bound": "43/81",
+      "q15_ratio_two_bracket_lower_bound": "17/12096"
+    },
+    "integral_checks": [
+      {
+        "t": 0.2,
+        "residual": 9.71445146547012e-17
+      },
+      {
+        "t": 1,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "t": 2,
+        "residual": 1.3877787807814457e-16
+      },
+      {
+        "t": 2.148911989939193,
+        "residual": 8.326672684688674e-17
+      },
+      {
+        "t": 5,
+        "residual": 0.0
+      }
+    ],
+    "pointwise_matrix_cases": 75,
+    "exterior_power_product_cases": 375,
+    "integrated_cases": [
+      {
+        "map": "ideal",
+        "T": 0.4,
+        "energy": -1.0416041347892593,
+        "derivative": 0.5192052131366973,
+        "upper_bound": 0.5192052131366974
+      },
+      {
+        "map": "ideal",
+        "T": 1,
+        "energy": -0.8065832690531375,
+        "derivative": 0.2966485075783683,
+        "upper_bound": 0.29664850757836825
+      },
+      {
+        "map": "ideal",
+        "T": 2.2,
+        "energy": -0.5646433258822787,
+        "derivative": 0.13782742376430487,
+        "upper_bound": 0.13782742376430487
+      },
+      {
+        "map": "unitary_mixing",
+        "T": 0.4,
+        "energy": -0.11801404130462673,
+        "derivative": 0.02313348981931815,
+        "upper_bound": 0.5192052131366974
+      },
+      {
+        "map": "unitary_mixing",
+        "T": 1,
+        "energy": -0.10433378734203885,
+        "derivative": 0.02143461685962369,
+        "upper_bound": 0.29664850757836825
+      },
+      {
+        "map": "unitary_mixing",
+        "T": 2.2,
+        "energy": -0.08314384627690904,
+        "derivative": 0.014250620335482118,
+        "upper_bound": 0.13782742376430487
+      },
+      {
+        "map": "lossy_mixing",
+        "T": 0.4,
+        "energy": 0.0007410308374304101,
+        "derivative": -0.018327142414604744,
+        "upper_bound": 0.5192052131366974
+      },
+      {
+        "map": "lossy_mixing",
+        "T": 1,
+        "energy": -0.00579876346209942,
+        "derivative": -0.006004343251898079,
+        "upper_bound": 0.29664850757836825
+      },
+      {
+        "map": "lossy_mixing",
+        "T": 2.2,
+        "energy": -0.008769574769947937,
+        "derivative": -0.0005899624828264614,
+        "upper_bound": 0.13782742376430487
+      },
+      {
+        "map": "resonant_mixing",
+        "T": 0.4,
+        "energy": 0.044788180332801776,
+        "derivative": -0.011422332145353164,
+        "upper_bound": 0.5192052131366974
+      },
+      {
+        "map": "resonant_mixing",
+        "T": 1,
+        "energy": 0.04054511450763777,
+        "derivative": -0.004468779193528514,
+        "upper_bound": 0.29664850757836825
+      },
+      {
+        "map": "resonant_mixing",
+        "T": 2.2,
+        "energy": 0.036905755925642686,
+        "derivative": -0.002386225679665028,
+        "upper_bound": 0.13782742376430487
+      },
+      {
+        "map": "signed_cycles",
+        "T": 0.4,
+        "energy": -0.18845028298126582,
+        "derivative": 0.0996362057517794,
+        "upper_bound": 0.5192052131366974
+      },
+      {
+        "map": "signed_cycles",
+        "T": 1,
+        "energy": -0.14389812504204988,
+        "derivative": 0.055486772883614144,
+        "upper_bound": 0.29664850757836825
+      },
+      {
+        "map": "signed_cycles",
+        "T": 2.2,
+        "energy": -0.09932224540387985,
+        "derivative": 0.025009705325311396,
+        "upper_bound": 0.13782742376430487
+      }
+    ],
+    "energy_variations": [
+      {
+        "map": "ideal",
+        "T": 0.4,
+        "residual": 6.632195015399134e-09
+      },
+      {
+        "map": "ideal",
+        "T": 1,
+        "residual": 1.978150254711153e-09
+      },
+      {
+        "map": "ideal",
+        "T": 2.2,
+        "residual": 3.8716610473166213e-10
+      },
+      {
+        "map": "unitary_mixing",
+        "T": 0.4,
+        "residual": 3.34745651336954e-10
+      },
+      {
+        "map": "unitary_mixing",
+        "T": 1,
+        "residual": 1.0986752480013351e-10
+      },
+      {
+        "map": "unitary_mixing",
+        "T": 2.2,
+        "residual": 1.4671446349479034e-11
+      },
+      {
+        "map": "lossy_mixing",
+        "T": 0.4,
+        "residual": 5.904697286673866e-10
+      },
+      {
+        "map": "lossy_mixing",
+        "T": 1,
+        "residual": 1.3082043955059408e-10
+      },
+      {
+        "map": "lossy_mixing",
+        "T": 2.2,
+        "residual": 1.523358262450758e-11
+      },
+      {
+        "map": "resonant_mixing",
+        "T": 0.4,
+        "residual": 4.47177257029141e-10
+      },
+      {
+        "map": "resonant_mixing",
+        "T": 1,
+        "residual": 7.841065730734842e-11
+      },
+      {
+        "map": "resonant_mixing",
+        "T": 2.2,
+        "residual": 3.82428463896467e-12
+      },
+      {
+        "map": "signed_cycles",
+        "T": 0.4,
+        "residual": 1.3541087695578824e-09
+      },
+      {
+        "map": "signed_cycles",
+        "T": 1,
+        "residual": 3.9916436822551304e-10
+      },
+      {
+        "map": "signed_cycles",
+        "T": 2.2,
+        "residual": 7.46348399749408e-11
+      }
+    ],
+    "nonnormal_commutator_norm": 0.13994094622972306,
+    "field_line_lengths": [
+      {
+        "u": 0.025,
+        "length_over_d": 54.28092267220483,
+        "triangle_lower_bound": 40.0
+      },
+      {
+        "u": 0.1,
+        "length_over_d": 12.998070347056135,
+        "triangle_lower_bound": 10.0
+      },
+      {
+        "u": 0.25,
+        "length_over_d": 4.85956720828972,
+        "triangle_lower_bound": 4.0
+      },
+      {
+        "u": 0.5,
+        "length_over_d": 2.236083897082421,
+        "triangle_lower_bound": 2.0
+      },
+      {
+        "u": 0.75,
+        "length_over_d": 1.400832961644773,
+        "triangle_lower_bound": 1.3333333333333333
+      },
+      {
+        "u": 0.9,
+        "length_over_d": 1.1318921220468763,
+        "triangle_lower_bound": 1.1111111111111112
+      },
+      {
+        "u": 0.99,
+        "length_over_d": 1.01190856124089,
+        "triangle_lower_bound": 1.0101010101010102
+      },
+      {
+        "u": 1.0,
+        "length_over_d": 1.0,
+        "triangle_lower_bound": 1.0
+      }
+    ],
+    "local_speed_cases": 168,
+    "distributed_transport_cases": [
+      {
+        "q": 4,
+        "xi": 0.07,
+        "maximum_product_ratio": 0.9793602341166535,
+        "rhs_evaluations": 512,
+        "local_mixing_commutator": 0.8786556330896664
+      },
+      {
+        "q": 4,
+        "xi": 0.3,
+        "maximum_product_ratio": 0.9340727199174145,
+        "rhs_evaluations": 620,
+        "local_mixing_commutator": 0.8786556330896664
+      },
+      {
+        "q": 4,
+        "xi": 0.7,
+        "maximum_product_ratio": 0.9112130477476814,
+        "rhs_evaluations": 926,
+        "local_mixing_commutator": 0.8786556330896664
+      },
+      {
+        "q": 6,
+        "xi": 0.07,
+        "maximum_product_ratio": 0.981335177235769,
+        "rhs_evaluations": 644,
+        "local_mixing_commutator": 1.9631587847761505
+      },
+      {
+        "q": 6,
+        "xi": 0.3,
+        "maximum_product_ratio": 0.9318639295319725,
+        "rhs_evaluations": 776,
+        "local_mixing_commutator": 1.9631587847761505
+      },
+      {
+        "q": 6,
+        "xi": 0.7,
+        "maximum_product_ratio": 0.8893088971931413,
+        "rhs_evaluations": 1166,
+        "local_mixing_commutator": 1.9631587847761505
+      }
+    ],
+    "geometric_threshold_ratio": 2.148911989939193,
+    "MMP_reproductions": [
+      {
+        "outer_order": 32,
+        "MMP_large_separation_ratio": 2.3471178599976263
+      },
+      {
+        "outer_order": 64,
+        "MMP_large_separation_ratio": 2.3471178599977387
+      },
+      {
+        "outer_order": 128,
+        "MMP_large_separation_ratio": 2.347117859997739
+      }
+    ],
+    "uniform_shortcut_gap_coefficient": 0.5451774444795623,
+    "ratio_two_gap_coefficient": 0.06111582133910609,
+    "finite_quantile_checks": [
+      {
+        "q": 1,
+        "t": 1,
+        "quadrature_error": 0.0025945277689983226,
+        "discrepancy_bound": 0.125
+      },
+      {
+        "q": 1,
+        "t": 2,
+        "quadrature_error": 0.015278955334776523,
+        "discrepancy_bound": 0.2222222222222222
+      },
+      {
+        "q": 1,
+        "t": 2.148911989939193,
+        "quadrature_error": 0.0182679641377817,
+        "discrepancy_bound": 0.2328553482553957
+      },
+      {
+        "q": 2,
+        "t": 1,
+        "quadrature_error": 0.0018689041862318817,
+        "discrepancy_bound": 0.0625
+      },
+      {
+        "q": 2,
+        "t": 2,
+        "quadrature_error": 0.0008345108903320686,
+        "discrepancy_bound": 0.1111111111111111
+      },
+      {
+        "q": 2,
+        "t": 2.148911989939193,
+        "quadrature_error": 0.0014770456875048965,
+        "discrepancy_bound": 0.11642767412769785
+      },
+      {
+        "q": 5,
+        "t": 1,
+        "quadrature_error": 0.00039425565947528995,
+        "discrepancy_bound": 0.025
+      },
+      {
+        "q": 5,
+        "t": 2,
+        "quadrature_error": 0.0003318723296225623,
+        "discrepancy_bound": 0.044444444444444446
+      },
+      {
+        "q": 5,
+        "t": 2.148911989939193,
+        "quadrature_error": 0.0002960982692943315,
+        "discrepancy_bound": 0.04657106965107914
+      },
+      {
+        "q": 15,
+        "t": 1,
+        "quadrature_error": 4.600956558528657e-05,
+        "discrepancy_bound": 0.008333333333333333
+      },
+      {
+        "q": 15,
+        "t": 2,
+        "quadrature_error": 5.259768490770145e-05,
+        "discrepancy_bound": 0.014814814814814814
+      },
+      {
+        "q": 15,
+        "t": 2.148911989939193,
+        "quadrature_error": 5.196694331427443e-05,
+        "discrepancy_bound": 0.015523689883693046
+      },
+      {
+        "q": 32,
+        "t": 1,
+        "quadrature_error": 1.0158632533771583e-05,
+        "discrepancy_bound": 0.00390625
+      },
+      {
+        "q": 32,
+        "t": 2,
+        "quadrature_error": 1.1945062697804598e-05,
+        "discrepancy_bound": 0.006944444444444444
+      },
+      {
+        "q": 32,
+        "t": 2.148911989939193,
+        "quadrature_error": 1.1897915526193348e-05,
+        "discrepancy_bound": 0.0072767296329811154
+      },
+      {
+        "q": 128,
+        "t": 1,
+        "quadrature_error": 6.35728553979864e-07,
+        "discrepancy_bound": 0.0009765625
+      },
+      {
+        "q": 128,
+        "t": 2,
+        "quadrature_error": 7.530841534542088e-07,
+        "discrepancy_bound": 0.001736111111111111
+      },
+      {
+        "q": 128,
+        "t": 2.148911989939193,
+        "quadrature_error": 7.516957329645191e-07,
+        "discrepancy_bound": 0.0018191824082452789
+      }
+    ],
+    "front_only_counterexample": {
+      "product": 0.22313016014842982,
+      "required_product_bound": 0.004691960523020674
+    }
+  },
+  "ordinary_conditional_delay_bound": true,
+  "actual_MMP_return_factorization_derived": false,
+  "actual_four_dimensional_projection_derived": false,
+  "complete_four_dimensional_energy_derived": false,
+  "actual_omitted_derivatives_bounded": false,
+  "physical_stability_proved": false,
+  "novelty_established": false,
+  "full_numerical_error_certified": false,
+  "lean_certified": false,
+  "lean_invocations": 0
+}

@@ -2,13 +2,15 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [passive-return bound](notes/passive-return-bound.md) excludes
-a stationary throat faster than the exterior signal front in the specified
-leading MMP length-energy model. It permits frequency-dependent mixing,
-unequal delays and passive loss, and gives a quantitative margin for
-omitted derivatives. Matrix, energy-variation and independent real-spectrum
-checks agree. The complete four-dimensional energy reduction and novelty
-remain unresolved; MMP and passive Casimir-force bounds are explicit precedents.
+The current [dipole-delay comparison](notes/dipole-delay-bound.md) gives a
+conditional stationary transit ratio above 2.1489 in the point-dipole
+continuum, and a correction budget
+of order `q/d^2`. It allows distributed Hermitian mixing in a specified
+local chiral propagation model. Matrix, ODE and spectral checks agree; an
+independent arc-length calculation reproduces MMP's known unmixed ratio
+2.3471. The physical four-dimensional projection, energy corrections and
+novelty remain open. The earlier [passive-return bound](notes/passive-return-bound.md)
+and its weaker common-front assumption are preserved.
 
 The preserved [LLL return-phase diagnostic](notes/lll-return-holonomy.md)
 shows that a general unitary return need not preserve the angularly
