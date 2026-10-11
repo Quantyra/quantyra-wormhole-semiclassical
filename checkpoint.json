@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "joint_weak_coupling_window_selected_physical_response_pending",
+  "status": "conservative_collar_obstruction_physical_metric_completion_required",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue the physical damping/fallback investigation in an explicit joint flux/coupling regime. Angular and prescribed-potential bounds support this decision but do not close the interacting physical response or novelty.",
+  "novelty": "Do not infer a physical clock pole from absorption or optical matching alone. Retain the primary/fallback provisionally and derive their conservative physical completion before formalization or manuscript acceptance.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive the renormalized real response and interacting stress bound at width delta with the actual clock vertex and a finite-time state; close physical matching.",
+    "Derive the constraint-compatible matched metric and finite-time state variation, including conservative collar terms and kinetic mass; then control interacting stress and physical channel matching.",
     "Finish primary/fallback novelty selection and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/weak-coupling-window.md",
-  "current_verification": "evidence/weak-coupling-window.json",
+  "current_note": "notes/collar-conservative-response.md",
+  "current_verification": "evidence/collar-conservative-response.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -858,5 +858,40 @@
     "supplemental_search_queries": 10,
     "next_decisive_question": "Derive the renormalized real response and interacting stress bound at width delta with the actual clock vertex and a finite-time state; close physical matching.",
     "contribution_decision": "Continue the physical damping/fallback investigation in an explicit joint flux/coupling regime. Angular and prescribed-potential bounds support this decision but do not close the interacting physical response or novelty."
+  },
+  "conservative_collar_response": {
+    "note": "notes/collar-conservative-response.md",
+    "verification": "evidence/collar-conservative-response.json",
+    "source_review": "evidence/collar-response-source-review.json",
+    "canonical_cft_ground_energy_reproduced": true,
+    "static_collar_term_controlled": true,
+    "static_collar_size": "-q/(12 pi^(3/2) h), for h much smaller than throat and minimum return",
+    "sharp_subtracted_complex_response_bound": true,
+    "relative_dynamic_collar_error": "O(h/(ell delta)+h^2/(ell^2 delta^2))",
+    "lapse_only_completion_has_growing_pole": true,
+    "weyl_related_completion_same_absorption": true,
+    "weyl_related_completion_has_no_upper_half_plane_pole": true,
+    "prescribed_metric_comparison_is_physical_wormhole": false,
+    "full_matched_conservative_response_derived": false,
+    "physical_state_constructed": false,
+    "physical_matching_closed": false,
+    "physical_wormhole_instability_proved": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "exact_checks": 4,
+      "ground_energy_cases": 3,
+      "curvature_cases": 3,
+      "mobius_cases": 3,
+      "heat_kernel_cases": 4,
+      "dynamic_cases": 9,
+      "instability_cases": 3,
+      "weyl_completion_cases": 3,
+      "weyl_action_quadrature": 2
+    },
+    "supplemental_search_queries": 7,
+    "next_decisive_question": "Derive the constraint-compatible matched metric and finite-time state variation, including conservative collar terms and kinetic mass; then control interacting stress and physical channel matching.",
+    "contribution_decision": "Do not infer a physical clock pole from absorption or optical matching alone. Retain the primary/fallback provisionally and derive their conservative physical completion before formalization or manuscript acceptance."
   }
 }
