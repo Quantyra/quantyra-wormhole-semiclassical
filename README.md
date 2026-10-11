@@ -2,7 +2,15 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [LLL return-phase diagnostic](notes/lll-return-holonomy.md)
+The current [passive-return bound](notes/passive-return-bound.md) excludes
+a stationary throat faster than the exterior signal front in the specified
+leading MMP length-energy model. It permits frequency-dependent mixing,
+unequal delays and passive loss, and gives a quantitative margin for
+omitted derivatives. Matrix, energy-variation and independent real-spectrum
+checks agree. The complete four-dimensional energy reduction and novelty
+remain unresolved; MMP and passive Casimir-force bounds are explicit precedents.
+
+The preserved [LLL return-phase diagnostic](notes/lll-return-holonomy.md)
 shows that a general unitary return need not preserve the angularly
 averaged negative support in the free equal-length channel model. A
 common electromagnetic phase cannot cancel relative eigenphases. A
@@ -93,6 +101,7 @@ python checks/magnetic_product_vacuum.py --output evidence/magnetic-product-vacu
 python checks/casimir_reference_matching.py --output evidence/casimir-reference-matching.json
 python checks/warped_winding_bound.py --output evidence/warped-winding-bound.json
 python checks/lll_return_holonomy.py --output evidence/lll-return-holonomy.json
+python checks/passive_return_bound.py --output evidence/passive-return-bound.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -108,7 +117,7 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-derive or bound the physical exterior return phases, delays and leakage,
-close the reference/interacting-state comparison,
+justify the physical exterior return and Gaussian energy,
+bound omitted derivatives against the passive-return margin,
 derive the curved total response,
 then pursue and verify the selected primary and fallback questions.
