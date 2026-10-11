@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "conditional_logarithmic_long_return_matching_physical_response_pending",
+  "status": "prescribed_loaded_operator_realized_physical_maxwell_matching_open",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Conditional flat-dipole matching now covers a fixed finite set of resonant long paths at delta=(log q)^-2, including two bounded axisymmetric source derivatives. Physical response and novelty remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The prescribed higher-mode load now has an operator realization and controlled smooth gauge completion. An exactly spherical flat cutoff cannot supply source-free Maxwell matching. The physical endpoint and novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Justify the physical loaded boundary and curved mouth interface; extend angular response, retain the exterior determinant and bound the discarded physical tail before renormalized stress and coupled-state closure.",
+    "Derive a source-free Einstein-Maxwell mouth/throat interface admitting the remote multipoles; control its effect on the loaded return, then full angular/determinant and discarded-tail response, renormalized stress and the coupled state.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/logarithmic-long-return.md",
-  "current_verification": "evidence/logarithmic-long-return.json",
+  "current_note": "notes/loaded-operator-realization.md",
+  "current_verification": "evidence/loaded-operator-realization.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1377,5 +1377,38 @@
     "goal_complete": false,
     "next_decisive_question": "Justify the physical loaded boundary and curved mouth interface; extend angular response, retain the exterior determinant and bound the discarded physical tail before renormalized stress and coupled-state closure.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Conditional flat-dipole matching now covers a fixed finite set of resonant long paths at delta=(log q)^-2, including two bounded axisymmetric source derivatives. Physical response and novelty remain open."
+  },
+  "loaded_operator_realization": {
+    "date": "2026-10-11",
+    "note": "notes/loaded-operator-realization.md",
+    "verification": "evidence/loaded-operator-realization.json",
+    "source_review": "evidence/loaded-realization-source-review.json",
+    "prescribed_loaded_operator_realized": true,
+    "all_interface_traces_proved": true,
+    "ground_closed_operator_self_adjoint": true,
+    "realization_requires_euclidean_end_collars": true,
+    "smooth_gauge_completion_controlled": true,
+    "source_free_exact_spherical_flat_interpolation_obstructed": true,
+    "physical_einstein_maxwell_interface_derived": false,
+    "selected_scale": "g^2=q^-2; delta=(log q)^-2; nu=delta^2; p=q^-1; a=c_a q^-1/4",
+    "smooth_completion_residual": "q p^(3/2)=q^-1/2; full matching retains q^-3/8 with polynomial logarithmic losses",
+    "bounded_source_insertion_estimates_unconditional_for_prescribed_model": true,
+    "full_quantum_response_derived": false,
+    "finite_flux_accuracy_established": false,
+    "verification_counts": {
+      "coupled_network_cases": 18,
+      "forced_resolvent_cases": 3,
+      "high_mode_defect_cases": 4,
+      "collar_smoothing_cases": 6
+    },
+    "max_current_error": 2.658318010162475e-12,
+    "max_independent_feedback_error": 1.9733562437530567e-12,
+    "max_solution_refinement": 1.046318334398272e-09,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Derive a source-free Einstein-Maxwell mouth/throat interface admitting the remote multipoles; control its effect on the loaded return, then full angular/determinant and discarded-tail response, renormalized stress and the coupled state.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The prescribed higher-mode load now has an operator realization and controlled smooth gauge completion. An exactly spherical flat cutoff cannot supply source-free Maxwell matching. The physical endpoint and novelty remain open."
   }
 }

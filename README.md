@@ -1,14 +1,14 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [logarithmic long returns](notes/logarithmic-long-return.md)
-controls the full flat-dipole mouth trial for any fixed finite set of
-resonant harmonics at delta=(log q)^-2, including two source derivatives.
-The result assumes the prescribed loaded realization and is asymptotic:
-the sampled bulk errors remain large, despite passing refinement checks.
-Physical angular/determinant response, state, curved matching and novelty
-remain open. [Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-logarithmic-long-return-audit.md).
+Current continuation, 2026-10-11: [loaded operator realization](notes/loaded-operator-realization.md)
+constructs the prescribed all-higher-mode throat/exterior operator and its
+interface traces. A smooth gauge completion preserves the long-return
+estimate with p=q^-1. An exactly spherical flat collar cannot join the
+dipole field through a source-free Maxwell shell; physical matching must
+admit the remote multipoles or a controlled metric response.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-loaded-realization-audit.md).
 
-Remaining to-do list: justify the physical boundary and curved interface,
+Remaining to-do list: derive the physical Einstein-Maxwell interface,
 control the full response and discarded tail, close stress/state and
 novelty, then independently verify, GCP-certify the consequential result
 and prepare the manuscript.
