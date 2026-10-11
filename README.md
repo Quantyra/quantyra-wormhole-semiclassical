@@ -1,5 +1,16 @@
 # Quantyra semiclassical wormhole research
 
+Current continuation, 2026-10-10: the [constrained clock response](notes/collective-clock-response.md)
+includes the real dispersive shift and absorptive resonance in its defined
+inverse-tail channel model. The [shrinking-sector theorem](notes/long-return-sector.md)
+controls local Dirac packets with effective parameter `q u`; endpoint/throat
+matching and the physical state remain open. No physical damping or novelty
+acceptance is claimed. [Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-collective-clock-and-sector-audit.md).
+
+Remaining to-do list: close the full return, state and interaction bounds,
+finish novelty and the physical result, then verify, GCP-certify suitable
+endpoints and prepare the manuscript.
+
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
 The [global trial and spherical traces](notes/global-mouth-trial.md)
