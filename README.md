@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [dipole source matching](notes/dipole-source-matching.md)
-adds the photon line-integral phase and transverse spin correction to the
-actual flat dipole trial. Conditional return and first two source-derivative
-errors vanish at shrinking resolution for fixed trimmed flux labels and
-bounded axisymmetric sources. The resonant long paths, general angular
-response, exterior determinant and physical stress remain unresolved.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-dipole-source-matching-audit.md).
+Current continuation, 2026-10-11: [logarithmic long returns](notes/logarithmic-long-return.md)
+controls the full flat-dipole mouth trial for any fixed finite set of
+resonant harmonics at delta=(log q)^-2, including two source derivatives.
+The result assumes the prescribed loaded realization and is asymptotic:
+the sampled bulk errors remain large, despite passing refinement checks.
+Physical angular/determinant response, state, curved matching and novelty
+remain open. [Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-logarithmic-long-return-audit.md).
 
-Remaining to-do list: match both long-return endpoints and the full source
-response, control determinant/renormalization and physical stress, close
-geometry/state and novelty, then independently verify, GCP-certify the
-consequential result and prepare the manuscript.
+Remaining to-do list: justify the physical boundary and curved interface,
+control the full response and discarded tail, close stress/state and
+novelty, then independently verify, GCP-certify the consequential result
+and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

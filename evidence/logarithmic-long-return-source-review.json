@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-11",
+  "scope": "Standard semialgebraic tools for polynomial trim losses; targeted supplement, not full literature or novelty closure",
+  "queries": [
+    "Michel Coste introduction semialgebraic geometry semialgebraic function polynomial growth infinity Tarski Seidenberg pdf",
+    "semialgebraic reach tubular neighborhood compact smooth family polynomial bound distance medial axis",
+    "\"AN INTRODUCTION TO SEMIALGEBRAIC GEOMETRY\" Coste pdf -site:researchgate.net -site:scispace.com",
+    "\"Coste\" \"Proposition 2.11\" semialgebraic pdf",
+    "\"Coste\" \"SAG.pdf\" -site:researchgate.net -site:scispace.com -site:perso.univ-rennes1.fr",
+    "\"CosteIntroToSemialGeo.pdf\" -site:gcomte.perso.math.cnrs.fr -site:sciencedirect.com"
+  ],
+  "sources": [
+    {
+      "author": "Michel Coste",
+      "title": "An Introduction to Semialgebraic Geometry",
+      "date_on_title_page": "October 2002",
+      "original_url": "https://perso.univ-rennes1.fr/michel.coste/polyens/SAG.pdf",
+      "accessed_academic_mirror": "https://blogs.mat.ucm.es/jesusr/wp-content/uploads/sites/52/2020/03/SAG.pdf",
+      "cache": "references/cache/coste-SAG-long-return.pdf",
+      "sha256": "86dbd8733c84db3b6955a36921bd43599a98a82d76fb5f5c041c5a512b8f8a31",
+      "pdf_pages": 78,
+      "read_scope": [
+        "Title page; Proposition 1.3 and root-bound proof, PDF page 8 (printed 7)",
+        "Theorem 1.9 statement and degree reduction, Lemma 1.10 and its Sturm-branch argument, general-system reduction: PDF pages 12-14 and 17-18 (printed 11-13 and 16-17)",
+        "Definition, Theorem 2.3 and projection proof, closure corollaries, Theorem 2.6 and quantifier induction: PDF pages 26-29 (printed 25-28)",
+        "Semialgebraic functions/derivatives, Proposition 2.11 and full growth proof, Theorem 2.12 and proof: PDF pages 30-32 (printed 29-31)"
+      ],
+      "dependency_boundary": "Theorem 1.9's branching proof uses earlier Sturm root-counting results; that entire dependency chain and the full book were not independently re-proved or declared audited. Projection/quantifier elimination is used as an established theorem. No external reach theorem is imported.",
+      "application": "The admissible weighted tube radius and the finite algebraic coefficient suprema are semialgebraic; one-variable growth controls their dependence on the flux trim. Arclength, source profiles, exponential modes and normalization integrals are not asserted semialgebraic.",
+      "access_notes": "Original author URL failed certificate verification in embedded Python and returned 403 with normal PowerShell TLS; a guessed replacement and another academic mirror returned 404. The UCM academic mirror downloaded with normal TLS verification. A later web-tool open timed out. No TLS bypass was used. PDF extraction needed UTF-8 console output; a color-profile warning did not prevent text extraction."
+    }
+  ],
+  "independent_argument": "Explicit prolate identities and magnetic lower bound, weighted center charts, polynomial tube-width and Laplace constants, and shrinking complex-source polydisc. The standard one-variable growth fact is explained by a polynomial vanishing on the graph and its lowest nonzero coefficient.",
+  "verification_corrections": [
+    "The inherited fixed-node Hermite rule had an empty supported node set in the broad far-field Gaussian. The new check integrates the compact support directly with Gauss-Legendre panels split at taper junctions; no error tolerance was loosened.",
+    "At the exact midplane endpoint, root bracketing could fail through rounding. The new check uses the exact midplane coordinates there.",
+    "High-precision flux comparison uses identical binary inputs to distinguish numerical evaluation error from decimal-to-binary input conditioning near a center."
+  ],
+  "decision": "Continue physical long-return damping and matched finite-duration band transfer. Conditional global matching for a finite resonant harmonic set now fits delta=(log q)^-2. This is not acceptance of either physical endpoint or publication novelty.",
+  "finite_q_limitation": "All sampled bulk residuals remain large; integration refinement validates evaluation, not finite-q accuracy or entry into the theorem's asymptotic regime.",
+  "remaining": "Loaded physical boundary and curved interface, full angular/determinant and discarded-tail response, state and renormalized stress, complete novelty review and consequential endpoint, independent verification, GCP-only Lean and manuscript."
+}

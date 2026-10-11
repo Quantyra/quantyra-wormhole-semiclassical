@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "dipole_source_derivatives_controlled_fixed_trim_long_return_pending",
+  "status": "conditional_logarithmic_long_return_matching_physical_response_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The actual flat dipole now has a conditional fixed-trim source-derivative return estimate at shrinking resolution; resonant long paths, full angular response and physical stress remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Conditional flat-dipole matching now covers a fixed finite set of resonant long paths at delta=(log q)^-2, including two bounded axisymmetric source derivatives. Physical response and novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Prove source-dependent propagation and both endpoint matches uniformly in the resonant shrinking labels Q=q u; extend angular response and retain the exterior determinant before physical renormalization, stress and coupled-state closure.",
+    "Justify the physical loaded boundary and curved mouth interface; extend angular response, retain the exterior determinant and bound the discarded physical tail before renormalized stress and coupled-state closure.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/dipole-source-matching.md",
-  "current_verification": "evidence/dipole-source-matching.json",
+  "current_note": "notes/logarithmic-long-return.md",
+  "current_verification": "evidence/logarithmic-long-return.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1345,5 +1345,37 @@
     "previous_goal_turn_classification": "progress: the full regulated mouth Hessian and conditional bounded-source port derivatives were delivered and verified; no live process inferred from a checkpoint",
     "next_decisive_question": "Prove source-dependent propagation and both endpoint matches uniformly in the resonant shrinking labels Q=q u; extend angular response and retain the exterior determinant before physical renormalization, stress and coupled-state closure.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The actual flat dipole now has a conditional fixed-trim source-derivative return estimate at shrinking resolution; resonant long paths, full angular response and physical stress remain open."
+  },
+  "logarithmic_long_return": {
+    "date": "2026-10-11",
+    "note": "notes/logarithmic-long-return.md",
+    "verification": "evidence/logarithmic-long-return.json",
+    "source_review": "evidence/logarithmic-long-return-source-review.json",
+    "conditional_finite_harmonic_long_return_matching": true,
+    "trim_constants_polynomial_existence_bound": true,
+    "explicit_trim_exponents_computed": false,
+    "selected_scale": "delta=1/log(q)^2; g^2=q^-2; nu=delta^2",
+    "rejected_scale": "delta=1/log(q): delta*log(2+q*delta^2) tends to 1",
+    "source_derivatives_controlled": 2,
+    "source_class": "Fixed compactly supported bounded C2 axisymmetric Pauli sources away from mouths",
+    "loaded_existence_still_assumed": true,
+    "physical_curved_interface_proved": false,
+    "discarded_physical_tail_controlled": false,
+    "full_quantum_response_derived": false,
+    "finite_flux_accuracy_established": false,
+    "sampled_bulk_residuals_small": false,
+    "verification_counts": {
+      "bulk_cases": 9,
+      "overlap_cases": 18,
+      "geometry_cases": 27
+    },
+    "max_relative_bulk_refinement": 0.0012497554293494318,
+    "max_overlap_refinement": 9.962351225962021e-06,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Justify the physical loaded boundary and curved mouth interface; extend angular response, retain the exterior determinant and bound the discarded physical tail before renormalized stress and coupled-state closure.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Conditional flat-dipole matching now covers a fixed finite set of resonant long paths at delta=(log q)^-2, including two bounded axisymmetric source derivatives. Physical response and novelty remain open."
   }
 }
