@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "reference_mouth_interaction_required_before_stress_closure",
+  "status": "full_line_first_order_reference_controlled_physical_matching_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Retain physical long-return damping and matched finite-duration transfer. Positive photon forms do not close the bulk-subtracted throat-only vacuum reference; derive the full mouth interaction and fixed renormalization matching before further throat-only higher-diagram work.",
+  "novelty": "Continue physical long-return damping and matched finite-duration transfer. The complete spherical unwrapped reference has controlled order-g^2 energy and static derivatives; the full finite-return mouth interaction and actual physical matching remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive the complete current/photon interaction through the mouths and its fixed renormalization conditions; then control higher-order and dynamical stress and physical matching.",
+    "Match the full finite-return mouth interaction and physical renormalization, then control higher-order/dynamical stress and the coupled geometry and state. Do not add incompatible partial diagrams.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/reference-mouth-completion.md",
-  "current_verification": "evidence/reference-mouth-completion.json",
+  "current_note": "notes/full-line-reference-stress.md",
+  "current_verification": "evidence/full-line-reference-stress.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1219,5 +1219,47 @@
     "previous_goal_turn_classification": "progress: committed and pushed the first return-dependent photon stress diagram, derivative proof and independent checks; no live process inferred from files",
     "next_decisive_question": "Derive the complete current/photon interaction through the mouths and its fixed renormalization conditions; then control higher-order and dynamical stress and physical matching.",
     "contribution_decision": "Retain physical long-return damping and matched finite-duration transfer. Positive photon forms do not close the bulk-subtracted throat-only vacuum reference; derive the full mouth interaction and fixed renormalization matching before further throat-only higher-diagram work."
+  },
+  "full_line_reference_stress": {
+    "date": "2026-10-11",
+    "note": "notes/full-line-reference-stress.md",
+    "verification": "evidence/full-line-reference-stress.json",
+    "source_review": "evidence/full-line-reference-source-review.json",
+    "full_line_unwrapped_order_g_squared_reference_controlled": true,
+    "full_line_ward_trace_derived": true,
+    "inverse_square_exteriors_included": true,
+    "first_two_static_derivatives_controlled_under_profile_bounds": true,
+    "working_bounds": [
+      "energy O(q^1/4 log q)",
+      "first derivative O(q^1/2 log q)",
+      "second derivative O(q^3/4 log q)"
+    ],
+    "curvature_relative_to_q_delta": "O(q^-3/16 log q)",
+    "conditional_recentring_relative_error": "O(q^-5/16 log q)",
+    "absolute_correction_claimed_to_vanish": false,
+    "physical_profile_bounds_proved": false,
+    "physical_renormalization_matched": false,
+    "complete_finite_return_diagram_controlled": false,
+    "higher_order_remainder_controlled": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "matrix_cases": 12,
+      "barrier_cases": 15,
+      "inverse_square_tail_cases": 8,
+      "renormalized_energy_cases": 3,
+      "dilation_cases": 12,
+      "clock_step_levels": 3,
+      "angular_cases": 5
+    },
+    "maximum_matrix_error": 4.3076653355456074e-14,
+    "maximum_barrier_error": 4.440892098500626e-16,
+    "maximum_tail_error": 1.734305037359718e-07,
+    "maximum_dilation_error": 1.2434497875801753e-14,
+    "supplemental_unique_queries": 6,
+    "previous_goal_turn_classification": "progress: the committed reference-mouth counterexample and exact cross-mouth cancellation changed the required next calculation; no live process inferred from checkpoint files",
+    "next_decisive_question": "Match the full finite-return mouth interaction and physical renormalization, then control higher-order/dynamical stress and the coupled geometry and state. Do not add incompatible partial diagrams.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration transfer. The complete spherical unwrapped reference has controlled order-g^2 energy and static derivatives; the full finite-return mouth interaction and actual physical matching remain open."
   }
 }
