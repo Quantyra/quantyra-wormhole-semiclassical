@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "nonnegative_exterior_photon_response_controlled_physical_stress_pending",
+  "status": "first_winding_photon_static_stress_controlled_reference_and_higher_orders_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical damping and matched finite-duration transfer fallback. Nonnegative exterior extensions preserve quadratic smallness with an additional inverse-resolution factor; this standard-method matching bound is not the novel physical endpoint.",
+  "novelty": "Continue physical damping and matched finite-duration transfer. The first return-dependent photon diagram has a finite endpoint formula and controlled static clock derivatives; full stress, physical closure and novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control two metric derivatives of the renormalized photon/fermion influence, higher current terms and physical metric/photon/higher-level/state matching.",
+    "Control the renormalized unwrapped reference, higher current/vacuum diagrams and dynamical stress, then match the actual coupled geometry and state.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/open-photon-load.md",
-  "current_verification": "evidence/open-photon-load.json",
+  "current_note": "notes/winding-interaction-stress.md",
+  "current_verification": "evidence/winding-interaction-stress.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1140,5 +1140,45 @@
     "previous_goal_turn_classification": "progress: committed projected polarization argument and source-bound checks; no live process claimed from a state file",
     "next_decisive_question": "Derive renormalized clock stress and higher-current control; establish the physical coupled metric/photon/fermion load and state.",
     "contribution_decision": "Continue physical damping and matched finite-duration transfer fallback. Nonnegative exterior extensions preserve quadratic smallness with an additional inverse-resolution factor; this standard-method matching bound is not the novel physical endpoint."
+  },
+  "winding_interaction_stress": {
+    "date": "2026-10-11",
+    "note": "notes/winding-interaction-stress.md",
+    "verification": "evidence/winding-interaction-stress.json",
+    "source_review": "evidence/winding-interaction-source-review.json",
+    "order_g_squared_winding_energy_and_two_static_derivatives_controlled": true,
+    "exact_endpoint_trace_derived": true,
+    "unequal_returns_and_angular_mixing_included": true,
+    "bound": "|D^j E_w^(2)| <= C_j g^2 q(H_q-1) d0^(-2-j), j=0,1,2, D_min>=d0",
+    "working_static_bound": "O(q^-3/4 log q); O(q^-27/16 log q) relative to q delta",
+    "full_renormalized_reference_controlled": false,
+    "higher_current_remainder_controlled": false,
+    "full_dynamical_stress_controlled": false,
+    "physical_matching_proved": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "exact_checks": 5,
+      "coefficient_cases": 12,
+      "contour_cases": 9,
+      "boundary_cases": 9,
+      "ode_cases": 24,
+      "angular_weights": 4,
+      "energy_refinements": 4,
+      "clock_derivatives": 3
+    },
+    "direct_pair_sum_regulators": 4,
+    "pair_sum_extrapolation_relative_error": 1.2150340373764598e-05,
+    "final_energy_refinement_relative_change": 0.0004976382804748068,
+    "final_clock_derivative_relative_changes": {
+      "first": 4.751779514807445e-06,
+      "second": 1.640207196404707e-05
+    },
+    "preserved_harness_failure": "evidence/failures/winding-interaction-stress-01/failure.json",
+    "supplemental_unique_queries": 8,
+    "previous_goal_turn_classification": "progress: the open-photon-load ordinary argument and exact-source checks were committed and pushed; no live process inferred from checkpoint files",
+    "next_decisive_question": "Control the renormalized unwrapped reference, higher current/vacuum diagrams and dynamical stress, then match the actual coupled geometry and state.",
+    "contribution_decision": "Continue physical damping and matched finite-duration transfer. The first return-dependent photon diagram has a finite endpoint formula and controlled static clock derivatives; full stress, physical closure and novelty remain open."
   }
 }

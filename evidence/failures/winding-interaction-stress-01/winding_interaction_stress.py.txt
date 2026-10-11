@@ -1,0 +1,288 @@
+"""Checks of the first return-dependent photon vacuum diagram and clock derivatives."""
+import os
+os.environ.setdefault('OPENBLAS_NUM_THREADS', '1')
+from pathlib import Path
+from functools import lru_cache
+import hashlib
+import importlib.util
+import json
+import platform
+import warnings
+import numpy as np
+import scipy
+from scipy.integrate import quad, solve_ivp, IntegrationWarning
+from scipy.linalg import block_diag, solve_banded
+from scipy.special import spherical_kn
+import sympy as sy
+
+ROOT=Path(__file__).resolve().parents[1]
+NOTE=ROOT/'notes/winding-interaction-stress.md'
+OUT=ROOT/'evidence/winding-interaction-stress.json'
+DEP=ROOT/'checks/angular_current_renormalization.py'
+spec=importlib.util.spec_from_file_location('angular',DEP)
+angular=importlib.util.module_from_spec(spec);spec.loader.exec_module(angular)
+QUAD_EPS=2e-11
+REFINEMENT_TOLERANCE=.01
+ODE_TOLERANCE=.001
+
+
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def delta_f(z,Li,Lj):
+    if abs(z)<1e-3*min(Li,Lj):
+        a,b=np.pi/Li,np.pi/Lj
+        return -(a*a+b*b)/(24*np.pi**2)+z*z*(7*(a**4+b**4)/360+a*a*b*b/36)/(4*np.pi**2)
+    a,b=np.pi*z/Li,np.pi*z/Lj
+    if a.real+b.real>650:
+        value=0j
+    else:value=1/(4*Li*Lj*np.sinh(a)*np.sinh(b))
+    return value-1/(4*np.pi**2*z*z)
+
+
+def coefficient_real(k,Li,Lj):
+    if k==0:return 4*quad(lambda t:float(delta_f(t,Li,Lj).real),0,np.inf,epsabs=QUAD_EPS,limit=250)[0]
+    return 4*quad(lambda t:float(delta_f(t,Li,Lj).real),0,np.inf,weight='cos',wvar=k,
+                  epsabs=QUAD_EPS,limlst=150)[0]
+
+
+@lru_cache(maxsize=12000)
+def coefficient_scaled(k,Li,Lj,T,d0):
+    """Return exp(kT) A, integrating above the real axis, with stable tails."""
+    if Li==Lj:
+        if k==0:return -1/(np.pi*Li)
+        return -k*np.exp(-k*(Li-T))/(np.pi*(-np.expm1(-k*Li)))
+    b=T+d0/2
+    assert b<min(Li,Lj)
+    if k==0:
+        value=quad(lambda t:float(delta_f(t+1j*b,Li,Lj).real),0,np.inf,epsabs=QUAD_EPS,limit=250)[0]
+    else:
+        value=quad(lambda t:float(delta_f(t+1j*b,Li,Lj).real),0,np.inf,weight='cos',wvar=k,
+                   epsabs=QUAD_EPS,limlst=150)[0]
+        value-=quad(lambda t:float(delta_f(t+1j*b,Li,Lj).imag),0,np.inf,weight='sin',wvar=k,
+                    epsabs=QUAD_EPS,limlst=150)[0]
+    return 4*np.exp(-k*d0/2)*value
+
+
+def exact_checks():
+    z,k,s,t,T=sy.symbols('z k s t T', real=True)
+    Li,Lj=sy.symbols('Li Lj',positive=True)
+    F=1/(4*Li*Lj*sy.sinh(sy.pi*z/Li)*sy.sinh(sy.pi*z/Lj))-1/(4*sy.pi**2*z*z)
+    assert sy.simplify(sy.limit(F,z,0)+(Li**-2+Lj**-2)/24)==0
+    ap=sy.Matrix([1,-sy.I]);am=sy.Matrix([1,sy.I])
+    rank=(sy.exp(k*(s-t))*ap*ap.T+sy.exp(-k*(s-t))*am*am.T)/2
+    expected=sy.Matrix([[sy.cosh(k*(s-t)),-sy.I*sy.sinh(k*(s-t))],[-sy.I*sy.sinh(k*(s-t)),-sy.cosh(k*(s-t))]])
+    assert sy.simplify((rank-expected).rewrite(sy.exp))==sy.zeros(2)
+    for sign,a in [(1,ap),(-1,am)]:
+        q=sy.exp(sign*k*s)*a
+        assert sy.simplify(-sy.diff(q[0],s)+sy.I*k*q[1])==0
+    bp=sy.Matrix([-sy.exp(-k*T/2),sy.exp(k*T/2)])
+    bm=sy.Matrix([-sy.exp(k*T/2),sy.exp(-k*T/2)])
+    assert sy.simplify(((bp*bm.T+bm*bp.T)/2-sy.Matrix([[1,-sy.cosh(k*T)],[-sy.cosh(k*T),1]])).rewrite(sy.exp))==sy.zeros(2)
+    assert sy.simplify(1/(sy.sinh(2*z)*sy.sinh(z))+(sy.diff(1/sy.sinh(z),z)+1/sy.cosh(z))/2)==0
+    return ['coincident_subtraction','rank_two_current_kernel','two_bulk_curl_cancellations','endpoint_matrix','double_length_identity']
+
+
+def coefficient_checks():
+    rows=[]
+    for L1,L2 in [(3.,3.),(3.,6.),(3.,1e6)]:
+        for k in [0.,.3,1.,3.]:
+            value=coefficient_real(k,L1,L2)
+            if L1==L2:
+                exact=-1/(np.pi*L1) if k==0 else -k/(np.pi*np.expm1(k*L1))
+            elif L2==2*L1:exact=k*(1-np.tanh(k*L1))/(2*np.pi)-1/(4*L1*np.cosh(k*L1))
+            else:exact=-np.log1p(np.exp(-k*L1))/(np.pi*L1)
+            assert abs(value-exact)<2e-9,(L1,L2,k,value,exact)
+            rows.append(dict(Li=L1,Lj=L2,k=k,coefficient=value,independent_limit=float(exact),error=float(abs(value-exact))))
+    contours=[]
+    for Li,Lj in [(2.8,3.6),(2.8,7.1),(3.6,7.1)]:
+        for k in [.2,.7,1.5]:
+            T,d0=2.4,.4
+            a=coefficient_real(k,Li,Lj)
+            c=coefficient_scaled(k,Li,Lj,T,d0)*np.exp(-k*T)
+            b=(1/(2*d0)+1/(2*np.pi*(T+d0/2)))*np.exp(-k*(T+d0/2))
+            assert abs(a-c)<3e-10 and abs(a)<=b
+            contours.append(dict(Li=Li,Lj=Lj,k=k,contour_error=float(abs(a-c)),bound=float(b)))
+    return rows,contours
+
+
+def pair_sum_checks():
+    Li,Lj,k,d=2.8,4.4,.7,.8
+    expected=coefficient_real(k,Li,Lj)*np.cosh(k*d)
+    rows=[]
+    for reg in [.04,.02,.01,.005]:
+        cutoff=24/reg
+        ni=int(cutoff*Li/(2*np.pi))+1;nj=int(cutoff*Lj/(2*np.pi))+1
+        # Row batching avoids a large two-dimensional regulator array.
+        m=2*np.pi*(np.arange(nj)+.5)/Lj
+        total=0.
+        for start in range(0,ni,64):
+            n=2*np.pi*(np.arange(start,min(start+64,ni))+.5)/Li
+            e=n[:,None]+m[None,:]
+            total+=np.sum(e*np.exp(-reg*e)*np.cos(d*e)/(k*k+e*e))
+        finite=4*total/(Li*Lj)
+        rest=quad(lambda e:np.exp(-reg*e)/(k*k+e*e),0,np.inf,weight='cos',wvar=d,epsabs=QUAD_EPS,limlst=150)[0]
+        reference=(reg/(reg*reg+d*d)-k*k*rest)/np.pi**2
+        diff=finite-reference
+        rows.append(dict(regulator=reg,value=float(diff),target=float(expected),error=float(abs(diff-expected))))
+    extrap=2*rows[-1]['value']-rows[-2]['value']
+    error=abs(extrap-expected)/abs(expected)
+    assert error<.001,error
+    assert all(rows[i]['error']<rows[i-1]['error'] for i in range(1,len(rows)))
+    return dict(cases=rows,linear_extrapolation_relative_error=float(error),tolerance=.001)
+
+
+@lru_cache(maxsize=1000)
+def core_parts(n,a,l):
+    y=np.linspace(-.5,.5,n+1);h=1/n
+    stiffness=np.diag(np.r_[1.,np.full(n-1,2.),1.]/h)+np.diag(np.full(n,-1/h),1)+np.diag(np.full(n,-1/h),-1)
+    mass=np.zeros((n+1,n+1));potential=np.zeros_like(mass)
+    gx,gw=np.polynomial.legendre.leggauss(6);shape=np.array([(1-gx)/2,(1+gx)/2])
+    for j in range(n):
+        s=(y[j]+y[j+1])/2+h*gx/2
+        measure=h*gw/2
+        mass[j:j+2,j:j+2]+=(shape*measure)@shape.T
+        potential[j:j+2,j:j+2]+=(shape*(measure*l*(l+1)*(2*a)**2/np.cos(2*a*s)**2))@shape.T
+    return stiffness+potential,mass
+
+
+def core_dtn(n,a,l,T,k):
+    H,M=core_parts(n,a,l);K=H/T+k*k*T*M
+    boundary=[0,n];inside=np.arange(1,n)
+    A=K[np.ix_(inside,inside)]
+    ab=np.zeros((3,n-1));ab[0,1:]=np.diag(A,1);ab[1]=np.diag(A);ab[2,:-1]=np.diag(A,-1)
+    return K[np.ix_(boundary,boundary)]-K[np.ix_(boundary,inside)]@solve_banded((1,1),ab,K[np.ix_(inside,boundary)])
+
+
+def flat_load(l,k,rb):
+    if k==0:return l/rb
+    return -1/rb-k*spherical_kn(l,k*rb,True)/spherical_kn(l,k*rb)
+
+
+def angular_data(q):
+    E,degree,sigma,beta,error=angular.angular_basis(q)
+    ls=degree+1;kappa=ls*(ls+1);tau=sigma*kappa
+    weighted=E*np.sqrt(tau/kappa)[:,None,None]
+    return ls,kappa,tau,weighted,error
+
+
+def boundary_green(q,n,T,k,mixed=True,a=1.2):
+    ls,_,_,_,_=angular_data(q)
+    total=len(ls)
+    dtn={l:core_dtn(n,a,l,T,k) for l in range(1,q)}
+    K=block_diag(*[dtn[int(l)] for l in ls])
+    O=np.linalg.qr(np.random.default_rng(5312+q).normal(size=(total,total)))[0] if mixed else np.eye(total)
+    Z=O@np.diag([flat_load(int(l),k,np.cos(a)) for l in ls])@O.T
+    for end in [0,1]:
+        ids=2*np.arange(total)+end
+        K[np.ix_(ids,ids)]+=Z
+    return np.linalg.inv(K)
+
+
+def ode_checks():
+    rows=[]
+    a,T=1.2,2.4
+    for l in [1,2]:
+        for k in [.2,1.,3.]:
+            def rhs(s,y):
+                v=l*(l+1)*(2*a/T)**2/np.cos(2*a*s/T)**2+k*k
+                return [y[1],v*y[0],y[3],v*y[2]]
+            r=solve_ivp(rhs,[-T/2,T/2],[1,0,0,1],method='DOP853',rtol=1e-12,atol=1e-13)
+            assert r.success
+            f,fp,g,gp=r.y[:,-1]
+            dtn=np.array([[f/g,-1/g],[-1/g,gp/g]])
+            load=flat_load(l,k,np.cos(a));reference=np.linalg.inv(dtn+load*np.eye(2))
+            for n in [24,48,96,192]:
+                actual=np.linalg.inv(core_dtn(n,a,l,T,k)+load*np.eye(2))
+                error=np.linalg.norm(actual-reference,2)/np.linalg.norm(reference,2)
+                rows.append(dict(l=l,k=k,n=n,relative_error=float(error)))
+                if n==192:assert error<ODE_TOLERANCE
+    return rows
+
+
+def boundary_identity_checks():
+    rows=[]
+    for T in [1.8,2.4,3.2]:
+        for k in [.2,1.,3.]:
+            n=16;h=T/n;y=np.linspace(-T/2,T/2,n+1)
+            gx,gw=np.polynomial.legendre.leggauss(8)
+            B=[]
+            for sign in [1,-1]:
+                source=np.zeros(n+1,dtype=complex)
+                for j in range(n):
+                    s=(y[j]+y[j+1])/2+h*gx/2
+                    p=np.exp(sign*k*s);f1=-sign*1j*p
+                    shape=np.array([(1-gx)/2,(1+gx)/2])
+                    derivative=np.array([-np.ones(8),np.ones(8)])/h
+                    source[j:j+2]+=np.sum((derivative*p+1j*k*shape*f1)*h*gw/2,axis=1)
+                target=np.zeros(n+1);target[0]=-np.exp(-sign*k*T/2);target[-1]=np.exp(sign*k*T/2)
+                assert np.max(abs(source-target))<2e-12
+                B.append(source)
+            direct=(np.outer(B[0],B[1].conj())+np.outer(B[1],B[0].conj()))/2
+            Q=np.array([[1,-np.cosh(k*T)],[-np.cosh(k*T),1]])
+            error=np.max(abs(direct[np.ix_([0,n],[0,n])]-Q))
+            assert error<2e-10
+            rows.append(dict(T=T,k=k,endpoint_error=float(error),dirichlet_interior_norm=float(np.linalg.norm(direct[1:-1,1:-1]))))
+    return rows
+
+
+def integrand(q,n,T,k,D,mixed=True):
+    ls,kappa,tau,W,_=angular_data(q)
+    d0=min(min(D),1.,T/2)
+    A=np.array([[coefficient_scaled(float(k),float(T+di),float(T+dj),float(T),float(d0)) for dj in D] for di in D])
+    C=np.einsum('aij,bij,ij->ab',W,W.conj(),A).real
+    e=np.exp(-k*T);Q=np.array([[e,-(1+e*e)/2],[-(1+e*e)/2,e]])
+    G=boundary_green(q,n,T,k,mixed)
+    return -float(np.trace(np.kron(C,Q)@G))/(2*np.pi)
+
+
+def energy(q,n,nk,K,T,D,mixed=True):
+    nodes,weights=np.polynomial.legendre.leggauss(nk)
+    return sum(K*w/2*integrand(q,n,T,K*(z+1)/2,D,mixed) for z,w in zip(nodes,weights))
+
+
+def run():
+    warnings.simplefilter('error',IntegrationWarning)
+    exact=exact_checks();coefficients,contours=coefficient_checks()
+    pairs=pair_sum_checks();boundary=boundary_identity_checks();ode=ode_checks()
+    weights=[]
+    for q in [2,3,4,6]:
+        _,kappa,tau,_,error=angular_data(q)
+        actual=float(np.sum(tau/kappa));expected=q*(sum(1/j for j in range(1,q+1))-1)/(4*np.pi)
+        assert abs(actual-expected)<2e-12
+        weights.append(dict(q=q,actual=actual,exact=expected,angular_gram_error=error))
+    q,T,D=3,2.4,(.4,1.2,4.7)
+    values=[]
+    for n,nk,K in [(24,32,24.),(48,64,24.),(96,96,24.),(96,96,36.)]:
+        value=energy(q,n,nk,K,T,D)
+        values.append(dict(n=n,nk=nk,kmax=K,energy_coefficient=value))
+    change=abs(values[-1]['energy_coefficient']-values[-2]['energy_coefficient'])/abs(values[-1]['energy_coefficient'])
+    meshchange=abs(values[-2]['energy_coefficient']-values[-3]['energy_coefficient'])/abs(values[-2]['energy_coefficient'])
+    assert change<REFINEMENT_TOLERANCE and meshchange<REFINEMENT_TOLERANCE
+    derivatives=[]
+    e0=energy(q,64,64,30.,T,D)
+    for step in [.02,.01,.005]:
+        ep=energy(q,64,64,30.,T*np.exp(step),D)
+        em=energy(q,64,64,30.,T*np.exp(-step),D)
+        derivatives.append(dict(step=step,energy=e0,first=(ep-em)/(2*step),second=(ep+em-2*e0)/step**2))
+    errors={key:abs(derivatives[-1][key]-derivatives[-2][key])/max(abs(derivatives[-1][key]),1e-8) for key in ['first','second']}
+    assert max(errors.values())<REFINEMENT_TOLERANCE,errors
+    r=dict(status='passed_winding_interaction_stress_checks',date='2026-10-11',
+        scope='Order-g^2 return-dependent photon vacuum diagram and first two static clock derivatives; full reference and higher orders excluded',
+        note_sha256=sha(NOTE),script_sha256=sha(Path(__file__)),dependency_hashes={'checks/angular_current_renormalization.py':sha(DEP)},
+        environment=dict(python=platform.python_version(),numpy=np.__version__,scipy=scipy.__version__,sympy=sy.__version__),
+        full_renormalized_stress_controlled=False,higher_order_remainder_controlled=False,
+        physical_damping_proved=False,novelty_established=False,lean_invocations=0,
+        exact_checks=exact,coefficient_cases=coefficients,contour_cases=contours,pair_sum=pairs,
+        boundary_cases=boundary,ode_cases=ode,angular_weights=weights,energy_refinements=values,
+        frequency_tail_relative_change=float(change),combined_mesh_frequency_relative_change=float(meshchange),
+        clock_derivatives=derivatives,clock_derivative_relative_changes=errors,
+        ode_tolerance=ODE_TOLERANCE,refinement_tolerance=REFINEMENT_TOLERANCE)
+    OUT.write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(dict(status=r['status'],exact_checks=len(exact),coefficient_cases=len(coefficients),
+        contour_cases=len(contours),pair_sum_error=pairs['linear_extrapolation_relative_error'],
+        boundary_cases=len(boundary),ode_cases=len(ode),energy_refinements=values,
+        clock_derivative_relative_changes=errors)))
+
+
+if __name__=='__main__':run()
