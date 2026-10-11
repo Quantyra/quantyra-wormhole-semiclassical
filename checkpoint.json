@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "coupled_singlet_return_and_oscillator_stress_verified_physical_asymptotic_pending",
+  "status": "uniform_gaussian_singlet_absorption_proved_physical_closure_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue the physical damping/fallback investigation; this necessary Gaussian refinement is not accepted novelty or a separate graph paper.",
+  "novelty": "Continue the physical damping investigation: its included Gaussian singlet preserves leading smoothed absorption; physical closure and novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control the coupled stress response at damping-scale resolution and its renormalized real part, then bound physical matching, interactions and state errors.",
+    "Control the renormalized real response and the physical metric vertex, matching, remaining interactions and finite-time state.",
     "Finish primary/fallback novelty selection and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/schwinger-return-feedback.md",
-  "current_verification": "evidence/schwinger-return-feedback.json",
+  "current_note": "notes/singlet-stress-continuum.md",
+  "current_verification": "evidence/singlet-stress-continuum.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -792,5 +792,39 @@
     "supplemental_web_queries": 4,
     "next_decisive_question": "Control the coupled stress response at damping-scale resolution and its renormalized real part, then bound physical matching, interactions and state errors.",
     "contribution_decision": "Continue the physical damping/fallback investigation; this necessary Gaussian refinement is not accepted novelty or a separate graph paper."
+  },
+  "singlet_stress_continuum": {
+    "note": "notes/singlet-stress-continuum.md",
+    "verification": "evidence/singlet-stress-continuum.json",
+    "bounded_projection_stress_identity": true,
+    "two_boundary_defect_space_proof": true,
+    "uniform_in_bounded_singlet_mass": true,
+    "positive_band_model_limit_proved": true,
+    "infrared_cutoff_removed": true,
+    "finite_channel_error_bound": true,
+    "actual_dipole_leading_limit": true,
+    "actual_dipole_remainder_rate_proved": false,
+    "real_response_renormalization_complete": false,
+    "physical_vertex_closed": false,
+    "physical_state_constructed": false,
+    "physical_matching_closed": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "model_scale_condition": "delta=q^(-a), 0<a<1/5; frequency width delta",
+    "model_absorption_coefficient": 0.009282710280588215,
+    "counts": {
+      "exact_checks": 4,
+      "energy_representation_cases": 6,
+      "resolvent_cases": 3,
+      "cauchy_cases": 2,
+      "derivative_cases": 4,
+      "soft_count_cases": 9,
+      "continuum_cases": 3
+    },
+    "numerical_continuum_scope": "free channel sums; tested q*delta^5<1 does not verify a small interacting error",
+    "supplemental_web_queries": 6,
+    "next_decisive_question": "Control the renormalized real response and the physical metric vertex, matching, remaining interactions and finite-time state.",
+    "contribution_decision": "Continue the physical damping investigation: its included Gaussian singlet preserves leading smoothed absorption; physical closure and novelty remain open."
   }
 }
