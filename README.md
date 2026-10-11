@@ -1,16 +1,15 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [transparent clock calculation](notes/transparent-clock-flux.md)
-derives the complete retarded symmetric-clock response in the leading
-free JT/channel model and constructs its causal finite-history matter
-state. Its positive spectrum excludes growing clock poles in that model.
-Physical damping still requires finite-channel decay, interactions and
-four-dimensional background/channel/state matching.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-transparent-clock-flux-audit.md).
+Current continuation, 2026-10-11: the [finite-channel proof](notes/finite-channel-decay.md)
+establishes a linear decay interval in the free inverse-tail JT/channel
+model when delta tends to zero and q delta^3 tends to infinity. Each
+fixed finite system remains recurrent. Interactions, full physical matching
+and novelty acceptance remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-finite-channel-decay-audit.md).
 
-Remaining to-do list: control finite-channel decay and interacting stress,
-close physical matching, finish novelty and the consequential result,
-then verify, GCP-certify suitable endpoints and prepare the manuscript.
+Remaining to-do list: control interacting stress and the physical response,
+close matching, finish novelty and the consequential result, then verify,
+GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

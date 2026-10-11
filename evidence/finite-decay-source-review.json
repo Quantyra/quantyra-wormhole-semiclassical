@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-11",
+  "status": "supplemental_primary_source_review_complete_with_declared_scope",
+  "search_query_count": 3,
+  "search_queries": [
+    "Friedrichs model weak coupling limit exponential decay spectral measure Cauchy distribution finite reservoir",
+    "Davies 1974 Markovian master equations weak coupling limit reservoir discrete spectrum recurrence",
+    "Caldeira Leggett oscillator bath counterterm closed quadratic form singular coupling spectral measure"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2607.29485v1",
+      "cached_filename": "2607.29485v1-finite-decay.html",
+      "sha256": "355a56354daa9de85046b5cc52c12340018a01f3b3148d376cee35e1ab864ef3",
+      "review_scope": "Main statements and comparison in section 1; sections 2 and 3 completely read; section 4 not newly audited."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.29485v1",
+      "cached_filename": "2607.29485v1-finite-decay.pdf",
+      "sha256": "88666644c46feb832ff6752b975430b3859288e8951d3921469244cd58b91a4d",
+      "review_scope": "Page 11 independently checked against HTML for the Holder endpoint integral."
+    },
+    {
+      "url": "https://arxiv.org/pdf/math-ph/0604058v2",
+      "cached_filename": "0604058v2-finite-decay.pdf",
+      "sha256": "7e455f19076a905b23827421f1942d3111302d72982509cb96a51a2e13bd0525",
+      "review_scope": "Pages 1-5 read: introduction and start of dilation framework. Full extended-limit proof not newly reviewed."
+    }
+  ],
+  "closest_overlap": "Discrete-reservoir exponential decay and the Cauchy spectral mechanism are established prior art. This milestone verifies the wormhole inverse-tail response and a sufficient channel-count hierarchy, not novelty of the mechanism.",
+  "proof_caveat": {
+    "source": "2607.29485v1",
+    "location": "Lemma 2.2, equation (2.7), PDF page 11",
+    "issue": "The integral of t^alpha/(1+t^2) diverges at alpha=1. A Lipschitz cusp gives eta log(1/eta), not O(eta).",
+    "independent_counterexample": "rho(y)=(1+abs(y))/3 on [-1,1]",
+    "effect": "Do not import the stated Lipschitz endpoint estimate. Strictly sub-Lipschitz exponents and other claims are not refuted by this local counterexample."
+  },
+  "full_novelty_review_complete": false,
+  "central_register_modified": false,
+  "novelty_established": false,
+  "lean_invocations": 0
+}
