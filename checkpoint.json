@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "prescribed_electric_screening_verified_rotating_physical_interface_pending",
+  "status": "local_rotation_verified_global_equilibrium_excluded_finite_time_state_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Retain the justified MMP screening baseline; no standalone novelty acceptance or formalization campaign.",
+  "novelty": "Retain local rotation algebra; exclude global rigid-equilibrium state closure. No new physical obstruction or standalone baseline paper.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,8 +18,8 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive source proofs/editions and select the primary question plus fallback",
-    "Derive the rotating metric/gauge Dirac matching and its electric/radiative state, then bound full energy and load derivatives.",
-    "Establish the complete physical consequence and common-observer comparison",
+    "Construct an admissible initial state with matched exterior/throat data and bound its evolved stress and variation over a throat transit.",
+    "Close physical matching and the full support/transport and common-observer consequence",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
   "baseline_note": "notes/axial-baseline-and-throat-energy.md",
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/rotating-electric-screening.md",
-  "current_verification": "evidence/rotating-electric-screening.json",
+  "current_note": "notes/rotating-dirac-and-state.md",
+  "current_verification": "evidence/rotating-dirac-and-state.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -629,5 +629,38 @@
     "edition_comparison": "MMP v3 Appendices A/G and 6.1.3 compared with 2023 accepted manuscript; relevant screening equations agree; final typeset edition and complete dependencies remain pending",
     "contribution_decision": "Retain the justified MMP screening baseline; no standalone novelty acceptance or formalization campaign.",
     "next_decisive_question": "Derive the rotating metric/gauge Dirac matching and its electric/radiative state, then bound full energy and load derivatives."
+  },
+  "rotating_dirac_and_state": {
+    "note": "notes/rotating-dirac-and-state.md",
+    "receipt": "evidence/rotating-dirac-and-state.json",
+    "local_rotating_weyl_congruence_derived": true,
+    "shrinking_collar_covariant_gradient_accounted_for": true,
+    "sufficient_bulk_scaling": "7/8 < nu < 1; nu=15/16 gives O(q^(-1/16)), not a return theorem",
+    "global_corotating_hadamard_equilibrium_closure_ruled_out": true,
+    "obstruction_is_established_state_theorem": true,
+    "probability_current_contraction_distinguished_from_equilibrium_state": true,
+    "finite_time_buffer_hierarchy_compatible": true,
+    "physical_initial_hadamard_state_constructed": false,
+    "complete_rotating_return_proved": false,
+    "physical_metric_and_gauge_interface_proved": false,
+    "complete_four_dimensional_energy_derived": false,
+    "common_observer_comparison_completed": false,
+    "novelty_established": false,
+    "final_primary_fallback_selected": false,
+    "lean_invocations": 0,
+    "verification_counts": {
+      "exact_checks": 11,
+      "exact_exponents": 10,
+      "differential_cases": 24,
+      "state_cases": 9
+    },
+    "supplemental_search_queries": 6,
+    "source_comparisons": [
+      "1806.02124v2 section 2 assumptions and proof, section 3",
+      "math-ph/0202003v1 Theorem 2.8 complete proof",
+      "1401.6388v2 sections 3-4; appendix inspected, stress not imported"
+    ],
+    "contribution_decision": "Retain local rotation algebra; exclude global rigid-equilibrium state closure. No new physical obstruction or standalone baseline paper.",
+    "next_decisive_question": "Construct an admissible initial state with matched exterior/throat data and bound its evolved stress and variation over a throat transit."
   }
 }
