@@ -1,17 +1,16 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [local Maxwell stress and focusing](notes/local-maxwell-stress.md)
-controls the magnetic correction by C q/d^2 under explicit inner-geometry
-and regularity conditions. The radial null cross term cancels; the direct
-leading spherical focusing correction is O(q^-9 (log q)^8) relative to
-the specified Casimir opening. The physical joined metric, complete
-second-order response, quantum state and novelty remain unresolved.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-local-maxwell-stress-audit.md).
+Current continuation, 2026-10-11: [magnetic mouth force balance](notes/magnetic-mouth-force.md)
+verifies the first-order coupled Einstein-Maxwell mouth response and its
+regular-axis acceleration condition. The selected weak-coupling family
+passes leading orbital, unscreened-drift and radiation hierarchy checks.
+These reproduce established physics. Binary/open-throat matching, the
+time-dependent quantum state and novelty remain unresolved.
 
-Remaining to-do list: solve the coupled metric/Maxwell boundary problem,
-verify the inner conditions, close the quantum state/response and novelty,
-then independently verify, GCP-certify the consequential result and prepare
-the manuscript.
+Remaining to-do list: match force-balanced moving mouths through the open
+throat, control the full time-dependent state/response, finish the physical
+endpoint and novelty review, then independently verify, GCP-certify suitable
+mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

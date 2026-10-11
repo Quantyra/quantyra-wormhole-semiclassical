@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-11",
+  "scope": "First-order coupled magnetic RN mouth response, regular-axis force balance, and leading orbital hierarchy in the already selected weak-coupling family",
+  "queries": [
+    "magnetically charged Reissner Nordstrom external magnetic field conical singularities Ernst acceleration balance magnetic black hole Lambda",
+    "Ernst magnetic Reissner Nordstrom metric Lambda 1 B P cos theta conical singularity",
+    "\"Symmetries of magnetized horizons\" arxiv",
+    "Ernst magnetically charged C metric B A m balance equation arxiv review"
+  ],
+  "reviewed_sources": [
+    {
+      "authors": "Sasha Brenner, Gaston Giribet and Luciano Montecchio",
+      "title": "Symmetries of magnetized horizons",
+      "version": "Published Physical Review D 103, 124006 (1 June 2021), nine PDF pages",
+      "url": "https://doi.org/10.1103/PhysRevD.103.124006",
+      "download_url": "https://inspirehep.net/files/e879bcbe974bea0564e8f491c097a155",
+      "cache": "references/cache/magnetized-horizons-force.pdf",
+      "sha256": "8937376dd26aef4c9629ea2cbab56bad5c55e3a86a37dd45dc7685de7d948d15",
+      "read_scope": "Title/abstract and Section VI, printed page 124006-8, equations (31)-(33) and the full cone-regularity/force discussion. The PDF page was also rendered and visually inspected.",
+      "use": "Static magnetic Ernst metric and potential, and the established interpretation of its unequal axis deficits as the force needed to hold a magnetic monopole at rest. Our first-order metric, Maxwell and axis equations are independently calculated.",
+      "source_correction": "The expanded azimuthal-period expressions printed after (33) do not equal the displayed Lambda squared at either pole. Direct substitution into (32) gives C_N=(1-BP/2)^4 and C_S=(1+BP/2)^4. The calculation uses those direct metric limits. This is not an OCR ambiguity: the printed page was inspected.",
+      "limits": "The horizon charge formalism in Sections III-V and its proof dependencies were not audited or imported. The exact solution-generating theorem is established background, not newly independently proved here."
+    },
+    {
+      "authors": "Jiri Bicak and David Kofron",
+      "title": "Rotating charged black holes accelerated by an electric field",
+      "version": "arXiv:1006.4072v1, archive stamp 21 June 2010; six PDF pages; the manuscript header separately prints August 13, 2018",
+      "url": "https://arxiv.org/abs/1006.4072v1",
+      "download_url": "https://arxiv.org/pdf/1006.4072",
+      "cache": "references/cache/1006.4072-force.pdf",
+      "sha256": "7c2479a324d4e60967dcebc1e898a588191db944222865d94d989ceb55075210",
+      "read_scope": "Main text Sections I-IV, including the factored charged C-metric (2)-(8), projection and Harrison transformations (11)-(20), and both-axis regularity conditions (25)-(30).",
+      "use": "Established acceleration-field equilibrium and elementary-flatness test. We specialize to the nonrotating magnetic dual with an explicitly declared orientation and geometric field normalization. The local first-order field equations and cone factors are independently verified rather than importing rotating formulas unaltered.",
+      "limits": "The rotating solution and upstream projection/Harrison existence proofs were not independently reconstructed. The book and Ernst 1976 dependencies remain outside this scoped proof review. Our full nonlinear check is restricted to angular cone geometry; the independent bulk calculation is first order."
+    },
+    {
+      "authors": "Juan Maldacena, Alexey Milekhin and Fedor Popov",
+      "title": "Traversable wormholes in four dimensions",
+      "version": "arXiv:1807.04726v3",
+      "url": "https://arxiv.org/html/1807.04726v3#S6.SS1",
+      "cache": "references/cache/1807.04726v3-open-photon.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "read_scope": "Complete Section 6.1 and subsections 6.1.1-6.1.4, including orbital frequency, naive and screened orbital drift, leading radiation, Unruh-like scale and thermodynamic qualification.",
+      "use": "Established orbital support proposal and leading frequency, drift and radiation comparators. We retain g explicitly, impose the selected g^2=q^-2 family, and independently derive the resulting constants and exponents.",
+      "limits": "Appendix G screening and circular-motion radiation/temperature dependencies are not newly proof-reviewed. Passing the naive unscreened scale diagnostic does not derive the actual field-line return. The local throat excitation scale is not a uniform gap of the exterior continuum; no adiabatic theorem, vacuum construction or physical stability is inferred."
+    }
+  ],
+  "access_notes": [
+    "Attempted arXiv HTML views for the two older articles returned errors; exact PDF artifacts were obtained through INSPIRE and arXiv and retained in the ignored cache.",
+    "Both source-download sessions were polled by their live handles and completed with exit code zero. Neither was restarted on a timeout."
+  ],
+  "verification": "evidence/magnetic-mouth-force.json",
+  "development_notes": [
+    "The first verifier run passed all background/linear bulk equations and then failed the expected frozen-metric residual coefficient. Independent radial differentiation gives -2 B P^2/r^2 because the potential includes B/2; the initial expectation had a factor of two error. The expectation was corrected without relaxing any tolerance.",
+    "The static source's printed period expansion was checked against both the metric and the rendered original PDF; the direct metric limit was retained."
+  ],
+  "novelty_decision": "Continue physical long-return damping with matched finite-duration band transfer as fallback. The local l=1 classical mouth response must include force balance. A globally static unsupported mouth is not supplied by this Ernst branch; the existing static calculation remains an auxiliary reference pending a controlled comparison. The selected weak-coupling family passes leading orbital, unscreened-drift and total-radiation hierarchies. These reproduce established mechanisms, not a new physical endpoint.",
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "full_binary_metric_matched": false,
+  "quantum_open_throat_matched": false,
+  "quantum_state_derived": false,
+  "physical_transport_proved": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}
