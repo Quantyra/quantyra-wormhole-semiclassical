@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [loaded operator realization](notes/loaded-operator-realization.md)
-constructs the prescribed all-higher-mode throat/exterior operator and its
-interface traces. A smooth gauge completion preserves the long-return
-estimate with p=q^-1. An exactly spherical flat collar cannot join the
-dipole field through a source-free Maxwell shell; physical matching must
-admit the remote multipoles or a controlled metric response.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-loaded-realization-audit.md).
+Current continuation, 2026-10-11: [coupled Maxwell matching](notes/coupled-maxwell-matching.md)
+constructs a source-free magnetic field through both mouths on the
+prescribed metric, matching the potential and normal flux. Its classical
+energy correction is subleading to q/ell at p=q^(-3/2) in the retained
+weak-coupling family. Corrected Dirac response, local stress, Einstein
+backreaction, state and novelty remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-coupled-maxwell-audit.md).
 
-Remaining to-do list: derive the physical Einstein-Maxwell interface,
-control the full response and discarded tail, close stress/state and
-novelty, then independently verify, GCP-certify the consequential result
-and prepare the manuscript.
+Remaining to-do list: control corrected matter propagation and mixing,
+metric and local stress, full quantum response/state and novelty, then
+independently verify, GCP-certify the consequential result and prepare
+the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

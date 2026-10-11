@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "prescribed_loaded_operator_realized_physical_maxwell_matching_open",
+  "status": "source_free_maxwell_matching_dirac_backreaction_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The prescribed higher-mode load now has an operator realization and controlled smooth gauge completion. An exactly spherical flat cutoff cannot supply source-free Maxwell matching. The physical endpoint and novelty remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Coupled Maxwell transmission removes the artificial seam current on the prescribed metric and controls its classical energy correction. Corrected matter response, Einstein backreaction and final novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive a source-free Einstein-Maxwell mouth/throat interface admitting the remote multipoles; control its effect on the loaded return, then full angular/determinant and discarded-tail response, renormalized stress and the coupled state.",
+    "Control the completed source-free Maxwell connection in the full Dirac channel mixing and return/source derivatives; derive local stress and Einstein backreaction, then the coupled state and renormalized response including exterior determinant and discarded physical tail.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/loaded-operator-realization.md",
-  "current_verification": "evidence/loaded-operator-realization.json",
+  "current_note": "notes/coupled-maxwell-matching.md",
+  "current_verification": "evidence/coupled-maxwell-matching.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1410,5 +1410,39 @@
     "goal_complete": false,
     "next_decisive_question": "Derive a source-free Einstein-Maxwell mouth/throat interface admitting the remote multipoles; control its effect on the loaded return, then full angular/determinant and discarded-tail response, renormalized stress and the coupled state.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The prescribed higher-mode load now has an operator realization and controlled smooth gauge completion. An exactly spherical flat cutoff cannot supply source-free Maxwell matching. The physical endpoint and novelty remain open."
+  },
+  "coupled_maxwell_matching": {
+    "date": "2026-10-11",
+    "note": "notes/coupled-maxwell-matching.md",
+    "verification": "evidence/coupled-maxwell-matching.json",
+    "source_review": "evidence/coupled-maxwell-source-review.json",
+    "source_free_maxwell_on_prescribed_geometry_proved": true,
+    "potential_and_normal_flux_matched": true,
+    "artificial_interface_current_removed": true,
+    "uniform_middle_profile_independent_bound": true,
+    "field_energy_error": "O(q^2 p^3)",
+    "classical_energy_error": "O(q^2 p^3/(g^2 d))",
+    "relative_classical_energy_bound": "O(q^-3/2 (log q)^2) relative to q/ell",
+    "selected_scale": "g^2=q^-2; delta=(log q)^-2; nu=delta^2; p=q^-3/2; a=c_a q^-1/4",
+    "prior_port_bound_insufficient": "p=q^-1 gives only O(1/delta), which does not establish subleading energy",
+    "einstein_equations_solved": false,
+    "corrected_dirac_return_controlled": false,
+    "local_stress_backreaction_controlled": false,
+    "energy_length_derivatives_controlled": false,
+    "full_quantum_state_and_response_derived": false,
+    "verification_counts": {
+      "throat_dtn_cases": 32,
+      "coupled_exterior_cases": 12,
+      "exact_angular_modes": 6
+    },
+    "max_unprojected_scaled_current_jump": 2.194588948188423e-08,
+    "max_throat_fem_bvp_difference": 0.00011099320197516249,
+    "max_sampled_scaled_field_cost": 0.4275617222525011,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Control the completed source-free Maxwell connection in the full Dirac channel mixing and return/source derivatives; derive local stress and Einstein backreaction, then the coupled state and renormalized response including exterior determinant and discarded physical tail.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Coupled Maxwell transmission removes the artificial seam current on the prescribed metric and controls its classical energy correction. Corrected matter response, Einstein backreaction and final novelty remain open."
   }
 }
