@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "exact_exterior_operator_and_closed_window_target_verified",
+  "status": "finite_spherical_mouth_modes_and_source_inverse_verified",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Exact leading flat-exterior operator and conditional stable energy window verified; curved-edge propagation is established prior work. Physical return/error and novelty remain unresolved.",
+  "novelty": "Use deformed finite spherical modes for matching. This closes the intrinsic port-profile and source-specific inverse calculation only; no standalone novelty acceptance.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,7 +18,7 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive literature proofs/editions and select the primary question plus fallback",
-    "Derive the physical flux-normalized mouth return using the exact axial operator; bound approximation error on 0.05<=xi*D<=4",
+    "Control the remaining radial corrector derivative and throat matching, then propagate through the exterior and bound the actual return on 0.05<=xi*D<=4.",
     "Bound total energy and common-observer corrections against the positive margin and establish the consequential result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/exterior-dirac-window.md",
-  "current_verification": "evidence/exterior-dirac-window.json",
+  "current_note": "notes/mouth-mode-matching.md",
+  "current_verification": "evidence/mouth-mode-matching.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -400,5 +400,31 @@
     "next_decisive_question": "Prove uniform prepared-input propagation and actual mouth matching sufficient for the return norm on 0.05<=xi*D<=4, then control total energy and observer corrections.",
     "finite_port_chord_comparison": "For flat spherical ports of radius r_p, D=d-2r_p and L_port(u)>=d/u-2r_p>=D/u. Common observer events and lapse still unresolved.",
     "window_front_convention": "Use the actual front D in the generic window example; xi_d keys in the receipt denote the generic comparison front, not a finite-port center separation."
+  },
+  "mouth_mode_matching": {
+    "note": "notes/mouth-mode-matching.md",
+    "receipt": "evidence/mouth-mode-matching.json",
+    "exact_leading_flat_dipole_angular_modes": true,
+    "compact_selected_sector_gap": "sqrt(1+80q/81)/rho for q>=3 and 0<rho/d<=0.1",
+    "profile_distance_bound": "(50 sqrt(2)/81) sqrt(q) (rho/d)^2",
+    "radial_source_inverse_bound": "(27/sqrt(160)) (rho/d)^2",
+    "isolated_profile_uniform_large_q_approximation": false,
+    "prepared_packet_proof_scope": "W75 Theorem 2 and sections 3.1-3.6 read; no uniform physical port estimate imported",
+    "verification_counts": {
+      "exact_identities": 14,
+      "profile_cases": 36,
+      "large_flux_distortion_cases": 5,
+      "angular_spectrum_cases": 18,
+      "cartesian_operator_cases": 12
+    },
+    "angular_spectrum_resolutions": 3,
+    "physical_port_return_derived": false,
+    "physical_return_error_bounded": false,
+    "complete_four_dimensional_energy_derived": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "Use deformed finite spherical modes for matching. This closes the intrinsic port-profile and source-specific inverse calculation only; no standalone novelty acceptance.",
+    "next_decisive_question": "Control the remaining radial corrector derivative and throat matching, then propagate through the exterior and bound the actual return on 0.05<=xi*D<=4."
   }
 }

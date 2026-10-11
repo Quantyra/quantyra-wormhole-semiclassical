@@ -2,6 +2,15 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
+The [finite spherical mouth calculation](notes/mouth-mode-matching.md)
+identifies exact deformed angular zero modes in the leading flat dipole
+field. A compact selected-sector gap bounds their radial source correction
+by `27/sqrt(160) (rho/d)^2` for `q>=3` and `rho/d<=0.1`.
+Using isolated-monopole profiles at fixed `rho/d` is not uniformly accurate
+as flux grows. Use the deformed modes for the next throat/port matching
+step. The correction derivative, full exterior return and physical energy
+are still unresolved; no novel physical theorem or Lean certificate follows.
+
 The [exterior Dirac audit](notes/exterior-dirac-window.md) derives the
 exact two-dimensional operator in each angular sector of the leading flat
 dipole exterior, including spin/measure and curvature terms. Its mass-zero
