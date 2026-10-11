@@ -2,6 +2,15 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
+The [finite mouth-collar calculation](notes/mouth-collar-scattering.md)
+controls the radial corrector derivative and converts its residual into a
+prepared-input scattering bound for the actual flat dipole annulus. The
+ordinary proof retains every angular excitation in the selected sectors.
+For `3<=q<=10^12`, `rho_1/d<=1/12500` and `0.05<=xi*d<=5`, the collar
+error is below `8e-6`. Coupling this local map to the actual exterior load
+still requires higher-mode feedback and curved throat/state control;
+the full two-mouth return and energy result remain unresolved.
+
 The [finite spherical mouth calculation](notes/mouth-mode-matching.md)
 identifies exact deformed angular zero modes in the leading flat dipole
 field. A compact selected-sector gap bounds their radial source correction

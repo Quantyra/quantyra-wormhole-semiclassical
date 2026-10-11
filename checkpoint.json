@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "finite_spherical_mouth_modes_and_source_inverse_verified",
+  "status": "finite_mouth_collar_prepared_input_scattering_verified",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Use deformed finite spherical modes for matching. This closes the intrinsic port-profile and source-specific inverse calculation only; no standalone novelty acceptance.",
+  "novelty": "Finite-annulus prepared-input scattering is controlled in the leading flat model. The exterior load can feed back into the annulus, so the column estimate alone is not a bound on the complete return.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,7 +18,7 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive literature proofs/editions and select the primary question plus fallback",
-    "Control the remaining radial corrector derivative and throat matching, then propagate through the exterior and bound the actual return on 0.05<=xi*D<=4.",
+    "Derive the actual exterior load and control its composition with both mouth collars, including higher-mode feedback, continuum escape and curved throat/state matching.",
     "Bound total energy and common-observer corrections against the positive margin and establish the consequential result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/mouth-mode-matching.md",
-  "current_verification": "evidence/mouth-mode-matching.json",
+  "current_note": "notes/mouth-collar-scattering.md",
+  "current_verification": "evidence/mouth-collar-scattering.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -426,5 +426,41 @@
     "lean_invocations": 0,
     "contribution_decision": "Use deformed finite spherical modes for matching. This closes the intrinsic port-profile and source-specific inverse calculation only; no standalone novelty acceptance.",
     "next_decisive_question": "Control the remaining radial corrector derivative and throat matching, then propagate through the exterior and bound the actual return on 0.05<=xi*D<=4."
+  },
+  "mouth_collar_scattering": {
+    "note": "notes/mouth-collar-scattering.md",
+    "receipt": "evidence/mouth-collar-scattering.json",
+    "radial_corrector_derivative_bound": "(27/5)rho/d^2+12 sqrt(q)rho^3/d^4",
+    "finite_annulus_prepared_input_scattering_bound": true,
+    "all_angular_excitations_retained_in_ordinary_proof": true,
+    "annular_resolvent_existence_argument": "Isolated angular direct sum, bounded self-adjoint remote-field perturbation and positive-imaginary-frequency resolvent continuation",
+    "uniform_error_example": {
+      "q_max": 1000000000000,
+      "epsilon_outer_max": 8e-05,
+      "xi_d_min": 0.05,
+      "xi_d_max": 5.0,
+      "error_bound": 8e-06
+    },
+    "verification_counts": {
+      "exact_identities": 3,
+      "rational_inequalities": 5,
+      "current_identity_cases": 9,
+      "corrector_derivative_cases": 27,
+      "scattering_cases": 12
+    },
+    "angular_orders": [
+      4,
+      7,
+      10
+    ],
+    "full_exterior_return_derived": false,
+    "full_exterior_return_error_bounded": false,
+    "curved_throat_matching_derived": false,
+    "complete_four_dimensional_energy_derived": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "Finite-annulus prepared-input scattering is controlled in the leading flat model. The exterior load can feed back into the annulus, so the column estimate alone is not a bound on the complete return.",
+    "next_decisive_question": "Derive the actual exterior load and control its composition with both mouth collars, including higher-mode feedback, continuum escape and curved throat/state matching."
   }
 }
