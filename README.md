@@ -1,15 +1,16 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [full singlet-response proof](notes/singlet-complex-response.md)
-controls the Gaussian spherical-photon correction, including its real
-dispersive part, at damping resolution when q delta^5 tends to infinity.
-Its renormalized static curvature and nonspherical interactions remain
-unresolved. The physical damping and matching claims remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-singlet-complex-response-audit.md).
+Current continuation, 2026-10-11: the [singlet static-curvature proof](notes/singlet-static-curvature.md)
+bounds the renormalized vacuum energy and both clock derivatives, retaining
+the local covariant term. It closes the Gaussian static premise and
+transfers the linear decay interval to the canonical Gaussian model in
+the declared weak-coupling family. Nonspherical interactions, physical
+matching and final novelty remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-singlet-static-curvature-audit.md).
 
-Remaining to-do list: derive the singlet static curvature, bound remaining
-interactions and physical matching, finish novelty and the consequential
-result, then verify, GCP-certify suitable endpoints and prepare the manuscript.
+Remaining to-do list: bound nonspherical interactions and physical matching,
+finish novelty and the consequential result, then independently verify,
+GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

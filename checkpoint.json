@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "gaussian_singlet_complex_response_controlled_static_and_physical_transfer_pending",
+  "status": "gaussian_singlet_static_and_dynamic_decay_transfer_proved_physical_matching_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue the existing physical damping/fallback target. The Gaussian dynamical singlet correction is now controlled, including its real part; physical transfer and final novelty remain open.",
+  "novelty": "Continue the existing physical damping/fallback target. The Gaussian static premise and canonical decay transfer are now proved; physical matching and final novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive the singlet static-curvature bound, control nonspherical interactions, and close physical background, complete return and state matching.",
+    "Control nonspherical current interactions and physical background, complete return, collar/vertex and state matching.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/singlet-complex-response.md",
-  "current_verification": "evidence/singlet-complex-response.json",
+  "current_note": "notes/singlet-static-curvature.md",
+  "current_verification": "evidence/singlet-static-curvature.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1021,5 +1021,34 @@
     "supplemental_unique_queries": 3,
     "next_decisive_question": "Derive the singlet static-curvature bound, control nonspherical interactions, and close physical background, complete return and state matching.",
     "contribution_decision": "Continue the existing physical damping/fallback target. The Gaussian dynamical singlet correction is now controlled, including its real part; physical transfer and final novelty remain open."
+  },
+  "singlet_static_curvature": {
+    "note": "notes/singlet-static-curvature.md",
+    "verification": "evidence/singlet-static-curvature.json",
+    "source_review": "evidence/singlet-static-source-review.json",
+    "date": "2026-10-11",
+    "gaussian_static_curvature_bound_proved": true,
+    "canonical_gaussian_decay_transfer_proved": true,
+    "bound": "Energy and first two clock derivatives: C[sqrt(I)+I Lbar+I^2+I(1+|log mu|+|c|+H)]",
+    "working_static_correction": "O(q^-3/8), with g^2=q^-2, epsilon=q^-1/4, delta=q^-1/16",
+    "working_equilibrium_shift": "O(q^-11/8)",
+    "fixed_local_renormalization_terms_retained": true,
+    "proper_cutoff_static_profile_included": true,
+    "full_proper_cutoff_dynamical_vertex_matched": false,
+    "nonspherical_interaction_bound_proved": false,
+    "physical_state_constructed": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "exact_checks": 10,
+      "matrix_cases": 27,
+      "kernel_cases": 16,
+      "profile_cases": 5,
+      "energy_cases": 5
+    },
+    "supplemental_unique_queries": 5,
+    "next_decisive_question": "Control nonspherical current interactions and physical background, complete return, collar/vertex and state matching.",
+    "contribution_decision": "Continue the existing physical damping/fallback target. The Gaussian static premise and canonical decay transfer are now proved; physical matching and final novelty remain open."
   }
 }
