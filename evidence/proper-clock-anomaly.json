@@ -1,0 +1,517 @@
+{
+  "status": "passed_proper_clock_anomaly_checks",
+  "date": "2026-10-11",
+  "exact_checks": [
+    {
+      "identity": "core_force",
+      "residual": "0"
+    },
+    {
+      "identity": "core_stiffness",
+      "residual": "0"
+    },
+    {
+      "identity": "moving_domain_term",
+      "residual": "0"
+    },
+    {
+      "identity": "boundary_term",
+      "residual": "0"
+    },
+    {
+      "identity": "covariant_square",
+      "residual": "0"
+    },
+    {
+      "identity": "outward_boundary_curvature_-1",
+      "residual": "0"
+    },
+    {
+      "identity": "outward_boundary_curvature_1",
+      "residual": "0"
+    }
+  ],
+  "static_metric_cases": [
+    {
+      "amplitude": 0.07,
+      "canonical_energy": -0.08350007659489199,
+      "weyl_action": 0.012236680923359992,
+      "covariant_energy": -0.09573675751825199,
+      "integrated_stress_energy": -0.095736757518252,
+      "error": 1.3877787807814457e-17
+    },
+    {
+      "amplitude": 0.3,
+      "canonical_energy": -0.08650664911995194,
+      "weyl_action": 0.013378772893604503,
+      "covariant_energy": -0.09988542201355645,
+      "integrated_stress_energy": -0.09988542201355646,
+      "error": 1.3877787807814457e-17
+    },
+    {
+      "amplitude": 0.65,
+      "canonical_energy": -0.1002517687402342,
+      "weyl_action": 0.016661944027601454,
+      "covariant_energy": -0.11691371276783566,
+      "integrated_stress_energy": -0.11691371276783567,
+      "error": 1.3877787807814457e-17
+    }
+  ],
+  "core_cases": [
+    {
+      "epsilon": 0.01,
+      "x": 1.1,
+      "spatial_integral": 196.55634820306418,
+      "formula": 196.55634820306398,
+      "integration_error": 1.9895196601282805e-13,
+      "stiffness": 0.04519138250310872,
+      "independent_stiffness": 0.04519138250310871,
+      "leading_error": 0.0006419508302246205,
+      "analytic_bound": 0.0006629772242794799
+    },
+    {
+      "epsilon": 0.04,
+      "x": 1.1,
+      "spatial_integral": 46.592655894123745,
+      "formula": 46.59265589412367,
+      "integration_error": 7.105427357601002e-14,
+      "stiffness": 0.043263974393817066,
+      "independent_stiffness": 0.04326397439381706,
+      "leading_error": 0.002569358939516271,
+      "analytic_bound": 0.0026519088971179196
+    },
+    {
+      "epsilon": 0.1,
+      "x": 1.1,
+      "spatial_integral": 16.66537053468309,
+      "formula": 16.665370534683085,
+      "integration_error": 3.552713678800501e-15,
+      "stiffness": 0.0393879794731183,
+      "independent_stiffness": 0.03938797947311829,
+      "leading_error": 0.006445353860215039,
+      "analytic_bound": 0.0066297722427948
+    },
+    {
+      "epsilon": 0.2,
+      "x": 1.1,
+      "spatial_integral": 6.787238634749937,
+      "formula": 6.787238634749933,
+      "integration_error": 4.440892098500626e-15,
+      "stiffness": 0.03278066883167582,
+      "independent_stiffness": 0.03278066883167581,
+      "leading_error": 0.01305266450165752,
+      "analytic_bound": 0.0132595444855896
+    }
+  ],
+  "join_cases": [
+    {
+      "epsilon": 0.02,
+      "energy_force_stiffness_correction": [
+        -4.132592913974392e-05,
+        -8.271734724687291e-05,
+        -0.00016569670867044091
+      ],
+      "normalized_by_epsilon_x_squared": [
+        -0.002066296456987196,
+        -0.004135867362343645,
+        -0.008284835433522045
+      ],
+      "note": "Samples of the analytic O(epsilon x^2) join bound; not a uniform numerical proof."
+    },
+    {
+      "epsilon": 0.06,
+      "energy_force_stiffness_correction": [
+        -0.00012476505735565743,
+        -0.00025130463397243276,
+        -0.0005097216036272064
+      ],
+      "normalized_by_epsilon_x_squared": [
+        -0.0020794176225942904,
+        -0.004188410566207213,
+        -0.00849536006045344
+      ],
+      "note": "Samples of the analytic O(epsilon x^2) join bound; not a uniform numerical proof."
+    },
+    {
+      "epsilon": 0.12,
+      "energy_force_stiffness_correction": [
+        -0.0002548859850998563,
+        -0.000524141078152972,
+        -0.0011062247842668375
+      ],
+      "normalized_by_epsilon_x_squared": [
+        -0.002124049875832136,
+        -0.004367842317941434,
+        -0.009218539868890313
+      ],
+      "note": "Samples of the analytic O(epsilon x^2) join bound; not a uniform numerical proof."
+    },
+    {
+      "epsilon": 0.24,
+      "energy_force_stiffness_correction": [
+        -0.0005539594533156573,
+        -0.0012287185933760637,
+        -0.0029569302964584446
+      ],
+      "normalized_by_epsilon_x_squared": [
+        -0.002308164388815239,
+        -0.0051196608057335995,
+        -0.012320542901910186
+      ],
+      "note": "Samples of the analytic O(epsilon x^2) join bound; not a uniform numerical proof."
+    }
+  ],
+  "return_cases": [
+    {
+      "epsilon": 0.003,
+      "return_length": 0,
+      "energy_force_stiffness": [
+        -0.0003189194558583708,
+        -0.000638450128028159,
+        -0.0012787372064154365
+      ],
+      "normalized_by_epsilon": [
+        -0.10630648528612359,
+        -0.21281670934271965,
+        -0.42624573547181216
+      ]
+    },
+    {
+      "epsilon": 0.003,
+      "return_length": 0.1,
+      "energy_force_stiffness": [
+        -0.00029952856456301246,
+        -0.0005811160001723479,
+        -0.0011100220082742379
+      ],
+      "normalized_by_epsilon": [
+        -0.09984285485433748,
+        -0.19370533339078264,
+        -0.3700073360914126
+      ]
+    },
+    {
+      "epsilon": 0.003,
+      "return_length": 1,
+      "energy_force_stiffness": [
+        -0.00018341945061059573,
+        -0.000278466952664332,
+        -0.0003556857261949448
+      ],
+      "normalized_by_epsilon": [
+        -0.06113981687019857,
+        -0.09282231755477734,
+        -0.11856190873164826
+      ]
+    },
+    {
+      "epsilon": 0.003,
+      "return_length": 100,
+      "energy_force_stiffness": [
+        -2.9533037876760575e-07,
+        -1.7992361892295965e-08,
+        1.6345539355205058e-08
+      ],
+      "normalized_by_epsilon": [
+        -9.844345958920192e-05,
+        -5.997453964098655e-06,
+        5.448513118401686e-06
+      ]
+    },
+    {
+      "epsilon": 0.003,
+      "return_length": 100000000.0,
+      "energy_force_stiffness": [
+        -3.1415971687939803e-19,
+        -9.622246076559361e-25,
+        -1.8652468943356483e-24
+      ],
+      "normalized_by_epsilon": [
+        -1.0471990562646601e-16,
+        -3.2074153588531204e-22,
+        -6.217489647785494e-22
+      ]
+    },
+    {
+      "epsilon": 0.03,
+      "return_length": 0,
+      "energy_force_stiffness": [
+        -0.0032455716748143975,
+        -0.0065553390504584546,
+        -0.013306799019702886
+      ],
+      "normalized_by_epsilon": [
+        -0.10818572249381325,
+        -0.2185113016819485,
+        -0.44355996732342956
+      ]
+    },
+    {
+      "epsilon": 0.03,
+      "return_length": 0.1,
+      "energy_force_stiffness": [
+        -0.0030465846723287037,
+        -0.005961822858383498,
+        -0.011539616752193796
+      ],
+      "normalized_by_epsilon": [
+        -0.1015528224109568,
+        -0.19872742861278328,
+        -0.3846538917397932
+      ]
+    },
+    {
+      "epsilon": 0.03,
+      "return_length": 1,
+      "energy_force_stiffness": [
+        -0.0018587413274276069,
+        -0.0028411809997801784,
+        -0.0036741164670631536
+      ],
+      "normalized_by_epsilon": [
+        -0.0619580442475869,
+        -0.09470603332600595,
+        -0.12247054890210513
+      ]
+    },
+    {
+      "epsilon": 0.03,
+      "return_length": 100,
+      "energy_force_stiffness": [
+        -2.9552901282971956e-06,
+        -1.809706207729545e-07,
+        1.617376550519371e-07
+      ],
+      "normalized_by_epsilon": [
+        -9.850967094323985e-05,
+        -6.03235402576515e-06,
+        5.391255168397903e-06
+      ]
+    },
+    {
+      "epsilon": 0.03,
+      "return_length": 100000000.0,
+      "energy_force_stiffness": [
+        -3.1420638879057118e-18,
+        -9.434391806020626e-22,
+        -1.8878154854360046e-21
+      ],
+      "normalized_by_epsilon": [
+        -1.047354629301904e-16,
+        -3.1447972686735424e-20,
+        -6.292718284786683e-20
+      ]
+    },
+    {
+      "epsilon": 0.12,
+      "return_length": 0,
+      "energy_force_stiffness": [
+        -0.013821595767370848,
+        -0.028862023940015503,
+        -0.061669321436418664
+      ],
+      "normalized_by_epsilon": [
+        -0.1151799647280904,
+        -0.24051686616679588,
+        -0.5139110119701555
+      ]
+    },
+    {
+      "epsilon": 0.12,
+      "return_length": 0.1,
+      "energy_force_stiffness": [
+        -0.0129488565045998,
+        -0.026172685623565676,
+        -0.05329674289265946
+      ],
+      "normalized_by_epsilon": [
+        -0.10790713753833167,
+        -0.21810571352971397,
+        -0.4441395241054955
+      ]
+    },
+    {
+      "epsilon": 0.12,
+      "return_length": 1,
+      "energy_force_stiffness": [
+        -0.0077967381958864304,
+        -0.012233276362850433,
+        -0.016628923377408518
+      ],
+      "normalized_by_epsilon": [
+        -0.06497281829905359,
+        -0.10194396969042029,
+        -0.13857436147840432
+      ]
+    },
+    {
+      "epsilon": 0.12,
+      "return_length": 100,
+      "energy_force_stiffness": [
+        -1.186872959192158e-05,
+        -7.815785090521543e-07,
+        5.336517508997697e-07
+      ],
+      "normalized_by_epsilon": [
+        -9.890607993267984e-05,
+        -6.513154242101286e-06,
+        4.447097924164748e-06
+      ]
+    },
+    {
+      "epsilon": 0.12,
+      "return_length": 100000000.0,
+      "energy_force_stiffness": [
+        -1.259672626658439e-17,
+        -6.111127955553834e-20,
+        -1.2382465517845831e-19
+      ],
+      "normalized_by_epsilon": [
+        -1.0497271888820325e-16,
+        -5.092606629628195e-19,
+        -1.0318721264871526e-18
+      ]
+    },
+    {
+      "epsilon": 0.24,
+      "return_length": 0,
+      "energy_force_stiffness": [
+        -0.030407544274010875,
+        -0.06708376426982739,
+        -0.1563290278573712
+      ],
+      "normalized_by_epsilon": [
+        -0.12669810114171198,
+        -0.2795156844576141,
+        -0.6513709494057134
+      ]
+    },
+    {
+      "epsilon": 0.24,
+      "return_length": 0.1,
+      "energy_force_stiffness": [
+        -0.028400549627455095,
+        -0.06055799619353746,
+        -0.13442371358399768
+      ],
+      "normalized_by_epsilon": [
+        -0.11833562344772956,
+        -0.2523249841397394,
+        -0.5600988065999903
+      ]
+    },
+    {
+      "epsilon": 0.24,
+      "return_length": 1,
+      "energy_force_stiffness": [
+        -0.016758078394551065,
+        -0.02748914850452544,
+        -0.04086664476372135
+      ],
+      "normalized_by_epsilon": [
+        -0.06982532664396277,
+        -0.114538118768856,
+        -0.17027768651550562
+      ]
+    },
+    {
+      "epsilon": 0.24,
+      "return_length": 100,
+      "energy_force_stiffness": [
+        -2.397056291169419e-05,
+        -1.946607190292747e-06,
+        2.5180924893885497e-07
+      ],
+      "normalized_by_epsilon": [
+        -9.987734546539245e-05,
+        -8.110863292886447e-06,
+        1.0492052039118957e-06
+      ]
+    },
+    {
+      "epsilon": 0.24,
+      "return_length": 100000000.0,
+      "energy_force_stiffness": [
+        -2.5380491098492145e-17,
+        -5.089230307878025e-19,
+        -1.0734520004522508e-18
+      ],
+      "normalized_by_epsilon": [
+        -1.0575204624371727e-16,
+        -2.1205126282825105e-18,
+        -4.472716668551045e-18
+      ]
+    }
+  ],
+  "moving_patch_cases": [
+    {
+      "epsilon": 0.1,
+      "period": 4.83321946706122,
+      "direct_action": -0.19741314770932805,
+      "integrated_by_parts_action": -0.19741314770932808,
+      "boundary_integration_error": 2.7755575615628914e-17,
+      "two_derivative_action": -0.1974131975045191,
+      "derivative_remainder": 4.979519102610297e-08,
+      "remainder_over_epsilon_cubed": 4.9795191026102956e-05,
+      "induced_lapse_relative_error": 2.8421709430404013e-15
+    },
+    {
+      "epsilon": 0.05,
+      "period": 4.83321946706122,
+      "direct_action": -0.20040133089048262,
+      "integrated_by_parts_action": -0.20040133089048268,
+      "boundary_integration_error": 5.551115123125783e-17,
+      "two_derivative_action": -0.20040133673544444,
+      "derivative_remainder": 5.844961764589485e-09,
+      "remainder_over_epsilon_cubed": 4.6759694116715864e-05,
+      "induced_lapse_relative_error": 5.258016244624742e-15,
+      "observed_remainder_order": 3.0907409282864506
+    },
+    {
+      "epsilon": 0.025,
+      "period": 4.83321946706122,
+      "direct_action": -0.2019002738699006,
+      "integrated_by_parts_action": -0.2019002738699006,
+      "boundary_integration_error": 0.0,
+      "two_derivative_action": -0.201900274588918,
+      "derivative_remainder": 7.190174011739714e-10,
+      "remainder_over_epsilon_cubed": 4.6017113675134156e-05,
+      "induced_lapse_relative_error": 1.0231815394945445e-14,
+      "observed_remainder_order": 3.023094995920183
+    },
+    {
+      "epsilon": 0.0125,
+      "period": 4.83321946706122,
+      "direct_action": -0.20265114525926825,
+      "integrated_by_parts_action": -0.20265114525926825,
+      "boundary_integration_error": 0.0,
+      "two_derivative_action": -0.20265114534878179,
+      "derivative_remainder": 8.951353547281826e-11,
+      "remainder_over_epsilon_cubed": 4.5830930162082937e-05,
+      "induced_lapse_relative_error": 2.145839061995503e-14,
+      "observed_remainder_order": 3.005848930203837
+    }
+  ],
+  "static_completion_scope": "specified free-CFT two-dimensional AdS core and controlled static joins",
+  "full_transparent_influence_action_derived": false,
+  "physical_four_dimensional_matching_closed": false,
+  "physical_clock_inertia_derived": false,
+  "physical_damping_proved": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "note_sha256": "54e2aca4609b537e1a9f7d7215a5cccb2dd897f833281ca05af82802a30f8530",
+  "script_sha256": "88ac5349ab18d5c109db18c71aeed2af30920665ea5d53e5e0d0d8f2df2c5edf",
+  "dependency_hashes": {
+    "notes/collar-conservative-response.md": "0bcf946a7b4ffda0e33fa9c7ff193380f0b1f1b03f2e942ae922083d2598abfc",
+    "notes/collective-clock-response.md": "2991f1f0994fa54e4ba3131532276f3b3cee539913029e57f7bfe6d8e3041e18",
+    "notes/weak-coupling-window.md": "8c92eaad60e8f1603c772e4eb12faad2533afdcfb5aea0d04bd069d20370fa13"
+  },
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "elapsed_seconds": 7.094341699994402
+}

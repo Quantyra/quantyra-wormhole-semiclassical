@@ -1,15 +1,14 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-10: the [conservative collar audit](notes/collar-conservative-response.md)
-shows that optical propagation and absorption do not determine the clock
-stiffness or inertia. Two explicit two-dimensional metric completions have
-the same absorption and different growing-pole conclusions. The matched
-physical metric/state response must be derived before accepting a wormhole
-damping rate; no physical instability or stability result is claimed.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-conservative-collar-audit.md).
+Current continuation, 2026-10-11: the [proper-clock anomaly calculation](notes/proper-clock-anomaly.md)
+resolves the static collar ambiguity for a regulated AdS2 core and
+controlled static joins. It reproduces the established finite anomaly
+with derivative-controlled cutoff errors. The local moving-boundary
+Weyl term is not the full transparent response or physical clock inertia.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-proper-clock-anomaly-audit.md).
 
-Remaining to-do list: derive the conservative physical completion, close
-interactions and matching/state errors, finish novelty and the consequential
+Remaining to-do list: complete transparent dynamics and state, close
+interactions and channel matching, finish novelty and the consequential
 result, then verify, GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
