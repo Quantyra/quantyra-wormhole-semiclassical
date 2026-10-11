@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "exact_conditional_drift_energy_and_causal_cone_milestone",
+  "status": "finite_flux_projection_and_conditional_reciprocal_energy_milestone",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "unresolved; known energy and effective-cone methods, specific coupled-response theorem under comparison",
+  "novelty": "Known Berezin and planar charge form factors; general gauge/spin mixing known. Specific spherical axial vertex and coupled energy extension unresolved under close comparison.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,10 +17,10 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Finish decisive proof/edition/citation review and select primary plus fallback",
-    "Derive or reject the quantum drift approximation, including derivative/nonlocal omitted terms",
-    "Establish a global physical background and admissible domain; the exact energy theorem applies only inside the prescribed response class",
-    "Pursue the consequential surviving result, GCP-certify suitable endpoints and prepare manuscript"
+    "Complete closest proof/edition/citation comparisons and choose primary plus fallback",
+    "Match Casimir-state stress, contact terms and summed higher-level response in a joint finite-flux/backreaction expansion with Ward identities",
+    "Accept or reject the global physical domain and quantify the surviving stability or transport consequence",
+    "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
   "baseline_note": "notes/axial-baseline-and-throat-energy.md",
   "baseline_verification": {
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/global-drift-energy.md",
-  "current_verification": "evidence/general-drift-energy.json",
+  "current_note": "notes/finite-flux-response-audit.md",
+  "current_verification": "evidence/finite-flux-energy.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -49,5 +49,33 @@
     "quantum_background_existence_proved": false,
     "physical_MMP_stability_proved": false,
     "external_shortcut_proved": false
+  },
+  "finite_flux_response": {
+    "note": "notes/finite-flux-response-audit.md",
+    "projection_receipt": "evidence/lll-projection.json",
+    "dirac_vertex_receipt": "evidence/lll-axial-vertex.json",
+    "energy_receipt": "evidence/finite-flux-energy.json",
+    "projection_kernel_cases": 102,
+    "independent_mode_norm_cases": 102,
+    "orthogonality_cases": 286,
+    "metric_vertex_integrals": 806,
+    "warped_background_dirac_vertex_verified": true,
+    "reciprocal_energy_identities": 18,
+    "form_factor": "beta_l=(q-1)! q!/((q-1-l)! (q+l)!) for l<q; zero above LLL cutoff",
+    "effective_potential": "a_eff=a-l(l+1)h/(4R^2)",
+    "ordering": "At fixed bare screening s0, finite-flux corrections scale as sqrt(alpha), before alpha backreaction",
+    "conditional_energy_hypotheses": "Prescribed ground-state drift, reciprocal charge action, S,C,A_t,A_r>0, L>2, s_l>0 and no incoming boundary energy",
+    "microscopic_ground_state_stress_derived": false,
+    "higher_levels_and_contact_terms_matched": false,
+    "full_physical_stability_proved": false,
+    "lean_invocations": 0,
+    "next_matching_test": {
+      "geometry": "R_t x antiperiodic S1_z x S2 with fixed magnetic flux",
+      "sector": "l=2, q>=3, nonzero longitudinal momentum below angular gap",
+      "observable": "finite-size minus infinite-line state-dependent quadratic Dirac response",
+      "required_terms": "quadratic contact, LLL, mixed LLL/higher-level and summed higher-level determinant contributions",
+      "acceptance": "leading drift/current comparison, charge/diffeomorphism Ward identities and controlled remainder",
+      "status": "specified_not_executed"
+    }
   }
 }
