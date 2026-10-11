@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "source_free_maxwell_matching_dirac_backreaction_pending",
+  "status": "maxwell_completed_dirac_comparison_physical_metric_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Coupled Maxwell transmission removes the artificial seam current on the prescribed metric and controls its classical energy correction. Corrected matter response, Einstein backreaction and final novelty remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Source-free Maxwell completion changes the full one-particle Dirac propagation by a bounded O(q p) perturbation under an explicit optical comparison condition. RN and AdS pieces satisfy the attenuation alternative to a cap; physical metric matching, renormalized response and novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control the completed source-free Maxwell connection in the full Dirac channel mixing and return/source derivatives; derive local stress and Einstein backreaction, then the coupled state and renormalized response including exterior determinant and discarded physical tail.",
+    "Derive a controlled joined Einstein metric and local stress, verify its optical attenuation condition, then obtain the quantum state and renormalized response including full ground/higher-mode feedback, exterior determinant and discarded physical tail.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/coupled-maxwell-matching.md",
-  "current_verification": "evidence/coupled-maxwell-matching.json",
+  "current_note": "notes/maxwell-dirac-comparison.md",
+  "current_verification": "evidence/maxwell-dirac-comparison.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1444,5 +1444,46 @@
     "goal_complete": false,
     "next_decisive_question": "Control the completed source-free Maxwell connection in the full Dirac channel mixing and return/source derivatives; derive local stress and Einstein backreaction, then the coupled state and renormalized response including exterior determinant and discarded physical tail.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Coupled Maxwell transmission removes the artificial seam current on the prescribed metric and controls its classical energy correction. Corrected matter response, Einstein backreaction and final novelty remain open."
+  },
+  "maxwell_dirac_comparison": {
+    "date": "2026-10-11",
+    "note": "notes/maxwell-dirac-comparison.md",
+    "verification": "evidence/maxwell-dirac-comparison.json",
+    "source_review": "evidence/maxwell-dirac-source-review.json",
+    "source_free_maxwell_potential_bound_proved": true,
+    "pointwise_boundary_inverse_constant": "448/445",
+    "dirac_perturbation_bound": "epsilon <= C q p = O(q^(-1/2)) at p=q^(-3/2)",
+    "optical_condition": "sup(w)<=C/p OR y=1/w satisfies y_double_prime<=2/y, with Euclidean seam collars",
+    "physical_rn_neck_violates_fixed_cap": true,
+    "rn_and_ads_attenuation_inequalities_checked": true,
+    "physical_joined_metric_condition_verified": false,
+    "full_one_particle_propagation_comparison": true,
+    "full_ground_higher_mode_mixing_included": true,
+    "full_resolvent_bound": "epsilon/nu^2",
+    "finite_time_evolution_bound": "epsilon abs(t)",
+    "bounded_source_derivatives_proved": 2,
+    "compressed_return_bound": "(j+1)! epsilon product(M_i)/(2 nu^(j+1))",
+    "compressed_return_is_full_throat_elimination": false,
+    "selected_scale": "g^2=q^-2; delta=(log q)^-2; nu=delta^2; p=q^(-3/2); a=c_a q^(-1/4)",
+    "einstein_equations_solved": false,
+    "local_stress_backreaction_controlled": false,
+    "full_quantum_state_and_response_derived": false,
+    "energy_length_derivatives_controlled": false,
+    "verification_counts": {
+      "field_cases": 12,
+      "evolution_cases": 12,
+      "resolvent_cases": 12,
+      "loaded_port_cases": 12,
+      "attenuation_cases": 4
+    },
+    "max_field_angular_refinement": 1.957461519874748e-06,
+    "max_duhamel_identity_error": 2.2450858883953357e-15,
+    "max_mixed_source_finite_difference_error": 1.222805751094014e-07,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Derive a controlled joined Einstein metric and local stress, verify its optical attenuation condition, then obtain the quantum state and renormalized response including full ground/higher-mode feedback, exterior determinant and discarded physical tail.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Source-free Maxwell completion changes the full one-particle Dirac propagation by a bounded O(q p) perturbation under an explicit optical comparison condition. RN and AdS pieces satisfy the attenuation alternative to a cap; physical metric matching, renormalized response and novelty remain open."
   }
 }

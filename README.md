@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [coupled Maxwell matching](notes/coupled-maxwell-matching.md)
-constructs a source-free magnetic field through both mouths on the
-prescribed metric, matching the potential and normal flux. Its classical
-energy correction is subleading to q/ell at p=q^(-3/2) in the retained
-weak-coupling family. Corrected Dirac response, local stress, Einstein
-backreaction, state and novelty remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-coupled-maxwell-audit.md).
+Current continuation, 2026-10-11: [Maxwell-completed Dirac propagation](notes/maxwell-dirac-comparison.md)
+controls the corrected potential and all channel mixing over finite times
+on the prescribed geometry. An optical attenuation condition covers the
+exact RN and AdS pieces even where a uniform optical cap fails. The Dirac
+perturbation is O(q^(-1/2)) at p=q^(-3/2). The joined Einstein metric,
+local stress, full quantum response and novelty remain unresolved.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-maxwell-dirac-audit.md).
 
-Remaining to-do list: control corrected matter propagation and mixing,
-metric and local stress, full quantum response/state and novelty, then
-independently verify, GCP-certify the consequential result and prepare
-the manuscript.
+Remaining to-do list: derive the joined metric and local stress, verify
+its optical comparison condition, close the quantum state/response and
+novelty, then independently verify, GCP-certify the consequential result
+and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
