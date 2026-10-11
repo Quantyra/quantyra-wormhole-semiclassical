@@ -2,7 +2,17 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [homogeneous vacuum calculation](notes/magnetic-product-vacuum.md)
+The current [reference/Casimir matching](notes/casimir-reference-matching.md)
+reproduces the complete first-order throat for arbitrary invariant vacuum
+pressures and a specified leading LLL Casimir source. The invariant part
+shifts the radii; the Casimir part supplies the opening. Direct contractions
+verify all Einstein-Maxwell components, conservation and known limiting
+cases. MMP and the later near-horizon EFT analysis already establish the
+underlying separation, so this is retained as a baseline rather than a
+standalone new-physics candidate. Corrected global transit time and total
+quantum response remain unresolved.
+
+The preserved [homogeneous vacuum calculation](notes/magnetic-product-vacuum.md)
 derives both renormalized reference pressures from the full magnetic Dirac
 spectrum. It reproduces the anomaly and supplies a nearby stationary
 product branch for sufficiently small loop strength at each fixed charge.
@@ -62,6 +72,7 @@ python checks/casimir_cylinder_response.py --output evidence/casimir-cylinder-re
 python checks/casimir_cylinder_ward.py --output evidence/casimir-cylinder-ward.json
 python checks/throat_trace_anomaly.py --output evidence/throat-trace-anomaly.json
 python checks/magnetic_product_vacuum.py --output evidence/magnetic-product-vacuum.json
+python checks/casimir_reference_matching.py --output evidence/casimir-reference-matching.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -77,6 +88,6 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-match the homogeneous quantum reference to the inhomogeneous Casimir state
-and global geometry, derive the curved total response,
+control the nonlocal state corrections and throat/exterior matching,
+derive the curved total response,
 then pursue and verify the selected primary and fallback questions.
