@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "finite_mouth_collar_prepared_input_scattering_verified",
+  "status": "dipole_interior_trial_and_global_error_criterion_verified",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Finite-annulus prepared-input scattering is controlled in the leading flat model. The exterior load can feed back into the annulus, so the column estimate alone is not a bound on the complete return.",
+  "novelty": "Use a global matched trial and weighted residual estimate to include feedback; retain collars as local matching evidence. Interior cancellation and known weighting methods do not establish the full return or novelty.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,7 +18,7 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive literature proofs/editions and select the primary question plus fallback",
-    "Derive the actual exterior load and control its composition with both mouth collars, including higher-mode feedback, continuum escape and curved throat/state matching.",
+    "Complete the global boundary proof audit and mouth/tube overlap plus trace matching; evaluate the weighted residual, incoming error and receiving trace budget with exceptional flux modes included.",
     "Bound total energy and common-observer corrections against the positive margin and establish the consequential result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/mouth-collar-scattering.md",
-  "current_verification": "evidence/mouth-collar-scattering.json",
+  "current_note": "notes/exterior-trial-residual.md",
+  "current_verification": "evidence/exterior-trial-residual.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -462,5 +462,40 @@
     "lean_invocations": 0,
     "contribution_decision": "Finite-annulus prepared-input scattering is controlled in the leading flat model. The exterior load can feed back into the annulus, so the column estimate alone is not a bound on the complete return.",
     "next_decisive_question": "Derive the actual exterior load and control its composition with both mouth collars, including higher-mode feedback, continuum escape and curved throat/state matching."
+  },
+  "exterior_trial_residual": {
+    "note": "notes/exterior-trial-residual.md",
+    "receipt": "evidence/exterior-trial-residual.json",
+    "passive_column_to_loaded_return_inference_refuted": true,
+    "actual_dipole_interior_corrected_trial": true,
+    "ordinary_interior_residual_bound": "C/sqrt(q)+C_cut exp(-q b0 w0^2/16) on a fixed regular trimmed tube",
+    "weighted_global_return_criterion": true,
+    "conditional_budget": {
+      "weight_fraction": 0.5,
+      "boundary_input_error": 5e-05,
+      "dimensionless_weighted_residual": 2e-05,
+      "receiver_trace_error": 1e-06,
+      "proved_upper_rational": "214049/256000000",
+      "target": 0.001,
+      "physical_hypotheses_verified": false
+    },
+    "verification_counts": {
+      "exact_identities": 3,
+      "moment_power_conditions": 6,
+      "dipole_section_cases": 30,
+      "passive_feedback_cases": 9,
+      "weighted_current_cases": 36
+    },
+    "flux_refinements_per_section": 3,
+    "geometry_derivative_resolutions": 2,
+    "global_matched_trial_constructed": false,
+    "full_exterior_return_error_bounded": false,
+    "global_boundary_proof_review_complete": false,
+    "complete_four_dimensional_energy_derived": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "Use a global matched trial and weighted residual estimate to include feedback; retain collars as local matching evidence. Interior cancellation and known weighting methods do not establish the full return or novelty.",
+    "next_decisive_question": "Complete the global boundary proof audit and mouth/tube overlap plus trace matching; evaluate the weighted residual, incoming error and receiving trace budget with exceptional flux modes included."
   }
 }

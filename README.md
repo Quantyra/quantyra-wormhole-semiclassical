@@ -2,6 +2,15 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
+The [interior exterior-trial calculation](notes/exterior-trial-residual.md)
+constructs the first correction in the actual dipole tube and proves a
+fixed-tube residual upper bound of order `q^(-1/2)`, plus the transverse
+cutoff tail. Weighted current gives a conditional global return-error
+criterion that includes feedback. An accurate collar column and passivity
+alone are insufficient, as an explicit delayed-load example confirms.
+The global trial, mouth traces, boundary proof review and exceptional-mode
+treatment remain open; no physical return-error or novelty acceptance.
+
 The [finite mouth-collar calculation](notes/mouth-collar-scattering.md)
 controls the radial corrector derivative and converts its residual into a
 prepared-input scattering bound for the actual flat dipole annulus. The
