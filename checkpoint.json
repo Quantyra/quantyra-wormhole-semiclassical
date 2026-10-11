@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-10",
-  "status": "projected_quadratic_photon_response_controlled_renormalized_stress_pending",
+  "date": "2026-10-11",
+  "status": "nonnegative_exterior_photon_response_controlled_physical_stress_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and finite-duration transfer fallback. The projected quadratic comparator is controlled; a current-only result is not accepted novelty or physical closure.",
+  "novelty": "Continue physical damping and matched finite-duration transfer fallback. Nonnegative exterior extensions preserve quadratic smallness with an additional inverse-resolution factor; this standard-method matching bound is not the novel physical endpoint.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/propagating-photon-polarization.md",
-  "current_verification": "evidence/propagating-photon-polarization.json",
+  "current_note": "notes/open-photon-load.md",
+  "current_verification": "evidence/open-photon-load.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1108,5 +1108,37 @@
     "supplemental_unique_queries": 5,
     "next_decisive_question": "Control two metric derivatives of the renormalized photon/fermion influence, higher current terms and physical metric/photon/higher-level/state matching.",
     "contribution_decision": "Continue physical long-return damping and finite-duration transfer fallback. The projected quadratic comparator is controlled; a current-only result is not accepted novelty or physical closure."
+  },
+  "open_photon_load": {
+    "date": "2026-10-11",
+    "note": "notes/open-photon-load.md",
+    "verification": "evidence/open-photon-load.json",
+    "source_review": "evidence/open-photon-source-review.json",
+    "nonnegative_exterior_quadratic_response_controlled": true,
+    "requires_local_core_energy_domination": true,
+    "global_photon_gap_required": false,
+    "bound": "epsilon_ext=O(g^2 q/eta^2); O(q^-7/8) at g^2=q^-2 and eta~q^-1/16",
+    "absolute_normalized_correction": "O(g^2 q/eta^3)=O(q^-13/16)",
+    "physical_coupled_load_derived": false,
+    "renormalized_clock_stress_controlled": false,
+    "higher_current_remainder_controlled": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "exact_checks": 6,
+      "matrix_cases": 15,
+      "radiative_cases": 18,
+      "resonance_cases": 5,
+      "angular_cases": 4,
+      "ode_refinements": 5,
+      "ultraviolet_refinements": 4,
+      "spatial_refinements": 4
+    },
+    "final_ode_relative_error": 2.0716215897351865e-05,
+    "supplemental_unique_queries": 6,
+    "previous_goal_turn_classification": "progress: committed projected polarization argument and source-bound checks; no live process claimed from a state file",
+    "next_decisive_question": "Derive renormalized clock stress and higher-current control; establish the physical coupled metric/photon/fermion load and state.",
+    "contribution_decision": "Continue physical damping and matched finite-duration transfer fallback. Nonnegative exterior extensions preserve quadratic smallness with an additional inverse-resolution factor; this standard-method matching bound is not the novel physical endpoint."
   }
 }

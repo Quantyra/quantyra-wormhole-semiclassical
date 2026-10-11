@@ -1,14 +1,14 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [propagating photon argument](notes/propagating-photon-polarization.md)
-controls free projected current polarization and quadratic photon
-resummation with unequal returns and all angular vertices. The correction
-is small at damping resolution in the working family. Renormalized clock
-stress, higher current terms and physical matching remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-propagating-photon-audit.md).
+Current continuation, 2026-10-11: the [open photon-load argument](notes/open-photon-load.md)
+controls projected quadratic response for nonnegative exterior extensions,
+including radiation, resonances and angular mixing, under an explicit
+local energy bound. The correction remains small at damping resolution.
+The coupled physical load and renormalized clock stress remain unresolved.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-open-photon-load-audit.md).
 
-Remaining to-do list: control renormalized clock stress and higher current
-terms, close physical matching and the state, finish novelty and the
+Remaining to-do list: derive renormalized clock stress and higher-current
+control, match the coupled geometry and state, finish novelty and the
 consequential result, then verify, GCP-certify and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
