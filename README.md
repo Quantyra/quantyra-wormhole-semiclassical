@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [gauged mouth interaction](notes/gauged-mouth-interaction.md)
-retains the exterior determinant and induced quadratic photon vertex.
-The complete regulated response obeys gauge cancellation and agrees with
-direct determinant calculations. Conditional continuum bounds control two
-bounded photon insertions at positive frequency resolution. Physical source
-matching, renormalization and the full interacting stress remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-gauged-mouth-interaction-audit.md).
+Current continuation, 2026-10-11: [dipole source matching](notes/dipole-source-matching.md)
+adds the photon line-integral phase and transverse spin correction to the
+actual flat dipole trial. Conditional return and first two source-derivative
+errors vanish at shrinking resolution for fixed trimmed flux labels and
+bounded axisymmetric sources. The resonant long paths, general angular
+response, exterior determinant and physical stress remain unresolved.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-dipole-source-matching-audit.md).
 
-Remaining to-do list: match the complete source-dependent exterior and
-finite-return subtraction, control physical renormalization and stress,
-close geometry/state and novelty, then independently verify, GCP-certify
-the consequential result and prepare the manuscript.
+Remaining to-do list: match both long-return endpoints and the full source
+response, control determinant/renormalization and physical stress, close
+geometry/state and novelty, then independently verify, GCP-certify the
+consequential result and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-11",
+  "scope": "Targeted curved-Dirac-packet proof audit and source-dependent dipole matching; full physical novelty exit remains open",
+  "queries": [
+    "Dirac curved interface exact transverse mode strong magnetic field wave packet adiabatic propagation error magnetic field lines",
+    "magnetic field line Dirac operator zero modes effective dynamics strong field semiclassical curved magnetic waveguides",
+    "\"Maldacena\" \"Milekhin\" wormhole damping fermions",
+    "\"wormhole\" \"long\" \"return\" \"damping\"",
+    "\"magnetic\" \"wormhole\" \"stability\" fermion response"
+  ],
+  "sources": [
+    {
+      "authors": "Guillaume Bal, Simon Becker, Alexis Drouot, Clotilde Fermanian Kammerer, Jianfeng Lu, Alexander Watson",
+      "title": "Edge state dynamics along curved interfaces",
+      "arxiv": "2106.00729v1",
+      "submitted": "2021-06-01",
+      "url": "https://arxiv.org/abs/2106.00729v1",
+      "html_url": "https://arxiv.org/html/2106.00729v1",
+      "html_cache": "references/cache/2106.00729v1-dipole-source.html",
+      "html_sha256": "a7d69eb8e71dcd541726cda6d3cbe5e78efd46b13726e9842ad6893f5986a5b1",
+      "pdf_url": "https://arxiv.org/pdf/2106.00729v1",
+      "pdf_cache": "references/cache/2106.00729v1-dipole-source.pdf",
+      "pdf_sha256": "b2213d580dacdd3350ba08bceb25756bab06e342c3311d7917d1b1f7785e9ed8",
+      "read_scope": "Metadata; HTML section 3.3 Lemmas 3.2 and 3.3 with their full proofs; original PDF page 18 visually checked; HTML Theorem 3, its proof and the following time-scale limitation passage inspected through web output",
+      "equation_numbering": "HTML renumbers equations: HTML (3.53) is PDF (3.19); HTML (3.54) is the unnumbered inverse immediately after PDF (3.19)",
+      "independent_findings": [
+        {
+          "location": "PDF page 18, inverse after (3.19); HTML (3.54)",
+          "finding": "For M=[[0,a],[a,2xi]], a=sqrt(2n+2), the displayed candidate [[2xi,-a],[-a,0]]/a^2 multiplies M to -I, not I.",
+          "local_correction": "Negate that candidate: M^-1=[[-2xi,a],[a,0]]/a^2.",
+          "verification": "Exact symbolic multiplication in checks/dipole_source_matching.py; original PDF visually confirms the signs, so this is not solely an HTML conversion issue."
+        },
+        {
+          "location": "PDF page 18, sequence space W and definition of S; HTML (3.47)-(3.48)",
+          "finding": "The added condition w_1(.,0)=0 conflicts with the shifted transform against phi_(n+1). An upper phi_1 input is orthogonal to the phi_0 kernel but has nonzero w_1(.,0). The displayed matrix also does not preserve that condition.",
+          "local_correction": "Use all rapidly decreasing shifted Hermite sequences; the removed upper phi_0 component has already been omitted by the n+1 shift.",
+          "verification": "Explicit n=0 Hermite coefficient counterexample, with corrected inverse on the unrestricted shifted sequence space."
+        }
+      ],
+      "use": "Established corrected-packet and complement-inversion method. Current dipole source cancellation and analytic derivative estimate are derived independently.",
+      "claim_boundary": "The two local displayed issues do not establish failure of the paper's main theorem. No global L2 gap, shrinking-dipole endpoint theorem or wormhole stress bound is imported. Publisher version and remaining proof chain are not declared reviewed."
+    }
+  ],
+  "search_followup": "The wormhole searches returned the established MMP construction, 2609.33511, 2610.09847 and 2606.12528, already treated in this program's source work. These search returns were not counted as new full proof reviews or evidence of novelty.",
+  "decision": "Retain primary physical long-return damping and fallback matched finite-duration band transfer. The new result is a conditional source-derivative matching estimate on fixed trimmed labels, not acceptance of either endpoint.",
+  "remaining": "Uniform shrinking-label endpoint matching, full angular and determinant response, physical renormalization and state/geometry, complete novelty review and consequential result, independent verification, GCP-only Lean and reproducible manuscript."
+}
