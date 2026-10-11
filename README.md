@@ -1,15 +1,15 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [magnetic mouth force balance](notes/magnetic-mouth-force.md)
-verifies the first-order coupled Einstein-Maxwell mouth response and its
-regular-axis acceleration condition. The selected weak-coupling family
-passes leading orbital, unscreened-drift and radiation hierarchy checks.
-These reproduce established physics. Binary/open-throat matching, the
-time-dependent quantum state and novelty remain unresolved.
+Current continuation, 2026-10-11: [classical dipole throat matching](notes/dipole-throat-matching.md)
+derives the regular static RN scalar overlap coefficient and verifies the
+four-dimensional metric/Maxwell reconstruction and exact low-frequency
+response on the leading product throat. Burko's earlier dipole result
+establishes the classical mode and reconstruction as prior work. Dynamic
+binary matching, boundary frames and the semiclassical state remain open.
 
-Remaining to-do list: match force-balanced moving mouths through the open
-throat, control the full time-dependent state/response, finish the physical
-endpoint and novelty review, then independently verify, GCP-certify suitable
+Remaining to-do list: derive dynamic mouth and remaining boundary data,
+control the full semiclassical state/response, finish the physical endpoint
+and novelty review, then independently verify, GCP-certify suitable
 mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
