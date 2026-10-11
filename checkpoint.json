@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "full_line_first_order_reference_controlled_physical_matching_pending",
+  "status": "gauged_mouth_vertices_verified_physical_matching_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration transfer. The complete spherical unwrapped reference has controlled order-g^2 energy and static derivatives; the full finite-return mouth interaction and actual physical matching remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration transfer. Complete regulated source vertices and conditional continuum insertion bounds are verified; actual physical matching and renormalized stress remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Match the full finite-return mouth interaction and physical renormalization, then control higher-order/dynamical stress and the coupled geometry and state. Do not add incompatible partial diagrams.",
+    "Match the full photon-source-dependent exterior response and finite-return subtraction, including induced quadratic vertices and exterior determinants, with physical renormalization and stress estimates; then close coupled geometry/state and novelty.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/full-line-reference-stress.md",
-  "current_verification": "evidence/full-line-reference-stress.json",
+  "current_note": "notes/gauged-mouth-interaction.md",
+  "current_verification": "evidence/gauged-mouth-interaction.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1261,5 +1261,43 @@
     "previous_goal_turn_classification": "progress: the committed reference-mouth counterexample and exact cross-mouth cancellation changed the required next calculation; no live process inferred from checkpoint files",
     "next_decisive_question": "Match the full finite-return mouth interaction and physical renormalization, then control higher-order/dynamical stress and the coupled geometry and state. Do not add incompatible partial diagrams.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration transfer. The complete spherical unwrapped reference has controlled order-g^2 energy and static derivatives; the full finite-return mouth interaction and actual physical matching remain open."
+  },
+  "gauged_mouth_interaction": {
+    "date": "2026-10-11",
+    "note": "notes/gauged-mouth-interaction.md",
+    "verification": "evidence/gauged-mouth-interaction.json",
+    "source_review": "evidence/gauged-mouth-source-review.json",
+    "complete_regulated_schur_hessian_derived": true,
+    "exterior_determinant_and_induced_quadratic_vertex_retained": true,
+    "finite_vector_ward_cancellation_verified": true,
+    "conditional_bounded_source_port_derivatives_proved": true,
+    "port_bounds": [
+      "first norm <= ||V||/(2 eta)",
+      "mixed second norm <= ||Va|| ||Vb||/eta^2"
+    ],
+    "physical_source_matching_proved": false,
+    "continuum_determinant_limit_proved": false,
+    "physical_renormalization_matched": false,
+    "full_finite_return_stress_controlled": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "regulated_partition_source_cases": 54,
+      "pure_gauge_cases": 9,
+      "bare_linear_cases": 3,
+      "continuum_port_cases": 6,
+      "continuum_gauge_cases": 3,
+      "chiral_interval_cases": 12
+    },
+    "maximum_schur_hessian_error": 7.788966359820356e-16,
+    "maximum_regulated_finite_difference_error": 7.798870499402915e-07,
+    "maximum_port_finite_difference_error": 2.1255315816394286e-07,
+    "maximum_port_ode_error": 1.3365743475973864e-14,
+    "maximum_omitted_induced_vertex_defect": 0.2220298550442804,
+    "supplemental_unique_queries": 4,
+    "previous_goal_turn_classification": "progress: the committed full-line reference proof and independent continuum checks were delivered; no live process inferred from checkpoint files",
+    "next_decisive_question": "Match the full photon-source-dependent exterior response and finite-return subtraction, including induced quadratic vertices and exterior determinants, with physical renormalization and stress estimates; then close coupled geometry/state and novelty.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration transfer. Complete regulated source vertices and conditional continuum insertion bounds are verified; actual physical matching and renormalized stress remain open."
   }
 }

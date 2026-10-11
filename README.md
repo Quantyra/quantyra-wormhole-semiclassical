@@ -1,18 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [full-line reference stress proof](notes/full-line-reference-stress.md)
-keeps the unwrapped current throughout the spherical photon reference.
-Its first vacuum diagram has a finite bulk-subtracted energy and two
-static derivatives, including inverse-square photon tails. Under the
-stated profile bounds, its curvature is small relative to the working
-free-clock stiffness. The actual finite-return mouth interaction,
-physical renormalization, higher orders and coupled state remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-full-line-reference-stress-audit.md).
+Current continuation, 2026-10-11: the [gauged mouth interaction](notes/gauged-mouth-interaction.md)
+retains the exterior determinant and induced quadratic photon vertex.
+The complete regulated response obeys gauge cancellation and agrees with
+direct determinant calculations. Conditional continuum bounds control two
+bounded photon insertions at positive frequency resolution. Physical source
+matching, renormalization and the full interacting stress remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-gauged-mouth-interaction-audit.md).
 
-Remaining to-do list: match full finite-return interaction and physical
-renormalization, control higher-order/dynamical stress and geometry/state,
-finish novelty and the consequential result, then independently verify,
-GCP-certify and prepare the manuscript.
+Remaining to-do list: match the complete source-dependent exterior and
+finite-return subtraction, control physical renormalization and stress,
+close geometry/state and novelty, then independently verify, GCP-certify
+the consequential result and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
