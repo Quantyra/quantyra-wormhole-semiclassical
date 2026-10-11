@@ -71,6 +71,13 @@ def verify():
         perturbation += gg*dspin[mu]+dgg*spin[mu]
         if mu == 3:
             perturbation += dgg*sp.I*(m-q*sp.cos(th)/2)
+    # The static spatial source has no longitudinal curl. Check both
+    # transverse chiralities, as needed for the massive-sector bound.
+    vv = sp.Function('v')(z, th)
+    static = perturbation.subs({vt: 0, vz: vv, N: 1, R: 1}).doit().applyfunc(sp.simplify)
+    angular = (vv*(m-q*sp.cos(th)/2)*sp.eye(4)
+               +sp.sin(th)*sp.diff(vv, th)*sp.kronecker_product(sp.eye(2), sz)/4)
+    assert (static+sp.I*gamma[1]*angular).applyfunc(sp.simplify) == sp.zeros(4)
     # q>0 zero modes have negative transverse chirality (indices 1,3).
     reduced = perturbation.extract([1, 3], [1, 3]).applyfunc(sp.simplify)
     shifts = [v*(m-q*sp.cos(th)/2)-sp.sin(th)*sp.diff(v, th)/4 for v in [vt, vz]]
@@ -78,6 +85,7 @@ def verify():
     residual = (reduced-expected).applyfunc(sp.simplify)
     assert residual == sp.zeros(2)
     return {'Clifford_relations': 16, 'projected_Dirac_matrix_entries': 4,
+            'static_spatial_full_Dirac_matrix_entries': 16,
             'all_residuals': 'exact_zero',
             'effective_gauge_shift_before_mode_integral': 'v_a (m-q cos(theta)/2) - sin(theta) partial_theta v_a /4',
             'axial_shift_convention': 'v_a=-h_a P_l\'(cos(theta))/R^2',

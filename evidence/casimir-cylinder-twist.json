@@ -1,0 +1,112 @@
+{
+  "status": "passed_static_cylinder_twist_response_checks",
+  "script_sha256": "5aa6c15c8626d74ed232a1a5f4c880549916258692d970db1d49a3645aea2755",
+  "sympy_version": "1.14.0",
+  "scipy_version": "1.18.1",
+  "symbolic_checks": {
+    "metric_vertex_as_angular_operator": "exact_zero",
+    "angular_eigenmode_1": "exact_zero",
+    "angular_weight_1": "exact_zero",
+    "angular_eigenmode_2": "exact_zero",
+    "angular_weight_2": "exact_zero",
+    "angular_orthogonality": "exact_zero",
+    "contact_angular_weight": "exact_zero",
+    "finite_flux_deficit": "exact_zero",
+    "deficit_greater_than_two_for_q_ge_three": "positive_shifted_polynomial",
+    "Matsubara_partial_fractions": "exact_zero",
+    "Clifford_Schur_entry_0": "exact_zero",
+    "Clifford_Schur_entry_1": "exact_zero",
+    "Clifford_Schur_entry_2": "exact_zero",
+    "Clifford_Schur_entry_3": "exact_zero",
+    "affine_metric_contact_sign": "exact_zero",
+    "l1_coordinate_vertex_cancellation": "exact_zero",
+    "uniform_geometric_tail_bound": "exact_rational_check"
+  },
+  "independent_Jacobi_mode_cases": 52,
+  "numerical_checks": {
+    "independent_Matsubara_cases": 3,
+    "max_Matsubara_residual": 3.958226975353529e-14,
+    "mixed_error_bound_cases": 5,
+    "max_mixed_error_to_bound_ratio": 0.9665434962250539,
+    "Casimir_energy_unit_circle": -0.5235987755982989,
+    "samples": [
+      {
+        "q": 3,
+        "length_over_radius": 16.0,
+        "mixed_plus_contact_hh": -0.0024443110400659755,
+        "leading_upper_bound_hh": -0.0024022139138289143,
+        "all_higher_sector_absolute_bound_hh": 1.670213210417165e-11,
+        "quadrature_error_estimate_hh": 3.688205833444725e-14,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 3,
+        "length_over_radius": 32.0,
+        "mixed_plus_contact_hh": -0.0006032270475637371,
+        "leading_upper_bound_hh": -0.0006005534784572286,
+        "all_higher_sector_absolute_bound_hh": 2.961850879588355e-25,
+        "quadrature_error_estimate_hh": 9.794108238907201e-15,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 8,
+        "length_over_radius": 16.0,
+        "mixed_plus_contact_hh": -0.004594219477141704,
+        "leading_upper_bound_hh": -0.004461497900410504,
+        "all_higher_sector_absolute_bound_hh": 3.083789360771686e-17,
+        "quadrature_error_estimate_hh": 1.614591126063082e-13,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 8,
+        "length_over_radius": 32.0,
+        "mixed_plus_contact_hh": -0.0011237729246158096,
+        "leading_upper_bound_hh": -0.001115374475102626,
+        "all_higher_sector_absolute_bound_hh": 6.177978594459886e-38,
+        "quadrature_error_estimate_hh": 4.108730877735085e-14,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 16,
+        "length_over_radius": 16.0,
+        "mixed_plus_contact_hh": -0.005866905692635737,
+        "leading_upper_bound_hh": -0.0056485407128233425,
+        "all_higher_sector_absolute_bound_hh": 4.756300952664307e-24,
+        "quadrature_error_estimate_hh": 4.252911265327947e-13,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 16,
+        "length_over_radius": 32.0,
+        "mixed_plus_contact_hh": -0.0014258825566186156,
+        "leading_upper_bound_hh": -0.0014121351782058356,
+        "all_higher_sector_absolute_bound_hh": 1.4986047889372811e-52,
+        "quadrature_error_estimate_hh": 1.0754160546294152e-13,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 64,
+        "length_over_radius": 16.0,
+        "mixed_plus_contact_hh": -0.007198803067559281,
+        "leading_upper_bound_hh": -0.00687039996414,
+        "all_higher_sector_absolute_bound_hh": 2.826289667556746e-49,
+        "quadrature_error_estimate_hh": 2.202844756483652e-12,
+        "full_hh_coefficient_strictly_negative": true
+      },
+      {
+        "q": 64,
+        "length_over_radius": 32.0,
+        "mixed_plus_contact_hh": -0.001738166555335062,
+        "leading_upper_bound_hh": -0.001717599991035,
+        "all_higher_sector_absolute_bound_hh": 3.789138227547922e-105,
+        "quadrature_error_estimate_hh": 1.2987680689554435e-11,
+        "full_hh_coefficient_strictly_negative": true
+      }
+    ]
+  },
+  "scope": "Free Dirac finite-size static spatial response on R_t x S1 x S2, l=2, q>=3",
+  "analytic_all_level_bound": "See note; infinite massive sector bounded, not discarded at a numerical cutoff",
+  "dynamical_kernel_complete": false,
+  "wormhole_stability_proved": false,
+  "lean_certified": false
+}

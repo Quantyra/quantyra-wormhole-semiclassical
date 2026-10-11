@@ -308,7 +308,12 @@ in its [receipt](../evidence/finite-flux-energy.json). The proofs above give
 the arbitrary-parameter arguments; finite cases are independent checks.
 All run without Lean. No new GCP certification or manuscript is claimed.
 
-## Next bounded matching calculation
+## Bounded matching calculation
+
+The subsequent [static response theorem](casimir-cylinder-twist-response.md)
+completes the spatial sign component of this test, including contact and
+an analytic all-level remainder. The temporal/curl kernel and full Ward
+audit below remain required; the test as a whole is incomplete.
 
 The next feasibility test isolates the state-dependent response on a
 prescribed product cylinder, before attempting a globally completed
@@ -331,11 +336,13 @@ reproduce the LLL Casimir energy $-\pi q/(6\mathcal L)$ and the projected
 charge kernel; derive the higher angular spectrum and matrix elements as
 part of the calculation rather than replacing them by a gap estimate.
 
-For $D=D_0+\epsilon D_1+\epsilon^2D_2+\cdots$, retain the quadratic
-determinant coefficient proportional to
+For $D=D_0+\epsilon D_1+\epsilon^2D_2+\cdots$, the quadratic coefficient
+of $\log\det D$ is
 
 $$\operatorname{Tr}(D_0^{-1}D_2)
 -\tfrac12\operatorname{Tr}(D_0^{-1}D_1D_0^{-1}D_1).$$
+
+The Euclidean fermion effective action $-\log\det D$ has the opposite sign.
 
 Separate the LLL, mixed LLL/higher-level, and purely higher-level parts
 before taking the finite-size difference. Equivalently the low-sector

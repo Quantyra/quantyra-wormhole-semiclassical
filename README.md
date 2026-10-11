@@ -2,16 +2,20 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [finite-flux response audit](notes/finite-flux-response-audit.md)
-derives the free lowest-Landau-level charge form factor and an axial metric
-vertex on a warped spherical background. Including the reciprocal metric
-source preserves the [conditional positive-energy theorem](notes/global-drift-energy.md)
-for the prescribed drift model. Finite-flux corrections can precede the
-retained backreaction order, so the physical approximation needs a joint
-expansion. The known Berezin form factor and planar magnetic response are
-credited. Full Casimir-state response, higher-level/contact matching, global
-MMP completion and novelty remain open; no physical stability or shortcut
-result is claimed.
+The current [static Casimir response](notes/casimir-cylinder-twist-response.md)
+resolves part of the microscopic matching problem: an axial metric twist
+lowers the finite-size free-Dirac vacuum energy on a magnetic product
+cylinder for flux `q>=3` and circumference/radius `>=16`. The proof includes
+the metric contact term, exact mixed-level response and an analytic bound
+on the entire massive sector. It is a fixed-background matter result;
+the total gravitational energy and dynamical response remain unresolved.
+
+The [finite-flux audit](notes/finite-flux-response-audit.md) and
+[conditional positive-energy theorem](notes/global-drift-energy.md) are
+preserved. The new response reproduces the leading spatial drift but
+supplies a finite-flux correction outside that assumed constitutive class.
+Known sphere spectra and geometric Casimir-response precedents are credited.
+Novelty, physical MMP stability, global completion and shortcuts remain open.
 
 The baseline is Sadhukhan, [arXiv:2610.09847v1](https://arxiv.org/abs/2610.09847v1).
 The [mouth factorization](notes/mouth-energy-factorization.md) and
@@ -33,6 +37,7 @@ python checks/general_drift_energy.py --output evidence/general-drift-energy.jso
 python checks/lll_projection.py --output evidence/lll-projection.json
 python checks/lll_axial_vertex.py --output evidence/lll-axial-vertex.json
 python checks/finite_flux_energy.py --output evidence/finite-flux-energy.json
+python checks/casimir_cylinder_twist.py --output evidence/casimir-cylinder-twist.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -48,6 +53,6 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-match the Casimir-state and summed higher-level/contact response in a joint
-finite-flux/backreaction expansion, resolve the physical domain,
+derive the temporal/curl response and Ward identities in a joint
+finite-flux/backreaction expansion, resolve the curved physical domain,
 then pursue and verify the selected primary and fallback questions.
