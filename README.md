@@ -2,7 +2,16 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [reference/Casimir matching](notes/casimir-reference-matching.md)
+The current [warped-circle winding bound](notes/warped-winding-bound.md)
+controls both the energy and local radial null stress of every higher
+angular fermion mode in a prescribed static spherical circle. It uses an
+integrated throat barrier and permits a small angular mass elsewhere.
+The antiperiodic winding null stress is non-positive in this model.
+Angular mixing in the real MMP exterior and comparison of the winding
+reference with the physical support state remain open. This conditional
+result has cross-checks; novelty and physical MMP acceptance are unresolved.
+
+The preserved [reference/Casimir matching](notes/casimir-reference-matching.md)
 reproduces the complete first-order throat for arbitrary invariant vacuum
 pressures and a specified leading LLL Casimir source. The invariant part
 shifts the radii; the Casimir part supplies the opening. Direct contractions
@@ -73,6 +82,7 @@ python checks/casimir_cylinder_ward.py --output evidence/casimir-cylinder-ward.j
 python checks/throat_trace_anomaly.py --output evidence/throat-trace-anomaly.json
 python checks/magnetic_product_vacuum.py --output evidence/magnetic-product-vacuum.json
 python checks/casimir_reference_matching.py --output evidence/casimir-reference-matching.json
+python checks/warped_winding_bound.py --output evidence/warped-winding-bound.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -88,6 +98,6 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-control the nonlocal state corrections and throat/exterior matching,
+resolve exterior angular mixing and the reference-state comparison,
 derive the curved total response,
 then pursue and verify the selected primary and fallback questions.
