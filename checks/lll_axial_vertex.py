@@ -71,6 +71,13 @@ def verify():
         perturbation += gg*dspin[mu]+dgg*spin[mu]
         if mu == 3:
             perturbation += dgg*sp.I*(m-q*sp.cos(th)/2)
+    # Full warped-background vertex, including the chirality-changing curl.
+    angular_shifts = [v*(m-q*sp.cos(th)/2)*sp.eye(4)
+                      +sp.sin(th)*sp.diff(v, th)*sp.kronecker_product(sp.eye(2), sz)/4
+                      for v in [vt, vz]]
+    algebraic = -sp.I*(gamma[0]*angular_shifts[0]+gamma[1]*angular_shifts[1])/N
+    curl = R*sp.sin(th)*(sp.diff(vz, t)-sp.diff(vt, z))/(4*N**2)*gamma[0]*gamma[1]*gamma[3]
+    assert (perturbation-algebraic-curl).applyfunc(sp.simplify) == sp.zeros(4)
     # The static spatial source has no longitudinal curl. Check both
     # transverse chiralities, as needed for the massive-sector bound.
     vv = sp.Function('v')(z, th)
@@ -86,6 +93,8 @@ def verify():
     assert residual == sp.zeros(2)
     return {'Clifford_relations': 16, 'projected_Dirac_matrix_entries': 4,
             'static_spatial_full_Dirac_matrix_entries': 16,
+            'full_warped_Dirac_vertex_matrix_entries': 16,
+            'curl_vertex': 'R sin(theta) (partial_t v_z-partial_z v_t) gamma0 gamma1 gamma3/(4 N^2)',
             'all_residuals': 'exact_zero',
             'effective_gauge_shift_before_mode_integral': 'v_a (m-q cos(theta)/2) - sin(theta) partial_theta v_a /4',
             'axial_shift_convention': 'v_a=-h_a P_l\'(cos(theta))/R^2',

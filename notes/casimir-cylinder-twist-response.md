@@ -16,6 +16,11 @@ under review. This advances the [specified cylinder test](finite-flux-response-a
 without claiming that its full dynamical kernel or Ward-identity audit is
 complete.
 
+The subsequent [Euclidean response calculation](casimir-cylinder-dynamical-response.md)
+includes the temporal and curl vertices, reproduces this static limit and
+bounds the remaining massive sector. Full Ward and curved-background
+matching remain open.
+
 ## Defined observable and result
 
 Use one free massless four-dimensional Dirac field of unit charge on
@@ -347,6 +352,6 @@ both angular chiralities. Numerical quadrature is supplementary to the
 ordinary sign proof; no Lean certificate exists yet.
 
 Remaining to-do list: complete the closest-source novelty comparison;
-derive the temporal/curl response and its Ward identities; assess the
+complete the full Ward identities for the extended response; assess the
 curved-background and stability consequence; then select and GCP-certify
 the complete surviving endpoint and prepare the manuscript.

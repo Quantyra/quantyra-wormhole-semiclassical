@@ -312,8 +312,10 @@ All run without Lean. No new GCP certification or manuscript is claimed.
 
 The subsequent [static response theorem](casimir-cylinder-twist-response.md)
 completes the spatial sign component of this test, including contact and
-an analytic all-level remainder. The temporal/curl kernel and full Ward
-audit below remain required; the test as a whole is incomplete.
+an analytic all-level remainder. The later
+[Euclidean response](casimir-cylinder-dynamical-response.md) includes temporal
+and curl terms with a bound on the remaining massive sector. The full Ward
+audit below remains required; the test as a whole is incomplete.
 
 The next feasibility test isolates the state-dependent response on a
 prescribed product cylinder, before attempting a globally completed

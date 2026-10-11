@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "static_cylinder_casimir_sign_milestone",
+  "status": "euclidean_axial_casimir_response_milestone",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Sphere spectrum, mixed metric response and negative geometric Casimir effects have precedents. Specific magnetic-cylinder finite-flux coefficient and uniform all-level bound remain under close comparison; no physical wormhole stability claim.",
+  "novelty": "Specific finite-flux static and Euclidean response remains under comparison. Sphere spectra, geometric Casimir effects, induced Pauli couplings and general spectral-gap analyticity have precedents; no physical wormhole stability claim.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,8 +18,8 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive proof/edition/citation comparisons and select primary plus fallback",
-    "Derive the temporal/curl Casimir response and Ward identities; control the joint finite-flux/backreaction expansion",
-    "Resolve curved background and global physical completion, and establish a consequential stability, transport or obstruction result",
+    "Restore angular partner sources and complete the full Ward identities, then control curved response in the joint finite-flux/backreaction expansion",
+    "Resolve global physical completion and establish a consequential stability, transport or obstruction result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
   "baseline_note": "notes/axial-baseline-and-throat-energy.md",
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/casimir-cylinder-twist-response.md",
-  "current_verification": "evidence/casimir-cylinder-twist.json",
+  "current_note": "notes/casimir-cylinder-dynamical-response.md",
+  "current_verification": "evidence/casimir-cylinder-response.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -75,7 +75,7 @@
       "observable": "finite-size minus infinite-line state-dependent quadratic Dirac response",
       "required_terms": "quadratic contact, LLL, mixed LLL/higher-level and summed higher-level determinant contributions",
       "acceptance": "leading drift/current comparison, charge/diffeomorphism Ward identities and controlled remainder",
-      "status": "static_spatial_sign_proved_temporal_curl_and_full_Ward_audit_pending"
+      "status": "euclidean_four_source_response_bounded_full_Ward_and_curved_matching_pending"
     }
   },
   "static_casimir_response": {
@@ -106,6 +106,36 @@
     "physical_wormhole_stability_proved": false,
     "external_shortcut_proved": false,
     "novelty": "unresolved",
+    "lean_invocations": 0
+  },
+  "euclidean_casimir_response": {
+    "note": "notes/casimir-cylinder-dynamical-response.md",
+    "receipt": "evidence/casimir-cylinder-response.json",
+    "source_scope": "Affine l=2 axial g_tauphi,g_zphi and A_tau,A_z; prescribed magnetic product cylinder; one free 4D Dirac",
+    "euclidean_domain": "q>=3; R,L>0; real Omega; k=2*pi*j/L with integer j nonzero",
+    "full_warped_linear_Dirac_vertex_verified": true,
+    "pure_LLL_finite_size_current_difference_zero": true,
+    "mixed_response_exact": true,
+    "curl_reduction": "c -> c + (Q^2*h-Q*(Q.h))/4; subtract M^2*(Omega*h_z-k*h_tau)^2*Theta_M/8",
+    "quadratic_metric_contact_included": true,
+    "entire_remaining_massive_sector_analytically_bounded": true,
+    "massive_remainder_computed_exactly": false,
+    "retarded_subthreshold_statement": "No absorptive spectral weight; analytic for |omega|<sqrt(k^2+(q+1)/R^2), after common UV subtraction",
+    "retarded_subthreshold_proof": "Ordinary vacuum spectral argument; pure LLL poles cancel, remaining pair thresholds have angular gap",
+    "euclidean_numeric_bound_claimed_after_Wick_rotation": false,
+    "symbolic_zero_identities": 6,
+    "pure_LLL_occupation_cases": 9,
+    "independent_Matsubara_cases": 4,
+    "max_Matsubara_residual": 8.531370054853937e-15,
+    "raw_vs_reduced_curl_cases": 4,
+    "static_limit_cases": 3,
+    "four_source_matrix_samples": 5,
+    "full_four_dimensional_Ward_audit_complete": false,
+    "curved_background_response_complete": false,
+    "physical_wormhole_stability_proved": false,
+    "physical_wormhole_instability_proved": false,
+    "external_shortcut_proved": false,
+    "novelty": "unresolved; general Pauli coupling and spectral-gap consequences known",
     "lean_invocations": 0
   }
 }

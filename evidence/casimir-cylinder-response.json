@@ -1,0 +1,325 @@
+{
+  "status": "passed_euclidean_cylinder_response_checks",
+  "script_sha256": "00b29734a9a59c9b203cbffe63e866db204954f9f56eeb4ec137eb4224d4feba",
+  "dependency_sha256": {
+    "casimir_cylinder_twist.py": "5aa6c15c8626d74ed232a1a5f4c880549916258692d970db1d49a3645aea2755"
+  },
+  "sympy_version": "1.14.0",
+  "scipy_version": "1.18.1",
+  "symbolic_checks": {
+    "full_spinor_trace_with_curl": "exact_zero",
+    "angular_commutator_curl_identity": "exact_zero",
+    "general_partial_fractions": "exact_zero",
+    "curl_reduction_massless_residue": "exact_zero",
+    "curl_reduction_massive_residue": "exact_zero",
+    "vector_kernel_traceless": "exact_zero",
+    "pure_LLL_occupation_sum_cases": 9
+  },
+  "numerical_checks": {
+    "independent_Matsubara_cases": 4,
+    "max_Matsubara_residual": 8.531370054853937e-15,
+    "raw_vs_reduced_curl_cases": 4,
+    "max_curl_reduction_residual": 7.806255641895632e-18,
+    "static_limit_cases": 3,
+    "max_static_limit_residual": 3.469446951953614e-18,
+    "response_samples": [
+      {
+        "q": 3,
+        "length_over_radius": 16.0,
+        "omega_E": 0.0,
+        "spatial_mode": 1,
+        "source_order": [
+          "a_tau",
+          "a_z",
+          "h_tau",
+          "h_z"
+        ],
+        "mixed_plus_LLL_contact_matrix": [
+          [
+            -0.0003793676679937339,
+            0.0,
+            -0.0004899098831092667,
+            -2.168404344971009e-19
+          ],
+          [
+            0.0,
+            0.0003793676679937339,
+            2.168404344971009e-19,
+            0.00047528406746214944
+          ],
+          [
+            -0.0004899098831092667,
+            2.168404344971009e-19,
+            0.002407099780446953,
+            0.0
+          ],
+          [
+            -2.168404344971009e-19,
+            0.00047528406746214944,
+            0.0,
+            -0.002444311040065975
+          ]
+        ],
+        "unit_source_errors": [
+          {
+            "quadrature_error_estimate": 1.1796354569144036e-14,
+            "all_massive_sector_bound": 1.1550684498367003e-13
+          },
+          {
+            "quadrature_error_estimate": 1.1796354569144036e-14,
+            "all_massive_sector_bound": 1.1550684498367003e-13
+          },
+          {
+            "quadrature_error_estimate": 1.6162143921430624e-14,
+            "all_massive_sector_bound": 1.7112871912175737e-11
+          },
+          {
+            "quadrature_error_estimate": 1.5512409488132547e-14,
+            "all_massive_sector_bound": 1.670213210417165e-11
+          }
+        ],
+        "continuum_mixed_pair_threshold": 2.038188550837979,
+        "circle_mixed_pair_threshold": 2.205964713510973
+      },
+      {
+        "q": 3,
+        "length_over_radius": 16.0,
+        "omega_E": 0.5,
+        "spatial_mode": 1,
+        "source_order": [
+          "a_tau",
+          "a_z",
+          "h_tau",
+          "h_z"
+        ],
+        "mixed_plus_LLL_contact_matrix": [
+          [
+            -0.0003439004151337203,
+            5.903358178170419e-07,
+            -0.0004573473186053106,
+            1.7319849218076137e-05
+          ],
+          [
+            5.903358178170419e-07,
+            0.0003439004151337203,
+            -1.6456631774517934e-05,
+            0.0004655246968633268
+          ],
+          [
+            -0.0004573473186053106,
+            -1.6456631774517934e-05,
+            0.0024731760315821515,
+            2.1323175102201143e-07
+          ],
+          [
+            1.7319849218076137e-05,
+            0.0004655246968633268,
+            2.1323175102201143e-07,
+            -0.0024511608928269183
+          ]
+        ],
+        "unit_source_errors": [
+          {
+            "quadrature_error_estimate": 1.074007956278079e-14,
+            "all_massive_sector_bound": 1.1550684498367003e-13
+          },
+          {
+            "quadrature_error_estimate": 1.074007956278079e-14,
+            "all_massive_sector_bound": 1.1550684498367003e-13
+          },
+          {
+            "quadrature_error_estimate": 3.575192664329103e-14,
+            "all_massive_sector_bound": 1.7112871912175737e-11
+          },
+          {
+            "quadrature_error_estimate": 3.726470861189936e-14,
+            "all_massive_sector_bound": 1.7225973722779e-11
+          }
+        ],
+        "continuum_mixed_pair_threshold": 2.038188550837979,
+        "circle_mixed_pair_threshold": 2.205964713510973
+      },
+      {
+        "q": 3,
+        "length_over_radius": 16.0,
+        "omega_E": 1.0,
+        "spatial_mode": 1,
+        "source_order": [
+          "a_tau",
+          "a_z",
+          "h_tau",
+          "h_z"
+        ],
+        "mixed_plus_LLL_contact_matrix": [
+          [
+            -0.0002643776800702384,
+            6.561950612932643e-07,
+            -0.0003793441788407245,
+            2.660939546534263e-05
+          ],
+          [
+            6.561950612932643e-07,
+            0.0002643776800702384,
+            -2.5439791011086803e-05,
+            0.0004351171649672171
+          ],
+          [
+            -0.0003793441788407245,
+            -2.5439791011086803e-05,
+            0.0026414612113386314,
+            -4.521898688113462e-06
+          ],
+          [
+            2.660939546534263e-05,
+            0.0004351171649672171,
+            -4.521898688113462e-06,
+            -0.002469475570681885
+          ]
+        ],
+        "unit_source_errors": [
+          {
+            "quadrature_error_estimate": 1.605811135096545e-14,
+            "all_massive_sector_bound": 1.1550684498367003e-13
+          },
+          {
+            "quadrature_error_estimate": 1.605811135096545e-14,
+            "all_massive_sector_bound": 1.1550684498367003e-13
+          },
+          {
+            "quadrature_error_estimate": 8.118876127458021e-14,
+            "all_massive_sector_bound": 1.7112871912175737e-11
+          },
+          {
+            "quadrature_error_estimate": 9.908301409524409e-14,
+            "all_massive_sector_bound": 1.775793691642427e-11
+          }
+        ],
+        "continuum_mixed_pair_threshold": 2.038188550837979,
+        "circle_mixed_pair_threshold": 2.205964713510973
+      },
+      {
+        "q": 8,
+        "length_over_radius": 16.0,
+        "omega_E": 0.5,
+        "spatial_mode": 1,
+        "source_order": [
+          "a_tau",
+          "a_z",
+          "h_tau",
+          "h_z"
+        ],
+        "mixed_plus_LLL_contact_matrix": [
+          [
+            -0.0003168994826757871,
+            1.3902981964473917e-07,
+            -0.001151574553347215,
+            1.6000756942404924e-05
+          ],
+          [
+            1.3902981964473917e-07,
+            0.0003168994826757871,
+            -1.5114106344313609e-05,
+            0.0011591496509777333
+          ],
+          [
+            -0.001151574553347215,
+            -1.5114106344313609e-05,
+            0.004708284029716644,
+            1.1444442983791353e-06
+          ],
+          [
+            1.6000756942404924e-05,
+            0.0011591496509777333,
+            1.1444442983791353e-06,
+            -0.004653036492480519
+          ]
+        ],
+        "unit_source_errors": [
+          {
+            "quadrature_error_estimate": 9.459316481839289e-15,
+            "all_massive_sector_bound": 4.223265619708007e-20
+          },
+          {
+            "quadrature_error_estimate": 9.459316481839289e-15,
+            "all_massive_sector_bound": 4.223265619708007e-20
+          },
+          {
+            "quadrature_error_estimate": 1.5045440081763537e-13,
+            "all_massive_sector_bound": 3.1174650164616003e-17
+          },
+          {
+            "quadrature_error_estimate": 1.5424504079892582e-13,
+            "all_massive_sector_bound": 3.1266984001231036e-17
+          }
+        ],
+        "continuum_mixed_pair_threshold": 3.0255929284632823,
+        "circle_mixed_pair_threshold": 3.2027681980213396
+      },
+      {
+        "q": 8,
+        "length_over_radius": 16.0,
+        "omega_E": 1.5,
+        "spatial_mode": 1,
+        "source_order": [
+          "a_tau",
+          "a_z",
+          "h_tau",
+          "h_z"
+        ],
+        "mixed_plus_LLL_contact_matrix": [
+          [
+            -0.00022094478846822945,
+            1.971153205237178e-07,
+            -0.000827921892796796,
+            3.327878054451761e-05
+          ],
+          [
+            1.971153205237178e-07,
+            0.00022094478846822945,
+            -3.189810906149257e-05,
+            0.0009436271652098159
+          ],
+          [
+            -0.000827921892796796,
+            -3.189810906149257e-05,
+            0.0059698555170576185,
+            -1.442850593571729e-05
+          ],
+          [
+            3.327878054451761e-05,
+            0.0009436271652098159,
+            -1.442850593571729e-05,
+            -0.005042064595979533
+          ]
+        ],
+        "unit_source_errors": [
+          {
+            "quadrature_error_estimate": 1.4405063036845305e-14,
+            "all_massive_sector_bound": 4.223265619708007e-20
+          },
+          {
+            "quadrature_error_estimate": 1.4405063036845305e-14,
+            "all_massive_sector_bound": 4.223265619708007e-20
+          },
+          {
+            "quadrature_error_estimate": 2.3755585279774483e-13,
+            "all_massive_sector_bound": 3.1174650164616003e-17
+          },
+          {
+            "quadrature_error_estimate": 3.038955595860929e-13,
+            "all_massive_sector_bound": 3.2134073239175953e-17
+          }
+        ],
+        "continuum_mixed_pair_threshold": 3.0255929284632823,
+        "circle_mixed_pair_threshold": 3.2027681980213396
+      }
+    ]
+  },
+  "scope": "Free Dirac compact-minus-line axial Euclidean quadratic response, l=2, q>=3, nonzero circle momentum",
+  "mixed_response_exact": true,
+  "entire_massive_sector_bounded": true,
+  "full_four_dimensional_Ward_audit_complete": false,
+  "curved_background_response_complete": false,
+  "physical_stability_proved": false,
+  "lean_certified": false
+}
