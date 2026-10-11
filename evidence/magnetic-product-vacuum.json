@@ -1,0 +1,125 @@
+{
+  "status": "passed_magnetic_product_vacuum_feasibility",
+  "script_sha256": "2c1e321fd5409c749ec1d41316965bac7914e01c3aff1e50281bb8d08d3e7a75",
+  "sympy_version": "1.14.0",
+  "scipy_version": "1.18.1",
+  "symbolic_checks": {
+    "spectral_a0": "exact_zero",
+    "spectral_a2": "exact_zero",
+    "spectral_a4_vs_four_dimensional_anomaly": "exact_zero",
+    "pressure_subtraction_constant": "exact_zero",
+    "independent_radius_variations_trace": "exact_zero",
+    "classical_two_radius_Jacobian_determinant": "-1",
+    "sphere_radius_first_order": "exact_zero",
+    "AdS_radius_first_order": "exact_zero"
+  },
+  "numerical_checks": {
+    "samples": [
+      {
+        "q": 3,
+        "eta": 1.0,
+        "log_mu_b_squared": 0.0,
+        "uv_cutoff": 0.0075,
+        "b4_Euclidean_action_density": 0.03179832799266688,
+        "b4_pressure_AdS": -0.024523696418407282,
+        "b4_pressure_sphere": 0.01579881671587264,
+        "b4_trace": -0.017449759405069286,
+        "uv_remainder_bounds_before_half": [
+          6.443493815042687e-23,
+          6.46815111240067e-23
+        ],
+        "angular_tail_integral_bound_before_half": 4.328513115055874e-33,
+        "outer_quadrature_error_estimates_before_half": [
+          2.7241105824765285e-15,
+          2.2786422167314908e-15
+        ],
+        "quadrature_error_estimates_are_not_certified_bounds": true,
+        "cutoff_change_max_residual": 9.96425164601078e-15,
+        "sphere_fractional_radius_squared_shift_per_g_c_squared": 0.021798841260806473,
+        "AdS_fractional_radius_squared_shift_per_g_c_squared": 0.02955428988528171
+      },
+      {
+        "q": 8,
+        "eta": 1.0,
+        "log_mu_b_squared": 0.0,
+        "uv_cutoff": 0.003333333333333333,
+        "b4_Euclidean_action_density": 0.10689206261328063,
+        "b4_pressure_AdS": -0.07887834534204324,
+        "b4_pressure_sphere": 0.012104870844419247,
+        "b4_trace": -0.133546948995248,
+        "uv_remainder_bounds_before_half": [
+          1.0163703592022364e-25,
+          1.0179813948117127e-25
+        ],
+        "angular_tail_integral_bound_before_half": 2.1466344722626584e-32,
+        "outer_quadrature_error_estimates_before_half": [
+          1.0909497676269827e-12,
+          1.4814693066807205e-12
+        ],
+        "quadrature_error_estimates_are_not_certified_bounds": true,
+        "cutoff_change_max_residual": 7.0457528700274e-14,
+        "sphere_fractional_radius_squared_shift_per_g_c_squared": 0.009859793167755405,
+        "AdS_fractional_radius_squared_shift_per_g_c_squared": 0.018206477479958405
+      },
+      {
+        "q": 16,
+        "eta": 1.0,
+        "log_mu_b_squared": 0.0,
+        "uv_cutoff": 0.001764705882352941,
+        "b4_Euclidean_action_density": 0.16017295768816525,
+        "b4_pressure_AdS": -0.09282554502014652,
+        "b4_pressure_sphere": -0.17659029676215304,
+        "b4_trace": -0.5388316835645991,
+        "uv_remainder_bounds_before_half": [
+          6.654605034690292e-28,
+          6.659682091750445e-28
+        ],
+        "angular_tail_integral_bound_before_half": 7.572142473378777e-32,
+        "outer_quadrature_error_estimates_before_half": [
+          4.955118680276874e-14,
+          8.466534607758233e-13
+        ],
+        "quadrature_error_estimates_are_not_certified_bounds": true,
+        "cutoff_change_max_residual": 9.64867075126108e-13,
+        "sphere_fractional_radius_squared_shift_per_g_c_squared": 0.0029007982818795787,
+        "AdS_fractional_radius_squared_shift_per_g_c_squared": 0.011320043337576441
+      },
+      {
+        "q": 64,
+        "eta": 1.0,
+        "log_mu_b_squared": 0.0,
+        "uv_cutoff": 0.00046153846153846153,
+        "b4_Euclidean_action_density": -4.573023420759775,
+        "b4_pressure_AdS": 4.932884522492503,
+        "b4_pressure_sphere": -9.255147709968313,
+        "b4_trace": -8.64452637495162,
+        "uv_remainder_bounds_before_half": [
+          2.086772914239239e-32,
+          2.08700926089594e-32
+        ],
+        "angular_tail_integral_bound_before_half": 1.090431614457919e-30,
+        "outer_quadrature_error_estimates_before_half": [
+          9.615605967896288e-12,
+          5.548274406319358e-12
+        ],
+        "quadrature_error_estimates_are_not_certified_bounds": true,
+        "cutoff_change_max_residual": 1.5660361896152608e-11,
+        "sphere_fractional_radius_squared_shift_per_g_c_squared": -0.00963454008299317,
+        "AdS_fractional_radius_squared_shift_per_g_c_squared": -0.0011926197949544796
+      }
+    ],
+    "independent_two_radius_finite_difference_pressures": [
+      -0.024523696419035266,
+      0.01579881670237978
+    ],
+    "finite_difference_vs_direct_pressure_max_residual": 1.3492859607389107e-11
+  },
+  "state": "Euclidean complete H2 L2 spectral prescription, continued to invariant AdS2 vacuum",
+  "renormalization": "zeta at fixed mu; finite additional local terms zero in this stated scheme",
+  "scope": "Homogeneous prescribed product vacuum and first-order stationary reference",
+  "full_numerical_error_certified": false,
+  "global_wormhole_constructed": false,
+  "physical_stability_proved": false,
+  "lean_certified": false,
+  "novelty_established": false
+}

@@ -2,7 +2,16 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The current [trace-matching audit](notes/throat-trace-anomaly.md) identifies
+The current [homogeneous vacuum calculation](notes/magnetic-product-vacuum.md)
+derives both renormalized reference pressures from the full magnetic Dirac
+spectrum. It reproduces the anomaly and supplies a nearby stationary
+product branch for sufficiently small loop strength at each fixed charge.
+Numerical radius variations independently check the pressure integrals.
+This is a specified Euclidean reference state and subtraction scheme;
+inhomogeneous Casimir matching, global completion and stability remain open.
+The determinant construction has direct prior literature and is credited.
+
+The preserved [trace-matching audit](notes/throat-trace-anomaly.md) identifies
 a necessary correction to the quantum reference background. The full
 massless charged Dirac anomaly is nonzero on the equal-radius magnetic
 throat, while the displayed LLL lift is traceless. The required leading
@@ -52,6 +61,7 @@ python checks/casimir_cylinder_twist.py --output evidence/casimir-cylinder-twist
 python checks/casimir_cylinder_response.py --output evidence/casimir-cylinder-response.json
 python checks/casimir_cylinder_ward.py --output evidence/casimir-cylinder-ward.json
 python checks/throat_trace_anomaly.py --output evidence/throat-trace-anomaly.json
+python checks/magnetic_product_vacuum.py --output evidence/magnetic-product-vacuum.json
 ```
 
 The checks combine symbolic tensor/reduction identities with independent
@@ -67,6 +77,6 @@ notes use Apache-2.0. Review is open source and informal; specialist sign-off
 is not a workflow gate. The research checkpoint is [checkpoint.json](checkpoint.json).
 
 Remaining to-do list: finish the source and novelty audit,
-compute the renormalized reference stress and matched background, derive
-the curved total response and resolve global physical completion,
+match the homogeneous quantum reference to the inhomogeneous Casimir state
+and global geometry, derive the curved total response,
 then pursue and verify the selected primary and fallback questions.
