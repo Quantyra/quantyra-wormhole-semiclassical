@@ -1,0 +1,159 @@
+{
+  "status": "passed_local_maxwell_stress_checks",
+  "exact": {
+    "direct_einstein_identities": 2,
+    "direct_maxwell_identities": 4,
+    "zero_flux_angular_modes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "mass_matrices_checked": 2,
+    "physical_l1_mass_squared": 6,
+    "reference_overlap_samples": [
+      {
+        "alpha": 0.01,
+        "overlap_endpoint": 10.0,
+        "max_area_comparison_lhs": 0.23949439689290924,
+        "minimum_S_over_f": 0.8405300609885143
+      },
+      {
+        "alpha": 0.0001,
+        "overlap_endpoint": 100.0,
+        "max_area_comparison_lhs": 0.030675639164167462,
+        "minimum_S_over_f": 0.9842890142119198
+      },
+      {
+        "alpha": 1e-08,
+        "overlap_endpoint": 10000.0,
+        "max_area_comparison_lhs": 0.0003140852433252976,
+        "minimum_S_over_f": 0.999842920364181
+      }
+    ]
+  },
+  "rn_radial_cases": [
+    {
+      "hmin": 0.0001,
+      "hmax": 0.01,
+      "potential_error": 3.0792729477369107e-13,
+      "derivative_error": 2.1659583848698816e-13,
+      "physical_field_error": 6.187596008483398e-15,
+      "solution_refinement": 1.181147575579633e-10
+    },
+    {
+      "hmin": 0.0001,
+      "hmax": 1.0,
+      "potential_error": 1.1173724434859061e-12,
+      "derivative_error": 1.0372913194622163e-12,
+      "physical_field_error": 3.3500305394312813e-12,
+      "solution_refinement": 2.1765349461980166e-10
+    },
+    {
+      "hmin": 0.0001,
+      "hmax": 100.0,
+      "potential_error": 1.3919653461553355e-12,
+      "derivative_error": 1.8707278056555397e-12,
+      "physical_field_error": 1.120043036095808e-08,
+      "solution_refinement": 3.6505824285801985e-10
+    },
+    {
+      "hmin": 1e-08,
+      "hmax": 0.01,
+      "potential_error": 1.6434897605159537e-12,
+      "derivative_error": 1.6434442240247094e-12,
+      "physical_field_error": 3.303410304259229e-14,
+      "solution_refinement": 2.962579093721343e-10
+    },
+    {
+      "hmin": 1e-08,
+      "hmax": 1.0,
+      "potential_error": 2.164592300296945e-12,
+      "derivative_error": 2.1650569893480725e-12,
+      "physical_field_error": 6.493259895696754e-12,
+      "solution_refinement": 4.191911720085456e-10
+    },
+    {
+      "hmin": 1e-08,
+      "hmax": 100.0,
+      "potential_error": 2.348831129527179e-12,
+      "derivative_error": 2.7522943064981886e-12,
+      "physical_field_error": 2.202391329031439e-08,
+      "solution_refinement": 6.110598433771864e-10
+    }
+  ],
+  "focusing_cases": [
+    {
+      "overlap_endpoint": 0.1,
+      "exact_field_amplitude": 0.49506574641601836,
+      "normalized_maxwell_integral": 0.00021613021182030905,
+      "focusing_slope": -0.00010806510590513265,
+      "bound_ratio": 0.0010878386621668956,
+      "weight_ratio": 1.0033156648743426,
+      "ode_quadrature_error": 5.02187538515414e-15,
+      "quadrature_refinement": 2.087089182034596e-18
+    },
+    {
+      "overlap_endpoint": 1.0,
+      "exact_field_amplitude": 0.2800495767557787,
+      "normalized_maxwell_integral": 0.03971317252895934,
+      "focusing_slope": -0.01985658626445231,
+      "bound_ratio": 0.03089561947404147,
+      "weight_ratio": 1.2220309407033145,
+      "ode_quadrature_error": 2.73600586631062e-14,
+      "quadrature_refinement": 2.706168622523819e-16
+    },
+    {
+      "overlap_endpoint": 10.0,
+      "exact_field_amplitude": 0.031824275530095376,
+      "normalized_maxwell_integral": 0.01507578714247661,
+      "focusing_slope": -0.007537893571279917,
+      "bound_ratio": 0.009601570830285585,
+      "weight_ratio": 1.8738837888500688,
+      "ode_quadrature_error": 4.161167937999366e-14,
+      "quadrature_refinement": 1.9255430583342559e-16
+    },
+    {
+      "overlap_endpoint": 1000.0,
+      "exact_field_amplitude": 0.0003183098861162432,
+      "normalized_maxwell_integral": 0.00016650751172365223,
+      "focusing_slope": -8.325375593665343e-05,
+      "bound_ratio": 0.00010600197425599245,
+      "weight_ratio": 1.998726761727963,
+      "ode_quadrature_error": 7.482731068878673e-14,
+      "quadrature_refinement": 9.242823520438925e-18
+    }
+  ],
+  "scale_powers": {
+    "component_q_power": -3,
+    "component_log_power": 4,
+    "null_q_power": -9,
+    "null_log_power": 8
+  },
+  "local_field_bound": "C q/d^2 under inner area and local regularity conditions",
+  "direct_null_stress_nonnegative": true,
+  "monopole_cross_term_cancels": true,
+  "full_einstein_response_solved": false,
+  "full_second_order_monopole_response": false,
+  "actual_quantum_state_derived": false,
+  "bulk_mass_gap_closes_boundary_modes": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "supplementary_numerics": true,
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0"
+  },
+  "input_sha256": {
+    "notes/local-maxwell-stress.md": "1c270884a9e3c9d45d0f52a0496bc0bb1ae6511b8ab49d02093c4de114eb9f2b",
+    "notes/maxwell-dirac-comparison.md": "cc95d5214bf65cd9b0318467dd1ec4edf7c1c620384ec130108216ee79842fef",
+    "notes/coupled-maxwell-matching.md": "36d5f4130879763f9d31421c49e60b8b24ac1d3ab9762a9584eb5c572d1d37ec",
+    "notes/casimir-reference-matching.md": "39993c5827bb4b59339471e64b8d93ec537832dd58d14afc8cd87b05929d920d"
+  },
+  "script_sha256": "dd708b6ba1cf16a52d55bfc382a4b68d78c8246611b4caf2726250055f396808"
+}

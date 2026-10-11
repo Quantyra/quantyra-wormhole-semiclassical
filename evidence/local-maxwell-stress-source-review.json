@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-11",
+  "scope": "Local classical Maxwell stress and its direct leading spherical focusing contribution, conditional on inner spherical geometry and local regularity; coupled nonspherical metric and quantum response remain open",
+  "queries": [
+    "Bicak Dvorak 1980 2933 magnetic monopole external field Reissner Nordstrom accelerating static perturbations pdf",
+    "Maldacena Milekhin Popov traversable wormhole gravitational backreaction magnetic field perturbations orbit tidal force"
+  ],
+  "reviewed_sources": [
+    {
+      "authors": "Juan Maldacena, Alexey Milekhin and Fedor Popov",
+      "title": "Traversable wormholes in four dimensions",
+      "version": "arXiv:1807.04726v3",
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "cache": "references/cache/1807.04726v3-open-photon.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "read_scope": "Re-read Sections 5.2, 5.3.1 and 5.3.2, including the traceless two-dimensional state-dependent stress, Einstein focusing, matching and scale; Sections 5.4-5.6, including the angular stress/KK paragraph and footnote 6; Section 6.1 through the orbital-frequency estimate (6.50).",
+      "use": "Established Casimir source and leading throat matching comparator, independently reproduced in notes/casimir-reference-matching.md. The angular stress discussion points to Michelson-Spradlin and distinguishes the shared bosonic Einstein-Maxwell spectrum. Orbital support is an additional global requirement.",
+      "limits": "The complete interacting state, all supporting proofs and orbital stability are not verified. This source does not supply a proved uniform inverse for our physical mouth boundary problem. Its construction and no-shortcut predecessor remain established prior work."
+    },
+    {
+      "authors": "Jeremy Michelson and Marcus Spradlin",
+      "title": "Supergravity spectrum on AdS2 x S2",
+      "version": "arXiv:hep-th/9906056v3, 2 September 1999; 20 PDF pages",
+      "url": "https://arxiv.org/abs/hep-th/9906056v3",
+      "download_url": "https://arxiv.org/pdf/hep-th/9906056",
+      "cache": "references/cache/9906056-local-stress.pdf",
+      "sha256": "d88c67971a8182819761473e6b3683eb886fc4d529c2430587f0bf0c70e81364",
+      "read_scope": "Title and introduction, Sections 2.1-2.2 for bosonic normalization, complete bosonic Section 3: gauge fixing and residual gauges (3.1-3.3), linearized Einstein-Maxwell equations (3.4), two-dimensional tensor constraint (3.5), exceptional l=0 and l=1 modes (3.6-3.7), general l>=2 sector (3.8), summary (3.9). PDF pages 3-13 contain the reviewed normalization/bosonic derivation.",
+      "use": "Scalar and vector mass matrices have eigenvalues l(l-1) and (l+1)(l+2); the physical l=1 scalar has mass squared six. The boundary modes and residual gauge discussion prevent use of the positive bulk spectrum alone as a global mouth-matching inverse.",
+      "independent_checks": "Algebraic characteristic polynomials of both displayed mass matrices; symmetric similarity of the scalar matrix; direct elimination of the l=1 scalar equations. This is not an independent derivation of every four-dimensional mode equation.",
+      "limits": "Fermionic Section 4, representation analysis in Section 5 and supersymmetry dependencies are not reviewed or imported. In particular, the extra l=1 scalar boundary mode is left unconstrained by the reviewed bulk equation; its mass argument from Section 5 is not adopted. Boundary gauge freedom depends on boundary conditions, which differ in the physical two-mouth problem. No supersymmetry is assigned to the QED model."
+    }
+  ],
+  "identified_not_proof_reviewed": [
+    {
+      "authors": "J. Bicak and L. Dvorak",
+      "title": "Stationary electromagnetic fields around black holes. III. General solutions and the fields of current loops near the Reissner-Nordstrom black hole",
+      "date": "1980-12-15",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.22.2933",
+      "scope": "Publisher abstract and metadata only. Relevant coupled electromagnetic/gravitational multipoles are identified, but the proof and radial formulas are not imported.",
+      "access": "Browser PDF requests did not retrieve a paper; direct APS PDF request returned HTTP 403, and the ADS PDF request timed out after 25 seconds. That source-fetch process exited with code zero after reporting the failures. No source PDF was obtained and no live fetch was restarted."
+    }
+  ],
+  "analytic_proof_scope": "The note proves the R^2 barrier estimate using the prior global potential bound, supplies a rescaled Bernstein/Bochner local gradient argument, derives Maxwell component and null bounds, and integrates the direct leading spherical focusing equation. Einstein and Maxwell tensors, RN/AdS radial identities and the scale powers are independently checked. Standard maximum-principle and differential-geometric identities are used; no novel general regularity theorem is claimed.",
+  "verification": "evidence/local-maxwell-stress.json",
+  "development_notes": [
+    "A global geometric inequality extending to the artificial Euclidean seam collars was not assumed: the local theorem instead applies on an inner segment with endpoint radii at least c p. Exact RN and AdS pieces satisfy the inequality; the physical joining problem remains open.",
+    "The initial checker completed successfully. After an explicit time normalization, a local gradient proof and a sharper statement of the mass-matrix check scope were added to the note, the checker completed again with exit code zero and updated input hashes. No tolerance was relaxed."
+  ],
+  "novelty_decision": "Continue physical long-return damping and matched finite-duration band transfer. The conditional local Maxwell source is subleading to the specified leading LLL Casimir opening, including its direct focusing contribution. Coupled nonspherical boundary response, actual quantum state and full second-order mean response remain unresolved; no new physical support, stability, transport or shortcut theorem is accepted.",
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "einstein_metric_solved": false,
+  "full_second_order_mean_response_derived": false,
+  "renormalized_quantum_response_derived": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}

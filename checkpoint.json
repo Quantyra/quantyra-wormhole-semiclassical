@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "maxwell_completed_dirac_comparison_physical_metric_pending",
+  "status": "local_maxwell_stress_controlled_coupled_metric_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Source-free Maxwell completion changes the full one-particle Dirac propagation by a bounded O(q p) perturbation under an explicit optical comparison condition. RN and AdS pieces satisfy the attenuation alternative to a cap; physical metric matching, renormalized response and novelty remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The local Maxwell field and its direct leading spherical focusing contribution are controlled under explicit inner-geometry hypotheses. Coupled metric/boundary response, actual quantum state, full second-order mean response and novelty remain open.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive a controlled joined Einstein metric and local stress, verify its optical attenuation condition, then obtain the quantum state and renormalized response including full ground/higher-mode feedback, exterior determinant and discarded physical tail.",
+    "Solve the coupled nonspherical metric/Maxwell response with physical mouth data; verify inner geometry and regularity, then derive the quantum state and full renormalized response including exterior determinant and discarded physical tail.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/maxwell-dirac-comparison.md",
-  "current_verification": "evidence/maxwell-dirac-comparison.json",
+  "current_note": "notes/local-maxwell-stress.md",
+  "current_verification": "evidence/local-maxwell-stress.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1485,5 +1485,45 @@
     "goal_complete": false,
     "next_decisive_question": "Derive a controlled joined Einstein metric and local stress, verify its optical attenuation condition, then obtain the quantum state and renormalized response including full ground/higher-mode feedback, exterior determinant and discarded physical tail.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Source-free Maxwell completion changes the full one-particle Dirac propagation by a bounded O(q p) perturbation under an explicit optical comparison condition. RN and AdS pieces satisfy the attenuation alternative to a cap; physical metric matching, renormalized response and novelty remain open."
+  },
+  "local_maxwell_stress": {
+    "date": "2026-10-11",
+    "note": "notes/local-maxwell-stress.md",
+    "verification": "evidence/local-maxwell-stress.json",
+    "source_review": "evidence/local-maxwell-stress-source-review.json",
+    "inner_area_condition": "(R^2) double prime <= 2 N^2 on an inner segment with endpoint radii >= c p",
+    "local_regularity": "Uniform proper-distance C^(2,alpha) bounds on areal-radius-sized neighborhoods",
+    "geometric_einstein_identity": "(R^2) double prime - 2 N^2 = 8 pi G_N N^2 R^2 (p_r-rho)",
+    "analytic_rn_ads_conditions_checked": true,
+    "physical_junction_conditions_verified": false,
+    "local_field_bound": "abs(beta) <= C q/d^2",
+    "radial_null_stress": "Delta T_kk = abs(beta_transverse)^2/g^2 >= 0",
+    "radial_null_linear_cross_term_cancels": true,
+    "fixed_reference_diagonal_mean_cross_term_cancels": true,
+    "component_relative_to_leading_core_casimir": "O(q^-3 (log q)^4)",
+    "direct_null_focusing_relative_to_leading_casimir": "O(q^-9 (log q)^8)",
+    "direct_focusing_is_full_second_order_mean_response": false,
+    "bosonic_mass_matrix_algebra_checked": true,
+    "bulk_positive_masses_control_physical_boundary_modes": false,
+    "coupled_einstein_equations_solved": false,
+    "full_quantum_state_and_response_derived": false,
+    "verification_counts": {
+      "einstein_tensor_identities": 2,
+      "maxwell_tensor_identities": 4,
+      "zero_flux_angular_modes": 8,
+      "mass_matrices": 2,
+      "rn_radial_cases": 6,
+      "focusing_cases": 4
+    },
+    "max_rn_physical_field_error": 2.202391329031439e-08,
+    "max_rn_solution_refinement": 6.110598433771864e-10,
+    "max_focusing_ode_quadrature_error": 7.482731068878673e-14,
+    "max_focusing_quadrature_refinement": 2.706168622523819e-16,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Solve the coupled nonspherical metric/Maxwell response with physical mouth data; verify inner geometry and regularity, then derive the quantum state and full renormalized response including exterior determinant and discarded physical tail.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The local Maxwell field and its direct leading spherical focusing contribution are controlled under explicit inner-geometry hypotheses. Coupled metric/boundary response, actual quantum state, full second-order mean response and novelty remain open."
   }
 }

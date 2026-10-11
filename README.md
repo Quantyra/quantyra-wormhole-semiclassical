@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [Maxwell-completed Dirac propagation](notes/maxwell-dirac-comparison.md)
-controls the corrected potential and all channel mixing over finite times
-on the prescribed geometry. An optical attenuation condition covers the
-exact RN and AdS pieces even where a uniform optical cap fails. The Dirac
-perturbation is O(q^(-1/2)) at p=q^(-3/2). The joined Einstein metric,
-local stress, full quantum response and novelty remain unresolved.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-maxwell-dirac-audit.md).
+Current continuation, 2026-10-11: [local Maxwell stress and focusing](notes/local-maxwell-stress.md)
+controls the magnetic correction by C q/d^2 under explicit inner-geometry
+and regularity conditions. The radial null cross term cancels; the direct
+leading spherical focusing correction is O(q^-9 (log q)^8) relative to
+the specified Casimir opening. The physical joined metric, complete
+second-order response, quantum state and novelty remain unresolved.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-local-maxwell-stress-audit.md).
 
-Remaining to-do list: derive the joined metric and local stress, verify
-its optical comparison condition, close the quantum state/response and
-novelty, then independently verify, GCP-certify the consequential result
-and prepare the manuscript.
+Remaining to-do list: solve the coupled metric/Maxwell boundary problem,
+verify the inner conditions, close the quantum state/response and novelty,
+then independently verify, GCP-certify the consequential result and prepare
+the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
