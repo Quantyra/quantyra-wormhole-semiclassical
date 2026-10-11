@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "dipole_interior_trial_and_global_error_criterion_verified",
+  "status": "global_flat_trial_and_spherical_trace_limits_verified",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Use a global matched trial and weighted residual estimate to include feedback; retain collars as local matching evidence. Interior cancellation and known weighting methods do not establish the full return or novelty.",
+  "novelty": "The global trial and its two mouth traces close the former geometric matching gap in the fixed flat model. The prepared-return conclusion remains conditional on boundary realization, restricted to trimmed modes and asymptotic flux. Complete source/domain, energy, physical matching and novelty comparisons before promotion.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -18,7 +18,7 @@
   "publication_selected": false,
   "remaining": [
     "Complete decisive literature proofs/editions and select the primary question plus fallback",
-    "Complete the global boundary proof audit and mouth/tube overlap plus trace matching; evaluate the weighted residual, incoming error and receiving trace budget with exceptional flux modes included.",
+    "Finish the original boundary proof/domain audit, control excluded channels in the energy estimate, and establish a physically compatible flux/port/throat scaling with matched state and holonomy.",
     "Bound total energy and common-observer corrections against the positive margin and establish the consequential result",
     "GCP-certify suitable complete mathematical endpoints and prepare a reproducible manuscript"
   ],
@@ -37,8 +37,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/exterior-trial-residual.md",
-  "current_verification": "evidence/exterior-trial-residual.json",
+  "current_note": "notes/global-mouth-trial.md",
+  "current_verification": "evidence/global-mouth-trial.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -497,5 +497,49 @@
     "lean_invocations": 0,
     "contribution_decision": "Use a global matched trial and weighted residual estimate to include feedback; retain collars as local matching evidence. Interior cancellation and known weighting methods do not establish the full return or novelty.",
     "next_decisive_question": "Complete the global boundary proof audit and mouth/tube overlap plus trace matching; evaluate the weighted residual, incoming error and receiving trace budget with exceptional flux modes included."
+  },
+  "global_mouth_trial": {
+    "note": "notes/global-mouth-trial.md",
+    "receipt": "evidence/global-mouth-trial.json",
+    "global_flat_trial_constructed": true,
+    "longitudinal_cutoff_derivatives_inside_removed_balls": true,
+    "ordinary_weighted_residual": "C1/sqrt(q)+C2 exp(-c0 q), fixed rho and trimmed contour family",
+    "uniform_spherical_trace_limit": true,
+    "persistent_wrong_spin_order": "(rho/d)^2",
+    "persistent_profile_distance_order": "(rho/d)^4",
+    "conditional_trimmed_large_flux_return": true,
+    "conditional_target": "0.001 exp(-xi D) for 0.05<=xi D<=4",
+    "asymptotic_budget": {
+      "rho_over_d_max": "1/200",
+      "wrong_spin_bound": "1/79200",
+      "source_shape_bound": "1/1568160000",
+      "finite_q_threshold_certified": false
+    },
+    "exceptional_channel_count_bound": "2 delta q+2; no exceptional-channel transport acceptance",
+    "verification_counts": {
+      "exact_identities": 8,
+      "endpoint_geometry_cases": 9,
+      "two_mouth_trace_cases": 18,
+      "exceptional_count_cases": 15
+    },
+    "flux_refinements_per_case": 3,
+    "quadrature_orders": [
+      480,
+      640
+    ],
+    "ode_tolerances": [
+      2e-13,
+      3e-14
+    ],
+    "global_boundary_proof_review_complete": false,
+    "full_exterior_boundary_realization_accepted": false,
+    "full_physical_return_error_bounded": false,
+    "curved_throat_matching_derived": false,
+    "complete_four_dimensional_energy_derived": false,
+    "physical_stability_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "contribution_decision": "The global trial and its two mouth traces close the former geometric matching gap in the fixed flat model. The prepared-return conclusion remains conditional on boundary realization, restricted to trimmed modes and asymptotic flux. Complete source/domain, energy, physical matching and novelty comparisons before promotion.",
+    "next_decisive_question": "Finish the original boundary proof/domain audit, control excluded channels in the energy estimate, and establish a physically compatible flux/port/throat scaling with matched state and holonomy."
   }
 }

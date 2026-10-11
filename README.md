@@ -2,14 +2,20 @@
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
-The [interior exterior-trial calculation](notes/exterior-trial-residual.md)
-constructs the first correction in the actual dipole tube and proves a
-fixed-tube residual upper bound of order `q^(-1/2)`, plus the transverse
-cutoff tail. Weighted current gives a conditional global return-error
-criterion that includes feedback. An accurate collar column and passivity
-alone are insufficient, as an explicit delayed-load example confirms.
-The global trial, mouth traces, boundary proof review and exceptional-mode
-treatment remain open; no physical return-error or novelty acceptance.
+The [global trial and spherical traces](notes/global-mouth-trial.md)
+extend the corrected dipole field through both mouth boundaries. End
+cutoff derivatives lie inside the removed balls, so the exterior weighted
+residual tends to zero at fixed geometry. Exact spin/measure matching
+reveals a persistent wrong-spin component of order `(rho/d)^2` and a
+smaller profile mismatch. Including both gives a conditional trimmed
+large-flux return bound on the selected frequency window. A finite flux
+threshold, the boundary realization, exceptional-channel energy and
+curved-throat/state matching remain unaccepted. No novelty claim follows.
+
+The [interior calculation](notes/exterior-trial-residual.md) supplies the
+residual cancellation and weighted current criterion used here. Its
+historical global-matching gap is addressed by the new trial, while the
+physical energy and complete return problem remain open.
 
 The [finite mouth-collar calculation](notes/mouth-collar-scattering.md)
 controls the radial corrector derivative and converts its residual into a
@@ -26,8 +32,8 @@ field. A compact selected-sector gap bounds their radial source correction
 by `27/sqrt(160) (rho/d)^2` for `q>=3` and `rho/d<=0.1`.
 Using isolated-monopole profiles at fixed `rho/d` is not uniformly accurate
 as flux grows. Use the deformed modes for the next throat/port matching
-step. The correction derivative, full exterior return and physical energy
-are still unresolved; no novel physical theorem or Lean certificate follows.
+step. The [collar result](notes/mouth-collar-scattering.md) controls the correction
+derivative; full physical return and energy remain unresolved; no novel physical theorem or Lean certificate follows.
 
 The [exterior Dirac audit](notes/exterior-dirac-window.md) derives the
 exact two-dimensional operator in each angular sector of the leading flat
