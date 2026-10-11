@@ -122,8 +122,22 @@ at the clock frequency is included. This is a resolvent bound at positive
 imaginary resolution, not the existence of a pointwise real-axis limit.
 
 The extra resolution factor cannot be removed uniformly over this class.
-For example take a one-coordinate core with `m0^2=2` and one exterior
-coordinate, with form `2|u|^2+|u-v|^2`. Its operator is
+For a continuum example attach a finite zero-potential interval of
+length L to one core end, with ordinary continuity, a Neumann outer end
+and a Neumann condition at the other core end. The full form satisfies
+(1). A sine test supported on that interval has Rayleigh quotient
+`pi^2/L^2`, so a sufficiently long exterior supplies an eigenvalue below
+the reflecting throat gap. The lowest eigenvalue is strictly positive:
+zero form energy would force a constant field vanishing in the core.
+An eigenfunction cannot vanish throughout the core, since its value and
+derivative at the join would then both vanish, forcing the exterior
+solution to vanish by ODE uniqueness. Consequently L(w) sees this
+eigenmode and (4) has a nonzero pole at its positive frequency. Its norm
+grows as `1/eta` when approached from the upper half-plane.
+
+A finite-dimensional check of this mechanism takes a one-coordinate
+core with `m0^2=2` and one exterior coordinate, with form
+`2|u|^2+|u-v|^2`. Its operator is
 `[[3,-1],[-1,1]]`, with eigenvalues `2+-sqrt(2)`. The lower mode has
 nonzero core weight `(2-sqrt(2))/4`. A nonzero spatial potential probe
 therefore has a pole as w approaches `sqrt(2-sqrt(2))` from above:
