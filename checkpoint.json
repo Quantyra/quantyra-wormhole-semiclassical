@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "first_winding_photon_static_stress_controlled_reference_and_higher_orders_pending",
+  "status": "reference_mouth_interaction_required_before_stress_closure",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical damping and matched finite-duration transfer. The first return-dependent photon diagram has a finite endpoint formula and controlled static clock derivatives; full stress, physical closure and novelty remain open.",
+  "novelty": "Retain physical long-return damping and matched finite-duration transfer. Positive photon forms do not close the bulk-subtracted throat-only vacuum reference; derive the full mouth interaction and fixed renormalization matching before further throat-only higher-diagram work.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control the renormalized unwrapped reference, higher current/vacuum diagrams and dynamical stress, then match the actual coupled geometry and state.",
+    "Derive the complete current/photon interaction through the mouths and its fixed renormalization conditions; then control higher-order and dynamical stress and physical matching.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/winding-interaction-stress.md",
-  "current_verification": "evidence/winding-interaction-stress.json",
+  "current_note": "notes/reference-mouth-completion.md",
+  "current_verification": "evidence/reference-mouth-completion.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1180,5 +1180,44 @@
     "previous_goal_turn_classification": "progress: the open-photon-load ordinary argument and exact-source checks were committed and pushed; no live process inferred from checkpoint files",
     "next_decisive_question": "Control the renormalized unwrapped reference, higher current/vacuum diagrams and dynamical stress, then match the actual coupled geometry and state.",
     "contribution_decision": "Continue physical damping and matched finite-duration transfer. The first return-dependent photon diagram has a finite endpoint formula and controlled static clock derivatives; full stress, physical closure and novelty remain open."
+  },
+  "reference_mouth_completion": {
+    "date": "2026-10-11",
+    "note": "notes/reference-mouth-completion.md",
+    "verification": "evidence/reference-mouth-completion.json",
+    "source_review": "evidence/reference-mouth-source-review.json",
+    "positive_exterior_bulk_subtraction_counterexample": true,
+    "uniform_full_line_cross_mouth_cancellation_proved": true,
+    "reference_asymptotic": "F=h/(1+h)+m^2 T/(2k)+O(k^-2); first two clock derivatives obey the same expansion",
+    "clock_counterexample_coefficients": [
+      "2/3",
+      "2/9",
+      "-2/27"
+    ],
+    "frequency_cutoff_regulator_explicit": true,
+    "physical_boundary_divergence_claimed": false,
+    "full_renormalized_stress_controlled": false,
+    "physical_damping_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "counts": {
+      "exact_checks": 6,
+      "direct_kernel_cases": 18,
+      "kernel_meshes": 3,
+      "matched_cases": 6,
+      "cutoff_levels": 5,
+      "clock_steps": 3
+    },
+    "maximum_direct_kernel_error": 2.6645352591003757e-13,
+    "maximum_cross_mouth_error": 4.440892098500626e-16,
+    "final_cutoff_slopes": [
+      0.6666412938038645,
+      0.22216665734626773,
+      -0.07419070224834456
+    ],
+    "supplemental_unique_queries": 8,
+    "previous_goal_turn_classification": "progress: committed and pushed the first return-dependent photon stress diagram, derivative proof and independent checks; no live process inferred from files",
+    "next_decisive_question": "Derive the complete current/photon interaction through the mouths and its fixed renormalization conditions; then control higher-order and dynamical stress and physical matching.",
+    "contribution_decision": "Retain physical long-return damping and matched finite-duration transfer. Positive photon forms do not close the bulk-subtracted throat-only vacuum reference; derive the full mouth interaction and fixed renormalization matching before further throat-only higher-diagram work."
   }
 }
