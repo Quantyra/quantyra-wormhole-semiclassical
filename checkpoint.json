@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "classical_dipole_throat_matching_quantum_boundary_pending",
+  "status": "dynamic_RN_dipole_verified_binary_quantum_matching_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The regular static RN gauge gives the scalar overlap coefficient 3/2, and the directly reconstructed classical dipole has an exact bounded low-frequency product-throat response. Burko already establishes RN dipole dynamics and reconstruction. Dynamic binary matching, boundary frames/holonomy, semiclassical state/response and consequential novelty remain open.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The physical finite-frequency RN master and full classical reconstruction are verified. A finite-annulus bound and prescribed two-mouth master junction preserve coefficient 3/2 at leading order. RN dipole dynamics are prior work. The actual binary drive, smooth quantum-open junction, boundary frames and semiclassical state/response remain unresolved; no consequential novelty is accepted.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive dynamic RN/binary matching and the remaining boundary-frame, vector and tidal data; then control semiclassical metric/current response and the actual time-dependent state, including exterior determinant and discarded physical tail.",
+    "Derive the actual binary outer drive, boundary frames/holonomy and remaining modes through the quantum-open geometry; then control the time-dependent quantum state and renormalized response, including exterior determinant and discarded physical tail.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/dipole-throat-matching.md",
-  "current_verification": "evidence/dipole-throat-matching.json",
+  "current_note": "notes/dynamic-rn-dipole.md",
+  "current_verification": "evidence/dynamic-rn-dipole.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1602,5 +1602,45 @@
     "goal_complete": false,
     "next_decisive_question": "Derive dynamic RN/binary matching and the remaining boundary-frame, vector and tidal data; then control semiclassical metric/current response and the actual time-dependent state, including exterior determinant and discarded physical tail.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The regular static RN gauge gives the scalar overlap coefficient 3/2, and the directly reconstructed classical dipole has an exact bounded low-frequency product-throat response. Burko already establishes RN dipole dynamics and reconstruction. Dynamic binary matching, boundary frames/holonomy, semiclassical state/response and consequential novelty remain open."
+  },
+  "dynamic_rn_dipole": {
+    "date": "2026-10-11",
+    "note": "notes/dynamic-rn-dipole.md",
+    "verification": "evidence/dynamic-rn-dipole.json",
+    "source_review": "evidence/dynamic-rn-dipole-source-review.json",
+    "physical_master": "Z=a-z^2 H/[2(3r-2)] in the displayed magnetic RN gauge",
+    "finite_frequency_four_dimensional_reconstruction_verified": true,
+    "Maxwell_equation_reduces_to_master_before_substitution": true,
+    "exact_static_master": "Z0=r(r-1)^2/(3r-2)",
+    "static_coefficient": "3/2",
+    "RN_dipole_dynamics_and_reconstruction_are_prior_work": true,
+    "finite_annulus_error": "eta=(Omega P)^2 K(s,L), with explicit redshift and outer-radius dependence",
+    "prescribed_junction": "product core plus RN annuli, master value and outward flux matched",
+    "selected_family_dynamic_end_coefficient_error": "O(q^-5 (log q)^6)",
+    "selected_family_geometric_matching_error": "O(q^-2)",
+    "conservative_master_gap_squared": "min(6, 2/(3 lambda^2) min(s^2/(1+s)^4,L^2/(1+L)^4))",
+    "verification_counts": {
+      "tensor_checks": 29,
+      "transfer_cases": 36,
+      "matched_cases": 12,
+      "scale_cases": 4
+    },
+    "max_transfer_solver_discrepancy": 1.208835698207622e-09,
+    "max_matching_solver_discrepancy": 7.72715225139109e-14,
+    "max_sampled_matching_error": 0.08059480573062366,
+    "min_sampled_matching_singular_value": 1.008201713563009,
+    "actual_binary_outer_drive_derived": false,
+    "complete_four_dimensional_junction_proved": false,
+    "boundary_frames_and_holonomy_fixed": false,
+    "semiclassical_response_derived": false,
+    "time_dependent_quantum_state_derived": false,
+    "physical_transport_or_stability_proved": false,
+    "external_shortcut_proved": false,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Derive the actual binary outer drive, boundary frames/holonomy and remaining modes through the quantum-open geometry; then control the time-dependent quantum state and renormalized response, including exterior determinant and discarded physical tail.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The physical finite-frequency RN master and full classical reconstruction are verified. A finite-annulus bound and prescribed two-mouth master junction preserve coefficient 3/2 at leading order. RN dipole dynamics are prior work. The actual binary drive, smooth quantum-open junction, boundary frames and semiclassical state/response remain unresolved; no consequential novelty is accepted."
   }
 }

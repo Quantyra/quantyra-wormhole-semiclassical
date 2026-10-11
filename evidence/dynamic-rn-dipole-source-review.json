@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-11",
+  "scope": "Physical finite-frequency magnetic RN dipole reconstruction and prescribed RN/product-throat master matching",
+  "queries": [
+    "Reissner Nordstrom dipole polar perturbation low frequency tidal response electromagnetic l=1 extremal matching Burko",
+    "Reissner Nordstrom electromagnetic Love numbers dipole polar perturbations extremal dynamical response",
+    "\"Ladder symmetries and Love numbers of Reissner\" arxiv",
+    "\"Non-vanishing static Love number\" extremal Reissner Nordstrom arxiv"
+  ],
+  "reviewed_sources": [
+    {
+      "id": "burko_1995_polar_dipole",
+      "title": "Dipole Perturbations of the Reissner-Nordstrom Solution: The Polar Case",
+      "url": "https://arxiv.org/abs/gr-qc/9507012v1",
+      "cache": "references/cache/9507012-dipole-throat.pdf",
+      "sha256": "7427ce3efff08bc90d6a293bb3261e6b7f08abdd6381b25fc5103e9008efd52a",
+      "prior_review": "evidence/dipole-throat-source-review.json records the complete main derivation reading.",
+      "read_this_continuation": "Re-read PDF pages 6-7 and 15: separated tetrad fields, special dipole constraints and reconstructed fields, equations (12)-(28) and (88)-(99). Reused the previously reviewed physical potential in equations (40), (41), (87).",
+      "independent_verification": "Direct four-dimensional magnetic Einstein-Maxwell tensors identify Z=a-z^2 H/[2(3r-2)], reconstruct all components at arbitrary frequency, and recover precisely the extremal Burko potential. The Maxwell equation is checked before imposing the master equation. The static force-balanced solution gives Z=(3/2)epsilon r z^2/(3r-2).",
+      "not_imported": "The source's electric tetrad reconstruction is not assumed in our coordinate or boundary gauge. Upstream Chandrasekhar/Moncrief/Zerilli proofs remain incompletely reviewed; not every printed source equation is independently checked.",
+      "novelty_implication": "The physical RN dipole and reconstruction are established prior work."
+    },
+    {
+      "id": "garcia_saenz_2026_dynamical_running",
+      "title": "The Love for Three Logarithms: Universal Running of Dynamical Love Numbers",
+      "url": "https://arxiv.org/html/2610.01152v1",
+      "cache": "references/cache/2610.01152v1-dynamic-dipole.html",
+      "sha256": "43f376b1a947381b3ed32d8f14ea8707bf27dee6c42192cf3b46217e524c3450",
+      "read_this_continuation": "Abstract and introduction; section 2.1 near-zone expansion through equation (16); section 4.3 in full, equations (56)-(61); Appendix B in full, equations (71)-(82), including exceptional l=1 normalization and scheme dependence.",
+      "used_comparison": "The axial RN calculation distinguishes logarithmic running from the boundary-selected response. The exceptional dipole requires a static-basis qualification. Vanishing leading extremal running does not supply the physical wormhole response, its boundary data or a finite-annulus error bound.",
+      "full_main_proof_reviewed": false,
+      "independent_source_formula_verification": false,
+      "not_imported": "The recurrence theorem, scheme-invariance proof, all-order claims and upstream dependencies are not used as established theorems in our calculation."
+    },
+    {
+      "id": "rai_santoni_2024_ladders",
+      "title": "Ladder Symmetries and Love Numbers of Reissner-Nordstrom Black Holes",
+      "url": "https://arxiv.org/html/2404.06544v2",
+      "cache": "references/cache/2404.06544v2-dynamic-dipole.html",
+      "sha256": "90ca2613fd14a71de795dc2503098b21fb945288f1cec8ecb3ecfd0b5cda8763",
+      "read_this_continuation": "Abstract and search-returned introductory/axial scope snippets; final source/response paragraphs of section 4, equations (25)-(28); complete section 5, equations (29)-(33), including static polar/axial duality, reconstruction and l>=2 formulas. Appendix snippets returned by text search were inspected but are not a complete appendix review.",
+      "used_comparison": "Existing static matching and source/response ambiguities preclude treating a small static response or a simple master equation as sufficient novelty. Displayed generic harmonic reconstruction formulas do not replace exceptional l=1 treatment.",
+      "full_main_proof_reviewed": false,
+      "independent_source_formula_verification": false,
+      "not_imported": "The full hypergeometric/ladder proof, analytic-continuation result and general duality theorem are not imported as verified dependencies."
+    }
+  ],
+  "identified_without_proof_review": [
+    {
+      "url": "https://arxiv.org/abs/2406.19262",
+      "scope": "Abstract/metadata only; extremal static Love comparison lead, no theorem imported."
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.02506",
+      "scope": "Search metadata identified a multi-source nonlinear static comparison. The attempted HTML v3 open returned an error; no main derivation was read or used."
+    }
+  ],
+  "note": "notes/dynamic-rn-dipole.md",
+  "verification": "evidence/dynamic-rn-dipole.json",
+  "primary": "Physical long-return damping with actual matched throat/state response",
+  "fallback": "Matched finite-duration band transfer",
+  "decision": "Continue the existing target. Finite-frequency classical RN propagation and a specified two-mouth master junction are now controlled. The actual binary drive, smooth four-dimensional quantum-open junction and quantum response remain unresolved. Accept no consequential novelty yet.",
+  "physical_RN_mode_is_prior_work": true,
+  "prescribed_master_junction_is_complete_physical_spacetime": false,
+  "actual_binary_outer_drive_derived": false,
+  "quantum_state_and_response_derived": false,
+  "full_program_literature_exit_complete": false,
+  "full_program_proof_review_complete": false,
+  "new_physical_result_accepted": false,
+  "external_shortcut_proved": false,
+  "lean_invocations": 0,
+  "remaining": [
+    "Derive actual binary outer data, boundary frames/holonomy and remaining modes through a controlled quantum-open junction.",
+    "Control the time-dependent quantum state and renormalized response, exterior determinant and discarded physical tail.",
+    "Finish consequential endpoint and upstream proof/novelty review before acceptance and GCP certification."
+  ]
+}

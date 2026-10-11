@@ -1,16 +1,16 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [classical dipole throat matching](notes/dipole-throat-matching.md)
-derives the regular static RN scalar overlap coefficient and verifies the
-four-dimensional metric/Maxwell reconstruction and exact low-frequency
-response on the leading product throat. Burko's earlier dipole result
-establishes the classical mode and reconstruction as prior work. Dynamic
-binary matching, boundary frames and the semiclassical state remain open.
+Current continuation, 2026-10-11: [finite-frequency RN dipole matching](notes/dynamic-rn-dipole.md)
+verifies the physical RN dipole and metric/Maxwell reconstruction at finite
+frequency. An explicit annulus bound and prescribed two-mouth master
+junction preserve the leading coefficient 3/2. The actual binary drive,
+smooth quantum-open junction, boundary frames and quantum response remain
+unresolved. The RN mode is established prior work; novelty is not accepted.
 
-Remaining to-do list: derive dynamic mouth and remaining boundary data,
-control the full semiclassical state/response, finish the physical endpoint
-and novelty review, then independently verify, GCP-certify suitable
-mathematics and prepare the manuscript.
+Remaining to-do list: derive the binary drive and remaining boundary/mode
+data through the quantum-open geometry, control the semiclassical state
+and response, finish the consequential endpoint and novelty review, then
+independently verify, GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
