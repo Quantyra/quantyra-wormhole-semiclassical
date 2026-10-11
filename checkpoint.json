@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "uniform_gaussian_singlet_absorption_proved_physical_closure_pending",
+  "status": "joint_weak_coupling_window_selected_physical_response_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue the physical damping investigation: its included Gaussian singlet preserves leading smoothed absorption; physical closure and novelty remain open.",
+  "novelty": "Continue the physical damping/fallback investigation in an explicit joint flux/coupling regime. Angular and prescribed-potential bounds support this decision but do not close the interacting physical response or novelty.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control the renormalized real response and the physical metric vertex, matching, remaining interactions and finite-time state.",
+    "Derive the renormalized real response and interacting stress bound at width delta with the actual clock vertex and a finite-time state; close physical matching.",
     "Finish primary/fallback novelty selection and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/singlet-stress-continuum.md",
-  "current_verification": "evidence/singlet-stress-continuum.json",
+  "current_note": "notes/weak-coupling-window.md",
+  "current_verification": "evidence/weak-coupling-window.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -826,5 +826,37 @@
     "supplemental_web_queries": 6,
     "next_decisive_question": "Control the renormalized real response and the physical metric vertex, matching, remaining interactions and finite-time state.",
     "contribution_decision": "Continue the physical damping investigation: its included Gaussian singlet preserves leading smoothed absorption; physical closure and novelty remain open."
+  },
+  "weak_coupling_window": {
+    "note": "notes/weak-coupling-window.md",
+    "verification": "evidence/weak-coupling-window.json",
+    "source_review": "evidence/weak-coupling-source-review.json",
+    "exact_angular_exchange_norm": true,
+    "all_coupling_local_dipole_bound": true,
+    "electric_term_duhamel_through_model_damping_time": true,
+    "listed_scale_window_verified": true,
+    "window": "delta=q^(-a), g^2=q^(-b), 0<a<1/5, b>1+5a",
+    "working_example": {
+      "a": "1/16",
+      "b": "2",
+      "distance_over_radius_power": "47/16",
+      "electric_accumulation_power": "-11/32"
+    },
+    "theory_parameters_vary": true,
+    "fixed_theory_large_flux_result": false,
+    "angular_norm_is_full_stress_bound": false,
+    "real_response_renormalization_complete": false,
+    "physical_matching_closed": false,
+    "physical_state_constructed": false,
+    "physical_damping_proved": false,
+    "curved_mass_gap_bound_proved": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "exact_sum_checks": 48,
+    "angular_checks": 8,
+    "discrete_potential_checks": 12,
+    "supplemental_search_queries": 10,
+    "next_decisive_question": "Derive the renormalized real response and interacting stress bound at width delta with the actual clock vertex and a finite-time state; close physical matching.",
+    "contribution_decision": "Continue the physical damping/fallback investigation in an explicit joint flux/coupling regime. Angular and prescribed-potential bounds support this decision but do not close the interacting physical response or novelty."
   }
 }

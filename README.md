@@ -1,15 +1,15 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-10: the [uniform singlet absorption proof](notes/singlet-stress-continuum.md)
-shows that leading smoothed throat-stress absorption survives the charged
-singlet in the specified Gaussian return model, uniformly in its bounded
-mass profile. The real response and physical vertex, matching and state
-remain open; no physical damping or novelty acceptance is claimed.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-singlet-continuum-audit.md).
+Current continuation, 2026-10-10: the [joint weak-coupling argument](notes/weak-coupling-window.md)
+gives an exact angular interaction norm and bounds the prescribed dipole
+electric term through the proposed damping time. A joint flux/coupling
+window is selected for the next physical response calculation; this is
+not a fixed-theory large-flux or physical damping result.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-weak-coupling-audit.md).
 
-Remaining to-do list: control the real response and physical model errors,
-finish novelty and the consequential result, then independently verify,
-GCP-certify suitable endpoints and prepare the manuscript.
+Remaining to-do list: control the renormalized interacting stress and
+physical matching/state errors, finish novelty and the consequential
+result, then verify, GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
