@@ -1,16 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: the [singlet static-curvature proof](notes/singlet-static-curvature.md)
-bounds the renormalized vacuum energy and both clock derivatives, retaining
-the local covariant term. It closes the Gaussian static premise and
-transfers the linear decay interval to the canonical Gaussian model in
-the declared weak-coupling family. Nonspherical interactions, physical
-matching and final novelty remain open.
-[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-singlet-static-curvature-audit.md).
+Current continuation, 2026-10-11: the [angular current audit](notes/angular-current-renormalization.md)
+bounds the complete rotation-invariant one-loop coupling flow and shows
+why a single contact coupling and a cutoff-uniform bare free-energy form
+bound are insufficient. The next nonspherical response step retains photon
+propagation or supplies an equivalent renormalized matching estimate.
+The Gaussian singlet decay result is preserved; physical damping and
+final novelty remain open.
+[Planning audit](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/S053-angular-current-audit.md).
 
-Remaining to-do list: bound nonspherical interactions and physical matching,
-finish novelty and the consequential result, then independently verify,
-GCP-certify suitable endpoints and prepare the manuscript.
+Remaining to-do list: control the full nonspherical photon/current response
+and physical matching, finish novelty and the consequential result, then
+independently verify, GCP-certify suitable endpoints and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

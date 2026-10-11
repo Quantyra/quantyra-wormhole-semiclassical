@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "status": "gaussian_singlet_static_and_dynamic_decay_transfer_proved_physical_matching_pending",
+  "status": "angular_one_loop_running_controlled_full_photon_current_response_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue the existing physical damping/fallback target. The Gaussian static premise and canonical decay transfer are now proved; physical matching and final novelty remain open.",
+  "novelty": "Continue the physical damping/fallback target. One-loop contact running stays weak, but retain photon propagation or supply equivalent renormalized matching; angular pair and coefficient bounds do not close the stress response.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control nonspherical current interactions and physical background, complete return, collar/vertex and state matching.",
+    "Control the renormalized finite-frequency nonspherical photon/current response with physical background, return, collar/vertex and state matching.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/singlet-static-curvature.md",
-  "current_verification": "evidence/singlet-static-curvature.json",
+  "current_note": "notes/angular-current-renormalization.md",
+  "current_verification": "evidence/angular-current-renormalization.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1050,5 +1050,34 @@
     "supplemental_unique_queries": 5,
     "next_decisive_question": "Control nonspherical current interactions and physical background, complete return, collar/vertex and state matching.",
     "contribution_decision": "Continue the existing physical damping/fallback target. The Gaussian static premise and canonical decay transfer are now proved; physical matching and final novelty remain open."
+  },
+  "angular_current_renormalization": {
+    "note": "notes/angular-current-renormalization.md",
+    "verification": "evidence/angular-current-renormalization.json",
+    "source_review": "evidence/angular-current-source-review.json",
+    "date": "2026-10-11",
+    "one_loop_positive_flow_bound_proved": true,
+    "single_contact_coupling_closed": false,
+    "bare_contact_cutoff_uniform_form_bound": false,
+    "full_nonspherical_response_controlled": false,
+    "higher_loop_remainder_controlled": false,
+    "physical_damping_proved": false,
+    "physical_state_constructed": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "bound": "kappa(t)<=kappa0/(1-2 kappa0 t), kappa0=g^2(H_q-1)/(4 pi^2), for the positive one-loop local flow",
+    "working_coefficient_norm": "O(q^-1 log q); running increment O(q^-3 log^3 q) over O(log q) scale intervals",
+    "obstruction": "The bare contact interaction has divergent free-vacuum norm and free-energy form-dual norm as the current cutoff grows",
+    "photon_comparator": "Fixed-metric Maxwell global-throat frequency (l+1)x; gravito-electromagnetic and physical mouth sectors excluded",
+    "counts": {
+      "exact_checks": 4,
+      "angular_flow_cases": 5,
+      "fock_vacuum_cases": 8,
+      "asymptotic_cases": 8,
+      "photon_cases": 9
+    },
+    "supplemental_unique_queries": 7,
+    "next_decisive_question": "Control the renormalized finite-frequency nonspherical photon/current response with physical background, return, collar/vertex and state matching.",
+    "contribution_decision": "Continue the physical damping/fallback target. One-loop contact running stays weak, but retain photon propagation or supply equivalent renormalized matching; angular pair and coefficient bounds do not close the stress response."
   }
 }
