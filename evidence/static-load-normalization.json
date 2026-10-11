@@ -1,0 +1,171 @@
+{
+  "status": "passed_static_load_normalization",
+  "script_sha256": "6f6b201918e45098d5730796e62c45bc75584b06fde1f119447b18f36dee6ed1",
+  "note_sha256": "56ca6e7917bd2321b27ce747494431ecfd0474fa5ecbf181d82bdff6962769c0",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0"
+  },
+  "exact_checks": {
+    "proper_mass_integral": "0",
+    "worldline_action_energy": "0",
+    "printed_source_actual_mass": "0",
+    "printed_source_killing_energy": "0",
+    "lapse_action_density": "0",
+    "worldline_acceleration_force": "0",
+    "distributional_radial_conservation": "0",
+    "dimensionless_string_tension": "0",
+    "energy_equation_side_0": "0",
+    "radial_constraint_side_0": "0",
+    "angular_equation_side_0": "0",
+    "energy_equation_side_1": "0",
+    "radial_constraint_side_1": "0",
+    "angular_equation_side_1": "0",
+    "phi_continuity": "0",
+    "body_delta_jump": "0",
+    "gamma_continuity": "0",
+    "angular_delta_jump": "0",
+    "right_overlap_slope": "0",
+    "left_overlap_slope": "0",
+    "centered_mass_limit": "0",
+    "stationary_energy": "0",
+    "loaded_minimum_energy": "0",
+    "total_added_energy": "0",
+    "body_energy": "0",
+    "reversible_first_law": "0",
+    "overlap_matches_minimum": "0",
+    "body_energy_maximum": "0",
+    "MQ_charge_to_potential": "0",
+    "MQ_half_dimension_quadratic": "0"
+  },
+  "ode_cases": [
+    {
+      "height": 0.0,
+      "k": 0.5,
+      "max_errors": [
+        1.6034207642179332e-10,
+        5.417083448477911e-12
+      ]
+    },
+    {
+      "height": 0.4,
+      "k": 0.2,
+      "max_errors": [
+        2.0138637285560534e-10,
+        5.41861000513677e-12
+      ]
+    },
+    {
+      "height": 1.7,
+      "k": 0.35,
+      "max_errors": [
+        2.0239447964809365e-10,
+        5.50328532744615e-12
+      ]
+    },
+    {
+      "height": 3.0,
+      "k": 0.0,
+      "max_errors": [
+        2.2298442606261126e-10,
+        5.644013034711293e-12
+      ]
+    }
+  ],
+  "proper_mass_cases": [
+    {
+      "height": 0.0,
+      "proper_mass": 1.0,
+      "killing_energy": 1.0001562134074773,
+      "delta_limit": 1.0
+    },
+    {
+      "height": 0.5,
+      "proper_mass": 1.0,
+      "killing_energy": 1.1181457921362083,
+      "delta_limit": 1.118033988749895
+    },
+    {
+      "height": 2.0,
+      "proper_mass": 1.0,
+      "killing_energy": 2.236081954890275,
+      "delta_limit": 2.23606797749979
+    },
+    {
+      "height": 4.0,
+      "proper_mass": 1.0,
+      "killing_energy": 4.123107854919293,
+      "delta_limit": 4.123105625617661
+    }
+  ],
+  "energy_cases": [
+    {
+      "lambda_value": 0.0,
+      "minimizer": 0.9999999999999999,
+      "minimum": -1.0,
+      "minimizer_error": 1.1102230246251565e-16,
+      "total_added_energy": 0.0,
+      "body_energy": 0.0
+    },
+    {
+      "lambda_value": 0.1,
+      "minimizer": 0.9,
+      "minimum": -0.81,
+      "minimizer_error": 0.0,
+      "total_added_energy": 0.18999999999999995,
+      "body_energy": 0.18000000000000002
+    },
+    {
+      "lambda_value": 0.4,
+      "minimizer": 0.6000000000000001,
+      "minimum": -0.36,
+      "minimizer_error": 1.1102230246251565e-16,
+      "total_added_energy": 0.64,
+      "body_energy": 0.4800000000000001
+    },
+    {
+      "lambda_value": 0.5,
+      "minimizer": 0.5000000000000001,
+      "minimum": -0.25,
+      "minimizer_error": 1.1102230246251565e-16,
+      "total_added_energy": 0.75,
+      "body_energy": 0.5000000000000001
+    },
+    {
+      "lambda_value": 0.8,
+      "minimizer": 0.1999999999999999,
+      "minimum": -0.03999999999999999,
+      "minimizer_error": 5.551115123125783e-17,
+      "total_added_energy": 0.96,
+      "body_energy": 0.31999999999999984
+    },
+    {
+      "lambda_value": 0.95,
+      "minimizer": 0.04999999999999996,
+      "minimum": -0.002500000000000005,
+      "minimizer_error": 8.326672684688674e-17,
+      "total_added_energy": 0.9974999999999999,
+      "body_energy": 0.09499999999999992
+    }
+  ],
+  "source_comparison": {
+    "publisher_pdf_sha256": "53cac622417261aac1fc7101096c5c8a2af0dd2176acd4fe4126068bf1c92d4d",
+    "publisher_url": "https://inspirehep.net/files/bcd01c1c0d090e073c0ad34a5f460a9b",
+    "equations": [
+      "EGMM (3.4)-(3.10)",
+      "EGMM (3.15)-(3.23), Appendix B",
+      "MQ v3 (4.37)-(4.43), Appendix B"
+    ]
+  },
+  "fixed_rest_mass_normalization_verified": true,
+  "centered_static_limit_changed": false,
+  "conservative_lowering_envelope_changed": false,
+  "static_load_potential_is_known": true,
+  "quantum_state_constructed": false,
+  "finite_pulse_result": false,
+  "full_physical_stability_proved": false,
+  "final_primary_fallback_selected": false,
+  "novelty_established": false,
+  "lean_invocations": 0
+}
