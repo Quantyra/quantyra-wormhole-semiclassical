@@ -257,6 +257,31 @@ For example, (15) follows from `w=epsilon^2 x/2+O(epsilon^3)` and
 The leading sign and angular shape agree with the spin tilt into the
 distant monopole's field. No uniform-in-`q` remainder in (15) is asserted.
 
+There is a direct one-dimensional target for the missing derivative
+estimate. Write the normalized density as `p_epsilon=g_epsilon^2`, its CDF
+as `F_epsilon(x)=integral_0^x p_epsilon(t)dt`, and set
+`u=partial_epsilon log p_epsilon` and
+`v=partial_epsilon^2 log p_epsilon`. The exact corrector formula (14) then
+gives
+
+```text
+h = -epsilon F_epsilon/(2 sqrt(p_epsilon)),
+partial_rho h = (1/d) partial_epsilon h,
+partial_epsilon h = -[partial_epsilon F_epsilon
+  + epsilon partial_epsilon^2 F_epsilon
+  - (epsilon/2) u partial_epsilon F_epsilon]/(2 sqrt(p_epsilon)),
+partial_epsilon F_epsilon = integral_0^x p_epsilon u,
+partial_epsilon^2 F_epsilon = integral_0^x p_epsilon (u^2+v).
+```
+
+Thus the norm needed in (16) is an explicit weighted cumulative-score
+integral, with weight `1/p_epsilon`; a bound on the angular inverse norm
+does not bound it. The existing convexity estimate controls variances of
+bounded observables, but `partial_epsilon h` has the endpoint-sensitive
+factor `1/sqrt(p_epsilon)`. A uniform-in-`q,m` estimate for this integral,
+or a counterexample to one in the intended parameter regime, remains open.
+This reduction does not supply the throat/port scattering estimate.
+
 For imaginary frequency `i xi`, the trial radial state
 `exp[-xi(rho-rho_0)] [(g,0)+eta]` cancels the leading radial source in
 `(H_tilde-i xi)`. Its remaining lower-component residual is exactly
