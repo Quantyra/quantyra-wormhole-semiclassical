@@ -3,6 +3,7 @@ $rng = [System.Random]::new(20261012)
 $count = 10000
 $maxSpatial = 0.0
 $maxMomentum = 0.0
+$maxCasimir = 0.0
 for ($i = 0; $i -lt $count; $i++) {
     $x = -1.2 + 2.4 * $rng.NextDouble()
     $A = -2.0 + 4.0 * $rng.NextDouble()
@@ -35,8 +36,16 @@ for ($i = 0; $i -lt $count; $i++) {
 
     $maxSpatial = [Math]::Max($maxSpatial, [Math]::Abs($spatialResidual))
     $maxMomentum = [Math]::Max($maxMomentum, [Math]::Abs($momentumResidual))
+
+    $phiHomogeneous = $C1 * $tanx + $C2 * $secx
+    $piHomogeneous = $C3 * $secx
+    $phiPrimeHomogeneous = $C1 * $secx * $secx + $C2 * $secx * $tanx
+    $casimir = $phiHomogeneous * $phiHomogeneous + $cosx * $cosx * $piHomogeneous * $piHomogeneous - $cosx * $cosx * $phiPrimeHomogeneous * $phiPrimeHomogeneous
+    $expectedCasimir = $C2 * $C2 + $C3 * $C3 - $C1 * $C1
+    $maxCasimir = [Math]::Max($maxCasimir, [Math]::Abs($casimir - $expectedCasimir))
     if ([Math]::Abs($spatialResidual) -gt 1e-9 -or [Math]::Abs($momentumResidual) -gt 1e-9) {
         throw "JT Cauchy residual at sample ${i}: spatial=$spatialResidual momentum=$momentumResidual"
     }
 }
-Write-Output "PASS: $count source-profile samples; max spatial residual $maxSpatial; max momentum residual $maxMomentum."
+if ($maxCasimir -gt 1e-10) { throw "JT Casimir residual $maxCasimir" }
+Write-Output "PASS: $count source-profile samples; max spatial residual $maxSpatial; max momentum residual $maxMomentum; max homogeneous Casimir residual $maxCasimir."

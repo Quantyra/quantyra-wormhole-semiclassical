@@ -77,14 +77,48 @@ close the feedback problem: the characteristic maps themselves depend on
 the moving clock, while the clock is determined by the matched JT
 boundary equation and the exterior mass/charge balance.
 
+## Finite-cut mass data
+
+On the initial slice, the JT Casimir at either matching cut `x=±a` is
+
+```text
+C(±a)=phi_0(±a)^2 + cos^2(a) pi_0(±a)^2
+                    - cos^2(a) phi_0'(±a)^2.                 (5)
+```
+
+The profiles in (3) therefore give the two cut charges directly as
+functionals of the retarded source integrals `P,Q,int cos(J)`, and the three
+embedding constants. In the leading RN overlap, these charges supply the
+per-mouth mass data
+`delta M_±=r_e C(±a)/(8G)` after subtracting the common extremal mass,
+with higher overlap and throat orders omitted. The two cut values need not
+coincide when there is stress between the cuts; their difference is the
+integrated Casimir flux in (3). A symmetric boundary condition must be
+imposed on the matched mass/time data, not by discarding this flux.
+
+For perturbations about a supported background `Phi_0`, the linearized
+boundary datum is not obtained by applying the quadratic formula to
+`delta Phi` alone. At fixed magnetic charge,
+
+```text
+delta C = 2 Phi_0 delta Phi
+          - 2 gbar^ab partial_a Phi_0 partial_b delta Phi
+          - delta(gbar^ab) partial_a Phi_0 partial_b Phi_0.   (6)
+```
+
+Thus the two RN mass perturbations require the corrected background profile,
+metric variation, and cut displacement if the matching surface moves. The
+leading fixed-product Cauchy solve supplies only `delta Phi` for a prescribed
+source; it does not yet evaluate (6) on the physical background.
+
 ## Verification and limits
 
 `checks/jt_retarded_source_cauchy.ps1` tests (2)-(3) on deterministic
-analytic source profiles using independently differentiated expressions.
-The test covers the sourced spatial equation, the initial momentum
-constraint, and the three homogeneous modes. It verifies the local
-ordinary-algebra formulas, not evolution, global matching, or the physical
-LLL state. No new stability result or novelty claim is made.
+analytic source profiles using independently differentiated expressions,
+and checks that the homogeneous initial data have constant Casimir
+`C_2^2+C_3^2-C_1^2`. It verifies the local ordinary-algebra formulas, not
+evolution, global matching, or the physical LLL state. No new stability
+result or novelty claim is made.
 
 Remaining to-do list: impose both physical mouth boundary conditions on
 (4); solve the coupled clock/source feedback with the RN mass/charge
