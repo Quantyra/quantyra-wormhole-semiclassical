@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "dynamic_RN_dipole_verified_binary_quantum_matching_pending",
+  "status": "binary_leading_drive_verified_electric_axial_quantum_matching_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. The physical finite-frequency RN master and full classical reconstruction are verified. A finite-annulus bound and prescribed two-mouth master junction preserve coefficient 3/2 at leading order. RN dipole dynamics are prior work. The actual binary drive, smooth quantum-open junction, boundary frames and semiclassical state/response remain unresolved; no consequential novelty is accepted.",
+  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Leading circular-binary magnetic and motional electric mouth data are derived in a controlled leading-order model, with independently checked flat retarded fields and established conservative 1PN orbital coefficients. Local proper and coordinate orbital accelerations are distinguished. The electric/axial response, smooth quantum-open junction, transported frames, holonomy and semiclassical state remain unresolved. These classical ingredients are prior work; no consequential novelty is accepted.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive the actual binary outer drive, boundary frames/holonomy and remaining modes through the quantum-open geometry; then control the time-dependent quantum state and renormalized response, including exterior determinant and discarded physical tail.",
+    "Solve the stationary electric/axial dipole and remaining multipoles through a smooth quantum-open junction; derive transported frames and physical return holonomy, then control the time-dependent quantum state and renormalized source/exterior response.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/dynamic-rn-dipole.md",
-  "current_verification": "evidence/dynamic-rn-dipole.json",
+  "current_note": "notes/binary-mouth-drive.md",
+  "current_verification": "evidence/binary-mouth-drive.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1642,5 +1642,47 @@
     "goal_complete": false,
     "next_decisive_question": "Derive the actual binary outer drive, boundary frames/holonomy and remaining modes through the quantum-open geometry; then control the time-dependent quantum state and renormalized response, including exterior determinant and discarded physical tail.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. The physical finite-frequency RN master and full classical reconstruction are verified. A finite-annulus bound and prescribed two-mouth master junction preserve coefficient 3/2 at leading order. RN dipole dynamics are prior work. The actual binary drive, smooth quantum-open junction, boundary frames and semiclassical state/response remain unresolved; no consequential novelty is accepted."
+  },
+  "binary_mouth_drive": {
+    "date": "2026-10-11",
+    "note": "notes/binary-mouth-drive.md",
+    "verification": "evidence/binary-mouth-drive.json",
+    "source_review": "evidence/binary-mouth-drive-source-review.json",
+    "leading_binary_magnetic_drive": "epsilon_plus=-chi^2 n; epsilon_minus=+chi^2 n before angular gluing",
+    "leading_binary_electric_drive": "E_plus=+2v P e_z/d^2; E_minus=-2v P e_z/d^2; stationary at this order",
+    "local_acceleration": "coordinate orbital acceleration minus regular gravitational acceleration",
+    "established_1PN_orbit": "Omega^2=(4P/d^3)(1-8P/d)+O((P/d)^2 relative)",
+    "leading_clock_rate": "d tau_regular/dt=1-3P/(2d)+O((P/d)^2)",
+    "flat_retarded_field_independently_verified": true,
+    "conservative_1PN_orbit_and_Lienard_Wiechert_fields_are_prior_work": true,
+    "sign_rejected_in_source": "Tang-Liu-Han arXiv:2512.04806v2 (11); mixed G Q1 Q2 mass term",
+    "sign_checks": [
+      "extremal same-charge static balance",
+      "exact RN charged test-particle limit"
+    ],
+    "flat_field_coefficients_are_not_GR_1PN_coefficients": true,
+    "verification_counts": {
+      "symbolic": 13,
+      "retarded": 18,
+      "port": 4,
+      "scales": 4
+    },
+    "max_retarded_potential_derivative_error": 6.927328361035191e-11,
+    "minimum_fourth_order_refinement_ratio": 255.29055876500783,
+    "angular_gluing_assumption": "O orthogonal, det O=-1; antipodal O=-I equalizes magnetic drives",
+    "full_binary_outer_boundary_data_derived": false,
+    "stationary_electric_axial_response_derived": false,
+    "complete_four_dimensional_junction_proved": false,
+    "boundary_frames_and_holonomy_fixed": false,
+    "semiclassical_response_derived": false,
+    "time_dependent_quantum_state_derived": false,
+    "physical_transport_or_stability_proved": false,
+    "external_shortcut_proved": false,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Solve the stationary electric/axial dipole and remaining multipoles through a smooth quantum-open junction; derive transported frames and physical return holonomy, then control the time-dependent quantum state and renormalized source/exterior response.",
+    "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Leading circular-binary magnetic and motional electric mouth data are derived in a controlled leading-order model, with independently checked flat retarded fields and established conservative 1PN orbital coefficients. Local proper and coordinate orbital accelerations are distinguished. The electric/axial response, smooth quantum-open junction, transported frames, holonomy and semiclassical state remain unresolved. These classical ingredients are prior work; no consequential novelty is accepted."
   }
 }

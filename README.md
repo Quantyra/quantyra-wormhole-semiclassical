@@ -1,16 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [finite-frequency RN dipole matching](notes/dynamic-rn-dipole.md)
-verifies the physical RN dipole and metric/Maxwell reconstruction at finite
-frequency. An explicit annulus bound and prescribed two-mouth master
-junction preserve the leading coefficient 3/2. The actual binary drive,
-smooth quantum-open junction, boundary frames and quantum response remain
-unresolved. The RN mode is established prior work; novelty is not accepted.
+Current continuation, 2026-10-11: [circular binary mouth data](notes/binary-mouth-drive.md)
+derives the leading magnetic and motional electric drives, distinguishes
+local proper acceleration from orbital acceleration, and independently
+checks the retarded fields. The electric drive requires a stationary
+electric/axial response beyond the previous magnetic branch. The full
+quantum-open junction, transported frames, holonomy and state remain
+unresolved. These classical ingredients are prior work; novelty is not accepted.
 
-Remaining to-do list: derive the binary drive and remaining boundary/mode
-data through the quantum-open geometry, control the semiclassical state
-and response, finish the consequential endpoint and novelty review, then
-independently verify, GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: solve the stationary electric/axial response and
+remaining modes, derive frames and physical holonomy, control the smooth
+semiclassical junction and quantum state/response, finish the consequential
+endpoint and novelty review, then verify and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
