@@ -258,29 +258,83 @@ The leading sign and angular shape agree with the spin tilt into the
 distant monopole's field. No uniform-in-`q` remainder in (15) is asserted.
 
 There is a direct one-dimensional target for the missing derivative
-estimate. Write the normalized density as `p_epsilon=g_epsilon^2`, its CDF
-as `F_epsilon(x)=integral_0^x p_epsilon(t)dt`, and set
-`u=partial_epsilon log p_epsilon` and
-`v=partial_epsilon^2 log p_epsilon`. The exact corrector formula (14) then
+estimate. In the original angular measure, write the normalized density as
+`r_epsilon(theta)=g_epsilon(theta)^2`, its CDF as
+`F_epsilon(theta)=integral_0^theta r_epsilon(t)dt`, and set
+`u=partial_epsilon log r_epsilon` and
+`v=partial_epsilon^2 log r_epsilon`. The exact corrector formula (14) then
 gives
 
 ```text
-h = -epsilon F_epsilon/(2 sqrt(p_epsilon)),
+h = -epsilon F_epsilon/(2 sqrt(r_epsilon)),
 partial_rho h = (1/d) partial_epsilon h,
 partial_epsilon h = -[partial_epsilon F_epsilon
   + epsilon partial_epsilon^2 F_epsilon
-  - (epsilon/2) u partial_epsilon F_epsilon]/(2 sqrt(p_epsilon)),
-partial_epsilon F_epsilon = integral_0^x p_epsilon u,
-partial_epsilon^2 F_epsilon = integral_0^x p_epsilon (u^2+v).
+  - (epsilon/2) u partial_epsilon F_epsilon]/(2 sqrt(r_epsilon)),
+partial_epsilon F_epsilon = integral_0^theta r_epsilon u,
+partial_epsilon^2 F_epsilon = integral_0^theta r_epsilon (u^2+v).
 ```
 
 Thus the norm needed in (16) is an explicit weighted cumulative-score
-integral, with weight `1/p_epsilon`; a bound on the angular inverse norm
-does not bound it. The existing convexity estimate controls variances of
-bounded observables, but `partial_epsilon h` has the endpoint-sensitive
-factor `1/sqrt(p_epsilon)`. A uniform-in-`q,m` estimate for this integral,
-or a counterexample to one in the intended parameter regime, remains open.
-This reduction does not supply the throat/port scattering estimate.
+integral in `dtheta`, with weight `1/r_epsilon`; a bound on the angular
+inverse norm does not bound it. The existing convexity estimate controls
+variances of bounded observables, but `partial_epsilon h` has the
+endpoint-sensitive factor `1/sqrt(r_epsilon)`. The next subsection rules out
+a flux-independent derivative estimate at fixed nonzero deformation; the
+physically relevant joint-scale estimate remains open. This reduction does
+not supply the throat/port scattering estimate.
+
+### Large-flux obstruction to a flux-independent derivative bound
+
+The weighted integral has a concrete large-`q` scaling obstruction. Fix
+`m/q -> p` with `0<p<1` and a small fixed `epsilon>0`. Laplace's method
+places `p_epsilon` near the unique minimizer `x_epsilon` of
+
+```text
+I_epsilon(x)=-p log(x)-(1-p)log(1-x)+2w(x,epsilon),
+w=W/q,
+```
+
+with curvature `kappa=partial_x^2 I_epsilon(x_epsilon)>0`. In the central
+window `x=x_epsilon+z/sqrt(q kappa)`, the normalized density is Gaussian to
+leading order with respect to `dx`. Set `J(x)=sqrt(x(1-x))`; since
+`dx/dtheta=J(x)`, the angular density in (14) is
+`r_epsilon(theta)=J(x) p_epsilon(x)`. Differentiating the probability CDF
+at fixed `x` gives
+`partial_epsilon F_epsilon/p_epsilon -> -partial_epsilon x_epsilon`
+uniformly for bounded `z`. The differentiated Laplace expansion applies on
+these compact central windows because the minimizer stays interior and
+`kappa` is positive. Hence there
+
+```text
+h = (epsilon/2J(x_epsilon))(partial_epsilon x_epsilon) sqrt(r_epsilon)
+    + O(q^(-1/2) sqrt(r_epsilon)),
+partial_epsilon h = (epsilon/4)(partial_epsilon x_epsilon)^2
+    sqrt(q kappa) z sqrt(r_epsilon)/J(x_epsilon)
+    + O(sqrt(r_epsilon))
+```
+
+on each fixed central window. The leading derivative has nonzero Gaussian
+`L2` mass there, so its norm grows at least as a positive constant times
+`sqrt(q)` for fixed nonzero `epsilon` whenever
+`partial_epsilon x_epsilon != 0`. The latter condition holds for all
+sufficiently small fixed positive `epsilon`: since
+`w_x=epsilon^2/2+O(epsilon^3)`, stationarity gives
+`x_epsilon=p-epsilon^2 p(1-p)+O(epsilon^3)` and
+`partial_epsilon x_epsilon=-2 epsilon p(1-p)+O(epsilon^2)`.
+For example, the leading coefficient in the central-window derivative
+norm at small `epsilon` scales as
+`epsilon^3 p(1-p) sqrt(q)`.
+
+This rules out a flux-independent bound on `||partial_epsilon h||` at fixed
+deformation in the large-flux limit; it does not rule out a useful bound
+under a joint scaling such as `sqrt(q)/d` bounded or tending to zero. In
+(16), the derivative contribution therefore scales at least as
+`sqrt(q)/d` in this regime and must be compared with `xi ||h||` using the
+physical scaling of `d`, `xi`, and `q`. This is a local Laplace asymptotic,
+not yet a uniform error theorem or a counterexample to the complete MMP
+scattering problem; the joint physical parameter regime remains to be
+checked.
 
 For imaginary frequency `i xi`, the trial radial state
 `exp[-xi(rho-rho_0)] [(g,0)+eta]` cancels the leading radial source in
