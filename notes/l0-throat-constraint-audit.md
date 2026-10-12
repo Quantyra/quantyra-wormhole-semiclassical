@@ -78,6 +78,17 @@ survives as a physical boundary mode depends on mouth matching, boundary
 time normalization, and the Schwarzian/boundary action. This local result
 does not declare the modes pure gauge.
 
+This interpretation is consistent with the September 2026
+[Sadhukhan perturbation paper](https://arxiv.org/html/2609.33511v1), which
+states that the `l=0` sector contains the JT dilaton controlling throat
+length and is “not trivial” despite not propagating. In its exact
+`alpha=0` throat limit, its equation is `Box K=2K`, and it identifies the
+static MMP sphere-radius profile among its solutions. The paper restricts
+its master equations and `O(alpha)` stability result to `l>=2`; it does not
+solve the `l=0` boundary-value problem. The present three-dimensional local
+solution space agrees with the equation it displays, but the asymptotic
+clock and two-mouth classification remain open.
+
 For a time-dependent matter source, (2) must be solved simultaneously,
 with the stress/current response evaluated in that same perturbed state.
 The source must satisfy `nabla^a S_ab=0`, as follows from the divergence
@@ -95,6 +106,6 @@ multiple radii. Its receipt binds this note and script. These checks
 verify the stated local formulas; they do not verify the 4D reduction,
 quantum source conservation, coupled state response, or global matching.
 
-The closest-source comparison is MMP [section 5.3.2](https://arxiv.org/html/1807.04726v3#S5.SS3), equations (5.34)-(5.40): a static spherical perturbation sourced by their specified LLL stress, matched to the near-extremal exterior. Their section 5.4 discusses the Schwarzian validity range and the energy scale at which horizons form, not a time-dependent linear monopole eigenmode. The recent [Sadhukhan perturbation analysis](https://arxiv.org/abs/2609.33511v1) reports the `l>=2` polar-metric/axial-gauge sector; its master equations cannot be continued to `l=0` without redoing the constraints.
+The closest-source comparison is MMP [section 5.3.2](https://arxiv.org/html/1807.04726v3#S5.SS3), equations (5.34)-(5.40): a static spherical perturbation sourced by their specified LLL stress, matched to the near-extremal exterior. Their section 5.4 discusses the Schwarzian validity range and the energy scale at which horizons form, not a time-dependent linear monopole eigenmode. The September 2026 [Sadhukhan perturbation analysis](https://arxiv.org/html/2609.33511v1) is more direct: it explicitly says the `l=0` throat contains the nontrivial, nonpropagating JT dilaton but leaves it untreated; in its exact `alpha=0` limit its equation reduces to `Box K=2K`, whose static solutions include MMP's sphere-radius profile. Its perturbation master equations and first-order stability result are restricted to `l>=2`. That paper already derives the LLL stress response and induced Hall current required by the Bianchi identities in that higher-multipole sector. Neither its `l>=2` stability theorem nor its linear-response formulas establish the constrained `l=0` two-mouth boundary problem, and the higher-multipole equations cannot simply be continued to `l=0` because the harmonic gauge fixing degenerates there.
 
-Remaining to-do list: derive the full time-dependent spherical reduction including Maxwell and trace/anomaly terms; compute the conserved LLL stress/current response on the perturbed two-ended state; match the constraint solutions through the mouths to asymptotic boundary clocks; only then interpret the resulting kernel as a physical stability operator.
+Remaining to-do list: derive the `l=0` gauge-invariant boundary data and solve the constraints through both mouths; incorporate the matched LLL response and induced current in the state/boundary convention used by Sadhukhan; include massive-mode and full-anomaly corrections; only then interpret a clock kernel as a physical stability operator.
