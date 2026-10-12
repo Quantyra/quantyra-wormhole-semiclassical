@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-11",
+  "scope": "Global inner vector determinant and regulated Gaussian gauge marginal; physical state remains open",
+  "queries": [
+    "two dimensional non abelian fermion determinant upper bound diamagnetic inequality Wess Zumino Witten positive action",
+    "fermion determinant two dimensions non abelian gauge fields determinant bounds large fields",
+    "\"non-Abelian\" \"diamagnetic\" \"determinant\"",
+    "\"fermion determinant\" \"two dimensions\" \"upper bound\" Seiler Simon",
+    "\"Wess-Zumino\" \"Hermitian\" \"positive\" determinant bound",
+    "\"Fermion determinants\" Fry \"Seiler\" \"Simon\"",
+    "\"fermion determinant\" \"nonabelian\" \"bound\" two dimensional",
+    "\"QED2\" \"H\u00f6lder\" determinant",
+    "Brydges Frohlich Seiler 1979 \"121\" \"227\" gauge theories pdf",
+    "\"fermion determinant\" \"Holder\" inequality",
+    "\"Gauge theories\" \"diamagnetic\" \"Seiler\" pdf",
+    "\"On the construction of quantized gauge fields\" \"pdf\" \"I.\"",
+    "\"On the Construction of Quantized Gauge Fields. I\" Brydges Frohlich Seiler filetype:pdf",
+    "\"Brydges\" \"Seiler\" \"1979\" \"diamagnetic\" fermion proof"
+  ],
+  "reviewed_sources": [
+    {
+      "id": "fry_hep_th_0111244_v1",
+      "title": "Fermion Determinants",
+      "edition": "v1, 2001-11-27",
+      "read_scope": "Introduction, section 2 smoothing and equations (1)-(6), upper-bound/non-Abelian and continuum-identification discussion, and references 4-8. Massive lower-bound and chiral-limit proofs not adopted.",
+      "comparison": "Established non-Abelian two-dimensional determinant upper bound. The planar massive hypotheses are not assigned to the present massless finite graph.",
+      "url": "https://arxiv.org/pdf/hep-th/0111244v1",
+      "cache": "references/cache/hep-th-0111244v1-determinant-tail.pdf",
+      "sha256": "9666cbfbc03b3b31cac938292b9f8034165f2de442a229dd2fc92fb1a51bc8d9",
+      "pages": 10,
+      "text_characters": 18209,
+      "status": "cached"
+    },
+    {
+      "id": "brydges_frohlich_seiler_IHES_P_78_237",
+      "title": "On the Construction of Quantized Gauge Fields, I: General Results",
+      "edition": "IHES/P/78/237, June 1978 original preprint; later Annals of Physics 121 (1979) 227-284, DOI 10.1016/0003-4916(79)90098-8",
+      "read_scope": "Printed pages 19-21: reflection map, Lemma 2.2 proof and Schwarz inequality; pages 24-31: lattice Dirac setup and full Theorem 2.3 proof through (2.53), including the boundary-condition remark. Scanned equations inspected in rendered pages. General construction and later Higgs sections not fully reviewed.",
+      "comparison": "Established lattice diamagnetic bound using reflection positivity. Even-sided periodic rectangular geometry is distinct from unequal circles; the present argument uses static holonomy and thermal Holder instead.",
+      "url": "https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/FROHLICH/1978-1980/P_78_237/P_78_237.pdf",
+      "cache": "references/cache/IHES-P-78-237-determinant-tail.pdf",
+      "sha256": "7f478ec819310a8f9e421d4e2a44510e7a5edb3ab7e445b798adf9106bd4469c",
+      "pages": 93,
+      "text_characters": 100850,
+      "status": "cached"
+    }
+  ],
+  "retrieval": "Exact Fry PDF and 93-page IHES original preprint cached and hashed. Browser HTML and PDF requests failed for some endpoints; direct authorized PDF downloads succeeded. Publisher page failed. INSPIRE API supplied metadata but no full-text link; archive search then found the original. PMC Seiler-Simon page returned a challenge and no proof from it was used.",
+  "established_methods": "Vector current contact, unitary holonomy transfer, Schatten Holder, two-dimensional determinant domination and Gaussian reweighting. No novelty claim for these methods.",
+  "development_notes": [
+    "The initial static/time-dependent/Gaussian suite passed. The extended global-det3 and covariance computations passed their numerical assertions, then receipt serialization failed because a NumPy boolean was not JSON serializable. Converting that flag to a native bool fixed serialization; the full frozen suite was rerun.",
+    "Static uncorrected thermal traces violate the intended upper bound; retaining the independently fixed positive current contact restores agreement with the holonomy formula. This is a tested subtraction requirement, not a new tunable counterterm.",
+    "Finite spacetime det3 cutoffs converge to the holonomy-plus-quadratic identity with a maximum final error below 9e-6; finite-cutoff numbers are not asserted exact.",
+    "A final gauge-consistency check uses a time-dependent pure gauge that vanishes at the spatial endpoints and has trivial temporal holonomy. Four spatial cutoffs converge toward Delta=1; the final absolute log error is below 2e-6."
+  ],
+  "physical_limits": "Gaussian inner action and specified antiperiodic reference only. Actual constrained covariance, compact/infrared sectors, nonlinear gauge action, gauged exterior, photon continuum limit, Lorentzian reconstruction, local renormalized stress and smooth physical matching remain unproved.",
+  "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. In the defined antiperiodic unequal-return free Dirac model, the covariantly normalized vector determinant obeys 0<=Delta<=1 at all amplitudes. Static unitary holonomy and thermal trace Holder bounds yield a positive regulated gauge marginal, with controlled large-field tails and total variation under explicit Gaussian noise bounds. The fixed flat annulus reference gives O(log^3 q/q) total-variation control on duration O(log^2 q). The physical gauge constraints, nonlinear action, exterior, photon-cutoff removal, local stress and Lorentzian state remain open. Diamagnetic determinant bounds are established prior work; no consequential physical novelty or endpoint is accepted.",
+  "next_decisive_question": "Derive the physical constrained electric/rotational gauge action and covariance, including infrared/global sectors, nonlinear gauge vertices and the full source-dependent exterior; then establish the coupled quantum state, local renormalized stress and smooth matching. The specified inner Gaussian gauge marginal now has full determinant and weighted-tail control.",
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "outreach_sent": false,
+  "goal_complete": false
+}

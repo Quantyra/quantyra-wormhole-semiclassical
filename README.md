@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [nonlinear current influence](notes/nonlinear-current-determinant.md)
-bounds every free-fermion current term beyond quadratic for normalized
-inner electric/rotational sources with unequal returns. The zero-temperature
-bound depends on the mean return length and removes the fermion cutoff.
-The flat rotational Gaussian reference passes a regulated covariance test;
-the actual coupled gauge measure, weighted tails, stress and smooth matching
-remain unresolved. No physical endpoint or novelty is accepted.
+Current continuation, 2026-10-11: [global determinant and gauge marginal](notes/determinant-tail-control.md)
+proves a global bound on the covariantly normalized inner vector
+determinant with unequal returns. It controls the full regulated
+Gaussian gauge reweighting, including large fields, under explicit
+covariance bounds. The physical constrained gauge action, exterior,
+quantum state, local stress and smooth matching remain unresolved.
+No physical endpoint or consequential novelty is accepted.
 
-Remaining to-do list: derive the interacting gauge/fermion state and
-complete exterior response, control stress and smooth matching, establish
-the physical endpoint and novelty, independently verify, GCP-certify
-suitable mathematics and prepare the manuscript.
+Remaining to-do list: derive the physical coupled gauge action, global
+sectors and exterior response; control the state, stress and smooth
+matching; establish the physical endpoint and novelty; independently
+verify, GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
