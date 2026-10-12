@@ -1,19 +1,19 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [moving-mouth clock vertex](notes/moving-mouth-clock-vertex.md)
-is derived for the finite product Gaussian model. The momentum coupling
-from the moving coordinates leaves throat energy plus mouth pressure.
-In the free CFT, sharp pressure has a divergent local inertia after static
-subtraction. Specified smoothing on the cutoff scale instead gives a
-small spectral correction uniformly over all return lengths. The ordinary
-proof and independent ODE, spatial-profile and spectral checks agree.
-Physical local matching, interacting pressure response and the coupled
-state/exterior remain unresolved; damping and novelty are not accepted.
+Current continuation, 2026-10-11: [covariant mouth inertia](notes/covariant-mouth-inertia.md)
+cancels the sharp free pressure divergence. The local term follows from
+the covariant anomaly action and the curved background's Weyl functional;
+its coefficient is not adjusted by hand. In an explicit smooth metric
+regularization, the completed response part has a return-uniform sharp
+limit and is small at damping resolution. Independent curvature, Fourier
+and real-space checks pass. Finite state/trajectory contacts, interacting
+pressure and the physical geometry/exterior still need control;
+physical damping and novelty are not accepted.
 
-Remaining to-do list: match the local and nonlocal moving-mouth response;
-resolve corrected geometry and angular/compact state with the physical
-exterior; establish the physical endpoint and novelty; independently
-verify, GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: complete state/trajectory contacts and interacting
+pressure response; match corrected geometry and coupled state/exterior;
+establish the physical endpoint and novelty; independently verify,
+GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

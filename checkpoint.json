@@ -1,5 +1,44 @@
 {
   "date": "2026-10-11",
+  "covariant_mouth_inertia_progress": {
+    "date": "2026-10-11",
+    "note": "notes/covariant-mouth-inertia.md",
+    "verification": "evidence/covariant-mouth-inertia.json",
+    "source_review": "evidence/covariant-mouth-source-review.json",
+    "scope": "Covariant anomaly Hessian plus known free vacuum commutator in an explicit smooth metric regularization; not the full physical metric response",
+    "local_kinetic_term": "c w^2/(12pi) integral [beta-gamma-prime-rho0-prime gamma]^2",
+    "regulated_mouth_identity": "beta_h-gamma_h-prime-rho0-prime gamma_h=-r d_h; F_h=theta_h+r d_h",
+    "exact_cancellation": "integral d_h^2=4/L+8S_h/L cancels the spectral -2c r^2 w^2 S_h/(3pi L)",
+    "sharp_response_error": "C c (r+r^2)(1+eta^-1), uniformly over D>0",
+    "retained_scaling": "Normalized q-channel sharp error O(epsilon/delta^2) for epsilon=q^-2 and delta=log^-2 q",
+    "counts": {
+      "symbolic": 7,
+      "nonlinear_curvature": 9,
+      "fourier_hessian": 9,
+      "cancellations": 12,
+      "sharp_limits": 6,
+      "uniform": 30,
+      "scaling": 4
+    },
+    "max_curvature_error": 5.551115123125783e-17,
+    "max_fourier_normalized_error": 3.548746298088845e-16,
+    "max_cancellation_normalized_error": 6.463750335131373e-14,
+    "anomaly_contact_derived": true,
+    "sharp_completed_response_part_controlled": true,
+    "full_state_contacts_complete": false,
+    "physical_family_matched": false,
+    "interacting_pressure_controlled": false,
+    "angular_compact_state_constructed": false,
+    "physical_exterior_matched": false,
+    "physical_damping_proved": false,
+    "external_shortcut_proved": false,
+    "full_literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "contribution_decision": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. The covariant Polyakov Hessian plus the fixed-background Weyl cocycle supplies c w^2/(12pi) integral(beta-gamma-prime-rho0-prime gamma)^2. In an explicit smooth regularization of the proper-mouth linear metric this cancels the entire divergent pressure term, including overlapping-mouth images. The completed free response part has a return-uniform sharp limit with O((r+r^2)(1+eta^-1)) error. Remaining state/trajectory contacts, interacting pressure, coupled geometry/exterior and consequential physical novelty are unresolved.",
+    "next_decisive_question": "Complete finite state/trajectory contacts and the interacting proper-pressure response, then match corrected geometry and angular/compact state to the physical exterior. The covariant anomaly cancels the sharp free pressure inertia in the specified response part, so spectral divergence alone does not impose a physical smoothing-width condition."
+  },
   "moving_mouth_vertex_progress": {
     "date": "2026-10-11",
     "note": "notes/moving-mouth-clock-vertex.md",
@@ -147,7 +186,7 @@
     "contribution_decision": "Continue long-return damping as provisional primary and matched finite-duration transfer as fallback. The ideal rank-r collective boundary Casimir correction has length derivatives bounded by pi r/(6T^2) and 2pi r/(3T^3), independently of all returns and channel count. Its clock curvature is o(q delta) at fixed rank. At the deeper finite-mouth cut the local optical term c integral V has clock curvature c q/(2pi^2), requiring physical coefficient matching. The determinant method and local subtraction issue are established; no physical damping, total stress or consequential novelty is accepted.",
     "next_decisive_question": "Match the finite smooth-mouth determinant and local four-dimensional renormalized coefficients. The ideal collective boundary has a uniformly small static clock response, but a local optical coefficient has order-q curvature at the deeper cut; the boundary limit alone does not fix the total physical stress. Then resolve the angular/compact state and physical exterior matching."
   },
-  "status": "moving_mouth_vertex_verified_physical_pressure_matching_pending",
+  "status": "covariant_mouth_inertia_cancellation_verified_remaining_response_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -155,7 +194,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. Pulling back the proper moving mouth gives the on-shell vertex H_th+(epsilon/b)[T_zz(A)+T_zz(-A)]. The free sharp-pressure spectral response has local inertia -c r^2 w^2/(12 pi^(3/2) h); static subtraction alone is insufficient. A specified Gaussian smoothing h comparable to epsilon gives a return-uniform correction o(q delta). Physical local matching, interacting pressure response, coupled state/exterior and consequential novelty remain unresolved.",
+  "novelty": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. The covariant Polyakov Hessian plus the fixed-background Weyl cocycle supplies c w^2/(12pi) integral(beta-gamma-prime-rho0-prime gamma)^2. In an explicit smooth regularization of the proper-mouth linear metric this cancels the entire divergent pressure term, including overlapping-mouth images. The completed free response part has a return-uniform sharp limit with O((r+r^2)(1+eta^-1)) error. Remaining state/trajectory contacts, interacting pressure, coupled geometry/exterior and consequential physical novelty are unresolved.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -164,7 +203,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Match the local inertia and nonlocal moving-mouth response to the physical exterior, including the interacting mouth pressure; control corrected geometry and angular/compact state. The product Gaussian linear vertex and a sufficient free smoothing condition are now derived, but no full covariant physical response or damping theorem is accepted.",
+    "Complete finite state/trajectory contacts and the interacting proper-pressure response, then match corrected geometry and angular/compact state to the physical exterior. The covariant anomaly cancels the sharp free pressure inertia in the specified response part, so spectral divergence alone does not impose a physical smoothing-width condition.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -183,8 +222,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/moving-mouth-clock-vertex.md",
-  "current_verification": "evidence/moving-mouth-clock-vertex.json",
+  "current_note": "notes/covariant-mouth-inertia.md",
+  "current_verification": "evidence/covariant-mouth-inertia.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
