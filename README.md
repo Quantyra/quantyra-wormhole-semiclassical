@@ -1,19 +1,19 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [complete free proper-mouth response](notes/free-proper-mouth-response.md)
-includes the circle-state contacts and quadratic induced trajectory.
-The extra state inertia cancels in the covariant metric variation;
-the trajectory contributes a fixed, small local term. The full
-statically-subtracted free matter kernel of the prescribed family is
-close to the leading response uniformly over all positive return lengths.
-Independent Ward, global-energy and cutoff-refinement checks pass.
-Interacting pressure, corrected physical geometry and coupled state/exterior
-remain unresolved; physical damping and novelty are not accepted.
+Current continuation, 2026-10-11: [interacting mouth pressure in a fixed frequency band](notes/interacting-mouth-pressure-band.md)
+is controlled uniformly over all positive, unequal return lengths.
+Charged boundary capacity suppresses the large cut potential; a positive
+boundary map controls derivatives, including soft modes. The filtered
+response correction is asymptotically smaller than the proposed damping
+scale. Independent ODE and graph-mesh refinements verify the calculation.
+The renormalized ultraviolet remainder, interacting local terms and
+physical geometry/state/exterior remain open. Physical damping and
+consequential novelty are not accepted.
 
-Remaining to-do list: control interacting pressure and corrected geometry;
-construct the coupled state and physical exterior; establish the physical
-endpoint and novelty; independently verify, GCP-certify suitable
-mathematics and prepare the manuscript.
+Remaining to-do list: control the interacting ultraviolet response and
+its local terms; close physical geometry, coupled state and exterior;
+establish the physical endpoint and novelty; independently verify,
+GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

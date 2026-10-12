@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-11",
+  "status": "scoped_primary_rereading_and_targeted_comparison_search",
+  "search_queries": [
+    "Dirichlet to Neumann boundary spectral measure Schrodinger positive potential normal derivative heat kernel",
+    "dynamical Casimir radiation pressure massive scalar boundary force susceptibility semitransparent potential",
+    "Jaekel Reynaud motional Casimir force susceptibility mirrors scalar field 1992",
+    "Dirichlet to Neumann spectral measure Schrodinger positive potential boundary derivative eigenfunction estimates",
+    "\"wormhole\" \"mouth\" \"pressure\" \"response\" stability",
+    "\"semiclassical wormholes\" \"Schwinger\" stability",
+    "\"quantum graph\" \"pressure\" \"Casimir\" massive scalar"
+  ],
+  "search_query_count": 7,
+  "reviewed_sources": [
+    {
+      "title": "Motional Casimir force",
+      "authors": "Marc Thierry Jaekel and Serge Reynaud",
+      "edition": "Journal de Physique I 2 (1992), 149-165; arXiv quant-ph/0101069v1",
+      "url": "https://arxiv.org/abs/quant-ph/0101069",
+      "retrieval_url": "https://arxiv.org/pdf/quant-ph/0101069",
+      "cache": "references/cache/pressure-band-jaekel-reynaud-1992.pdf",
+      "sha256": "ccbb69a2bc80c13c632767bf9f13c57a6c550aae0a417942e22460431f009c32",
+      "read_scope": "Scoped rereading: introduction, Gaussian force-noise contractions equations (15)-(17), and linear-response Hamiltonian/susceptibility equations (18)-(19). This does not claim a new complete reading of its scattering algebra, appendix A or cited proof dependencies.",
+      "comparison": "Gaussian pressure pair spectra and their motional linear response are established. This note derives its graph-specific uniform boundary-capacity and fixed-band estimates directly; the mirror formulas do not prove the charged-graph ultraviolet completion."
+    }
+  ],
+  "reused_dependencies": "The canonical energy-space contraction and two-frequency rank comparison, moving-mouth Ward vertex, proper-cut kinematics and prescribed free contact completion retain their earlier source/proof scopes. No new full literature exit is claimed.",
+  "unused_leads": [
+    "Searches also returned mathematical spectral papers, graph Casimir examples and unrelated wormhole models. Snippets are discovery leads only; none are used to establish the uniform theorem or priority.",
+    "The second Jaekel-Reynaud PDF, quant-ph/0101068, was reopened but no additional proof claim rests on that access."
+  ],
+  "access_notes": [
+    "The unversioned arXiv PDF identifies v1; the downloaded exact bytes are hashed. The first two searches were submitted before context compaction and their output was not retained in the visible reading; no source review is claimed from those results.",
+    "The central literature register has incoming changes and is preserved unchanged."
+  ],
+  "development_notes": [
+    "The initial dense generalized eigensolver run passed the first mesh family and the first two meshes of the second family, then failed the unchanged 2e-7 Green-identity tolerance with normalized error 4.2332249e-7 at epsilon=1e-4 and 128 half-cells. Its source is retained in references/cache/pressure-band-initial-check.py.",
+    "A shift-invert generalized eigensolver now targets the low spectrum directly instead of using an absolute eigenvalue tolerance affected by the very high graded-mesh eigenvalues. All accuracy and refinement thresholds are retained. The final receipt records the terminal outcome and exact source.",
+    "That corrected solver passed the Green checks but the epsilon=1e-4 scalar eigenfrequency missed the fixed 3e-4 accuracy threshold at 128 half-cells: errors at 32,64,128 were 0.0050405205, 0.0012884437, 0.0003238773, showing second-order convergence. The final mesh family for that case is 64,128,256, with the same absolute and convergence thresholds. The intermediate source is retained in references/cache/pressure-band-shift-invert-check.py.",
+    "The independent negative-energy ODE uses an explicitly real squared spectral parameter, removing a harmless complex-to-real warning for k=i.",
+    "No fitted sample constant supplies the uniform bound; analytic capacity, form duality, Bessel and positive pair-measure estimates do."
+  ],
+  "novelty_assessment": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. Charged boundary capacity and positive Dirichlet-to-Neumann estimates control the actual pressure vertex in every fixed frequency band, including soft modes and unequal returns. The filtered proper-interacting versus canonical-free correction divided by q delta is O(log^4(q)/sqrt(q)+log^10(q)/q) in the retained scaling. Renormalized ultraviolet response, mass-dependent contacts and physical geometry/state/exterior remain unresolved; physical damping and consequential novelty are not accepted.",
+  "central_register_modified": false,
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}
