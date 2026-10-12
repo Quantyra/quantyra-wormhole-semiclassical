@@ -149,7 +149,7 @@ T_hat_tau tau=T_hat_xx=-c_j/(8 pi),  T_hat_tau x=0.           (11)
 Here the hat denotes the traceless two-dimensional part; the common mixed
 trace-anomaly component is not included in (11). For `q` channels this is
 precisely the static stress in
-`lll-state-difference-source.md` and MMP equations (5.26)-(5.27), after
+`lll-state-difference-source.md` and MMP [equations (5.26)-(5.27)](https://arxiv.org/html/1807.04726v3#S5.SS2), after
 integrating the four-dimensional stress over the sphere. Thus the static
 source is reproduced only when the circle Casimir state and its Weyl
 anomaly are combined. This confirms the existing MMP normalization; it does
