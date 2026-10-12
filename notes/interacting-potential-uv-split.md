@@ -228,21 +228,46 @@ The distance formula applies because throat points have
 reduces to a one-dimensional integral operator, without assuming equal
 returns or replacing the potential by a boundary condition.
 
-This identity does not bound the subtracted integral as `Omega->0`,
-`Omega->infinity`, or `epsilon->0`. The return-uniform tail in (9)
-controls the two-vertex bubble, whereas this formula is for the
+For the positive seagull profile `W_2`, this reduction gives a uniform
+ultraviolet estimate on the *return-dependent difference* from the free
+trace. The resolvent identity and `0<=(1+B_Omega)^(-1)<=1` imply
+
+```text
+0<=Tr((R^0_Omega-R_Omega)W_2)
+  =Tr((1+B_Omega)^(-1) V_0^(1/2)K_Omega W_2 K_Omega V_0^(1/2))
+ <=||V_0||_infinity Tr(W_2 K_Omega^2)
+ <=||V_0||_infinity ||K_Omega|| Tr(W_2 K_Omega)
+ <=C ||V_0||_infinity I_2 Omega^(-3),   Omega>=1.               (14)
+```
+
+Here `||K_Omega||<=Omega^(-2)` because `J` is an isometry and
+`||R^0_Omega||<=Omega^(-2)`; the last step is the free diagonal bound
+(8). Consequently the integral of this difference over
+`|Omega|>=R>=1` is at most
+`C ||V_0||_infinity I_2 R^(-2)`, uniformly in `q` and all positive
+returns. With `||V_0||_infinity=a/epsilon^2` and
+`I_2<=a epsilon/b^3`, the explicit coefficient is
+`C a^2/(epsilon b^3)`. The estimate proves convergence of the
+return-dependent ultraviolet correction at every fixed mouth cutoff;
+its coefficient is not uniform as `epsilon->0`.
+
+The return-dependent ultraviolet correction is now controlled at fixed
+`epsilon`, but this identity does not bound the low-frequency contribution
+or give a coefficient uniform as `epsilon->0`. The return-uniform tail in
+(9) controls the two-vertex bubble, whereas this formula is for the
 one-resolvent seagull trace. Kinetic and stress insertions also remain
-outside its scope. The local subtraction remains the fixed one in
-(6)-(7).
+outside its scope. The local subtraction remains the fixed one in (6)-(7).
 
 ## Consequence and remaining gap
 
 The potential-sector UV problem separates into a single local logarithm,
-whose spatial coefficient is exactly (4), and a convergent two-vertex
-response with a return-uniform high-frequency tail. This is the appropriate
-starting point for evaluating the global finite part and its retarded
-continuation. It does not bound the kinetic stress-stress tail or control
-the physical exterior boundary as the geometry moves.
+whose spatial coefficient is exactly (4), a return-uniform ultraviolet
+correction to the one-vertex seagull trace at fixed mouth cutoff, and a
+convergent two-vertex response with a return-uniform high-frequency tail.
+This is the appropriate starting point for evaluating the global finite
+part and its retarded continuation. It does not bound the kinetic
+stress-stress tail or control the physical exterior boundary as the
+geometry moves.
 
 Bilal and Leduc's exact determinant variation for a constant-mass scalar
 on a compact boundaryless surface gives the same general local/global
@@ -252,7 +277,8 @@ Their operator and boundary conditions differ from this variable
 rank-one potential on a transmitting graph; no determinant formula from
 that paper is imported here.
 
-Remaining to-do list: evaluate the return-dependent finite potential
-response and its retarded continuation; bound kinetic/stress vertices;
+Remaining to-do list: control the low-frequency and shrinking-cutoff
+finite potential response and its retarded continuation; bound
+kinetic/stress vertices;
 close physical matching, novelty selection, certification and manuscript
 preparation.
