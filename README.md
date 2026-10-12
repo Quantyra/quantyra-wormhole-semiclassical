@@ -1,17 +1,18 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [global determinant and gauge marginal](notes/determinant-tail-control.md)
-proves a global bound on the covariantly normalized inner vector
-determinant with unequal returns. It controls the full regulated
-Gaussian gauge reweighting, including large fields, under explicit
-covariance bounds. The physical constrained gauge action, exterior,
-quantum state, local stress and smooth matching remain unresolved.
-No physical endpoint or consequential novelty is accepted.
+Current continuation, 2026-10-11: [electric Gauss law and mouth boundary](notes/gauss-mouth-boundary.md)
+derives two collective charged-current boundary constraints from the
+singular mouth potential in the quadratic Maxwell/LLL model, with a
+uniform unequal-return resolvent bound. The deeper matching cut lies
+outside the earlier small-mass vacuum-energy estimate. Angular and
+compact sectors, the physical exterior, state, renormalized mouth stress
+and smooth matching remain unresolved. No physical endpoint or novelty
+is accepted.
 
-Remaining to-do list: derive the physical coupled gauge action, global
-sectors and exterior response; control the state, stress and smooth
-matching; establish the physical endpoint and novelty; independently
-verify, GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: derive angular and compact gauge sectors with the
+physical exterior; control the state, mouth stress and smooth matching;
+establish the physical endpoint and novelty; independently verify,
+GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

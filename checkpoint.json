@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "inner_determinant_tail_controlled_physical_state_pending",
+  "status": "projected_electric_mouth_boundary_verified_physical_state_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. In the defined antiperiodic unequal-return free Dirac model, the covariantly normalized vector determinant obeys 0<=Delta<=1 at all amplitudes. Static unitary holonomy and thermal trace Holder bounds yield a positive regulated gauge marginal, with controlled large-field tails and total variation under explicit Gaussian noise bounds. The fixed flat annulus reference gives O(log^3 q/q) total-variation control on duration O(log^2 q). The physical gauge constraints, nonlinear action, exterior, photon-cutoff removal, local stress and Lorentzian state remain open. Diamagnetic determinant bounds are established prior work; no consequential physical novelty or endpoint is accepted.",
+  "novelty": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. In the prescribed spherical Maxwell/LLL current graph, a singular near-mouth electric potential can be replaced by two collective charged-current endpoint constraints, uniformly over unequal returns under explicit mean-length bounds. At R=q^2 the negative-energy resolvent error is O(log^2 q/q), and the damping-resolution bound is O(log^6 q/q). This is not a physical state or stress theorem. Bare global inertias do not justify an instantaneous-vacuum rotor. The integrated potential grows as q/(2pi^2), outside the previous small-I static estimate. Schwinger screening and large-coupling resolvent methods are prior work; no consequential physical novelty or endpoint is accepted.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive the physical constrained electric/rotational gauge action and covariance, including infrared/global sectors, nonlinear gauge vertices and the full source-dependent exterior; then establish the coupled quantum state, local renormalized stress and smooth matching. The specified inner Gaussian gauge marginal now has full determinant and weighted-tail control.",
+    "Use the derived quadratic electric mouth boundary limit while deriving the angular and compact gauge sectors with the actual exterior. Control the coupled quantum state and renormalized mouth stress before smooth matching and the physical damping/transfer result. The earlier small-integrated-potential vacuum estimate does not cover the deeper matching cut R=q^2.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/determinant-tail-control.md",
-  "current_verification": "evidence/determinant-tail-control.json",
+  "current_note": "notes/gauss-mouth-boundary.md",
+  "current_verification": "evidence/gauss-mouth-boundary.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1995,5 +1995,48 @@
     "goal_complete": false,
     "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. In the defined antiperiodic unequal-return free Dirac model, the covariantly normalized vector determinant obeys 0<=Delta<=1 at all amplitudes. Static unitary holonomy and thermal trace Holder bounds yield a positive regulated gauge marginal, with controlled large-field tails and total variation under explicit Gaussian noise bounds. The fixed flat annulus reference gives O(log^3 q/q) total-variation control on duration O(log^2 q). The physical gauge constraints, nonlinear action, exterior, photon-cutoff removal, local stress and Lorentzian state remain open. Diamagnetic determinant bounds are established prior work; no consequential physical novelty or endpoint is accepted.",
     "next_decisive_question": "Derive the physical constrained electric/rotational gauge action and covariance, including infrared/global sectors, nonlinear gauge vertices and the full source-dependent exterior; then establish the coupled quantum state, local renormalized stress and smooth matching. The specified inner Gaussian gauge marginal now has full determinant and weighted-tail control."
+  },
+  "gauss_mouth_boundary": {
+    "date": "2026-10-11",
+    "note": "notes/gauss-mouth-boundary.md",
+    "verification": "evidence/gauss-mouth-boundary.json",
+    "source_review": "evidence/gauss-mouth-source-review.json",
+    "model": "Quadratic spherical Maxwell/LLL current on a common throat with unequal free exterior returns",
+    "electric_profile": "a sec^2(s), a=q g_c^2/(4pi^2)",
+    "boundary_constraint": "v* f=0 at the two mouths; neutral endpoint values remain matched",
+    "resolvent_bound": "min(1,max(c/(1+c),gamma/(1-gamma)+C/(beta+C)))",
+    "retained_scaling": "g_c^2=q^-2; R=q^2; delta=log^-2 q; negative-energy error O(log^2 q/q)",
+    "damping_resolution": "O(log^6 q/q) at eta=delta, for bounded resolvent readouts only",
+    "bare_inertias": "I_e~1/(8q); I_relative_rotation=q/32; not screened quantum inertias",
+    "small_I_extension_rejected": "integral V=q/(2pi^2) at R=q^2; earlier theorem applies at its shallower declared cutoff",
+    "counts": {
+      "symbolic": 6,
+      "capacitance": 3,
+      "matrix": 12,
+      "continuum_lift": 10,
+      "finite_element_families": 7,
+      "finite_element_refinements": 21,
+      "independent_ODE": 3,
+      "scales": 4
+    },
+    "max_matrix_identity_error": 4.195149602770881e-12,
+    "max_FEM_successive_norm_error": 6.829476026082304e-05,
+    "max_ODE_FEM_eigenvalue_error": 0.0013875974768235988,
+    "min_ODE_FEM_refinement_improvement": 15.155609353942989,
+    "quadratic_electric_boundary_derived": true,
+    "compact_sectors_resolved": false,
+    "angular_boundary_closed": false,
+    "physical_exterior_photon_derived": false,
+    "physical_quantum_state_constructed": false,
+    "renormalized_mouth_stress_controlled": false,
+    "smooth_semiclassical_junction": false,
+    "physical_damping_or_transfer": false,
+    "external_shortcut": false,
+    "full_literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. In the prescribed spherical Maxwell/LLL current graph, a singular near-mouth electric potential can be replaced by two collective charged-current endpoint constraints, uniformly over unequal returns under explicit mean-length bounds. At R=q^2 the negative-energy resolvent error is O(log^2 q/q), and the damping-resolution bound is O(log^6 q/q). This is not a physical state or stress theorem. Bare global inertias do not justify an instantaneous-vacuum rotor. The integrated potential grows as q/(2pi^2), outside the previous small-I static estimate. Schwinger screening and large-coupling resolvent methods are prior work; no consequential physical novelty or endpoint is accepted.",
+    "next_decisive_question": "Use the derived quadratic electric mouth boundary limit while deriving the angular and compact gauge sectors with the actual exterior. Control the coupled quantum state and renormalized mouth stress before smooth matching and the physical damping/transfer result. The earlier small-integrated-potential vacuum estimate does not cover the deeper matching cut R=q^2."
   }
 }

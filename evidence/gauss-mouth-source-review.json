@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-11",
+  "reviewed_sources": [
+    {
+      "url": "https://www.mathematik.tu-clausthal.de/fileadmin/Sites/Mathematik/Documents/Mathematik_Berichte/2009_10.pdf",
+      "cache": "references/cache/large-coupling-2009-gauss-boundary.pdf",
+      "sha256": "e5d6815727eee6b4f1fe01d2ba3e786ee4b0a73a846c03172748e5bfc57fb5ed",
+      "bytes": 357846,
+      "status": "retrieved",
+      "title": "Large coupling convergence: Overview and new results",
+      "authors": "Hichem BelHadjAli, Ali Ben Amor, Johannes F. Brasche",
+      "edition": "Mathematik-Bericht 2009/10, December 16, 2009; later chapter DOI 10.1007/978-3-0348-0024-2_2",
+      "read_scope": "Introduction and form definitions; section 2.2 full Lemma 3 resolvent formula and proof; section 2.3 formulas (14)-(23) and Lemma 4 proof. Later rate, trace-class and Dirichlet-form theorems not imported.",
+      "comparison": "Established form-penalty resolvent method. The present finite-dimensional endpoint lift supplies its explicit unequal-return constant."
+    },
+    {
+      "url": "https://arxiv.org/html/hep-th/0511116v1",
+      "cache": "references/cache/hep-th-0511116v1-gauss-boundary.html",
+      "sha256": "825bc9e3ea54656a3bb0c3188e2a9015610054a7de01a59559c252c78b13cd28",
+      "bytes": 1020361,
+      "status": "retrieved",
+      "title": "The Schwinger Model on a Circle: Relation between Path Integral and Hamiltonian approaches",
+      "authors": "S. Azakov",
+      "edition": "arXiv:hep-th/0511116v1, 2005-11-10",
+      "read_scope": "Section 2.3 in full, equations (23)-(38), with the normal-ordered sea energy in (21)-(22). Reviewed Gauss elimination, spectral-flow matching, oscillator wave functions and nonzero-mode diagonalization. Thermodynamic correlator proofs not reviewed.",
+      "comparison": "Known circle compact-sector construction; unequal-return wormhole sectors are not supplied by it."
+    },
+    {
+      "url": "https://arxiv.org/html/2003.02860v3",
+      "cache": "references/cache/2003.02860v3-gauss-boundary.html",
+      "sha256": "fac56dd80e34360eb4e3fb58885d601c7a331fc6d02ecdee3e0c6ae98a963fd0",
+      "bytes": 888297,
+      "status": "retrieved",
+      "title": "The statistical mechanics of near-extremal black holes",
+      "authors": "Luca V. Iliesiu and Gustavo J. Turiaci",
+      "edition": "arXiv:2003.02860v3",
+      "read_scope": "Section 3.4 in full, with browser checks of section 2.3 and Appendix A formulas. Prior stationary-electric source review contains the broader earlier scope; no new full gravitational partition-function proof review claimed.",
+      "comparison": "Established spin energy and rotor scaling in an isolated-black-hole ensemble. Only a bare scale comparator is used; the wormhole matter-coupled charge and state remain open."
+    },
+    {
+      "title": "Traversable wormholes in four dimensions",
+      "authors": "Juan Maldacena, Alexey Milekhin, Fedor Popov",
+      "edition": "arXiv:1807.04726v3, 2020-11-03",
+      "url": "https://arxiv.org/html/1807.04726v3#A1",
+      "cache": "references/cache/1807.04726v3-rotation-current.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "read_scope": "Rechecked section 5.2 Wilson-line paragraph and Appendix A/A.1, including the spherical Maxwell action (A.3) and electric/rotational screening. Reused exact-version cache.",
+      "comparison": "Schwinger screening and the rotational mass scaling are prior work; global quantum state and physical exterior not imported."
+    }
+  ],
+  "queries": [
+    "Maldacena Milekhin Popov wormholes four dimensions Wilson line electric charge appendix A rotation SU 2 gauge field",
+    "massless multiflavor Schwinger model circle zero modes holonomy quantum mechanics vacuum energy",
+    "Schwinger model spatially varying coupling Gauss law bosonization inverse square boundary self adjoint extension",
+    "quantum graph large delta coupling Dirichlet norm resolvent convergence penalty boundary",
+    "Large coupling convergence BelHadjAli BenAmor Brasche 2011 pdf"
+  ],
+  "unused_leads": [
+    "Quantum graph singular-potential and shrinking-edge papers located; no theorem imported from abstracts.",
+    "An attempted arXiv:1002.2565 lookup was unrelated equivariant K-theory; discarded."
+  ],
+  "development_notes": [
+    "Initial algebra/resolvent/FEM suite passed.",
+    "Added independent ODE eigenvalue comparison failed its 0.002 absolute tolerance at 64 half-throat cells: errors 0.00268397635 and 0.00549197562 for epsilon=1e-4 and 1e-6. The failed source is retained in external custody.",
+    "Refined the equal-return families to 32/64/128 half-throat cells, retained the original tolerances, and reran the full suite successfully."
+  ],
+  "novelty_assessment": "Known screening and large-coupling methods, used for a quantitative boundary replacement in the defined model. No consequential physical result or novelty acceptance.",
+  "scope_limits": "No compact-sector wave function, actual exterior photon action, angular nonlinear state, renormalized mouth stress or smooth wormhole. Prior small-I static bound is not extended to R=q^2.",
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "goal_complete": false,
+  "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. In the prescribed spherical Maxwell/LLL current graph, a singular near-mouth electric potential can be replaced by two collective charged-current endpoint constraints, uniformly over unequal returns under explicit mean-length bounds. At R=q^2 the negative-energy resolvent error is O(log^2 q/q), and the damping-resolution bound is O(log^6 q/q). This is not a physical state or stress theorem. Bare global inertias do not justify an instantaneous-vacuum rotor. The integrated potential grows as q/(2pi^2), outside the previous small-I static estimate. Schwinger screening and large-coupling resolvent methods are prior work; no consequential physical novelty or endpoint is accepted.",
+  "next_decisive_question": "Use the derived quadratic electric mouth boundary limit while deriving the angular and compact gauge sectors with the actual exterior. Control the coupled quantum state and renormalized mouth stress before smooth matching and the physical damping/transfer result. The earlier small-integrated-potential vacuum estimate does not cover the deeper matching cut R=q^2."
+}
