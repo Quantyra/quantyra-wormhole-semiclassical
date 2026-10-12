@@ -1,5 +1,39 @@
 {
   "date": "2026-10-11",
+  "proper_mouth_seagull_progress": {
+    "date": "2026-10-11",
+    "note": "notes/proper-mouth-seagull-audit.md",
+    "verification": "evidence/proper-mouth-seagull.json",
+    "source_review": "evidence/proper-mouth-seagull-source-review.json",
+    "scope": "Quadratic-amplitude explicit bulk velocity contact and free-field joined-contact residual in the prescribed proper-cut product throat; no interacting join or full UV result",
+    "cut_expansion": "s=A-r phi-epsilon phi^2/(2b^3)+epsilon^3 phidot^2/(2b^3)+O(phi^3)",
+    "bulk_operator": "H_bulk,02=-mu integral T_zz + mu integral z V0 tan(z)|v*f|^2; mu=epsilon^3/(2 A b^3)",
+    "free_contact": "B_free-B_bulk=c epsilon/(12 pi b)[1-epsilon(b-A epsilon)/(A b^2)]",
+    "bracket_range": "11/15 < bracket < 1 for epsilon<=1/4",
+    "counts": {
+      "symbolic": 11,
+      "high_precision": 7
+    },
+    "max_symbolic_residual": 0.0,
+    "source_count": 1,
+    "source_review_scope": "Introduction; section 3.1 form factor and divergent/local/nonlocal split; section 3.2 renormalization conditions; section 4 retarded Wick rotation and pair-production part; conclusions. Original version v2 was pinned and hashed.",
+    "bulk_contact_verified": true,
+    "free_joined_contact_reproduced": true,
+    "interacting_join_contact_derived": false,
+    "interacting_uv_response_controlled": false,
+    "full_physical_action_matched": false,
+    "physical_metric_matched": false,
+    "angular_compact_state_constructed": false,
+    "physical_exterior_matched": false,
+    "physical_damping_proved": false,
+    "external_shortcut_proved": false,
+    "full_literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "contribution_decision": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. The exact quadratic cut expansion gives a bulk seagull with both the full pressure stress and an additional z V tan(z)|v*f|^2 profile contact. In the free CFT the bulk term reproduces the circle-Casimir part of the known coefficient but leaves a positive O(c epsilon) joined-geometry contact. The interacting join and ultraviolet response, physical geometry/state/exterior and consequential novelty remain unresolved.",
+    "next_decisive_question": "Derive and bound the potential-profile seagull and joined velocity contact in the interacting charged model, then control the renormalized high-frequency response. The free bulk-versus-joined split is now checked, but its order-epsilon residual does not determine the interacting term. Close constraint-compatible geometry, coupled state/exterior, the common-observer endpoint and the full novelty review before GCP certification and manuscript preparation."
+  },
   "interacting_pressure_band_progress": {
     "date": "2026-10-11",
     "note": "notes/interacting-mouth-pressure-band.md",
@@ -261,7 +295,7 @@
     "contribution_decision": "Continue long-return damping as provisional primary and matched finite-duration transfer as fallback. The ideal rank-r collective boundary Casimir correction has length derivatives bounded by pi r/(6T^2) and 2pi r/(3T^3), independently of all returns and channel count. Its clock curvature is o(q delta) at fixed rank. At the deeper finite-mouth cut the local optical term c integral V has clock curvature c q/(2pi^2), requiring physical coefficient matching. The determinant method and local subtraction issue are established; no physical damping, total stress or consequential novelty is accepted.",
     "next_decisive_question": "Match the finite smooth-mouth determinant and local four-dimensional renormalized coefficients. The ideal collective boundary has a uniformly small static clock response, but a local optical coefficient has order-q curvature at the deeper cut; the boundary limit alone does not fix the total physical stress. Then resolve the angular/compact state and physical exterior matching."
   },
-  "status": "interacting_pressure_band_proved_renormalized_uv_matching_pending",
+  "status": "free_bulk_contact_split_checked_interacting_join_uv_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -269,7 +303,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. Charged boundary capacity and positive Dirichlet-to-Neumann estimates control the actual pressure vertex in every fixed frequency band, including soft modes and unequal returns. The filtered proper-interacting versus canonical-free correction divided by q delta is O(log^4(q)/sqrt(q)+log^10(q)/q) in the retained scaling. Renormalized ultraviolet response, mass-dependent contacts and physical geometry/state/exterior remain unresolved; physical damping and consequential novelty are not accepted.",
+  "novelty": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. The exact quadratic cut expansion gives a bulk seagull with both the full pressure stress and an additional z V tan(z)|v*f|^2 profile contact. In the free CFT the bulk term reproduces the circle-Casimir part of the known coefficient but leaves a positive O(c epsilon) joined-geometry contact. The interacting join and ultraviolet response, physical geometry/state/exterior and consequential novelty remain unresolved.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -278,7 +312,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Control the renormalized high-frequency interacting proper-pressure response together with its mass-dependent local terms. The finite-band pressure estimate is now proved uniformly in the individual returns and is small at damping resolution; it must not be substituted for a full dispersion estimate. Then close constraint-compatible geometry, coupled angular/compact state and physical exterior, establish novelty and a physical endpoint, and prepare GCP certification and the reproducible manuscript.",
+    "Derive and bound the potential-profile seagull and joined velocity contact in the interacting charged model, then control the renormalized high-frequency response. The free bulk-versus-joined split is now checked, but its order-epsilon residual does not determine the interacting term. Close constraint-compatible geometry, coupled state/exterior, the common-observer endpoint and the full novelty review before GCP certification and manuscript preparation.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -297,8 +331,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/interacting-mouth-pressure-band.md",
-  "current_verification": "evidence/interacting-mouth-pressure-band.json",
+  "current_note": "notes/proper-mouth-seagull-audit.md",
+  "current_verification": "evidence/proper-mouth-seagull.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,

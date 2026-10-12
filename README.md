@@ -1,19 +1,16 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [interacting mouth pressure in a fixed frequency band](notes/interacting-mouth-pressure-band.md)
-is controlled uniformly over all positive, unequal return lengths.
-Charged boundary capacity suppresses the large cut potential; a positive
-boundary map controls derivatives, including soft modes. The filtered
-response correction is asymptotically smaller than the proposed damping
-scale. Independent ODE and graph-mesh refinements verify the calculation.
-The renormalized ultraviolet remainder, interacting local terms and
-physical geometry/state/exterior remain open. Physical damping and
-consequential novelty are not accepted.
+Current continuation, 2026-10-11: [proper-mouth bulk and joined velocity contacts](notes/proper-mouth-seagull-audit.md)
+expands the exact moving-cut Hamiltonian through quadratic amplitude.
+Its bulk term reproduces the free circle-Casimir response; an order-epsilon
+contact comes from the rest of the joined geometry. Independent symbolic
+and high-precision cutoff checks pass. The interacting join and ultraviolet
+response, physical matching and novelty remain unresolved.
 
-Remaining to-do list: control the interacting ultraviolet response and
-its local terms; close physical geometry, coupled state and exterior;
-establish the physical endpoint and novelty; independently verify,
-GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: derive the interacting joined contact and ultraviolet
+response; close physical geometry, state and exterior; finish literature
+review and novelty selection; independently verify and certify suitable
+mathematics on GCP; prepare the reproducible manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
