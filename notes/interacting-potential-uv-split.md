@@ -106,6 +106,24 @@ Thus its spatial `L2` norm is `O(a sqrt(epsilon))` uniformly over
 `epsilon<=1/4`; the local covariant integral `J_2` is
 `O(a epsilon[1+|log(lambda_0/epsilon)|])` for fixed positive `lambda_0`.
 
+The two profiles also obey the sharper pointwise comparison
+
+```text
+W_2/V_0=2 mu z tan(z)
+      =epsilon^3 z tan(z)/(A b^3)
+      <=epsilon^2/b^2,                 -A<=z<=A.               (5a)
+```
+
+Here `z tan(z)` is even and increasing in `|z|`, and
+`tan(A)=b/epsilon`. Hence `0<=W_2<=epsilon^2 b^-2 V_0 P_c` as
+operators on the charged throat sector. For every `Omega>0`, trace
+monotonicity gives
+`0<=Tr(R_Omega W_2)<=epsilon^2 b^-2 Tr(R_Omega V_0 P_c)`.
+This exposes an `O(epsilon^2)` relative insertion factor, potentially
+useful for the shrinking-mouth family. It does not itself control the
+weighted potential resolvent in the infrared uniformly over arbitrarily
+long returns; no integrated small-mouth response bound is inferred.
+
 Define the finite optical resolvent part, excluding the finite local
 coefficient `c`, by
 
