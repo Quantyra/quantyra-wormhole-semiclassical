@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-11",
+  "scope": "All nonlinear inner-current terms in the free unequal-return LLL model; regulated Gaussian reference only",
+  "queries": [
+    "regularized Fredholm determinant det 3 bound Schatten norm log determinant series Dirac two dimensions",
+    "Kato Seiler Simon inequality proof interpolation Schatten p multiplication Fourier multiplier arxiv",
+    "non Abelian Schwinger model large representation Dynkin index large level effective action fermion determinant",
+    "\"Kato-Seiler-Simon\" \"interpolation\" \"arxiv\"",
+    "\"regularized determinant\" \"Schatten\" \"Dirac\" \"two dimensions\" Fry",
+    "\"wormhole\" \"regularized determinant\" fermion",
+    "\"fermion determinant\" \"large representation\" two dimensional",
+    "\"unequal\" \"circles\" \"Dirac\" determinant gauge"
+  ],
+  "reviewed_sources": [
+    {
+      "id": "britz_et_al_2007_12834_v3",
+      "title": "The Product Formula for Regularized Fredholm Determinants",
+      "edition": "v3, 2020-11-26",
+      "read_scope": "Version metadata, introduction through (1.3), trace-ideal and general nonnormal determinant definition read. Sections 2-3 product-anomaly proof not adopted or claimed fully reviewed.",
+      "comparison": "Established det_3 definition; our small-source series and continuity argument are supplied explicitly.",
+      "url": "https://arxiv.org/html/2007.12834v3",
+      "cache": "references/cache/2007.12834v3-nonlinear-current.html",
+      "sha256": "59f9318f1e33180f80de6bf18807cb63a2fa83d40bed42e9ee54ae34e6f489f4",
+      "bytes": 290467,
+      "status": "cached"
+    },
+    {
+      "id": "hartmann_lesch_2106_02444_v3",
+      "title": "Zeta and Fredholm determinants of self-adjoint operators",
+      "edition": "v3, 2022-02-25",
+      "read_scope": "Version metadata and section 4.1, Definition 4.2 and Theorem 4.3 with its termwise logarithmic-derivative argument. Zeta asymptotics and full paper not reviewed.",
+      "comparison": "Self-adjoint standing assumptions differ from the generally nonnormal D0^-1 V; no self-adjoint determinant theorem silently transferred.",
+      "url": "https://arxiv.org/html/2106.02444v3",
+      "cache": "references/cache/2106.02444v3-nonlinear-current.html",
+      "sha256": "ebba05d92b3424a38269be022cb169196540bb12a4325ff026fa0a19cbbbc9c6",
+      "bytes": 635231,
+      "status": "cached"
+    },
+    {
+      "id": "briet_cuenin_golinskii_kupin_JST368",
+      "title": "Lieb-Thirring inequalities for an effective Hamiltonian of bilayer graphene",
+      "edition": "EMS online-first 2021 PDF, DOI 10.4171/JST/368",
+      "read_scope": "Pages 27-29, section 3, Schatten interpolation and Theorem 3.3 hypotheses/conclusion read from browser and cached PDF text. The cited foundational book proofs were not newly retrieved. Graphene resolvent estimates and full article not adopted.",
+      "comparison": "Established interpolation theorem, applied here to an explicit circle kernel; no continuum Fourier normalization or graphene constant is imported.",
+      "url": "https://ems.press/content/serial-article-files/33817",
+      "cache": "references/cache/JST368-nonlinear-current.pdf",
+      "sha256": "72ba8fd3d0af82d1341d2a88b70e153d49c88f653efdb7452283063e2fd2045b",
+      "bytes": 336928,
+      "status": "cached"
+    }
+  ],
+  "prior_context": "Retained rotational-current-response.md supplies the fixed-R quadratic action and normalized infinite-line polarization; its MMP rotational-screening predecessor remains established.",
+  "leads_not_adopted": [
+    "Fry arXiv:1504.03117 large-field determinant lead: no theorem used.",
+    "Large N_f for multiple representations, DOI 10.1140/epjc/s10052-021-09257-8: a different-dimensional lead; no result imported."
+  ],
+  "retrieval_note": "Three primary-source files retrieved and hashed in ignored local cache. Browser PDF screenshot failed; cached PDF text supplied section 3. Download does not imply full-paper review.",
+  "search_verdict": "The scoped queries did not establish an exact physical predecessor or a novelty claim. The core determinant and interpolation methods are prior work; the full physical comparison and literature exit remain incomplete.",
+  "development_notes": [
+    "The finite color, kernel and determinant suite passed on first execution. Adding the explicit flat rotational covariance comparator also passed. No failed scientific case was observed.",
+    "Finite spectral cutoffs 1,2,3 still change the small determinant values appreciably; they are bound checks, not a converged physical calculation. The analytic S3 argument removes the fermion cutoff.",
+    "For the explicit unit-profile moving-load substitution, r is still about 336 at q=10^32; r<1 first holds among displayed samples at q=10^64. These are conservative mathematical substitutions, not viable physical thresholds."
+  ],
+  "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. For normalized electric/rotational sources in the defined unequal-return free LLL circles, ||D0^-1 V||_S3^3 <= 4 sqrt(2) Lbar/(pi sqrt(q)) integral |phi|^3 at zero temperature. This sums every current vertex beyond quadratic when the bound is less than one and removes the fermion cutoff. The flat quadratic rotational reference also passes a regulated covariance size test. Actual finite-return gauge covariance, weighted tails, renormalized stress and smooth physical matching remain open. The determinant/interpolation methods are established; no physical endpoint or consequential novelty is accepted.",
+  "next_decisive_question": "Derive the actual finite-return electric/rotational gauge covariance and determinant-weighted tail control, including compact sectors, nonlinear gauge vertices and full source-dependent exterior response; then control renormalized stress and smooth semiclassical matching. The inner-source nonlinear free-fermion determinant now has an all-orders cutoff-independent bound.",
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "outreach_sent": false,
+  "goal_complete": false
+}

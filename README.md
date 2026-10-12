@@ -1,12 +1,12 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [driven fermion state and energy](notes/driven-fermion-sea.md)
-constructs the causal free-fermion state for a prescribed moving inner
-load, retaining unequal returns and noncommuting angular sources. Its
-cutoff-independent excitation-energy bound is subleading to q delta in
-the retained asymptotic family and needs no uniform spectral gap.
-The fluctuating gauge state, local renormalized stress and complete
-physical matching remain unresolved; no physical endpoint is accepted.
+Current continuation, 2026-10-11: [nonlinear current influence](notes/nonlinear-current-determinant.md)
+bounds every free-fermion current term beyond quadratic for normalized
+inner electric/rotational sources with unequal returns. The zero-temperature
+bound depends on the mean return length and removes the fermion cutoff.
+The flat rotational Gaussian reference passes a regulated covariance test;
+the actual coupled gauge measure, weighted tails, stress and smooth matching
+remain unresolved. No physical endpoint or novelty is accepted.
 
 Remaining to-do list: derive the interacting gauge/fermion state and
 complete exterior response, control stress and smooth matching, establish
