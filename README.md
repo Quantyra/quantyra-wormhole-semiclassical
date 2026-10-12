@@ -1,18 +1,19 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [electric Gauss law and mouth boundary](notes/gauss-mouth-boundary.md)
-derives two collective charged-current boundary constraints from the
-singular mouth potential in the quadratic Maxwell/LLL model, with a
-uniform unequal-return resolvent bound. The deeper matching cut lies
-outside the earlier small-mass vacuum-energy estimate. Angular and
-compact sectors, the physical exterior, state, renormalized mouth stress
-and smooth matching remain unresolved. No physical endpoint or novelty
-is accepted.
+Current continuation, 2026-10-11: [collective boundary Casimir response](notes/collective-boundary-casimir.md)
+has first and second throat-length derivatives bounded independently of
+channel count and all unequal returns. Independent graph spectra verify
+the ideal-boundary energy. Its static clock correction is small in the
+retained scaling, but the deeper finite mouth has an order-q local optical
+term requiring physical renormalization matching. The ideal-boundary
+limit does not supply total mouth stress or a physical damping result.
+The determinant method is established; novelty remains unaccepted.
 
-Remaining to-do list: derive angular and compact gauge sectors with the
-physical exterior; control the state, mouth stress and smooth matching;
-establish the physical endpoint and novelty; independently verify,
-GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: match finite-mouth stress and local renormalized
+coefficients; resolve the coupled angular/compact state and physical
+exterior; complete smooth matching, the physical endpoint and novelty;
+independently verify, GCP-certify suitable mathematics and prepare the
+manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-11",
+  "reviewed_sources": [
+    {
+      "title": "Zeta functions of quantum graphs",
+      "authors": "J. M. Harrison and K. Kirsten",
+      "edition": "arXiv:0911.2509v3, 2010-12-03; J. Phys. A 44 (2011) 235301",
+      "url": "https://arxiv.org/pdf/0911.2509v3",
+      "doi": "10.1088/1751-8113/44/23/235301",
+      "cache": "references/cache/boundary-casimir-0911.2509v3.pdf",
+      "sha256": "2e0d6fb660cc1dcb94db87e450f654f2f1386ff05cbe2f81ea8886f4e1230c49",
+      "bytes": 382604,
+      "read_scope": "v3 sections 7.3-7.4 in full, including asymptotic subtraction and force derivation (101)-(111); equal-length checks in 7.1-7.2. The earlier v2 section 2 and contour introduction were also inspected; v3 metadata identifies corrected typos and added references. No full dependency or line-by-line edition audit is claimed.",
+      "comparison": "General graph force and determinant methods are established. The new note independently derives its endpoint compression and checks scalar normalization against interval/circle spectra; it does not import a generic secular equation across degenerate lengths."
+    },
+    {
+      "title": "Vacuum energy of Schrodinger operators on metric graphs",
+      "authors": "J. M. Harrison and K. Kirsten",
+      "edition": "arXiv:1201.3754v1, 2012-01-18; PDF carries a later typesetting timestamp",
+      "url": "https://arxiv.org/pdf/1201.3754v1",
+      "doi": "10.1142/S2010194512007477",
+      "cache": "references/cache/boundary-casimir-1201.3754v1.pdf",
+      "sha256": "845e3f271c9b36c2c5c5c90377bd1a8751426f4f0a0ac1985b8de0842d4faa38",
+      "bytes": 185329,
+      "read_scope": "Introduction/Theorem 1.1, interval and graph secular construction in section 3, sections 4-5 including the ultraviolet subtraction, residues, length forces (35)-(37), and the final caveat when compact support is relaxed. The recurrence's cited WKB proof, full classification theorem, publisher edition and all references are not fully audited.",
+      "comparison": "A fixed potential supported inside an edge differs from the clock-dependent mouth profile reaching its endpoint. The finite local subtraction dependence is prior work; the q-scaling and explicit clock variation here concern the previously defined optical model only."
+    },
+    {
+      "title": "Traversable wormholes in four dimensions",
+      "authors": "Juan Maldacena, Alexey Milekhin and Fedor Popov",
+      "edition": "arXiv:1807.04726v3, 2020-11-03",
+      "url": "https://arxiv.org/html/1807.04726v3#A1",
+      "cache": "references/cache/1807.04726v3-rotation-current.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "read_scope": "Reused the Appendix A/A.1 electric/rotational screening review pinned by gauss-mouth-source-review.json; browser confirmed exact v3 and the model/LLL and propagation assumptions in sections 2-3. No new full MMP proof review is claimed.",
+      "comparison": "Screening and subleading finite current sectors are established expectations. The ideal-boundary comparison does not prove those expectations for the full quantum state or local mouth stress."
+    }
+  ],
+  "queries": [
+    "quantum graph Casimir energy Dirichlet insertion spectral determinant gluing boundary Green function",
+    "wormhole MMP Schwinger screening Casimir energy rotational modes boundary",
+    "site.arxiv.org Harrison Kirsten Texier spectral determinants zeta functions quantum graphs vacuum energy 2012",
+    "site.arxiv.org Casimir energy quantum graphs boundary conditions Fulling Kaplan Wilson",
+    "\"collective\" \"Dirichlet\" \"Casimir\" quantum graph",
+    "\"wormhole\" \"mouth\" \"renormalization\" Schwinger Casimir",
+    "\"Zeta functions of quantum graphs\" correction erratum"
+  ],
+  "citation_followup": "Backward references in 1201.3754 identify 0911.2509 and 1111.0643; Harrison's author publication list confirms the related publications. The 1111.0643 determinant paper, Fulling-Kaplan-Wilson star-graph predecessor and gluing-formula paper were discovered but not used as independently read proofs. No complete forward-citation review is asserted.",
+  "access_notes": [
+    "Browser HTML fetches for both graph papers and the versioned 1201.3754 PDF initially missed cache; the unversioned PDF parsed successfully, identifies v1, and exact-version PDFs were then retrieved directly and hashed.",
+    "A requested browser screenshot of page 8 failed. Equation (35)'s one-half normalization was checked in extracted text and independently against the exact interval/circle spectra.",
+    "No separate erratum was identified in the single targeted query. That search is not proof that none exists; the v3 correction history is retained."
+  ],
+  "novelty_assessment": "The graph determinant and Casimir force method, interval/circle energies, and local renormalization issue are established. The uniform rank-dependent comparison supports the existing wormhole investigation; it is not accepted as a consequential novel physical target. Long-return damping and matched finite-duration transfer remain provisional pending the full source/model review.",
+  "development_notes": [
+    "The first full run passed symbolic identities, scattering determinants, equal-return baselines, independent unitary spectra and uniform inequalities, then failed the 2e-7 finite-difference tolerance: the rank-one first derivative had error 2.443558986e-7 at step .005.",
+    "A diagnostic at steps .02/.01/.005/.0025 exhibited second-order convergence. The final step .0025 gives first-derivative error 6.108879991e-8 and second-derivative error 4.840315298e-8. Added this refinement without relaxing any tolerance; failed source and diagnostic remain in the ignored reference cache."
+  ],
+  "full_literature_exit_complete": false,
+  "physical_renormalization_matched": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}
