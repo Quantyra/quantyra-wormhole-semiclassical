@@ -75,10 +75,35 @@ throat coordinate. The remaining operator is bounded uniformly over all
 positive returns at fixed mouth cutoff. Equation (3) is an exact
 decomposition, not a perturbative expansion: the bound can grow like
 `epsilon^-2` in the shrinking-mouth limit, and `I+Bbar_Omega` need not
-be positive. Consequently a scalar Sherman–Morrison resummation cannot
-be applied to the remainder without an additional positivity or spectral
-argument. The physical contact still requires the full inverse
-`(I+B_Omega)^-1` and its retarded continuation.
+be positive. However, the compression of `Bbar_Omega` orthogonal to its
+rank-one vector is automatically positive. Set
+
+```text
+u=sqrt(V_0) 1, e=u/||u||, Q=I-|e><e|,
+C_Q=I_Q+Q Bbar_Omega Q,
+b_Q=Q Bbar_Omega e,
+a_Q=1+c_Omega ||u||^2+<e,Bbar_Omega e>,
+s_Q=a_Q-<b_Q,C_Q^(-1)b_Q>.
+```
+
+For `v` orthogonal to `u`,
+`<v,Bbar_Omega v>=<v,B_Omega v> >= 0`, so `C_Q >= I_Q` and
+`||C_Q^(-1)||<=1`. The scalar Schur complement obeys `s_Q>=1` because
+`I+B_Omega>=I`. The full inverse therefore has the exact block formula
+
+```text
+(I+B_Omega)^(-1) =
+  [ s_Q^(-1)                 -s_Q^(-1) b_Q* C_Q^(-1)             ]
+  [ -C_Q^(-1)b_Q s_Q^(-1)     C_Q^(-1)+C_Q^(-1)b_Q s_Q^(-1)b_Q*C_Q^(-1) ]. (4)
+```
+
+This reduces the return-enhanced inversion to one scalar Schur complement
+and an orthogonal block that is positive and bounded at fixed mouth
+cutoff. It is a structural reduction of the exact Euclidean resolvent, not
+a bound on the frequency-integrated response: `||Bbar_Omega||` may grow
+as `epsilon^-2`, the `Q` block still depends on `Omega` and the returns,
+and the moving stress vertices and retarded continuation remain to be
+controlled.
 
 ## Verification and scope
 
@@ -90,15 +115,15 @@ stronger `|G(0)-G(d)|<=d/2` bound and hashes this note and the script into
 but does not replace, the derivative proof above.
 
 The decomposition gives a concrete next step for the primary (l=0)
-response: resummation should treat the spatially constant throat mode
-nonperturbatively and control the bounded remainder without assuming it is
-positive. This step addresses only the Gaussian potential sector. It does
+response: evaluate the scalar Schur complement and positive orthogonal
+block with bounds uniform in the return lengths. This step addresses only
+the Gaussian potential sector. It does
 not resolve the interacting joined contact identified in the
 [proper-mouth seagull audit](proper-mouth-seagull-audit.md), prove a
 physical damping pole, or claim novelty.
 
-Remaining to-do list: obtain a positivity/spectral bound for the bounded
-Birman–Schwinger remainder; control the shrinking-cutoff limit; include
+Remaining to-do list: bound the positive orthogonal Birman-Schwinger block
+and scalar Schur complement uniformly in returns; control the shrinking-cutoff limit; include
 kinetic, stress and joined-mouth vertices with one covariant subtraction;
 match the curved exterior and state; then decide whether a physical
 stability theorem survives.
