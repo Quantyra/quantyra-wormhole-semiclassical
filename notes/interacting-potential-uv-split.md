@@ -93,38 +93,101 @@ The primitive is `(z sec^2(z)-tan(z))/2`. Formula (4) is positive for
 `0<epsilon<=1/4` and is `O(a epsilon)` as `epsilon -> 0`. It gives the
 coefficient of the local logarithm in (3), not the finite renormalized
 expectation. The seagull-audit quadratic-kernel convention is twice the
-effective-action coefficient in (3).
-
-## The nonlocal two-vertex tail is integrable
-
-Let `L_G` be the total graph length and `K=||W_1||_infinity`. For
-`|Omega|>=2|w|+1`, positivity and one-dimensional Weyl growth give
+effective-action coefficient in (3). Since `z tan(z) sec^2(z)` increases
+on `[0,A]`, the insertion also obeys the exact bounds
 
 ```text
-||R_Omega|| <= |Omega|^-2,
-||R_Omega||_1 <= C_G (L_G/|Omega|+|Omega|^-2),
-|Tr(R_Omega W_1 R_(Omega+w) W_1)|
- <= C_G K^2 (L_G/|Omega|^3+|Omega|^-4).                         (5)
+0<=W_2(z)<=a/b^2,
+I_2<=a epsilon/b^3,
+||W_2||_2^2<=a^2 epsilon/b^5.                               (5)
 ```
 
-Indeed, apply `|Tr(AB)|<=||A||_1 ||B||` with
-`A=R_Omega` and
-`B=W_1 R_(Omega+w) W_1`; the second inequality follows from the compact
-one-dimensional eigenvalue counting law. Thus the bubble has a finite
-ultraviolet tail, bounded beyond frequency `R>2|w|+1` by
-`C_G K^2(L_G/R^2+R^-3)`. This bound is for each fixed graph and fixed
-mouth cutoff; its constant is not uniform as return lengths grow or
-`epsilon -> 0`.
+Thus its spatial `L2` norm is `O(a sqrt(epsilon))` uniformly over
+`epsilon<=1/4`; the local covariant integral `J_2` is
+`O(a epsilon[1+|log(lambda_0/epsilon)|])` for fixed positive `lambda_0`.
+
+Define the finite optical resolvent part, excluding the finite local
+coefficient `c`, by
+
+```text
+R_opt(W_2;mu_R)=1/2 lim_(Lambda->infinity) [
+   integral_-Lambda^Lambda dOmega/(2 pi) Tr_G(R_Omega W_2)
+   -(1/(2 pi)) log(Lambda/mu_R) I_2 ].                          (6)
+```
+
+The subtraction is exactly the divergence in (3). It can equivalently be
+defined with the subtracted heat kernel, so it is finite on each fixed
+graph and captures the global channel/return dependence.
+
+The already fixed covariant prescription makes the finite **local** part
+explicit as well. At the reference clock `phi=0`, the optical lapse is
+`N(z)=lambda_0 sec(z)`. In the notation of the proper-mouth local audit,
+the local conversion is `c I+J/(4 pi)`, with `I=integral V` and
+`J=integral V log(N)`. Applied to this insertion it is
+
+```text
+I_2=integral W_2 dz=a epsilon(A-b epsilon)/(A b^3),
+J_2=integral W_2 log(N) dz
+   =2 mu a [ (A/epsilon^2-b/epsilon) log(lambda_0/epsilon)
+             -A/(2 epsilon^2)+3b/(2epsilon)-A ],
+C_local=c I_2+J_2/(4 pi).                                    (7)
+```
+
+For the second identity, integrate `z tan(z) sec^2(z)` using the primitive
+above and integrate the additional `log(sec z)` by parts. Thus the
+renormalized potential contact in the specified prescription is exactly
+`R_opt+C_local`; only the global finite resolvent part still depends on the
+return lengths. This statement varies
+the potential insertion only. Variations of the lapse, measure and kinetic
+operator contribute separate local terms to the full clock response.
+
+## Return-uniform bound for the two-vertex tail
+
+For the potential vertex, `W_1(z)=w_1(z)P_c` is supported on the throat
+and `P_c=v v*` has rank one with `v_j=1/sqrt(q)`. Let
+`H_free` be the direct sum of the q free circles of lengths
+`L_j=T+D_j`, and `H_0=H_free+V_0P_c`. For `Omega>0`, form ordering gives
+`R_Omega<=R_Omega^free`. The diagonal free resolvent on circle j is
+
+```text
+G_(L_j,Omega)(z,z)=coth(Omega L_j/2)/(2 Omega).
+```
+
+For `epsilon<=1/4`, `T=2 acos(epsilon)>=2 acos(1/4)>2`; hence for
+`Omega>=1` the diagonal is at most `C/Omega`, with a universal C. The
+normalized charged projector then gives
+
+```text
+Tr(R_Omega W_1^2)
+ <= Tr(R_Omega^free W_1^2)
+ <= (C/Omega) integral_-A^A |w_1(z)|^2 dz.                    (8)
+```
+
+This bound is independent of q and of every return length for a fixed
+profile `w_1`. For real Euclidean external frequency `w`, positivity also
+gives the exact Hilbert-Schmidt identity and bound
+
+```text
+Tr(R_Omega W_1 R_(Omega+w) W_1)
+ = ||R_Omega^(1/2) W_1 R_(Omega+w)^(1/2)||_2^2
+ <= ||R_(Omega+w)|| Tr(R_Omega W_1^2)
+ <= C/Omega^3 integral_-A^A |w_1(z)|^2 dz,                  (9)
+```
+
+provided `|Omega|>=2|w|+1`. Integrating (8) shows that the bubble tail
+beyond `R>2|w|+1` is at most
+`C R^-2 integral |w_1|^2`, uniformly in all positive returns and in q.
+The bound is not uniform as `epsilon->0` or if the vertex profile norm
+grows; those scalings are retained explicitly in its right-hand side.
 
 ## Consequence and remaining gap
 
 The potential-sector UV problem separates into a single local logarithm,
 whose spatial coefficient is exactly (4), and a convergent two-vertex
-response. This is the appropriate starting point for matching the finite
-contact to the covariant 1+1 subtraction and then evaluating its retarded
-finite part. It does not determine that finite part, bound the kinetic
-stress-stress tail, or control the physical exterior boundary as the
-geometry moves.
+response with a return-uniform high-frequency tail. This is the appropriate
+starting point for evaluating the global finite part and its retarded
+continuation. It does not bound the kinetic stress-stress tail or control
+the physical exterior boundary as the geometry moves.
 
 Bilal and Leduc's exact determinant variation for a constant-mass scalar
 on a compact boundaryless surface gives the same general local/global
@@ -134,7 +197,7 @@ Their operator and boundary conditions differ from this variable
 rank-one potential on a transmitting graph; no determinant formula from
 that paper is imported here.
 
-Remaining to-do list: fix the finite local coefficient by the chosen
-matched covariant action; evaluate the finite retarded potential response;
-bound kinetic/stress vertices and the full UV remainder; then close physical
-matching, novelty selection, certification and manuscript preparation.
+Remaining to-do list: evaluate the return-dependent finite potential
+response and its retarded continuation; bound kinetic/stress vertices;
+close physical matching, novelty selection, certification and manuscript
+preparation.
