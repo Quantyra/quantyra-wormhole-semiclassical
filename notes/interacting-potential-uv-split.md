@@ -180,6 +180,52 @@ beyond `R>2|w|+1` is at most
 The bound is not uniform as `epsilon->0` or if the vertex profile norm
 grows; those scalings are retained explicitly in its right-hand side.
 
+## Exact throat-only resolvent reduction
+
+There is also an exact reduction of the finite-cutoff resolvent that
+isolates where the finite return dependence enters. Let `J` embed a throat
+function `f` as the channel vector `v f` on the full graph, and let
+`R^0_Omega=(H_free+Omega^2)^(-1)`. Define the positive throat operator
+
+```text
+K_Omega=J* R^0_Omega J,
+B_Omega=V_0^(1/2) K_Omega V_0^(1/2).
+```
+
+The resolvent identity for `H_0=H_free+J V_0 J*` gives
+
+```text
+R_Omega=R^0_Omega
+ -R^0_Omega J V_0^(1/2)(1+B_Omega)^(-1)
+     V_0^(1/2)J*R^0_Omega.                                    (10)
+```
+
+This follows by multiplication by `H_0+Omega^2` and
+`(1+B)^(-1)+B(1+B)^(-1)=1`. For a bounded throat multiplication
+insertion `W=w(z)P_c`, cyclicity of the trace reduces the interacting
+trace to throat operators only:
+
+```text
+Tr_G(R_Omega W)=Tr_th(K_Omega w)
+ -Tr_th((1+B_Omega)^(-1) V_0^(1/2) K_Omega w K_Omega
+                                      V_0^(1/2)).              (13)
+```
+
+For fixed positive `Omega`, finite graph and positive `epsilon`, these
+are ordinary resolvent identities. `K_Omega` is the average of the
+individual free-circle kernels on the throat, with each return length
+entering explicitly through `G_(T+D_j,Omega)`. Thus the finite
+return-dependent part of the contact reduces to a one-dimensional
+integral operator, without assuming equal returns or replacing the
+potential by a boundary condition.
+
+This identity does not bound the subtracted integral as `Omega->0`,
+`Omega->infinity`, or `epsilon->0`. The return-uniform tail in (9)
+controls the two-vertex bubble, whereas this formula is for the
+one-resolvent seagull trace. Kinetic and stress insertions also remain
+outside its scope. The local subtraction remains the fixed one in
+(6)-(7).
+
 ## Consequence and remaining gap
 
 The potential-sector UV problem separates into a single local logarithm,
@@ -201,3 +247,4 @@ Remaining to-do list: evaluate the return-dependent finite potential
 response and its retarded continuation; bound kinetic/stress vertices;
 close physical matching, novelty selection, certification and manuscript
 preparation.
+
