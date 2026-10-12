@@ -1,19 +1,19 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [covariant mouth inertia](notes/covariant-mouth-inertia.md)
-cancels the sharp free pressure divergence. The local term follows from
-the covariant anomaly action and the curved background's Weyl functional;
-its coefficient is not adjusted by hand. In an explicit smooth metric
-regularization, the completed response part has a return-uniform sharp
-limit and is small at damping resolution. Independent curvature, Fourier
-and real-space checks pass. Finite state/trajectory contacts, interacting
-pressure and the physical geometry/exterior still need control;
-physical damping and novelty are not accepted.
+Current continuation, 2026-10-11: [complete free proper-mouth response](notes/free-proper-mouth-response.md)
+includes the circle-state contacts and quadratic induced trajectory.
+The extra state inertia cancels in the covariant metric variation;
+the trajectory contributes a fixed, small local term. The full
+statically-subtracted free matter kernel of the prescribed family is
+close to the leading response uniformly over all positive return lengths.
+Independent Ward, global-energy and cutoff-refinement checks pass.
+Interacting pressure, corrected physical geometry and coupled state/exterior
+remain unresolved; physical damping and novelty are not accepted.
 
-Remaining to-do list: complete state/trajectory contacts and interacting
-pressure response; match corrected geometry and coupled state/exterior;
-establish the physical endpoint and novelty; independently verify,
-GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: control interacting pressure and corrected geometry;
+construct the coupled state and physical exterior; establish the physical
+endpoint and novelty; independently verify, GCP-certify suitable
+mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

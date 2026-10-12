@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-11",
+  "status": "scoped_primary_read_and_targeted_comparison_search",
+  "search_queries": [
+    "Christensen Fulling 1977 trace anomalies Hawking effect conservation two dimensional stress tensor state",
+    "two dimensional conformal field theory curved spacetime stress tensor linear response metric contact terms conservation",
+    "\"traversable wormhole\" \"finite cutoff\" \"matter\" response",
+    "\"wormhole\" \"inertia\" \"Casimir\" stability"
+  ],
+  "search_query_count": 4,
+  "reviewed_sources": [
+    {
+      "title": "Trace anomalies and the Hawking effect",
+      "authors": "S. M. Christensen and S. A. Fulling",
+      "edition": "Physical Review D 15, 2088-2104 (1977)",
+      "url": "https://doi.org/10.1103/PhysRevD.15.2088",
+      "retrieval_url": "https://bpb-us-e2.wpmucdn.com/websites.umass.edu/dist/e/23826/files/2015/01/ChristiansenFulling-Hawking.pdf",
+      "cache": "references/cache/free-mouth-state-christensen-fulling-1977.pdf",
+      "sha256": "4c89f8982c8ce3accef26feb648636fa764bb20302c0f654b50a22f5f0fe3bb7",
+      "read_scope": "Introduction and section III conservation/trace decomposition and state-constant discussion through equations (3.2)-(3.8), read in the scanned PDF text. This is a scoped predecessor review, not a complete new reading of the 17-page article or its proof dependencies.",
+      "comparison": "Conservation, trace and state data as constraints on two-dimensional stress are established. The black-hole state conditions and Hawking coefficients are not used as this circle response. Its time-dependent Ward/contact and proper-trajectory argument is derived directly in the note."
+    }
+  ],
+  "reused_dependencies": "The covariant Polyakov action, Weyl functional, circle-vacuum spectrum and induced-cut kinematics retain the exact primary dependencies in the preceding covariant-mouth, moving-mouth and proper-clock source supplements. No complete new rereading is claimed.",
+  "unused_leads": [
+    "The finite-cutoff and wormhole searches returned holographic, worldsheet, thermal-Casimir and other models. Their snippets do not establish applicability or novelty; no conclusions from secondary pages are imported."
+  ],
+  "access_notes": [
+    "The scanned original paper was obtained from a university-hosted copy and hashed. OCR equations are imperfect; the new calculation uses explicitly derived Ward equations, not an unverified transcription of its formulas. The central literature register remains untouched."
+  ],
+  "development_notes": [
+    "The initial full run passed the symbolic and state-Ward checks, then failed the fixed 3e-5 normalized static-derivative accuracy requirement: the first case had error 5.1443814e-4 at step .01. The initial source is retained in references/cache/free-mouth-state-initial-check.py.",
+    "A targeted diagnostic checked all eight energy-derivative cases. Every case showed second-order convergence; the largest finest-step error was 1.4423792e-3. This identified finite-difference truncation, rather than disagreement of the contact formulas.",
+    "The final run uses steps .004, .002 and .001 instead of .04, .02 and .01, retains the same quadrature and error thresholds, and requires the error to shrink by more than a factor 1/.3 at each halving. It passes all checks, with maximum finest-step error 1.4423739e-5."
+  ],
+  "novelty_assessment": "Continue physical long-return damping as provisional primary and matched finite-duration transfer as fallback. Retarded traceless conservation and the second metric variation cancel the extra circle-state inertia. The induced proper-time cut fixes an additional restoring term w^2[c epsilon/(12pi b)+pi c epsilon^3/(3L^2 b^3)]. Adding it to the anomaly-completed sharp response gives the complete subtracted free matter kernel for the prescribed metric family. Relative to the asymptotic canonical kernel its return-uniform error is C c epsilon(1+eta^-2), or O(epsilon/delta^3) after summing q channels and dividing by q delta. Physical interacting pressure, corrected geometry/state/exterior and consequential novelty remain unresolved.",
+  "central_register_modified": false,
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}
