@@ -100,12 +100,16 @@ function Get-NormalizedSha256([string]$path) {
 }
 
 $notePath = Join-Path $root 'notes/return-uniform-low-frequency-kernel.md'
+$bubbleNotePath = Join-Path $root 'notes/interacting-potential-uv-split.md'
 $scriptPath = Join-Path $root 'checks/return_uniform_kernel.ps1'
 $result = [ordered]@{
     date = '2026-10-12'
     status = 'passed'
     script_sha256 = Get-NormalizedSha256 $scriptPath
-    input_sha256 = @{ 'notes/return-uniform-low-frequency-kernel.md' = Get-NormalizedSha256 $notePath }
+    input_sha256 = @{
+        'notes/return-uniform-low-frequency-kernel.md' = Get-NormalizedSha256 $notePath
+        'notes/interacting-potential-uv-split.md' = Get-NormalizedSha256 $bubbleNotePath
+    }
     powershell = $PSVersionTable.PSVersion.ToString()
     checked_cases = $checked
     throat_lengths = $tValues
