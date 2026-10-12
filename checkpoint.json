@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "local_coset_and_two_frequency_return_verified_state_pending",
+  "status": "driven_free_sea_energy_verified_interacting_state_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping as primary and matched finite-duration band transfer as fallback. The established local current coset has c=q-4+6/(k+2), k=q(q^2-1)/6. Unequal point-dipole returns do not preserve the linear electric/rotational current space: longitudinal two-frequency squared leakage is 3 pi kappa |omega2-omega1| delta+o(delta), while transverse leakage is o(delta). Equal-frequency conjugation and central-charge replacement do not close the physical quantum state or stress. No interacting damping, global coset factorization, smooth junction or consequential novelty is accepted.",
+  "novelty": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. For the defined free unequal-return LLL model, a prescribed noncommuting inner source admits a finite-energy causal quasifree state. The all-orders excitation-energy bound depends on amplitude and total time variation, not static holding time or a uniform spectral gap. The moving-load scaling gives E=O(log^6 q)=o(q delta). This is not a bound on local renormalized stress, the fluctuating gauge state or full exterior matching. CAR, external-field state construction and switching-time energy methods are established; no consequential physical novelty is accepted.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Derive the coupled finite-time electric/rotational state and gauged exterior response with the two-frequency current vertices, moving load, quadratic vertex and exterior determinant retained; control renormalized stress, omitted modes and smooth semiclassical matching.",
+    "Construct the coupled fluctuating electric/rotational gauge and fermion state, retaining the full source-dependent exterior determinant and quadratic vertices; control local renormalized stress, higher modes and smooth semiclassical matching. The prescribed inner classical drive now has a separate cutoff-independent free-sea energy bound.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/angular-current-coset.md",
-  "current_verification": "evidence/angular-current-coset.json",
+  "current_note": "notes/driven-fermion-sea.md",
+  "current_verification": "evidence/driven-fermion-sea.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1874,5 +1874,41 @@
     "goal_complete": false,
     "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration band transfer as fallback. The established local current coset has c=q-4+6/(k+2), k=q(q^2-1)/6. Unequal point-dipole returns do not preserve the linear electric/rotational current space: longitudinal two-frequency squared leakage is 3 pi kappa |omega2-omega1| delta+o(delta), while transverse leakage is o(delta). Equal-frequency conjugation and central-charge replacement do not close the physical quantum state or stress. No interacting damping, global coset factorization, smooth junction or consequential novelty is accepted.",
     "next_decisive_question": "Derive the coupled finite-time electric/rotational state and gauged exterior response with the two-frequency current vertices, moving load, quadratic vertex and exterior determinant retained; control renormalized stress, omitted modes and smooth semiclassical matching."
+  },
+  "driven_fermion_sea": {
+    "date": "2026-10-11",
+    "note": "notes/driven-fermion-sea.md",
+    "verification": "evidence/driven-fermion-sea.json",
+    "source_review": "evidence/driven-fermion-sea-source-review.json",
+    "model": "Free neutral antiperiodic LLL circles with unequal returns and bounded classical matrix sources on the common inner interval",
+    "state": "Gamma(t)=U(t,0) P_minus U(t,0)^dagger",
+    "hypothesis": "sup b(A)<=1/4; a_star>=sup a(A); finite integrated b(dot A) and sqrt(a(dot A))",
+    "energy_bound": "E(t)<=2 exp(2B(t)) [2 sqrt(a_star)+sqrt(2) W(t)]^2",
+    "moving_load_energy": "E=O(log^6 q); E/(q delta)=O(log^8 q/q)->0",
+    "uniform_spectral_gap_required": false,
+    "fermion_cutoff_removed": true,
+    "arbitrary_noncommuting_classical_sources": true,
+    "counts": {
+      "covariance": 36,
+      "projection": 18,
+      "dynamics": 9,
+      "time_refinements": 3,
+      "spectral_refinements": 3,
+      "independent_ODE": 2
+    },
+    "maximum_ODE_energy_error": 4.2579248503774036e-13,
+    "maximum_refined_work_error": 2.7581917598409195e-12,
+    "full_quantum_gauge_state": false,
+    "local_renormalized_stress_bound": false,
+    "physical_return_matching": false,
+    "smooth_semiclassical_junction": false,
+    "physical_stability_or_transport": false,
+    "external_shortcut": false,
+    "full_literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration transfer as fallback. For the defined free unequal-return LLL model, a prescribed noncommuting inner source admits a finite-energy causal quasifree state. The all-orders excitation-energy bound depends on amplitude and total time variation, not static holding time or a uniform spectral gap. The moving-load scaling gives E=O(log^6 q)=o(q delta). This is not a bound on local renormalized stress, the fluctuating gauge state or full exterior matching. CAR, external-field state construction and switching-time energy methods are established; no consequential physical novelty is accepted.",
+    "next_decisive_question": "Construct the coupled fluctuating electric/rotational gauge and fermion state, retaining the full source-dependent exterior determinant and quadratic vertices; control local renormalized stress, higher modes and smooth semiclassical matching. The prescribed inner classical drive now has a separate cutoff-independent free-sea energy bound."
   }
 }

@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [local current coset and exterior return](notes/angular-current-coset.md)
-derives the large local stress sector commuting with electric and
-rotational currents, then tests its exterior boundary. Unequal returns
-mix the linear current space at two frequencies: the longitudinal squared
-leakage is order delta, although it vanishes at equal frequencies.
-Local central-charge counting therefore does not supply the physical
-quantum state or renormalized stress. No new physical endpoint is accepted.
+Current continuation, 2026-10-11: [driven fermion state and energy](notes/driven-fermion-sea.md)
+constructs the causal free-fermion state for a prescribed moving inner
+load, retaining unequal returns and noncommuting angular sources. Its
+cutoff-independent excitation-energy bound is subleading to q delta in
+the retained asymptotic family and needs no uniform spectral gap.
+The fluctuating gauge state, local renormalized stress and complete
+physical matching remain unresolved; no physical endpoint is accepted.
 
-Remaining to-do list: derive the coupled state and complete gauged return
-response, control stress and smooth matching, establish the physical
-endpoint and novelty, independently verify, GCP-certify suitable mathematics
-and prepare the manuscript.
+Remaining to-do list: derive the interacting gauge/fermion state and
+complete exterior response, control stress and smooth matching, establish
+the physical endpoint and novelty, independently verify, GCP-certify
+suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
