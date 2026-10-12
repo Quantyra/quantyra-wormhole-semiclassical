@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-11",
+  "scope": "Dipole rotational current constraint, quadratic energy and finite-flux spectrum",
+  "queries": [
+    "magnetic wormhole fermions SU(2) rotation gauge field lowest Landau level angular momentum Schwinger",
+    "Maldacena Milekhin Popov wormhole SU(2) gauge field rotations fermions",
+    "Reissner Nordstrom near horizon SU(2) gauge field Maxwell mixing rotation dimensional reduction fermion angular momentum",
+    "wormhole \"polarisation current\" \"axial\"",
+    "\"Reissner\" \"fermions\" \"SU(2)\" \"rotational\"",
+    "\"wormholes\" \"rotational\" \"gauge\" fermions",
+    "\"monopole\" \"Dirac\" \"Kaluza\" \"Pauli\" sphere reduction",
+    "\"Reissner\" \"rotational\" \"Schwinger\"",
+    "\"wormhole\" \"angular momentum\" \"screening\"",
+    "\"Reissner\" \"dipole\" \"fermion\"",
+    "\"wormhole\" \"SU(2)\" \"mass\" \"fermions\"",
+    "\"Maldacena\" \"rotational\" \"Schwinger\" \"dipole\""
+  ],
+  "reviewed_sources": [
+    {
+      "id": "mmp_v3_rotation",
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "cache": "references/cache/1807.04726v3-rotation-current.html",
+      "read_scope": "Appendix A in full, including A.1, and Appendix C conventions (C.10)-(C.14) refreshed. The existing finite-flux audit retains the previously reviewed C.18 mode basis.",
+      "comparison": "Appendix A.1 explicitly predicts masses for the SU(2) rotational gauge fields of order G q^3/P^2, equivalent to g_c^2 q. This is not a new screening mechanism. The present work retains electromagnetic mixing and solves the defined dipole constraint.",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671"
+    },
+    {
+      "id": "sadhukhan_axial_v1",
+      "url": "https://arxiv.org/html/2610.09847v1",
+      "cache": "references/cache/2610.09847v1-rotation-current.html",
+      "read_scope": "Sections 2.1-2.2, 5.1-5.2.3 and 8.1-8.4 equation neighborhood refreshed; section 7.4 and start of 7.6 rechecked. The existing axial-baseline-and-throat-energy.md records the earlier full text/appendix review.",
+      "comparison": "Section 2.2 explicitly leaves l=1 gauge fixing and reduction undone. The nonzero factor of (8.4), evaluated algebraically at l=1, agrees with the new defined action at large q. Its third zero root is not a physical third dipole degree of freedom. No import of the source quantum constitutive closure or its claimed full stability precision. Fixed finite-q current factors are those of the free LLL projection, not a complete four-dimensional correction.",
+      "sha256": "eba008dfd9ad4d502f94be1d72b1f4db2c329bada2cbeb3e90a3189bef74c954"
+    }
+  ],
+  "prior_rotor_source": "Iliesiu and Turiaci 2003.02860v3, A.2 and A.3 beginning revisited via primary HTML; no quantum rotor partition function or metric-only uplift is adopted.",
+  "contribution_decision": "Continue physical long-return damping as primary and matched finite-duration band transfer as fallback. The quadratic classical plus free projected LLL rotational-current action has a complete dipole constraint reduction, conserved displacement including matter, and positive two-field energy on prescribed static spherical backgrounds. The finite-flux product masses reproduce known rotational screening and the published large-flux polynomial. The quantum state, physical spin/holonomy boundary data, omitted response and smooth junction remain unresolved. This supporting component does not establish consequential novelty or physical wormhole stability, transport or a shortcut.",
+  "next_decisive_question": "Determine the physical rotational boundary charge, holonomy and state in the same exterior/throat return construction as the electric singlet; control higher-level/contact and Casimir-state terms, then complete smooth semiclassical matching and the physical response.",
+  "full_literature_and_proof_exit_complete": false,
+  "novelty_established": false,
+  "outreach_sent": false,
+  "verification_development_notes": [
+    "The first independent full tensor comparison exposed a sign error in the checker factor relating the angular Maxwell residual to the divergence of the reduced Maxwell equations. The factor was corrected; the reduced action and manuscript equations did not change.",
+    "The characteristic-polynomial comparison initially used SymPy charpoly with an assumed-real symbol. SymPy generated a same-named symbol with different assumptions; the comparison now directly evaluates det(x I-M), and passes.",
+    "No failed run wrote an accepted receipt. The final complete checker pins the exact sources and includes spectrum grid refinement."
+  ]
+}

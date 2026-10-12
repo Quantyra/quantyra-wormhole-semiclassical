@@ -1,18 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [stationary electric dipole and rotation charge](notes/stationary-electric-dipole.md)
-verifies the coupled four-dimensional classical response and solves a
-prescribed reflection-symmetric junction at zero conserved rotation charge.
-The electric-induced frame rotation is small in the retained hierarchy;
-a unit physical spin is not small in the LLL relative-frame estimate.
-This limits a perturbative estimate and does not prove instability.
-The quantum rotational sector, smooth junction and state response remain
-unresolved; no consequential novelty is accepted.
+Current continuation, 2026-10-11: [rotational-current response](notes/rotational-current-response.md)
+couples the geometric rotation datum to the fermion angular current and
+eliminates the dipole gauge constraint. The defined projected model has
+a positive two-field energy and an explicit finite-flux throat spectrum.
+Rotational screening is established prior work. The physical spin/state,
+holonomy, omitted quantum response and smooth junction remain unresolved;
+no physical stability theorem or consequential novelty is accepted.
 
-Remaining to-do list: derive the rotational sector coupled to the fermion
-angular current, determine spin and holonomy data, complete smooth matching
-and quantum response, finish the physical endpoint and novelty review,
-then independently verify, GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: determine rotational boundary/state data together
+with the electric singlet, control omitted quantum terms and smooth
+matching, finish the physical endpoint and novelty review, independently
+verify, GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
