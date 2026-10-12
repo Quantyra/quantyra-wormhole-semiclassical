@@ -68,9 +68,11 @@ partial_v Q_e = +(g_c^2/(4 pi)) j_v.                          (2)
 ```
 
 The center-of-charge mode uses `q` coherent flavors,
-`j^a=(q/pi) epsilon^{ab} partial_b chi` with `Box chi` equal to the
-worldsheet electric field, up to the orientation that makes the photon
-mass positive. That mass is `m_S^2/X` with
+`j^a=(q/pi) epsilon^{ab} partial_b chi`. The orientation is the Gauss-law
+orientation `epsilon_tx=+sqrt(-g)`, raised on the mostly-plus metric, and
+the static dual is `Box chi=F_tx`. Those two inputs produce
+`kappa^2=g_c^2 q/(4 pi^2 X)`. The opposite epsilon produces the tachyonic
+root and fails the check. This is `m_S^2/X` with the Sadhukhan value
 `m_S^2=g_c^2 q/(4 pi^2)`.
 
 Each massive mode has `m_n=lambda_n/sqrt(X)`, `lambda_n=sqrt(n(n+q))`,
@@ -96,12 +98,21 @@ nabla_a j^a = 0,
 nabla^a T_ab = (J_X/(4 G)) partial_b X + j^a F_ba.             (4)
 ```
 
-The checker builds the Christoffel symbols from the conformal metric,
-builds `T_ab` from (1) and from the Hilbert variation, builds `J_X`
-from the Euler–Lagrange derivative, and simplifies the residuals.
-They vanish identically. The trace identity `T^a_a=c R_2/(24 pi)` is
-the same simplification. Equation (4) is not imposed by setting a
-residual to zero in advance.
+The checker builds the Christoffel symbols from the conformal metric.
+For the dilaton sector it builds `T_ab` from the Hilbert variation and
+`J_X` from the Euler–Lagrange derivative, with `j=0`, and simplifies
+`nabla^a T_ab-(J_X/(4G)) partial_b X` to zero. For the Lorentz term it
+builds `F_ab` from `A_a`, builds `j^a` and the `chi` Euler–Lagrange
+derivative from one action density, and simplifies
+
+```text
+nabla^a T_ab - j^a F_ba - (1/sqrt(-g)) (delta S/delta chi) partial_b chi
+```
+
+to zero. On shell in `chi` that is the Lorentz piece of (4). The two
+sectors are linear, so their sum is (4). Neither residual is set to zero
+in advance. The trace identity `T^a_a=c R_2/(24 pi)` is the same
+simplification of the conformal stress.
 
 The fractional size of the omitted nonlocal massive condensate on the
 product throat is the curvature-to-mass ratio `R_2/m_1^2=2/(1+q)`.

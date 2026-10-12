@@ -50,14 +50,20 @@
       "T_uu_sign": "-2 p(X) (partial_u X)^2",
       "J_contact": "-log((lambda**2/(X*mu**2))**(G*N_n*lambda**2/(X**2*pi)))"
     },
+    "lorentz_ward": {
+      "lorentz_residual_u": 0,
+      "lorentz_residual_v": 0,
+      "identity": "nabla^a T_ab - j^a F_ba = (1/sqrt) (delta S/delta chi) partial_b chi"
+    },
     "join_contact": {
       "schwarzian_join_contact": "formula (6) of the RN collar note"
     },
     "current": {
       "current_conservation": "chiral j_u(u), j_v(v) divergence 0",
       "gauss": "partial_u Q = -(g_c^2/(4 pi)) j_u; partial_v Q = (g_c^2/(4 pi)) j_v",
-      "schwinger_mass_squared_over_X": "g_c^2 q / (4 pi^2 X)",
-      "sadhukhan_m_S_squared": "g_c^2 q / (4 pi^2)"
+      "schwinger_mass_squared_over_X": "g_c**2*q/(4*X_c*pi**2)",
+      "sadhukhan_m_S_squared": "g_c^2 q / (4 pi^2)",
+      "schwinger_kappa_squared": "g_c**2*q/(4*X_c*pi**2)"
     },
     "modes": {
       "delta_C": "-2 beta a",
@@ -86,7 +92,7 @@
   },
   "scope": "Spherical Hadamard-Polyakov response, Ward identities, both-mouth mass and Gauss integrals, and the clock-normalization obstruction. Not a stability, shortcut, formation, or engineering result.",
   "sha256": {
-    "check": "06cad484b61637566a838aebc8d69bae013e177e8b491be744c7c50f9b2d80cb",
-    "note": "77c27713204bda85fc164d390d3b9c0e2203f237640ab3874faac34514b51221"
+    "check": "673e3aaa304ff03623b260808540c11255d66afdacfd45574479f1cb9383518d",
+    "note": "d4a09af9413b4e7eaf2e327d3c3b01574107821b355c1fbdcc58ce6a5444b528"
   }
 }

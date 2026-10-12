@@ -391,40 +391,100 @@ def check_current_and_gauss():
     if sp.simplify(sp.diff(dQu, v) - sp.diff(dQv, u)) != 0:
         raise AssertionError("Gauss integrability")
 
-    # Schwinger mass. One flavor has j^a = (1/pi) epsilon^{ab} partial_b chi
-    # and Box chi = E. q flavors in the center-of-charge mode add coherently.
-    # Maxwell: partial_a (X F^{ab}) = -(g_c^2/(4 pi)) j^b.
-    # Flat chart ds^2=-dt^2+dx^2, X constant, harmonic time factor e^{-i w t}.
-    w, k, Xc = sp.symbols("w k X_c", positive=True)
-    # Electric field E_field = F_tx. Box chi = -w^2 term + ... use Lorenz:
-    # For a static-gradient mode, partial_x^2 chi = -k^2 chi = E, and
-    # j^t = (q/pi) partial_x chi if epsilon^{tx}=+1. Then
-    # partial_x (X E) = -(g_c^2/(4 pi)) j^t gives
-    # X (-k^2) (E/(-k^2 wait))
-    # Set chi such that d_x^2 chi = -k^2 chi and E_field = -k^2 chi
-    # (the massless wave operator on a static mode is d_x^2).
-    # partial_x (X E) = X d_x E = X (-k^2) d_x chi
-    # j^t = (q/pi) * epsilon^{t x} d_x chi. Take the orientation in which
-    # the Maxwell source and this dual agree with a positive mass:
-    # -(g_c^2/(4 pi)) * (q/pi) = - X * (coefficient of E in the wave op).
-    # X * mu^2 * E  is the mass term if partial_x (X E) + X mu^2 * (response).
-    # From partial_x (X E) = -(g_c^2/(4 pi)) j^t
-    # and j^t = -(q/pi) partial_x chi, E=-k^2 chi, partial_x E = -k^2 partial_x chi,
-    # X (-k^2) partial_x chi = -(g_c^2/(4 pi)) (-q/pi) partial_x chi
-    # -X k^2 = (g_c^2/(4 pi)) (q/pi)
-    # which would be a tachyon. The opposite dual orientation
-    # j^t = +(q/pi) partial_x chi with E = + (operator) flips once:
-    # Standard result quoted by Sadhukhan 2610.09847v1 eq (1.1):
-    # m_S^2 = g_c^2 q / (4 pi^2), and the worldsheet mass is m_S^2 / X.
-    mu2 = gc**2 * q / (4 * pi**2 * Xc)
-    sadhukhan = gc**2 * q / (4 * pi**2)
-    if sp.simplify(mu2 * Xc - sadhukhan) != 0:
-        raise AssertionError(mu2)
+    mass = schwinger_mass()
     return {
         "current_conservation": "chiral j_u(u), j_v(v) divergence 0",
         "gauss": "partial_u Q = -(g_c^2/(4 pi)) j_u; partial_v Q = (g_c^2/(4 pi)) j_v",
-        "schwinger_mass_squared_over_X": "g_c^2 q / (4 pi^2 X)",
+        "schwinger_mass_squared_over_X": str(mass["worldsheet_mass_squared"]),
         "sadhukhan_m_S_squared": "g_c^2 q / (4 pi^2)",
+        "schwinger_kappa_squared": str(mass["kappa_squared"]),
+    }
+
+
+def schwinger_mass():
+    """Derive m_S^2 from the Gauss orientation. A flipped epsilon fails."""
+    tx, xx = sp.symbols("t x", real=True)
+    kappa, Xc = sp.symbols("kappa X_c", nonzero=True)
+    chi = sp.exp(kappa * xx)
+    # epsilon_tx = +sqrt(-g) = +1, the same orientation as epsilon_uv above.
+    # Raising on diag(-1, +1) gives epsilon^{tx} = -1. This sign is not chosen
+    # by looking at the mass.
+    eps_tx_up = sp.Integer(-1)
+    j_t = (q / pi) * eps_tx_up * sp.diff(chi, xx)
+    # Static dual fixed with that epsilon: Box chi = F_tx, and Box = d_x^2.
+    electric = sp.diff(chi, xx, 2)
+    # nabla_a (X F^{a t}) = d_x (X F^{xt}) and F^{xt} = F_tx on this metric.
+    maxwell_lhs = sp.diff(Xc * electric, xx)
+    maxwell_rhs = -(gc**2 / (4 * pi)) * j_t
+    resid = sp.simplify(maxwell_lhs - maxwell_rhs)
+    coeff = sp.simplify(resid * sp.exp(-kappa * xx) / kappa)
+    quoted = gc**2 * q / (4 * pi**2)
+    # coeff is X_c kappa^2 minus the derived mass parameter. It must be that
+    # difference, not a second copy of the quote assigned by hand.
+    if sp.simplify(coeff - (Xc * kappa**2 - quoted)) != 0:
+        raise AssertionError(coeff)
+    kappa_squared = sp.simplify(sp.solve(sp.Eq(coeff, 0), kappa**2)[0])
+    if sp.simplify(kappa_squared - quoted / Xc) != 0:
+        raise AssertionError(kappa_squared)
+    # The opposite epsilon produces the tachyonic root and must not pass.
+    flipped = sp.simplify(
+        sp.diff(Xc * electric, xx) - -(gc**2 / (4 * pi)) * ((q / pi) * (+1) * sp.diff(chi, xx))
+    )
+    flipped_coeff = sp.simplify(flipped * sp.exp(-kappa * xx) / kappa)
+    if sp.simplify(flipped_coeff - (Xc * kappa**2 + quoted)) != 0:
+        raise AssertionError(flipped_coeff)
+    return {
+        "kappa_squared": kappa_squared,
+        "worldsheet_mass_squared": kappa_squared,
+        "sadhukhan_match": True,
+    }
+
+
+def check_lorentz_ward():
+    """Off-shell residual of nabla^a T_ab - j^a F_ba for the boson action."""
+    omega = sp.Function("omega")(u, v)
+    chi = sp.Function("chi")(u, v)
+    Au = sp.Function("A_u")(u, v)
+    Av = sp.Function("A_v")(u, v)
+    alpha = sp.symbols("alpha", real=True)
+    Ef = sp.exp(2 * omega)
+    sqrt_f = Ef / 2
+    chi_u = sp.diff(chi, u)
+    chi_v = sp.diff(chi, v)
+    # Hilbert stress of sqrt*(-1/2)*(grad chi)^2, same map as massive_ward.
+    pp = -sp.Rational(1, 2)
+    g2 = -4 * chi_u * chi_v / Ef
+    t_uu = -2 * pp * chi_u**2
+    t_vv = -2 * pp * chi_v**2
+    t_uv = pp * g2 * (-Ef / 2) - 2 * pp * chi_u * chi_v
+    div_u, div_v = divergence(omega, t_uu, t_vv, t_uv)
+    # Action density. The kinetic piece is sqrt*p*grad2 = chi_u chi_v.
+    # The coupling is sqrt * A_a * j^a with j^a = alpha * epsilon^{ab} d_b chi
+    # and epsilon^{uv} = -2/E, so sqrt*epsilon^{uv} = -1.
+    cu, cv = sp.symbols("chi_u chi_v")
+    lag = cu * cv + alpha * (-Au * cv + Av * cu)
+    d_cu = sp.diff(lag, cu).subs({cu: chi_u, cv: chi_v})
+    d_cv = sp.diff(lag, cv).subs({cu: chi_u, cv: chi_v})
+    euler = -(sp.diff(d_cu, u) + sp.diff(d_cv, v))
+    density = lag.subs({cu: chi_u, cv: chi_v})
+    j_up_u = sp.diff(density, Au) / sqrt_f
+    j_up_v = sp.diff(density, Av) / sqrt_f
+    f_uv = sp.diff(Av, u) - sp.diff(Au, v)
+    # j^a F_ba. F_uu = F_vv = 0 and F_vu = -F_uv.
+    force_u = j_up_v * f_uv
+    force_v = j_up_u * (-f_uv)
+    res_u = sp.simplify(div_u - force_u - euler * chi_u / sqrt_f)
+    res_v = sp.simplify(div_v - force_v - euler * chi_v / sqrt_f)
+    if res_u != 0 or res_v != 0:
+        raise AssertionError(f"Lorentz Ward failed: {res_u}, {res_v}")
+    # The opposite force sign is not an identity.
+    flipped_u = sp.simplify(div_u + force_u - euler * chi_u / sqrt_f)
+    if flipped_u == 0:
+        raise AssertionError("force sign is not tested")
+    return {
+        "lorentz_residual_u": 0,
+        "lorentz_residual_v": 0,
+        "identity": "nabla^a T_ab - j^a F_ba = (1/sqrt) (delta S/delta chi) partial_b chi",
     }
 
 
@@ -648,6 +708,7 @@ def main():
         "rn_reduction": check_rn_reduction(),
         "zeta": zeta_dirac_potential(),
         "massive_ward": massive_ward(),
+        "lorentz_ward": check_lorentz_ward(),
         "join_contact": check_join_contact(),
         "current": check_current_and_gauss(),
         "modes": check_modes(),
