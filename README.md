@@ -1,16 +1,16 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [rotational-current response](notes/rotational-current-response.md)
-couples the geometric rotation datum to the fermion angular current and
-eliminates the dipole gauge constraint. The defined projected model has
-a positive two-field energy and an explicit finite-flux throat spectrum.
-Rotational screening is established prior work. The physical spin/state,
-holonomy, omitted quantum response and smooth junction remain unresolved;
-no physical stability theorem or consequential novelty is accepted.
+Current continuation, 2026-10-11: [gluing/support compatibility](notes/gluing-support-compatibility.md)
+corrects the reference angular identification. Antipodal gluing with no
+compensating angular connection introduces a half-turn and fails the
+retained leading free-channel support test. Reflection gluing preserves
+the untwisted return but makes the classical electric load odd and changes
+the required rotation datum. The physical quantum state, moving-mouth
+connection and smooth junction remain unresolved; novelty is not accepted.
 
-Remaining to-do list: determine rotational boundary/state data together
-with the electric singlet, control omitted quantum terms and smooth
-matching, finish the physical endpoint and novelty review, independently
+Remaining to-do list: derive angular transport and the coupled quantum
+state for the corrected reference, control omitted response and smooth
+matching, establish the physical endpoint and novelty, independently
 verify, GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
