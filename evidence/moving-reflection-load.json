@@ -1,0 +1,730 @@
+{
+  "status": "passed_moving_reflection_and_classical_load_not_quantum_state",
+  "python": "3.13.7",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sympy": "1.14.0",
+  "exact": [
+    "reflection velocity",
+    "corotating reflection",
+    "axial pullback",
+    "relative proper rotation",
+    "common Maxwell/metric frame shift"
+  ],
+  "fermi_walker": [
+    {
+      "speed": 0.02,
+      "orbital_angle": 1.7,
+      "thomas_angle": -0.00034010203401180217,
+      "errors": [
+        7.87236942301206e-12,
+        1.0491607582707729e-13
+      ],
+      "orthonormality_errors": [
+        1.574873564891277e-11,
+        2.0983215165415459e-13
+      ]
+    },
+    {
+      "speed": 0.02,
+      "orbital_angle": 6.283185307179586,
+      "thomas_angle": -0.0012570141782616748,
+      "errors": [
+        2.7982477164394115e-10,
+        3.2157956852962855e-13
+      ],
+      "orthonormality_errors": [
+        3.532596437594293e-10,
+        1.5787371410169726e-13
+      ]
+    },
+    {
+      "speed": 0.2,
+      "orbital_angle": 1.7,
+      "thomas_angle": -0.035055234471417916,
+      "errors": [
+        3.8420366883994913e-10,
+        3.8275573272298217e-13
+      ],
+      "orthonormality_errors": [
+        3.810899373846155e-10,
+        2.9121149935917856e-13
+      ]
+    },
+    {
+      "speed": 0.2,
+      "orbital_angle": 6.283185307179586,
+      "thomas_angle": -0.12956384362973436,
+      "errors": [
+        9.826428559733813e-10,
+        1.131511551122344e-12
+      ],
+      "orthonormality_errors": [
+        2.092858220059668e-09,
+        1.2841949725839186e-12
+      ]
+    },
+    {
+      "speed": 0.6,
+      "orbital_angle": 1.7,
+      "thomas_angle": -0.425,
+      "errors": [
+        4.020477506472275e-09,
+        1.041045027960763e-11
+      ],
+      "orthonormality_errors": [
+        5.645410361410086e-09,
+        7.599254558954271e-12
+      ]
+    },
+    {
+      "speed": 0.6,
+      "orbital_angle": 6.283185307179586,
+      "thomas_angle": -1.5707963267948966,
+      "errors": [
+        3.441077800481196e-08,
+        7.093520562606592e-11
+      ],
+      "orthonormality_errors": [
+        6.882155378917787e-08,
+        5.366973532261454e-11
+      ]
+    },
+    {
+      "speed": 0.8,
+      "orbital_angle": 1.7,
+      "thomas_angle": -1.1333333333333337,
+      "errors": [
+        2.2408517152960883e-08,
+        3.473232812467586e-11
+      ],
+      "orthonormality_errors": [
+        3.043165042182494e-08,
+        2.8088087411504148e-11
+      ]
+    },
+    {
+      "speed": 0.8,
+      "orbital_angle": 6.283185307179586,
+      "thomas_angle": -4.188790204786392,
+      "errors": [
+        9.852480886696213e-08,
+        1.3793222120028759e-10
+      ],
+      "orthonormality_errors": [
+        1.3566846046586534e-07,
+        1.1829914825511878e-10
+      ]
+    }
+  ],
+  "wilson": [
+    {
+      "time": 0.1,
+      "covariant_identity_errors": [
+        2.50643969905293e-10,
+        4.543410463924827e-13
+      ]
+    },
+    {
+      "time": 0.7,
+      "covariant_identity_errors": [
+        2.2433170712989277e-10,
+        4.0634050655052556e-13
+      ]
+    },
+    {
+      "time": 1.3,
+      "covariant_identity_errors": [
+        6.843326737919981e-10,
+        5.239349072011986e-13
+      ]
+    },
+    {
+      "time": 2.2,
+      "covariant_identity_errors": [
+        9.789936260128869e-11,
+        3.3191631100531114e-13
+      ]
+    }
+  ],
+  "matched": [
+    {
+      "lam": 0.01,
+      "R": 4.641588833612778,
+      "r_out": 3.0,
+      "chi_b": 0.03,
+      "J_over_omega_hat": 1.046975533651092,
+      "asymptotic_ratio": 1.053157894736842,
+      "refinements": [
+        {
+          "nodes": 150,
+          "tolerance": 3e-07,
+          "flux_error": 1.903555646443067e-09,
+          "charge_error": 1.6516343848138604e-10,
+          "invariant_potential_error": 2.1974876085462114e-10,
+          "max_V_over_omega_hat": 0.9097780088963543,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 572,
+          "tolerance": 3e-09,
+          "flux_error": 4.369726802622154e-12,
+          "charge_error": 2.6711965972481266e-13,
+          "invariant_potential_error": 2.7538735181131813e-12,
+          "max_V_over_omega_hat": 0.9097780088866569,
+          "max_w_over_omega_hat": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "lam": 0.01,
+      "R": 4.641588833612778,
+      "r_out": 21.0,
+      "chi_b": 0.001,
+      "J_over_omega_hat": 0.9937986616881503,
+      "asymptotic_ratio": 0.9993056984159637,
+      "refinements": [
+        {
+          "nodes": 216,
+          "tolerance": 3e-07,
+          "flux_error": 5.735888486402274e-09,
+          "charge_error": 2.2937207688755734e-13,
+          "invariant_potential_error": 2.2538913374559044e-09,
+          "max_V_over_omega_hat": 0.9832132016697595,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 935,
+          "tolerance": 3e-09,
+          "flux_error": 5.795974811206861e-12,
+          "charge_error": 6.661338147750939e-15,
+          "invariant_potential_error": 1.6585482986997135e-12,
+          "max_V_over_omega_hat": 0.9832132017215983,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.01,
+      "R": 4.641588833612778,
+      "r_out": 101.0,
+      "chi_b": 0.0001,
+      "J_over_omega_hat": 0.9943947270340592,
+      "asymptotic_ratio": 0.9999039113897532,
+      "refinements": [
+        {
+          "nodes": 286,
+          "tolerance": 3e-07,
+          "flux_error": 5.3207824257661684e-09,
+          "charge_error": 3.1730285066089436e-11,
+          "invariant_potential_error": 1.7573932604292297e-09,
+          "max_V_over_omega_hat": 0.9961289212586174,
+          "max_w_over_omega_hat": 0.9999999999999999
+        },
+        {
+          "nodes": 1213,
+          "tolerance": 3e-09,
+          "flux_error": 6.301292820865001e-12,
+          "charge_error": 1.8318679906315083e-14,
+          "invariant_potential_error": 3.330578868254719e-12,
+          "max_V_over_omega_hat": 0.996128921391184,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.003,
+      "R": 6.933612743506346,
+      "r_out": 3.0,
+      "chi_b": 0.03,
+      "J_over_omega_hat": 1.0518854844714682,
+      "asymptotic_ratio": 1.053157894736842,
+      "refinements": [
+        {
+          "nodes": 153,
+          "tolerance": 3e-07,
+          "flux_error": 1.0188520723146658e-09,
+          "charge_error": 2.1215784684613936e-10,
+          "invariant_potential_error": 4.947112997033543e-10,
+          "max_V_over_omega_hat": 0.909536480272417,
+          "max_w_over_omega_hat": 0.9999999999999999
+        },
+        {
+          "nodes": 677,
+          "tolerance": 3e-09,
+          "flux_error": 6.22624174440034e-12,
+          "charge_error": 1.7195134205394424e-12,
+          "invariant_potential_error": 1.6705005434491937e-12,
+          "max_V_over_omega_hat": 0.9095364803027789,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.003,
+      "R": 6.933612743506346,
+      "r_out": 21.0,
+      "chi_b": 0.001,
+      "J_over_omega_hat": 0.9981725653532421,
+      "asymptotic_ratio": 0.9993056984159637,
+      "refinements": [
+        {
+          "nodes": 238,
+          "tolerance": 3e-07,
+          "flux_error": 4.537538341275244e-09,
+          "charge_error": 2.569785495509791e-10,
+          "invariant_potential_error": 1.8352996483672612e-09,
+          "max_V_over_omega_hat": 0.9831867536196786,
+          "max_w_over_omega_hat": 0.9999999999999999
+        },
+        {
+          "nodes": 994,
+          "tolerance": 3e-09,
+          "flux_error": 8.959166741817626e-12,
+          "charge_error": 2.420619260590229e-12,
+          "invariant_potential_error": 4.1013004624390614e-12,
+          "max_V_over_omega_hat": 0.9831867538721505,
+          "max_w_over_omega_hat": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "lam": 0.003,
+      "R": 6.933612743506346,
+      "r_out": 101.0,
+      "chi_b": 0.0001,
+      "J_over_omega_hat": 0.9987703367439589,
+      "asymptotic_ratio": 0.9999039113897532,
+      "refinements": [
+        {
+          "nodes": 280,
+          "tolerance": 3e-07,
+          "flux_error": 4.056562086240945e-09,
+          "charge_error": 8.612059954060669e-10,
+          "invariant_potential_error": 8.130049068862111e-10,
+          "max_V_over_omega_hat": 0.9961230053088267,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 1230,
+          "tolerance": 3e-09,
+          "flux_error": 1.2449152819726805e-11,
+          "charge_error": 3.2027713814386516e-12,
+          "invariant_potential_error": 9.789867267545604e-12,
+          "max_V_over_omega_hat": 0.9961230052667243,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.001,
+      "R": 9.999999999999998,
+      "r_out": 3.0,
+      "chi_b": 0.03,
+      "J_over_omega_hat": 1.0528610309436202,
+      "asymptotic_ratio": 1.053157894736842,
+      "refinements": [
+        {
+          "nodes": 151,
+          "tolerance": 3e-07,
+          "flux_error": 1.4925712887858822e-09,
+          "charge_error": 1.6178391959442706e-10,
+          "invariant_potential_error": 9.187806349064687e-10,
+          "max_V_over_omega_hat": 0.9094883420582568,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 697,
+          "tolerance": 3e-09,
+          "flux_error": 5.2910392070431125e-12,
+          "charge_error": 1.5831780331154732e-12,
+          "invariant_potential_error": 1.6802939248328208e-12,
+          "max_V_over_omega_hat": 0.9094883420895948,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.001,
+      "R": 9.999999999999998,
+      "r_out": 21.0,
+      "chi_b": 0.001,
+      "J_over_omega_hat": 0.9990413425357763,
+      "asymptotic_ratio": 0.9993056984159637,
+      "refinements": [
+        {
+          "nodes": 240,
+          "tolerance": 3e-07,
+          "flux_error": 2.1566340102641135e-09,
+          "charge_error": 7.087218589774125e-10,
+          "invariant_potential_error": 5.398753891855401e-10,
+          "max_V_over_omega_hat": 0.9831816023916512,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 1035,
+          "tolerance": 3e-09,
+          "flux_error": 1.1879275341186712e-11,
+          "charge_error": 2.646549646101448e-12,
+          "invariant_potential_error": 6.6240671801887085e-12,
+          "max_V_over_omega_hat": 0.9831816023970771,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.001,
+      "R": 9.999999999999998,
+      "r_out": 101.0,
+      "chi_b": 0.0001,
+      "J_over_omega_hat": 0.9996394525065282,
+      "asymptotic_ratio": 0.9999039113897532,
+      "refinements": [
+        {
+          "nodes": 279,
+          "tolerance": 3e-07,
+          "flux_error": 2.5316480023462873e-09,
+          "charge_error": 9.040050930053667e-10,
+          "invariant_potential_error": 1.1553394911774373e-09,
+          "max_V_over_omega_hat": 0.9961218628167743,
+          "max_w_over_omega_hat": 0.9999999999999999
+        },
+        {
+          "nodes": 1352,
+          "tolerance": 3e-09,
+          "flux_error": 1.524169679356646e-11,
+          "charge_error": 8.264500195309665e-13,
+          "invariant_potential_error": 7.102131382996646e-12,
+          "max_V_over_omega_hat": 0.9961218629084568,
+          "max_w_over_omega_hat": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "lam": 0.0003,
+      "R": 14.938015821857213,
+      "r_out": 3.0,
+      "chi_b": 0.03,
+      "J_over_omega_hat": 1.0530980005755939,
+      "asymptotic_ratio": 1.053157894736842,
+      "refinements": [
+        {
+          "nodes": 148,
+          "tolerance": 3e-07,
+          "flux_error": 2.744554583600234e-09,
+          "charge_error": 7.638223387118614e-11,
+          "invariant_potential_error": 1.6208149336560673e-09,
+          "max_V_over_omega_hat": 0.9094766418825895,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 688,
+          "tolerance": 3e-09,
+          "flux_error": 3.6154427931504734e-12,
+          "charge_error": 1.305400232354259e-12,
+          "invariant_potential_error": 2.857338497752604e-12,
+          "max_V_over_omega_hat": 0.9094766418638451,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.0003,
+      "R": 14.938015821857213,
+      "r_out": 21.0,
+      "chi_b": 0.001,
+      "J_over_omega_hat": 0.9992523635923318,
+      "asymptotic_ratio": 0.9993056984159637,
+      "refinements": [
+        {
+          "nodes": 232,
+          "tolerance": 3e-07,
+          "flux_error": 2.3322428155392316e-09,
+          "charge_error": 7.346870889435309e-10,
+          "invariant_potential_error": 7.749129879441874e-10,
+          "max_V_over_omega_hat": 0.9831802457268681,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 1137,
+          "tolerance": 3e-09,
+          "flux_error": 1.5679291198722467e-11,
+          "charge_error": 9.792167077193881e-14,
+          "invariant_potential_error": 6.331601909437268e-12,
+          "max_V_over_omega_hat": 0.9831802457842467,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.0003,
+      "R": 14.938015821857213,
+      "r_out": 101.0,
+      "chi_b": 0.0001,
+      "J_over_omega_hat": 0.9998505557857287,
+      "asymptotic_ratio": 0.9999039113897532,
+      "refinements": [
+        {
+          "nodes": 283,
+          "tolerance": 3e-07,
+          "flux_error": 2.4411412336000637e-09,
+          "charge_error": 5.139849656998763e-10,
+          "invariant_potential_error": 1.565225238482626e-09,
+          "max_V_over_omega_hat": 0.9961214773904821,
+          "max_w_over_omega_hat": 0.9999999999999999
+        },
+        {
+          "nodes": 1450,
+          "tolerance": 3e-09,
+          "flux_error": 1.1343259664897687e-11,
+          "charge_error": 7.58726415028832e-13,
+          "invariant_potential_error": 3.711028012665096e-12,
+          "max_V_over_omega_hat": 0.9961214776298135,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.0001,
+      "R": 21.544346900318832,
+      "r_out": 3.0,
+      "chi_b": 0.03,
+      "J_over_omega_hat": 1.0531440256761662,
+      "asymptotic_ratio": 1.053157894736842,
+      "refinements": [
+        {
+          "nodes": 173,
+          "tolerance": 3e-07,
+          "flux_error": 2.5283887206128952e-09,
+          "charge_error": 5.280758053061163e-10,
+          "invariant_potential_error": 2.2224029283535174e-09,
+          "max_V_over_omega_hat": 0.9094743691262639,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 668,
+          "tolerance": 3e-09,
+          "flux_error": 4.97658453798641e-12,
+          "charge_error": 9.9253938401489e-13,
+          "invariant_potential_error": 4.5823006847300896e-12,
+          "max_V_over_omega_hat": 0.9094743690972904,
+          "max_w_over_omega_hat": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "lam": 0.0001,
+      "R": 21.544346900318832,
+      "r_out": 21.0,
+      "chi_b": 0.001,
+      "J_over_omega_hat": 0.9992933482617824,
+      "asymptotic_ratio": 0.9993056984159637,
+      "refinements": [
+        {
+          "nodes": 225,
+          "tolerance": 3e-07,
+          "flux_error": 2.7003740910025442e-09,
+          "charge_error": 6.080929093599252e-10,
+          "invariant_potential_error": 1.0809186384505565e-09,
+          "max_V_over_omega_hat": 0.9831801342509526,
+          "max_w_over_omega_hat": 1.0
+        },
+        {
+          "nodes": 1140,
+          "tolerance": 3e-09,
+          "flux_error": 1.1797001653674275e-11,
+          "charge_error": 1.6712187189682481e-12,
+          "invariant_potential_error": 4.4244052865849426e-12,
+          "max_V_over_omega_hat": 0.9831801343944633,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    },
+    {
+      "lam": 0.0001,
+      "R": 21.544346900318832,
+      "r_out": 101.0,
+      "chi_b": 0.0001,
+      "J_over_omega_hat": 0.9998915564237271,
+      "asymptotic_ratio": 0.9999039113897532,
+      "refinements": [
+        {
+          "nodes": 285,
+          "tolerance": 3e-07,
+          "flux_error": 2.3525675851843175e-09,
+          "charge_error": 3.9170611199068617e-10,
+          "invariant_potential_error": 2.042869409659559e-09,
+          "max_V_over_omega_hat": 0.9961214880785355,
+          "max_w_over_omega_hat": 0.9999999999999999
+        },
+        {
+          "nodes": 1460,
+          "tolerance": 3e-09,
+          "flux_error": 1.544414596210686e-11,
+          "charge_error": 1.0387246618392965e-12,
+          "invariant_potential_error": 3.161151895803016e-12,
+          "max_V_over_omega_hat": 0.9961214884691396,
+          "max_w_over_omega_hat": 1.0
+        }
+      ]
+    }
+  ],
+  "spin_and_scales": {
+    "spin": [
+      {
+        "q": 2,
+        "orbital_angle": 0.01,
+        "norm": 0.009999958333385416
+      },
+      {
+        "q": 2,
+        "orbital_angle": 0.3,
+        "norm": 0.29887626494719843
+      },
+      {
+        "q": 2,
+        "orbital_angle": 1.2,
+        "norm": 1.1292849467900707
+      },
+      {
+        "q": 3,
+        "orbital_angle": 0.01,
+        "norm": 0.01999966666833333
+      },
+      {
+        "q": 3,
+        "orbital_angle": 0.3,
+        "norm": 0.5910404133226791
+      },
+      {
+        "q": 3,
+        "orbital_angle": 1.2,
+        "norm": 1.8640781719344528
+      },
+      {
+        "q": 6,
+        "orbital_angle": 0.01,
+        "norm": 0.049994791829424665
+      },
+      {
+        "q": 6,
+        "orbital_angle": 0.3,
+        "norm": 1.3632775200466685
+      },
+      {
+        "q": 6,
+        "orbital_angle": 1.2,
+        "norm": 1.9476952617563905
+      },
+      {
+        "q": 11,
+        "orbital_angle": 0.01,
+        "norm": 0.09995833854135665
+      },
+      {
+        "q": 11,
+        "orbital_angle": 0.3,
+        "norm": 1.9949899732081087
+      },
+      {
+        "q": 11,
+        "orbital_angle": 1.2,
+        "norm": 1.9923292176716814
+      },
+      {
+        "q": 22,
+        "orbital_angle": 0.01,
+        "norm": 0.209614337657765
+      },
+      {
+        "q": 22,
+        "orbital_angle": 0.3,
+        "norm": 1.9937300569078378
+      },
+      {
+        "q": 22,
+        "orbital_angle": 1.2,
+        "norm": 1.99708669074921
+      }
+    ],
+    "scales": [
+      {
+        "q": 1000.0,
+        "delta": 0.02095685522351266,
+        "Omega_ell": 0.0029403965075557557,
+        "q_Omega_damping_time": 140.30714418720427,
+        "classical_KJ_scale": 0.18377478172223474,
+        "electric_e": 5.553158563485817e-23,
+        "omega_hat": 5.849732985345552e-14,
+        "worst_gap_proxy": 61.621463908568224
+      },
+      {
+        "q": 1000000.0,
+        "delta": 0.005239213805878165,
+        "Omega_ell": 7.438680150304552e-07,
+        "q_Omega_damping_time": 141.98084724007032,
+        "classical_KJ_scale": 0.04649175093940344,
+        "electric_e": 5.619401365978856e-44,
+        "omega_hat": 1.4798783950006654e-26,
+        "worst_gap_proxy": 3897.283574098747
+      },
+      {
+        "q": 1000000000.0,
+        "delta": 0.0023285394692791847,
+        "Omega_ell": 7.939070570400539e-11,
+        "q_Omega_damping_time": 34.09463603749062,
+        "classical_KJ_scale": 0.0049619191065003385,
+        "electric_e": 1.3494175309270533e-65,
+        "omega_hat": 1.5794279060432988e-39,
+        "worst_gap_proxy": 184864.39172570466
+      },
+      {
+        "q": 1000000000000.0,
+        "delta": 0.0013098034514695412,
+        "Omega_ell": 5.950944120243641e-15,
+        "q_Omega_damping_time": 4.54338711168225,
+        "classical_KJ_scale": 0.0003719340075152275,
+        "electric_e": 1.7982084371132333e-87,
+        "omega_hat": 1.1839027160005323e-52,
+        "worst_gap_proxy": 7794567.1481974935
+      },
+      {
+        "q": 1e+18,
+        "delta": 0.0005821348673197962,
+        "Omega_ell": 2.0084436405822287e-23,
+        "q_Omega_damping_time": 0.03450134587933708,
+        "classical_KJ_scale": 1.2552772753638929e-06,
+        "electric_e": 1.3655145319328618e-131,
+        "omega_hat": 3.9956716665017965e-79,
+        "worst_gap_proxy": 11691850722.296242
+      },
+      {
+        "q": 1e+30,
+        "delta": 0.00020956855223512662,
+        "Omega_ell": 9.298350187880687e-41,
+        "q_Omega_damping_time": 4.436901476252196e-07,
+        "classical_KJ_scale": 5.81146886742543e-12,
+        "electric_e": 1.756062926868392e-220,
+        "omega_hat": 1.8498479937508314e-132,
+        "worst_gap_proxy": 1.9486417870493736e+16
+      }
+    ]
+  },
+  "script_sha256": "d7c61f53f80596bda32ff428411f4126967928e48e9b5a3ae4667af137b9b075",
+  "input_sha256": {
+    "notes/moving-reflection-load.md": "b36d386ee7b60679b86447b1821dad5666f9608c39e2ef823b38a6d500746bd0",
+    "checks/gluing_support_compatibility.py": "1deae39e15509624f7e5aa496187f631686ea0f529adba84110f5d4ce027c835",
+    "notes/gluing-support-compatibility.md": "9b7101720ff3865cf7976c92c1f55a49b68aeaf73b159f5d9e5e84df0c758d66",
+    "notes/rotational-current-response.md": "0b63ea4de54c5234518e16ff2e5ad56e2c9381a55e6910c1654a53214f4a8a59",
+    "notes/rotating-dirac-and-state.md": "bed806cc063c3d115c783534bd956304cd1713818d0f37b4037c15db32197c62",
+    "notes/binary-mouth-drive.md": "ee866e52d0210886d8d42414eb9d2b2f78f52f5a57747960dbbcbf9192ec2136",
+    "notes/weak-coupling-window.md": "8c92eaad60e8f1603c772e4eb12faad2533afdcfb5aea0d04bd069d20370fa13"
+  },
+  "moving_physical_return_proved": false,
+  "physical_quantum_state_selected": false,
+  "full_stress_bound": false,
+  "smooth_semiclassical_junction": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}
