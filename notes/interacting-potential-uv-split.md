@@ -247,4 +247,3 @@ Remaining to-do list: evaluate the return-dependent finite potential
 response and its retarded continuation; bound kinetic/stress vertices;
 close physical matching, novelty selection, certification and manuscript
 preparation.
-
