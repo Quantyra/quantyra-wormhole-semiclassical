@@ -89,12 +89,31 @@ R_+'(u_b)=Y_+'(U_b) U_b'/[1-R_b'/F(R_b)].                  (5)
 ```
 
 The Schwarzian chain rule supplies the corresponding second/third
-derivative contact in (1). For a static matching sphere, equation (4) is
-only a constant tortoise translation and the stress in (2) acquires no
-additional frequency-dependent collar factor. A moving sphere contributes
-through (5), once `R_b(t)` and the induced time matching have been solved
-from the coupled Einstein equations. Equation (5) does not specify those
-dynamics.
+derivative contact in (1). More explicitly, with
+`Z(lambda)=Y_+(U_b(lambda))` and `u_b=u_b(lambda)`,
+
+```text
+Sch(Z as a function of u_b)
+  = (U_b'/u_b')^2 Sch(Y_+,U_b)
+    + [Sch(U_b,lambda)-Sch(u_b,lambda)]/(u_b')^2.           (6)
+```
+
+Thus the RN chiral state stress at the cut is
+
+```text
+t_+^RN(u_b)=(U_b'/u_b')^2 t_+^th(U_b)
+ - c/(24pi) [Sch(U_b,lambda)-Sch(u_b,lambda)]/(u_b')^2,     (7)
+```
+
+where `t_+^th=Y_+'^2 t_+^0-c Sch(Y_+,U_b)/(24pi)` is the throat state
+function. The corresponding vector current has only its weight-one factor,
+`j_u^RN=(U_b'/u_b')j_U^th`. For a static matching sphere, equation (4)
+is a constant tortoise translation and the stress acquires only the
+constant redshift factor `x_*^2`. A moving sphere contributes through both
+the redshift and the Schwarzian contact in (7), once `R_b(lambda)` and the
+induced time matching have been solved from the coupled Einstein equations.
+Equations (6)-(7) determine the interface transform but do not specify that
+dynamics or the local renormalized join action.
 
 ## RN mass function sourced by the conformal stress
 
@@ -105,7 +124,7 @@ collar identities
 
 ```text
 partial_u m=-(T_uu+T_uv),
-partial_v m= +(T_vv+T_uv).                                  (6)
+partial_v m= +(T_vv+T_uv).                                  (8)
 ```
 
 For the finite state difference on the same fixed metric, the geometric
@@ -114,7 +133,7 @@ terms cancel, `Delta T_uv=0`, and
 ```text
 partial_u Delta m=-Delta t_+(u),
 partial_v Delta m=+Delta t_-(v),
-Delta m=C-int^u Delta t_+(s)ds+int^v Delta t_-(s)ds.       (7)
+Delta m=C-int^u Delta t_+(s)ds+int^v Delta t_-(s)ds.       (9)
 ```
 
 Here `C` is fixed by the RN mass data on an initial cut. Equation (7)
@@ -133,10 +152,11 @@ reproduced in `rn-jt-static-boundary-charge-match.md` and MMP
 [equations (5.39)-(5.42)](https://arxiv.org/html/1807.04726v3#S5.SS3).
 
 Run `checks/rn_collar_lll_flux.ps1` for deterministic checks of the RN
-anomaly trace/conservation identities, null mass-balance projections and
-the timelike interface-map signs. These checks test the formulas on the
-fixed RN background; they do not verify the four-dimensional renormalized
-state, moving-geometry response, or stability.
+anomaly trace/conservation identities, null mass-balance projections, the
+timelike interface-map signs, and the composed Schwarzian formula (6).
+These checks test the formulas on the fixed RN background; they do not
+verify the four-dimensional renormalized state, moving-geometry response,
+or stability.
 
 Remaining to-do list: determine the matched initial state maps and moving
 RN sphere from the coupled boundary equations; include electric
