@@ -14,7 +14,9 @@ MMP already obtains the stronger numerical ratio approximately `2.35` for
 its unmixed dipole model. We reproduce `2.3471178600` independently. The
 candidate addition is an analytic, mixing-tolerant comparison and error
 budget, not discovery of the original no-shortcut conclusion. The matrix
-method is a direct use of Weyl's established eigenvalue inequalities.
+comparison uses the established finite-dimensional spectral-majorization
+tools of Weyl and Pólya; the delay inequalities themselves must still be
+proved for the propagation model.
 
 ## Model and delay hypothesis
 
@@ -68,9 +70,15 @@ product_{j=1}^k |lambda_j(X)|
     <= exp[-xi(kT+sum_{j=1}^k d_j)].                    (3)
 ```
 
-This is the exterior-power argument used by
-[Weyl (1949), equations (3)-(11)](https://doi.org/10.1073/pnas.35.7.408).
-For clarity, the convex step needed here can also be proved directly.
+Weyl's 1949 proof obtains eigenvalue-product bounds by applying the ordinary
+eigenvalue/singular-value inequality to exterior powers of a finite matrix
+(pp. 409-410). Pólya's 1950 remark proves the weak-partial-sum lemma that
+transfers those product bounds to sums of convex increasing functions (p. 50);
+unlike equality-at-the-final-index majorization, it needs only the ordered
+partial-sum bounds used here. See [Weyl (1949)](https://doi.org/10.1073/pnas.35.7.408)
+and [Pólya (1950)](https://doi.org/10.1073/pnas.36.1.49). The following
+argument also proves the particular convex step directly, so the comparison
+does not rely on an unstated majorization convention.
 Write `a_j=log|lambda_j|` and `b_j=-xi(T+d_j)`. All are negative, and (3)
 is the inequality between their ordered partial sums. For any real `v`,
 
