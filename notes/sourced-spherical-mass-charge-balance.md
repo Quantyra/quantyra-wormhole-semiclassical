@@ -61,6 +61,39 @@ reversing orientation reverses both `f` and the displayed flux sign. Thus
 electric flux is constant only in regions with zero radial current. The
 fixed magnetic flux remains topological and obeys its Bianchi identity.
 
+## Ward identities required of the retarded source
+
+For a gauge- and diffeomorphism-invariant renormalized effective action
+`Gamma[g,X,A]` with the source definitions in the mode-reduction note,
+infinitesimal gauge variation and diffeomorphism variation give
+
+```text
+nabla_a j^a = 0,
+nabla^a T_ab^(2) = (J_X/(4G)) partial_b X + j^a F_ba.      (3)
+```
+
+For the second identity, use
+`delta g^ab=-2 nabla^(a xi^b)`, `delta X=xi^a partial_a X`, and the
+gauge-covariant form of the vector variation
+`delta A_a=xi^b F_ba + partial_a(xi^b A_b)`. Integrating by parts and using
+the gauge identity removes the pure-gradient term and yields (3). The sign
+of the Lorentz-force term follows the convention
+`j^a=(1/sqrt(-g)) delta Gamma/delta A_a`; changing the sign in the Maxwell
+source convention changes that term consistently. In the fixed zero-electric
+sector with no charged source, set `j=0`; one must not do so when the charged
+Dirac modes are retained.
+
+The retarded response functions cannot be checked by testing only a
+stress-stress correlator. Their metric, area and gauge variations must
+satisfy the linearization of (3), including contact terms from varying the
+connection, inverse metric, `F_ba`, and reference state. The in-in
+functional version assumes the initial state and boundary conditions are
+transformed along with the sources; a state held fixed under a physical
+boundary deformation requires its explicit variation to appear in the
+response. Equations (1)-(3) therefore provide coupled consistency conditions
+for the yet-unknown `delta T_ab`, `delta J_X`, and `delta j^a`, rather than
+independent adjustable loads.
+
 ## Matching consequence and scope
 
 Equations (1)-(2) separate the data needed for a physical calculation:
