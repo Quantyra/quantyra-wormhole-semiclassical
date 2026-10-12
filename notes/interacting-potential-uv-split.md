@@ -124,6 +124,27 @@ useful for the shrinking-mouth family. It does not itself control the
 weighted potential resolvent in the infrared uniformly over arbitrarily
 long returns; no integrated small-mouth response bound is inferred.
 
+This weighted trace is exactly a coupling derivative of the same finite
+graph determinant. Write `V_0=a U`, with `U=sec^2(z)P_c`, and
+`B_Omega(a)=a U^(1/2)K_Omega U^(1/2)`. The finite-cutoff identity is
+
+```text
+Tr_G(R_Omega V_0 P_c)
+   =Tr_th(B_Omega(1+B_Omega)^(-1))
+   =partial_(log a) log det(1+B_Omega).                         (5b)
+```
+
+The first equality follows from the resolvent identity and cyclicity;
+the second is the Fredholm determinant derivative. Combining with (5a)
+reduces the positive-frequency contact estimate to a renormalized
+`log(a)` derivative of the Gaussian determinant, with a prefactor at
+most `epsilon^2/b^2`. The integral over frequency still requires
+the derivative of the same local Born subtraction and covariant term.
+Existing static determinant bounds concern clock derivatives at fixed
+`a`; they do not supply this coupling derivative or its uniformity in
+long returns. This is an exact reduction of the missing estimate, not
+its resolution.
+
 Define the finite optical resolvent part, excluding the finite local
 coefficient `c`, by
 
