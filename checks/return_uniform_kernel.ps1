@@ -1,4 +1,4 @@
-﻿param([string]$Output = "evidence/return-uniform-kernel.json")
+param([string]$Output = "evidence/return-uniform-kernel.json")
 $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 
@@ -80,4 +80,3 @@ $result = [ordered]@{
 $outputPath = Join-Path $root $Output
 $result | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $outputPath -Encoding utf8
 Write-Output (ConvertTo-Json @{ status = 'passed'; checked_cases = $checked; max_ratio = $maxRatio })
-
