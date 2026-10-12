@@ -197,7 +197,7 @@ The resolvent identity for `H_0=H_free+J V_0 J*` gives
 ```text
 R_Omega=R^0_Omega
  -R^0_Omega J V_0^(1/2)(1+B_Omega)^(-1)
-     V_0^(1/2)J*R^0_Omega.                                    (10)
+     V_0^(1/2)J*R^0_Omega.                                    (12)
 ```
 
 This follows by multiplication by `H_0+Omega^2` and
@@ -214,10 +214,19 @@ Tr_G(R_Omega W)=Tr_th(K_Omega w)
 For fixed positive `Omega`, finite graph and positive `epsilon`, these
 are ordinary resolvent identities. `K_Omega` is the average of the
 individual free-circle kernels on the throat, with each return length
-entering explicitly through `G_(T+D_j,Omega)`. Thus the finite
-return-dependent part of the contact reduces to a one-dimensional
-integral operator, without assuming equal returns or replacing the
-potential by a boundary condition.
+entering explicitly as
+
+```text
+K_Omega(z,z')=(1/q) sum_j G_(L_j,Omega)(z,z'),
+G_(L,Omega)(z,z')=
+ cosh(Omega*(L/2-d_L(z,z')))/(2 Omega sinh(Omega*L/2)),
+d_L(z,z')=min(|z-z'|, L-|z-z'|),   L_j=T+D_j.
+```
+
+The distance formula applies because throat points have
+`|z-z'|<=T<L_j`. Thus the finite return-dependent part of the contact
+reduces to a one-dimensional integral operator, without assuming equal
+returns or replacing the potential by a boundary condition.
 
 This identity does not bound the subtracted integral as `Omega->0`,
 `Omega->infinity`, or `epsilon->0`. The return-uniform tail in (9)
