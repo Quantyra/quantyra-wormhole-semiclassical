@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-11",
+  "status": "bounded_source_rereading_and_targeted_search",
+  "search_queries": [
+    "Casimir force positive potential Dirichlet to Neumann finite rank determinant gluing quantum graph",
+    "Harrison Kirsten vacuum energy Schrodinger metric graphs potential Casimir force 1201.3754",
+    "Casimir piston force arbitrary positive potential Dirichlet to Neumann matrix rank bound"
+  ],
+  "search_query_count": 3,
+  "reviewed_sources": [
+    {
+      "title": "Vacuum energy of Schrodinger operators on metric graphs",
+      "authors": "Jonathan M. Harrison and Klaus Kirsten",
+      "edition": "arXiv:1201.3754v1, 2012-01-18; retrieved PDF carries a later typesetting timestamp",
+      "url": "https://arxiv.org/pdf/1201.3754v1",
+      "doi": "10.1142/S2010194512007477",
+      "cache": "references/cache/boundary-casimir-1201.3754v1.pdf",
+      "sha256": "845e3f271c9b36c2c5c5c90377bd1a8751426f4f0a0ac1985b8de0842d4faa38",
+      "read_scope": "Reread Theorem 1.1, sections 3-5 including boundary/secular construction, Dirichlet determinant factors, asymptotic subtraction, force equations (35)-(37) and the final caveat on renormalization dependence. Reuses the exact cached version from collective-boundary-casimir-source-review.json. The cited general classification, WKB and contour proof dependencies were not newly completed.",
+      "comparison": "Fixed supported potentials and Dirichlet-to-Neumann determinant/force methods are established. The new note proves its finite boundary rank, derivative envelopes and strong-positive-background remainder directly. The matrix-valued coupled current model and its zero modes are not covered merely by quoting the scalar generic-spectrum theorem. No novelty or complete proof-chain exit is claimed."
+    }
+  ],
+  "other_prior_work": "The local optical/covariant subtraction reuses the Bilal-Leduc and Graham et al. proof reading recorded in the singlet-static and proper-mouth-local source supplements. The source product-throat model remains MMP's baseline. No new full rereading of those papers occurred in this continuation.",
+  "unused_leads": [
+    "Harrison-Kirsten-Texier arXiv:1111.0643 and Fucci-Kirsten-Morales arXiv:1106.0731 occur in the graph paper's references; their cited general proofs are not imported as read results.",
+    "Searches also returned spectral-interlacing and piston results; discovery alone does not establish the absence of an earlier rank-dependent bound."
+  ],
+  "access_notes": [
+    "The exact-version browser PDF route returned a cache miss. The unversioned route parsed a PDF identifying v1; the previously downloaded exact-version local PDF remains the hashed source.",
+    "The central literature register contains incoming work and is not modified by this supplemental search."
+  ],
+  "novelty_assessment": "This closes a static determinant premise in the existing finite Gaussian product model using established spectral and renormalization methods. It is supporting evidence for the provisional physical long-return damping primary and matched finite-duration transfer fallback. Consequential novelty, corrected-background response and the physical moving-clock/state/exterior construction remain unresolved.",
+  "development_notes": [
+    "The first run passed symbolic identities, positive-remainder comparisons and all finite-cell boundary ranks/force inequalities, then failed the 2e-7 energy quadrature refinement tolerance with discrepancy 1.3709732218113169e-5.",
+    "The force integral is regular at zero, but the auxiliary interaction energy F(L)-F(infinity) contains -log(k) from the one lifted constant oscillator. Its exactly integrated endpoint term is now separated on the first panel. The quadrature orders and tolerance are unchanged. The failed source is retained in the ignored reference cache.",
+    "The corrected run passed, but review showed a cancellation floor in second finite differences near zero frequency. The final checker evaluates those boundary log determinants at 55 digits for k<.05 and additionally requires both finite-difference errors to decrease by more than three when the step is halved. The prior passing source and receipt are retained in the ignored cache."
+  ],
+  "central_register_modified": false,
+  "full_literature_exit_complete": false,
+  "novelty_established": false,
+  "lean_invocations": 0,
+  "goal_complete": false
+}

@@ -1,18 +1,18 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [proper-mouth local stress](notes/proper-mouth-local-stress.md)
-has small first and second clock derivatives in the retained scaling.
-Fixing the mouth lapse changes the cutoff motion and removes the large
-local curvature of the preceding canonical-clock diagnostic. Exact
-integrals include the covariant logarithm; the known first-order throat
-correction cancels its largest cutoff terms. Direct integration, clock
-differences and smooth static collar checks pass. The nonlocal determinant,
-moving-clock vertex and higher-order physical state remain unresolved;
-no physical damping or consequential novelty is accepted.
+Current continuation, 2026-10-11: [finite-mouth Gaussian determinant](notes/finite-mouth-determinant.md)
+has controlled first and second proper-clock derivatives at the deep cut.
+Fixed mouth cells give a boundary-rank force bound independent of barrier
+strength and unequal returns; the remaining potential is small over that
+strong background. With the existing local prescription, both clock
+derivatives of the entire product-model correction are O(1)=o(q delta).
+Independent full-profile ODE and Fredholm determinants agree. The corrected physical geometry,
+moving-clock vertex and coupled state/exterior remain unresolved;
+physical damping and consequential novelty are not accepted.
 
-Remaining to-do list: control the nonlocal finite-mouth determinant and
-actual clock response; resolve the angular/compact state, physical exterior
-and higher-order matching; establish the physical endpoint and novelty;
+Remaining to-do list: derive the physical moving-clock response and
+corrected-background determinant; resolve angular/compact sectors and
+exterior matching; establish the physical endpoint and novelty;
 independently verify, GCP-certify suitable mathematics and prepare the
 manuscript.
 
