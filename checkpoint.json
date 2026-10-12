@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "binary_leading_drive_verified_electric_axial_quantum_matching_pending",
+  "status": "stationary_electric_axial_verified_quantum_rotation_sector_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -8,7 +8,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue physical long-return damping and matched finite-duration band transfer. Leading circular-binary magnetic and motional electric mouth data are derived in a controlled leading-order model, with independently checked flat retarded fields and established conservative 1PN orbital coefficients. Local proper and coordinate orbital accelerations are distinguished. The electric/axial response, smooth quantum-open junction, transported frames, holonomy and semiclassical state remain unresolved. These classical ingredients are prior work; no consequential novelty is accepted.",
+  "novelty": "Continue the physical long-return and finite band-transfer direction. The stationary electric/axial RN response and rotation integration constant are verified in four dimensions. A prescribed reflection-symmetric zero-rotation-charge junction is solved explicitly. Its electric-induced frame scale is chi*Omega*ell, but a unit physical spin is not small in the LLL rigid-rotation norm at large flux. This limits a sufficient perturbative estimate, not physical traversability. The admissible spin sector, smooth junction and quantum response remain unresolved. Established classical/rotational ingredients do not establish novelty.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -17,7 +17,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Solve the stationary electric/axial dipole and remaining multipoles through a smooth quantum-open junction; derive transported frames and physical return holonomy, then control the time-dependent quantum state and renormalized source/exterior response.",
+    "Derive the quantum rotational sector coupled to the LLL angular current and determine admissible spin/holonomy data; complete smooth metric/source matching and the full Dirac response, then control the evolving quantum state and renormalized exterior response.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -36,8 +36,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/binary-mouth-drive.md",
-  "current_verification": "evidence/binary-mouth-drive.json",
+  "current_note": "notes/stationary-electric-dipole.md",
+  "current_verification": "evidence/stationary-electric-dipole.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,
@@ -1684,5 +1684,45 @@
     "goal_complete": false,
     "next_decisive_question": "Solve the stationary electric/axial dipole and remaining multipoles through a smooth quantum-open junction; derive transported frames and physical return holonomy, then control the time-dependent quantum state and renormalized source/exterior response.",
     "contribution_decision": "Continue physical long-return damping and matched finite-duration band transfer. Leading circular-binary magnetic and motional electric mouth data are derived in a controlled leading-order model, with independently checked flat retarded fields and established conservative 1PN orbital coefficients. Local proper and coordinate orbital accelerations are distinguished. The electric/axial response, smooth quantum-open junction, transported frames, holonomy and semiclassical state remain unresolved. These classical ingredients are prior work; no consequential novelty is accepted."
+  },
+  "stationary_electric_dipole": {
+    "date": "2026-10-11",
+    "note": "notes/stationary-electric-dipole.md",
+    "verification": "evidence/stationary-electric-dipole.json",
+    "source_review": "evidence/stationary-electric-dipole-source-review.json",
+    "full_stationary_RN_and_product_tensor_verification": true,
+    "conserved_rotation_parameter": "r^4 omega_prime+2 r^2 V_prime=-6 J in P=1 RN units",
+    "uniform_field_seed_rotation_charge": "J=e; zero seed spin is not zero conserved rotation charge",
+    "zero_charge_RN_flux": "u=e (r-1)^2(r+2)/r plus the finite-annulus decaying solution",
+    "prescribed_junction": "reflection-symmetric product core and RN annuli; electric flux and invariant potential matched",
+    "matched_flux_coefficient": "k=(2e lambda^2/pi)[1+O(s+R^-2)]",
+    "electric_induced_frame_scale": "beta~e/lambda=chi Omega ell relative to specified outer frame",
+    "full_binary_frame_precession_derived": false,
+    "unit_physical_spin_LLL_rotation_norm": "8(1-1/q), using ell=16P^3/(Gq)",
+    "spin_sector_boundary_relation": "opposite conserved charges require opposite outer rotation coefficients, omega_out_plus~-J and omega_out_minus~+J in the center frame",
+    "spin_norm_is_port_center_frame_comparison_not_central_metric_shift": true,
+    "spin_diagnostic_is_not_instability_or_nontraversability": true,
+    "verification_counts": {
+      "tensors": 72,
+      "basis": 17,
+      "matched_annuli": 15,
+      "scales": 4
+    },
+    "max_independent_ODE_error": 1.8612171820859626e-10,
+    "max_sampled_growing_coefficient_error": 0.11242360391172002,
+    "physical_spin_sector_selected": false,
+    "complete_four_dimensional_junction_proved": false,
+    "boundary_frames_and_holonomy_fixed": false,
+    "full_Dirac_response_derived": false,
+    "semiclassical_response_derived": false,
+    "time_dependent_quantum_state_derived": false,
+    "physical_transport_or_stability_proved": false,
+    "external_shortcut_proved": false,
+    "literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "next_decisive_question": "Derive the quantum rotational sector coupled to the LLL angular current and determine admissible spin/holonomy data; complete smooth metric/source matching and the full Dirac response, then control the evolving quantum state and renormalized exterior response.",
+    "contribution_decision": "Continue the physical long-return and finite band-transfer direction. The stationary electric/axial RN response and rotation integration constant are verified in four dimensions. A prescribed reflection-symmetric zero-rotation-charge junction is solved explicitly. Its electric-induced frame scale is chi*Omega*ell, but a unit physical spin is not small in the LLL rigid-rotation norm at large flux. This limits a sufficient perturbative estimate, not physical traversability. The admissible spin sector, smooth junction and quantum response remain unresolved. Established classical/rotational ingredients do not establish novelty."
   }
 }

@@ -1,17 +1,18 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [circular binary mouth data](notes/binary-mouth-drive.md)
-derives the leading magnetic and motional electric drives, distinguishes
-local proper acceleration from orbital acceleration, and independently
-checks the retarded fields. The electric drive requires a stationary
-electric/axial response beyond the previous magnetic branch. The full
-quantum-open junction, transported frames, holonomy and state remain
-unresolved. These classical ingredients are prior work; novelty is not accepted.
+Current continuation, 2026-10-11: [stationary electric dipole and rotation charge](notes/stationary-electric-dipole.md)
+verifies the coupled four-dimensional classical response and solves a
+prescribed reflection-symmetric junction at zero conserved rotation charge.
+The electric-induced frame rotation is small in the retained hierarchy;
+a unit physical spin is not small in the LLL relative-frame estimate.
+This limits a perturbative estimate and does not prove instability.
+The quantum rotational sector, smooth junction and state response remain
+unresolved; no consequential novelty is accepted.
 
-Remaining to-do list: solve the stationary electric/axial response and
-remaining modes, derive frames and physical holonomy, control the smooth
-semiclassical junction and quantum state/response, finish the consequential
-endpoint and novelty review, then verify and prepare the manuscript.
+Remaining to-do list: derive the rotational sector coupled to the fermion
+angular current, determine spin and holonomy data, complete smooth matching
+and quantum response, finish the physical endpoint and novelty review,
+then independently verify, GCP-certify suitable mathematics and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 

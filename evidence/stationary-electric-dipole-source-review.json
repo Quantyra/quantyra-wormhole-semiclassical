@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-11",
+  "scope": "Stationary electric/axial dipole, conserved rotation charge, prescribed junction and spin diagnostic",
+  "queries": [
+    "magnetised Reissner Nordstrom omega -2 q B r horizon angular momentum Ernst electric dipole",
+    "Reissner Nordstrom axial dipole stationary perturbations angular momentum l=1 uniform magnetic field Burko",
+    "\"Symmetries of magnetized horizons\" arxiv",
+    "\"Stationary electromagnetic fields around black holes\" \"III\" Bicak Dvorak 1980",
+    "near extremal Reissner Nordstrom quantum angular momentum SU(2) rotor Iliesiu Turiaci mass gap"
+  ],
+  "reviewed_sources": [
+    {
+      "id": "burko_1999_axial",
+      "title": "Dipole perturbations of the Reissner-Nordstrom solution: II. The axial case",
+      "url": "https://arxiv.org/pdf/gr-qc/9902002v1",
+      "cache": "references/cache/9902002v1-axial-electric.pdf",
+      "read_scope": "Entire six-page paper, sections I-VI, equations (1)-(37) and references. Rendered PDF page 4 visually inspected for the physical/constraint assignment after (27).",
+      "comparison": "Our directly reconstructed static potential equals the zero-frequency potential in (26). The paragraph assigning (26) to a constraint and (27) to the photon is not adopted: at zero charge, (26) has the Maxwell potential 2f/r^2, while (27) has the gravitational dipole Regge-Wheeler potential. The source equations (19)-(21) also distinguish those limits.",
+      "independent_verification": "Full stationary four-dimensional Einstein-Maxwell tensors and reconstruction, including the rotation integration constant; neutral Maxwell potential checked analytically.",
+      "limitation": "No adoption of frequency-divided reconstruction at zero frequency, and no assertion that the entire source is invalid. Dynamic and upstream Chandrasekhar/Moncrief proof dependencies remain incompletely reviewed.",
+      "sha256": "7cdc7351e26a8d3299ff588e9511e285d64c580fd61016fe6be26ce7cba50cd8"
+    },
+    {
+      "id": "brenner_giribet_montecchio_2021",
+      "title": "The symmetries of magnetized horizons",
+      "url": "https://arxiv.org/pdf/2103.06983v2",
+      "cache": "references/cache/2103.06983v2-electric.pdf",
+      "read_scope": "PDF pages 9-10: section 4 metric, potentials, physical fields, conical period and coordinate setup. Pages 13-15: mass/rotation-charge discussion, gauge choice, (28)-(30), and magnetic-charge comparison (31)-(33).",
+      "comparison": "The displayed Ernst branch has frame dragging linear in external field and a nonzero total rotation charge despite zero seed Kerr parameter. Its J=-q^3 B0+O(B0^3) agrees under duality with J=E P^3 in our conventions.",
+      "independent_verification": "The general M,P linear fields and constant rotation charge are checked directly; extremal regular/decaying fields are verified against all four-dimensional components.",
+      "limitation": "The full nonlinear horizon-charge derivation, asymptotics, thermodynamic mass and upstream exact-solution proofs are not imported as a binary junction or spin-state prescription.",
+      "sha256": "35ad1927045555ba7c00d2abed2e3e340e237a8b4ad8e52d66506b0d998bd534"
+    },
+    {
+      "id": "iliesiu_turiaci_2021_rotation",
+      "title": "The statistical mechanics of near-extremal black holes",
+      "url": "https://arxiv.org/html/2003.02860v3",
+      "cache": "references/cache/2003.02860v3-rotation.pdf",
+      "read_scope": "HTML abstract/intro scope; end of 2.2 (2.19)-(2.22), start of 2.3 through (2.26) and boundary-sector discussion; complete 3.4 (3.28)-(3.34); appendix A.1, A.2 through (A.9), and A.3 discussion (A.12)-(A.13). Other portions reached by find are snippets, not full proof review.",
+      "comparison": "Fixed rotation charge and fixed boundary angular potential select different ensembles. Soft rotational energy and a reduced rotation gauge sector are established ingredients, not novelty of this project.",
+      "independent_verification": "Only the flat extremal Kerr-Newman small-spin classical energy scale is independently derived here. The source quantum partition function, KK truncation, uplift and state are not independently certified.",
+      "limitation": "Do not import the isolated black-hole ensemble or neglect of additional charged matter into the interacting fermion-supported wormhole. Coupled rotational/LLL response remains the next question.",
+      "sha256": "185ab6b615c9fb2a7185517d1536290d7071bbb6bf6cddb213dd530b6dcde71a"
+    }
+  ],
+  "metadata_only_leads": [
+    {
+      "title": "Stationary electromagnetic fields around black holes. III",
+      "authors": "J. Bicak and L. Dvorak",
+      "year": 1980,
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.22.2933",
+      "evidence": "Publisher abstract explicitly identifies coupled stationary extremal RN rational multipoles and the uniform-field solution.",
+      "full_text_attempt": "https://articles.adsabs.harvard.edu/pdf/1980PhRvD..22.2933B returned HTTP 403",
+      "full_proof_read": false
+    }
+  ],
+  "contribution_decision": "Continue the physical long-return and finite band-transfer direction. The stationary electric/axial RN response and rotation integration constant are verified in four dimensions. A prescribed reflection-symmetric zero-rotation-charge junction is solved explicitly. Its electric-induced frame scale is chi*Omega*ell, but a unit physical spin is not small in the LLL rigid-rotation norm at large flux. This limits a sufficient perturbative estimate, not physical traversability. The admissible spin sector, smooth junction and quantum response remain unresolved. Established classical/rotational ingredients do not establish novelty.",
+  "next_decisive_question": "Derive the quantum rotational sector coupled to the LLL angular current and determine admissible spin/holonomy data; complete smooth metric/source matching and the full Dirac response, then control the evolving quantum state and renormalized exterior response.",
+  "full_literature_and_proof_exit_complete": false,
+  "novelty_established": false,
+  "outreach_sent": false,
+  "verification_development_notes": [
+    "A hand-entered derivative in the numerical basis failed the interface identity; it was corrected and an exact derivative cross-check was added.",
+    "One combined run terminated with OpenBLAS workspace allocation failure under low workstation memory. No task process remained live. The final checker pins one BLAS worker and clears symbolic caches before numerical integration.",
+    "Forward shooting of the small spin response amplified growing-mode contamination to 4.15e-8. The accepted spin check instead solves the inner-load and outer-Robin boundary problem directly by collocation, with tolerance refinement, without seeding its initial data from the closed matching coefficients.",
+    "The independent spin boundary solver exposed a sign error in its hand-entered outer Robin condition. The derivative of the -2J/r particular solution has sign +2J/r^2; the condition was corrected and direct residual checks of both boundary conditions were added before acceptance."
+  ]
+}
