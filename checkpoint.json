@@ -1,5 +1,43 @@
 {
   "date": "2026-10-11",
+  "proper_mouth_local_progress": {
+    "date": "2026-10-11",
+    "note": "notes/proper-mouth-local-stress.md",
+    "verification": "evidence/proper-mouth-local-stress.json",
+    "source_review": "evidence/proper-mouth-local-source-review.json",
+    "model": "Spherical Gaussian electric current, fixed mouth lapse, fixed local coefficient and invariant pressures",
+    "local_clock_derivatives": "a x/4+O(a epsilon x^2[1+|c|+|log N_b|]), j=1,2",
+    "first_order_coefficients": "I-I0=2a alpha x B; J-J0=2a alpha x Q; U and leading R^2 terms cancel",
+    "retained_scaling": "a=1/(4pi^2 q), alpha=1/(4pi^2 q^3), epsilon=q^-2, delta=log^-2 q",
+    "local_clock_response_scale": "O(q^-1); product cutoff error O(q^-3 log q); known first-order correction O(q^-4 log q)",
+    "counts": {
+      "symbolic": 11,
+      "product_integrals": 6,
+      "clock_refinement": 3,
+      "first_order": 6,
+      "affine_geometry_refinement": 2,
+      "collars": 9,
+      "scales": 4
+    },
+    "max_product_integral_error": 9.956824444577827e-60,
+    "max_first_order_coefficient_error": 2.5449353132253595e-54,
+    "proper_clock_local_comparison_controlled": true,
+    "known_first_order_local_coefficients_controlled": true,
+    "nonlocal_finite_mouth_determinant_controlled": false,
+    "physical_clock_vertex_derived": false,
+    "higher_order_physical_geometry_controlled": false,
+    "physical_renormalization_matched": false,
+    "angular_compact_state_constructed": false,
+    "physical_exterior_matched": false,
+    "physical_damping_proved": false,
+    "external_shortcut_proved": false,
+    "full_literature_exit_complete": false,
+    "novelty_established": false,
+    "lean_invocations": 0,
+    "goal_complete": false,
+    "contribution_decision": "Continue long-return damping as provisional primary and matched finite-duration transfer as fallback. At fixed mouth lapse, the local covariant mass term has first two clock derivatives a x/4+O(a epsilon x^2[1+|c|+|log N_b|]); its known first-order throat correction is O(a alpha log q). The formerly large canonical local curvature belongs to a different clock family. This resolves a supporting local-static size concern, not the nonlocal determinant, physical damping or consequential novelty.",
+    "next_decisive_question": "Control the nonlocal finite-mouth determinant and derive the moving-clock vertex, including higher-order geometry/state response and four-dimensional renormalization matching. The fixed-proper-mouth local term is now small through the known first-order correction; this does not transfer the canonical damping kernel. Resolve the angular/compact state and physical exterior."
+  },
   "collective_boundary_casimir_progress": {
     "date": "2026-10-11",
     "note": "notes/collective-boundary-casimir.md",
@@ -35,7 +73,7 @@
     "contribution_decision": "Continue long-return damping as provisional primary and matched finite-duration transfer as fallback. The ideal rank-r collective boundary Casimir correction has length derivatives bounded by pi r/(6T^2) and 2pi r/(3T^3), independently of all returns and channel count. Its clock curvature is o(q delta) at fixed rank. At the deeper finite-mouth cut the local optical term c integral V has clock curvature c q/(2pi^2), requiring physical coefficient matching. The determinant method and local subtraction issue are established; no physical damping, total stress or consequential novelty is accepted.",
     "next_decisive_question": "Match the finite smooth-mouth determinant and local four-dimensional renormalized coefficients. The ideal collective boundary has a uniformly small static clock response, but a local optical coefficient has order-q curvature at the deeper cut; the boundary limit alone does not fix the total physical stress. Then resolve the angular/compact state and physical exterior matching."
   },
-  "status": "ideal_collective_boundary_casimir_verified_physical_matching_pending",
+  "status": "proper_mouth_local_comparison_verified_nonlocal_response_pending",
   "planning_repository": "Quantyra/quantyra-space-planning",
   "planning_stories": [
     "S051",
@@ -43,7 +81,7 @@
   ],
   "note": "notes/mouth-energy-factorization.md",
   "verification": "evidence/mouth-energy.json",
-  "novelty": "Continue long-return damping as provisional primary and matched finite-duration transfer as fallback. The ideal rank-r collective boundary Casimir correction has length derivatives bounded by pi r/(6T^2) and 2pi r/(3T^3), independently of all returns and channel count. Its clock curvature is o(q delta) at fixed rank. At the deeper finite-mouth cut the local optical term c integral V has clock curvature c q/(2pi^2), requiring physical coefficient matching. The determinant method and local subtraction issue are established; no physical damping, total stress or consequential novelty is accepted.",
+  "novelty": "Continue long-return damping as provisional primary and matched finite-duration transfer as fallback. At fixed mouth lapse, the local covariant mass term has first two clock derivatives a x/4+O(a epsilon x^2[1+|c|+|log N_b|]); its known first-order throat correction is O(a alpha log q). The formerly large canonical local curvature belongs to a different clock family. This resolves a supporting local-static size concern, not the nonlocal determinant, physical damping or consequential novelty.",
   "physical_source_audit_complete": false,
   "global_stability_established": false,
   "finite_disturbance_result": false,
@@ -52,7 +90,7 @@
   "manuscript_prepared": false,
   "publication_selected": false,
   "remaining": [
-    "Match the finite smooth-mouth determinant and local four-dimensional renormalized coefficients. The ideal collective boundary has a uniformly small static clock response, but a local optical coefficient has order-q curvature at the deeper cut; the boundary limit alone does not fix the total physical stress. Then resolve the angular/compact state and physical exterior matching.",
+    "Control the nonlocal finite-mouth determinant and derive the moving-clock vertex, including higher-order geometry/state response and four-dimensional renormalization matching. The fixed-proper-mouth local term is now small through the known first-order correction; this does not transfer the canonical damping kernel. Resolve the angular/compact state and physical exterior.",
     "Finish primary/fallback novelty and the consequential physical result",
     "Independently verify, GCP-certify suitable endpoints and prepare the reproducible manuscript"
   ],
@@ -71,8 +109,8 @@
     "throat_reduction": "evidence/throat-reduction.json",
     "throat_reconstruction_requires_nonzero_frequency": true
   },
-  "current_note": "notes/collective-boundary-casimir.md",
-  "current_verification": "evidence/collective-boundary-casimir.json",
+  "current_note": "notes/proper-mouth-local-stress.md",
+  "current_verification": "evidence/proper-mouth-local-stress.json",
   "exact_drift_model": {
     "verification": "evidence/general-drift-energy.json",
     "conditional_global_energy_proved": true,

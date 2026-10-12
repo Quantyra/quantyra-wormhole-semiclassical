@@ -1,17 +1,18 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [collective boundary Casimir response](notes/collective-boundary-casimir.md)
-has first and second throat-length derivatives bounded independently of
-channel count and all unequal returns. Independent graph spectra verify
-the ideal-boundary energy. Its static clock correction is small in the
-retained scaling, but the deeper finite mouth has an order-q local optical
-term requiring physical renormalization matching. The ideal-boundary
-limit does not supply total mouth stress or a physical damping result.
-The determinant method is established; novelty remains unaccepted.
+Current continuation, 2026-10-11: [proper-mouth local stress](notes/proper-mouth-local-stress.md)
+has small first and second clock derivatives in the retained scaling.
+Fixing the mouth lapse changes the cutoff motion and removes the large
+local curvature of the preceding canonical-clock diagnostic. Exact
+integrals include the covariant logarithm; the known first-order throat
+correction cancels its largest cutoff terms. Direct integration, clock
+differences and smooth static collar checks pass. The nonlocal determinant,
+moving-clock vertex and higher-order physical state remain unresolved;
+no physical damping or consequential novelty is accepted.
 
-Remaining to-do list: match finite-mouth stress and local renormalized
-coefficients; resolve the coupled angular/compact state and physical
-exterior; complete smooth matching, the physical endpoint and novelty;
+Remaining to-do list: control the nonlocal finite-mouth determinant and
+actual clock response; resolve the angular/compact state, physical exterior
+and higher-order matching; establish the physical endpoint and novelty;
 independently verify, GCP-certify suitable mathematics and prepare the
 manuscript.
 
