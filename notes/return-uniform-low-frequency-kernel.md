@@ -160,25 +160,73 @@ contribution in the prescribed Gaussian graph model. It does not bound
 the higher-frequency renormalized finite part, the two-vertex bubble, the
 kinetic/stress response, or the retarded physical kernel.
 
+The higher-frequency **interaction correction** can also be bounded
+uniformly as the cutoff shrinks. Let
+`T_min=2 acos(1/4)` and
+`C_0=coth(T_min/2)/2`. For `Omega>=1` and every return circle,
+
+```text
+c_Omega(L)=coth(Omega L/2)/(2 Omega)<=C_0/Omega,
+Tr(R_Omega^free W_2)=I_2 (1/q) sum_j c_Omega(L_j).
+```
+
+Positivity and form ordering give
+`0<=Delta_Omega=Tr((R_Omega^free-R_Omega)W_2)
+<=Tr(R_Omega^free W_2)`. Split at `Omega=epsilon^-1` (which exceeds
+one for the stated cutoff range). On `1<=Omega<=epsilon^-1`, integration
+of this free-trace bound gives
+`C_0 I_2 log(1/epsilon)`. On `Omega>=epsilon^-1`, the resolvent-identity
+tail (14) of the UV-split note gives
+`Delta_Omega<=C_0 ||V_0||_infinity I_2 Omega^-3`, so its integral is at
+most `(C_0/2)||V_0||_infinity I_2 epsilon^2`. Using
+`I_2<=a epsilon/b^3` and `||V_0||_infinity=a/epsilon^2`,
+
+```text
+integral_1^infinity Delta_Omega dOmega
+ <= C_0 [a epsilon log(1/epsilon)+a^2 epsilon/2]/b^3.           (9)
+```
+
+This is uniform in channel count and all positive returns, and vanishes
+as `epsilon->0` at fixed `a`. The free high-frequency trace separates
+exactly as
+
+```text
+c_Omega(L)=1/(2 Omega)+1/[Omega (exp(Omega L)-1)].               (10)
+```
+
+The first term is the sole logarithmic divergence with coefficient `I_2`.
+The finite return-dependent remainder above `Omega=1` is bounded by
+`I_2 E_1(T_min)/(1-exp(-T_min))`, where
+`E_1(t)=integral_t^infinity exp(-x)/x dx`; it is therefore `O(a epsilon)`.
+Together with the fixed covariant local conversion (7), whose size is
+`O(a epsilon[1+|log(lambda_0/epsilon)|])` at fixed renormalization scale,
+(9)-(10) control the renormalized high-frequency potential seagull in the
+shrinking-cutoff limit. This does not control the low-frequency
+interaction correction separately (only the full positive low-frequency
+trace is bounded by (8)), and does not extend to the bubble or kinetic and
+stress vertices.
+
 ## Verification and scope
 
 `checks/return_uniform_kernel.ps1` independently evaluates the exact
 positive difference in a cancellation-resistant form over deterministic
 logarithmic grids of `Omega`, `D`, and throat separations. It checks the
-stronger `|G(0)-G(d)|<=d/2` bound and hashes this note and the script into
-`evidence/return-uniform-kernel.json`. This numerical check supplements,
-but does not replace, the derivative proof above.
+stronger `|G(0)-G(d)|<=d/2` bound and the high-frequency free-diagonal and
+return-remainder inequalities used in (9)-(10), then hashes this note and
+the script into `evidence/return-uniform-kernel.json`. These numerical
+checks supplement, but do not replace, the analytic operator and trace
+proofs above.
 
-The decomposition and (8) advance the primary (l=0) response by controlling
-the positive potential seagull in the infrared. The next step is to bound
-the higher-frequency renormalized potential finite part and the two-vertex
-bubble, then match the stress and join. This step addresses only the
-Gaussian potential sector. It does
+The decomposition and (8)-(10) control the low-frequency positive
+potential seagull and its renormalized high-frequency interaction part.
+The next step is to bound the two-vertex bubble, then the kinetic/stress
+response and moving join. This step addresses only the Gaussian potential
+sector. It does
 not resolve the interacting joined contact identified in the
 [proper-mouth seagull audit](proper-mouth-seagull-audit.md), prove a
 physical damping pole, or claim novelty.
 
-Remaining to-do list: bound the higher-frequency renormalized potential
-finite part and two-vertex bubble; include kinetic, stress and joined-mouth
-vertices with one covariant subtraction; match the curved exterior and
-state; then decide whether a physical stability theorem survives.
+Remaining to-do list: bound the two-vertex bubble and kinetic/stress
+response with the same covariant subtraction; derive the interacting
+joined-mouth contact; match the curved exterior and state; then decide
+whether a physical stability theorem survives.

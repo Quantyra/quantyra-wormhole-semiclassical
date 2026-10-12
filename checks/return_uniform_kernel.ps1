@@ -22,11 +22,32 @@ $fractions = @(0..20 | ForEach-Object { $_ / 20.0 })
 $checked = 0
 $maxRatio = 0.0
 $maxDrop = 0.0
+$tMin = 2.0 * [math]::Acos(0.25)
+$c0 = 0.5 * [math]::Cosh($tMin / 2.0) / [math]::Sinh($tMin / 2.0)
+$diagonalCases = 0
+$maxDiagonalRatio = 0.0
+$remainderCases = 0
 
 foreach ($throat in $tValues) {
     foreach ($exterior in $dValues) {
         $length = $throat + $exterior
         foreach ($omega in $omegaValues) {
+            if ($omega -ge 1.0) {
+                $tail = [math]::Exp(-$omega * $length)
+                $freeDiag = 1.0 / (2.0 * $omega) + $tail / ($omega * (1.0 - $tail))
+                $diagonalRatio = $omega * $freeDiag / $c0
+                if ($diagonalRatio -gt (1.0 + 2e-12)) {
+                    throw "Free diagonal bound failed: omega=$omega L=$length ratio=$diagonalRatio"
+                }
+                $maxDiagonalRatio = [math]::Max($maxDiagonalRatio, $diagonalRatio)
+                $freeRemainder = $tail / ($omega * (1.0 - $tail))
+                $uniformRemainder = [math]::Exp(-$omega * $tMin) / ($omega * (1.0 - [math]::Exp(-$tMin)))
+                if ($freeRemainder -gt ($uniformRemainder * (1.0 + 2e-12))) {
+                    throw "Free return remainder bound failed: omega=$omega L=$length"
+                }
+                $diagonalCases++
+                $remainderCases++
+            }
             foreach ($fraction in $fractions) {
                 $separation = $throat * $fraction
                 $circular = [math]::Min($separation, $length - $separation)
@@ -70,9 +91,16 @@ $result = [ordered]@{
     separation_grid_points_per_geometry = $fractions.Count
     max_drop_over_circular_separation_half = $maxRatio
     max_absolute_drop = $maxDrop
+    free_diagonal_bound_cases = $diagonalCases
+    max_omega_times_free_diagonal_over_C0 = $maxDiagonalRatio
+    free_return_remainder_bound_cases = $remainderCases
+    C0 = $c0
     analytic_lipschitz_bound = '|dG/dd| <= 1/2'
     kernel_operator_bound = '||Kbar|| <= T^2/2 by Schur test'
     interacting_remainder_positive_proved = $false
+    potential_seagull_low_frequency_uniform = $true
+    high_frequency_interaction_correction_uniform = $true
+    full_response_shrinking_cutoff_uniformity_proved = $false
     shrinking_cutoff_uniformity_proved = $false
     physical_matching_proved = $false
     lean_invocations = 0
