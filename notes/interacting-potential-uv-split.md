@@ -219,6 +219,44 @@ beyond `R>2|w|+1` is at most
 The bound is not uniform as `epsilon->0` or if the vertex profile norm
 grows; those scalings are retained explicitly in its right-hand side.
 
+For the moving-mouth potential variation in the product-throat model, the
+linear coefficient is explicit. Differentiating `x J sec^2(Jz)` at
+`phi=0`, with `J=1+kappa phi+O(phi^2)`, gives
+
+```text
+w_1(z)=a sec^2(z) g(z),
+g(z)=1+kappa+2 kappa z tan(z),
+kappa=-epsilon/(A b).                                          (10)
+```
+
+Since `0<=z tan(z)<=A b/epsilon` on `[-A,A]`, `g` ranges between
+`-1-|kappa|` and `1-|kappa|`. Also `A>pi/3` and `b>3/4` for
+`0<epsilon<=1/4`, so `|kappa|<1/pi<1/3` and `|g|<=4/3`. Therefore
+
+```text
+integral_-A^A |w_1(z)|^2 dz
+ <=(16/9) a^2 integral_-A^A sec^4(z) dz
+ =(32/9) a^2 (b/epsilon+b^3/(3 epsilon^3))
+ <=(38/27) a^2 epsilon^-3.                                  (11)
+```
+
+Here the last inequality uses `b<=1` and `epsilon^2<=1/16`. Substituting
+(11) into the return-uniform bubble tail (9), for fixed external `w` and
+sufficiently small `epsilon` so that `epsilon^-2>=2|w|+1`, gives
+
+```text
+integral_|Omega|>=epsilon^-2
+ |Tr(R_Omega W_1 R_(Omega+w) W_1)| dOmega
+ <=(38 C/27) a^2 epsilon.                                    (12)
+```
+
+Thus the far-ultraviolet bubble tail vanishes uniformly in all positive
+returns and channel count at fixed `a`. The unsolved band
+`2|w|+1<=|Omega|<=epsilon^-2` grows as the mouth shrinks; (9) alone does
+not bound its integrated contribution. The exact on-shell stress vertex
+also contains kinetic and mouth-pressure terms, so (12) is not the full
+clock bubble or a physical damping estimate.
+
 ## Exact throat-only resolvent reduction
 
 There is also an exact reduction of the finite-cutoff resolvent that
@@ -290,23 +328,27 @@ returns. With `||V_0||_infinity=a/epsilon^2` and
 return-dependent ultraviolet correction at every fixed mouth cutoff;
 its coefficient is not uniform as `epsilon->0`.
 
-The return-dependent ultraviolet correction is now controlled at fixed
-`epsilon`, but this identity does not bound the low-frequency contribution
-or give a coefficient uniform as `epsilon->0`. The return-uniform tail in
-(9) controls the two-vertex bubble, whereas this formula is for the
-one-resolvent seagull trace. Kinetic and stress insertions also remain
-outside its scope. The local subtraction remains the fixed one in (6)-(7).
+The bound in (14) alone is not uniform as `epsilon->0`. The subsequent
+[return-uniform kernel analysis](return-uniform-low-frequency-kernel.md)
+uses the zero-trace Birman--Schwinger remainder to control the full
+low-frequency potential seagull and its renormalized high-frequency
+interaction correction uniformly in the shrinking-cutoff limit. The same
+note's explicit moving-mouth vertex profile gives the far-ultraviolet
+bubble-tail bound (12). The growing intermediate-frequency bubble band,
+kinetic and stress insertions, and physical retarded matching remain open.
+The local subtraction remains the fixed one in (6)-(7).
 
 ## Consequence and remaining gap
 
-The potential-sector UV problem separates into a single local logarithm,
-whose spatial coefficient is exactly (4), a return-uniform ultraviolet
-correction to the one-vertex seagull trace at fixed mouth cutoff, and a
-convergent two-vertex response with a return-uniform high-frequency tail.
-This is the appropriate starting point for evaluating the global finite
-part and its retarded continuation. It does not bound the kinetic
-stress-stress tail or control the physical exterior boundary as the
-geometry moves.
+The potential-sector response separates into a local logarithm whose
+spatial coefficient is exactly (4), a low-frequency potential seagull
+bounded uniformly over returns and shrinking cutoff, and a renormalized
+high-frequency seagull whose interaction correction vanishes in that
+limit. The two-vertex potential bubble has a far-ultraviolet tail of order
+`a^2 epsilon` at fixed external frequency, but its intermediate band is
+not controlled. This still does not bound the kinetic/stress response,
+give the full retarded kernel, or control the physical exterior boundary
+as the geometry moves.
 
 Bilal and Leduc's exact determinant variation for a constant-mass scalar
 on a compact boundaryless surface gives the same general local/global
@@ -316,8 +358,8 @@ Their operator and boundary conditions differ from this variable
 rank-one potential on a transmitting graph; no determinant formula from
 that paper is imported here.
 
-Remaining to-do list: control the low-frequency and shrinking-cutoff
-finite potential response and its retarded continuation; bound
-kinetic/stress vertices;
-close physical matching, novelty selection, certification and manuscript
-preparation.
+Remaining to-do list: control the intermediate-frequency two-vertex
+bubble; derive the kinetic/stress and joined-mouth response with the same
+covariant subtraction; establish the physical retarded continuation and
+curved exterior/state matching; then complete novelty review,
+certification and manuscript preparation.

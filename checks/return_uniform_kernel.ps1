@@ -27,6 +27,9 @@ $c0 = 0.5 * [math]::Cosh($tMin / 2.0) / [math]::Sinh($tMin / 2.0)
 $diagonalCases = 0
 $maxDiagonalRatio = 0.0
 $remainderCases = 0
+$profileCases = 0
+$maxVertexRatio = 0.0
+$maxProfileIntegralRatio = 0.0
 
 foreach ($throat in $tValues) {
     foreach ($exterior in $dValues) {
@@ -67,6 +70,26 @@ foreach ($throat in $tValues) {
     }
 }
 
+foreach ($epsilon in @(0.25, 0.2, 0.1, 0.01, 1e-4, 1e-8)) {
+    $A = [math]::Acos($epsilon)
+    $b = [math]::Sqrt(1.0 - $epsilon * $epsilon)
+    $kappa = -$epsilon / ($A * $b)
+    for ($j = 0; $j -le 100; $j++) {
+        $z = -$A + 2.0 * $A * $j / 100.0
+        $g = 1.0 + $kappa + 2.0 * $kappa * $z * [math]::Tan($z)
+        $ratio = [math]::Abs($g) / (4.0 / 3.0)
+        if ($ratio -gt (1.0 + 2e-12)) { throw "Moving-mouth vertex envelope failed: epsilon=$epsilon z=$z g=$g" }
+        $maxVertexRatio = [math]::Max($maxVertexRatio, $ratio)
+        $profileCases++
+    }
+    $exactSec4 = 2.0 * ($b / $epsilon + $b * $b * $b / (3.0 * $epsilon * $epsilon * $epsilon))
+    $profileBound = (16.0 / 9.0) * $exactSec4
+    $asymptoticBound = (38.0 / 27.0) / ($epsilon * $epsilon * $epsilon)
+    $integralRatio = $profileBound / $asymptoticBound
+    if ($integralRatio -gt (1.0 + 2e-12)) { throw "Moving-mouth L2 bound failed: epsilon=$epsilon ratio=$integralRatio" }
+    $maxProfileIntegralRatio = [math]::Max($maxProfileIntegralRatio, $integralRatio)
+}
+
 function Get-NormalizedSha256([string]$path) {
     $bytes = [System.IO.File]::ReadAllBytes($path)
     $text = [System.Text.Encoding]::UTF8.GetString($bytes).Replace("`r`n", "`n")
@@ -95,11 +118,16 @@ $result = [ordered]@{
     max_omega_times_free_diagonal_over_C0 = $maxDiagonalRatio
     free_return_remainder_bound_cases = $remainderCases
     C0 = $c0
+    moving_mouth_vertex_profile_cases = $profileCases
+    max_vertex_envelope_ratio = $maxVertexRatio
+    max_profile_integral_bound_ratio = $maxProfileIntegralRatio
     analytic_lipschitz_bound = '|dG/dd| <= 1/2'
     kernel_operator_bound = '||Kbar|| <= T^2/2 by Schur test'
     interacting_remainder_positive_proved = $false
     potential_seagull_low_frequency_uniform = $true
     high_frequency_interaction_correction_uniform = $true
+    far_ultraviolet_potential_bubble_tail_bound = '38 C a^2 epsilon / 27, for fixed external frequency and epsilon^-2 >= 2|w|+1'
+    moving_mouth_bubble_midband_controlled = $false
     full_response_shrinking_cutoff_uniformity_proved = $false
     shrinking_cutoff_uniformity_proved = $false
     physical_matching_proved = $false
