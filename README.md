@@ -1,17 +1,17 @@
 # Quantyra semiclassical wormhole research
 
-Current continuation, 2026-10-11: [moving reflection and angular load](notes/moving-reflection-load.md)
-derives the angular boundary term from the orbiting reflection gluing.
-The specified classical junction requires a rotation datum of order
-P Omega, larger than its electric-only value. The projected source remains
-small on the proposed damping time in the retained joint limit. This is
-a bounded-source result; the physical quantum state, renormalized stress,
-complete moving return and smooth junction remain unresolved.
+Current continuation, 2026-10-11: [local current coset and exterior return](notes/angular-current-coset.md)
+derives the large local stress sector commuting with electric and
+rotational currents, then tests its exterior boundary. Unequal returns
+mix the linear current space at two frequencies: the longitudinal squared
+leakage is order delta, although it vanishes at equal frequencies.
+Local central-charge counting therefore does not supply the physical
+quantum state or renormalized stress. No new physical endpoint is accepted.
 
-Remaining to-do list: derive the coupled angular/electric state and global
-rotation sector with this moving load, control stress and smooth matching,
-establish the physical endpoint and novelty, independently verify,
-GCP-certify suitable mathematics and prepare the manuscript.
+Remaining to-do list: derive the coupled state and complete gauged return
+response, control stress and smooth matching, establish the physical
+endpoint and novelty, independently verify, GCP-certify suitable mathematics
+and prepare the manuscript.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
