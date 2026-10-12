@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $rng = [System.Random]::new(51012)
 $maxIdentity = 0.0
+$maxBalanceBridge = 0.0
 $maxExpansionScaled = 0.0
 $samples = 10000
 
@@ -22,6 +23,25 @@ for ($i = 0; $i -lt $samples; $i++) {
     $lhs1 = 2.0 * ($phi * $p1 - ($h01 * (-$p0) + $h11 * $p1))
     $maxIdentity = [Math]::Max($maxIdentity, [Math]::Abs($lhs0 - $rhs0))
     $maxIdentity = [Math]::Max($maxIdentity, [Math]::Abs($lhs1 - $rhs1))
+
+    # Expand the exact spherical mass balance and compare it with the JT
+    # Casimir flux using S_ab=(2G/r_e^2) T_ab.
+    $re = 0.1 + 10.0 * $rng.NextDouble()
+    $grav = 0.01 + 2.0 * $rng.NextDouble()
+    $t00 = 2.0 * $rng.NextDouble() - 1.0
+    $t01 = 2.0 * $rng.NextDouble() - 1.0
+    $t11 = 2.0 * $rng.NextDouble() - 1.0
+    $ttrace = -$t00 + $t11
+    $s00 = 2.0 * $grav / ($re * $re) * $t00
+    $s01 = 2.0 * $grav / ($re * $re) * $t01
+    $s11 = 2.0 * $grav / ($re * $re) * $t11
+    $strace = -$s00 + $s11
+    $casimir0 = $re / (4.0 * $grav) * (($s00 + $strace) * (-$p0) + $s01 * $p1)
+    $casimir1 = $re / (4.0 * $grav) * ($s01 * (-$p0) + ($s11 - $strace) * $p1)
+    $spherical0 = 1.0 / (2.0 * $re) * (($t00 + $ttrace) * (-$p0) + $t01 * $p1)
+    $spherical1 = 1.0 / (2.0 * $re) * ($t01 * (-$p0) + ($t11 - $ttrace) * $p1)
+    $maxBalanceBridge = [Math]::Max($maxBalanceBridge, [Math]::Abs($casimir0 - $spherical0))
+    $maxBalanceBridge = [Math]::Max($maxBalanceBridge, [Math]::Abs($casimir1 - $spherical1))
 
     $eps = 0.001
     $x = $eps * (2.0 * $rng.NextDouble() - 1.0)
@@ -45,7 +65,7 @@ for ($i = 0; $i -lt 1000; $i++) {
     $maxNormalization = [Math]::Max($maxNormalization, [Math]::Abs($lhs - $rhs) / [Math]::Max(1.0, [Math]::Abs($rhs)))
 }
 
-if ($maxIdentity -gt 1e-12 -or $maxExpansionScaled -gt 1.0 -or $maxNormalization -gt 1e-12) {
-    throw "JT Casimir check failed: identity=$maxIdentity expansion_scaled=$maxExpansionScaled normalization=$maxNormalization"
+if ($maxIdentity -gt 1e-12 -or $maxBalanceBridge -gt 1e-12 -or $maxExpansionScaled -gt 1.0 -or $maxNormalization -gt 1e-12) {
+    throw "JT Casimir check failed: identity=$maxIdentity balance_bridge=$maxBalanceBridge expansion_scaled=$maxExpansionScaled normalization=$maxNormalization"
 }
-"PASS samples=$samples identity_max=$maxIdentity expansion_scaled_max=$maxExpansionScaled normalization_scaled_max=$maxNormalization"
+"PASS samples=$samples identity_max=$maxIdentity balance_bridge_max=$maxBalanceBridge expansion_scaled_max=$maxExpansionScaled normalization_scaled_max=$maxNormalization"

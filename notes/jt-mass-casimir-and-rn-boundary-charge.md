@@ -62,6 +62,25 @@ constant. With a source, (3) is the local mass-work identity that must
 agree with the full spherical mass-flux balance when the reduction
 normalizations and background corrections are included.
 
+At the leading product-throat order the normalization agreement can be made
+explicit. From the exact reduction,
+`S_ab=(2G/r_e^2) delta T_ab^(2)` and
+`nabla_b R=(r_e/2) partial_b Phi`, while raising an orbit-space index in
+the exact mass balance contributes `r_e^-2`. Therefore
+
+```text
+nabla_a m = r_e/(4G) (S_ab-gbar_ab S) nabla_bar^b Phi
+           = 1/(2r_e) (delta T_ab^(2)-gbar_ab gbar^cd delta T_cd^(2))
+                         nabla_bar^b Phi + higher throat orders.
+```
+
+This is precisely the small-dilaton expansion of
+`nabla_a m=(T_a^b-delta_a^b T)nabla_b R`. It closes the local normalization
+bridge between the sourced JT Casimir flux and the exact spherical mass
+balance. It does not determine the retarded stress, moving-boundary contact,
+or integration constants at either asymptotic mouth; those still require the
+corrected matched solution.
+
 The three homogeneous dilaton modes can be written
 
 ```text
@@ -103,10 +122,11 @@ must be treated together.
 ## Verification and scope
 
 Run `checks/jt_mass_casimir.ps1`. It checks the local identity (3) on
-deterministic Lorentzian jets, the exact expansion (1)-(2), and the MMP
-normalization in (5). These checks verify the algebra and perturbative
-order; they do not supply the corrected two-ended background or finite-
-frequency boundary response.
+deterministic Lorentzian jets, the leading normalization bridge from the
+JT Casimir flux to the spherical Misner-Sharp balance, the exact expansion
+(1)-(2), and the MMP normalization in (5). These checks verify the algebra
+and perturbative order; they do not supply the corrected two-ended background
+or finite-frequency boundary response.
 
 Remaining to-do list: evaluate the Casimir variation on the corrected
 MMP background; equate its source flux to the RN collar mass balance;
