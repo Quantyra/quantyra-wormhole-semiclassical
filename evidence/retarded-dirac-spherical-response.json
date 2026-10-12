@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-12",
+  "check": "checks/retarded_dirac_spherical_response.py",
+  "note": "notes/retarded-dirac-spherical-response.md",
+  "prescription": "spherical Hadamard-Polyakov",
+  "endpoint": "obstruction",
+  "l0_clock_is_independent_mode": false,
+  "homogeneous_coefficients_fixed_by_mass_and_clocks": true,
+  "ward_identities_hold": true,
+  "both_mouths_integrated": true,
+  "shortcut_claimed": false,
+  "lean_invocations": 0,
+  "formal_certificate": "none",
+  "max_mass_residual": 2.2556869935276558e-10,
+  "max_charge_residual": 2.2556869935276558e-10,
+  "max_rate_residual": 9.051739167237338e-09,
+  "max_delta_C_residual": 1.2434497875801753e-14,
+  "past_stress_residual": 0.0,
+  "future_contact_abs": 6.097318998827098,
+  "report": {
+    "conservation": {
+      "christoffel_components_checked": 8,
+      "nonzero_christoffel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "divergence_u": 0,
+      "divergence_v": 0,
+      "trace_anomaly": "T^a_a = c R_2 / (24 pi)"
+    },
+    "rn_reduction": {
+      "rn_uu_vv_uv_trace": "match equations (2) of rn-collar-lll-anomaly-flux.md"
+    },
+    "zeta": {
+      "zeta_per_area": "m^{2(1-s)}/(2 pi (s-1))",
+      "euclidean_density": "m^2 (log(m^2/mu^2)-1)/(4 pi)",
+      "spinor_trace": "2/(4 pi t) = 1/(2 pi t)",
+      "proper_time_numeric_s2_mass1": 1.0
+    },
+    "massive_ward": {
+      "ward": "nabla^a T_ab = (J_X/(4G)) partial_b X",
+      "T_uu_sign": "-2 p(X) (partial_u X)^2",
+      "J_contact": "-log((lambda**2/(X*mu**2))**(G*N_n*lambda**2/(X**2*pi)))"
+    },
+    "join_contact": {
+      "schwarzian_join_contact": "formula (6) of the RN collar note"
+    },
+    "current": {
+      "current_conservation": "chiral j_u(u), j_v(v) divergence 0",
+      "gauss": "partial_u Q = -(g_c^2/(4 pi)) j_u; partial_v Q = (g_c^2/(4 pi)) j_v",
+      "schwinger_mass_squared_over_X": "g_c^2 q / (4 pi^2 X)",
+      "sadhukhan_m_S_squared": "g_c^2 q / (4 pi^2)"
+    },
+    "modes": {
+      "delta_C": "-2 beta a",
+      "clock_killing_kernel": "b = c = 0",
+      "left_tau_shift": "- right_tau_shift",
+      "delta_M": "- r_e beta a / (4 G)",
+      "static_tangent_match": true
+    },
+    "mouths": {
+      "mouths": 2,
+      "slice_samples": 12,
+      "max_mass_residual": 2.2556869935276558e-10,
+      "max_charge_residual": 2.2556869935276558e-10,
+      "max_rate_residual": 9.051739167237338e-09,
+      "normalized_clock": "alpha'=0; trial sin(t) changes the lapse",
+      "units": "g_c^2/(4 pi)=1 in the charge comparison; anomaly subtracted"
+    },
+    "retarded": {
+      "past_stress_residual": 0.0,
+      "future_contact_abs": 6.097318998827098
+    },
+    "float_samples": {
+      "mode_casimir_samples": 2000,
+      "max_delta_C_residual": 1.2434497875801753e-14
+    }
+  },
+  "scope": "Spherical Hadamard-Polyakov response, Ward identities, both-mouth mass and Gauss integrals, and the clock-normalization obstruction. Not a stability, shortcut, formation, or engineering result.",
+  "sha256": {
+    "check": "06cad484b61637566a838aebc8d69bae013e177e8b491be744c7c50f9b2d80cb",
+    "note": "77c27713204bda85fc164d390d3b9c0e2203f237640ab3874faac34514b51221"
+  }
+}

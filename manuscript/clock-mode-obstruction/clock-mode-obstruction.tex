@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+
+\title{The symmetric MMP mouth clock is not an independent boundary mode}
+\author{Quantyra Space}
+\date{12 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In the fixed-flux spherical sector of the Maldacena--Milekhin--Popov wormhole, the renormalized retarded Dirac stress, dilaton source, and current are defined by one Hadamard--Polyakov prescription. Their Ward identities hold at that order, and the sourced Misner--Sharp mass and electric Gauss flux integrate through both mouths on normalized asymptotic clocks. The symmetric proper-mouth clock is not a gauge-invariant dynamical boundary mode: the three homogeneous Jackiw--Teitelboim coefficients are fixed by those masses and by the two clock normalizations. This is an obstruction to treating that clock as a stability or shortcut degree of freedom. The classification agrees with the pinned sources and is not claimed as a new theorem. No formation, propulsion, or traversability result is stated.
+\end{abstract}
+
+\section{Endpoint}
+The selected question was whether a symmetric \((l=0)\) proper-mouth clock survives as a physical boundary degree of freedom of the fixed-flux Einstein--Maxwell--Dirac throat, and, if it does, what sign or pole its retarded kernel has. It does not survive. After both asymptotic static-observer clocks are normalized, the spherical data that remain are the two Misner--Sharp masses and the two electric fluxes. Each is an integral of the renormalized stress or current. There is no leftover relational clock function, and therefore no stability sign and no pole for that function.
+
+The prescription, the balance laws, and the mode count are derived in the satellite note \texttt{notes/retarded-dirac-spherical-response.md}. The evaluator is \texttt{checks/retarded\_dirac\_spherical\_response.py}. Its receipt records the Ward, mass, charge, and Casimir residuals. This note does not replace that check.
+
+\section{Sources at the stated order}
+On \(ds^{2}=-e^{2\omega}\,du\,dv\), with central charge \(c=q\),
+\begin{align}
+T_{uu}&=\frac{c}{12\pi}\big(\partial_{u}^{2}\omega-(\partial_{u}\omega)^{2}\big)+t_{+}(u),\\
+T_{vv}&=\frac{c}{12\pi}\big(\partial_{v}^{2}\omega-(\partial_{v}\omega)^{2}\big)+t_{-}(v),\\
+T_{uv}&=-\frac{c}{12\pi}\partial_{u}\partial_{v}\omega.
+\end{align}
+The functions \(t_{\pm}\) are the retarded characteristic pullbacks, including the Schwarzian of a moving join. They reduce to the fixed-RN collar stress when \(\omega=\tfrac12\log F\). The trace is \(T^{a}{}_{a}=c R_{2}/(24\pi)\).
+
+The massive-tower dilaton source is the zeta-function finite part
+\(m^{2}(\log(m^{2}/\mu^{2})-1)/(4\pi)\) for each two-dimensional Dirac mode of mass \(m=\lambda/\sqrt{X}\), varied with the Euler--Lagrange derivative when the Lagrangian depends on \(\nabla X\). The vector current is chiral and conserved. Its center-of-charge backreaction has worldsheet mass \(m_{S}^{2}/X\) with \(m_{S}^{2}=g_{c}^{2} q/(4\pi^{2})\).
+
+The Ward identities
+\begin{equation}
+\nabla_{a} j^{a}=0,
+\qquad
+\nabla^{a} T_{ab}=\frac{J_{X}}{4G}\partial_{b} X+j^{a} F_{ba}
+\end{equation}
+are the diffeomorphism and gauge identities of this action. The checker simplifies them from the Christoffel symbols and the Hilbert variation. Omitted nonlocal massive propagators correct \(J_{X}\) by a fractional amount \(2/(1+q)\) on the product throat. They do not enlarge the homogeneous solution space.
+
+\section{Both mouths}
+On each collar,
+\(\partial_{u} m=-(T_{uu}+T_{uv})\) and \(\partial_{v} m=T_{vv}+T_{uv}\).
+On a constant Killing-time slice the asymptotic mass minus the cut mass is the integral of the two chiral fluxes from the cut to that mouth's infinity. The electric flux obeys the same split. Both mouths use one time \(t\) with unit asymptotic lapse and a fixed origin. A reparametrization \(t+\alpha(t)\) changes the lapse by \(\alpha'\) and is excluded unless \(\alpha'=0\).
+
+\section{Mode count}
+The source-free throat solutions are
+\begin{equation}
+\Phi=a\rho+\sqrt{1+\rho^{2}}\,(b\cos\tau+c\sin\tau).
+\end{equation}
+Around the supported slope \(\Phi_{0}=\beta\rho\), the linear Casimir depends only on \(a\), and the mass shift is \(\delta M=-r_{e}\beta a/(4G)\). The coefficients \(b\) and \(c\) are Lie derivatives along Killing fields whose asymptotic time components vanish for all \(\tau\) only if \(b=c=0\). Mass and clock normalization therefore fix \((a,b,c)\).
+
+\section{Prior art and boundary}
+The verdict is already known. Maldacena--Milekhin--Popov, arXiv:1807.04726v3, sections 5.3.2 and 5.4 and Appendix A, give the static throat, the binding-energy warning, and the massive center-of-charge mode. Sadhukhan, arXiv:2609.33511v1, states that the \(l=0\) mouth is mass plus gauge and that the Jackiw--Teitelboim dilaton does not propagate. Sadhukhan, arXiv:2610.09847v1, states that the only \(l=0\) mode is the massive electric mode. Maldacena--Qi, arXiv:1804.00491v3, construct a coupled Schwarzian for nearly-AdS\(_2\) boundary reparametrizations, with \(\mathrm{SL}(2)\) as a gauge constraint, not for two normalized asymptotically flat clocks.
+
+No Lean certificate is claimed. No workstation Lean run is acceptance. No same-emission exterior clock comparison is proved, and none is claimed. Publication is not selected.
+
+\begin{thebibliography}{9}
+\bibitem{MMP} J.~Maldacena, A.~Milekhin, and F.~Popov, arXiv:1807.04726v3.
+\bibitem{S1} A.~Sadhukhan, arXiv:2609.33511v1.
+\bibitem{S2} A.~Sadhukhan, arXiv:2610.09847v1.
+\bibitem{MQ} J.~Maldacena and X.-L.~Qi, arXiv:1804.00491v3.
+\end{thebibliography}
+\end{document}

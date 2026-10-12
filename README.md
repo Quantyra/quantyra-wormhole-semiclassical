@@ -1,5 +1,10 @@
 # Quantyra semiclassical wormhole research
 
+Current continuation, 2026-10-12: [spherical Dirac response and clock obstruction](notes/retarded-dirac-spherical-response.md).
+The Hadamard–Polyakov stress, dilaton source, and current satisfy the Ward identities at the stated order. Both-mouth mass and Gauss integrals use one normalized asymptotic clock. The symmetric `(l=0)` clock coefficients are fixed by those fluxes and by the clock normalization. The checker is `checks/retarded_dirac_spherical_response.py`. The verdict is already known. No shortcut is claimed.
+
+Remaining to-do list: none for this endpoint. Publication, DOI minting, journal submission, and outreach are unselected.
+
 Current continuation, 2026-10-11: [proper-mouth bulk and joined velocity contacts](notes/proper-mouth-seagull-audit.md)
 expands the exact moving-cut Hamiltonian through quadratic amplitude.
 Its bulk term reproduces the free circle-Casimir response; an order-epsilon
