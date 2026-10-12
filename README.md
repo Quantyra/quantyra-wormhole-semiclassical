@@ -1,7 +1,7 @@
 # Quantyra semiclassical wormhole research
 
 Current continuation, 2026-10-12: [spherical Dirac response and clock obstruction](notes/retarded-dirac-spherical-response.md).
-The Hadamard–Polyakov stress, dilaton source, and current satisfy the Ward identities at the stated order. Both-mouth mass and Gauss integrals use one normalized asymptotic clock. The symmetric `(l=0)` clock coefficients are fixed by those fluxes and by the clock normalization. The checker is `checks/retarded_dirac_spherical_response.py`. The verdict is already known. No shortcut is claimed.
+The Hadamard–Polyakov stress, dilaton source, and current satisfy the Ward identities at the stated order. Both-mouth mass and Gauss integrals use one normalized asymptotic clock. The symmetric `(l=0)` clock coefficients are fixed by those fluxes and by the clock normalization. The checker is `checks/retarded_dirac_spherical_response.py`. The verdict is already known. No shortcut is claimed. No Lean certificate is claimed.
 
 Remaining to-do list: none for this endpoint. Publication, DOI minting, journal submission, and outreach are unselected.
 
@@ -9,13 +9,12 @@ Current continuation, 2026-10-11: [proper-mouth bulk and joined velocity contact
 expands the exact moving-cut Hamiltonian through quadratic amplitude.
 Its bulk term reproduces the free circle-Casimir response; an order-epsilon
 contact comes from the rest of the joined geometry. Independent symbolic
-and high-precision cutoff checks pass. The interacting join and ultraviolet
-response, physical matching and novelty remain unresolved.
+and high-precision cutoff checks pass. That contact split is a preserved
+predecessor. The 2026-10-12 clock obstruction closes it: the symmetric
+proper-mouth clock is fixed by the masses and the normalized clocks. The
+prior-art verdict is already known. No Lean certificate is claimed.
 
-Remaining to-do list: derive the interacting joined contact and ultraviolet
-response; close physical geometry, state and exterior; finish literature
-review and novelty selection; independently verify and certify suitable
-mathematics on GCP; prepare the reproducible manuscript.
+Remaining to-do list: none for this endpoint. Publication, DOI minting, journal submission, and outreach are unselected.
 
 Technical satellite for the [Quantyra Space research program](https://github.com/Quantyra/quantyra-space-planning/blob/main/docs/wormhole-research-program.md).
 
