@@ -6,9 +6,10 @@ to the throat admits an exact decomposition into a spatially constant part
 and a remainder whose kernel is uniformly bounded independently of the
 Euclidean frequency and all positive return lengths. This isolates the
 long-return infrared enhancement before the repulsive charged potential is
-resummed. It does **not** bound the interacting infrared response, the
-shrinking-mouth limit, the moving-metric stress vertices, or the physical
-curved exterior load.
+resummed. The zero-trace remainder also yields a uniform low-frequency
+bound for the positive potential seagull, including the shrinking-mouth
+limit. It does **not** bound the full interacting response, moving-metric
+stress vertices, or the physical curved exterior load.
 
 ## Statement and proof
 
@@ -105,6 +106,60 @@ as `epsilon^-2`, the `Q` block still depends on `Omega` and the returns,
 and the moving stress vertices and retarded continuation remain to be
 controlled.
 
+## Uniform low-frequency bound for the potential seagull
+
+The diagonal of each free circle Green kernel is independent of the
+position `z`, so `K_Omega(z,z)=c_Omega` and the weighted remainder satisfies
+
+```text
+Tr(Bbar_Omega)=integral_I V_0(z)[K_Omega(z,z)-c_Omega] dz=0.      (5)
+```
+
+It is trace class for every fixed `Omega>0` and positive mouth cutoff.
+Let `e=u/||u||` and `Q=I-|e><e|` as above. Since
+`B_Omega>=0`, its rank-one part vanishes on `Q`, and therefore
+`D_Q=Q Bbar_Omega Q=Q B_Omega Q>=0`. Equation (5) gives
+
+```text
+Tr(D_Q)=-<e,Bbar_Omega e><=||Bbar_Omega||
+       <=||V_0||_infinity T^2/2.                                  (6)
+```
+
+Use the Schur block formula (4), with `C_Q=I_Q+D_Q`. Taking the trace of
+`B_Omega(I+B_Omega)^(-1)=I-(I+B_Omega)^(-1)` yields
+
+```text
+Tr(B_Omega(I+B_Omega)^(-1))
+ =1-s_Q^(-1)+Tr(I_Q-C_Q^(-1))-s_Q^(-1)||C_Q^(-1)b_Q||^2
+ <=1+Tr(D_Q)
+ <=1+||V_0||_infinity T^2/2.                                    (7)
+```
+
+The middle inequality uses `s_Q>=1`, `C_Q>=I_Q`, and
+`0<=I_Q-C_Q^(-1)<=D_Q`. This is uniform over all positive return
+lengths, channel counts, and `Omega>0`; no low-frequency gap is assumed.
+The exact coupling-derivative identity identifies the left side with
+`Tr_G(R_Omega V_0 P_c)`.
+
+From the pointwise moving-cut inequality
+`0<=W_2<=epsilon^2 b^-2 V_0 P_c`, trace monotonicity now gives
+
+```text
+0<=Tr_G(R_Omega W_2)
+ <=epsilon^2/b^2 * (1+a T^2/(2 epsilon^2))
+ =(epsilon^2+a T^2/2)/b^2
+ <=(epsilon^2+a pi^2/2)/b^2,                                  (8)
+```
+
+because `||V_0||_infinity=a/epsilon^2` and `T=2 acos(epsilon)<pi`.
+Consequently, for any fixed `Omega_0`, the positive-frequency contact
+integral over `0<Omega<Omega_0` is at most
+`Omega_0 (epsilon^2+a pi^2/2)/b^2`, uniformly in the returns and as
+`epsilon->0`. This controls the potential seagull's low-frequency
+contribution in the prescribed Gaussian graph model. It does not bound
+the higher-frequency renormalized finite part, the two-vertex bubble, the
+kinetic/stress response, or the retarded physical kernel.
+
 ## Verification and scope
 
 `checks/return_uniform_kernel.ps1` independently evaluates the exact
@@ -114,16 +169,16 @@ stronger `|G(0)-G(d)|<=d/2` bound and hashes this note and the script into
 `evidence/return-uniform-kernel.json`. This numerical check supplements,
 but does not replace, the derivative proof above.
 
-The decomposition gives a concrete next step for the primary (l=0)
-response: evaluate the scalar Schur complement and positive orthogonal
-block with bounds uniform in the return lengths. This step addresses only
-the Gaussian potential sector. It does
+The decomposition and (8) advance the primary (l=0) response by controlling
+the positive potential seagull in the infrared. The next step is to bound
+the higher-frequency renormalized potential finite part and the two-vertex
+bubble, then match the stress and join. This step addresses only the
+Gaussian potential sector. It does
 not resolve the interacting joined contact identified in the
 [proper-mouth seagull audit](proper-mouth-seagull-audit.md), prove a
 physical damping pole, or claim novelty.
 
-Remaining to-do list: bound the positive orthogonal Birman-Schwinger block
-and scalar Schur complement uniformly in returns; control the shrinking-cutoff limit; include
-kinetic, stress and joined-mouth vertices with one covariant subtraction;
-match the curved exterior and state; then decide whether a physical
-stability theorem survives.
+Remaining to-do list: bound the higher-frequency renormalized potential
+finite part and two-vertex bubble; include kinetic, stress and joined-mouth
+vertices with one covariant subtraction; match the curved exterior and
+state; then decide whether a physical stability theorem survives.
