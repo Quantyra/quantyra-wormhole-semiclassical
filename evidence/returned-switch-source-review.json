@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "reviewed_and_verified_free_JT_result",
+  "previous_satellite_commit": "5bd00f9a47f70d68b5927dfbfb58646e65ac816a",
+  "previous_planning_commit": "1dcd4b813d4e7c62a0315cac4ac5c757873babbb",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1804.00491v3",
+      "title": "Eternal traversable wormhole",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/formation-boundary-2026-10-12/1804.00491v3.html",
+      "sha256": "0fd400fb887938db763540b128b6d1dec40cf2850797233317b7a12f78ae0f27",
+      "reading_scope": "This turn re-read equations C.205-C.211 and their surrounding assumptions, plus equation 2.11 and its null-constraint discussion. Earlier full scoped convention reading is retained in switching-radiation-source-review.json. C.206 malformed second HTML equation is excluded: the junction is explicitly defined as the inherited real rotation.",
+      "full_paper_proof_chain_reviewed": false,
+      "role": "Static free-fermion towers/vacuum and JT normalization; the returned-state and capture proofs are derived locally."
+    },
+    {
+      "url": "https://arxiv.org/html/1410.4957v2",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-return-2026-10-13\\1410.4957v2.html",
+      "sha256": "9deb9c19a1c02ed34b52baa8c05173fd11045d6e866553fe32b0d78fd0119800",
+      "reading_scope": "Prior-turn sections II/III and appendices A/B reading retained; not re-read this turn.",
+      "role": "Established Fourier control comparator, not a wormhole or interacting-stress proof."
+    }
+  ],
+  "query_log": [
+    "\"free fermion\" \"wormhole\" \"quench\" \"ground state\"",
+    "\"boundary conditions\" \"fermion\" \"shortcuts to adiabaticity\"",
+    "\"traversable wormhole\" \"adiabatic\" \"switching\""
+  ],
+  "novelty": "No novelty acceptance; focused search did not supply a physical transfer theorem and is not exhaustive.",
+  "files": [
+    {
+      "path": "notes/switching-radiation-capture.md",
+      "sha256": "cbcdb676fb685b0ce356dfc4be3b3c3694dd25545aef2ebee84fe4fd4ccc1b96"
+    },
+    {
+      "path": "notes/driven-bulk-geometry.md",
+      "sha256": "d728ec1170fe376198f81d114143f6e9ad637306feff53997182111cab95838a"
+    },
+    {
+      "path": "notes/electric-return-cancellation.md",
+      "sha256": "66cd00353061f924eea841a8c4908cdf1a5294ee40ea422686bc9ef5bddbf0cb"
+    },
+    {
+      "path": "notes/quantum-junction-state.md",
+      "sha256": "bdb90d7bd8e6af015c982a9711723fdfef6354ca2ad9aaebf4e44a8a05ce44fb"
+    },
+    {
+      "path": "notes/returned-switch-capture.md",
+      "sha256": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+    },
+    {
+      "path": "checks/returned_switch_capture.py",
+      "sha256": "14a248f1bc0f11e72b623526c14a162bcdb3584aeea1fa3aebfed8b7004ac355"
+    },
+    {
+      "path": "evidence/returned-switch-capture.json",
+      "sha256": "a42678c878f0ca6c84a65d6681c67e46b3960851c78eb3a42290f400d47ae95c"
+    }
+  ],
+  "development_failure": {
+    "snapshot_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\returned-switch-2026-10-13\\development-unweighted-quadrature.py",
+    "sha256": "4a8f3079bea770031ba70c85966308ceca6af4ec76874122d08d4842424523e1",
+    "exit_code": 1,
+    "stage": "Fourier work comparison",
+    "reason": "Unweighted oscillatory quadrature reached the maximum 50 subdivisions; IntegrationWarning is configured as an error.",
+    "resolution": "Use weighted cosine/sine quadrature on the same smooth pieces. Physical formulas and failure-on-warning policy unchanged."
+  },
+  "verification": {
+    "exit_code": 0,
+    "raw_log_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\returned-switch-2026-10-13\\verification.log",
+    "raw_log_sha256": "3076949f9204b0df144cc5b02d401383405b91b8ef8c69089427dbf7e737bda5",
+    "point_split_cases": 10,
+    "work_protocols": 3,
+    "geometric_cases": 18,
+    "refinement": "Global ODE step cap halved from 0.01 to 0.005 with tighter relative/absolute tolerances.",
+    "final_state_refinement": 4.057865155004947e-14,
+    "maximum_nonlinear_endpoint_error": 2.0801693700889246e-12,
+    "maximum_spatial_reconstruction_error": 3.1086244689504383e-15
+  },
+  "accepted_scope": [
+    "Exact all-return free covariance and point-split continuum stress, with nonnegative final excitation identity.",
+    "Period-averaged switch produces the static free matter vacuum after the strip fills.",
+    "Uniform capture for eta<=1/2000, z0 in [1/4,7/25], |v0|<=1/2000; explicit final reduced energy margin.",
+    "Conditional all-time total-area bound and zero-backreaction probe transit."
+  ],
+  "limitations": [
+    "Exact free-Majorana nondispersive junction and symmetric semiclassical JT constraints",
+    "All-mode returned covariance and renormalized stress; final matter vacuum, oscillating geometry",
+    "Prepared pair and imposed nonlocal boundary interaction; no physical preparation or four-dimensional matching",
+    "Electric-neutral h and free-junction theta retain distinct physical normalization gates"
+  ],
+  "goal_audit": {
+    "previous_turn": "progress",
+    "current_turn": "progress",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "remaining_todo": [
+    "Match physical clock and vertex without identifying the free angle theta with the gauged neutral coupling h by assumption.",
+    "Control interacting electric/angular/coset and massive constrained state, common renormalized stress and evolving geometry below the margins.",
+    "Establish initial-pair preparation, quantum fluctuations, sufficient general stability and finite-energy transport."
+  ]
+}
