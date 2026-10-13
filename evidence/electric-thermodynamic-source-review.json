@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_classical_thermal_charge_and_finite_cut_radial_matching",
+  "previous_satellite_commit": "6653ebc9f7d79ec81c6e58fda2b675c7234ceb32",
+  "previous_planning_commit": "f58550240c8648b1dbf47d47410130fa7563f12e",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2003.02860v3",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/charged-opening-2026-10-13/2003.02860v3.html",
+      "sha256": "fac56dd80e34360eb4e3fb58885d601c7a331fc6d02ecdee3e0c6ae98a963fd0",
+      "reading_scope": "Sections 2.1 and 3.2 reread for the RN action, ensembles, horizon thermodynamics and quantum prefactors; section 5.1 confirms charged matter is not included. The fixed-magnetic electric derivative is derived independently, not imported from their pure electric expansion.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1510.07911v2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/quantum-junction-2026-10-13/1510.07911v2.html",
+      "sha256": "6dc907001ad94a6b075ecb5279d4558abd1f85f0367469e55b08a70f5e069859",
+      "reading_scope": "Section 2 Gauss constraint, cut flux and dressed fields; no new weak-gravity or holographic reconstruction claim.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/electric-thermodynamic-matching.md",
+      "sha256": "94cf0ed497d9088a9f743ca02b315e8f29fd666feb89ae460e0d8827ab57816e"
+    },
+    {
+      "path": "checks/electric_thermodynamic_matching.py",
+      "sha256": "125516686888f282e0838eae90e05e38d8d21dab0350b64f4d6a6446235d6d3d"
+    },
+    {
+      "path": "checks/radial_electric_correlator.py",
+      "sha256": "8b4c8c312c788b76b58aa6e216f2463ae7754e8287b65df7bc962dfd70ee0f63"
+    },
+    {
+      "path": "notes/radial-electric-correlator.md",
+      "sha256": "d51e799feacb3360c546721e4a97e8f21b769326d4d61299eea546646c26a660"
+    },
+    {
+      "path": "notes/electric-reservoir-midpoint.md",
+      "sha256": "ea494a68a7f0cc700bcb4791ac656b9305da35c60d0c3893c29f626ae6ba6c03"
+    },
+    {
+      "path": "evidence/electric-thermodynamic-matching.json",
+      "sha256": "7c46b4242f4c6079263cc1b07ed30c69fd527d8e535689e456570c4c052b206b"
+    },
+    {
+      "path": "notes/compact-phase-transfer.md",
+      "sha256": "db571516fd2c662681f0615458af936e527d52bdf7b09c131dfe38161e56a818"
+    },
+    {
+      "path": "notes/angular-boundary-response.md",
+      "sha256": "a8c4febfbfacb91453cdf92af20fd9c42cef902ac683c108cc3503fae96f17f6"
+    },
+    {
+      "path": "notes/boundary-vertex-matching.md",
+      "sha256": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-thermodynamic-2026-10-13\\verification.log",
+    "raw_log_sha256": "59d7ce5bf97aa23275cbd008035b9433f80dfeb53e229f21b6ed36b7e18dc934",
+    "counts": {
+      "symbolic": 4,
+      "RN_action_comparisons": 12,
+      "classical_charge_distributions": 3,
+      "finite_cut_radial_comparisons": 12,
+      "candidate_substitutions": 6
+    },
+    "maximum_RN_action_comparison_error": 1.4836824602749686e-67,
+    "candidate_decimal_precision": 400,
+    "development_failures": [
+      {
+        "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-thermodynamic-2026-10-13\\development-initial.py",
+        "source_sha256": "4853d24d3efc3985b41675d692d9a8eb917bae28148fa51a587f7f0758799982",
+        "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-thermodynamic-2026-10-13\\development-initial.log",
+        "log_sha256": "bde70a9bb4c8a5fe86b43eb8bee4b84ec2c4c55df72e6b5c05154885a30abeea",
+        "reason": "A quadrature node arbitrarily close to zero charge caused the secant starting points to coincide at working precision.",
+        "resolution": "Use Newton iteration with the analytic positive horizon derivative; use 400-digit precision for the separate candidate cancellation check. No physical formula or acceptance inequality changed."
+      }
+    ],
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "Classical fixed-temperature RN charge free energy and its capacitance match at the actual horizon radius; no extra extremal-entropy multiplier.",
+    "Explicit charge-window and classical tail bounds; they concern probabilities, not boundary matrix elements.",
+    "Finite optical-cut radial midpoint comparison uniform in channel count for the existing neutral-inner-cut LLL ensemble."
+  ],
+  "limitations": [
+    "No full gravity/matter density operator or charged matrix-element matching",
+    "No quantum determinant or angular-sector acceptance",
+    "Finite-cut bound uses the same free reference and neutral inner flux",
+    "No driven stress, stability, preparation or physical creation"
+  ],
+  "novelty": "Thermodynamics, Gauss-law constraints and bosonization are established; explicit quantitative matching comparisons are derived. No exhaustive novelty acceptance.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_goal_turn": "progress: verified radial electric correlator and focused pushed checkpoint",
+    "current_goal_turn": "progress",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "next_action": "Build the joint finite-temperature gravity/matter state and angular/coset branching using a single charge functional; retain boundary matrix elements and derive driven covariance/stress. Do not multiply the full RN partition by the radial partition.",
+  "remaining_todo": [
+    "Joint gravitational/angular initial state and operator matching.",
+    "Driven state, complete stress, massive modes and evolving geometry.",
+    "Preparation, quantum fluctuations, sufficient general stability and finite-energy transport."
+  ]
+}
