@@ -1,0 +1,338 @@
+{
+  "date": "2026-10-13",
+  "status": "compact_phase_state_gate_and_spherical_capacitance_verified",
+  "code_sha256": "c5eb9b4dc67e08fce83fc0b36b304f55aa6694c05b705fd6cdfb5b06cef7bb0c",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "symbolic": {
+    "electric_thermal_parameter": "pi*L**4*q/(8*eta*nf*z*(L**2 + 3*b**2)*(L**2 + 6*b**2))",
+    "rotation_thermal_exponent": "pi*L**2*(L**2 + b**2)*(q - 1)*(q + 1)/(8*eta*nf*q*z*(L**2 + 2*b**2)*(L**2 + 6*b**2))",
+    "first_LL_mass_squared_in_AdS2": "(q + 1)/(1 + 6*b**2/L**2)",
+    "fixed_charge_curvature": "pass"
+  },
+  "capacitance": [
+    {
+      "X": 0.25,
+      "kappa": 0.001,
+      "capacitance_ratio": 1.0014463239134435,
+      "variational_upper": 1.00144695788403,
+      "refinement_error": 8.881784197001252e-16
+    },
+    {
+      "X": 0.25,
+      "kappa": 0.1,
+      "capacitance_ratio": 1.1388273607419723,
+      "variational_upper": 1.1446957884029885,
+      "refinement_error": 0.0
+    },
+    {
+      "X": 0.25,
+      "kappa": 1,
+      "capacitance_ratio": 2.081227511653162,
+      "variational_upper": 2.446957884029885,
+      "refinement_error": 8.881784197001252e-16
+    },
+    {
+      "X": 1,
+      "kappa": 0.001,
+      "capacitance_ratio": 1.0004120065654942,
+      "variational_upper": 1.000412068962311,
+      "refinement_error": 4.440892098500626e-16
+    },
+    {
+      "X": 1,
+      "kappa": 0.1,
+      "capacitance_ratio": 1.0406003139013216,
+      "variational_upper": 1.0412068962310959,
+      "refinement_error": 0.0
+    },
+    {
+      "X": 1,
+      "kappa": 1,
+      "capacitance_ratio": 1.363143779155555,
+      "variational_upper": 1.412068962310959,
+      "refinement_error": 0.0
+    },
+    {
+      "X": 100,
+      "kappa": 0.001,
+      "capacitance_ratio": 1.0000043495468889,
+      "variational_upper": 1.0000043495544466,
+      "refinement_error": 2.220446049250313e-16
+    },
+    {
+      "X": 100,
+      "kappa": 0.1,
+      "capacitance_ratio": 1.0004348798945848,
+      "variational_upper": 1.0004349554446619,
+      "refinement_error": 6.661338147750939e-16
+    },
+    {
+      "X": 100,
+      "kappa": 1,
+      "capacitance_ratio": 1.0043420223076844,
+      "variational_upper": 1.0043495544466179,
+      "refinement_error": 6.661338147750939e-16
+    },
+    {
+      "X": 10000,
+      "kappa": 0.001,
+      "capacitance_ratio": 1.0000000435207317,
+      "variational_upper": 1.0000000435207328,
+      "refinement_error": 6.661338147750939e-16
+    },
+    {
+      "X": 10000,
+      "kappa": 0.1,
+      "capacitance_ratio": 1.000004352065715,
+      "variational_upper": 1.000004352073288,
+      "refinement_error": 6.661338147750939e-16
+    },
+    {
+      "X": 10000,
+      "kappa": 1,
+      "capacitance_ratio": 1.0000435199755906,
+      "variational_upper": 1.0000435207328795,
+      "refinement_error": 0.0
+    }
+  ],
+  "electric_kernel": [
+    {
+      "x": 0.01,
+      "coherence": 0.9975031223974601,
+      "log_coherence": -0.0025,
+      "theta_error": "9.055679078826712367509119290887791780682531198139138189582614889935501e-72"
+    },
+    {
+      "x": 0.1,
+      "coherence": 0.9753099120283326,
+      "log_coherence": -0.025,
+      "theta_error": "9.055679078826712367509119290887791780682531198139138189582614889935501e-72"
+    },
+    {
+      "x": 1.0,
+      "coherence": 0.7786396715061379,
+      "log_coherence": -0.25020689274555324,
+      "theta_error": "0.0"
+    },
+    {
+      "x": 5.0,
+      "coherence": 0.16199443011780465,
+      "log_coherence": -1.8201933263296872,
+      "theta_error": "0.0"
+    },
+    {
+      "x": 50.0,
+      "coherence": 2.7775887729928042e-11,
+      "log_coherence": -24.306852819440056,
+      "theta_error": "0.0"
+    },
+    {
+      "x": 500.0,
+      "coherence": 5.338380431082553e-109,
+      "log_coherence": -249.30685281944005,
+      "theta_error": "7.711743568329229176770400111080028596579215854431673509856959926908172e-180"
+    }
+  ],
+  "spin_kernel": [
+    {
+      "a": 0.01,
+      "j": 0.5,
+      "coherence": 0.9981259762777265,
+      "heat_trace_ratio": 2.824893799628525,
+      "character_quadrature_error": 1.1102230246251565e-16,
+      "small_a_approximation": 0.998126756714382
+    },
+    {
+      "a": 0.01,
+      "j": 1,
+      "coherence": 0.9950104045236485,
+      "heat_trace_ratio": 2.824893799628525,
+      "character_quadrature_error": 1.1102230246251565e-16,
+      "small_a_approximation": 0.9950124791926823
+    },
+    {
+      "a": 0.01,
+      "j": 5,
+      "coherence": 0.9277144707929497,
+      "heat_trace_ratio": 2.824893799628525,
+      "character_quadrature_error": 0.0,
+      "small_a_approximation": 0.9277434863285529
+    },
+    {
+      "a": 0.01,
+      "j": 20,
+      "coherence": 0.349784570594559,
+      "heat_trace_ratio": 2.824893799628524,
+      "character_quadrature_error": 0.0,
+      "small_a_approximation": 0.3499377491111553
+    },
+    {
+      "a": 0.1,
+      "j": 0.5,
+      "coherence": 0.9813473719906021,
+      "heat_trace_ratio": 2.793291838714075,
+      "character_quadrature_error": 0.0,
+      "small_a_approximation": 0.9814246877477771
+    },
+    {
+      "a": 0.1,
+      "j": 1,
+      "coherence": 0.9510296109512775,
+      "heat_trace_ratio": 2.793291838714075,
+      "character_quadrature_error": 1.1102230246251565e-16,
+      "small_a_approximation": 0.951229424500714
+    },
+    {
+      "a": 0.1,
+      "j": 5,
+      "coherence": 0.47088125877285836,
+      "heat_trace_ratio": 2.793291838714075,
+      "character_quadrature_error": 1.1102230246251565e-16,
+      "small_a_approximation": 0.4723665527410147
+    },
+    {
+      "a": 0.1,
+      "j": 20,
+      "coherence": 2.635824264736979e-05,
+      "heat_trace_ratio": 2.793291838714075,
+      "character_quadrature_error": 1.5832739850077382e-17,
+      "small_a_approximation": 2.7536449349747158e-05
+    },
+    {
+      "a": 1,
+      "j": 0.5,
+      "coherence": 0.8219864299617935,
+      "heat_trace_ratio": 2.4960781767747693,
+      "character_quadrature_error": 0.0,
+      "small_a_approximation": 0.8290291181804004
+    },
+    {
+      "a": 1,
+      "j": 1,
+      "coherence": 0.5929335943571347,
+      "heat_trace_ratio": 2.4960781767747693,
+      "character_quadrature_error": 0.0,
+      "small_a_approximation": 0.6065306597126334
+    },
+    {
+      "a": 1,
+      "j": 5,
+      "coherence": 0.00040253992908636626,
+      "heat_trace_ratio": 2.4960781767747693,
+      "character_quadrature_error": 5.9631119486702744e-18,
+      "small_a_approximation": 0.0005530843701478336
+    },
+    {
+      "a": 1,
+      "j": 20,
+      "coherence": 1.4083943027990613e-47,
+      "heat_trace_ratio": 2.4960781767747693,
+      "character_quadrature_error": 5.954641619197731e-18,
+      "small_a_approximation": 2.506567475899953e-46
+    }
+  ],
+  "spin_warm_refinement": [
+    {
+      "a": 0.01,
+      "j": 5,
+      "coherence": 0.9277144707929497,
+      "heat_trace_ratio": 2.824893799628525,
+      "character_quadrature_error": null,
+      "small_a_approximation": 0.9277434863285529
+    },
+    {
+      "a": 0.001,
+      "j": 5,
+      "coherence": 0.992527744628339,
+      "heat_trace_ratio": 2.828073593451763,
+      "character_quadrature_error": null,
+      "small_a_approximation": 0.9925280548191384
+    },
+    {
+      "a": 0.0001,
+      "j": 5,
+      "coherence": 0.9992502780570173,
+      "heat_trace_ratio": 2.8283917696281002,
+      "character_quadrature_error": null,
+      "small_a_approximation": 0.9992502811797007
+    }
+  ],
+  "single_flavor_spin_coherence_upper": 1.650195530298888e-27,
+  "candidate_many_flavor_family": [
+    {
+      "k": 2000.0,
+      "flavors": 8000000000.0,
+      "magnetic_flux": 8000000000.0,
+      "g": 6.25e-14,
+      "AdS4_radius_over_lp": 3.2e+16,
+      "eta_f": 0.0005,
+      "radius_squared_over_AdS4_squared": 4093306.665119291,
+      "electric_thermal_parameter": 5.208333121266271e-12,
+      "angular_thermal_exponent": 3.197896352957742e-05,
+      "spherical_screening_upper": 6.732939697997844e-16,
+      "first_LL_gap_squared": 325.73500797599655,
+      "Schwinger_mass_squared_AdS2": 2.578426293574127e-16,
+      "angular_polarization_scale_proxy": 2.5e-07,
+      "species_ratio_N_G_over_b_squared": 3.0537658237330516e-20,
+      "area_ratio_N_eta_over_Phi_ext": 3.053765823733051e-23,
+      "N_eta": 6.4e+16,
+      "temperature_times_radius": 2.984155304478519e-17,
+      "entropy_curvature_over_electric_thermal_parameter": 7.634414559332628e-24
+    },
+    {
+      "k": 4000.0,
+      "flavors": 64000000000.0,
+      "magnetic_flux": 64000000000.0,
+      "g": 3.90625e-15,
+      "AdS4_radius_over_lp": 1.024e+18,
+      "eta_f": 0.00025,
+      "radius_squared_over_AdS4_squared": 16373227.16047715,
+      "electric_thermal_parameter": 6.510416600395709e-13,
+      "angular_thermal_exponent": 1.5989480299945123e-05,
+      "spherical_screening_upper": 4.2080872278654056e-17,
+      "first_LL_gap_squared": 651.4700158807391,
+      "Schwinger_mass_squared_AdS2": 1.6115164334838305e-17,
+      "angular_polarization_scale_proxy": 6.25e-08,
+      "species_ratio_N_G_over_b_squared": 4.771508953872187e-22,
+      "area_ratio_N_eta_over_Phi_ext": 2.3857544769360935e-25,
+      "N_eta": 2.048e+18,
+      "temperature_times_radius": 9.325485041716897e-19,
+      "entropy_curvature_over_electric_thermal_parameter": 5.964386192340234e-26
+    },
+    {
+      "k": 10000.0,
+      "flavors": 1000000000000.0,
+      "magnetic_flux": 1000000000000.0,
+      "g": 1e-16,
+      "AdS4_radius_over_lp": 1e+20,
+      "eta_f": 0.0001,
+      "radius_squared_over_AdS4_squared": 102332670.62798218,
+      "electric_thermal_parameter": 4.1666666598805205e-14,
+      "angular_thermal_exponent": 6.395791955915553e-06,
+      "spherical_screening_upper": 1.0772703243566327e-18,
+      "first_LL_gap_squared": 1628.6750396780285,
+      "Schwinger_mass_squared_AdS2": 4.125482069718606e-19,
+      "angular_polarization_scale_proxy": 1e-08,
+      "species_ratio_N_G_over_b_squared": 1.9544100507947787e-24,
+      "area_ratio_N_eta_over_Phi_ext": 3.908820101589557e-28,
+      "N_eta": 2e+20,
+      "temperature_times_radius": 9.549296601066421e-21,
+      "entropy_curvature_over_electric_thermal_parameter": 9.772050253973893e-29
+    }
+  ],
+  "scope": [
+    "quadratic compact boundary modes at leading RN/KN susceptibility",
+    "static spherical massless-LLL Gaussian polarization with regular horizon",
+    "angular obstruction conditional on inertia dressing at most one percent"
+  ],
+  "not_proved": [
+    "full dynamical gauge-invariant switching kernel",
+    "matched angular inertia correction",
+    "higher angular sectors and finite-cutoff dynamics",
+    "initial-pair preparation",
+    "full four-dimensional stability or physical realization"
+  ]
+}
