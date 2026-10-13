@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_electric_reservoir_point_midpoint_and_compact_limit",
+  "previous_satellite_commit": "ddd401a5275fc8d330a2211ca1d38765c705eaab",
+  "previous_planning_commit": "319e8b0f7106d62818b62974bd1357886455e86d",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/cond-mat/0209642",
+      "title": "Full Counting Statistics: An elementary derivation of Levitov's formula",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\0209642v1.pdf",
+      "sha256": "c013c3245174d9c1ca254e541212a6df8bbee592fdc0d188eee91f982314c859",
+      "reading_scope": "Section 2, equations (8)-(12), including the finite-dimensional trace proof and scope; no noninteracting scattering formula is used for the charging Hamiltonian.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/cond-mat/9805275v3",
+      "title": "Bosonization for Beginners - Refermionization for Experts",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\9805275v3.pdf",
+      "sha256": "b1dcd9b026bee9672074e272557b8f27be799f14fe414a512eebc9e9f1475a32",
+      "reading_scope": "Sections 4E-4F for completeness and charge ladders; section 6 derivation and equations (61)-(64); section 7 equations (67)-(70); appendix B charge/oscillator partition proof and Jacobi identity. Antiperiodic delta_b=1 and field normalization are explicitly matched. The impurity problem is not imported.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "query_log": [
+    "fermion canonical partition function projection compact group character heat kernel thermal Green function charging energy Coulomb blockade",
+    "arxiv charged particle Schwarzian matter compact group heat kernel Wilson line thermal correlator",
+    "site.arxiv.org Klich elementary derivation Levitov formula trace fermionic determinants 0209642",
+    "site.arxiv.org von Delft Schoeller Bosonization for beginners refermionization experts finite size Fock space zero modes 9805275"
+  ],
+  "source_selection": "Klich and von Delft-Schoeller supply the finite trace and constructive bosonization dependencies. Group-particle sources and NIST 20.5 were inspected as locators/comparators; no new nonabelian claim is made.",
+  "novelty": "No novelty acceptance or exhaustive search. The trace identity, constructive bosonization and compact charging model are established; the explicit regulator-uniform bound and finite-reservoir certificate serve this matching decision.",
+  "files": [
+    {
+      "path": "notes/boundary-packet-spectral-matching.md",
+      "sha256": "ac6efda07ce4f6d5660f053c1ae9861aea4986a7707b116a9154fb6601af61f0"
+    },
+    {
+      "path": "notes/boundary-vertex-matching.md",
+      "sha256": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+    },
+    {
+      "path": "notes/fermionic-compact-transfer.md",
+      "sha256": "0cc02f21e6e6392a134259aee9ed79feee90825741c9bf493ec26e3bc42026e4"
+    },
+    {
+      "path": "notes/neutral-transfer-current.md",
+      "sha256": "f67dc346c00279ede5997a5ea5d08f748866a0345a2fe54a29162d02e13e0758"
+    },
+    {
+      "path": "notes/phase-influence-action.md",
+      "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+    },
+    {
+      "path": "notes/electric-reservoir-midpoint.md",
+      "sha256": "ea494a68a7f0cc700bcb4791ac656b9305da35c60d0c3893c29f626ae6ba6c03"
+    },
+    {
+      "path": "checks/electric_reservoir_midpoint.py",
+      "sha256": "6c793ab467d3ba7a3846ddbc5f17c842e27260e296306437df706277b8e5c0a3"
+    },
+    {
+      "path": "evidence/electric-reservoir-midpoint.json",
+      "sha256": "2a14765192f21bd8a5998395991d163d073b93587dd64b8e579477eff7b2cd0d"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\verification.log",
+    "raw_log_sha256": "ca661aceea7533552116de6fa1aca58d2f512ec488b6ce6257cf5353edf57f27",
+    "fock_cases": 20,
+    "fourier_cases": 3,
+    "reservoir_cases": 15,
+    "continuum_cases": 12,
+    "finite_circle_lattice_cases": 24,
+    "spatial_regulator_cases": 4,
+    "maximum_trace_error": 4.107825191113079e-15,
+    "maximum_lattice_error": 1.252311532251582e-09,
+    "maximum_cutoff_grid_refinement": 6.842241151439055e-08,
+    "development_failures": [
+      {
+        "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\development-initial.py",
+        "source_sha256": "5feea223cde03a0f1641a53a33f325a76826753318b6246ff576c42111e35872",
+        "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\development-initial.log",
+        "log_sha256": "31e7f28c36e7230a95905bd6be5f8d5e574905abca2f7cab10a96f4d1d173ada",
+        "reason": "An assumed fivefold decrease of the finite-volume error failed because the selected volume values already had volume corrections below the ultraviolet truncation floor.",
+        "resolution": "Added smaller optical circles, assessed the refined UV/grid limit against a stated absolute tolerance, and added 24 independent finite-circle lattice comparisons. No Hamiltonian or analytic bound changed."
+      }
+    ],
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "The full paired fermion spectrum with radial kinetic energies and total electric charging obeys exp(-x/2)<=b/b_free<=exp(x/4)/cosh(x/2).",
+    "The bound survives physical spatial localization; a finite-reservoir certificate derives the U(1) rotor midpoint in the optical-volume limit.",
+    "The finite-circle charge lattice gives an independent bosonized midpoint formula without adding an independent rotor."
+  ],
+  "limitations": [
+    "The actual radial Coulomb kernel is not merely a total-charge square.",
+    "A screened inertia and the same explicit fermions cannot be combined without matching.",
+    "The angular sector, evolving state, stress and geometry are not computed.",
+    "The infinite-reservoir compact factor replaces the Gaussian zero mode; it is not an extra independent rotor."
+  ],
+  "decision": "Use the uniform electric comparison and exact charge-lattice formula for initial-state matching. Next retain the full radial Gauss kernel and Wilson dressing; do not substitute screened inertia into a second copy of its fermions.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_turn": "progress",
+    "current_turn": "progress",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "remaining_todo": [
+    "Match the full radial electric Hamiltonian and dressed operator, with one compact mode and one oscillator subtraction.",
+    "Include joint angular and massive sectors and derive the driven two-time covariance/stress with evolving geometry.",
+    "Establish preparation, fluctuations, sufficient general stability and finite-energy transport."
+  ]
+}
