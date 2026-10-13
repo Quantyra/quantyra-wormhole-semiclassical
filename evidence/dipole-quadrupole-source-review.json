@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-13",
+  "scope": "quadratic bosonic dipole contribution to the product polar source, with its leading ordered kernel and explicit Gauss interactions",
+  "local_source_conventions": [
+    {
+      "path": "notes/nonabelian-dipole-constraints.md",
+      "use": "exact substituted round action and canonical Gauss law; its nonlinear-closure obstruction remains",
+      "sha256": "1b14cd03ea1bf97c08a296b6dc1eefb84169e0cfd1eecf021cc5a6adb35a1b28"
+    },
+    {
+      "path": "notes/quadrupole-product-response.md",
+      "use": "coupled product master conventions, including E0*S_T/2 and physical/domain limitations",
+      "sha256": "334546768d34b4affde58b3d18be6017bd9197910a2a4921b9ec8281bdc5a9ea"
+    },
+    {
+      "path": "notes/lll-polar-noise.md",
+      "use": "retain the distinction between free reference kernels and induced or interacting response",
+      "sha256": "79fceb3712b392cc5096b2b7c2d19e366a6af770c22bd95691c6cf6f0310908a"
+    }
+  ],
+  "inherited_primary_context": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0308128v3",
+      "scope": "Previously reviewed exceptional dipole and coupled master conventions; no new full-paper review claimed."
+    },
+    {
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "scope": "Previously reviewed LLL and monopole background; no new source claim is imported."
+    }
+  ],
+  "new_external_bibliographic_search": false,
+  "ordinary_argument": [
+    "Solve the round bosonic Gauss law in radial gauge and display the retained cubic/quartic interaction.",
+    "Derive second-order Einstein and Maxwell source projections directly from the coordinate four-dimensional fields, then transform to the horizontal frame.",
+    "Retain the sphere tracefree source in r_A as well as the extra Maxwell residual.",
+    "Polarize the axis result into the STF composite Q_m and derive its full ordered two-by-two source matrix from W^2.",
+    "Compute local Gauss density noise; show that vanishing global vacuum charge does not eliminate partial flux.",
+    "Bound the Gaussian time-smeared partial flux spectral tail with a complete sum, retaining the comparison boundary domain."
+  ],
+  "verification_history": [
+    {
+      "snapshot": "derive-initial.py",
+      "log": "derive-initial.log",
+      "result": "FAIL",
+      "reason": "Background identity applied only to one side of comparison; residual -c^2*(C^2+C-2P^2)*W_r^2."
+    },
+    {
+      "snapshot": "derive-refined.py",
+      "log": "derive-refined.log",
+      "result": "PASS",
+      "scope": "Apply the same exact background relation to both sides; no physical coefficient or tolerance changed."
+    },
+    {
+      "snapshot": "checker-development.py",
+      "log": "development.log",
+      "result": "PASS_WITH_PARTIAL_SOURCE_SCOPE",
+      "scope": "Direct source projections and a kernel retaining only the extra Maxwell part of r_A. This is not evidence for the final full source."
+    },
+    {
+      "snapshot": "checker-full-source.py",
+      "log": "full-source.log",
+      "result": "PASS",
+      "scope": "Restore E0*S_T/2 to the assembled r_A; verify the full mixed kernel and the smeared Gauss flux."
+    },
+    {
+      "snapshot": "checker-final.py",
+      "log": "verification.log",
+      "result": "see_final_receipt",
+      "scope": "Also verify all fourteen first-order dipole Einstein/Maxwell components on shell and retain note hash."
+    }
+  ],
+  "raw_directory": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\dipole-quadrupole-source-2026-10-13",
+  "novelty": "No novelty or exhaustive prior-art acceptance; a direct derivation in the existing program conventions.",
+  "limitations": [
+    "The bosonic round Hamiltonian is a projection, not a consistent nonlinear 4D truncation.",
+    "The ordered kernel is leading Gaussian H2 data; H3/H4 and fermion polarization are not controlled by it.",
+    "Global Friedrichs vacuum and its gap are not physical horizon matching.",
+    "Full response contacts, renormalized stress, capture, preparation, stability, transport and creation remain."
+  ],
+  "lean_invocations": 0,
+  "paid_compute": false,
+  "outreach_sent": false
+}

@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "scope": "leading bosonic dipole quadratic polar source and Gaussian ordered kernel; fixed product",
+  "direct_four_dimensional_source": {
+    "status": "PASS",
+    "quadratic_base_trace": "-C*(1 - c**2)*Derivative(W(t, r), r)**2/2 - 2*c**2*(-P*Derivative(W(t, r), r) - Derivative(H(t, r), r) + Derivative(V(t, r), t))**2",
+    "quadratic_sphere_tracefree_coefficient": "-C**2*Derivative(W(t, r), r)**2/2 + 2*(r**2 + 1)*V(t, r)**2 - 2*H(t, r)**2/(r**2 + 1)",
+    "rF": "2*C*Derivative(W(t, r), r)**2/3 + (-P*Derivative(W(t, r), r) - Derivative(H(t, r), r) + Derivative(V(t, r), t))*(2*P*Derivative(W(t, r), r)/3 + 2*Derivative(H(t, r), r)/3 - 2*Derivative(V(t, r), t)/3) - (2*(r**2 + 1)*V(t, r)**2 - 2*H(t, r)**2/(r**2 + 1))/C",
+    "horizontal_angular_Maxwell_residual": "c*(-P*Derivative(W(t, r), r) - Derivative(H(t, r), r) + Derivative(V(t, r), t))*Derivative(W(t, r), r)",
+    "units": "a=1,b^2=C,kappa^2=2,g=1,P^2=C(C+1)/2",
+    "method": "direct coordinate metric/inverse, second-order Ricci, Maxwell tensor and stress, horizontal projection",
+    "polar_Maxwell": {
+      "direct_quadratic_Maxwell_source": "b^2 W_r G/(3g)",
+      "linear_polar_Maxwell_identity": "exact, including base trace"
+    },
+    "on_shell_linear_dipole_tensor_components": 14
+  },
+  "canonical_reduction": {
+    "Proca_mass": "mu*(1/kappae+P^2/kappag)=(2+4Y)/b^2",
+    "canonical_rF_and_rA": "exact, including E0*S_T/2",
+    "composite_wave_reduction": "exact",
+    "local_composite_redefinition": "K v=(9G/b^4,0)",
+    "Gauss_reduced_cubic_quartic_Hamiltonian": "exact",
+    "rotation_Poisson_brackets": 9
+  },
+  "ordered_kernel": {
+    "STF_matrix_orthogonality": 25,
+    "independent_bosonic_pair_state_checks": [
+      {
+        "C": 1.0,
+        "Delta_dipole": 3.0,
+        "modes": 6,
+        "source_matrix_relative_error": 2.6288260169404563e-16,
+        "Gauss_kernel_error": 6.206335383118183e-17
+      },
+      {
+        "C": 4.0,
+        "Delta_dipole": 2.302775637731995,
+        "modes": 6,
+        "source_matrix_relative_error": 2.0728849581877048e-16,
+        "Gauss_kernel_error": 5.551115123125783e-17
+      },
+      {
+        "C": 100000000.0,
+        "Delta_dipole": 2.0000000133333335,
+        "modes": 6,
+        "source_matrix_relative_error": 2.122508675019383e-23,
+        "Gauss_kernel_error": 1.1102230246251565e-16
+      }
+    ]
+  },
+  "smeared_Gauss_flux": {
+    "cases": [
+      {
+        "C": 1.0,
+        "cut": -0.4,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.00022364953196674428,
+        "all_mode_remainder_upper": 3.5719035739802635e-24,
+        "cut_uniform_upper": 0.0227318809192313
+      },
+      {
+        "C": 1.0,
+        "cut": 0.0,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0003933309393486384,
+        "all_mode_remainder_upper": 3.5719035739802635e-24,
+        "cut_uniform_upper": 0.0227318809192313
+      },
+      {
+        "C": 1.0,
+        "cut": 0.35,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0002573018395816431,
+        "all_mode_remainder_upper": 3.5719035739802635e-24,
+        "cut_uniform_upper": 0.0227318809192313
+      },
+      {
+        "C": 1.0,
+        "cut": 1.5707963267948966,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 2.2553528508454234e-33,
+        "all_mode_remainder_upper": 3.5719035739802635e-24,
+        "cut_uniform_upper": 0.0227318809192313
+      },
+      {
+        "C": 4.0,
+        "cut": -0.4,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0013369351952821809,
+        "all_mode_remainder_upper": 6.062321765431461e-24,
+        "cut_uniform_upper": 0.17127215564745926
+      },
+      {
+        "C": 4.0,
+        "cut": 0.0,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0019873634119000126,
+        "all_mode_remainder_upper": 6.062321765431461e-24,
+        "cut_uniform_upper": 0.17127215564745926
+      },
+      {
+        "C": 4.0,
+        "cut": 0.35,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0014752614748887649,
+        "all_mode_remainder_upper": 6.062321765431461e-24,
+        "cut_uniform_upper": 0.17127215564745926
+      },
+      {
+        "C": 4.0,
+        "cut": 1.5707963267948966,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 1.7493999951860307e-32,
+        "all_mode_remainder_upper": 6.062321765431461e-24,
+        "cut_uniform_upper": 0.17127215564745926
+      },
+      {
+        "C": 100000000.0,
+        "cut": -0.4,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.002787595227261265,
+        "all_mode_remainder_upper": 8.036782934298486e-24,
+        "cut_uniform_upper": 0.41070604399257415
+      },
+      {
+        "C": 100000000.0,
+        "cut": 0.0,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0038850537578845397,
+        "all_mode_remainder_upper": 8.036782934298486e-24,
+        "cut_uniform_upper": 0.41070604399257415
+      },
+      {
+        "C": 100000000.0,
+        "cut": 0.35,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 0.0030270017333139405,
+        "all_mode_remainder_upper": 8.036782934298486e-24,
+        "cut_uniform_upper": 0.41070604399257415
+      },
+      {
+        "C": 100000000.0,
+        "cut": 1.5707963267948966,
+        "Gaussian_width": 0.25,
+        "per_axis_flux_variance_N32": 2.8835329753843143e-32,
+        "all_mode_remainder_upper": 8.036782934298486e-24,
+        "cut_uniform_upper": 0.41070604399257415
+      }
+    ],
+    "tail_method": "Cauchy-Schwarz spatial overlaps and decreasing Gaussian polynomial integral",
+    "no_global_gap_assigned_to_horizon": true
+  },
+  "checker_sha256": "209419365d212ce6a9e8d3005c633de8f3fdd9eebde0f69b4ddf95d00c5cd9cc",
+  "dependencies": {
+    "notes/dipole-quadrupole-source.md": "5e5ae1a772f66b6bf6dc77124c1cdefdadd01cdb56263d0a5e5062f0a1113878",
+    "notes/nonabelian-dipole-constraints.md": "1b14cd03ea1bf97c08a296b6dc1eefb84169e0cfd1eecf021cc5a6adb35a1b28",
+    "notes/quadrupole-product-response.md": "334546768d34b4affde58b3d18be6017bd9197910a2a4921b9ec8281bdc5a9ea",
+    "notes/lll-polar-noise.md": "79fceb3712b392cc5096b2b7c2d19e366a6af770c22bd95691c6cf6f0310908a"
+  },
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "limitations": [
+    "Round bosonic projection is not a consistent nonlinear 4D truncation.",
+    "Gaussian kernel is a leading expansion; cubic/quartic interactions and fermionic polarization remain.",
+    "Global Friedrichs vacuum is not the physical horizon or boundary-driven state.",
+    "Local response contacts and full renormalized stress remain.",
+    "No capture, creation, preparation, full stability or transport bound."
+  ]
+}
