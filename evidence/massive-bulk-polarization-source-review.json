@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-13",
+  "purpose": "S072 massive bulk electric polarization: common subtraction, exact tower, invariant thresholds and all-frequency classical pulse work",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2205.04312v2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/massive-bulk-polarization-2026-10-13/2205.04312v2.html",
+      "sha256": "c882df0446fc8ae85fbb507a6334d17bf2ae2cb8c7ec46067a87241fd318b99b",
+      "reading_scope": "Sections II.2, IV.2.1 and appendix A.1 read in full. Import the regulated vacuum 1+1-dimensional massive vector bubble, including the finite Ward contact and invariant pair threshold. No finite-temperature/density result, planar degeneracy or massive-only plasma dispersion is assigned to the sphere/LLL mixed model.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1209.2663v2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/massive-bulk-polarization-2026-10-13/1209.2663v2.html",
+      "sha256": "4e714837790d0c163a0f2c247ad3a19b2097c1edf3c96889a111f6a9c6b2981f",
+      "reading_scope": "Section IV.2 threshold and invariant-momentum derivation, section IV.3 and appendix B read. The latter two were read in full; IV.3 was reread separately after a combined output truncated part of it. Reuse the distinction between local charge renormalization and finite magnetic response, and the pair-threshold singularity warning. No planar all-level numerical coefficient is transferred to the sphere.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2603.15730v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/wormhole-literature-review/2026-10-10/2603.15730v1-body.html",
+      "sha256": "6aa0aecd73c0a187b56f406f8b9fe155145d81825e5415946abba7e2a58b557c",
+      "reading_scope": "Sphere spectrum equations 2.29-2.31 retained from the immediately preceding higher-Landau boundary audit, where they were reread. Exact sphere eigenvalues and total multiplicities only; no supersymmetric determinant or curved electric response is imported.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "inherited_evidence": {
+    "satellite_commit": "6cbec82e08d96b32ef1c046d9162e452df369c66",
+    "files": [
+      {
+        "path": "notes/higher-landau-boundary.md",
+        "sha256": "2fef6b07851f9f4f8ca4305a4b3bcb96ca4731605538f29e0c8bd5220c8e305a"
+      },
+      {
+        "path": "notes/collective-electric-response.md",
+        "sha256": "c7ba56eca243c8e6d3487b2ea1db34f4b7eb9724d58d6bfe61b79d9f100346ad"
+      },
+      {
+        "path": "notes/phase-influence-action.md",
+        "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+      },
+      {
+        "path": "notes/magnetic-product-vacuum.md",
+        "sha256": "06049ca070ef17c46199e07c47c6c0979ef5838f4ed38497a2ca93cfdda76c94"
+      }
+    ]
+  },
+  "development_notes": [
+    "The first checker run failed a 2e-14 Fourier normalization tolerance: 160-point double-precision Gauss-Legendre integration differed from the Bessel expression by 2.142730437526552e-14 at y=0.2. Independent 60-digit time integration found Gauss-Legendre error -1.8998357253340695e-14 and Bessel error 2.428947121924826e-15. The checker now uses the high-precision independent integral with a stricter 1e-14 tolerance; no formula, physical bound or pulse was changed.",
+    "Pulse work uses 300 massive levels, 512/1024/2048-node refinement and a separate analytic all-remaining-level tail bound. It does not use the general upper bound as a substitute for integrating the pulse.",
+    "The static subtraction is one common physical angular-mass cutoff subtraction. A finite magnetic response is retained and g_* is distinguished from the renormalized Maxwell g_R. Candidate values specify mu=1/b and g_R(mu)=k^-4 only as a comparison.",
+    "The exact all-frequency work result is a free vacuum linear-response theorem on R^(1,1) x S2 with a prescribed classical source. Its small value is relative to the pulse electric energy, not the negative opening energy.",
+    "The earlier S053 projected massless photon and determinant comparators are not identified with this massive electric sector; closed programs remain closed."
+  ],
+  "claims_boundary": [
+    "No uniform pointwise real-axis polarization bound: individual thresholds are singular",
+    "No curved AdS2/RN remainder or thermal/entangled-state transfer has been proved",
+    "No actual quantum source profile, complete stress, higher-loop bound, physical creation or full stability has been established"
+  ]
+}
