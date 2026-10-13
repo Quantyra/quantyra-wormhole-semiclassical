@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_boundary_packet_matching_and_first_moment_inference_null",
+  "previous_satellite_commit": "6f9f063cee7288e89c22cd275b0175d800664894",
+  "previous_planning_commit": "26e7cd85c58d9ee8fef5b9df70c609586dd30eaa",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2107.13094v2",
+      "title": "Discrete Lehmann representation of imaginary time Green functions",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\boundary-packet-2026-10-13\\2107.13094v2.html",
+      "sha256": "2d012b9baf8208c12d4beb9fd51e54fc4cafba69ba6f33e4e5a53c63144df971",
+      "reading_scope": "Introduction through the fermionic spectral representation, equations (1)-(2), and its stated energy-cutoff assumption. The midpoint kernel follows by setting tau=beta/2; no numerical reconstruction algorithm or finite-support premise is imported.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "query_log": [
+    "fermion thermofield double correlator spectral function cosh beta omega arxiv",
+    "fermionic spectral function Lehmann representation thermal anticommutator arxiv"
+  ],
+  "novelty": "No novelty acceptance. Lehmann/KMS representations, canonical Wilson dressing and CAR identities are standard. The explicit localization and matched-moment counterexample establish the scope decision; the search is not exhaustive.",
+  "files": [
+    {
+      "path": "notes/fermionic-compact-transfer.md",
+      "sha256": "0cc02f21e6e6392a134259aee9ed79feee90825741c9bf493ec26e3bc42026e4"
+    },
+    {
+      "path": "notes/boundary-vertex-matching.md",
+      "sha256": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+    },
+    {
+      "path": "notes/phase-influence-action.md",
+      "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+    },
+    {
+      "path": "notes/switching-radiation-capture.md",
+      "sha256": "cbcdb676fb685b0ce356dfc4be3b3c3694dd25545aef2ebee84fe4fd4ccc1b96"
+    },
+    {
+      "path": "notes/quantum-junction-state.md",
+      "sha256": "bdb90d7bd8e6af015c982a9711723fdfef6354ca2ad9aaebf4e44a8a05ce44fb"
+    },
+    {
+      "path": "notes/boundary-packet-spectral-matching.md",
+      "sha256": "ac6efda07ce4f6d5660f053c1ae9861aea4986a7707b116a9154fb6601af61f0"
+    },
+    {
+      "path": "checks/boundary_packet_spectral_matching.py",
+      "sha256": "71946d2a754a11d45dde1d8cd7c4d22bce0bc3cbd28150e281395d7f25dc1745"
+    },
+    {
+      "path": "evidence/boundary-packet-spectral-matching.json",
+      "sha256": "8e0af1ff51a63e14b01569766807160199be51715425e6227d7a4e383eda4535"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\boundary-packet-2026-10-13\\verification.log",
+    "raw_log_sha256": "ae375ca5e4a0828028c707ed4942c844fc17ea84f073c6630fe5e757142f6b8c",
+    "packet_cases": 4,
+    "localization_cases": 7,
+    "dressed_oscillator_cutoffs": [
+      32,
+      48
+    ],
+    "maximum_radial_identity_error": 1.3335496351940738e-15,
+    "maximum_spectral_first_moment_error": 7.549516567451064e-15,
+    "same_moment_midpoint_gap": 0.01534337325863059,
+    "same_UV_tail_physical_gap": 0.0007325921093445164,
+    "development_failures": [],
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "A spatially smeared, gauge-transported canonical packet retains the total-charge mixed terms and radial off-diagonal variation.",
+    "The free canonical affinity vanishes under point localization while its physical boundary midpoint is finite and correctly clock-normalized.",
+    "An explicit equal-first-moment counterexample persists after a common ultraviolet tail and physical normalization.",
+    "The thermally weighted full spectral difference is an exact equilibrium matching target; switching requires the driven two-time covariance."
+  ],
+  "decision": "Park the raw or reference-subtracted CAR first moment as a standalone point-boundary or continuum capture certificate. Preserve the finite-mode theorem and all earlier scoped results.",
+  "limitations": [
+    "Packet identities hold at a canonical spatial regulator; gravitational dressing remains unmatched.",
+    "Free KMS localization is a required normalization comparator, not the interacting RN spectral density.",
+    "The counterexample rejects an inference, not the candidate wormhole.",
+    "The actual prepared weighted spectrum and driven two-time covariance/stress remain open."
+  ],
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_turn": "progress",
+    "current_turn": "progress",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "remaining_todo": [
+    "Bound the physical prepared boundary spectral difference in the common operator normalization.",
+    "Derive the driven two-time covariance and complete renormalized stress with gauge constraints, initial dressing and evolving geometry.",
+    "Establish preparation, quantum fluctuations, sufficient general stability and finite-energy transport."
+  ]
+}

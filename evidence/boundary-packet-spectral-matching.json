@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "status": "PASS",
+  "decision": "Raw and reference-subtracted CAR first moments cannot alone certify the point boundary transfer.",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "packet_cases": [
+    {
+      "q": 2,
+      "orbitals": 2,
+      "beta": 1.2,
+      "x": 0.07,
+      "a": 0.02,
+      "CAR_error": 2.220446049250313e-16,
+      "compact_identity_error": 1.1107649934270853e-16,
+      "radial_identity_error": 8.926082647349966e-16,
+      "omitted_cross_operator_norm": 3.9843925898922925,
+      "mixed_charge_expectation": 0.01937623814422371,
+      "radial_channel_expectation": 1.6793575692652043,
+      "total_first_moment_error": 4.440892098500626e-16,
+      "C": 0.612912610147823,
+      "S": 3.451210185953513,
+      "spectral_mass": 0.9999999999999996,
+      "direct_C_error": 2.220446049250313e-16,
+      "direct_S_error": 4.440892098500626e-16
+    },
+    {
+      "q": 3,
+      "orbitals": 2,
+      "beta": 0.7,
+      "x": 0.12,
+      "a": 0.035,
+      "CAR_error": 2.220446049250313e-16,
+      "compact_identity_error": 3.331391796911832e-16,
+      "radial_identity_error": 6.673765165990308e-16,
+      "omitted_cross_operator_norm": 3.795450081174293,
+      "mixed_charge_expectation": 0.09401678286923155,
+      "radial_channel_expectation": 0.7253337374292566,
+      "total_first_moment_error": 3.1086244689504383e-15,
+      "C": 0.8110719340430952,
+      "S": 1.5799560538738926,
+      "spectral_mass": 0.9999999999999997,
+      "direct_C_error": 0.0,
+      "direct_S_error": 2.6645352591003757e-15
+    },
+    {
+      "q": 2,
+      "orbitals": 3,
+      "beta": 1.7,
+      "x": 0.04,
+      "a": 0.017,
+      "CAR_error": 1.1102230246251565e-16,
+      "compact_identity_error": 6.939435983819303e-17,
+      "radial_identity_error": 1.3335496351940738e-15,
+      "omitted_cross_operator_norm": 9.129028105313308,
+      "mixed_charge_expectation": 0.017762518835799157,
+      "radial_channel_expectation": 1.9700216383211928,
+      "total_first_moment_error": 6.661338147750939e-15,
+      "C": 0.5913131142339658,
+      "S": 3.9744932012991825,
+      "spectral_mass": 0.9999999999999998,
+      "direct_C_error": 1.1102230246251565e-16,
+      "direct_S_error": 7.549516567451064e-15
+    },
+    {
+      "q": 1,
+      "orbitals": 3,
+      "beta": 1.2,
+      "x": 0.08,
+      "a": 0.02,
+      "CAR_error": 1.1102230246251565e-16,
+      "compact_identity_error": 1.9081958235744878e-17,
+      "radial_identity_error": 4.470478994460427e-16,
+      "omitted_cross_operator_norm": 3.2220099195223435,
+      "mixed_charge_expectation": 0.0134914069012149,
+      "radial_channel_expectation": 1.2281119953927586,
+      "total_first_moment_error": 4.440892098500626e-16,
+      "C": 0.7192180851997767,
+      "S": 2.5082927355757976,
+      "spectral_mass": 0.9999999999999999,
+      "direct_C_error": 1.1102230246251565e-16,
+      "direct_S_error": 0.0
+    }
+  ],
+  "free_localization": [
+    {
+      "epsilon_over_beta": 1.0,
+      "epsilon": 6.283185307179586,
+      "beta": 6.283185307179586,
+      "canonical_norm": 0.05066059182116889,
+      "C": 0.8584073464102069,
+      "S": 1.2898681336964528,
+      "boundary_midpoint": 0.021743712096390106,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 0.1856134363553861,
+      "C_asymptotic_ratio": 0.2732395447351627,
+      "S_asymptotic_ratio": 0.6449340668482264,
+      "digamma_error": 5.551115123125783e-17,
+      "quadrature_error": 1.0571825854478166e-13
+    },
+    {
+      "epsilon_over_beta": 0.2,
+      "epsilon": 1.2566370614359172,
+      "beta": 6.283185307179586,
+      "canonical_norm": 0.25330295910584444,
+      "C": 0.42316005422722625,
+      "S": 9.559417895978081,
+      "boundary_midpoint": 0.053593846955573,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 0.03712268727107722,
+      "C_asymptotic_ratio": 0.6734801434929754,
+      "S_asymptotic_ratio": 0.9559417895978082,
+      "digamma_error": 2.220446049250313e-16,
+      "quadrature_error": 1.7038941846347796e-13
+    },
+    {
+      "epsilon_over_beta": 0.05,
+      "epsilon": 0.3141592653589793,
+      "beta": 6.283185307179586,
+      "canonical_norm": 1.0132118364233778,
+      "C": 0.14051853169621914,
+      "S": 39.85220830151221,
+      "boundary_midpoint": 0.07118751977572141,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 0.009280671817769304,
+      "C_asymptotic_ratio": 0.8945687566187379,
+      "S_asymptotic_ratio": 0.9963052075378054,
+      "digamma_error": 2.220446049250313e-16,
+      "quadrature_error": 2.6768537085889656e-13
+    },
+    {
+      "epsilon_over_beta": 0.01,
+      "epsilon": 0.06283185307179587,
+      "beta": 6.283185307179586,
+      "canonical_norm": 5.066059182116889,
+      "C": 0.03069834698672681,
+      "S": 199.9678113420026,
+      "boundary_midpoint": 0.07775982131395884,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 0.001856134363553861,
+      "C_asymptotic_ratio": 0.9771587335375523,
+      "S_asymptotic_ratio": 0.9998390567100129,
+      "digamma_error": 0.0,
+      "quadrature_error": 5.3405004478391594e-14
+    },
+    {
+      "epsilon_over_beta": 0.001,
+      "epsilon": 0.006283185307179587,
+      "beta": 6.283185307179586,
+      "canonical_norm": 50.660591821168886,
+      "C": 0.0031342804003921167,
+      "S": 1999.9967173328587,
+      "boundary_midpoint": 0.0793922500086774,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 0.0001856134363553861,
+      "C_asymptotic_ratio": 0.9976724375169005,
+      "S_asymptotic_ratio": 0.9999983586664294,
+      "digamma_error": 2.220446049250313e-16,
+      "quadrature_error": 6.722868582114118e-14
+    },
+    {
+      "epsilon_over_beta": 0.0001,
+      "epsilon": 0.0006283185307179586,
+      "beta": 6.283185307179586,
+      "canonical_norm": 506.60591821168896,
+      "C": 0.0003140860036114194,
+      "S": 19999.999671085297,
+      "boundary_midpoint": 0.0795589141285015,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 1.856134363553861e-05,
+      "C_asymptotic_ratio": 0.9997668006147259,
+      "S_asymptotic_ratio": 0.9999999835542649,
+      "digamma_error": 4.440892098500626e-16,
+      "quadrature_error": 6.866671471595877e-14
+    },
+    {
+      "epsilon_over_beta": 1e-05,
+      "epsilon": 6.283185307179587e-05,
+      "beta": 6.283185307179586,
+      "canonical_norm": 5066.059182116888,
+      "C": 3.1415193778925425e-05,
+      "S": 199999.99996710202,
+      "boundary_midpoint": 0.07957561545085325,
+      "point_limit": 0.07957747154594767,
+      "regulator_error_bound": 1.8561343635538612e-06,
+      "C_asymptotic_ratio": 0.999976675621148,
+      "S_asymptotic_ratio": 0.9999999998355101,
+      "digamma_error": 2.220446049250313e-16,
+      "quadrature_error": 6.881888633480127e-14
+    }
+  ],
+  "moment_counterexample": {
+    "weight_r": 0.17018101929680157,
+    "reference_C": 0.9021622572287045,
+    "C": 0.8868188839700739,
+    "exact_positive_gap": 0.01534337325863059,
+    "common_first_moment": 0.9242343145200195,
+    "matrix_C_gap_error": 3.469446951953614e-17,
+    "matrix_first_moment_difference": 0.0,
+    "common_UV_tail": [
+      {
+        "epsilon": 0.2,
+        "spectral_mixing_weight": 0.06,
+        "subtracted_first_moment": 0.0,
+        "physical_midpoint_loss": 0.0007325921093445164
+      },
+      {
+        "epsilon": 0.05,
+        "spectral_mixing_weight": 0.015,
+        "subtracted_first_moment": 0.0,
+        "physical_midpoint_loss": 0.0007325921093445164
+      },
+      {
+        "epsilon": 0.01,
+        "spectral_mixing_weight": 0.003,
+        "subtracted_first_moment": 0.0,
+        "physical_midpoint_loss": 0.0007325921093445384
+      },
+      {
+        "epsilon": 0.001,
+        "spectral_mixing_weight": 0.0003,
+        "subtracted_first_moment": 0.0,
+        "physical_midpoint_loss": 0.0007325921093445247
+      }
+    ],
+    "conclusion": "Equal reference-subtracted first moments do not bound the midpoint loss."
+  },
+  "dressed_recoil": [
+    {
+      "oscillator_modes": 32,
+      "beta": 1.7,
+      "omega": 0.8,
+      "fermion_energy": 0.6,
+      "dressing_g": 0.45,
+      "CAR_error": 7.771561172376096e-16,
+      "recoil_thermal_squared_error": 9.29202480352916e-18,
+      "midpoint_formula_error": 1.1102230246251565e-16,
+      "first_moment_formula_error": 2.220446049250313e-16,
+      "C": 0.8468588566770459,
+      "S": 1.3029382058233965,
+      "spectral_mass": 0.9999999999999998,
+      "direct_C_error": 0.0,
+      "direct_S_error": 4.440892098500626e-16
+    },
+    {
+      "oscillator_modes": 48,
+      "beta": 1.7,
+      "omega": 0.8,
+      "fermion_energy": 0.6,
+      "dressing_g": 0.45,
+      "CAR_error": 8.881784197001252e-16,
+      "recoil_thermal_squared_error": 1.2110577430472777e-26,
+      "midpoint_formula_error": 2.220446049250313e-16,
+      "first_moment_formula_error": 6.661338147750939e-16,
+      "C": 0.8468588566770457,
+      "S": 1.302938205823396,
+      "spectral_mass": 0.9999999999999997,
+      "direct_C_error": 1.1102230246251565e-16,
+      "direct_S_error": 6.661338147750939e-16
+    }
+  ],
+  "limitations": [
+    "Packet identities hold at a canonical spatial regulator; gravitational dressing remains unmatched.",
+    "Free KMS localization is a required normalization comparator, not the interacting RN spectral density.",
+    "The counterexample rejects an inference, not the candidate wormhole.",
+    "The actual prepared weighted spectrum and driven two-time covariance/stress remain open."
+  ],
+  "artifacts": [
+    {
+      "path": "notes/boundary-packet-spectral-matching.md",
+      "sha256": "ac6efda07ce4f6d5660f053c1ae9861aea4986a7707b116a9154fb6601af61f0"
+    },
+    {
+      "path": "checks/boundary_packet_spectral_matching.py",
+      "sha256": "71946d2a754a11d45dde1d8cd7c4d22bce0bc3cbd28150e281395d7f25dc1745"
+    }
+  ]
+}
