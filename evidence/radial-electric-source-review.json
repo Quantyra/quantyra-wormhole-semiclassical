@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_radial_electric_initial_correlator_in_declared_ensemble",
+  "previous_satellite_commit": "a5baed287a2c9e80eb4587180a06b05e9e23c409",
+  "previous_planning_commit": "7584487",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/wormhole-literature-review/2026-10-10/1807.04726-v3-body.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "reading_scope": "Appendix A electric center-of-mass current and surviving neutral sector, equations A.1-A.3; no full 4D or angular completion imported.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/cond-mat/9805275v3",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/electric-reservoir-2026-10-13/9805275v3.pdf",
+      "sha256": "b1dcd9b026bee9672074e272557b8f27be799f14fe414a512eebc9e9f1475a32",
+      "reading_scope": "Current HTML checks of completeness, charge ladders, operator identity, linear Hamiltonian, thermal Weyl trace and appendix B partition proof; same-version PDF retained from the preceding source review. No impurity-model result imported.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/radial-electric-correlator.md",
+      "sha256": "d51e799feacb3360c546721e4a97e8f21b769326d4d61299eea546646c26a660"
+    },
+    {
+      "path": "checks/radial_electric_correlator.py",
+      "sha256": "8b4c8c312c788b76b58aa6e216f2463ae7754e8287b65df7bc962dfd70ee0f63"
+    },
+    {
+      "path": "evidence/radial-electric-correlator.json",
+      "sha256": "b424423ed948ac1c57b3dd4666747825aaf41f69fc77235bf7d585dcfb56f580"
+    },
+    {
+      "path": "notes/electric-reservoir-midpoint.md",
+      "sha256": "ea494a68a7f0cc700bcb4791ac656b9305da35c60d0c3893c29f626ae6ba6c03"
+    },
+    {
+      "path": "notes/boundary-vertex-matching.md",
+      "sha256": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+    },
+    {
+      "path": "notes/phase-influence-action.md",
+      "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+    },
+    {
+      "path": "notes/neutral-transfer-current.md",
+      "sha256": "f67dc346c00279ede5997a5ea5d08f748866a0345a2fe54a29162d02e13e0758"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\radial-electric-2026-10-13\\verification.log",
+    "raw_log_sha256": "943794a3528578dbed4510200619bc31ed6d2dfe9efb34c765dc056b025ed298",
+    "development_failures": [
+      {
+        "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\radial-electric-2026-10-13\\development-initial.py",
+        "source_sha256": "22d8e90fb4573c13c6fd7c539f770173c4d5a71b09cf0de6d83a71d5c69ffb43",
+        "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\radial-electric-2026-10-13\\development-initial.log",
+        "log_sha256": "59f5d184cdda5c6c249e14af89ddd3b2f0986fcbd3141909a20b5230afac04e0",
+        "reason": "The c=0.3 optical-volume sample still has a 9.48e-8 two-species finite-volume correction, larger than the proposed test tolerance.",
+        "resolution": "Retained c=0.3 and added c=0.15 to the same convergence sequence. No finite-volume uniform-in-n claim is made."
+      },
+      {
+        "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\radial-electric-2026-10-13\\development-mesh.py",
+        "source_sha256": "2cb8d2d2c2e760de1a68cb0711211081182f2b293b2f39c711217379f9721b52",
+        "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\radial-electric-2026-10-13\\development-mesh.log",
+        "log_sha256": "77a623767715126b082f35448a97b6d906f5680e3dda1e661fac35b5a76adef5",
+        "reason": "The finite-mesh Matsubara truncation omitted its constant high-frequency delta-K tail.",
+        "resolution": "Summed the constant tail analytically and bounded the remaining inverse-fourth-power tail; kept the common mesh contact cancellation."
+      }
+    ],
+    "local_lean_or_lake_run": false,
+    "counts": {
+      "charge_lattices": 18,
+      "optical_limits": 6,
+      "shifted_thermal_traces": 4,
+      "constant_potential_comparisons": 9,
+      "nonconstant_meshes": 6,
+      "candidate_bounds": 3
+    },
+    "maximum_trace_error": 7.771561172376096e-16,
+    "maximum_spectral_error": 1.2727451037530813e-11,
+    "maximum_mesh_thermal_error": 2.0469737016526324e-16
+  },
+  "accepted_scope": [
+    "Fixed-background spherical electric LLL Hamiltonian with radial Gauss profile, neutral inner flux and integer species lattice.",
+    "Exact finite-interval Euclidean boundary two-point ratio, with screened charge energy and its oscillator displacement derived together.",
+    "Half-line limit in the specified ensemble and the inherited candidate initial-electric-loss bound, conditional on that physical matching."
+  ],
+  "limitations": [
+    "No horizon black-hole degeneracy matching",
+    "No angular or massive interactions",
+    "No driven stress or geometry",
+    "No physical creation or full stability claim",
+    "Optical-volume limit is at fixed finite species number, not a finite-volume certificate uniform in n.",
+    "Four-dimensional microscopic boundary matching and gravitational charge-sector measure remain open."
+  ],
+  "novelty": "No exhaustive novelty review or novelty acceptance; bosonization, theta functions and Gaussian diagonalization are established tools.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_thread_turn": "Goal drafting, no material research progress; current work revalidated both worktrees and took the selected calculation.",
+    "current_turn": "progress",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "decision": "Use the exact radial electric operator and equilibrium correlator in prepared-sector and angular matching; do not insert an equilibrium amplitude in place of the driven covariance or stress.",
+  "remaining_todo": [
+    "Match gravitational/seed charge weights, angular branching and the physical boundary operator.",
+    "Derive driven covariance and complete stress including massive interactions and evolving geometry.",
+    "Establish preparation, quantum fluctuations, sufficient general stability and finite-energy transport."
+  ]
+}
