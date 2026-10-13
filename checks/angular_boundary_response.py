@@ -130,7 +130,7 @@ def scale_family(k):
           "electric_screening_upper":nf*q*g*g*d/(4*np.pi**2),
           "angular_LLL_trial_increment_over_lower":gamma*(1+2/(q+1))**2*d/lo,
           "species_NG_over_b2":n/b2,"Neta_over_Phi_ext":2*n*eta/b2,
-          "Neta":n*eta,"Tb":n*eta*c/(2*np.pi*b2)}
+          "Neta":n*eta,"Tb":n*eta*z0*c/(2*np.pi*b2)}
     assert xe<1/k and chi<1/k and rows["LLL_gap_squared"]>k/7
     return rows
 

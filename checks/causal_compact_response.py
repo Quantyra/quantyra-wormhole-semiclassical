@@ -160,15 +160,25 @@ def candidates():
         _,dhi,_,dx,_,_=bounds(x,q,gamma)
         eps2=g*g*q*(q-1)/(8*np.pi**2*(q+1))
         epse=q*g*g*dx/(4*np.pi**2)
+        b2=x*k**10
+        tb=(2*q)*eta*.5*c/(2*np.pi*b2)
+        radius_fraction_upper=16*np.pi*tb/c
+        assert tb<(3+45*x)/(32*np.pi) and radius_fraction_upper<1e-12
+        # A deliberately loose representable radius envelope avoids rounding
+        # a 1e-32 fractional displacement to zero in double precision.
+        h_upper=1+1e-12
         for delta in (.25,.5):
             ratio_j=24*np.pi*eta*c*dhi/(delta*(q*q-1)*(1-eps2))
             ratio_e=8*np.pi*eta*c*y*(1+epse)/(delta*q*q)
-            bound_j=4*np.sqrt(6)*ratio_j;bound_e=4*np.sqrt(6)*ratio_e
+            bound_j=4*np.sqrt(6)*ratio_j*h_upper**3
+            bound_e=4*np.sqrt(6)*ratio_e*h_upper
             assert bound_j<2.33e-6*(2000/k)**3*(.25/delta)
             assert bound_e<2.33e-6*(2000/k)**3*(.25/delta)
             rows.append({"k":k,"q":q,"delta":delta,"epsilon_angular_squared":eps2,
                 "electric_screening_upper":epse,"a_over_drive_duration_angular_upper":ratio_j,
                 "a_over_drive_duration_electric_upper":ratio_e,
+                "prepared_temperature_Tb":tb,"outer_radius_fraction_upper":radius_fraction_upper,
+                "nonextremal_radius_envelope":h_upper,
                 "cubic_uniform_relative_error_angular_upper":bound_j,
                 "cubic_uniform_relative_error_electric_upper":bound_e})
     return rows

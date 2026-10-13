@@ -5,9 +5,9 @@ a positive constrained wave operator and a quantitative causal response
 bound.** For an infinitesimal cubic boundary-transfer drive lasting as
 long as the proposed opening switch, the single-species candidate's
 charge and angular responses follow their static values to within
-`2.33e-6` of the final static response, uniformly in time, on the
-extremal reference background. The finite-temperature theorem is also
-given. This is a response test on a fixed RN exterior. The actual
+`2.33e-6` of the final static response, uniformly in time, including
+the slightly nonextremal RN benchmark at the prescribed initial
+temperature. This is a response test on a fixed RN exterior. The actual
 fermion junction, prepared quantum state and evolving wormhole stress
 have not yet been matched to it.
 
@@ -290,9 +290,39 @@ allowed ramp `delta=1/4`, both are below `2.369e-7`; (13) is below
 entire static interval, not the smaller trial matter term alone.
 For nonzero initial temperature use the actual `R,T,Y`, static coefficient
 and physical duration in (9)--(13). The theorem has no small-temperature
-assumption. The numbers displayed here are extremal reference comparisons;
-the prior radius-shift scaling does not by itself bound every thermal
-or background quantum correction.
+assumption. A quantitative extension to the prepared-temperature RN
+benchmark is short. Set `T=N eta_f z_0/(2pi phi_r)`, `z_0=1/2`, and
+`h=R/b`. At fixed magnetic flux,
+
+```
+4pi Tb h^3=h^2-1+3X(h^4-1) >= 2(1+6X)(h-1).
+```
+
+For this family `X>=1` and the RN temperature increases with `h>=1`.
+The selected temperature is below its value at `h=2`, so
+`h-1<=16pi Tb/(1+6X)`. At `k=2000` this is below `7.64e-33`, and it
+decreases as `k` grows. The static electric trial bound at `R` is at
+most `h` times the bound at `b`. The angular bound is at most `h^3`
+times its reference value: its derivative terms grow at most as `R^3`,
+while its mixing and matter trial integrals are `R` times functions
+decreasing with `X_R`. Using the deliberately loose envelope
+`h<=1+1e-12` still gives (13) below `2.33e-6` in both sectors. No floating
+point subtraction of nearly equal horizon radii is needed.
+
+This conclusion is uniform for `k>=2000`, not an extrapolation from the
+three numerical examples. The exact flux equation gives `X>1e9` and
+`X^2<pi k^6/3`; (9) gives `epsilon^2<1e-14`. The static trial bound obeys
+`d_upper<X+1.501`, using `D(X)<=1/X`. Substitution bounds both
+nonextremal errors by
+`4sqrt(6) [48pi^2/(delta k^3)](1+1e-8)`, which is below `2.33e-6`
+at the smallest `k` and `delta` and decreases with either parameter.
+
+The earlier single-species scale receipt omitted `z_0` from its displayed
+`Tb` field and hence overstated that temperature by two. That field and
+its checker are corrected here. Its inertia bounds, phase exponents and
+candidate decision are unchanged. The present finite-temperature argument
+concerns classical RN coefficients and the projected chemical response;
+thermal/background quantum stress corrections remain unbounded.
 
 This is a positive test of the **boundary-transfer response timescale**.
 The opening angle `theta(t)` rotates the fermion endpoint junction;
