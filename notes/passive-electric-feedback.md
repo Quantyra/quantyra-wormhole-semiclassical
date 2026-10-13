@@ -1,10 +1,10 @@
 # Quadratic electric feedback: positive response and retained quantum noise
 
-> Paused session checkpoint, 2026-10-13. This derivation and its passing
-> development receipt are preserved from the interrupted S072 turn. Final
-> ordinary-proof review and the planning milestone audit remain unfinished.
-> Resume only when Dan resumes the research goal; this save does not promote
-> the draft to an accepted milestone.
+> Resumed and reviewed, 2026-10-13. The original checker reproduces its
+> saved receipt byte for byte. The bounded stationary-response and
+> all-return stiffness arguments are retained. The continuation derives
+> [a minimum cancellation duration and a shaped switch](electric-return-cancellation.md);
+> physical driven-state and stress matching remain unfinished.
 
 S072, 2026-10-13. **The finite-channel stationary electric response has no
 exponentially growing poles within the phase-linear, second-order neutral
@@ -121,6 +121,12 @@ H_quad(t)=H_G +k(t) alpha^2/2
 k(t)=mu h+h^2 delta_q-h R_X(t),
 R_X(t)=sum_even (2v_E/E) integral_0^t cos[E(t-u)] h'(u) du. (6)
 ```
+
+At a finite common regulator, replace `delta_q` in this exact realization
+by `delta_reg=chi_XX,reg(0)-chi_YY,reg(0)` and regulate the kernels
+consistently. The displayed expression is the common-regulator limit.
+The finite-band demonstrations instead match their local static term
+to `delta_q`; they are not a raw truncation of both susceptibilities.
 
 Assume `h(0)=0`. Integrating the `X` response by parts gives
 `chi_XX*h=h chi_XX(0)-R_X`. Eliminating each driven `y_E` in (6)
