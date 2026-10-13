@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_fermionic_compact_sum_rule_and_finite_driven_diagnostic",
+  "previous_satellite_commit": "efc38363b296cf5470e55b5fbb4298ad88f45d19",
+  "previous_planning_commit": "218cf17802b6e90b2203faf6c01e81ee499b34ba",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1909.05253v2",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\1909.05253v2.html",
+      "sha256": "fefc798c5906fd0d5dbf10a4cc6da68156f5912ba07abf755e63854286dc649a",
+      "reading_scope": "Section 2.2 read: group-particle Hilbert space, left/right representation factors, Casimir Hamiltonian and general invariant potentials. Introduction checked for the pure gravitational gauge model and probe worldline scope.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2003.02860v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\2003.02860v3.html",
+      "sha256": "fac56dd80e34360eb4e3fb58885d601c7a331fc6d02ecdee3e0c6ae98a963fd0",
+      "reading_scope": "Section 3.1 boundary partition/action discussion, sections 3.2-3.4 thermal coefficients and angular ensemble, and section 5.1 charged-matter limitation reviewed; not a full paper proof-chain review. No Kerr-Newman inertia is imported into the fixed magnetic boundary-field ensemble.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "query_log": [
+    "near extremal black holes rotation SU(2) particle group partition function Schwarzian charge representation degeneracy heat kernel",
+    "Jackiw Teitelboim gravity compact gauge group matter representation heat kernel boundary particle group partition function"
+  ],
+  "novelty": "No novelty acceptance. CAR channels and thermal-affinity inequalities are established algebraic methods. The exact compact charge sum rule and its physical extension terms are derived locally; source review is scoped, not exhaustive.",
+  "files": [
+    {
+      "path": "notes/quantum-junction-state.md",
+      "sha256": "bdb90d7bd8e6af015c982a9711723fdfef6354ca2ad9aaebf4e44a8a05ce44fb"
+    },
+    {
+      "path": "notes/angular-transfer-matching.md",
+      "sha256": "7ed21299cc76b405de3676aab7b806be013dc3aaf57a28ec2ecf77b66c54a30d"
+    },
+    {
+      "path": "notes/angular-boundary-response.md",
+      "sha256": "a8c4febfbfacb91453cdf92af20fd9c42cef902ac683c108cc3503fae96f17f6"
+    },
+    {
+      "path": "notes/boundary-vertex-matching.md",
+      "sha256": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+    },
+    {
+      "path": "notes/phase-influence-action.md",
+      "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+    },
+    {
+      "path": "notes/fermionic-compact-transfer.md",
+      "sha256": "0cc02f21e6e6392a134259aee9ed79feee90825741c9bf493ec26e3bc42026e4"
+    },
+    {
+      "path": "checks/fermionic_compact_transfer.py",
+      "sha256": "80469f4e795f7149ce97594366d77f88555df470ffd09bda4fce7e4cc0d27d14"
+    },
+    {
+      "path": "evidence/fermionic-compact-transfer.json",
+      "sha256": "c34833f9f7173604effc8971aa73701916b5fdba1fe77e213b8e91579b1bb5ea"
+    }
+  ],
+  "development_failures": [
+    {
+      "snapshot": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\development-initial.py",
+      "sha256": "c360dec442978f25500c0f777d5e54452e04d6c0a20d22b67df2290de47ffe7b",
+      "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\development-initial.log",
+      "log_sha256": "1ebf705ecc63ca6e271ba4099ec726cdd6fcfc71cb29e31f19c9d0fbaca5c62a",
+      "exit_code": 1,
+      "diagnostic_repeat": true,
+      "reason": "The global-interval solve at rtol=2e-10 failed the 3e-9 work-balance threshold; a diagnostic repeat measured 5.692832427683925e-9 in the first q=2 case."
+    },
+    {
+      "snapshot": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\development-tighter.py",
+      "sha256": "66d96c094fd41a3eae14b398b9eecd866de8daae8e94c4a88755f15d5d4fd8c5",
+      "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\development-tighter.log",
+      "log_sha256": "f427dda7326e3e34735c4c7bc77998156216243144ea5e25e623e4b282006a82",
+      "exit_code": 1,
+      "reason": "Tightening rtol to 2e-12 still gave work residual 1.2428778894957304e-8 in the q=3 case."
+    }
+  ],
+  "resolution": "Integrate separately across [0,1/4], [1/4,pi], [pi,pi+1/4]. No Hamiltonian, waveform or work-error acceptance threshold was changed.",
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\verification.log",
+    "raw_log_sha256": "bc27dab68ba01143593ef56614fdd152c79beca678c1caea2d9689302f3a5109",
+    "thermal_cases": 4,
+    "driven_cases": 3,
+    "maximum_operator_error": 6.661338147750939e-16,
+    "maximum_work_error": 1.588063014423824e-12,
+    "maximum_global_constraint_error": 5.6875754377530476e-30,
+    "refinement_difference": 8.881784197001252e-16,
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "Exact Majorana-channel identity E(K)-K=lambda-4K/D for quadratic charge/spin Hamiltonians on canonical fermions.",
+    "Dimension-uniform initial affinity and free-evolution bounds with actual Fock branching, not independent rotor multiplicities.",
+    "Exact mixed-charge and residual-Hamiltonian terms that prevent automatic physical extension.",
+    "Finite two-sided driven CAR diagnostics retain total electric charge and spin and satisfy independent work balance."
+  ],
+  "limitations": [
+    "No identification of the physical radial or black-hole Hamiltonian with K",
+    "Uniform canonical-mode channel is not an unsmeared boundary transfer operator",
+    "Driven finite charge model has no continuum stress or JT geometry",
+    "Physical mixed charges and residual Hamiltonian terms remain unbounded"
+  ],
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_turn": "progress",
+    "current_turn": "progress",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "remaining_todo": [
+    "Match the physical boundary insertion and bound mixed-charge/radial commutator terms.",
+    "Control the driven continuum state, complete stress and evolving geometry below capture and area margins.",
+    "Establish preparation, quantum fluctuations, sufficient general stability and finite-energy transport."
+  ]
+}
