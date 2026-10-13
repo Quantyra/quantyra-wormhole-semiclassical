@@ -1,5 +1,14 @@
 # Compact charge and rotation modes in the formation transfer
 
+Subsequent 2026-10-13 correction to the physical transfer:
+[fixed magnetic boundary-field response](angular-boundary-response.md).
+The Kerr-Newman inertia used below is a family coefficient that changes
+the boundary electric field. It is not the fixed-source susceptibility.
+The conditional rotor calculations below are preserved, but their
+single-species failure and many-species selection do not apply to the
+newly specified fixed-field ensemble. Its coupled static bound permits
+a single-species candidate; frequency-dependent matching remains open.
+
 S072, 2026-10-13. **The free JT initial covariance cannot be transferred
 by simply freezing the electromagnetic and angular phases of a magnetic
 black hole.** A compact-mode calculation gives an exponentially small
