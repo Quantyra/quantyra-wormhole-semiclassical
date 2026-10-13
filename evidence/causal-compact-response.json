@@ -1,0 +1,608 @@
+{
+  "date": "2026-10-13",
+  "scope": "retarded Gaussian charge and axial boundary-transfer response on fixed RN-AdS backgrounds",
+  "checker_sha256": "809954b41dbdca017fca3de60fd8614530330e090864a6fb54fbf20d7e12119b",
+  "dependency_sha256": "5d21487f2973a49c98b2cce5dfbdb4888c62d412c6ab73fe3076b7ea7ffc480f",
+  "symbolic": {
+    "heavy_mass_squared": "2*(2*pi*G*q**2 + g**2*r**2)/(g**2*r**4)",
+    "light_diagonal_mass_squared": "n*q*(q - 1)*(2*pi*G + g**2*r**2)/(4*pi**2*r**4*(q + 1))",
+    "mass_determinant": "G*n*q*(q - 1)*(q + 1)/(pi*r**6)",
+    "boundary_source_projection": [
+      0,
+      1
+    ],
+    "mixing_upper_squared": "g**2*n*q*(q - 1)/(8*pi**2*(q + 1))"
+  },
+  "cubic_memory_envelope": {
+    "cases": 35,
+    "max_independent_quadrature_error": 3.1086244689504383e-15
+  },
+  "passive_finite_regulators": [
+    {
+      "X": 0.5,
+      "q": 3,
+      "G_over_R2": 0.01,
+      "tau_4pi_RT": 0.1,
+      "kind": "electric",
+      "cells": 100,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 107.39599351887497,
+      "epsilon_squared": 0.0,
+      "static_mixing_ratio": 0.0,
+      "spectral_identity_relative_error": 1.2242433215345354e-12,
+      "minimum_squared_frequency": 9.066984852433175e-05,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999305226534103,
+          "lower": 0.9900990099009901,
+          "spectral_error": 8.704148513061227e-13
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9931112400094588,
+          "lower": 0.9090909090909091,
+          "spectral_error": 1.4804824033376462e-12
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.6262949485376199,
+          "lower": 0.5,
+          "spectral_error": 4.912736883966318e-13
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.0926808832014412,
+          "lower": 0.09090909090909091,
+          "spectral_error": 3.7317371415213074e-14
+        }
+      ],
+      "cubic_max_sampled_error": 0.0008171013383610425,
+      "cubic_analytic_bound": 0.09797958971132711
+    },
+    {
+      "X": 0.5,
+      "q": 3,
+      "G_over_R2": 0.01,
+      "tau_4pi_RT": 0.1,
+      "kind": "electric",
+      "cells": 180,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 107.39639610942645,
+      "epsilon_squared": 0.0,
+      "static_mixing_ratio": 0.0,
+      "spectral_identity_relative_error": 4.9020757720888266e-11,
+      "minimum_squared_frequency": 9.065180571841161e-05,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999305234406488,
+          "lower": 0.9900990099009901,
+          "spectral_error": 5.024947125065182e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9931113284373869,
+          "lower": 0.9090909090909091,
+          "spectral_error": 4.9989679062889536e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.6263282413727235,
+          "lower": 0.5,
+          "spectral_error": 1.7550072506367087e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09271784238394812,
+          "lower": 0.09090909090909091,
+          "spectral_error": 2.5962565430859286e-13
+        }
+      ],
+      "cubic_max_sampled_error": 0.0008178932965399419,
+      "cubic_analytic_bound": 0.09797958971132713
+    },
+    {
+      "X": 0.5,
+      "q": 3,
+      "G_over_R2": 0.01,
+      "tau_4pi_RT": 0.1,
+      "kind": "angular",
+      "cells": 100,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 148.87853359457534,
+      "epsilon_squared": 0.0022381163872297787,
+      "static_mixing_ratio": -0.02405753230782591,
+      "spectral_identity_relative_error": 3.546563338352981e-11,
+      "minimum_squared_frequency": 4.836198915560369e-05,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.99996636606632,
+          "lower": 0.9900990099009901,
+          "spectral_error": 3.8144043479348966e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9966490648912442,
+          "lower": 0.9090909090909091,
+          "spectral_error": 3.706557283322809e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.7554236591770356,
+          "lower": 0.5,
+          "spectral_error": 2.020217326759166e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09253274039523116,
+          "lower": 0.09090909090909091,
+          "spectral_error": 2.5435209494162336e-13
+        }
+      ],
+      "cubic_max_sampled_error": 0.0003968266572649906,
+      "cubic_analytic_bound": 0.09797958971132711
+    },
+    {
+      "X": 0.5,
+      "q": 3,
+      "G_over_R2": 0.01,
+      "tau_4pi_RT": 0.1,
+      "kind": "angular",
+      "cells": 180,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 148.89916663989865,
+      "epsilon_squared": 0.0022381163872297787,
+      "static_mixing_ratio": -0.024034706287640498,
+      "spectral_identity_relative_error": 3.078666721759936e-11,
+      "minimum_squared_frequency": 4.835122939363385e-05,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999663709326064,
+          "lower": 0.9900990099009901,
+          "spectral_error": 2.518862896039309e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9966495492963986,
+          "lower": 0.9090909090909091,
+          "spectral_error": 3.634370582261681e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.7554551257303737,
+          "lower": 0.5,
+          "spectral_error": 1.846767183621978e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09257331189196699,
+          "lower": 0.09090909090909091,
+          "spectral_error": 1.526279103103434e-13
+        }
+      ],
+      "cubic_max_sampled_error": 0.00039674834418374405,
+      "cubic_analytic_bound": 0.09797958971132711
+    },
+    {
+      "X": 3,
+      "q": 7,
+      "G_over_R2": 0.005,
+      "tau_4pi_RT": 0.2,
+      "kind": "electric",
+      "cells": 100,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 160.31353297232812,
+      "epsilon_squared": 0.0,
+      "static_mixing_ratio": 0.0,
+      "spectral_identity_relative_error": 2.861645475290126e-11,
+      "minimum_squared_frequency": 0.0003402634025126481,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999514613235018,
+          "lower": 0.9900990099009901,
+          "spectral_error": 2.9709457116666727e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9951731471976021,
+          "lower": 0.9090909090909091,
+          "spectral_error": 2.6105562156431006e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.6896567253525356,
+          "lower": 0.5,
+          "spectral_error": 1.4333312314818158e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09155134661731211,
+          "lower": 0.09090909090909091,
+          "spectral_error": 2.1303792063775973e-13
+        }
+      ],
+      "cubic_max_sampled_error": 0.0005361517696644811,
+      "cubic_analytic_bound": 0.09797958971132711
+    },
+    {
+      "X": 3,
+      "q": 7,
+      "G_over_R2": 0.005,
+      "tau_4pi_RT": 0.2,
+      "kind": "electric",
+      "cells": 180,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 160.31364552723585,
+      "epsilon_squared": 0.0,
+      "static_mixing_ratio": 0.0,
+      "spectral_identity_relative_error": 1.3660229147181431e-11,
+      "minimum_squared_frequency": 0.00034021003970431386,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999514615586254,
+          "lower": 0.9900990099009901,
+          "spectral_error": 1.05467856670316e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9951731741456534,
+          "lower": 0.9090909090909091,
+          "spectral_error": 1.2259304682515904e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.6896743650139223,
+          "lower": 0.5,
+          "spectral_error": 7.7152728650276e-12
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.0916014745542129,
+          "lower": 0.09090909090909091,
+          "spectral_error": 1.4058199049316045e-13
+        }
+      ],
+      "cubic_max_sampled_error": 0.0005367932785657976,
+      "cubic_analytic_bound": 0.0979795897113271
+    },
+    {
+      "X": 3,
+      "q": 7,
+      "G_over_R2": 0.005,
+      "tau_4pi_RT": 0.2,
+      "kind": "angular",
+      "cells": 100,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 795.7657662567468,
+      "epsilon_squared": 0.005222271570202816,
+      "static_mixing_ratio": -0.009972439654888617,
+      "spectral_identity_relative_error": 7.446479628927444e-11,
+      "minimum_squared_frequency": 0.000282060230756081,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999612544200749,
+          "lower": 0.9900990099009901,
+          "spectral_error": 7.322709105750391e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9961422019607218,
+          "lower": 0.9090909090909091,
+          "spectral_error": 7.331135698507296e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.730610677922329,
+          "lower": 0.5,
+          "spectral_error": 3.5859759606182706e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09199461681428764,
+          "lower": 0.09090909090909091,
+          "spectral_error": 6.931538676369087e-13
+        }
+      ],
+      "cubic_max_sampled_error": 0.00046447781400639124,
+      "cubic_analytic_bound": 0.0979795897113271
+    },
+    {
+      "X": 3,
+      "q": 7,
+      "G_over_R2": 0.005,
+      "tau_4pi_RT": 0.2,
+      "kind": "angular",
+      "cells": 180,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 795.825482435556,
+      "epsilon_squared": 0.005222271570202816,
+      "static_mixing_ratio": -0.009968862048611443,
+      "spectral_identity_relative_error": 1.0925043844823206e-11,
+      "minimum_squared_frequency": 0.00028200557765279343,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.999961257466806,
+          "lower": 0.9900990099009901,
+          "spectral_error": 2.1401547201094218e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9961425071260237,
+          "lower": 0.9090909090909091,
+          "spectral_error": 1.9007573293094993e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.7306349981174722,
+          "lower": 0.5,
+          "spectral_error": 1.3502976514701004e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09204408791228505,
+          "lower": 0.09090909090909091,
+          "spectral_error": 2.706168622523819e-15
+        }
+      ],
+      "cubic_max_sampled_error": 0.00046453442336622306,
+      "cubic_analytic_bound": 0.09797958971132711
+    },
+    {
+      "X": 12,
+      "q": 11,
+      "G_over_R2": 0.002,
+      "tau_4pi_RT": 0.1,
+      "kind": "electric",
+      "cells": 100,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 610.049363945483,
+      "epsilon_squared": 0.0,
+      "static_mixing_ratio": 0.0,
+      "spectral_identity_relative_error": 2.106651632301488e-11,
+      "minimum_squared_frequency": 0.00010606843584127411,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999716685706732,
+          "lower": 0.9900990099009901,
+          "spectral_error": 2.814071198287138e-11
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9971755272598384,
+          "lower": 0.9090909090909091,
+          "spectral_error": 3.4927172265497575e-11
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.783716324584638,
+          "lower": 0.5,
+          "spectral_error": 2.351430161695589e-11
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.0915051583658559,
+          "lower": 0.09090909090909091,
+          "spectral_error": 3.7761460625063137e-14
+        }
+      ],
+      "cubic_max_sampled_error": 0.00023913432773310485,
+      "cubic_analytic_bound": 0.09797958971132713
+    },
+    {
+      "X": 12,
+      "q": 11,
+      "G_over_R2": 0.002,
+      "tau_4pi_RT": 0.1,
+      "kind": "electric",
+      "cells": 180,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 610.0494078065728,
+      "epsilon_squared": 0.0,
+      "static_mixing_ratio": 0.0,
+      "spectral_identity_relative_error": 1.1606094698522659e-09,
+      "minimum_squared_frequency": 0.00010605673863902043,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999716687081769,
+          "lower": 0.9900990099009901,
+          "spectral_error": 1.2776888436150102e-09
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9971755309535477,
+          "lower": 0.9090909090909091,
+          "spectral_error": 1.2014247374736442e-09
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.7837219617844573,
+          "lower": 0.5,
+          "spectral_error": 7.544294078343228e-10
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09155971633898438,
+          "lower": 0.09090909090909091,
+          "spectral_error": 9.789141719451777e-12
+        }
+      ],
+      "cubic_max_sampled_error": 0.00023864825572144618,
+      "cubic_analytic_bound": 0.09797958971132711
+    },
+    {
+      "X": 12,
+      "q": 11,
+      "G_over_R2": 0.002,
+      "tau_4pi_RT": 0.1,
+      "kind": "angular",
+      "cells": 100,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 6508.559774823844,
+      "epsilon_squared": 0.002391996716975075,
+      "static_mixing_ratio": 0.0003680021255237018,
+      "spectral_identity_relative_error": 4.1692651269392345e-10,
+      "minimum_squared_frequency": 9.99735519898864e-05,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999735707432975,
+          "lower": 0.9900990099009901,
+          "spectral_error": 3.8969416582546046e-10
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9973645834722883,
+          "lower": 0.9090909090909091,
+          "spectral_error": 4.1959213881170854e-10
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.7947354108737931,
+          "lower": 0.5,
+          "spectral_error": 2.4636614970319215e-10
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09195928084964254,
+          "lower": 0.09090909090909091,
+          "spectral_error": 3.7157221743910895e-12
+        }
+      ],
+      "cubic_max_sampled_error": 0.00014812100011043887,
+      "cubic_analytic_bound": 0.0979795897113271
+    },
+    {
+      "X": 12,
+      "q": 11,
+      "G_over_R2": 0.002,
+      "tau_4pi_RT": 0.1,
+      "kind": "angular",
+      "cells": 180,
+      "horizon_cut_1_minus_u": 1e-05,
+      "static_coefficient": 6508.723772868334,
+      "epsilon_squared": 0.002391996716975075,
+      "static_mixing_ratio": 0.0003682167355431147,
+      "spectral_identity_relative_error": 1.253026117785402e-09,
+      "minimum_squared_frequency": 9.996088018409465e-05,
+      "Laplace_comparisons": [
+        {
+          "s_times_a": 0.01,
+          "response_ratio": 0.9999735714595337,
+          "lower": 0.9900990099009901,
+          "spectral_error": 1.2531190529685432e-09
+        },
+        {
+          "s_times_a": 0.1,
+          "response_ratio": 0.9973646526605314,
+          "lower": 0.9090909090909091,
+          "spectral_error": 1.32722632883997e-09
+        },
+        {
+          "s_times_a": 1,
+          "response_ratio": 0.7947441046646012,
+          "lower": 0.5,
+          "spectral_error": 8.09395772627397e-10
+        },
+        {
+          "s_times_a": 10,
+          "response_ratio": 0.09201297005924869,
+          "lower": 0.09090909090909091,
+          "spectral_error": 1.505648383748337e-11
+        }
+      ],
+      "cubic_max_sampled_error": 0.00014705597941830866,
+      "cubic_analytic_bound": 0.09797958971132711
+    }
+  ],
+  "static_grid_refinement_relative": [
+    3.74864116536866e-06,
+    0.00013857058967436942,
+    7.020918734168546e-07,
+    7.503677643794227e-05,
+    7.189760242720666e-08,
+    2.5196651480818844e-05
+  ],
+  "single_species_candidates": [
+    {
+      "k": 2000,
+      "q": 16000000000000,
+      "delta": 0.25,
+      "epsilon_angular_squared": 7.91571747205665e-16,
+      "electric_screening_upper": 8.416174400253159e-26,
+      "a_over_drive_duration_angular_upper": 2.368705056596694e-07,
+      "a_over_drive_duration_electric_upper": 2.368705056309669e-07,
+      "cubic_uniform_relative_error_angular_upper": 2.3208474959248993e-06,
+      "cubic_uniform_relative_error_electric_upper": 2.3208474956436734e-06
+    },
+    {
+      "k": 2000,
+      "q": 16000000000000,
+      "delta": 0.5,
+      "epsilon_angular_squared": 7.91571747205665e-16,
+      "electric_screening_upper": 8.416174400253159e-26,
+      "a_over_drive_duration_angular_upper": 1.184352528298347e-07,
+      "a_over_drive_duration_electric_upper": 1.1843525281548345e-07,
+      "cubic_uniform_relative_error_angular_upper": 1.1604237479624497e-06,
+      "cubic_uniform_relative_error_electric_upper": 1.1604237478218367e-06
+    },
+    {
+      "k": 4000,
+      "q": 256000000000000,
+      "delta": 0.25,
+      "epsilon_angular_squared": 4.9473234200359855e-17,
+      "electric_screening_upper": 6.5751362501217795e-28,
+      "a_over_drive_duration_angular_upper": 2.960881320379189e-08,
+      "a_over_drive_duration_electric_upper": 2.9608813203343422e-08,
+      "cubic_uniform_relative_error_angular_upper": 2.901059369546854e-07,
+      "cubic_uniform_relative_error_electric_upper": 2.9010593695029137e-07
+    },
+    {
+      "k": 4000,
+      "q": 256000000000000,
+      "delta": 0.5,
+      "epsilon_angular_squared": 4.9473234200359855e-17,
+      "electric_screening_upper": 6.5751362501217795e-28,
+      "a_over_drive_duration_angular_upper": 1.4804406601895945e-08,
+      "a_over_drive_duration_electric_upper": 1.4804406601671711e-08,
+      "cubic_uniform_relative_error_angular_upper": 1.450529684773427e-07,
+      "cubic_uniform_relative_error_electric_upper": 1.4505296847514568e-07
+    },
+    {
+      "k": 8000,
+      "q": 4096000000000000,
+      "delta": 0.25,
+      "epsilon_angular_squared": 3.0920771375225133e-18,
+      "electric_screening_upper": 5.1368251954002175e-30,
+      "a_over_drive_duration_angular_upper": 3.7011016504166936e-09,
+      "a_over_drive_duration_electric_upper": 3.701101650409686e-09,
+      "cubic_uniform_relative_error_angular_upper": 3.6263242118774324e-08,
+      "cubic_uniform_relative_error_electric_upper": 3.626324211870567e-08
+    },
+    {
+      "k": 8000,
+      "q": 4096000000000000,
+      "delta": 0.5,
+      "epsilon_angular_squared": 3.0920771375225133e-18,
+      "electric_screening_upper": 5.1368251954002175e-30,
+      "a_over_drive_duration_angular_upper": 1.8505508252083468e-09,
+      "a_over_drive_duration_electric_upper": 1.850550825204843e-09,
+      "cubic_uniform_relative_error_angular_upper": 1.8131621059387162e-08,
+      "cubic_uniform_relative_error_electric_upper": 1.8131621059352834e-08
+    }
+  ],
+  "limitations": [
+    "Finite regulators have reflecting horizon cuts; the half-line theorem is proved separately",
+    "The prescribed phase/chemical drive is not the actual nonlinear fermion-transfer switch",
+    "Quantum transfer covariance, noise, moving geometry and other sectors remain unmatched"
+  ],
+  "passed": true
+}

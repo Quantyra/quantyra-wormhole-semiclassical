@@ -1,5 +1,9 @@
 # Rotation with the AdS magnetic boundary field fixed
 
+Continuation: [causal boundary-transfer response](causal-compact-response.md)
+now bounds a smooth mean-response test in the projected Gaussian sector.
+The actual quantum junction and its switching stress remain unmatched.
+
 S072, 2026-10-13. **The Kerr-Newman moment of inertia used in the previous
 compact-mode comparison is not the fixed-boundary-field susceptibility.**
 Magnetic Kerr-Newman-AdS changes the electric field on a nonrotating AdS
