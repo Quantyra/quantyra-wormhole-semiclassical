@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_projected_nonabelian_constraints_and_quadrupole_source",
+  "previous_satellite_commit": "bf850a40b2dc9c67cf50739a7f7b63c85abd3590",
+  "previous_planning_commit": "ba4acbd5bcb73a9bf16c93cab1d9781058a05dc9",
+  "sources": [
+    {
+      "url": "https://doi.org/10.1007/JHEP05(2023)156",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\nonabelian-dipole-2026-10-13\\sphere-bundles-JHEP2023.pdf",
+      "sha256": "c61172225a2a6c156599a976f110cab4e9b7ad47f9d51e1c79773c2386a2604d",
+      "reading_scope": "Sections 2 and 2.1, equations (2.1)-(2.21): definition and closure of the global angular form; extra fields and special couplings required for the listed consistent reductions. No transfer of supergravity truncation consistency to four-dimensional Einstein-Maxwell-Dirac.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\wormhole-literature-review\\2026-10-10\\1807.04726-v3-body.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "reading_scope": "Appendices A and C: massless Dirac bosonization distinction, angular spin-j representation, monopole zero modes and spherical spinor rescaling. All-axis constrained Hamiltonian and quadrupole source derived in this milestone.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/nonabelian-dipole-constraints.md",
+      "sha256": "1b14cd03ea1bf97c08a296b6dc1eefb84169e0cfd1eecf021cc5a6adb35a1b28"
+    },
+    {
+      "path": "checks/nonabelian_dipole_constraints.py",
+      "sha256": "a87eb755cc1ada1ff6fd59a106a50df2eeef8d0abb426c6f7c39f2e0c0c0005d"
+    },
+    {
+      "path": "evidence/nonabelian-dipole-constraints.json",
+      "sha256": "4252c851d3efec7cd405be4c007d005af0d3e9d9e4a5eabd7a4c6c964e6a6b01"
+    },
+    {
+      "path": "notes/radial-axial-correlator.md",
+      "sha256": "f2769e303e0a05ef3f894c51242f76442a03d7c5ea089b2d4079487819f46cf7"
+    },
+    {
+      "path": "notes/causal-compact-response.md",
+      "sha256": "ab573951b0bf7e7376d3ace5631babeeece76b6ba6b21e5c282b708da24e4b82"
+    },
+    {
+      "path": "notes/angular-boundary-response.md",
+      "sha256": "a8c4febfbfacb91453cdf92af20fd9c42cef902ac683c108cc3503fae96f17f6"
+    },
+    {
+      "path": "notes/angular-transfer-matching.md",
+      "sha256": "7ed21299cc76b405de3676aab7b806be013dc3aaf57a28ec2ecf77b66c54a30d"
+    },
+    {
+      "path": "notes/schwarzian-initial-state.md",
+      "sha256": "d65e243814b033dc07544e4c5b1da7bcc53fef9bbdd1498285efd1ef18b05978"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\nonabelian-dipole-2026-10-13\\verification.log",
+    "raw_log_sha256": "77c501fdd6f3f9039482d17dc5e81ad1bcc957e9c7c42126f6e387a92e2fa0f9",
+    "initial_checker_snapshot": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\nonabelian-dipole-2026-10-13\\checker-initial.py",
+    "initial_checker_sha256": "a87eb755cc1ada1ff6fd59a106a50df2eeef8d0abb426c6f7c39f2e0c0c0005d",
+    "counts": {
+      "noncommuting_coordinate_action_and_gauge_cases": 16,
+      "exact_moment_map_brackets": 3,
+      "exact_canonical_variations": 12,
+      "LLL_projection_cases": 5,
+      "Cartan_symbolic_identities": 2,
+      "quadrupole_integrals": 5
+    },
+    "maximum_action_relative_error": 2.886579864025407e-15,
+    "maximum_covariance_relative_error": 1.8038666879435825e-15,
+    "maximum_Legendre_relative_error": 1.4088089950713583e-15,
+    "maximum_LLL_projection_error": 1.6320278464368813e-14,
+    "development_failures": [],
+    "first_run_passed": true,
+    "numerical_scope": "Independent coordinate Maxwell tensor/inverse fibred metric integration; finite gauge rotations with derivative jets; local Legendre transform including boundary divergence; symbolic classical moment map; monopole-wavefunction integrals. No full four-dimensional Einstein evolution or renormalized quantum calculation.",
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "Exact substitution of the round fibred metric and covariant Maxwell dipole ansatz into the classical bosonic action; direct LLL coupling A+2H/(q+1).",
+    "Constrained projected Hamiltonian with angular Gauss source rho+H_x cross E_H, auxiliary H_t elimination and boundary flux terms.",
+    "Nonzero l=2 electric-stress source in omitted Einstein equations, with RMS/monopole ratio 2/sqrt(5) for the exhibited classical data.",
+    "Positive classical boson squares and weighted local dipole angular-momentum bound, without quantum positivity or horizon-uniform inference."
+  ],
+  "limitations": [
+    "Round-sphere/dipole projection is not a consistent nonlinear four-dimensional truncation.",
+    "No interacting quantum correlator, regulator construction or driven stress bound.",
+    "Quadrupole ratio is relative to the dipole electric stress, not the capture/area margin.",
+    "Higher harmonics, massive transitions and physical horizon/operator/state matching remain.",
+    "No preparation, sufficient full stability, finite-energy transport or creation result."
+  ],
+  "rejected_inference": {
+    "statement": "Promoting the one-axis angular fields to three Gaussian copies or two independent non-Abelian connections supplies the full angular theory.",
+    "reason": "The electromagnetic dipole carries rotation charge; its Maxwell curvature has no H_t cross H_x term; omitted Einstein equations have a sourced quadrupole.",
+    "replacement": "Use one rotation connection and adjoint dipole with the derived Gauss law, and retain or quantitatively bound the induced higher-harmonic response."
+  },
+  "novelty": "Geometric angular forms, dimensional reduction and canonical constraint methods are established. Their application here fixes the full projected angular constraint and the next physical error calculation; no exhaustive novelty acceptance.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_goal_turn": "no progress: drafted a goal paragraph without new research evidence",
+    "current_goal_turn": "progress: derived and verified all-axis projected constraints and an explicit omitted quadrupole source, fixing the next physical comparison",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "next_action": "Derive the sourced l=2 coupled retarded Einstein-Maxwell response and a renormalized bound in the state satisfying the full angular Gauss law; keep the physical horizon/dressed boundary insertion and dilaton dependence. Then compare all corrections with the returned-switch capture and area margins.",
+  "remaining": [
+    "non-Abelian constrained quantum state and higher-harmonic response",
+    "massive transitions and physical state/operator/horizon matching",
+    "driven stress and evolving geometry",
+    "preparation and quantum fluctuations",
+    "sufficient stability and finite-energy transport"
+  ]
+}
