@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-13",
+  "purpose": "S072 higher-Landau boundary matching and a conditional finite-frequency exterior bound",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/0907.2694v2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/higher-landau-boundary-2026-10-13/0907.2694v2.html",
+      "sha256": "aad7463af2e0c3ababf2f5722a00f379c9df9c8e2a8d016236e43bca763912e1",
+      "reading_scope": "Sections III.1.2, III.1.3, III.2, IV, appendices A.2, A.4, D.2 and D.4 read in full. Import the linear inner/outer matching structure, the role of a nonzero zero-frequency source coefficient, and the neutral-electric AdS2 spinor Green function. Derive normalization independently with Hankel functions. No charged planar spectrum, Fermi-surface claim, or uniform simultaneous large-mass/frequency error bound is imported.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2308.00871v2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/static-formation-2026-10-12/2308.00871v2.html",
+      "sha256": "e6e117afc1c991666f51f889849f6987cacda39b825953453bf2e827a1ba1ed2",
+      "reading_scope": "Sections 2.1.1, 2.1.2 and appendix A reread in full: separated Dirac equation, radial gamma projector, and complementary left/right boundary conditions. Their LLL truncation is not used to dismiss higher modes. No equality between their physical h and the reference collective coupling is assumed.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2603.15730v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/wormhole-literature-review/2026-10-10/2603.15730v1-body.html",
+      "sha256": "6aa0aecd73c0a187b56f406f8b9fe155145d81825e5415946abba7e2a58b557c",
+      "reading_scope": "Equations 2.26-2.31 reread for the sphere eigenvalues and their total multiplicities, q=2g in the source. No supersymmetric determinant or response result is imported.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "inherited_evidence": {
+    "satellite_commit": "d7a87b269e7caf6817a495a91bb991478a9c40b2",
+    "files": [
+      {
+        "path": "notes/collective-electric-response.md",
+        "sha256": "c7ba56eca243c8e6d3487b2ea1db34f4b7eb9724d58d6bfe61b79d9f100346ad"
+      },
+      {
+        "path": "checks/collective_electric_response.py",
+        "sha256": "48c6b7f14f799e4e1bdd24cbc814305f9a388f195711a7c3f142d9d017c10a74"
+      },
+      {
+        "path": "evidence/collective-electric-response.json",
+        "sha256": "8b812e0ed01a8fdafad294128014a3212c08293ca50776dcb0236690231845dd"
+      },
+      {
+        "path": "notes/angular-boundary-response.md",
+        "sha256": "a8c4febfbfacb91453cdf92af20fd9c42cef902ac683c108cc3503fae96f17f6"
+      }
+    ],
+    "reuse": "Keep the collective frequencies, frozen clock calibration and existing k-family; do not infer excitation weights from the preceding mass comparison."
+  },
+  "development_notes": [
+    "All checker assertions passed on the first retained run. No failed result has been omitted.",
+    "Finite-cut Riccati flux identity independently checked in three real-frequency exterior integrations; the ordinary disk-invariance proof supplies the bound.",
+    "The thermal gamma expression is checked against an independent zero-temperature Hankel normalization and a positive finite-temperature identity.",
+    "Prior exterior-dirac-window and mouth-mode-matching notes concern the earlier flat dipole geometry; their boundary realization is not transferred to this spherical AdS exterior.",
+    "Candidate numerical estimates are explicitly distinguished from conditional exterior bounds. The inner disk condition, finite-temperature outer perturbation and simultaneous k-limit remainder are not established.",
+    "Boundary spectral suppression does not control bulk massive-mode gauge polarization or complete switching stress."
+  ],
+  "claims_boundary": [
+    "Free massless Dirac field on a frozen purely magnetic extremal RN-AdS4 exterior",
+    "Initial near-extremal AdS2 thermal expression only at leading matched order",
+    "Finite-band tower bound conditional on a uniform inner-cut retarded-load bound",
+    "No physical creation, full stability, all-frequency load, novelty acceptance or Lean certificate"
+  ]
+}
