@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-13",
+  "purpose": "S072 projected collective electric response and the higher-Landau scale comparison",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.15730v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/wormhole-literature-review/2026-10-10/2603.15730v1-body.html",
+      "sha256": "6aa0aecd73c0a187b56f406f8b9fe155145d81825e5415946abba7e2a58b557c",
+      "reading_scope": "Equations 2.26-2.31 and the adjacent degeneracy paragraph reread. The sphere Dirac eigenvalue n(n+q)/b^2, with q=2g in that source, supplies the first higher-Landau mass. No supersymmetric path integral or dynamical higher-mode suppression is imported.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/wormhole-literature-review/2026-10-10/1807.04726-v3-body.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "reading_scope": "Appendix A/A.1 as read in the inherited neutral-current and phase-action work. Establishes the common electric current sector and the need to avoid counting it again. This turn derives its projected second-order response from the already retained exact kernels; no new full-paper audit.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/0801.2293v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/neutral-current-2026-10-13/0801.2293v1.html",
+      "sha256": "d518e248550a6077f35eb97083e43e697a8a9173ff52e26c6882380104d0b1ee",
+      "reading_scope": "Sections I, II.6 and III as read for the inherited neutral-current influence. Source-dependent scattering action comparator only; the uncorrelated channel-reservoir specialization is not assigned to the prepared strip state.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "inherited_evidence": {
+    "satellite_commit": "29e3df9f1f4237ab883df70cc9e5a451169bdb1f",
+    "notes": [
+      "notes/neutral-transfer-current.md",
+      "notes/phase-influence-action.md",
+      "notes/quantum-junction-state.md",
+      "notes/causal-compact-response.md",
+      "notes/angular-boundary-response.md",
+      "notes/angular-transfer-matching.md"
+    ],
+    "checker_sha256": "8f5d0e4a0d44a24d43afc1ba8c28f20d631b6f4cc4ac7ebe7b2981b5762652a6",
+    "reuse": "Exact neutral spectra and complete second-order source formula; initial static-inertia/clock comparison; prior warning that fixed-order smallness does not bound a complete switch."
+  },
+  "development_notes": [
+    "A monotone-coupling total-energy identity was considered but not applied: its ground-state or finite prepared-energy premise is not established for the complete compact/radial state and physical clocks. The retained calculation uses the explicit neutral response instead.",
+    "The first Abel-convergence run failed a chosen 3e-5 finite-epsilon tolerance at t=0.46 (observed 3.612e-5). Direct mode diagnostics showed convergence toward the analytic limit; extending the same regulator sequence to epsilon=1/4096 passed at 1.056e-5. This was a finite-regulator accuracy issue, not a change to the formula.",
+    "The homogeneous covariance is explicitly tested against the canonical uncertainty bound to prevent treating damping without its noise as a complete quantum state."
+  ],
+  "novelty": "Spectral response, Abel distributions, damped linear feedback and energy bookkeeping are established methods. The matched neutral-memory formula and collective/higher-mode comparison are ordinary derivations; no exhaustive novelty acceptance.",
+  "limitations": [
+    "Angular dynamics held fixed; full current/coset branching not completed",
+    "Second-order source kernel resummed in phase feedback; no all-order h or nonlinear-phase error bound",
+    "No physical identification of bare boundary h from the reference-energy calibration",
+    "No ultraviolet stress matching or quantum-noise-driven energy calculation",
+    "First-return global-time comparison only; no proof of physical higher-mode excitation or instability",
+    "No completed 4D geometry, pair preparation, full stability or finite-energy transport"
+  ]
+}
