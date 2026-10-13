@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_global_Casimir_boundary_correlator_and_reservoir_limit",
+  "previous_satellite_commit": "01d39e2c437dab3e41db60aeaa8d3cc5385ab36b",
+  "previous_planning_commit": "7f11c6aac88597e964c7b32b70bbe10279b2e109",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/cond-mat/0209642",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\0209642v1.pdf",
+      "sha256": "c013c3245174d9c1ca254e541212a6df8bbee592fdc0d188eee91f982314c859",
+      "reading_scope": "Section 2, equations (8)-(12): finite fermion trace/determinant identity. The interacting Casimir insertion and reservoir limit are derived in the new note, not asserted by this source.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1909.05253v2",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\fermionic-compact-2026-10-13\\1909.05253v2.html",
+      "sha256": "fefc798c5906fd0d5dbf10a4cc6da68156f5912ba07abf755e63854286dc649a",
+      "reading_scope": "Section 2.2, equations (2.15)-(2.18): the group-particle Hilbert space and dimension-squared heat-kernel partition sum. It does not establish a charged-matter black-hole density operator.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/angular-reservoir-correlator.md",
+      "sha256": "436cc3dc06a9c168b074b34d368ed410c99308543124374d0319f5989c957530"
+    },
+    {
+      "path": "checks/angular_reservoir_correlator.py",
+      "sha256": "633ef8cb0e6b4e1ed7d391137dd9b514e9e498c7640c37f4634eb658932a02ed"
+    },
+    {
+      "path": "evidence/angular-reservoir-correlator.json",
+      "sha256": "044fe81c2b01de5b21f8c023c7e56ee19b845b29374c0c00372bcd39a246805d"
+    },
+    {
+      "path": "checks/fermionic_compact_transfer.py",
+      "sha256": "80469f4e795f7149ce97594366d77f88555df470ffd09bda4fce7e4cc0d27d14"
+    },
+    {
+      "path": "notes/fermionic-compact-transfer.md",
+      "sha256": "0cc02f21e6e6392a134259aee9ed79feee90825741c9bf493ec26e3bc42026e4"
+    },
+    {
+      "path": "notes/quantum-junction-state.md",
+      "sha256": "bdb90d7bd8e6af015c982a9711723fdfef6354ca2ad9aaebf4e44a8a05ce44fb"
+    },
+    {
+      "path": "notes/electric-reservoir-midpoint.md",
+      "sha256": "ea494a68a7f0cc700bcb4791ac656b9305da35c60d0c3893c29f626ae6ba6c03"
+    },
+    {
+      "path": "notes/radial-electric-correlator.md",
+      "sha256": "d51e799feacb3360c546721e4a97e8f21b769326d4d61299eea546646c26a660"
+    },
+    {
+      "path": "notes/angular-transfer-matching.md",
+      "sha256": "7ed21299cc76b405de3676aab7b806be013dc3aaf57a28ec2ecf77b66c54a30d"
+    },
+    {
+      "path": "notes/electric-thermodynamic-matching.md",
+      "sha256": "94cf0ed497d9088a9f743ca02b315e8f29fd666feb89ae460e0d8827ab57816e"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\angular-reservoir-2026-10-13\\verification.log",
+    "raw_log_sha256": "7353f4f2195a3c7c1dd123f04f7f84cfbbab3cca650ed42c7d2b6d4ad4e000cd",
+    "counts": {
+      "finite_Fock_group": 6,
+      "reservoir_comparisons": 9,
+      "quadrature_refinements": 3,
+      "cofactor_cases": 32,
+      "certificate_evaluations": 9
+    },
+    "maximum_Fock_group_error": 2.653433028854124e-14,
+    "maximum_quadrature_refinement_error": 5.551115123125783e-16,
+    "bound_numerics": "Convergent spectral sums evaluated numerically; no interval-arithmetic or large-flux certificate claimed. The finite-volume inequality has an ordinary proof.",
+    "development_failures": [
+      {
+        "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\angular-reservoir-2026-10-13\\development-initial.py",
+        "source_sha256": "f760a6da7adf60b2a787aafbd362f2d5605e3f2bf68db067630e5ba2ccbb661a",
+        "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\angular-reservoir-2026-10-13\\development-initial.log",
+        "log_sha256": "41740c113b4d828eaf5fa7016ddf4cdab71e3875bcb0697fe1f7a2bfeebe9c84",
+        "reason": "The conservative analytic error bound at V=1e8 exceeds the two-percent trial target; maximum about 0.505.",
+        "resolution": "Retain all V=1e8 rows as target misses; add V=1e12 and V=1e16, which meet the unchanged target. No physical Hamiltonian, group integral or analytic inequality changed."
+      }
+    ],
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "Exact finite-Fock Euclidean two-point insertion for H0+xQ^2+aJ^2, with paired conjugate spin multiplets and neutral singlet seed.",
+    "Uniform-in-tagged-energy finite-reservoir comparison with the faithful compact-group factor; the latter emerges without adding a rotor.",
+    "Physical point-field optical-volume limit at fixed q,x,a and 0<t<1 in that model, including the inherited compact midpoint affinity bound."
+  ],
+  "limitations": [
+    "No identification of this global Casimir model with the full radial angular or gravitational state.",
+    "No horizon gluing, angular nonzero-mode bound, massive interaction transfer or dressed 4D operator matching.",
+    "The electric part must not be multiplied by the existing full radial electric correlator without a common constrained derivation.",
+    "Finite-volume error depends on q,x,a,V,t; no unqualified joint large-flux/volume limit.",
+    "No driven stress, evolving geometry, preparation, sufficient stability or finite-energy transport result."
+  ],
+  "novelty": "Finite Fock determinant identities, heat kernels and group representation theory are established. The stated combined insertion and explicit reservoir comparison are derived here; no exhaustive novelty acceptance.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_goal_turn": "no progress: drafted a goal paragraph without changing research state",
+    "previous_research_milestone": "progress: pushed classical thermodynamic and finite-cut radial matching",
+    "current_goal_turn": "progress: derived and independently checked joint charge-spin boundary correlator in a specified fermion model",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "next_action": "Derive the radial angular Gauss Hamiltonian and dressed boundary insertion within one gravity/matter gluing. Bound its nonzero-mode difference from the global comparison; keep the RN Hessian as a bare matching condition. Then construct driven covariance and complete stress with common subtraction.",
+  "remaining": [
+    "physical state, constraints, coupling and clocks",
+    "radial angular and massive interactions",
+    "driven quantum stress and evolving geometry",
+    "preparation and quantum fluctuations",
+    "sufficient general stability and finite-energy transport"
+  ]
+}
