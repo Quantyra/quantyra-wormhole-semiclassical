@@ -1,0 +1,130 @@
+{
+  "status": "checks_passed_candidate_rejected",
+  "date": "2026-10-12",
+  "claim": "Radial overlap exists; positive-pressure fluid support has known warping instability",
+  "stable_wormhole": false,
+  "formation_rate_computed": false,
+  "full_mode_solver_reproduced": false,
+  "novelty_accepted": false,
+  "python": "3.13.7",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "normalized_sha256": {
+    "checks\\static_formation_support.py": "76f434c576345ad09bfa12fb8b5cfd3c52d0db5f5b28095f7570a8cbed1c549f",
+    "notes\\static-formation-support.md": "b3fc54b3302d2f1d769c335ab9621d1ed861c1d3f15160405a630e45171e085f",
+    "evidence\\static-formation-source-review.json": "26109151ab128f2035d27be00b0bca3093d14df9a2b000eca14afda599ad71db"
+  },
+  "symbolic": {
+    "potential_derivatives": [
+      "0",
+      "0",
+      "(12*eta*s**3 + 4*eta*s**2 + 3*s**3 - s**2 - s - 1)/(2*s**2)"
+    ],
+    "eta_critical": "(1 - s)*(3*s**2 + 2*s + 1)/(4*s**2*(3*s + 1))",
+    "equilibrium_sequence_comparison": "exact equality",
+    "printed_1708_04588_eq40_difference": "(s + 1)*(4*eta*s**2 - s**2 - 1)/(2*s**2)"
+  },
+  "interval": {
+    "C_lower_exclusive": 0.41421356237309503,
+    "C_upper_exclusive": 0.4218709463147078,
+    "s_star": 0.3952949624907765,
+    "DEC_s_min_inclusive": 0.2
+  },
+  "example": {
+    "s": "2/5",
+    "C": "21/50",
+    "eta": "99/100",
+    "eta_crit": "171/176",
+    "R2_V_second": "81/1000",
+    "pressure_over_density": "3/8",
+    "endpoint_slopes": [
+      -0.4,
+      0.04999997571875074
+    ],
+    "eikonal_omega2_over_k2": "-3/8"
+  },
+  "independent_potential_checks": [
+    {
+      "eta": 0.99,
+      "expected": 0.081,
+      "rows": [
+        {
+          "h": 0.001,
+          "curvature": 0.08098064161320492,
+          "absolute_error": 1.935838679508093e-05
+        },
+        {
+          "h": 0.0005,
+          "curvature": 0.08099516040787062,
+          "absolute_error": 4.839592129373735e-06
+        },
+        {
+          "h": 0.00025,
+          "curvature": 0.08099879010225325,
+          "absolute_error": 1.2098977467576347e-06
+        }
+      ]
+    },
+    {
+      "eta": 0.9,
+      "expected": -0.315,
+      "rows": [
+        {
+          "h": 0.001,
+          "curvature": -0.31501598266447317,
+          "absolute_error": 1.59826644731863e-05
+        },
+        {
+          "h": 0.0005,
+          "curvature": -0.3150039956616468,
+          "absolute_error": 3.995661646756973e-06
+        },
+        {
+          "h": 0.00025,
+          "curvature": -0.3150009989151322,
+          "absolute_error": 9.989151322191127e-07
+        }
+      ]
+    }
+  ],
+  "conditional_thickness_check": {
+    "assumptions_derived_for_physical_material": false,
+    "illustrative_coefficients": {
+      "beta0": 0.375,
+      "A": 2,
+      "B": 3,
+      "D": 4
+    },
+    "continuum_sufficient_epsilon_threshold": 0.016675784634041752,
+    "discrete_modes": [
+      {
+        "epsilon": 0.01,
+        "ell": 10,
+        "K": 10.488088481701515,
+        "k_h": 0.10488088481701516,
+        "W_squared_upper_bound": -12.43382303659697
+      },
+      {
+        "epsilon": 0.0001,
+        "ell": 100,
+        "K": 100.4987562112089,
+        "k_h": 0.01004987562112089,
+        "W_squared_upper_bound": -3579.4220875775823
+      },
+      {
+        "epsilon": 1e-06,
+        "ell": 1000,
+        "K": 1000.499875062461,
+        "k_h": 0.001000499875062461,
+        "W_squared_upper_bound": -373366.99224587507
+      }
+    ]
+  },
+  "limitations": [
+    "Probe string",
+    "Cusp is not a smooth orbit",
+    "Radial test is not nonspherical stability",
+    "No matched black-hole pair or quantum state",
+    "Thickness implication requires its stated mode and error bounds"
+  ]
+}
