@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-13",
+  "purpose": "S072 ordered Gaussian electric fluctuations, failed derivative-moment gate and finite excitation above dressed endpoint vacua",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/ordered-electric-vacuum-2026-10-13/1807.04726v3.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "reading_scope": "Appendix A and A.1 reread in full. Reuse the electric center-of-mass boson and its gauge-field action, including the distinction from remaining neutral modes. The sphere-radius normalization and constrained canonical electric field are derived locally. No physical switching or angular completion is imported.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2607.19468v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/ordered-electric-vacuum-2026-10-13/2607.19468v1.html",
+      "sha256": "4df5391ff187b605322f8fd6deaa517cef6b12e4f3c02cee814179410ad45e97",
+      "reading_scope": "Section 3.3 read in full, including its bosonized global Hamiltonian, electric displacement and vanishing boundary electric field. Import only that action/boundary comparison. The normal-mode spectrum, derivative-moment failure, ordered spectral work and endpoint-dressing bounds are derived independently in the current note. No static-potential formula, tensor-network result, full-paper validation or novelty acceptance is claimed.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "inherited_evidence": {
+    "satellite_commit": "4c80e238d7bbd94fd89e0ca000b2ec4b3f0d4b63",
+    "files": [
+      {
+        "path": "notes/curved-massive-response.md",
+        "sha256": "fa00c42c4cc646f28252e2b4fea94fa42c494a766d8029835e483e6d46255b44"
+      },
+      {
+        "path": "checks/curved_massive_response.py",
+        "sha256": "ea37d725e660964c78eb7f67b967e1ba3cf16399bf854cbe0e909c43c4cf33b8"
+      },
+      {
+        "path": "notes/phase-influence-action.md",
+        "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+      },
+      {
+        "path": "notes/causal-compact-response.md",
+        "sha256": "ab573951b0bf7e7376d3ace5631babeeece76b6ba6b21e5c282b708da24e4b82"
+      },
+      {
+        "path": "notes/collective-electric-response.md",
+        "sha256": "c7ba56eca243c8e6d3487b2ea1db34f4b7eb9724d58d6bfe61b79d9f100346ad"
+      }
+    ]
+  },
+  "development_notes": [
+    "The first checker invocation stopped before calculations with ModuleNotFoundError for the sibling curved_massive_response module. This embedded Python runtime does not automatically expose that directory. The checker now loads the existing dependency by its absolute __file__-relative path using importlib, and records its SHA-256. No physical formula changed.",
+    "The full checker then passed. Independent quintic-ramp Fourier/norm checks and complete finite joint-energy ramp sums were added; the full checker passed again.",
+    "The new ordinary proof demonstrates that the previous sufficient quantum derivative-moment assumption fails for the normalizable Gaussian electric vacuum: the squared equal-time Maxwell norm is exactly K N, and its second-time-derivative norm grows as K N^5/5. This is not a divergent physical work claim.",
+    "The replacement proof retains the ordered source spectrum. Vacuum pair creation uses E+omega. Its cumulative massive and total energy measures have explicit U^3 bounds, including every source, radial and sphere mode.",
+    "Exact finite joint-energy sums through U=40 are compared with the full positive-measure bounds. Spatial quadrature uses 192 and 384 nodes; analytic tails cover every omitted joint energy for both the pulse and dressed ramp.",
+    "Thermal occupation moments are checked by independent sums over source modes and Bose expansion index. They are not identified with the initial entangled or boundary-driven state.",
+    "Dressed endpoint checks use finite two-level Hamiltonians, their exact initial and final ground states, and direct time evolution. They check the excess energy coefficient, not a bare massive occupation or a complete interacting continuum state.",
+    "The global scalar boundary condition is explicitly the fast-falloff Friedrichs choice. It is not uniquely forced by scalar normalizability in the small-mass window and has not been matched to the RN source.",
+    "Candidate energy values are in fixed global Killing units for explicitly stated diagnostic envelopes. They are not compared to the actual opening margin or claimed as the physical junction error."
+  ],
+  "claims_boundary": [
+    "Fixed global AdS2 x S2, projected Gaussian electric source and initially empty massive sector",
+    "Quadratic reduced cross-sector interaction; massive instantaneous Coulomb interactions, counterterms and full stress remain separate",
+    "Vacuum and stationary diagonal Gaussian-source formulas do not control the nonstationary interacting junction",
+    "The dressed-ramp coefficient has a uniform regulator bound; no continuum interacting vacuum or uniform higher-order remainder is constructed",
+    "No RN/evolving-geometry matching, physical preparation, stable creation or finite-energy transport is established"
+  ]
+}
