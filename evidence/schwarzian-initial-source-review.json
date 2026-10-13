@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_initial_schwarzian_moments_and_separate_preparation_marginals",
+  "previous_satellite_commit": "3ce6754ec75544ded6a11df4ff7614c4d81b4207",
+  "previous_planning_commit": "ba6ac7e1388a60d7add73257d7a34c407a5c4523",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1705.08408v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\1705.08408v3.html",
+      "sha256": "0c8e0ca954506b2dc2470ddfe093c98311b93bb9019ed906d8907a85f0618c00",
+      "reading_scope": "Sections 1/1.1 conventions, section 2.1 Liouville representation, section 4.2 including exact prefactor in (4.10) and TFD continuation; appendix A energy moments. The new one-dimensional midpoint reductions and uniform remainders are derived here.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1804.01081v2",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\1804.01081v2.html",
+      "sha256": "845baca85418aa3ee49d91ff6a522a619776bf5b3e454e46f1423e509875f4a6",
+      "reading_scope": "Section 2.2 canonical length, section 3.1 exact Bessel Hamiltonian/modes, selected section 3.3 Hartle-Hawking normalization and section 4 factorization distinction. Use C=2 phi_b, not an independent thermal pure-JT trace.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2301.07257v2",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\2301.07257v2.html",
+      "sha256": "c37e313277fe6e0992b203cadaf950a598b84c6cdcde372b9c6074399fff8599",
+      "reading_scope": "Section 2.3 read in full; section 3.2 TFD/vacuum paragraph and section 3.3 half-disk state construction. Minimally coupled invariant matter vacuum reduces to pure JT after gravitational constraints. No transfer to radius-dependent charged matter is assumed.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2003.02860v3#S5.SS1",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\charged-opening-2026-10-13\\2003.02860v3.html",
+      "sha256": "fac56dd80e34360eb4e3fb58885d601c7a331fc6d02ecdee3e0c6ae98a963fd0",
+      "reading_scope": "Section 5.1 read: additional charged scalar/fermion contributions remain outside the analyzed near-extremal partition function.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/schwarzian-initial-state.md",
+      "sha256": "d65e243814b033dc07544e4c5b1da7bcc53fef9bbdd1498285efd1ef18b05978"
+    },
+    {
+      "path": "checks/schwarzian_initial_state.py",
+      "sha256": "2f99d8bb2972b3a331508ff07f9548c2c7a12a0b9a487dacb099ce68ba3f3c34"
+    },
+    {
+      "path": "evidence/schwarzian-initial-state.json",
+      "sha256": "c287cdd3fff2e107b96593f50d77c8ed15e5eb02d92f78947db922f2a6be2cef"
+    },
+    {
+      "path": "notes/returned-switch-capture.md",
+      "sha256": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+    },
+    {
+      "path": "notes/switching-radiation-capture.md",
+      "sha256": "cbcdb676fb685b0ce356dfc4be3b3c3694dd25545aef2ebee84fe4fd4ccc1b96"
+    },
+    {
+      "path": "notes/radial-axial-correlator.md",
+      "sha256": "f2769e303e0a05ef3f894c51242f76442a03d7c5ea089b2d4079487819f46cf7"
+    },
+    {
+      "path": "notes/electric-thermodynamic-matching.md",
+      "sha256": "94cf0ed497d9088a9f743ca02b315e8f29fd666feb89ae460e0d8827ab57816e"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\verification.log",
+    "raw_log_sha256": "2423f741da99f90b872cb55b0b844e9546defccacd6a06731df344f688357819",
+    "counts": {
+      "bessel_matrix_elements": 3,
+      "small_a_moment_cases": 6,
+      "direct_Gamma_spectral_integrals": 8,
+      "length_wavefunction_refinement_pairs": 3,
+      "candidate_substitutions": 4
+    },
+    "max_Gamma_spectral_error": 4.296563105299356e-14,
+    "max_length_wavefunction_error": 2.0312640458541864e-12,
+    "bessel_decimal_digits": 40,
+    "moment_candidate_decimal_digits": 70,
+    "claim": "Ordinary analytic proof supported by floating-point checks; not an interval or Lean certificate."
+  },
+  "retained_development": [
+    {
+      "status": "failed",
+      "exit_code": 1,
+      "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\checker-initial.py",
+      "source_sha256": "6fa4342f14c7e93342a87af555eb63f56f255ffd5229c344116e97af08bfc3dd",
+      "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\development-initial.log",
+      "log_sha256": "972f37a0d5cd94d0de13f70b27aeff3b57ee884347ffc29a68421b73009e7869",
+      "reason": "Direct Gamma quadrature at a=0.05, Delta=0.5 had fine error 3.2420336637528635e-8 and refinement 1.588829955290194e-5 with 256/384 nodes, exceeding the unchanged 3e-10 targets. Three 70-digit Bessel checks and all small-a checks passed before this failure."
+    },
+    {
+      "status": "passed",
+      "exit_code": 0,
+      "source": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\checker-refined.py",
+      "source_sha256": "2f99d8bb2972b3a331508ff07f9548c2c7a12a0b9a487dacb099ce68ba3f3c34",
+      "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\schwarzian-state-2026-10-13\\development-refined.log",
+      "log_sha256": "2423f741da99f90b872cb55b0b844e9546defccacd6a06731df344f688357819",
+      "change": "Use 640/960 nodes for the same two-energy integral and accuracy targets. Bessel working precision is 40 digits to reduce runtime, with unchanged 1e-30 matrix target and precision-appropriate 1e-35 differential residual; the stricter initial 70-digit checks remain preserved. No physical formula or analytic bound changed."
+    }
+  ],
+  "preserved_worktree": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "manifest_sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "files": 14,
+    "all_match": true
+  },
+  "goal_audit": {
+    "previous_turn": "no_progress_goal_restatement",
+    "revalidation": "Read current checkpoint/protocol/story and confirmed unchanged authoritative commits/worktrees; resumed available initial-state calculation.",
+    "current_turn": "progress",
+    "full_goal_complete": false,
+    "external_blocker": false,
+    "task_owned_process_live": false
+  },
+  "next_action": "Match the radius-dependent charged matter theory, horizon flux sectors and dressed operator to a common gravitational state; then derive evolution under a physical-boundary-time drive. The minimally coupled vacuum theorem is a benchmark, not automatic RN transfer.",
+  "remaining": [
+    "Noncommuting angular theory and massive interactions",
+    "Full matter/gravity state, operator and boundary matching",
+    "Driven quantum capture, complete stress and evolving geometry",
+    "Initial-pair preparation, sufficient stability and finite-energy transport"
+  ]
+}
