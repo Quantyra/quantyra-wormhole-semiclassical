@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-12",
+  "status": "probe_completion_comparison_verified",
+  "python": "3.13.7",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "code_sha256": "89067129d834c632397d99ee31398920e064aff9f5b1b78fdb3aa3fada342c12",
+  "symbolic": {
+    "flat_normal_L2": "rho*vt**2/2 + rho*vx**2/4 + rho*vy**2/4",
+    "surface_pressure_ratio": "1/2",
+    "sound_speed_squared": "1/2",
+    "RNAdS_static_radius": "2*a*(3*zeta + 1)",
+    "RNAdS_f_at_wall": "(2*zeta + 1)*(6*zeta + 1)**3/(4*(3*zeta + 1))",
+    "RNAdS_radial_growth_squared": "(2*zeta + 1)*(6*zeta + 1)**4/(32*a**2*(3*zeta + 1)**4)",
+    "printed_F8_discrepancy_factor": "2*a*(3*zeta + 1)"
+  },
+  "nonlinear_action_checks": [
+    {
+      "a": 1,
+      "a2_over_L2": 0.0,
+      "ell": 0,
+      "predicted_action_second_derivative": -1.5707963267948966,
+      "relative_errors_h_1e_3_1e_4_1e_5": [
+        7.500003125001094e-07,
+        7.50000003125e-09,
+        7.5000000003125e-11
+      ]
+    },
+    {
+      "a": 1,
+      "a2_over_L2": 0.0,
+      "ell": 2,
+      "predicted_action_second_derivative": -2.199114857512855,
+      "relative_errors_h_1e_3_1e_4_1e_5": [
+        5.357138762043652e-07,
+        5.357142816191844e-09,
+        5.357142856733347e-11
+      ]
+    },
+    {
+      "a": 1,
+      "a2_over_L2": 0.0,
+      "ell": 5,
+      "predicted_action_second_derivative": -4.426789648240163,
+      "relative_errors_h_1e_3_1e_4_1e_5": [
+        2.8491348865676667e-06,
+        2.8491478991956678e-08,
+        2.8491480293226804e-10
+      ]
+    },
+    {
+      "a": 1,
+      "a2_over_L2": 0.1,
+      "ell": 0,
+      "predicted_action_second_derivative": -0.4525510007440862,
+      "relative_errors_h_1e_3_1e_4_1e_5": [
+        5.32583041288873e-07,
+        5.3258290326791805e-09,
+        5.3258290188770875e-11
+      ]
+    },
+    {
+      "a": 1,
+      "a2_over_L2": 0.1,
+      "ell": 2,
+      "predicted_action_second_derivative": -0.5317474258743013,
+      "relative_errors_h_1e_3_1e_4_1e_5": [
+        8.077790526930737e-08,
+        8.077791767851593e-10,
+        8.077791780260798e-12
+      ]
+    },
+    {
+      "a": 1,
+      "a2_over_L2": 0.1,
+      "ell": 5,
+      "predicted_action_second_derivative": -1.0439528767164716,
+      "relative_errors_h_1e_3_1e_4_1e_5": [
+        3.5404711307587513e-07,
+        3.540472799809315e-09,
+        3.540472816499825e-11
+      ]
+    }
+  ],
+  "growth_comparison": [
+    {
+      "ell": 0,
+      "material_coordinate_time_growth": 0.1767766952966369,
+      "collisionless_phase_space_norm_growth": 0.1767766952966369
+    },
+    {
+      "ell": 2,
+      "material_coordinate_time_growth": 0.46770717334674267,
+      "collisionless_phase_space_norm_growth": 0.1767766952966369
+    },
+    {
+      "ell": 5,
+      "material_coordinate_time_growth": 0.9842509842514764,
+      "collisionless_phase_space_norm_growth": 0.1767766952966369
+    },
+    {
+      "ell": 10,
+      "material_coordinate_time_growth": 1.8624580532189174,
+      "collisionless_phase_space_norm_growth": 0.1767766952966369
+    },
+    {
+      "ell": 50,
+      "material_coordinate_time_growth": 8.928535714214286,
+      "collisionless_phase_space_norm_growth": 0.1767766952966369
+    }
+  ],
+  "not_computed": [
+    "full constrained gravitational Hessian",
+    "microscopic radiation wall state",
+    "collisionless Euclidean determinant",
+    "instanton negative-mode count",
+    "wormhole nucleation rate",
+    "wormhole stability"
+  ]
+}
