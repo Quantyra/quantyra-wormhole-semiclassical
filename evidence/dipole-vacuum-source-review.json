@@ -1,0 +1,61 @@
+{
+  "story": "S072",
+  "date": "2026-10-13",
+  "status": "PASS",
+  "novelty_claim": false,
+  "scope": "Global Friedrichs H2 vacuum-to-two-dipole particular polar response, both master branches; exact regulated causal subtraction, without a continuum initial-data or physical-state bound.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2403.13142v2",
+      "title": "Loops in Anti de Sitter space",
+      "cache_sha256": "5dfdc82d25c4bebc77310842681f9be3f6567f3588c846e2ac3aae6517770901",
+      "reviewed": "Section 3.1; section 7 through Theorems 7.1 and 7.2, including conditions and weights. Extended Theorem 7.3 was screened but is not required.",
+      "used": "Existing AdS product expansion specialized to d=2 and both mass parameters Delta-1/2; all positivity conditions hold."
+    },
+    {
+      "url": "https://arxiv.org/html/1107.5161v1",
+      "title": "Anti de Sitter quantum field theory and a new class of hypergeometric identities",
+      "cache_sha256": "b0640c5d9ccac3f854620b37f2f241a7f1e6ba57229136742b1212c1b6537f48",
+      "reviewed": "Complete sections 6 (including 6.1) and 7 (including 7.1), with noninteger convergence and distributional boundary values.",
+      "limits": "Appendix dependencies A/B were identified, not newly read in full; no whole-paper or exhaustive novelty review claimed."
+    }
+  ],
+  "search_queries_retained": [
+    "AdS2 product two scalar propagators Kallen Lehmann double trace positive coefficients spectral representation",
+    "anti de Sitter Kallen Lehmann product scalar Wightman functions Bros Epstein Moschella",
+    "\"Anti-de Sitter\" \"hypergeometric\" \"K?ll?n\" Epstein 2011",
+    "\"Loops in anti de Sitter space\" Epstein Moschella arxiv",
+    "site:arxiv.org \"Anti de Sitter quantum field theory and a new class\""
+  ],
+  "source_access_note": "A v2 request for 1107.5161 failed; the abstract record lists v1, which is cached and reviewed. It was not treated as an absent paper.",
+  "independent_argument": "Positive-energy two-particle lowering recurrence, exchange parity and dimension count establish the spectral support. Exact rational inversion and polynomial positivity bound response. Green identity proves detuning cancellation for all spectral descendants; direct quadrature checks both branches.",
+  "initial_development": {
+    "status": "PASS",
+    "snapshot_sha256": "433d99e0190f37ba2f9e5218fb2f141f6a4e1948cca1b1ceeda6345d0f73e722",
+    "receipt_sha256": "1f042cbc61a38b593ff0ddb2bb17a84c14e7a9a493ae10f66f640dabcc160569",
+    "log_sha256": "300878dad36f2a6adbe6dcbd7f8f19c4055d674cd0bc7b7a8e56fd5d35299bba",
+    "handle_revalidation": "Prior handle 75696 is missing; complete PASS receipt matches its preserved source. No terminal exit code is inferred from that missing handle.",
+    "scope": "Predates additional all-branch Green identity and regulated causal checks."
+  },
+  "acceptance": {
+    "status": "PASS",
+    "exit_code": 0,
+    "session_id": 88306,
+    "snapshot_sha256": "41c641368febc7f1cd538d58c4e0218e6fdd3cd566ecc5e49c44c47ee465c7b4",
+    "note_sha256": "e830afc5977a732b209b6cc646b91cf515afc6f78f3eac9d76ea04c42800eee2",
+    "receipt_sha256": "99a788714513c7f3a513e32cb65564c3d809863c3c44df39f5c1d06b753c2583",
+    "log_sha256": "300878dad36f2a6adbe6dcbd7f8f19c4055d674cd0bc7b7a8e56fd5d35299bba",
+    "all_branch_spatial_cases": 24,
+    "max_Green_identity_error": "2.0241020051002605e-79"
+  },
+  "failed_calculations": [],
+  "changes_after_development": "Added general all-branch overlap/causal identities, exact rational certification of the rounded metric constant, and the complete ordinary argument. No failed threshold was relaxed.",
+  "raw_directory": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\dipole-vacuum-response-2026-10-13",
+  "not_established": [
+    "Intrinsic homogeneous master fluctuations and correlated initial dressing.",
+    "Continuum sharp-initial-data moments or switched-source stress.",
+    "H3/H4 corrections, fermions, induced currents, local contacts and massive modes.",
+    "Physical boundary/horizon matching and evolving complete renormalized stress.",
+    "Physical capture probability, stable creation, pair preparation or finite-energy transport."
+  ]
+}
