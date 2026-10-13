@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-13",
+  "purpose": "S072 angular current/coset matching and fixed-order transfer limitation",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2108.02202v2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/angular-coset-2026-10-13/2108.02202v2.html",
+      "sha256": "9e2165f70cb3c891a7eda46a71ddb73ab88a667814c111cde96f2d381d2179c2",
+      "reading_scope": "Sections 3 (partial context) and 4.2, appendices A.1, A.2 and B coset-character subsection. Section 4.2 and both stress appendices read in full. Current algebra, stress/coset decomposition and branching are comparators. The present complex-fermion normalization and stress states are checked independently. No flat-space infrared gap or curved-RN equivalence is imported.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2211.09036v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/angular-coset-2026-10-13/2211.09036v1.html",
+      "sha256": "92b5cc6e146e688f244a45e3aecd8800eb796f71ca1f275162324d170d20c736",
+      "reading_scope": "Introduction and section 2 preamble read in full. Operator decomposition, current primaries and branching guide the retained-state interpretation. The proposed full infrared theory, possible missing topological sectors, condensate mechanism and examples are not adopted for the wormhole.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/hep-th/9412199v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/angular-coset-2026-10-13/hep-th-9412199v1.html",
+      "sha256": "40fb0e001c6789f50b4545284ad8bf42cf31cb138adedb04d45e9e14438f897a",
+      "reading_scope": "Sections 2 and 3 read in full: affine algebra, null-state KZ derivation, four-point blocks and sewing constraints. Equation 3.4 uses a generator contraction twice the standard Cartesian spin dot product. The present norm bound is derived separately and does not import initial block coefficients.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "version_notes": [
+    "HTML 2211.09036v2 returned HTTP 404; only v1 is used.",
+    "HTML 2108.02202v3 was not available through the web reader; only the cached v2 is used."
+  ],
+  "inherited_evidence": {
+    "satellite_commit": "a62a6a885e686491915872d1b2fdb4672ad3abb2",
+    "notes": [
+      "notes/neutral-transfer-current.md",
+      "notes/causal-compact-response.md",
+      "notes/quantum-junction-state.md",
+      "notes/phase-influence-action.md",
+      "notes/angular-current-coset.md"
+    ],
+    "prior_coset_commit": "fe68067",
+    "reuse": "The electric/SU(2)/coset stress decomposition and level-two CAR checks already exist in the closed S053 result. This update adds transfer weights, the three-current Ward check and a separated-insertion KZ bound; it does not claim the inherited split as new or reopen the closed program."
+  },
+  "novelty": "Affine embeddings, Sugawara/coset decomposition and KZ equations are established. This is an ordinary matched normalization and finite-order bound for the selected LLL representation; no exhaustive novelty acceptance.",
+  "limitations": [
+    "No complete angular/coset transfer multipoint functions or sewing coefficients",
+    "No unrestricted tensor-product state or three-independent-Gaussian angular completion",
+    "No all-order switching error from the small fixed-order KZ bound",
+    "No continuum stress, evolving geometry, preparation or sufficient physical stability result"
+  ],
+  "development_notes": [
+    "The provisional filenames collided with clean tracked S053 files. Before staging, those three historical files were restored from HEAD byte-for-byte, and this continuation was moved to distinct angular-transfer-matching filenames. The final checker reuses the existing CAR implementation and preserves its historical receipt."
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-13",
+  "status": "PASS",
+  "scope": "Exact current algebra/stress split and separated-insertion KZ transport; not the interacting wormhole stress",
+  "python": "3.13.7",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sympy": "1.14.0",
+  "checker_sha256": "66f3d58324fdcdf652277e9f4ed431f2c1e5ddb9b6a1bb4500c518107b8f1778",
+  "ward_cases": [
+    {
+      "q": 2,
+      "three_current_imaginary_part": 0.5,
+      "expected_S_J": 0.5,
+      "three_current_error": 0.0
+    },
+    {
+      "q": 3,
+      "three_current_imaginary_part": 2.0000000000000004,
+      "expected_S_J": 2.0,
+      "three_current_error": 4.440892098500626e-16
+    },
+    {
+      "q": 4,
+      "three_current_imaginary_part": 5.0,
+      "expected_S_J": 5.0,
+      "three_current_error": 0.0
+    },
+    {
+      "q": 5,
+      "three_current_imaginary_part": 10.0,
+      "expected_S_J": 10.0,
+      "three_current_error": 0.0
+    },
+    {
+      "q": 6,
+      "three_current_imaginary_part": 17.500000000000004,
+      "expected_S_J": 17.5,
+      "three_current_error": 3.552713678800501e-15
+    },
+    {
+      "q": 8,
+      "three_current_imaginary_part": 42.0,
+      "expected_S_J": 42.0,
+      "three_current_error": 0.0
+    }
+  ],
+  "inherited_dependencies_sha256": {
+    "checks/angular_current_coset.py": "7d7205d80297ac7da10de6200f99581d70f23dcdadc107988567d8a09480f49f",
+    "checks/gluing_support_compatibility.py": "1deae39e15509624f7e5aa496187f631686ea0f529adba84110f5d4ce027c835",
+    "evidence/angular-current-coset.json": "21267a8b85ddf218d399602bb246e598ba816ad8b9bdf3632c302278263cebcb"
+  },
+  "direct_recoupling": [
+    {
+      "q": 2,
+      "direct_tensor_recoupling_error": 2.172659466300293e-17
+    },
+    {
+      "q": 3,
+      "direct_tensor_recoupling_error": 3.2616362727005863e-16
+    },
+    {
+      "q": 4,
+      "direct_tensor_recoupling_error": 9.698524330361112e-16
+    }
+  ],
+  "kz_cases": [
+    {
+      "q": 3,
+      "x_interval": [
+        0.2,
+        0.8
+      ],
+      "log_pair_length": 2.7725887222397816,
+      "transport_distance_from_identity": 2.406974232333552,
+      "analytic_bound": 5.349604207872798,
+      "refinement_error": 8.491269623874804e-14,
+      "pair_commutator_norm": 1.732050807568877,
+      "offdiagonal_transport_norm": 0.7232379621514108,
+      "scope": "KZ transport on ambient invariant tensors; no physical sewing constants inferred"
+    },
+    {
+      "q": 4,
+      "x_interval": [
+        0.2,
+        0.8
+      ],
+      "log_pair_length": 2.7725887222397816,
+      "transport_distance_from_identity": 2.5114476258380427,
+      "analytic_bound": 4.6568542494923815,
+      "refinement_error": 6.614869918910474e-14,
+      "pair_commutator_norm": 4.437059837324712,
+      "offdiagonal_transport_norm": 0.6372997589830661,
+      "scope": "KZ transport on ambient invariant tensors; no physical sewing constants inferred"
+    },
+    {
+      "q": 5,
+      "x_interval": [
+        0.2,
+        0.8
+      ],
+      "log_pair_length": 2.7725887222397816,
+      "transport_distance_from_identity": 2.1979859232006387,
+      "analytic_bound": 3.5372500887818505,
+      "refinement_error": 9.773689745050091e-14,
+      "pair_commutator_norm": 9.13642462666433,
+      "offdiagonal_transport_norm": 0.5300939337328402,
+      "scope": "KZ transport on ambient invariant tensors; no physical sewing constants inferred"
+    },
+    {
+      "q": 8,
+      "x_interval": [
+        0.2,
+        0.8
+      ],
+      "log_pair_length": 2.7725887222397816,
+      "transport_distance_from_identity": 1.357243645280228,
+      "analytic_bound": 1.760857218802482,
+      "refinement_error": 2.461002872840874e-13,
+      "pair_commutator_norm": 41.10731287705951,
+      "offdiagonal_transport_norm": 0.3525191800918771,
+      "scope": "KZ transport on ambient invariant tensors; no physical sewing constants inferred"
+    },
+    {
+      "q": 12,
+      "x_interval": [
+        0.2,
+        0.8
+      ],
+      "log_pair_length": 2.7725887222397816,
+      "transport_distance_from_identity": 0.8476037764403715,
+      "analytic_bound": 0.9903960886887075,
+      "refinement_error": 3.429372533497632e-13,
+      "pair_commutator_norm": 147.07130129607947,
+      "offdiagonal_transport_norm": 0.25518537678311276,
+      "scope": "KZ transport on ambient invariant tensors; no physical sewing constants inferred"
+    }
+  ],
+  "exact_and_candidate": {
+    "exact_table": [
+      {
+        "q": 1,
+        "level": "0",
+        "c_coset": "0",
+        "fermion_h_charge": "1/2",
+        "fermion_h_angular": "0",
+        "fermion_h_coset": "0"
+      },
+      {
+        "q": 2,
+        "level": "1",
+        "c_coset": "0",
+        "fermion_h_charge": "1/4",
+        "fermion_h_angular": "1/4",
+        "fermion_h_coset": "0"
+      },
+      {
+        "q": 3,
+        "level": "4",
+        "c_coset": "0",
+        "fermion_h_charge": "1/6",
+        "fermion_h_angular": "1/3",
+        "fermion_h_coset": "0"
+      },
+      {
+        "q": 4,
+        "level": "10",
+        "c_coset": "1/2",
+        "fermion_h_charge": "1/8",
+        "fermion_h_angular": "5/16",
+        "fermion_h_coset": "1/16"
+      },
+      {
+        "q": 5,
+        "level": "20",
+        "c_coset": "14/11",
+        "fermion_h_charge": "1/10",
+        "fermion_h_angular": "3/11",
+        "fermion_h_coset": "7/55"
+      },
+      {
+        "q": 6,
+        "level": "35",
+        "c_coset": "80/37",
+        "fermion_h_charge": "1/12",
+        "fermion_h_angular": "35/148",
+        "fermion_h_coset": "20/111"
+      },
+      {
+        "q": 10,
+        "level": "165",
+        "c_coset": "1008/167",
+        "fermion_h_charge": "1/20",
+        "fermion_h_angular": "99/668",
+        "fermion_h_coset": "252/835"
+      },
+      {
+        "q": 100,
+        "level": "166650",
+        "c_coset": "7999299/83326",
+        "fermion_h_charge": "1/200",
+        "fermion_h_angular": "9999/666608",
+        "fermion_h_coset": "7999299/16665200"
+      },
+      {
+        "q": 16000000000000,
+        "level": "682666666666666666666666664000000000000",
+        "c_coset": "5461333333331967999999999978666666666687999999999999/341333333333333333333333332000000000001",
+        "fermion_h_charge": "1/32000000000000",
+        "fermion_h_angular": "255999999999999999999999999/2730666666666666666666666656000000000008",
+        "fermion_h_coset": "5461333333331967999999999978666666666687999999999999/10922666666666666666666666624000000000032000000000000"
+      }
+    ],
+    "candidate_k": 2000,
+    "candidate_q": 16000000000000,
+    "charge_plus_angular_transfer_weight": "2.5e-13",
+    "four_insertion_transport_bound_x_point2_to_point8": "5.1986038542009410947308860866e-13",
+    "illustrative_r_equal_q_over_k": "8000000000.0",
+    "unit_pair_log_length_exponent_at_that_order": "23999999.9985",
+    "limitation": "The last order is a norm-counting diagnostic, not a distribution of physical events or a lower bound on error."
+  }
+}
