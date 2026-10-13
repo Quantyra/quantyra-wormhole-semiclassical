@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-13",
+  "purpose": "S072 fixed global AdS2 massive current measure and second-order work for classical and operator-valued radial sources",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2208.08252v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/curved-massive-response-2026-10-13/2208.08252v1.html",
+      "sha256": "602352b0a5e64398018a9f4d96dd3640c5aeeb85f8a5bf0cf6573816c8430bfb",
+      "reading_scope": "Read the relevant self-adjoint-domain discussion in III.1, the massive-mode construction in III.3.2, and the positive-frequency discussion in III.4. Equations 22, 23, 36, 48, 87 and 88 were checked directly; the M>=1/2 unique normalizable realization was reread separately after combined output truncation. Import the canonical Dirac operator, flat rescaled inner product, exact massive energies and normalized Jacobi spinors. No alternative small-mass boundary extension, interacting source state or RN matching is imported.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://dlmf.nist.gov/10.32.E2",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/curved-massive-response-2026-10-13/dlmf-10.32.E2.tex",
+      "sha256": "c93500da386bf46c6a51ceb17535ddc536c7f89afd32bf2ade679a04ae66669e",
+      "reading_scope": "Read the exact modified-Bessel integral identity and its order condition Re(nu)>-1/2. The local bound uses nu=M-1/2>=3.5 and real z>0. The subsequent gamma-integral inequality is derived in the current note, not attributed to DLMF.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://dlmf.nist.gov/10.22.E67",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/curved-massive-response-2026-10-13/dlmf-10.22.E67.tex",
+      "sha256": "629fc3d5ee0aa1a6be8deafc521d07f8442dbfc2271bff729f77d907dd52c882",
+      "reading_scope": "Read the exact Weber exponential integral of the product of two Bessel J functions. It fixes the diagonal inverse-square heat-kernel normalization with real positive time and order nu>=3.5. Three independent quadratures verify this normalization.",
+      "full_paper_proof_chain_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/2603.15730v1",
+      "cache_path": "C:/Users/dfred/QuantyraTools/SpaceProofs/wormhole-literature-review/2026-10-10/2603.15730v1-body.html",
+      "sha256": "6aa0aecd73c0a187b56f406f8b9fe155145d81825e5415946abba7e2a58b557c",
+      "reading_scope": "Reuse the exact sphere eigenvalues and total multiplicities from the preceding higher-Landau and massive-bulk source audits. This source was not reread in the current continuation. No further determinant or response result is imported.",
+      "full_paper_proof_chain_reviewed": false
+    }
+  ],
+  "inherited_evidence": {
+    "satellite_commit": "07987d64831cc1a35d601914bd3c78c8d85ddf10",
+    "files": [
+      {
+        "path": "notes/massive-bulk-polarization.md",
+        "sha256": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3"
+      },
+      {
+        "path": "notes/higher-landau-boundary.md",
+        "sha256": "2fef6b07851f9f4f8ca4305a4b3bcb96ca4731605538f29e0c8bd5220c8e305a"
+      },
+      {
+        "path": "notes/phase-influence-action.md",
+        "sha256": "83bc4ecb1b291f39490c7b8fa464d9c211b0e107b1f9d6536f8f1a553761f1b8"
+      },
+      {
+        "path": "notes/collective-electric-response.md",
+        "sha256": "c7ba56eca243c8e6d3487b2ea1db34f4b7eb9724d58d6bfe61b79d9f100346ad"
+      }
+    ]
+  },
+  "development_notes": [
+    "The arXiv v2 HTML request returned 404; the reviewed and hashed source is v1. No unavailable v2 proof is claimed.",
+    "The ordinary proof retains both scalar Dirac potentials, compares their Friedrichs heat kernels with a half-line inverse-square kernel, sums the exact sphere counting function, and uses the vector commutator before applying the Maxwell energy seminorm. It does not infer an infinite-tower result from finite numerical samples.",
+    "The first complete checker run passed. Three independent Weber normalization integrals were then added and the complete checker rerun passed. No failed scientific or numerical check occurred in this continuation.",
+    "Exact finite-energy pair sums include every allowed radial pair and sphere level through energy 60. Spatial quadrature is refined from 256 to 512 points. A separate analytic tail bound includes all omitted energies.",
+    "The quantum-source bound uses ordered Hilbert-Schmidt norms, an initially factorized massive bath vacuum, two time derivatives and orthogonal dyadic pair-energy bands. No commuting or symmetrized replacement is made.",
+    "The quantum toy check compares excited and ground source states in an exactly evolved two-level block. Their distinct detunings and quadratic coefficients test operator ordering; it is not an actual wormhole source calculation.",
+    "The current note makes the frequency optimization explicit with an infimum; this notation clarification changes no constant or checker."
+  ],
+  "claims_boundary": [
+    "Fixed global AdS2 x S2 normalizable free massive vacuum, q>=1 and M1>=4; massless LLL already retained separately",
+    "Quadratic excitation work only; no static curved Maxwell renormalization or full stress tensor computed",
+    "Classical comparison is relative to pulse Maxwell energy, not negative opening energy",
+    "Actual quantum source moments, possible ultraviolet divergence, Gauss dressing and initial correlations remain unresolved",
+    "No RN/evolving-geometry transfer, feedback remainder, physical creation, complete stability or novelty acceptance"
+  ]
+}
