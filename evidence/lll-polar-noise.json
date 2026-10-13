@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "scope": "free NS Dirac LLL vacuum on fixed round product; polar constrained metric only",
+  "tensor_response": [
+    {
+      "ell": 2,
+      "Einstein_components": 10,
+      "Maxwell_components": 4,
+      "stress_divergences": 2,
+      "frequency": "arbitrary including zero",
+      "radius_ratio": "symbolic C",
+      "chi_and_Acal": 0
+    },
+    {
+      "ell": 3,
+      "Einstein_components": 10,
+      "Maxwell_components": 4,
+      "stress_divergences": 2,
+      "frequency": "arbitrary including zero",
+      "radius_ratio": "symbolic C",
+      "chi_and_Acal": 0
+    }
+  ],
+  "ordered_kernels": {
+    "particle_hole_cases": [
+      {
+        "q": 2,
+        "frequencies": 12,
+        "max_absolute_error": 2.842170943040401e-14,
+        "matrix_commutator_norm": 1.881566767621036
+      },
+      {
+        "q": 3,
+        "frequencies": 12,
+        "max_absolute_error": 1.1434089857104676e-13,
+        "matrix_commutator_norm": 5.169173360677791
+      },
+      {
+        "q": 5,
+        "frequencies": 12,
+        "max_absolute_error": 6.821210263296962e-13,
+        "matrix_commutator_norm": 12.17837932402351
+      }
+    ],
+    "two_ordered_generating_functions": "exact"
+  },
+  "angular": {
+    "independent_LLL_matrix_variances": 90,
+    "angular_sum_bounds": 12,
+    "axial_mixed_stress_identity": "exact first-order zero-mode identity"
+  },
+  "smearing": {
+    "gaussian_sums": [
+      {
+        "gaussian_time_width": "0.125",
+        "circumference": "pi",
+        "stress_spectral_sum": "120.0924519012935887847425683483686554167408136358566664475125162556150869137786",
+        "positive_tail_upper": "2.514110524667749746727275579178766342816603478368957663558313368114846641567583e-440",
+        "nsum_difference": "0.0"
+      },
+      {
+        "gaussian_time_width": "0.25",
+        "circumference": "pi",
+        "stress_spectral_sum": "6.0950326118246516256079505249585224466432692494902887797460808803677570709903349",
+        "positive_tail_upper": "4.4193467173342362328681097830064926628956127370613140287620167796993972432431843e-1775",
+        "nsum_difference": "8.4337583545844185794788592410160152061679691058948060400622104200865154327758077e-81"
+      },
+      {
+        "gaussian_time_width": "0.5",
+        "circumference": "pi",
+        "stress_spectral_sum": "0.11286242240757052044840086016536413230287065372358429180305747806455403970831275",
+        "positive_tail_upper": "2.7078521450047295575424842033905474467041016067588407110143043664189934788375105e-7112",
+        "nsum_difference": "0.0"
+      }
+    ],
+    "candidate": [
+      {
+        "k": 2000,
+        "a_squared_Planck_units": "170666666663192159915357013890941.98493671412932240057697314933399514314064133362",
+        "smeared_polar_fractional_gtautau_RMS_upper": "3.0076950105150895770557457775783921269666789569938826967856384345961847830958796e-26",
+        "quadrupole_relative_variance_form_factor_loss": "0.00000000000037499999999992968750000001025390624999862670898437517738342285153996936793148734",
+        "soft_branch_l_max": 344361,
+        "soft_branch_form_factor_loss_upper": "0.007411552667625",
+        "physical_capture_probability_bound": false
+      },
+      {
+        "k": 4000,
+        "a_squared_Planck_units": "174762666666221929802499031111373816.68114360267587814098277825300498848867696759",
+        "smeared_polar_fractional_gtautau_RMS_upper": "1.1748808634615279692269859773049974731958514799938542740786298191000391829294584e-28",
+        "quadrupole_relative_variance_form_factor_loss": "0.000000000000023437499999999725341796875002503395080566385295242071151902564452029376995678413",
+        "soft_branch_l_max": 974003,
+        "soft_branch_form_factor_loss_upper": "0.003705792257859375",
+        "physical_capture_probability_bound": false
+      },
+      {
+        "k": 10000,
+        "a_squared_Planck_units": "1666666666666395220826720600043563119657.5788583759979493631552607439228833821853",
+        "smeared_polar_fractional_gtautau_RMS_upper": "7.6996992267631294987583481315623056317102424625799346763332616907492439330807134e-32",
+        "quadrupole_relative_variance_form_factor_loss": "0.00000000000000059999999999999982000000000000004199999999999999100000000000000185976696529996048",
+        "soft_branch_l_max": 3850087,
+        "soft_branch_form_factor_loss_upper": "0.0014823173757656",
+        "physical_capture_probability_bound": false
+      }
+    ]
+  },
+  "checker_sha256": "f5d8c95395bed7b1338a553befe3f956420e7defc006621c6f256edd727dff3c",
+  "dependencies": {
+    "notes/lll-polar-noise.md": "79fceb3712b392cc5096b2b7c2d19e366a6af770c22bd95691c6cf6f0310908a",
+    "checks/lll_projection.py": "1aaa1e7ffe485897a80d5849085bbcb0fbedd616362fba55cba76606c8d3f323",
+    "notes/quadrupole-product-response.md": "334546768d34b4affde58b3d18be6017bd9197910a2a4921b9ec8281bdc5a9ea",
+    "notes/angular-current-renormalization.md": "bbbaa368ea02ac2ea038cebdb82f45e7b23fbf70106742469c57aeab9b514899",
+    "notes/lll-state-difference-source.md": "e321135d800dbe2a505f92a68038d4d1c1051906225f4101473eee3f6ac7b01e"
+  },
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "mpmath": "1.3.0"
+  },
+  "limitations": [
+    "Free comparison is not the interacting angular-Gauss state.",
+    "Zero direct polar master noise does not eliminate constrained metric or axial current noise.",
+    "Pointwise stress variance diverges; the stated metric estimate is time smeared.",
+    "Induced Hall/anomaly response, nonlinear dipole sources, massive levels and boundary matching remain.",
+    "No physical capture, preparation, stability, transport or creation bound."
+  ]
+}
