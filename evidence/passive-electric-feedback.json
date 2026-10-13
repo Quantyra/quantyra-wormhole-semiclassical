@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-13",
+  "status": "PASS",
+  "python": "3.13.7",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "checker_sha256": "c2fade24d059e8c38d5356c77130f8d7e62ad34c6759619043e6f29fefca337a",
+  "subtraction": [
+    {
+      "q": 3,
+      "delta_chi": "1.07996006971811829646215643992",
+      "ratio_to_mu": "2.26186308079784091205318512132",
+      "integral_relative_error": "1.8111358e-71",
+      "paired_512_mode_ratio": 2.0354297031738633
+    },
+    {
+      "q": 5,
+      "delta_chi": "1.10484105297036702020348456107",
+      "ratio_to_mu": "1.38838421415844665600105573907",
+      "integral_relative_error": "0.0",
+      "paired_512_mode_ratio": 1.3349493019794305
+    },
+    {
+      "q": 31,
+      "delta_chi": "4.84704625883309159792824721821",
+      "ratio_to_mu": "0.982415801184511743696956164973",
+      "integral_relative_error": "9.0556791e-71",
+      "paired_512_mode_ratio": 0.5818816159500428
+    },
+    {
+      "q": 127,
+      "delta_chi": "19.1091821254304379349482012095",
+      "ratio_to_mu": "0.945405766635616609277729726911",
+      "integral_relative_error": "2.173363e-70",
+      "paired_512_mode_ratio": 0.3763912195318927
+    },
+    {
+      "q": 1000,
+      "delta_chi": "148.902870391026113317803205107",
+      "ratio_to_mu": "0.935584327437761561749325097036",
+      "integral_relative_error": "1.9922494e-70",
+      "paired_512_mode_ratio": 0.3074397490254377
+    },
+    {
+      "q": 16000000000000,
+      "delta_chi": "2378861061722.81929292946144497",
+      "ratio_to_mu": "0.934176554427403097820004337746",
+      "integral_relative_error": "1.0514591e-58",
+      "paired_512_mode_ratio": 0.2969362951492573
+    }
+  ],
+  "switch_stiffness": {
+    "reference": [
+      {
+        "q": 31,
+        "hf": 0.03,
+        "T": 0.5,
+        "minimum_stiffness_ratio": 0.885223284404027,
+        "largest_R_comparison_error": 0.08215876309290449,
+        "R_error_bound": 5.6122596050030475,
+        "R_truncation_bound": 0.0005521212936760203,
+        "pre_return_stiffness_lower_ratio": -0.22751184162040816,
+        "all_time_stiffness_lower_ratio": -0.31751184162040813
+      },
+      {
+        "q": 127,
+        "hf": 0.08,
+        "T": 0.6,
+        "minimum_stiffness_ratio": 0.7348636466922861,
+        "largest_R_comparison_error": 0.16779763799790004,
+        "R_error_bound": 10.393073342598235,
+        "R_truncation_bound": 0.004188733828963833,
+        "pre_return_stiffness_lower_ratio": 0.28581412816808616,
+        "all_time_stiffness_lower_ratio": 0.08581412816808609
+      },
+      {
+        "q": 1000,
+        "hf": 0.08,
+        "T": 0.5,
+        "minimum_stiffness_ratio": 0.647232458792716,
+        "largest_R_comparison_error": 0.23175041592750745,
+        "R_error_bound": 14.96602561334146,
+        "R_truncation_bound": 0.04749430483234583,
+        "pre_return_stiffness_lower_ratio": 0.6659656877593796,
+        "all_time_stiffness_lower_ratio": 0.4259656877593796
+      }
+    ],
+    "candidate": [
+      {
+        "k": 2000,
+        "T": 0.25,
+        "maximum_h_derivative": 0.03769911184307752,
+        "finite_q_error": 1.846359403253137e-12,
+        "pre_return_stiffness_lower_ratio": 0.9623008881550761,
+        "all_time_stiffness_lower_ratio": 0.9246017763119986
+      },
+      {
+        "k": 4000,
+        "T": 0.25,
+        "maximum_h_derivative": 0.01884955592153876,
+        "finite_q_error": 5.769873135166053e-14,
+        "pre_return_stiffness_lower_ratio": 0.9811504440784035,
+        "all_time_stiffness_lower_ratio": 0.9623008881568648
+      },
+      {
+        "k": 8000,
+        "T": 0.25,
+        "maximum_h_derivative": 0.00942477796076938,
+        "finite_q_error": 1.8030853547393914e-15,
+        "pre_return_stiffness_lower_ratio": 0.9905752220392289,
+        "all_time_stiffness_lower_ratio": 0.9811504440784594
+      }
+    ]
+  },
+  "resolvent": [
+    {
+      "q": 3,
+      "minimum_normal_frequency_squared": 0.02642683921487191,
+      "maximum_resolvent_error": 4.441434166503682e-16,
+      "minimum_impedance_real_part": 0.04702099379158159
+    },
+    {
+      "q": 31,
+      "minimum_normal_frequency_squared": 0.4567993738477405,
+      "maximum_resolvent_error": 2.1094237467877974e-15,
+      "minimum_impedance_real_part": 0.025711054594974508
+    },
+    {
+      "q": 1000,
+      "minimum_normal_frequency_squared": 0.4512326236731202,
+      "maximum_resolvent_error": 2.010699415441723e-15,
+      "minimum_impedance_real_part": 0.10214818233050027
+    }
+  ],
+  "quantum_switches": [
+    {
+      "q": 127,
+      "hf": 0.08,
+      "T": 0.6,
+      "I": 0.7,
+      "neutral_bath_modes": 12,
+      "radial_modes": 2,
+      "X_response_modes": 128,
+      "minimum_full_uncertainty_determinant": 0.2654761897413256,
+      "minimum_homogeneous_only_determinant": 0.17326520609523638,
+      "maximum_symplectic_error": 5.942375528087356e-15,
+      "final_covariance": [
+        0.4023000925416177,
+        0.8016518517441855,
+        -0.17720958243276652
+      ],
+      "finite_band_energy_change": 0.7026348275165049,
+      "integrated_switch_work": [
+        0.7026390634864782,
+        0.7026341218287371
+      ],
+      "energy_balance_error": 7.05687767776908e-07,
+      "rtol": 2e-10
+    },
+    {
+      "q": 1000,
+      "hf": 0.08,
+      "T": 0.5,
+      "I": 2.0,
+      "neutral_bath_modes": 12,
+      "radial_modes": 2,
+      "X_response_modes": 128,
+      "minimum_full_uncertainty_determinant": 0.2654761844146595,
+      "minimum_homogeneous_only_determinant": 0.05845972128637421,
+      "maximum_symplectic_error": 9.251321556523432e-13,
+      "final_covariance": [
+        0.30593186745474055,
+        2.2111603476106896,
+        0.14191828248750446
+      ],
+      "finite_band_energy_change": 4.213961142693734,
+      "integrated_switch_work": [
+        4.213945064221107,
+        4.213959138429736
+      ],
+      "energy_balance_error": 2.0042639974349186e-06,
+      "rtol": 2e-10,
+      "floquet": {
+        "period": 3.141592653589793,
+        "largest_multiplier_modulus": 1.0000000000000029,
+        "inferred_growth_rate": 9.188269079783478e-16,
+        "symplectic_error": 3.3306690738754696e-15
+      }
+    }
+  ],
+  "quantum_refinement": {
+    "q": 1000,
+    "hf": 0.08,
+    "T": 0.5,
+    "I": 2.0,
+    "neutral_bath_modes": 12,
+    "radial_modes": 2,
+    "X_response_modes": 128,
+    "minimum_full_uncertainty_determinant": 0.2654761844146594,
+    "minimum_homogeneous_only_determinant": 0.05845972127254466,
+    "maximum_symplectic_error": 6.1820996751925665e-15,
+    "final_covariance": [
+      0.30593186808496914,
+      2.2111603445904384,
+      0.1419182808641024
+    ],
+    "finite_band_energy_change": 4.213961147822445,
+    "integrated_switch_work": [
+      4.21394506422067,
+      4.213959138429328
+    ],
+    "energy_balance_error": 2.0093931176745627e-06,
+    "rtol": 2e-12,
+    "floquet": {
+      "period": 3.141592653589793,
+      "largest_multiplier_modulus": 1.0000000000000029,
+      "inferred_growth_rate": 9.188269079783478e-16,
+      "symplectic_error": 4.773959005888173e-15
+    }
+  },
+  "covariance_refinement_error": 3.0202511602794857e-09,
+  "limitations": [
+    "Phase-linear and second-order neutral influence, resummed as a Gaussian model; angular sector held fixed",
+    "Stationary no-growing-pole result and all-time switched stiffness bound are different statements",
+    "Finite-band covariance and energy only; no renormalized continuum stress, nonlinear stability or physical capture"
+  ]
+}
