@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_sourced_product_quadrupole_response_with_light_branch",
+  "previous_satellite_commit": "7934f76fdd96431fa8f407449957536844f94bc0",
+  "previous_planning_commit": "cb3aa49474c993e69d3bd71af0bb3290e76f53d9",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0308128v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\retarded-angular-2026-10-13\\hep-th-0308128v3.html",
+      "sha256": "109a5ef7b66783b407130b8e6c609eb69b1ce5f27f680a145a641f2568889449",
+      "reading_scope": "Sections 2.1, 5.1, 5.2, source definitions/conservation in 5.3 and 5.5. Constant-radius source equations checked against covariant Maxwell equation and independent 4D tensors; literal (160) not used.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/hep-th/0308128v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\quadrupole-response-2026-10-13\\hep-th-0308128v3.pdf",
+      "sha256": "c7e04b39658a164f0e95eaa9eff97e8a73cd7c209c1d867480ee92860e62dcc7",
+      "reading_scope": "PDF page 27 visually inspected: source expression (5.75), corresponding to HTML (160), confirms both disputed terms are present as recorded. Surrounding source-free equations and mass discriminant inspected.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/gr-qc/0301052v2",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\quadrupole-response-2026-10-13\\gr-qc-0301052v2.html",
+      "sha256": "3c80b734f76adf403713ead8eaf797d03e9e4069aa3aafce2fb25a46874912d5",
+      "reading_scope": "Section II.1 and II.3 equations (1)-(6), (10)-(17): background and both parity potentials, independently specialized to the extremal throat. No whole-exterior isospectrality or boundary matching inferred.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/quadrupole-product-response.md",
+      "sha256": "334546768d34b4affde58b3d18be6017bd9197910a2a4921b9ec8281bdc5a9ea"
+    },
+    {
+      "path": "checks/quadrupole_product_response.py",
+      "sha256": "6945941cac0d041d12565e9259937787e3bb09235a9fdfd7c914187bb6348398"
+    },
+    {
+      "path": "evidence/quadrupole-product-response.json",
+      "sha256": "619c0ddbaf8bbb2a436c7794112613b8360c222fa814599bfae2c2c7e26d409d"
+    },
+    {
+      "path": "notes/nonabelian-dipole-constraints.md",
+      "sha256": "1b14cd03ea1bf97c08a296b6dc1eefb84169e0cfd1eecf021cc5a6adb35a1b28"
+    },
+    {
+      "path": "notes/radial-axial-correlator.md",
+      "sha256": "f2769e303e0a05ef3f894c51242f76442a03d7c5ea089b2d4079487819f46cf7"
+    },
+    {
+      "path": "notes/returned-switch-capture.md",
+      "sha256": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+    },
+    {
+      "path": "notes/curved-massive-response.md",
+      "sha256": "fa00c42c4cc646f28252e2b4fea94fa42c494a766d8029835e483e6d46255b44"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\quadrupole-response-2026-10-13\\verification.log",
+    "raw_log_sha256": "72c05af01f36687c9c55c8fb388b1b7756460d66081e15aecfa53b0660f0effc",
+    "counts": {
+      "exact_sourced_4D_master_identities": 2,
+      "exact_source_free_Einstein_Maxwell_components": 14,
+      "exact_exterior_potential_limits": 4,
+      "normalized_global_mode_cases": 8,
+      "retarded_pulse_work_cases": 3,
+      "candidate_80_digit_cases": 3
+    },
+    "maximum_global_mode_residual": 1.1303693013781895e-15,
+    "maximum_global_orthonormality_error": 1.0658141036401503e-14,
+    "maximum_pulse_Duhamel_ODE_error": 9.244422718643341e-14,
+    "maximum_pulse_work_error": 5.329070518200751e-15,
+    "numerical_scope": "Exact SymPy tensor identities plus supplementary finite spectral, time-evolution and high-precision substitutions; no interacting quantum or evolving four-dimensional simulation.",
+    "development_failures": [
+      {
+        "snapshot": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\quadrupole-response-2026-10-13\\checker-initial.py",
+        "snapshot_sha256": "df303e252e2b347ac85f174b74a4c11ae7c702dfc9f83bb7bb437c9ce82bc667",
+        "log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\quadrupole-response-2026-10-13\\development-initial.log",
+        "log_sha256": "beba995662361d410b183bedfc9687781f8854ac1c363f4aace1b6ce74b72d7b",
+        "exit_code": 1,
+        "failure": "Maxwell source identity residual E0*(T+R)/2.",
+        "resolution": "Corrected anisotropic source coefficient from E0*S_T to E0*S_T/2, as required by the covariant Maxwell equation and trace constraint. Targets were not relaxed."
+      }
+    ],
+    "refined_electric_source_pass": {
+      "snapshot_sha256": "c227989af5e818ddfde3fd00676b3a1e01b51e215a7da040ee489f53569b7604",
+      "log_sha256": "72c05af01f36687c9c55c8fb388b1b7756460d66081e15aecfa53b0660f0effc",
+      "receipt_sha256": "63ca4f28ccbdef45a5e5ef2d1dfdd4cb0de179d19045ea186c6c6575e30ddf37",
+      "exit_code": 0
+    },
+    "final_scope_extension": "Independent radial electric field permits nonzero magnetic current after electromagnetic duality; the two master identities and homogeneous reconstruction pass at the extended scope.",
+    "final_snapshot_sha256": "6945941cac0d041d12565e9259937787e3bb09235a9fdfd7c914187bb6348398",
+    "first_run_passed": false,
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "Gauge-invariant sourced polar equations on fixed AdS2 x S2, with covariant electric-current divergence and magnetic-current Bianchi source.",
+    "Positive 2x2 product mass matrix, exact light/heavy spectrum, source projectors and candidate low-mass harmonic count.",
+    "Friedrichs global retarded propagator and finite-time source-to-master-energy bounds; Poincare reference has no positive spectral gap but retains finite-time bounds.",
+    "Direct symbolic l=2 four-dimensional tensor verification for arbitrary frequency/radius ratio, plus independent RN-AdS potential limit."
+  ],
+  "limitations": [
+    "No complete quadratic dipole/fermion source or renormalized quantum source kernel computed.",
+    "Friedrichs global boundaries are not physical horizon/mouth matching; the light branch permits other endpoint domains.",
+    "Master-energy normalization and mode counts are not physical stress or capture-error estimates.",
+    "Radius evolution, boundary clocks, all higher interactions and initial gravitational/matter state remain unmatched.",
+    "No pair preparation, sufficient full stability, finite-energy transport or creation result."
+  ],
+  "candidate": {
+    "k": 2000,
+    "C": "49119681981.43144744702865721368269081232045097028753486783704773577582739995979",
+    "quadrupole_mu_minus": "0.0000000000000000000049735919710142018602334911496694773097399978415308906500970210576652256398729466",
+    "quadrupole_mu_plus": "2.0000000002443012559464863688221274822770542908690399542656974556249670330061329",
+    "Delta_minus_minus_one": "0.0000000000000000000049735919710142018602087545325753403763831825879838041193945424484853529100031376",
+    "metric_source_light_projector_weight": "0.00000000006107531397791780625686454469630426596220543651974640026819082379753335117015646",
+    "ell_max_mu_minus_le_one": 344361,
+    "angular_multiplicity_one_polar_branch": 118585187040,
+    "multiplicity_over_LLL_complex_channels": "0.00741157419",
+    "count_is_not_stress_estimate": true
+  },
+  "source_correction": {
+    "covariant_result": "r_A=(E0/2)S_T-D_a Jtilde^a+Bcal",
+    "literal_expression_not_used": "HTML (160), PDF (5.75), has twice the anisotropic coefficient and omits the B_prime*Jtilde_xi part of the radial divergence.",
+    "evidence": "Direct four-dimensional source identities; covariant source (105)/(5.20) and trace (110)/(5.25); PDF page 27 visually confirmed.",
+    "scope": "Local source convention in this calculation; no change to source-free KI spectrum and no outreach or external erratum filed."
+  },
+  "rejected_inference": {
+    "statement": "The sourced quadrupole and all omitted angular modes can be eliminated as uniformly heavy fields.",
+    "reason": "At k=2000 the l=2 lower branch has m^2*a^2=4.9735919710e-21; many higher angular states also have product mass squared at most one.",
+    "replacement": "Retain the coupled light branch in the retarded kernel and estimate the actual ordered source correlations; small mass alone implies no instability."
+  },
+  "novelty": "Underlying Einstein-Maxwell master equations and Gegenbauer wave spectrum are established. This calculation specializes their sourced form, independently verifies it, and supplies the actual candidate mass/source projection and response target. No exhaustive novelty acceptance.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_goal_turn": "progress: all-axis dipole Gauss law and omitted quadrupole source committed and pushed",
+    "current_goal_turn": "progress: derived and verified sourced coupled quadrupole response, corrected source factor, retained light branch and boundary-dependent finite-time bounds",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "next_action": "Project the complete quadratic dipole/metric and fermion source into r_F/r_A, retaining dual magnetic currents and mixed correlations. Derive its renormalized ordered kernel in the state obeying the angular Gauss law, propagate through the light/heavy retarded operator and physically match boundaries before comparing capture and area margins.",
+  "remaining": [
+    "constrained renormalized quantum source kernel",
+    "physical boundary/state/operator and radius matching",
+    "higher interactions and evolving stress/geometry",
+    "preparation and quantum fluctuations",
+    "sufficient stability and finite-energy transport"
+  ]
+}
