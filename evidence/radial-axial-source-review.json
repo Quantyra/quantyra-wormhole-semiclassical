@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-13",
+  "story": "S072",
+  "epic": "E003",
+  "status": "verified_radial_electric_plus_one_axis_correlator",
+  "previous_satellite_commit": "25a6b876ee32cb9c35729d656d8a4e24407b5909",
+  "previous_planning_commit": "6a572307926513e523d9e007eab95640ff2110fc",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0308128v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\retarded-angular-2026-10-13\\hep-th-0308128v3.html",
+      "sha256": "109a5ef7b66783b407130b8e6c609eb69b1ce5f27f680a145a641f2568889449",
+      "reading_scope": "Section 4.2.2 equations (72)-(74): exceptional dipole constraint and remaining electromagnetic wave; no independent dynamical gravitational dipole. It does not establish the fermion correlator.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/1807.04726v3#A1",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\wormhole-literature-review\\2026-10-10\\1807.04726-v3-body.html",
+      "sha256": "2fe642d7082c743a9d433348814df4a07b34c766808cb4212f01a4b1f49c6671",
+      "reading_scope": "Appendix A read in the cached section: Abelian bosonization/current anomaly; distinction from non-Abelian angular gauging. The two-component radial correlator is derived here.",
+      "entire_paper_reviewed": false
+    },
+    {
+      "url": "https://arxiv.org/html/cond-mat/9805275v3",
+      "cache_path": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\electric-reservoir-2026-10-13\\9805275v3.pdf",
+      "sha256": "b1dcd9b026bee9672074e272557b8f27be799f14fe414a512eebc9e9f1475a32",
+      "reading_scope": "Reuse of the previously reviewed finite-circle species-charge and Klein-ladder conventions, sections 4E-4F, 6-7 and appendix B. No new attribution of the radial coupled theorem to this source.",
+      "entire_paper_reviewed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "notes/radial-axial-correlator.md",
+      "sha256": "f2769e303e0a05ef3f894c51242f76442a03d7c5ea089b2d4079487819f46cf7"
+    },
+    {
+      "path": "checks/radial_axial_correlator.py",
+      "sha256": "210a89febcc511b096f415d6abe6966e6fb5b17b8cac0171c6117fef967087d4"
+    },
+    {
+      "path": "evidence/radial-axial-correlator.json",
+      "sha256": "7f49f1319ed8fcf2d48d5fecb4a357ac5f52aaa0806b5dd7a9d816431720d4ed"
+    },
+    {
+      "path": "checks/radial_electric_correlator.py",
+      "sha256": "8b4c8c312c788b76b58aa6e216f2463ae7754e8287b65df7bc962dfd70ee0f63"
+    },
+    {
+      "path": "notes/radial-electric-correlator.md",
+      "sha256": "d51e799feacb3360c546721e4a97e8f21b769326d4d61299eea546646c26a660"
+    },
+    {
+      "path": "notes/causal-compact-response.md",
+      "sha256": "ab573951b0bf7e7376d3ace5631babeeece76b6ba6b21e5c282b708da24e4b82"
+    },
+    {
+      "path": "notes/angular-boundary-response.md",
+      "sha256": "a8c4febfbfacb91453cdf92af20fd9c42cef902ac683c108cc3503fae96f17f6"
+    },
+    {
+      "path": "notes/electric-reservoir-midpoint.md",
+      "sha256": "ea494a68a7f0cc700bcb4791ac656b9305da35c60d0c3893c29f626ae6ba6c03"
+    },
+    {
+      "path": "notes/angular-reservoir-correlator.md",
+      "sha256": "436cc3dc06a9c168b074b34d368ed410c99308543124374d0319f5989c957530"
+    },
+    {
+      "path": "notes/angular-transfer-matching.md",
+      "sha256": "7ed21299cc76b405de3676aab7b806be013dc3aaf57a28ec2ecf77b66c54a30d"
+    }
+  ],
+  "verification": {
+    "exit_code": 0,
+    "raw_log": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\radial-axial-2026-10-13\\verification.log",
+    "raw_log_sha256": "ab7181b923885b83f40a0b9469bc02e1fe93e9a375fd09ab9d2d4552ce32f4d8",
+    "counts": {
+      "vector_charge_Fock_traces": 6,
+      "radial_meshes": 6,
+      "joint_species_midpoints": 5,
+      "candidate_substitutions": 6,
+      "matrix_static_cap_counterexamples": 1
+    },
+    "maximum_vector_trace_error": 3.3306690738754696e-16,
+    "maximum_primal_spectral_error": 9.450218385609332e-13,
+    "maximum_thermal_trace_error": 1.1127708997304975e-15,
+    "candidate_decimal_precision": 70,
+    "numerical_scope": "Supplementary mesh/spectral/ODE and finite trace checks of an ordinary proof; no interval arithmetic or four-dimensional simulation.",
+    "development_failures": [],
+    "first_run_passed": true,
+    "local_lean_or_lake_run": false
+  },
+  "accepted_scope": [
+    "Exact joint radial electric and one commuting angular-generator correlator in the stated quadratic Einstein-Maxwell/massless-LLL model and neutral inner-cut ensemble.",
+    "Dynamical electromagnetic dipole retained with mixed outer boundary conditions; one species-charge lattice and common oscillator subtraction.",
+    "Explicit bare-radial variational cap replaces an invalid general matrix extension of scalar static monotonicity.",
+    "Finite-cut midpoint ratio between exp(-b_m/2) and exp(b_m/2)/cosh(b_m/2), uniform in channel count and optical length; candidate loss below 8.334e-5 against the same-cut free reference."
+  ],
+  "limitations": [
+    "No noncommuting SU(2) radial interaction bound; do not multiply three one-axis copies.",
+    "Other angular harmonics, massive modes and nonlinear gravitational terms remain.",
+    "Neutral inner cut is not physical horizon gluing; 4D dressed operator and boundary clocks/coupling remain unmatched.",
+    "No capture-energy or area error theorem follows from the initial midpoint bound.",
+    "No driven stress, preparation, full stability or finite-energy transport conclusion."
+  ],
+  "rejected_inference": {
+    "statement": "For every positive matrix potential with one natural outer component, delta K(s)<=delta K(0).",
+    "reason": "Explicit positive definite constant-matrix counterexample gives 0.2289457584 at s=0.4 versus 0.0254138903 at s=0.",
+    "scope": "General estimate fails; no RN instability or wormhole impossibility is inferred.",
+    "replacement": "Drop the positive matrix potential for the lower bound; set the heavy trial component to zero for an all-frequency upper bound by the light diagonal radial integral."
+  },
+  "novelty": "Underlying bosonization, constrained axial dynamics and spectral methods are established. The joint finite-cut correlator and explicit uniform comparison are derived here; no exhaustive novelty acceptance.",
+  "preservation": {
+    "manifest": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\static-formation-2026-10-12\\preexisting-worktree-hashes.json",
+    "sha256": "3246a0d8130bde193a2b3a41ca213cf1c96f38268336fdcc4a8bd83b7c78466f",
+    "unchanged_files": 14
+  },
+  "goal_audit": {
+    "previous_goal_turn": "progress: derived and pushed global charge-spin reservoir correlator",
+    "current_goal_turn": "progress: derived and verified radial electric plus one-axis correlator with dipole dynamics and uniform finite-cut bound",
+    "complete": false,
+    "external_blocker": false,
+    "live_computation_remaining": false
+  },
+  "next_action": "Control the noncommuting angular current theory with radial gauge/metric constraints and physical gravity/matter gluing; do not infer it from three Abelian copies or the global Casimir model. Then obtain the driven covariance/stress with common subtraction and evolving geometry.",
+  "remaining": [
+    "noncommuting angular and massive interactions",
+    "physical horizon state and dressed operator/coupling/clocks",
+    "driven stress and evolving geometry",
+    "preparation and quantum fluctuations",
+    "sufficient general stability and finite-energy transport"
+  ]
+}
