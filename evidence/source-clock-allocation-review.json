@@ -1,0 +1,71 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for the scoped source-clock obstruction; opening not achieved",
+  "satellite_base_commit": "46c591edb5bdfccb0c482e18158d494eb3fafcce",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\source-clock-allocation-2026-10-13",
+  "accepted_run": "acceptance-02",
+  "accepted_inputs": {
+    "checks/source_clock_allocation.py": "c6e0bbc4774d5c27e3fd6de91babf1d60441d234aa49ad39dfd1a37a8aa0b527",
+    "notes/source-clock-allocation.md": "5465b92f7e1d1016acbc700f7c80fdd762f263ab703623597cf7dfb40e981ff9",
+    "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+    "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763",
+    "notes/switching-radiation-capture.md": "cbcdb676fb685b0ce356dfc4be3b3c3694dd25545aef2ebee84fe4fd4ccc1b96"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1804.00491v3",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\formation-boundary-2026-10-12\\1804.00491v3.html",
+      "sha256": "0fd400fb887938db763540b128b6d1dec40cf2850797233317b7a12f78ae0f27",
+      "reviewed": "Reused the pinned Maldacena-Qi v3 cache. The constraint dictionary inserts the matter charge into the Schwarzian equation. A bounded 2026-10-13 refresh did not find a revision that fixes the finite local source coefficient zeta_s or selects between a fixed boundary metric and a dynamical clock insertion.",
+      "application": "Use the retained global-time charge dictionary. Do not treat the double-trace coupling as a value of zeta_s."
+    },
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\sources\\vassilevich-hep-th-0306138v3.html",
+      "sha256": "3a378712a7bc291265748f35d30ed445627b331142aa696cbbad5c2632f9b029",
+      "reviewed": "Reused the pinned Vassilevich v3 cache already reviewed for the curved-collar heat coefficients. Those coefficients fix divergences and the local anomaly polynomial. They do not assign the finite source coefficient.",
+      "application": "Confirm the retained a3 and a4 polynomials have no zeta_s. Do not promote a heat coefficient into an opening budget."
+    }
+  ],
+  "runs": [
+    {
+      "identity": "development-01",
+      "command": "checks/source_clock_allocation.py --output dev-01.json",
+      "exit_code": 1,
+      "failure": "A central-difference check of the squared-pulse primitive missed a 1e-8 tolerance by about 1.3e-8 at step 1e-4. The symbolic derivative identity had already passed. The step was reduced to 1e-5. No physical formula changed."
+    },
+    {
+      "identity": "development-02",
+      "command": "checks/source_clock_allocation.py --output dev-01.json",
+      "exit_code": 1,
+      "failure": "The work-identity quadrature called .sol on an OdeSolution that was already the dense interpolant. The call was pointed at the OdeResult. No physical formula or threshold changed."
+    },
+    {
+      "identity": "acceptance-01",
+      "output_sha256": "0139e16df69b94de0b8bbd612bc4df2e58aade849621a7de6190651eda5782d4",
+      "stdout_sha256": "a7936da31ec0cd9a87e2642c27c55792fb2fb1e7950fb641d3283bfba9533386",
+      "exit_code": 0,
+      "lambda_critical": 4815.9793639883765,
+      "limiting_budget": "switch",
+      "sup_abs_delta_z_on_switch": 0.009762475724334141
+    },
+    {
+      "identity": "acceptance-02",
+      "output_sha256": "0139e16df69b94de0b8bbd612bc4df2e58aade849621a7de6190651eda5782d4",
+      "stdout_sha256": "a7936da31ec0cd9a87e2642c27c55792fb2fb1e7950fb641d3283bfba9533386",
+      "exit_code": 0,
+      "lambda_critical": 4815.9793639883765,
+      "limiting_budget": "switch",
+      "sup_abs_delta_z_on_switch": 0.009762475724334141
+    }
+  ],
+  "predecessor_curved_fermion_boundary": {
+    "checker": "checks/curved_fermion_boundary.py",
+    "runs": 2,
+    "status": "PASS",
+    "identical_result_sha256": "90d1d2739867889d4b2ab5d11e42ca0c59eac0fa35f1b107396a45a345a76998",
+    "matches_retained_acceptance_02": true
+  },
+  "lean_paid_compute_publication_outreach": false
+}
