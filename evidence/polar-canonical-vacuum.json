@@ -1,0 +1,344 @@
+{
+  "story": "S072",
+  "scope": "Free intrinsic l>=2 polar Einstein-Maxwell vacuum on fixed global product, Friedrichs boundaries; central Gaussian time smear s=1/4.",
+  "ADM": [
+    {
+      "ell": 2,
+      "gravity_kinetic": "exact",
+      "Maxwell_kinetic": "exact",
+      "linear_spatial_Ricci": "exact",
+      "linear_magnetic_energy": "exact"
+    },
+    {
+      "ell": 3,
+      "gravity_kinetic": "exact",
+      "Maxwell_kinetic": "exact",
+      "linear_spatial_Ricci": "exact",
+      "linear_magnetic_energy": "exact"
+    },
+    {
+      "ell": 4,
+      "gravity_kinetic": "exact",
+      "Maxwell_kinetic": "exact",
+      "linear_spatial_Ricci": "exact",
+      "linear_magnetic_energy": "exact"
+    }
+  ],
+  "reduction": {
+    "radial_and_angular_shift_constraints": "exact",
+    "kinetic_boundary_term": "4*b**4*(v(y)*Derivative(v(y), y)/N(y) - 3*v(y)**2*Derivative(N(y), y)/(2*N(y)**2))/(L*k2)",
+    "Wz": "C M_L",
+    "det_W": "2 b^2 (L-2)/kappa^2",
+    "inverse_Wz_11": "1/(L-2)",
+    "quadrupole_Wv_over_G": [
+      "3/kappa^2",
+      "0"
+    ]
+  },
+  "spectral": {
+    "CCR": [
+      {
+        "C": "1.0",
+        "ell": 2,
+        "CCR_matrix_error": "2.3738919364399496868683105673904892885552414584049862415699449977e-66"
+      },
+      {
+        "C": "1.0",
+        "ell": 3,
+        "CCR_matrix_error": "2.8263531834170761945614311553297666689520646179888163692619061998e-67"
+      },
+      {
+        "C": "1.0",
+        "ell": 20,
+        "CCR_matrix_error": "2.8985883422835279593838472134681475121456158136688216594597155104e-67"
+      },
+      {
+        "C": "1.0",
+        "ell": 500,
+        "CCR_matrix_error": "4.5467592340434755221895107034546463150997236839579515861185180582e-67"
+      },
+      {
+        "C": "4.0",
+        "ell": 2,
+        "CCR_matrix_error": "5.9347298410998742171707764184762232213881036460124656039248624943e-66"
+      },
+      {
+        "C": "4.0",
+        "ell": 3,
+        "CCR_matrix_error": "4.7477838728798993737366211347809785771104829168099724831398899954e-66"
+      },
+      {
+        "C": "4.0",
+        "ell": 20,
+        "CCR_matrix_error": "1.1869459682199748434341552836952446442776207292024931207849724989e-66"
+      },
+      {
+        "C": "4.0",
+        "ell": 500,
+        "CCR_matrix_error": "1.0676488577474379996592656069963482457539835034613511602566225093e-66"
+      },
+      {
+        "C": "100.0",
+        "ell": 2,
+        "CCR_matrix_error": "5.9465176154100579641636860478687885551965158533939035529977547754e-64"
+      },
+      {
+        "C": "100.0",
+        "ell": 3,
+        "CCR_matrix_error": "1.4318775949837975653784349064787221904026398069099342794694311359e-64"
+      },
+      {
+        "C": "100.0",
+        "ell": 20,
+        "CCR_matrix_error": "1.1869459682199748434341552836952446442776207292024931207849724989e-66"
+      },
+      {
+        "C": "100.0",
+        "ell": 500,
+        "CCR_matrix_error": "5.0748518216125008173640248111242641427574742885694146924462869661e-67"
+      },
+      {
+        "C": "10000000000.0",
+        "ell": 2,
+        "CCR_matrix_error": "1.7738744483233041836840334277972936076347071167627621575122972046e-48"
+      },
+      {
+        "C": "10000000000.0",
+        "ell": 3,
+        "CCR_matrix_error": "5.514437534757539227221797063755807600571375271051661200812769343e-49"
+      },
+      {
+        "C": "10000000000.0",
+        "ell": 20,
+        "CCR_matrix_error": "6.1862836559997123491456605683251396506175247141656974659304297688e-52"
+      },
+      {
+        "C": "10000000000.0",
+        "ell": 500,
+        "CCR_matrix_error": "7.0173879353595570717201763143395341504421321227623067612339022568e-58"
+      }
+    ],
+    "radial_normalization": [
+      {
+        "h": 1.0,
+        "n": 0,
+        "norm_error": 0.0,
+        "central_weight_relative_error": 2.220446049250313e-16
+      },
+      {
+        "h": 1.0,
+        "n": 1,
+        "norm_error": 8.881784197001252e-16,
+        "central_weight_relative_error": 5.551115123125783e-16
+      },
+      {
+        "h": 1.0,
+        "n": 2,
+        "norm_error": 1.5543122344752192e-15,
+        "central_weight_relative_error": 1.5543122344752192e-15
+      },
+      {
+        "h": 1.0,
+        "n": 3,
+        "norm_error": 4.440892098500626e-16,
+        "central_weight_relative_error": 6.661338147750939e-16
+      },
+      {
+        "h": 1.0,
+        "n": 4,
+        "norm_error": 8.881784197001252e-16,
+        "central_weight_relative_error": 1.3322676295501878e-15
+      },
+      {
+        "h": 1.0,
+        "n": 5,
+        "norm_error": 1.5543122344752192e-15,
+        "central_weight_relative_error": 2.7755575615628914e-15
+      },
+      {
+        "h": 1.7,
+        "n": 0,
+        "norm_error": 1.176836406102666e-14,
+        "central_weight_relative_error": 1.1102230246251565e-15
+      },
+      {
+        "h": 1.7,
+        "n": 1,
+        "norm_error": 8.43769498715119e-15,
+        "central_weight_relative_error": 6.661338147750939e-16
+      },
+      {
+        "h": 1.7,
+        "n": 2,
+        "norm_error": 3.708144902248023e-14,
+        "central_weight_relative_error": 4.440892098500626e-16
+      },
+      {
+        "h": 1.7,
+        "n": 3,
+        "norm_error": 8.43769498715119e-15,
+        "central_weight_relative_error": 2.220446049250313e-15
+      },
+      {
+        "h": 1.7,
+        "n": 4,
+        "norm_error": 1.2656542480726785e-14,
+        "central_weight_relative_error": 2.4424906541753444e-15
+      },
+      {
+        "h": 1.7,
+        "n": 5,
+        "norm_error": 1.8207657603852567e-14,
+        "central_weight_relative_error": 1.3322676295501878e-15
+      },
+      {
+        "h": 3.0,
+        "n": 0,
+        "norm_error": 8.881784197001252e-16,
+        "central_weight_relative_error": 7.771561172376096e-16
+      },
+      {
+        "h": 3.0,
+        "n": 1,
+        "norm_error": 4.440892098500626e-16,
+        "central_weight_relative_error": 5.551115123125783e-16
+      },
+      {
+        "h": 3.0,
+        "n": 2,
+        "norm_error": 1.3322676295501878e-15,
+        "central_weight_relative_error": 1.9984014443252818e-15
+      },
+      {
+        "h": 3.0,
+        "n": 3,
+        "norm_error": 1.9984014443252818e-15,
+        "central_weight_relative_error": 1.1102230246251565e-15
+      },
+      {
+        "h": 3.0,
+        "n": 4,
+        "norm_error": 1.3322676295501878e-15,
+        "central_weight_relative_error": 1.887379141862766e-15
+      },
+      {
+        "h": 3.0,
+        "n": 5,
+        "norm_error": 6.661338147750939e-16,
+        "central_weight_relative_error": 1.4432899320127035e-15
+      },
+      {
+        "h": 8.0,
+        "n": 0,
+        "norm_error": 7.771561172376096e-16,
+        "central_weight_relative_error": 2.3314683517128287e-15
+      },
+      {
+        "h": 8.0,
+        "n": 1,
+        "norm_error": 4.440892098500626e-16,
+        "central_weight_relative_error": 0.0
+      },
+      {
+        "h": 8.0,
+        "n": 2,
+        "norm_error": 3.4416913763379853e-15,
+        "central_weight_relative_error": 2.220446049250313e-15
+      },
+      {
+        "h": 8.0,
+        "n": 3,
+        "norm_error": 4.773959005888173e-15,
+        "central_weight_relative_error": 5.440092820663267e-15
+      },
+      {
+        "h": 8.0,
+        "n": 4,
+        "norm_error": 4.218847493575595e-15,
+        "central_weight_relative_error": 1.6653345369377348e-15
+      },
+      {
+        "h": 8.0,
+        "n": 5,
+        "norm_error": 2.6645352591003757e-15,
+        "central_weight_relative_error": 1.5543122344752192e-15
+      }
+    ]
+  },
+  "infinite_sums": {
+    "constant": "27648/127",
+    "RMS_bound": "15 sqrt(G)/a",
+    "candidate_k2000": {
+      "C": "49119681981.431447447028657213682690812320450970287534867837047736",
+      "a2_over_G": "170666666663192159915357013890941.98493671412932240057697314933399",
+      "RMS_bound": "0.000000000000001148198316941302495651291091440250012533706137112093448951976615",
+      "light_metric_projector": "0.000000000061075313977917806256864544696304265962205436519746400268190823798",
+      "light_kinetic_coefficient": "0.00000000024430125592161840896766400035836705864892198434076573287634118653",
+      "projector_over_kinetic": "0.24999999998982078100388759862262285398719003918290449663126566612"
+    },
+    "heat_diagnostics": [
+      {
+        "C": 1.0,
+        "ell_max": 68,
+        "heat_partial_sum": 32.335429165459615,
+        "analytic_heat_bound": 40.0
+      },
+      {
+        "C": 4.0,
+        "ell_max": 136,
+        "heat_partial_sum": 128.33385494323437,
+        "analytic_heat_bound": 160.0
+      },
+      {
+        "C": 100.0,
+        "ell_max": 679,
+        "heat_partial_sum": 3200.333354167907,
+        "analytic_heat_bound": 4000.0
+      },
+      {
+        "C": 10000.0,
+        "ell_max": 6789,
+        "heat_partial_sum": 320000.33333354164,
+        "analytic_heat_bound": 400000.0
+      }
+    ],
+    "vacuum_diagnostics": [
+      {
+        "C": 1.0,
+        "ell_max": 80,
+        "even_radial_terms": 50,
+        "dimensionless_variance_partial_sum": 11.925843713759615,
+        "proven_all_mode_upper_bound": "27648/127"
+      },
+      {
+        "C": 4.0,
+        "ell_max": 160,
+        "even_radial_terms": 50,
+        "dimensionless_variance_partial_sum": 11.795928744406302,
+        "proven_all_mode_upper_bound": "27648/127"
+      },
+      {
+        "C": 100.0,
+        "ell_max": 800,
+        "even_radial_terms": 50,
+        "dimensionless_variance_partial_sum": 10.919533658402322,
+        "proven_all_mode_upper_bound": "27648/127"
+      }
+    ],
+    "tail_proof": "See note: positive radial gamma bound, mass inequality, unimodal sphere heat sum. No truncation is used to prove the all-mode result."
+  },
+  "versions": {
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "sources": {
+    "checks/polar_canonical_vacuum.py": "26445d0229898719eb6397d6457a3b93bf5dc37a53d5d44d90f2132121b62133",
+    "notes/polar-canonical-vacuum.md": "4f49027cf2630aa82f26a518177add98a525849536039b7de21cd00770d3fd6d",
+    "checks/quadrupole_product_response.py": "6945941cac0d041d12565e9259937787e3bb09235a9fdfd7c914187bb6348398",
+    "notes/quadrupole-product-response.md": "334546768d34b4affde58b3d18be6017bd9197910a2a4921b9ec8281bdc5a9ea"
+  },
+  "status": "PASS",
+  "goal_complete": false
+}

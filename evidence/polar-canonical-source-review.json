@@ -1,0 +1,101 @@
+{
+  "story": "S072",
+  "date": "2026-10-13",
+  "status": "PASS",
+  "goal_complete": false,
+  "result": "Physical reduced polar kinetic matrix W_z=C M_L; canonical intrinsic free-vacuum covariance; complete l>=2/radial time-Gaussian sphere RMS below 15 sqrt(G)/a.",
+  "primary_sources": [
+    {
+      "file": "ADM-0405109v1.html",
+      "url": "https://arxiv.org/html/gr-qc/0405109v1",
+      "sha256": "ae9298461404fd4c09983d6bd2402d1db658bcf3844eaa6820895a28f31ae1ec",
+      "bytes": 598126,
+      "title": "The Dynamics of General Relativity",
+      "reviewed": "Sections 3.2-3.3 and 6.1: lapse/shift constraints, extrinsic-curvature momentum and Maxwell canonical coupling. Equations 3.9-3.15 and 6.1-6.3; section 6.2 screened only.",
+      "not_imported": "No point-particle self-energy, nonlinear quantum-gravity or asymptotic-flatness conclusion imported."
+    },
+    {
+      "file": "Michelson-Spradlin-9906056v3.html",
+      "url": "https://arxiv.org/html/hep-th/9906056v3",
+      "sha256": "7a0d1e9d1c6166c02c1513af4b50fc339372841cf3efd4cd887f38e57acbf209",
+      "bytes": 491089,
+      "title": "Supergravity spectrum on AdS(2) x S(2)",
+      "reviewed": "Section 3.8 in full, especially bosonic scalar matrix 3.44 and masses 3.45; section 3.9 spectrum/weight summary screened.",
+      "not_imported": "Only the C=1 bosonic scalar mass comparison is used. Supersymmetry, full fermionic spectrum and boundary gauge sectors are not transferred to C>1."
+    }
+  ],
+  "novelty_claim": false,
+  "comparison_scope": "Targeted primary-source consistency check, not an exhaustive novelty search. ADM fixes the constraint method; the C=1 spectrum is established prior art.",
+  "ordinary_argument": [
+    "Four-dimensional ADM sphere integration with both shifts retained; lapse constraint and both momentum constraints fix the reduced positive kinetic matrix.",
+    "Potential reconstructed from the already verified complete linear master equations and W K symmetry. Absolute normalization comes from the ADM action.",
+    "Canonical branch covariance contains P_r/(C mu_r); the light projector alone does not suppress intrinsic vacuum noise.",
+    "Positive gamma-ratio and heat-sum estimates bound all l>=2, both branches and all central radial modes without numerical tail extrapolation."
+  ],
+  "runs": [
+    {
+      "name": "development-01",
+      "session_id": 18826,
+      "exit_code": 1,
+      "hashes": {
+        "log.txt": "172f64315d38b14e1deb0de16c9034bb11713ed70582c4acbcc84beb28c3d585",
+        "polar-canonical-vacuum.md": "2abcf088473c067704bf469f00fba7ae0b3c111500f6d4be7dd593791a676db1",
+        "polar_canonical_vacuum.py": "be9e44ca2c703b2638c8d524938692fe610de0dc9b49ae80e0f91942092411ca",
+        "result.json": "6f3df4e801b039815dda065039974d0cee1446425226f67ed1a1c5043a7a1c22"
+      }
+    },
+    {
+      "name": "development-02",
+      "session_id": 65691,
+      "exit_code": 0,
+      "hashes": {
+        "log.txt": "f70a4248a9af07b99f755fcef99dc1452b0c114bdcc61e4f4f603879d1334f02",
+        "polar-canonical-vacuum.md": "2abcf088473c067704bf469f00fba7ae0b3c111500f6d4be7dd593791a676db1",
+        "polar_canonical_vacuum.py": "26445d0229898719eb6397d6457a3b93bf5dc37a53d5d44d90f2132121b62133",
+        "receipt.json": "0d2ae894391cc10962562e3c72b976f2745d8008922f70b6376d6d5342180bf7",
+        "result.json": "7e410d0df7482e42b330281f3580ea2e1fc7e8ff8adc3c66fea5339e33b91b8e"
+      }
+    },
+    {
+      "name": "acceptance",
+      "session_id": 18468,
+      "exit_code": 0,
+      "hashes": {
+        "log.txt": "f70a4248a9af07b99f755fcef99dc1452b0c114bdcc61e4f4f603879d1334f02",
+        "polar-canonical-vacuum.md": "4f49027cf2630aa82f26a518177add98a525849536039b7de21cd00770d3fd6d",
+        "polar_canonical_vacuum.py": "26445d0229898719eb6397d6457a3b93bf5dc37a53d5d44d90f2132121b62133",
+        "receipt.json": "69ce736fb33df8d4ca9b110699d95522d45a538d61bf6cd0978f017f97e01fed",
+        "result.json": "b0befd69289b9898b0600df49000bdb0b455a69d4d38764ef3c451d690859403"
+      }
+    }
+  ],
+  "failed_calculations": [
+    {
+      "run": "development-01",
+      "failure": "The checker integration-by-parts boundary term had incorrect coefficients. Direct spatial tensors for ell=2,3,4 and both shift constraints had passed.",
+      "correction": "Replaced that boundary term by 4b^4/(kappa^2 L)[v vprime/N-3Nprime v^2/(2N^2)]. The resulting pointwise identity is exact.",
+      "unchanged": "Reduced W matrix, covariance, final inequality and all numerical tolerances."
+    }
+  ],
+  "changes_after_successful_development": "Note clarifies dual electric amplitude, Gauss/charge scope, the exact boundary derivative and the retained failed run. Checker unchanged for acceptance.",
+  "verification_scope": {
+    "tensor_harmonics": [
+      2,
+      3,
+      4
+    ],
+    "general_L_proof": "Sphere gradient/Hessian identities and exact symbolic constrained reduction.",
+    "CCR_cases": 16,
+    "radial_quadratures": 24,
+    "max_radial_norm_error": 3.708144902248023e-14,
+    "finite_sums": "Diagnostics only; all-mode result is analytic."
+  },
+  "raw_directory": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\polar-canonical-vacuum-2026-10-13",
+  "limitations": [
+    "Quadratic Einstein-Maxwell theory on a fixed global product, Friedrichs boundaries and free global vacuum only.",
+    "Central Gaussian time smear of dimensionless width 1/4 at a fixed angle, not the prior spatial average or a trajectory supremum.",
+    "No interacting dressed state or physical conserved boundary drive.",
+    "No full metric, renormalized stress, ultraviolet effective-theory error, capture probability, creation, full stability or finite-energy transport conclusion."
+  ],
+  "next_step": "Use the physical polar normalization to derive initial matter/metric correlations and conserved sources from the constrained fermion/dipole/boundary action, retaining H3/H4, induced response and physical boundary matching."
+}
