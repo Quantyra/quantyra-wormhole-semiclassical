@@ -1,0 +1,328 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for curved matched-collar derivative heat coefficients, local Weyl transfer, fixed-round RN reference limit and prescribed-source contact identities",
+  "satellite_base_commit": "12123206dd149016cf0e5e812d0a40af266b5a1a",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13",
+  "accepted_run": "acceptance-02",
+  "accepted_inputs": {
+    "checks/curved_fermion_boundary.py": "0aed0bba4cdf72d120edec075f13854b68914eed8779b782806cdd20169c1240",
+    "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+    "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+    "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+    "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+    "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\sources\\vassilevich-hep-th-0306138v3.html",
+      "sha256": "3a378712a7bc291265748f35d30ed445627b331142aa696cbbad5c2632f9b029",
+      "reviewed": "Section 2.1 inward-normal convention; (5.22), (5.27)-(5.33) mixed heat coefficients; sections 7.1-7.2, especially (7.4), (7.24) and the distinction between localized and integrated coefficients.",
+      "application": "Import the mixed heat-coefficient theorem and determinant convention. Derive the paired curved-domain Robin term, rank-eight traces, Weyl transfer and RN reference limit directly; no unrelated reflecting-wall coefficient is assigned."
+    }
+  ],
+  "runs": [
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\acceptance\\checks\\curved_fermion_boundary.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791960423.688005,
+      "duration_seconds": 6.679200887680054,
+      "exit_code": 1,
+      "input_sha256": {
+        "checks/curved_fermion_boundary.py": "9717305c37431b314866648bd53471dc9f8b512b8a6ca612050c332959d9c0d9",
+        "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+        "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+        "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+      },
+      "stdout_sha256": "430a92aa25f45507704fc873e49d0dcd828381fa271e26697179e8e1eb228b7b",
+      "terminal_sha256": "7cb66abc7a67e0352304efa5d02c586674c1fefe0d9238ba6e90d8582f057d41",
+      "result_sha256": null
+    },
+    {
+      "identity": "acceptance-02",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\acceptance-02",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\acceptance-02\\checks\\curved_fermion_boundary.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\acceptance-02\\result.json"
+      ],
+      "start_unix": 1791960531.7601397,
+      "duration_seconds": 14.100260019302368,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/curved_fermion_boundary.py": "0aed0bba4cdf72d120edec075f13854b68914eed8779b782806cdd20169c1240",
+        "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+        "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+        "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+      },
+      "stdout_sha256": "4976ed42d75ecc1951919ae6723636fbd745270a826ee906944c6d95c0604f8a",
+      "terminal_sha256": "c308082260e3fd067d8816642265cb48555e05f91c3ee167b179eaa00b66e14f",
+      "result_sha256": "90d1d2739867889d4b2ab5d11e42ca0c59eac0fa35f1b107396a45a345a76998"
+    },
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\development-01\\checks\\curved_fermion_boundary.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791960280.4297085,
+      "duration_seconds": 9.692588090896606,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/curved_fermion_boundary.py": "7ba61d635b38df4d7477a53fcb02d667543ec54943098794695e3334be6131f0",
+        "notes/curved-fermion-boundary.md": "7bcbaafbb8a10b161678c2222206c91f27d537020ae0a630c03eafe8bfa91417",
+        "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+        "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+      },
+      "stdout_sha256": "ce8e0a388d84f1082029de2863fa860aaad864b9fe160f8e490a84ec13f4bb69",
+      "terminal_sha256": "91a649c92c7dfbd4f8bda7e89f5f5d008e63f7bcece74e735ca5e692b83b7939",
+      "result_sha256": "0abcf6319fc4df6f13d6fd2c87c50aa896a16cb0a59f0e54b8cd3c45b423b6ea"
+    },
+    {
+      "identity": "development-02",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\development-02",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\development-02\\checks\\curved_fermion_boundary.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-fermion-boundary-2026-10-13\\development-02\\result.json"
+      ],
+      "start_unix": 1791960467.9922054,
+      "duration_seconds": 9.813234806060791,
+      "exit_code": 1,
+      "input_sha256": {
+        "checks/curved_fermion_boundary.py": "94528618f8dfffb49e7c801df016687f2d8df58bdfd0f28d6a652dc4cfbffd28",
+        "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+        "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+        "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763"
+      },
+      "stdout_sha256": "e7bcfe6ca8e4f087779d41e3b51a05c8e4a303db216d40cf14b982ddd6855c6c",
+      "terminal_sha256": "8526cef8cc75b617221dfa86db4d81732ae9e2889f667a3bd1f7eea13c787b77",
+      "result_sha256": null
+    }
+  ],
+  "failed_runs": [
+    "acceptance",
+    "development-02"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "verification": {
+    "clifford": {
+      "Clifford_and_minimal_curvature_gauge_traces": "PASS",
+      "arbitrary_symmetric_second_fundamental_form": "PASS",
+      "induced_Robin_both_domains": "PASS",
+      "rank": 8,
+      "coefficients": [
+        {
+          "domain": "Dirac",
+          "a3": "(u0**2 + u1**2 + u2**2)/4",
+          "a4": "4*(2*L00*u0**2 - L00*u1**2 - L00*u2**2 + 6*L01*u0*u1 + 6*L02*u0*u2 - L11*u0**2 + 2*L11*u1**2 - L11*u2**2 + 6*L12*u1*u2 - L22*u0**2 - L22*u1**2 + 2*L22*u2**2)/15",
+          "a4_normal_smearing": "4*(u0**2 + u1**2 + u2**2)/15"
+        },
+        {
+          "domain": "adjoint",
+          "a3": "(u0**2 + u1**2 + u2**2)/4",
+          "a4": "4*(2*L00*u0**2 - L00*u1**2 - L00*u2**2 + 6*L01*u0*u1 + 6*L02*u0*u2 - L11*u0**2 + 2*L11*u1**2 - L11*u2**2 + 6*L12*u1*u2 - L22*u0**2 - L22*u1**2 + 2*L22*u2**2)/15",
+          "a4_normal_smearing": "4*(u0**2 + u1**2 + u2**2)/15"
+        }
+      ],
+      "umbilic_omission_control": "PASS"
+    },
+    "weyl": {
+      "conformal_weights_and_WZ_cocycle": "PASS",
+      "finite_L_source_term_shift": "delta(J)=-3 integral n(omega)*(Dtheta)^2",
+      "RN_typeB_relative_series": "-4*Q2*ell**2*z**3/3 + 2*ell**2*m*z**2",
+      "RN_normal_relative_series": "2*Q2*ell**2*z**3 - 3*ell**2*m*z**2",
+      "RN_WZ_relative_limit": "0; typeB is O(log(R)/R^2), normal term O(1/R^2), at fixed parameters"
+    },
+    "source_action_variations": 8,
+    "direct_curved_surfaces": 12,
+    "maximum_contact_discrepancy": 2.4741694804042424e-11,
+    "maximum_contact_refinement": 1.0184431076254441e-10,
+    "maximum_surface_heat_discrepancy": 5.745404152517954e-14,
+    "maximum_surface_refinement": 8.051892486093948e-14,
+    "maximum_surface_Robin_discrepancy": 7.489619521158216e-13,
+    "contact_tolerance": 2e-07,
+    "surface_tolerance": 2e-08,
+    "finite_difference_steps": [
+      0.001,
+      0.0005
+    ],
+    "supplementary_numerics_are_not_interval_certificates": true
+  },
+  "run_history": "development-01 passed exact identities and eight contact variations. acceptance added twelve direct finite-angle curved-surface tests and failed the target Robin comparison. development-02 retained diagnostic values, confirming heat traces agreed and isolating element-wise multiplication in the numerical target matrix. Replacing that product with matrix multiplication gives acceptance-02 PASS. No analytic coefficient or numerical threshold was changed.",
+  "decision": "Use the curvature and normal-smearing terms together in the local Weyl transfer. Source-only finite contacts do not change normalized matter evolution for a fixed prescribed source and boundary geometry, but remain in source stress/work and cannot be dismissed for feedback or dynamical controllers.",
+  "scope_limits": [
+    "Identical pulled-back collar metric/gauge jets, minimal massless free Dirac field",
+    "No full unequal or evolving interacting determinant, phase, state or opening remainder",
+    "RN limit at fixed parameters; no simultaneous large-flux theorem",
+    "Controller and physical trajectory matching remain open",
+    "No full S074-S080 task completed"
+  ],
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "clock_artifact_preservation": [
+    {
+      "path": "manuscript/clock-mode-obstruction/claim-to-evidence.md",
+      "sha256": "c8104e07ebd99d3d4b2de32b9a685c13318ec5eb9400325175641144008084d8"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex",
+      "sha256": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/bundle.json",
+      "sha256": "d4a5726ead6bdfbdb0480c2be279c89976cc68db6225bdf94742be31d54f8f0b"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction-v0.1.0-source.zip",
+      "sha256": "7a490844a2ead224344754e344f6c95f814d7f56c0c01a434d1f77714793efb9"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.pdf",
+      "sha256": "416bb2d8a140e91690a988364dec4fdb13dc7e54859d80b51fe6bed6fb93ba26"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/creation-intent.json",
+      "sha256": "f6fce18c2b020dcbcf2b56b973059e311da3838bfe8beef68326022f8775ec04"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/draft-record.json",
+      "sha256": "1dbfeed8483a22b38baf55601f2287b7cd53770812128246e11c3742f1b5e2ee"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/LICENSE-CC-BY-4.0.txt",
+      "sha256": "62202e40780cad6d159546cdf74b5b218d07091f6feeca7b1244771ac72cba7c"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/manifest.json",
+      "sha256": "beeb5dd2e0accb4258faceae469dbba61b33b2df3b1f096932d962188b6f3d41"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/public-record.json",
+      "sha256": "be393570622dd0594dd857e6ee9bb84a56d8fac9c8e470a73d46961a390a4699"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/published-record.json",
+      "sha256": "a36d71de62fbf2ea9a57d29a4ccc92971645febe1ad551d0c51051798935d963"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/resolution-check.json",
+      "sha256": "b77eb49617f5f3f61f4a1bde2a47bb80ee403b8074085a1ab2ebb726f0327807"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/zenodo-metadata.json",
+      "sha256": "ed4ba7c848fa682d5d1179e726eaaf9ea725a4381a7fdbe77ce0cb65061fb6f8"
+    }
+  ],
+  "no_Lean_paid_compute_publication_or_outreach": true,
+  "closed_predecessors_not_reopened": true,
+  "remaining": "S074 other local interactions, unmatched boundary and finite dynamical matching, observable remainder; S075 physical state/drive and clock/controller; S076-S080."
+}

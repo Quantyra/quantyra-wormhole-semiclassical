@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "clifford": {
+    "Clifford_and_minimal_curvature_gauge_traces": "PASS",
+    "arbitrary_symmetric_second_fundamental_form": "PASS",
+    "induced_Robin_both_domains": "PASS",
+    "rank": 8,
+    "coefficients": [
+      {
+        "domain": "Dirac",
+        "a3": "(u0**2 + u1**2 + u2**2)/4",
+        "a4": "4*(2*L00*u0**2 - L00*u1**2 - L00*u2**2 + 6*L01*u0*u1 + 6*L02*u0*u2 - L11*u0**2 + 2*L11*u1**2 - L11*u2**2 + 6*L12*u1*u2 - L22*u0**2 - L22*u1**2 + 2*L22*u2**2)/15",
+        "a4_normal_smearing": "4*(u0**2 + u1**2 + u2**2)/15"
+      },
+      {
+        "domain": "adjoint",
+        "a3": "(u0**2 + u1**2 + u2**2)/4",
+        "a4": "4*(2*L00*u0**2 - L00*u1**2 - L00*u2**2 + 6*L01*u0*u1 + 6*L02*u0*u2 - L11*u0**2 + 2*L11*u1**2 - L11*u2**2 + 6*L12*u1*u2 - L22*u0**2 - L22*u1**2 + 2*L22*u2**2)/15",
+        "a4_normal_smearing": "4*(u0**2 + u1**2 + u2**2)/15"
+      }
+    ],
+    "umbilic_omission_control": "PASS"
+  },
+  "weyl": {
+    "conformal_weights_and_WZ_cocycle": "PASS",
+    "finite_L_source_term_shift": "delta(J)=-3 integral n(omega)*(Dtheta)^2",
+    "RN_typeB_relative_series": "-4*Q2*ell**2*z**3/3 + 2*ell**2*m*z**2",
+    "RN_normal_relative_series": "2*Q2*ell**2*z**3 - 3*ell**2*m*z**2",
+    "RN_WZ_relative_limit": "0; typeB is O(log(R)/R^2), normal term O(1/R^2), at fixed parameters"
+  },
+  "contact_variations": [
+    {
+      "mask": [
+        1,
+        0,
+        0
+      ],
+      "sign": 1,
+      "discrepancy": 6.306621891383202e-12,
+      "step_refinement": 5.921152457233347e-12
+    },
+    {
+      "mask": [
+        0,
+        1,
+        0
+      ],
+      "sign": 1,
+      "discrepancy": 5.473843600611872e-12,
+      "step_refinement": 2.368327756130384e-12
+    },
+    {
+      "mask": [
+        0,
+        0,
+        1
+      ],
+      "sign": 1,
+      "discrepancy": 2.0004733980449885e-11,
+      "step_refinement": 2.1316282072803006e-11
+    },
+    {
+      "mask": [
+        1,
+        1,
+        1
+      ],
+      "sign": 1,
+      "discrepancy": 1.6363799204555107e-11,
+      "step_refinement": 1.0184431076254441e-10
+    },
+    {
+      "mask": [
+        1,
+        0,
+        0
+      ],
+      "sign": -1,
+      "discrepancy": 7.988054662178001e-13,
+      "step_refinement": 1.1842749003676545e-12
+    },
+    {
+      "mask": [
+        0,
+        1,
+        0
+      ],
+      "sign": -1,
+      "discrepancy": 5.473843600611872e-12,
+      "step_refinement": 1.184385922670117e-12
+    },
+    {
+      "mask": [
+        0,
+        0,
+        1
+      ],
+      "sign": -1,
+      "discrepancy": 2.4741694804042424e-11,
+      "step_refinement": 2.6053242896395545e-11
+    },
+    {
+      "mask": [
+        1,
+        1,
+        1
+      ],
+      "sign": -1,
+      "discrepancy": 1.6359802401666457e-11,
+      "step_refinement": 9.829159708374391e-11
+    }
+  ],
+  "direct_surfaces": [
+    {
+      "theta": -0.6,
+      "shape": "umbilic",
+      "heat_discrepancy": 1.3038181645441682e-14,
+      "step_refinement": 2.640943019827091e-14,
+      "Robin_discrepancy": 3.2892018579655853e-13,
+      "unsmeared_derivative_a4": 0.0
+    },
+    {
+      "theta": -0.6,
+      "shape": "anisotropic",
+      "heat_discrepancy": 2.0429838376578857e-14,
+      "step_refinement": 2.0337898041704837e-14,
+      "Robin_discrepancy": 1.9637686740422854e-13,
+      "unsmeared_derivative_a4": -0.0018192898568531331
+    },
+    {
+      "theta": 0.0,
+      "shape": "umbilic",
+      "heat_discrepancy": 4.163336342344337e-17,
+      "step_refinement": 1.6653345369377348e-16,
+      "Robin_discrepancy": 6.509259464525837e-17,
+      "unsmeared_derivative_a4": 2.7755575615628915e-18
+    },
+    {
+      "theta": 0.0,
+      "shape": "anisotropic",
+      "heat_discrepancy": 1.3877787807814457e-17,
+      "step_refinement": 2.220446049250313e-16,
+      "Robin_discrepancy": 4.6304445746600316e-17,
+      "unsmeared_derivative_a4": 0.0043256415677661916
+    },
+    {
+      "theta": 0.006283185307179587,
+      "shape": "umbilic",
+      "heat_discrepancy": 4.5102810375396984e-17,
+      "step_refinement": 5.551115123125783e-17,
+      "Robin_discrepancy": 3.4814245181760065e-15,
+      "unsmeared_derivative_a4": 0.0
+    },
+    {
+      "theta": 0.006283185307179587,
+      "shape": "anisotropic",
+      "heat_discrepancy": 1.6653345369377348e-16,
+      "step_refinement": 1.249000902703301e-16,
+      "Robin_discrepancy": 1.5277404312236069e-15,
+      "unsmeared_derivative_a4": -0.0015599017557361837
+    },
+    {
+      "theta": 0.2,
+      "shape": "umbilic",
+      "heat_discrepancy": 2.355754480376504e-15,
+      "step_refinement": 5.329070518200751e-15,
+      "Robin_discrepancy": 2.8681053341650316e-14,
+      "unsmeared_derivative_a4": 0.0
+    },
+    {
+      "theta": 0.2,
+      "shape": "anisotropic",
+      "heat_discrepancy": 2.3175905639050143e-15,
+      "step_refinement": 3.011479954295737e-15,
+      "Robin_discrepancy": 7.103795966182625e-14,
+      "unsmeared_derivative_a4": -0.003922406347410684
+    },
+    {
+      "theta": 0.7,
+      "shape": "umbilic",
+      "heat_discrepancy": 5.2034765385400306e-14,
+      "step_refinement": 8.051892486093948e-14,
+      "Robin_discrepancy": 3.9509883871042564e-13,
+      "unsmeared_derivative_a4": -2.7755575615628915e-18
+    },
+    {
+      "theta": 0.7,
+      "shape": "anisotropic",
+      "heat_discrepancy": 5.745404152517954e-14,
+      "step_refinement": 3.979108709464495e-14,
+      "Robin_discrepancy": 5.885771959837639e-13,
+      "unsmeared_derivative_a4": -0.0031810522663509484
+    },
+    {
+      "theta": 1.0,
+      "shape": "umbilic",
+      "heat_discrepancy": 3.7463088187195126e-14,
+      "step_refinement": 4.782285678572862e-14,
+      "Robin_discrepancy": 4.802531935048279e-13,
+      "unsmeared_derivative_a4": 0.0
+    },
+    {
+      "theta": 1.0,
+      "shape": "anisotropic",
+      "heat_discrepancy": 4.4931072751341425e-14,
+      "step_refinement": 4.494668526262519e-14,
+      "Robin_discrepancy": 7.489619521158216e-13,
+      "unsmeared_derivative_a4": 0.0007207211503821524
+    }
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "scope": "Matched identical Euclidean collars for a free minimal Dirac field; local derivative heat/Weyl sector and prescribed-source contact distinction. No full state, determinant phase, controller or opening proof.",
+  "checker_sha256": "0aed0bba4cdf72d120edec075f13854b68914eed8779b782806cdd20169c1240"
+}
