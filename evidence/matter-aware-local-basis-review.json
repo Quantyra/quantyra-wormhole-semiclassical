@@ -1,0 +1,202 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for the displayed bosonic four-derivative span, induced matter contacts and LLL contact spectrum; full S074 remains open",
+  "satellite_base_commit": "7d5af2349c3e14c39156f585bb8146882d65aa3a",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13",
+  "accepted_inputs": {
+    "checks/matter_aware_local_basis.py": "4c74282a22b579bd1c4ae41455006f130b7f0a7cf04a2321d3fb509b27f5bfdc",
+    "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+  },
+  "dependencies_sha256": {
+    "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8",
+    "checks/finite_local_electromagnetic_input.py": "8d8c040a4ebdb4ed15d267a6bf5d5f1e793da94ba6363b40c3ff7c252100f1cd",
+    "notes/weak-coupling-window.md": "8c92eaad60e8f1603c772e4eb12faad2533afdcfb5aea0d04bd069d20370fa13",
+    "checks/weak_coupling_window.py": "3a33fa62e0102461f3dea4f9f006ddabc47674807784a4ab1ffa2ee9e3fa95f8",
+    "notes/angular-current-renormalization.md": "bbbaa368ea02ac2ea038cebdb82f45e7b23fbf70106742469c57aeab9b514899",
+    "checks/angular_current_renormalization.py": "a6ac4cc2c51146633a820279115136039631274c530bb6d9f482c31df8e8980f",
+    "notes/axisymmetric-axial-action.md": "c9960c15886e268b1f9e3d0f5bc58128a5e986ed43a9fee353021280e5e52fe8"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1801.08546v3",
+      "title": "Proof of the Weak Gravity Conjecture from Black Hole Entropy",
+      "authors": [
+        "Clifford Cheung",
+        "Junyu Liu",
+        "Grant N. Remmen"
+      ],
+      "reviewed": "equation 4, source-free qualification below it, Appendix B equations 92-96",
+      "application": "Eight nonderivative bosonic terms; c4-c6 and c7-c8 converted to our kappa normalization. Equation 95 in D=4 independently preserves our c3,c6,u,v. Charged stress/current and Lambda terms are derived locally rather than discarded. No entropy-positivity theorem is applied.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\sources\\higher-dimension-em-1801.08546v3.html",
+      "sha256": "c386eadfca6fe78dee888c51fcf409f6787921d71757ded8b1a0592ce54b4f66"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1811.09413v2",
+      "title": "Field redefinitions in effective theories at higher orders",
+      "authors": [
+        "Juan Carlos Criado",
+        "Manuel Perez-Victoria"
+      ],
+      "reviewed": "sections 2-3, source and Jacobian requirements around equation 2.2, first-order limitation and equations 3.3-3.7",
+      "application": "The local map is restricted to first order; physical source and boundary transforms and regularized Jacobian are retained as matching obligations, not assumed absent.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\sources\\field-redefinitions-1811.09413.pdf",
+      "sha256": "dbfd1379f695d9b9700d550a1642dff2181399a2ca19f02d5af897ddebe9b7f4"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\development-01\\checks\\matter_aware_local_basis.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791950527.4671702,
+      "duration_seconds": 12.796253681182861,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/matter_aware_local_basis.py": "246a22d32dbf1c702271ca3f1e4ed7f166e5d02609799a327ead14264ce8f853"
+      },
+      "stdout_sha256": "92d7e605e36c550cfe475c43fc7bc0c69f3dadd2ccb2f297e68d6db974f18832",
+      "terminal_sha256": "a85d4f558dd46f867fcb67288be42074fdd4ff00e6344b062a44d6eb8468e294",
+      "result_sha256": "ce5ed8e63c85d2d1700861d87e5ba0232d7b0d059ad2b836342a96f59f87965d"
+    },
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\acceptance\\checks\\matter_aware_local_basis.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\matter-aware-local-basis-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791950769.7188394,
+      "duration_seconds": 17.474807500839233,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/matter_aware_local_basis.py": "4c74282a22b579bd1c4ae41455006f130b7f0a7cf04a2321d3fb509b27f5bfdc",
+        "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+      },
+      "stdout_sha256": "92d7e605e36c550cfe475c43fc7bc0c69f3dadd2ccb2f297e68d6db974f18832",
+      "terminal_sha256": "7925bed6c7647e185a537cb320f0e5f5d44d23c4ecca1344fb740c92ada0957c",
+      "result_sha256": "262db4dacc6785e4491ae3457c7a9a237f92c0bc3ea0e8bd9935abb020f7b2da"
+    }
+  ],
+  "failed_runs": [],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "mpmath": "1.3.0"
+  },
+  "development_to_acceptance": "Added three exact curved differential checks and completed the note; output combination names U,V avoid confusion with the geometric ratio C. Numerical tolerances unchanged.",
+  "verification": {
+    "analytic": [
+      "complete coefficient map for the declared nine-term span with Lambda and charged T,j",
+      "exact equation-of-motion residual and first-order field map",
+      "derivative-invariant reduction with explicit boundary flux",
+      "source-free coefficient-invariant regression",
+      "all-q LLL contact spectra and exact current Frobenius norm",
+      "application of retained free-current vacuum-column obstruction"
+    ],
+    "exact_tensor_cases": 8,
+    "coefficient_directions_per_case": 10,
+    "curved_differential_families": 3,
+    "exact_flux_cases": 16,
+    "independent_angular_quadratures": 12,
+    "maximum_quadrature_error": 4.551914464070067e-15,
+    "angular_tolerance": 8e-12,
+    "candidate": {
+      "alpha9": "1.171104478417192636657444410650317449863444589860142108627248948473354039191241028157e-68",
+      "conjugate_pair_coefficient_norm": "1.491096532937216508574613451805644776382856817163150389169250536408254989375392980736e-56",
+      "maximum_current_coupling": "9.492615353765805302357422959545218506804792546463505150148579772421098896305641310177e-57",
+      "current_coupling_Frobenius_norm": "2.684917075137377435652157206485105300312874953239032241740979952767438546855716733957e-50",
+      "physical_coefficient_assumed": false
+    },
+    "scope": "classical bulk algebra through first order; LLL projection on a fixed product; contact spectra do not establish a renormalized many-body or opening estimate"
+  },
+  "decision": "Retain induced matter terms in the common action. Complete independent Dirac and boundary operators, regulator, finite matching and nonlinear constraints. Neither a source-free basis nor a small angular contact norm closes S074.",
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "closed_clock_program_not_reopened": true,
+  "no_lean_paid_compute_publication_or_outreach": true,
+  "next": "Independent Dirac and boundary basis, common composite renormalization and physical matching, nonlinear even constraints and other sectors; then S075-S080."
+}

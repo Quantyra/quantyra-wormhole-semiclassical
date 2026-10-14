@@ -1,0 +1,326 @@
+{
+  "map": {
+    "A": "c1 - c3",
+    "B": "c2 + 4*c3",
+    "U": "c4 - c6/3",
+    "V": "c5 + 2*c6",
+    "I_squared_coefficient": "-c2/4 - c3 - c5/4 - c6/2 + c7",
+    "I4_coefficient": "c2 + 4*c3 + c5 + 2*c6 + c8",
+    "matter_contacts": "kappa^4[A*tau^2+B*T2+(2B+V)*S.T-(U+V/4)*tau*I]+kappa^2*c9*j^2",
+    "off_shell_residual": "E_mu_nu H^mu_nu+kappa^2*c9*(divF-j).(divF+j)",
+    "source_free_field_redefinition_invariants": "c3, c6, c7-(B+V)/4, c8+B+V",
+    "order": "linear in the local coefficients; boundary/source transformations required"
+  },
+  "tensor_cases": [
+    {
+      "case": 0,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 1,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 2,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 3,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 4,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 5,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 6,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    },
+    {
+      "case": 7,
+      "coefficient_directions": 10,
+      "exact_off_shell_residual": true
+    }
+  ],
+  "differential_basis_cases": [
+    {
+      "metric_powers": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "closed_F_and_covariant_derivative_identity": "exact for all r>0",
+      "boundary_divergence": "-24*r**2 + 16 - 8/r**2 - 8/r**3 + 32/r**6"
+    },
+    {
+      "metric_powers": [
+        2,
+        -1,
+        1,
+        0
+      ],
+      "closed_F_and_covariant_derivative_identity": "exact for all r>0",
+      "boundary_divergence": "-36*r**6 - 42*r**4 - 72*r**3 - 20*r**2 - 8/r**2"
+    },
+    {
+      "metric_powers": [
+        -1,
+        1,
+        2,
+        1
+      ],
+      "closed_F_and_covariant_derivative_identity": "exact for all r>0",
+      "boundary_divergence": "24 + 4/r**6 + 12/r**7 + 8/r**8 + 144/r**10"
+    }
+  ],
+  "angular_exact": [
+    {
+      "q": 1,
+      "linear_sum": 1,
+      "square_sum": "1"
+    },
+    {
+      "q": 2,
+      "linear_sum": 2,
+      "square_sum": "4/3"
+    },
+    {
+      "q": 3,
+      "linear_sum": 3,
+      "square_sum": "9/5"
+    },
+    {
+      "q": 4,
+      "linear_sum": 4,
+      "square_sum": "16/7"
+    },
+    {
+      "q": 5,
+      "linear_sum": 5,
+      "square_sum": "25/9"
+    },
+    {
+      "q": 6,
+      "linear_sum": 6,
+      "square_sum": "36/11"
+    },
+    {
+      "q": 7,
+      "linear_sum": 7,
+      "square_sum": "49/13"
+    },
+    {
+      "q": 8,
+      "linear_sum": 8,
+      "square_sum": "64/15"
+    },
+    {
+      "q": 9,
+      "linear_sum": 9,
+      "square_sum": "81/17"
+    },
+    {
+      "q": 10,
+      "linear_sum": 10,
+      "square_sum": "100/19"
+    },
+    {
+      "q": 11,
+      "linear_sum": 11,
+      "square_sum": "121/21"
+    },
+    {
+      "q": 12,
+      "linear_sum": 12,
+      "square_sum": "144/23"
+    },
+    {
+      "q": 13,
+      "linear_sum": 13,
+      "square_sum": "169/25"
+    },
+    {
+      "q": 14,
+      "linear_sum": 14,
+      "square_sum": "196/27"
+    },
+    {
+      "q": 15,
+      "linear_sum": 15,
+      "square_sum": "225/29"
+    },
+    {
+      "q": 16,
+      "linear_sum": 16,
+      "square_sum": "256/31"
+    }
+  ],
+  "angular_quadrature": [
+    {
+      "q": 1,
+      "refinement": 1,
+      "errors": {
+        "gram": 2.220446049250313e-16,
+        "pair_spectrum": 2.7755575615628914e-17,
+        "conjugate_spectrum": 2.7755575615628914e-17
+      }
+    },
+    {
+      "q": 1,
+      "refinement": 2,
+      "errors": {
+        "gram": 1.1102230246251565e-16,
+        "pair_spectrum": 4.163336342344337e-17,
+        "conjugate_spectrum": 4.163336342344337e-17
+      }
+    },
+    {
+      "q": 2,
+      "refinement": 1,
+      "errors": {
+        "gram": 8.881820616493715e-16,
+        "pair_spectrum": 9.71445146547012e-17,
+        "conjugate_spectrum": 3.469446951953614e-17
+      }
+    },
+    {
+      "q": 2,
+      "refinement": 2,
+      "errors": {
+        "gram": 4.440892565729527e-16,
+        "pair_spectrum": 8.326672684688674e-17,
+        "conjugate_spectrum": 4.163336342344337e-17
+      }
+    },
+    {
+      "q": 3,
+      "refinement": 1,
+      "errors": {
+        "gram": 6.66184631171896e-16,
+        "pair_spectrum": 4.163336342344337e-16,
+        "conjugate_spectrum": 2.498001805406602e-16
+      }
+    },
+    {
+      "q": 3,
+      "refinement": 2,
+      "errors": {
+        "gram": 1.9984014443252818e-15,
+        "pair_spectrum": 2.7755575615628914e-16,
+        "conjugate_spectrum": 2.3592239273284576e-16
+      }
+    },
+    {
+      "q": 4,
+      "refinement": 1,
+      "errors": {
+        "gram": 7.771566434065969e-16,
+        "pair_spectrum": 4.440892098500626e-16,
+        "conjugate_spectrum": 3.3306690738754696e-16
+      }
+    },
+    {
+      "q": 4,
+      "refinement": 2,
+      "errors": {
+        "gram": 7.771568782507861e-16,
+        "pair_spectrum": 1.942890293094024e-16,
+        "conjugate_spectrum": 1.942890293094024e-16
+      }
+    },
+    {
+      "q": 6,
+      "refinement": 1,
+      "errors": {
+        "gram": 6.661391091028659e-16,
+        "pair_spectrum": 3.885780586188048e-16,
+        "conjugate_spectrum": 4.440892098500626e-16
+      }
+    },
+    {
+      "q": 6,
+      "refinement": 2,
+      "errors": {
+        "gram": 4.551914464070067e-15,
+        "pair_spectrum": 2.4424906541753444e-15,
+        "conjugate_spectrum": 1.6653345369377348e-15
+      }
+    },
+    {
+      "q": 8,
+      "refinement": 1,
+      "errors": {
+        "gram": 6.661440237575585e-16,
+        "pair_spectrum": 7.771561172376096e-16,
+        "conjugate_spectrum": 7.216449660063518e-16
+      }
+    },
+    {
+      "q": 8,
+      "refinement": 2,
+      "errors": {
+        "gram": 3.3306694155680416e-15,
+        "pair_spectrum": 2.3869795029440866e-15,
+        "conjugate_spectrum": 1.1657341758564144e-15
+      }
+    }
+  ],
+  "candidate_and_vacuum": {
+    "candidate_k2000_per_unit_c9": {
+      "alpha9": "1.171104478417192636657444410650317449863444589860142108627248948473354039191241028157e-68",
+      "conjugate_pair_coefficient_norm": "1.491096532937216508574613451805644776382856817163150389169250536408254989375392980736e-56",
+      "maximum_current_coupling": "9.492615353765805302357422959545218506804792546463505150148579772421098896305641310177e-57",
+      "current_coupling_Frobenius_norm": "2.684917075137377435652157206485105300312874953239032241740979952767438546855716733957e-50",
+      "physical_coefficient_assumed": false
+    },
+    "vacuum_cases": [
+      {
+        "N": 4,
+        "vacuum_column_norm_over_G2": "30",
+        "weighted_norm_over_G2_N2": 0.2623015873015873
+      },
+      {
+        "N": 16,
+        "vacuum_column_norm_over_G2": "1496",
+        "weighted_norm_over_G2_N2": 0.25136565793859866
+      },
+      {
+        "N": 64,
+        "vacuum_column_norm_over_G2": "89440",
+        "weighted_norm_over_G2_N2": 0.2501262789049512
+      },
+      {
+        "N": 256,
+        "vacuum_column_norm_over_G2": "5625216",
+        "weighted_norm_over_G2_N2": 0.25001051442478517
+      },
+      {
+        "N": 1024,
+        "vacuum_column_norm_over_G2": "358438400",
+        "weighted_norm_over_G2_N2": 0.25000082206224883
+      }
+    ],
+    "continuum_decision": "For nonzero G, weighted vacuum column grows as ||G||_F^2 N^2/4; no cutoff-uniform free-vacuum form estimate follows from the finite angular norm."
+  },
+  "status": "PASS",
+  "scope": "displayed parity-even bosonic four-derivative span with induced charged-matter contacts; not a complete Dirac/boundary basis or renormalized opening bound",
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "mpmath": "1.3.0"
+  },
+  "checker_sha256": "4c74282a22b579bd1c4ae41455006f130b7f0a7cf04a2321d3fb509b27f5bfdc"
+}
