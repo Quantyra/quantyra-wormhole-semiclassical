@@ -1,0 +1,226 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for shared Maxwell subtraction and the complete massive constant-field AdS coefficient; physical boundary/state and full S074 matching remain open",
+  "satellite_base_commit": "796ee25b3ec88082293cd9cf61559d7fa19272e0",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13",
+  "accepted_inputs": {
+    "checks/curved_electric_matching.py": "7357bb5f1ba56a7d12ba8fc64d7b316d4cb766605fd1e86c2770110a27481267",
+    "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "evidence/uniform-dirac-reference.json": "d536cb605d2943f449bfb4b79499c58bb86d76fb6af67d514502364d0d228307",
+    "notes/massive-bulk-polarization.md": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3",
+    "evidence/massive-bulk-polarization.json": "96a2c32d1a287fe10ca5b324d005cfbc41c0517aced9215c3f4d20b644a27aa7",
+    "notes/finite-local-reference-window.md": "6fe824d2f51ec8f4d3fffcd3e5c44bd1a5471edccd8751bcdf22d0aff76f7b03",
+    "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8"
+  },
+  "dependencies_sha256": {
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "evidence/uniform-dirac-reference.json": "d536cb605d2943f449bfb4b79499c58bb86d76fb6af67d514502364d0d228307",
+    "notes/massive-bulk-polarization.md": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3",
+    "evidence/massive-bulk-polarization.json": "96a2c32d1a287fe10ca5b324d005cfbc41c0517aced9215c3f4d20b644a27aa7",
+    "notes/finite-local-reference-window.md": "6fe824d2f51ec8f4d3fffcd3e5c44bd1a5471edccd8751bcdf22d0aff76f7b03",
+    "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8"
+  },
+  "dependencies_git_blob_sha256": {
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "evidence/uniform-dirac-reference.json": "6ec1782e5ea45d8db63bd4ce57fc5058ecc9444bf51840b4689235cfe91b3e56",
+    "notes/massive-bulk-polarization.md": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3",
+    "evidence/massive-bulk-polarization.json": "96a2c32d1a287fe10ca5b324d005cfbc41c0517aced9215c3f4d20b644a27aa7",
+    "notes/finite-local-reference-window.md": "6fe824d2f51ec8f4d3fffcd3e5c44bd1a5471edccd8751bcdf22d0aff76f7b03",
+    "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8"
+  },
+  "dependency_line_endings": "Uniform Dirac receipt has CRLF in the worktree and LF in Git; both hashes are retained and parsed content matches. New checker/note bytes and all other dependency contents are verified against Git at delivery.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.15730v1",
+      "title": "Exact Path Integral Methods in Supersymmetric AdS2 x S2 Backgrounds",
+      "authors": [
+        "Alberto Castellano",
+        "Carmine Montella",
+        "Matteo Zatti"
+      ],
+      "reviewed": "Hyperbolic Dirac discrete and continuum spectrum (2.63)-(2.68), field continuation (2.74), flat Dirac heat trace (B.43); sphere product inputs retained from previous audit.",
+      "application": "Minimal positive-mass Dirac field. Retain the discrete zero-level density before taking the weak-field derivative. No supersymmetric specialization or general electric-instability conclusion is imported. The common finite part, coefficient and signed tower bounds are derived here.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\sources\\dirac-product-2603.15730v1.html",
+      "sha256": "6aa0aecd73c0a187b56f406f8b9fe155145d81825e5415946abba7e2a58b557c"
+    },
+    {
+      "url": "https://dlmf.nist.gov/4.36.E3",
+      "title": "NIST DLMF 4.36.3: hyperbolic cotangent partial fractions",
+      "reviewed": "coth expansion used to derive a positive Laplace integrand and signed global remainders",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\sources\\dlmf-hyperbolic-partial-fractions.html",
+      "sha256": "cf2328bb876ed413f02ded197f94f1891588a297c42f2c916d14d6ca6e4050df"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\development-01\\checks\\curved_electric_matching.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791953866.7555711,
+      "duration_seconds": 26.318440437316895,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/curved_electric_matching.py": "7357bb5f1ba56a7d12ba8fc64d7b316d4cb766605fd1e86c2770110a27481267",
+        "notes/curved-electric-matching.md": "1328a323d41d0a194f882afc6bfd2da3e5d899f6c197c85d60102387904b5d84",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "evidence/uniform-dirac-reference.json": "d536cb605d2943f449bfb4b79499c58bb86d76fb6af67d514502364d0d228307",
+        "notes/massive-bulk-polarization.md": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3",
+        "evidence/massive-bulk-polarization.json": "96a2c32d1a287fe10ca5b324d005cfbc41c0517aced9215c3f4d20b644a27aa7",
+        "notes/finite-local-reference-window.md": "6fe824d2f51ec8f4d3fffcd3e5c44bd1a5471edccd8751bcdf22d0aff76f7b03",
+        "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8"
+      },
+      "stdout_sha256": "b97d64e757af6a6a5de00165743b49848123059b6dda5f9c9e71d0c97fa28dfd",
+      "terminal_sha256": "bf376f34fa6b5bd40b92a417b5b70870a8d6d8f764cab14fbe1d74ddc1023899",
+      "result_sha256": "80b433c22f5e712a0b0c04e7dbbd4aa1429f51a78fbb023d76c8a0290ef0a92e"
+    },
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\acceptance\\checks\\curved_electric_matching.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\curved-electric-matching-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791953950.129663,
+      "duration_seconds": 16.201292037963867,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/curved_electric_matching.py": "7357bb5f1ba56a7d12ba8fc64d7b316d4cb766605fd1e86c2770110a27481267",
+        "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "evidence/uniform-dirac-reference.json": "d536cb605d2943f449bfb4b79499c58bb86d76fb6af67d514502364d0d228307",
+        "notes/massive-bulk-polarization.md": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3",
+        "evidence/massive-bulk-polarization.json": "96a2c32d1a287fe10ca5b324d005cfbc41c0517aced9215c3f4d20b644a27aa7",
+        "notes/finite-local-reference-window.md": "6fe824d2f51ec8f4d3fffcd3e5c44bd1a5471edccd8751bcdf22d0aff76f7b03",
+        "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8"
+      },
+      "stdout_sha256": "b97d64e757af6a6a5de00165743b49848123059b6dda5f9c9e71d0c97fa28dfd",
+      "terminal_sha256": "cbd0e4840ddc4825f1d91a448a6a14e2f61b3df0f1032d4ec5217507c7ddca30",
+      "result_sha256": "80b433c22f5e712a0b0c04e7dbbd4aa1429f51a78fbb023d76c8a0290ef0a92e"
+    }
+  ],
+  "failed_runs": [],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "development_to_acceptance": "Added explanation of absolute convergence and common four-dimensional subtraction to the note. Checker and numerical tolerances unchanged.",
+  "verification": {
+    "analytic": [
+      "sphere zeta Laurent finite part and exact equality to the retained spectral subtraction",
+      "same Maxwell scale running from the local heat coefficient",
+      "continuum plus discrete resolvent and its mass derivative",
+      "positive Laplace representation and signed curvature remainder",
+      "absolutely convergent full massive tower with analytic angular tail",
+      "parallel electric/magnetic local tensor contractions and J^2 regression",
+      "uniform candidate loop and conditional local coefficient bounds"
+    ],
+    "direct_resolvent_cases": 8,
+    "maximum_resolvent_quadrature_discrepancy": 2.60350773516268e-71,
+    "independent_Laplace_cases": 6,
+    "maximum_Laplace_discrepancy": 9.055679078826712e-72,
+    "quadrature_comparison_tolerance": "1e-45",
+    "zeta_and_spectral_cases": 4,
+    "maximum_zeta_finite_difference_discrepancy": 2.7339915379766583e-19,
+    "zeta_derivative_tolerance": "1e-12",
+    "finite_tower_cases": 4,
+    "levels_per_tower": 128,
+    "candidate_values": [
+      2000,
+      4000,
+      20000
+    ],
+    "quadratures_are_not_interval_certificates": true,
+    "proof_scope": "zero-field invariant background derivative at fixed metric, one free Dirac loop plus displayed finite bosonic span; massless LLL kept separately, no general driven response or boundary charge susceptibility"
+  },
+  "decision": "Use the same renormalized Maxwell parameter in the retained zeta reference and spectral bubble. Add the finite signed AdS massive correction and explicit local terms for this constant-field coefficient. Physical finite coefficients, independent matter/boundary terms, nonlinear constraints, general state/response and opening transfer remain unfinished.",
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "closed_predecessor_workstreams_not_reopened": true,
+  "no_lean_paid_compute_publication_or_outreach": true,
+  "next": "Complete independent matter/boundary action and nonlinear constraints, then physical state/general response and S075-S080."
+}
