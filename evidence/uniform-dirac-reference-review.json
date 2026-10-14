@@ -1,0 +1,193 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for a flux-uniform stationary product in the specified one-Dirac-loop zeta model; full S074 and the wormhole remain open",
+  "satellite_base_commit": "f6ff5cb36045d1b3ceadfd97192d833912d2b92f",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13",
+  "accepted_inputs": {
+    "checks/uniform_dirac_reference.py": "5b09c0e4f86caf3476c076897c87cac7d23dfbc8f3b6f80f69207710d2d3be3d",
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "evidence/magnetic-product-vacuum.json": "b5a926bbea6f5fc83f02be0f2f539b9beafdf7757863543c87e86bb5096b0496"
+  },
+  "dependencies_sha256": {
+    "notes/magnetic-product-vacuum.md": "06049ca070ef17c46199e07c47c6c0979ef5838f4ed38497a2ca93cfdda76c94",
+    "checks/magnetic_product_vacuum.py": "2c1e321fd5409c749ec1d41316965bac7914e01c3aff1e50281bb8d08d3e7a75",
+    "evidence/magnetic-product-vacuum.json": "b5a926bbea6f5fc83f02be0f2f539b9beafdf7757863543c87e86bb5096b0496",
+    "notes/throat-trace-anomaly.md": "e0a92b01b074afba4307db23979e1d93c130d12b3e4e48b96515f405cf24e617",
+    "notes/massive-bulk-polarization.md": "c5f0e8e255b1fa7e0b72765eed06f6e999bd35f90b2678aedb3656f5f24e7fc3",
+    "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c",
+    "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.15730v1",
+      "title": "Exact Path Integral Methods in Supersymmetric AdS2 x S2 Backgrounds",
+      "authors": [
+        "Alberto Castellano",
+        "Carmine Montella",
+        "Matteo Zatti"
+      ],
+      "reviewed": "sphere spectrum and degeneracies 2.29-2.31, hyperbolic density 2.84-2.85 at zero electric field, product factorization 3.40-3.42",
+      "application": "Minimal Dirac spectral input, with magnetic g=q/2 and physical-volume normalization. The rescaled Euler-Maclaurin bound and uniform negative-Lambda stationary contraction are derived here. No first-determinant novelty, supersymmetric or electric-instability claim is imported.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\sources\\dirac-product-2603.15730v1.html",
+      "sha256": "6aa0aecd73c0a187b56f406f8b9fe155145d81825e5415946abba7e2a58b557c"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\development-01\\checks\\uniform_dirac_reference.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791951704.286821,
+      "duration_seconds": 29.82307505607605,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/uniform_dirac_reference.py": "9d137353bd7489554b1baea89e8714f7409d2d6a3e5b12320f07ea0a148cd0f6",
+        "evidence/magnetic-product-vacuum.json": "b5a926bbea6f5fc83f02be0f2f539b9beafdf7757863543c87e86bb5096b0496"
+      },
+      "stdout_sha256": "4c3f087b231e8c0fb78876a5c653c13ab878acc070f408b6e5676f00bd99a8c9",
+      "terminal_sha256": "d0faccf1e136e9b82966d1e2ebe4446f106fac64832a2d90d3f406ba4bb135db",
+      "result_sha256": "293283f20eb55f431163bdd2a9587a428a84b8d35db8a4f8f3ae5f36e4e4213f"
+    },
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\acceptance\\checks\\uniform_dirac_reference.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\uniform-dirac-reference-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791951934.6960773,
+      "duration_seconds": 34.58104491233826,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/uniform_dirac_reference.py": "5b09c0e4f86caf3476c076897c87cac7d23dfbc8f3b6f80f69207710d2d3be3d",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "evidence/magnetic-product-vacuum.json": "b5a926bbea6f5fc83f02be0f2f539b9beafdf7757863543c87e86bb5096b0496"
+      },
+      "stdout_sha256": "4c3f087b231e8c0fb78876a5c653c13ab878acc070f408b6e5676f00bd99a8c9",
+      "terminal_sha256": "00ecd90275b77fdf109d070d6f58ed2c626337403352c64a5db04c4bc5248a0f",
+      "result_sha256": "d536cb605d2943f449bfb4b79499c58bb86d76fb6af67d514502364d0d228307"
+    }
+  ],
+  "failed_runs": [],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "mpmath": "1.3.0"
+  },
+  "development_to_acceptance": "Added explicit rational checks for both self-map inequalities, both derivative rows and the first-order remainder majorants; completed the ordinary proof. Numerical tolerances unchanged.",
+  "verification": {
+    "analytic": [
+      "rescaled common-scheme heat coefficients including the required -log q",
+      "sphere tail without exponential flux growth",
+      "pressure and weighted derivative bound uniform in q>=1,0<r<=1",
+      "stationary Einstein equations with Lambda<0",
+      "self-map and contraction on the one-percent squared-radius box",
+      "uniform radius and first-order remainder bounds for all integer k>=2000"
+    ],
+    "legacy_pressure_cases": 4,
+    "maximum_legacy_scheme_regression_error": 1.1418817280617333e-15,
+    "candidate_values": [
+      2000,
+      4000,
+      20000
+    ],
+    "UV_splits_per_candidate": 2,
+    "maximum_UV_split_discrepancy": 2.7755575615628914e-17,
+    "independent_pressure_derivative_error": 4.4285321937342914e-15,
+    "regression_and_cutoff_tolerance": 3e-09,
+    "pressure_derivative_tolerance": 2e-08,
+    "numerical_quadrature_is_not_interval_certified": true,
+    "proof_scope": "analytic existence and bounds in the homogeneous one-loop truncation with fixed zeta finite inputs; illustrative pressure values have adaptive rather than fully certified quadrature errors"
+  },
+  "decision": "Use this controlled homogeneous reference for later matching. Retain all unresolved finite EFT coefficients and physical state/boundary obligations; the product supplies no null opening stress and is not a global or stable wormhole.",
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "closed_predecessor_workstreams_not_reopened": true,
+  "no_lean_paid_compute_publication_or_outreach": true,
+  "next": "Common finite local and boundary matching, independent Dirac terms, nonlinear even constraints and remaining interactions; then S075-S080."
+}
