@@ -1,0 +1,185 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for the complete selected mixed nonlocal channel; S074 physical local completion remains open",
+  "satellite_base_commit": "49d05cb50b67d76c567cf448cd38cd328df870b2",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13",
+  "accepted_inputs": {
+    "checks/mixed_axial_response.py": "10dc3a2720af22ce8e4998d5eccd900904ae148f9180a3dee8ba7755b3d37cff",
+    "notes/mixed-axial-response.md": "f9d36b728e810bf5d7d555edbfacdefb07a9ecd09b63cf8946c9f178ec39c36f"
+  },
+  "dependencies_sha256": {
+    "notes/axisymmetric-axial-action.md": "c9960c15886e268b1f9e3d0f5bc58128a5e986ed43a9fee353021280e5e52fe8",
+    "checks/axisymmetric_axial_action.py": "e8e70f94a4ac3d806750acad7fc6e050470b78977d93ddf361eca98dcb1994c6",
+    "evidence/axisymmetric-axial-action.json": "54837f20253478046f9d5f914b3599715967ccb6273623317d8849384de232fc",
+    "notes/polar-dipole-dressing.md": "68baea5a0a916714ac7cf846942cc9d1050c9e0f4d98cb5fc5d0481bd529ca9c",
+    "notes/dipole-vacuum-response.md": "e830afc5977a732b209b6cc646b91cf515afc6f78f3eac9d76ea04c42800eee2",
+    "checks/dipole_vacuum_response.py": "41c641368febc7f1cd538d58c4e0218e6fdd3cd566ecc5e49c44c47ee465c7b4"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2403.13142v2#S7",
+      "title": "Loops in Anti de Sitter space",
+      "authors": [
+        "Sergio L. Cacciatori",
+        "Henri Epstein",
+        "Ugo Moschella"
+      ],
+      "reviewed": "Theorem 7.2, conditions 7.135 and coefficients 7.136-7.138; local global-mode conventions retained from the earlier dipole source review",
+      "application": "d=2, delta=1/2, source mass parameters A-1/2 and B-1/2. A in [2,3], B in [1,5] satisfies all positive-mass conditions. The source supplies the convergent unequal-mass expansion. The gap, tail majorant and physical coupling application are derived here.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\sources\\loops-2403.13142v2.html",
+      "sha256": "5dfdc82d25c4bebc77310842681f9be3f6567f3588c846e2ac3aae6517770901"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\development-01\\checks\\mixed_axial_response.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791947889.5907018,
+      "duration_seconds": 16.834561824798584,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/mixed_axial_response.py": "10dc3a2720af22ce8e4998d5eccd900904ae148f9180a3dee8ba7755b3d37cff"
+      },
+      "stdout_sha256": "53384c5642c4ec3a282b4511e6403b83e7a3cf933bafe12be3d2adbcb9208a01",
+      "terminal_sha256": "02f39dc383c99d9d7381d5d863cbd44c588ddfe3082978f7dddf06c1bf7409fc",
+      "result_sha256": "1489497a45c81e714a972366d78fba9773447d8678da32c84de9a25b6d267661"
+    },
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\acceptance\\checks\\mixed_axial_response.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\mixed-axial-response-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791948076.1100242,
+      "duration_seconds": 29.74628496170044,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/mixed_axial_response.py": "10dc3a2720af22ce8e4998d5eccd900904ae148f9180a3dee8ba7755b3d37cff",
+        "notes/mixed-axial-response.md": "f9d36b728e810bf5d7d555edbfacdefb07a9ecd09b63cf8946c9f178ec39c36f"
+      },
+      "stdout_sha256": "53384c5642c4ec3a282b4511e6403b83e7a3cf933bafe12be3d2adbcb9208a01",
+      "terminal_sha256": "6a272e89dbdca6069df262296b72b616bf009624ca3fa63a4ccf5c3e2b5fe466",
+      "result_sha256": "1489497a45c81e714a972366d78fba9773447d8678da32c84de9a25b6d267661"
+    }
+  ],
+  "failed_runs": [],
+  "verification": {
+    "analytic": [
+      "positive polynomial certificate for both branch Casimir gaps",
+      "Gamma-ratio majorant from log convexity",
+      "complete beta<4/3 and derivative<8/15 bound",
+      "uniform explicit spectral tail",
+      "weighted closed-form positivity and low-pole intervals"
+    ],
+    "numerical": {
+      "distinct_field_weights": 36,
+      "Euclidean_product_cases": 12,
+      "spectral_parameter_cases": 15,
+      "branches_per_spectral_case": 2,
+      "finite_mass_and_residue_cases": 12,
+      "digits": 80
+    },
+    "scope": "fixed global product, free Friedrichs vacuum, stated nondifferentiated cubic representative; full local action/renormalization and physical interacting state remain unmatched",
+    "candidate_k2000": {
+      "C": "49119681981.43144744702865721368269081232045097028753486783704773577582739995979",
+      "G_over_a2": "5.8593750001192877226349773206859690761444515821106285453730520311335400429126604e-33",
+      "Qall": "2.0703125007022070605931832614345117138925463566124631585317523978250918114409138e-32",
+      "mixed_epsilon": "2.7604166676029427474575776819126822851900618088166175447090031971001224152545517e-32",
+      "mixed_light_absolute_shift_bound": "1.3729186174643774916427185411642514913146226675870401443096520410439887836116462e-52",
+      "old_dipole_epsilon": "1.3988227427590353471411711700724421914194097491208977805184457510748785895160537e-33",
+      "two_selected_channels_epsilon": "2.9002989418788462821716947989199265043320027837287073227608477722076102742061571e-32",
+      "two_selected_channels_light_absolute_shift_bound": "1.4424903530869615163960247341555989209622194314602331511296318659816121881893986e-52"
+    },
+    "maximum_finite_mass_discrepancy": 4.668265773943858e-12,
+    "maximum_finite_residue_discrepancy": 1.5543122344752192e-15
+  },
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "no_lean_paid_compute_publication_or_outreach": true,
+  "next": "Common local action and subtraction, nonlinear even constraints, remaining angular/parity/fermion interactions, boundary ensemble and quantum measure; then S075-S080."
+}
