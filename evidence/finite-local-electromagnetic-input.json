@@ -1,0 +1,583 @@
+{
+  "invariants": {
+    "F_dual_F": "4*b1*e1 + 4*b2*e2 + 4*b3*e3",
+    "basis_relation": "J^2=4 Tr((F g^-1)^4)-2(F^2)^2",
+    "magnetic_background_action_and_first_variation": "zero",
+    "quadratic_correction": "cJ*kappa^4*B0^2*e_parallel^2",
+    "parallel_electric_susceptibility": "1+2*cJ*kappa^4*B0^2",
+    "four_null_photon_mixed_coefficient_of_J_squared": "256",
+    "constitutive_and_stress_Ward_identity": "exact, using dF=0"
+  },
+  "dualization": {
+    "rank_one_update": "A=K tensor gamma + (4*pi*cJ*kappa^4/R) u u^T, u=(sigma,1) tensor d sigma",
+    "eta": "2*cJ*kappa2**2*(sigma_c**2 - sigma_t**2 + sigma_x**2)/R**2",
+    "inverse": "Sherman-Morrison identity verified exactly for all 6 curvature variables",
+    "dual_scalar_correction": "cJ*kappa2**2*(pA_c*sigma_c - pA_t*sigma_t + pA_x*sigma_x)**2/(2*pi*R*(R**2 + 2*cJ*kappa2**2*sigma_c**2 - 2*cJ*kappa2**2*sigma_t**2 + 2*cJ*kappa2**2*sigma_x**2))",
+    "determinant_ratio": "det(A_updated)/det(A)=1+eta; finite Gaussian multiplier=(1+eta)^(-1/2)",
+    "scope": "local bosonic axisymmetric reduction on a prescribed even background; fixed flux sectors and boundary Legendre term retained"
+  },
+  "spectrum": {
+    "all_l_ge_2_mass_matrix": [
+      [
+        "(2*C + L/(theta + 1) + 2)/C",
+        "sqrt(2*C + 2)*sqrt(L - 2)/C"
+      ],
+      [
+        "sqrt(2*C + 2)*sqrt(L - 2)/C",
+        "(L - 2)/C"
+      ]
+    ],
+    "determinant": "L*(L-2)/[(1+theta)*C^2]",
+    "dipole_mass": "(2*C + 2)/C + 2/(C*(theta + 1))",
+    "relative_update_rank": 1,
+    "relative_update_nonzero_eigenvalue": "-theta/(1+theta)",
+    "comparison": "min(1,1/(1+theta))*M0 <= M(theta) <= max(1,1/(1+theta))*M0 for theta>-1",
+    "EFT_linear_relative_shift_bound": "|theta|; exact selected-model remainder <=theta^2/(1-|theta|) for |theta|<1"
+  },
+  "published_master_comparison": {
+    "source": "https://arxiv.org/html/2004.07560v2",
+    "equations": [
+      "70",
+      "71",
+      "72",
+      "83"
+    ],
+    "source_lagrangian": "calL=calF-cJ*kappa^4*calG^2; action contains -calL",
+    "source_constitutive_denominator": "1+2*cJ*kappa^4*P^2/b^4=1+theta",
+    "all_l_ge_2_product_matrix": "exact match after swapping field order",
+    "dipole_product_mass": "exact match",
+    "novelty": "application and normalization check; the general NLED perturbation dependence is established prior work"
+  },
+  "finite_dual_checks": [
+    {
+      "signature": -1.0,
+      "cJ": -0.02,
+      "inverse_error": 5.551115123125783e-17,
+      "determinant_ratio_error": 1.960237527853792e-15,
+      "Euclidean_Gaussian_ratio": null
+    },
+    {
+      "signature": -1.0,
+      "cJ": 0.015,
+      "inverse_error": 2.7755575615628914e-17,
+      "determinant_ratio_error": 8.335346302068558e-16,
+      "Euclidean_Gaussian_ratio": null
+    },
+    {
+      "signature": -1.0,
+      "cJ": 0.07,
+      "inverse_error": 5.551115123125783e-17,
+      "determinant_ratio_error": 2.6367796834847468e-15,
+      "Euclidean_Gaussian_ratio": null
+    },
+    {
+      "signature": 1.0,
+      "cJ": -0.02,
+      "inverse_error": 2.7755575615628914e-17,
+      "determinant_ratio_error": 9.783840404509192e-16,
+      "Euclidean_Gaussian_ratio": 1.0057398214810744
+    },
+    {
+      "signature": 1.0,
+      "cJ": 0.015,
+      "inverse_error": 2.7755575615628914e-17,
+      "determinant_ratio_error": 2.1163626406917047e-16,
+      "Euclidean_Gaussian_ratio": 0.9957590478804472
+    },
+    {
+      "signature": 1.0,
+      "cJ": 0.07,
+      "inverse_error": 4.163336342344337e-17,
+      "determinant_ratio_error": 1.7555401576885288e-15,
+      "Euclidean_Gaussian_ratio": 0.9806582588972009
+    }
+  ],
+  "mass_checks": {
+    "parameter_cases": [
+      {
+        "C": "1.0",
+        "l": 2,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.1335359750673363979",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 2,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0060313279412786941",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 2,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99403107258474769642",
+        "direct_eigenvalue_relative_error": "4.1581639e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 2,
+        "theta": "0.2",
+        "light_mass_ratio": "0.89150471698584904717",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 3,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.1229854419783313559",
+        "direct_eigenvalue_relative_error": "8.3163278e-112"
+      },
+      {
+        "C": "1.0",
+        "l": 3,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0057364425056772811",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "1.0",
+        "l": 3,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99430787061638616179",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 3,
+        "theta": "0.2",
+        "light_mass_ratio": "0.89445840321486671696",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 8,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.0965846378218928459",
+        "direct_eigenvalue_relative_error": "6.6530623e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 8,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0052805675030977475",
+        "direct_eigenvalue_relative_error": "3.3265311e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 8,
+        "theta": "0.01",
+        "light_mass_ratio": "0.9946934181705504799",
+        "direct_eigenvalue_relative_error": "4.1581639e-111"
+      },
+      {
+        "C": "1.0",
+        "l": 8,
+        "theta": "0.2",
+        "light_mass_ratio": "0.89285714285714285714",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "1.0",
+        "l": 100,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.0183980270804528362",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "1.0",
+        "l": 100,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0044345189276797206",
+        "direct_eigenvalue_relative_error": "1.9959187e-110"
+      },
+      {
+        "C": "1.0",
+        "l": 100,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99440403061624221612",
+        "direct_eigenvalue_relative_error": "2.8275515e-110"
+      },
+      {
+        "C": "1.0",
+        "l": 100,
+        "theta": "0.2",
+        "light_mass_ratio": "0.84817391187444069643",
+        "direct_eigenvalue_relative_error": "9.9795934e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 2,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.169862367942584194",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "4.0",
+        "l": 2,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0073462688410361006",
+        "direct_eigenvalue_relative_error": "3.3265311e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 2,
+        "theta": "0.01",
+        "light_mass_ratio": "0.9927572424678673724",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 2,
+        "theta": "0.2",
+        "light_mass_ratio": "0.87230607531439507869",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 3,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.1525793245704417059",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 3,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0067561924765491195",
+        "direct_eigenvalue_relative_error": "3.3265311e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 3,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99332578573674871115",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 3,
+        "theta": "0.2",
+        "light_mass_ratio": "0.88049225451102386768",
+        "direct_eigenvalue_relative_error": "3.3265311e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 8,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.1169516624920271691",
+        "direct_eigenvalue_relative_error": "4.1581639e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 8,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0057478752854914192",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 8,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99427389481904078149",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 8,
+        "theta": "0.2",
+        "light_mass_ratio": "0.89097362322796265872",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 100,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.027858992747913297",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "4.0",
+        "l": 100,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.004699826115154954",
+        "direct_eigenvalue_relative_error": "9.1479606e-111"
+      },
+      {
+        "C": "4.0",
+        "l": 100,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99458673880330973781",
+        "direct_eigenvalue_relative_error": "1.6632656e-110"
+      },
+      {
+        "C": "4.0",
+        "l": 100,
+        "theta": "0.2",
+        "light_mass_ratio": "0.85511361041008025733",
+        "direct_eigenvalue_relative_error": "9.9795934e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 2,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.2413721853022611014",
+        "direct_eigenvalue_relative_error": "5.8214295e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 2,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0098174711778018443",
+        "direct_eigenvalue_relative_error": "1.1476532e-109"
+      },
+      {
+        "C": "100.0",
+        "l": 2,
+        "theta": "0.01",
+        "light_mass_ratio": "0.9903715794139838257",
+        "direct_eigenvalue_relative_error": "2.3285718e-110"
+      },
+      {
+        "C": "100.0",
+        "l": 2,
+        "theta": "0.2",
+        "light_mass_ratio": "0.83721170072708754899",
+        "direct_eigenvalue_relative_error": "1.2973471e-109"
+      },
+      {
+        "C": "100.0",
+        "l": 3,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.2341261569620434926",
+        "direct_eigenvalue_relative_error": "2.4948983e-110"
+      },
+      {
+        "C": "100.0",
+        "l": 3,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0095766234556503492",
+        "direct_eigenvalue_relative_error": "3.8255108e-110"
+      },
+      {
+        "C": "100.0",
+        "l": 3,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99060332978551077706",
+        "direct_eigenvalue_relative_error": "1.1642859e-110"
+      },
+      {
+        "C": "100.0",
+        "l": 3,
+        "theta": "0.2",
+        "light_mass_ratio": "0.84053403420797323253",
+        "direct_eigenvalue_relative_error": "2.1622452e-110"
+      },
+      {
+        "C": "100.0",
+        "l": 8,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.1954302199116430404",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 8,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.008258430056854068",
+        "direct_eigenvalue_relative_error": "8.3163278e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 8,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99187433024604745454",
+        "direct_eigenvalue_relative_error": "4.9897967e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 8,
+        "theta": "0.2",
+        "light_mass_ratio": "0.85904884222364646106",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 100,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.0820117183999424866",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "100.0",
+        "l": 100,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0053004217379287161",
+        "direct_eigenvalue_relative_error": "0.0"
+      },
+      {
+        "C": "100.0",
+        "l": 100,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99460448832987264051",
+        "direct_eigenvalue_relative_error": "4.9897967e-111"
+      },
+      {
+        "C": "100.0",
+        "l": 100,
+        "theta": "0.2",
+        "light_mass_ratio": "0.8838751514111729101",
+        "direct_eigenvalue_relative_error": "1.6632656e-111"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 2,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.2499999999990625",
+        "direct_eigenvalue_relative_error": "5.6999391e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 2,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0101010101009794919",
+        "direct_eigenvalue_relative_error": "3.9984341e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 2,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99009900990101950789",
+        "direct_eigenvalue_relative_error": "6.9073637e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 2,
+        "theta": "0.2",
+        "light_mass_ratio": "0.83333333333375",
+        "direct_eigenvalue_relative_error": "6.144096e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 3,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.249999999998125",
+        "direct_eigenvalue_relative_error": "3.2313477e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 3,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0101010101009488828",
+        "direct_eigenvalue_relative_error": "1.7830693e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 3,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99009900990104891677",
+        "direct_eigenvalue_relative_error": "1.2576635e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 3,
+        "theta": "0.2",
+        "light_mass_ratio": "0.83333333333416666667",
+        "direct_eigenvalue_relative_error": "3.7373173e-100"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 8,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.24999999998875",
+        "direct_eigenvalue_relative_error": "4.4598555e-101"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 8,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0101010101006427916",
+        "direct_eigenvalue_relative_error": "6.8877623e-101"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 8,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99009900990134300559",
+        "direct_eigenvalue_relative_error": "4.5826441e-101"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 8,
+        "theta": "0.2",
+        "light_mass_ratio": "0.83333333333833333333",
+        "direct_eigenvalue_relative_error": "2.3285561e-101"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 100,
+        "theta": "-0.2",
+        "light_mass_ratio": "1.2499999984218750259",
+        "direct_eigenvalue_relative_error": "4.3360322e-103"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 100,
+        "theta": "-0.01",
+        "light_mass_ratio": "1.0101010100494847472",
+        "direct_eigenvalue_relative_error": "3.0721311e-103"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 100,
+        "theta": "0.01",
+        "light_mass_ratio": "0.99009900995049504876",
+        "direct_eigenvalue_relative_error": "5.6286945e-103"
+      },
+      {
+        "C": "1000000000000.0",
+        "l": 100,
+        "theta": "0.2",
+        "light_mass_ratio": "0.83333333403472221219",
+        "direct_eigenvalue_relative_error": "8.7654949e-103"
+      }
+    ],
+    "candidate_k2000": {
+      "C": "49119681981.431447447028657213682690812320450970287534867837047735775827399959790093623564006091303801572556839",
+      "G_over_a2": "0.0000000000000000000000000000000058593750001192877226349773206859690761444515821106285453730520311335400429126603991500314384588982971905581621",
+      "theta_per_unit_cJ": "0.00000000000000000000000000000029452431128603522596486486978182562615854388187801784331656891072120081732169923898269657300414954055450101783",
+      "cJ_absolute_limit_for_one_percent_two_sided_mass_comparison": "33616885668206477874617768456.274295109114060323045747206110280417606197769266799756559255966770282357797030147",
+      "positive_cJ_for_theta_0p01": "33953054524888542653363946140.837038060205200926276204678171383221782259746959467754124848526437985181375000449",
+      "cases": [
+        {
+          "cJ": "0.0",
+          "theta": "0.0",
+          "l3_light_relative_shift": "0.0",
+          "magnetic_background_shift_from_this_operator": "0 exactly"
+        },
+        {
+          "cJ": "1.0",
+          "theta": "0.00000000000000000000000000000029452431128603522596486486978182562615854388187801784331656891072120081732169923898269657300414954055450101783",
+          "l3_light_relative_shift": "-0.00000000000000000000000000000029452431125005889639960746197928309838447085509294799352066510949373683957528532119172193370735395213973807083",
+          "magnetic_background_shift_from_this_operator": "0 exactly"
+        },
+        {
+          "cJ": "33953054524888542653363946140.837038060205200926276204678171383221782259746959467754124848526437985181375000449",
+          "theta": "0.01",
+          "l3_light_relative_shift": "-0.0099009900978124632101401609733489374352830697727713666129209621223040512609358995153118493494526682214930745107",
+          "magnetic_background_shift_from_this_operator": "0 exactly"
+        }
+      ]
+    }
+  },
+  "status": "PASS",
+  "scope": "one specified finite local EFT coefficient; full S074 action, counterterms, state and opening remain incomplete",
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "mpmath": "1.3.0"
+  },
+  "checker_sha256": "8d8c040a4ebdb4ed15d267a6bf5d5f1e793da94ba6363b40c3ff7c252100f1cd"
+}
