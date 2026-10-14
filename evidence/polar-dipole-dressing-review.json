@@ -1,0 +1,97 @@
+{
+  "story": "S072",
+  "date": "2026-10-13",
+  "status": "PASS",
+  "goal_complete": false,
+  "result": "Complete free-dipole pair bubble in a specified reciprocal cubic representative has a uniformly small relative polar mass correction. Its quadratic auxiliary-field comparison has positive masses and a correlated Gaussian vacuum; physical local completion remains open.",
+  "primary_sources": [
+    {
+      "file": "field-redefinitions-1811.09413v2.html",
+      "url": "https://arxiv.org/html/1811.09413v2",
+      "sha256": "a7a125196d1385beaf37f28c0004926ce76fdebe75a536906b74f3eb0552e646",
+      "title": "Field redefinitions in effective theories at higher orders",
+      "reviewed": "Section 3 in full: Taylor expansion of field redefinitions, first-order equation-of-motion equivalence, multiple insertions and induced higher-order terms. Equation 10 supplies the relevant caution.",
+      "not_imported": "No flat-space LSZ conclusion is asserted for AdS boundary observables. No complete physical off-shell action or renormalization follows from this citation."
+    },
+    {
+      "file": "AdS-loops-2403.13142v2.html",
+      "url": "https://arxiv.org/html/2403.13142v2",
+      "sha256": "5dfdc82d25c4bebc77310842681f9be3f6567f3588c846e2ac3aae6517770901",
+      "title": "Loops in Anti de Sitter space",
+      "reviewed": "Theorem 7.2 conditions and coefficients rechecked. The earlier source review and independent two-particle proof are retained in evidence/dipole-vacuum-source-review.json.",
+      "used": "Known d=2 positive dipole-pair expansion, including radial descendants. No new spectral identity or whole-paper review claimed."
+    }
+  ],
+  "novelty_claim": false,
+  "search_queries": [
+    "AdS bubble spectral representation scalar one loop self energy Kallen Lehmann cubic interaction field redefinition local counterterms",
+    "field redefinitions higher orders effective theories equations motion second order Criado Perez Victoria 1811.09413"
+  ],
+  "source_access_note": "An initial 1811.09413v3 request returned 404. The abstract record identifies v2 as the latest version; v2 was retrieved, cached and section 3 read in full.",
+  "ordinary_argument": [
+    "The source and physical kinetic matrix fix a reciprocal cubic representative on free dipole data, not the full off-shell reduced theory.",
+    "An exact triangular polar field shift retains its explicit derivative and potential quartic terms.",
+    "Gamma log convexity and the pair Casimir gap prove beta<2, beta_prime<1/5 and a uniform analytic tail.",
+    "The invariant relative coupling g^T M^-1 g is proportional to G/a^2 even with the light branch retained.",
+    "A weighted closed mass form constructs the infinite auxiliary comparison; its Schur complement brackets both low masses and defines a correlated stationary Gaussian vacuum."
+  ],
+  "runs": [
+    {
+      "name": "development-01",
+      "session_id": 46442,
+      "exit_code": 0,
+      "hashes": {
+        "log.txt": "e69d397f566871e3c77a20d5e91ae5c78751f1fa9eaa7578e5f7d80675432d4c",
+        "polar-dipole-dressing.md": "730ebdcb95ba8a382babac680f75dcf45ccf4e417a45ea4afb31f05987a8c9c5",
+        "polar_dipole_dressing.py": "b1033d26b0d9a704e82d4416aa956ceac25b4c7c38b9b32108817655b62e4bbd",
+        "receipt.json": "29c5d171d7412a841c4168433cdd14b4663fb48755e9b14163ffe80b2c1c42fc",
+        "result.json": "699073e1bad7b843300b003a889c08dccefd73d63258118f36e8b8ea6dc657f6"
+      }
+    },
+    {
+      "name": "acceptance",
+      "session_id": 80573,
+      "exit_code": 0,
+      "hashes": {
+        "log.txt": "e69d397f566871e3c77a20d5e91ae5c78751f1fa9eaa7578e5f7d80675432d4c",
+        "polar-dipole-dressing.md": "b100d6c4835e559966c84a4095a28fe9a1080592c376bd78d485f9de545e8924",
+        "polar_dipole_dressing.py": "b1033d26b0d9a704e82d4416aa956ceac25b4c7c38b9b32108817655b62e4bbd",
+        "receipt.json": "0b1a6e594d5591514493c56a85258fca26fbbe0685dec3822a0e69198d79f038",
+        "result.json": "dce19fef0470a688f466836691584b521fa488096ea03f7dec3e170893a76ba0"
+      }
+    },
+    {
+      "name": "acceptance-02",
+      "session_id": 21909,
+      "exit_code": 0,
+      "hashes": {
+        "log.txt": "e69d397f566871e3c77a20d5e91ae5c78751f1fa9eaa7578e5f7d80675432d4c",
+        "polar-dipole-dressing.md": "68baea5a0a916714ac7cf846942cc9d1050c9e0f4d98cb5fc5d0481bd529ca9c",
+        "polar_dipole_dressing.py": "b1033d26b0d9a704e82d4416aa956ceac25b4c7c38b9b32108817655b62e4bbd",
+        "receipt.json": "01e7f6743f358765b835a7788a53882f33ea77b8d3c264d7162cf87692c2d72b",
+        "result.json": "ac3ee44dd4a0b2daf47e2a0be3bde9c20c4e93838621bfa733b1aff653975673"
+      }
+    }
+  ],
+  "failed_calculations": [],
+  "changes_after_development": "The note explicitly states that generated quartic products need continuum renormalization, then clarifies that auxiliary fields encode the pair kernel and are not additional physical species whose vacuum energies can be added to stress. Final acceptance-02 records the reviewed note. Checker and thresholds unchanged.",
+  "verification_scope": {
+    "enclosed_spectral_cases": 12,
+    "finite_mass_matrices": 12,
+    "max_mass_root_error": 1.673328142715036e-12,
+    "max_residue_norm_error": 1.5543122344752192e-15,
+    "spatial_Gaussian_cases": 2,
+    "max_covariance_reconstruction_error": 9.881528600826075e-14,
+    "infinite_mode_basis": "Analytic spectral-tail bound and closed quadratic-form argument; finite checks are diagnostics."
+  },
+  "raw_directory": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\polar-dipole-dressing-2026-10-13",
+  "limitations": [
+    "Selected nondifferentiated cubic representative and its nonlocal free-dipole bubble only.",
+    "Generated quartic terms do not comprise the physical fourth-order action or fix its local renormalization.",
+    "Auxiliary Gaussian fields match the dipole bilinear two-point kernel, not its higher cumulants.",
+    "No complete Einstein-Maxwell/fermion dressed state, nonlinear constraints, thermal or physical horizon state.",
+    "No driven stress, capture/area error, pair preparation, full stability, creation or finite-energy transport conclusion.",
+    "Auxiliary vacuum energies are not physical four-dimensional stress contributions."
+  ],
+  "next_step": "Derive the remaining local reduced interactions, polar-polar-dipole-dipole terms, tadpoles and constraint contacts with a common renormalization; then match the physical interacting state and conserved boundary drive."
+}
