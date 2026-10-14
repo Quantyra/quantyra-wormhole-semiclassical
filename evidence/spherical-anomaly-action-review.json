@@ -1,0 +1,218 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for the nonlinear spherical bulk anomaly component and joint source identity; full interacting action, boundary ensemble and state remain open",
+  "satellite_base_commit": "7c90ce695d3b8c5d660d8b2fd41af5cce402c483",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13",
+  "accepted_inputs": {
+    "checks/spherical_anomaly_action.py": "498af6f6380e553847cc0b6c943e9d973f1a963502665118885196aa6b8959a5",
+    "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+    "notes/throat-trace-anomaly.md": "e0a92b01b074afba4307db23979e1d93c130d12b3e4e48b96515f405cf24e617",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+    "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+  },
+  "dependencies_sha256": {
+    "notes/throat-trace-anomaly.md": "e0a92b01b074afba4307db23979e1d93c130d12b3e4e48b96515f405cf24e617",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+    "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+  },
+  "dependencies_git_blob_sha256": {
+    "notes/throat-trace-anomaly.md": "e0a92b01b074afba4307db23979e1d93c130d12b3e4e48b96515f405cf24e617",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+    "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+    "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0106151v1",
+      "title": "Weyl Cohomology and the Effective Action for Conformal Anomalies",
+      "reviewed": "Equations (40), (44), (46), (54)-(56): fourth-order conformal operator, bulk Wess-Zumino functional, Q-curvature transformation and finite R-squared ambiguity.",
+      "application": "Established bulk transgression. The spherical reduction, retained integration-by-parts flux and source normalization are derived here. The source discards surface terms; it does not provide the physical mouth ensemble. No novelty of the Wess-Zumino construction is claimed.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\sources\\weyl-cohomology-0106151v1.html",
+      "sha256": "ff02107abaf60d49c01536fe1c22c39c4186e5a9a51634af311d57d1c4487b1b"
+    },
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "title": "Heat kernel expansion: user\u2019s manual",
+      "reviewed": "Equations (3.27), (4.28), section 7.1: Dirac endomorphism, smeared local heat coefficient and anomaly relation.",
+      "application": "The derivative coefficient is computed directly from tr E=-R and the 60 Box E+12 Box R I terms, with the retained fermion anomaly sign. It defines the local heat representative; physical finite curvature coefficients remain explicit. Mode sums are not separately renormalized.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\sources\\heat-kernel-0306138v3.html",
+      "sha256": "3a378712a7bc291265748f35d30ed445627b331142aa696cbbad5c2632f9b029"
+    },
+    {
+      "url": "https://arxiv.org/html/1906.02334v3",
+      "title": "Equilibrium thermodynamic susceptibilities for a dense degenerate Dirac field",
+      "reviewed": "Equations (49)-(51): Dirac c,a coefficients, negative gauge trace term and inverse-coupling running.",
+      "application": "Only the retained vacuum anomaly normalization is used, not the finite-density equation of state or susceptibilities.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\sources\\dirac-trace-1906.02334v3.html",
+      "sha256": "89cb75b148c654178e57dbd4b5ebe9900fb1b88cf102df76bdd9a63609cce8d8"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\development-01\\checks\\spherical_anomaly_action.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791954909.9103158,
+      "duration_seconds": 17.92801785469055,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/spherical_anomaly_action.py": "b3954754caa15cfa7ef820fa58321807d4425661db633f02c79c3405f0a16d55",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/throat-trace-anomaly.md": "e0a92b01b074afba4307db23979e1d93c130d12b3e4e48b96515f405cf24e617",
+        "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+        "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+      },
+      "stdout_sha256": "619e4bca29e714be3e9f761c77b36544850c3f6b7007e0a8f92c4bb8acaec20b",
+      "terminal_sha256": "fbf236dd421df821e53c37cf3db9fed7a71469c4bbbad6dd705959ef6f0484c8",
+      "result_sha256": "903b48e099d0d312a920eec109becdcabbdbcac0a785d8944783f6ce99270893"
+    },
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\acceptance\\checks\\spherical_anomaly_action.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-action-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791955007.045781,
+      "duration_seconds": 11.078610897064209,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/spherical_anomaly_action.py": "498af6f6380e553847cc0b6c943e9d973f1a963502665118885196aa6b8959a5",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/throat-trace-anomaly.md": "e0a92b01b074afba4307db23979e1d93c130d12b3e4e48b96515f405cf24e617",
+        "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "notes/curved-electric-matching.md": "1a9f11668782953671797feb778a893ff5b650daaecb4dd089976dbb33c55ed8",
+        "notes/matter-aware-local-basis.md": "c343a3a20171687573f4aceabc8f05d04e98b18134cead14fb21f58dc9d40e5c"
+      },
+      "stdout_sha256": "619e4bca29e714be3e9f761c77b36544850c3f6b7007e0a8f92c4bb8acaec20b",
+      "terminal_sha256": "94633311efb8d74ac8942876128102ba4b59b53a168ac28f0014eaf453412b81",
+      "result_sha256": "c01fa29be4c5d8e6020267f93b3b42131dada7bee90d66565f383cb8cbeb11fc"
+    }
+  ],
+  "failed_runs": [],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "development_to_acceptance": "Added exact boundary-flux/variational-current checks on arbitrary one-coordinate profiles and the curvature-basis finite-shift identity. Note and numerical tolerances unchanged.",
+  "verification": {
+    "analytic": [
+      "local derivative heat coefficient and finite curvature-squared ambiguity",
+      "spherical conformal-operator reduction and exact quartic bulk polynomial",
+      "explicit integration-by-parts divergence and sigma boundary variation",
+      "arbitrary-covariant-jet Euler derivative equals the four-dimensional anomaly",
+      "current conservation and Lorentz-force Ward identity",
+      "regression to the complete magnetic-product anomaly",
+      "physical trace/dilaton source normalization from a joint Weyl variation"
+    ],
+    "exact_four_dimensional_metric_cases": 12,
+    "compact_profile_cases": 6,
+    "maximum_integrated_variation_discrepancy": 1.7763568394002505e-15,
+    "maximum_quadrature_refinement": 4.529709940470639e-14,
+    "variation_and_refinement_tolerance": 2e-10,
+    "quadrature_orders": [
+      32,
+      48
+    ],
+    "numerical_checks_are_not_interval_certificates": true,
+    "proof_scope": "local spherical Weyl-anomalous component of one massless Dirac determinant, common four-dimensional regulator and conformally related state/domain data where defined; no nonlocal state functional or gravitational constraint solution"
+  },
+  "decision": "Retain the nonlinear anomaly action and joint stress/dilaton/current identity as required components of the common local action. Do not add an independent guessed radius Jacobian or treat the anomaly as the full source. Complete the boundary, independent matter, nonlinear constraint and state-dependent sectors.",
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "closed_predecessor_workstreams_not_reopened": true,
+  "no_lean_paid_compute_publication_or_outreach": true,
+  "next": "Other local/matter and boundary terms, nonlinear constraints and state-dependent source matching; then S075-S080."
+}
