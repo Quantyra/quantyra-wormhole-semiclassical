@@ -1,0 +1,282 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for the local anomaly boundary action, canonical data obstruction and transparent smooth gluing; physical quantum boundary matching remains open",
+  "satellite_base_commit": "652a4453544853c728870ca689252a9582c47530",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13",
+  "accepted_inputs": {
+    "checks/spherical_anomaly_boundary.py": "09c7d91c83c863a6d24ed63eec64c9be4b25cf0eef19bebc5dc337d9a5c31afb",
+    "notes/spherical-anomaly-boundary.md": "341b46fe4f57322791534224cf7ebb2ea86269b1441d95433b317141db578e4c",
+    "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+    "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+    "notes/collective-clock-response.md": "2991f1f0994fa54e4ba3131532276f3b3cee539913029e57f7bfe6d8e3041e18",
+    "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1001.3598v2",
+      "reviewed": "Section 2, especially (2.3), (2.23)-(2.26): auxiliary fields and generalized GHY term; fixed auxiliary boundary variables.",
+      "application": "Established higher-derivative variational method. Our scalar Legendre map and signs are derived directly for the spherical anomaly, not imported from new massive gravity.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\sources\\hohm-tonni-1001.3598v2.html",
+      "sha256": "19bb8a24910779627449c1b8464076c30680d3489079ce54753ee1b2ff2b1c95"
+    },
+    {
+      "url": "https://arxiv.org/html/1510.00021v3",
+      "reviewed": "Sections 3.4 and 4.1: boundary conformal charges and boundary terms in the four-dimensional anomaly effective action.",
+      "application": "Distinguishes genuine boundary anomaly data from a variational GHY completion. No numerical boundary charge is assigned to our transmitting/driven domain.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\sources\\herzog-boundary-1510.00021v3.html",
+      "sha256": "500817c6169c6df120b2fe547387062d52965a6b345327abdf84c5419863c63a"
+    },
+    {
+      "url": "https://arxiv.org/html/2308.10351v2",
+      "reviewed": "Section 2.4, equations (32)-(41): fermionic projector and mixed domain before heat-coefficient calculation.",
+      "application": "The local reflecting projector is not assumed to equal the coupled two-boundary domain. No boundary heat coefficient from this source is substituted into the candidate model.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\sources\\fermion-boundaries-2308.10351v2.html",
+      "sha256": "9534a00fbb84c21b84aacdf37e88d5f40e30ceb2606d8f295cdbf2bdf1a375e6"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\acceptance\\checks\\spherical_anomaly_boundary.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791957784.771505,
+      "duration_seconds": 22.93408441543579,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/spherical_anomaly_boundary.py": "09c7d91c83c863a6d24ed63eec64c9be4b25cf0eef19bebc5dc337d9a5c31afb",
+        "notes/spherical-anomaly-boundary.md": "341b46fe4f57322791534224cf7ebb2ea86269b1441d95433b317141db578e4c",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/collective-clock-response.md": "2991f1f0994fa54e4ba3131532276f3b3cee539913029e57f7bfe6d8e3041e18",
+        "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+      },
+      "stdout_sha256": "0a1209b0405ff954203c1cda07b6532c947e254483928ea54b9bdf4e23ead8fe",
+      "terminal_sha256": "f90ebc8ba2fe36a6d97a6d2ad9af6864b0f496311512bd531b9e32c7ff53187b",
+      "result_sha256": "32855d30c8296fae8cc91dc61133a4d0579e3e99842355b6c90307e18211e908"
+    },
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\development-01\\checks\\spherical_anomaly_boundary.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-boundary-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791957639.9872398,
+      "duration_seconds": 34.55566763877869,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/spherical_anomaly_boundary.py": "986a66466b7e38b365bfc89ad4e94ed82323e7a4378a303c3c1f0e9fdf5e3628",
+        "notes/spherical-anomaly-boundary.md": "008a9e9e18c209612dd91abecbe956492509d27ff5af7e71b386304493a394b7",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/collective-clock-response.md": "2991f1f0994fa54e4ba3131532276f3b3cee539913029e57f7bfe6d8e3041e18",
+        "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6"
+      },
+      "stdout_sha256": "7622242d27e9bfb35ea475eeabac3853dd28b577ee31950e890cf7a69437d9e1",
+      "terminal_sha256": "bf3aaab5816792dca8ea251e762c29e1afd4a3069f0c520428e9159617bfb608",
+      "result_sha256": "1078397e085fb64539adc34f1379e5a39e3f4e9b74f551e3c18d4791c0298ef4"
+    }
+  ],
+  "failed_runs": [],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "verification": {
+    "analytic": {
+      "Legendre_inverse": "PASS",
+      "Hessian_determinant": "-b*(b+4*c*sigma)",
+      "Delta_lower_bound": "47/1500",
+      "inverse_Hessian_infinity_bound": "10500/47",
+      "invertibility_range": "sigma >= -1/100 at b=1/30,c=1/20",
+      "independent_normal_jets": "PASS",
+      "restricted_boundary_symplectic_rank": 4,
+      "restricted_boundary_symplectic_determinant": 4,
+      "Gaussian_normal_curvature": "PASS",
+      "auxiliary_GHY_and_Q_normal_flux_identity": "PASS for arbitrary two-variable Gaussian-normal fields",
+      "classical_Weyl_GHY_flux_cancellation": "PASS",
+      "electric_density_Legendre_transform": "PASS",
+      "moving_cut_extrinsic_curvature": "PASS",
+      "all_auxiliary_boundary_momenta": "PASS",
+      "classical_sigma_metric_boundary_momenta": "PASS"
+    },
+    "independent_variation_cases": 16,
+    "moving_or_static_cut_cases": 4,
+    "maximum_variation_discrepancy": 1.540712002423561e-13,
+    "maximum_step_refinement": 1.5728159402585325e-13,
+    "maximum_variation_quadrature_refinement": 1.7578531336169372e-13,
+    "maximum_cut_discrepancy": 3.885780586188048e-16,
+    "maximum_cut_quadrature_refinement": 6.661338147750939e-16,
+    "minimum_GHY_omission_discrepancy_for_fixed_values": 0.023201934201929626,
+    "tolerance": 2e-08,
+    "variation_quadrature_orders": [
+      32,
+      48
+    ],
+    "gluing_quadrature_orders": [
+      40,
+      64
+    ],
+    "finite_difference_steps": [
+      0.001,
+      0.0005
+    ],
+    "numerical_checks_are_not_interval_certificates": true,
+    "scope": "Local spherical classical-plus-anomaly variational and smooth gluing identities; numerical auxiliary-action checks use arbitrary off-shell Gaussian-normal profiles, not a physical state or evolved geometry."
+  },
+  "development_to_acceptance": "Extended the exact inverse-Hessian bound to all sigma>=-1/100, added the arbitrary-field GHY/Q-normal-flux integration-by-parts identity and common electric coefficient check. Numerical cases, steps, quadrature orders and tolerances unchanged.",
+  "decision": "Use transparent matching on artificial internal cuts. At a true boundary supply matched auxiliary data or a consistent EFT order reduction, and compute the actual fermion domain, boundary determinant/anomaly and finite terms before declaring physical closure.",
+  "no_physical_boundary_ensemble_selected_by_auxiliary_Dirichlet": true,
+  "no_extra_physical_auxiliary_particles_or_opening_bound_claimed": true,
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "clock_artifact_preservation": [
+    {
+      "path": "manuscript/clock-mode-obstruction/claim-to-evidence.md",
+      "sha256": "c8104e07ebd99d3d4b2de32b9a685c13318ec5eb9400325175641144008084d8"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex",
+      "sha256": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/bundle.json",
+      "sha256": "d4a5726ead6bdfbdb0480c2be279c89976cc68db6225bdf94742be31d54f8f0b"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction-v0.1.0-source.zip",
+      "sha256": "7a490844a2ead224344754e344f6c95f814d7f56c0c01a434d1f77714793efb9"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.pdf",
+      "sha256": "416bb2d8a140e91690a988364dec4fdb13dc7e54859d80b51fe6bed6fb93ba26"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/creation-intent.json",
+      "sha256": "f6fce18c2b020dcbcf2b56b973059e311da3838bfe8beef68326022f8775ec04"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/draft-record.json",
+      "sha256": "1dbfeed8483a22b38baf55601f2287b7cd53770812128246e11c3742f1b5e2ee"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/LICENSE-CC-BY-4.0.txt",
+      "sha256": "62202e40780cad6d159546cdf74b5b218d07091f6feeca7b1244771ac72cba7c"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/manifest.json",
+      "sha256": "beeb5dd2e0accb4258faceae469dbba61b33b2df3b1f096932d962188b6f3d41"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/public-record.json",
+      "sha256": "be393570622dd0594dd857e6ee9bb84a56d8fac9c8e470a73d46961a390a4699"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/published-record.json",
+      "sha256": "a36d71de62fbf2ea9a57d29a4ccc92971645febe1ad551d0c51051798935d963"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/resolution-check.json",
+      "sha256": "b77eb49617f5f3f61f4a1bde2a47bb80ee403b8074085a1ab2ebb726f0327807"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/zenodo-metadata.json",
+      "sha256": "ed4ba7c848fa682d5d1179e726eaaf9ea725a4381a7fdbe77ce0cb65061fb6f8"
+    }
+  ],
+  "next": "Physical four-dimensional coupled fermion boundary/domain and state matching, other S074 interactions and controlled remainder; S075-S080.",
+  "closed_predecessors_not_reopened": true,
+  "no_Lean_paid_compute_publication_or_outreach": true
+}
