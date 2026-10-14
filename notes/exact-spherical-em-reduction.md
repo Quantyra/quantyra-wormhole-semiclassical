@@ -48,12 +48,15 @@ E_ab := g_ab Box X - nabla_a nabla_b X
        + (nabla_a X nabla_b X - g_ab (nabla X)^2/2)/(2X)
        - g_ab V(X)/2 = 2G T_ab^(2),                         (2)
 
-R2 - Box X/X + (nabla X)^2/(2X^2) + V'(X) = J_X.          (3)
+R2 - Box X/X + (nabla X)^2/(2X^2) + V'(X) = -J_X.         (3)
 ```
 
 Here `T_ab^(2)=-2/sqrt(-g) delta I_matter^(2)/delta g^ab` and
 `J_X=4G/sqrt(-g) delta I_matter^(2)/delta X`; these definitions fix the
-source normalizations. In an ADM decomposition
+source normalizations. A [dated source and constraint correction](spherical-anomaly-sources.md)
+fixes the sign in (3) from direct action variation and the Noether identity;
+the previous metric/JT checker did not test a nonzero independent J_X.
+In an ADM decomposition
 `ds2=-N^2dt^2+Lambda^2(dr+N^r dt)^2`, the projections
 `u^a u^b(E_ab-2G T_ab^(2))=0` and
 `u^a s^b(E_ab-2G T_ab^(2))=0`, for unit normal `u` and unit radial vector

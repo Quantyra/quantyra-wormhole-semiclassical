@@ -1,0 +1,314 @@
+{
+  "story": "S074",
+  "date": "2026-10-13",
+  "status": "PASS for separate local anomaly sources, corrected source conventions and nonlinear constraint identities; full interacting state and boundary problem remain open",
+  "satellite_base_commit": "dbab9e409a8f7b23106869af9798e2da622fa983",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13",
+  "accepted_inputs": {
+    "checks/spherical_anomaly_sources.py": "0f02228c52e193521c90522286cda127e7292f6b7b92f9baaf5b1dc833e9c369",
+    "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+    "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+    "notes/exact-spherical-em-reduction.md": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+    "notes/sourced-spherical-mass-charge-balance.md": "6137a17f2d4734a461fce60e5d908d850d0eff1064492008d7bac8b413d45da5",
+    "notes/retarded-dirac-spherical-response.md": "5b695c2080dca2ca01ca252820d88a5a67dc6c7bfef4dd3894918ce574af1cf6",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "checks/retarded_dirac_spherical_response.py": "673e3aaa304ff03623b260808540c11255d66afdacfd45574479f1cb9383518d",
+    "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0106151v1",
+      "reviewed": "Equations (44), (50), (56): bulk anomaly transgression and finite curvature term.",
+      "application": "Established predecessor functional; separate spherical Hilbert stress and boundary current derived by direct variation here. Does not determine physical boundary conditions.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\sources\\weyl-cohomology-0106151v1.html",
+      "sha256": "ff02107abaf60d49c01536fe1c22c39c4186e5a9a51634af311d57d1c4487b1b"
+    },
+    {
+      "url": "https://arxiv.org/html/hep-th/0204253v3",
+      "reviewed": "Equation (2.9), section 2.1.4 and section 5.2 equations (5.15)-(5.17).",
+      "application": "Standard dilaton action, physical-frame caution and matter conservation structure. Our source signs and charge factors follow direct variation in our own normalization; no claim of novel general dilaton conservation laws.",
+      "cache": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\sources\\dilaton-gravity-0204253v3.html",
+      "sha256": "68d2e5c7ec3e50bcfedb5f7fd44bd867b513fc969201042a8eff4821a9c2e6f2"
+    }
+  ],
+  "runs": [
+    {
+      "identity": "acceptance",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\acceptance",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\acceptance\\checks\\spherical_anomaly_sources.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\acceptance\\result.json"
+      ],
+      "start_unix": 1791956451.9324503,
+      "duration_seconds": 86.58886933326721,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/spherical_anomaly_sources.py": "0f02228c52e193521c90522286cda127e7292f6b7b92f9baaf5b1dc833e9c369",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/exact-spherical-em-reduction.md": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+        "notes/sourced-spherical-mass-charge-balance.md": "6137a17f2d4734a461fce60e5d908d850d0eff1064492008d7bac8b413d45da5",
+        "notes/retarded-dirac-spherical-response.md": "5b695c2080dca2ca01ca252820d88a5a67dc6c7bfef4dd3894918ce574af1cf6",
+        "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+        "checks/retarded_dirac_spherical_response.py": "673e3aaa304ff03623b260808540c11255d66afdacfd45574479f1cb9383518d",
+        "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e"
+      },
+      "stdout_sha256": "e7a6460d38c9f448febae2963f7a50183c3bceac7dd95112530285c83df7ab63",
+      "terminal_sha256": "554b74b8505fbc1012fc803f077301c7ad6ec9ebe69c84bb59085eb02338b458",
+      "result_sha256": "a546d2ba1750ba305c3191d47b2f8e1b5f9ae6193c9c904c23194650e0a61812"
+    },
+    {
+      "identity": "development-01",
+      "root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\development-01",
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\development-01\\checks\\spherical_anomaly_sources.py",
+        "--output",
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\spherical-anomaly-sources-2026-10-13\\development-01\\result.json"
+      ],
+      "start_unix": 1791956038.079423,
+      "duration_seconds": 542.1335854530334,
+      "exit_code": 0,
+      "input_sha256": {
+        "checks/spherical_anomaly_sources.py": "73534abc2110cb02163a6d3fe0758b1e191e7f98aa2811f228df601d0665c6cf",
+        "notes/spherical-anomaly-sources.md": "db49dd6cb596616bd80ecac553c9337aa53d54ac4fabc0cac996c92e087c1306",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/exact-spherical-em-reduction.md": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+        "notes/sourced-spherical-mass-charge-balance.md": "1b8255b3959841423880370a182d2e285938d39a064eca7e96ef6a6dfc0c59cf",
+        "notes/retarded-dirac-spherical-response.md": "5b695c2080dca2ca01ca252820d88a5a67dc6c7bfef4dd3894918ce574af1cf6",
+        "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+        "checks/retarded_dirac_spherical_response.py": "673e3aaa304ff03623b260808540c11255d66afdacfd45574479f1cb9383518d",
+        "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e"
+      },
+      "stdout_sha256": "888e948bdeafe27be10f2a5ee7093290becc5dcdfa063c834fee8124986be5eb",
+      "terminal_sha256": "aeae2ce871ffd370db6dac270800f13ab8a7daedf6235168a8a8db4d50e7c6bc",
+      "result_sha256": "000d39b4d46812d9e8476ff73a9bbd88afb8045e9a755f0ca9de231e5cdb6718"
+    }
+  ],
+  "failed_runs": [],
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "development_to_acceptance": "Added exact physical-frame Ward transfer and charged/Lambda mass-work checks; retained factored expressions for numerical common-subexpression elimination instead of expanding curved profiles. Numerical cases, steps, quadrature orders and tolerances unchanged.",
+  "corrections": [
+    {
+      "path": "notes/exact-spherical-em-reduction.md",
+      "predecessor_commit": "dbab9e409a8f7b23106869af9798e2da622fa983",
+      "predecessor_sha256": "52eec5dc6329bfae718e38262c90a9452d2c3bc5c7c7231aea8a63d7c062e3c2",
+      "current_sha256": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+      "correction": "Equation (3): D0=-J_X with J_X=+4G delta Gamma/delta X; direct variation and Noether identity fix the sign."
+    },
+    {
+      "path": "notes/sourced-spherical-mass-charge-balance.md",
+      "predecessor_commit": "dbab9e409a8f7b23106869af9798e2da622fa983",
+      "predecessor_sha256": "cf2e0716a696bfaace8e345aabacb3a637c6cf663fc1fcd2baf039ad4c66c4d3",
+      "current_sha256": "6137a17f2d4734a461fce60e5d908d850d0eff1064492008d7bac8b413d45da5",
+      "correction": "Scaled Q_e=(4pi/gc^2)X f obeys dQ_e=epsilon j. The gc^2/(4pi) factor belongs to D=X f. Mass balance uses the metric trace, not the angular equation."
+    },
+    {
+      "path": "notes/retarded-dirac-spherical-response.md",
+      "predecessor_commit": "dbab9e409a8f7b23106869af9798e2da622fa983",
+      "predecessor_sha256": "d4a09af9413b4e7eaf2e327d3c3b01574107821b355c1fbdcc58ce6a5444b528",
+      "current_sha256": "5b695c2080dca2ca01ca252820d88a5a67dc6c7bfef4dd3894918ce574af1cf6",
+      "correction": "Equation (2) now uses the scaled Q_e law. The historical checker Q label denotes D; general-coupling distinctions were absent in its gc^2/(4pi)=1 mouth quadrature."
+    }
+  ],
+  "historical_impact": {
+    "old_metric_JT_check": "Had no independent nonzero J_X; could not test the angular-source sign.",
+    "old_Gauss_checker": "Correct as a calculation for D=X f; its Q label is not the scaled charge defined in the note.",
+    "old_charge_quadrature": "Used gc^2/(4pi)=1 and could not distinguish D from Q_e.",
+    "Schwinger_mass": "Its separate calculation starts from the correctly normalized Maxwell equation; not changed.",
+    "clock_manuscript": "Reviewed the TeX. Neither erroneous equation is printed. Its source-free mode count, mass variation and asymptotic-clock argument do not use the corrected source factors.",
+    "frozen_artifacts": "All clock manuscript/deposit files in the current manifest remain byte-identical. No publication or outreach occurred."
+  },
+  "verification": {
+    "analytic": {
+      "flat_arbitrary_function_Ward": "PASS",
+      "gauge_conservation": "PASS",
+      "full_pointwise_boundary_variation": "PASS for arbitrary flat-chart fields and all metric/gauge/scalar variations",
+      "physical_source_chain_rule": "PASS",
+      "physical_frame_Ward_transfer": "PASS for arbitrary two-dimensional conformal factors and symmetric stress"
+    },
+    "constraints": {
+      "gravitational_Noether_identity": "PASS on arbitrary conformal metric and radius",
+      "Maxwell_Noether_identity": "PASS",
+      "dilaton_sign": "D0+J_X=0 without electric field",
+      "wrong_sign_residual": "8*G*Derivative(f(z), z)",
+      "scaled_charge": "d Q_e = epsilon j",
+      "unscaled_flux": "d D = gc^2/(4*pi) epsilon j",
+      "null_constraint_propagation": "PASS",
+      "charged_Lambda_mass_work_identity": "PASS on unrestricted local radius/charge jets"
+    },
+    "independent_variations": 12,
+    "maximum_variation_discrepancy": 2.739475313262574e-13,
+    "maximum_step_refinement": 9.627854069549358e-13,
+    "maximum_quadrature_refinement": 3.1441516057384433e-13,
+    "tolerance": 1e-07,
+    "quadrature_orders": [
+      32,
+      48
+    ],
+    "finite_difference_steps": [
+      0.001,
+      0.0005
+    ],
+    "scope": "Direct two-dimensional metric/connection curvature and action evaluations versus integrated Hilbert stress, scalar and gauge sources. Flat exact Green identity covers arbitrary field and metric variations. Curved profiles are supplementary numerical checks, not an interval certificate or a physical evolution."
+  },
+  "preserved_preexisting_files": [
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/S051-constraint-compatibility-audit-2026-10-12.md",
+      "sha256": "ecf1f2ccfd1662cb59cb5d6cc1115a447ed02305e8e0df01cbdfaff3e7df72b1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-and-novelty.md",
+      "sha256": "e530505b06e92427ddb0178acbf20ec6852cba9c7f94f4b0b09d41480b1539a0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\Quantyra-Space-Planning",
+      "path": "docs/wormhole-literature-sources.json",
+      "sha256": "640cfbe4e7bde848d9e6082bce1db990271d7057a9027d009c89dc479cc6e453"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/exterior_boundary_and_energy.py",
+      "sha256": "4a96b4eb27eddd86feb7f771c8e78ebf7a900b0eff3af8c7a1821dc5e6ed56d3"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/polar_dipole_contacts.py",
+      "sha256": "14ca4c38524b91cf231ef50d50df29f59277cca99614241dd2289196c278427a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/exterior-boundary-and-energy.json",
+      "sha256": "9b3c6f6edb51584ddc67595fb434d85b213f9206cfe0a97cb5c26c8cf42ecd3a"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/exterior-boundary-and-energy.md",
+      "sha256": "57e2e5e136d05b883afcb9a85ab546706608e48d5b66944a6b5859dac218ba07"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "README.md",
+      "sha256": "93d7a58858d850d95b957d63076b2dae4d0260f537696a402c095bc42d850499"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checkpoint.json",
+      "sha256": "f68d9befe110732f28fb938830fc884011da949bc69bcee189934d52fc9e13bc"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "checks/rn_collar_lll_flux.ps1",
+      "sha256": "00a237c03208abfd075e0d96d9078e718401d4dbaad161c9fe2699985540b269"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/proper-mouth-seagull.json",
+      "sha256": "7c97c893715a992a783af45ff1c4c5a42e8752eedc103acaf31aad08fe36d58b"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "evidence/rn-collar-lll-anomaly-flux.json",
+      "sha256": "db1f925948742c4372364fc54156754c4bebedf2483b9931d23bdb339d59a1b2"
+    },
+    {
+      "root": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "path": "notes/rn-collar-lll-anomaly-flux.md",
+      "sha256": "c7fe2e928bb4a00c59ca3ef9c73d5e26be2275089726766a749531cb06f963ba"
+    }
+  ],
+  "clock_artifact_preservation": [
+    {
+      "path": "manuscript/clock-mode-obstruction/claim-to-evidence.md",
+      "sha256": "c8104e07ebd99d3d4b2de32b9a685c13318ec5eb9400325175641144008084d8"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex",
+      "sha256": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/bundle.json",
+      "sha256": "d4a5726ead6bdfbdb0480c2be279c89976cc68db6225bdf94742be31d54f8f0b"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction-v0.1.0-source.zip",
+      "sha256": "7a490844a2ead224344754e344f6c95f814d7f56c0c01a434d1f77714793efb9"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.log",
+      "sha256": "dfdc1837e663fa09f6dc4e7adaf7e6aae22acbb6172bb5ff4097263f6b0000d1"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/clock-mode-obstruction.pdf",
+      "sha256": "416bb2d8a140e91690a988364dec4fdb13dc7e54859d80b51fe6bed6fb93ba26"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/creation-intent.json",
+      "sha256": "f6fce18c2b020dcbcf2b56b973059e311da3838bfe8beef68326022f8775ec04"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/draft-record.json",
+      "sha256": "1dbfeed8483a22b38baf55601f2287b7cd53770812128246e11c3742f1b5e2ee"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/LICENSE-CC-BY-4.0.txt",
+      "sha256": "62202e40780cad6d159546cdf74b5b218d07091f6feeca7b1244771ac72cba7c"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/manifest.json",
+      "sha256": "beeb5dd2e0accb4258faceae469dbba61b33b2df3b1f096932d962188b6f3d41"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/pdflatex.log",
+      "sha256": "7bf100bd960a32b9b0ce3fc5b49a662866a3dcf2fb5a7eab603007c8a90e2de0"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/public-record.json",
+      "sha256": "be393570622dd0594dd857e6ee9bb84a56d8fac9c8e470a73d46961a390a4699"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/published-record.json",
+      "sha256": "a36d71de62fbf2ea9a57d29a4ccc92971645febe1ad551d0c51051798935d963"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/resolution-check.json",
+      "sha256": "b77eb49617f5f3f61f4a1bde2a47bb80ee403b8074085a1ab2ebb726f0327807"
+    },
+    {
+      "path": "manuscript/clock-mode-obstruction/deposit/v0.1.0/zenodo-metadata.json",
+      "sha256": "ed4ba7c848fa682d5d1179e726eaaf9ea725a4381a7fdbe77ce0cb65061fb6f8"
+    }
+  ],
+  "frozen_source_review": {
+    "zip_sha256": "7a490844a2ead224344754e344f6c95f814d7f56c0c01a434d1f77714793efb9",
+    "TeX": [
+      {
+        "name": "manuscript/clock-mode-obstruction/clock-mode-obstruction.tex",
+        "sha256": "1214c2925790321263c5dfd61fd35e21a38b4a063769d71dbcc37d647f03f64e",
+        "equals_reviewed_current_TeX_after_line_ending_normalization": true
+      }
+    ]
+  },
+  "decision": "Use the separate anomaly sources and corrected coupled constraints; complete the independent state functional, full angular interactions, physical coefficients, boundary ensemble and error ledger.",
+  "next": "S074 remaining local/interacting/boundary matching and controlled remainder, then S075-S080.",
+  "closed_predecessors_not_reopened": true,
+  "no_Lean_paid_compute_publication_or_outreach": true
+}

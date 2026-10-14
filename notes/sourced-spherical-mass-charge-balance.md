@@ -31,8 +31,10 @@ This is the two-dimensional form of the spherical mass-flux identity. The
 normalization follows because `T_ab^(2)` is the sphere-integrated orbit-space
 stress (`4 pi R^2` times the four-dimensional orbit-space stress). Equation
 (1) follows by differentiating `m`, replacing the second derivatives of `R`
-with the metric equation from the exact reduced action, and using the angular
-Einstein equation to remove its trace term. It is valid before a near-throat
+with the metric equation from the exact reduced action and its metric
+trace. The angular equation is not needed for this algebraic identity,
+as checked in the [dated constraint correction](spherical-anomaly-sources.md).
+It is valid before a near-throat
 expansion. Diffeomorphism invariance requires the reduced stress and dilaton
 source to obey their Ward identity; treating a prescribed stress history
 that violates it as a solution would invalidate (1).
@@ -46,20 +48,23 @@ an independent radiative spherical gravitational mode.
 
 ## Electric Gauss balance
 
-If charged Dirac matter is retained, set `f=*F` with the orientation chosen
-once on the two-dimensional orbit space and define the electric flux
+If charged Dirac matter is retained, set `F_ab=f epsilon_ab` with
+`epsilon_uv=+sqrt(-g)` and define the electric flux
 `Q_e=(4 pi/g_c^2) X f`. The Maxwell equation in the source convention of the
 mode-reduction note gives
 
 ```text
 nabla_a(X F^ab) = -(g_c^2/(4 pi)) j^b,
-partial_a Q_e = (g_c^2/(4 pi)) epsilon_ab j^b,               (2)
+partial_a Q_e = epsilon_ab j^b,                            (2)
 ```
 
 where the second equality uses the corresponding volume-form convention;
 reversing orientation reverses both `f` and the displayed flux sign. Thus
 electric flux is constant only in regions with zero radial current. The
 fixed magnetic flux remains topological and obeys its Bianchi identity.
+The [2026-10-13 correction](spherical-anomaly-sources.md) distinguishes
+this scaled charge from `D=X f`, whose derivative has the factor
+`g_c^2/(4 pi)`. The predecessor equation attached that factor to Q_e.
 
 ## Ward identities required of the retarded source
 

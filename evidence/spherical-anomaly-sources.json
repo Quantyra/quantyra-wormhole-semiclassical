@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "analytic": {
+    "flat_arbitrary_function_Ward": "PASS",
+    "gauge_conservation": "PASS",
+    "full_pointwise_boundary_variation": "PASS for arbitrary flat-chart fields and all metric/gauge/scalar variations",
+    "physical_source_chain_rule": "PASS",
+    "physical_frame_Ward_transfer": "PASS for arbitrary two-dimensional conformal factors and symmetric stress"
+  },
+  "constraints": {
+    "gravitational_Noether_identity": "PASS on arbitrary conformal metric and radius",
+    "Maxwell_Noether_identity": "PASS",
+    "dilaton_sign": "D0+J_X=0 without electric field",
+    "wrong_sign_residual": "8*G*Derivative(f(z), z)",
+    "scaled_charge": "d Q_e = epsilon j",
+    "unscaled_flux": "d D = gc^2/(4*pi) epsilon j",
+    "null_constraint_propagation": "PASS",
+    "charged_Lambda_mass_work_identity": "PASS on unrestricted local radius/charge jets"
+  },
+  "variation_cases": [
+    {
+      "curved": false,
+      "variation": "metric_0",
+      "predicted": 0.2510193744862722,
+      "direct_derivative": 0.25101937448599826,
+      "discrepancy": 2.739475313262574e-13,
+      "step_refinement": 2.4052981828504016e-13,
+      "quadrature_refinement": 1.1102230246251565e-13
+    },
+    {
+      "curved": false,
+      "variation": "metric_1",
+      "predicted": -5.3995039443579125e-20,
+      "direct_derivative": -3.700743415417188e-14,
+      "discrepancy": 3.700738015913244e-14,
+      "step_refinement": 0.0,
+      "quadrature_refinement": 1.295260195396016e-13
+    },
+    {
+      "curved": false,
+      "variation": "metric_2",
+      "predicted": -0.21039781090377574,
+      "direct_derivative": -0.21039781090366935,
+      "discrepancy": 1.0638712133470563e-13,
+      "step_refinement": 9.250933352689117e-14,
+      "quadrature_refinement": 2.7755575615628914e-14
+    },
+    {
+      "curved": false,
+      "variation": "sigma",
+      "predicted": -4.305549281887979,
+      "direct_derivative": -4.305549281888032,
+      "discrepancy": 5.3290705182007514e-14,
+      "step_refinement": 3.6415315207705135e-14,
+      "quadrature_refinement": 1.8562928971732617e-13
+    },
+    {
+      "curved": false,
+      "variation": "gauge",
+      "predicted": -0.02082999535303629,
+      "direct_derivative": -0.020829995352985204,
+      "discrepancy": 5.108760636751697e-14,
+      "step_refinement": 1.8506030041720578e-14,
+      "quadrature_refinement": 2.960617861980097e-13
+    },
+    {
+      "curved": false,
+      "variation": "joint",
+      "predicted": -4.285757713658517,
+      "direct_derivative": -4.2857577136583185,
+      "discrepancy": 1.9895196601282805e-13,
+      "step_refinement": 8.322231792590173e-13,
+      "quadrature_refinement": 3.1441516057384433e-13
+    },
+    {
+      "curved": true,
+      "variation": "metric_0",
+      "predicted": 0.24997397824681342,
+      "direct_derivative": 0.24997397824664627,
+      "discrepancy": 1.6714407635731732e-13,
+      "step_refinement": 1.3877787807814457e-13,
+      "quadrature_refinement": 1.48020484758149e-13
+    },
+    {
+      "curved": true,
+      "variation": "metric_1",
+      "predicted": 0.00021639442036062927,
+      "direct_derivative": 0.00021639442041957815,
+      "discrepancy": 5.894888526966624e-14,
+      "step_refinement": 1.942890293094024e-13,
+      "quadrature_refinement": 1.295260285746197e-13
+    },
+    {
+      "curved": true,
+      "variation": "metric_2",
+      "predicted": -0.2129212762092203,
+      "direct_derivative": -0.2129212762091992,
+      "discrepancy": 2.1094237467877974e-14,
+      "step_refinement": 1.0177969578251123e-13,
+      "quadrature_refinement": 1.3877787807814457e-13
+    },
+    {
+      "curved": true,
+      "variation": "sigma",
+      "predicted": -4.327337230564437,
+      "direct_derivative": -4.327337230564498,
+      "discrepancy": 6.128431095930864e-14,
+      "step_refinement": 0.0,
+      "quadrature_refinement": 1.474376176702208e-13
+    },
+    {
+      "curved": true,
+      "variation": "gauge",
+      "predicted": -0.020643578320671572,
+      "direct_derivative": -0.020643578320841034,
+      "discrepancy": 1.6946166692122233e-13,
+      "step_refinement": 1.6653345369377348e-13,
+      "quadrature_refinement": 1.1102230246251565e-13
+    },
+    {
+      "curved": true,
+      "variation": "joint",
+      "predicted": -4.310711712427155,
+      "direct_derivative": -4.310711712427177,
+      "discrepancy": 2.220446049250313e-14,
+      "step_refinement": 9.627854069549358e-13,
+      "quadrature_refinement": 2.4868995751603507e-14
+    }
+  ],
+  "tolerance": 1e-07,
+  "quadrature_orders": [
+    32,
+    48
+  ],
+  "finite_difference_steps": [
+    0.001,
+    0.0005
+  ],
+  "finite_difference_order": 4,
+  "numerical_checks_are_not_interval_certificates": true,
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "checker_sha256": "0f02228c52e193521c90522286cda127e7292f6b7b92f9baaf5b1dc833e9c369"
+}

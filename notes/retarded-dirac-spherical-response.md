@@ -63,9 +63,14 @@ the same frame. With `epsilon_uv=+sqrt(-g)` and the Maxwell convention
 of `sourced-spherical-mass-charge-balance.md`,
 
 ```text
-partial_u Q_e = -(g_c^2/(4 pi)) j_u,
-partial_v Q_e = +(g_c^2/(4 pi)) j_v.                          (2)
+partial_u Q_e = -j_u,
+partial_v Q_e = +j_v.                                       (2)
 ```
+
+The [2026-10-13 normalization correction](spherical-anomaly-sources.md)
+fixes (2) for `Q_e=(4 pi/g_c^2) X f`. The historical checker's Q variable
+obeys the unscaled `D=X f` law; its receipts remain preserved. Its separate
+Schwinger-mass derivation starts directly from Maxwell's equation.
 
 The center-of-charge mode uses `q` coherent flavors,
 `j^a=(q/pi) epsilon^{ab} partial_b chi`. The orientation is the Gauss-law
