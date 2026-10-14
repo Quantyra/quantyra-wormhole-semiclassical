@@ -1,0 +1,308 @@
+{
+  "story": "S074",
+  "scope": "Aligned axisymmetric dipole block on a specified finite polar background; direct cubic matching and unreduced local quartic contacts, with scalar-block bulk logarithm only.",
+  "four_dimensional_tensor": {
+    "Ricci_F_squared_coefficient": "R/(2*A*B)",
+    "Maxwell_horizontal_and_mixed_contractions": "exact",
+    "scope": "Arbitrary diagonal axisymmetric background metric and its first/second c derivatives; connection-curvature term independently reconstructed."
+  },
+  "contacts": {
+    "K_gravity_series": "J*t**2/14 + 8*chi**2*t**2/7 - 4*chi*t/5 + 1",
+    "K_electric_series": "11*J*t**2/70 + 22*chi**2*t**2/35 + 4*chi*t/5 + 1",
+    "K_cross_series": "12*a*chi*t**2/35 + 6*a*t/5",
+    "K_extra_series": "72*a**2*t**2/35",
+    "mass_linear": "4*mu*(3*P**2*a*ke + P**2*chi*ke - chi*kg)/(5*ke*kg)",
+    "mass_quadratic": "-mu*(25*J*P**2*ke*kg + 55*J*kg**2 + 216*P**4*a**2*ke**2 - 504*P**2*a**2*ke*kg - 240*P**2*a*chi*ke*kg + 176*P**2*chi**2*ke*kg - 4*chi**2*kg**2)/(350*ke*kg**2)",
+    "kinetic_seagull": "-11 J g^ab/350",
+    "sqrt_det_Z": "1-9 J/175",
+    "bulk_log_mass_quadratic": "-mu*(7*J*P**2*ke*kg + 37*J*kg**2 + 216*P**4*a**2*ke**2 - 504*P**2*a**2*ke*kg - 240*P**2*a*chi*ke*kg + 176*P**2*chi**2*ke*kg - 4*chi**2*kg**2)/(350*ke*kg**2)",
+    "omitted_l3_overlap": "6/35"
+  },
+  "cubic_matching": {
+    "on_shell_coefficients": [
+      "(-2*C**2 - 22*C - 12)/(15*b**2)",
+      "-16*pi*G*e*(C + 8)/(5*b**2)"
+    ],
+    "harmonic_conversion": "8pi/15",
+    "curved_stress_divergence": "exact for arbitrary radial data satisfying the free wave equation"
+  },
+  "numerical": {
+    "operator_comparisons": [
+      {
+        "C": 1.0,
+        "shape": [
+          0.7,
+          0.4,
+          0.9
+        ],
+        "amplitudes": [
+          0.02,
+          0.01,
+          0.005
+        ],
+        "relative_operator_remainder": [
+          7.455720550423687e-06,
+          9.266594620527258e-07,
+          1.1549815652026989e-07
+        ],
+        "halving_ratios": [
+          8.04580415539907,
+          8.023153701938934
+        ]
+      },
+      {
+        "C": 1.0,
+        "shape": [
+          -0.6,
+          0.2,
+          0.5
+        ],
+        "amplitudes": [
+          0.02,
+          0.01,
+          0.005
+        ],
+        "relative_operator_remainder": [
+          4.6762520670521707e-07,
+          5.836320389936608e-08,
+          7.289506479916478e-09
+        ],
+        "halving_ratios": [
+          8.012329266767622,
+          8.006468484548874
+        ]
+      },
+      {
+        "C": 4.0,
+        "shape": [
+          0.7,
+          0.4,
+          0.9
+        ],
+        "amplitudes": [
+          0.02,
+          0.01,
+          0.005
+        ],
+        "relative_operator_remainder": [
+          1.4354932343844476e-05,
+          1.7856474473868882e-06,
+          2.2264959786966187e-07
+        ],
+        "halving_ratios": [
+          8.039063010367162,
+          8.01998954622949
+        ]
+      },
+      {
+        "C": 4.0,
+        "shape": [
+          -0.6,
+          0.2,
+          0.5
+        ],
+        "amplitudes": [
+          0.02,
+          0.01,
+          0.005
+        ],
+        "relative_operator_remainder": [
+          1.0713770667673355e-06,
+          1.3360252075026816e-07,
+          1.6679561731791637e-08
+        ],
+        "halving_ratios": [
+          8.019138117685442,
+          8.009953912375204
+        ]
+      },
+      {
+        "C": 25.0,
+        "shape": [
+          0.7,
+          0.4,
+          0.9
+        ],
+        "amplitudes": [
+          0.02,
+          0.01,
+          0.005
+        ],
+        "relative_operator_remainder": [
+          5.535133689048442e-05,
+          6.943883176893752e-06,
+          8.693166830419795e-07
+        ],
+        "halving_ratios": [
+          7.971236767731028,
+          7.987748667833205
+        ]
+      },
+      {
+        "C": 25.0,
+        "shape": [
+          -0.6,
+          0.2,
+          0.5
+        ],
+        "amplitudes": [
+          0.02,
+          0.01,
+          0.005
+        ],
+        "relative_operator_remainder": [
+          4.5606904306603355e-06,
+          5.652569361140561e-07,
+          7.034643423331488e-08
+        ],
+        "halving_ratios": [
+          8.068349345721414,
+          8.03533174459552
+        ]
+      }
+    ],
+    "heat_trace_checks": [
+      {
+        "C": 1.0,
+        "Fourier_cutoff": 220,
+        "max_heat_trace_relative_error": 4.440892098500626e-16,
+        "extrapolated_heat_coefficient": -6.091806693726369,
+        "analytic_heat_coefficient": -6.099032601214313,
+        "explicit_extrapolation_error_bound": 0.022686546535661285
+      },
+      {
+        "C": 4.0,
+        "Fourier_cutoff": 220,
+        "max_heat_trace_relative_error": 2.220446049250313e-16,
+        "extrapolated_heat_coefficient": -3.0690656190701944,
+        "analytic_heat_coefficient": -3.070008184443157,
+        "explicit_extrapolation_error_bound": 0.0028933710101667416
+      },
+      {
+        "C": 25.0,
+        "Fourier_cutoff": 220,
+        "max_heat_trace_relative_error": 2.220446049250313e-16,
+        "extrapolated_heat_coefficient": -2.2198530515739208,
+        "analytic_heat_coefficient": -2.2202118335688787,
+        "explicit_extrapolation_error_bound": 0.0010943815561685057
+      }
+    ]
+  },
+  "closure": {
+    "unnormalized_l1_l2_l3_overlap": "6/35",
+    "normalized_overlap_squared": "27/175",
+    "l1_only_retains_norm_squared": "4/25",
+    "total_multiplication_norm_squared": "11/35",
+    "mixed_block_logdet_quadratic": "-v**2/(2*aa*bb)",
+    "constraint_schur_quartic": "-J^2/(2 A), only on an invertible constrained domain",
+    "determinant_diagnostics": [
+      {
+        "a": 2.0,
+        "b": 5.0,
+        "v": 0.3,
+        "cases": [
+          {
+            "step": 0.02,
+            "remainder": 3.2400156128294187e-12,
+            "analytic_bound": 3.240011664041991e-12
+          },
+          {
+            "step": 0.01,
+            "remainder": 2.0265639758616278e-13,
+            "analytic_bound": 2.0250018225016405e-13
+          },
+          {
+            "step": 0.005,
+            "remainder": 1.2861005408054116e-14,
+            "analytic_bound": 1.2656252847656891e-14
+          }
+        ]
+      },
+      {
+        "a": 1.0,
+        "b": 12.0,
+        "v": 0.8,
+        "cases": [
+          {
+            "step": 0.02,
+            "remainder": 1.1377936697227564e-10,
+            "analytic_bound": 1.1378020508881972e-10
+          },
+          {
+            "step": 0.01,
+            "remainder": 7.11112916877929e-12,
+            "analytic_bound": 7.111149037239313e-12
+          },
+          {
+            "step": 0.005,
+            "remainder": 4.4440443962000953e-13,
+            "analytic_bound": 4.444450370378273e-13
+          }
+        ]
+      },
+      {
+        "a": 3.0,
+        "b": 4.0,
+        "v": -0.5,
+        "cases": [
+          {
+            "step": 0.02,
+            "remainder": 1.7361139844059644e-11,
+            "analytic_bound": 1.7361255788242684e-11
+          },
+          {
+            "step": 0.01,
+            "remainder": 1.0851665639651832e-12,
+            "analytic_bound": 1.0850717050104966e-12
+          },
+          {
+            "step": 0.005,
+            "remainder": 6.795429403119838e-14,
+            "analytic_bound": 6.781687559906716e-14
+          }
+        ]
+      }
+    ],
+    "l3_light_asymptotic": "mu_l3_minus = 60/C^2 + o(C^-2)",
+    "hierarchy": [
+      {
+        "k": 2000,
+        "C": 49119681981.43145,
+        "l3_light_mass_squared_a_squared": 2.4867959852033372e-20,
+        "dipole_mass_squared_a_squared": 2.000000000081434,
+        "light_to_dipole_mass_squared_ratio": 1.2433979925510412e-20
+      },
+      {
+        "k": 4000,
+        "C": 392957455851.4516,
+        "l3_light_mass_squared_a_squared": 3.8856187277108177e-22,
+        "dipole_mass_squared_a_squared": 2.0000000000101794,
+        "light_to_dipole_mass_squared_ratio": 1.9428093638455206e-22
+      },
+      {
+        "k": 10000,
+        "C": 6139960247678.931,
+        "l3_light_mass_squared_a_squared": 1.591549430915843e-24,
+        "dipole_mass_squared_a_squared": 2.0000000000006515,
+        "light_to_dipole_mass_squared_ratio": 7.957747154576622e-25
+      }
+    ],
+    "scope": "Angular overlap and block algebra expose missing terms; no physical mixed-vertex coefficient, full determinant or loop-error size is supplied."
+  },
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "sources": {
+    "checks/polar_local_contact_audit.py": "98945200b1fb370a2566d4bef2f8b953e0a92c718ff7abae6c34c2673a900ca7",
+    "notes/polar-local-contact-audit.md": "8e11914aaff0d5041dd52e8e1118eb59dcabc1b1da64587986517af03b6afcff",
+    "notes/dipole-quadrupole-source.md": "5e5ae1a772f66b6bf6dc77124c1cdefdadd01cdb56263d0a5e5062f0a1113878",
+    "notes/polar-canonical-vacuum.md": "4f49027cf2630aa82f26a518177add98a525849536039b7de21cd00770d3fd6d",
+    "notes/polar-dipole-dressing.md": "68baea5a0a916714ac7cf846942cc9d1050c9e0f4d98cb5fc5d0481bd529ca9c",
+    "notes/quadrupole-product-response.md": "334546768d34b4affde58b3d18be6017bd9197910a2a4921b9ec8281bdc5a9ea"
+  },
+  "status": "PASS",
+  "goal_complete": false,
+  "S074_complete": false
+}
