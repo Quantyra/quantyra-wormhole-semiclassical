@@ -1,0 +1,45 @@
+{
+  "story": "S083",
+  "date": "2026-10-14",
+  "status": "PASS for the product-throat Lhat weight and the radiation-channel kappa slices; c_theta has no separate range; S074 gate not closed; opening not achieved",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\source-clock-radiation-2026-10-14",
+  "accepted_run": "acceptance-02",
+  "receipt_sha256": "459e070ab56c19291a4f66724fdbeeeeea18d14ce55b78acad8dc009d2043ef4",
+  "accepted_inputs": {
+    "checks/source_clock_radiation.py": "bbfe392c627630d570c04a7b1132314aab132cf1997ef606ae57e9410542b101",
+    "notes/source-clock-radiation.md": "54e754f0d980166a13e2165cea4accb553ee41835f4d942edb99d067482c90f7",
+    "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+    "notes/collective-clock-response.md": "2991f1f0994fa54e4ba3131532276f3b3cee539913029e57f7bfe6d8e3041e18",
+    "checks/source_clock_allocation.py": "c6e0bbc4774d5c27e3fd6de91babf1d60441d234aa49ad39dfd1a37a8aa0b527",
+    "notes/source-clock-window.md": "49f4b53ad89d2c8c0a53f39f82619f708d6565fd2ab659324b79621631dabce4"
+  },
+  "runs": [
+    {
+      "identity": "development-01",
+      "command": "checks/source_clock_radiation.py --output development-01.json",
+      "exit_code": 0,
+      "receipt_sha256": "459e070ab56c19291a4f66724fdbeeeeea18d14ce55b78acad8dc009d2043ef4",
+      "note": "The finite-sum delay identity and the exact T_star drive sample were in place before this run. No physical formula changed after it."
+    },
+    {
+      "identity": "acceptance-01",
+      "command": "checks/source_clock_radiation.py --output acceptance-01.json",
+      "exit_code": 0,
+      "receipt_sha256": "459e070ab56c19291a4f66724fdbeeeeea18d14ce55b78acad8dc009d2043ef4"
+    },
+    {
+      "identity": "acceptance-02",
+      "command": "checks/source_clock_radiation.py --output acceptance-02.json",
+      "exit_code": 0,
+      "receipt_sha256": "459e070ab56c19291a4f66724fdbeeeeea18d14ce55b78acad8dc009d2043ef4"
+    }
+  ],
+  "c_theta_separate_range": false,
+  "identified_input": "O(epsilon) product-throat weight; absent from the JT clock",
+  "radiation_channel": "six-corner kappa slices at Lambda = 0 and at half and full prescribed-angle anchors",
+  "area_budget_evaluated": false,
+  "s074_gate_closed": false,
+  "opening_achieved": false,
+  "overshoot_sample_is_a_joint_boundary": false,
+  "lean_paid_compute_publication_outreach": false
+}
