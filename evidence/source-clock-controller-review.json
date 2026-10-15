@@ -1,0 +1,44 @@
+{
+  "story": "S082",
+  "date": "2026-10-14",
+  "status": "PASS for the contact-channel controller slices; c_theta has no separate range; S074 gate not closed; opening not achieved",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\source-clock-controller-2026-10-14",
+  "accepted_run": "acceptance-02",
+  "receipt_sha256": "4489663ed69b66ca89a8cb0b74c45431c2e83ba5c940e2e64c1d52997ce876c7",
+  "accepted_inputs": {
+    "checks/source_clock_controller.py": "dad29dfdf2146ad38db995ea920450fc8dfffa8989ccc048dea758382cc3b278",
+    "notes/source-clock-controller.md": "9f9143d898661136ed6dc0e6a553ebc3b3ce850b38f229205902f20174d1f7f7",
+    "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+    "checks/source_clock_allocation.py": "c6e0bbc4774d5c27e3fd6de91babf1d60441d234aa49ad39dfd1a37a8aa0b527",
+    "notes/source-clock-window.md": "49f4b53ad89d2c8c0a53f39f82619f708d6565fd2ab659324b79621631dabce4"
+  },
+  "runs": [
+    {
+      "identity": "development-01",
+      "command": "checks/source_clock_controller.py --output development-01.json",
+      "exit_code": 0,
+      "receipt_sha256": "4489663ed69b66ca89a8cb0b74c45431c2e83ba5c940e2e64c1d52997ce876c7",
+      "note": "The central-difference tolerance was set to a relative gap before this run. No physical formula changed after it."
+    },
+    {
+      "identity": "acceptance-01",
+      "command": "checks/source_clock_controller.py --output acceptance-01.json",
+      "exit_code": 0,
+      "receipt_sha256": "4489663ed69b66ca89a8cb0b74c45431c2e83ba5c940e2e64c1d52997ce876c7"
+    },
+    {
+      "identity": "acceptance-02",
+      "command": "checks/source_clock_controller.py --output acceptance-02.json",
+      "exit_code": 0,
+      "receipt_sha256": "4489663ed69b66ca89a8cb0b74c45431c2e83ba5c940e2e64c1d52997ce876c7"
+    }
+  ],
+  "c_theta_separate_range": false,
+  "separating_input": "Lhat_uu on the varied clock boundary",
+  "drive_channel": "unresolved; retained g is not replaced",
+  "area_budget_evaluated": false,
+  "s074_gate_closed": false,
+  "opening_achieved": false,
+  "overshoot_sample_is_a_joint_boundary": false,
+  "lean_paid_compute_publication_outreach": false
+}

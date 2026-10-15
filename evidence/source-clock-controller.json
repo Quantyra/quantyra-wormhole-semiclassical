@@ -1,0 +1,409 @@
+{
+  "status": "PASS",
+  "verdict": "joint_sum_constraint_and_contact_channel_kappa_range",
+  "opening_achieved": false,
+  "s074_gate_closed": false,
+  "not_an_impossibility_theorem": true,
+  "area_budget": "not evaluated; no replacement target was written before the test",
+  "decision": {
+    "opening_rule": "D",
+    "u_hamiltonian": "A*y^2*rho^2 + 2*A*(kappa/eta)*y^3*rho",
+    "global_time_charge": "A*y*rho^2 + 2*A*(kappa/eta)*y^2*rho",
+    "clock_equation": "z_tt+(1+Lambda*r0^2)*z+4*Lambda*kappa*r0*z^2+3*Lambda*kappa^2*z^3=g/2",
+    "kappa_zero_reduces_to_rule_D": true,
+    "lambda_zero_removes_every_kappa_term": true,
+    "lambda_theta": "(2*pi*ell**2/N)*c_theta*Lhat_uu",
+    "joint_constraint": "Lambda=(pi*ell**2/N)*(zeta_s+2*c_theta*Lhat_uu)",
+    "c_theta_in_heat_polynomial_a4": false,
+    "separating_input": "Lhat_uu on the varied clock boundary",
+    "drive_channel": "unresolved; retained g is not replaced",
+    "controller_ansatz": "rho=r0(t)+kappa*z"
+  },
+  "numerical_variation": {
+    "central_difference_gap": 1.2655347676648185e-18,
+    "central_difference_relative_gap": 6.702802905747133e-09,
+    "point": "A=1, eta=1/2000, y=0.28*eta, r0=0.001, kappa=0.2"
+  },
+  "additivity": {
+    "lambda_source_piece": 2437.7281665802,
+    "lambda_theta_piece": 2437.7281665802,
+    "sum": 4875.4563331604,
+    "trajectory_gap_against_rule_D": 0.0,
+    "corner": {
+      "z0": 0.28,
+      "v0": 0.0005
+    }
+  },
+  "prescribed_angle_anchors": [
+    -4757.61079788208,
+    4875.4563331604
+  ],
+  "positive_anchor_at_kappa_zero_admissible": true,
+  "controller_ranges": [
+    {
+      "lambda_value": 1218.8640832901,
+      "anchor_fraction": 0.25,
+      "kappa_positive": 0.0021056297302246094,
+      "kappa_negative": -0.0021144577026367193,
+      "positive_binding_budget": "post_switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.002577343094351106,
+        "post_switch": 0.019999996626466843,
+        "energy": 0.0019214172404384555
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.0004431011517778416,
+        "post_switch": 0.019999996917421548,
+        "energy": 0.00024876083029212737
+      }
+    },
+    {
+      "lambda_value": 2437.7281665802,
+      "anchor_fraction": 0.5,
+      "kappa_positive": 0.001492590808868408,
+      "kappa_negative": -0.0015083452224731444,
+      "positive_binding_budget": "post_switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.004266109625656649,
+        "post_switch": 0.01999999814527953,
+        "energy": 0.0031929229190746644
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.0012168690209637956,
+        "post_switch": 0.01999999797144031,
+        "energy": 0.0008190005991224603
+      }
+    },
+    {
+      "lambda_value": 3656.5922498703003,
+      "anchor_fraction": 0.75,
+      "kappa_positive": 0.0007495726108551027,
+      "kappa_negative": -0.0012409776687622074,
+      "positive_binding_budget": "switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999944204997,
+        "post_switch": 0.007943283117127165,
+        "energy": 0.0037409263397636117
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.002103598922219181,
+        "post_switch": 0.019999997832948146,
+        "energy": 0.0014665133496943872
+      }
+    },
+    {
+      "lambda_value": 4875.4563331604,
+      "anchor_fraction": 1.0,
+      "kappa_positive": 1.490116119384766e-10,
+      "kappa_negative": -0.0010815817832946781,
+      "positive_binding_budget": "switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999999556939,
+        "post_switch": 0.004360055301269261,
+        "energy": 0.003712424168181211
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.003039711932126196,
+        "post_switch": 0.019999998733850444,
+        "energy": 0.0021540901000086377
+      }
+    },
+    {
+      "lambda_value": -1189.40269947052,
+      "anchor_fraction": -0.25,
+      "kappa_positive": 0.002086107635498047,
+      "kappa_negative": -0.002084294509887696,
+      "positive_binding_budget": "post_switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.002531247239650751,
+        "post_switch": 0.019999996708091272,
+        "energy": 0.001870168680563028
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.0004407064919987602,
+        "post_switch": 0.019999997444648976,
+        "energy": 0.00024982224378711226
+      }
+    },
+    {
+      "lambda_value": -2378.80539894104,
+      "anchor_fraction": -0.5,
+      "kappa_positive": 0.0014863876342773438,
+      "kappa_negative": -0.0014881957054138186,
+      "positive_binding_budget": "post_switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.004239102585731781,
+        "post_switch": 0.01999999850353157,
+        "energy": 0.0031236609181762576
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.0012107970049599764,
+        "post_switch": 0.019999998239120187,
+        "energy": 0.0008103995387770402
+      }
+    },
+    {
+      "lambda_value": -3568.20809841156,
+      "anchor_fraction": -0.75,
+      "kappa_positive": 0.0007515277385711672,
+      "kappa_negative": -0.0012264337539672852,
+      "positive_binding_budget": "switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999927780573,
+        "post_switch": 0.007621130998911929,
+        "energy": 0.003668973710066553
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.002095244919624789,
+        "post_switch": 0.01999999790653989,
+        "energy": 0.0014444025681606687
+      }
+    },
+    {
+      "lambda_value": -4757.61079788208,
+      "anchor_fraction": -1.0,
+      "kappa_positive": 1.1324882507324219e-10,
+      "kappa_negative": -0.0010714412689208984,
+      "positive_binding_budget": "switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999997586213,
+        "post_switch": 0.004407769573089748,
+        "energy": 0.0036342799287083782
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.003034563357869516,
+        "post_switch": 0.019999999083363307,
+        "energy": 0.002115842106064997
+      }
+    }
+  ],
+  "monotonicity": {
+    "lambda_value": 2437.7281665802,
+    "corner": {
+      "z0": 0.28,
+      "v0": -0.0005
+    },
+    "probe": [
+      {
+        "sign": 1.0,
+        "fraction": 0.25,
+        "switch": 0.0029002037087683917,
+        "post_switch": 0.0024637331159115053,
+        "energy": 0.002155943493729856,
+        "switch_deviation_nondecreasing": true,
+        "admissible": true
+      },
+      {
+        "sign": 1.0,
+        "fraction": 0.5,
+        "switch": 0.0033263849208483437,
+        "post_switch": 0.005243633886799659,
+        "energy": 0.002481711936829667,
+        "switch_deviation_nondecreasing": true,
+        "admissible": true
+      },
+      {
+        "sign": 1.0,
+        "fraction": 0.75,
+        "switch": 0.0037817973514932893,
+        "post_switch": 0.011313911915060204,
+        "energy": 0.0028273976609712037,
+        "switch_deviation_nondecreasing": true,
+        "admissible": true
+      },
+      {
+        "sign": 1.0,
+        "fraction": 1.0,
+        "switch": 0.004266109625656649,
+        "post_switch": 0.01999999814527953,
+        "energy": 0.0031929229190746644,
+        "switch_deviation_nondecreasing": true,
+        "admissible": true
+      },
+      {
+        "sign": -1.0,
+        "fraction": 0.25,
+        "switch": 0.0021333507003273786,
+        "post_switch": 0.0018314345741197724,
+        "energy": 0.0015615191386241511,
+        "switch_deviation_nondecreasing": true,
+        "admissible": true
+      },
+      {
+        "sign": -1.0,
+        "fraction": 0.5,
+        "switch": 0.001794472736876461,
+        "post_switch": 0.004748768234401679,
+        "energy": 0.0012934115746371655,
+        "switch_deviation_nondecreasing": false,
+        "admissible": true
+      },
+      {
+        "sign": -1.0,
+        "fraction": 0.75,
+        "switch": 0.0014881395231520142,
+        "post_switch": 0.011101123564109638,
+        "energy": 0.0010458902945234827,
+        "switch_deviation_nondecreasing": false,
+        "admissible": true
+      },
+      {
+        "sign": -1.0,
+        "fraction": 1.0,
+        "switch": 0.0012168690209637956,
+        "post_switch": 0.01999999797144031,
+        "energy": 0.0008190005991224603,
+        "switch_deviation_nondecreasing": false,
+        "admissible": true
+      }
+    ]
+  },
+  "independent_integrator": {
+    "lambda_value": 2437.7281665802,
+    "kappa": 0.001492590808868408,
+    "corner": {
+      "z0": 0.28,
+      "v0": -0.0005
+    },
+    "dop853_rk45_gap": 1.1297329738368944e-10
+  },
+  "overshoot_probe": {
+    "lambda_overshoot": 5363.00196647644,
+    "corner": {
+      "z0": 0.28,
+      "v0": 0.0005
+    },
+    "kappa_zero_admissible": false,
+    "samples": [
+      {
+        "kappa": 0.0001,
+        "admissible": false,
+        "binding_budget": "switch",
+        "sup_abs_delta_z_on_switch": 0.005718828713708126,
+        "post_switch_sup_abs_delta_z": 0.004909374819939291,
+        "abs_delta_e_f": 0.004258968371067373
+      },
+      {
+        "kappa": -0.0001,
+        "admissible": false,
+        "binding_budget": "switch",
+        "sup_abs_delta_z_on_switch": 0.005272388579874793,
+        "post_switch_sup_abs_delta_z": 0.004546103581958866,
+        "abs_delta_e_f": 0.003909645420731328
+      },
+      {
+        "kappa": 0.001,
+        "admissible": false,
+        "binding_budget": "switch",
+        "sup_abs_delta_z_on_switch": 0.007950058568407727,
+        "post_switch_sup_abs_delta_z": 0.019905966871411884,
+        "abs_delta_e_f": 0.005984783209365657
+      },
+      {
+        "kappa": -0.001,
+        "admissible": true,
+        "binding_budget": "post_switch",
+        "sup_abs_delta_z_on_switch": 0.003496518304417648,
+        "post_switch_sup_abs_delta_z": 0.018637263343309618,
+        "abs_delta_e_f": 0.002493530795375204
+      },
+      {
+        "kappa": 0.01,
+        "admissible": false,
+        "binding_budget": "post_switch",
+        "sup_abs_delta_z_on_switch": 0.04689016885060407,
+        "post_switch_sup_abs_delta_z": 0.6479094336238462,
+        "abs_delta_e_f": 0.03565556451269988
+      },
+      {
+        "kappa": -0.01,
+        "admissible": false,
+        "binding_budget": "post_switch",
+        "sup_abs_delta_z_on_switch": 0.006346540525033154,
+        "post_switch_sup_abs_delta_z": 0.6224118772264038,
+        "abs_delta_e_f": 0.00256973208622166
+      },
+      {
+        "kappa": 0.1,
+        "admissible": false,
+        "binding_budget": "switch",
+        "sup_abs_delta_z_on_switch": 0.4620020910133199,
+        "post_switch_sup_abs_delta_z": 1.1108082276321793,
+        "abs_delta_e_f": 0.703422710630539
+      },
+      {
+        "kappa": -0.1,
+        "admissible": false,
+        "binding_budget": "switch",
+        "sup_abs_delta_z_on_switch": 0.4301600745622115,
+        "post_switch_sup_abs_delta_z": 1.1275777687109245,
+        "abs_delta_e_f": 0.5785548263602588
+      },
+      {
+        "kappa": 1.0,
+        "admissible": false,
+        "binding_budget": "energy",
+        "sup_abs_delta_z_on_switch": 0.558231554156758,
+        "post_switch_sup_abs_delta_z": 1.2265745394453376,
+        "abs_delta_e_f": 49.54522489713013
+      },
+      {
+        "kappa": -1.0,
+        "admissible": false,
+        "binding_budget": "energy",
+        "sup_abs_delta_z_on_switch": 0.5577850023384028,
+        "post_switch_sup_abs_delta_z": 1.2267616052645396,
+        "abs_delta_e_f": 49.61085997454208
+      }
+    ],
+    "any_sample_admissible": true
+  },
+  "c_theta_separate_range": false,
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "checker_sha256": "dad29dfdf2146ad38db995ea920450fc8dfffa8989ccc048dea758382cc3b278"
+}
