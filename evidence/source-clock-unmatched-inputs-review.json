@@ -1,0 +1,46 @@
+{
+  "story": "S085",
+  "date": "2026-10-14",
+  "status": "PASS for scoped obstructions on the retained rule-D clock; no new Lambda interval; S074 gate not closed; opening not achieved",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\source-clock-unmatched-inputs-2026-10-14",
+  "accepted_run": "acceptance-02",
+  "receipt_sha256": "1bca101dc208162a47f7b04713e3a8ae5a444cdf5b6ee55a2970ded26c57cc39",
+  "accepted_inputs": {
+    "checks/source_clock_unmatched_inputs.py": "a47ce1798c55a8958becbc22805ed513c19f27c428b1f629c6d72acbe91a9269",
+    "notes/source-clock-unmatched-inputs.md": "39f6dc5cdc1e43109fa156ed3f24aa83ebe4518bd65af524ee24b8f8424313ba",
+    "checks/source_clock_joint.py": "a17adbc5b1acb8327a89a0d1fb1524b7dbf88493318f8164bd9a5549d37eecb3",
+    "checks/source_clock_radiation.py": "bbfe392c627630d570c04a7b1132314aab132cf1997ef606ae57e9410542b101",
+    "checks/source_clock_allocation.py": "c6e0bbc4774d5c27e3fd6de91babf1d60441d234aa49ad39dfd1a37a8aa0b527",
+    "evidence/source-clock-joint.json": "7e2f40635c567b2c3ee113650e637bab877120349df48bc09933c5a9a6ce1825"
+  },
+  "runs": [
+    {
+      "identity": "acceptance-01",
+      "command": "checks/source_clock_unmatched_inputs.py --output evidence/source-clock-unmatched-inputs.json",
+      "exit_code": 0,
+      "receipt_sha256": "1bca101dc208162a47f7b04713e3a8ae5a444cdf5b6ee55a2970ded26c57cc39",
+      "note": "The comparison, hardest step, observable, and test were written before this run. No physical formula changed after it."
+    },
+    {
+      "identity": "acceptance-02",
+      "command": "checks/source_clock_unmatched_inputs.py --output acceptance-02.json",
+      "exit_code": 0,
+      "receipt_sha256": "1bca101dc208162a47f7b04713e3a8ae5a444cdf5b6ee55a2970ded26c57cc39"
+    }
+  ],
+  "zeta_s_classification": "unavailable physical input",
+  "unequal_collars_classification": "unresolved proof",
+  "nonlocal_interacting_determinant_classification": "unresolved proof",
+  "cJ_classification": "unavailable physical input",
+  "zeta_s_set_to_zero": false,
+  "sigma_set_to_zero": false,
+  "cJ_set_to_zero": false,
+  "new_lambda_interval": false,
+  "split_state_gap": 0.0,
+  "distinct_sum_state_gap": 0.009895015671797413,
+  "reconstruction_gap": 2.1894991625165394e-06,
+  "area_budget_evaluated": false,
+  "s074_gate_closed": false,
+  "opening_achieved": false,
+  "lean_paid_compute_publication_outreach": false
+}
