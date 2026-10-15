@@ -1,165 +1,164 @@
-# Renormalized coupling, substitution error, channel data, and a measured pair
+# Scale `mu`, first bracket, width derivative, and the susceptibility `1+4*B0**2`
 
-S090, E003, 2026-10-14. This note takes the four inputs named by S089.
+S104, E003, 2026-10-15. This note takes the four inputs named by S103.
 The comparison, the hardest step, the observable, and the test below
 are fixed before any checker run. No result from a fit is stated in
 this section.
 
-The S085 march is not repeated. The S087 product-throat derivative is
-not recomputed. The S088 relative series is not differentiated again.
-The S089 `L00` derivative is not recomputed as a new result. No new
-`Lambda` interval is sought. No replacement area target is written
-before the test. The area budget stays unevaluated. `zeta_s`,
-`sigma`, `cJ`, and `delta` are not set to zero. An endpoint contact
-energy is not cancelled. A positive quadratic term is not used as a
-stability mass.
+The S085 march is not repeated. The S088 relative series is not
+differentiated again. The S103 scale derivative is not recomputed as a
+new result. The S103 bracket derivative is not recomputed as a new
+result. The S103 ceiling is not recomputed as a new result. The S103
+ratio is not recomputed as a new result. No new `Lambda` interval is
+sought. No replacement area target is written before the test. The area
+budget stays unevaluated. `zeta_s`, `sigma`, `cJ`, `c_theta`, `d_theta`,
+and `delta` are not set to zero. An endpoint contact energy is not
+cancelled. A positive quadratic term is not used as a stability mass.
 
-## Renormalized value of `c_theta`
+## Scale in the dimension-one monomial
 
-Assumption. A renormalized value is a number for `c_theta` at one
-stated scale. The candidate coefficient is the shipped factor in the
-mixed a4 curvature term, divided by `(4pi)^2`, which the curved-collar
-note calls `b_theta`. The finite coupling in `sigma = 2 c_theta Lhat^{uu}`
-is a different object from that beta-function coefficient.
+Assumption. A number for `c_theta(mu0)` would be the scale `mu` in
+`c_one*mu`.
 
-Error comparison. The `L00` derivative recorded by S089 is not a value
-of `c_theta`, and it is not differentiated again. A beta-function
-coefficient does not assign the finite coupling at a scale. `sigma` is
-not replaced by `b_theta`.
+Error comparison. That scale is not a value of `c_theta(mu0)`. The
+derivative of the monomial in `c_one` is the symbol `mu`. That symbol is
+not a number. `c_theta` is not set to zero and is not set equal to
+`b_theta`. The scale derivative that returns `c_one` is not recomputed.
 
-Comparison. Call `clifford_checks()` and `charge_identities()`. Divide
-the shipped a4 by the traceless quadratic form and by `(4pi)^2`.
-Differentiate `2*c_theta*Lhat` in `c_theta` and check that derivative
-by a finite difference. Compare the symbols with the march parameters.
+Comparison. Require the dimension-one clause. Form `c_one*mu`.
+Differentiate it in `c_one` and check the derivative by a finite
+difference. Compare the result with the endpoint that still contains
+`c_theta(mu0)`.
 
-Hardest step. The curvature prefactor can be a pure number while
-`c_theta` remains a symbol in `sigma`. The pure number is not a
-renormalized coupling at a stated scale.
+Hardest step. The scale can be the object returned by a coefficient
+derivative while the endpoint coefficient stays independent. Returning
+`mu` does not assign `c_theta(mu0)`.
 
-Observable. The a4 prefactor, `b_theta`, and the `c_theta` derivative
-of `sigma`.
+Observable. Whether the scale `mu` is a number, and the derivative of
+`c_one*mu` in `c_one`.
 
 Test.
 
-1. Require the returned a4 of both domains to be a constant times
-   `(u·L·u - tr(L)|u|^2/3)`. Record that constant.
-2. Set `b_theta` to that constant over `(4pi)^2`. Require it to be a
-   number that does not contain `c_theta`.
-3. Require the shipped sigma string to be `2*c_theta*Lhat^{uu}`.
-   Differentiate `2*c_theta*Lhat` in `c_theta` and require a finite
-   difference to agree. Require the derivative to contain `Lhat`.
-4. Require the march parameters to omit `c_theta` and `mu`. Do not
-   march. Do not set `c_theta` to zero.
-
-If `b_theta` is a number and `c_theta` remains in `sigma`, the
-renormalized value is an unavailable physical input.
-
-## Error of the two-rate substitution
-
-Assumption. An error bound would compare the one-angle normal-smearing
-coefficient with a proved two-collar coefficient. The candidate is the
-difference between the shipped one-angle square and the same square
-after the two rates are substituted. Equation (8) has one angle.
-
-Error comparison. The product coefficient recorded by S089 is the
-algebra of that substitution, not a bound on a two-collar coefficient.
-The shipped return does not contain a two-collar error. `delta` is not
-set to zero. A positive square is not a stability mass.
-
-Comparison. Call `analytic()`. Record its keys and the one-angle
-string. Form the difference between that square and the substituted
-square. Check the difference by a finite difference in one rate. Read
-the exclusion sentence.
-
-Hardest step. The difference can be an explicit expression while the
-shipped return still has no two-collar coefficient to compare it with.
-An expression for a substitution is not an error bound.
-
-Observable. The shipped return keys, and the difference created by the
-substitution.
-
-Test.
-
-1. Require `product_Delta_a4_unsmeared` to be 0 and the normal-smearing
-   string to be one angle's square.
-2. Form the difference between that square and the substituted square.
-   Require a finite difference in one rate to agree with its derivative.
-3. Require the return keys to contain no two-collar error bound.
-4. Read the sentence that unequal collars are not covered by (8). Do
-   not introduce a two-collar clock equation.
-
-A pass is a scoped obstruction. The class is an unresolved proof.
-
-## Declared channel count and one exterior length
-
-Assumption. The clock datum would be one declared positive `q` together
-with one numeric `D_j`. The scaling formulas are the three closed
-expressions in the finite-mouth note. The mean return remains the
-big-O sentence.
-
-Error comparison. The `q` derivatives recorded by S089 are not values
-of `D_j`. Evaluating the three closed formulas at a positive rational
-`q` is an illustration. That rational is not assigned to the rule-D
-march. The big-O is not changed by the illustration.
-
-Comparison. Evaluate `a`, `epsilon`, and `lambda_0` at `q = 4`.
-Differentiate each formula once more only to check the values by a
-finite difference of the formulas, not to assign them. Read the big-O
-sentence. Compare `q` and `D_j` with the march parameters and with
-`Lambda`.
-
-Hardest step. The three formulas become numbers at `q = 4`, and
-`D_j` does not. A triple with a missing length is not the norm's data.
-
-Observable. The three illustrated numbers, the big-O sentence, and the
-march parameter list.
-
-Test.
-
-1. Require each illustrated value to agree with a finite difference of
-   its formula between two neighbors of `q = 4`, in the sense that the
-   centered quotient's limit is the derivative and the value at `q = 4`
-   is the formula.
-2. Require the note to state `average D_j=O(delta log q)`.
-3. Require `q` and `D_j` to be absent from the march parameters and
-   from `Lambda`. Do not call `march`. Do not assign `q = 4` to the
-   clock.
+1. Require the sentence `it renormalizes a dimension-one coefficient`.
+2. Record the derivative of `c_one*mu` in `c_one`. Require a finite
+   difference to agree. Require the derivative to be the symbol `mu` and
+   not a number. Require the endpoint to keep `c_theta(mu0)`.
+3. Require the shipped sigma string to stay `2*c_theta*Lhat^{uu}`.
+   Require the march parameters to omit `c_theta`. Do not set `c_theta`
+   equal to `b_theta`. Do not store the derivative in `mu` as this result.
 
 A pass is a scoped obstruction. The class is an unavailable physical
-input.
+input. No admissible value of `c_theta(mu0)` is recorded.
 
-## Measured `chi` and gravitational `kappa`
+## First bracket in (4)
 
-Assumption. A measurement is a number for `chi` and a number for the
-gravitational `kappa` at one nonzero numeric `B0`. The candidate is
-the shipped parallel susceptibility with `B0 = 1` and `kappa = 1`
-both substituted. Those substitutions are not measurements.
+Assumption. The unequal-collar invariant would be the first-bracket term
+`b_theta (log f/2)(2/3)(R^2/f)w`.
 
-Error comparison. Leaving `kappa` symbolic was the S089 result, and
-that expression is not the measurement. Substituting a number for
-`kappa` by hand leaves `cJ`. The march parameter spelled `kappa` is
-the contact coefficient, and it is not substituted for the
-gravitational `kappa`. `cJ` is not set to zero.
+Error comparison. That bracket term is not a two-collar theorem. The
+local relative limit is not a proof for unequal driven collars. The
+derivative in `w` is `R**2*log(f)/(60*pi**2*f)`. That derivative is not
+the recorded collar mismatch and is not the second-bracket derivative
+`-R**2/(120*pi**2*f)`. `delta` is not set to zero. `d_theta` is not set
+to zero.
 
-Comparison. Call `invariants()`. Substitute `B0 = 1` and `kappa = 1`.
-Differentiate in `cJ` and check the derivative by a finite difference.
-Compare the remaining symbols with the march parameters.
+Comparison. Require the displayed first bracket, the shipped coefficient
+`b_theta=4/[5(4pi)^2]`, and the exclusion of unequal collars.
+Differentiate `b_theta*(log(f)/2)*(2/3)*(R**2/f)*w` in `w` and check the
+derivative by a finite difference. Compare the derivative with the
+recorded mismatch `1`.
 
-Hardest step. Both backgrounds can be numbers while `chi` remains
-linear in `cJ`. A linear expression is not a measured susceptibility.
+Hardest step. The first bracket can stay dependent on one lapse and one
+weight while the two collars remain uncovered. A one-boundary quotient
+is not the missing invariant.
 
-Observable. The susceptibility after both substitutions, and the march
-parameter list.
+Observable. The derivative of the first bracket in `w`, and whether it
+equals the mismatch.
 
 Test.
 
-1. Require the twice-substituted susceptibility to contain `cJ` and no
-   `B0` or `kappa`.
-2. Require its `cJ` derivative to agree with a finite difference.
-3. Require that derivative to be a nonzero number.
-4. Require the march parameters to omit `chi`, `B0`, and `cJ`. Do not
-   use the march's `kappa` as the gravitational `kappa`. Do not set
-   `cJ` to zero. Do not adopt the conditional axial window.
+1. Require `b_theta (log f/2)(2/3)(R^2/f)w`, the shipped `b_theta`
+   formula, and the statement that this limit is not a proof for unequal
+   driven collars.
+2. Record the derivative in `w`. Require a finite difference to agree.
+   Require the derivative to differ from `1` and from
+   `-R**2/(120*pi**2*f)`.
+3. Do not adopt the derivative as a two-collar theorem. Do not
+   differentiate the RN relative series. Do not store the `f'` derivative
+   of the second bracket as this result. Do not set `d_theta` to zero.
+
+A pass is a scoped obstruction. The class is an unresolved proof. No
+admissible two-collar coefficient is recorded.
+
+## Width derivative of the ceiling
+
+Assumption. A number for one `D_j` would be the width derivative
+`-2*a/h**2`.
+
+Error comparison. That derivative is not an assignment of `D_j`. It keeps
+`a` and `h`. It is not the ceiling `2*a/h`. `a` and `h` are not set to
+zero. `delta` is not set to zero. The determinant is not set to one.
+
+Comparison. Require the displayed ceiling. Differentiate `2*a/h` in `h`
+and check that derivative by the limit of a central quotient and by a
+finite difference. Differentiate the resulting expression in `D_j`, and
+differentiate the clock expression for `Lambda` in `D_j`.
+
+Hardest step. The width derivative can be an exact rational expression
+while `D_j` is absent. A quotient that still contains `a` and `h` does
+not assign `D_j`.
+
+Observable. Whether `-2*a/h**2` is a number for `D_j`, and the clock
+derivative in `D_j`.
+
+Test.
+
+1. Require `eta=integral W=2a[1/(epsilon+h)-epsilon x^2/(1+b)]<=2a/h.`
+2. Require the `h` derivative of the ceiling to equal `-2*a/h**2`.
+   Require the limit of a central quotient and a finite difference to
+   agree. Require the derivative in `D_j` to vanish. Require the clock
+   derivative in `D_j` to vanish.
+3. Require `D_j`, `a`, `epsilon`, and `h` to be absent from the march
+   parameters. Do not read the width derivative as `D_j`. Do not store
+   the ceiling `2*a/h` as this result. Do not set `a` or `h` to zero.
+
+A pass is a scoped obstruction. The class is an unavailable physical
+input. No numeric `D_j` is recorded.
+
+## Substituted susceptibility
+
+Assumption. A measured `cJ` would be the susceptibility `1+4*B0**2`.
+
+Error comparison. The expression `1+4*B0**2` does not measure `cJ`.
+Writing the integer `2` in place of `cJ` removes `cJ` from the reduced
+susceptibility. The conditional axial window is not adopted. `cJ` is not
+set to zero. `B0` is not set to one. A positive quadratic term is not
+used as a stability mass.
+
+Comparison. Read the shipped parallel susceptibility. Reduce it at
+gravitational `kappa = 1`. Substitute the integer `2` for `cJ` and
+compare the result with `1+4*B0**2`. Differentiate the substituted
+expression in `cJ` and check that derivative by a finite difference.
+
+Hardest step. The substitution can produce a quadratic in `B0` while
+`cJ` never remains. That quadratic is not a measured coupling, and
+setting `B0` to one is not this test.
+
+Observable. The substituted susceptibility, and whether that expression
+is `cJ`.
+
+Test.
+
+1. Require the sentence that magnetic background matching alone cannot
+   measure `cJ`.
+2. Record the susceptibility after the integer `2` replaces `cJ`.
+   Require it to equal `1+4*B0**2`. Require a numerical evaluation at
+   one nonzero `B0` other than one to agree. Require the `cJ` derivative
+   of the substituted expression to vanish, and require a finite
+   difference to agree. Do not set `B0` to one.
+3. Require the march parameters to omit `cJ`, `chi`, `B0`, and
+   `e_parallel`. Do not use the march's `kappa` as the gravitational
+   `kappa`. Do not store the simplified ratio `2` as this result.
 
 A pass is a scoped obstruction. The class is an unavailable physical
 input. No admissible value of `cJ` is recorded.
@@ -173,28 +172,32 @@ They are not an impossibility theorem.
 
 ## Benchmark result
 
-Filled from the receipt after the two agreeing checker runs. The shipped
-a4 prefactor is `4/5`. Then `b_theta = 1/(20*pi**2)`. The shipped sigma
-string is `2*c_theta*Lhat^{uu}`, and its `c_theta` derivative is
-`2*Lhat`. `sigma` is not replaced by `b_theta`. The class is an
-unavailable physical input. `c_theta` is not set to zero.
+Filled from the receipt after the two agreeing checker runs. The
+coefficient derivative of `c_one*mu` is `mu`. That symbol is not a number
+and does not assign `c_theta(mu0)`. The endpoint keeps `c_theta(mu0)`.
+`sigma` stays `2*c_theta*Lhat^{uu}`. The class is an unavailable physical
+input. `c_theta` is not set to zero and is not set equal to `b_theta`.
+The scale derivative is not recomputed as a new result.
 
-The substitution difference is `-4*theta_R*(2*theta_L - theta_R)/15`.
-The shipped return keys contain no two-collar error bound. The class is
-an unresolved proof. `delta` is not set to zero.
+The derivative of the first bracket in `w` is
+`R**2*log(f)/(60*pi**2*f)`. It is not the recorded mismatch `1` and it is
+not the second-bracket derivative `-R**2/(120*pi**2*f)`. The class is an
+unresolved proof. The derivative is not adopted as a two-collar theorem.
+`delta` is not set to zero. `d_theta` is not set to zero. The second-bracket
+derivative is not recomputed as a new result.
 
-At the illustrated `q = 4`, which is not assigned to the clock, the
-scaling values are `a = 1/(16*pi**2)`, `epsilon = 1/16`, and
-`lambda_0 = 1/(1024*pi)`. `average D_j` remains `O(delta log q)`.
-`numeric_D_j` is null. The class is an unavailable physical input.
-The determinant is not set to one.
+The width derivative of the ceiling is `-2*a/h**2`. It is not a number.
+It keeps `a` and `h`. Its derivative in `D_j` is `0`. The clock derivative
+in `D_j` is `0`. `numeric_D_j` is null. The class is an unavailable
+physical input. The derivative is not read as `D_j`. The ceiling is not
+recomputed as a new result.
 
-At `B0 = 1` and `kappa = 1` the susceptibility is `2*cJ + 1`. Its
-`cJ` derivative is `2`. `chi` is not a number. The march parameter
-`kappa` is not used as the gravitational `kappa`. The class is an
-unavailable physical input. `cJ` is not set to zero.
+The substituted susceptibility is `4*B0**2 + 1`. It does not measure
+`cJ`. Its derivative in `cJ` is `0`. The class is an unavailable physical
+input. `cJ` is not set to zero. `B0` is not set to one. The ratio is not
+recomputed as a new result.
 
-`opening_achieved` is false. `s074_gate_closed` is false. The S085
-march is not repeated. The S089 `L00` derivative is not recomputed as
-a new result. No new `Lambda` interval is recorded. The area budget
-is not evaluated. No successor model is opened.
+`opening_achieved` is false. `s074_gate_closed` is false. The S085 march
+is not repeated. The S088 relative series is not differentiated again. No
+new `Lambda` interval is recorded. The area budget is not evaluated. No
+successor model is opened.

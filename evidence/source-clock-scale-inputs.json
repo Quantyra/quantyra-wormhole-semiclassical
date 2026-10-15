@@ -1,35 +1,41 @@
 {
   "status": "PASS",
-  "verdict": "scoped_obstructions_for_the_four_inputs_named_by_S089",
+  "verdict": "scoped_obstructions_for_the_four_inputs_named_by_S103",
   "opening_achieved": false,
   "s074_gate_closed": false,
   "not_an_impossibility_theorem": true,
   "successor_model_opened": false,
   "s085_march_repeated": false,
-  "s087_product_throat_recomputed": false,
   "s088_rn_series_recomputed": false,
-  "s089_l00_derivative_recomputed": false,
+  "s103_scale_derivative_recomputed": false,
+  "s103_bracket_derivative_recomputed": false,
+  "s103_ceiling_recomputed": false,
+  "s103_ratio_recomputed": false,
   "new_lambda_interval": false,
   "area_budget_evaluated": false,
   "area_budget": "not evaluated; no replacement target was written before the test",
   "zeta_s_set_to_zero": false,
   "sigma_set_to_zero": false,
+  "c_theta_set_to_zero": false,
+  "d_theta_set_to_zero": false,
   "cJ_set_to_zero": false,
   "delta_set_to_zero": false,
   "endpoint_energy_cancelled": false,
   "positive_quadratic_mass_used_as_result": false,
   "tasks": {
-    "renormalized_coupling": {
+    "monomial_scale": {
       "classification": "unavailable physical input",
       "admissible_range": null,
       "identified_physical_input": false,
       "c_theta_set_to_zero": false,
-      "sigma_set_to_zero": false,
-      "a4_prefactor": "4/5",
-      "b_theta": "1/(20*pi**2)",
+      "c_theta_set_equal_to_b_theta": false,
+      "scale_is_a_number": false,
+      "scale_assigns_c_theta": false,
+      "coefficient_derivative": "mu",
+      "derivative_assigns_c_theta": false,
+      "scale_derivative_recomputed": false,
+      "endpoint_keeps_c_theta_mu0": true,
       "sigma": "2*c_theta*Lhat^{uu}",
-      "c_theta_derivative": "2*Lhat",
-      "sigma_replaced_by_b_theta": false,
       "march_parameters": [
         "eta",
         "lam",
@@ -40,43 +46,35 @@
       ],
       "march_called": false
     },
-    "substitution_error": {
+    "first_bracket": {
       "classification": "unresolved proof",
       "admissible_range": null,
       "identified_physical_input": false,
       "delta_set_to_zero": false,
+      "d_theta_set_to_zero": false,
       "two_collar_equation_introduced": false,
-      "positive_quadratic_mass_used_as_result": false,
-      "shipped_return_keys": [
-        "allowed_rank",
-        "domain_Green_and_work",
-        "induced_mixed_Robin",
-        "interval_propagation_determinant",
-        "omitting_Robin_a3",
-        "product_Delta_a3_without_4pi",
-        "product_Delta_a4_normal_smearing_without_4pi",
-        "product_Delta_a4_unsmeared",
-        "rank",
-        "static_collar_intertwiner"
-      ],
-      "substitution_difference": "-4*theta_R*(2*theta_L - theta_R)/15",
-      "two_collar_error_bound_returned": false,
-      "error_bound_proved": false
+      "derivative_adopted_as_theorem": false,
+      "rn_series_recomputed": false,
+      "bracket_derivative_recomputed": false,
+      "weight_derivative": "R**2*log(f)/(60*pi**2*f)",
+      "derivative_equals_mismatch": false,
+      "recorded_mismatch": "1"
     },
-    "channel_data": {
+    "width_derivative": {
       "classification": "unavailable physical input",
       "admissible_range": null,
       "identified_physical_input": false,
       "determinant_set_to_one": false,
-      "channel_count_assigned": false,
-      "illustrated_q": "4",
-      "illustrated_values": {
-        "a": "1/(16*pi**2)",
-        "epsilon": "1/16",
-        "lambda_0": "1/(1024*pi)"
-      },
-      "average_D_j": "O(delta log q)",
+      "delta_set_to_zero": false,
+      "a_set_to_zero": false,
+      "h_set_to_zero": false,
+      "derivative_read_as_D_j": false,
+      "derivative_is_a_number": false,
+      "ceiling_reported_as_result": false,
       "numeric_D_j": null,
+      "width_derivative": "-2*a/h**2",
+      "width_derivative_in_D_j": "0",
+      "clock_derivative_in_D_j": "0",
       "march_parameters": [
         "eta",
         "lam",
@@ -88,15 +86,19 @@
       "march_called": false,
       "Lambda": "lambda_zeta+lambda_theta=(pi*ell**2/N)*(zeta_s+sigma)"
     },
-    "measured_pair": {
+    "substituted_susceptibility": {
       "classification": "unavailable physical input",
       "admissible_range": null,
       "identified_physical_input": false,
       "cJ_set_to_zero": false,
+      "b0_set_to_one": false,
       "conditional_axial_window_adopted": false,
-      "chi_at_unit_B0_and_kappa": "2*cJ + 1",
-      "cJ_derivative": "2",
-      "chi_is_a_number": false,
+      "positive_quadratic_mass_used_as_result": false,
+      "ratio_recomputed": false,
+      "substituted_susceptibility": "4*B0**2 + 1",
+      "susceptibility_is_cJ": false,
+      "susceptibility_measures_cJ": false,
+      "cJ_derivative_of_substituted": "0",
       "march_kappa_used_as_gravitational_kappa": false,
       "march_parameters": [
         "eta",
@@ -120,5 +122,5 @@
     "python": "3.13.7",
     "sympy": "1.14.0"
   },
-  "checker_sha256": "9971e0d69a4cd84e578a1ce31f491298555f6975fc4d31659c064639c3be01ad"
+  "checker_sha256": "23bfb86e2031f5ec36ac379891e17727f00c6681f03645b1a98ba694e375fede"
 }

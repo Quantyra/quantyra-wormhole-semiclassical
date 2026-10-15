@@ -1,8 +1,9 @@
-"""S090 checks for the four inputs named by S089.
+"""S104 checks for the four inputs named by S103.
 
 The comparison, hardest step, observable, and test are fixed in
 notes/source-clock-scale-inputs.md. This checker does not march the
-rule-D clock and does not edit the pinned checkers it calls.
+rule-D clock, does not call the RN series, and does not edit the pinned
+checkers it calls.
 """
 import argparse
 import hashlib
@@ -17,8 +18,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import sympy as s
 
-import coupled_fermion_domain as coupled
-import curved_fermion_boundary as curved
 import finite_local_electromagnetic_input as em
 import source_clock_joint as joint
 import source_clock_radiation as rad
@@ -27,8 +26,8 @@ import source_clock_radiation as rad
 ROOT = Path(__file__).resolve().parents[1]
 NOTE = ROOT / 'notes' / 'source-clock-scale-inputs.md'
 CURVED_NOTE = ROOT / 'notes' / 'curved-fermion-boundary.md'
-COUPLED_NOTE = ROOT / 'notes' / 'coupled-fermion-domain.md'
 MOUTH_NOTE = ROOT / 'notes' / 'finite-mouth-determinant.md'
+EM_NOTE = ROOT / 'notes' / 'finite-local-electromagnetic-input.md'
 PINNED = (
     ROOT / 'checks' / 'curved_fermion_boundary.py',
     ROOT / 'checks' / 'coupled_fermion_domain.py',
@@ -36,7 +35,8 @@ PINNED = (
     ROOT / 'checks' / 'source_clock_joint.py',
     ROOT / 'checks' / 'source_clock_radiation.py',
 )
-STENCIL = s.Rational(1, 1000)
+STEP = s.Rational(1, 1000)
+NUMERIC_STEP = s.Rational(1, 10**8)
 
 
 def zero(expr):
@@ -54,235 +54,248 @@ def require_sentence(path, sentence):
 def require_pre_fit_note():
     for sentence in (
         'before any checker run',
-        'Assumption. A renormalized value is a number for `c_theta`',
-        '`sigma` is not replaced by `b_theta`',
-        'Assumption. An error bound would compare the one-angle',
-        'Assumption. The clock datum would be one declared positive `q`',
-        'Assumption. A measurement is a number for `chi`',
+        'Assumption. A number for `c_theta(mu0)` would be the scale `mu` in `c_one*mu`.',
+        'That scale is not a value of `c_theta(mu0)`.',
+        'Assumption. The unequal-collar invariant would be the first-bracket term `b_theta (log f/2)(2/3)(R^2/f)w`.',
+        'That bracket term is not a two-collar theorem.',
+        'Assumption. A number for one `D_j` would be the width derivative `-2*a/h**2`.',
+        'That derivative is not an assignment of `D_j`.',
+        'Assumption. A measured `cJ` would be the susceptibility `1+4*B0**2`.',
+        'The expression `1+4*B0**2` does not measure `cJ`.',
         'The S085 march is not repeated',
-        'The S089 `L00` derivative is not recomputed as a new result',
+        'The S103 scale derivative is not recomputed as a new result',
+        'The S103 bracket derivative is not recomputed as a new result',
+        'The S103 ceiling is not recomputed as a new result',
+        'The S103 ratio is not recomputed as a new result',
+        'The S088 relative series is not differentiated again',
         'No replacement area target is written before the test',
     ):
         require_sentence(NOTE, sentence)
 
 
-def stencil(at, center):
-    samples = [
-        at(center + sign * scale * STENCIL)
-        for sign, scale in ((-2, 1), (-1, 1), (1, 1), (2, 1))
-    ]
-    return s.simplify(
-        (-samples[3] + 8 * samples[2] - 8 * samples[1] + samples[0]) / (12 * STENCIL)
-    )
+def absent(name, text):
+    return re.search(
+        r'(?<![A-Za-z0-9_])' + re.escape(name) + r'(?![A-Za-z0-9_])',
+        text,
+    ) is None
 
 
-def scalar_quadratic(matrix, vector):
-    total = 0
-    for i in range(3):
-        for j in range(3):
-            total += vector[i] * matrix[i, j] * vector[j]
-    return s.expand(total)
-
-
-def curvature_form():
-    names = s.symbols('L00 L11 L22 L01 L02 L12')
-    matrix = s.Matrix([
-        [names[0], names[3], names[4]],
-        [names[3], names[1], names[5]],
-        [names[4], names[5], names[2]],
-    ])
-    gradient = s.Matrix(s.symbols('u0 u1 u2'))
-    bare = s.expand(
-        scalar_quadratic(matrix, gradient)
-        - s.trace(matrix) * scalar_quadratic(s.eye(3), gradient) / 3
-    )
-    return names, gradient, bare
-
-
-def renormalized_coupling():
-    """b_theta is a number, and c_theta remains inside sigma."""
-    info = curved.clifford_checks()
-    rows = info['coefficients']
-    assert len(rows) == 2
-    parsed = [s.expand(s.sympify(row['a4'])) for row in rows]
-    zero(parsed[0] - parsed[1])
-    coefficient = parsed[0]
-    names, gradient, bare = curvature_form()
-    zero(coefficient - s.simplify(coefficient.subs({
-        names[0]: 1, names[1]: 0, names[2]: 0,
-        names[3]: 0, names[4]: 0, names[5]: 0,
-        gradient[0]: 1, gradient[1]: 0, gradient[2]: 0,
-    })) * bare / bare.subs({
-        names[0]: 1, names[1]: 0, names[2]: 0,
-        names[3]: 0, names[4]: 0, names[5]: 0,
-        gradient[0]: 1, gradient[1]: 0, gradient[2]: 0,
-    }))
-    sample = {
-        names[0]: 1, names[1]: 0, names[2]: 0,
-        names[3]: 0, names[4]: 0, names[5]: 0,
-        gradient[0]: 1, gradient[1]: 0, gradient[2]: 0,
-    }
-    prefactor = s.simplify(coefficient.subs(sample) / bare.subs(sample))
-    assert prefactor.is_number and prefactor != 0
-    zero(coefficient - prefactor * bare)
-    beta = s.factor(prefactor / (4 * s.pi)**2)
-    assert beta.is_number
-    assert s.Symbol('c_theta') not in beta.free_symbols
-    declared = joint.charge_identities()
-    assert declared['sigma'] == '2*c_theta*Lhat^{uu}'
-    assert declared['sigma_set_to_zero'] is False
-    coupling, collar = s.symbols('c_theta Lhat')
-    sigma = 2 * coupling * collar
-    exact = s.diff(sigma, coupling)
-    center = s.Rational(1, 4)
-    point = {collar: s.Rational(3, 5)}
+def monomial_scale():
+    """The coefficient derivative returns the scale, which does not assign c_theta."""
+    require_sentence(CURVED_NOTE, 'it renormalizes a dimension-one coefficient')
+    coefficient, scale = s.symbols('c_one mu')
+    monomial = coefficient * scale
+    exact = s.diff(monomial, coefficient)
+    zero(s.expand(exact - scale))
+    assert str(s.factor(exact)) == 'mu'
+    assert str(s.factor(exact)) != 'c_one'
+    assert not exact.is_number
+    center = s.Integer(2)
+    held = s.Rational(3, 7)
 
     def at(value):
-        return sigma.subs(point).subs(coupling, value)
+        return monomial.subs(scale, held).subs(coefficient, value)
 
-    zero(stencil(at, center) - exact.subs(point))
-    assert collar in exact.free_symbols
+    sampled = (at(center + STEP) - at(center - STEP)) / (2 * STEP)
+    zero(s.expand(sampled - exact.subs(scale, held)))
+    assert abs(s.N(sampled - held, 40)) < s.Integer(10)**(-18)
+    endpoint_coupling, origin = s.symbols('c_theta_mu0 mu0')
+    endpoint = endpoint_coupling + s.log(origin) / (20 * s.pi**2)
+    assert endpoint_coupling in endpoint.free_symbols
+    assert not endpoint.is_number
+    assert s.simplify(exact - endpoint_coupling) != 0
+    declared = joint.charge_identities()
+    assert declared['sigma'] == '2*c_theta*Lhat^{uu}'
     signature = list(inspect.signature(rad.march).parameters)
-    for name in ('c_theta', 'mu'):
-        assert name not in signature
+    joined = ' '.join(signature)
+    assert absent('c_theta', joined)
     return dict(
         classification='unavailable physical input',
         admissible_range=None,
         identified_physical_input=False,
         c_theta_set_to_zero=False,
-        sigma_set_to_zero=False,
-        a4_prefactor=str(prefactor),
-        b_theta=str(beta),
+        c_theta_set_equal_to_b_theta=False,
+        scale_is_a_number=False,
+        scale_assigns_c_theta=False,
+        coefficient_derivative='mu',
+        derivative_assigns_c_theta=False,
+        scale_derivative_recomputed=False,
+        endpoint_keeps_c_theta_mu0=True,
         sigma=declared['sigma'],
-        c_theta_derivative=str(exact),
-        sigma_replaced_by_b_theta=False,
         march_parameters=signature,
         march_called=False,
     )
 
 
-def substitution_error():
-    """The substitution difference is not a two-collar error bound."""
-    info = coupled.analytic()
-    assert info['product_Delta_a4_unsmeared'] == 0
-    normal = s.sympify(info['product_Delta_a4_normal_smearing_without_4pi'])
-    angle = s.Symbol('theta_prime')
-    constant = s.simplify(normal.subs(angle, 1))
-    zero(normal - constant * angle**2)
-    left, right = s.symbols('theta_L theta_R')
-    substituted = s.expand(constant * (left - right)**2)
-    difference = s.expand(substituted - normal.subs(angle, left))
-    assert difference != 0
-    point = {right: s.Rational(1, 3)}
-    center = s.Rational(2, 5)
-    exact = s.diff(difference, left).subs(point).subs(left, center)
-
-    def at(value):
-        return difference.subs(point).subs(left, value)
-
-    zero(stencil(at, center) - exact)
-    keys = sorted(info)
-    assert not any('bound' in key or 'two_collar' in key for key in keys)
-    require_sentence(COUPLED_NOTE, 'are not covered by (8).')
+def first_bracket():
+    """The w derivative of the first bracket is not the collar mismatch."""
+    require_sentence(CURVED_NOTE, 'b_theta (log f/2)(2/3)(R^2/f)w')
+    require_sentence(CURVED_NOTE, 'b_theta=4/[5(4pi)^2]')
     require_sentence(
         CURVED_NOTE,
-        'Unequal collar perturbations are outside the following theorem.',
+        'not a simultaneous large-flux error estimate, a proof for unequal driven collars',
     )
+    scheme = s.Integer(4) / (5 * (4 * s.pi)**2)
+    zero(scheme - 1 / (20 * s.pi**2))
+    radius, lapse, weight = s.symbols('R f w')
+    term = scheme * (s.log(lapse) / 2) * s.Rational(2, 3) * (radius**2 / lapse) * weight
+    exact = s.diff(term, weight)
+    expected = radius**2 * s.log(lapse) / (60 * s.pi**2 * lapse)
+    zero(s.expand(exact - expected))
+    stored = str(s.factor(exact))
+    assert stored == 'R**2*log(f)/(60*pi**2*f)'
+    assert not exact.is_number
+    assert stored != '1'
+    assert stored != '-R**2/(120*pi**2*f)'
+    center = s.Rational(2, 5)
+    held = {radius: s.Rational(3, 7), lapse: s.Rational(4, 9)}
+
+    def at(value):
+        return term.subs(held).subs(weight, value)
+
+    sampled = (at(center + STEP) - at(center - STEP)) / (2 * STEP)
+    target = exact.subs(held)
+    zero(s.expand(sampled - target))
+    assert abs(s.N(sampled - target, 40)) < s.Integer(10)**(-18)
     return dict(
         classification='unresolved proof',
         admissible_range=None,
         identified_physical_input=False,
         delta_set_to_zero=False,
+        d_theta_set_to_zero=False,
         two_collar_equation_introduced=False,
-        positive_quadratic_mass_used_as_result=False,
-        shipped_return_keys=keys,
-        substitution_difference=str(s.factor(difference)),
-        two_collar_error_bound_returned=False,
-        error_bound_proved=False,
+        derivative_adopted_as_theorem=False,
+        rn_series_recomputed=False,
+        bracket_derivative_recomputed=False,
+        weight_derivative=stored,
+        derivative_equals_mismatch=False,
+        recorded_mismatch='1',
     )
 
 
-def channel_data():
-    """At one rational q the three formulas are numbers and D_j is not."""
-    channel = s.Symbol('q', positive=True)
-    formulas = {
-        'a': 1 / (4 * s.pi**2 * channel),
-        'epsilon': channel**(-2),
-        'lambda_0': 1 / (16 * s.pi * channel**3),
-    }
-    illustrated = {}
-    center = s.Integer(4)
-    step = s.symbols('h', positive=True)
-    for name, formula in formulas.items():
-        value = s.factor(formula.subs(channel, center))
-        assert value != 0
-        quotient = (
-            formula.subs(channel, channel + step)
-            - formula.subs(channel, channel - step)
-        ) / (2 * step)
-        zero(s.limit(quotient, step, 0) - s.diff(formula, channel))
-        illustrated[name] = str(value)
-    note = flat(MOUTH_NOTE)
-    assert 'average D_j=O(delta log q), lambda_0=1/(16pi q^3),' in note
-    signature = list(inspect.signature(rad.march).parameters)
+def width_derivative():
+    """The h derivative of the ceiling does not assign one D_j."""
+    require_sentence(
+        MOUTH_NOTE,
+        'eta=integral W=2a[1/(epsilon+h)-epsilon x^2/(1+b)]<=2a/h.',
+    )
+    amplitude, width = s.symbols('a h')
+    ceiling = 2 * amplitude / width
+    exact = s.diff(ceiling, width)
+    expected = -2 * amplitude / width**2
+    zero(s.expand(exact - expected))
+    stored = str(s.factor(exact))
+    assert stored == '-2*a/h**2'
+    assert stored != '2*a/h'
+    assert amplitude in exact.free_symbols
+    assert width in exact.free_symbols
+    assert not exact.is_number
+    center = s.Rational(2, 5)
+    held = s.Rational(3, 7)
+    step_symbol = s.Symbol('step')
+
+    def at_width(value):
+        return ceiling.subs(amplitude, held).subs(width, value)
+
+    central = (
+        at_width(center + step_symbol) - at_width(center - step_symbol)
+    ) / (2 * step_symbol)
+    target = exact.subs(amplitude, held).subs(width, center)
+    zero(s.expand(s.limit(central, step_symbol, 0) - target))
+    sampled = (
+        at_width(center + NUMERIC_STEP) - at_width(center - NUMERIC_STEP)
+    ) / (2 * NUMERIC_STEP)
+    assert abs(s.N(sampled - target, 40)) < s.Integer(10)**(-12)
+    clock_symbol = s.Symbol('D_j')
+    clock_exact = s.diff(exact, clock_symbol)
+    zero(clock_exact)
+
+    def at_clock(value):
+        return exact.subs(clock_symbol, value)
+
+    clock_sampled = (at_clock(s.Integer(2) + STEP) - at_clock(s.Integer(2) - STEP)) / (2 * STEP)
+    zero(s.expand(clock_sampled - clock_exact))
+    assert abs(s.N(clock_sampled, 40)) < s.Integer(10)**(-18)
     declared = joint.charge_identities()['Lambda']
-    for name in ('q', 'D_j'):
-        assert name not in signature
-        assert re.search(
-            r'(?<![A-Za-z0-9_])' + re.escape(name) + r'(?![A-Za-z0-9_])',
-            declared,
-        ) is None
+    rhs = s.sympify(declared.split('=', 1)[1], locals={'N': s.Symbol('N')})
+    zero(s.diff(rhs, clock_symbol))
+    signature = list(inspect.signature(rad.march).parameters)
+    joined = ' '.join(signature)
+    for name in ('D_j', 'a', 'epsilon', 'h'):
+        assert absent(name, joined)
     return dict(
         classification='unavailable physical input',
         admissible_range=None,
         identified_physical_input=False,
         determinant_set_to_one=False,
-        channel_count_assigned=False,
-        illustrated_q='4',
-        illustrated_values=illustrated,
-        average_D_j='O(delta log q)',
+        delta_set_to_zero=False,
+        a_set_to_zero=False,
+        h_set_to_zero=False,
+        derivative_read_as_D_j=False,
+        derivative_is_a_number=False,
+        ceiling_reported_as_result=False,
         numeric_D_j=None,
+        width_derivative=stored,
+        width_derivative_in_D_j='0',
+        clock_derivative_in_D_j='0',
         march_parameters=signature,
         march_called=False,
         Lambda=declared,
     )
 
 
-def measured_pair():
-    """Numbers for B0 and kappa leave chi linear in cJ."""
+def substituted_susceptibility():
+    """Writing 2 in place of cJ does not measure cJ."""
+    require_sentence(EM_NOTE, 'Magnetic background matching alone cannot')
     info = em.invariants()
     susceptibility = s.sympify(
         info['parallel_electric_susceptibility'].replace('^', '**')
     )
-    coupling = s.Symbol('cJ')
-    substituted = s.expand(
-        susceptibility.subs({s.Symbol('B0'): 1, s.Symbol('kappa'): 1})
-    )
-    assert coupling in substituted.free_symbols
-    assert s.Symbol('B0') not in substituted.free_symbols
-    assert s.Symbol('kappa') not in substituted.free_symbols
+    names = {symbol.name: symbol for symbol in susceptibility.free_symbols}
+    gravitational = names['kappa']
+    background = names['B0']
+    coefficient = names['cJ']
+    reduced = s.expand(susceptibility.subs(gravitational, 1))
+    zero(s.expand(reduced - (1 + 2 * coefficient * background**2)))
+    substituted = s.expand(reduced.subs(coefficient, 2))
+    expected = 1 + 4 * background**2
+    zero(s.expand(substituted - expected))
+    stored = str(s.factor(substituted))
+    assert stored == '4*B0**2 + 1'
     assert not substituted.is_number
-    exact = s.diff(substituted, coupling)
-    assert exact.is_number and exact != 0
-    center = s.Rational(1, 5)
+    assert background in substituted.free_symbols
+    assert coefficient not in substituted.free_symbols
+    slope = s.diff(substituted, coefficient)
+    zero(s.expand(slope))
+    center = s.Rational(2, 5)
+    assert center != 1
 
     def at(value):
-        return substituted.subs(coupling, value)
+        return substituted.subs(coefficient, value)
 
-    zero(stencil(at, center) - exact)
+    sampled = (at(center + STEP) - at(center - STEP)) / (2 * STEP)
+    zero(s.expand(sampled - slope))
+    assert abs(s.N(sampled, 40)) < s.Integer(10)**(-18)
+    numeric = s.N(substituted.subs(background, center), 40)
+    assert abs(numeric - s.Rational(41, 25)) < s.Integer(10)**(-18)
     signature = list(inspect.signature(rad.march).parameters)
-    for name in ('cJ', 'chi', 'B0'):
-        assert name not in signature
+    joined = ' '.join(signature)
+    for name in ('cJ', 'chi', 'B0', 'e_parallel'):
+        assert absent(name, joined)
     assert 'kappa' in signature
     return dict(
         classification='unavailable physical input',
         admissible_range=None,
         identified_physical_input=False,
         cJ_set_to_zero=False,
+        b0_set_to_one=False,
         conditional_axial_window_adopted=False,
-        chi_at_unit_B0_and_kappa=str(s.factor(substituted)),
-        cJ_derivative=str(exact),
-        chi_is_a_number=False,
+        positive_quadratic_mass_used_as_result=False,
+        ratio_recomputed=False,
+        substituted_susceptibility=stored,
+        susceptibility_is_cJ=False,
+        susceptibility_measures_cJ=False,
+        cJ_derivative_of_substituted='0',
         march_kappa_used_as_gravitational_kappa=False,
         march_parameters=signature,
         march_called=False,
@@ -294,35 +307,39 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     require_pre_fit_note()
-    coupling = renormalized_coupling()
-    error = substitution_error()
-    channel = channel_data()
-    magnetic = measured_pair()
+    scale = monomial_scale()
+    bracket = first_bracket()
+    width = width_derivative()
+    susceptibility = substituted_susceptibility()
     result = dict(
         status='PASS',
-        verdict='scoped_obstructions_for_the_four_inputs_named_by_S089',
+        verdict='scoped_obstructions_for_the_four_inputs_named_by_S103',
         opening_achieved=False,
         s074_gate_closed=False,
         not_an_impossibility_theorem=True,
         successor_model_opened=False,
         s085_march_repeated=False,
-        s087_product_throat_recomputed=False,
         s088_rn_series_recomputed=False,
-        s089_l00_derivative_recomputed=False,
+        s103_scale_derivative_recomputed=False,
+        s103_bracket_derivative_recomputed=False,
+        s103_ceiling_recomputed=False,
+        s103_ratio_recomputed=False,
         new_lambda_interval=False,
         area_budget_evaluated=False,
         area_budget='not evaluated; no replacement target was written before the test',
         zeta_s_set_to_zero=False,
         sigma_set_to_zero=False,
+        c_theta_set_to_zero=False,
+        d_theta_set_to_zero=False,
         cJ_set_to_zero=False,
         delta_set_to_zero=False,
         endpoint_energy_cancelled=False,
         positive_quadratic_mass_used_as_result=False,
         tasks=dict(
-            renormalized_coupling=coupling,
-            substitution_error=error,
-            channel_data=channel,
-            measured_pair=magnetic,
+            monomial_scale=scale,
+            first_bracket=bracket,
+            width_derivative=width,
+            substituted_susceptibility=susceptibility,
         ),
         pinned_checker_sha256={
             path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in PINNED
@@ -336,14 +353,10 @@ def main():
     )
     print(json.dumps(dict(
         status=result['status'],
-        renormalized_coupling=coupling['classification'],
-        b_theta=coupling['b_theta'],
-        a4_prefactor=coupling['a4_prefactor'],
-        substitution_error=error['classification'],
-        channel_data=channel['classification'],
-        illustrated_values=channel['illustrated_values'],
-        measured_pair=magnetic['classification'],
-        chi_at_unit_B0_and_kappa=magnetic['chi_at_unit_B0_and_kappa'],
+        coefficient_derivative=scale['coefficient_derivative'],
+        weight_derivative=bracket['weight_derivative'],
+        width_derivative=width['width_derivative'],
+        substituted_susceptibility=susceptibility['substituted_susceptibility'],
         opening_achieved=False,
     )), flush=True)
 
