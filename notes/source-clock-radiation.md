@@ -223,7 +223,7 @@ No Lean, paid compute, publication, or outreach was used.
 Remaining to-do list: the product-throat weight of `Lhat^{uu}` is
 `O(epsilon)` and drops out of the retained JT clock, so `c_theta` has
 no separate clock interval on this benchmark. The radiation-channel
-`kappa` slices, on all six corners, are
+`kappa` slices, on all 6 corners, are
 `0.0: [-5.16183614730835e-05, 5.072014927864075e-05]`,
 `2437.7281665802: [-4.602195620536803e-05, 5.619207024574278e-05]`,
 `4875.4563331604: [-0.0, 6.0794997215271e-05]`,
