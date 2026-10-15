@@ -1,0 +1,53 @@
+{
+  "story": "S086",
+  "date": "2026-10-14",
+  "status": "PASS for scoped obstructions on the four inputs named after S085; no new Lambda interval; S085 march not repeated; S074 gate not closed; opening not achieved",
+  "accepted_run": "acceptance-02",
+  "receipt_sha256": "38867d29ca83a15e2911af21d52d4d8dc3b76932914bfee413a348c3f3711b70",
+  "accepted_inputs": {
+    "checks/source_clock_separated_inputs.py": "809d2d3063acc35d724cb59270b0d77dd4a109ed924f7f2263ec68c45656c5b3",
+    "notes/source-clock-separated-inputs.md": "032fac82443ce05d8c4a7a188b99ff0ed9971f2cce3e51b3e229e5a6bc354bf5",
+    "checks/source_clock_joint.py": "a17adbc5b1acb8327a89a0d1fb1524b7dbf88493318f8164bd9a5549d37eecb3",
+    "checks/source_clock_radiation.py": "bbfe392c627630d570c04a7b1132314aab132cf1997ef606ae57e9410542b101",
+    "checks/curved_fermion_boundary.py": "0aed0bba4cdf72d120edec075f13854b68914eed8779b782806cdd20169c1240",
+    "checks/finite_local_electromagnetic_input.py": "8d8c040a4ebdb4ed15d267a6bf5d5f1e793da94ba6363b40c3ff7c252100f1cd",
+    "checks/source_clock_allocation.py": "c6e0bbc4774d5c27e3fd6de91babf1d60441d234aa49ad39dfd1a37a8aa0b527",
+    "checks/source_clock_controller.py": "dad29dfdf2146ad38db995ea920450fc8dfffa8989ccc048dea758382cc3b278"
+  },
+  "runs": [
+    {
+      "identity": "acceptance-01",
+      "command": "checks/source_clock_separated_inputs.py --output evidence/source-clock-separated-inputs.json",
+      "exit_code": 0,
+      "receipt_sha256": "38867d29ca83a15e2911af21d52d4d8dc3b76932914bfee413a348c3f3711b70",
+      "note": "The comparison, hardest step, observable, and test were written before this run. Benchmark numbers were copied from the receipt afterward. No physical formula changed after it."
+    },
+    {
+      "identity": "acceptance-02",
+      "command": "checks/source_clock_separated_inputs.py rerun; receipt bytes matched acceptance-01",
+      "exit_code": 0,
+      "receipt_sha256": "38867d29ca83a15e2911af21d52d4d8dc3b76932914bfee413a348c3f3711b70"
+    }
+  ],
+  "separation_classification": "uncontrolled approximation",
+  "unequal_collars_classification": "uncontrolled approximation",
+  "nonlocal_interacting_determinant_classification": "uncontrolled approximation",
+  "cJ_classification": "unavailable physical input",
+  "source_response_ratio": "-2",
+  "fixed_Lhat_response_ratio": "2",
+  "lapse_gap": "4*pi*ell**2*theta_dot**2*sigma",
+  "free_derivative": "2/101",
+  "interacting_derivative": "-4798/7701",
+  "matching_condition": "(chi - 1)/(2*B0**2*kappa**4)",
+  "zeta_s_set_to_zero": false,
+  "sigma_set_to_zero": false,
+  "cJ_set_to_zero": false,
+  "conditional_axial_window_adopted": false,
+  "s085_march_repeated": false,
+  "new_lambda_interval": false,
+  "successor_model_opened": false,
+  "area_budget_evaluated": false,
+  "s074_gate_closed": false,
+  "opening_achieved": false,
+  "lean_paid_compute_publication_outreach": false
+}

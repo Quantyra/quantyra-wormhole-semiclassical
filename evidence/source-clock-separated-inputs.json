@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "verdict": "scoped_obstructions_for_the_four_inputs_named_after_S085",
+  "opening_achieved": false,
+  "s074_gate_closed": false,
+  "not_an_impossibility_theorem": true,
+  "successor_model_opened": false,
+  "s085_march_repeated": false,
+  "new_lambda_interval": false,
+  "area_budget_evaluated": false,
+  "area_budget": "not evaluated; no replacement target was written before the test",
+  "zeta_s_set_to_zero": false,
+  "sigma_set_to_zero": false,
+  "cJ_set_to_zero": false,
+  "endpoint_energy_cancelled": false,
+  "positive_quadratic_mass_used_as_result": false,
+  "tasks": {
+    "separation": {
+      "classification": "uncontrolled approximation",
+      "admissible_range": null,
+      "identified_physical_input": false,
+      "zeta_s_set_to_zero": false,
+      "sigma_set_to_zero": false,
+      "round_metric_actions_agree": true,
+      "round_metric_radius_derivatives_agree": true,
+      "source_response_ratio": "-2",
+      "fixed_Lhat_response_ratio": "2",
+      "clock_sum_response_ratio": "-2",
+      "fixed_Lhat_combined_ratio": "2*(sigma + zeta_s)/(sigma - zeta_s)",
+      "opposite_shift_changes_combined_ratio": true,
+      "lapse_gap": "4*pi*ell**2*theta_dot**2*sigma",
+      "lhat_lapse_piece": "4*pi*N*R**2*c_theta*dLhat_dN*theta_dot**2",
+      "lhat_derivative_evaluated": false,
+      "source_finite_difference_relative_gap": 2.1690019832717698e-11,
+      "contact_finite_difference_relative_gap": 3.472477328216686e-10,
+      "shipped_contact_variation_max_discrepancy": 2.4741694804042424e-11,
+      "endpoint_energy_cancelled": false
+    },
+    "unequal_collars": {
+      "classification": "uncontrolled approximation",
+      "admissible_range": null,
+      "identified_physical_input": false,
+      "delta_set_to_zero": false,
+      "two_collar_equation_introduced": false,
+      "matched_limit": "average equals E_s(ell_bar) at delta=0",
+      "sum_of_energies_at_zero_difference": "2*E_s",
+      "second_derivative": "pi*theta_dot**2*zeta_s",
+      "jet_cross_second_derivative": "retained",
+      "positive_quadratic_mass_used_as_result": false
+    },
+    "nonlocal_interacting_determinant": {
+      "classification": "uncontrolled approximation",
+      "admissible_range": null,
+      "identified_physical_input": false,
+      "determinant_set_to_one": false,
+      "free_gaussian_recomputed": false,
+      "wormhole_determinant_computed": false,
+      "predeclared_point": "z=0, v=1/100, m=1/2",
+      "free_derivative": "2/101",
+      "interacting_derivative": "-4798/7701",
+      "second_m_derivative_at_zero": "-4*(z + 1)/(v*z + v + 1)**3",
+      "finite_difference_relative_gap": 7.176209872275215e-10
+    },
+    "cJ": {
+      "classification": "unavailable physical input",
+      "admissible_range": null,
+      "identified_physical_input": false,
+      "cJ_set_to_zero": false,
+      "conditional_axial_window_adopted": false,
+      "shipped_parallel_susceptibility": "1+2*cJ*kappa^4*B0^2",
+      "matching_condition": "(chi - 1)/(2*B0**2*kappa**4)",
+      "matching_data": "parallel electric susceptibility and B0",
+      "data_supplied_by_rule_D_march": false,
+      "march_parameters": [
+        "eta",
+        "lam",
+        "kappa",
+        "z0",
+        "v0",
+        "method"
+      ],
+      "quadratic_correction": "cJ*kappa^4*B0^2*e_parallel^2"
+    }
+  },
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3"
+  },
+  "checker_sha256": "809d2d3063acc35d724cb59270b0d77dd4a109ed924f7f2263ec68c45656c5b3"
+}
