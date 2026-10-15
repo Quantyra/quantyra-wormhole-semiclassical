@@ -1,0 +1,395 @@
+{
+  "status": "PASS",
+  "verdict": "finite_weyl_product_on_realized_angle",
+  "opening_achieved": false,
+  "s074_gate_closed": false,
+  "not_an_impossibility_theorem": true,
+  "area_budget": "not evaluated; no replacement target was written before the test",
+  "c_theta_set_to_zero": false,
+  "sigma_set_to_zero": false,
+  "corner_count": 6,
+  "identified_input": "sigma=2*c_theta*Lhat^{uu} enters as lambda_theta inside Lambda=lambda_zeta+lambda_theta on the realized delay; zeta_s stays unmatched inside that sum; the O(epsilon) product-throat weight is a geometric factor",
+  "identities": {
+    "sigma": "2*c_theta*Lhat^{uu}",
+    "lambda_theta": "(pi*ell**2/N)*sigma",
+    "Lambda": "lambda_zeta+lambda_theta=(pi*ell**2/N)*(zeta_s+sigma)",
+    "charge_factor": "(r0+kappa*z)*(r0+3*kappa*z)=r0**2+4*kappa*r0*z+3*kappa**2*z**2",
+    "c_theta_set_to_zero": false,
+    "sigma_set_to_zero": false
+  },
+  "drive_regression": {
+    "max_abs_drive_error": 5.875251396503245e-10,
+    "final_drive": 0.9980000004377896,
+    "final_target": 0.998
+  },
+  "anchor_regression": {
+    "anchor_trajectory_gap": 1.0325795773979962e-10,
+    "lambda_value": 4875.4563331604
+  },
+  "prescribed_reduction": {
+    "anchors": [
+      {
+        "lambda_value": 4875.4563331604,
+        "all_corners_admissible": true,
+        "corners": [
+          {
+            "z0": 0.25,
+            "v0": -0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004577120727846246,
+            "post_switch": 0.004043273856061846,
+            "energy": 0.0029058075615835954
+          },
+          {
+            "z0": 0.25,
+            "v0": 0.0,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004589261605956324,
+            "post_switch": 0.00405796135993175,
+            "energy": 0.0029138087971381788
+          },
+          {
+            "z0": 0.25,
+            "v0": 0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004601425149918993,
+            "post_switch": 0.004072648962484743,
+            "energy": 0.00292181003519032
+          },
+          {
+            "z0": 0.28,
+            "v0": -0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.0049767923186812835,
+            "post_switch": 0.004332646524272704,
+            "energy": 0.0036963946913085577
+          },
+          {
+            "z0": 0.28,
+            "v0": 0.0,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004988384855852464,
+            "post_switch": 0.004346350845053373,
+            "energy": 0.0037044092952610574
+          },
+          {
+            "z0": 0.28,
+            "v0": 0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004999999995464445,
+            "post_switch": 0.004360055346973646,
+            "energy": 0.003712424057481012
+          }
+        ]
+      },
+      {
+        "lambda_value": -4757.61079788208,
+        "all_corners_admissible": true,
+        "corners": [
+          {
+            "z0": 0.25,
+            "v0": -0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004584640103113394,
+            "post_switch": 0.004123534331487239,
+            "energy": 0.002829955716318916
+          },
+          {
+            "z0": 0.25,
+            "v0": 0.0,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.0045969731657001245,
+            "post_switch": 0.004138336745130505,
+            "energy": 0.0028376056304561526
+          },
+          {
+            "z0": 0.25,
+            "v0": 0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004609337092156898,
+            "post_switch": 0.004153139243180726,
+            "energy": 0.002845255754832493
+          },
+          {
+            "z0": 0.28,
+            "v0": -0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004976496612589053,
+            "post_switch": 0.004379963462344483,
+            "energy": 0.0036188856222469923
+          },
+          {
+            "z0": 0.28,
+            "v0": 0.0,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004988247447654984,
+            "post_switch": 0.00439385706215778,
+            "energy": 0.0036265823735095737
+          },
+          {
+            "z0": 0.28,
+            "v0": 0.0005,
+            "admissible": true,
+            "binding_budget": "switch",
+            "switch": 0.004999999364431393,
+            "post_switch": 0.004407769365151526,
+            "energy": 0.003634279354687242
+          }
+        ]
+      }
+    ],
+    "overshoot_lambda": 5363.00196647644,
+    "overshoot_corner": {
+      "z0": 0.28,
+      "v0": 0.0005
+    },
+    "overshoot_kappa_zero_admissible": false,
+    "overshoot_binding_budget": "switch",
+    "overshoot_switch": 0.005493315463730761,
+    "overshoot_post_switch": 0.004787787189791448,
+    "overshoot_energy": 0.004082742076953361
+  },
+  "lambda_zero_kappa": {
+    "lambda_value": 0.0,
+    "kappa_negative": -5.16183614730835e-05,
+    "kappa_positive": 5.072014927864075e-05,
+    "positive_binding_budget": "post_switch",
+    "negative_binding_budget": "post_switch",
+    "positive_edge": {
+      "z0": 0.28,
+      "v0": -0.0005,
+      "switch": 0.0024459137182819557,
+      "post_switch": 0.019999999835735978,
+      "energy": 0.0005853197756253148,
+      "admissible": true,
+      "binding_budget": "post_switch"
+    },
+    "negative_edge": {
+      "z0": 0.28,
+      "v0": -0.0005,
+      "switch": 0.002478600292956157,
+      "post_switch": 0.019999999367255057,
+      "energy": 0.0006155740990010095,
+      "admissible": true,
+      "binding_budget": "post_switch"
+    }
+  },
+  "lambda_ranges_at_half_kappa": [
+    {
+      "kappa": 2.5360074639320374e-05,
+      "lambda_negative": -3957.533203125,
+      "lambda_positive": 5497.42431640625,
+      "positive_binding_budget": "switch",
+      "negative_binding_budget": "switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999802967798,
+        "post_switch": 0.008388130218885403,
+        "energy": 0.003918992449777059,
+        "admissible": true,
+        "binding_budget": "switch"
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999757793729,
+        "post_switch": 0.013603632640178706,
+        "energy": 0.0033400963585700216,
+        "admissible": true,
+        "binding_budget": "switch"
+      }
+    },
+    {
+      "kappa": -2.580918073654175e-05,
+      "lambda_negative": -5509.62939453125,
+      "lambda_positive": 4146.0244140625,
+      "positive_binding_budget": "switch",
+      "negative_binding_budget": "switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999523526456,
+        "post_switch": 0.013720037609165646,
+        "energy": 0.0034409878103401903,
+        "admissible": true,
+        "binding_budget": "switch"
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004999999656788608,
+        "post_switch": 0.008765389795295508,
+        "energy": 0.003872524741704353,
+        "admissible": true,
+        "binding_budget": "switch"
+      }
+    }
+  ],
+  "kappa_ranges_at_half_anchors": [
+    {
+      "lambda_value": 2437.7281665802,
+      "kappa_negative": -4.602195620536803e-05,
+      "kappa_positive": 5.619207024574278e-05,
+      "positive_binding_budget": "post_switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.0013032109323214275,
+        "post_switch": 0.019999998597202244,
+        "energy": 0.0012321136303596325,
+        "admissible": true,
+        "binding_budget": "post_switch"
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.00404848228235162,
+        "post_switch": 0.019999998703092943,
+        "energy": 0.0023834957026707126,
+        "admissible": true,
+        "binding_budget": "post_switch"
+      }
+    },
+    {
+      "lambda_value": -2378.80539894104,
+      "kappa_negative": -5.705349445343019e-05,
+      "kappa_positive": 4.523511528968811e-05,
+      "positive_binding_budget": "post_switch",
+      "negative_binding_budget": "post_switch",
+      "positive_edge": {
+        "z0": 0.28,
+        "v0": 0.0005,
+        "switch": 0.004122389357063674,
+        "post_switch": 0.019999998100413197,
+        "energy": 0.0023639354273032875,
+        "admissible": true,
+        "binding_budget": "post_switch"
+      },
+      "negative_edge": {
+        "z0": 0.28,
+        "v0": -0.0005,
+        "switch": 0.0011330751602307426,
+        "post_switch": 0.01999999949438653,
+        "energy": 0.0010975432453807499,
+        "admissible": true,
+        "binding_budget": "post_switch"
+      }
+    }
+  ],
+  "full_edge_probe": {
+    "probe_is_an_empty_interval_claim": false,
+    "edges": [
+      {
+        "kappa": 5.072014927864075e-05,
+        "corner": {
+          "z0": 0.28,
+          "v0": -0.0005
+        },
+        "samples": [
+          {
+            "lambda_value": 2437.7281665802,
+            "admissible": true,
+            "binding_budget": "post_switch",
+            "switch": 0.0013912167620211066,
+            "post_switch": 0.017825245049287397,
+            "energy": 0.0012912792672545026
+          },
+          {
+            "lambda_value": 4875.4563331604,
+            "admissible": true,
+            "binding_budget": "post_switch",
+            "switch": 0.0037893442388556506,
+            "post_switch": 0.015735136386739637,
+            "energy": 0.003164319215374245
+          },
+          {
+            "lambda_value": -2378.80539894104,
+            "admissible": false,
+            "binding_budget": "post_switch",
+            "switch": 0.004332308692933856,
+            "post_switch": 0.02216906589233167,
+            "energy": 0.002419097573016449
+          },
+          {
+            "lambda_value": -4757.61079788208,
+            "admissible": false,
+            "binding_budget": "switch",
+            "switch": 0.006754881440100391,
+            "post_switch": 0.02438020818604926,
+            "energy": 0.0042544635577800305
+          }
+        ]
+      },
+      {
+        "kappa": -5.16183614730835e-05,
+        "corner": {
+          "z0": 0.28,
+          "v0": -0.0005
+        },
+        "samples": [
+          {
+            "lambda_value": 2437.7281665802,
+            "admissible": false,
+            "binding_budget": "post_switch",
+            "switch": 0.0042471650965114766,
+            "post_switch": 0.022135703100777074,
+            "energy": 0.002438205252786513
+          },
+          {
+            "lambda_value": 4875.4563331604,
+            "admissible": false,
+            "binding_budget": "switch",
+            "switch": 0.006493905541107806,
+            "post_switch": 0.024247431152050074,
+            "energy": 0.004256582320518093
+          },
+          {
+            "lambda_value": -2378.80539894104,
+            "admissible": true,
+            "binding_budget": "post_switch",
+            "switch": 0.0012281630895080858,
+            "post_switch": 0.017913183585984524,
+            "energy": 0.001166343067215525
+          },
+          {
+            "lambda_value": -4757.61079788208,
+            "admissible": true,
+            "binding_budget": "post_switch",
+            "switch": 0.003501943253191843,
+            "post_switch": 0.01594121989837262,
+            "energy": 0.0029507828928647117
+          }
+        ]
+      }
+    ]
+  },
+  "independent_integrator": {
+    "lambda_value": 5497.42431640625,
+    "kappa": 2.5360074639320374e-05,
+    "corner": {
+      "z0": 0.28,
+      "v0": 0.0005
+    },
+    "dop853_rk45_gap": 3.897244749140327e-10
+  },
+  "versions": {
+    "python": "3.13.7",
+    "sympy": "1.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "checker_sha256": "a17adbc5b1acb8327a89a0d1fb1524b7dbf88493318f8164bd9a5549d37eecb3"
+}

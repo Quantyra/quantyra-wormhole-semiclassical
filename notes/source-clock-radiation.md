@@ -220,24 +220,23 @@ opening.
 [source/run review](../evidence/source-clock-radiation-review.json).
 No Lean, paid compute, publication, or outreach was used.
 
-Remaining to-do list: the product-throat weight of `Lhat^{uu}` is
-`O(epsilon)` and drops out of the retained JT clock, so `c_theta` has
-no separate clock interval on this benchmark. The radiation-channel
-`kappa` slices, on all 6 corners, are
-`0.0: [-5.16183614730835e-05, 5.072014927864075e-05]`,
-`2437.7281665802: [-4.602195620536803e-05, 5.619207024574278e-05]`,
-`4875.4563331604: [-0.0, 6.0794997215271e-05]`,
-`-2378.80539894104: [-5.705349445343019e-05, 4.523511528968811e-05]`,
-and `-4757.61079788208: [-6.149901151657105e-05, 1.788139343261719e-11]`.
-At `Lambda = 4875.4563331604` the negative endpoint is `0` on the
-switch budget. At `Lambda = -4757.61079788208` the positive endpoint
-is the last admissible bisection value on that same budget. The
-one-corner overshoot at `Lambda = 5363.00196647644` lies outside the
-three budgets for `kappa = 0` and for every probed magnitude. The
-joint boundary outside these `Lambda` samples is not mapped. A sphere
-radius that varies along the normal is outside this product metric.
-Unequal collars, the nonlocal interacting determinant, and `cJ` stay
-unmatched. S074.2–S074.6 stay open. S075 through S079 stay blocked.
-The area budget stays unevaluated. None further for the S080
-obstruction audit, the S081 benchmark interval, or the S082
-contact-channel slices.
+Remaining to-do list: on the realized angle,
+`sigma = 2 c_theta Lhat^{uu}` enters through
+`Lambda = (pi ell^2 / N)(zeta_s + sigma)`. At
+`kappa = 2.5360074639320374e-05` the six-corner interval is
+`-3957.533203125 <= Lambda <= 5497.42431640625`, switch on both signs.
+At `kappa = -2.580918073654175e-05` the six-corner interval is
+`-5509.62939453125 <= Lambda <= 4146.0244140625`, switch on both signs.
+Both edges are the corner `z(0) = 7/25`, `z_t(0) = 1/2000`. `zeta_s`
+stays unmatched inside that sum, so `sigma` has no separate number. The
+product-throat weight remains the recorded `O(epsilon)` geometric factor.
+The half-anchor `kappa` slices, on all 6 corners, are
+`2437.7281665802: [-4.602195620536803e-05, 5.619207024574278e-05]`
+and `-2378.80539894104: [-5.705349445343019e-05, 4.523511528968811e-05]`.
+The one-corner full-edge probe at the `Lambda = 0` endpoints keeps a
+same-sign anchor admissible and is not an empty interval. Unequal
+collars, the nonlocal interacting determinant, and `cJ` stay unmatched.
+S074.2–S074.6 stay open. S075 through S079 stay blocked. The area budget
+stays unevaluated. None further for the S080 obstruction audit, the S081
+benchmark interval, the S082 contact-channel slices, or the S083
+radiation-channel slices.
