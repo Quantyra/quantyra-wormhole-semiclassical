@@ -1,0 +1,39 @@
+{
+  "story": "S081",
+  "date": "2026-10-14",
+  "status": "PASS for the benchmark lambda interval; S074 gate not closed; opening not achieved",
+  "raw_root": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\source-clock-window-2026-10-14",
+  "accepted_run": "acceptance-02",
+  "receipt_sha256": "45ebe5e60418cfaa3d061b7e44cbbdf00924c80e47355b23fae4d36c87207537",
+  "accepted_inputs": {
+    "checks/source_clock_window.py": "59ccf069de80c20a3b69b44bcfa175046bec50d4be99215014c38277e82aeee2",
+    "notes/source-clock-window.md": "49f4b53ad89d2c8c0a53f39f82619f708d6565fd2ab659324b79621631dabce4",
+    "notes/source-clock-allocation.md": "5465b92f7e1d1016acbc700f7c80fdd762f263ab703623597cf7dfb40e981ff9",
+    "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21"
+  },
+  "runs": [
+    {
+      "identity": "development-01",
+      "command": "checks/source_clock_window.py --output window-dev-01.json",
+      "exit_code": 1,
+      "failure": "The script directory was not on sys.path, so the sibling import of source_clock_allocation failed. The import now inserts that directory. No physical formula changed."
+    },
+    {
+      "identity": "acceptance-01",
+      "command": "checks/source_clock_window.py --output window-acc-01.json",
+      "exit_code": 0,
+      "receipt_sha256": "45ebe5e60418cfaa3d061b7e44cbbdf00924c80e47355b23fae4d36c87207537"
+    },
+    {
+      "identity": "acceptance-02",
+      "command": "checks/source_clock_window.py --output window-acc-02.json",
+      "exit_code": 0,
+      "receipt_sha256": "45ebe5e60418cfaa3d061b7e44cbbdf00924c80e47355b23fae4d36c87207537"
+    }
+  ],
+  "lambda_interval": [-4757.61079788208, 4875.4563331604],
+  "area_budget_evaluated": false,
+  "s074_gate_closed": false,
+  "opening_achieved": false,
+  "lean_paid_compute_publication_outreach": false
+}
