@@ -1,0 +1,207 @@
+{
+  "runs": [
+    {
+      "checks": [
+        {
+          "detail": "",
+          "label": "actual_bytecode_disabled",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "four_dimensional_Christoffel_curvature",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "lapse_curvature_variation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "RN_constant_scalar_curvature",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "RN_scalar_gauge_variation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "radial_box_from_volume",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fourth_derivative_coefficient",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "constant_background_delta_box_term",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "magnetic_invariant",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "magnetic_lapse_variation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "trace_box_coefficient",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "proper_radial_symbol",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "local_principal_root",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Einstein_trace_update_multiplier",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "finite_R2_Weyl_variation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "finite_R2_scheme_shift",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fR_constant_curvature_equation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "R2_Einstein_bulk_variation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fR_Einstein_family",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fR_effective_Einstein_factor",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fR_AdS_charge_factor",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fR_coupling_conversion",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "constant_curvature_action_scaling",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Einstein_Brown_York_finite_mass",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "relative_charge_source_offset_cancellation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "canonical_lapse_vertex",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "canonical_radial_F_vertex",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "canonical_mixed_seagull",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "scope_excludes_physical_charge",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "scope_excludes_global_mode",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "-B",
+        "checks/stationary_solver_charge.py"
+      ],
+      "contract": {
+        "acceptance": "all symbolic residuals exactly zero; all scope guards true",
+        "excluded": [
+          "full stationary stress bound",
+          "physical Dirac boundary charge",
+          "global Planck mode",
+          "nonexistence of corrected exterior",
+          "physical completion"
+        ],
+        "failure_policy": "append every execution and raw log; retain failed input bytes",
+        "numerical_tolerances": "none",
+        "ordinary_arguments": "localized high-frequency norm contradiction; covariant relative charge scaling",
+        "scope": "retained one-Dirac anomaly scheme; local RN annulus; separate f(R) counterexample"
+      },
+      "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "dont_write_bytecode": true,
+      "execution_inputs_sha256": {
+        "checks/stationary_solver_charge.py": "754bdb9ee6efdc3b1c5c81490906036634c89c86f95681d8662c3610549eaedb",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/stationary-exterior-charge-audit.md": "0b4c1c8d566f713c7d5a67e52d662fa8146b4ee1ade14873efef3ce851e20a59",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-exterior-solver-obstruction.md": "b04a96e808a80574dbb2cf52b38fde71ac0779422a1a34965d2c8a1083e11f1c",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50"
+      },
+      "failed_checks": [],
+      "final_inputs_sha256": {
+        "checks/stationary_solver_charge.py": "754bdb9ee6efdc3b1c5c81490906036634c89c86f95681d8662c3610549eaedb",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/stationary-exterior-charge-audit.md": "0b4c1c8d566f713c7d5a67e52d662fa8146b4ee1ade14873efef3ce851e20a59",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-exterior-solver-obstruction.md": "b04a96e808a80574dbb2cf52b38fde71ac0779422a1a34965d2c8a1083e11f1c",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50"
+      },
+      "finished_utc": "2026-10-16T06:50:28.249467+00:00",
+      "python": "3.13.7",
+      "started_utc": "2026-10-16T06:50:25.939482+00:00",
+      "status": "passed",
+      "sympy": "1.14.0",
+      "terminal_exit_status": 0
+    }
+  ]
+}
