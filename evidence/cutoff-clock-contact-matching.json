@@ -1,0 +1,218 @@
+{
+  "status": "pass",
+  "milestone": "E003/S133",
+  "symbolic": {
+    "Christoffels": "derived from g_2; four nonzero entries equal -1/Z",
+    "exact_K": "(P*epsilon**2*(f2*y - p2*x) + x*(-epsilon**2*y**2 + x**2))/(r_e*(-epsilon**2*y**2 + x**2)**(3/2))",
+    "exact_total_density": "epsilon*(2*pi*P*r_e*theta_prime**2*zeta_s/sqrt(-epsilon**2*y**2 + x**2) + P*theta_prime**2*(-8*pi*c_theta/3 + 4*pi*d_theta/3)*(P*epsilon**2*(f2*y - p2*x) + x*(-epsilon**2*y**2 + x**2))/(-epsilon**2*y**2 + x**2)**2)",
+    "P_equals_Fprime_K": "(-epsilon**2*f3/x + 1)/(r_e*(-epsilon**2*f2**2/x**2 + 1)**(3/2))",
+    "P_equals_Fprime_lapse": "r_e*sqrt(-epsilon**2*f2**2/x**2 + 1)/epsilon",
+    "curvature_series": "epsilon**2*(3*f2**2/(2*r_e*x**2) - f3/(r_e*x)) + 1/r_e",
+    "weight_series": "epsilon**3*(2*f2**2/x**2 - f3/x) + epsilon",
+    "exact_fixed_lapse_condition": "P^2+epsilon^2*Pprime^2=Fprime^2"
+  },
+  "numerical": {
+    "synthetic_cases": [
+      {
+        "family": "sinusoidal",
+        "epsilon": "0.2",
+        "action": "0.0088710342346486335848646227688419415518624804334334",
+        "first_variation": "0.00023117969521361308464849692015208265758558705113125",
+        "second_variation": "0.0000029288757677860696015768637521269961400802650127153",
+        "mixed_variation": "-0.0000053469747719406533852606780554715511757699143853511",
+        "action_over_epsilon": "0.044355171173243167924323113844209707759312402167167",
+        "geometry_max_error": "2.0880974297595278485472941149620952178243725625821e-52",
+        "finite_differences": [
+          {
+            "step": "2e-4",
+            "first_error": "0.000000000000001037963460458182453769194068841809353887180556806",
+            "second_error": "7.2857607248159131556442154545320588131790958522805e-17",
+            "mixed_error": "2.348432996670847991876630832918972321879326439983e-16"
+          },
+          {
+            "step": "1e-4",
+            "first_error": "2.594908651030085184700563797552217029030074022839e-16",
+            "second_error": "1.8214401811155188705118378015011066288532479723307e-17",
+            "mixed_error": "5.8710824907900502571796578428089585938049879302673e-17"
+          }
+        ]
+      },
+      {
+        "family": "sinusoidal",
+        "epsilon": "0.1",
+        "action": "0.0044574906512389387917322281877903410631293723172841",
+        "first_variation": "0.00012144669364483559521370436883264798379313253709099",
+        "second_variation": "0.0000020673701293518934217206037874720749378330010404893",
+        "mixed_variation": "-0.000003007443973801661839348656423436645541113456392118",
+        "action_over_epsilon": "0.044574906512389387917322281877903410631293723172841",
+        "geometry_max_error": "1.1484535863677403167010117632291523698034049094201e-52",
+        "finite_differences": [
+          {
+            "step": "2e-4",
+            "first_error": "1.3715241930115236357869380942453731658627112765389e-16",
+            "second_error": "6.2586856450143804606218666852513151150955053362407e-18",
+            "mixed_error": "3.0913479107092556923093671694933414102701901578991e-17"
+          },
+          {
+            "step": "1e-4",
+            "first_error": "3.4288104824039532595355039004025631838092385720189e-17",
+            "second_error": "1.564671411147501814587520251686293833597651343898e-18",
+            "mixed_error": "7.728369775685591749133693344256162242424863885345e-18"
+          }
+        ]
+      },
+      {
+        "family": "sinusoidal",
+        "epsilon": "0.05",
+        "action": "0.0022314916823239783381837134670744393603110556398864",
+        "first_variation": "0.000061455227476404755433181864003846806888912369049974",
+        "second_variation": "0.000001108923348544993879783236544059319010718471970535",
+        "mixed_variation": "-0.0000015452953292819124079866865960598252653232762995281",
+        "action_over_epsilon": "0.044629833646479566763674269341488787206221112797728",
+        "geometry_max_error": "5.7422679318387015835050588161457618490170245471007e-53",
+        "finite_differences": [
+          {
+            "step": "2e-4",
+            "first_error": "2.1230987522357310984736422727188975370035457899525e-17",
+            "second_error": "5.7380737096839938583815077388713362082141528820034e-19",
+            "mixed_error": "4.635246681738990620948876284485926434706419859728e-18"
+          },
+          {
+            "step": "1e-4",
+            "first_error": "5.3077468805124370423983684175506108564146114627217e-18",
+            "second_error": "1.4345184275523851547450615666518039451919722833159e-19",
+            "mixed_error": "1.1588116703040745118467033371931971121880333755605e-18"
+          }
+        ]
+      },
+      {
+        "family": "polynomial",
+        "epsilon": "0.2",
+        "action": "0.0087534591082824756613819540705368699106977570479561",
+        "first_variation": "0.00022577503386467448928736117437304627169799129696263",
+        "second_variation": "0.0000033128988847657572261000940264942913666658988115783",
+        "mixed_variation": "-0.0000046947525223169641490935425740631737920856753410538",
+        "action_over_epsilon": "0.04376729554141237830690977035268434955348878523978",
+        "geometry_max_error": "2.5057169157114334182567529379545142613892470750985e-52",
+        "finite_differences": [
+          {
+            "step": "2e-4",
+            "first_error": "5.740290761289156469475880600004686956289298664548e-16",
+            "second_error": "6.1244687293391310189568014424603253527424674677023e-17",
+            "mixed_error": "3.7621988250613921731172857290865693266220465205551e-16"
+          },
+          {
+            "step": "1e-4",
+            "first_error": "1.4350726902881045633032614245938179932826402514962e-16",
+            "second_error": "1.5311171822366555050645025075985712660483610505397e-17",
+            "mixed_error": "9.4054970611646573139494517145347145880576707382437e-17"
+          }
+        ]
+      },
+      {
+        "family": "polynomial",
+        "epsilon": "0.1",
+        "action": "0.004368481188056767800342818588709413270143149647842",
+        "first_variation": "0.000115374109091473904884163581907492191961821404743",
+        "second_variation": "0.0000021517377452066035324098637097195949542466599221217",
+        "mixed_variation": "-0.0000029187375220661842317384710550535366060326274614655",
+        "action_over_epsilon": "0.043684811880567678003428185887094132701431496478419",
+        "geometry_max_error": "1.5660730723196458864104705862215714133682794219366e-52",
+        "finite_differences": [
+          {
+            "step": "2e-4",
+            "first_error": "8.2527648805888151527806936492231350886026779277919e-17",
+            "second_error": "5.4705711649047719611534546573012697214430531295563e-18",
+            "mixed_error": "4.8025481151237416546184067863946747141650836883245e-17"
+          },
+          {
+            "step": "1e-4",
+            "first_error": "2.0631912201204097691512109974156439483752006595547e-17",
+            "second_error": "1.367642791104663185541401982324101453861060587181e-18",
+            "mixed_error": "1.2006370286003812037669673747442527483724658688003e-17"
+          }
+        ]
+      },
+      {
+        "family": "polynomial",
+        "epsilon": "0.05",
+        "action": "0.0021832097883697155643315295728946201652976078593132",
+        "first_variation": "0.000057997740185996433928890762120569366293582569615168",
+        "second_variation": "0.0000011378124280020101437061334281074075318416804695297",
+        "mixed_variation": "-0.0000015308929404569301374608478382976182859921876453016",
+        "action_over_epsilon": "0.043664195767394311286630591457892403305952157186263",
+        "geometry_max_error": "4.1761948595190556970945882299241904356487451251641e-53",
+        "finite_differences": [
+          {
+            "step": "2e-4",
+            "first_error": "1.5667552228598006307995286059682304218250116141856e-17",
+            "second_error": "4.0113473378421812485685232297757494680868308529063e-19",
+            "mixed_error": "6.65550659078011817288578278235854627411425866118e-18"
+          },
+          {
+            "step": "1e-4",
+            "first_error": "3.9168880571935052184441458111657093058933471237929e-18",
+            "second_error": "1.0028368346110715067823348910946896382372434906143e-19",
+            "mixed_error": "1.6638766474756673078328739461118787548469393467697e-18"
+          }
+        ]
+      }
+    ],
+    "largest_first_difference_error": "0.000000000000001037963460458182453769194068841809353887180556806",
+    "largest_second_difference_error": "3.7621988250613921731172857290865693266220465205551e-16",
+    "uniform_bound_example": {
+      "B": "2.0",
+      "v": "0.8",
+      "P_lower": "0.8",
+      "Delta_lower": "0.32",
+      "interval_length": "1",
+      "direction_norm_upper_bounds": [
+        "1",
+        "1"
+      ],
+      "C0_C1_C2": [
+        "12758.040209727012426013763607798743300863607009456",
+        "719629.64597777725915344434255889276095880846796687",
+        "56882033.490879902128983066782349276537898511338924"
+      ],
+      "meaning": "bounds are epsilon*interval_length*Cj times direction norms; no physical coefficient assignment or clock-solution error inferred"
+    }
+  },
+  "predeclared_tolerances": {
+    "dps": 50,
+    "steps": [
+      "2e-4",
+      "1e-4"
+    ],
+    "first_absolute": "1e-8",
+    "second_absolute": "1e-6",
+    "geometry_absolute": "1e-35",
+    "bound_rounding_allowance": "1e-30"
+  },
+  "claims": {
+    "uniform_action_first_second_variations_O_epsilon": true,
+    "zeta_s_throat_cut_also_suppressed": true,
+    "fixed_lapse_gauge_solved": false,
+    "exterior_boundary_matching_supplied": false,
+    "finite_coefficients_physically_assigned": false,
+    "full_Weyl_anomaly_computed": false,
+    "S074_complete": false,
+    "new_Lambda_interval": false,
+    "area_budget_evaluated": false,
+    "physical_opening_achieved": false
+  },
+  "inputs_sha256": {
+    "notes/source-clock-radiation.md": "6e0d22d31059cc55e9521ffb24045b371124aad37041c0c6803fe67d2f1e31f7",
+    "notes/curved-fermion-boundary.md": "545f4fed966d38c935446f0a93d9f0dfecba1001f0415314537d618dc6979c21",
+    "notes/source-clock-joint.md": "9c149d26d81f9e1bbef84cd6aedc911b4b7c48a58090e96320411c0a7bfd017d",
+    "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+    "notes/cutoff-clock-contact-matching.md": "dd24eb0b34e8abe61c8dd8d19290c917e827dbabf5d41b8fab70394e25dffee5",
+    "checks/cutoff_clock_contact_matching.py": "84c84fe9115d9dc407be40d0775520b2bfb490ae39106e3f69f047888ddabf6c"
+  },
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  }
+}
