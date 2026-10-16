@@ -1,0 +1,511 @@
+"""S136 bounded outward tube attempt. No floating trajectory is a certificate."""
+import os
+for _n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):
+    os.environ[_n]='1'
+import argparse
+from fractions import Fraction as F
+import hashlib
+import json
+import math
+from pathlib import Path
+import platform
+import sys
+import time
+import numpy as np
+
+ROOT=Path(__file__).resolve().parents[1]
+ORDER=8
+MAX_ITER=12
+ETA_F=F(1,2000)
+INPUTS=['notes/common-drive-validated-capture.md','checks/common_drive_validated_capture.py',
+        'notes/laboratory-drive-clock-feedback.md','checks/laboratory_drive_clock_feedback.py',
+        'notes/jt-prescribed-source-constraint.md','notes/physical-clock-remainder.md',
+        'notes/common-drive-area-and-tail.md']
+
+
+def down(x): return np.nextafter(x,-np.inf)
+def up(x): return np.nextafter(x,np.inf)
+
+
+class I:
+    """Binary64 endpoint arithmetic, one outward step after each operation.
+
+    Basic IEEE operations are rounded nearest; one adjacent float encloses
+    the exact result, including underflow. No BLAS reduction is trusted.
+    """
+    def __init__(self,lo,hi=None):
+        if isinstance(lo,I):self.lo,self.hi=lo.lo,lo.hi;return
+        self.lo=np.asarray(lo,dtype=float)
+        self.hi=np.asarray(lo if hi is None else hi,dtype=float)
+        if np.any(self.lo>self.hi):raise ValueError('reversed interval')
+    @staticmethod
+    def q(x):
+        q=F(x); v=float(q); lo=v;hi=v
+        if F.from_float(v)>q:lo=float(np.nextafter(v,-np.inf))
+        if F.from_float(v)<q:hi=float(np.nextafter(v,np.inf))
+        return I(lo,hi)
+    def __add__(a,b):
+        b=I(b);return I(down(a.lo+b.lo),up(a.hi+b.hi))
+    __radd__=__add__
+    def __neg__(a):return I(-a.hi,-a.lo)
+    def __sub__(a,b):return a+-I(b)
+    def __rsub__(a,b):return I(b)+-a
+    def __mul__(a,b):
+        b=I(b);q=np.stack(np.broadcast_arrays(a.lo*b.lo,a.lo*b.hi,a.hi*b.lo,a.hi*b.hi))
+        return I(down(q.min(axis=0)),up(q.max(axis=0)))
+    __rmul__=__mul__
+    def __truediv__(a,b):
+        b=I(b)
+        if np.any((b.lo<=0)&(b.hi>=0)):raise ArithmeticError('interval division through zero')
+        return a*I(down(1/b.hi),up(1/b.lo))
+    def __rtruediv__(a,b):return I(b)/a
+    def __pow__(a,n):
+        if not isinstance(n,int) or n<0:raise ValueError('interval integer power')
+        ans=ONE
+        for _ in range(n):ans=ans*a
+        return ans
+    def __getitem__(a,k):return I(a.lo[k],a.hi[k])
+    def mid(a):return (a.lo+a.hi)/2
+    def mag(a):return np.maximum(abs(a.lo),abs(a.hi))
+    def record(a):return [a.lo.tolist(),a.hi.tolist()]
+
+
+ZERO=I(0.)
+ONE=I(1.)
+ETA=I.q(ETA_F)
+
+
+def isum(xs):
+    ans=ZERO
+    for x in xs:ans=ans+x
+    return ans
+
+
+def mat(a,b):
+    """Outward matrix multiply, no unaccounted dot/sum rounding."""
+    if b.lo.ndim==1:
+        vals=[isum(a[i,k]*b[k] for k in range(3)) for i in range(3)]
+    else:
+        vals=[[isum(a[i,k]*b[k,j] for k in range(3)) for j in range(3)] for i in range(3)]
+    return stack(vals)
+
+
+def stack(a):
+    if isinstance(a[0],list):return I([[v.lo for v in row] for row in a],[[v.hi for v in row] for row in a])
+    return I([v.lo for v in a],[v.hi for v in a])
+
+
+def inv(a):
+    # Explicit adjugate. This is an interval enclosure, not a transpose.
+    co=[]
+    for i in range(3):
+        row=[]
+        for j in range(3):
+            r=[k for k in range(3) if k!=i];c=[k for k in range(3) if k!=j]
+            v=a[r[0],c[0]]*a[r[1],c[1]]-a[r[0],c[1]]*a[r[1],c[0]]
+            row.append(v if (i+j)%2==0 else -v)
+        co.append(row)
+    determinant=isum(a[0,j]*co[0][j] for j in range(3))
+    return stack([[co[j][i]/determinant for j in range(3)] for i in range(3)])
+
+
+def padd(a,b):
+    return [(a[k] if k<len(a) else ZERO)+(b[k] if k<len(b) else ZERO) for k in range(max(len(a),len(b)))]
+def pneg(a):return [-v for v in a]
+def psub(a,b):return padd(a,pneg(b))
+def pscale(a,b):return [v*b for v in a]
+def pmul(a,b):
+    ans=[]
+    for k in range(len(a)+len(b)-1):ans.append(isum(a[j]*b[k-j] for j in range(max(0,k-len(b)+1),min(len(a)-1,k)+1)))
+    return ans
+def peval(a,x):
+    ans=a[-1]
+    for v in reversed(a[:-1]):ans=ans*x+v
+    return ans
+def pdiff(a):return [a[k]*k for k in range(1,len(a))]
+def pshift(a,x):
+    xp=[ONE]
+    for _ in range(len(a)):xp.append(xp[-1]*x)
+    return [isum(a[j]*math.comb(j,k)*xp[j-k] for j in range(k,len(a))) for k in range(len(a))]
+
+
+def atan_bounds(q,n):
+    q=F(q);s=sum((-1)**j*q**(2*j+1)/F(2*j+1) for j in range(n))
+    other=s+(-1)**n*q**(2*n+1)/F(2*n+1)
+    return min(s,other),max(s,other)
+
+
+def make_pi():
+    a,b=atan_bounds(F(1,5),48);c,d=atan_bounds(F(1,239),16)
+    low=16*a-4*d;high=16*b-4*c
+    return I(I.q(low).lo,I.q(high).hi)
+
+
+PI=make_pi()
+
+
+def trig(x,cos=False):
+    # Taylor with absolute remainder, |x|<4. No platform libm assumption.
+    if float(x.mag())>=4:raise ValueError('trig range')
+    # Horner in x^2 avoids redundant interval powers.
+    terms=[I.q(F((-1)**j,math.factorial(2*j+(0 if cos else 1)))) for j in range(36)]
+    ans=peval(terms,x*x)*(ONE if cos else x)
+    k=72+(0 if cos else 1)
+    err=I.q(F(4)**k/F(math.factorial(k))).hi
+    return ans+I(-err,err)
+
+
+def poly_q(vals):return [I.q(v) for v in vals]
+
+
+class Reference:
+    def __init__(self):
+        self.f0=poly_q([0,0,0,640,-3840,6144])
+        self.is0=poly_q([0,0,0,0,160,-768,1024])
+        self.rs0=pmul(self.f0,self.f0)
+        self.rs0=[ZERO]+[v/(i+1) for i,v in enumerate(self.rs0)]
+        self.f=[self.f0,[ONE],psub([ONE],self.f0)]
+        self.a=[pscale(self.is0,1/PI),[I.q(F(1,8))/PI,1/PI],
+                pscale(psub([PI-I.q(F(1,8)),ONE],self.is0),1/PI)]
+        rr=[self.rs0,[I.q(F(181,1848)),ONE],
+            psub([PI-I.q(F(1,4))+I.q(F(181,1848)),ONE],self.rs0)]
+        self.g=[psub(self.a[k],pscale(rr[k],4*ETA/PI)) for k in range(3)]
+        self.coA=self.osc_series(self.g[0],I.q(F(53,200)),ZERO,54)
+        self.wA,self.vA=self.point(0,I.q(F(1,4)))
+        self.wC,self.vC=self.point(1,PI-I.q(F(1,4)))
+        self.coC=self.osc_series(self.g[2],self.wC,self.vC,54)
+
+    @staticmethod
+    def osc_series(g,w,v,n):
+        a=[w,v]
+        for k in range(n-1):a.append(((g[k]/2 if k<len(g) else ZERO)-a[k])/((k+2)*(k+1)))
+        return a
+
+    def point(self,stage,x):
+        if stage in (0,2):
+            co=self.coA if stage==0 else self.coC
+            # Beyond polynomial forcing, a_(n+2)=-a_n/((n+1)(n+2)).
+            # First two omitted terms and ratio <= (1/4)^2/(54*55)
+            # give a geometric majorant; derivative tail handled separately.
+            n=len(co)-1
+            omitted=[-co[-2]/(n*(n+1)),-co[-1]/((n+1)*(n+2))]
+            e=isum(I.q(F.from_float(float(q.mag())))*I.q(F(1,4)**(n+1+j)) for j,q in enumerate(omitted))*2
+            ev=isum(I.q(F.from_float(float(q.mag())))*I.q(F(1,4)**(n+j))*(n+1+j) for j,q in enumerate(omitted))*2
+            return peval(co,x)+I(-e.hi,e.hi),peval(pdiff(co),x)+I(-ev.hi,ev.hi)
+        g=self.g[1];c=trig(x,True);s=trig(x)
+        return (peval(g,x)/2+(self.wA-g[0]/2)*c+(self.vA-g[1]/2)*s,
+                g[1]/2-(self.wA-g[0]/2)*s+(self.vA-g[1]/2)*c)
+
+    def local(self,stage,x,H):
+        xx=I.q(x) if isinstance(x,F) else x
+        # x is an exact dyadic/rational local phase start, not a sample.
+        g=pshift(self.g[stage],xx)
+        w,v=self.point(stage,xx)
+        co=self.osc_series(g,w,v,32)
+        # Absolute tail of the local series, including all terms 15..32.
+        rem=isum(I.q(F.from_float(float(q.mag())))*I.q(F.from_float(H)**k) for k,q in enumerate(co) if k>=15)
+        # For n>=12 coefficient recurrence is homogeneous. At H<=1/40,
+        # the omitted factorial tail is <2*sum(first omitted contributions).
+        hh=I.q(F.from_float(H))
+        tail=2*(I.q(F.from_float(float(co[-2].mag())))*(hh**33)/(32*33)
+                +I.q(F.from_float(float(co[-1].mag())))*(hh**34)/(33*34))
+        err=float((rem+tail).hi)
+        wr=co[:15];wr[0]=wr[0]+I(-err,err)
+        return {'w':wr,'a':pshift(self.a[stage],xx),'f':pshift(self.f[stage],xx)}
+
+
+def vpoly(p):return [[q[i] for q in p] for i in range(3)]
+def mpoly(p,i,j):return [q[i,j] for q in p]
+
+
+def nominal_center(c,ref,h,lam):
+    # Arbitrary floating order-eight polynomial; validation supplies rigor.
+    w=np.array([float(x.mid()) for x in ref['w']]);a=np.array([float(x.mid()) for x in ref['a']]);f=np.array([float(x.mid()) for x in ref['f']])
+    z=np.zeros(ORDER+1);v=z.copy();l=z.copy();z[0],v[0],l[0]=c
+    def conv(x,y,k):return sum(x[j]*y[k-j] for j in range(k+1) if j<len(x) and k-j<len(y))
+    def divcoeff(numer,old,k):return (numer-sum(w[j]*old[k-j] for j in range(1,min(k,len(w)-1)+1)))/w[0]
+    zd=np.zeros(ORDER);vd=zd.copy();ld=zd.copy()
+    pump=np.convolve(np.convolve(f,f),w)*(4/math.pi)
+    for k in range(ORDER):
+        zd[k]=divcoeff(conv(z,v,k),zd,k)
+        vd[k]=divcoeff(-conv(z,z,k)+conv(a,z,k)/2-0.0005*lam*l[k]/2,vd,k)
+        ld[k]=divcoeff(conv(v,l,k),ld,k)+(pump[k] if k<len(pump) else 0.)
+        z[k+1]=zd[k]/(k+1);v[k+1]=vd[k]/(k+1);l[k+1]=ld[k]/(k+1)
+    return [I(np.array([z[k],v[k],l[k]])) for k in range(ORDER+1)]
+
+
+def matrix_poly(c,Q,ref,lam):
+    z,v,l=c
+    w=float(ref['w'][0].mid());a=float(ref['a'][0].mid())
+    A=np.array([[v,z,0],[-2*z+a/2,0,-.0005*lam/2],[0,l,v]])/w
+    arr=Q.copy();out=[I(arr)]
+    for k in range(1,7):
+        arr=A@arr/k;out.append(I(arr))
+    return out
+
+
+def tube_quantities(cp,Pp,ref,lamnom,h):
+    z,v,l=vpoly(cp);w=ref['w'];a=ref['a'];f=ref['f']
+    numerator=[pmul(z,v),padd(padd(pneg(pmul(z,z)),pscale(pmul(a,z),I.q(F(1,2)))),pscale(l,-ETA*lamnom/2)),
+               padd(pmul(v,l),pscale(pmul(pmul(f,f),pmul(w,w)),4/PI))]
+    defects=[psub(numerator[i],pmul(w,pdiff([q[i] for q in cp]))) for i in range(3)]
+    H=I(0,h)
+    defect=stack([peval(p,H) for p in defects])
+    # Polynomial cancellation in A_num(c)*P-w*P' is essential.
+    Ap=[[v,z,[ZERO]],[padd(pscale(z,-2),pscale(a,I.q(F(1,2)))),[ZERO],[-ETA*lamnom/2]],[[ZERO],l,v]]
+    lin=[]
+    for i in range(3):
+        lin.append([])
+        for j in range(3):
+            pp=[ZERO]
+            for k in range(3):pp=padd(pp,pmul(Ap[i][k],mpoly(Pp,k,j)))
+            pp=psub(pp,pmul(w,pdiff(mpoly(Pp,i,j))))
+            lin[i].append(peval(pp,H))
+    Pr=peval(Pp,H);Pi=inv(Pr)
+    wr=peval(w,H)
+    if float(wr.lo)<=0:raise ArithmeticError('reference positivity failed')
+    cr=peval(cp,H)
+    return defect,stack(lin),Pr,Pi,wr,cr
+
+
+def derivative_bound(data,radius,lamnom,lammax):
+    defect,A,P,Pi,w,c=data
+    xi=I(-radius,radius);delta=mat(P,xi)
+    quad=stack([delta[0]*delta[1],-delta[0]*delta[0],delta[1]*delta[2]])
+    ctrl=-(ETA*I(1-lamnom,lammax-lamnom)*(c[2]+delta[2]))/2+I.q(F(1,1000000))*I(-1,1)*(c[0]+delta[0])
+    return mat(Pi,defect+mat(A,xi)+quad+stack([ZERO,ctrl,ZERO])).mag()/w.lo
+
+
+def asfloat(x):return float(np.asarray(x))
+
+
+def segment(c,Q,r0,tt,ref,duration,lammax,basis='carried'):
+    h=float(duration.hi)
+    lamnom=(1+lammax)/2
+    cp=nominal_center(c,ref,h,lamnom);Pp=matrix_poly(c,Q,ref,lamnom)
+    data=tube_quantities(cp,Pp,ref,lamnom,h)
+    d=np.maximum(1e-14,derivative_bound(data,r0,lamnom,lammax)*1.05+1e-14)
+    success=False
+    history=[]
+    for _ in range(MAX_ITER):
+        endrad=(I(r0)+I(h)*I(d)).hi
+        bound=up(derivative_bound(data,endrad,lamnom,lammax))
+        history.append({'rate':d.tolist(),'required':bound.tolist()})
+        if np.all(bound<d):success=True;break
+        d=np.maximum(d,up(bound*1.08+1e-14))
+    if not success:return None,{'reason':'whole_segment_face_not_closed','iterations':history,'r0':r0.tolist(),'h':h}
+    defect,A,P,Pi,w,cr=data
+    delta=mat(P,I(-endrad,endrad));whole=cr+delta
+    if asfloat(whole[0].lo)<asfloat(I.q(F(3,200)).hi):return None,{'reason':'driving_z_target_not_proved','z':whole[0].record(),'iterations':history}
+    # Integrate center/w by validated polynomial division; remainder enclosed
+    # by pointwise identity. It is safe to use any quotient polynomial.
+    zpoly=[x[0] for x in cp];wc=ref['w'];quot=[]
+    for k in range(ORDER+1):quot.append((zpoly[k]-isum(wc[j]*quot[k-j] for j in range(1,min(k,len(wc)-1)+1)))/wc[0])
+    residual=psub(zpoly,pmul(wc,quot))
+    integ=isum(quot[k]*(duration**(k+1))/(k+1) for k in range(len(quot)))
+    terr=(peval(residual,I(0,h))+delta[0])/w*I(0,h)
+    tnew=tt+integ+terr
+    if asfloat(tnew.hi)>=7:return None,{'reason':'completion_time_bootstrap_not_closed','t':tnew.record(),'iterations':history}
+    endP=peval(Pp,duration);endc=peval(cp,duration)
+    cn=endc.mid();Qn=np.linalg.qr(endP.mid())[0] if basis=='qr' else endP.mid()
+    Qi=inv(I(Qn))
+    reboxed=mat(Qi,endc-I(cn))+mat(mat(Qi,endP),I(-endrad,endrad))
+    rn=up(reboxed.mag())
+    record={'c':[x.record() for x in cp],'P':[x.record() for x in Pp],
+            'r0':r0.tolist(),'rates':d.tolist(),'end_r':rn.tolist(),
+            'Qnext':Qn.tolist(),'cnext':cn.tolist(),'t_next':tnew.record(),
+            'whole_z':whole[0].record(),'verified_rate':bound.tolist(),
+            'h':h,'duration':duration.record(),'lambda_max':lammax}
+    return (cn,Qn,rn,tnew),record
+
+
+def primitive_tests():
+    # Independent exact rational containment of the arithmetic primitives.
+    vals=[F(-7,19),F(1,2000),F(53,200),F(2)**-1070,F(1,3)]
+    count=0
+    for a in vals:
+        for b in vals:
+            for v,q in ((I.q(a)+I.q(b),a+b),(I.q(a)*I.q(b),a*b),(I.q(a)/I.q(b),a/b)):
+                lo=asfloat(v.lo);hi=asfloat(v.hi)
+                if not (lo==-math.inf or F.from_float(lo)<=q) or not (hi==math.inf or q<=F.from_float(hi)):raise AssertionError('primitive')
+                count+=1
+    # Machin interval includes a high precision independent decimal pi.
+    import mpmath as mp
+    with mp.workdps(80):
+        if not mp.mpf(float(PI.lo))<mp.pi<mp.mpf(float(PI.hi)):raise AssertionError('pi')
+        for x in [F(0),F(1,4),F(11,4)]:
+            for co in [False,True]:
+                a=trig(I.q(x),co);v=mp.cos(mp.mpf(x.numerator)/x.denominator) if co else mp.sin(mp.mpf(x.numerator)/x.denominator)
+                if not mp.mpf(float(a.lo))<=v<=mp.mpf(float(a.hi)):raise AssertionError('trig')
+    return {'exact_rational_basic_operations':count,'pi_interval':PI.record(),'trig_independent_high_precision':'pass'}
+
+
+def mesh(ref,denom):
+    out=[]
+    for stage in range(3):
+        length=F(1,4) if stage!=1 else PI-I.q(F(1,4))
+        count=math.ceil((float(length.hi) if isinstance(length,I) else float(length))*denom)
+        # Exact rational widths and an interval-enclosed irrational seam.
+        for k in range(count):
+            start=F(k,denom)
+            if stage==1 and k==count-1:
+                hh=length-I.q(start)
+            else:hh=I.q(min(F(1,denom),F(1,4)-start)) if stage!=1 else I.q(F(1,denom))
+            out.append((stage,start,hh,ref.local(stage,start,float(hh.hi))))
+    return out
+
+
+def inputs():return {p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}
+
+
+def contains(outer,inner):
+    return bool(np.all(outer.lo<=inner.lo) and np.all(outer.hi>=inner.hi))
+
+
+def time_enclosure(cp,data,ref,duration,tt,radius):
+    """Independent replay of the integrated polynomial identity for t_s."""
+    defect,A,P,Pi,w,c=data
+    h=float(duration.hi)
+    zp=[q[0] for q in cp];wp=ref['w'];quot=[]
+    for k in range(ORDER+1):quot.append((zp[k]-isum(wp[j]*quot[k-j] for j in range(1,min(k,len(wp)-1)+1)))/wp[0])
+    remainder=psub(zp,pmul(wp,quot))
+    integral=isum(quot[k]*(duration**(k+1))/(k+1) for k in range(ORDER+1))
+    error=(peval(remainder,I(0,h))+mat(P,I(-radius,radius))[0])/w*I(0,h)
+    return tt+integral+error
+
+
+def replay(args):
+    """Read recorded approximants; never call the center/radius generator.
+
+    An incomplete receipt can validate only its recorded local inequalities.
+    No prefix replay is a full-domain capture certificate.
+    """
+    path=ROOT/'evidence/common-drive-validated-capture.json'
+    original=path.read_bytes();receipt=json.loads(original)
+    frozen=inputs();ref=Reference();denom=int(F(receipt['predeclared_strategy']['max_step']).denominator)
+    phases=mesh(ref,denom);count=0;fail=[];cell_reports=[]
+    reference_min=min(float(peval(row[3]['w'],I(0,float(row[2].hi))).lo) for row in phases)
+    if reference_min<=0:raise AssertionError('full source reference positivity')
+    expected_indices=set(range(120))
+    actual_indices=[]
+    for cell in receipt['cells']:
+        idx=cell['index'];actual_indices.append(idx);iz=idx//4;iv=idx%4
+        if not 0<=idx<120:raise AssertionError('cell index')
+        zl=F(1,4)+F(iz,1000);zh=zl+F(1,1000);vl=-F(1,2000)+F(iv,4000);vh=vl+F(1,4000)
+        if cell['z_rational']!=[str(zl),str(zh)] or cell['v_rational']!=[str(vl),str(vh)]:raise AssertionError('preparation cover')
+        previous_center=stack([I(I.q(zl).lo,I.q(zh).hi),I(I.q(vl).lo,I.q(vh).hi),ZERO])
+        previous_basis=None;previous_radius=None;tt=ZERO;whole_z_lower=math.inf
+        for k,row in enumerate(cell['segments']):
+            stage,start,duration,local=phases[k]
+            if row['number']!=k or row['phase_stage']!=stage or row['phase_local_start']!=str(start):raise AssertionError('phase order')
+            if row['duration']!=duration.record() or row['h']!=float(duration.hi):raise AssertionError('irrational seam duration')
+            cp=[I(*x) for x in row['c']];Pp=[I(*x) for x in row['P']]
+            if any(np.any(x.lo!=x.hi) for x in cp+Pp):raise AssertionError('approximants must be exact dyadic points')
+            r0=np.array(row['r0']);rate=np.array(row['rates']);lammax=row['lambda_max'];lamnom=(1+lammax)/2
+            if lammax!=(1 if iz>=20 else 3):raise AssertionError('control range')
+            initial_shift=previous_center-cp[0] if previous_basis is None and np.array_equal(Pp[0].lo,np.eye(3)) and np.array_equal(Pp[0].hi,np.eye(3)) else mat(inv(Pp[0]),previous_center-cp[0])
+            if previous_basis is not None:
+                initial_shift=initial_shift+mat(mat(inv(Pp[0]),previous_basis),I(-previous_radius,previous_radius))
+            if np.any(initial_shift.mag()>r0):raise AssertionError(('interface containment',idx,k,initial_shift.mag(),r0))
+            data=tube_quantities(cp,Pp,local,lamnom,float(duration.hi))
+            endrad=(I(r0)+I(float(duration.hi))*I(rate)).hi
+            required=up(derivative_bound(data,endrad,lamnom,lammax))
+            if not np.all(required<rate):raise AssertionError(('whole segment outward faces',idx,k))
+            whole=data[-1]+mat(data[2],I(-endrad,endrad))
+            if float(whole[0].lo)<float(I.q(F(3,200)).hi):raise AssertionError(('whole segment z',idx,k))
+            tnext=time_enclosure(cp,data,local,duration,tt,endrad)
+            if float(tnext.hi)>=7:raise AssertionError(('whole segment time',idx,k))
+            if lammax==1 and float(tnext.hi)>=float(PI.lo):raise AssertionError(('no-return prefix bootstrap',idx,k))
+            stored_time=I(*row['t_next'])
+            if not contains(stored_time,tnext):raise AssertionError(('recorded time interval',idx,k))
+            tt=stored_time
+            previous_center=peval(cp,duration);previous_basis=peval(Pp,duration);previous_radius=endrad
+            whole_z_lower=min(whole_z_lower,float(whole[0].lo));count+=1
+        complete=len(cell['segments'])==len(phases)
+        entry={'cell':idx,'replayed_segments':len(cell['segments']),'source_completed':complete,'whole_prefix_z_lower':whole_z_lower,'prefix_time_upper':float(tt.hi)}
+        if complete:
+            final=previous_center+mat(previous_basis,I(-previous_radius,previous_radius));z,v,l=final[0],final[1],final[2]
+            energy=v*v+z*z-z+ETA*lammax*l
+            passed=float(energy.hi)<=float(I.q(F(-3,200)).lo) and float(tt.hi)<=7 and (lammax!=1 or float(tt.hi)<float(PI.lo))
+            entry.update({'energy_upper':float(energy.hi),'all_targets_verified':passed})
+            if not passed:fail.append({'cell':idx,'reason':'endpoint target'})
+        else:fail.append({'cell':idx,'reason':'incomplete phase coverage'})
+        cell_reports.append(entry)
+    full=set(actual_indices)==expected_indices and len(actual_indices)==120 and not fail
+    if inputs()!=frozen:raise RuntimeError('source changed during replay')
+    result={'verifier_mode':'recorded approximants; no center or radius iteration called',
+            'generation_receipt_sha256':hashlib.sha256(original).hexdigest(),'verifier_source_sha256':frozen,
+            'replayed_whole_segments':count,'cell_reports':cell_reports,
+            'full_source_reference_w_lower':reference_min,
+            'arithmetic':{'endpoint_format':'IEEE754 binary64','rounding':'one outward nextafter per elementary operation; explicit interval reductions',
+                          'pi':'rational Machin alternating sums (48 and16 terms)',
+                          'trigonometry':'36-term Taylor polynomial and exact rational absolute remainder',
+                          'reference_order':54,'local_reference_order':14,'local_tail_majorant_through_order':32},
+            'full_120_cell_cover_present':set(actual_indices)==expected_indices and len(actual_indices)==120,
+            'certified_full_rectangle':full,'outcome':'FULL_CERTIFICATE_PASS' if full else 'LOCAL_PREFIX_ONLY_FULL_CAPTURE_UNCERTIFIED',
+            'failure_scope':fail,'unvisited_preparation_cells':sorted(expected_indices-set(actual_indices))}
+    receipt['independent_replay']=result
+    for attempt in receipt.get('prior_attempts',[]):
+        attempt['verification_status']='Development estimate only; prefix not accepted. This attempt predates tail/time/threshold tightenings and was not replayed as rigorous evidence.'
+    receipt['current_source_sha256']=frozen
+    receipt['source_hash_explanation']='Original generation hashes retained. Current checker adds read-only reconstruction/replay and reporting; current note reports the failed estimates. Recorded approximants are verified directly against the current exact source.'
+    path.write_text(json.dumps(receipt,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
+    print(json.dumps(result,indent=2),flush=True)
+    return 0 if full else 2
+
+
+def run(args):
+    began=time.time();frozen_hashes=inputs();checks=primitive_tests();ref=Reference();phases=mesh(ref,args.denom)
+    wmin=min(float(peval(x[3]['w'],I(0,float(x[2].hi))).lo) for x in phases)
+    if wmin<=0:raise AssertionError('whole reference positivity')
+    print('PREDECLARED full cover=120, targets z>=.015,t<=7,e<=-.015, |r|<=1e-6',flush=True)
+    print('REFERENCE whole-segment w lower',wmin,flush=True)
+    receipt={'scope':'stipulated free matter/minimal JT only','fixed_targets':{'z_min':'.015','completion_max':7,'energy_max':'-.015','residual_abs_max':'1e-6'},
+             'predeclared_strategy':{'cells':120,'order':ORDER,'max_step':str(F(1,args.denom)),'max_radius_iterations':MAX_ITER,'basis':args.basis},
+             'source_sha256':frozen_hashes,'primitives':checks,'reference_whole_segment_w_lower':wmin,
+             'cells':[],'failures':[],'certified_full_rectangle':False}
+    indices=list(range(120)) if args.cell is None else [args.cell]
+    for idx in indices:
+        iz=idx//4;iv=idx%4
+        zl=F(1,4)+F(iz,1000);zh=zl+F(1,1000)
+        vl=-F(1,2000)+F(iv,4000);vh=vl+F(1,4000)
+        zi=I(I.q(zl).lo,I.q(zh).hi);vi=I(I.q(vl).lo,I.q(vh).hi)
+        c=np.array([float(I.q((zl+zh)/2).mid()),float(I.q((vl+vh)/2).mid()),0.])
+        initial=stack([zi,vi,ZERO])-I(c)
+        r=up(initial.mag());Q=np.eye(3);tt=ZERO
+        lammax=1 if iz>=20 else 3
+        item={'index':idx,'z_rational':[str(zl),str(zh)],'v_rational':[str(vl),str(vh)],'lambda_max':lammax,'segments':[]}
+        for number,(stage,s,h,local) in enumerate(phases):
+            try:result,rec=segment(c,Q,r,tt,local,h,lammax,args.basis)
+            except (ArithmeticError,ValueError,FloatingPointError) as exc:result,rec=None,{'reason':'interval_operation_failed','exception':repr(exc)}
+            rec.update({'phase_stage':stage,'phase_local_start':str(s),'number':number})
+            if result is None:
+                item['failure']=rec;receipt['failures'].append({'cell':idx,**rec});break
+            item['segments'].append(rec);c,Q,r,tt=result
+        else:
+            final=I(c)+mat(I(Q),I(-r,r))
+            zz,vv,ll=final[0],final[1],final[2]
+            energy=vv*vv+zz*zz-zz+ETA*lammax*ll
+            condition=asfloat(energy.hi)<=asfloat(I.q(F(-3,200)).lo) and asfloat(tt.hi)<=7 and (lammax!=1 or asfloat(tt.hi)<float(PI.lo))
+            item.update({'completion_time':tt.record(),'endpoint':final.record(),'energy_upper':asfloat(energy.hi),'all_targets_verified':condition})
+            if not condition:receipt['failures'].append({'cell':idx,'reason':'endpoint_or_no_return_target_not_closed','energy_upper':asfloat(energy.hi),'time':tt.record()})
+        receipt['cells'].append(item)
+        print('CELL',idx,'segments',len(item['segments']),'result',item.get('all_targets_verified',item.get('failure',{}).get('reason')),flush=True)
+        if receipt['failures'] and args.stop_first:break
+    receipt['certified_full_rectangle']=len(receipt['cells'])==120 and not receipt['failures']
+    receipt['elapsed_seconds']=time.time()-began
+    receipt['python']=sys.version;receipt['platform']=platform.platform();receipt['numpy']=np.__version__
+    receipt['terminal_outcome']='PASS' if receipt['certified_full_rectangle'] else 'INCOMPLETE_ENCLOSURE_NOT_PHYSICAL_FAILURE'
+    if inputs()!=frozen_hashes:raise RuntimeError('source changed during run; receipt rejected')
+    output=ROOT/'evidence/common-drive-validated-capture.json'
+    if output.exists():
+        previous=json.loads(output.read_text(encoding='utf-8'))
+        receipt['prior_attempts']=previous.get('prior_attempts',[])+[{k:v for k,v in previous.items() if k not in ('prior_attempts','cells')}|{'cell_prefix_summary':[{'index':v['index'],'segments':len(v['segments']),'failure':v.get('failure'),'all_targets_verified':v.get('all_targets_verified')} for v in previous['cells']],'receipt_sha256':hashlib.sha256(output.read_bytes()).hexdigest()}]
+    output.write_text(json.dumps(receipt,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
+    print(receipt['terminal_outcome'],'elapsed',receipt['elapsed_seconds'],flush=True)
+    return 0 if receipt['certified_full_rectangle'] else 2
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--cell',type=int);p.add_argument('--denom',type=int,choices=[40,80],default=40);p.add_argument('--basis',choices=['qr','carried'],default='carried');p.add_argument('--stop-first',action='store_true');p.add_argument('--replay',action='store_true')
+    args=p.parse_args();sys.exit(replay(args) if args.replay else run(args))

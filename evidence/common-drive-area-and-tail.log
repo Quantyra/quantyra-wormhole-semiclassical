@@ -1,0 +1,70 @@
+ATTEMPT 1
+CWD: C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical
+COMMAND: C:\Users\dfred\QuantyraTools\SpaceProofs\python\python.exe checks/common_drive_area_and_tail.py
+STDOUT:
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 222, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 201, in main
+    symbolic=symbolic_checks(), tail=tail_checks(), spatial_green=green_checks(),
+             ~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 53, in symbolic_checks
+    require_zero(k_left-sp.tan(s/2))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 32, in require_zero
+    raise AssertionError(('nonzero symbolic remainder', result))
+AssertionError: ('nonzero symbolic remainder', -tan(s/2) - 1/tan(s) + 1/sin(s))
+EXIT STATUS: 1
+ATTEMPT 2; exact half-angle cross multiplication; frozen tolerances unchanged
+CWD: C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical
+COMMAND: C:\Users\dfred\QuantyraTools\SpaceProofs\python\python.exe checks/common_drive_area_and_tail.py
+STDOUT:
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 225, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 204, in main
+    symbolic=symbolic_checks(), tail=tail_checks(), spatial_green=green_checks(),
+                                                                  ~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 166, in green_checks
+    require_zero(sp.diff(flux, s)+T)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\common_drive_area_and_tail.py", line 32, in require_zero
+    raise AssertionError(('nonzero symbolic remainder', result))
+AssertionError: ('nonzero symbolic remainder', -2*sin(4*s)/(11*tan(s)) + 4*cos(2*s)/11 + 2*cos(4*s)/11 + 2/11)
+EXIT STATUS: 1
+ATTEMPT 3; expand-angle symbolic fallback; frozen tolerances unchanged
+CWD: C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical
+COMMAND: C:\Users\dfred\QuantyraTools\SpaceProofs\python\python.exe checks/common_drive_area_and_tail.py
+STDOUT:
+{
+  "status": "pass",
+  "milestone": "E003/S136.4",
+  "tail_maximum_error": "3.933064160293708641203416948052562653278324048285381205e-62",
+  "green_maximum_error": "1.555753819465285426786016013445031060147563042180291783e-61",
+  "receipt": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\evidence\\common-drive-area-and-tail.json"
+}
+STDERR:
+EXIT STATUS: 0
+POST-RUN DOCUMENTATION-ONLY UPDATE; no symbolic or numerical rerun required
+[
+  {
+    "path": "notes/common-drive-area-and-tail.md",
+    "run_input_sha256": "9fa11e8ab5c5d83410e0d18bb70a798e61b4c0615765383cca3ffe556c001f50",
+    "final_input_sha256": "0f61eacedf878b2381d00ce240ab51c2a7608b7dc96b74ff60a3744cf491440a",
+    "change_scope": "post-run documentation-only clarification: anomaly-shifted versus raw area and physical response scope; numerical and symbolic definitions unchanged",
+    "computation_repeated": false
+  },
+  {
+    "path": "notes/physical-clock-remainder.md",
+    "run_input_sha256": "a45e5ada88fecc8c3179b3955dba60841aa010b7a77813bc597fcd48f94ab2b6",
+    "final_input_sha256": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972",
+    "change_scope": "post-run documentation-only clarification: anomaly-shifted versus raw area and physical response scope; numerical and symbolic definitions unchanged",
+    "computation_repeated": false
+  }
+]
+Final verification: listed input hashes match LF-normalized source; code unchanged; all artifacts valid UTF-8/LF and zero NUL.
+Final checker command and cwd remain ATTEMPT 3 above. FINAL ACCEPTED COMPUTATION EXIT STATUS: 0

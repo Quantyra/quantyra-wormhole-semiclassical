@@ -1,0 +1,212 @@
+{
+  "status": "pass",
+  "milestone": "E003/S136.4",
+  "scientific_verdict": "conditional free-JT area/tail control; bounded persistent residual is insufficient",
+  "frozen_protocol": {
+    "decimal_digits": 60,
+    "independent_quadrature_tolerance": "1e-35",
+    "eta": "1/2000",
+    "driving_clock_target": "3/200",
+    "completion_target": "7",
+    "endpoint_energy_target": "-3/200",
+    "postcompletion_tail_L1": "1/200"
+  },
+  "symbolic": {
+    "spatial_operator_and_distributional_green_kernel": "exact symbolic pass",
+    "kernel_range_proof": "K<=tan(s/2)<=1 on 0<s<=pi/2; K>=0",
+    "zero_charge_witness_Ttt": "5*A*sin(s)^2*(4*cos(s)^2-1)",
+    "zero_charge_witness_Tss": "A*sin(s)^2*(4*cos(s)^2+1)",
+    "zero_charge_witness_integral_boundary_and_conservation": "exact symbolic pass",
+    "resonant_forcing_and_unbounded_negative_subsequence": "exact symbolic pass",
+    "exact_constants": {
+      "eta": "1/2000",
+      "qmax": "13/75",
+      "Dmax": "13/25",
+      "gf_min": "12/25",
+      "area_floor": "-97/200",
+      "free_clock_floor_square_gap": "9/40000",
+      "tail_L1": "1/200",
+      "future_clock_floor": ">1/100",
+      "classical_margin_at_k_2000": "51199999999999999999999999999999903/200"
+    }
+  },
+  "tail": {
+    "rows": [
+      {
+        "profile": "exp_decay",
+        "time": "0.2",
+        "delta_z": "0.00001866675301590072150257580949463014866763681250132654121",
+        "delta_v": "0.0001800025777791604939568368176237596017025699170388788628",
+        "rigorous_envelope_L1": "0.001",
+        "independent_error": "3.933064160293708641203416948052562653278324048285381205e-62"
+      },
+      {
+        "profile": "exp_decay",
+        "time": "1.7",
+        "delta_z": "0.0006515964144003639748288385468708445256488757030290318747",
+        "delta_v": "0.0003400683960521046405172948517770311267579438681380918507",
+        "rigorous_envelope_L1": "0.001",
+        "independent_error": "7.596454196607838997978593815649565723376772666895955973e-65"
+      },
+      {
+        "profile": "exp_decay",
+        "time": "8.0",
+        "delta_z": "0.0005675968715299489077578931846011321078725248332825014038",
+        "delta_v": "0.0004217613750934328700502304136441565642438942476032598591",
+        "rigorous_envelope_L1": "0.001",
+        "independent_error": "7.596454196607838997978593815649565723376772666895955973e-65"
+      },
+      {
+        "profile": "modulated_decay",
+        "time": "0.2",
+        "delta_z": "0.00002186523912588215999668811393055000536010460801903553031",
+        "delta_v": "0.0002039239148127835095439189667387603116132677892228008621",
+        "rigorous_envelope_L1": "0.000625",
+        "independent_error": "9.495567745759798747473242269561957154220965833619944966e-66"
+      },
+      {
+        "profile": "modulated_decay",
+        "time": "1.7",
+        "delta_z": "0.0005077593501867015043516677675059318781429218182635998579",
+        "delta_v": "0.000134272903310436441183835407248748778052710940261643079",
+        "rigorous_envelope_L1": "0.000625",
+        "independent_error": "7.596454196607838997978593815649565723376772666895955973e-65"
+      },
+      {
+        "profile": "modulated_decay",
+        "time": "8.0",
+        "delta_z": "0.0005087750991650130367555772324460619532519335086235130274",
+        "delta_v": "0.0001304867993714099986655116808780409641545593602109562048",
+        "rigorous_envelope_L1": "0.000625",
+        "independent_error": "1.899113549151959749494648453912391430844193166723988993e-65"
+      },
+      {
+        "profile": "signed_gaussian",
+        "time": "0.2",
+        "delta_z": "0.00000154981184128053118877365904032070268545850555124050799",
+        "delta_v": "0.00002275526417142799109113193975440691824127933228271502833",
+        "rigorous_envelope_L1": "0.0003544907701811032054596334966682290365595098912244774256",
+        "independent_error": "2.373891936439949686868310567390489288555241458404986242e-66"
+      },
+      {
+        "profile": "signed_gaussian",
+        "time": "1.7",
+        "delta_z": "0.0001744606976699920906738031786111310076327165968500339821",
+        "delta_v": "0.00004237555883970747389870849309116842039928238802707978845",
+        "rigorous_envelope_L1": "0.0003544907701811032054596334966682290365595098912244774256",
+        "independent_error": "1.899113549151959749494648453912391430844193166723988993e-65"
+      },
+      {
+        "profile": "signed_gaussian",
+        "time": "8.0",
+        "delta_z": "0.0001751123734038870882253842573230346330777624680130634328",
+        "delta_v": "0.00003687209827506559679498454803602815493446474514058631955",
+        "rigorous_envelope_L1": "0.0003544907701811032054596334966682290365595098912244774256",
+        "independent_error": "1.899113549151959749494648453912391430844193166723988993e-65"
+      }
+    ],
+    "maximum_error": "3.933064160293708641203416948052562653278324048285381205e-62",
+    "profile_scope": "smooth verification residuals, no physical assignment"
+  },
+  "spatial_green": {
+    "rows": [
+      {
+        "profile": "negative_sine_squared",
+        "sigma": "0.2416609733530610183432802602522694526305514922596235247",
+        "reconstructed_phi": "0.1089940191591270091535986835254330066670801520971319947",
+        "independent_error": "2.917038411497410175223780025209433237776680704088047094e-62"
+      },
+      {
+        "profile": "negative_sine_squared",
+        "sigma": "0.6283185307179586476925286766559005768394338798750211642",
+        "reconstructed_phi": "-0.04767280944531368634020851057867375582841097435941363979",
+        "independent_error": "3.889384548663213566965040033612577650368907605450729458e-62"
+      },
+      {
+        "profile": "negative_sine_squared",
+        "sigma": "1.57079632679489661923132169163975144209858469968755291",
+        "reconstructed_phi": "-0.2557142857142857142857142857142857142857142857142857143",
+        "independent_error": "7.778769097326427133930080067225155300737815210901458916e-62"
+      },
+      {
+        "profile": "zero_charge_witness",
+        "sigma": "0.2416609733530610183432802602522694526305514922596235247",
+        "reconstructed_phi": "0.4623187815645015048382431016609353178337342227995529894",
+        "independent_error": "0.0"
+      },
+      {
+        "profile": "zero_charge_witness",
+        "sigma": "0.6283185307179586476925286766559005768394338798750211642",
+        "reconstructed_phi": "0.1174148858577252689675912530131151631259805053835398437",
+        "independent_error": "8.751115234492230525671340075628299713330042112264141281e-62"
+      },
+      {
+        "profile": "zero_charge_witness",
+        "sigma": "1.57079632679489661923132169163975144209858469968755291",
+        "reconstructed_phi": "-0.4888888888888888888888888888888888888888888888888888889",
+        "independent_error": "1.555753819465285426786016013445031060147563042180291783e-61"
+      },
+      {
+        "profile": "mixed_smooth_profile",
+        "sigma": "0.2416609733530610183432802602522694526305514922596235247",
+        "reconstructed_phi": "0.6165736304403259947481007627293462665227317319482340023",
+        "independent_error": "7.778769097326427133930080067225155300737815210901458916e-62"
+      },
+      {
+        "profile": "mixed_smooth_profile",
+        "sigma": "0.6283185307179586476925286766559005768394338798750211642",
+        "reconstructed_phi": "0.3252711332994440843162586739678715622766152200972215118",
+        "independent_error": "0.0"
+      },
+      {
+        "profile": "mixed_smooth_profile",
+        "sigma": "1.57079632679489661923132169163975144209858469968755291",
+        "reconstructed_phi": "0.1428571428571428571428571428571428571428571428571428571",
+        "independent_error": "3.889384548663213566965040033612577650368907605450729458e-62"
+      }
+    ],
+    "maximum_error": "1.555753819465285426786016013445031060147563042180291783e-61",
+    "profile_scope": "smooth metric-equation verification sources, no matter realization"
+  },
+  "claim_limits": {
+    "full_preparation_rectangle_certified": false,
+    "driving_and_endpoint_targets_assumed_not_proved": true,
+    "area_bound_for_arbitrary_clock_residual": false,
+    "free_area_requires_consistent_free_JT_r_zero": true,
+    "physical_tail_bound_derived": false,
+    "renormalized_extremal_area_or_full_physical_area_certified": false,
+    "physical_opening_or_stability_claimed": false,
+    "Lean_run": false
+  },
+  "input_hash_policy": "SHA-256 of UTF-8 source bytes after CRLF/CR normalization to LF; no other normalization",
+  "inputs_sha256": {
+    "notes/common-drive-area-and-tail.md": "0f61eacedf878b2381d00ce240ab51c2a7608b7dc96b74ff60a3744cf491440a",
+    "checks/common_drive_area_and_tail.py": "39321c99ae71f5dbc177fd447fcb19d05bbc80034d587bf2f5149578255a7352",
+    "notes/jt-prescribed-source-constraint.md": "fa3215de69c80fa04fac642511e4f6225e22aa60ef1120755ffdfd09902c4b67",
+    "notes/laboratory-drive-clock-feedback.md": "5f149bccdebbf121ac98d8aa45c5d4bf641b8b5fef7e4ccbc4408259a6f19059",
+    "notes/physical-clock-remainder.md": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972"
+  },
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0"
+  },
+  "post_run_documentation_updates": [
+    {
+      "path": "notes/common-drive-area-and-tail.md",
+      "run_input_sha256": "9fa11e8ab5c5d83410e0d18bb70a798e61b4c0615765383cca3ffe556c001f50",
+      "final_input_sha256": "0f61eacedf878b2381d00ce240ab51c2a7608b7dc96b74ff60a3744cf491440a",
+      "change_scope": "post-run documentation-only clarification: anomaly-shifted versus raw area and physical response scope; numerical and symbolic definitions unchanged",
+      "computation_repeated": false
+    },
+    {
+      "path": "notes/physical-clock-remainder.md",
+      "run_input_sha256": "a45e5ada88fecc8c3179b3955dba60841aa010b7a77813bc597fcd48f94ab2b6",
+      "final_input_sha256": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972",
+      "change_scope": "post-run documentation-only clarification: anomaly-shifted versus raw area and physical response scope; numerical and symbolic definitions unchanged",
+      "computation_repeated": false
+    }
+  ],
+  "final_source_verification": "All listed input hashes verified after text-only documentation updates; checker source and accepted numerical/symbolic computations unchanged."
+}
