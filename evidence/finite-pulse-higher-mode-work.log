@@ -1,0 +1,18 @@
+
+RUN 2026-10-16T05:10:10.160866+00:00
+COMMAND ["C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe", "-B", "checks/finite_pulse_higher_mode_work.py"] CWD C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical
+INPUT_SHA256 {"checks/finite_pulse_higher_mode_work.py": "1486b25f06ca879e5babdfad6591810a87ce800b04b02bda6ac405f1bcb6c0c0", "notes/common-drive-validated-capture.md": "259466199e7cc84223c92c9db8d8254e67591aeb5dbd353e02ceeb983518ffab", "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace", "notes/finite-pulse-higher-mode-work.md": "febbf9851630f5abf129cb66e3a3133bf66f004c388eea14fa36d6cbb69ba241", "notes/laboratory-drive-clock-feedback.md": "5f149bccdebbf121ac98d8aa45c5d4bf641b8b5fef7e4ccbc4408259a6f19059", "notes/rn-higher-mode-boundary-spectral-control.md": "3fadbf8ba2e073c6297d65db6adfe55cf4963d12d0639bf712a4a0b75eda7baa", "notes/rn-shifted-boundary-moments.md": "7106581bd87fdccebe1be71a23bc622157ca06185079563ad9ff44a6297bab60"}
+PREDECLARED_CONTRACT {"decimal_precisions": [60, 90], "finite_tolerances": ["2e-7", "2e-8"], "ode_refinements": [["2e-10", "2e-12"], ["2e-12", "2e-14"]], "scalar_cases": [[18, ".05", 1], [32, ".2", 3]], "scalar_orders": [2, 3, 4], "scalar_tail": "8/[3*pi*(2*r-1)]*P**(1-2*r), P=max(100,4*mu)", "scalar_tolerances": ["2e-8", "2e-9"], "scope": "ordinary continuum theorem with supplementary scalar/finite tests; no RN discretization", "target": "abs(W_higher,U)/(nu*N*eta)<=1e-8; proved bound<1e-34"}
+scalar M=18 r=2 dps=60: diff=2.123185e-7 tail=2.8294212e-7
+scalar M=18 r=3 dps=60: diff=1.2740308e-11 tail=1.6976527e-11
+scalar M=18 r=4 dps=60: diff=9.1006597e-16 tail=1.2126091e-15
+scalar M=32 r=2 dps=60: diff=2.1255172e-7 tail=2.8294212e-7
+scalar M=32 r=3 dps=60: diff=1.2756472e-11 tail=1.6976527e-11
+scalar M=32 r=4 dps=60: diff=9.112846e-16 tail=1.2126091e-15
+scalar M=18 r=2 dps=90: diff=2.123185e-7 tail=2.8294212e-7
+scalar M=18 r=3 dps=90: diff=1.2740308e-11 tail=1.6976527e-11
+scalar M=18 r=4 dps=90: diff=9.1006597e-16 tail=1.2126091e-15
+scalar M=32 r=2 dps=90: diff=2.1255172e-7 tail=2.8294212e-7
+scalar M=32 r=3 dps=90: diff=1.2756472e-11 tail=1.6976527e-11
+scalar M=32 r=4 dps=90: diff=9.112846e-16 tail=1.2126091e-15
+TERMINAL_EXIT_STATUS 0 CHECKS 272 FAILURES 0
