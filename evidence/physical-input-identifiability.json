@@ -1,0 +1,95 @@
+{
+  "verdict": "structural ambiguity established; derivative-only continuation closed",
+  "all_order_scale_derivative": "(-1)**n*b*factorial(n - 1)/mu**n",
+  "all_order_fixed_C_mu0_partial": "(-1)**(n - 1)*b*factorial(n - 1)/mu0**n",
+  "all_order_proof": "exact symbolic base and arbitrary-positive-integer induction step",
+  "reference_scale_scope": "mu0 partial holds C independent; physical total derivative adds dC/dmu0=-b/mu0 and vanishes",
+  "aggregate_rank": 1,
+  "aggregate_kernel": [
+    "-2*L",
+    "1"
+  ],
+  "two_geometry_determinant": "-2*A1*A2*(L1 - L2)",
+  "two_geometry_assumptions": "same scale, scheme and common couplings; independently known nonzero A_i and distinct L_i; independently matched Lambda_i",
+  "rational_same_data_witness": {
+    "zeta_C_1": [
+      "13",
+      "2"
+    ],
+    "zeta_C_2": [
+      "7",
+      "3"
+    ],
+    "A": "2",
+    "L": "3",
+    "Lambda": "50"
+  },
+  "rational_two_geometry_inverse": {
+    "A": [
+      "2",
+      "3"
+    ],
+    "L": [
+      "3",
+      "5"
+    ],
+    "Lambda": [
+      "50",
+      "99"
+    ],
+    "recovered_zeta": "13",
+    "recovered_C": "2"
+  },
+  "rational_susceptibility_inverse": {
+    "cJ": "7/5",
+    "B0": "3/2",
+    "kappa_grav": "2/3",
+    "chi": "101/45",
+    "recovered_cJ": "7/5"
+  },
+  "numeric_checks": {
+    "dps": 60,
+    "step": "1e-8",
+    "absolute_tolerance": "1e-14",
+    "scale_derivative_absolute_errors": [
+      "5.00351524159692711831000956405275531853041465261894503613764e-20",
+      "5.00351524159692711831000956405275609640732438526165842914565e-20"
+    ],
+    "fixed_C_mu0_partial_absolute_errors": [
+      "0.00000000000000000135094911523117061014618049827732977858401175183820443290674",
+      "0.00000000000000000135094911523117061014618049827732977858401175183820443290674"
+    ],
+    "susceptibility_absolute_error": "1.43244968791653641416090502802998038461841726175629514625492e-53",
+    "mouth_values": [
+      "0.857952354287769511524445363460707815142958896072273649434287",
+      "0.607385335131926618904291052641241165155139869857534697098307"
+    ]
+  },
+  "physical_measurements_supplied": false,
+  "synthetic_examples_only": true,
+  "S074_complete": false,
+  "new_Lambda_interval": false,
+  "area_budget_evaluated": false,
+  "opening_achieved": false,
+  "stability_achieved": false,
+  "transport_achieved": false,
+  "preparation_achieved": false,
+  "creation_achieved": false,
+  "inputs_sha256": {
+    "notes/source-clock-running-inputs.md": "f764d3d43aa2698c8e6d36efb9b3093bcc48a7cc03fbc547c02dda0377a80d6b",
+    "notes/source-clock-controller.md": "9f9143d898661136ed6dc0e6a553ebc3b3ce850b38f229205902f20174d1f7f7",
+    "checks/source_clock_joint.py": "a17adbc5b1acb8327a89a0d1fb1524b7dbf88493318f8164bd9a5549d37eecb3",
+    "notes/finite-local-electromagnetic-input.md": "9cf84ad9801b1bb86bdab5d3bcb6f32d424a23792b574f7af3c36ff217c3d6a8",
+    "notes/finite-mouth-determinant.md": "fb7213ef5df7157eb62d13baedb2e79d9a5a4c7859c8985f70c51f89963a0228",
+    "checks/finite_local_electromagnetic_input.py": "8d8c040a4ebdb4ed15d267a6bf5d5f1e793da94ba6363b40c3ff7c252100f1cd",
+    "notes/physical-input-identifiability.md": "647f4974960c4c2480e6773fa8cd4014302a368d42f7a62f082b9ac71eb911a6",
+    "checks/physical_input_identifiability.py": "5989de8da22a61878914ddb506a831c78de3bd5be3ac67653389ae708700e774"
+  },
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "status": "pass"
+}
