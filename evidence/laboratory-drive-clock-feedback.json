@@ -1,0 +1,1331 @@
+{
+  "status": "pass",
+  "milestone": "E003/S135.3",
+  "scientific_verdict": "numerical capture at six corners; old quantitative margins and fixed completion time do not transfer to one laboratory waveform",
+  "frozen_model": {
+    "eta": 0.0005,
+    "reference_initial": [
+      0.265,
+      0.0
+    ],
+    "horizon": 8.0,
+    "phase_domain_max": 16.0,
+    "z_domain_stop": 0.005,
+    "global_reference_source_completion": 3.391592653589793,
+    "residual": "r=0; no nonzero residual radius selected"
+  },
+  "symbolic": {
+    "aligned_and_inverse_phase_identities": "exact symbolic pass",
+    "quintic_squared_integral": "181/462",
+    "d0_Lipschitz_constant": "30*eta"
+  },
+  "reference_independent_error": 1.1679546219056647e-13,
+  "same_initial_identity_control_error": 6.217248937900877e-15,
+  "cases": [
+    {
+      "initial": [
+        0.25,
+        -0.0005
+      ],
+      "terminal_time": 8.0,
+      "domain_exit": false,
+      "sampled_min_z": 0.047211074710158674,
+      "source_completion_time": 6.590141080062362,
+      "source_completion_shift": 3.198548426472569,
+      "max_phase_shift": 3.3951753073017015,
+      "common_time_central_error_before_Tstar": 0.016625788471269998,
+      "common_time_same_preparation_error_before_Tstar": 0.02612581678824294,
+      "common_time_central_error_after_Tstar": 0.16695268950306297,
+      "common_time_same_preparation_error_after_Tstar": 0.15795940792350083,
+      "old_common_time_one_over_200_clock_budget": false,
+      "old_common_time_post_one_over_50_clock_budget": false,
+      "final_g": 0.997879360667619,
+      "completion_energy": -0.1729840454228992,
+      "negative_energy_capture_diagnostic": true,
+      "autonomous_future_min_z": 0.22333714190445325,
+      "old_minus_one_over_25_energy_margin": true,
+      "validation": {
+        "uniform_refinement_error": 5.7688076537942834e-11,
+        "uniform_independent_aligned_RK45_error": 4.4642067820177544e-13,
+        "completion_time_errors": [
+          4.5150549965455866e-11,
+          3.2862601528904634e-14
+        ],
+        "completion_energy_errors": [
+          1.1727285809115529e-12,
+          3.7192471324942744e-15
+        ],
+        "max_memory_integral_error": 3.258113197231226e-13,
+        "post_completion_energy_drift": 4.551914400963142e-15,
+        "energy_work_error": 2.0786511401027497e-11,
+        "sampled_radiation_defect_checks": [
+          {
+            "t": 0.05,
+            "actual_D_defect": 8.098304484746149e-06,
+            "analytic_bound": 0.00016488317583066342
+          },
+          {
+            "t": 0.2984375,
+            "actual_D_defect": 0.00010971572502712929,
+            "analytic_bound": 0.00037106427200514117
+          },
+          {
+            "t": 0.546875,
+            "actual_D_defect": 8.464189637650632e-05,
+            "analytic_bound": 0.0005292351126105716
+          },
+          {
+            "t": 0.7953125000000001,
+            "actual_D_defect": 4.6478261247000566e-05,
+            "analytic_bound": 0.000615130287975659
+          },
+          {
+            "t": 1.04375,
+            "actual_D_defect": 3.530872126876212e-06,
+            "analytic_bound": 0.0006144312192844965
+          },
+          {
+            "t": 1.2921875,
+            "actual_D_defect": 6.641534612736549e-05,
+            "analytic_bound": 0.000740191094031932
+          },
+          {
+            "t": 1.5406250000000001,
+            "actual_D_defect": 0.00014895381318086797,
+            "analytic_bound": 0.0010193151682867333
+          },
+          {
+            "t": 1.7890625,
+            "actual_D_defect": 0.00026980977487912287,
+            "analytic_bound": 0.001522124073404243
+          },
+          {
+            "t": 2.0375,
+            "actual_D_defect": 0.0004587299378452814,
+            "analytic_bound": 0.002377380389638321
+          },
+          {
+            "t": 2.2859374999999997,
+            "actual_D_defect": 0.0007141940674363493,
+            "analytic_bound": 0.0037191776358161586
+          },
+          {
+            "t": 2.534375,
+            "actual_D_defect": 0.0009711567505018373,
+            "analytic_bound": 0.005551669498061625
+          },
+          {
+            "t": 2.7828125,
+            "actual_D_defect": 0.0011773930010814417,
+            "analytic_bound": 0.007768826763924279
+          },
+          {
+            "t": 3.03125,
+            "actual_D_defect": 0.0013273833954979188,
+            "analytic_bound": 0.010260292518632353
+          },
+          {
+            "t": 3.2796875,
+            "actual_D_defect": 4.1683339381063875e-05,
+            "analytic_bound": 0.01306196679282481
+          },
+          {
+            "t": 3.5281249999999997,
+            "actual_D_defect": 0.0005951075017861449,
+            "analytic_bound": 0.015864097921869925
+          },
+          {
+            "t": 3.7765625,
+            "actual_D_defect": 0.0005139259280398244,
+            "analytic_bound": 0.018744789799507097
+          },
+          {
+            "t": 4.025,
+            "actual_D_defect": 0.00043712905847201203,
+            "analytic_bound": 0.02167510486287361
+          },
+          {
+            "t": 4.2734375,
+            "actual_D_defect": 0.00036169917914378883,
+            "analytic_bound": 0.02468005643106185
+          },
+          {
+            "t": 4.521875,
+            "actual_D_defect": 0.0002829467537154018,
+            "analytic_bound": 0.02777742378964843
+          },
+          {
+            "t": 4.7703125,
+            "actual_D_defect": 0.00018968571436551833,
+            "analytic_bound": 0.030898749139359066
+          },
+          {
+            "t": 5.01875,
+            "actual_D_defect": 5.7961016328096464e-05,
+            "analytic_bound": 0.03404939493291187
+          },
+          {
+            "t": 5.2671875,
+            "actual_D_defect": 0.00013740822492193145,
+            "analytic_bound": 0.03723498545383561
+          },
+          {
+            "t": 5.515625,
+            "actual_D_defect": 0.00036780554684445656,
+            "analytic_bound": 0.0404043176308887
+          },
+          {
+            "t": 5.7640625,
+            "actual_D_defect": 0.0005580558262860964,
+            "analytic_bound": 0.04345387931880061
+          },
+          {
+            "t": 6.0125,
+            "actual_D_defect": 0.0006897257189406431,
+            "analytic_bound": 0.046304865302964605
+          },
+          {
+            "t": 6.2609375,
+            "actual_D_defect": 0.0010052769159807136,
+            "analytic_bound": 0.04889567675866139
+          },
+          {
+            "t": 6.509375,
+            "actual_D_defect": 0.0006696960996715922,
+            "analytic_bound": 0.05125234190771474
+          },
+          {
+            "t": 6.7578125,
+            "actual_D_defect": 0.0005656064959416161,
+            "analytic_bound": 0.05297110087145601
+          },
+          {
+            "t": 7.00625,
+            "actual_D_defect": 0.0004863498093515442,
+            "analytic_bound": 0.05389692773022835
+          },
+          {
+            "t": 7.2546875,
+            "actual_D_defect": 0.0004103962213211675,
+            "analytic_bound": 0.05399825219740924
+          },
+          {
+            "t": 7.503125,
+            "actual_D_defect": 0.00033452903809784744,
+            "analytic_bound": 0.05656908448474422
+          },
+          {
+            "t": 7.7515625,
+            "actual_D_defect": 0.0002524554396753226,
+            "analytic_bound": 0.06261502729760418
+          },
+          {
+            "t": 8.0,
+            "actual_D_defect": 0.00014903156919807668,
+            "analytic_bound": 0.07218709160503489
+          }
+        ]
+      },
+      "same_preparation_global_baseline_completion_energy": -0.06572235180701952,
+      "matched_source_completion_energy_difference": -0.10726169361587967,
+      "old_absolute_energy_correction_one_over_50_budget": false,
+      "comparison_time_windows": {
+        "before_Tstar": "old fixed global-time [0,Tstar] window",
+        "after_Tstar": "old fixed global-time [Tstar,8] window; not necessarily the actual post-source interval"
+      }
+    },
+    {
+      "initial": [
+        0.25,
+        0.0
+      ],
+      "terminal_time": 8.0,
+      "domain_exit": false,
+      "sampled_min_z": 0.04746619114560653,
+      "source_completion_time": 6.632570108944592,
+      "source_completion_shift": 3.240977455354799,
+      "max_phase_shift": 3.4245742031908275,
+      "common_time_central_error_before_Tstar": 0.016587269826524184,
+      "common_time_same_preparation_error_before_Tstar": 0.026950294895177973,
+      "common_time_central_error_after_Tstar": 0.1694894385096517,
+      "common_time_same_preparation_error_after_Tstar": 0.16007248948092123,
+      "old_common_time_one_over_200_clock_budget": false,
+      "old_common_time_post_one_over_50_clock_budget": false,
+      "final_g": 0.9978835206636351,
+      "completion_energy": -0.1739290949645363,
+      "negative_energy_capture_diagnostic": true,
+      "autonomous_future_min_z": 0.22505531444871701,
+      "old_minus_one_over_25_energy_margin": true,
+      "validation": {
+        "uniform_refinement_error": 5.3015369871900475e-11,
+        "uniform_independent_aligned_RK45_error": 3.646860591288714e-12,
+        "completion_time_errors": [
+          4.0821568347837456e-11,
+          2.6911806116913795e-12
+        ],
+        "completion_energy_errors": [
+          1.0294542995836764e-12,
+          4.934941344458821e-14
+        ],
+        "max_memory_integral_error": 1.2897566552900943e-13,
+        "post_completion_energy_drift": 7.216449660063518e-16,
+        "energy_work_error": 2.984321123555844e-11,
+        "sampled_radiation_defect_checks": [
+          {
+            "t": 0.05,
+            "actual_D_defect": 8.082930943536582e-06,
+            "analytic_bound": 0.00016463157021248432
+          },
+          {
+            "t": 0.2984375,
+            "actual_D_defect": 0.00010848134581762725,
+            "analytic_bound": 0.0003684311622785382
+          },
+          {
+            "t": 0.546875,
+            "actual_D_defect": 8.250343283208944e-05,
+            "analytic_bound": 0.0005225312230256651
+          },
+          {
+            "t": 0.7953125000000001,
+            "actual_D_defect": 4.361688895853592e-05,
+            "analytic_bound": 0.0006030145160632503
+          },
+          {
+            "t": 1.04375,
+            "actual_D_defect": 6.9149201306615594e-06,
+            "analytic_bound": 0.0006038893808116641
+          },
+          {
+            "t": 1.2921875,
+            "actual_D_defect": 7.014796501969914e-05,
+            "analytic_bound": 0.0007366509884216722
+          },
+          {
+            "t": 1.5406250000000001,
+            "actual_D_defect": 0.0001529208405651654,
+            "analytic_bound": 0.0010231953577022291
+          },
+          {
+            "t": 1.7890625,
+            "actual_D_defect": 0.0002739437206701152,
+            "analytic_bound": 0.0015337287731396055
+          },
+          {
+            "t": 2.0375,
+            "actual_D_defect": 0.00046296086118409853,
+            "analytic_bound": 0.0023968818057952344
+          },
+          {
+            "t": 2.2859374999999997,
+            "actual_D_defect": 0.0007186381047820862,
+            "analytic_bound": 0.003746930150920096
+          },
+          {
+            "t": 2.534375,
+            "actual_D_defect": 0.0009760491630212624,
+            "analytic_bound": 0.0055885543279954675
+          },
+          {
+            "t": 2.7828125,
+            "actual_D_defect": 0.0011826460943842989,
+            "analytic_bound": 0.007815558095326766
+          },
+          {
+            "t": 3.03125,
+            "actual_D_defect": 0.0013327760809554604,
+            "analytic_bound": 0.010317111956816779
+          },
+          {
+            "t": 3.2796875,
+            "actual_D_defect": 4.77581339943516e-05,
+            "analytic_bound": 0.01312826097966874
+          },
+          {
+            "t": 3.5281249999999997,
+            "actual_D_defect": 0.000588192508169228,
+            "analytic_bound": 0.015939354248498492
+          },
+          {
+            "t": 3.7765625,
+            "actual_D_defect": 0.0005061962970323254,
+            "analytic_bound": 0.01882909098545238
+          },
+          {
+            "t": 4.025,
+            "actual_D_defect": 0.00042872303426871395,
+            "analytic_bound": 0.021768689421707323
+          },
+          {
+            "t": 4.2734375,
+            "actual_D_defect": 0.0003527333396297185,
+            "analytic_bound": 0.024790366196470227
+          },
+          {
+            "t": 4.521875,
+            "actual_D_defect": 0.000273476014544118,
+            "analytic_bound": 0.027898549653318706
+          },
+          {
+            "t": 4.7703125,
+            "actual_D_defect": 0.00017967727675613802,
+            "analytic_bound": 0.031031216855231872
+          },
+          {
+            "t": 5.01875,
+            "actual_D_defect": 4.732424668293109e-05,
+            "analytic_bound": 0.0341940500461502
+          },
+          {
+            "t": 5.2671875,
+            "actual_D_defect": 0.00014884031376236583,
+            "analytic_bound": 0.037393087127814056
+          },
+          {
+            "t": 5.515625,
+            "actual_D_defect": 0.0003805286498957726,
+            "analytic_bound": 0.04057790398941805
+          },
+          {
+            "t": 5.7640625,
+            "actual_D_defect": 0.0005726071161858582,
+            "analytic_bound": 0.04364565422692838
+          },
+          {
+            "t": 6.0125,
+            "actual_D_defect": 0.0006909343095765339,
+            "analytic_bound": 0.046518300129223915
+          },
+          {
+            "t": 6.2609375,
+            "actual_D_defect": 0.0009372675415210659,
+            "analytic_bound": 0.04913585839170715
+          },
+          {
+            "t": 6.509375,
+            "actual_D_defect": 0.0007032551458086237,
+            "analytic_bound": 0.05152618783646598
+          },
+          {
+            "t": 6.7578125,
+            "actual_D_defect": 0.000558386974193211,
+            "analytic_bound": 0.05329117846868927
+          },
+          {
+            "t": 7.00625,
+            "actual_D_defect": 0.0004783648092192448,
+            "analytic_bound": 0.05428406860486331
+          },
+          {
+            "t": 7.2546875,
+            "actual_D_defect": 0.00040178068851798874,
+            "analytic_bound": 0.0543377936732323
+          },
+          {
+            "t": 7.503125,
+            "actual_D_defect": 0.00032538220112121683,
+            "analytic_bound": 0.056762934509299055
+          },
+          {
+            "t": 7.7515625,
+            "actual_D_defect": 0.00024280219148036485,
+            "analytic_bound": 0.06262449145185903
+          },
+          {
+            "t": 8.0,
+            "actual_D_defect": 0.0001388115583861125,
+            "analytic_bound": 0.072154946933745
+          }
+        ]
+      },
+      "same_preparation_global_baseline_completion_energy": -0.06603744699951747,
+      "matched_source_completion_energy_difference": -0.10789164796501882,
+      "old_absolute_energy_correction_one_over_50_budget": false,
+      "comparison_time_windows": {
+        "before_Tstar": "old fixed global-time [0,Tstar] window",
+        "after_Tstar": "old fixed global-time [Tstar,8] window; not necessarily the actual post-source interval"
+      }
+    },
+    {
+      "initial": [
+        0.25,
+        0.0005
+      ],
+      "terminal_time": 8.0,
+      "domain_exit": false,
+      "sampled_min_z": 0.04772076271644451,
+      "source_completion_time": 6.673597426480951,
+      "source_completion_shift": 3.282004772891158,
+      "max_phase_shift": 3.4532880498177043,
+      "common_time_central_error_before_Tstar": 0.016563883176626888,
+      "common_time_same_preparation_error_before_Tstar": 0.02776625366756036,
+      "common_time_central_error_after_Tstar": 0.17196714868481533,
+      "common_time_same_preparation_error_after_Tstar": 0.1621313935938079,
+      "old_common_time_one_over_200_clock_budget": false,
+      "old_common_time_post_one_over_50_clock_budget": false,
+      "final_g": 0.9978852089620451,
+      "completion_energy": -0.17479009356586628,
+      "negative_energy_capture_diagnostic": true,
+      "autonomous_future_min_z": 0.22663096499339463,
+      "old_minus_one_over_25_energy_margin": true,
+      "validation": {
+        "uniform_refinement_error": 4.8117954065673985e-11,
+        "uniform_independent_aligned_RK45_error": 7.895906151134113e-12,
+        "completion_time_errors": [
+          3.653877200804345e-11,
+          5.992539797716745e-12
+        ],
+        "completion_energy_errors": [
+          8.855693955922561e-13,
+          1.5870638137016613e-13
+        ],
+        "max_memory_integral_error": 1.1372230129705167e-13,
+        "post_completion_energy_drift": 2.220446049250313e-16,
+        "energy_work_error": 3.4998087761195507e-11,
+        "sampled_radiation_defect_checks": [
+          {
+            "t": 0.05,
+            "actual_D_defect": 8.067564240282944e-06,
+            "analytic_bound": 0.0001643800122405725
+          },
+          {
+            "t": 0.2984375,
+            "actual_D_defect": 0.00010724841731466232,
+            "analytic_bound": 0.0003658006029941419
+          },
+          {
+            "t": 0.546875,
+            "actual_D_defect": 8.03694436857438e-05,
+            "analytic_bound": 0.0005158382281042379
+          },
+          {
+            "t": 0.7953125000000001,
+            "actual_D_defect": 4.076397960844913e-05,
+            "analytic_bound": 0.0005909255730061166
+          },
+          {
+            "t": 1.04375,
+            "actual_D_defect": 1.0285838261898765e-05,
+            "analytic_bound": 0.000594116751539515
+          },
+          {
+            "t": 1.2921875,
+            "actual_D_defect": 7.38612489193497e-05,
+            "analytic_bound": 0.0007338440393851074
+          },
+          {
+            "t": 1.5406250000000001,
+            "actual_D_defect": 0.0001568576935909768,
+            "analytic_bound": 0.001027752854025928
+          },
+          {
+            "t": 1.7890625,
+            "actual_D_defect": 0.00027802572706270854,
+            "analytic_bound": 0.0015459148286349012
+          },
+          {
+            "t": 2.0375,
+            "actual_D_defect": 0.00046710062871926005,
+            "analytic_bound": 0.0024167949183611743
+          },
+          {
+            "t": 2.2859374999999997,
+            "actual_D_defect": 0.0007229401784296645,
+            "analytic_bound": 0.003774826503413397
+          },
+          {
+            "t": 2.534375,
+            "actual_D_defect": 0.0009807612213955496,
+            "analytic_bound": 0.005625240849530427
+          },
+          {
+            "t": 2.7828125,
+            "actual_D_defect": 0.0011877017334845775,
+            "analytic_bound": 0.007861719286660573
+          },
+          {
+            "t": 3.03125,
+            "actual_D_defect": 0.0013379668123665559,
+            "analytic_bound": 0.010372983410441626
+          },
+          {
+            "t": 3.2796875,
+            "actual_D_defect": 5.363088536046489e-05,
+            "analytic_bound": 0.013193231549538505
+          },
+          {
+            "t": 3.5281249999999997,
+            "actual_D_defect": 0.0005814803167209842,
+            "analytic_bound": 0.016012915677358585
+          },
+          {
+            "t": 3.7765625,
+            "actual_D_defect": 0.0004986729939566062,
+            "analytic_bound": 0.01891132741943756
+          },
+          {
+            "t": 4.025,
+            "actual_D_defect": 0.00042053004224232565,
+            "analytic_bound": 0.021859835433672058
+          },
+          {
+            "t": 4.2734375,
+            "actual_D_defect": 0.0003439912454525373,
+            "analytic_bound": 0.024897823663123975
+          },
+          {
+            "t": 4.521875,
+            "actual_D_defect": 0.0002642460418638723,
+            "analytic_bound": 0.0280164088988082
+          },
+          {
+            "t": 4.7703125,
+            "actual_D_defect": 0.00016993810391121873,
+            "analytic_bound": 0.031159969890505772
+          },
+          {
+            "t": 5.01875,
+            "actual_D_defect": 3.70052060202279e-05,
+            "analytic_bound": 0.03433448939506862
+          },
+          {
+            "t": 5.2671875,
+            "actual_D_defect": 0.00015988015101739005,
+            "analytic_bound": 0.03754639933540138
+          },
+          {
+            "t": 5.515625,
+            "actual_D_defect": 0.0003927696783233958,
+            "analytic_bound": 0.04074604729739702
+          },
+          {
+            "t": 5.7640625,
+            "actual_D_defect": 0.0005865895442754027,
+            "analytic_bound": 0.04383124601649498
+          },
+          {
+            "t": 6.0125,
+            "actual_D_defect": 0.0007012030364935376,
+            "analytic_bound": 0.04672468331673182
+          },
+          {
+            "t": 6.2609375,
+            "actual_D_defect": 0.0008813967905105769,
+            "analytic_bound": 0.049367915765171695
+          },
+          {
+            "t": 6.509375,
+            "actual_D_defect": 0.0007583112830200863,
+            "analytic_bound": 0.05179050066808366
+          },
+          {
+            "t": 6.7578125,
+            "actual_D_defect": 0.0005513711684876862,
+            "analytic_bound": 0.05359975843937235
+          },
+          {
+            "t": 7.00625,
+            "actual_D_defect": 0.00047058812509611844,
+            "analytic_bound": 0.05465686456413296
+          },
+          {
+            "t": 7.2546875,
+            "actual_D_defect": 0.00039338145324866554,
+            "analytic_bound": 0.05467649478401838
+          },
+          {
+            "t": 7.503125,
+            "actual_D_defect": 0.00031646423227978983,
+            "analytic_bound": 0.056960827132621045
+          },
+          {
+            "t": 7.7515625,
+            "actual_D_defect": 0.00023339811956633785,
+            "analytic_bound": 0.06263814413732186
+          },
+          {
+            "t": 8.0,
+            "actual_D_defect": 0.00012887523099032764,
+            "analytic_bound": 0.07211145408266932
+          }
+        ]
+      },
+      "same_preparation_global_baseline_completion_energy": -0.06635204219201551,
+      "matched_source_completion_energy_difference": -0.10843805137385076,
+      "old_absolute_energy_correction_one_over_50_budget": false,
+      "comparison_time_windows": {
+        "before_Tstar": "old fixed global-time [0,Tstar] window",
+        "after_Tstar": "old fixed global-time [Tstar,8] window; not necessarily the actual post-source interval"
+      }
+    },
+    {
+      "initial": [
+        0.28,
+        -0.0005
+      ],
+      "terminal_time": 8.0,
+      "domain_exit": false,
+      "sampled_min_z": 0.020238469724642636,
+      "source_completion_time": 2.4244528922803186,
+      "source_completion_shift": -0.9671397613094745,
+      "max_phase_shift": 4.865917567095524,
+      "common_time_central_error_before_Tstar": 0.036268358650509036,
+      "common_time_same_preparation_error_before_Tstar": 0.050680826953108105,
+      "common_time_central_error_after_Tstar": 0.07214929630568548,
+      "common_time_same_preparation_error_after_Tstar": 0.07751855496177601,
+      "old_common_time_one_over_200_clock_budget": false,
+      "old_common_time_post_one_over_50_clock_budget": false,
+      "final_g": 0.9959675531972921,
+      "completion_energy": -0.021192003165945317,
+      "negative_energy_capture_diagnostic": true,
+      "autonomous_future_min_z": 0.021752909697407785,
+      "old_minus_one_over_25_energy_margin": false,
+      "validation": {
+        "uniform_refinement_error": 7.348788244598836e-10,
+        "uniform_independent_aligned_RK45_error": 1.3960477218688538e-10,
+        "completion_time_errors": [
+          2.439248802943439e-11,
+          4.75042227776612e-12
+        ],
+        "completion_energy_errors": [
+          5.138580533303738e-12,
+          1.6912339584340685e-12
+        ],
+        "max_memory_integral_error": 1.2638717519384765e-12,
+        "post_completion_energy_drift": 3.7987321621635317e-13,
+        "energy_work_error": 4.328176705925557e-12,
+        "sampled_radiation_defect_checks": [
+          {
+            "t": 0.05,
+            "actual_D_defect": 5.339900550519001e-06,
+            "analytic_bound": 0.00014684316453671443
+          },
+          {
+            "t": 0.2984375,
+            "actual_D_defect": 9.736797195794913e-05,
+            "analytic_bound": 0.0003295046320021883
+          },
+          {
+            "t": 0.546875,
+            "actual_D_defect": 7.608978520128994e-05,
+            "analytic_bound": 0.00047165641247219603
+          },
+          {
+            "t": 0.7953125000000001,
+            "actual_D_defect": 4.2937714761700184e-05,
+            "analytic_bound": 0.0005512728383992187
+          },
+          {
+            "t": 1.04375,
+            "actual_D_defect": 3.141672343701888e-06,
+            "analytic_bound": 0.0005510925137953243
+          },
+          {
+            "t": 1.2921875,
+            "actual_D_defect": 6.647352161066487e-05,
+            "analytic_bound": 0.0006759290469674295
+          },
+          {
+            "t": 1.5406250000000001,
+            "actual_D_defect": 0.00016266729466800443,
+            "analytic_bound": 0.000978008927887838
+          },
+          {
+            "t": 1.7890625,
+            "actual_D_defect": 0.0003556969226373328,
+            "analytic_bound": 0.0016276889997330639
+          },
+          {
+            "t": 2.0375,
+            "actual_D_defect": 0.0009919763585372445,
+            "analytic_bound": 0.0033813807958648565
+          },
+          {
+            "t": 2.2859374999999997,
+            "actual_D_defect": 0.00464715818412435,
+            "analytic_bound": 0.011239210160697628
+          },
+          {
+            "t": 2.534375,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07131833156238879
+          },
+          {
+            "t": 2.7828125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07576569203411487
+          },
+          {
+            "t": 3.03125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07411796642355212
+          },
+          {
+            "t": 3.2796875,
+            "actual_D_defect": 0.0009706917086175586,
+            "analytic_bound": 0.07644602679923479
+          },
+          {
+            "t": 3.5281249999999997,
+            "actual_D_defect": 9.117164711838874e-05,
+            "analytic_bound": 0.0791753752178779
+          },
+          {
+            "t": 3.7765625,
+            "actual_D_defect": 6.571274164177934e-05,
+            "analytic_bound": 0.08217934676144413
+          },
+          {
+            "t": 4.025,
+            "actual_D_defect": 2.8193628549803926e-05,
+            "analytic_bound": 0.0853368249884562
+          },
+          {
+            "t": 4.2734375,
+            "actual_D_defect": 2.3204692771078977e-05,
+            "analytic_bound": 0.08862845742154445
+          },
+          {
+            "t": 4.521875,
+            "actual_D_defect": 9.528101808776264e-05,
+            "analytic_bound": 0.09206203046121293
+          },
+          {
+            "t": 4.7703125,
+            "actual_D_defect": 0.00021317620283086086,
+            "analytic_bound": 0.09558339437514361
+          },
+          {
+            "t": 5.01875,
+            "actual_D_defect": 0.0004890925289077956,
+            "analytic_bound": 0.09928920223407126
+          },
+          {
+            "t": 5.2671875,
+            "actual_D_defect": 0.0016030857098806722,
+            "analytic_bound": 0.10384797541743004
+          },
+          {
+            "t": 5.515625,
+            "actual_D_defect": 0.009512074653040532,
+            "analytic_bound": 0.11520713394201917
+          },
+          {
+            "t": 5.7640625,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.13228742691450993
+          },
+          {
+            "t": 6.0125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.11455896777850351
+          },
+          {
+            "t": 6.2609375,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.11652560382517978
+          },
+          {
+            "t": 6.509375,
+            "actual_D_defect": 0.00014543584852952395,
+            "analytic_bound": 0.12068700513517867
+          },
+          {
+            "t": 6.7578125,
+            "actual_D_defect": 8.349196201101468e-05,
+            "analytic_bound": 0.12426156364075558
+          },
+          {
+            "t": 7.00625,
+            "actual_D_defect": 5.3831714014630034e-05,
+            "analytic_bound": 0.12758901600851724
+          },
+          {
+            "t": 7.2546875,
+            "actual_D_defect": 1.1741921805504332e-05,
+            "analytic_bound": 0.13068438080299083
+          },
+          {
+            "t": 7.503125,
+            "actual_D_defect": 4.5738417630074215e-05,
+            "analytic_bound": 0.1335364149675815
+          },
+          {
+            "t": 7.7515625,
+            "actual_D_defect": 0.00012930218607129203,
+            "analytic_bound": 0.13580566712314215
+          },
+          {
+            "t": 8.0,
+            "actual_D_defect": 0.00028042294699559024,
+            "analytic_bound": 0.13632444419452458
+          }
+        ]
+      },
+      "same_preparation_global_baseline_completion_energy": -0.047449677633452814,
+      "matched_source_completion_energy_difference": 0.026257674467507496,
+      "old_absolute_energy_correction_one_over_50_budget": false,
+      "comparison_time_windows": {
+        "before_Tstar": "old fixed global-time [0,Tstar] window",
+        "after_Tstar": "old fixed global-time [Tstar,8] window; not necessarily the actual post-source interval"
+      }
+    },
+    {
+      "initial": [
+        0.28,
+        0.0
+      ],
+      "terminal_time": 8.0,
+      "domain_exit": false,
+      "sampled_min_z": 0.02043598012984724,
+      "source_completion_time": 2.4333500637063037,
+      "source_completion_shift": -0.9582425898834894,
+      "max_phase_shift": 4.827914032874689,
+      "common_time_central_error_before_Tstar": 0.03480329064893639,
+      "common_time_same_preparation_error_before_Tstar": 0.04933917379474262,
+      "common_time_central_error_after_Tstar": 0.0705925085715165,
+      "common_time_same_preparation_error_after_Tstar": 0.07627683532247348,
+      "old_common_time_one_over_200_clock_budget": false,
+      "old_common_time_post_one_over_50_clock_budget": false,
+      "final_g": 0.996018125081767,
+      "completion_energy": -0.021458932882437748,
+      "negative_energy_capture_diagnostic": true,
+      "autonomous_future_min_z": 0.022032074136599578,
+      "old_minus_one_over_25_energy_margin": false,
+      "validation": {
+        "uniform_refinement_error": 8.537712758993621e-10,
+        "uniform_independent_aligned_RK45_error": 1.5298873279334657e-10,
+        "completion_time_errors": [
+          2.6336710590157963e-11,
+          4.53814763545779e-12
+        ],
+        "completion_energy_errors": [
+          1.2729782505882525e-11,
+          2.6846511125278028e-12
+        ],
+        "max_memory_integral_error": 2.2645982006676887e-12,
+        "post_completion_energy_drift": 1.6903145549918008e-14,
+        "energy_work_error": 2.563699252888796e-12,
+        "sampled_radiation_defect_checks": [
+          {
+            "t": 0.05,
+            "actual_D_defect": 5.3477176494842195e-06,
+            "analytic_bound": 0.00014704384623794562
+          },
+          {
+            "t": 0.2984375,
+            "actual_D_defect": 9.837183793548151e-05,
+            "analytic_bound": 0.00033163475611526093
+          },
+          {
+            "t": 0.546875,
+            "actual_D_defect": 7.790961490813887e-05,
+            "analytic_bound": 0.00047723696898363896
+          },
+          {
+            "t": 0.7953125000000001,
+            "actual_D_defect": 4.554893660554168e-05,
+            "analytic_bound": 0.000561776255558071
+          },
+          {
+            "t": 1.04375,
+            "actual_D_defect": 2.5972897740606654e-07,
+            "analytic_bound": 0.0005613538984127607
+          },
+          {
+            "t": 1.2921875,
+            "actual_D_defect": 6.216379352768069e-05,
+            "analytic_bound": 0.000677619030533709
+          },
+          {
+            "t": 1.5406250000000001,
+            "actual_D_defect": 0.0001568423993171899,
+            "analytic_bound": 0.0009689189519049138
+          },
+          {
+            "t": 1.7890625,
+            "actual_D_defect": 0.0003453587650358199,
+            "analytic_bound": 0.0015999549836218628
+          },
+          {
+            "t": 2.0375,
+            "actual_D_defect": 0.0009565190628082303,
+            "analytic_bound": 0.0032931147581865754
+          },
+          {
+            "t": 2.2859374999999997,
+            "actual_D_defect": 0.00434530285613485,
+            "analytic_bound": 0.010669031741851999
+          },
+          {
+            "t": 2.534375,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.06581988727208743
+          },
+          {
+            "t": 2.7828125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07531554372452874
+          },
+          {
+            "t": 3.03125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07364546946987287
+          },
+          {
+            "t": 3.2796875,
+            "actual_D_defect": 0.0009711729157322949,
+            "analytic_bound": 0.07569149671918411
+          },
+          {
+            "t": 3.5281249999999997,
+            "actual_D_defect": 9.246761271438828e-05,
+            "analytic_bound": 0.07837802227940334
+          },
+          {
+            "t": 3.7765625,
+            "actual_D_defect": 6.781575159146023e-05,
+            "analytic_bound": 0.08135528434243794
+          },
+          {
+            "t": 4.025,
+            "actual_D_defect": 3.108224393087505e-05,
+            "analytic_bound": 0.08449471518440557
+          },
+          {
+            "t": 4.2734375,
+            "actual_D_defect": 1.950691300554473e-05,
+            "analytic_bound": 0.08776595208042273
+          },
+          {
+            "t": 4.521875,
+            "actual_D_defect": 9.055431201567292e-05,
+            "analytic_bound": 0.0911878138428734
+          },
+          {
+            "t": 4.7703125,
+            "actual_D_defect": 0.00020637122838651316,
+            "analytic_bound": 0.09469844296132814
+          },
+          {
+            "t": 5.01875,
+            "actual_D_defect": 0.0004745681382407425,
+            "analytic_bound": 0.09838925481913789
+          },
+          {
+            "t": 5.2671875,
+            "actual_D_defect": 0.0015349298687421364,
+            "analytic_bound": 0.10288808608184505
+          },
+          {
+            "t": 5.515625,
+            "actual_D_defect": 0.008679246923896652,
+            "analytic_bound": 0.11347695562305797
+          },
+          {
+            "t": 5.7640625,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.1335268057094668
+          },
+          {
+            "t": 6.0125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.11401873044826512
+          },
+          {
+            "t": 6.2609375,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.11551794023445891
+          },
+          {
+            "t": 6.509375,
+            "actual_D_defect": 0.0001463280369382882,
+            "analytic_bound": 0.1197317348006293
+          },
+          {
+            "t": 6.7578125,
+            "actual_D_defect": 8.507707900311549e-05,
+            "analytic_bound": 0.12332237122141497
+          },
+          {
+            "t": 7.00625,
+            "actual_D_defect": 5.621487337172408e-05,
+            "analytic_bound": 0.12665639528410352
+          },
+          {
+            "t": 7.2546875,
+            "actual_D_defect": 1.4909787331128261e-05,
+            "analytic_bound": 0.12975664433804
+          },
+          {
+            "t": 7.503125,
+            "actual_D_defect": 4.172083396798915e-05,
+            "analytic_bound": 0.1326098227036118
+          },
+          {
+            "t": 7.7515625,
+            "actual_D_defect": 0.00012404758475261174,
+            "analytic_bound": 0.1349047547117114
+          },
+          {
+            "t": 8.0,
+            "actual_D_defect": 0.0002720866807653325,
+            "analytic_bound": 0.1355429313300034
+          }
+        ]
+      },
+      "same_preparation_global_baseline_completion_energy": -0.047764772825950874,
+      "matched_source_completion_energy_difference": 0.026305839943513126,
+      "old_absolute_energy_correction_one_over_50_budget": false,
+      "comparison_time_windows": {
+        "before_Tstar": "old fixed global-time [0,Tstar] window",
+        "after_Tstar": "old fixed global-time [Tstar,8] window; not necessarily the actual post-source interval"
+      }
+    },
+    {
+      "initial": [
+        0.28,
+        0.0005
+      ],
+      "terminal_time": 8.0,
+      "domain_exit": false,
+      "sampled_min_z": 0.020633045067514753,
+      "source_completion_time": 2.442327552033385,
+      "source_completion_shift": -0.9492651015564082,
+      "max_phase_shift": 4.789364391841643,
+      "common_time_central_error_before_Tstar": 0.033336459660237405,
+      "common_time_same_preparation_error_before_Tstar": 0.04799575764925079,
+      "common_time_central_error_after_Tstar": 0.06903625483630096,
+      "common_time_same_preparation_error_after_Tstar": 0.07503433517361646,
+      "old_common_time_one_over_200_clock_budget": false,
+      "old_common_time_post_one_over_50_clock_budget": false,
+      "final_g": 0.9960677695028486,
+      "completion_energy": -0.021728052745587208,
+      "negative_energy_capture_diagnostic": true,
+      "autonomous_future_min_z": 0.0223136963896019,
+      "old_minus_one_over_25_energy_margin": false,
+      "validation": {
+        "uniform_refinement_error": 7.52213402677171e-10,
+        "uniform_independent_aligned_RK45_error": 1.1743228611749146e-10,
+        "completion_time_errors": [
+          2.6779023443168626e-11,
+          4.2299497238218464e-12
+        ],
+        "completion_energy_errors": [
+          1.6776302569354584e-12,
+          5.148312332003968e-14
+        ],
+        "max_memory_integral_error": 1.4783724171609815e-12,
+        "post_completion_energy_drift": 4.7704895589362195e-14,
+        "energy_work_error": 2.9870550477539837e-13,
+        "sampled_radiation_defect_checks": [
+          {
+            "t": 0.05,
+            "actual_D_defect": 5.355531341279696e-06,
+            "analytic_bound": 0.00014724449399857335
+          },
+          {
+            "t": 0.2984375,
+            "actual_D_defect": 9.937464108585275e-05,
+            "analytic_bound": 0.000333763020892386
+          },
+          {
+            "t": 0.546875,
+            "actual_D_defect": 7.972594910044006e-05,
+            "analytic_bound": 0.00048280919593926325
+          },
+          {
+            "t": 0.7953125000000001,
+            "actual_D_defect": 4.815287858481697e-05,
+            "analytic_bound": 0.0005722577386244286
+          },
+          {
+            "t": 1.04375,
+            "actual_D_defect": 3.6482692808187563e-06,
+            "analytic_bound": 0.0005781986062719813
+          },
+          {
+            "t": 1.2921875,
+            "actual_D_defect": 5.787695564817355e-05,
+            "analytic_bound": 0.0006801467204938488
+          },
+          {
+            "t": 1.5406250000000001,
+            "actual_D_defect": 0.00015106814185548382,
+            "analytic_bound": 0.0009607576975349247
+          },
+          {
+            "t": 1.7890625,
+            "actual_D_defect": 0.0003352039230627734,
+            "analytic_bound": 0.0015734648015456477
+          },
+          {
+            "t": 2.0375,
+            "actual_D_defect": 0.0009224782482691206,
+            "analytic_bound": 0.0032083772616825577
+          },
+          {
+            "t": 2.2859374999999997,
+            "actual_D_defect": 0.004070474923469873,
+            "analytic_bound": 0.010143009811182315
+          },
+          {
+            "t": 2.534375,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.060268470335180215
+          },
+          {
+            "t": 2.7828125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07485162897226712
+          },
+          {
+            "t": 3.03125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.07322556159138784
+          },
+          {
+            "t": 3.2796875,
+            "actual_D_defect": 0.0009716538165656554,
+            "analytic_bound": 0.07493159723021667
+          },
+          {
+            "t": 3.5281249999999997,
+            "actual_D_defect": 9.376180750089442e-05,
+            "analytic_bound": 0.07757219720237576
+          },
+          {
+            "t": 3.7765625,
+            "actual_D_defect": 6.991408330053002e-05,
+            "analytic_bound": 0.08052087490478778
+          },
+          {
+            "t": 4.025,
+            "actual_D_defect": 3.396186453596744e-05,
+            "analytic_bound": 0.0836410171852819
+          },
+          {
+            "t": 4.2734375,
+            "actual_D_defect": 1.5824752344567507e-05,
+            "analytic_bound": 0.0868910034251714
+          },
+          {
+            "t": 4.521875,
+            "actual_D_defect": 8.585680557884629e-05,
+            "analytic_bound": 0.09030048348181768
+          },
+          {
+            "t": 4.7703125,
+            "actual_D_defect": 0.0001996406542330363,
+            "analytic_bound": 0.09379987549968333
+          },
+          {
+            "t": 5.01875,
+            "actual_D_defect": 0.00046038715449926064,
+            "analytic_bound": 0.09747549673124715
+          },
+          {
+            "t": 5.2671875,
+            "actual_D_defect": 0.0014703773417306418,
+            "analytic_bound": 0.10191723708898458
+          },
+          {
+            "t": 5.515625,
+            "actual_D_defect": 0.007948065717318698,
+            "analytic_bound": 0.11183348662505155
+          },
+          {
+            "t": 5.7640625,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.1344126301327986
+          },
+          {
+            "t": 6.0125,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.11350590194354172
+          },
+          {
+            "t": 6.2609375,
+            "actual_D_defect": 0.002,
+            "analytic_bound": 0.11448529859310261
+          },
+          {
+            "t": 6.509375,
+            "actual_D_defect": 0.00014721972548821624,
+            "analytic_bound": 0.11875684492699562
+          },
+          {
+            "t": 6.7578125,
+            "actual_D_defect": 8.665954621088902e-05,
+            "analytic_bound": 0.12236478363060409
+          },
+          {
+            "t": 7.00625,
+            "actual_D_defect": 5.8592000711176016e-05,
+            "analytic_bound": 0.12570550793652552
+          },
+          {
+            "t": 7.2546875,
+            "actual_D_defect": 1.8066678619600793e-05,
+            "analytic_bound": 0.12881024509199432
+          },
+          {
+            "t": 7.503125,
+            "actual_D_defect": 3.7722382893553685e-05,
+            "analytic_bound": 0.13166362310542024
+          },
+          {
+            "t": 7.7515625,
+            "actual_D_defect": 0.00011883168904970685,
+            "analytic_bound": 0.1339817970609106
+          },
+          {
+            "t": 8.0,
+            "actual_D_defect": 0.00026386824774761973,
+            "analytic_bound": 0.13472820141350905
+          }
+        ]
+      },
+      "same_preparation_global_baseline_completion_energy": -0.048079368018448865,
+      "matched_source_completion_energy_difference": 0.026351315272861657,
+      "old_absolute_energy_correction_one_over_50_budget": false,
+      "comparison_time_windows": {
+        "before_Tstar": "old fixed global-time [0,Tstar] window",
+        "after_Tstar": "old fixed global-time [Tstar,8] window; not necessarily the actual post-source interval"
+      }
+    }
+  ],
+  "tolerances": {
+    "uniform_state_completion_energy": 2e-06,
+    "memory_work_identity": 2e-08,
+    "defect_bound_rounding": 1e-08
+  },
+  "claim_limits": {
+    "interval_certification": false,
+    "whole_preparation_box_verified": false,
+    "nonzero_residual_range_verified": false,
+    "old_six_corner_quantitative_theorem_transferred": false,
+    "four_dimensional_opening_claimed": false,
+    "S074_complete": false
+  },
+  "inputs_sha256": {
+    "notes/laboratory-drive-clock-feedback.md": "5f149bccdebbf121ac98d8aa45c5d4bf641b8b5fef7e4ccbc4408259a6f19059",
+    "checks/laboratory_drive_clock_feedback.py": "ee82339b9075c5a5cc9e5d3c9c6db3d2d60f25c590da115a870568061261285c",
+    "notes/returned-switch-capture.md": "fadb218a48191c49b283f14c3baa0d665fd9c7ea77716c363b406454717b4763",
+    "notes/boundary-vertex-matching.md": "b235d11fc8bdaf81e70d9dbf564c50dff7a47e1a29aec8768e303be0f674c2e6",
+    "notes/schwarzian-initial-state.md": "d65e243814b033dc07544e4c5b1da7bcc53fef9bbdd1498285efd1ef18b05978",
+    "notes/jt-prescribed-source-constraint.md": "fa3215de69c80fa04fac642511e4f6225e22aa60ef1120755ffdfd09902c4b67",
+    "notes/prescribed-source-clock-variation.md": "3ca032efd881eb3b7fc50fa657b9a5630b6f39588b802f2c40bd9711313c2496"
+  },
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0"
+  },
+  "reporting_only_refresh": {
+    "evolution_run_checker_sha256": "132d93640d57465bdbdb12737c5d3109a74d728fa385199024e5d03ece21133f",
+    "scope": "Retain accepted trajectories/endpoints and verification; independently recompute same-preparation baseline at Tstar and matched-source-completion energy differences; add final reviewed note links/hashes. No evolution or tolerances changed."
+  }
+}
