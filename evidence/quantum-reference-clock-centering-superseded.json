@@ -1,0 +1,186 @@
+{
+  "disposition": "SUPERSEDED_REVIEW_FOUND_NONUNIFORM_POLYNOMIAL_MAJORANT",
+  "reason": "The code specialized h=1 before taking absolute polynomial coefficients; this was not a uniform bound on 0<=h<=1. The result was not accepted as the final certificate. The raw pressure target and tolerances remain fixed. An explicit xi>k^3 guard is also added.",
+  "original_receipt": {
+    "started_utc": "2026-10-16T04:10:15.689433+00:00",
+    "story": "S137.1",
+    "inputs_sha256": {
+      "notes/quantum-reference-clock-centering.md": "60520b1f0120116d4101b3373574ef46bb8159b388687981487fcfd82617453c",
+      "checks/quantum_reference_clock_centering.py": "9d604b234684face856fc2c2c3d8f85faa0a54fde2105808a3f41fbdfd21bce1",
+      "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+      "checks/uniform_dirac_reference.py": "5b09c0e4f86caf3476c076897c87cac7d23dfbc8f3b6f80f69207710d2d3be3d",
+      "notes/physical-clock-remainder.md": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972",
+      "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b"
+    },
+    "hash_policy": "SHA256 with CRLF-to-LF normalization",
+    "protocol": {
+      "rational_cells": 64,
+      "numeric_digits": 60,
+      "numeric_tolerance": "1e-35",
+      "pressure_target": [
+        ".028",
+        ".030"
+      ],
+      "raw_area_target": "<-100000"
+    },
+    "runtime": {
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    },
+    "constants": {
+      "pi": {
+        "rational": [
+          "157079632679489661923/50000000000000000000",
+          "314159265358979323847/100000000000000000000"
+        ],
+        "decimal_display_only": [
+          3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      "logq": {
+        "rational": [
+          "30403/1000",
+          "7601/250"
+        ],
+        "decimal_display_only": [
+          30.403,
+          30.404
+        ]
+      },
+      "gamma": {
+        "rational": [
+          "577/1000",
+          "289/500"
+        ],
+        "decimal_display_only": [
+          0.577,
+          0.578
+        ]
+      }
+    },
+    "flat_comparison": {
+      "J_ir": {
+        "rational": [
+          "1114898435628140851499/800000000000000000000",
+          "9035582826398992096941/6400000000000000000000"
+        ],
+        "decimal_display_only": [
+          1.393623044535176,
+          1.4118098166248425
+        ]
+      },
+      "J_uv": {
+        "rational": [
+          "-1/720",
+          "-83/60480"
+        ],
+        "decimal_display_only": [
+          -0.001388888888888889,
+          -0.0013723544973544973
+        ]
+      },
+      "pressure": {
+        "rational": [
+          "13291809839780933902045051339647529952570436258732726934951442694311523437500000000/460257955135661515943561593254363068077167221034764946700046986966168440140378668629",
+          "635516050261751515013601743979738458027118082764662708629398328906250000000000000/21917045482650548378264837774017288956055581954036426033335570807912782863827555649"
+        ],
+        "decimal_display_only": [
+          0.0288790442217629,
+          0.028996428864685418
+        ]
+      },
+      "monotone_cells": 64
+    },
+    "infinite_kernel_errors": {
+      "UV_polynomial": "1332725582391004688933799676121740793691202260897611/100682220699648000000000000000000000000000000000000000000000000",
+      "UV_remainders": "4000000287287971840000213000000000531/143327232000000000000000000000000000000000000",
+      "angular_IR": "870400008713482666670831/1843200000000000000000000000000000000",
+      "curvature_IR": "31/480000",
+      "subtraction": "2460160240000000000001/276480000000000000000000000000",
+      "finite_terms": "25421653386666666666677/184320000000000000000000000000",
+      "pressure_error": "6519986764482459933905106219810289403045642075202260897611/201364441399296000000000000000000000000000000000000000000000000"
+    },
+    "pressure": {
+      "rational": [
+        "14145486707922865314801418285807229445652659933888039857165829791963785441745177299282595510149333225080182959102034388049729218637368578482829/490368180081876829508132108174256930976179248455711363751043705617559553271706378894684985491456000000000000000000000000000000000000000000000000",
+        "14234803700856439552256882078885408307555242878210318258852453898522344836654822700717404489850666774919817040897965611950270781362631421517171/490368180081876829508132108174256930976179248455711363751043705617559553271706378894684985491456000000000000000000000000000000000000000000000000"
+      ],
+      "decimal_display_only": [
+        0.02884666518443548,
+        0.029028807902012836
+      ]
+    },
+    "candidate": {
+      "mu_bounds": {
+        "rational": [
+          "1/262400000000000000000000000000000",
+          "1/256000000000000000000000000000000"
+        ],
+        "decimal_display_only": [
+          3.810975609756098e-33,
+          3.90625e-33
+        ]
+      },
+      "epsilon_over_mu": {
+        "rational": [
+          "157079632679489661923/38437500000000",
+          "314159265358979323847/75000000000000"
+        ],
+        "decimal_display_only": [
+          4086624.5900355033,
+          4188790.204786391
+        ]
+      },
+      "normalized_area_translation": {
+        "rational": [
+          "-14234803700856454911418377736339896533550123297048629788406126524098093982379643674478022658170666774919817040897965611950270781362631421517171/117066779692511086038307887808070413959828915187694937112391195281812199833600000000000000000000000000000000000000000000000000000000000000",
+          "-14145486707922849571660885236916378963895934792076630042232720735663569975307845380455151794053333225080182959102034388049729218637368578482829/119993449184823863189647536014800391843101624306831556520323455273771550638080000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "decimal_display_only": [
+          -121595.58619657728,
+          -117885.49128323495
+        ]
+      },
+      "sphere_squared_fractional_decrease_lower": "14145486707922849623019655665748685185425198357666248619429879209200145408346597537376890815545208595160647232510034388049729218637368578482829/31383563525240117088520454923152443582475471901165527280066797159523811409389208249259839071453184000000000000000000000000000000000000000000000000000000000000000000000000",
+      "sphere_radius_fractional_decrease_lower": "14145486707922849623019655665748685185425198357666248619429879209200145408346597537376890815545208595160647232510034388049729218637368578482829/62767127050480234177040909846304887164950943802331054560133594319047622818778416498519678142906368000000000000000000000000000000000000000000000000000000000000000000000000",
+      "reference_remainder": "1/2000000000000000000000000000000000000000000",
+      "raw_K_100000_hypothesis_for_stationary_product": false
+    },
+    "symbolic": {
+      "potential_tangent": "exact",
+      "joint_Ward_reference_subtraction": "exact",
+      "nonlinear_rational_remainder": "exact",
+      "normalization_with_exterior_lapse": "exact"
+    },
+    "numerical": [
+      {
+        "potential_error": "8.57069944732279434946934847250662252739984376142536232656413e-60",
+        "normalization_error": "0.0"
+      },
+      {
+        "potential_error": "4.55458325329757220450103155826756317206784145757280763487798e-59",
+        "normalization_error": "1.55575381946528542678601601344503106014756304218029178327528e-61"
+      },
+      {
+        "potential_error": "2.99713542454644322961846631840164225876396539508779805342071e-59",
+        "normalization_error": "3.11150763893057085357203202689006212029512608436058356655056e-61"
+      }
+    ],
+    "status": "PASS_RATIONAL_REFERENCE_COMPARISON_AND_EXACT_CENTERING",
+    "claims": {
+      "specified_reference_raw_jet_window_excluded": true,
+      "centered_dynamical_jet_window_excluded": false,
+      "matched_quantum_exterior_constructed": false,
+      "physical_residual_or_opening_certified": false,
+      "Lean_run": false
+    }
+  },
+  "original_source_utf8": "\"\"\"S137.1 exact rational pressure bracket and reference-centering identities.\"\"\"\nfrom fractions import Fraction as F\nfrom pathlib import Path\nimport datetime\nimport hashlib\nimport json\nimport math\nimport platform\nimport sys\nimport traceback\n\nimport mpmath as mp\nimport sympy as sp\n\nROOT = Path(__file__).resolve().parents[1]\nNAME = 'quantum-reference-clock-centering'\nINPUTS = ['notes/'+NAME+'.md', 'checks/quantum_reference_clock_centering.py',\n          'notes/uniform-dirac-reference.md', 'checks/uniform_dirac_reference.py',\n          'notes/physical-clock-remainder.md', 'notes/spherical-anomaly-sources.md']\nDPS = 60\nTOL = '1e-35'\nCELLS = 64\n\n\nclass R:\n    \"\"\"Closed rational interval; no binary floating operations in acceptance.\"\"\"\n    def __init__(self, lo, hi=None):\n        if isinstance(lo, R):\n            self.lo, self.hi = lo.lo, lo.hi\n        else:\n            self.lo, self.hi = F(lo), F(lo if hi is None else hi)\n        assert self.lo <= self.hi\n\n    def __add__(a, b):\n        b = R(b)\n        return R(a.lo+b.lo, a.hi+b.hi)\n    __radd__ = __add__\n\n    def __neg__(a):\n        return R(-a.hi, -a.lo)\n\n    def __sub__(a, b):\n        return a+-R(b)\n\n    def __rsub__(a, b):\n        return R(b)+-a\n\n    def __mul__(a, b):\n        b = R(b)\n        v = [a.lo*b.lo, a.lo*b.hi, a.hi*b.lo, a.hi*b.hi]\n        return R(min(v), max(v))\n    __rmul__ = __mul__\n\n    def __truediv__(a, b):\n        b = R(b)\n        assert not b.lo <= 0 <= b.hi\n        return a*R(1/b.hi, 1/b.lo)\n\n    def __rtruediv__(a, b):\n        return R(b)/a\n\n    def __pow__(a, n):\n        assert isinstance(n, int) and n >= 0\n        out = R(1)\n        for _ in range(n):\n            out = out*a\n        return out\n\n    def compact(a, denominator=10**20):\n        lo = (a.lo.numerator*denominator)//a.lo.denominator\n        hi = -((-a.hi.numerator*denominator)//a.hi.denominator)\n        return R(F(lo, denominator), F(hi, denominator))\n\n    def record(a):\n        return {'rational': [str(a.lo), str(a.hi)],\n                'decimal_display_only': [float(a.lo), float(a.hi)]}\n\n\ndef exponential(x):\n    x = F(x)\n    assert x >= 0\n    terms = max(180, math.ceil(2*x)+40)\n    term = F(1)\n    total = term\n    for k in range(1, terms+1):\n        term *= x/k\n        total += term\n    first = term*x/(terms+1)\n    ratio = x/(terms+2)\n    assert ratio < 1\n    return R(total, total+first/(1-ratio)).compact()\n\n\ndef pi_bounds():\n    def atan(x, n):\n        s = sum(((-1)**j*x**(2*j+1)/F(2*j+1) for j in range(n)), F(0))\n        other = s+(-1)**n*x**(2*n+1)/F(2*n+1)\n        return R(min(s, other), max(s, other))\n    return (16*atan(F(1, 5), 48)-4*atan(F(1, 239), 16)).compact()\n\n\ndef constants():\n    pi = pi_bounds()\n    assert F(314, 100) < pi.lo < pi.hi < F(22, 7)\n    q = 2000**4\n    logq = R(F(30403, 1000), F(30404, 1000))\n    assert exponential(logq.lo).hi < q < exponential(logq.hi).lo\n    log100 = R(F('4.60517018'), F('4.60517019'))\n    assert exponential(log100.lo).hi < 100 < exponential(log100.hi).lo\n    H = sum((F(1, j) for j in range(1, 101)), F(0))\n    gamma_precise = R(H)-log100-F(1, 200)+R(0, F(1, 120000))\n    gamma = R(F(577, 1000), F(578, 1000))\n    assert gamma.lo < gamma_precise.lo and gamma_precise.hi < gamma.hi\n    return pi, q, logq, gamma\n\n\ndef flat_pressure(pi, logq, gamma):\n    values = [R(1)]\n    for j in range(1, CELLS+1):\n        values.append((1+2/(exponential(F(CELLS, j))-1)).compact())\n    # Monotonicity follows analytically from the coth derivative. Nearly\n    # constant cells may have overlapping rational value enclosures.\n    assert all(values[j].lo <= values[j+1].hi for j in range(CELLS))\n    ir = R(sum((v.lo for v in values[:-1]), F(0))/CELLS,\n           sum((v.hi for v in values[1:]), F(0))/CELLS)\n    uv = R(-F(1, 720), -F(1, 720)+F(1, 60480))\n    integral = (uv+ir)/(8*pi**2)\n    value = -(integral-1/(8*pi**2)+(gamma-logq)/(48*pi**2))/2\n    return value, {'J_ir': ir.record(), 'J_uv': uv.record(),\n                   'pressure': value.record(), 'monotone_cells': CELLS}\n\n\ndef sphere_poly(t, h, pi):\n    out = 1/(2*pi*t)\n    for j in range(1, 4):\n        for v in range(j+1):\n            out += sp.bernoulli(2*j)*(-1)**(2*j-v)*t**(2*j-v-1)*h**v/(\n                2*pi*sp.factorial(2*j-2*v)*sp.factorial(v))\n    return sp.expand(out)\n\n\ndef sf(value):\n    value = sp.Rational(value)\n    return F(int(value.p), int(value.q))\n\n\ndef full_kernel_error(q):\n    t, h, r = sp.symbols('t h r', positive=True)\n    pi = sp.Symbol('p', positive=True)\n    S3 = sphere_poly(t, h, pi)\n    HP3 = 1/(2*pi*t)+r**2*t/(120*pi)-r**3*t**2/(252*pi)\n    product = sp.expand(HP3*S3)\n    expected = [1/(4*pi**2), -h/(24*pi**2), (15-3*h*h+3*r*r)/(720*pi**2)]\n    assert all(sp.simplify(product.coeff(t, power)-c) == 0\n               for power, c in zip([-2, -1, 0], expected))\n    difference = sp.expand(product-S3.subs(h, 0)/(2*pi*t))\n    difference -= sum(difference.coeff(t, j)*t**j for j in [-2, -1, 0])\n    tau, rmax, hi = F(1, 4), F(31, 10000), F(1, q)\n    uv_poly = F(0)\n    for powers, coeff in sp.Poly(sp.expand(difference.subs(pi, 3)), t, h, r).terms():\n        pt, ph, pr = powers\n        assert pt >= 1\n        uv_poly += abs(sf(coeff))*tau**pt*hi**ph*rmax**pr/pt\n    poly_bound = sum(abs(sf(c))*tau**p[0] for p, c in\n                     sp.Poly(sp.expand(t*S3.subs({pi: 3, h: 1})), t).terms())\n    assert poly_bound < 1\n    assert F(1, 6)+tau*tau/F(360) < 1\n\n    def sphere_error(inverse_q):\n        result = F(0)\n        for j in range(4):\n            for v in range(4-j):\n                coefficient = F(math.factorial(7)*math.comb(3-j, v)*4**v*math.factorial(v),\n                                math.factorial(j)*math.factorial(7-2*j)*69984)\n                power = 5-j-v\n                result += coefficient*inverse_q**(j+v)*tau**(power-1)/(power-1)\n        return result\n\n    uv_remainders = sphere_error(hi)+sphere_error(F(0))+rmax**4*tau**2/2880\n    # These are strict upper bounds using pi>3, log4<2, |gamma-logq|<31.\n    angular_tail = (F(1, 6)/tau**2+rmax**2/360)*(F(17, 6)/q+F(65, 3)/q**2)\n    curvature_tail = rmax/48\n    dp1, dp2 = F(1, 216*q), (rmax*rmax+hi*hi)/2160\n    subtraction = 3*dp1+2*dp2\n    finite_terms = dp1+31*dp2\n    total = (uv_poly+uv_remainders+angular_tail+curvature_tail+subtraction+finite_terms)/2\n    assert total < F(1, 10000)\n    return total, {k: str(v) for k, v in dict(UV_polynomial=uv_poly,\n               UV_remainders=uv_remainders, angular_IR=angular_tail,\n               curvature_IR=curvature_tail, subtraction=subtraction,\n               finite_terms=finite_terms, pressure_error=total).items()}\n\n\ndef candidate_bounds(pi, q, pressure):\n    k = 2000\n    assert q == k**4\n    c_lower, c_upper = F(6*k**3), F(123*k**3, 20)\n    assert c_lower*c_lower < 1+12*pi.lo*k**6\n    assert 1+12*pi.hi*k**6 < c_upper*c_upper\n    assert c_upper/q < F(31, 10000)\n    ratio = 2*pi*k**5/R(c_lower, c_upper)\n    remainder = F(5, 10**43)\n    mu_lower = F(160, 41*k**10)\n    mu_upper = F(4, k**10)\n    displacement = -(ratio*pressure)+R(-remainder/mu_lower, remainder/mu_lower)\n    assert displacement.hi < -100000\n    eps_lower = F(4, k**8)\n    sphere_down = eps_lower*pressure.lo-remainder\n    radius_down = sphere_down/2\n    assert radius_down > F(2, 10**28)\n    assert radius_down > F('5.46875e-29')\n    return {'mu_bounds': R(mu_lower, mu_upper).record(),\n            'epsilon_over_mu': ratio.record(), 'normalized_area_translation': displacement.record(),\n            'sphere_squared_fractional_decrease_lower': str(sphere_down),\n            'sphere_radius_fractional_decrease_lower': str(radius_down),\n            'reference_remainder': str(remainder),\n            'raw_K_100000_hypothesis_for_stationary_product': False}\n\n\ndef symbolic_centering():\n    X, xs, G, a, L, rm, phi = sp.symbols('X xs G a L rm phi', positive=True)\n    V = 2+6*X/L**2-2*rm**2/X\n    V0 = V.subs(X, xs)\n    Js = 2/a**2-sp.diff(V, X).subs(X, xs)\n    ell = (-V0+Js*(X-xs))/(4*G)\n    effective = V+4*G*ell\n    assert sp.simplify(effective.subs(X, xs)) == 0\n    assert sp.simplify(sp.diff(effective, X).subs(X, xs)-2/a**2) == 0\n    assert sp.simplify(4*G*sp.diff(ell, X)-Js) == 0\n    assert sp.simplify(sp.diff(ell, X)-Js/(4*G)) == 0\n    U = effective.subs(X, xs+2*G*phi)/(4*G)-phi/a**2\n    assert sp.factor(U+2*G*rm**2*phi**2/(xs**2*(xs+2*G*phi))) == 0\n    C, k, pi = sp.symbols('C k pi', positive=True)\n    eps = 4/k**8*(1+1/C)\n    mu = 24/((C-1)*k**7)\n    assert sp.factor((eps/mu-2*pi*k**5/C)*6*C*k-(C*C-1-12*pi*k**6)) == 0\n    b, alpha, lam = sp.symbols('b alpha lam', positive=True)\n    rate = sp.exp(alpha)*lam/a**2\n    assert sp.simplify(b*lam/G-b*a**2*sp.exp(-alpha)/G*rate) == 0\n    return {'potential_tangent': 'exact', 'joint_Ward_reference_subtraction': 'exact',\n            'nonlinear_rational_remainder': 'exact', 'normalization_with_exterior_lapse': 'exact'}\n\n\ndef numerical_centering():\n    rows = []\n    for b, a, G, rm, L, phi, alpha in [\n        ('1.4', '.8', '.02', '1.9', '2.1', '.2', '.03'),\n        ('2.1', '.6', '.015', '3.4', '1.7', '-.4', '-.02'),\n        ('1.1', '.4', '.01', '2.8', '3.2', '.05', '.1')]:\n        b, a, G, rm, L, phi, alpha = map(mp.mpf, [b, a, G, rm, L, phi, alpha])\n        x0, x = b*b, b*b+2*G*phi\n        V = lambda xx: 2+6*xx/L**2-2*rm**2/xx\n        Js = 2/a**2-mp.diff(V, x0)\n        effective = V(x)-V(x0)+Js*(x-x0)\n        direct = effective/(4*G)-phi/a**2\n        rational = -2*G*rm**2*phi**2/(b**4*x)\n        error = abs(direct-rational)\n        assert error < mp.mpf(TOL)\n        # Independent coefficient from finite near-horizon metric/area jets.\n        width = mp.mpf('.013')\n        dt_dU = mp.exp(alpha)*width/a**2\n        area_leading = b*width/G\n        phi_r = b*a*a*mp.exp(-alpha)/G\n        norm_error = abs(area_leading-phi_r*dt_dU)\n        assert norm_error < mp.mpf(TOL)\n        rows.append({'potential_error': str(error), 'normalization_error': str(norm_error)})\n    return rows\n\n\ndef hashes():\n    return {p: hashlib.sha256((ROOT/p).read_bytes().replace(b'\\r\\n', b'\\n')).hexdigest() for p in INPUTS}\n\n\ndef main():\n    mp.mp.dps = DPS\n    began = datetime.datetime.now(datetime.timezone.utc).isoformat()\n    source = hashes()\n    log = ROOT/'evidence'/f'{NAME}.log'\n    result = {'started_utc': began, 'story': 'S137.1', 'inputs_sha256': source,\n              'hash_policy': 'SHA256 with CRLF-to-LF normalization',\n              'protocol': {'rational_cells': CELLS, 'numeric_digits': DPS, 'numeric_tolerance': TOL,\n                           'pressure_target': ['.028', '.030'], 'raw_area_target': '<-100000'},\n              'runtime': {'python': sys.version, 'platform': platform.platform(),\n                          'sympy': sp.__version__, 'mpmath': mp.__version__}}\n    def emit(message):\n        with log.open('a', encoding='utf-8', newline='\\n') as f:\n            f.write(message+'\\n')\n        print(message, flush=True)\n    emit('RUN '+began+'; exact rational acceptance; frozen protocol '+json.dumps(result['protocol']))\n    try:\n        pi, q, logq, gamma = constants()\n        flat, flat_data = flat_pressure(pi, logq, gamma)\n        err, err_data = full_kernel_error(q)\n        pressure = flat+R(-err, err)\n        assert F(28, 1000) < pressure.lo and pressure.hi < F(30, 1000), pressure.record()\n        result.update(constants={'pi': pi.record(), 'logq': logq.record(), 'gamma': gamma.record()},\n                      flat_comparison=flat_data, infinite_kernel_errors=err_data,\n                      pressure=pressure.record(), candidate=candidate_bounds(pi, q, pressure),\n                      symbolic=symbolic_centering(), numerical=numerical_centering())\n        assert hashes() == source, 'source changed during validation'\n        result['status'] = 'PASS_RATIONAL_REFERENCE_COMPARISON_AND_EXACT_CENTERING'\n        result['claims'] = {'specified_reference_raw_jet_window_excluded': True,\n                            'centered_dynamical_jet_window_excluded': False,\n                            'matched_quantum_exterior_constructed': False,\n                            'physical_residual_or_opening_certified': False, 'Lean_run': False}\n        emit('Pressure interval '+json.dumps(pressure.record()))\n        emit('Normalized area translation '+json.dumps(result['candidate']['normalized_area_translation']))\n        emit('TERMINAL PASS exit 0; all frozen inputs match')\n    except Exception:\n        result['status'] = 'FAIL'\n        result['traceback'] = traceback.format_exc()\n        emit(result['traceback'])\n        emit('TERMINAL FAIL exit 1; retained assertion, no target change')\n        raise\n    finally:\n        with (ROOT/'evidence'/f'{NAME}.json').open('w', encoding='utf-8', newline='\\n') as f:\n            json.dump(result, f, indent=2)\n            f.write('\\n')\n\n\nif __name__ == '__main__':\n    main()\n",
+  "original_log_utf8": "RUN 2026-10-16T04:10:15.689433+00:00; exact rational acceptance; frozen protocol {\"rational_cells\": 64, \"numeric_digits\": 60, \"numeric_tolerance\": \"1e-35\", \"pressure_target\": [\".028\", \".030\"], \"raw_area_target\": \"<-100000\"}\nPressure interval {\"rational\": [\"14145486707922865314801418285807229445652659933888039857165829791963785441745177299282595510149333225080182959102034388049729218637368578482829/490368180081876829508132108174256930976179248455711363751043705617559553271706378894684985491456000000000000000000000000000000000000000000000000\", \"14234803700856439552256882078885408307555242878210318258852453898522344836654822700717404489850666774919817040897965611950270781362631421517171/490368180081876829508132108174256930976179248455711363751043705617559553271706378894684985491456000000000000000000000000000000000000000000000000\"], \"decimal_display_only\": [0.02884666518443548, 0.029028807902012836]}\nNormalized area translation {\"rational\": [\"-14234803700856454911418377736339896533550123297048629788406126524098093982379643674478022658170666774919817040897965611950270781362631421517171/117066779692511086038307887808070413959828915187694937112391195281812199833600000000000000000000000000000000000000000000000000000000000000\", \"-14145486707922849571660885236916378963895934792076630042232720735663569975307845380455151794053333225080182959102034388049729218637368578482829/119993449184823863189647536014800391843101624306831556520323455273771550638080000000000000000000000000000000000000000000000000000000000000\"], \"decimal_display_only\": [-121595.58619657728, -117885.49128323495]}\nTERMINAL PASS exit 0; all frozen inputs match\n",
+  "original_source_sha256": "9d604b234684face856fc2c2c3d8f85faa0a54fde2105808a3f41fbdfd21bce1",
+  "original_note_utf8": "# Quantum reference centering at the clock and seam scales\n\n2026-10-15, E003/S137.1. The small fractional shift of the stationary\nproduct must be compared with the much smaller opening scale. In the\nspecified one-loop prescription of [the uniform reference](uniform-dirac-reference.md),\nthe k=2000 sphere shift exceeds 1e5 in units of the dynamical area scale\nN*eta. This does not destroy the reference or the opening. It requires\nconsistent centering before applying an absolute remainder ledger.\n\nThe S136 identity remains exact about its explicitly classical reference.\nIts illustrative weighted-jet window was conditional. The following\ncomparison does not turn its failed enclosure into a physical failure,\nor determine the omitted finite couplings of the full theory.\n\n## A pressure lower bound in the retained scheme\n\nKeep exactly the previous one-free-Dirac homogeneous prescription:\nq=k^4, g_R=k^-4, L4=k^5*l_p, mu0=1/b0, and zero additional finite local\ncoefficients. The source determinant is the complete summed angular heat\ntrace, not an independently renormalized LLL determinant. Write\n\n```text\nC0=sqrt(1+12*pi*k^6), xi0=(C0-1)/6,\nr=C0/q, L=-log(q), epsilon=4*k^-8*(1+1/C0),\nmu_open=2G*N*eta/b0^2=4/(xi0*k^7), eta=1/2000, k=2000.\n```\n\nThe accepted exact reference theorem gives\n\n```text\nz_star=b_star^2/b0^2,\n|z_star-1+epsilon*A(r,L)|<5e-43.\n```\n\nIts earlier pressure quadratures were numerical illustrations. Here the\npredeclared test is 0.028<A<0.030 using rational inequalities and explicit\ninfinite tails. No tolerance for an adaptive quadrature is promoted to a\ncertificate. The pressure kernel and subtractions are\n\n```text\nS_q(t)=[1+2 sum_(n>=1)(1+2n/q)exp(-tn(1+n/q))]/(4pi),\nhP(t,r)=1/(2pi*t)+(2r^2*t/pi) int_0^infinity\n                         lambda^3 exp(-rt lambda^2)/(exp(2pi lambda)-1) d lambda,\np0=1/(4pi^2), p1=-1/(24pi^2*q),\np2=(15-3/q^2+3r^2)/(720pi^2),\nI=int_0^1 [hP*S_q-p0/t^2-p1/t-p2]dt/t\n  +int_1^infinity hP*S_q dt/t,\nA=-(1/2)[I-p0/2-p1+p2*(gamma_E-log(q))].\n```\n\nAll of these definitions are unchanged from the accepted reference.\nThe proof below compares this pressure with q=infinity,r=0 while keeping\nthe same finite scale logarithm L. This is a comparison kernel, not a\nchange of physical charge or renormalization prescription.\n\nFor that comparison, S_infinity=coth(t/2)/(4pi), hP_0=1/(2pi*t).\nThe subtracted integral is\n\n```text\nI_flat=(J_uv+J_ir)/(8pi^2),\nJ_uv=int_0^1 [coth(t/2)/t-2/t^2-1/6]dt/t,\nJ_ir=int_0^1 coth(1/(2v))dv,\n-1/720 <= J_uv <= -1/720+1/60480.\n```\n\nThe last inequality follows from the alternating expansion of each\npositive denominator in the partial-fraction series for coth; the first\ntwo retained terms suffice on 0<t<=1. At v=0 define the integrand as 1.\nIt increases on [0,1], so 64 equal left and right Riemann sums enclose\nJ_ir. Each coth value is 1+2/(exp(1/v)-1). Finite positive Taylor sums\nfor exp and a geometric bound on their remaining terms give rational\nenclosures. Machin alternating sums enclose pi. Exponential comparisons\nverify 30.403<log(q)<30.404; the same method and the usual one-term\nharmonic-number remainder verify 0.577<gamma_E<0.578. For the latter,\nH_n-log(n)-1/(2n)<gamma_E<H_n-log(n)-1/(2n)+1/(12n^2), n=100,\nfollows from the positive-real digamma remainder in\n[DLMF 5.11(ii)](https://dlmf.nist.gov/5.11#ii).\n\nHere is a finite bound for the difference from the actual kernel. Set\ntau=1/4, r_max=31/10000 and use 0<r<r_max, q=16000000000000.\nOn 0<t<=tau use the third Euler--Maclaurin sphere polynomial S3 from\nthe accepted reference and\n\n```text\nHP3=1/(2pi*t)+r^2*t/(120pi)-r^3*t^2/(252pi),\n|hP-HP3|<=r^4*t^3/(480pi), |S3|<=1/t, hP<=1/t.\n```\n\nThe thermal remainder follows from |exp(-x)-1+x|<=x^2/2 and the exact\nBose moments. The sphere remainder is bounded by\n\n```text\nR_S(t)=1/69984 sum_(j=0)^3 sum_(v=0)^(3-j)\n [7! binomial(3-j,v)4^v v!/(j!(7-2j)!)] q^(-j-v)t^(5-j-v).\n```\n\nThis uses pi>3 and zeta(6)<2 in the previously proved uniform remainder.\nFor q=infinity retain only j=v=0. Integrate the absolute coefficient\ndifference of HP3*S3(q) and (1/(2pi*t))*S3(infinity), after removing\ntheir t^-2,t^-1,t^0 coefficients, divided by t. Add\nint_0^tau [R_S(q)+R_S(infinity)]dt/t^2\nand r_max^4*tau^2/(2880). These bound the complete UV difference without\ndifferentiating a remainder or using a finite angular cutoff.\n\nFor t>=tau, direct comparison of each exponential gives\n\n```text\n|S_q-S_infinity| <= (1/(2pi*q))sum_(n>=1)(2n+t*n^2)exp(-nt)\n                 +(1/(pi*q^2))sum_(n>=1)t*n^3 exp(-nt).\n```\n\nSince exp(-tau)<4/5, the sums of exp(-n*tau), n*exp(-n*tau), and\nn^2*exp(-n*tau) are at most 4,20,180. Therefore\n\n```text\nint_tau^infinity hP*|S_q-S_infinity|dt/t\n <= [1/(2pi*tau^2)+r_max^2/(120pi)]\n                       *[17/(2pi*q)+65/(pi*q^2)].\nint_tau^infinity (hP-hP_0)*S_infinity dt/t\n <= 3*r_max/(16pi^2).\n```\n\nFor the second inequality, S_infinity<=9/(4pi) and the positive Bose\nintegral gives int_tau^infinity(hP-hP_0)dt/t<=r/(12pi).\nThe remaining subtraction differences on [tau,1] are bounded by\n3*|delta p1|+2*|delta p2|, since log(4)<2. The finite terms in A add\n|delta p1|+31*|delta p2| before multiplication by 1/2.\nHere |delta p1|<=1/(24pi^2*q) and\n|delta p2|<=(r_max^2+q^-2)/(240pi^2).\nTogether these give |A-A_flat|<1e-4, using only rational coefficient sums.\n\n## Consequence at the fixed opening scale\n\nThe pressure bracket and the exact first-order remainder imply\n\n```text\n(z_star-1)/mu_open < -1e5,\nabs((b_star-b0)/b0)>2e-28.\n```\n\nIndeed epsilon/mu_open=2pi*k^5/C0. The elementary bounds\n3.14<pi<22/7 and 6k^3<C0<(123/20)k^3 give the first strict inequality\nwith substantial margin; the 5e-43 reference remainder contributes\nless than 1.4e-10 in these normalized area units. The radius difference\nuses |sqrt(z_star)-1|=|z_star-1|/(sqrt(z_star)+1), with z_star<1.\nThe S136 classical seam delta<=5.46875e-29 is smaller than this radius\ntranslation. Its coordinate and charge dictionary cannot simply be\nidentified with the same seam measured from b_star.\n\nThis refutes applying S136's illustrative bound |sin(sigma)Phi_A/B|<=1e5\nto the raw homogeneous corrected product about b0: at the strip center\nthe constant shift alone exceeds it. It does not refute a centered\ndynamical jet bound, change the source, or prove the true residual large.\nThe physical radius remains close to b0 in ordinary relative units.\nUnknown finite coefficients or a different reference state require a\ndifferent reference solution; the stated pressure bracket does not fix them.\n\n## Exact centering with both reference sources retained\n\nLet b_star,a_star be any stationary product solving the specified\nspherical theory, with fixed physical parameters and magnetic potential\n\n```text\nV(X)=2+6X/L4^2-2r_m^2/X, X_star=b_star^2,\nT_star,ab=-V(X_star)*g_star,ab/(4G),\nJ_star=2/a_star^2-V'(X_star).\n```\n\nThese equations follow from the orbit and angular Einstein equations;\nthey are not an additional assumption of zero angular source. Define a\nfixed bookkeeping functional on arbitrary nearby spherical fields,\n\n```text\nGamma_ref=int sqrt(-g) [-V(X_star)+J_star*(X-X_star)]/(4G),\nGamma_rest=Gamma-Gamma_ref,\nV_eff(X)=V(X)-V(X_star)+J_star*(X-X_star).\n```\n\nThen V_eff(X_star)=0 and V_eff'(X_star)=2/a_star^2.\nThe reference stress is its displayed scalar density times g_ab and\nits radius source is J_star. It obeys\nnabla^a T_ref,ab=J_star*partial_b X/(4G), so subtraction preserves the\njoint Ward identity. This is an exact reorganization of one fixed action,\nnot a new finite coupling or a claim that the true vacuum response is\nlocal. The full derivative and nonlocal response remains in Gamma_rest.\nAt the exact stationary product its stress and radius sources vanish.\n\nFor Phi_star=(X-X_star)/(2G), g=a_star^2 exp(2omega_star)g0, the exact\nS136 form now reads\n\n```text\nL0 Phi_star=T_rest+G_star,\nU_star=V_eff/(4G)-Phi_star/a_star^2\n      =-2G r_m^2 Phi_star^2/(b_star^4 X).\n```\n\nG_star is precisely S136's displayed kinetic/conformal/potential tensor\nwith b_star,a_star,Phi_star and U_star. No relation\nb_star^2/a_star^2=1+6b_star^2/L4^2 is imposed on a quantum product.\nThe geometric estimate instead uses\nmu_star=2G B/b_star^2 and vartheta_star=a_star^2 r_m^2/b_star^4.\nFor the stationary centered solution Phi_star=omega_star=0, both sides\nvanish without subtracting two enormous absolute norms.\n\nRetain the known 2D anomaly contact in the same allocation as the chosen\nGamma/Gamma_ref; never add an independent LLL anomaly to the already\ncomplete four-dimensional determinant. The remaining free benchmark\nstress and its dilaton shift must be transferred together as in S136.\nCentering the full stationary product is more than subtracting that\nsingle known 2D constant contact.\n\n## The exterior normalization is still physical data\n\nA corrected product does not determine a corrected RN exterior. For a\nmatched stationary metric -exp(2alpha)F dU^2+dR^2/F with alpha(infinity)=0,\nnear-horizon F~(R-b_star)^2/a_star^2, the leading kinematic normalization is\n\n```text\nphi_r,geom=b_star*a_star^2*exp(-alpha_star)/G,\nPhi_star/rho=phi_r,geom*dt/dU.\n```\n\nAlpha_star is the limiting exterior lapse, not fixed by a product\ncalculation. Complete effective charges and nonlocal stress can supply\nadditional response, retained in the boundary defect. Substituting b_star\ninto the classical formula b^3/[G(1+6xi)] silently imposes both a classical\nradius relation and a lapse normalization. Neither follows from the\naccepted homogeneous determinant. The matched exterior stress, initial\nstate and moving-cut charge must still be calculated.\n\n## Verification fixed before execution\n\nThe checker must verify the pressure bracket by exact rational arithmetic:\n64 monotone cells, positive exponential Taylor sums with their geometric\ntails, Machin pi bounds, explicit harmonic/log bounds and all UV/IR tails.\nNo floating quadrature is used for acceptance. Decimal output is a display\nof rational bounds. Symbolic source, Ward, potential and normalization\nidentities must vanish exactly. Three independent 60-digit numerical\nproduct/cut comparisons must agree within 1e-35; these test the identities,\nnot an unknown physical exterior. Preserve any failed assertion in the log.\n\nRemaining to-do list: match the centered physical exterior and state,\nbound Gamma_rest's stress/radius/boundary response, prove common-drive\ncapture and complete the physical tail, area and S074-S079 gates.\n",
+  "original_note_sha256": "60520b1f0120116d4101b3373574ef46bb8159b388687981487fcfd82617453c"
+}

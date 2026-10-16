@@ -1,0 +1,172 @@
+{
+  "milestone": "E003/S137.3",
+  "started_utc": "2026-10-16T04:06:37.096103+00:00",
+  "frozen_protocol": {
+    "decimal_digits": 60,
+    "absolute_or_relative_tolerance": "1e-35",
+    "fourth_order_difference_step": "1e-10"
+  },
+  "execution": {
+    "executable": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+    "argv": [
+      "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+      "checks/exterior_mass_lapse_and_cut_work.py"
+    ],
+    "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+    "command": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe checks/exterior_mass_lapse_and_cut_work.py"
+  },
+  "inputs_sha256": {
+    "notes/exterior-mass-lapse-and-cut-work.md": "3bed3e9dff772828e4bb23367d5223872f2c80d736277d23e9c06e79889fa0f3",
+    "checks/exterior_mass_lapse_and_cut_work.py": "3ca6b768bc65f1279b6f7b831a13014594d7a9994c3713ee5a3ef25932c4cca2",
+    "notes/exact-spherical-em-reduction.md": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+    "notes/sourced-spherical-mass-charge-balance.md": "6137a17f2d4734a461fce60e5d908d850d0eff1064492008d7bac8b413d45da5",
+    "notes/physical-clock-remainder.md": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972",
+    "notes/rn-ads-finite-cut-matching.md": "c354e877b41da5aa93be43052c693acbf6ab6ba7327318409f0038291cbb9337",
+    "notes/exterior-lll-delayed-boundary.md": "f50ea1ee544ae72b06356886bcb984a1ddcbfc01359287dc3291ad4ca0077f23",
+    "notes/jt-prescribed-source-constraint.md": "fa3215de69c80fa04fac642511e4f6225e22aa60ef1120755ffdfd09902c4b67"
+  },
+  "input_hash_policy": "SHA-256 after CRLF/CR normalization to LF; no other byte changes",
+  "primary_sources": [
+    "https://arxiv.org/pdf/gr-qc/9710089",
+    "https://arxiv.org/html/2308.00871v2"
+  ],
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "four_dimensional_constraints": {
+    "full_four_dimensional_ricci_components": 5,
+    "exact_mass_lapse_flux": "symbolic zero remainders",
+    "pressure_only_nonclosure": "same mass/flux, distinct cut lapse; no physical matter realization"
+  },
+  "moving_work_and_conditional_bound": {
+    "moving_cut_pressure_work": "exact orthonormal and boosted-coordinate identities",
+    "RN_integral_primitive": "exact derivative and endpoint",
+    "candidate_conditional": {
+      "k": 2000,
+      "e": "1/100000",
+      "mu_max": "1/256000000000000000000000000000000",
+      "delta_max": "7/128000000000000000000000000000",
+      "alpha_over_A_upper_exact": "1342177280000000000000000000294912000000000000000000000032256000000000000000000000066003/503316480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "alpha_over_A_bound": "2.667e-15",
+      "physical_chirality_envelope_assigned": false
+    }
+  },
+  "RN_independent_integrals": [
+    {
+      "xi": "1.0",
+      "delta": "0.1",
+      "I_alpha": "8.717671012389884191130939557198755089074687695690070264",
+      "I_alpha_upper": "10.67454255291824583028608145825886457566532860180875047",
+      "independent_relative_error": "0.0",
+      "T_ext_over_b": "2.281633135986782429918669724368629901357466164913133549",
+      "T_ext_over_b_upper": "3.072167169426870195433711844195532630743171853893935136",
+      "travel_relative_error": "0.0"
+    },
+    {
+      "xi": "17.0",
+      "delta": "0.02",
+      "I_alpha": "4.125261896837324195410554258181526612774150680410751484",
+      "I_alpha_upper": "4.295873568854642274266797092470302352418395476862183232",
+      "independent_relative_error": "0.0",
+      "T_ext_over_b": "0.5580692625509773636959214187724308318714211011087164672",
+      "T_ext_over_b_upper": "0.6200278596142529788652413059902677114804728136256469924",
+      "travel_relative_error": "0.0"
+    }
+  ],
+  "leading_LLL_flux_and_variation": {
+    "profiles": {
+      "J_plus": "exp(-v^2)/1000",
+      "J_minus": "-exp(-(v-0.3)^2/2)/1500",
+      "scope": "smooth mathematical verification functions; no quantum-state realization asserted"
+    },
+    "whole_history_chirality_envelope": "1/600",
+    "cases": [
+      {
+        "U": "-0.2",
+        "x": "-0.3",
+        "mass": "-0.001317856638267275561222563116299076151331228894885435856",
+        "quadrature_and_fourth_order_variation_errors": [
+          "0.0",
+          "3.732867267016563418652248148643732092701491051329900352e-44",
+          "3.871771509408727439730178536944377604207438193468580446e-44"
+        ]
+      },
+      {
+        "U": "-0.2",
+        "x": "-0.8",
+        "mass": "-0.001561075900410291692878921455911925243448151825493884091",
+        "quadrature_and_fourth_order_variation_errors": [
+          "1.519290839321567799595718763129913144675354533379191195e-64",
+          "1.154605516528967213191641492385269129778261570492689827e-44",
+          "3.367473979483785383587162805940965465800602247579988761e-45"
+        ]
+      },
+      {
+        "U": "0.7",
+        "x": "-0.3",
+        "mass": "-0.002513083098875460309852673237222789808859203652376271672",
+        "quadrature_and_fourth_order_variation_errors": [
+          "3.038581678643135599191437526259826289350709066758382389e-64",
+          "1.802432676873480934751177802807126168607907499205899095e-44",
+          "3.102626538869636120697606508774389466469978957891672308e-44"
+        ]
+      },
+      {
+        "U": "0.7",
+        "x": "-0.8",
+        "mass": "-0.002296168616322044049161507207662105800883938873368047679",
+        "quadrature_and_fourth_order_variation_errors": [
+          "0.0",
+          "1.032652061979759703347520693414574917859068837235600837e-45",
+          "9.507270395374517315666505482580325478883494498865585692e-45"
+        ]
+      },
+      {
+        "U": "2.0",
+        "x": "-0.3",
+        "mass": "-0.003285508530220923485298718940591318080116931264840522192",
+        "quadrature_and_fourth_order_variation_errors": [
+          "0.0",
+          "6.429891383223394928698136143514379967637854663749198657e-46",
+          "7.56114467820702904736897190685566584998675063654201149e-45"
+        ]
+      },
+      {
+        "U": "2.0",
+        "x": "-0.8",
+        "mass": "-0.003113826239371703492696586657091658624203765573798462755",
+        "quadrature_and_fourth_order_variation_errors": [
+          "0.0",
+          "9.719447736484202810844500960547334175140749904007059841e-46",
+          "2.596825813137184123289757325921012672422877658097775937e-45"
+        ]
+      }
+    ],
+    "integrated_moving_cut_work": "-0.0004466416310277504926478055858622229616096579876419748818",
+    "work_error": "3.038581678643135599191437526259826289350709066758382389e-64"
+  },
+  "status": "pass_scoped_exterior_response_identities_and_conditional_bounds",
+  "claims": {
+    "exact_spherical_constraints_and_cut_work": true,
+    "leading_LLL_response_requires_matched_static_reference": true,
+    "corrected_quantum_exterior_or_initial_state_supplied": false,
+    "physical_chirality_envelope_established": false,
+    "finite_cut_beta_or_O_e_squared_remainder_proved": false,
+    "full_preparation_rectangle_certified": false,
+    "physical_opening_or_stability_claimed": false,
+    "Lean_run": false
+  },
+  "post_run_documentation_updates": [
+    {
+      "path": "notes/exterior-mass-lapse-and-cut-work.md",
+      "run_input_sha256": "785f64690793b3666ac3bbdcb90dd9347a5ccc36a210af3826153aeea9ad4e1a",
+      "final_input_sha256": "3bed3e9dff772828e4bb23367d5223872f2c80d736277d23e9c06e79889fa0f3",
+      "scope": "Text-only clarification of alpha0=0 comparison class and companion reference-centering link; mathematical definitions and frozen checks unchanged",
+      "computation_repeated": false
+    }
+  ],
+  "final_input_verification": "All listed LF-normalized input hashes match final sources; checker unchanged; no hidden rerun after documentation-only clarification."
+}

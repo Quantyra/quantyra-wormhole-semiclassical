@@ -1,0 +1,348 @@
+{
+  "scope": "classical static magnetic near-extremal RN free Dirac; first-order specified TFD work only",
+  "eta": "1/2000",
+  "finite_drive_work_proved": false,
+  "quantum_exterior_transfer_proved": false,
+  "source_sha256": {
+    "notes/rn-higher-mode-boundary-spectral-control.md": "a92c0ffd453eb45c7e51530746ac73d0887d468741231b91af67f134751f0d52",
+    "checks/rn_higher_mode_boundary_spectral_control.py": "3a0503271c7b1e724af713738a6633a3858cc34365785922910cb9e87f36cbc0",
+    "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "notes/higher-landau-boundary.md": "2fef6b07851f9f4f8ca4305a4b3bcb96ca4731605538f29e0c8bd5220c8e305a",
+    "notes/curved-massive-response.md": "fa00c42c4cc646f28252e2b4fea94fa42c494a766d8029835e483e6d46255b44",
+    "notes/exterior-lll-delayed-boundary.md": "f50ea1ee544ae72b06356886bcb984a1ddcbfc01359287dc3291ad4ca0077f23",
+    "notes/rn-ads-finite-cut-matching.md": "c354e877b41da5aa93be43052c693acbf6ab6ba7327318409f0038291cbb9337",
+    "notes/laboratory-drive-clock-feedback.md": "5f149bccdebbf121ac98d8aa45c5d4bf641b8b5fef7e4ccbc4408259a6f19059",
+    "notes/physical-clock-remainder.md": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972"
+  },
+  "precision": {
+    "symbolic": "exact SymPy and Fraction",
+    "spectral_digits": [
+      80,
+      110
+    ],
+    "geometry_digits": 140
+  },
+  "predeclared_tolerances": {
+    "scalar": [
+      2e-08,
+      2e-09
+    ],
+    "geometry_relative": 2e-10
+  },
+  "failures": [],
+  "exact": {
+    "symbolic_identities": "pass",
+    "rational_assertions": [
+      "X_ge_k3",
+      "C_lt_123k3_over20",
+      "M1_gt18",
+      "C_over_q_lt7_over_k",
+      "counting_K_over_q_lt15_over_k",
+      "sixth_power_bound",
+      "CD_bound",
+      "D_square_bound",
+      "thermal_h_bound",
+      "thermal_horizon_small",
+      "collar_a_d_small",
+      "collar_lower_mass",
+      "sqrt2_lower",
+      "sqrt2_upper",
+      "sqrt7_upper",
+      "exponential_tower_bound",
+      "angular_tail_correction",
+      "moment_prefactor",
+      "tower_target",
+      "first_coefficient",
+      "second_coefficient",
+      "TFD_laplace",
+      "coherent_work"
+    ],
+    "boundary_allowed_rank": 2,
+    "tower_upper_rational": "2048000000000000000000000000023/214748364800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "tower_upper_decimal": 9.5367431640625e-69,
+    "frozen_source_total_angle": "pi/500",
+    "integrated_frame_operator_norm": "pi/1000"
+  },
+  "geometry": [
+    {
+      "kind": "physical",
+      "k": 2000,
+      "z_i": "0.25",
+      "X": "8186613663.405241241171443",
+      "s_h": "4.771508905399092827438763e-34",
+      "kappa0": "2.343750000047715089053991e-23",
+      "maximum_radial_chain_error_scaled": "3.9939752435069575384e-119",
+      "minimum_shifted_margin_scaled": "9.2795202062083382765e-46"
+    },
+    {
+      "kind": "physical",
+      "k": 2000,
+      "z_i": "0.28",
+      "X": "8186613663.405241241171443",
+      "s_h": "5.344089974046983966731415e-34",
+      "kappa0": "2.62500000005344089974047e-23",
+      "maximum_radial_chain_error_scaled": "1.4095274651027934964e-118",
+      "minimum_shifted_margin_scaled": "1.1640230146667739534e-45"
+    },
+    {
+      "kind": "physical",
+      "k": 4000,
+      "z_i": "0.25",
+      "X": "65492909308.40859659602485",
+      "s_h": "9.319353330691591636262734e-37",
+      "kappa0": "3.662109375009319353330692e-25",
+      "maximum_radial_chain_error_scaled": "1.3654984426021171501e-116",
+      "minimum_shifted_margin_scaled": "5.2201800864460145318e-49"
+    },
+    {
+      "kind": "physical",
+      "k": 4000,
+      "z_i": "0.28",
+      "X": "65492909308.40859659602485",
+      "s_h": "1.043767573037458263261426e-36",
+      "kappa0": "4.101562500010437675730375e-25",
+      "maximum_radial_chain_error_scaled": "2.1895351940330937982e-117",
+      "minimum_shifted_margin_scaled": "6.5481939004378806287e-49"
+    },
+    {
+      "kind": "synthetic",
+      "k": null,
+      "z_i": null,
+      "X": "1.0",
+      "s_h": "0.0005",
+      "kappa0": "0.003497127435657546008370744",
+      "maximum_radial_chain_error_scaled": "3.3457054928632082466e-134",
+      "minimum_shifted_margin_scaled": "0.000020524969988230895889"
+    },
+    {
+      "kind": "synthetic",
+      "k": null,
+      "z_i": null,
+      "X": "1.0",
+      "s_h": "0.001",
+      "kappa0": "0.006988519470541444571410609",
+      "maximum_radial_chain_error_scaled": "5.3458347322037164845e-134",
+      "minimum_shifted_margin_scaled": "0.000081926899410872599708"
+    },
+    {
+      "kind": "synthetic",
+      "k": null,
+      "z_i": null,
+      "X": "10000000000.0",
+      "s_h": "0.0005",
+      "kappa0": "29977518.73644671275377893",
+      "maximum_radial_chain_error_scaled": "1.7619002475382256444e-125",
+      "minimum_shifted_margin_scaled": "0.22345209536496524654"
+    },
+    {
+      "kind": "synthetic",
+      "k": null,
+      "z_i": null,
+      "X": "10000000000.0",
+      "s_h": "0.001",
+      "kappa0": "59910149.77631208503233581",
+      "maximum_radial_chain_error_scaled": "3.0547233768232738932e-124",
+      "minimum_shifted_margin_scaled": "0.22344161046907007814"
+    }
+  ],
+  "scalar": [
+    {
+      "case": "synthetic18",
+      "M": "18.0",
+      "nu_d": "0.05",
+      "moment": "0.0070382501488499852128414687040812261",
+      "exact_upper": "0.026672775072178491122301474127951975",
+      "simple_upper": "0.053334230512903345397350928046330421",
+      "comparisons": [
+        {
+          "precision_digits": 80,
+          "ODE_error_scaled": "2.2208554151825662942e-18",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "3.6817855420006762802e-14"
+        },
+        {
+          "precision_digits": 110,
+          "ODE_error_scaled": "3.1941448974907911178e-19",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "3.6817855420006762802e-14"
+        }
+      ],
+      "spectral_metadata": [
+        {
+          "P": "500.0",
+          "precision_digits": 80,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "9.7784797035660494296e-14",
+          "IR_bound": "6.0566310064039953725e-69"
+        },
+        {
+          "P": "500.0",
+          "precision_digits": 110,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "9.7784797035660494296e-14",
+          "IR_bound": "6.0566310064039953725e-69"
+        }
+      ]
+    },
+    {
+      "case": "synthetic32",
+      "M": "32.0",
+      "nu_d": "0.2",
+      "moment": "0.0011642029186806226076146681795824391",
+      "exact_upper": "0.0046566311152993128811229706436785752",
+      "simple_upper": "0.0093223114428599907470324618548765007",
+      "comparisons": [
+        {
+          "precision_digits": 80,
+          "ODE_error_scaled": "1.6435333939061971562e-17",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "1.1634399423326506745e-13"
+        },
+        {
+          "precision_digits": 110,
+          "ODE_error_scaled": "3.6964670318063668926e-20",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "1.1634399423326506745e-13"
+        }
+      ],
+      "spectral_metadata": [
+        {
+          "P": "500.0",
+          "precision_digits": 80,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "3.0904824742134674741e-13",
+          "IR_bound": "1.5763734755452049691e-72"
+        },
+        {
+          "P": "500.0",
+          "precision_digits": 110,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "3.0904824742134674741e-13",
+          "IR_bound": "1.5763734755452049691e-72"
+        }
+      ]
+    },
+    {
+      "case": "synthetic64",
+      "M": "64.0",
+      "nu_d": "0.001",
+      "moment": "0.00014565950829225419063479253485421596",
+      "exact_upper": "0.00058263803099802613192757094457191367",
+      "simple_upper": "0.0011652760690749204226582258058092227",
+      "comparisons": [
+        {
+          "precision_digits": 80,
+          "ODE_error_scaled": "1.5538516417531134362e-15",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "4.6493503922477549565e-13"
+        },
+        {
+          "precision_digits": 110,
+          "ODE_error_scaled": "1.199606938577173992e-17",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "4.6493503922477549565e-13"
+        }
+      ],
+      "spectral_metadata": [
+        {
+          "P": "500.0",
+          "precision_digits": 80,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "1.2361929896853869896e-12",
+          "IR_bound": "1.6711980796290799047e-76"
+        },
+        {
+          "P": "500.0",
+          "precision_digits": 110,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "1.2361929896853869896e-12",
+          "IR_bound": "1.6711980796290799047e-76"
+        }
+      ]
+    },
+    {
+      "case": "candidate2000",
+      "M": "18.048130316886021037787142989852892",
+      "nu_d": "4.6751048485970559428841750308730565e-33",
+      "moment": "4972631779318257463740938438.6660525",
+      "exact_upper": "4972631779318257463740938438.6855336",
+      "simple_upper": "9941248998773391900058461003.3264907",
+      "comparisons": [
+        {
+          "precision_digits": 80,
+          "ODE_error_scaled": "3.0971436473383015736e-16",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "3.7015000584330826444e-14"
+        },
+        {
+          "precision_digits": 110,
+          "ODE_error_scaled": "7.0054742231634036929e-17",
+          "spectral_error_after_tail_scaled": "0.0",
+          "raw_spectral_difference": "3.7015000584330826444e-14"
+        }
+      ],
+      "spectral_metadata": [
+        {
+          "P": "500.0",
+          "precision_digits": 80,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "9.8308430982600620261e-14",
+          "IR_bound": "6.3175101840863318928e-38"
+        },
+        {
+          "P": "500.0",
+          "precision_digits": 110,
+          "positive_scattering_measure": "Neumann step barrier, full continuum",
+          "UV_difference_bound": "9.8308430982600620261e-14",
+          "IR_bound": "6.3175101840863318928e-38"
+        }
+      ]
+    }
+  ],
+  "outcome": "PASS_STATIC_REFERENCE_COMPONENT_ONLY",
+  "elapsed_seconds": 785.6397564411163,
+  "terminal_exit_status": 0,
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "execution_source_sha256": {
+    "notes/rn-higher-mode-boundary-spectral-control.md": "a92c0ffd453eb45c7e51530746ac73d0887d468741231b91af67f134751f0d52",
+    "checks/rn_higher_mode_boundary_spectral_control.py": "3a0503271c7b1e724af713738a6633a3858cc34365785922910cb9e87f36cbc0",
+    "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "notes/higher-landau-boundary.md": "2fef6b07851f9f4f8ca4305a4b3bcb96ca4731605538f29e0c8bd5220c8e305a",
+    "notes/curved-massive-response.md": "fa00c42c4cc646f28252e2b4fea94fa42c494a766d8029835e483e6d46255b44",
+    "notes/exterior-lll-delayed-boundary.md": "f50ea1ee544ae72b06356886bcb984a1ddcbfc01359287dc3291ad4ca0077f23",
+    "notes/rn-ads-finite-cut-matching.md": "c354e877b41da5aa93be43052c693acbf6ab6ba7327318409f0038291cbb9337",
+    "notes/laboratory-drive-clock-feedback.md": "5f149bccdebbf121ac98d8aa45c5d4bf641b8b5fef7e4ccbc4408259a6f19059",
+    "notes/physical-clock-remainder.md": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972"
+  },
+  "effective_source_sha256": {
+    "notes/rn-higher-mode-boundary-spectral-control.md": "3fadbf8ba2e073c6297d65db6adfe55cf4963d12d0639bf712a4a0b75eda7baa",
+    "checks/rn_higher_mode_boundary_spectral_control.py": "3a0503271c7b1e724af713738a6633a3858cc34365785922910cb9e87f36cbc0",
+    "notes/coupled-fermion-domain.md": "04e58c50d81334507c22cf25fc40e0c2c1ebb8fe16448e8b1dce3a9e247aeace",
+    "notes/dirac-spherical-source-reduction.md": "75bba585e7946db7053eb3a25330ab845e65e9eefd5155dc831699588247d624",
+    "notes/higher-landau-boundary.md": "2fef6b07851f9f4f8ca4305a4b3bcb96ca4731605538f29e0c8bd5220c8e305a",
+    "notes/curved-massive-response.md": "fa00c42c4cc646f28252e2b4fea94fa42c494a766d8029835e483e6d46255b44",
+    "notes/exterior-lll-delayed-boundary.md": "f50ea1ee544ae72b06356886bcb984a1ddcbfc01359287dc3291ad4ca0077f23",
+    "notes/rn-ads-finite-cut-matching.md": "c354e877b41da5aa93be43052c693acbf6ab6ba7327318409f0038291cbb9337",
+    "notes/laboratory-drive-clock-feedback.md": "5f149bccdebbf121ac98d8aa45c5d4bf641b8b5fef7e4ccbc4408259a6f19059",
+    "notes/physical-clock-remainder.md": "7ef072b852a07aee9e9b0a65a7f85fa054ec200b9268c1e0b6244bb79a4bc972"
+  },
+  "text_only_refresh": {
+    "kind": "text-only post-run refresh; no mathematical/parameter/tolerance/checker changes",
+    "changed_files": [
+      "notes/rn-higher-mode-boundary-spectral-control.md"
+    ],
+    "reason": "Record completed validation, correct classical-versus-quantum reference pointer, clarify normalized family clock, and fix inline formula Markdown.",
+    "execution_note_sha256": "a92c0ffd453eb45c7e51530746ac73d0887d468741231b91af67f134751f0d52",
+    "current_note_sha256": "3fadbf8ba2e073c6297d65db6adfe55cf4963d12d0639bf712a4a0b75eda7baa",
+    "at_utc": "2026-10-16T04:29:20.744877+00:00"
+  }
+}
