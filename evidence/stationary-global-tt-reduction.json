@@ -1,0 +1,286 @@
+{
+  "runs": [
+    {
+      "checks": [
+        {
+          "detail": "",
+          "label": "actual_bytecode_disabled",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "inputs_strict_UTF8_LF",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "exact_fixed_theta_normal",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "negative_endpoint_formula",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "positive_endpoint_formula",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "negative_endpoint_loop_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "positive_H_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "root_shift_loop_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "benchmark_root_scale",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_tracefree",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_divergence",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_energy_by_parts",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_kernel_difference_01",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_kernel_difference_02",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_outer_roots",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_normal_solution",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_normal_conformal",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "York_outer_essential_threshold",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "York_bolt_inverse_square",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "York_seed_gap_guard",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "York_seed_potential",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "TT_Schur_monotonicity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "areal_TT_force",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "complete_TT_integration_certificate",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "TT_square_completion",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "TT_seed_potential",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "TT_cross_with_bolt_primitive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "TT_cross_seed_guard",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Hardy_boundary_identity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Schur_first_primitive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Schur_second_primitive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "F_second_x_minimum",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "F_second_constant_minimum",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "W_constant_minimum",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "W_x_calculus_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "F_second_positive_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "Schur_monotone_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "Hardy_cross_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "W_complete_gap_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "TT_tensor_norm_constant",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "TT_physical_gap_constant",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "coarse_thermal_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "projection_strip_guards",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "-B",
+        "checks/stationary_global_tt_reduction.py"
+      ],
+      "contract": {
+        "acceptance": "every symbolic residual exactly zero and rational inequality true",
+        "failure_policy": "append every run and retain failed input bytes",
+        "hash_policy": "SHA256 of raw UTF8/LF/noBOM bytes, no normalization",
+        "numerical_tolerances": "none",
+        "ordinary_arguments": [
+          "escaping packets",
+          "global weighted York inverse",
+          "finite regularity qualification",
+          "Hardy and Schur bounds",
+          "smooth bolt closure"
+        ],
+        "scope": "normal diagonal, York identities, classical TT form and exact gap guards",
+        "unresolved": [
+          "quantum lower-form bound",
+          "candidate sharp mixed projection",
+          "off-shell transfer",
+          "physical kernel",
+          "adjoint phase",
+          "candidate moments",
+          "quantitative coupled inverse",
+          "nonlinear and physical matching"
+        ]
+      },
+      "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "dont_write_bytecode": true,
+      "execution_inputs_sha256": {
+        "checks/stationary_global_tt_reduction.py": "e39e14c95de028032e14e19699a09a318a6ff8edbfd1eab23d36d04796fce855",
+        "notes/stationary-adjoint-phase.md": "63d4558676aa1d061cc56e10e6d8f8b17d69480b2a680c625d9e70edd82cbaed",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-global-tt-reduction.md": "47517cd7213d79d5abdc02644662fe729bae7e9cb7468c5d02f0bf4b17d7cbaf",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/stationary-shape-logarithmic-response.md": "1221163c9fec92cbb00c26318eef71fe2b56878b6f06d1bbc9ec3efdc87e783c"
+      },
+      "failed_checks": [],
+      "final_inputs_sha256": {
+        "checks/stationary_global_tt_reduction.py": "e39e14c95de028032e14e19699a09a318a6ff8edbfd1eab23d36d04796fce855",
+        "notes/stationary-adjoint-phase.md": "63d4558676aa1d061cc56e10e6d8f8b17d69480b2a680c625d9e70edd82cbaed",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-global-tt-reduction.md": "47517cd7213d79d5abdc02644662fe729bae7e9cb7468c5d02f0bf4b17d7cbaf",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/stationary-shape-logarithmic-response.md": "1221163c9fec92cbb00c26318eef71fe2b56878b6f06d1bbc9ec3efdc87e783c"
+      },
+      "finished_utc": "2026-10-18T03:11:47.825463+00:00",
+      "python": "3.13.7",
+      "started_utc": "2026-10-18T03:11:38.130060+00:00",
+      "status": "passed",
+      "sympy": "1.14.0",
+      "terminal_exit_status": 0
+    }
+  ]
+}
