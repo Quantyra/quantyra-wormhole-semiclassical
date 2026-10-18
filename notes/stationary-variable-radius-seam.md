@@ -148,9 +148,90 @@ The flat positive remainder at constant `v` likewise stays the
 statement already proved: a pointwise replacement is not a
 variable-coefficient theorem. No term in `E_bubble` is set to zero.
 
-Classification: unresolved proof.
+Classification of the full nonlocal derivative, before the estimate
+below: unresolved as a three-resolvent theorem. The next section
+estimates the part that the retained a2 bound actually controls, and
+records why that part does not close the weighted-jet norm.
 
-## 5. Prescribed-source mass and temperature map
+## 5. Low-jet embedding and the retained a2 derivative
+
+Let `D` be the radial hyperbolic Laplacian
+`u''+coth(chi) u'`. The divergence identity
+
+    (sinh(chi) u')'/sinh(chi)=D u
+
+integrates, for a regular bolt value `u'(0)=0`, to
+
+    u'(chi)=(1/sinh chi) integral_0^chi sinh(t) D u(t) dt.
+
+Hence `|u'(chi)|<=||D u||_infinity tanh(chi/2)<||D u||_infinity`.
+The weight in the transverse jet collapses exactly:
+
+    coth(chi) tanh(chi/2)=1-1/(2 cosh(chi/2)^2)<1,
+
+so `|coth(chi) u'|<||D u||_infinity`. Therefore
+`|u''|<2||D u||_infinity`. If
+
+    ||u||_infinity+||D u||_infinity<=eta,
+
+every jet in the weighted norm `X_L^2` is at most `2 eta` before the
+factor `1/cosh(chi)<=1`. The radial low-jet ball embeds into `X_L^2`
+with constant 2. This embedding does not run in the other direction.
+
+On `0<=chi<=84`, `cosh(84)>exp(84)/2`. Since `exp(1)>27/10`,
+
+    cosh(84)>(27/10)^84/2>10^35.
+
+A field of weighted norm 1 may therefore have supremum above `10^35`.
+The a2 hypothesis in the parameter-form note requires
+`||w||_infinity+||Delta w||_infinity<=1/100`. The unit ball of `X_84^2`
+is not contained in that hypothesis ball. The ratio of the two sup-norm
+allowances exceeds `10^37`.
+
+Inside the hypothesis ball, the retained a2 estimate is
+
+    ||Dr^(-1/2)(partial_w Q_a2) Dr^(-1/2)||<1600 eta.
+
+The ledger `9|c2|/C<=15/(2 pi)` and `[15/(2 pi)](200 pi+1)<1503`,
+rounded up to 1600, is used unchanged and covers only this contact.
+At `eta=1/100` the relative factor is 16, which is not a contraction.
+The factor falls below 1 only for `eta<1/1600`. On that smaller ball
+the contraction is a statement about the a2 quadratic form in the `Dr`
+topology. It is not a bound on `||E_bubble||` from `X_L^2` to `X_L^2`.
+
+The a2 third-variation matrix, evaluated at vanishing curvature and
+vanishing `Delta w`, is diagonal with entries proportional to
+`(-2,0)`. Its determinant vanishes, so it has a kernel direction.
+A scalar three-resolvent trace does not have that matrix shape. The
+constant 1600 is not substituted for `E_bubble`, and `E_bubble` is not
+set to zero.
+
+## 6. Failed fixed-point composition
+
+The classical seam map of the next section takes the two scalars
+`(a(R), integral rho)`. The a2 bound returns a relative quadratic form,
+not those two scalars. Composing the relative factor 1600 with the
+product inverse norm `1.3e8` is a formal product:
+
+    1600*1.3e8/100=2080000000,
+    1600*1.3e8/1600=130000000.
+
+At the contraction threshold the formal product equals the full product
+norm, so it does not produce a smaller seam correction. On the
+hypothesis ball it is larger still. This composition is an uncontrolled
+approximation to `||E_bubble||_{X_L^2}`. It is preserved as a failed
+argument and is not used as a Lipschitz constant for the seam map.
+
+Consequently the coupled mass and temperature fixed point is not
+solved. The prescribed-source Jacobian below remains nonzero, and the
+missing input is a seam-source Lipschitz bound for the three-resolvent
+insertion.
+
+Classification of `E_bubble` in `X_L^2`: unresolved proof, with the
+embedding, the factor 16, and the formal products above recorded.
+Classification of the coupled fixed point: unresolved proof.
+
+## 7. Prescribed-source mass and temperature map
 
 For a prescribed spherical source, the retained solution defines
 
@@ -178,14 +259,15 @@ Fixed temperature in the retained geometry proof also gives `H(R)=0`
 for that same prescribed source, and therefore `xi(R)=s_R`. That
 identity is not re-derived from the product kernel.
 
-## 6. Coupled seam
+## 8. Coupled seam
 
 The quantum source `rho, p` is the stress of the variable-radius
 state. That state depends on `E_bubble` and on the exterior values
-sampled by the nonlocal kernel. Section 5 solves the system only
+sampled by the nonlocal kernel. Section 7 solves the system only
 after `rho` and `p` are prescribed. Substituting the product response
 for that stress changes the source that the map was given, so the
-output of section 5 is not a fixed point.
+output of section 7 is not a fixed point. Section 6 shows that the
+retained a2 factor does not supply the missing source Lipschitz bound.
 
 No boundary datum at `chi=L` repairs this. The product operator
 samples both sides of the seam, and the exterior continuation changes
@@ -199,7 +281,7 @@ solution of the quantum seam.
 No replacement area target was written before this test. The area
 budget is not evaluated. No numerical value is assigned to it.
 
-## 7. Constant-background bubble derivative
+## 9. Constant-background bubble derivative
 
 The constant-background integrand factor of the parameter-form
 remainder is `exp(2v) f(exp(-2v) x)`, with
@@ -221,7 +303,7 @@ The constant-background derivative is therefore not the zero function.
 It is still not the variable Dirac three-vertex. The higher weighted
 nonlinear map is not this derivative.
 
-## 8. Nonlinear map, reduced branch, and observable errors
+## 10. Nonlinear map, reduced branch, and observable errors
 
 A reduced branch in the sense of the covariant reduced-inverse note
 needs an inverse constant `M_s`, a nonlinear derivative bound `L_s`,
@@ -239,7 +321,7 @@ Classification of each of these three items: unresolved proof.
 None is set to zero, and none is replaced by the constant-background
 derivative.
 
-## 9. Signed source condition, decided separately
+## 11. Signed source condition, decided separately
 
 The fast outgoing condition is the scalar statement
 
@@ -266,7 +348,7 @@ Decision: the original signed source condition is undecided.
 Classification: unavailable physical input. `m_num` is not set to zero.
 This decision does not use the kernel substitution in section 3.
 
-## 10. Transfer and the physical gates
+## 12. Transfer and the physical gates
 
 The finite-pulse work theorem remains a statement about its static
 reference. Transfer onto a matched variable-radius exterior requires
@@ -284,23 +366,26 @@ bubble derivative leaves that pass unsatisfied. S075 through S079
 stay blocked on that pass. The earlier obstruction audit remains the
 S080 outcome. No satisfying row of the completion plan is met.
 
-## 11. Checker
+## 13. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
 It audits the conformal Laplacian, both gap enclosures, the arithmetic
-of the rejected substitution, the resolvent identity, the prescribed-source
-Jacobian, the constant-background derivatives, and the separation
-between `M(p)` and the fast phase. Analytic continuation, spectral
-domains, the variable-coefficient bubble, and the coupled fixed point
-remain ordinary arguments. The checker does not assign a bound to
-`E_bubble` and does not evaluate the area budget.
+of the rejected substitution, the radial embedding identities, the a2
+ledger and its factors 16 and 1, the formal products with `1.3e8`, the
+resolvent identity, the prescribed-source Jacobian, the
+constant-background derivatives, and the separation between `M(p)` and
+the fast phase. Analytic continuation, spectral domains, the
+three-resolvent insertion, and the coupled fixed point remain ordinary
+arguments. The checker does not assign the constant 1600 to `E_bubble`
+and does not evaluate the area budget.
 
-Remaining to-do list: estimate `E_bubble` in `X_L^2` and solve the
-coupled mass and temperature fixed point with that estimate included;
-prove the variable Dirac three-vertex, the higher weighted nonlinear
-map, the reduced branch, and the physical observable errors without
-setting them to zero; enclose the signed moment, or prove it vanishes,
-from its own data; then match the exterior, transfer the finite-pulse
-theorem, and complete the driven stress, radius, controller, capture,
-tail, spatial area, and S074-S080 gates.
+Remaining to-do list: bound the three-resolvent insertion as an `X_L^2`
+source, on a ball that embeds into the classical Jacobian, with a
+seam-source Lipschitz constant below 1; the a2 factor 1600 is not that
+bound. Then prove the variable Dirac three-vertex, the higher weighted
+nonlinear map, the reduced branch, and the physical observable errors
+without setting them to zero; enclose the signed moment from its own
+data; match the exterior, transfer the finite-pulse theorem, and
+complete the driven stress, radius, controller, capture, tail, spatial
+area, and S074-S080 gates.

@@ -25,13 +25,13 @@ INPUTS=[
 CONTRACT={
     'acceptance':'exact residuals zero and the stated rational comparisons satisfied',
     'numerical_tolerances':'none',
-    'scope':'conformal Laplacian, two exponential-gap enclosures, rejected-substitution arithmetic, resolvent identity, prescribed-source Jacobian, constant-background derivatives, and the fast-phase separation',
+    'scope':'conformal Laplacian, two exponential-gap enclosures, rejected-substitution arithmetic, radial low-jet embedding, a2 ledger and failed fixed-point products, resolvent identity, prescribed-source Jacobian, constant-background derivatives, and the fast-phase separation',
     'ordinary_arguments':['variable-radius decomposition and the uncontrolled conformal substitution',
         'absence of a proved bound on the nonlocal bubble derivative',
         'prescribed-source map distinguished from the coupled fixed point',
         'constant-background derivative distinguished from the variable three-vertex',
         'signed moment left unenclosed and separate from the product inverse'],
-    'unresolved':['E_bubble in the weighted jet norm',
+    'unresolved':['three-resolvent insertion as an X_L^2 seam source',
         'coupled mass and temperature fixed point',
         'variable Dirac three-vertex, higher weighted nonlinear map, reduced branch, and physical observable errors',
         'signed moment enclosure',
@@ -97,6 +97,33 @@ def conformal_laplacian_and_gap():
     check('reciprocal_substitution_above_lower_endpoint',(1/alt_lower_reciprocal-1)*130000000>13650000)
     check('reciprocal_substitution_below_upper_endpoint',(1/alt_upper_reciprocal-1)*130000000<14300000)
     check('retained_weighted_reserve',R(22,7)*(40000000+2000*84*R(6,5))<130000000)
+
+
+def low_jet_embedding_and_a2_factor():
+    chi=S.symbols('chi',positive=True)
+    field=S.Function('field')(chi)
+    radial=(S.diff(S.sinh(chi)*S.diff(field,chi),chi)/S.sinh(chi)
+            -(S.diff(field,chi,2)+S.coth(chi)*S.diff(field,chi)))
+    zero('radial_hyperbolic_divergence',radial)
+    slope=S.simplify(S.expand(((S.cosh(chi)-1)/S.sinh(chi)-S.tanh(chi/2)).rewrite(S.exp)))
+    if slope.atoms(S.Float):
+        raise ValueError('inexact Float atom in integrated_slope_is_tanh_half')
+    check('integrated_slope_is_tanh_half',slope==0,slope)
+    zero('transverse_jet_collapses',S.coth(chi)*S.tanh(chi/2)-(1-1/(2*S.cosh(chi/2)**2)))
+    zero('cosh_minus_sinh',S.cosh(chi)-S.sinh(chi)-S.exp(-chi))
+    partial=sum(R(1,1)/S.factorial(k) for k in range(7))
+    check('exp_one_above_27_10',partial>R(27,10),partial)
+    check('cosh_84_above_1e35',R(27,10)**84/2>10**35)
+    check('weighted_ball_exceeds_hypothesis_by_1e37',(R(27,10)**84/2)*100>10**37)
+    check('a2_ledger_below_1600',1500+R(5,2)<1600)
+    zero('a2_factor_on_hypothesis_ball',1600*R(1,100)-16)
+    zero('a2_factor_at_contraction_threshold',1600*R(1,1600)-1)
+    zero('failed_composition_on_hypothesis_ball',1600*130000000*R(1,100)-2080000000)
+    zero('failed_composition_at_threshold',1600*130000000*R(1,1600)-130000000)
+    c2,v=S.symbols('c2 v',positive=True)
+    third=c2*S.exp(-2*v)*S.Matrix([[-2,0],[0,0]])
+    zero('a2_third_variation_determinant',third.det())
+    zero('a2_third_variation_not_scalar',third[0,0]/(c2*S.exp(-2*v))+2)
 
 
 def resolvent_and_prescribed_source():
@@ -167,6 +194,7 @@ def main():
             check('actual_bytecode_disabled',sys.dont_write_bytecode and '-B' in sys.orig_argv)
             check('inputs_strict_UTF8_LF',all(raw.decode('utf-8') is not None and b'\r' not in raw and not raw.startswith(b'\xef\xbb\xbf') for raw in before.values()))
             conformal_laplacian_and_gap()
+            low_jet_embedding_and_a2_factor()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:
