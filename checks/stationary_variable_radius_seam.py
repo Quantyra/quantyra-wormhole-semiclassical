@@ -303,6 +303,23 @@ def moment_norms_and_outer_endpoint():
     check('moment_symbol_not_replaced',S.symbols('m_num')!=0)
 
 
+def absent_inputs_and_blocked_gates():
+    k1=4*10**17+1
+    k2=8*10**17+1
+    check('first_pair_fast_guard',k1>4*10**17)
+    check('second_pair_fast_guard',k2>2*4*10**17)
+    check('energy_guard',181>180)
+    c0_first=k1*(181+4*1)
+    c0_second=k2*(181+4*4)
+    check('admissible_c0_values_differ',c0_first!=c0_second)
+    factor=R(16,10**12-8)
+    h_norm,c0=S.symbols('h_norm c0',positive=True)
+    bound=factor*R(2,10**6)*S.sqrt(c0)*h_norm
+    ratio=S.simplify(bound.subs(h_norm,2)/bound.subs(h_norm,1))
+    zero('moment_error_scales_with_h_norm',ratio-2)
+    check('moment_symbol_remains_unassigned',S.symbols('m_num')!=0)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -329,6 +346,7 @@ def main():
             exterior_field_and_dirac_family()
             higher_map_and_signed_moment()
             moment_norms_and_outer_endpoint()
+            absent_inputs_and_blocked_gates()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

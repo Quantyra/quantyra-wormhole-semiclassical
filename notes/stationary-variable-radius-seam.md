@@ -694,17 +694,54 @@ S139.1 stays open. The finite-pulse transfer still requires this match.
 Driven stress, radius, controller, capture, tail, and spatial area stay
 blocked. The area budget is not evaluated.
 
-## 24. Checker
+## 24. Search of the retained notes
+
+The scalar phase note defines `c0=k(E+4 lambda)` and
+`h_R=V*R4_PV p` with `p=80 pi^2 f_eff`. It gives
+`||g||^2/c0<4*10^{-12}` and `||L||<4*10^{-12}`. It does not assign a
+number to `c0` or to `||h_R||`. The outgoing-inverse note adds
+`k/sqrt(lambda)>4*10^{17}` and `E>180/G`. Those inequalities do not
+select one value of `c0`.
+
+Two pairs satisfy both inequalities and the positive-energy condition
+`E=181`, `G=1`:
+
+    lambda=1,  k=4*10^{17}+1,  c0=185 k,
+    lambda=4,  k=8*10^{17}+1,  c0=197 k.
+
+The two values of `c0` differ. No boundary-trace number at `chi=D0`
+appears in the stationary notes. The weighted allowance above `10^37`
+is not a trace below 1.
+
+Classification: unavailable physical input for numerical `c0`,
+`||h_R||`, and the `chi=D0` trace. `m_num` is not set to zero.
+
+## 25. Why S138 and the later gates stay blocked
+
+S138 transfers the finite-pulse work theorem from its static reference
+onto a matched quantum exterior. That exterior is the unmatched trace
+at `chi=D0` together with the unenclosed moment. The transfer is not
+performed.
+
+S076 stress and radius need an accepted geometry. S075's controller
+and drive need the S074 pass. Capture needs the matched drive. The
+exterior tail and the `dr` Jacobian remain unresolved. The spatial
+area budget has no replacement target, so it is not evaluated.
+S074.2 through S074.6 and S075.1 through S079.6 stay unchecked. The
+S080 outcome remains the earlier obstruction audit. No satisfying row
+is met.
+
+## 26. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits `||g||^2<4*10^{-12} c0` and the outer identity
-`tanh(D0/2)=exp(-h)`. It does not replace `m_num` by zero, and it does
-not evaluate the area budget.
+It also audits the two admissible values of `c0` and the scaling of
+the moment error with `||h_R||`. It does not replace `m_num` by zero,
+and it does not evaluate the area budget.
 
-Remaining to-do list: supply numerical values of `c0=k(E+4 lambda)` and
-`||h_R||` for the actual source, and a boundary-trace estimate below 1
-at `chi=D0`. The partial bound `||g||<2*10^{-6} sqrt(c0)` is not that
-interval, and `m_num` is not zero. Then transfer the finite-pulse
-theorem and complete driven stress, radius, controller, capture, tail,
-spatial area, and every S074-S080 gate.
+Remaining to-do list: numerical `c0`, `||h_R||`, and a `chi=D0`
+boundary trace below 1 are absent. Two admissible pairs give different
+values of `c0`. `m_num` is not zero. S138 and the later stress, radius,
+controller, capture, tail, and area gates stay blocked on that missing
+match. S074.2-S074.6 and S075.1-S079.6 stay open. The area budget is
+unevaluated.
