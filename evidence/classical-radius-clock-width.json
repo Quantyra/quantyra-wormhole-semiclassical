@@ -1,0 +1,552 @@
+{
+  "runs": [
+    {
+      "checks": [
+        {
+          "detail": "",
+          "label": "actual_bytecode_disabled",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "inputs_strict_UTF8_LF",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "comparison_identity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "clock_shift_identity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "ell_squared_times_lambda",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "frozen_lambda",
+          "passed": true
+        },
+        {
+          "detail": "1",
+          "label": "frozen_G_is_one",
+          "passed": true
+        },
+        {
+          "detail": "1999/2048000000000000000000000000000000000",
+          "label": "lambda_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "lower_product_endpoint",
+          "passed": true
+        },
+        {
+          "detail": "2000000000",
+          "label": "lower_product_is_2000_cubed_over_4",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "lower_bound_is_strict",
+          "passed": true
+        },
+        {
+          "detail": "387420489",
+          "label": "integer_guard_below_lower_product",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "endpoint_not_used_as_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "corrected_radius_not_substituted",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "horizon_equations_present",
+          "passed": true
+        },
+        {
+          "detail": "[]",
+          "label": "no_numerical_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "width_zero_only_with_one_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "width_is_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "width_positive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "disk_enclosure_width",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "disk_lower_shift",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "disk_upper_shift",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "disk_enclosure_width_positive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "combined_bound_ratio",
+          "passed": true
+        },
+        {
+          "detail": "8",
+          "label": "combined_bounds_do_not_meet",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "combined_log_width",
+          "passed": true
+        },
+        {
+          "detail": "log(8)/2",
+          "label": "combined_log_width_positive",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "same_source_upper_bound_recorded",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "log_bound_integer_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "missing_input_is_numerical_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "kappa_not_set_to_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "m_num_not_set_to_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "h_R_norm_not_set_to_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "lambda_assignment_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "G_assignment_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_before_verdict",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_comparison",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_hardest_step",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_observable",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_test",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "verdict_matches_search",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "area_budget_unevaluated",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "-B",
+        "checks/classical_radius_clock_width.py"
+      ],
+      "contract": {
+        "acceptance": "the identity, the strict lower bound, the horizon line search, and the clock width agree",
+        "area_budget": "not evaluated; no replacement target was written before the test",
+        "failure_policy": "append initialized scientific runs and retain failed raw input bytes",
+        "hash_policy": "SHA256 of raw UTF8/LF/noBOM bytes without normalization",
+        "not_set_to_zero": [
+          "kappa",
+          "lambda",
+          "G",
+          "m_num",
+          "h_R"
+        ],
+        "numerical_tolerances": "none",
+        "ordinary_arguments": [
+          "comparison, hardest step, observable, and test recorded before the fit",
+          "line search for one classical extremal radius",
+          "width of kappa_M from the recorded bounds"
+        ],
+        "scope": "one frozen spectral point and the retained horizon equations",
+        "unresolved": [
+          "one numerical classical extremal radius b0",
+          "S074.2 freeze",
+          "area budget"
+        ]
+      },
+      "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "dont_write_bytecode": true,
+      "execution_inputs_sha256": {
+        "checks/classical_radius_clock_width.py": "ff442da50e02b9b450486498662b59a057184605d43286d286aed7cae13e125c",
+        "notes/classical-radius-clock-width.md": "cc844f10ce03b23495d5bd41392c6ec57d22b4f90853b916cfc6f1321b2c4f05",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-horizon-product-matching.md": "9c3a445f2ab0fe24482e129fcd7a8656f8dec2eba9a7ce707a46207557cfe534",
+        "notes/stationary-same-source-boundary-charge.md": "b2d9260f73ab4e532430f70c9dff3c124f39e359528ffaf1fdbf2bda0fcb796f",
+        "notes/stationary-variable-radius-seam.md": "f3677d01473a9842ecc559d6cd7c3d13db01f060e9ccc398665206715c6c04fc"
+      },
+      "failed_checks": [],
+      "final_inputs_sha256": {
+        "checks/classical_radius_clock_width.py": "ff442da50e02b9b450486498662b59a057184605d43286d286aed7cae13e125c",
+        "notes/classical-radius-clock-width.md": "cc844f10ce03b23495d5bd41392c6ec57d22b4f90853b916cfc6f1321b2c4f05",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-horizon-product-matching.md": "9c3a445f2ab0fe24482e129fcd7a8656f8dec2eba9a7ce707a46207557cfe534",
+        "notes/stationary-same-source-boundary-charge.md": "b2d9260f73ab4e532430f70c9dff3c124f39e359528ffaf1fdbf2bda0fcb796f",
+        "notes/stationary-variable-radius-seam.md": "f3677d01473a9842ecc559d6cd7c3d13db01f060e9ccc398665206715c6c04fc"
+      },
+      "finished_utc": "2026-10-18T20:48:36.189862+00:00",
+      "python": "3.13.7",
+      "started_utc": "2026-10-18T20:48:35.889756+00:00",
+      "status": "passed",
+      "sympy": "1.14.0",
+      "terminal_exit_status": 0
+    },
+    {
+      "checks": [
+        {
+          "detail": "",
+          "label": "actual_bytecode_disabled",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "inputs_strict_UTF8_LF",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "comparison_identity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "clock_shift_identity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "ell_squared_times_lambda",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "frozen_lambda",
+          "passed": true
+        },
+        {
+          "detail": "1",
+          "label": "frozen_G_is_one",
+          "passed": true
+        },
+        {
+          "detail": "1999/2048000000000000000000000000000000000",
+          "label": "lambda_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "lower_product_endpoint",
+          "passed": true
+        },
+        {
+          "detail": "2000000000",
+          "label": "lower_product_is_2000_cubed_over_4",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "lower_bound_is_strict",
+          "passed": true
+        },
+        {
+          "detail": "387420489",
+          "label": "integer_guard_below_lower_product",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "endpoint_not_used_as_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "corrected_radius_not_substituted",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "horizon_equations_present",
+          "passed": true
+        },
+        {
+          "detail": "[]",
+          "label": "no_numerical_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "width_zero_only_with_one_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "width_is_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "width_positive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "disk_enclosure_width",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "disk_lower_shift",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "disk_upper_shift",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "disk_enclosure_width_positive",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "combined_bound_ratio",
+          "passed": true
+        },
+        {
+          "detail": "8",
+          "label": "combined_bounds_do_not_meet",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "combined_log_width",
+          "passed": true
+        },
+        {
+          "detail": "log(8)/2",
+          "label": "combined_log_width_positive",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "same_source_upper_bound_recorded",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "log_bound_integer_guard",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "missing_input_is_numerical_b0",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "kappa_not_set_to_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "m_num_not_set_to_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "h_R_norm_not_set_to_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "lambda_assignment_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "G_assignment_not_zero",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_before_verdict",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_comparison",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_hardest_step",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_observable",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "protocol_states_test",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "verdict_matches_search",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "area_budget_unevaluated",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "-B",
+        "checks/classical_radius_clock_width.py"
+      ],
+      "contract": {
+        "acceptance": "the identity, the strict lower bound, the horizon line search, and the clock width agree",
+        "area_budget": "not evaluated; no replacement target was written before the test",
+        "failure_policy": "append initialized scientific runs and retain failed raw input bytes",
+        "hash_policy": "SHA256 of raw UTF8/LF/noBOM bytes without normalization",
+        "not_set_to_zero": [
+          "kappa",
+          "lambda",
+          "G",
+          "m_num",
+          "h_R"
+        ],
+        "numerical_tolerances": "none",
+        "ordinary_arguments": [
+          "comparison, hardest step, observable, and test recorded before the fit",
+          "line search for one classical extremal radius",
+          "width of kappa_M from the recorded bounds"
+        ],
+        "scope": "one frozen spectral point and the retained horizon equations",
+        "unresolved": [
+          "one numerical classical extremal radius b0",
+          "S074.2 freeze",
+          "area budget"
+        ]
+      },
+      "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "dont_write_bytecode": true,
+      "execution_inputs_sha256": {
+        "checks/classical_radius_clock_width.py": "ff442da50e02b9b450486498662b59a057184605d43286d286aed7cae13e125c",
+        "notes/classical-radius-clock-width.md": "cc844f10ce03b23495d5bd41392c6ec57d22b4f90853b916cfc6f1321b2c4f05",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-horizon-product-matching.md": "9c3a445f2ab0fe24482e129fcd7a8656f8dec2eba9a7ce707a46207557cfe534",
+        "notes/stationary-same-source-boundary-charge.md": "b2d9260f73ab4e532430f70c9dff3c124f39e359528ffaf1fdbf2bda0fcb796f",
+        "notes/stationary-variable-radius-seam.md": "f3677d01473a9842ecc559d6cd7c3d13db01f060e9ccc398665206715c6c04fc"
+      },
+      "failed_checks": [],
+      "final_inputs_sha256": {
+        "checks/classical_radius_clock_width.py": "ff442da50e02b9b450486498662b59a057184605d43286d286aed7cae13e125c",
+        "notes/classical-radius-clock-width.md": "cc844f10ce03b23495d5bd41392c6ec57d22b4f90853b916cfc6f1321b2c4f05",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-horizon-product-matching.md": "9c3a445f2ab0fe24482e129fcd7a8656f8dec2eba9a7ce707a46207557cfe534",
+        "notes/stationary-same-source-boundary-charge.md": "b2d9260f73ab4e532430f70c9dff3c124f39e359528ffaf1fdbf2bda0fcb796f",
+        "notes/stationary-variable-radius-seam.md": "f3677d01473a9842ecc559d6cd7c3d13db01f060e9ccc398665206715c6c04fc"
+      },
+      "finished_utc": "2026-10-18T20:48:37.692352+00:00",
+      "python": "3.13.7",
+      "started_utc": "2026-10-18T20:48:37.443623+00:00",
+      "status": "passed",
+      "sympy": "1.14.0",
+      "terminal_exit_status": 0
+    }
+  ]
+}
