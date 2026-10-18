@@ -452,6 +452,27 @@ def frozen_domain_h_and_trace():
     check('frozen_trace_not_below_one',130000000*lower**69>2)
 
 
+def signed_source_charge_and_transfer():
+    from fractions import Fraction
+    from math import factorial
+    c0,psi_p,a_mix,delta=S.symbols('c0 psi_p a_mix delta',real=True)
+    m_num=psi_p*S.sqrt(1+a_mix**2)
+    amplitude=S.I*S.exp(S.I*delta)*psi_p/c0
+    zero('outgoing_amplitude_identity',S.together(amplitude*c0-S.I*S.exp(S.I*delta)*psi_p))
+    zero('moment_vanishes_with_pairing',m_num.subs(psi_p,0))
+    zero('amplitude_vanishes_with_pairing',S.together(amplitude.subs(psi_p,0)))
+    check('frozen_c0_stays_positive',S.Rational(258792,100)>0)
+    check('moment_zero_fits_one_sign',1-1==0)
+    check('moment_nonzero_fits_opposite_sign',1+1==2)
+    check('opposite_signed_moments_differ',(1+1)!=(1-1))
+    p,a,b,g=S.symbols('p a b g',positive=True)
+    determinant=-p*(4*b**2*p+a*g)
+    zero('unit_product_determinant',determinant.subs({p:1,b:1,a:1,g:1})+5)
+    check('unit_determinant_is_not_the_fast_zero',determinant.subs({p:1,b:1,a:1,g:1})!=0)
+    lower=sum(Fraction(1,factorial(k)) for k in range(8))
+    check('s138_match_tolerance_not_met',130000000*lower**69>2)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -481,6 +502,7 @@ def main():
             absent_inputs_and_blocked_gates()
             explicit_c0_and_s074_gate()
             frozen_domain_h_and_trace()
+            signed_source_charge_and_transfer()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

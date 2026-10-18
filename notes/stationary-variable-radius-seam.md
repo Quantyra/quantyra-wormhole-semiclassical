@@ -974,11 +974,46 @@ Classification: unavailable physical input, from this frozen-point
 calculation. S074.2 stays unchecked. The later gates in section 28 stay
 unchecked. They are not closed by this attempt.
 
-Remaining to-do list: at the frozen point `G=1`,
-`lambda=(1999/2000)*2000^{-10}`, and `h=10^{-31}`,
-`258792/100<c0<258793/100`. The bound `||L||<4*10^{-12}` does not
-determine `||h_R||`. At that point `D0>69` and the weighted allowance
-exceeds `10^{37}`, so it is not a trace below 1. S074.2 stays
-unchecked. S074.3 through S079.6 stay unchecked. `m_num` is not zero.
-S138 stays blocked. The area budget is unevaluated. No satisfying row
+## 30. Signed source, charge, and the finite-pulse transfer
+
+The comparison is the fast condition `m_num(80 pi^2 f_eff)=0` on the
+frozen point of section 29, kept separate from the product inverse.
+The hardest step is the sign of `m0+<g_R,J h_R>`. The observable is
+that moment. The test is the outgoing identity and two pairings of
+equal size and opposite sign.
+
+The phase relation is
+
+    A_out=i exp(i delta_full)<psi,p>/c0,
+    <psi,p>=m_num/sqrt(1+a_mix^2).
+
+At the frozen point `c0>2587>0`, so `A_out=0` if and only if
+`m_num=0`. The truncation bound is a positive multiple of `||h_R||`.
+Section 29 leaves that norm unset. With reference value `m0=1` and
+pairing size `1`, the moment `m0-<g_R,J h_R>` is `0` and
+`m0+<g_R,J h_R>` is `2`. The same size admits both values. The signed
+condition is not decided. `m_num` is not set to zero.
+
+The product determinant at the unit point `(p,b,a,g)=(1,1,1,1)` equals
+`-5`. That value is not the fast condition `0`, and it is not the full
+charge. Exterior matching still requires the sample at `chi=D0` to lie
+within `1` of the outer datum. Section 29 places the weighted
+allowance above `10^{37}`. The sample is not matched, and the full
+charge is not matched.
+
+S138 transfers the finite-pulse theorem onto that matched exterior.
+The match tolerance is not met, so the transfer is not performed.
+Classification: unavailable physical input for the moment sign and the
+trace. No replacement area target is written in this section. The area
+budget is not evaluated. No pass box is checked. No satisfying row
 is met.
+
+Remaining to-do list: the fast condition is equivalent to `m_num=0`
+at the frozen point because `c0>2587`, and the pairings of size `1`
+give moments `0` and `2`. The condition is undecided, and `m_num` is
+not zero. The unit product determinant is `-5`, not that condition.
+The weighted sample at `chi=D0` stays above `10^{37}`, so exterior,
+state, and full charge are not matched and the S138 transfer is not
+performed. No replacement area target was written. The area budget is
+not evaluated. S074.2 through S079.6 stay unchecked. No satisfying
+row is met.
