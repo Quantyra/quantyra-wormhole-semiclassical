@@ -554,22 +554,69 @@ No Lipschitz constant below 1 is obtained for the pair of seam
 observables. The rho-integral cap exceeds 1 on an admissible guard
 point, and the composition tail has no `L-infinity` input.
 
-## 18. Checker
+## 18. Exterior L-infinity bound and the guard set for B
+
+On `chi<=84` the retained weighted estimate gives
+`|U|/cosh(chi)<=1.3e8 ||F/omega||_infinity`. The fictitious exterior
+begins at `D0>69`, which is inside that ball. Therefore every value
+there satisfies
+
+    |U(chi)|<=1.3e8 cosh(chi) ||F/omega||_infinity.
+
+The series through degree 7 is a lower bound for `exp(1)`. Its 69th
+power exceeds `10^29`, and `cosh(69)>exp(69)/2`, so `cosh(69)>10^29`.
+The resulting `L-infinity` allowance on `chi>=69` exceeds `10^37` times
+the weighted source. It is not below 1. This is the bound supplied by
+the retained weighted theorem. It does not become a composition
+Lipschitz constant below 1.
+
+The factor `2.016 B s` is below 1 only if `B<1/(2.016 s)`. At the cold
+seam `s=1/100` this would require `B<1000/20.16`. The guards do not
+impose that restriction. For every `B>=1` the choice `h=gamma=10^{-31}`
+and `lambda=8*10^9` has `x=lambda B^2>=8*10^9>7.9e9` and
+`|h/gamma-1|=0<=12 gamma`. At `B=50` and `s=1/100`,
+`2.016 B s=1.008>1`. The admissible set is unbounded in `B`, so it
+contains no uniform cap below 1. This obstruction is read off the
+guards. It does not reuse a single previously evaluated cap, and it
+does not set `B` to zero.
+
+## 19. Variable Dirac three-vertex, continued
+
+The constant-background theorem assumes a shift with
+`|v|<=1/100` and no spatial derivative. The family
+`v_N=sin(N Y)/100` obeys `|v_N|<=1/100` for every `N`, while
+
+    dv_N/dY=N cos(N Y)/100.
+
+At `N=100` the derivative amplitude is 1. The constant-shift derivative
+contains no factor of `N`. Replacing `v_N` by a constant inside the
+three-vertex drops this term. That replacement is an uncontrolled
+approximation. The variable three-vertex remains an unresolved proof.
+The derivative term is not set to zero, and `N` is not set to zero.
+
+The higher weighted map needs a derivative bound `L_s`. The same family
+shows that the constant-shift hypothesis does not provide one: the
+derivative amplitude grows with `N` while the supremum stays inside the
+hypothesis. `L_s` and `epsilon_s` stay unfixed. The reduced branch is
+not constructed, and the physical error bound is not obtained.
+
+## 20. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits `dr/dchi`, the admissible guard point where the chart
-cap equals `20.16`, and the unit-density tail below `10^{-20}`. It does
-not promote that tail to a composition Lipschitz constant, and it does
-not evaluate the area budget.
+It also audits the exterior `L-infinity` allowance, the unbounded guard
+set for `B`, and the variable family `v_N`. It does not turn the
+allowance above `10^37` into a contraction, and it does not evaluate
+the area budget.
 
-Remaining to-do list: bound the intermediate field on `chi>D0` in
-`L-infinity` and cap `B` so the chart factor `2.016 B s` falls below 1.
-The unit-density tail below `10^{-20}` is not the composition, and the
-cap `20.16` is not below 1. Then prove the variable Dirac three-vertex
-and the higher weighted nonlinear map without using a `C5` bound as a
-higher norm; construct the reduced branch and bound physical observable
-errors without setting `L_s` or `epsilon_s` to zero; enclose the signed
-moment from its own data; match the exterior, transfer the finite-pulse
-theorem, and complete the driven stress, radius, controller, capture,
-tail, spatial area, and S074-S080 gates.
+Remaining to-do list: derive an exterior `L-infinity` bound below 1
+from the kernel, not from the weighted allowance above `10^37`, and
+find a guard that caps `B` below `1/(2.016 s)`. The admissible value
+`B=50` keeps `2.016 B s` above 1. Then close the variable Dirac
+three-vertex for a nonconstant shift whose derivative amplitude is not
+controlled by `|v|<=1/100`; construct the reduced branch and bound
+physical observable errors without setting `L_s`, `epsilon_s`, or `N`
+to zero; enclose the signed moment from its own data; match the
+exterior, transfer the finite-pulse theorem, and complete the driven
+stress, radius, controller, capture, tail, spatial area, and S074-S080
+gates.

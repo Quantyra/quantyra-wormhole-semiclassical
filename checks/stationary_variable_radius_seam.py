@@ -245,6 +245,30 @@ def tail_and_radial_factor():
     check('unit_density_tail_below_1e-20',22*10*402000*10**68*10**20<7*9*27**68)
 
 
+def exterior_field_and_dirac_family():
+    from fractions import Fraction
+    from math import factorial
+    lower=sum(Fraction(1,factorial(k)) for k in range(8))
+    check('exp69_above_1e29',lower**69>10**29)
+    check('cosh69_above_1e29',lower**69>2*10**29)
+    check('exterior_Linf_allowance_above_1e37',130000000*lower**69>2*10**37)
+    check('exterior_allowance_not_below_one',130000000*lower**69>2)
+    B=50
+    lam=8*10**9
+    check('large_radius_guard',lam*B*B>79*10**8)
+    check('large_radius_h',10**31>10**30)
+    check('large_radius_gamma',0<=12)
+    factor=B*R(1,100)*2*R(1008,1000)
+    zero('seam_factor_at_B50',factor-R(126,125))
+    check('seam_factor_at_B50_exceeds_one',factor>1)
+    N,Y=S.symbols('N Y',real=True)
+    family=S.sin(N*Y)/100
+    zero('variable_shift_derivative',S.diff(family,Y)-N*S.cos(N*Y)/100)
+    zero('variable_shift_amplitude_at_100',(N*S.cos(N*Y)/100).subs(N,100)-S.cos(100*Y))
+    zero('circle_identity',S.sin(Y)**2+S.cos(Y)**2-1)
+    zero('derivative_to_supremum_ratio',(N/100)/R(1,100)-N)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -268,6 +292,7 @@ def main():
             three_resolvent_and_higher_map()
             noncommuting_weighted_kernel()
             tail_and_radial_factor()
+            exterior_field_and_dirac_family()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:
