@@ -604,6 +604,20 @@ def exterior_prescription():
     check('normal_factor_leaves_allowance_above_1e37',130000000*lower**69>2*10**37)
 
 
+def exterior_blocks_named_freeze():
+    pi,kappa,G,lam=S.symbols('pi kappa G lam',positive=True)
+    period=2*pi/kappa
+    check('period_retains_kappa',kappa in period.free_symbols)
+    shift=11*(G/(60*pi))*lam**2/6
+    check('vacuum_shift_retains_lambda_and_G',lam in shift.free_symbols and G in shift.free_symbols)
+    width=R(54,5)-R(39,5)
+    check('clock_width_blocks_singleton_ensemble',width==3 and width!=0)
+    from fractions import Fraction
+    from math import factorial
+    lower=sum(Fraction(1,factorial(k)) for k in range(8))
+    check('open_exterior_allowance_blocks_matched_action',130000000*lower**69>2*10**37)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -637,6 +651,7 @@ def main():
             reference_projection_sign()
             s074_2_freeze()
             exterior_prescription()
+            exterior_blocks_named_freeze()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

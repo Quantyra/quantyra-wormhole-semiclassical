@@ -1117,14 +1117,34 @@ unresolved proof. S139.2 stays unchecked. `m_num` is not set to zero.
 No replacement area target is written. The area budget is not evaluated.
 No pass box is checked. No satisfying row is met.
 
-The records for S074.2 through S079.6 stay in force. This prescription
-does not supply their missing inputs, and their pass conditions do not
-hold.
+## 34. Why the open exterior blocks the S074.2 freeze
 
-Remaining to-do list: the time period is `2 pi/kappa`, and `kappa` is
-not one number. The clock shift satisfies `39/5<kappa_M<54/5`. The
-vacuum shift is `11 epsilon lambda^2/6` and is not one metric. The
-normal determinant does not bound the full exterior remainder, and the
-weighted sample at `chi=D0` stays above `10^{37}`. S139.1 and S139.2
-stay unchecked. S074.2 through S079.6 stay unchecked. No satisfying
+The comparison is the S074.2 freeze against the open exterior
+prescription of section 33. The hardest step is the clock width. The
+observable is whether one ensemble, one time, one vacuum, and one
+matched action are fixed. The test is the width, the free symbols, and
+the weighted allowance.
+
+The clock interval has width `54/5-39/5=3`. A width of 3 is not a
+single normalization, so the boundary ensemble is not frozen. The time
+period `2 pi/kappa` retains `kappa`, so the canonical time is not one
+value. The vacuum shift `11 epsilon lambda^2/6` retains `lambda` and
+`G`, so it is not one metric and the parameter domain is not one point.
+Dividing the weighted allowance by the normal determinant 2 still leaves
+it above `10^{37}` on `chi>=69`, so the matched action is not fixed.
+The dilation coefficient `c=0` remains one gauge direction and does not
+remove this dependency.
+
+Classification: unavailable physical input, inherited from the open
+exterior prescription. S074.2 stays unchecked. S074.3 through S079.6
+stay blocked on that open freeze. Their pass conditions do not hold.
+`m_num` is not set to zero. No replacement area target is written. The
+area budget is not evaluated. No pass box is checked. No satisfying
 row is met.
+
+Remaining to-do list: S074.2 stays unchecked because the exterior
+prescription is open. The clock shift has width 3, the time period
+retains `kappa`, the vacuum shift retains `lambda` and `G`, and the
+weighted sample stays above `10^{37}`. S074.3 through S079.6 stay
+blocked on that open freeze. S139.1 and S139.2 stay unchecked. No
+satisfying row is met.
