@@ -140,18 +140,54 @@ def three_resolvent_and_higher_map():
     matrix_zero('three_resolvent_matrix_insertion',derivative-three)
     mass,pi_symbol=S.symbols('M pi',positive=True)
     zero('leading_heat_mass_derivative',S.diff(1/(120*pi_symbol*mass**2),mass)+1/(60*pi_symbol*mass**3))
+    from fractions import Fraction
+    import math
     q=2000**4
-    check('lightest_mass_square_below_338',(1+q)*10<338*6*79*10**9)
-    check('lightest_mass_below_19',19**2>338 and (1+q)*10<338*6*79*10**9)
+    guard=6*79*10**8
+    check('guard_quotient_exceeds_33755',(1+q)*100>33755*guard)
+    check('guard_quotient_below_33756',(1+q)*100<33756*guard)
+    check('lightest_mass_below_19',33756<19**2*100 and (1+q)*100<33756*guard)
     C_point=1+6*10**10
-    check('counterexample_mass_above_133333_over_500',(1+q)*500>133333*C_point)
-    check('counterexample_mass_below_800_thirds',(1+q)*3<800*C_point)
-    check('counterexample_mass_below_18',800<18**2*3)
-    check('counterexample_mass_above_16_32',1632**2*500<133333*10000)
-    check('counterexample_mass_below_16_33',800*10000<1633**2*3)
-    check('counterexample_heat_above_158',130000000*7*10**6>158*60*22*1633**3)
-    check('heat_candidate_above_100',7*130000000>100*60*22*19**3)
-    check('heat_candidate_not_a_contraction',100>1)
+    check('point_mass_above_16_32',(1+q)*10000>1632**2*C_point)
+    check('point_mass_below_16_33',(1+q)*10000<1633**2*C_point)
+    def atan_bounds(x,n):
+        x=Fraction(x)
+        total=Fraction(0)
+        power=x
+        x2=x*x
+        for k in range(n):
+            term=power/(2*k+1)
+            if k%2==0:
+                total+=term
+            else:
+                total-=term
+            power*=x2
+        rem=power/(2*n+1)
+        if n%2==0:
+            return total,total+rem
+        return total-rem,total
+    a_lo,a_hi=atan_bounds(Fraction(1,5),8)
+    b_lo,b_hi=atan_bounds(Fraction(1,239),8)
+    pi_lo=16*a_lo-4*b_hi
+    pi_hi=16*a_hi-4*b_lo
+    check('heat_pi_above_333_over_106',pi_lo>Fraction(333,106))
+    check('heat_pi_below_22_over_7',pi_hi<Fraction(22,7))
+    mass_square=Fraction(1+q,C_point)
+    target_lo=mass_square.numerator*10**16
+    den_lo=mass_square.denominator
+    root=math.isqrt(target_lo//den_lo)
+    while (root+1)*(root+1)*den_lo<=target_lo:
+        root+=1
+    while root*root*den_lo>target_lo:
+        root-=1
+    sq_lo=Fraction(root,10**8)
+    sq_hi=Fraction(root+1,10**8)
+    heat_lo=Fraction(130000000)/(60*pi_hi*sq_hi*mass_square)
+    heat_hi=Fraction(130000000)/(60*pi_lo*sq_lo*mass_square)
+    check('point_heat_above_158',heat_lo>158)
+    check('point_heat_below_159',heat_hi<159)
+    check('point_heat_outside_100_124',heat_lo>124)
+    check('heat_candidate_not_a_contraction',heat_lo>1)
     N,Y=S.symbols('N Y',real=True)
     sample=S.sin(N*Y)/N**5
     zero('c5_fifth_derivative_amplitude',S.diff(sample,Y,5)-S.cos(N*Y))
@@ -309,14 +345,11 @@ def moment_norms_and_outer_endpoint():
     zero('outer_endpoint_identity',S.tanh(S.atanh(z))-z)
     phase=(ROOT/'notes/stationary-scalar-phase-moment.md').read_text(encoding='utf-8')
     check('phase_moment_formula_retained','m_num(p)=m0+<g_R,J h_R>' in phase)
-    check('phase_moment_not_assigned_zero',re.search(r'm_num\s*=\s*0',phase) is None)
+    check('phase_states_fast_condition','m_num(80pi^2 f_eff)=0' in phase)
+    check('phase_moment_not_assigned_zero',re.search(r'(?<![\w(])m_num\s*=\s*0',phase) is None)
 
 
 def absent_inputs_and_blocked_gates():
-    check('rejected_first_wave',(4*10**17+1)**2*4!=715)
-    check('rejected_second_wave',(8*10**17+1)**2!=172)
-    check('rejected_first_energy',181*3<60*9+11)
-    check('rejected_second_energy',181*3<60*9+44)
     pi,G,lam=S.symbols('pi G lam',positive=True)
     energy=60*pi/G+11*lam/3
     wave=energy-9*lam/4

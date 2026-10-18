@@ -384,23 +384,22 @@ coefficient is
     d/dM [1/(120 pi M^2)] = -1/(60 pi M^3).
 
 The guards `q=2000^4`, `x>7.9e9`, `|d|<1e-12` and `C=1+6x+d` give
-`C>6x`, hence
+`C>6x>6*7.9e9`, hence
 
-    M_1^2=(1+q)/C<(1+2000^4)/(6*7.9e9)<338,
+    33755/100 < (1+2000^4)/(6*7.9e9) < 33756/100.
 
-and therefore `M_1<19`. They do not give `M_1>18`. At `x=10^{10}` and
-`d=0`, `C=1+6*10^{10}` and
+Thus `M_1^2<33756/100` and `M_1<19`. They do not give `M_1>18`.
+At `x=10^{10}` and `d=0`, `C=1+6*10^{10}` and
 
-    133333/500 < M_1^2 < 800/3,
+    (1632/100)^2 < M_1^2 < (1633/100)^2,
 
-so `16.32<M_1<16.33`. With `pi<22/7`, the formal product of this
-derivative's absolute value with `1.3e8` exceeds 158 at that point.
-The value is not inside `(100,124)`. The comparison that placed it
-below 124 used the false lower bound `M>18`.
+so `16.32<M_1<16.33`. With `333/106<pi<22/7`, the formal product of
+this derivative's absolute value with `1.3e8` satisfies
 
-Whenever those guards hold, `M_1<19`. With `pi<22/7` the same formal
-product exceeds 100, including at `x=10^{10}`. It is not a Lipschitz
-constant below 1.
+    158 < product < 159.
+
+That value is not inside `(100,124)`. It is not a Lipschitz constant
+below 1.
 
 The candidate is also not the seam source. The classical Jacobian
 takes `(a(R), integral rho)` to `(s_R, delta mu)`. A scalar
@@ -718,10 +717,8 @@ states `k_rad^2=E-9 lambda/4` and
     k_rad/sqrt(lambda)>4*10^{17},  E>180/G.
 
 That note contains no `c0` and no `chi=D0` trace.
-
-The pairs `E=181`, `G=1`, `(lambda=1, k=4*10^{17}+1)` and
-`(lambda=4, k=8*10^{17}+1)` miss `k^2=E-9 lambda/4`. With `pi>3` they
-also miss `E=60 pi/G+11 lambda/3`. They are not spectral points.
+The phase note states the fast condition `m_num(80 pi^2 f_eff)=0` and
+the formula `m_num(p)=m0+<g_R,J h_R>`. It does not assign `m_num=0`.
 
 The product `G lambda=(1999/2000)*2000^{-10}` lies in the open window
 above. At `G=1` and at `G=4` the identities fix `E` and `k^2`. Because
