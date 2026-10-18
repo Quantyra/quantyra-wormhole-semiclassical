@@ -506,6 +506,37 @@ def signed_source_charge_and_transfer():
     check('s138_match_tolerance_not_met',130000000*lower**69>2)
 
 
+def reference_projection_sign():
+    pi,G=S.symbols('pi G',positive=True)
+    epsilon=G/(60*pi)
+    factor=80*pi**2*epsilon/(8*pi*G)
+    zero('reference_projection_coefficient',factor-R(1,6))
+    eigenvalue=S.Integer(3)
+    operator=S.diag(eigenvalue,5)
+    vector=S.Matrix([1,0])
+    height=S.Matrix(S.symbols('Z1 Z2',real=True))
+    cancelled=vector.dot((eigenvalue*S.eye(2)-operator)*height)
+    zero('trace_term_cancels_on_eigenvector',cancelled)
+    def pairing(source):
+        return S.Matrix([1,0]).dot(S.Matrix(source))
+    plus,minus,flat=(1,0),(-1,0),(0,1)
+    check('positive_remainder_moment',pairing(plus)==1)
+    check('negative_remainder_moment',pairing(minus)==-1)
+    check('zero_remainder_moment',pairing(flat)==0)
+    check('three_remainders_share_norm',
+          plus[0]**2+plus[1]**2==minus[0]**2+minus[1]**2==flat[0]**2+flat[1]**2==1)
+    check('negative_moment_is_not_zero',pairing(minus)!=0)
+    check('remainder_moments_are_not_the_unit_determinant',
+          pairing(plus)!=-5 and pairing(minus)!=-5 and pairing(flat)!=-5)
+    phase=(ROOT/'notes/stationary-scalar-phase-moment.md').read_text(encoding='utf-8')
+    check('phase_states_projection_coefficient','80pi^2 epsilon/(8pi G)=1/6' in phase)
+    check('phase_states_second_term_remains','the second term of (27)' in phase)
+    check('phase_states_moment_not_evaluated',
+          'do not evaluate (27)' in phase and 'bound it away from zero' in phase)
+    check('phase_states_sign_change',"changing its sign changes the moment's sign" in phase)
+    check('phase_states_zero_combination','exactly zero moment' in phase)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -536,6 +567,7 @@ def main():
             explicit_c0_and_s074_gate()
             frozen_domain_h_and_trace()
             signed_source_charge_and_transfer()
+            reference_projection_sign()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

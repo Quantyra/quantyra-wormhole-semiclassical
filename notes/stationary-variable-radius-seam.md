@@ -1005,12 +1005,49 @@ trace. No replacement area target is written in this section. The area
 budget is not evaluated. No pass box is checked. No satisfying row
 is met.
 
-Remaining to-do list: the fast condition is equivalent to `m_num=0`
-at the frozen point because `c0>2587`, and the pairings of size `1`
-give moments `0` and `2`. The condition is undecided, and `m_num` is
-not zero. The unit product determinant is `-5`, not that condition.
-The weighted sample at `chi=D0` stays above `10^{37}`, so exterior,
-state, and full charge are not matched and the S138 transfer is not
-performed. No replacement area target was written. The area budget is
-not evaluated. S074.2 through S079.6 stay unchecked. No satisfying
-row is met.
+## 31. Reference projection and the three admissible signs
+
+The comparison is the fast condition `m_num(80 pi^2 f_eff)=0`, kept
+separate from the product inverse. The hardest step is the cancellation
+of `(a_tr-epsilon T)Z` against the reference field. The observable is
+the sign of the remaining pairing. The test is the coefficient `1/6`,
+one self-adjoint eigenvector, and three remainder vectors of equal norm.
+
+The phase note sets `epsilon=G/(60 pi)` and `E=a_tr/epsilon`. Then
+
+    80 pi^2 epsilon/(8 pi G)=1/6.
+
+On a self-adjoint matrix, an eigenvector of `T` at eigenvalue `E` pairs
+to zero against `(a_tr-epsilon T)Z` for every height `Z`. The curvature
+remainder in equation (23a) is not fixed by that cancellation. The three
+vectors `(1,0)`, `(-1,0)`, and `(0,1)` have squared norm `1` and
+pairings `1`, `-1`, and `0` against the first coordinate. The same
+absolute norm admits both signs and exact zero.
+
+Equation (23a) does not remove the second term of (27). The phase note
+states that the retained data do not evaluate (27) or bound it away
+from zero. Section 30's pairings `0` and `2` are both nonnegative, so
+they do not exhibit the negative sign. `m_num` is not set to zero. The
+fast condition stays undecided.
+
+The unit product determinant remains `-5`. That value is not one of
+these three pairings. Section 29 still places the weighted sample at
+`chi=D0` above `10^{37}`, so exterior, state, and full charge are not
+matched. The S138 transfer is not performed. No replacement area target
+is written. The area budget is not evaluated. No pass box is checked.
+No satisfying row is met.
+
+Classification: unavailable physical input, from this projection. The
+missing input is the unevaluated second term of (27), together with the
+unmatched trace at `chi=D0`.
+
+Remaining to-do list: the reference projection coefficient is `1/6`, and
+the trace term cancels on an eigenvector, but the curvature remainder
+still admits moments `1`, `-1`, and `0` at equal norm. Equation (23a)
+does not remove the second term of (27). The fast condition stays
+undecided, and `m_num` is not zero. The unit product determinant is
+`-5`, not that condition. The weighted sample at `chi=D0` stays above
+`10^{37}`, so exterior, state, and full charge are not matched and the
+S138 transfer is not performed. No replacement area target was written.
+The area budget is not evaluated. S074.2 through S079.6 stay unchecked.
+No satisfying row is met.
