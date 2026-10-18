@@ -1082,7 +1082,49 @@ full gauge. The perturbative order and the parameter domain are not one
 freeze. S074.2 stays unchecked. No pass box is checked. No satisfying
 row is met.
 
-Remaining to-do list: S139.1 and S139.2 lack a separate classified
-record. The common exterior prescription and the full exterior stress
-stay open. S074.2 through S079.6 stay unchecked. No satisfying row
-is met.
+## 33. Exterior prescription and the full stress
+
+The comparison is the S139.1 list: the corrected period, the outer
+vacuum, the boundary-clock normalization, and the transformed Dirac
+domain. The hardest step is the clock shift. The observable is
+`kappa_M`. The test is the disk-note window and the normal determinant.
+
+The angle period is `2 pi`, with `varphi=kappa tau`, so the time period
+is `2 pi/kappa`. The note does not assign one value to `kappa`. The
+clock shift is `kappa_M=-6/5-log(mu0 ell)`. The retained window
+`9<-log(mu0 ell)<12` is exactly
+
+    39/5<kappa_M<54/5.
+
+The width is 3, so the normalization is not one number. The centered
+vacuum shift is `11 epsilon lambda^2/6` with `epsilon=G/(60 pi)`. That
+formula is not one metric. The trace-free split
+`(b/3,-b/6,-b/6)` sums to 0, and the normal mixing determinant is 2.
+The weight `7/2` avoids the mixing pole. The explicit normal term
+`23/(8640 pi^2)` remains in `A_T`. The same note says the global inverse
+is unproved and that this symbol does not yet bound the full remainder.
+No physical gate is closed.
+
+Classification for S139.1: unavailable physical input for one period,
+one vacuum, and one clock normalization. The transformed domain on the
+full exterior is an unresolved proof. S139.1 stays unchecked.
+
+S139.2 asks for the renormalized stress and radius source on the full
+exterior. Dividing the retained weighted allowance by the normal
+determinant 2 still leaves a quantity above `10^{37}` on `chi>=69`.
+The normal gap is not that full-exterior stress. Classification:
+unresolved proof. S139.2 stays unchecked. `m_num` is not set to zero.
+No replacement area target is written. The area budget is not evaluated.
+No pass box is checked. No satisfying row is met.
+
+The records for S074.2 through S079.6 stay in force. This prescription
+does not supply their missing inputs, and their pass conditions do not
+hold.
+
+Remaining to-do list: the time period is `2 pi/kappa`, and `kappa` is
+not one number. The clock shift satisfies `39/5<kappa_M<54/5`. The
+vacuum shift is `11 epsilon lambda^2/6` and is not one metric. The
+normal determinant does not bound the full exterior remainder, and the
+weighted sample at `chi=D0` stays above `10^{37}`. S139.1 and S139.2
+stay unchecked. S074.2 through S079.6 stay unchecked. No satisfying
+row is met.

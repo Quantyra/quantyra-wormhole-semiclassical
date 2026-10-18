@@ -569,6 +569,41 @@ def s074_2_freeze():
     check('canonical_field_not_identified','Y=phi_ref' not in phase and 'phi_ref' in phase)
 
 
+def exterior_prescription():
+    pi,kappa=S.symbols('pi kappa',positive=True)
+    zero('time_period_from_angle',kappa*(2*pi/kappa)-2*pi)
+    zero('clock_shift_lower_endpoint',R(-6,5)+9-R(39,5))
+    zero('clock_shift_upper_endpoint',R(-6,5)+12-R(54,5))
+    check('clock_shift_width_is_three',(R(54,5)-R(39,5))==3)
+    check('clock_shift_is_not_one_number',R(39,5)!=R(54,5))
+    G,lam=S.symbols('G lam',positive=True)
+    epsilon=G/(60*pi)
+    shift=11*epsilon*lam**2/6
+    zero('vacuum_shift_coefficient',shift-11*G*lam**2/(360*pi))
+    b=S.symbols('b',real=True)
+    zero('trace_free_beta_sum',b/3-b/6-b/6)
+    s=S.symbols('s')
+    mixing=S.Matrix([[1,(s+3)/(3*(s+1))],[0,2]])
+    zero('normal_mixing_determinant',mixing.det()-2)
+    check('weight_avoids_mixing_pole',R(7,2)+1!=0)
+    zero('normal_gap_lower_bound',R(116,5)-R(50,3)-R(98,15))
+    check('finite_normal_numerator_remains',23!=0)
+    disk=(ROOT/'notes/stationary-disk-and-normal-inverse.md').read_text(encoding='utf-8')
+    check('disk_states_angle_period','period(varphi)=2pi' in disk and 'varphi=kappa tau' in disk)
+    check('disk_states_clock_window','9<-log(mu0 ell)<12' in disk and '39/5<kappa_M<54/5' in disk)
+    check('disk_states_vacuum_shift','lambda0=lambda+11epsilon lambda^2/6' in disk)
+    check('disk_states_finite_normal_term','23/(8640pi^2)' in disk)
+    check('disk_states_beta_split','(beta_1,beta_2,beta_3)=(b/3,-b/6,-b/6)' in disk)
+    check('disk_states_normal_determinant','det C=2' in disk)
+    check('disk_leaves_global_inverse_open','bounded actual-minus-normal remainders and a global inverse remain unproved' in disk)
+    check('disk_states_no_physical_gate','No physical gate is closed.' in disk)
+    check('disk_does_not_bound_full_remainder','NOT yet bound the' in disk and 'full remainder as an operator' in disk)
+    from fractions import Fraction
+    from math import factorial
+    lower=sum(Fraction(1,factorial(k)) for k in range(8))
+    check('normal_factor_leaves_allowance_above_1e37',130000000*lower**69>2*10**37)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -601,6 +636,7 @@ def main():
             signed_source_charge_and_transfer()
             reference_projection_sign()
             s074_2_freeze()
+            exterior_prescription()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:
