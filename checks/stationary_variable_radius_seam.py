@@ -1,0 +1,201 @@
+"""Finite identities for the variable-radius kernel comparison.
+
+The checker audits exact algebra and rational enclosures. It does not
+bound the nonlocal bubble derivative, solve the coupled seam, evaluate
+the signed moment, or test an area budget.
+"""
+from __future__ import annotations
+import base64, contextlib, hashlib, json, platform, sys, traceback
+from datetime import datetime, timezone
+from pathlib import Path
+import sympy as S
+
+ROOT=Path(__file__).resolve().parents[1]
+RECEIPT=ROOT/'evidence/stationary-variable-radius-seam.json'
+LOG=ROOT/'evidence/stationary-variable-radius-seam.log'
+INPUTS=[
+    'checks/stationary_variable_radius_seam.py',
+    'notes/stationary-variable-radius-seam.md',
+    'notes/stationary-product-weighted-response.md',
+    'notes/stationary-product-contour-inverse.md',
+    'notes/stationary-reduced-cold-response.md',
+    'notes/stationary-reduced-parameter-form-bounds.md',
+    'notes/stationary-scalar-phase-moment.md',
+]
+CONTRACT={
+    'acceptance':'exact residuals zero and the stated rational comparisons satisfied',
+    'numerical_tolerances':'none',
+    'scope':'conformal Laplacian, two exponential-gap enclosures, rejected-substitution arithmetic, resolvent identity, prescribed-source Jacobian, constant-background derivatives, and the fast-phase separation',
+    'ordinary_arguments':['variable-radius decomposition and the uncontrolled conformal substitution',
+        'absence of a proved bound on the nonlocal bubble derivative',
+        'prescribed-source map distinguished from the coupled fixed point',
+        'constant-background derivative distinguished from the variable three-vertex',
+        'signed moment left unenclosed and separate from the product inverse'],
+    'unresolved':['E_bubble in the weighted jet norm',
+        'coupled mass and temperature fixed point',
+        'variable Dirac three-vertex, higher weighted nonlinear map, reduced branch, and physical observable errors',
+        'signed moment enclosure',
+        'exterior match, finite-pulse transfer, and the physical gates'],
+    'not_set_to_zero':['E_bubble','m_num','M_s','L_s','epsilon_s','zeta_s','sigma','cJ','c_theta','delta'],
+    'area_budget':'not evaluated; no replacement target was written before the test',
+    'failure_policy':'append initialized scientific runs and retain failed raw input bytes; unreadable-input or receipt preflight errors abort before scientific execution',
+    'hash_policy':'SHA256 of raw UTF8/LF/noBOM bytes without normalization',
+}
+ROWS=[]
+R=S.Rational
+
+
+def check(label,condition,detail=''):
+    if any(row['label']==label for row in ROWS):
+        raise ValueError('duplicate check label: '+label)
+    row={'label':label,'passed':bool(condition),'detail':str(detail)}
+    ROWS.append(row)
+    print(json.dumps(row,sort_keys=True),flush=True)
+
+
+def zero(label,expression):
+    expression=S.sympify(expression)
+    if expression.atoms(S.Float):
+        raise ValueError('inexact Float atom in '+label)
+    value=S.simplify(S.together(expression))
+    check(label,value==0,value)
+
+
+def matrix_zero(label,matrix):
+    if any(entry.atoms(S.Float) for entry in matrix):
+        raise ValueError('inexact Float atom in '+label)
+    vals=[S.simplify(S.together(entry)) for entry in matrix]
+    check(label,all(entry==0 for entry in vals),vals)
+
+
+def conformal_laplacian_and_gap():
+    x,y=S.symbols('x y',real=True)
+    sigma=S.Function('sigma')(x,y)
+    field=S.Function('field')(x,y)
+    weight=S.exp(2*sigma)
+    flux_x=weight*S.exp(-2*sigma)*S.diff(field,x)
+    flux_y=weight*S.exp(-2*sigma)*S.diff(field,y)
+    lap_hat=(S.diff(flux_x,x)+S.diff(flux_y,y))/weight
+    lap=S.diff(field,x,2)+S.diff(field,y,2)
+    zero('two_dimensional_conformal_laplacian',lap_hat-S.exp(-2*sigma)*lap)
+    a=S.symbols('a',positive=True)
+    zero('cosh_gap_comparison',S.exp(a)+S.exp(-a)-2-(S.exp(a/2)-S.exp(-a/2))**2)
+    z=R(1,10)
+    direct_lower=sum(z**k/S.factorial(k) for k in range(6))
+    direct_tail=(z**6/S.factorial(6))/(1-z/7)
+    direct_upper=direct_lower+direct_tail
+    check('direct_gap_above_21_200',direct_lower-1>R(21,200),direct_lower-1)
+    check('direct_gap_below_11_100',direct_upper-1<R(11,100),direct_upper-1)
+    alt_lower_reciprocal=sum((-z)**k/S.factorial(k) for k in range(5))
+    alt_upper_reciprocal=sum((-z)**k/S.factorial(k) for k in range(6))
+    check('reciprocal_gap_above_21_200',1/alt_lower_reciprocal-1>R(21,200),1/alt_lower_reciprocal-1)
+    check('reciprocal_gap_below_11_100',1/alt_upper_reciprocal-1<R(11,100),1/alt_upper_reciprocal-1)
+    zero('rejected_endpoint_lower',R(21,200)*130000000-13650000)
+    zero('rejected_endpoint_upper',R(11,100)*130000000-14300000)
+    check('direct_substitution_above_lower_endpoint',(direct_lower-1)*130000000>13650000)
+    check('direct_substitution_below_upper_endpoint',(direct_upper-1)*130000000<14300000)
+    check('reciprocal_substitution_above_lower_endpoint',(1/alt_lower_reciprocal-1)*130000000>13650000)
+    check('reciprocal_substitution_below_upper_endpoint',(1/alt_upper_reciprocal-1)*130000000<14300000)
+    check('retained_weighted_reserve',R(22,7)*(40000000+2000*84*R(6,5))<130000000)
+
+
+def resolvent_and_prescribed_source():
+    A=S.Matrix([[2,0],[0,3]])
+    E=S.Matrix([[1,1],[0,1]])
+    matrix_zero('resolvent_difference_identity',(A+E).inv()-A.inv()+A.inv()*E*(A+E).inv())
+    kappa,G,radius,D_h,rho_R,a_R,I_rho=S.symbols(
+        'kappa G R D_h rho_R a_R I_rho',positive=True)
+    s_R=(G*rho_R/radius-kappa*a_R)/D_h
+    f_R=-(2*kappa*radius*s_R)/radius
+    zero('horizon_lapse_constraint',f_R+2*kappa*s_R)
+    delta_mu=kappa*radius*s_R+G*I_rho
+    jacobian=S.Matrix([[S.diff(s_R,a_R),S.diff(s_R,I_rho)],
+                        [S.diff(delta_mu,a_R),S.diff(delta_mu,I_rho)]]).det()
+    zero('prescribed_source_jacobian',jacobian+kappa*G/D_h)
+
+
+def constant_background_and_fast_phase():
+    v,x,t=S.symbols('v x t',positive=True)
+    f=S.log(1+x)-x+x**2/2
+    factor=S.exp(2*v)*f.subs(x,S.exp(-2*v)*x)
+    deriv=S.diff(factor,v).subs(v,0)
+    by_chain=2*f+(x**2/(1+x))*(-2*x)
+    reduced=2*S.log(1+x)-2*x+x**2*(1-x)/(1+x)
+    zero('constant_bubble_derivative_chain_rule',deriv-by_chain)
+    zero('constant_bubble_derivative_reduced',deriv-reduced)
+    upper_log=R(5,6)
+    zero('log_two_integral',S.integrate(1/(1+t),(t,0,1))-S.log(2))
+    check('constant_derivative_negative_at_one',2*upper_log-2<0,2*upper_log-2)
+    u=S.symbols('u',positive=True)
+    num=u**2*(1+t*x)
+    den=1+u*t*x
+    by_u=S.diff(num/den,u).subs(u,S.exp(-2*v))*(-2*S.exp(-2*v))
+    Rv=S.exp(-4*v)*(1+t*x)/(1+S.exp(-2*v)*t*x)
+    zero('constant_Rv_two_methods',S.diff(Rv,v)-by_u)
+    zero('constant_Rv_origin_derivative',S.diff(Rv,v).subs({v:0,t:0,x:0})+4)
+    p,a,b,g=S.symbols('p a b g',positive=True)
+    M=S.Matrix([[-a,-2*b*p],[-2*b*p,p*g]])
+    zero('product_determinant_identity',M.det()+p*(4*b*b*p+a*g))
+    slope=S.diff(M.det(),p).subs({p:1,b:1,a:1,g:1})
+    zero('product_determinant_slope_at_unit_point',slope+9)
+    a_mix=S.symbols('a_mix',real=True)
+    ratio=(1+S.I*a_mix)/(1-S.I*a_mix)
+    zero('fast_scattering_modulus',ratio*S.conjugate(ratio)-1)
+    zero('fast_scattering_phase_at_one',ratio.subs(a_mix,1)-S.I)
+    M_s,L_s,eps_s=S.symbols('M_s L_s epsilon_s',positive=True)
+    certificate=2*M_s**2*L_s*eps_s
+    check('newton_certificate_keeps_three_symbols',
+          certificate.free_symbols=={M_s,L_s,eps_s},sorted(str(s) for s in certificate.free_symbols))
+
+
+def hashes(data):
+    return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
+
+
+def main():
+    before={name:(ROOT/name).read_bytes() for name in INPUTS}
+    existing=json.loads(RECEIPT.read_text(encoding='utf-8')) if RECEIPT.exists() else {'runs':[]}
+    if not isinstance(existing,dict) or not isinstance(existing.get('runs'),list):
+        raise ValueError('receipt preflight requires an object with a runs list')
+    ROWS.clear()
+    run={'started_utc':datetime.now(timezone.utc).isoformat(),'contract':CONTRACT,
+         'command':sys.orig_argv,'dont_write_bytecode':sys.dont_write_bytecode,'cwd':str(Path.cwd()),
+         'python':platform.python_version(),'sympy':S.__version__,'execution_inputs_sha256':hashes(before)}
+    with LOG.open('a',encoding='utf-8',newline='\n') as log,contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
+        print('RUN '+json.dumps(run,sort_keys=True),flush=True)
+        try:
+            check('actual_bytecode_disabled',sys.dont_write_bytecode and '-B' in sys.orig_argv)
+            check('inputs_strict_UTF8_LF',all(raw.decode('utf-8') is not None and b'\r' not in raw and not raw.startswith(b'\xef\xbb\xbf') for raw in before.values()))
+            conformal_laplacian_and_gap()
+            resolvent_and_prescribed_source()
+            constant_background_and_fast_phase()
+        except Exception:
+            traceback.print_exc()
+            check('uncaught_exception',False)
+        try:
+            run['final_inputs_sha256']=hashes({name:(ROOT/name).read_bytes() for name in INPUTS})
+        except Exception:
+            traceback.print_exc()
+            run['final_inputs_sha256']={}
+            check('final_input_reread_failed',False)
+        print('FINAL_INPUTS '+json.dumps(run['final_inputs_sha256'],sort_keys=True),flush=True)
+        check('frozen_inputs_unchanged',run['execution_inputs_sha256']==run['final_inputs_sha256'])
+        run['checks']=ROWS
+        run['failed_checks']=[row for row in ROWS if not row['passed']]
+        code=int(bool(run['failed_checks']))
+        run['status']='failed' if code else 'passed'
+        run['terminal_exit_status']=code
+        run['finished_utc']=datetime.now(timezone.utc).isoformat()
+        if code:
+            run['failed_inputs_base64']={name:base64.b64encode(raw).decode('ascii') for name,raw in before.items()}
+            for name,raw in before.items():
+                print(json.dumps({'path':name,'sha256':hashlib.sha256(raw).hexdigest(),'base64':base64.b64encode(raw).decode('ascii')},sort_keys=True))
+        print('TERMINAL '+json.dumps({'status':run['status'],'checks':len(ROWS),'failures':len(run['failed_checks']),'terminal_exit_status':code,'finished_utc':run['finished_utc']},sort_keys=True),flush=True)
+    existing['runs'].append(run)
+    RECEIPT.write_text(json.dumps(existing,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
+    print(json.dumps({'status':run['status'],'checks':len(ROWS),'failures':len(run['failed_checks']),'receipt':str(RECEIPT)},sort_keys=True))
+    return code
+
+
+if __name__=='__main__':
+    sys.exit(main())
