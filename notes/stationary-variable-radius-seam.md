@@ -785,12 +785,165 @@ freeze the domain: `c0` meets both enclosures, and `||h_R||` is not an
 identified number. The exterior trace is absent. S074.2 stays
 unchecked. `m_num` is not set to zero.
 
-Remaining to-do list: at `G lambda=(1999/2000)*2000^{-10}`,
+## 28. Per-gate outcomes after the unmet S074.2 dependency
+
+Each gate below is blocked by section 27. The parameter domain is not
+one point, `||h_R||` is not a number, and no `chi=D0` trace below 1 is
+on record. No named derivation is substituted for that missing freeze.
+No pass box is checked. `m_num` is not set to zero.
+
+S074.3 asks for the cubic and quartic vertices, including lapse,
+shifts, Gauss constraints, induced contacts, and boundary terms, with
+angular sectors and either fermions and higher modes or a bound on
+their omission. Those vertices need the frozen domain from S074.2.
+Classification: unavailable physical input. The vertices are not
+derived and are not set to zero. S074.3 stays unchecked.
+
+S074.4 asks for one regulator, subtraction, and renormalization
+condition, and for the finite couplings that need physical input. It
+needs the S074.3 vertices. Classification: unavailable physical input
+inherited from S074.2. No regulator is fixed. S074.4 stays unchecked.
+
+S074.5 asks for a local/nonlocal match without double counting, a
+regulator-independent remainder, and checked current and stress
+identities. It needs the S074.4 regulator. Classification: unresolved
+proof. No remainder is bounded. S074.5 stays unchecked.
+
+S074.6 asks for a direct variation of that derivation and an
+independent check. The derivation is not available. The shipped checker
+audits the `c0` enclosures and the note search. It does not verify
+cubic vertices. Classification: unresolved proof. S074.6 stays
+unchecked.
+
+S075.1 asks for both boundary clocks, frames, ensembles, and vertex
+normalization, and for the relation of the free angle to the
+interacting coupling. That relation needs the S074 action. Classification:
+unavailable physical input. S075.1 stays unchecked.
+
+S075.2 asks for the joint dressed initial state, its charge and spin
+branching, and a preparation-error norm. It needs S075.1 and a numeric
+`||h_R||`. Classification: unavailable physical input. The state is not
+constructed. S075.2 stays unchecked.
+
+S075.3 asks for the boundary Hamiltonian of the returned switch and for
+gauge, charge, and stress identities that include the drive. It needs
+S075.1. Classification: unresolved proof. S075.3 stays unchecked.
+
+S075.4 asks for mixed current and noise correlations over the whole
+switch, or a uniform remainder. It needs S075.3. Classification:
+unresolved proof. S075.4 stays unchecked.
+
+S075.5 asks for the ordered massive-mode work estimate on this state,
+with endpoint dressing removed. It needs S075.2. The S138 theorem stays
+on its static reference. Classification: unresolved proof. S075.5 stays
+unchecked.
+
+S075.6 asks for continuum work and charge balance and for the inputs
+S076 requires. It needs S075.3 through S075.5. Classification:
+unresolved proof. S075.6 stays unchecked.
+
+S076.1 asks for the observable ledger that carries action, state, and
+source errors into energy, clock, and area, frozen before any
+acceptance run. Those errors are not numbers. Classification:
+unavailable physical input. S076.1 stays unchecked.
+
+S076.2 asks for the renormalized stress, currents, and gravitational
+sources from that same action and state, with Ward identities. The
+action and state are not available. Classification: unavailable
+physical input. S076.2 stays unchecked.
+
+S076.3 asks for the coupled response through the switch and the
+returns, with backreaction. It needs S076.2. Classification:
+unresolved proof. S076.3 stays unchecked.
+
+S076.4 asks for reduction, tail, and quantum-source bounds on one
+common parameter domain, including the extremal area coefficient. The
+S074.2 domain is two disjoint `c0` intervals, not one domain.
+Classification: unavailable physical input. S076.4 stays unchecked.
+
+S076.5 asks for a nonempty budget window, or a replacement target
+written before the test, with positive clock and area. No replacement
+target was written. The area budget is not evaluated. Classification:
+unresolved proof. S076.5 stays unchecked.
+
+S076.6 asks for an independent check of whether physical opening is
+achieved. No opening is claimed. Classification: unresolved proof.
+S076.6 stays unchecked.
+
+S077.1 asks for perturbation sectors, a gauge-invariant norm, and a
+survival criterion before any stability calculation. No accepted S076
+geometry exists. Classification: unavailable physical input. S077.1
+stays unchecked.
+
+S077.2 asks for the constrained perturbation operator and controlled
+spectral tails. It needs S077.1. Classification: unresolved proof.
+S077.2 stays unchecked.
+
+S077.3 asks for a nonlinear disturbance radius inside the opening
+margins. Those margins are not established. Classification: unresolved
+proof. S077.3 stays unchecked.
+
+S077.4 asks for fluctuation bounds of smeared observables in the
+interacting state. That state is the missing S075.2 state.
+Classification: unavailable physical input. S077.4 stays unchecked.
+
+S077.5 asks for a weakest-mode test and an exact time scope. It needs
+S077.2. Classification: unresolved proof. S077.5 stays unchecked.
+
+S078.1 asks for sender, receiver, clocks, packet profile, energy,
+charge and spin, the packet time interval, and an arrival criterion.
+The clocks are the missing S075.1 clocks. Classification: unavailable
+physical input. S078.1 stays unchecked.
+
+S078.2 asks for propagation on the matched geometry and a nonzero
+reception bound. The `chi=D0` trace is absent, so the geometry is not
+matched. Classification: unresolved proof. S078.2 stays unchecked.
+
+S078.3 asks for packet stress in the coupled equations and a nonzero
+energy range that keeps clock and area positive until reception. It
+needs S076.3. Classification: unresolved proof. S078.3 stays unchecked.
+
+S078.4 asks for causal attribution of reception to throat transport.
+It needs S078.2. Classification: unresolved proof. S078.4 stays
+unchecked.
+
+S078.5 asks for the achieved energy and travel-time scope. It needs
+S078.3. No shortcut claim is made. Classification: unresolved proof.
+S078.5 stays unchecked.
+
+S079.1 stays checked. It is the earlier inventory.
+
+S079.2 asks for one joint target state and one preparation-error norm
+from the physical tolerances. Those tolerances are the open S075, S077,
+and S078 gates. Classification: unavailable physical input. S079.2
+stays unchecked.
+
+S079.3 asks for a finite-resource preparation protocol that reaches the
+opening basin. It needs S079.2. Classification: unresolved proof.
+S079.3 stays unchecked.
+
+S079.4 asks for that protocol to be evolved through switching and
+reception, with errors carried into S076 through S078. Those stories
+are open. Classification: unresolved proof. S079.4 stays unchecked.
+
+S079.5 records that the initial bridge remains supplied. Creation from
+disconnected geometry is not constructed. The topology mechanism
+remains an unresolved proof. S079.5 stays unchecked.
+
+S079.6 asks for separate preparation and creation verdicts. Preparation
+is unachieved. Creation is unachieved. The unresolved requirement is
+the unfrozen S074.2 domain, the missing numeric `||h_R||`, and the
+missing `chi=D0` trace below 1. S079.6 stays unchecked.
+
+S080 remains the earlier obstruction audit. No satisfying row is met.
+The E003 objective is unmet.
+
+Remaining to-do list: S074.3 through S074.6, S075.1 through S075.6,
+S076.1 through S076.6, S077.1 through S077.5, S078.1 through S078.5,
+and S079.2 through S079.6 each have a recorded obstruction from the
+unmet S074.2 dependency. At `G lambda=(1999/2000)*2000^{-10}`,
 `258792/100<c0<258793/100` when `G=1` and `32349/100<c0<32350/100`
 when `G=4`. The phase and outgoing notes have no numeric `||h_R||`
-and no `chi=D0` trace below 1. S074.2 stays open because those
-identities do not freeze one parameter domain and `||h_R||` is not an
-identified number. `m_num` is not zero. S138 and the later stress,
-radius, controller, capture, tail, and area gates stay blocked on that
-missing match. S074.3-S074.6 and S075.1-S079.6 stay open. The area
-budget is unevaluated.
+and no `chi=D0` trace below 1. `m_num` is not zero. No pass box was
+checked. S138 stays blocked. The area budget is unevaluated. S080
+remains the obstruction audit. No satisfying row is met.
