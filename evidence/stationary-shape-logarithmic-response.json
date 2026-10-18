@@ -1,0 +1,293 @@
+{
+  "runs": [
+    {
+      "checks": [
+        {
+          "detail": "",
+          "label": "actual_bytecode_disabled",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "inputs_strict_UTF8_LF",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "product_orbit_density",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "fixed_volume_first_variation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Dirac_radial_first",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Dirac_time_first",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "spin_connection_first",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Dirac_radial_contact",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Dirac_time_contact",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "spin_connection_contact",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "full_radial_zero_order_first",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "full_radial_zero_order_contact",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "positive_square_first_vertex",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "positive_square_mixed_contact",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "scalar_Duhamel_time_ordering",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "transverse_trace",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "transverse_quadratic_trace",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "tracefree_projection_logarithm",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "shape_projection_norm",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "pure_conformal_logarithm_vanishes",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "principal_scalar_curvature",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "even_dimension_eta",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "zeta_to_fermionic_Hessian",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "universal_shape_log_coefficient",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Euclidean_conformal_trace_sign",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "Euclidean_shape_trace_cross",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "conformal_principal_coefficient",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "cross_matrix_coefficient",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "mixed_square_completion",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "ordinary_shape_constant",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "conformal_Schur_retains_shape_log",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "curvature_square_scalar_direction",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "transformed_matrix_cross",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "transformed_matrix_symmetry",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "transpose_output_conformal",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "transpose_output_shape",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "scale_shift_only_shape_order_four",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "positive_conformal_symbol",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "positive_shape_log_symbol",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "reciprocal_conformal_symbol",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "reciprocal_log_shape_symbol",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "mixed_remainder_Young_identity",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "shape_remainder_energy_ratio",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "ordinary_shape_energy_ratio",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "-B",
+        "checks/stationary_shape_logarithmic_response.py"
+      ],
+      "contract": {
+        "acceptance": "every symbolic residual exactly zero and rational inequality true",
+        "excluded": [
+          "exact RN solution",
+          "physical instability or nonexistence",
+          "full coupled index or inverse",
+          "actual compatibility Jacobian",
+          "Planck frequency numerical shooting",
+          "physical gate closure"
+        ],
+        "failure_policy": "append every run and retain failed input bytes",
+        "hash_policy": "SHA256 of raw UTF8/LF/noBOM bytes, no normalization",
+        "numerical_tolerances": "none",
+        "ordinary_arguments": [
+          "compact heat Hessian and common Mellin continuation",
+          "interior localization with retained global contacts",
+          "mixed-log parametrix and Garding estimate",
+          "packet function-space obstruction",
+          "global shape/constraint maps and moving endpoint domains"
+        ],
+        "scope": "finite identities for compact shape heat Hessian and coupled interior mixed-log symbol"
+      },
+      "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "dont_write_bytecode": true,
+      "execution_inputs_sha256": {
+        "checks/stationary_shape_logarithmic_response.py": "35f84c3661a4a7fe0721ec923ef57739bb64a337d4cdbe9baad8b9af33fbcc1e",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-coupled-asymptotic-obstruction.md": "667699207ce5b2d4267dddd89dde56bb28ca29b6927cdb43909e76797a797dcc",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-fast-phase-variation.md": "0fb4629172deceefc658bff0cbc592ca61b662b92af3dba2a691515a95f5a9ae",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-shape-logarithmic-response.md": "1221163c9fec92cbb00c26318eef71fe2b56878b6f06d1bbc9ec3efdc87e783c",
+        "notes/stationary-weighted-conformal-range.md": "8e4c7442fec6fd670bf0c9bb3083722c112fe785a8db6b079894e9b01683f336"
+      },
+      "failed_checks": [],
+      "final_inputs_sha256": {
+        "checks/stationary_shape_logarithmic_response.py": "35f84c3661a4a7fe0721ec923ef57739bb64a337d4cdbe9baad8b9af33fbcc1e",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-coupled-asymptotic-obstruction.md": "667699207ce5b2d4267dddd89dde56bb28ca29b6927cdb43909e76797a797dcc",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-fast-phase-variation.md": "0fb4629172deceefc658bff0cbc592ca61b662b92af3dba2a691515a95f5a9ae",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-shape-logarithmic-response.md": "1221163c9fec92cbb00c26318eef71fe2b56878b6f06d1bbc9ec3efdc87e783c",
+        "notes/stationary-weighted-conformal-range.md": "8e4c7442fec6fd670bf0c9bb3083722c112fe785a8db6b079894e9b01683f336"
+      },
+      "finished_utc": "2026-10-18T01:35:03.999528+00:00",
+      "python": "3.13.7",
+      "started_utc": "2026-10-18T01:35:02.340535+00:00",
+      "status": "passed",
+      "sympy": "1.14.0",
+      "terminal_exit_status": 0
+    }
+  ]
+}
