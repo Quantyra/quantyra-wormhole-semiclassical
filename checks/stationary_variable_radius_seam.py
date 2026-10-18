@@ -413,6 +413,45 @@ def explicit_c0_and_s074_gate():
     check('no_chi_D0_trace_below_one','chi=D0' not in phase and 'chi=D0' not in outgoing)
 
 
+def frozen_domain_h_and_trace():
+    from fractions import Fraction
+    from math import factorial
+    V=S.Matrix([1,0])
+    Rmat=S.diag(R(1,10**12),1)
+    source=S.Matrix([10**20,0])
+    sandwich=(V.T*Rmat*V)[0]
+    image=(V.T*Rmat*source)[0]
+    zero('sandwich_stays_small',sandwich-R(1,10**12))
+    zero('free_source_image',image-10**8)
+    check('sandwich_meets_L_scale',sandwich*10**12<4)
+    check('free_source_not_unit',image>1)
+    c0_hi=S.Rational(258793,100)
+    h_norm=S.symbols('h_norm',positive=True)
+    factor=R(16,10**12-8)
+    bound=factor*R(2,10**6)*S.sqrt(c0_hi)*h_norm
+    check('frozen_moment_keeps_h_norm',bound.free_symbols=={h_norm})
+    check('frozen_moment_coefficient_positive',(factor*R(2,10**6))**2*c0_hi>0)
+    h=S.symbols('h',positive=True)
+    closed=(S.exp(h)+1)/(S.exp(h)-1)
+    zero('coth_half_closed_form',S.simplify(S.expand((S.coth(h/2)-closed).rewrite(S.exp))))
+    z=S.symbols('z')
+    atanh_gap=2*S.atanh(z)-S.log((1+z)/(1-z))
+    zero('atanh_matches_log_at_zero',atanh_gap.subs(z,0))
+    zero('atanh_matches_log_derivative',S.diff(atanh_gap,z))
+    other=S.log((1+S.exp(-h))/(1-S.exp(-h)))
+    zero('explicit_disk_logs_agree',S.simplify(S.log(closed)-other))
+    y=Fraction(1,10**31)
+    partial=1-y+y**2/2-y**3/6
+    check('exp_series_terms_decrease',y<4)
+    check('taylor_above_one_minus_y',partial>1-y)
+    check('frozen_ratio_above_1e31',(2-y)/y>10**31)
+    upper=sum(Fraction(1,factorial(k)) for k in range(12))+Fraction(13,12)/factorial(12)
+    check('frozen_exp69_below_ratio',upper**69<2*10**30 and 10**31>2*10**30)
+    lower=sum(Fraction(1,factorial(k)) for k in range(8))
+    check('frozen_trace_allowance_above_1e37',130000000*lower**69>2*10**37)
+    check('frozen_trace_not_below_one',130000000*lower**69>2)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -441,6 +480,7 @@ def main():
             moment_norms_and_outer_endpoint()
             absent_inputs_and_blocked_gates()
             explicit_c0_and_s074_gate()
+            frozen_domain_h_and_trace()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

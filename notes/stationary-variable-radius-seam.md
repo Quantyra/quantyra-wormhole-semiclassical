@@ -938,12 +938,47 @@ missing `chi=D0` trace below 1. S079.6 stays unchecked.
 S080 remains the earlier obstruction audit. No satisfying row is met.
 The E003 objective is unmet.
 
-Remaining to-do list: S074.3 through S074.6, S075.1 through S075.6,
-S076.1 through S076.6, S077.1 through S077.5, S078.1 through S078.5,
-and S079.2 through S079.6 each have a recorded obstruction from the
-unmet S074.2 dependency. At `G lambda=(1999/2000)*2000^{-10}`,
-`258792/100<c0<258793/100` when `G=1` and `32349/100<c0<32350/100`
-when `G=4`. The phase and outgoing notes have no numeric `||h_R||`
-and no `chi=D0` trace below 1. `m_num` is not zero. No pass box was
-checked. S138 stays blocked. The area budget is unevaluated. S080
-remains the obstruction audit. No satisfying row is met.
+## 29. One frozen point, attempted for S074.2
+
+The comparison is `||h_R||` and the weighted sample at `chi=D0` on one
+frozen point. The hardest step is passing from `||L||<4*10^{-12}` to
+`||V* R4_PV p||`. The observables are that norm and the sample. The
+test is a two-by-two source that meets the `L` scale while the image
+exceeds 1, together with the disk endpoint at `h=10^{-31}`.
+
+Freeze
+
+    G=1,  lambda=(1999/2000)*2000^{-10},  h=10^{-31}.
+
+Section 27 gives `258792/100<c0<258793/100` at this `G`. The phase
+definition remains `h_R=V*R4_PV p` with `p=80 pi^2 f_eff`, and
+`||L||<4*10^{-12}` for `L=V*R+ V/(E+4 lambda)`. The denominator
+`E+4 lambda` is fixed by `c0` and `k` at this point. The source `p` is
+not. The diagonal example
+
+    V=(1,0),  R=diag(10^{-12},1),  p=(10^{20},0)
+
+has sandwich `V* R V=10^{-12}<4*10^{-12}` and image `V* R p=10^8`. A
+bound of the `L` type does not determine `||h_R||`. Substituting the
+upper value of `c0` into the moment-error factor leaves the positive
+symbol `||h_R||`. `m_num` is not set to zero.
+
+The same point has `D0=log(coth(h/2))=2 atanh(exp(-h))`. The degree-3
+exponential polynomial at `h=10^{-31}` lies above `1-h`, the omitted
+term is positive, and the resulting ratio exceeds `10^{31}`. Since
+`exp(69)<2*10^{30}`, this gives `D0>69`. The retained weighted
+allowance on `chi>=69` exceeds `10^{37}` times the weighted source. It
+is not a trace below 1 at `chi=D0`.
+
+Classification: unavailable physical input, from this frozen-point
+calculation. S074.2 stays unchecked. The later gates in section 28 stay
+unchecked. They are not closed by this attempt.
+
+Remaining to-do list: at the frozen point `G=1`,
+`lambda=(1999/2000)*2000^{-10}`, and `h=10^{-31}`,
+`258792/100<c0<258793/100`. The bound `||L||<4*10^{-12}` does not
+determine `||h_R||`. At that point `D0>69` and the weighted allowance
+exceeds `10^{37}`, so it is not a trace below 1. S074.2 stays
+unchecked. S074.3 through S079.6 stay unchecked. `m_num` is not zero.
+S138 stays blocked. The area budget is unevaluated. No satisfying row
+is met.
