@@ -600,23 +600,66 @@ derivative amplitude grows with `N` while the supremum stays inside the
 hypothesis. `L_s` and `epsilon_s` stay unfixed. The reduced branch is
 not constructed, and the physical error bound is not obtained.
 
-## 20. Checker
+## 20. Higher weighted map, reduced branch, and observable errors
+
+The product estimate controls the weighted jet norm `X_L^2`, whose
+jets stop at order two. Define the third-jet seminorm by the weighted
+supremum of `|u'''|`. For `N>=1` set
+
+    f_N(chi)=cos(N chi)/N^2.
+
+Then `f_N''(0)=-1`, so the weighted second jet at the bolt is 1 and
+`||f_N||_X>=1`. The third derivative is `N sin(N chi)`. Its amplitude
+is `N`. The identity `|sin u|<=|u|` follows from `u-sin u` vanishing
+at 0 with nonnegative derivative `1-cos u`, and
+`|sin(N chi)/(N sinh chi)|<=chi/sinh(chi)<=1` keeps the transverse
+jet inside the same norm. Thus these fields lie in the unit ball of a
+fixed multiple of `X_L^2`, while the third-jet seminorm is at least a
+positive multiple of `N`.
+
+No finite `L_s` satisfies
+`third seminorm <= L_s ||f||_X` for every such field. Taking
+`N` larger than that finite candidate violates it. `epsilon_s` is not
+set to zero: each `f_N` has weighted second jet 1. The Newton
+certificate `2 M_s^2 L_s epsilon_s<1` therefore has no finite `L_s`
+on this ball. The higher weighted map is not obtained. This comparison
+uses the weighted jet norm directly. It does not pass through a `C5`
+bound.
+
+The reduced branch is not constructed. Physical observable errors are
+not bounded. Classification of each: unresolved proof. Neither `L_s`
+nor `epsilon_s` is set to zero.
+
+## 21. Signed-moment enclosure
+
+The retained fast expansion has `rho_mix=8*10^{-12}` and
+
+    error in m_num <= 2 ||g|| ||h_R|| rho_mix^(m+1)/(1-rho_mix).
+
+At `m=0` the numerical factor is `16/(10^{12}-8)`, which is below
+`2*10^{-11}`. The norms `||g||` and `||h_R||` are not retained
+numbers. Their product with this factor is not an interval about
+`m_num`. The enclosure does not exclude zero and does not prove zero.
+`m_num` is not set to zero. Classification: unavailable physical
+input for those two norms.
+
+The higher-map obstruction does not evaluate the fast pairing. The
+exterior match, the finite-pulse transfer, and the driven stress,
+radius, controller, capture, tail, and spatial area stay blocked.
+No pass condition of S139.1, S139.2, or S074.2 through S079.6 holds.
+The area budget is not evaluated.
+
+## 22. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits the exterior `L-infinity` allowance, the unbounded guard
-set for `B`, and the variable family `v_N`. It does not turn the
-allowance above `10^37` into a contraction, and it does not evaluate
-the area budget.
+It also audits the third-jet family `cos(N chi)/N^2` and the
+`rho_mix` truncation factor. It does not assign a finite `L_s`, and it
+does not replace `m_num` by zero.
 
-Remaining to-do list: derive an exterior `L-infinity` bound below 1
-from the kernel, not from the weighted allowance above `10^37`, and
-find a guard that caps `B` below `1/(2.016 s)`. The admissible value
-`B=50` keeps `2.016 B s` above 1. Then close the variable Dirac
-three-vertex for a nonconstant shift whose derivative amplitude is not
-controlled by `|v|<=1/100`; construct the reduced branch and bound
-physical observable errors without setting `L_s`, `epsilon_s`, or `N`
-to zero; enclose the signed moment from its own data; match the
-exterior, transfer the finite-pulse theorem, and complete the driven
-stress, radius, controller, capture, tail, spatial area, and S074-S080
-gates.
+Remaining to-do list: enclose `||g||` and `||h_R||` so the truncation
+factor `16/(10^{12}-8)` becomes an interval for `m_num`. The third-jet
+family shows there is no finite `L_s` on the weighted unit ball, and
+`epsilon_s` is not zero. Then match the exterior, transfer the
+finite-pulse theorem, and complete driven stress, radius, controller,
+capture, tail, spatial area, and every S074-S080 gate.

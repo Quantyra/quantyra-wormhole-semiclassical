@@ -269,6 +269,27 @@ def exterior_field_and_dirac_family():
     zero('derivative_to_supremum_ratio',(N/100)/R(1,100)-N)
 
 
+def higher_map_and_signed_moment():
+    N,chi=S.symbols('N chi',real=True)
+    field=S.cos(N*chi)/N**2
+    zero('third_jet_second_derivative',S.diff(field,chi,2)+S.cos(N*chi))
+    zero('third_jet_third_derivative',S.diff(field,chi,3)-N*S.sin(N*chi))
+    zero('third_jet_bolt_value',S.diff(field,chi,2).subs(chi,0)+1)
+    u=S.symbols('u',real=True)
+    gap=u-S.sin(u)
+    zero('sine_gap_at_zero',gap.subs(u,0))
+    zero('sine_gap_derivative',S.diff(gap,u)-(1-S.cos(u)))
+    zero('one_minus_cos_square',1-S.cos(u)-2*S.sin(u/2)**2)
+    rho=R(8,10**12)
+    factor=2*rho/(1-rho)
+    zero('moment_truncation_factor',factor-16/(10**12-8))
+    check('moment_truncation_below_2e-11',16*10**11<2*(10**12-8))
+    g_norm,h_norm=S.symbols('g_norm h_norm',positive=True)
+    enclosure=factor*g_norm*h_norm
+    check('moment_enclosure_keeps_two_norms',enclosure.free_symbols=={g_norm,h_norm},
+          sorted(str(name) for name in enclosure.free_symbols))
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -293,6 +314,7 @@ def main():
             noncommuting_weighted_kernel()
             tail_and_radial_factor()
             exterior_field_and_dirac_family()
+            higher_map_and_signed_moment()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:
