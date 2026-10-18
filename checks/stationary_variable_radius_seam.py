@@ -5,7 +5,7 @@ bound the nonlocal bubble derivative, solve the coupled seam, evaluate
 the signed moment, or test an area budget.
 """
 from __future__ import annotations
-import base64, contextlib, hashlib, json, platform, sys, traceback
+import base64, contextlib, hashlib, json, platform, re, sys, traceback
 from datetime import datetime, timezone
 from pathlib import Path
 import sympy as S
@@ -21,6 +21,7 @@ INPUTS=[
     'notes/stationary-reduced-cold-response.md',
     'notes/stationary-reduced-parameter-form-bounds.md',
     'notes/stationary-scalar-phase-moment.md',
+    'notes/stationary-scalar-outgoing-inverse.md',
 ]
 CONTRACT={
     'acceptance':'exact residuals zero and the stated rational comparisons satisfied',
@@ -141,9 +142,15 @@ def three_resolvent_and_higher_map():
     zero('leading_heat_mass_derivative',S.diff(1/(120*pi_symbol*mass**2),mass)+1/(60*pi_symbol*mass**3))
     q=2000**4
     check('lightest_mass_square_below_338',(1+q)*10<338*6*79*10**9)
-    check('lightest_mass_below_19',19**2>338)
+    check('lightest_mass_below_19',19**2>338 and (1+q)*10<338*6*79*10**9)
+    C_point=1+6*10**10
+    check('counterexample_mass_above_133333_over_500',(1+q)*500>133333*C_point)
+    check('counterexample_mass_below_800_thirds',(1+q)*3<800*C_point)
+    check('counterexample_mass_below_18',800<18**2*3)
+    check('counterexample_mass_above_16_32',1632**2*500<133333*10000)
+    check('counterexample_mass_below_16_33',800*10000<1633**2*3)
+    check('counterexample_heat_above_158',130000000*7*10**6>158*60*22*1633**3)
     check('heat_candidate_above_100',7*130000000>100*60*22*19**3)
-    check('heat_candidate_below_124',130000000<124*60*3*18**3)
     check('heat_candidate_not_a_contraction',100>1)
     N,Y=S.symbols('N Y',real=True)
     sample=S.sin(N*Y)/N**5
@@ -300,24 +307,48 @@ def moment_norms_and_outer_endpoint():
     h=S.symbols('h',positive=True)
     z=S.exp(-h)
     zero('outer_endpoint_identity',S.tanh(S.atanh(z))-z)
-    check('moment_symbol_not_replaced',S.symbols('m_num')!=0)
+    phase=(ROOT/'notes/stationary-scalar-phase-moment.md').read_text(encoding='utf-8')
+    check('phase_moment_formula_retained','m_num(p)=m0+<g_R,J h_R>' in phase)
+    check('phase_moment_not_assigned_zero',re.search(r'm_num\s*=\s*0',phase) is None)
 
 
 def absent_inputs_and_blocked_gates():
-    k1=4*10**17+1
-    k2=8*10**17+1
-    check('first_pair_fast_guard',k1>4*10**17)
-    check('second_pair_fast_guard',k2>2*4*10**17)
-    check('energy_guard',181>180)
-    c0_first=k1*(181+4*1)
-    c0_second=k2*(181+4*4)
-    check('admissible_c0_values_differ',c0_first!=c0_second)
+    check('rejected_first_wave',(4*10**17+1)**2*4!=715)
+    check('rejected_second_wave',(8*10**17+1)**2!=172)
+    check('rejected_first_energy',181*3<60*9+11)
+    check('rejected_second_energy',181*3<60*9+44)
+    pi,G,lam=S.symbols('pi G lam',positive=True)
+    energy=60*pi/G+11*lam/3
+    wave=energy-9*lam/4
+    zero('wave_matches_split_energy',wave-(60*pi/G+17*lam/12))
+    c0_square=S.simplify(wave*(energy+4*lam)**2)
+    window=S.Rational(1999,2000)/2000**10
+    first=c0_square.subs({G:1,lam:window})
+    second=c0_square.subs({G:4,lam:window/4})
+    zero('c0_square_ratio',S.simplify(first/second)-64)
+    check('window_above_floor',1999*1000>999*2000)
+    check('window_below_cap',1999<2000)
+    check('fast_guard_from_pi_bound',180*2000**11>1999*16*10**34)
+    check('sqrt_window_above_3e-17',1999*10**34>9*2000**11)
+    check('sqrt_window_below_4e-17',1999*10**34<16*2000**11)
+    excess=(60*3-180)/G+11*lam/3
+    zero('energy_excess_at_pi_three',excess-11*lam/3)
+    check('lambda_positive_on_window',11*1999>0)
+    phase=(ROOT/'notes/stationary-scalar-phase-moment.md').read_text(encoding='utf-8')
+    outgoing=(ROOT/'notes/stationary-scalar-outgoing-inverse.md').read_text(encoding='utf-8')
+    check('phase_defines_c0','c0=k(E+4lambda)' in phase)
+    check('phase_defines_h_R','h_R=V*R4_PV p' in phase)
+    check('phase_has_no_numeric_c0',re.search(r'c0\s*=\s*[0-9]',phase) is None)
+    check('phase_has_no_numeric_h_norm',re.search(r'\|\|h_R\|\|\s*(<=|<|=|>=|>)\s*[0-9]',phase) is None)
+    check('phase_has_no_chi_D0','chi=D0' not in phase and 'chi = D0' not in phase)
+    check('outgoing_defines_wave','k_rad^2=E-9lambda/4' in outgoing)
+    check('outgoing_has_no_c0','c0' not in outgoing)
+    check('outgoing_has_no_chi_D0','chi=D0' not in outgoing and 'chi = D0' not in outgoing)
     factor=R(16,10**12-8)
     h_norm,c0=S.symbols('h_norm c0',positive=True)
     bound=factor*R(2,10**6)*S.sqrt(c0)*h_norm
     ratio=S.simplify(bound.subs(h_norm,2)/bound.subs(h_norm,1))
     zero('moment_error_scales_with_h_norm',ratio-2)
-    check('moment_symbol_remains_unassigned',S.symbols('m_num')!=0)
 
 
 def hashes(data):

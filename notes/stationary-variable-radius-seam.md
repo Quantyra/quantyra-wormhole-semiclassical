@@ -386,13 +386,20 @@ coefficient is
 The guards `q=2000^4`, `x>7.9e9`, `|d|<1e-12` and `C=1+6x+d` give
 `C>6x`, hence
 
-    M_1^2=(1+q)/C<338,    18<M_1<19.
+    M_1^2=(1+q)/C<(1+2000^4)/(6*7.9e9)<338,
 
-At every mass in that interval, with `3<pi<22/7`, the formal product of
-this derivative's absolute value with the weighted inverse norm `1.3e8`
-lies strictly between 100 and 124. The lower comparison uses `M<19`
-and `pi<22/7`. The upper comparison uses `M>18` and `pi>3`. The
-candidate is therefore greater than 100. It is not a Lipschitz
+and therefore `M_1<19`. They do not give `M_1>18`. At `x=10^{10}` and
+`d=0`, `C=1+6*10^{10}` and
+
+    133333/500 < M_1^2 < 800/3,
+
+so `16.32<M_1<16.33`. With `pi<22/7`, the formal product of this
+derivative's absolute value with `1.3e8` exceeds 158 at that point.
+The value is not inside `(100,124)`. The comparison that placed it
+below 124 used the false lower bound `M>18`.
+
+Whenever those guards hold, `M_1<19`. With `pi<22/7` the same formal
+product exceeds 100, including at `x=10^{10}`. It is not a Lipschitz
 constant below 1.
 
 The candidate is also not the seam source. The classical Jacobian
@@ -696,25 +703,34 @@ blocked. The area budget is not evaluated.
 
 ## 24. Search of the retained notes
 
-The scalar phase note defines `c0=k(E+4 lambda)` and
-`h_R=V*R4_PV p` with `p=80 pi^2 f_eff`. It gives
-`||g||^2/c0<4*10^{-12}` and `||L||<4*10^{-12}`. It does not assign a
-number to `c0` or to `||h_R||`. The outgoing-inverse note adds
-`k/sqrt(lambda)>4*10^{17}` and `E>180/G`. Those inequalities do not
-select one value of `c0`.
+The scalar phase note defines
 
-Two pairs satisfy both inequalities and the positive-energy condition
-`E=181`, `G=1`:
+    E=60 pi/G+11 lambda/3,  k^2=E-9 lambda/4,  c0=k(E+4 lambda),
 
-    lambda=1,  k=4*10^{17}+1,  c0=185 k,
-    lambda=4,  k=8*10^{17}+1,  c0=197 k.
+and `h_R=V*R4_PV p` with `p=80 pi^2 f_eff`. It gives
+`||g||^2/c0<4*10^{-12}` and `||L||<4*10^{-12}`. A line search of that
+note finds the formula `m_num(p)=m0+<g_R,J h_R>`, no assignment
+`m_num=0`, no assignment of `c0` to a numeral, and no numeric bound on
+`||h_R||`. It contains no `chi=D0` trace. The outgoing-inverse note
+states `k_rad^2=E-9 lambda/4` and
 
-The two values of `c0` differ. No boundary-trace number at `chi=D0`
-appears in the stationary notes. The weighted allowance above `10^37`
-is not a trace below 1.
+    .999*2000^{-10}<G lambda<2000^{-10},
+    k_rad/sqrt(lambda)>4*10^{17},  E>180/G.
+
+That note contains no `c0` and no `chi=D0` trace.
+
+The pairs `E=181`, `G=1`, `(lambda=1, k=4*10^{17}+1)` and
+`(lambda=4, k=8*10^{17}+1)` miss `k^2=E-9 lambda/4`. With `pi>3` they
+also miss `E=60 pi/G+11 lambda/3`. They are not spectral points.
+
+The product `G lambda=(1999/2000)*2000^{-10}` lies in the open window
+above. At `G=1` and at `G=4` the identities fix `E` and `k^2`. Because
+`pi>3`, both points meet `k/sqrt(lambda)>4*10^{17}` and `E>180/G`.
+The squared values of `c0` stand in the ratio 64, so `c0` is not one
+number. `m_num` is not set to zero.
 
 Classification: unavailable physical input for numerical `c0`,
-`||h_R||`, and the `chi=D0` trace. `m_num` is not set to zero.
+`||h_R||`, and the `chi=D0` trace.
 
 ## 25. Why S138 and the later gates stay blocked
 
@@ -735,13 +751,15 @@ is met.
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits the two admissible values of `c0` and the scaling of
-the moment error with `||h_R||`. It does not replace `m_num` by zero,
-and it does not evaluate the area budget.
+It audits the spectral identities, the ratio 64 of the two squared
+`c0` values, the line search of the phase and outgoing notes, and the
+scaling of the moment error with `||h_R||`. It does not replace
+`m_num` by zero, and it does not evaluate the area budget.
 
 Remaining to-do list: numerical `c0`, `||h_R||`, and a `chi=D0`
-boundary trace below 1 are absent. Two admissible pairs give different
-values of `c0`. `m_num` is not zero. S138 and the later stress, radius,
-controller, capture, tail, and area gates stay blocked on that missing
-match. S074.2-S074.6 and S075.1-S079.6 stay open. The area budget is
-unevaluated.
+boundary trace below 1 are absent from the phase and outgoing notes.
+The spectral identities at `G=1` and `G=4`, on one allowed
+`G lambda` window, give squared `c0` values in the ratio 64. `m_num`
+is not zero. S138 and the later stress, radius, controller, capture,
+tail, and area gates stay blocked on that missing match. S074.2-S074.6
+and S075.1-S079.6 stay open. The area budget is unevaluated.
