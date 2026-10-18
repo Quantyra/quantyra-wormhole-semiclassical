@@ -1041,13 +1041,48 @@ Classification: unavailable physical input, from this projection. The
 missing input is the unevaluated second term of (27), together with the
 unmatched trace at `chi=D0`.
 
-Remaining to-do list: the reference projection coefficient is `1/6`, and
-the trace term cancels on an eigenvector, but the curvature remainder
-still admits moments `1`, `-1`, and `0` at equal norm. Equation (23a)
-does not remove the second term of (27). The fast condition stays
-undecided, and `m_num` is not zero. The unit product determinant is
-`-5`, not that condition. The weighted sample at `chi=D0` stays above
-`10^{37}`, so exterior, state, and full charge are not matched and the
-S138 transfer is not performed. No replacement area target was written.
-The area budget is not evaluated. S074.2 through S079.6 stay unchecked.
-No satisfying row is met.
+## 32. S074.2 freeze of the six named items
+
+The comparison is the S074.2 pass language: one action, one boundary
+ensemble, one gauge, one set of canonical fields, one perturbative
+order, and one parameter domain. The hardest step is the isothermal
+dilation. The observable is the coefficient `c`. The test is the
+ordinary differential equation, the outer endpoint, and the disjoint
+spectral enclosures.
+
+The adjoint note states that `eta'=eta/xi` forces `eta=c xi`, and that
+the outer endpoint `xi=1` forces `c=0`. The solution `eta=c xi` satisfies
+the equation, its value at `xi=1` is `c`, and `c=0` gives `eta=0`. That
+one gauge direction is zero. The disk note still names a separate
+fixed-period disk gauge. The bookkeeping sentence still conditions on
+"a fixed gauge", so the dilation result does not select that disk chart
+as the action's gauge.
+
+The boundary ensemble occurs in that same conditional sentence. It is
+not assigned. The phase operator
+
+    P=(T+4 lambda)(T-E)-V J V*
+
+and the bookkeeping equation `E0(Y)+lambda J_rest(Y)=0` are both
+retained. Neither note contains the other equation. The canonical name
+`Y` is not identified with `phi_ref`.
+
+The bookkeeping family has its center at `lambda=0` and the retained
+theory at `lambda=1`. The exact residual carries the factor `lambda^2`.
+At `lambda=1` that factor equals 1, so the first-order truncation does
+not remove the residual. The perturbative order is not one frozen order.
+
+The spectral enclosures satisfy `32350/100<258792/100`, so the `G=4`
+interval lies below the `G=1` interval. The parameter domain is not one
+interval. `m_num` is not set to zero.
+
+Classification: unavailable physical input for the action, the ensemble,
+and the canonical fields. The gauge direction `c` is zero and is not the
+full gauge. The perturbative order and the parameter domain are not one
+freeze. S074.2 stays unchecked. No pass box is checked. No satisfying
+row is met.
+
+Remaining to-do list: S139.1 and S139.2 lack a separate classified
+record. The common exterior prescription and the full exterior stress
+stay open. S074.2 through S079.6 stay unchecked. No satisfying row
+is met.

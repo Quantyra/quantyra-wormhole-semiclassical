@@ -22,6 +22,9 @@ INPUTS=[
     'notes/stationary-reduced-parameter-form-bounds.md',
     'notes/stationary-scalar-phase-moment.md',
     'notes/stationary-scalar-outgoing-inverse.md',
+    'notes/stationary-adjoint-phase.md',
+    'notes/stationary-centered-covariant-seed.md',
+    'notes/stationary-disk-and-normal-inverse.md',
 ]
 CONTRACT={
     'acceptance':'exact residuals zero and the stated rational comparisons satisfied',
@@ -537,6 +540,35 @@ def reference_projection_sign():
     check('phase_states_zero_combination','exactly zero moment' in phase)
 
 
+def s074_2_freeze():
+    xi=S.symbols('xi',positive=True)
+    coefficient=S.symbols('c',real=True)
+    eta=coefficient*xi
+    zero('dilation_solves_isothermal_ode',S.diff(eta,xi)-eta/xi)
+    zero('endpoint_value_is_the_coefficient',eta.subs(xi,1)-coefficient)
+    zero('outer_endpoint_kills_dilation',eta.subs({xi:1,coefficient:0}))
+    book=S.symbols('lam',real=True)
+    zero('retained_residual_factor_is_one',(book**2).subs(book,1)-1)
+    check('first_order_residual_remains',(book**2).subs(book,1)!=0)
+    check('spectral_c0_intervals_disjoint',R(32350,100)<R(258792,100))
+    adjoint=(ROOT/'notes/stationary-adjoint-phase.md').read_text(encoding='utf-8')
+    family=(ROOT/'notes/stationary-centered-covariant-seed.md').read_text(encoding='utf-8')
+    disk=(ROOT/'notes/stationary-disk-and-normal-inverse.md').read_text(encoding='utf-8')
+    phase=(ROOT/'notes/stationary-scalar-phase-moment.md').read_text(encoding='utf-8')
+    check('adjoint_states_dilation_ode',"eta'=eta/xi, so eta=c xi" in adjoint)
+    check('adjoint_states_endpoint_kills_dilation','endpoint xi=1 forces c=0' in adjoint)
+    check('bookkeeping_endpoints_named','the seed at lambda=0 and the original retained theory at lambda=1' in family)
+    check('ensemble_sentence_is_conditional','If Y denotes reduced geometric fields in a fixed gauge, with a prescribed' in family)
+    check('disk_gauge_is_named','global fixed-period disk gauge' in disk)
+    operator='P=(T+4lambda)(T-E)-V J V*'
+    equation='E0(Y)+lambda J_rest(Y)=0'
+    check('phase_operator_is_retained',operator in phase)
+    check('bookkeeping_equation_is_retained',equation in family)
+    check('phase_omits_bookkeeping_equation',equation not in phase)
+    check('bookkeeping_omits_phase_operator',operator not in family)
+    check('canonical_field_not_identified','Y=phi_ref' not in phase and 'phi_ref' in phase)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -568,6 +600,7 @@ def main():
             frozen_domain_h_and_trace()
             signed_source_charge_and_transfer()
             reference_projection_sign()
+            s074_2_freeze()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:
