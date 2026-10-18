@@ -290,6 +290,19 @@ def higher_map_and_signed_moment():
           sorted(str(name) for name in enclosure.free_symbols))
 
 
+def moment_norms_and_outer_endpoint():
+    zero('rank_one_mass_square',(R(2,10**6))**2-R(4,10**12))
+    c0,h_norm=S.symbols('c0 h_norm',positive=True)
+    factor=16/(10**12-8)
+    bound=factor*R(2,10**6)*S.sqrt(c0)*h_norm
+    check('moment_bound_keeps_c0_and_h',bound.free_symbols=={c0,h_norm},
+          sorted(str(name) for name in bound.free_symbols))
+    h=S.symbols('h',positive=True)
+    z=S.exp(-h)
+    zero('outer_endpoint_identity',S.tanh(S.atanh(z))-z)
+    check('moment_symbol_not_replaced',S.symbols('m_num')!=0)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -315,6 +328,7 @@ def main():
             tail_and_radial_factor()
             exterior_field_and_dirac_family()
             higher_map_and_signed_moment()
+            moment_norms_and_outer_endpoint()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

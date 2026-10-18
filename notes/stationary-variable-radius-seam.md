@@ -649,17 +649,62 @@ radius, controller, capture, tail, and spatial area stay blocked.
 No pass condition of S139.1, S139.2, or S074.2 through S079.6 holds.
 The area budget is not evaluated.
 
-## 22. Checker
+## 22. Moment norms
+
+Equation (5) of the scalar phase note gives
+
+    ||g||^2/c0=||Im L||<=||L||<4*10^{-12},
+
+with `c0=k(E+4 lambda)`. Hence `||g||<2*10^{-6} sqrt(c0)`. The factor
+`4*10^{-12}` is exactly `(2*10^{-6})^2`. The quantity `c0` is not a
+retained number, so this is not a numerical interval for `||g||`.
+
+The second factor is `h_R=V*R4_PV p` with `p=80 pi^2 f_eff`. The same
+note states that the retained source data do not evaluate (27), and
+that the series remainder does not certify errors in `h_R` or the
+source. No retained operator norm converts the unknown `f_eff` into a
+numerical `||h_R||`.
+
+The truncation product therefore stays
+
+    [16/(10^{12}-8)] ||g|| ||h_R||
+      < [16/(10^{12}-8)] (2*10^{-6}) sqrt(c0) ||h_R||.
+
+Both `sqrt(c0)` and `||h_R||` remain. The product is not an interval
+about `m_num`. It does not exclude zero and it does not prove zero.
+Classification: unavailable physical input. `m_num` is not set to zero.
+
+## 23. Exterior matching, with the moment left open
+
+The physical outer endpoint is defined by `tanh(D0/2)=exp(-h)`, so
+`D0` is finite for `h>0`. The product inverse is the complete-H2
+resolvent, whose comparison coordinate runs past every finite `D0`.
+Its value at `chi=D0` is an interior sample of that resolvent, not a
+matched outer datum.
+
+The only retained pointwise allowance on `chi>=69` is
+`|U|<=1.3e8 cosh(chi)` times the weighted source. That allowance
+exceeds `10^37`. It does not show that the interior sample equals the
+required outer datum within a tolerance below 1. The open factors
+`sqrt(c0)` and `||h_R||` are not used to cancel this difference, and
+`m_num` is not set to zero in their place.
+
+Exterior and state matching therefore remains an unresolved proof.
+S139.1 stays open. The finite-pulse transfer still requires this match.
+Driven stress, radius, controller, capture, tail, and spatial area stay
+blocked. The area budget is not evaluated.
+
+## 24. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits the third-jet family `cos(N chi)/N^2` and the
-`rho_mix` truncation factor. It does not assign a finite `L_s`, and it
-does not replace `m_num` by zero.
+It also audits `||g||^2<4*10^{-12} c0` and the outer identity
+`tanh(D0/2)=exp(-h)`. It does not replace `m_num` by zero, and it does
+not evaluate the area budget.
 
-Remaining to-do list: enclose `||g||` and `||h_R||` so the truncation
-factor `16/(10^{12}-8)` becomes an interval for `m_num`. The third-jet
-family shows there is no finite `L_s` on the weighted unit ball, and
-`epsilon_s` is not zero. Then match the exterior, transfer the
-finite-pulse theorem, and complete driven stress, radius, controller,
-capture, tail, spatial area, and every S074-S080 gate.
+Remaining to-do list: supply numerical values of `c0=k(E+4 lambda)` and
+`||h_R||` for the actual source, and a boundary-trace estimate below 1
+at `chi=D0`. The partial bound `||g||<2*10^{-6} sqrt(c0)` is not that
+interval, and `m_num` is not zero. Then transfer the finite-pulse
+theorem and complete driven stress, radius, controller, capture, tail,
+spatial area, and every S074-S080 gate.
