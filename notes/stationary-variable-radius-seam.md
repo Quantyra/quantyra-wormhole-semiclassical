@@ -366,26 +366,104 @@ bubble derivative leaves that pass unsatisfied. S075 through S079
 stay blocked on that pass. The earlier obstruction audit remains the
 S080 outcome. No satisfying row of the completion plan is met.
 
-## 13. Checker
+## 13. Three-resolvent candidate inside the classical Jacobian
+
+Let `A(s)=D+s V` for an invertible matrix `D` and a matrix insertion
+`V`. Differentiating the squared resolvent gives
+
+    d/ds (A^-1 A^-1) = -A^-1 V A^-1 A^-1 - A^-1 A^-1 V A^-1.
+
+Each term contains three resolvents. This is the constant-matrix
+insertion. A radius function `v(Y)` replaces `V` by multiplication by
+a noncommuting function, and the same algebra does not estimate that
+operator.
+
+The only scalar mass derivative available from the retained heat
+coefficient is
+
+    d/dM [1/(120 pi M^2)] = -1/(60 pi M^3).
+
+The guards `q=2000^4`, `x>7.9e9`, `|d|<1e-12` and `C=1+6x+d` give
+`C>6x`, hence
+
+    M_1^2=(1+q)/C<338,    18<M_1<19.
+
+At every mass in that interval, with `3<pi<22/7`, the formal product of
+this derivative's absolute value with the weighted inverse norm `1.3e8`
+lies strictly between 100 and 124. The lower comparison uses `M<19`
+and `pi<22/7`. The upper comparison uses `M>18` and `pi>3`. The
+candidate is therefore greater than 100. It is not a Lipschitz
+constant below 1.
+
+The candidate is also not the seam source. The classical Jacobian
+takes `(a(R), integral rho)` to `(s_R, delta mu)`. A scalar
+coefficient derivative does not supply those two values. Using the
+formal product as `||E_bubble||_{X_L^2}` is an uncontrolled
+approximation. The three-resolvent insertion in `X_L^2` remains an
+unresolved proof. It is not set equal to the heat candidate and it is
+not set to zero. The coupled fixed point remains unsolved.
+
+## 14. Variable Dirac three-vertex
+
+The constant-background remainder bound `|P_{M,v}-P_M|<=.05 P_M` for
+`|v|<=.01` stays a constant-shift statement. The variable three-vertex
+needs the commutator of the Dirac operator with `v(Y)`, a gain-two
+remainder, and the common finite parts at one scale.
+
+The sequence `f_N(Y)=N^-5 sin(N Y)` has fifth derivative `cos(N Y)` and
+sixth derivative `-N sin(N Y)`. Its `C5` amplitude is 1, while its next
+derivative has amplitude `N`. A bound on five derivatives does not
+bound the sixth. That sequence is a counterexample to reading a `C5`
+label as the higher weighted control the three-vertex remainder asks
+for. It is not a statement that the physical vertex vanishes.
+
+Classification of the variable Dirac three-vertex and its common
+contact: unresolved proof. Neither is set to zero, and neither is
+replaced by the constant-background factor or by `f_N`.
+
+## 15. Higher weighted nonlinear map
+
+The reduced-branch certificate is `2 M_s^2 L_s epsilon_s<1`.
+Substituting the only numerical inverse constant on hand,
+`M_s=1.3e8`, gives
+
+    2 M_s^2=33800000000000000.
+
+The product `L_s epsilon_s` remains in the certificate. No retained
+estimate supplies values that make the product smaller than the
+reciprocal of that square. Section 14 also shows that a `C5` bound
+does not control the next derivative, so the weighted product bound
+does not yield the higher map.
+
+The reduced branch is not constructed. Physical observable errors are
+not bounded. Classification of each: unresolved proof. None of
+`M_s`, `L_s`, or `epsilon_s` is set to zero.
+
+The signed moment remains the unavailable input recorded in section 11.
+The heat candidate does not evaluate it. The exterior match, the
+finite-pulse transfer, and the driven stress, radius, controller,
+capture, tail, and spatial area stay blocked. No pass condition of
+S139.1, S139.2, or S074.2 through S079.6 holds. The S080 outcome
+remains the earlier obstruction audit. No satisfying row is met.
+The area budget is not evaluated.
+
+## 16. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It audits the conformal Laplacian, both gap enclosures, the arithmetic
-of the rejected substitution, the radial embedding identities, the a2
-ledger and its factors 16 and 1, the formal products with `1.3e8`, the
-resolvent identity, the prescribed-source Jacobian, the
-constant-background derivatives, and the separation between `M(p)` and
-the fast phase. Analytic continuation, spectral domains, the
-three-resolvent insertion, and the coupled fixed point remain ordinary
-arguments. The checker does not assign the constant 1600 to `E_bubble`
-and does not evaluate the area budget.
+It also audits the three-resolvent matrix identity, the lightest-mode
+window, the heat-candidate products 100 and 124, the `C5` sequence, and
+the Newton square `33800000000000000`. It does not assign that candidate
+or the constant 1600 to the three-resolvent insertion, and it does not
+evaluate the area budget.
 
-Remaining to-do list: bound the three-resolvent insertion as an `X_L^2`
-source, on a ball that embeds into the classical Jacobian, with a
-seam-source Lipschitz constant below 1; the a2 factor 1600 is not that
-bound. Then prove the variable Dirac three-vertex, the higher weighted
-nonlinear map, the reduced branch, and the physical observable errors
-without setting them to zero; enclose the signed moment from its own
+Remaining to-do list: estimate the noncommuting three-resolvent kernel
+directly in `X_L^2`, with the horizon value and the rho integral as the
+seam observables. The heat candidate above 100 is not that estimate.
+Then prove the variable Dirac three-vertex and the higher weighted
+nonlinear map without using a `C5` bound as a higher norm; construct
+the reduced branch and bound physical observable errors without setting
+`L_s` or `epsilon_s` to zero; enclose the signed moment from its own
 data; match the exterior, transfer the finite-pulse theorem, and
 complete the driven stress, radius, controller, capture, tail, spatial
 area, and S074-S080 gates.

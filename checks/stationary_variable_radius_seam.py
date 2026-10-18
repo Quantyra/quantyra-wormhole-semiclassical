@@ -126,6 +126,36 @@ def low_jet_embedding_and_a2_factor():
     zero('a2_third_variation_not_scalar',third[0,0]/(c2*S.exp(-2*v))+2)
 
 
+def three_resolvent_and_higher_map():
+    s=S.symbols('s')
+    base=S.Matrix([[2,0],[0,3]])
+    insertion=S.Matrix([[1,1],[0,2]])
+    family=base+s*insertion
+    inverse=family.inv()
+    square=inverse*inverse
+    derivative=S.Matrix(2,2,lambda i,j: S.diff(square[i,j],s)).subs(s,0)
+    green=base.inv()
+    three=-green*insertion*green*green-green*green*insertion*green
+    matrix_zero('three_resolvent_matrix_insertion',derivative-three)
+    mass,pi_symbol=S.symbols('M pi',positive=True)
+    zero('leading_heat_mass_derivative',S.diff(1/(120*pi_symbol*mass**2),mass)+1/(60*pi_symbol*mass**3))
+    q=2000**4
+    check('lightest_mass_square_below_338',(1+q)*10<338*6*79*10**9)
+    check('lightest_mass_below_19',19**2>338)
+    check('heat_candidate_above_100',7*130000000>100*60*22*19**3)
+    check('heat_candidate_below_124',130000000<124*60*3*18**3)
+    check('heat_candidate_not_a_contraction',100>1)
+    N,Y=S.symbols('N Y',real=True)
+    sample=S.sin(N*Y)/N**5
+    zero('c5_fifth_derivative_amplitude',S.diff(sample,Y,5)-S.cos(N*Y))
+    zero('c5_sixth_derivative_amplitude',S.diff(sample,Y,6)+N*S.sin(N*Y))
+    zero('newton_square_at_product_norm',2*130000000**2-33800000000000000)
+    L_s,eps_s=S.symbols('L_s epsilon_s',positive=True)
+    certificate=33800000000000000*L_s*eps_s
+    check('newton_certificate_keeps_two_symbols',certificate.free_symbols=={L_s,eps_s},
+          sorted(str(name) for name in certificate.free_symbols))
+
+
 def resolvent_and_prescribed_source():
     A=S.Matrix([[2,0],[0,3]])
     E=S.Matrix([[1,1],[0,1]])
@@ -195,6 +225,7 @@ def main():
             check('inputs_strict_UTF8_LF',all(raw.decode('utf-8') is not None and b'\r' not in raw and not raw.startswith(b'\xef\xbb\xbf') for raw in before.values()))
             conformal_laplacian_and_gap()
             low_jet_embedding_and_a2_factor()
+            three_resolvent_and_higher_map()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:
