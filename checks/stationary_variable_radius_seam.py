@@ -156,6 +156,23 @@ def three_resolvent_and_higher_map():
           sorted(str(name) for name in certificate.free_symbols))
 
 
+def noncommuting_weighted_kernel():
+    chi=S.symbols('chi',real=True)
+    zero('cosh_first_jet',S.diff(S.cosh(chi),chi)-S.sinh(chi))
+    zero('cosh_second_jet',S.diff(S.sinh(chi),chi)-S.cosh(chi))
+    zero('cosh_transverse_jet',S.coth(chi)*S.sinh(chi)-S.cosh(chi))
+    zero('cosh_profile_weighted_value',S.cosh(chi)/S.cosh(chi)-1)
+    zero('cosh_square_weighted_value',S.cosh(chi)**2/S.cosh(chi)-S.cosh(chi))
+    zero('bolt_weight',S.cosh(0)-1)
+    zero('hyperbolic_comparison_integral',S.integrate(S.cosh(chi)*S.sinh(chi),(chi,0,S.symbols('L',positive=True)))-S.sinh(S.symbols('L',positive=True))**2/2)
+    check('commutator_gap_above_1e37',168*10**35>10**37)
+    check('comparison_integral_above_1e69',(10**35-1)**2>2*10**69)
+    check('horizon_composition_not_contractive',130000000>1)
+    check('weight_exceeds_inverse_threshold',168*10**35*130000000>10**45)
+    phi_x,phi_y=S.symbols('phi_x phi_y')
+    zero('insertion_split',phi_y-(phi_x+(phi_y-phi_x)))
+
+
 def resolvent_and_prescribed_source():
     A=S.Matrix([[2,0],[0,3]])
     E=S.Matrix([[1,1],[0,1]])
@@ -226,6 +243,7 @@ def main():
             conformal_laplacian_and_gap()
             low_jet_embedding_and_a2_factor()
             three_resolvent_and_higher_map()
+            noncommuting_weighted_kernel()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

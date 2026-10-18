@@ -447,23 +447,79 @@ S139.1, S139.2, or S074.2 through S079.6 holds. The S080 outcome
 remains the earlier obstruction audit. No satisfying row is met.
 The area budget is not evaluated.
 
-## 16. Checker
+## 16. Noncommuting kernel in the weighted norm
+
+The three-resolvent source with a radial multiplier `phi` has the
+integral kernel
+
+    Lambda_phi(x,x')
+      = integral K(d(x,y)) phi(y) K(d(y,z)) K(d(z,x')) dvol(y,z)
+      + integral K(d(x,y)) K(d(y,z)) phi(z) K(d(z,x')) dvol(y,z).
+
+The two insertions sit at different points. Split `phi(y)=phi(x)+(phi(y)-phi(x))`.
+The first piece commutes out of the integral. The second is the
+noncommuting gap.
+
+On the ball `chi<=84`, the geodesic distance is at most `2*84=168`.
+The weighted norm controls `|phi'|/cosh(chi)`. Hence
+
+    |phi(y)-phi(x)| <= 168 ||phi||_X cosh(84).
+
+The retained comparison `cosh(84)>10^35` therefore gives a gap larger
+than `10^37 ||phi||_X`. That constant is not below 1.
+
+The same weight shows that `X_L^2` is not an algebra. The radial
+profile `cosh(chi)` has all four weighted jets bounded by 1, so its
+norm is 1. Its square is `cosh(chi)^2`, and dividing by `cosh(chi)`
+returns `cosh(chi)`. The weighted norm of the product is therefore
+greater than `10^35`. Pulling `||phi||_X` out of `Lambda_phi` without
+this factor is false. The corrected factor is not a Lipschitz constant
+below 1.
+
+The horizon observable is the bolt value. There `cosh(0)=1`, so
+`|u(0)|<=||u||_X`. The evaluation constant is 1, which is not strictly
+below 1. One composition with the retained inverse norm replaces 1 by
+`1.3e8`, which is not below 1. The contraction threshold for a source
+derivative is `1/1.3e8`. The multiplication factor `10^35` exceeds that
+threshold by more than `10^43`.
+
+The rho-integral observable in the classical Jacobian is `integral rho dr`.
+Its change-of-variables factor `dr/dchi` is not a retained finite
+constant on the exterior ray. The hyperbolic comparison functional
+`integral_0^84 u(chi) sinh(chi) dchi`, evaluated on the same unit-norm
+profile `cosh(chi)`, equals `sinh(84)^2/2` and exceeds `10^69`. A unit
+ball of `X_L^2` therefore does not force this integral below 1. The
+physical `dr` integral is not identified with that comparison. Its
+missing Jacobian is an unresolved proof.
+
+No ball inside the classical Jacobian receives a Lipschitz constant
+below 1 for the pair `(horizon value, rho integral)`. The Jacobian
+determinant `-kappa G/D_h` remains nonzero, and the source increments
+are not placed in its contracting neighborhood. The tail discarded by
+zero extension is also unresolved: the ball restriction of `K` does not
+reproduce `Lambda_phi`.
+
+Classification: uncontrolled approximation for any bound that omits the
+`cosh(84)` weight; unresolved proof for the physical `dr` Jacobian and
+the exterior tail. Neither obstruction is removed by setting a
+coefficient to zero.
+
+## 17. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits the three-resolvent matrix identity, the lightest-mode
-window, the heat-candidate products 100 and 124, the `C5` sequence, and
-the Newton square `33800000000000000`. It does not assign that candidate
-or the constant 1600 to the three-resolvent insertion, and it does not
-evaluate the area budget.
+It also audits the noncommuting gap, the weighted product `cosh^2`,
+the bolt weight, and the hyperbolic comparison integral. It does not
+assign `10^35` or `10^69` to the physical `dr` integral, and it does
+not evaluate the area budget.
 
-Remaining to-do list: estimate the noncommuting three-resolvent kernel
-directly in `X_L^2`, with the horizon value and the rho integral as the
-seam observables. The heat candidate above 100 is not that estimate.
-Then prove the variable Dirac three-vertex and the higher weighted
-nonlinear map without using a `C5` bound as a higher norm; construct
-the reduced branch and bound physical observable errors without setting
-`L_s` or `epsilon_s` to zero; enclose the signed moment from its own
-data; match the exterior, transfer the finite-pulse theorem, and
-complete the driven stress, radius, controller, capture, tail, spatial
-area, and S074-S080 gates.
+Remaining to-do list: control the exterior tail in `Lambda_phi` and the
+`dr/dchi` factor in the rho integral. The weighted multiplication norm
+above `10^35` and the comparison integral above `10^69` are not a
+Lipschitz constant below 1. Then prove the variable Dirac three-vertex
+and the higher weighted nonlinear map without using a `C5` bound as a
+higher norm; construct the reduced branch and bound physical observable
+errors without setting `L_s` or `epsilon_s` to zero; enclose the signed
+moment from its own data; match the exterior, transfer the finite-pulse
+theorem, and complete the driven stress, radius, controller, capture,
+tail, spatial area, and S074-S080 gates.
