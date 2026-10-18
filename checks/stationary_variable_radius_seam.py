@@ -349,6 +349,68 @@ def absent_inputs_and_blocked_gates():
     bound=factor*R(2,10**6)*S.sqrt(c0)*h_norm
     ratio=S.simplify(bound.subs(h_norm,2)/bound.subs(h_norm,1))
     zero('moment_error_scales_with_h_norm',ratio-2)
+    zero('c0_positive_ratio',S.sqrt(S.simplify(first/second))-8)
+
+
+def explicit_c0_and_s074_gate():
+    from fractions import Fraction
+    import math
+    def atan_bounds(x,n):
+        x=Fraction(x)
+        total=Fraction(0)
+        power=x
+        x2=x*x
+        for k in range(n):
+            term=power/(2*k+1)
+            if k%2==0:
+                total+=term
+            else:
+                total-=term
+            power*=x2
+        rem=power/(2*n+1)
+        if n%2==0:
+            return total,total+rem
+        return total-rem,total
+    def sqrt_bounds(value,scale):
+        value=Fraction(value)
+        target=value.numerator*scale*scale
+        den=value.denominator
+        a=math.isqrt(target//den)
+        while (a+1)*(a+1)*den<=target:
+            a+=1
+        while a*a*den>target:
+            a-=1
+        return Fraction(a,scale),Fraction(a+1,scale)
+    a_lo,a_hi=atan_bounds(Fraction(1,5),12)
+    b_lo,b_hi=atan_bounds(Fraction(1,239),12)
+    pi_lo=16*a_lo-4*b_hi
+    pi_hi=16*a_hi-4*b_lo
+    check('machin_pi_bounds_ordered',pi_lo<pi_hi)
+    check('machin_pi_above_3',pi_lo>3)
+    check('machin_pi_below_22_over_7',pi_hi<Fraction(22,7))
+    s=Fraction(1999,2000)/2000**10
+    def enclosure(G):
+        lam=s/G
+        rad_lo=60*pi_lo/G+17*lam/12
+        rad_hi=60*pi_hi/G+17*lam/12
+        lin_lo=60*pi_lo/G+23*lam/3
+        lin_hi=60*pi_hi/G+23*lam/3
+        sq_lo,_=sqrt_bounds(rad_lo,10**8)
+        _,sq_hi=sqrt_bounds(rad_hi,10**8)
+        return sq_lo*lin_lo,sq_hi*lin_hi
+    c1_lo,c1_hi=enclosure(1)
+    c4_lo,c4_hi=enclosure(4)
+    check('c0_at_G1_above_258792_over_100',c1_lo>Fraction(258792,100))
+    check('c0_at_G1_below_258793_over_100',c1_hi<Fraction(258793,100))
+    check('c0_at_G4_above_32349_over_100',c4_lo>Fraction(32349,100))
+    check('c0_at_G4_below_32350_over_100',c4_hi<Fraction(32350,100))
+    check('c0_enclosures_differ',c1_lo>c4_hi)
+    phase=(ROOT/'notes/stationary-scalar-phase-moment.md').read_text(encoding='utf-8')
+    outgoing=(ROOT/'notes/stationary-scalar-outgoing-inverse.md').read_text(encoding='utf-8')
+    numeric_h=re.compile(r'\|\|h_R\|\|\s*(<=|<|=|>=|>)\s*[0-9]|h_R\s*=\s*[0-9]')
+    check('phase_numeric_h_norm_absent',numeric_h.search(phase) is None)
+    check('outgoing_h_R_absent','h_R' not in outgoing)
+    check('no_chi_D0_trace_below_one','chi=D0' not in phase and 'chi=D0' not in outgoing)
 
 
 def hashes(data):
@@ -378,6 +440,7 @@ def main():
             higher_map_and_signed_moment()
             moment_norms_and_outer_endpoint()
             absent_inputs_and_blocked_gates()
+            explicit_c0_and_s074_gate()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

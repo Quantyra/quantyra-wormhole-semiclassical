@@ -726,11 +726,12 @@ also miss `E=60 pi/G+11 lambda/3`. They are not spectral points.
 The product `G lambda=(1999/2000)*2000^{-10}` lies in the open window
 above. At `G=1` and at `G=4` the identities fix `E` and `k^2`. Because
 `pi>3`, both points meet `k/sqrt(lambda)>4*10^{17}` and `E>180/G`.
-The squared values of `c0` stand in the ratio 64, so `c0` is not one
-number. `m_num` is not set to zero.
+The squared values of `c0` stand in the ratio 64, so the positive
+values stand in the ratio 8. `c0` is not one number. `m_num` is not
+set to zero.
 
-Classification: unavailable physical input for numerical `c0`,
-`||h_R||`, and the `chi=D0` trace.
+The explicit enclosures are in section 27. `||h_R||` and the
+`chi=D0` trace remain unavailable physical inputs.
 
 ## 25. Why S138 and the later gates stay blocked
 
@@ -751,15 +752,45 @@ is met.
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It audits the spectral identities, the ratio 64 of the two squared
-`c0` values, the line search of the phase and outgoing notes, and the
-scaling of the moment error with `||h_R||`. It does not replace
-`m_num` by zero, and it does not evaluate the area budget.
+It audits the spectral identities, the Machin enclosures of `c0`, the
+line search of the phase and outgoing notes, and the scaling of the
+moment error with `||h_R||`. It does not replace `m_num` by zero, and
+it does not evaluate the area budget.
 
-Remaining to-do list: numerical `c0`, `||h_R||`, and a `chi=D0`
-boundary trace below 1 are absent from the phase and outgoing notes.
-The spectral identities at `G=1` and `G=4`, on one allowed
-`G lambda` window, give squared `c0` values in the ratio 64. `m_num`
-is not zero. S138 and the later stress, radius, controller, capture,
-tail, and area gates stay blocked on that missing match. S074.2-S074.6
-and S075.1-S079.6 stay open. The area budget is unevaluated.
+## 27. Explicit c0 values and the S074.2 gate
+
+The comparison is the phase identity `c0=k(E+4 lambda)` at the two
+window points. The hardest step is the square root of `k^2`. The
+observable is `c0`. The test is Machin's enclosure of `pi` together
+with a line search for a numeric `||h_R||` and a `chi=D0` trace below 1.
+
+On `G lambda=(1999/2000)*2000^{-10}`,
+
+    pi=16 atan(1/5)-4 atan(1/239),
+
+and the identities `E=60 pi/G+11 lambda/3` and `k^2=E-9 lambda/4` give
+
+    258792/100 < c0 < 258793/100    at G=1,
+    32349/100 < c0 < 32350/100      at G=4.
+
+The positive ratio is 8. A line search of the phase note finds
+`h_R=V*R4_PV p` and no comparison of `||h_R||` with a numeral. The
+outgoing note does not contain `h_R`. Neither note contains `chi=D0`,
+so neither states a trace below 1 at that endpoint.
+
+S074.2 asks for a frozen action, boundary ensemble, gauge, canonical
+fields, perturbative order, and parameter domain, and for a map of the
+closest source equations. The phase identities are mapped. They do not
+freeze the domain: `c0` meets both enclosures, and `||h_R||` is not an
+identified number. The exterior trace is absent. S074.2 stays
+unchecked. `m_num` is not set to zero.
+
+Remaining to-do list: at `G lambda=(1999/2000)*2000^{-10}`,
+`258792/100<c0<258793/100` when `G=1` and `32349/100<c0<32350/100`
+when `G=4`. The phase and outgoing notes have no numeric `||h_R||`
+and no `chi=D0` trace below 1. S074.2 stays open because those
+identities do not freeze one parameter domain and `||h_R||` is not an
+identified number. `m_num` is not zero. S138 and the later stress,
+radius, controller, capture, tail, and area gates stay blocked on that
+missing match. S074.3-S074.6 and S075.1-S079.6 stay open. The area
+budget is unevaluated.
