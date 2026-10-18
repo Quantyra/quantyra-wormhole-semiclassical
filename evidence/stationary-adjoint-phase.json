@@ -1,0 +1,212 @@
+{
+  "runs": [
+    {
+      "checks": [
+        {
+          "detail": "",
+          "label": "actual_bytecode_disabled",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "inputs_strict_UTF8_LF",
+          "passed": true
+        },
+        {
+          "detail": "[0, 0]",
+          "label": "TT_source_vector",
+          "passed": true
+        },
+        {
+          "detail": "[0, 0]",
+          "label": "TT_mass_vector",
+          "passed": true
+        },
+        {
+          "detail": "[0, 0]",
+          "label": "scalar_vector",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "reflected_congruence_mass_derivative",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "TT_mass_root_slope",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "positive_mass_pairing_coefficient",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "loop_coefficient_bound",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "relative_loop_bound",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "benchmark_relative_loop_bound",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "local_outer_flux_sign",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "nonlocal_commutator_first_moment",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "scalar_root_derivative",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "scalar_flux_normalization",
+          "passed": true
+        },
+        {
+          "detail": "[0, 0, 0, 0]",
+          "label": "real_scalar_Green_determinant",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "full_spherical_Ward_reconstruction",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "full_trace_output_reconstruction",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "orbit_trace_output_reconstruction",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "radial_isothermal_gauge_equation",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "radial_dilation_solution",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "thermal_Phi_source",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "thermal_V_source",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "candidate_weighted_tail_0",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "candidate_weighted_tail_1",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "candidate_weighted_tail_2",
+          "passed": true
+        },
+        {
+          "detail": "0",
+          "label": "scalar_moment_tail",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "source_mass_corrections_decay",
+          "passed": true
+        },
+        {
+          "detail": "",
+          "label": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "command": [
+        "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+        "-B",
+        "checks/stationary_adjoint_phase.py"
+      ],
+      "contract": {
+        "acceptance": "every symbolic residual exactly zero and rational inequality true",
+        "failure_policy": "append every run and retain failed input bytes",
+        "hash_policy": "SHA256 of raw UTF8/LF/noBOM bytes, no normalization",
+        "numerical_tolerances": "none",
+        "ordinary_arguments": [
+          "actual nonlocal cutoff limit",
+          "finite asymptotic extraction",
+          "actual scalar-phase quotient",
+          "actual candidate source-tail proof"
+        ],
+        "scope": "normal boundary pairings, signs, Ward/gauge identities and source integrability",
+        "unresolved": [
+          "actual physical kernel",
+          "actual phase angle",
+          "candidate source moments",
+          "quantitative inverse",
+          "nonlinear physical logarithmic phase",
+          "physical matching"
+        ]
+      },
+      "cwd": "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical",
+      "dont_write_bytecode": true,
+      "execution_inputs_sha256": {
+        "checks/stationary_adjoint_phase.py": "67548d3dfdfa9dc60528ef1ab3efaeb65fc5d167d12faec43cba37d31119dd90",
+        "notes/stationary-adjoint-phase.md": "63d4558676aa1d061cc56e10e6d8f8b17d69480b2a680c625d9e70edd82cbaed",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-fast-phase-variation.md": "0fb4629172deceefc658bff0cbc592ca61b662b92af3dba2a691515a95f5a9ae",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/stationary-trace-range-condition.md": "ea51eb18b6ca77f267b16ad181bac444dea375bd608cb903fc407635d5c163f1",
+        "notes/stationary-weighted-conformal-range.md": "8e4c7442fec6fd670bf0c9bb3083722c112fe785a8db6b079894e9b01683f336"
+      },
+      "failed_checks": [],
+      "final_inputs_sha256": {
+        "checks/stationary_adjoint_phase.py": "67548d3dfdfa9dc60528ef1ab3efaeb65fc5d167d12faec43cba37d31119dd90",
+        "notes/stationary-adjoint-phase.md": "63d4558676aa1d061cc56e10e6d8f8b17d69480b2a680c625d9e70edd82cbaed",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-fast-phase-variation.md": "0fb4629172deceefc658bff0cbc592ca61b662b92af3dba2a691515a95f5a9ae",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/stationary-trace-range-condition.md": "ea51eb18b6ca77f267b16ad181bac444dea375bd608cb903fc407635d5c163f1",
+        "notes/stationary-weighted-conformal-range.md": "8e4c7442fec6fd670bf0c9bb3083722c112fe785a8db6b079894e9b01683f336"
+      },
+      "finished_utc": "2026-10-18T02:47:16.436411+00:00",
+      "python": "3.13.7",
+      "started_utc": "2026-10-18T02:47:13.785683+00:00",
+      "status": "passed",
+      "sympy": "1.14.0",
+      "terminal_exit_status": 0
+    }
+  ]
+}
