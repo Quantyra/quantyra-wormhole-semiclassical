@@ -222,6 +222,29 @@ def constant_background_and_fast_phase():
           certificate.free_symbols=={M_s,L_s,eps_s},sorted(str(s) for s in certificate.free_symbols))
 
 
+def tail_and_radial_factor():
+    chi=S.symbols('chi',positive=True)
+    v=S.log(S.tanh(chi/2))
+    zero('radial_coordinate_derivative',S.simplify(S.expand((S.diff(v,chi)-1/S.sinh(chi)).rewrite(S.exp))))
+    F0,kappa=S.symbols('F0 kappa',positive=True)
+    zero('dr_dchi_from_F0',(1/S.sinh(chi))/(kappa/F0)-F0/(kappa*S.sinh(chi)))
+    B=1000
+    lam=10**4
+    check('guard_x',lam*B*B>79*10**8)
+    check('guard_h',10**31>10**30)
+    check('guard_gamma_ratio',0<=12)
+    cap=B*(R(1,100))*2*R(1008,1000)
+    zero('chart_cap_at_admissible_point',cap-R(2016,100))
+    check('chart_cap_not_below_one',cap>1)
+    # e**69 < (series upper)**69 < 2*10**30, so log(2*10**30)>69.
+    from math import factorial
+    from fractions import Fraction
+    upper=sum(Fraction(1,factorial(k)) for k in range(12))+Fraction(13,12)/factorial(12)
+    check('disk_radius_above_69',upper**69<2*10**30)
+    # Area-weighted majorant tail from distance 69, unit L-infinity density.
+    check('unit_density_tail_below_1e-20',22*10*402000*10**68*10**20<7*9*27**68)
+
+
 def hashes(data):
     return {name:hashlib.sha256(raw).hexdigest() for name,raw in data.items()}
 
@@ -244,6 +267,7 @@ def main():
             low_jet_embedding_and_a2_factor()
             three_resolvent_and_higher_map()
             noncommuting_weighted_kernel()
+            tail_and_radial_factor()
             resolvent_and_prescribed_source()
             constant_background_and_fast_phase()
         except Exception:

@@ -504,19 +504,69 @@ Classification: uncontrolled approximation for any bound that omits the
 the exterior tail. Neither obstruction is removed by setting a
 coefficient to zero.
 
-## 17. Checker
+## 17. Exterior tail and the radial factor
+
+The coordinate definition `v=log tanh(chi/2)` has derivative
+`dv/dchi=1/sinh(chi)`. The retained radial formula has
+`dv/dr=kappa/F0`. Therefore
+
+    dr/dchi=F0/(kappa sinh(chi)).
+
+On the region where the retained upper bound is `F0<=C s^2`,
+
+    dr/dchi<=(B/gamma) s^2/sinh(chi),
+
+because `kappa=gamma C/B`. The chart inequality `s<=1.008 h cosh(chi)`
+rearranges to `cosh(chi)>=s/(1.008 h)`. For `cosh>2`, `sinh>cosh/2`, so
+
+    dr/dchi<(B/gamma) s h (2*1.008)
+
+when that lower bound on the hyperbolic sine is inserted. At `h=gamma`
+this is `2.016 B s`.
+
+The guards `x>7.9e9`, `h<1e-30` and `|h/gamma-1|<=12 gamma` admit
+`h=gamma=10^{-31}`, `B=1000` and `lambda=10^4`. Then `x=10^{10}`, and
+at the cold seam `s=1/100` the cap equals `20.16`, which is not below 1.
+The guards do not cap `B`. This attempt therefore does not produce a
+Lipschitz constant below 1 for the rho integral. The exact factor is
+kept. The cap is not sharpened by setting `B` or `gamma` to zero.
+
+The physical disk ends at `D0=log(coth(h/2))`. For `h<1e-30`,
+`coth(h/2)>2/h>2*10^{30}`, and `D0>69`. A source supported at distance
+at least 69 from the bolt, with unit `L-infinity` density, meets the
+kernel majorant integrated against hyperbolic area. For distance at
+least 1 the square-root denominator is at least `9/10`, and `sinh`
+is at most half an exponential. The resulting tail is below `10^{-20}`.
+That is below 1. It is a bound on one kernel leg acting on a unit
+density, not on the three-resolvent composition.
+
+The composition applies that leg to the intermediate field on
+`chi>D0`. The retained theorem bounds that field in the weighted norm,
+not in `L-infinity`. No `L-infinity` bound is selected here, and the
+weight comparison recorded earlier is not reused as this Lipschitz
+constant. The boundary layer, where the distance to the fictitious
+exterior is short, is likewise not bounded by the long-distance tail.
+Classification of the composition tail: unresolved proof. The one-leg
+unit-density tail below `10^{-20}` remains available and is not set
+equal to the composition.
+
+No Lipschitz constant below 1 is obtained for the pair of seam
+observables. The rho-integral cap exceeds 1 on an admissible guard
+point, and the composition tail has no `L-infinity` input.
+
+## 18. Checker
 
 The focused checker is
 [stationary_variable_radius_seam.py](../checks/stationary_variable_radius_seam.py).
-It also audits the noncommuting gap, the weighted product `cosh^2`,
-the bolt weight, and the hyperbolic comparison integral. It does not
-assign `10^35` or `10^69` to the physical `dr` integral, and it does
+It also audits `dr/dchi`, the admissible guard point where the chart
+cap equals `20.16`, and the unit-density tail below `10^{-20}`. It does
+not promote that tail to a composition Lipschitz constant, and it does
 not evaluate the area budget.
 
-Remaining to-do list: control the exterior tail in `Lambda_phi` and the
-`dr/dchi` factor in the rho integral. The weighted multiplication norm
-above `10^35` and the comparison integral above `10^69` are not a
-Lipschitz constant below 1. Then prove the variable Dirac three-vertex
+Remaining to-do list: bound the intermediate field on `chi>D0` in
+`L-infinity` and cap `B` so the chart factor `2.016 B s` falls below 1.
+The unit-density tail below `10^{-20}` is not the composition, and the
+cap `20.16` is not below 1. Then prove the variable Dirac three-vertex
 and the higher weighted nonlinear map without using a `C5` bound as a
 higher norm; construct the reduced branch and bound physical observable
 errors without setting `L_s` or `epsilon_s` to zero; enclose the signed
