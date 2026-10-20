@@ -1,0 +1,1598 @@
+{
+  "runs": [
+    {
+      "story": "S157",
+      "created_utc": "2026-10-20T12:28:48.402844+00:00",
+      "status": "failed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 70,
+        "scalar_y": [
+          ".08",
+          ".01",
+          "exp(-20)"
+        ],
+        "parameters": [
+          "0",
+          ".4",
+          "1"
+        ],
+        "contour_nodes": 128,
+        "contour_radius": ".005",
+        "contour_tolerance": "1e-25",
+        "scalar_steps": [
+          "1e-7",
+          "5e-8"
+        ],
+        "scalar_difference_tolerance": "1e-6",
+        "pressure_y": [
+          ".001",
+          ".02",
+          ".06"
+        ],
+        "gauss_nodes": [
+          32,
+          64
+        ],
+        "pressure_steps": [
+          ".001",
+          ".0005"
+        ],
+        "pressure_normalization": "1e-14",
+        "pressure_difference_tolerance": "1e-7",
+        "quadrature_tolerance": "1e-24",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-35",
+        "endpoint_differences": "second-order one-sided within [0,1]",
+        "fixtures_are_quantum_sources": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_outer_regular_response.py": "7eda5fc05059d94d2db5afb4a89030c42e67a5a55071dedefb11c3cd2bdf29f2",
+        "notes/comparison-path-outer-regular-response.md": "7c93433973148b76350d5185c911fcd0603bae5c7b2d4a03ac315330814a4348",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_outer_regular_response.py": "7eda5fc05059d94d2db5afb4a89030c42e67a5a55071dedefb11c3cd2bdf29f2",
+        "notes/comparison-path-outer-regular-response.md": "7c93433973148b76350d5185c911fcd0603bae5c7b2d4a03ac315330814a4348",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "comparison-path-interior-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-interior-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scaled_metric_jet_2",
+          "passed": true,
+          "detail": "0.00000000249547731040856694781839243254"
+        },
+        {
+          "name": "scaled_metric_jet_3",
+          "passed": true,
+          "detail": "0.0000000539021896954170460728772765428"
+        },
+        {
+          "name": "scaled_metric_jet_4",
+          "passed": true,
+          "detail": "0.00000116428708368845139517414917332"
+        },
+        {
+          "name": "scaled_metric_jet_5",
+          "passed": true,
+          "detail": "0.0000251486006301517328557616221438"
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_complex_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_cap_proper_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scaled_norm_below_existing_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ellipse_stays_in_scaled_cone",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cubic_coefficient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "small_mass_evaluation_fits",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "two_row_small_mass_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "row_commutator_scalar_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_neumann_ratio",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_shrinking_complex_bound",
+          "passed": true,
+          "detail": "1207266713/93750000000000000000"
+        },
+        {
+          "name": "difference_and_cubic_complex_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_count_zero_moment",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_count_inverse_moment",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_H_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_H_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_L_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_L_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_L_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_weighted_budget_0",
+          "passed": true,
+          "detail": "9339/3062500000000"
+        },
+        {
+          "name": "pressure_weighted_budget_1",
+          "passed": true,
+          "detail": "247283/60025000000000000000"
+        },
+        {
+          "name": "pressure_weighted_budget_2",
+          "passed": true,
+          "detail": "47587117974559/52521875000000000000000000000"
+        },
+        {
+          "name": "regular_profile_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "regular_profile_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "regular_profile_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_regular_mass",
+          "passed": true,
+          "detail": "5859541175611/500000000000000000000000000"
+        },
+        {
+          "name": "outer_regular_density",
+          "passed": true,
+          "detail": "6136369892569/100000000000000000000000"
+        },
+        {
+          "name": "outer_regular_lapse",
+          "passed": true,
+          "detail": "175850606957/200000000000000000000000000"
+        },
+        {
+          "name": "outer_cross_terms_retained",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_strip_log_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "capped_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_direction_low_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_collar_log_lower",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_real_endpoint_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "compact_real_endpoint_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_regular_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_to_complex_log_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_scalar_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_scalar_second_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_region_covered",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_log_weight_conversion",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "sixth_log_mass_integral",
+          "passed": false,
+          "detail": "1577.70228896309356850224477021"
+        }
+      ],
+      "numerics": [
+        {
+          "scaled_jets": [
+            "0.00000000249547731040856694781839243254",
+            "0.0000000539021896954170460728772765428",
+            "0.00000116428708368845139517414917332",
+            "0.0000251486006301517328557616221438"
+          ],
+          "constraint_second_bounds_exact": [
+            "5859541175611/500000000000000000000000000",
+            "6136369892569/100000000000000000000000",
+            "175850606957/200000000000000000000000000"
+          ],
+          "full_outer_source_bounded": false,
+          "goal_complete": false
+        }
+      ],
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\comparison_path_outer_regular_response.py\", line 285, in main\n    numerical_budgets()\n    ~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\comparison_path_outer_regular_response.py\", line 166, in numerical_budgets\n    check(\"sixth_log_mass_integral\", I6 < 1330, mp.nstr(I6, 30))\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\comparison_path_outer_regular_response.py\", line 52, in check\n    raise AssertionError(name)\nAssertionError: sixth_log_mass_integral\n",
+      "scope": "fixed-chart actual-path outer regular canonical response",
+      "unresolved": [
+        "allocated cubic/Weyl and other sources",
+        "general family and full inverse",
+        "coupled solution",
+        "physical completion requirements"
+      ],
+      "failed_checker_source_utf8": "\"\"\"S157: shrinking charts and fixed-chart regular outer response.\"\"\"\nfrom __future__ import annotations\nfrom datetime import datetime, timezone\nfrom fractions import Fraction as Q\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport sys\nimport traceback\nimport mpmath as mp\nimport sympy as s\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = \"comparison-path-outer-regular-response\"\nINPUTS = [\n    \"checks/comparison_path_outer_regular_response.py\",\n    \"notes/comparison-path-outer-regular-response.md\",\n    \"notes/comparison-path-interior-response.md\",\n    \"evidence/comparison-path-interior-response.json\",\n    \"notes/comparison-path-cold-response.md\",\n    \"evidence/comparison-path-cold-response.json\",\n    \"notes/fixed-chart-global-constraint-transfer.md\",\n    \"evidence/fixed-chart-global-constraint-transfer.json\",\n    \"notes/stationary-completed-metric-response-norm.md\",\n    \"notes/stationary-centered-canonical-response.md\",\n    \"notes/stationary-centered-conormal-source.md\",\n    \"notes/divided-jet-dirac-response.md\",\n    \"notes/coincident-normal-dirac-response.md\",\n    \"notes/outer-ward-and-constraint-transfer.md\",\n]\nPROTOCOL = {\n    \"digits\": 70, \"scalar_y\": [\".08\", \".01\", \"exp(-20)\"],\n    \"parameters\": [\"0\", \".4\", \"1\"], \"contour_nodes\": 128,\n    \"contour_radius\": \".005\", \"contour_tolerance\": \"1e-25\",\n    \"scalar_steps\": [\"1e-7\", \"5e-8\"], \"scalar_difference_tolerance\": \"1e-6\",\n    \"pressure_y\": [\".001\", \".02\", \".06\"], \"gauss_nodes\": [32, 64],\n    \"pressure_steps\": [\".001\", \".0005\"], \"pressure_normalization\": \"1e-14\",\n    \"pressure_difference_tolerance\": \"1e-7\", \"quadrature_tolerance\": \"1e-24\",\n    \"refinement_ratio\": \".35\", \"refinement_floor\": \"1e-35\",\n    \"endpoint_differences\": \"second-order one-sided within [0,1]\",\n    \"fixtures_are_quantum_sources\": False,\n}\nROWS, NUMERICS = [], []\n\n\ndef check(name, passed, detail=\"\"):\n    assert name not in {x[\"name\"] for x in ROWS}\n    row = {\"name\": name, \"passed\": bool(passed), \"detail\": str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row), flush=True)\n    if not passed:\n        raise AssertionError(name)\n\n\ndef predecessors():\n    for stem, count in [(\"comparison-path-interior-response\", 126),\n                        (\"comparison-path-cold-response\", 242),\n                        (\"fixed-chart-global-constraint-transfer\", 99)]:\n        run = json.loads((ROOT/\"evidence\"/(stem+\".json\")).read_text())[\"runs\"][-1]\n        check(stem+\"_receipt\", run[\"status\"] == \"passed\" and len(run[\"checks\"]) == count\n              and all(x[\"passed\"] for x in run[\"checks\"])\n              and len({x[\"name\"] for x in run[\"checks\"]}) == count)\n        check(stem+\"_current_inputs\", run[\"unchanged_inputs\"]\n              and run[\"input_sha256_before\"] == run[\"input_sha256_after\"]\n              and all(sha256((ROOT/p).read_bytes()).hexdigest() == h\n                      for p, h in run[\"input_sha256_after\"].items()))\n\n\ndef exact_checks():\n    X, r = s.symbols(\"X r\", positive=True)\n    yy = s.Rational(2, 25)\n    H = 20*X/(1-20*yy*X)\n    remainder = s.series(sum(H**k for k in range(6)), X, 0, 6).removeO().expand()\n    cubic = s.series((s.Rational(21, 20)+H/100)**3, X, 0, 6).removeO().expand()\n    Lmax = mp.mpf(1)-mp.log(mp.mpf(\".08\"))\n    totals = []\n    for j in range(2, 6):\n        val = (mp.mpf(\"4e-8\")*mp.mpf(\".08\")**4*Lmax*mp.mpf(str(remainder.coeff(X, j)))\n               +mp.mpf(\"1e-11\")*mp.mpf(\".08\")**3*mp.mpf(str(cubic.coeff(X, j))))\n        check(f\"scaled_metric_jet_{j}\", val < mp.mpf(\"2.6e-5\"), mp.nstr(val, 30))\n        totals.append(mp.nstr(val, 30))\n    for j in range(1, 6):\n        check(f\"seed_coordinate_cauchy_coefficient_{j}\",\n              Q(\".01\")*(j+1)*1000**j <= 20*2000**(j-1))\n    check(\"seed_complex_coordinate_margin\", Q(\".0042\")*Q(\"1.12\") < Q(\".0048\") < Q(\".01\"))\n    check(\"real_cap_proper_margin\", Q(\"1.03\")/40 < Q(\".05\"))\n    check(\"scaled_norm_below_existing_reserve\", Q(\"2.6e-5\") < Q(\"1.3e-4\"))\n    check(\"ellipse_stays_in_scaled_cone\", Q(\"64.5009765625\")*Q(\"1.3e-4\") < Q(\".011\"))\n    check(\"proper_cubic_coefficient\", Q(\"4e-11\")*Q(\".075\") < Q(\"1e-11\"))\n    check(\"small_mass_evaluation_fits\", Q(1, 320) < Q(1, 160))\n    M = s.symbols(\"M\", positive=True)\n    check(\"two_row_small_mass_factor\",\n          s.expand(M*(1+32/(M*r))**2-(M+64/r+1024/(M*r**2))) == 0)\n    check(\"row_commutator_scalar_constant\", 2*32000**2*320*Q(\"1.02\") < 9*10**11)\n    # Homogeneity follows through the full finite product recursion.\n    p = [None, s.Rational(2, 100), s.Integer(300), s.Integer(50000), s.Integer(7000000)]\n    B = [None, 2, 400, 50000, 7000000, 2000000000]\n    def product(n, d, scale):\n        if n == 1:\n            return B[d+1]/scale**(d+1)\n        if d == n-1:\n            return (2/scale)**n\n        return (B[d-n+2]/scale**(d-n+2)*(2/scale)**(n-1)\n                +sum(p[a]/scale**a*product(n-1, d-a, scale) for a in range(1, d-n+2)))\n    for n in range(1, 5):\n        check(f\"born_degree_five_scaling_{n}\", s.simplify(product(n, 4, r)*r**5-product(n, 4, s.Integer(1))) == 0)\n    check(\"born_neumann_ratio\", 5*Q(\"1.02\")*Q(\".06\") < 1)\n    eta = Q(\"8.5e-33\")\n    angular = 24*320**3+64*8*320**2+1024*8*320\n    Kunit = 2*eta*(Q(2, 3)*10**17+10**17+9*10**11*angular)\n    check(\"complete_shrinking_complex_bound\", Kunit < Q(\"2e-11\"), str(Kunit))\n    check(\"difference_and_cubic_complex_budget\", 2*Q(\"2e-11\")+Q(\"1e-30\") < Q(\"1e-10\"))\n    E, delta = s.symbols(\"E delta\", positive=True)\n    check(\"angular_count_zero_moment\", s.integrate(4*delta*E**2*s.exp(-delta*E), (E, 0, s.oo)) == 8/delta**2)\n    check(\"angular_count_inverse_moment\", s.integrate(4*(1+delta*E)*s.exp(-delta*E), (E, 0, s.oo)) == 8/delta)\n    a = Q(\"1.2e-8\")\n    H0, H1, H2 = Q(\"1.01\"), Q(\"5e-8\"), Q(\"2.4e-15\")\n    L0, L1, L2 = Q(\".01\"), Q(\"8e-10\"), Q(\"5.5e-17\")\n    I = Q(\".08\")**2/2\n    check(\"ward_H_first\", 4*a*H0 < H1)\n    check(\"ward_H_second\", 16*a*a*H0 < H2)\n    check(\"ward_L_value\", H0*3*I < L0)\n    check(\"ward_L_first\", H0*(12*a+Q(\"1e-7\"))*I < L1)\n    check(\"ward_L_second\", H0*(48*a*a+8*a*Q(\"1e-7\"))*I < L2)\n    lowerL = Q(\"3.5\")\n    P0, P1, P2 = Q(\"6e-10\"), Q(\"5.2e-13\"), Q(\"1.1e-14\")\n    S0, S1, S2 = Q(\"3e-7\"), Q(\"6e-14\"), Q(\"9e-14\")\n    bound0 = H0*P0/lowerL**2+L0*S0\n    bound1 = (H0*P1+H1*P0)/lowerL**4+L0*S1+L1*S0/lowerL**2\n    bound2 = (H0*P2+2*H1*P1+H2*P0)/lowerL**6+L0*S2+2*L1*S1/lowerL**2+L2*S0/lowerL**4\n    for j, v, bound in zip(range(3), [bound0, bound1, bound2], [Q(\"4e-9\"), Q(\"5e-15\"), Q(\"1e-15\")]):\n        check(f\"pressure_weighted_budget_{j}\", v < bound, str(v))\n    N0, N1, N2 = Q(\"3.1e-7\"), Q(\"7e-14\"), Q(\"9.2e-14\")\n    check(\"regular_profile_value\", 2*Q(\"4e-9\")+S0 < N0)\n    check(\"regular_profile_first\", 2*Q(\"5e-15\")+S1 == N1)\n    check(\"regular_profile_second\", 2*Q(\"1e-15\")+S2 == N2)\n    dg = Q(\"3e-7\")\n    m2 = Q(\"1.003\")*N2+Q(\"4.02\")*dg*N1+Q(\"5.54\")*dg**2*N0\n    a2 = Q(\"1.006\")*N2+Q(\"10.08\")*dg*N1+Q(\"26.5\")*dg**2*N0\n    outs = [Q(\".254\")*m2/2, 1330*m2/2, Q(\".019\")*a2/2]\n    for tag, v, bound in zip([\"mass\", \"density\", \"lapse\"], outs, [Q(\"1.2e-14\"), Q(\"6.2e-11\"), Q(\"9e-16\")]):\n        check(\"outer_regular_\"+tag, v < bound, str(v))\n    check(\"outer_cross_terms_retained\", m2 > Q(\"1.003\")*N2 and a2 > Q(\"1.006\")*N2)\n    NUMERICS.append({\"scaled_jets\": totals, \"constraint_second_bounds_exact\": [str(x) for x in outs],\n                     \"full_outer_source_bounded\": False, \"goal_complete\": False})\n\n\ndef numerical_budgets():\n    y = mp.mpf(\".08\")\n    L = 1-mp.log(y)\n    check(\"seed_strip_log_guard\", mp.mpf(\"1.01\")*mp.exp(mp.mpf(\".09\")) < mp.mpf(\"1.12\"))\n    check(\"capped_gradient\", mp.exp(mp.mpf(\".027\"))*(mp.mpf(\"8e-6\")+160*mp.mpf(\"3e-8\")*y*y) < mp.mpf(\"1e-5\"))\n    check(\"radial_direction_low_guard\", 3*mp.mpf(\"1e-11\")*y+mp.mpf(\"2e-6\")*y*y*L < mp.mpf(\"1e-7\"))\n    check(\"real_collar_log_lower\", L > mp.mpf(\"3.5\"))\n    check(\"outer_real_endpoint_budget\", 2*mp.mpf(\"8.5e-33\")*mp.mpf(\"1e24\")*(mp.mpf(\"1e-7\")+mp.mpf(\"4e-11\"))*mp.mpf(\"1.01\") < mp.mpf(\"5e-15\"))\n    check(\"compact_real_endpoint_budget\", mp.mpf(\"3.4e-14\")+mp.mpf(\"1e-20\") < mp.mpf(\"5e-15\")*L**2)\n    check(\"seed_regular_value_budget\", 2*mp.mpf(\"8.5e-33\")*400**2*mp.mpf(\"1e20\")+mp.mpf(\"5e-15\") < mp.mpf(\"3e-7\"))\n    check(\"real_to_complex_log_bound\", mp.log(20000) < 7+2*mp.log(1/y))\n    check(\"outer_scalar_first_budget\", mp.mpf(\"5e-15\")*mp.exp(2)*(7/mp.log(256))**2 < mp.mpf(\"6e-14\"))\n    check(\"outer_scalar_second_budget\", mp.mpf(\"5e-15\")*mp.exp(4)/8*(7/mp.log(256))**4 < mp.mpf(\"9e-14\"))\n    check(\"outer_region_covered\", mp.sqrt(8)*mp.log(mp.mpf(40)/39) < y)\n    check(\"outer_log_weight_conversion\", mp.sqrt(mp.mpf(\"5.9\"))/mp.mpf(\"1.001\") > 1)\n    ell = 1+mp.log(40)\n    I6 = sum(mp.binomial(6, j)*mp.factorial(j)*ell**(6-j) for j in range(7))/40\n    J6 = sum(mp.binomial(6, j)*mp.factorial(j)*ell**(6-j)/4**(j+1) for j in range(7))/40**4\n    check(\"sixth_log_mass_integral\", I6 < 1330, mp.nstr(I6, 30))\n    check(\"sixth_log_primitive_constant\", mp.mpf(\"12.2\")*I6/40**3 < mp.mpf(\".254\"))\n    check(\"sixth_log_lapse_constant\", mp.mpf(\"12.2\")*J6 < mp.mpf(\".019\"), mp.nstr(mp.mpf(\"12.2\")*J6, 30))\n    for power, exact in [(1, I6), (4, J6)]:\n        value = mp.quad(lambda z: (ell+z)**6*mp.exp(-power*z), [0, 1, 4, 16, mp.inf])/40**power\n        check(f\"sixth_log_independent_integral_{power}\", abs(value-exact) < mp.mpf(\"1e-55\"))\n    NUMERICS.append({\"I6\": mp.nstr(I6, 35), \"J6\": mp.nstr(J6, 35)})\n\n\ndef fd(fun, x, h, j):\n    if x == 0 or x == 1:\n        h = h if x == 0 else -h\n        assert all(0 <= x+n*h <= 1 for n in range(4))\n        v = [fun(x+n*h) for n in range(4)]\n        return (-3*v[0]+4*v[1]-v[2])/(2*h) if j == 1 else (2*v[0]-5*v[1]+4*v[2]-v[3])/h**2\n    return (fun(x+h)-fun(x-h))/(2*h) if j == 1 else (fun(x+h)-2*fun(x)+fun(x-h))/h**2\n\n\ndef differences(tag, fun, x, target, j, steps, tol):\n    errors = [abs(fd(fun, x, mp.mpf(h), j)-target) for h in steps]\n    check(tag+\"_difference\", max(errors) < mp.mpf(tol)*(1+abs(target)),\n          {\"target\": mp.nstr(target, 25), \"errors\": [mp.nstr(e, 12) for e in errors]})\n    check(tag+\"_refinement\", errors[1] < mp.mpf(\".35\")*errors[0] or max(errors) < mp.mpf(\"1e-35\"))\n\n\ndef scalar_fixtures():\n    x = s.symbols(\"x\")\n    for label, y in zip(PROTOCOL[\"scalar_y\"], [mp.mpf(\".08\"), mp.mpf(\".01\"), mp.exp(-20)]):\n        L = 1-mp.log(y)\n        a, B = mp.mpf(\"5e-15\")*L**2, mp.mpf(\"1e-10\")*y**-5\n        degree = int(mp.floor(mp.log(B/a)/mp.log(256)))\n        check(\"fixture_ellipse_bound_\"+label,\n              (a/4)*(mp.mpf(256)**degree+mp.mpf(256)**(-degree)) <= B)\n        poly = s.chebyshevt(degree, 2*x-1)/2\n        derivs = [s.lambdify(x, s.diff(poly, x, j), \"mpmath\") for j in [1, 2]]\n        fun = lambda q: mp.chebyt(degree, 2*q-1)/2\n        for parameter in PROTOCOL[\"parameters\"]:\n            lam = mp.mpf(parameter)\n            for j in [1, 2]:\n                tag = f\"scalar_{label}_{parameter}_{j}\"\n                target = derivs[j-1](lam)\n                bound = mp.mpf(\"6e-14\")*L**4/a if j == 1 else mp.mpf(\"9e-14\")*L**6/a\n                check(tag+\"_weighted_bound\", abs(target) < bound)\n                radius, count = mp.mpf(\".005\"), 128\n                contour = mp.factorial(j)*sum(\n                    fun(lam+radius*mp.exp(2j*mp.pi*n/count))*mp.exp(-2j*mp.pi*j*n/count)\n                    for n in range(count))/count/radius**j\n                check(tag+\"_contour\", abs(contour-target) < mp.mpf(\"1e-25\")*(1+abs(target)))\n                differences(tag, fun, lam, target, j, PROTOCOL[\"scalar_steps\"], \"1e-6\")\n        NUMERICS.append({\"scalar_y\": label, \"chebyshev_degree\": degree, \"amplitude_normalized\": True})\n\n\ndef pressure_fixtures():\n    nodes = {n: mp.gauss_quadrature(n, \"legendre\") for n in [32, 64]}\n    top, normalization = mp.mpf(\".08\"), mp.mpf(\"1e-14\")\n    def u(v):\n        return mp.mpf(\"1e-8\")*v**3+mp.mpf(\"2e-8\")*v**4*(1-mp.log(v))\n    def up(v):\n        return mp.mpf(\"3e-8\")*v**2+mp.mpf(\"2e-8\")*v**3*(3-4*mp.log(v))\n    def source(v, lam, j=0):\n        L = 1-mp.log(v)\n        coeff = [mp.mpf(\"3e-10\")+lam*mp.mpf(\"2e-13\")+lam**2*mp.mpf(\"4e-15\"),\n                 mp.mpf(\"2e-13\")+lam*mp.mpf(\"8e-15\"), mp.mpf(\"8e-15\")][j]\n        return coeff*L*L\n    def memory(lam, j=0):\n        return [mp.mpf(\"5e-10\")+lam*mp.mpf(\"4e-13\")+lam**2*mp.mpf(\"5e-15\"),\n                mp.mpf(\"4e-13\")+lam*mp.mpf(\"1e-14\"), mp.mpf(\"1e-14\")][j]\n    for label in PROTOCOL[\"pressure_y\"]:\n        y = mp.mpf(label)\n        length = mp.log(top/y)\n        def integrate(fun, count):\n            xs, ws = nodes[count]\n            return sum(w*length/2*fun(y*mp.exp(length*(z+1)/2))*y*mp.exp(length*(z+1)/2)\n                       for z, w in zip(xs, ws))\n        def pressure(lam, count):\n            H = mp.exp(top**2-y**2+2*lam*(u(top)-u(y)))\n            return H*memory(lam)-integrate(lambda v:\n                mp.exp(v*v-y*y+2*lam*(u(v)-u(y)))*(v+lam*up(v))*source(v, lam), count)\n        for parameter in PROTOCOL[\"parameters\"]:\n            lam = mp.mpf(parameter)\n            dt = u(top)-u(y)\n            H = mp.exp(top**2-y**2+2*lam*dt)\n            mem2 = H*(memory(lam, 2)+4*dt*memory(lam, 1)+4*dt*dt*memory(lam))\n            def density(v, omit=False):\n                d = u(v)-u(y)\n                K = mp.exp(v*v-y*y+2*lam*d)\n                A = v+lam*up(v)\n                ans = A*source(v, lam, 2)\n                if not omit:\n                    ans += (4*d*A+2*up(v))*source(v, lam, 1)+(4*d*d*A+4*d*up(v))*source(v, lam)\n                return K*ans\n            integral = mp.quad(lambda z: density(y*mp.exp(z))*y*mp.exp(z), [0, length/2, length])\n            target = (mem2-integral)/normalization\n            tag = f\"pressure_{label}_{parameter}\"\n            for count in [32, 64]:\n                check(tag+f\"_second_quadrature_{count}\",\n                      abs((mem2-integrate(density, count))/normalization-target) < mp.mpf(\"1e-24\"))\n            check(tag+\"_node_agreement\", abs(pressure(lam, 32)-pressure(lam, 64))/normalization < mp.mpf(\"1e-24\"))\n            differences(tag, lambda q: pressure(q, 64)/normalization, lam, target, 2,\n                        PROTOCOL[\"pressure_steps\"], \"1e-7\")\n            omitted = (H*memory(lam, 2)-integrate(lambda v: density(v, True), 64))/normalization\n            check(tag+\"_kernel_omission_detected\", abs(target-omitted) > mp.mpf(\"1e-13\"))\n            check(tag+\"_memory_omission_detected\", abs(mem2/normalization) > mp.mpf(\".5\"))\n            NUMERICS.append({\"pressure_y\": label, \"parameter\": parameter,\n                             \"normalized_second\": mp.nstr(target, 25)})\n\n\ndef hashes():\n    return {p: sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    mp.mp.dps = 70\n    before = hashes()\n    error = None\n    print(json.dumps({\"event\": \"start\", \"story\": \"S157\", \"input_count\": len(before)}), flush=True)\n    try:\n        predecessors()\n        exact_checks()\n        numerical_budgets()\n        scalar_fixtures()\n        pressure_fixtures()\n    except Exception:\n        error = traceback.format_exc()\n        print(error, file=sys.stderr, flush=True)\n    after = hashes()\n    ok = error is None and before == after and all(r[\"passed\"] for r in ROWS)\n    record = {\n        \"story\": \"S157\", \"created_utc\": datetime.now(timezone.utc).isoformat(),\n        \"status\": \"passed\" if ok else \"failed\", \"python\": sys.version,\n        \"mpmath\": mp.__version__, \"sympy\": s.__version__, \"protocol\": PROTOCOL,\n        \"input_sha256_before\": before, \"input_sha256_after\": after,\n        \"unchanged_inputs\": before == after, \"checks\": ROWS, \"numerics\": NUMERICS,\n        \"exception\": error, \"scope\": \"fixed-chart actual-path outer regular canonical response\",\n        \"unresolved\": [\"allocated cubic/Weyl and other sources\", \"general family and full inverse\",\n                       \"coupled solution\", \"physical completion requirements\"],\n    }\n    if error:\n        record[\"failed_checker_source_utf8\"] = Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"] = (ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    out = ROOT/\"evidence\"/(STEM+\".json\")\n    history = json.loads(out.read_text()) if out.exists() else {\"runs\": []}\n    history[\"runs\"].append(record)\n    out.write_text(json.dumps(history, indent=2)+\"\\n\", encoding=\"utf-8\", newline=\"\\n\")\n    print(json.dumps({\"status\": record[\"status\"], \"checks\": len(ROWS), \"unchanged_inputs\": before == after}), flush=True)\n    return 0 if ok else 1\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+      "failed_note_source_utf8": "# Fixed-chart outer regular response on the retained path\n\n2026-10-20, E003/S157 supporting S139/S074. Ordinary proof and\nverification protocol before acceptance.\n\nThe regular canonical outer source and its HH pressure contribution\nhave first and second responses on the ACTUAL comparison path in\nfixed seed coordinates. Shrinking charts avoid differentiating a\nmoving proper-coordinate map in C5. The price is a sixth logarithmic\npower, which remains integrable in the outer constraints.\n\nThe singular canonical cubic is allocated explicitly below. Its\ncombination with the Weyl sector, other local sources and the full\nequation inverse remain required. A regular-sector bound is not a\nbound for the complete outer physical source.\n\n## 1. Fixed observations and scaled metric jets\n\nUse [S155](comparison-path-interior-response.md)'s actual path\nsigma_lambda=sigma0+lambda u and\nr_lambda=B+(r0-B)exp(lambda V), 0<=lambda<=1.\nWrite y=Y0 for the FIXED seed inward proper coordinate and\n\n    Y_lambda(y)=integral_0^y exp(lambda u(v))dv,\n    L(y)=1+log(1/y), 0<y<=y_*=.08.                  (1)\n\nThe physical clock, actual paired domain, B,A,C and scheme are fixed.\nNo source is evaluated at a complex spatial point. The scalar at\nfixed y is the one in the original common disk.\n\nThe finite metric proof gives the common-chart expansion\n\n    u(y)=m y^3+v(y), |m|<1e-11,\n    |v^(j)|<=2e-8 j!100^j y^(4-j)L(y), j<=5,       (2)\n    |u|<1.2e-8, |grad_gbar u|<7.7e-6.\n\nThe factor two in (2) is the proper-to-common reserve in\n[the metric estimate](stationary-completed-metric-response-norm.md).\nThe mass cubic follows from |p|<4e-11 and d^3<.075.\nNo sixth unknown metric derivative is used.\n\nAt an observation y use a fixed SEED conformal normal chart and\nput r=y. Its cap is one through r/80 and zero by r/40. We need\nthe scaled high-jet norm\n\n    max_(2<=j<=5) r^j |partial^alpha u|/(j!100^j),\n\nwith unscaled value/gradient, actual-domain and cap low norms.\nHere is an explicit, loose finite-coordinate majorant for this step.\nThe seed a0 obeys |(log a0)'|<9 on its .01 complex strip and\n.99<a0<1.01 on the real collar. In the isothermal coordinate\nxi=int dy/a0, a fixed quadratic normalizer has coefficient\nmodulus <.1. On a complex real-coordinate bidisk of radius .001\nabout any point in |z|<=y/40, its inverse proper coordinate remains\nwithin the .01 strip: the isothermal displacement is <.0042 and\n|a0|<1.12 gives a proper displacement <.0048.\nOnly this SEED map is complexified.\n\nCauchy applied to its increment, of modulus <.01, bounds its\ntwo-variable Taylor series by\n\n    H(T)=20T/(1-2000T), T=|delta z1|+|delta z2|.\n\nIndeed the grouped degree-j coefficient is at most\n.01(j+1)1000^j <=20*2000^(j-1). Real points in the cap obey\n.95y<Y0(z)<1.05y by the unit proper gradient and the seed\nnormal metric bound exp(|sigma0|)<1.03.\nThus the normalized scaled degree-j coefficients of (2) are\nmajorized, for j<=5, by the coefficient of X^j in\n\n    4e-8 y^4 L(y) sum_(k=0)^5 [20X/(1-20yX)]^k\n      +1e-11 y^3 [1.05+.2X/(1-20yX)]^3.          (3)\n\nThe first term includes the two-variable composition and the\nvariation of y^(4-k)L across the cap. Formula (3) has positive\ncoefficients increasing with y on this interval. At y=.08,\neach coefficient for j=2,...,5 is below 2.6e-5.\n\nThe unscaled first jet is <8e-6. Also |u|<3e-8 y^3 on\nthe cap, so a cutoff of slope 160/r gives capped gradient\nless than exp(.027)[8e-6+160(3e-8)y^2]<1e-5.\nConsequently the scaled norm is <1.3e-4, uniformly down to\ny=0. On the parameter ellipse used in\n[S156](comparison-path-cold-response.md), rho=256,\n|lambda|<=64.5009765625, and all these coefficient norms\nremain below .011.\n\n## 2. A complex bound that allows small M r\n\nReuse S154/S155's finite Born subtraction on the cap r/40.\nThe angular masses M themselves are NOT rescaled or truncated.\nAll Taylor-degree-j coefficient bounds acquire r^-j. The\ncomplete degree-five remainder therefore acquires r^-5:\n\n    |E_cap,M|<1e17 r^-5 M^-3.\n\nThe fifth-and-higher Born sum still has ratio 5(1.02)(.06)<1.\nThe complex-mass kernel envelope is the same one justified by\n[DLMF 10.32.9](https://dlmf.nist.gov/10.32#E9), rechecked 2026-10-20.\nThe local common contact has total derivative order four and\nis bounded by 1e17 C r^-4. All counterterms and fixed vacuum\nallocation are the original ones.\n\nThe old point-evaluation ball 1/(10M) need not fit when M r\nis small. Replace its inverse scale by\n\n    K=M+32/r.\n\nThe evaluation ball 1/(10K) lies inside r/320, before the\ngluing commutator. The flattened mass potential remains bounded\nby 3M^2<=3K^2. S143/S144's same cutoff/Caccioppoli/Fourier\ncalculation gives point evaluation <1e4 K times the local L2\nnorm. The actual and cap weighted resolvents still have norm\n3/M; their actual domain and scalar multipliers are unchanged.\nThe two separated row norms are therefore bounded by\n\n    3.2e4(K/M) exp(-M distance/2).\n\nThe scalar-source comparison, including both rows, density\nfactor and cutoff slope 320/r, is bounded by\n\n    (9e11/r)[M+64/r+1024/(M r^2)] exp(-Mr/320).   (4)\n\nThis treats ALL modes, including M r<1. It is not an\nexponential-only estimate with an unfitted evaluation ball.\nFor delta>0, the retained count N(E)<=4CE^2 gives\n\n    sum d_n M_n exp(-delta M_n)<=24C/delta^3,\n    sum d_n exp(-delta M_n)<=8C/delta^2,\n    sum (d_n/M_n) exp(-delta M_n)<=8C/delta.       (5)\n\nThe last two follow by Stieltjes integration by parts with\nexp(-delta E) and exp(-delta E)/E. There are no masses below\n18, so the apparent lower-end singularity in the latter has\nzero counting measure.\n\nUsing delta=r/320, sum d_n/M_n^3<2C/3 and eta_G<8.5e-33,\nthe nonconstant normalized scalar has complex bound\n\n    K(r)<=2eta_G {\n       (2/3)1e17 r^-5+1e17 r^-4\n       +9e11 r^-4[24*320^3+64*8*320^2+1024*8*320]}\n       <2e-11 r^-5, 0<r<=.08.                   (6)\n\nThe bounds are locally uniform for every y>0, proving parameter\nholomorphy there. They deliberately allow growth at the boundary.\nThey do not assert a bounded unweighted source on the closed collar.\n\n## 3. Real regular values and actual-path response\n\nLet S_lambda=2G Theta_lambda/(B^2 C) at fixed y and let c_lambda\nbe the cubic of the orbit warping in actual proper coordinates.\nThe exact finite cubic relation in the reconstruction gives\nc_lambda=c0+lambda m. Define\n\n    T_lambda(y)=2eta_G c_lambda/[5pi Y_lambda(y)],\n    Q_lambda(y)=S_lambda(y)-T_lambda(y).           (7)\n\nFor complex lambda in the ellipse, (1) has |Y_lambda/y-1|<1e-6,\nso its inverse and T_lambda are holomorphic. Here |c_lambda|<2.\nThe difference Q_lambda-Q_0 consequently has bound\n\n    B(y)=1e-10 y^-5.                              (8)\n\nThe fixed vacuum scalar cancels in this difference. The cubic\nis kept at its actual Y_lambda, including its parameter responses.\nIt is not frozen at y before differentiating.\n\nFor REAL lambda the endpoint canonical proof bounds the proper\nregular difference by\n1e24(1e-7+4e-11)lambda C^2[1+log^2 Y] when Y<=.05.\nPulling to y adds the frozen regular gradient contribution:\n|R0,Y|<=2e13 q^2/Y and |Y_lambda/y-1|<1.3e-8.\nOn the remaining compact collar .05<=Y<=.081 the same endpoint\nproof gives the unweighted coefficient 2e18 lambda C^2.\nIts endpoint-coordinate identification is fixed once; the\nfrozen pullback correction obeys the same gradient bound.\nThe tiny explicit cubic difference on this compact collar is\nincluded as well. Thus a single generous real bound is\n\n    |Q_lambda(y)-Q_0(y)|<=5e-15 L(y)^2,\n                  0<y<=.08, 0<=lambda<=1.        (9)\n\nThere is no omitted strip around Y=.05. On this full interval\nL>=1+log(12.5)>3.5. The seed value bound\n|R0|<=1e20 q^2 L and (9) also give |Q_lambda|<3e-7 L^2.\n\nApply S156's closed-interval lemma to (8)-(9). With t=log(1/y),\n\n    log[B/(5e-15 L^2)]<=log(20000)+5t\n                          <7(1+t)=7L,\n    k<=7L/log(256).\n\nIt follows, INCLUDING lambda=0,1, that\n\n    |partial_lambda Q|<6e-14 L^4,\n    |partial_lambda^2 Q|<9e-14 L^6.               (10)\n\nThese are derivatives along the retained path, not arbitrary\nmixed directions. They do not use S151's C7 coordinate contract.\nThey give C2 into the slightly weaker L^7 weighted supremum\nspace: each derivative divided by L^7 tends uniformly to zero\nat y=0, while continuity away from zero follows from holomorphy.\nThe sharper L^6 bound in (10) remains available for integration.\nNo C2 claim into the L^6 supremum space is needed.\n\n## 4. Fixed-cut pressure memory and the retained cubic sector\n\nUse the fixed seed cut y_*=.08, which belongs to S155's interior\ncover. Its HH pressure P_* has value/first/second bounds\n\n    (P0,P1,P2)=(6e-10,5.2e-13,1.1e-14).\n\nThere is no moving-cut evaluation. With\nW_lambda(y)=a0(y)^2 exp(2lambda u(y)) up to a fixed constant,\nthe exact Ward solution is decomposed as\n\n    P=P_reg+P_cub,\n    P_reg(y)=H_lambda(y)P_*+L_lambda[Q](y),\n    P_cub(y)=L_lambda[T](y),\n    H_lambda=W_lambda(y_*)/W_lambda(y),\n    L_lambda[f]=-[2W_lambda(y)]^-1\n                    integral_y^y_* W_lambda'(v)f(v)dv. (11)\n\nP_cub has zero matching value at y_* by this definition;\nthe full, nonzero HH pressure memory stays in P_reg.\nThis is an exact allocation, not a new subtraction or boundary\ncondition. P_cub-T and 2P_cub-T must still be combined with\nthe correlated Weyl sector before a full physical absolute norm.\nIn particular T has nonzero second response from Y_lambda.\n\nFrom (2), |u_y|<1e-7 y, and |a0'/a0|<2y. Write a=1.2e-8.\nThen W(v)/W(y)<1.01 and\n|a0'/a0+lambda u_y|<3y. The value/first/second operator bounds\non any weight L^p, p>=0, are\n\n| Operator | Value | First lambda response | Second lambda response |\n| --- | ---: | ---: | ---: |\n| H_lambda | 1.01 | 5e-8 | 2.4e-15 |\n| L_lambda | .01 | 8e-10 | 5.5e-17 |\n\nFor H use 4a H and 16a^2 H. For L, put d=u(v)-u(y);\nthe differentiated integrands are respectively\nK[2d A+u_y(v)] and K[4d^2 A+4d u_y(v)], where\nK=W(v)/W(y), A=a0'/a0+lambda u_y.\nUsing |d|<=2a and integral_0^.08 v dv=.0032 gives the table.\nThe weight L(v)^p is at most L(y)^p inside the integral.\n\nThe full product rule in (11) and L>=3.5 give\n\n    |P_reg|<4e-9 L^2,\n    |P_reg'|<5e-15 L^4,\n    |P_reg''|<1e-15 L^6.\n\nThus the regular canonical normalized profiles\nrho_reg=P_reg-Q and n_reg=2P_reg-Q satisfy\n\n    value: 3.1e-7 L^2,\n    first: 7e-14 L^4,\n    second: 9.2e-14 L^6.                          (12)\n\nEvery changing-kernel and matching-memory cross term is retained.\nThe bound does not request a spatial derivative of a varying source.\n\n## 5. Entire seed outer interval and its constraint consequence\n\nFor t=r0/B>=40 the retained seed guards give\n\n    1/t<sqrt(5.9)/(1.001t)<=y\n          <=sqrt(8)log[t/(t-1)]<.08.\n\nHence the whole outer interval is covered and L(y)<=L_e(t)=1+log t.\nFor the sixth logarithmic power, direct integration gives\n\n    I6=int_40^infinity L_e^6/t^2 dt\n       =(1/40) sum_(j=0)^6 binom(6,j) j! L_e(40)^(6-j)<1330,\n    (2C/x)I6/40^3<.254,\n    (2C/x)int_40^infinity L_e^6/t^5 dt<.019.       (13)\n\nThese replace only S152's OUTER column. With d_g=3e-7 define\n\n    m2=1.003(9.2e-14)+4.02d_g(7e-14)+5.54d_g^2(3.1e-7),\n    a2=1.006(9.2e-14)+10.08d_g(7e-14)+26.5d_g^2(3.1e-7).\n\nUse L^2,L^4<=L^6 for the cross terms. The normalization cancels\none 2eta_G factor exactly as in S152/S156. For the OUTER REGULAR\nCANONICAL component, the second-response bounds are\n\n    zero-datum mass primitive: .254 m2/2 <1.2e-14,\n    absolute mass density in BC units: 1330 m2/2 <6.2e-11,\n    absolute lapse density L1: .019 a2/2 <9e-16.  (14)\n\nTaylor allowances are half (14) times lambda^2. Pointwise\ncontinuity and the integrable L^6 majorants justify twice\ndifferentiating these density maps in their output norms.\nThe primitive norm follows from the same absolute integral\nand its fixed positive outer denominator. No scalar derivative\nof an absolute value or supremum is asserted.\n\n## 6. Predeclared verification and limits\n\nRevalidate S155, S156 and S152 receipts and current inputs.\nCheck the scaled finite-jet majorants, seed coordinate margins,\nBorn degree-five scaling, contact degree-four scaling, the K/M\nrow factor, complete angular counts and complex bounds. Check\nthe real/complex interval budgets, pressure product rules,\ncoverage and every sixth-log constraint constant.\n\nUse 70 digits for numerical diagnostics. At y=.08,.01,exp(-20),\ncompare a manufactured Chebyshev family of degree\nfloor(log[B/a]/log(256)) and amplitude a/2 against the closed-\ninterval bounds. Normalize by a. Compare coefficient derivatives\nusing [DLMF 18.5.1](https://dlmf.nist.gov/18.5#E1)'s representation\nwith 128-node Cauchy contours of radius .005 at lambda=0,.4,1,\ntolerance 1e-25(1+|target|); real first/second differences at\nsteps 1e-7,5e-8 must pass tolerance 1e-6(1+|target|) and\nrefinement ratio .35 unless both errors are below 1e-35.\nEndpoint differences stay within [0,1].\n\nFor pressure use manufactured a0=exp(y^2/2),\nu=1e-8 y^3+2e-8 y^4 L(y), a regular source\n(3e-10+lambda*2e-13+lambda^2*4e-15)L(y)^2 and matching\npressure 5e-10+lambda*4e-13+lambda^2*5e-15.\nAt y=.001,.02,.06 and lambda=0,.4,1 compare direct 32/64-node\nGauss quadrature, after a logarithmic radial substitution,\nagainst adaptive quadrature of the complete second-response\nformula. Normalize by 1e-14, tolerance 1e-24 for quadrature;\nuse steps .001,.0005, tolerance 1e-7(1+|target|) and the same\nrefinement policy. Detect omission of matching memory and of\nkernel derivatives. Check sixth-log integrals independently\nafter t=40exp(z). These fixtures are not quantum determinants.\n\nPreserve every run, failed source snapshot, raw log and input\nhash before/after. The infinite sums, analytic continuation and\noperator estimates remain ordinary proofs.\n\nRemaining to-do list: recombine the allocated cubic and Weyl\nsector, complete other local/radius/reference sources and E0;\nestablish a general admissible family and usable full inverse;\nsolve exterior/state, charge, return and signed source; complete\nopening, stability, transport, preparation and separate creation.\n"
+    },
+    {
+      "story": "S157",
+      "created_utc": "2026-10-20T12:29:47.358866+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 70,
+        "scalar_y": [
+          ".08",
+          ".01",
+          "exp(-20)"
+        ],
+        "parameters": [
+          "0",
+          ".4",
+          "1"
+        ],
+        "contour_nodes": 128,
+        "contour_radius": ".005",
+        "contour_tolerance": "1e-25",
+        "scalar_steps": [
+          "1e-7",
+          "5e-8"
+        ],
+        "scalar_difference_tolerance": "1e-6",
+        "pressure_y": [
+          ".001",
+          ".02",
+          ".06"
+        ],
+        "gauss_nodes": [
+          32,
+          64
+        ],
+        "pressure_steps": [
+          ".001",
+          ".0005"
+        ],
+        "pressure_normalization": "1e-14",
+        "pressure_difference_tolerance": "1e-7",
+        "quadrature_tolerance": "1e-24",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-35",
+        "endpoint_differences": "second-order one-sided within [0,1]",
+        "fixtures_are_quantum_sources": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_outer_regular_response.py": "e61888d393a205ddeb0b20d8faa930304cd192e4e1505cab71abeb2affafdf87",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_outer_regular_response.py": "e61888d393a205ddeb0b20d8faa930304cd192e4e1505cab71abeb2affafdf87",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "comparison-path-interior-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-interior-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scaled_metric_jet_2",
+          "passed": true,
+          "detail": "0.00000000249547731040856694781839243254"
+        },
+        {
+          "name": "scaled_metric_jet_3",
+          "passed": true,
+          "detail": "0.0000000539021896954170460728772765428"
+        },
+        {
+          "name": "scaled_metric_jet_4",
+          "passed": true,
+          "detail": "0.00000116428708368845139517414917332"
+        },
+        {
+          "name": "scaled_metric_jet_5",
+          "passed": true,
+          "detail": "0.0000251486006301517328557616221438"
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_coordinate_cauchy_coefficient_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_complex_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_cap_proper_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scaled_norm_below_existing_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ellipse_stays_in_scaled_cone",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cubic_coefficient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "small_mass_evaluation_fits",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "two_row_small_mass_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "row_commutator_scalar_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_degree_five_scaling_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_neumann_ratio",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_shrinking_complex_bound",
+          "passed": true,
+          "detail": "1207266713/93750000000000000000"
+        },
+        {
+          "name": "difference_and_cubic_complex_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_count_zero_moment",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_count_inverse_moment",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_H_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_H_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_L_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_L_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_L_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_weighted_budget_0",
+          "passed": true,
+          "detail": "9339/3062500000000"
+        },
+        {
+          "name": "pressure_weighted_budget_1",
+          "passed": true,
+          "detail": "247283/60025000000000000000"
+        },
+        {
+          "name": "pressure_weighted_budget_2",
+          "passed": true,
+          "detail": "47587117974559/52521875000000000000000000000"
+        },
+        {
+          "name": "regular_profile_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "regular_profile_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "regular_profile_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_regular_mass",
+          "passed": true,
+          "detail": "6966856043443/500000000000000000000000000"
+        },
+        {
+          "name": "outer_regular_density",
+          "passed": true,
+          "detail": "3644911439947/50000000000000000000000"
+        },
+        {
+          "name": "outer_regular_lapse",
+          "passed": true,
+          "detail": "175850606957/200000000000000000000000000"
+        },
+        {
+          "name": "outer_cross_terms_retained",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_strip_log_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "capped_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_direction_low_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_collar_log_lower",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_real_endpoint_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "compact_real_endpoint_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_regular_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_to_complex_log_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_scalar_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_scalar_second_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_region_covered",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_log_weight_conversion",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "sixth_log_mass_integral",
+          "passed": true,
+          "detail": "1577.70228896309356850224477021"
+        },
+        {
+          "name": "sixth_log_primitive_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "sixth_log_lapse_constant",
+          "passed": true,
+          "detail": "0.0180626134379060573087380166506"
+        },
+        {
+          "name": "sixth_log_independent_integral_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "sixth_log_independent_integral_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_ellipse_bound_.08",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_0_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_0_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_0_1_difference",
+          "passed": true,
+          "detail": "{'target': '9.0', 'errors': ['3.2e-13', '8.0e-14']}"
+        },
+        {
+          "name": "scalar_.08_0_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_0_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_0_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_0_2_difference",
+          "passed": true,
+          "detail": "{'target': '-48.0', 'errors': ['1.0740386554e-57', '3.79074237905e-57']}"
+        },
+        {
+          "name": "scalar_.08_0_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_.4_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_.4_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_.4_1_difference",
+          "passed": true,
+          "detail": "{'target': '-2.52', 'errors': ['1.6e-13', '4.0e-14']}"
+        },
+        {
+          "name": "scalar_.08_.4_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_.4_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_.4_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_.4_2_difference",
+          "passed": true,
+          "detail": "{'target': '-9.6', 'errors': ['3.2853301365e-58', '3.2853301365e-58']}"
+        },
+        {
+          "name": "scalar_.08_.4_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_1_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_1_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_1_1_difference",
+          "passed": true,
+          "detail": "{'target': '9.0', 'errors': ['3.2e-13', '8.0e-14']}"
+        },
+        {
+          "name": "scalar_.08_1_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_1_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_1_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.08_1_2_difference",
+          "passed": true,
+          "detail": "{'target': '48.0', 'errors': ['1.0740386554e-57', '3.79074237905e-57']}"
+        },
+        {
+          "name": "scalar_.08_1_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_ellipse_bound_.01",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_0_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_0_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_0_1_difference",
+          "passed": true,
+          "detail": "{'target': '25.0', 'errors': ['1.119999616e-11', '2.79999952e-12']}"
+        },
+        {
+          "name": "scalar_.01_0_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_0_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_0_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_0_2_difference",
+          "passed": true,
+          "detail": "{'target': '-400.0', 'errors': ['1.4079996928e-10', '3.519999616e-11']}"
+        },
+        {
+          "name": "scalar_.01_0_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_.4_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_.4_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_.4_1_difference",
+          "passed": true,
+          "detail": "{'target': '2.728', 'errors': ['5.44e-13', '1.36e-13']}"
+        },
+        {
+          "name": "scalar_.01_.4_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_.4_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_.4_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_.4_2_difference",
+          "passed": true,
+          "detail": "{'target': '42.88', 'errors': ['2.56e-12', '6.4e-13']}"
+        },
+        {
+          "name": "scalar_.01_.4_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_1_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_1_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_1_1_difference",
+          "passed": true,
+          "detail": "{'target': '25.0', 'errors': ['1.119999616e-11', '2.79999952e-12']}"
+        },
+        {
+          "name": "scalar_.01_1_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_1_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_1_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_.01_1_2_difference",
+          "passed": true,
+          "detail": "{'target': '400.0', 'errors': ['1.4079996928e-10', '3.519999616e-11']}"
+        },
+        {
+          "name": "scalar_.01_1_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_ellipse_bound_exp(-20)",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_0_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_0_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_0_1_difference",
+          "passed": true,
+          "detail": "{'target': '-324.0', 'errors': ['2.97674790688e-8', '7.44189488356e-9']}"
+        },
+        {
+          "name": "scalar_exp(-20)_0_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_0_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_0_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_0_2_difference",
+          "passed": true,
+          "detail": "{'target': '69768.0', 'errors': ['7.36744578953e-6', '1.84186832368e-6']}"
+        },
+        {
+          "name": "scalar_exp(-20)_0_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_.4_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_.4_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_.4_1_difference",
+          "passed": true,
+          "detail": "{'target': '8.52983048805285888', 'errors': ['1.7879998423e-11', '4.46999960576e-12']}"
+        },
+        {
+          "name": "scalar_exp(-20)_.4_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_.4_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_.4_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_.4_2_difference",
+          "passed": true,
+          "detail": "{'target': '-601.3849157431197696', 'errors': ['6.86830460294e-10', '1.71707615074e-10']}"
+        },
+        {
+          "name": "scalar_exp(-20)_.4_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_1_1_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_1_1_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_1_1_difference",
+          "passed": true,
+          "detail": "{'target': '324.0', 'errors': ['2.97674790688e-8', '7.44189488356e-9']}"
+        },
+        {
+          "name": "scalar_exp(-20)_1_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_1_2_weighted_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_1_2_contour",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_exp(-20)_1_2_difference",
+          "passed": true,
+          "detail": "{'target': '69768.0', 'errors': ['7.36744578953e-6', '1.84186832368e-6']}"
+        },
+        {
+          "name": "scalar_exp(-20)_1_2_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_0_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_0_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_0_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_0_difference",
+          "passed": true,
+          "detail": "{'target': '0.9642017776504684598239564', 'errors': ['6.28396354443e-27', '1.57099088611e-27']}"
+        },
+        {
+          "name": "pressure_.001_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_0_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_0_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_.4_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_.4_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_.4_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_.4_difference",
+          "passed": true,
+          "detail": "{'target': '0.9642017775552861941840709', 'errors': ['5.71269413136e-28', '1.42817353284e-28']}"
+        },
+        {
+          "name": "pressure_.001_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_.4_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_.4_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_1_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_1_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_1_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_1_difference",
+          "passed": true,
+          "detail": "{'target': '0.9642017774125127957221861', 'errors': ['6.28396354459e-27', '1.57099088615e-27']}"
+        },
+        {
+          "name": "pressure_.001_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_1_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.001_1_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_0_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_0_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_0_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_0_difference",
+          "passed": true,
+          "detail": "{'target': '0.9685141363235137328700489', 'errors': ['6.11667262174e-27', '1.52916815543e-27']}"
+        },
+        {
+          "name": "pressure_.02_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_0_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_0_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_.4_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_.4_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_.4_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_.4_difference",
+          "passed": true,
+          "detail": "{'target': '0.9685141362306729562494187', 'errors': ['5.56061147436e-28', '1.39015286859e-28']}"
+        },
+        {
+          "name": "pressure_.02_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_.4_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_.4_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_1_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_1_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_1_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_1_difference",
+          "passed": true,
+          "detail": "{'target': '0.9685141360914117913164717', 'errors': ['6.11667262189e-27', '1.52916815547e-27']}"
+        },
+        {
+          "name": "pressure_.02_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_1_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.02_1_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_0_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_0_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_0_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_0_difference",
+          "passed": true,
+          "detail": "{'target': '0.9878068002092877265206679', 'errors': ['2.18186647175e-27', '5.45466617938e-28']}"
+        },
+        {
+          "name": "pressure_.06_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_0_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_0_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_.4_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_.4_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_.4_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_.4_difference",
+          "passed": true,
+          "detail": "{'target': '0.9878068001587193176962323', 'errors': ['1.98351497433e-28', '4.95878743583e-29']}"
+        },
+        {
+          "name": "pressure_.06_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_.4_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_.4_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_1_second_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_1_second_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_1_node_agreement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_1_difference",
+          "passed": true,
+          "detail": "{'target': '0.9878068000828667044588647', 'errors': ['2.18186647179e-27', '5.45466617947e-28']}"
+        },
+        {
+          "name": "pressure_.06_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_1_kernel_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_.06_1_memory_omission_detected",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "scaled_jets": [
+            "0.00000000249547731040856694781839243254",
+            "0.0000000539021896954170460728772765428",
+            "0.00000116428708368845139517414917332",
+            "0.0000251486006301517328557616221438"
+          ],
+          "constraint_second_bounds_exact": [
+            "6966856043443/500000000000000000000000000",
+            "3644911439947/50000000000000000000000",
+            "175850606957/200000000000000000000000000"
+          ],
+          "full_outer_source_bounded": false,
+          "goal_complete": false
+        },
+        {
+          "I6": "1577.7022889630935685022447702092139",
+          "J6": "0.0014805420850742669925195095615234592"
+        },
+        {
+          "scalar_y": ".08",
+          "chebyshev_degree": 3,
+          "amplitude_normalized": true
+        },
+        {
+          "scalar_y": ".01",
+          "chebyshev_degree": 5,
+          "amplitude_normalized": true
+        },
+        {
+          "scalar_y": "exp(-20)",
+          "chebyshev_degree": 18,
+          "amplitude_normalized": true
+        },
+        {
+          "pressure_y": ".001",
+          "parameter": "0",
+          "normalized_second": "0.9642017776504684598239564"
+        },
+        {
+          "pressure_y": ".001",
+          "parameter": ".4",
+          "normalized_second": "0.9642017775552861941840709"
+        },
+        {
+          "pressure_y": ".001",
+          "parameter": "1",
+          "normalized_second": "0.9642017774125127957221861"
+        },
+        {
+          "pressure_y": ".02",
+          "parameter": "0",
+          "normalized_second": "0.9685141363235137328700489"
+        },
+        {
+          "pressure_y": ".02",
+          "parameter": ".4",
+          "normalized_second": "0.9685141362306729562494187"
+        },
+        {
+          "pressure_y": ".02",
+          "parameter": "1",
+          "normalized_second": "0.9685141360914117913164717"
+        },
+        {
+          "pressure_y": ".06",
+          "parameter": "0",
+          "normalized_second": "0.9878068002092877265206679"
+        },
+        {
+          "pressure_y": ".06",
+          "parameter": ".4",
+          "normalized_second": "0.9878068001587193176962323"
+        },
+        {
+          "pressure_y": ".06",
+          "parameter": "1",
+          "normalized_second": "0.9878068000828667044588647"
+        }
+      ],
+      "exception": null,
+      "scope": "fixed-chart actual-path outer regular canonical response",
+      "unresolved": [
+        "allocated cubic/Weyl and other sources",
+        "general family and full inverse",
+        "coupled solution",
+        "physical completion requirements"
+      ]
+    }
+  ]
+}
