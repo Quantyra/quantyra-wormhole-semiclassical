@@ -1,0 +1,807 @@
+{
+  "runs": [
+    {
+      "story": "S166 strong interior quantum remainder",
+      "created_utc": "2026-10-20T17:24:58.135445+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "sympy": "1.14.0",
+      "protocol": {
+        "scope": "actual canonical massive Hessian minus retained geodesic model, Y>=1/8",
+        "norm": "sum of covariant H3 seminorms in gbar on one physical half",
+        "constant": "1e48 C; intentionally unoptimized",
+        "method": "first Cauchy, actual zero-value probes, finite-part Taylor subtraction",
+        "quantum_domain": "full paired actual domain, angular tower and common contacts",
+        "arithmetic": "exact symbolic and rational, continuum derivative bounds",
+        "global_fast_TT_inverse": false,
+        "Newton_contraction": false
+      },
+      "input_sha256_before": {
+        "checks/coincident_normal_dirac_response.py": "2093b939075113e91c649d1bfef88881b4adf125cd182a4712ca400aa0da8068",
+        "checks/general_interior_dirac_response.py": "5f94b0a85435dd08ffc1d77a9c4afbc144fe45ffe3c2eea5468ddf7427c16c4a",
+        "checks/stationary_curved_quantum_tt.py": "6a9c4f99b91ab1193abe41add4ba61e6d063401fdee3823b1c427fe8bbfebf8d",
+        "checks/strong_interior_quantum_remainder.py": "79e14e61e7845d1b3b61f86ced785a71e08271f372a8a82bb973e6c7e9978a3b",
+        "evidence/coincident-normal-dirac-response.json": "6202c4ae4b7c20b7179ad91b918a110d9b4161ae6c1d63f08459e636797b6adb",
+        "evidence/general-interior-dirac-response.json": "b59de6589b6ba273b0aa120d2abf48a3be426a92fd4754e992a0af5a058a3c10",
+        "evidence/stationary-curved-quantum-tt.json": "596e9f6824f4881aabdc2511d0955966949b91837d95158271afa9817e84ce4e",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/curved-remote-dirac-response.md": "36623d47971a4f1fbddfdb5cf15ea39086b9ad6610abe68b37d8285550219858",
+        "notes/flat-variable-dirac-three-point.md": "845c142bde8b9bf02972d6a19c636dfe26d444747d95a194ffa9f73b8455139b",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/retained-benchmark-parameter-recovery.md": "b4a38711e4a1050ef25d09929460d3674c99abe383c4a911b60204c37554a62d",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/stationary-exterior-boundary-weyl.md": "bfb3e03390da039973e8a049023a0847e48dc7922e7d0a3667143adf16e8fab9",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-global-tt-reduction.md": "47517cd7213d79d5abdc02644662fe729bae7e9cb7468c5d02f0bf4b17d7cbaf",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-reduced-parameter-form-bounds.md": "6387ab57225ed282e43993b56a1d19482bdcf4d4f3f78ac3107b44520e50d0ac",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+        "notes/stationary-weyl-radial-sources.md": "8206ce935d2085614baef919ac16dbceba2e98c80f82162c7ab8ef8aace70ad0",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4"
+      },
+      "input_sha256_after": {
+        "checks/coincident_normal_dirac_response.py": "2093b939075113e91c649d1bfef88881b4adf125cd182a4712ca400aa0da8068",
+        "checks/general_interior_dirac_response.py": "5f94b0a85435dd08ffc1d77a9c4afbc144fe45ffe3c2eea5468ddf7427c16c4a",
+        "checks/stationary_curved_quantum_tt.py": "6a9c4f99b91ab1193abe41add4ba61e6d063401fdee3823b1c427fe8bbfebf8d",
+        "checks/strong_interior_quantum_remainder.py": "79e14e61e7845d1b3b61f86ced785a71e08271f372a8a82bb973e6c7e9978a3b",
+        "evidence/coincident-normal-dirac-response.json": "6202c4ae4b7c20b7179ad91b918a110d9b4161ae6c1d63f08459e636797b6adb",
+        "evidence/general-interior-dirac-response.json": "b59de6589b6ba273b0aa120d2abf48a3be426a92fd4754e992a0af5a058a3c10",
+        "evidence/stationary-curved-quantum-tt.json": "596e9f6824f4881aabdc2511d0955966949b91837d95158271afa9817e84ce4e",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/curved-remote-dirac-response.md": "36623d47971a4f1fbddfdb5cf15ea39086b9ad6610abe68b37d8285550219858",
+        "notes/flat-variable-dirac-three-point.md": "845c142bde8b9bf02972d6a19c636dfe26d444747d95a194ffa9f73b8455139b",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/retained-benchmark-parameter-recovery.md": "b4a38711e4a1050ef25d09929460d3674c99abe383c4a911b60204c37554a62d",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/stationary-exterior-boundary-weyl.md": "bfb3e03390da039973e8a049023a0847e48dc7922e7d0a3667143adf16e8fab9",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-global-tt-reduction.md": "47517cd7213d79d5abdc02644662fe729bae7e9cb7468c5d02f0bf4b17d7cbaf",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-reduced-parameter-form-bounds.md": "6387ab57225ed282e43993b56a1d19482bdcf4d4f3f78ac3107b44520e50d0ac",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+        "notes/stationary-weyl-radial-sources.md": "8206ce935d2085614baef919ac16dbceba2e98c80f82162c7ab8ef8aace70ad0",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "stationary-curved-quantum-tt_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_checks/stationary_curved_quantum_tt.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/spherical-anomaly-action.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-centered-conormal-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-exterior-boundary-weyl.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-exterior-conformal-domain.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-global-tt-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-horizon-source-defect.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-massive-boundary-layer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-paired-dirac-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-reference-cold-bolt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-reference-nonbolt-stress.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-seed-quantum-form.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-curved-quantum-tt_input_notes/stationary-weyl-radial-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_checks/general_interior_dirac_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/general-interior-dirac-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/coincident-normal-dirac-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/curved-remote-dirac-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/flat-variable-dirac-three-point.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_notes/retained-benchmark-parameter-recovery.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_checks/coincident_normal_dirac_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/coincident-normal-dirac-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/curved-remote-dirac-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/flat-variable-dirac-three-point.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/stationary-reduced-parameter-form-bounds.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coincident-normal-dirac-response_input_notes/retained-benchmark-parameter-recovery.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "first_Cauchy_complete_tower",
+          "passed": true,
+          "detail": "169214337280000000000000/3"
+        },
+        {
+          "name": "fixed_area_density_contact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "zero_value_probe_density_contact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "five_probes_extract_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_probes_have_zero_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_integral_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cutoff_left_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cutoff_right_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bernstein_derivative_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "left_join_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "right_join_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bernstein_derivative_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "left_join_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "right_join_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bernstein_derivative_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "left_join_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "right_join_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bernstein_derivative_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "left_join_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "right_join_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bernstein_derivative_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "left_join_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "right_join_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bernstein_derivative_6",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_1_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_1_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_2_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_2_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_2_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_3_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_3_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_3_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_3_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_4_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_4_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_4_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_4_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_4_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_5_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_5_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_5_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_5_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_5_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_5_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_Cartesian_6_6",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_U_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_U_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_U_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_U_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_U_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_U_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "probe_six_jet_6",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_seed_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Christoffel_majorant_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Christoffel_majorant_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Christoffel_majorant_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Christoffel_majorant_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Christoffel_majorant_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_geodesic_coefficient_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_geodesic_coefficient_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_geodesic_coefficient_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_geodesic_coefficient_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_geodesic_coefficient_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "geodesic_equation_through_degree_four",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_flow_probe_X3",
+          "passed": true,
+          "detail": "67968640000000000000000000000"
+        },
+        {
+          "name": "full_flow_probe_X4",
+          "passed": true,
+          "detail": "228604930560000000000000000000000"
+        },
+        {
+          "name": "full_flow_probe_X6",
+          "passed": true,
+          "detail": "6153697123295272960000000000000000000000"
+        },
+        {
+          "name": "integral_Taylor_degree_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_6",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_7",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_8",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_9",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_10",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_11",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "integral_Taylor_degree_12",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "strong_near_kernel_half_double",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "point_near_probe",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison_annulus_row",
+          "passed": true,
+          "detail": "631910400000000/7"
+        },
+        {
+          "name": "complete_geodesic_tail_row",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_bounded_kernel_rows",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "row_subtraction_strong_Schur",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "actual_constant_contact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "actual_probe_Hessian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "geodesic_probe_complete_action",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "actual_minus_geodesic_probe",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_five_contact_coefficients",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "final_strong_H3_reserve",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "exception": null,
+      "S166_complete": false,
+      "goal_complete": false,
+      "strong_interior_remainder_bound": true,
+      "global_fast_TT_inverse": false,
+      "unresolved": [
+        "principal graph comparison",
+        "outer fast fourth/log estimate",
+        "higher York reconstruction and residual composition",
+        "nonlinear signed compatibility",
+        "physical requirements"
+      ]
+    }
+  ]
+}
