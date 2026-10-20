@@ -1,0 +1,642 @@
+{
+  "runs": [
+    {
+      "story": "S152",
+      "created_utc": "2026-10-20T10:39:32.749903+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 55,
+        "nodes": [
+          32,
+          64
+        ],
+        "steps": [
+          ".001",
+          ".0005"
+        ],
+        "gaps": [
+          "1e-5",
+          "1e-30"
+        ],
+        "endpoints": [
+          ".75",
+          "2.5"
+        ],
+        "mixed_tolerance": "2e-6",
+        "identity_tolerance": "1e-11",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-30"
+      },
+      "input_sha256_before": {
+        "checks/fixed_chart_global_constraint_transfer.py": "100191fc073b91c49f39ad0594cc14956aded67ce7c59bb6e8046a645290c58f",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-constraint-residual.md": "e877b3f8b32cef8fd866c1cb7370279f82b853d1a12ceea048792950f6e040a9",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "evidence/common-chart-coordinate-transfer.json": "e835a6f48b6abbaf73f084e9ed4eddbc9f0904b12ae81add96d7d88063de7e08"
+      },
+      "input_sha256_after": {
+        "checks/fixed_chart_global_constraint_transfer.py": "100191fc073b91c49f39ad0594cc14956aded67ce7c59bb6e8046a645290c58f",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-constraint-residual.md": "e877b3f8b32cef8fd866c1cb7370279f82b853d1a12ceea048792950f6e040a9",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "evidence/common-chart-coordinate-transfer.json": "e835a6f48b6abbaf73f084e9ed4eddbc9f0904b12ae81add96d7d88063de7e08"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "s151_final_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s151_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_multiplier_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_multiplier_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_log_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_log_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_multiplier_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_multiplier_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_density_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_density_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_source_geometry_product_rule",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_lower_boundary_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_upper_boundary_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_interface_full_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "rough_split_second_difference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "rough_lower_piece_not_c2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_integral_primitive_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_integral_primitive_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_primitive_maximum",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "toy_gap_cancellation_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "missing_modulus_bolt_singularity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "dini_power_integral",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "missing_gap_factor_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_value_multiplier_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_value_multiplier_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_first_multiplier_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_mixed_multiplier_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_first_multiplier_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_mixed_multiplier_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_mass_primitive_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_mass_primitive_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_absolute_mass_integral",
+          "passed": true,
+          "detail": "0.834083736085991947518427377604"
+        },
+        {
+          "name": "outer_mass_primitive_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_lapse_integral",
+          "passed": true,
+          "detail": "0.000029135875898406155863944591895"
+        },
+        {
+          "name": "cold_absolute_mass_integral",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_bolt_lapse_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_remaining_lapse_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "regional_common_envelopes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_profile_cross_coefficients",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "thermal_tail_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "direct_physical_vs_fixed_values_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_inner_mixed_difference_32_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.0004053345382674271398103162', 'errors': ['1.631823529366955e-13', '4.079558823100461e-14']}"
+        },
+        {
+          "name": "mass_inner_mixed_refinement_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_outer_mixed_difference_32_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.0005759227732077261844029793', 'errors': ['5.620662426153198e-13', '1.40516560639205e-13']}"
+        },
+        {
+          "name": "mass_outer_mixed_refinement_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_total_scaled_mixed_difference_32_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.021080345582580911580343', 'errors': ['2.057315873904525e-11', '5.143289684226e-12']}"
+        },
+        {
+          "name": "mass_total_scaled_mixed_refinement_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_mixed_difference_32_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.0002031592008359934001717022', 'errors': ['2.473275347505402e-13', '6.183188367267942e-14']}"
+        },
+        {
+          "name": "lapse_mixed_refinement_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_lapse_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_jacobian_response_omission_detected_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_jacobian_response_omission_detected_32_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "direct_physical_vs_fixed_values_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_inner_mixed_difference_32_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.0004053381609770866550888528', 'errors': ['1.631934730763388e-13', '4.079836826591446e-14']}"
+        },
+        {
+          "name": "mass_inner_mixed_refinement_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_outer_mixed_difference_32_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.0005759367755852130775282037', 'errors': ['5.621969790046346e-13', '1.405492447365181e-13']}"
+        },
+        {
+          "name": "mass_outer_mixed_refinement_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_total_scaled_mixed_difference_32_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.02108215084706286898510631', 'errors': ['2.057920594686026e-11', '5.144801486179148e-12']}"
+        },
+        {
+          "name": "mass_total_scaled_mixed_refinement_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_mixed_difference_32_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.0002031638721280952342150627', 'errors': ['2.473433850887545e-13', '6.18358462572306e-14']}"
+        },
+        {
+          "name": "lapse_mixed_refinement_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_lapse_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_jacobian_response_omission_detected_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_jacobian_response_omission_detected_32_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "direct_physical_vs_fixed_values_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_inner_mixed_difference_64_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.0004053345382674271398103162', 'errors': ['1.631823529366955e-13', '4.079558823100461e-14']}"
+        },
+        {
+          "name": "mass_inner_mixed_refinement_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_outer_mixed_difference_64_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.0005759227732077261844029793', 'errors': ['5.620662426153198e-13', '1.40516560639205e-13']}"
+        },
+        {
+          "name": "mass_outer_mixed_refinement_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_total_scaled_mixed_difference_64_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.021080345582580911580343', 'errors': ['2.057315873904525e-11', '5.143289684226e-12']}"
+        },
+        {
+          "name": "mass_total_scaled_mixed_refinement_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_mixed_difference_64_1e-5",
+          "passed": true,
+          "detail": "{'target': '0.0002031592008359934001717022', 'errors': ['2.473275347505402e-13', '6.183188367267942e-14']}"
+        },
+        {
+          "name": "lapse_mixed_refinement_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_lapse_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_jacobian_response_omission_detected_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_jacobian_response_omission_detected_64_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "direct_physical_vs_fixed_values_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_inner_mixed_difference_64_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.0004053381609770866550888528', 'errors': ['1.631934730763388e-13', '4.079836826591446e-14']}"
+        },
+        {
+          "name": "mass_inner_mixed_refinement_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_outer_mixed_difference_64_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.0005759367755852130775282037', 'errors': ['5.621969790046346e-13', '1.405492447365181e-13']}"
+        },
+        {
+          "name": "mass_outer_mixed_refinement_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_total_scaled_mixed_difference_64_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.02108215084706286898510631', 'errors': ['2.057920594686026e-11', '5.144801486179148e-12']}"
+        },
+        {
+          "name": "mass_total_scaled_mixed_refinement_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_mixed_difference_64_1e-30",
+          "passed": true,
+          "detail": "{'target': '0.0002031638721280952342150627', 'errors': ['2.473433850887545e-13', '6.18358462572306e-14']}"
+        },
+        {
+          "name": "lapse_mixed_refinement_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_lapse_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_jacobian_response_omission_detected_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_jacobian_response_omission_detected_64_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadrature_refinement_1e-5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadrature_refinement_1e-30",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_weight_uniform_small_gap",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "dropping_gap_weight_loses_uniformity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "rough_split_divergence_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "rough_quadrature_interface_cancellation_.001",
+          "passed": true,
+          "detail": "{'lower_mixed': '14.90711984999859797606116', 'whole_mixed': '0.0'}"
+        },
+        {
+          "name": "rough_quadrature_interface_cancellation_.0005",
+          "passed": true,
+          "detail": "{'lower_mixed': '21.08185106778919554665929', 'whole_mixed': '-1.019578823124769457298483e-50'}"
+        }
+      ],
+      "numerics": [
+        {
+          "regional_matrix": [
+            [
+              "46",
+              "0",
+              "279",
+              ".00016"
+            ],
+            [
+              ".000002",
+              "0",
+              "1",
+              ".835"
+            ],
+            [
+              "13122",
+              "486",
+              "1300",
+              ".00003"
+            ]
+          ],
+          "common_envelopes_times_eta": [
+            "561/200000000000000000000000000000000",
+            "17/1000000000000000000000000000000000",
+            "51/400000000000000000000000000000"
+          ],
+          "actual_quantum_source_jet_constants_proved": false,
+          "full_equation_inverse_proved": false
+        },
+        {
+          "nodes": 32,
+          "gap": "1e-5",
+          "mixed_targets": [
+            "0.000405334538267427139810316152865",
+            "0.000575922773207726184402979258564",
+            "0.0210803455825809115803429954396",
+            "0.000203159200835993400171702157739"
+          ],
+          "toy_infinity_mass_test_divisor": "B*C*h^2",
+          "manufactured_profiles_are_physical_sources": false
+        },
+        {
+          "nodes": 32,
+          "gap": "1e-30",
+          "mixed_targets": [
+            "0.000405338160977086655088852783912",
+            "0.000575936775585213077528203701334",
+            "0.0210821508470628689851063053146",
+            "0.000203163872128095234215062740368"
+          ],
+          "toy_infinity_mass_test_divisor": "B*C*h^2",
+          "manufactured_profiles_are_physical_sources": false
+        },
+        {
+          "nodes": 64,
+          "gap": "1e-5",
+          "mixed_targets": [
+            "0.000405334538267427139810316152865",
+            "0.000575922773207726184402979258564",
+            "0.0210803455825809115803429954396",
+            "0.000203159200835993400171702154438"
+          ],
+          "toy_infinity_mass_test_divisor": "B*C*h^2",
+          "manufactured_profiles_are_physical_sources": false
+        },
+        {
+          "nodes": 64,
+          "gap": "1e-30",
+          "mixed_targets": [
+            "0.000405338160977086655088852783912",
+            "0.000575936775585213077528203701334",
+            "0.0210821508470628689851063053146",
+            "0.000203163872128095234215062737067"
+          ],
+          "toy_infinity_mass_test_divisor": "B*C*h^2",
+          "manufactured_profiles_are_physical_sources": false
+        }
+      ],
+      "exception": null,
+      "scope": "global fixed-chart source-to-constraint map on stated regional profile norms",
+      "unresolved": [
+        "actual quantum source jets in the weighted space",
+        "full higher-order inverse",
+        "coupled exterior/state, charge and signed source",
+        "all physical completion requirements"
+      ]
+    }
+  ]
+}
