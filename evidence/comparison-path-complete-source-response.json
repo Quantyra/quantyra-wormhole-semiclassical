@@ -1,0 +1,3551 @@
+{
+  "runs": [
+    {
+      "story": "S160",
+      "created_utc": "2026-10-20T13:49:02.253259+00:00",
+      "status": "failed",
+      "stage": "startup_import_before_main",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "protocol": {
+        "digits": 70,
+        "y": [
+          ".002",
+          ".02",
+          ".06"
+        ],
+        "parameters": [
+          "0",
+          ".4",
+          "1"
+        ],
+        "formula_tolerance": "1e-30",
+        "contour_nodes": [
+          64,
+          128
+        ],
+        "contour_radius": ".01",
+        "real_steps": [
+          ".001",
+          ".0005"
+        ],
+        "second_tolerance": "1e-6",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-35",
+        "endpoint_differences": "second-order one-sided within [0,1]",
+        "target": "symbolic jet parameter derivatives and independent Taylor polynomial arithmetic",
+        "fixtures_are_physical_states": false
+      },
+      "input_sha256_before": null,
+      "input_sha256_after": {
+        "checks/comparison_path_complete_source_response.py": "4f5df7431343aeff3ddde271edaf693acd34fa4caca02b62ea69fdf1119c9e4a",
+        "notes/comparison-path-complete-source-response.md": "59ae2e84dc310d9d97c2ef1bf8b478aff4017c6152a4af937831cc13b66b0d8d",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d"
+      },
+      "unchanged_inputs": null,
+      "hash_capture_note": "Hashes captured after the startup failure; the scientific checker had not entered main or captured before hashes.",
+      "checks": [],
+      "numerics": [],
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\comparison_path_complete_source_response.py\", line 11, in <module>\n    from comparison_path_outer_recombination import Jet\nModuleNotFoundError: No module named 'comparison_path_outer_recombination'\n",
+      "failed_checker_source_utf8": "\"\"\"S160: complete retained Dirac/reference source on the comparison path.\"\"\"\nfrom __future__ import annotations\nfrom datetime import datetime, timezone\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport sys\nimport traceback\nimport mpmath as mp\nimport sympy as s\nfrom comparison_path_outer_recombination import Jet\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = \"comparison-path-complete-source-response\"\nINPUTS = [\n    \"checks/comparison_path_complete_source_response.py\",\n    \"notes/comparison-path-complete-source-response.md\",\n    \"checks/comparison_path_outer_recombination.py\",\n    *[f\"{folder}/{stem}.{ext}\" for stem in [\n        \"comparison-path-interior-response\", \"comparison-path-cold-response\",\n        \"comparison-path-outer-regular-response\", \"comparison-path-outer-recombination\",\n        \"comparison-path-lll-reference-response\", \"fixed-chart-global-constraint-transfer\"]\n      for folder, ext in [(\"notes\", \"md\"), (\"evidence\", \"json\")]],\n    \"notes/stationary-completed-metric-response-norm.md\",\n    \"notes/stationary-centered-local-response.md\",\n    \"notes/spherical-anomaly-sources.md\",\n    \"notes/stationary-centered-covariant-seed.md\",\n    \"notes/stationary-centered-exterior-source.md\",\n    \"notes/stationary-reference-cold-bolt.md\",\n    \"notes/stationary-horizon-source-defect.md\",\n]\nPROTOCOL = {\n    \"digits\": 70, \"y\": [\".002\", \".02\", \".06\"], \"parameters\": [\"0\", \".4\", \"1\"],\n    \"formula_tolerance\": \"1e-30\", \"contour_nodes\": [64, 128], \"contour_radius\": \".01\",\n    \"real_steps\": [\".001\", \".0005\"], \"second_tolerance\": \"1e-6\",\n    \"refinement_ratio\": \".35\", \"refinement_floor\": \"1e-35\",\n    \"endpoint_differences\": \"second-order one-sided within [0,1]\",\n    \"target\": \"symbolic jet parameter derivatives and independent Taylor polynomial arithmetic\",\n    \"fixtures_are_physical_states\": False,\n}\nROWS, NUMERICS = [], []\nRat = s.Rational\n\n\ndef check(name, passed, detail=\"\"):\n    assert name not in {r[\"name\"] for r in ROWS}\n    row = {\"name\": name, \"passed\": bool(passed), \"detail\": str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row), flush=True)\n    if not passed:\n        raise AssertionError(name)\n\n\ndef predecessors():\n    for stem, count in [\n        (\"comparison-path-interior-response\", 126), (\"comparison-path-cold-response\", 242),\n        (\"comparison-path-outer-regular-response\", 202), (\"comparison-path-outer-recombination\", 242),\n        (\"comparison-path-lll-reference-response\", 376), (\"fixed-chart-global-constraint-transfer\", 99)]:\n        run = json.loads((ROOT/\"evidence\"/(stem+\".json\")).read_text())[\"runs\"][-1]\n        check(stem+\"_receipt\", run[\"status\"] == \"passed\" and len(run[\"checks\"]) == count\n              and len({r[\"name\"] for r in run[\"checks\"]}) == count and all(r[\"passed\"] for r in run[\"checks\"]))\n        check(stem+\"_current_inputs\", run[\"unchanged_inputs\"]\n              and run[\"input_sha256_before\"] == run[\"input_sha256_after\"]\n              and all(sha256((ROOT/p).read_bytes()).hexdigest() == h\n                      for p, h in run[\"input_sha256_after\"].items()))\n\n\ndef lagrangian(R, U, V, phi, e, qm):\n    aa, cc, bb = Rat(11, 360), Rat(1, 20), Rat(1, 30)\n    dd = bb-2*aa/3\n    L = (phi*(cc*(R+2*e)**2/3-4*aa*e*R-qm/3)+bb*R*U-3*bb*U**2\n         +(bb*R+(2*bb-4*aa)*e)*V-6*dd*U*V-3*dd*V**2)\n    P = phi*(2*cc*(R+2*e)/3-4*aa*e)+bb*(U+V)\n    Q = bb*R-6*bb*U-6*dd*V\n    Z = bb*R+(2*bb-4*aa)*e-6*dd*(U+V)\n    Lphi = cc*(R+2*e)**2/3-4*aa*e*R-qm/3\n    return [s.expand(f) for f in (L, P, Q, Z, Lphi)]\n\n\ndef cartesian_polynomials():\n    H, e, qm = s.symbols(\"H e qm\")\n    indices = [(j-k, k) for j in range(6) for k in range(j+1)]\n    sig = {a: s.Symbol(f\"s{a[0]}{a[1]}\") for a in indices}\n    phi = {a: s.Symbol(f\"p{a[0]}{a[1]}\") for a in indices}\n    directions = []\n    for axis in range(2):\n        mapping = {H: -2*H*sig[(1, 0) if axis == 0 else (0, 1)]}\n        for jets in (sig, phi):\n            for (i, j), symbol in jets.items():\n                if i+j < 5:\n                    mapping[symbol] = jets[(i+1, j) if axis == 0 else (i, j+1)]\n        directions.append(mapping)\n    def D(f, axis):\n        return s.expand(sum(s.diff(f, v)*directions[axis][v]\n                            for v in f.free_symbols if v in directions[axis]))\n    R = -2*H*(sig[2, 0]+sig[0, 2])\n    U = H*(phi[2, 0]+phi[0, 2])\n    V = H*(phi[1, 0]**2+phi[0, 1]**2)\n    L, P, Q, Z, Lphi = lagrangian(R, U, V, phi[0, 0], e, qm)\n    dp, dq = [[D(f, i) for i in range(2)] for f in [P, Q]]\n    boxp = H*(D(dp[0], 0)+D(dp[1], 1))\n    hxx = D(dp[0], 0)-sig[1, 0]*dp[0]+sig[0, 1]*dp[1]\n    hyy = D(dp[1], 1)+sig[1, 0]*dp[0]-sig[0, 1]*dp[1]\n    hxy = D(dp[0], 1)-sig[0, 1]*dp[0]-sig[1, 0]*dp[1]\n    common = -L/2+R*P/2+boxp+(H*(dq[0]*phi[1, 0]+dq[1]*phi[0, 1])+Q*U)/2\n    mxx = s.expand(common-H*hxx+H*Z*phi[1, 0]**2-H*phi[1, 0]*dq[0])\n    myy = s.expand(common-H*hyy+H*Z*phi[0, 1]**2-H*phi[0, 1]*dq[1])\n    mxy = s.expand(-H*hxy+H*Z*phi[1, 0]*phi[0, 1]-H*(phi[1, 0]*dq[1]+phi[0, 1]*dq[0])/2)\n    E = s.expand(Lphi+H*(D(dq[0], 0)+D(dq[1], 1))\n                 -2*H*(D(Z, 0)*phi[1, 0]+D(Z, 1)*phi[0, 1]+Z*(phi[2, 0]+phi[0, 2])))\n    divx = D(mxx, 0)+D(mxy, 1)+sig[1, 0]*(mxx-myy)+2*sig[0, 1]*mxy\n    divy = D(mxy, 0)+D(myy, 1)+sig[0, 1]*(myy-mxx)+2*sig[1, 0]*mxy\n    check(\"two_dimensional_Ward_x\", s.expand(divx+E*phi[1, 0]/2) == 0)\n    check(\"two_dimensional_Ward_y\", s.expand(divy+E*phi[0, 1]/2) == 0)\n    check(\"independent_conformal_metric_variation\",\n          s.expand(2*L-2*R*P-2*Q*U-2*Z*V-2*boxp+2*(mxx+myy)) == 0)\n    variables = [H, e, qm, *sig.values(), *phi.values()]\n    orders = [0, 0, 0, *[sum(a) for a in indices], *[sum(a) for a in indices]]\n    phizero = variables.index(phi[0, 0])\n    for label, expr in [(\"density\", myy), (\"null\", myy-mxx), (\"radius\", E)]:\n        for degree in [4, 5]:\n            cur = s.expand(expr if degree == 4 else D(expr, 0))\n            poly = s.Poly(cur, *variables)\n            terms = poly.terms()\n            check(f\"{label}_total_order_{degree}\", all(sum(a*b for a, b in zip(ex, orders)) <= degree for ex, co in terms))\n            check(f\"{label}_H_power_{degree}\", all(ex[0] <= 2 for ex, co in terms))\n            check(f\"{label}_phi_degree_{degree}\", all(ex[phizero] <= 1 for ex, co in terms))\n            count = sum(abs(co)*max(1, sum(ex[3:])+2*ex[0]) for ex, co in terms if ex[2] == 0)\n            check(f\"{label}_coefficient_reserve_{degree}\", count < (10**4 if degree == 4 else 10**5), str(count))\n            NUMERICS.append({\"polynomial\": label, \"order\": degree, \"monomials\": len(terms), \"weighted_count\": str(count)})\n    check(\"density_magnetic_monomial\", s.diff(myy, qm) == phi[0, 0]/6)\n    check(\"null_magnetic_cancellation\", s.diff(myy-mxx, qm) == 0)\n    check(\"radius_magnetic_constant\", s.diff(E, qm) == -Rat(1, 3))\n    return H, e, qm, sig, phi, myy, s.expand(myy-mxx), E, mxy\n\n\ndef radial_polynomials():\n    w, p = s.symbols(\"w0:5\"), s.symbols(\"p0:5\")\n    e, qm = s.symbols(\"e qm\")\n    def D(f):\n        return s.expand(sum(s.diff(f, a[j])*a[j+1] for a in (w, p) for j in range(4)))\n    R = -2*(w[2]+w[1]**2)\n    U, V = p[2]+w[1]*p[1], p[1]**2\n    L, P, Q, Z, Lphi = lagrangian(R, U, V, p[0], e, qm)\n    mt = s.expand(-L/2+R*P/2+D(D(P))+(D(Q)*p[1]+Q*U)/2)\n    mr = s.expand(-L/2+R*P/2+w[1]*D(P)+Z*V-D(Q)*p[1]/2+Q*U/2)\n    E = s.expand(Lphi+D(D(Q))+w[1]*D(Q)-2*(D(Z*p[1])+w[1]*Z*p[1]))\n    adj1 = lambda f: D(f)+w[1]*f\n    adj2 = lambda f: D(D(f))+2*w[1]*D(f)+(w[2]+w[1]**2)*f\n    check(\"independent_radial_orbit_Euler\", s.expand(L-adj1(s.diff(L, w[1]))+adj2(s.diff(L, w[2]))+2*mt) == 0)\n    en = L-2*R*P-2*Q*U-2*Z*V-adj1(2*w[1]*P-p[1]*Q)\n    check(\"independent_radial_lapse_Euler\", s.expand(en+2*mr) == 0)\n    ep = s.diff(L, p[0])-adj1(s.diff(L, p[1]))+adj2(s.diff(L, p[2]))\n    check(\"independent_radius_Euler\", s.expand(ep-E) == 0)\n    y, c, f, d = s.symbols(\"y c f d\", positive=True)\n    wb, pb = e*y**2/2+c*y**3, -s.log(d*y)-e*y*y/6+f*y**3\n    sub = {a[j]: s.diff(expr, y, j) for a, expr in [(w, wb), (p, pb)] for j in range(5)}\n    outer = s.expand(E.subs(sub))\n    expected = {-4: -Rat(11, 15), -3: 0, -2: 22*e/45, -1: 11*c/15}\n    for k, val in expected.items():\n        check(f\"radius_Laurent_{k}\", s.simplify(outer.coeff(y, k)-val) == 0)\n    vacuum = -Rat(11, 15)/y**4*s.exp(-2*e*y*y/3+4*f*y**3)\n    vp = s.series(vacuum, y, 0, 1).removeO().expand()\n    for k in [-4, -3, -2, -1]:\n        check(f\"correlated_vacuum_cancellation_{k}\", s.simplify((outer-vp).coeff(y, k).subs(f, -c/4)) == 0)\n    mismatch = s.symbols(\"mismatch\")\n    check(\"uncorrelated_vacuum_pole_detected\",\n          s.simplify((outer-vp).coeff(y, -1).subs(f, -c/4+mismatch)-44*mismatch/15) == 0)\n    regular = s.expand(outer.subs(f, -c/4)-sum(v*y**k for k, v in expected.items()))\n    poly = s.Poly(regular, y, c, e, qm)\n    count = sum(abs(co)*2**ex[1] for ex, co in poly.terms())\n    check(\"radius_reference_regular_majorant\", count < 10**8, str(count))\n    Eproduct = lagrangian(-2, 0, 0, 0, e, qm)[4]\n    check(\"nonzero_angular_product_value\", s.expand(Eproduct-((1+e**2)/15+e/9-qm/3)) == 0)\n    return w, p, e, qm, mt, s.expand(mt-mr), E\n\n\ndef angular_identities():\n    E, mt, mr, kE, K, pa0, pv, dp, t, Pc, Sc = s.symbols(\"E mt mr kE K pa0 pv dp t Pc Sc\")\n    pa = pa0/t**4+pv*(1-t**-4)+dp*(-t**-4+4*t**-5-3*t**-6)\n    ps = -pa0/t**4+pv*(1+t**-4)+dp*(t**-4-6*t**-5+6*t**-6)\n    rho = Pc-Sc+4*kE*mt+K*t**4*pa\n    null = 2*Pc-Sc+4*kE*(mt-mr)\n    angular = -Sc/2+kE*E+2*kE*(mt+mr)-K*t**4*ps\n    T = kE*E-K*(2*pv*t**4+dp*(-2/t+3/t**2))\n    check(\"independent_angular_chain_rule\", s.simplify(angular-rho+null/2-T) == 0)\n    estar = s.symbols(\"estar\")\n    cold = kE*(E-estar)-K*(2*pv*(t**4-1)+dp*(-2/t+3/t**2-1))\n    check(\"cold_trace_centering\", s.expand((T-cold).subs(estar, K*(2*pv+dp)/kE)) == 0)\n    check(\"missing_angular_product_detected\", (kE*estar).subs({kE: 1, estar: 2}) != 0)\n    ev = s.symbols(\"ev\")\n    check(\"outer_trace_vacuum_allocation\", s.expand((kE*(E-ev)-K*dp*(-2/t+3/t**2)-T).subs(ev, 2*K*pv*t**4/kE)) == 0)\n\n\ndef budgets():\n    X = s.symbols(\"X\")\n    H = Rat(\"1.1\")*X+sum(2*s.catalan(j-1)*Rat(\".3\")**(j-1)/Rat(\".9\")**(2*j-1)*X**j for j in range(2, 6))\n    comp = s.series(sum((100*H)**k for k in range(6)), X, 0, 6).removeO().expand()\n    for j in range(1, 6):\n        check(f\"cold_chart_composition_{j}\", comp.coeff(X, j)/100**j < 4)\n        check(f\"cold_seed_jet_{j}\", 20*Rat(\"1.28\")**j+33*Rat(\"4e-6\") < 100)\n    for radius, bound in [(Rat(1, 64), Rat(\".04\")), (Rat(\".1\"), Rat(\".22\"))]:\n        check(\"complex_cold_s_displacement_\"+str(radius), 2*(radius+radius**2/2)/(1-radius**2/4) < bound)\n    check(\"inverse_tau_jet_sum\", Rat(\"1.3\")*sum(Rat(\".2\")**j for j in range(6)) < 2)\n    A = 33*Rat(\"8e-5\")*81\n    check(\"complex_gap_direction_jets\", A < Rat(\".214\"))\n    finite_radius = 2*33*Rat(\"8e-5\")*(1+A)**4*Rat(\"1.001\")**4*Rat(\"1.00001\")\n    check(\"finite_cold_radius_ideal\", finite_radius < Rat(\".02\"), str(finite_radius))\n    check(\"cold_background_jet_guard\", 100*Rat(\".00331\")+Rat(\".01\") < 1)\n    check(\"cold_exponential_guard\", mp.exp(mp.mpf(\".2\")) < 2)\n    # S155 inverse-quadratic majorant for the radius scalar, no log Jacobian.\n    amin = Rat(\".999999\")\n    HH = Rat(\"1.000001\")*X+sum(2*s.catalan(j-1)*Rat(\"4e-6\")**(j-1)/amin**(2*j-1)*X**j for j in range(2, 5))\n    DD = Rat(\"5e-9\")+HH-X\n    transfer = (Rat(\"1e-4\")*sum((100*HH)**j for j in range(5))\n                +6*((1-160*(X+DD))**-2-(1-160*X)**-2))\n    series = s.series(transfer, X, 0, 5).removeO().expand()\n    for j in range(2, 5):\n        val = series.coeff(X, j)/100**j\n        check(f\"middle_radius_fixed_jet_{j}\", val < Rat(\".0021\"), str(val))\n        check(f\"middle_radius_background_{j}\", 6*Rat(\".32\")**j+33*Rat(\".0021\") < 1)\n    check(\"middle_low_radius_gradient\", Rat(\"20.1\")+33*Rat(\"6.3e-6\") < 100)\n    check(\"middle_complex_seed_radius_log\", mp.log(40)+mp.log(4) < 6)\n    check(\"middle_relative_complex_z\", Rat(\".5\")*Rat(\".035\")*40 < Rat(\".75\"))\n    check(\"middle_complex_strip_derivative\", Rat(\".3\")+2*Rat(\".02\")+17*Rat(\".02\")**2/2+13*Rat(\".02\")**3/6 < Rat(\".4\"))\n    check(\"middle_complex_curvature_guard\", 2+17*Rat(\".02\")+13*Rat(\".02\")**2/2 < 3)\n    check(\"middle_normal_coordinate_margin\", Rat(1, 32)/(1-3*Rat(1, 32)**2) < Rat(\".035\"))\n    check(\"middle_complex_z_speed\", Rat(\".2\")+Rat(\".4\")*Rat(\".02\") < Rat(\".5\")**2)\n    check(\"middle_value_radius_log\", mp.log(40)+mp.mpf(\"4e-7\") < 4)\n    eta, qbar = Rat(\"8.5e-33\"), 160000\n    b4 = 2*10**4*100*24*100**4\n    b5 = 2*10**5*100*120*100**5\n    cold = eta/3*(b4+qbar*100/6)\n    check(\"cold_Weyl_and_radius_complex\", cold < Rat(\"1e-15\"), str(cold))\n    bolt = Rat(\"2.2\")*eta/3*(b5+qbar*100*100/6)\n    check(\"bolt_Weyl_modulus\", bolt < Rat(\"1e-11\"), str(bolt))\n    mid = eta/3*(2*10**4*4*24*100**4+qbar*4/6)\n    check(\"middle_Weyl_and_radius_complex\", mid < Rat(\"1e-16\"), str(mid))\n    ref = Rat(\"1.71e-26\")\n    check(\"cold_T_budget\", Rat(\"1e-15\")+ref*(2*Rat(\"4.1\")+3*Rat(\"8.1\")) < Rat(\"1e-14\"))\n    check(\"middle_T_budget\", Rat(\"1e-16\")+ref*(2*41**4+3*(2*Rat(\"1.001\")+3*Rat(\"1.001\")**2)) < Rat(\"1e-15\"))\n    check(\"outer_reference_E_budget\", eta/12*10**8*(1+qbar) < Rat(\"1e-15\"))\n    check(\"outer_T_budget\", eta/12*b4+Rat(\"1e-15\")+ref*3*(2*Rat(\".026\")+3*Rat(\".026\")**2) < Rat(\"1e-12\"))\n    check(\"outer_vacuum_exponential_remainder\",\n          mp.mpf(11)/30*(mp.mpf(2)/3+2*mp.mpf(\".081\"))**2*mp.exp(mp.mpf(\".006\")) < 1)\n    dg = Rat(\"3e-7\")\n    B = list(map(Rat, [\"1e-15\", \"1e-11\", \"1e-16\"]))\n    N1, N2 = [[v*factor for v in B] for factor in [Rat(\".032\"), Rat(\".002\")]]\n    for i in range(3):\n        check(f\"Weyl_Cauchy_first_{i}\", B[i]/32 < N1[i])\n        check(f\"Weyl_Cauchy_second_{i}\", 2*B[i]/32**2 < N2[i])\n    mass = [Rat(\"1.003\")*c+Rat(\"4.02\")*dg*b+Rat(\"5.54\")*dg**2*a for a, b, c in zip(B, N1, N2)]\n    lapse = [Rat(\"1.006\")*c+Rat(\"10.08\")*dg*b+Rat(\"26.5\")*dg**2*a for a, b, c in zip(B, N1, N2)]\n    outs = [(46*mass[0]+279*mass[2])/2, (Rat(\".000002\")*mass[0]+mass[2])/2,\n            (13122*lapse[0]+486*lapse[1]+1300*lapse[2])/2]\n    for name, val, limit in zip([\"mass\", \"density\", \"lapse\"], outs, [\"8e-17\", \"1.1e-19\", \"5e-12\"]):\n        check(\"new_Weyl_second_\"+name, val < Rat(limit), str(val))\n    full = [Rat(\"7.2e-8\")+Rat(\"4.4e-12\")+Rat(\"1.5e-14\")+Rat(\"2.9e-19\")+outs[0],\n            Rat(\"3.2e-15\")+Rat(\"1.6e-14\")+Rat(\"7.4e-11\")+Rat(\"1.1e-21\")+outs[1],\n            Rat(\"3.6e-5\")+Rat(\"2.1e-11\")+Rat(\"1e-15\")+Rat(\"1.4e-18\")+outs[2]]\n    for name, val, limit in zip([\"mass\", \"density\", \"lapse\"], full, [\"7.21e-8\", \"7.41e-11\", \"3.61e-5\"]):\n        check(\"complete_source_second_\"+name, val < Rat(limit), str(val))\n    pairs = [[Rat(x) for x in row] for row in [\n        [\"1.11e-6\", \"1.71e-10\", \"3.11e-9\"], [\"1.71e-9\", \"1.41e-12\", \"3.11e-14\"],\n        [\"3.12e-7\", \"3.21e-11\", \"2.1e-12\"]]]\n    trace = [[Rat(x) for x in row] for row in [\n        [\"1e-14\", \"3.2e-16\", \"2e-17\"], [\"1e-15\", \"3.2e-17\", \"2e-18\"], [\"1e-12\", \"3.2e-14\", \"2e-15\"]]]\n    angular = [[\"1.7e-6\", \"2.6e-10\", \"4.7e-9\"], [\"2.6e-9\", \"2.2e-12\", \"4.7e-14\"],\n               [\"4.7e-7\", \"4.9e-11\", \"3.2e-12\"]]\n    component_rows = [\n        [[\"1.1e-6\", \"1.7e-10\", \"3.1e-9\"], [\"1e-15\", \"3.2e-17\", \"2e-18\"], [\"1e-23\", \"3.2e-25\", \"2e-26\"]],\n        [[\"1.7e-9\", \"1.4e-12\", \"3.1e-14\"], [\"1e-16\", \"3.2e-18\", \"2e-19\"], [\"1e-18\", \"3.2e-20\", \"2e-21\"]],\n        [[\"3.1e-7\", \"7e-14\", \"9.2e-14\"], [\"1e-9\", \"3.2e-11\", \"2e-12\"], [\"1e-21\", \"3.2e-23\", \"2e-24\"]],\n    ]\n    for i in range(3):\n        for j in range(3):\n            check(f\"complete_orbit_region_{i}_order_{j}\", sum(Rat(row[j]) for row in component_rows[i]) < pairs[i][j])\n            check(f\"angular_source_region_{i}_order_{j}\", Rat(3, 2)*pairs[i][j]+trace[i][j] < Rat(angular[i][j]))\n    hmax = Rat(\"1e-30\")\n    J1, J2 = 4*Rat(\"1e-8\")*hmax, 20*Rat(\"1e-16\")*hmax\n    for label, vals, limits in [\n        (\"angular\", list(map(Rat, angular[0])), [\"1.1e-8\", \"2e-7\"]),\n        (\"orbit\", pairs[0], [\"7.1e-9\", \"1.3e-7\"])]:\n        first = Rat(\".506\")*81*(Rat(\"1.000001\")*vals[1]+J1*vals[0])\n        second = Rat(\".506\")*81*(Rat(\"1.000001\")*vals[2]+2*J1*vals[1]+J2*vals[0])\n        check(label+\"_moving_bolt_first\", first < Rat(limits[0]))\n        check(label+\"_moving_bolt_second\", second < Rat(limits[1]))\n    NUMERICS.append({\"new_Weyl_second_exact\": [str(v) for v in outs],\n                     \"complete_source_second_exact\": [str(v) for v in full],\n                     \"complete_E0_residual\": False, \"goal_complete\": False})\n\n\ndef fixtures(cart, radial):\n    H, ec, qc, sig, phi, mtc, mnc, Ec, mxy = cart\n    w, p, er, qr, mtr, mnr, Er = radial\n    y, lam = s.symbols(\"y lam\", positive=True)\n    w0 = Rat(\".001\")*y*y/2+Rat(\".02\")*y**3\n    p0 = -s.log(Rat(\".41\")*y)-Rat(\".001\")*y*y/6-Rat(\".02\")*y**3/4\n    u = Rat(\".001\")*y**3+Rat(\".002\")*y**4*(1-s.log(y))\n    wf, pf = w0+lam*u, p0-Rat(\".0005\")*lam*y**3+Rat(\".003\")*lam*y**4*(1-s.log(y))\n    Dx, Dr = lambda f: s.exp(w0)*s.diff(f, y), lambda f: s.exp(-lam*u)*s.diff(f, y)\n    def jets(f, D):\n        ans = [f]\n        for _ in range(4):\n            ans.append(s.expand(D(ans[-1])))\n        return ans\n    cjets, rjets = [jets(f, Dx) for f in (wf, pf)], [jets(f, Dr) for f in (wf, pf)]\n    cv = [H, *sig.values(), *phi.values()]\n    cexpr = [s.exp(-2*wf)]\n    for family in cjets:\n        cexpr += [family[i] if j == 0 and i <= 4 else 0 for i, j in sig]\n    cfun = s.lambdify((y, lam), cexpr, \"mpmath\", cse=True)\n    cder = s.lambdify((y, lam), [[s.diff(f, lam, j)/s.factorial(j) for j in range(3)]\n                                for f in cexpr], \"mpmath\", cse=True)\n    cpoly = s.lambdify(cv, [f.subs({ec: Rat(\".001\"), qc: 4}) for f in (mtc, mnc, Ec)], \"mpmath\", cse=True)\n    rfun = s.lambdify((y, lam), rjets[0]+rjets[1], \"mpmath\", cse=True)\n    rpoly = s.lambdify((*w, *p), [f.subs({er: Rat(\".001\"), qr: 4}) for f in (mtr, mnr, Er)], \"mpmath\", cse=True)\n    phifun = s.lambdify((y, lam), pf, \"mpmath\")\n    phider = s.lambdify((y, lam), s.diff(pf, lam), \"mpmath\")\n    def value(yy, q):\n        ans = cpoly(*cfun(yy, q))\n        ans[2] += mp.mpf(11)/15*mp.mpf(\".41\")**4*mp.exp(4*phifun(yy, q))\n        return ans\n    def target(yy, q):\n        ans = cpoly(*(Jet(*v) for v in cder(yy, q)))\n        ph = Jet(phifun(yy, q), phider(yy, q))\n        ans[2] += mp.mpf(11)/15*mp.mpf(\".41\")**4*(4*ph).exp()\n        return [2*v.v[2] for v in ans]\n    def fd(fun, q, step):\n        if q == 0:\n            return (2*fun(q)-5*fun(q+step)+4*fun(q+2*step)-fun(q+3*step))/step**2\n        if q == 1:\n            return (2*fun(q)-5*fun(q-step)+4*fun(q-2*step)-fun(q-3*step))/step**2\n        return (fun(q+step)-2*fun(q)+fun(q-step))/step**2\n    for ys in PROTOCOL[\"y\"]:\n        yy = mp.mpf(ys)\n        for qs in PROTOCOL[\"parameters\"]:\n            q = mp.mpf(qs)\n            tag = f\"fixture_{ys}_{qs}\"\n            va, vb = cpoly(*cfun(yy, q)), rpoly(*rfun(yy, q))\n            for j, label in enumerate([\"density\", \"null\", \"radius\"]):\n                check(tag+\"_\"+label+\"_radial_vs_Cartesian\", abs(va[j]-vb[j]) < mp.mpf(\"1e-30\"))\n            targ = target(yy, q)\n            radius = mp.mpf(\".01\")\n            for n in PROTOCOL[\"contour_nodes\"]:\n                sums = [mp.mpc(0)]*3\n                for k in range(n):\n                    phase = mp.exp(2j*mp.pi*k/n)\n                    vals = value(yy, q+radius*phase)\n                    sums = [a+b/phase**2 for a, b in zip(sums, vals)]\n                for j, label in enumerate([\"density\", \"null\", \"radius_regular\"]):\n                    err = abs(2*sums[j]/n/radius**2-targ[j])\n                    check(tag+f\"_{label}_contour_{n}\", err < mp.mpf(\"1e-6\")*(1+abs(targ[j])), mp.nstr(err, 25))\n            for j, label in enumerate([\"density\", \"null\", \"radius_regular\"]):\n                errs = []\n                for step in PROTOCOL[\"real_steps\"]:\n                    err = abs(fd(lambda z: value(yy, z)[j], q, mp.mpf(step))-targ[j])\n                    errs.append(err)\n                    check(tag+f\"_{label}_difference_{step}\", err < mp.mpf(\"1e-6\")*(1+abs(targ[j])), mp.nstr(err, 25))\n                check(tag+f\"_{label}_refinement\", errs[1] < mp.mpf(\".35\")*errs[0] or max(errs) < mp.mpf(\"1e-35\"))\n            NUMERICS.append({\"y\": ys, \"lambda\": qs, \"second_responses\": [mp.nstr(v, 35) for v in targ]})\n    x, z = s.symbols(\"x z\")\n    r2 = x*x+z*z\n    sf, pf = Rat(\".02\")*r2+lam*Rat(\".003\")*r2, Rat(\".01\")+Rat(\".03\")*r2+lam*Rat(\".002\")*r2\n    sub = {H: 1, ec: Rat(\".001\"), qc: 4}\n    for family, expr in [(sig, sf), (phi, pf)]:\n        sub.update({var: s.diff(expr, x, i, z, j).subs({x: 0, z: 0}) for (i, j), var in family.items()})\n    check(\"Cartesian_bolt_null_zero\", s.expand(mnc.subs(sub)) == 0)\n    check(\"Cartesian_bolt_offdiagonal_zero\", s.expand(mxy.subs(sub)) == 0)\n    product_sub = {H: 1, ec: Rat(\".001\"), qc: 4}\n    sh = -s.log(1-r2/4)\n    for family, expr in [(sig, sh), (phi, s.Integer(0))]:\n        product_sub.update({var: s.diff(expr, x, i, z, j).subs({x: 0, z: 0}) for (i, j), var in family.items()})\n    check(\"Cartesian_product_orbit_zero\", mtc.subs(product_sub) == 0 and mnc.subs(product_sub) == 0)\n    check(\"Cartesian_product_angular_nonzero\", Ec.subs(product_sub) != 0)\n\n\ndef hashes():\n    return {p: sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    mp.mp.dps = 70\n    before, error = hashes(), None\n    print(json.dumps({\"event\": \"start\", \"story\": \"S160\", \"input_count\": len(before)}), flush=True)\n    try:\n        predecessors()\n        cart = cartesian_polynomials()\n        radial = radial_polynomials()\n        angular_identities()\n        budgets()\n        fixtures(cart, radial)\n    except Exception:\n        error = traceback.format_exc()\n        print(error, file=sys.stderr, flush=True)\n    after = hashes()\n    ok = error is None and before == after and all(r[\"passed\"] for r in ROWS)\n    record = {\n        \"story\": \"S160\", \"created_utc\": datetime.now(timezone.utc).isoformat(),\n        \"status\": \"passed\" if ok else \"failed\", \"python\": sys.version,\n        \"mpmath\": mp.__version__, \"sympy\": s.__version__, \"protocol\": PROTOCOL,\n        \"input_sha256_before\": before, \"input_sha256_after\": after, \"unchanged_inputs\": before == after,\n        \"checks\": ROWS, \"numerics\": NUMERICS, \"exception\": error,\n        \"scope\": \"complete retained Dirac-minus-reference source response on the specified comparison path\",\n        \"unresolved\": [\"E0 and complete residual assembly\", \"general family and full inverse\",\n                       \"coupled solution and physical completion\"],\n    }\n    if error:\n        record[\"failed_checker_source_utf8\"] = Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"] = (ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    out = ROOT/\"evidence\"/(STEM+\".json\")\n    history = json.loads(out.read_text()) if out.exists() else {\"runs\": []}\n    history[\"runs\"].append(record)\n    out.write_text(json.dumps(history, indent=2)+\"\\n\", encoding=\"utf-8\", newline=\"\\n\")\n    print(json.dumps({\"status\": record[\"status\"], \"checks\": len(ROWS), \"unchanged_inputs\": before == after}), flush=True)\n    return 0 if ok else 1\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+      "failed_note_source_utf8": "# Complete retained source response on the comparison path\n\n2026-10-20, E003/S160 supporting S139/S074. Ordinary argument and\npredeclared verification before acceptance.\n\nThis completes the retained Dirac-minus-reference density, null and\nangular SOURCE response on the specified comparison path. It combines\nS155, S156, S158 and S159 with the remaining Weyl cold/middle stress\nand the independent local anomaly/radius allocation. It does not\ncomplete the E0 operator, a general-family source theorem, full\nhigher-order inverse, coupled solution or physical stability proof.\n\n## 1. Independent radius variation and the exact trace allocation\n\nUse the retained spherical action and chain rule in\n[the anomaly source derivation](spherical-anomaly-sources.md).\nIts underlying Weyl transgression is\n[Mazur--Mottola](https://arxiv.org/html/hep-th/0106151v1), inspected\n2026-10-20. That paper does not supply the bounds below.\nNo finite coefficient, scale, flux, state or boundary ensemble changes.\n\nUse dimensionless product-frame derivatives in A units and set\n\n    e=1/C, qbar=q^2/C^2<160000, eta_G=GC/B^2<8.5e-33,\n    phi=log(r/B), aA=11/360, cA=1/20, bA=1/30,\n    dA=bA-2aA/3,\n    R=R_product, U=Box phi, V=(grad phi)^2,\n    Q=bA R-6bA U-6dA V,\n    Z=bA R+(2bA-4aA)e-6dA(U+V),\n    E=cA(R+2e)^2/3-4aA e R-qbar/3\n                            +Box Q-2 div(Z grad phi). (1)\n\nE is the independent Weyl-field Euler derivative. It is not\nreplaced by the orbit trace. Let M_t,M_r be the mixed local\nEuler components in S158. Their normalized sources are\n\n    W_rho=eta_G M_t/pi, W_N=eta_G(M_t-M_r)/pi,\n    S_W=-eta_G(M_t+M_r)/pi,\n    A_W=eta_G E/(4pi)-S_W/2.                     (2)\n\nFor any physical source use\n\n    rho=(2G/(B^2 C))r^2 rho2,\n    N=(2G/(B^2 C))r^2(rho2+p2),\n    A=(8piG/(B^2 C))r^4 pS.\n\nThe canonical massive/LLL contribution has A_can=-S_can/2.\nThus the full Dirac-minus-reference source satisfies exactly\n\n    A_rest=rho_rest-N_rest/2+T,\n    T=eta_G E/(4pi)\n                  -K[2pv t^4+DP g(t)],\n    K=8piG B^2/C, g(t)=-2/t+3/t^2, t=r/B.        (3)\n\nIndeed the chain rule gives\nJ_X=(2G/X)exp(-2phi)(s_W-tau_hat,total), and pS=J_X/(16piG).\nAlso S_total=N_total-2rho_total and\nt^4(pA_ref+pS_ref)=2pv t^4+DP g(t). This derivation keeps\nthe independent radius source; it does not differentiate an\nuncontrolled spatial stress profile or infer the angular equation\nfrom solved orbit constraints.\n\nAt the exact product, phi=0, R=-2, and all its covariant\nderivatives vanish. The Weyl ORBIT stress is zero, but\n\n    E_*=(1+e^2)/15+e/9-qbar/3,\n    eta_G E_* /(4pi)=K(p0A+p0S)=K(2pv+DP).       (4)\n\nThe angular product value is generally nonzero. Consequently\nthe cold local allocation is exactly\n\n    T=eta_G(E-E_*)/(4pi)\n           -K[2pv(t^4-1)+DP(g(t)-1)].            (5)\n\nIt vanishes at the product before a norm is taken.\n\nAt the outer boundary use the actual proper coordinate and\ncorrelated jets from S158,\n\n    w=eY^2/2+cY^3+O_4(Y^4 L),\n    phi=-log(dY)-eY^2/6-cY^3/4+O_4(Y^4 L).\n\nSubstitution in (1) gives the negative powers\n\n    E=-11/(15Y^4)+22e/(45Y^2)+11c/(15Y)+O(L).\n\nThey are exactly those of\nE_vac=-11d^4 exp(4phi)/15. The fixed vacuum identity is\neta_G E_vac/(4pi)=2K pv t^4. Thus\n\n    T=eta_G(E-E_vac)/(4pi)-K DP g(t)              (6)\n\nis integrable in the outer squared-log profile norm.\nThere is no separate mass cubic in T. For an independent phi\ncubic f3 the 1/Y coefficient of E itself is still 11c/15;\nsubtracting its actual-radius vacuum leaves (11c+44f3)/(15Y).\nThe correlation f3=-c/4 is essential.\n\n## 2. Finite conformal jet algebra and coefficient reserves\n\nAt a fixed real observation use conformal Cartesian coordinates,\ng_product=exp(2sigma)(dx^2+dy^2). Treat H=exp(-2sigma) as\na formal coefficient with D_i H=-2H sigma_i. Then\n\n    R=-2H(sigma_xx+sigma_yy),\n    U=H(phi_xx+phi_yy), V=H(phi_x^2+phi_y^2).\n\nInsert these in the retained action L,P,Q,Z and\n\n    M_ij^mixed=-delta_ij L/2+R delta_ij P/2\n       +delta_ij Box P-H Hess_ij P\n       +H Z phi_i phi_j-H phi_(i Q_j)\n       +delta_ij[H grad Q.grad phi+QU]/2.        (7)\n\nThe Hessian uses the full conformal connection. In particular\nHess_xx P=P_xx-sigma_x P_x+sigma_y P_y and\nHess_yy P=P_yy+sigma_x P_x-sigma_y P_y.\nAt a radial observation y is the angular/time direction.\nFormula (1) is expanded in the same variables.\n\nThe resulting polynomials have total derivative order at most four,\nat most one undifferentiated phi and H power at most two.\nSeparate the algebraic magnetic monomials M_t=qbar phi/6\nand E=-qbar/3. Count absolute coefficients times\nmax(1, total field-jet degree+2 degree_H); the 2 degree_H\naccounts for varying H. For M_t, M_t-M_r and E the count\nis below 1e4. After one Cartesian derivative each analogous\ncount is below 1e5, with total derivative order at most five.\nThe checker expands the full two-variable formulas to verify\nthese finite counts; it does not assume a proper-coordinate\nformula is regular at the bolt.\n\nBackground differentiated jets are bounded by j!100^j. The\nundifferentiated phi bound is one in the cold region and four\nin the middle. Products at total derivative order four or five\nare bounded by 4!100^4 or 5!100^5. Along the cold interpolations\nbelow |H|^k<2 for k<=2. Therefore a weighted field difference\nof 100 a_x j!100^j gives regular polynomial differences\n\n    order four: 2*1e4*100*(4!100^4)a_x,\n    order five: 2*1e5*100*(5!100^5)a_x.          (8)\n\nThe magnetic terms are counted at derivative order zero/one;\nthe constant in E cancels from E-E_*.\n\n## 3. Actual cold and middle charts\n\nAll unknown spatial arguments remain real. Allow |lambda|<=33\non the original path sigma_lambda=sigma0+lambda u,\nr_lambda=B+(r0-B)exp(lambda V). Only finite jets are used.\n\nFor cold points s=t0-1<=.001, put a_x=s[1+log(.01/s)]<=.00331.\nUse a fixed H2 normal conformal chart and compare with the exact\nH2 x S2 product in that chart. The seed cold functions are analytic.\nHere are explicit margins sufficient for their weighted jets.\nIn the transvection-centered bidisk |z|,|w|<=1/64,\nthe fractional change of cosh chi is below .017. The retained\ninverse-s bound of two gives |s_complex-s0|<.04s0, within the\nquarter s-disk. The exact cold q0,D formulas give\n|sigma_seed-sigma_H2|<20a_x and |phi_seed|<3s0 there.\nChanging to Cartesian complex coordinates halves that radius.\nCauchy therefore bounds their normalized j-jets, j<=5, by\n20(1.28)^j a_x and 3(1.28)^j a_x.\n\nThe same seed normalizer and its inverse have a finite\ncomposition cost below four through degree five. For example\nuse inverse linear coefficient 1.1, higher coefficients bounded\nby 2 Cat_(j-1)(.3)^(j-1)/(.9)^(2j-1), and divide the\ncomposition coefficients by 100^j. The once-made endpoint\ntransfer of S155/S159, with cold weighted low jets, then gives\n\n    u: normalized jets <=4e-6 a_x,\n    nu=tau V: normalized jets <=4e-5 a_x, tau=s/t0.\n\nThis is a finite identification of the actual tangent, not\nparameter differentiation of a moving normalizer.\n\nFor completeness finite radius exponentiation preserves this\nideal also at complex lambda. In the larger transvection\nbidisk |z|,|w|<=.1, the same inverse-s bound gives relative\ns change <.22. The analytic inverse-tau normalized jet sum\nthrough five is below 2/s, using the Cartesian radius .05\nand the geometric sum of (20/100)^j. Thus lambda V has\nnormalized high jets at most A=33(8e-5)L_c<=.214.\nIts scalar value remains below 4e-7. The finite exponential\ncoefficients through five are bounded by A(1+A)^4.\nThe tau product and logarithm in\nlog[1+tau(exp(lambda V)-1)] consequently cost less than\n.02 a_x. The scalar logarithm denominator stays above .999999.\nTogether with the seed bounds and affine orbit path this proves\n\n    |partial^alpha(delta sigma,phi)|\n              <=100 a_x j!100^j, j<=5,           (9)\n\nrelative to H2 and phi=0. The sharper values give |delta sigma|<.05,\n|phi|<.002. Background differentiated jets on the straight\ninterpolation to the product obey j!100^j, since\n100a_x<.331 and the H2 normal metric coefficients are smaller\nthan the remaining margin.\n\nOn S152's middle interval, 1.001<=t0<=40, S155's fixed\nnormal-chart orbit bounds apply. The seed radius log has\ncomplex modulus <6 on its 1/32 normal bidisk. One can check\nthis directly from z_Y^2=calB(z)/C: on the real strip\n|calB'|/C<.3, |calB''|/C<=2, and in the .02 complex strip\n|z_Y|<.5. The normal-coordinate/Jacobi recurrence with\ncomplex |R|<3 gives |Y-Y0|<.035. Since z0>=1/40, the\nrelative z change is <.75; hence |log z|<log40+log4<6.\nThe low seed radial gradient is <20.1. For j>=2 the\nnormalized seed bound is 6(.32)^j.\n\nRepeat S155's inverse-quadratic scalar transfer with radius\nendpoint bound 1e-4 and seed modulus 6. Through degree four\nthe normalized changed radius jets are <.0021. After multiplication\nby 33, the seed plus change remains below one. The orbit jets\nlikewise remain below one. The point values obey |phi|<4\nand |sigma_lambda|<4e-7 in the fixed seed normal chart.\nThus the middle coefficient bounds in section 2 apply on the\nentire complex parameter disk.\n\n## 4. Local weighted response bounds\n\nEquations (8)-(9), the factors eta_G/pi and eta_G/(4pi),\nand qbar<160000 give the following joint complex bounds:\n\n    cold: max(|W_rho|,|W_N|,eta_G|E-E_*|/(4pi))\n                                                   <1e-15 a_x,\n    middle: max(|W_rho|,|W_N|,eta_G|E|/(4pi))<1e-16.\n\nThe Weyl orbit source vanishes on phi=0 for every metric,\nso its cold comparison has no product constant. Rotational\nregularity gives W_N(0)=0 for every complex parameter.\nUse the order-five bound along the radial segment, where\na_x<=2h L_h and seed proper length<1.1chi. It gives\n\n    |W_N|<1e-11 h L_h chi\n                         <=1e-11 h L_h sqrt(chi). (10)\n\nThe fixed-chart polynomial argument establishes holomorphy\nin these weighted spaces, including the bolt modulus.\nCauchy circles of radius 32 give first bounds .032B and\nsecond bounds .002B from each complex value bound B.\n\nFor the local T in (3), the reference coefficients obey\nK q^2/B^4<1.71e-26, |pv|B^4/q^2<1, |DP|B^4/q^2<3.\nUse (5) in the cold region, (3) in the middle and (6) outside.\nIn the outer estimate use S158's proper remainder bound\n100 j!100^j Y^(4-j)L through order four. The polynomial E\nhas no undifferentiated phi. Its variation and the explicit\nvacuum exponential difference lose no more than L^2.\nOn the truncated reference jets, the remaining nonnegative\npower coefficient majorant is below 1e8(1+qbar); the\nvacuum exponential remainder is bounded by its convergent\nTaylor estimate. Normalization puts that reference remainder\nbelow 1e-15 L^2. The proper-distance and radius responses\nremain in these formulas; they are not frozen.\n\nSufficient T bounds are:\n\n| Region/weight | Complex value | First response | Second response |\n| --- | ---: | ---: | ---: |\n| cold / a_x | 1e-14 | 3.2e-16 | 2e-17 |\n| middle / 1 | 1e-15 | 3.2e-17 | 2e-18 |\n| outer / L_e^2 | 1e-12 | 3.2e-14 | 2e-15 |\n\nAll homogeneous and vacuum cancellations precede these norms.\n\n## 5. Complete source assembly and its limits\n\nApply S152 to the new Weyl cold/middle profiles, with\nsquare-root bolt column 486, d_g=3e-7 and the full product\nrules for changing geometry. Its second-response contributions\nto mass primitive, absolute mass density /BC and lapse L1 are\n\n    (8e-17, 1.1e-19, 5e-12).                    (11)\n\nAdding S155, S156, S158 and S159 separately, with their\ndistinct regional/logarithmic columns, gives for the COMPLETE\nretained Dirac-minus-reference source:\n\n| Constraint density output | Second response |\n| --- | ---: |\n| zero-datum mass primitive | 7.21e-8 |\n| absolute mass density /BC | 7.41e-11 |\n| absolute lapse density L1 | 3.61e-5 |\n\nTaylor allowances are half these values times lambda^2.\nThe cold massive allowance still dominates. These are source-map\nbounds only, not an E0 residual, inverse estimate or solution error.\n\nFor the full radius source, (3) and the now complete orbit\nprofiles give the following angular bounds:\n\n| Region and respective weights | Value | First | Second |\n| --- | ---: | ---: | ---: |\n| cold, a_x throughout | 1.7e-6 | 2.6e-10 | 4.7e-9 |\n| middle, unweighted | 2.6e-9 | 2.2e-12 | 4.7e-14 |\n| outer, L_e^2 / L_e^4 / L_e^6 | 4.7e-7 | 4.9e-11 | 3.2e-12 |\n\nThe outer source is C2 in the slightly weaker L_e^7 space,\nas in S157. No angular source spatial derivative is inferred\nfrom these parameter bounds. The radius equation remains a\nrequired equation of any eventual solution.\n\nAt the actual moving bolt the force ratio\n8piG pS/(2kappa/r_lambda)=A_rest/[2gamma t_lambda^3],\ngamma=kappa B/C>.99h. The known t_lambda derivative\nfactors are retained. With L_h<81, first/second angular-force\nresponses are below 1.1e-8 and 2e-7; the corresponding\norbit-pressure responses are below 7.1e-9 and 1.3e-7.\nThese coarse derivative bounds do not replace the much sharper\nfixed-seed forcing value, set the thermal gap, or solve its return\ncondition.\n\nThis theorem concerns one specified affine common-chart path.\nIt supplies no preservation theorem for iterates of an unknown\nsolver. The E0 operator/complete residual assembly and a usable\nfull higher-order inverse remain necessary next steps.\n\n## 6. Predeclared verification\n\nRevalidate S155-S159 and S152 receipts and exact current inputs.\nExpand the two-variable conformal action/stress/radius polynomials;\ncheck their derivative order, H powers and coefficient reserves,\nboth metric Euler variations, scalar Euler variation and Ward\nidentity. Independently reduce to proper radial jets. Check product,\nangular/reference and outer Laurent cancellations, finite chart\nmajorants, all regional/constraint budgets and moving-bolt factors.\nPreserve every run and any failed source snapshots.\n\nUse 70 digits. For radial proper-chart diagnostics take\n\n    w0=.001 y^2/2+.02 y^3,\n    phi0=-log(.41y)-.001 y^2/6-.02 y^3/4,\n    u=.001 y^3+.002 y^4(1-log y),\n    w_lambda=w0+lambda u,\n    phi_lambda=phi0-.0005lambda y^3\n                             +.003lambda y^4(1-log y).\n\nThe proper derivative is exp(-lambda u)partial_y.\nAt y=.002,.02,.06 and lambda=0,.4,1 compare the direct\nradial Euler expressions and the conformal-Cartesian formula\nafter a one-dimensional conformal-coordinate conversion.\nCompare eta-free Weyl density, null and E-minus-vacuum second\nresponses from symbolic differentiation with 64/128-node Cauchy\ncontours of radius .01 and real steps .001,.0005. Use\nabsolute tolerance 1e-6(1+|target|), refinement ratio .35,\nor floor 1e-35 when both errors are below it. Use one-sided\nsecond-order stencils at the parameter endpoints. Formula\ncomparisons have tolerance 1e-30.\n\nAlso test a regular Cartesian bolt fixture\nsigma=.02(x^2+y^2)+lambda*.003(x^2+y^2),\nphi=.01+.03(x^2+y^2)+lambda*.002(x^2+y^2).\nRequire isotropic stress at the origin, a finite nonzero angular\nproduct value and the local Ward identity. Check a manufactured\ncomplete trace/radius combination and require that omitting E_*\nfrom the cold cancellation or omitting the vacuum correlation\nleaves a detectable error.\n\nThese fixtures test local algebra and parameter calculus, not\ncontinuum determinants, a physical state, a nonlinear branch or\nstability. Uniform spatial/weighted arguments remain ordinary proofs.\n\nRemaining to-do list: E0 and complete residual assembly; general\nadmissible family and usable full inverse; coupled exterior/state,\ncharge, return and signed-source solve; opening, stability, transport,\npreparation, separate creation and full-result audit.\n"
+    },
+    {
+      "story": "S160",
+      "created_utc": "2026-10-20T13:49:31.095188+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 70,
+        "y": [
+          ".002",
+          ".02",
+          ".06"
+        ],
+        "parameters": [
+          "0",
+          ".4",
+          "1"
+        ],
+        "formula_tolerance": "1e-30",
+        "contour_nodes": [
+          64,
+          128
+        ],
+        "contour_radius": ".01",
+        "real_steps": [
+          ".001",
+          ".0005"
+        ],
+        "second_tolerance": "1e-6",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-35",
+        "endpoint_differences": "second-order one-sided within [0,1]",
+        "target": "symbolic jet parameter derivatives and independent Taylor polynomial arithmetic",
+        "fixtures_are_physical_states": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_complete_source_response.py": "9943ff5827b860b975160f47962c7ff92568f84005ee3143dfada34d447a456c",
+        "notes/comparison-path-complete-source-response.md": "59ae2e84dc310d9d97c2ef1bf8b478aff4017c6152a4af937831cc13b66b0d8d",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_complete_source_response.py": "9943ff5827b860b975160f47962c7ff92568f84005ee3143dfada34d447a456c",
+        "notes/comparison-path-complete-source-response.md": "59ae2e84dc310d9d97c2ef1bf8b478aff4017c6152a4af937831cc13b66b0d8d",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "comparison-path-interior-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-interior-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-regular-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-regular-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-recombination_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-recombination_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-lll-reference-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-lll-reference-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "two_dimensional_Ward_x",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "two_dimensional_Ward_y",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_conformal_metric_variation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_total_order_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_H_power_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_phi_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_coefficient_reserve_4",
+          "passed": true,
+          "detail": "2666/45"
+        },
+        {
+          "name": "density_total_order_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_H_power_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_phi_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_coefficient_reserve_5",
+          "passed": true,
+          "detail": "20081/45"
+        },
+        {
+          "name": "null_total_order_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_H_power_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_phi_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_coefficient_reserve_4",
+          "passed": true,
+          "detail": "1532/15"
+        },
+        {
+          "name": "null_total_order_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_H_power_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_phi_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_coefficient_reserve_5",
+          "passed": true,
+          "detail": "11606/15"
+        },
+        {
+          "name": "radius_total_order_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_H_power_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_phi_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_coefficient_reserve_4",
+          "passed": true,
+          "detail": "6703/45"
+        },
+        {
+          "name": "radius_total_order_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_H_power_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_phi_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_coefficient_reserve_5",
+          "passed": true,
+          "detail": "48664/45"
+        },
+        {
+          "name": "density_magnetic_monomial",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_magnetic_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_magnetic_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radial_orbit_Euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radial_lapse_Euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radius_Euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "uncorrelated_vacuum_pole_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_reference_regular_majorant",
+          "passed": true,
+          "detail": "1432537/9720"
+        },
+        {
+          "name": "nonzero_angular_product_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_angular_chain_rule",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_trace_centering",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "missing_angular_product_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_trace_vacuum_allocation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_cold_s_displacement_1/64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_cold_s_displacement_1/10",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_tau_jet_sum",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_gap_direction_jets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "finite_cold_radius_ideal",
+          "passed": true,
+          "detail": "175606434056922420179736831327958353/15258789062500000000000000000000000000"
+        },
+        {
+          "name": "cold_background_jet_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_exponential_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_radius_fixed_jet_2",
+          "passed": true,
+          "detail": "8328875416447368671574997655820139699398287625005999999/24413911133213866597461456874726250079999990000000000000000"
+        },
+        {
+          "name": "middle_radius_background_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_radius_fixed_jet_3",
+          "passed": true,
+          "detail": "24276624389299103504887572384551743780995944870264690861063958968776124991750001/30517303467907712185062763911536634195506110938068749887500010000000000000000000000"
+        },
+        {
+          "name": "middle_radius_background_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_radius_fixed_jet_4",
+          "passed": true,
+          "detail": "70714176942027506555893660576069276819550823383426076270556451055628348570844241493997124955062510499999/38146522524421683760089203766440844163812684550796414783793018749030625144999990000000000000000000000000000"
+        },
+        {
+          "name": "middle_radius_background_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_low_radius_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_seed_radius_log",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_relative_complex_z",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_strip_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_curvature_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_normal_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_z_speed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_value_radius_log",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_Weyl_and_radius_complex",
+          "passed": true,
+          "detail": "1.36000000075556e-17"
+        },
+        {
+          "name": "bolt_Weyl_modulus",
+          "passed": true,
+          "detail": "1.49600000001662e-13"
+        },
+        {
+          "name": "middle_Weyl_and_radius_complex",
+          "passed": true,
+          "detail": "5.44000000302222e-19"
+        },
+        {
+          "name": "cold_T_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_T_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_reference_E_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_T_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_vacuum_exponential_remainder",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_first_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_second_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_first_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_second_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_first_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_second_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "new_Weyl_second_mass",
+          "passed": true,
+          "detail": "7412312599282327/100000000000000000000000000000000"
+        },
+        {
+          "name": "new_Weyl_second_density",
+          "passed": true,
+          "detail": "501519678317612493/5000000000000000000000000000000000000"
+        },
+        {
+          "name": "new_Weyl_second_lapse",
+          "passed": true,
+          "detail": "490272730523612101/100000000000000000000000000000"
+        },
+        {
+          "name": "complete_source_second_mass",
+          "passed": true,
+          "detail": "7200441507441312599282327/100000000000000000000000000000000"
+        },
+        {
+          "name": "complete_source_second_density",
+          "passed": true,
+          "detail": "370096000507019678317612493/5000000000000000000000000000000000000"
+        },
+        {
+          "name": "complete_source_second_lapse",
+          "passed": true,
+          "detail": "3600002590372870523612101/100000000000000000000000000000"
+        },
+        {
+          "name": "complete_orbit_region_0_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_0_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_0_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_0_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_0_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_0_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_1_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_1_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_1_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_1_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_1_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_1_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_2_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_2_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_2_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_2_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_2_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_2_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_moving_bolt_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_moving_bolt_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "orbit_moving_bolt_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "orbit_moving_bolt_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_density_contour_64",
+          "passed": true,
+          "detail": "2.453757313920075119569485e-58"
+        },
+        {
+          "name": "fixture_.002_0_null_contour_64",
+          "passed": true,
+          "detail": "7.136968813463087635391779e-58"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_contour_64",
+          "passed": true,
+          "detail": "2.996939241523687259545955e-57"
+        },
+        {
+          "name": "fixture_.002_0_density_contour_128",
+          "passed": true,
+          "detail": "1.47927341515524393475461e-59"
+        },
+        {
+          "name": "fixture_.002_0_null_contour_128",
+          "passed": true,
+          "detail": "2.17539044940724700396599e-58"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.454634579393614218947178e-57"
+        },
+        {
+          "name": "fixture_.002_0_density_difference_.001",
+          "passed": true,
+          "detail": "9.066786115451894058824304e-36"
+        },
+        {
+          "name": "fixture_.002_0_density_difference_.0005",
+          "passed": true,
+          "detail": "2.266696528863059330539453e-36"
+        },
+        {
+          "name": "fixture_.002_0_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_null_difference_.001",
+          "passed": true,
+          "detail": "1.048709322238462719080021e-35"
+        },
+        {
+          "name": "fixture_.002_0_null_difference_.0005",
+          "passed": true,
+          "detail": "2.621773305596258837575104e-36"
+        },
+        {
+          "name": "fixture_.002_0_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.761488176707622846864062e-37"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.903720441769384577921986e-38"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_density_contour_64",
+          "passed": true,
+          "detail": "4.962788742006938219175385e-58"
+        },
+        {
+          "name": "fixture_.002_.4_null_contour_64",
+          "passed": true,
+          "detail": "4.21821593401428420408773e-58"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_contour_64",
+          "passed": true,
+          "detail": "1.016816308978137129936199e-56"
+        },
+        {
+          "name": "fixture_.002_.4_density_contour_128",
+          "passed": true,
+          "detail": "1.325968069293543868212405e-58"
+        },
+        {
+          "name": "fixture_.002_.4_null_contour_128",
+          "passed": true,
+          "detail": "1.231737052514797715628115e-58"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_contour_128",
+          "passed": true,
+          "detail": "3.659201262447160039214547e-57"
+        },
+        {
+          "name": "fixture_.002_.4_density_difference_.001",
+          "passed": true,
+          "detail": "8.242532832000768027737406e-37"
+        },
+        {
+          "name": "fixture_.002_.4_density_difference_.0005",
+          "passed": true,
+          "detail": "2.060633208000192019526763e-37"
+        },
+        {
+          "name": "fixture_.002_.4_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_null_difference_.001",
+          "passed": true,
+          "detail": "9.533721110987384969982228e-37"
+        },
+        {
+          "name": "fixture_.002_.4_null_difference_.0005",
+          "passed": true,
+          "detail": "2.383430277746846252105356e-37"
+        },
+        {
+          "name": "fixture_.002_.4_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.510443796919861458486427e-38"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.276109492299657664174567e-39"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_density_contour_64",
+          "passed": true,
+          "detail": "1.112014784473270512560859e-57"
+        },
+        {
+          "name": "fixture_.002_1_null_contour_64",
+          "passed": true,
+          "detail": "5.589945677778078932816659e-58"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_contour_64",
+          "passed": true,
+          "detail": "2.041163050499871175138526e-57"
+        },
+        {
+          "name": "fixture_.002_1_density_contour_128",
+          "passed": true,
+          "detail": "6.825122867596113860391878e-58"
+        },
+        {
+          "name": "fixture_.002_1_null_contour_128",
+          "passed": true,
+          "detail": "2.288003838385340063041805e-58"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_contour_128",
+          "passed": true,
+          "detail": "7.412835052207866593471754e-57"
+        },
+        {
+          "name": "fixture_.002_1_density_difference_.001",
+          "passed": true,
+          "detail": "9.066786114823927698675202e-36"
+        },
+        {
+          "name": "fixture_.002_1_density_difference_.0005",
+          "passed": true,
+          "detail": "2.266696528705896099952741e-36"
+        },
+        {
+          "name": "fixture_.002_1_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_null_difference_.001",
+          "passed": true,
+          "detail": "1.048709322163795969946514e-35"
+        },
+        {
+          "name": "fixture_.002_1_null_difference_.0005",
+          "passed": true,
+          "detail": "2.621773305409387877316565e-36"
+        },
+        {
+          "name": "fixture_.002_1_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.761488176468058382862635e-37"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.903720441169818206333372e-38"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_density_contour_64",
+          "passed": true,
+          "detail": "1.274212518092640255440461e-62"
+        },
+        {
+          "name": "fixture_.02_0_null_contour_64",
+          "passed": true,
+          "detail": "2.182348006319800379763739e-62"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_contour_64",
+          "passed": true,
+          "detail": "5.310378876333795451901908e-61"
+        },
+        {
+          "name": "fixture_.02_0_density_contour_128",
+          "passed": true,
+          "detail": "9.351373616895299749183377e-62"
+        },
+        {
+          "name": "fixture_.02_0_null_contour_128",
+          "passed": true,
+          "detail": "1.236799791149303302693835e-62"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.392095789956708662826672e-61"
+        },
+        {
+          "name": "fixture_.02_0_density_difference_.001",
+          "passed": true,
+          "detail": "1.267205785585492224523473e-27"
+        },
+        {
+          "name": "fixture_.02_0_density_difference_.0005",
+          "passed": true,
+          "detail": "3.168014464101382844390452e-28"
+        },
+        {
+          "name": "fixture_.02_0_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_null_difference_.001",
+          "passed": true,
+          "detail": "1.449226617121100866838279e-27"
+        },
+        {
+          "name": "fixture_.02_0_null_difference_.0005",
+          "passed": true,
+          "detail": "3.623066542965402366926784e-28"
+        },
+        {
+          "name": "fixture_.02_0_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.566919699823443246036642e-28"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.41729924981591356640202e-29"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_density_contour_64",
+          "passed": true,
+          "detail": "6.525913056683314787602676e-62"
+        },
+        {
+          "name": "fixture_.02_.4_null_contour_64",
+          "passed": true,
+          "detail": "1.299507132279696064854231e-62"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_contour_64",
+          "passed": true,
+          "detail": "9.650026030507571236242469e-61"
+        },
+        {
+          "name": "fixture_.02_.4_density_contour_128",
+          "passed": true,
+          "detail": "4.126424597555164854176236e-62"
+        },
+        {
+          "name": "fixture_.02_.4_null_contour_128",
+          "passed": true,
+          "detail": "9.059687560235122107714206e-63"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_contour_128",
+          "passed": true,
+          "detail": "3.922550375296153474303336e-61"
+        },
+        {
+          "name": "fixture_.02_.4_density_difference_.001",
+          "passed": true,
+          "detail": "1.152005223016010516796785e-28"
+        },
+        {
+          "name": "fixture_.02_.4_density_difference_.0005",
+          "passed": true,
+          "detail": "2.880013057540026291991567e-29"
+        },
+        {
+          "name": "fixture_.02_.4_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_null_difference_.001",
+          "passed": true,
+          "detail": "1.317478699582269465855515e-28"
+        },
+        {
+          "name": "fixture_.02_.4_null_difference_.0005",
+          "passed": true,
+          "detail": "3.293696748955673664638309e-29"
+        },
+        {
+          "name": "fixture_.02_.4_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.333563295048202605914842e-29"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "5.833908237620506514786407e-30"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_density_contour_64",
+          "passed": true,
+          "detail": "7.53152366102798187994538e-62"
+        },
+        {
+          "name": "fixture_.02_1_null_contour_64",
+          "passed": true,
+          "detail": "4.506315960037229440387639e-63"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_contour_64",
+          "passed": true,
+          "detail": "4.531457913022613419641134e-61"
+        },
+        {
+          "name": "fixture_.02_1_density_contour_128",
+          "passed": true,
+          "detail": "4.76905924403275842767338e-62"
+        },
+        {
+          "name": "fixture_.02_1_null_contour_128",
+          "passed": true,
+          "detail": "5.220731924574864234762727e-63"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_contour_128",
+          "passed": true,
+          "detail": "9.957896740835811876066523e-62"
+        },
+        {
+          "name": "fixture_.02_1_density_difference_.001",
+          "passed": true,
+          "detail": "1.267205684860731754503431e-27"
+        },
+        {
+          "name": "fixture_.02_1_density_difference_.0005",
+          "passed": true,
+          "detail": "3.168014212014177112662084e-28"
+        },
+        {
+          "name": "fixture_.02_1_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_null_difference_.001",
+          "passed": true,
+          "detail": "1.449226498104532165009548e-27"
+        },
+        {
+          "name": "fixture_.02_1_null_difference_.0005",
+          "passed": true,
+          "detail": "3.623066245098680224139315e-28"
+        },
+        {
+          "name": "fixture_.02_1_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.566919511544473785913217e-28"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.417298778603879030178397e-29"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_density_contour_64",
+          "passed": true,
+          "detail": "2.186428522595881792606259e-64"
+        },
+        {
+          "name": "fixture_.06_0_null_contour_64",
+          "passed": true,
+          "detail": "5.887944378250983989146376e-64"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_contour_64",
+          "passed": true,
+          "detail": "3.898490072118396531114163e-63"
+        },
+        {
+          "name": "fixture_.06_0_density_contour_128",
+          "passed": true,
+          "detail": "1.136623487308738968249488e-63"
+        },
+        {
+          "name": "fixture_.06_0_null_contour_128",
+          "passed": true,
+          "detail": "3.04422414513014168725949e-64"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.485520465565433837591134e-63"
+        },
+        {
+          "name": "fixture_.06_0_density_difference_.001",
+          "passed": true,
+          "detail": "1.476363536925774152356859e-23"
+        },
+        {
+          "name": "fixture_.06_0_density_difference_.0005",
+          "passed": true,
+          "detail": "3.690908847502117333904813e-24"
+        },
+        {
+          "name": "fixture_.06_0_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_null_difference_.001",
+          "passed": true,
+          "detail": "1.648677648635060612877541e-23"
+        },
+        {
+          "name": "fixture_.06_0_null_difference_.0005",
+          "passed": true,
+          "detail": "4.121694127604132870810198e-24"
+        },
+        {
+          "name": "fixture_.06_0_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "7.178980280779190231873757e-24"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "1.794745072581576297335301e-24"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_density_contour_64",
+          "passed": true,
+          "detail": "8.139892741915607425538303e-64"
+        },
+        {
+          "name": "fixture_.06_.4_null_contour_64",
+          "passed": true,
+          "detail": "1.665076582834648117176605e-64"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_contour_64",
+          "passed": true,
+          "detail": "1.37432760387029071450884e-63"
+        },
+        {
+          "name": "fixture_.06_.4_density_contour_128",
+          "passed": true,
+          "detail": "1.175781202048181541780468e-63"
+        },
+        {
+          "name": "fixture_.06_.4_null_contour_128",
+          "passed": true,
+          "detail": "1.190735883318554523640176e-64"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_contour_128",
+          "passed": true,
+          "detail": "1.650783336290443523121416e-63"
+        },
+        {
+          "name": "fixture_.06_.4_density_difference_.001",
+          "passed": true,
+          "detail": "1.342147290324142399360217e-24"
+        },
+        {
+          "name": "fixture_.06_.4_density_difference_.0005",
+          "passed": true,
+          "detail": "3.355368225810355997917691e-25"
+        },
+        {
+          "name": "fixture_.06_.4_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_null_difference_.001",
+          "passed": true,
+          "detail": "1.498796262376839300740807e-24"
+        },
+        {
+          "name": "fixture_.06_.4_null_difference_.0005",
+          "passed": true,
+          "detail": "3.746990655942098251278468e-25"
+        },
+        {
+          "name": "fixture_.06_.4_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "6.526339362417068129600555e-25"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "1.6315848406042670321867e-25"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_density_contour_64",
+          "passed": true,
+          "detail": "4.028783071716056398383823e-64"
+        },
+        {
+          "name": "fixture_.06_1_null_contour_64",
+          "passed": true,
+          "detail": "3.823139379912937918315492e-64"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_contour_64",
+          "passed": true,
+          "detail": "3.263943356178266504934942e-64"
+        },
+        {
+          "name": "fixture_.06_1_density_contour_128",
+          "passed": true,
+          "detail": "6.961783055092255825908808e-64"
+        },
+        {
+          "name": "fixture_.06_1_null_contour_128",
+          "passed": true,
+          "detail": "1.04081735612620528060806e-64"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.641342143494748456121432e-64"
+        },
+        {
+          "name": "fixture_.06_1_density_difference_.001",
+          "passed": true,
+          "detail": "1.476359740930197788588279e-23"
+        },
+        {
+          "name": "fixture_.06_1_density_difference_.0005",
+          "passed": true,
+          "detail": "3.690899347137824083835043e-24"
+        },
+        {
+          "name": "fixture_.06_1_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_null_difference_.001",
+          "passed": true,
+          "detail": "1.648673246180141963051352e-23"
+        },
+        {
+          "name": "fixture_.06_1_null_difference_.0005",
+          "passed": true,
+          "detail": "4.121683109433887306781662e-24"
+        },
+        {
+          "name": "fixture_.06_1_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "7.17896281594226568491228e-24"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "1.794740701598792794190115e-24"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_bolt_null_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_bolt_offdiagonal_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_product_orbit_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_product_angular_nonzero",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "polynomial": "density",
+          "order": 4,
+          "monomials": 72,
+          "weighted_count": "2666/45"
+        },
+        {
+          "polynomial": "density",
+          "order": 5,
+          "monomials": 172,
+          "weighted_count": "20081/45"
+        },
+        {
+          "polynomial": "null",
+          "order": 4,
+          "monomials": 64,
+          "weighted_count": "1532/15"
+        },
+        {
+          "polynomial": "null",
+          "order": 5,
+          "monomials": 168,
+          "weighted_count": "11606/15"
+        },
+        {
+          "polynomial": "radius",
+          "order": 4,
+          "monomials": 68,
+          "weighted_count": "6703/45"
+        },
+        {
+          "polynomial": "radius",
+          "order": 5,
+          "monomials": 163,
+          "weighted_count": "48664/45"
+        },
+        {
+          "new_Weyl_second_exact": [
+            "7412312599282327/100000000000000000000000000000000",
+            "501519678317612493/5000000000000000000000000000000000000",
+            "490272730523612101/100000000000000000000000000000"
+          ],
+          "complete_source_second_exact": [
+            "7200441507441312599282327/100000000000000000000000000000000",
+            "370096000507019678317612493/5000000000000000000000000000000000000",
+            "3600002590372870523612101/100000000000000000000000000000"
+          ],
+          "complete_E0_residual": false,
+          "goal_complete": false
+        },
+        {
+          "y": ".002",
+          "lambda": "0",
+          "second_responses": [
+            "0.00000000075141528496741221871830123184811278",
+            "0.00000000074748368089086082155847892976942359",
+            "7.8562148869073683717679013772487397e-15"
+          ]
+        },
+        {
+          "y": ".002",
+          "lambda": ".4",
+          "second_responses": [
+            "0.0000000007514152849227479072153929211418568",
+            "0.00000000074748368084159413913613835537184492",
+            "7.8562157472536990474830942908519327e-15"
+          ]
+        },
+        {
+          "y": ".002",
+          "lambda": "1",
+          "second_responses": [
+            "0.00000000075141528485575143996399776690197937",
+            "0.00000000074748368076769411550605963337541604",
+            "7.8562170377731949706799069726654872e-15"
+          ]
+        },
+        {
+          "y": ".02",
+          "lambda": "0",
+          "second_responses": [
+            "0.000000080819711126862973587526628399049315",
+            "0.000000075717750160975548502528464085900348",
+            "0.000000021946084135116707829830844436523004"
+          ]
+        },
+        {
+          "y": ".02",
+          "lambda": ".4",
+          "second_responses": [
+            "0.00000008081970567094009630042690673160437",
+            "0.000000075717744273799276873011528777970222",
+            "0.000000021946082893098699930870096276632163"
+          ]
+        },
+        {
+          "y": ".02",
+          "lambda": "1",
+          "second_responses": [
+            "0.000000080819697487056195091655407557807589",
+            "0.000000075717735443035343721065373030022892",
+            "0.000000021946081030071772090707184083387677"
+          ]
+        },
+        {
+          "y": ".06",
+          "lambda": "0",
+          "second_responses": [
+            "0.00000089446044844336190297243950043627463",
+            "0.00000076680940735894753848340061162787764",
+            "0.00000054670305157068166009716025009792505"
+          ]
+        },
+        {
+          "y": ".06",
+          "lambda": ".4",
+          "second_responses": [
+            "0.00000089445848405579705497302116054072553",
+            "0.00000076680736266728644782207870246521885",
+            "0.00000054670201268863142600173437836351466"
+          ]
+        },
+        {
+          "y": ".06",
+          "lambda": "1",
+          "second_responses": [
+            "0.0000008944555374792815123890328396210843",
+            "0.00000076680429563519047741201709565374735",
+            "0.00000054670045436790555664718173087721879"
+          ]
+        }
+      ],
+      "exception": null,
+      "scope": "complete retained Dirac-minus-reference source response on the specified comparison path",
+      "unresolved": [
+        "E0 and complete residual assembly",
+        "general family and full inverse",
+        "coupled solution and physical completion"
+      ],
+      "superseded_checker_source_utf8": "\"\"\"S160: complete retained Dirac/reference source on the comparison path.\"\"\"\nfrom __future__ import annotations\nfrom datetime import datetime, timezone\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport importlib.util\nimport sys\nimport traceback\nimport mpmath as mp\nimport sympy as s\n\nROOT = Path(__file__).resolve().parents[1]\n# The pinned embedded Python does not put the script directory on sys.path.\n_spec = importlib.util.spec_from_file_location(\"s158_taylor_arithmetic\", ROOT/\"checks/comparison_path_outer_recombination.py\")\n_module = importlib.util.module_from_spec(_spec)\n_spec.loader.exec_module(_module)\nJet = _module.Jet\nSTEM = \"comparison-path-complete-source-response\"\nINPUTS = [\n    \"checks/comparison_path_complete_source_response.py\",\n    \"notes/comparison-path-complete-source-response.md\",\n    \"checks/comparison_path_outer_recombination.py\",\n    *[f\"{folder}/{stem}.{ext}\" for stem in [\n        \"comparison-path-interior-response\", \"comparison-path-cold-response\",\n        \"comparison-path-outer-regular-response\", \"comparison-path-outer-recombination\",\n        \"comparison-path-lll-reference-response\", \"fixed-chart-global-constraint-transfer\"]\n      for folder, ext in [(\"notes\", \"md\"), (\"evidence\", \"json\")]],\n    \"notes/stationary-completed-metric-response-norm.md\",\n    \"notes/stationary-centered-local-response.md\",\n    \"notes/spherical-anomaly-sources.md\",\n    \"notes/stationary-centered-covariant-seed.md\",\n    \"notes/stationary-centered-exterior-source.md\",\n    \"notes/stationary-reference-cold-bolt.md\",\n    \"notes/stationary-horizon-source-defect.md\",\n]\nPROTOCOL = {\n    \"digits\": 70, \"y\": [\".002\", \".02\", \".06\"], \"parameters\": [\"0\", \".4\", \"1\"],\n    \"formula_tolerance\": \"1e-30\", \"contour_nodes\": [64, 128], \"contour_radius\": \".01\",\n    \"real_steps\": [\".001\", \".0005\"], \"second_tolerance\": \"1e-6\",\n    \"refinement_ratio\": \".35\", \"refinement_floor\": \"1e-35\",\n    \"endpoint_differences\": \"second-order one-sided within [0,1]\",\n    \"target\": \"symbolic jet parameter derivatives and independent Taylor polynomial arithmetic\",\n    \"fixtures_are_physical_states\": False,\n}\nROWS, NUMERICS = [], []\nRat = s.Rational\n\n\ndef check(name, passed, detail=\"\"):\n    assert name not in {r[\"name\"] for r in ROWS}\n    row = {\"name\": name, \"passed\": bool(passed), \"detail\": str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row), flush=True)\n    if not passed:\n        raise AssertionError(name)\n\n\ndef predecessors():\n    for stem, count in [\n        (\"comparison-path-interior-response\", 126), (\"comparison-path-cold-response\", 242),\n        (\"comparison-path-outer-regular-response\", 202), (\"comparison-path-outer-recombination\", 242),\n        (\"comparison-path-lll-reference-response\", 376), (\"fixed-chart-global-constraint-transfer\", 99)]:\n        run = json.loads((ROOT/\"evidence\"/(stem+\".json\")).read_text())[\"runs\"][-1]\n        check(stem+\"_receipt\", run[\"status\"] == \"passed\" and len(run[\"checks\"]) == count\n              and len({r[\"name\"] for r in run[\"checks\"]}) == count and all(r[\"passed\"] for r in run[\"checks\"]))\n        check(stem+\"_current_inputs\", run[\"unchanged_inputs\"]\n              and run[\"input_sha256_before\"] == run[\"input_sha256_after\"]\n              and all(sha256((ROOT/p).read_bytes()).hexdigest() == h\n                      for p, h in run[\"input_sha256_after\"].items()))\n\n\ndef lagrangian(R, U, V, phi, e, qm):\n    aa, cc, bb = Rat(11, 360), Rat(1, 20), Rat(1, 30)\n    dd = bb-2*aa/3\n    L = (phi*(cc*(R+2*e)**2/3-4*aa*e*R-qm/3)+bb*R*U-3*bb*U**2\n         +(bb*R+(2*bb-4*aa)*e)*V-6*dd*U*V-3*dd*V**2)\n    P = phi*(2*cc*(R+2*e)/3-4*aa*e)+bb*(U+V)\n    Q = bb*R-6*bb*U-6*dd*V\n    Z = bb*R+(2*bb-4*aa)*e-6*dd*(U+V)\n    Lphi = cc*(R+2*e)**2/3-4*aa*e*R-qm/3\n    return [s.expand(f) for f in (L, P, Q, Z, Lphi)]\n\n\ndef cartesian_polynomials():\n    H, e, qm = s.symbols(\"H e qm\")\n    indices = [(j-k, k) for j in range(6) for k in range(j+1)]\n    sig = {a: s.Symbol(f\"s{a[0]}{a[1]}\") for a in indices}\n    phi = {a: s.Symbol(f\"p{a[0]}{a[1]}\") for a in indices}\n    directions = []\n    for axis in range(2):\n        mapping = {H: -2*H*sig[(1, 0) if axis == 0 else (0, 1)]}\n        for jets in (sig, phi):\n            for (i, j), symbol in jets.items():\n                if i+j < 5:\n                    mapping[symbol] = jets[(i+1, j) if axis == 0 else (i, j+1)]\n        directions.append(mapping)\n    def D(f, axis):\n        return s.expand(sum(s.diff(f, v)*directions[axis][v]\n                            for v in f.free_symbols if v in directions[axis]))\n    R = -2*H*(sig[2, 0]+sig[0, 2])\n    U = H*(phi[2, 0]+phi[0, 2])\n    V = H*(phi[1, 0]**2+phi[0, 1]**2)\n    L, P, Q, Z, Lphi = lagrangian(R, U, V, phi[0, 0], e, qm)\n    dp, dq = [[D(f, i) for i in range(2)] for f in [P, Q]]\n    boxp = H*(D(dp[0], 0)+D(dp[1], 1))\n    hxx = D(dp[0], 0)-sig[1, 0]*dp[0]+sig[0, 1]*dp[1]\n    hyy = D(dp[1], 1)+sig[1, 0]*dp[0]-sig[0, 1]*dp[1]\n    hxy = D(dp[0], 1)-sig[0, 1]*dp[0]-sig[1, 0]*dp[1]\n    common = -L/2+R*P/2+boxp+(H*(dq[0]*phi[1, 0]+dq[1]*phi[0, 1])+Q*U)/2\n    mxx = s.expand(common-H*hxx+H*Z*phi[1, 0]**2-H*phi[1, 0]*dq[0])\n    myy = s.expand(common-H*hyy+H*Z*phi[0, 1]**2-H*phi[0, 1]*dq[1])\n    mxy = s.expand(-H*hxy+H*Z*phi[1, 0]*phi[0, 1]-H*(phi[1, 0]*dq[1]+phi[0, 1]*dq[0])/2)\n    E = s.expand(Lphi+H*(D(dq[0], 0)+D(dq[1], 1))\n                 -2*H*(D(Z, 0)*phi[1, 0]+D(Z, 1)*phi[0, 1]+Z*(phi[2, 0]+phi[0, 2])))\n    divx = D(mxx, 0)+D(mxy, 1)+sig[1, 0]*(mxx-myy)+2*sig[0, 1]*mxy\n    divy = D(mxy, 0)+D(myy, 1)+sig[0, 1]*(myy-mxx)+2*sig[1, 0]*mxy\n    check(\"two_dimensional_Ward_x\", s.expand(divx+E*phi[1, 0]/2) == 0)\n    check(\"two_dimensional_Ward_y\", s.expand(divy+E*phi[0, 1]/2) == 0)\n    check(\"independent_conformal_metric_variation\",\n          s.expand(2*L-2*R*P-2*Q*U-2*Z*V-2*boxp+2*(mxx+myy)) == 0)\n    variables = [H, e, qm, *sig.values(), *phi.values()]\n    orders = [0, 0, 0, *[sum(a) for a in indices], *[sum(a) for a in indices]]\n    phizero = variables.index(phi[0, 0])\n    for label, expr in [(\"density\", myy), (\"null\", myy-mxx), (\"radius\", E)]:\n        for degree in [4, 5]:\n            cur = s.expand(expr if degree == 4 else D(expr, 0))\n            poly = s.Poly(cur, *variables)\n            terms = poly.terms()\n            check(f\"{label}_total_order_{degree}\", all(sum(a*b for a, b in zip(ex, orders)) <= degree for ex, co in terms))\n            check(f\"{label}_H_power_{degree}\", all(ex[0] <= 2 for ex, co in terms))\n            check(f\"{label}_phi_degree_{degree}\", all(ex[phizero] <= 1 for ex, co in terms))\n            count = sum(abs(co)*max(1, sum(ex[3:])+2*ex[0]) for ex, co in terms if ex[2] == 0)\n            check(f\"{label}_coefficient_reserve_{degree}\", count < (10**4 if degree == 4 else 10**5), str(count))\n            NUMERICS.append({\"polynomial\": label, \"order\": degree, \"monomials\": len(terms), \"weighted_count\": str(count)})\n    check(\"density_magnetic_monomial\", s.diff(myy, qm) == phi[0, 0]/6)\n    check(\"null_magnetic_cancellation\", s.diff(myy-mxx, qm) == 0)\n    check(\"radius_magnetic_constant\", s.diff(E, qm) == -Rat(1, 3))\n    return H, e, qm, sig, phi, myy, s.expand(myy-mxx), E, mxy\n\n\ndef radial_polynomials():\n    w, p = s.symbols(\"w0:5\"), s.symbols(\"p0:5\")\n    e, qm = s.symbols(\"e qm\")\n    def D(f):\n        return s.expand(sum(s.diff(f, a[j])*a[j+1] for a in (w, p) for j in range(4)))\n    R = -2*(w[2]+w[1]**2)\n    U, V = p[2]+w[1]*p[1], p[1]**2\n    L, P, Q, Z, Lphi = lagrangian(R, U, V, p[0], e, qm)\n    mt = s.expand(-L/2+R*P/2+D(D(P))+(D(Q)*p[1]+Q*U)/2)\n    mr = s.expand(-L/2+R*P/2+w[1]*D(P)+Z*V-D(Q)*p[1]/2+Q*U/2)\n    E = s.expand(Lphi+D(D(Q))+w[1]*D(Q)-2*(D(Z*p[1])+w[1]*Z*p[1]))\n    adj1 = lambda f: D(f)+w[1]*f\n    adj2 = lambda f: D(D(f))+2*w[1]*D(f)+(w[2]+w[1]**2)*f\n    check(\"independent_radial_orbit_Euler\", s.expand(L-adj1(s.diff(L, w[1]))+adj2(s.diff(L, w[2]))+2*mt) == 0)\n    en = L-2*R*P-2*Q*U-2*Z*V-adj1(2*w[1]*P-p[1]*Q)\n    check(\"independent_radial_lapse_Euler\", s.expand(en+2*mr) == 0)\n    ep = s.diff(L, p[0])-adj1(s.diff(L, p[1]))+adj2(s.diff(L, p[2]))\n    check(\"independent_radius_Euler\", s.expand(ep-E) == 0)\n    y, c, f, d = s.symbols(\"y c f d\", positive=True)\n    wb, pb = e*y**2/2+c*y**3, -s.log(d*y)-e*y*y/6+f*y**3\n    sub = {a[j]: s.diff(expr, y, j) for a, expr in [(w, wb), (p, pb)] for j in range(5)}\n    outer = s.expand(E.subs(sub))\n    expected = {-4: -Rat(11, 15), -3: 0, -2: 22*e/45, -1: 11*c/15}\n    for k, val in expected.items():\n        check(f\"radius_Laurent_{k}\", s.simplify(outer.coeff(y, k)-val) == 0)\n    vacuum = -Rat(11, 15)/y**4*s.exp(-2*e*y*y/3+4*f*y**3)\n    vp = s.series(vacuum, y, 0, 1).removeO().expand()\n    for k in [-4, -3, -2, -1]:\n        check(f\"correlated_vacuum_cancellation_{k}\", s.simplify((outer-vp).coeff(y, k).subs(f, -c/4)) == 0)\n    mismatch = s.symbols(\"mismatch\")\n    check(\"uncorrelated_vacuum_pole_detected\",\n          s.simplify((outer-vp).coeff(y, -1).subs(f, -c/4+mismatch)-44*mismatch/15) == 0)\n    regular = s.expand(outer.subs(f, -c/4)-sum(v*y**k for k, v in expected.items()))\n    poly = s.Poly(regular, y, c, e, qm)\n    count = sum(abs(co)*2**ex[1] for ex, co in poly.terms())\n    check(\"radius_reference_regular_majorant\", count < 10**8, str(count))\n    Eproduct = lagrangian(-2, 0, 0, 0, e, qm)[4]\n    check(\"nonzero_angular_product_value\", s.expand(Eproduct-((1+e**2)/15+e/9-qm/3)) == 0)\n    return w, p, e, qm, mt, s.expand(mt-mr), E\n\n\ndef angular_identities():\n    E, mt, mr, kE, K, pa0, pv, dp, t, Pc, Sc = s.symbols(\"E mt mr kE K pa0 pv dp t Pc Sc\")\n    pa = pa0/t**4+pv*(1-t**-4)+dp*(-t**-4+4*t**-5-3*t**-6)\n    ps = -pa0/t**4+pv*(1+t**-4)+dp*(t**-4-6*t**-5+6*t**-6)\n    rho = Pc-Sc+4*kE*mt+K*t**4*pa\n    null = 2*Pc-Sc+4*kE*(mt-mr)\n    angular = -Sc/2+kE*E+2*kE*(mt+mr)-K*t**4*ps\n    T = kE*E-K*(2*pv*t**4+dp*(-2/t+3/t**2))\n    check(\"independent_angular_chain_rule\", s.simplify(angular-rho+null/2-T) == 0)\n    estar = s.symbols(\"estar\")\n    cold = kE*(E-estar)-K*(2*pv*(t**4-1)+dp*(-2/t+3/t**2-1))\n    check(\"cold_trace_centering\", s.expand((T-cold).subs(estar, K*(2*pv+dp)/kE)) == 0)\n    check(\"missing_angular_product_detected\", (kE*estar).subs({kE: 1, estar: 2}) != 0)\n    ev = s.symbols(\"ev\")\n    check(\"outer_trace_vacuum_allocation\", s.expand((kE*(E-ev)-K*dp*(-2/t+3/t**2)-T).subs(ev, 2*K*pv*t**4/kE)) == 0)\n\n\ndef budgets():\n    X = s.symbols(\"X\")\n    H = Rat(\"1.1\")*X+sum(2*s.catalan(j-1)*Rat(\".3\")**(j-1)/Rat(\".9\")**(2*j-1)*X**j for j in range(2, 6))\n    comp = s.series(sum((100*H)**k for k in range(6)), X, 0, 6).removeO().expand()\n    for j in range(1, 6):\n        check(f\"cold_chart_composition_{j}\", comp.coeff(X, j)/100**j < 4)\n        check(f\"cold_seed_jet_{j}\", 20*Rat(\"1.28\")**j+33*Rat(\"4e-6\") < 100)\n    for radius, bound in [(Rat(1, 64), Rat(\".04\")), (Rat(\".1\"), Rat(\".22\"))]:\n        check(\"complex_cold_s_displacement_\"+str(radius), 2*(radius+radius**2/2)/(1-radius**2/4) < bound)\n    check(\"inverse_tau_jet_sum\", Rat(\"1.3\")*sum(Rat(\".2\")**j for j in range(6)) < 2)\n    A = 33*Rat(\"8e-5\")*81\n    check(\"complex_gap_direction_jets\", A < Rat(\".214\"))\n    finite_radius = 2*33*Rat(\"8e-5\")*(1+A)**4*Rat(\"1.001\")**4*Rat(\"1.00001\")\n    check(\"finite_cold_radius_ideal\", finite_radius < Rat(\".02\"), str(finite_radius))\n    check(\"cold_background_jet_guard\", 100*Rat(\".00331\")+Rat(\".01\") < 1)\n    check(\"cold_exponential_guard\", mp.exp(mp.mpf(\".2\")) < 2)\n    # S155 inverse-quadratic majorant for the radius scalar, no log Jacobian.\n    amin = Rat(\".999999\")\n    HH = Rat(\"1.000001\")*X+sum(2*s.catalan(j-1)*Rat(\"4e-6\")**(j-1)/amin**(2*j-1)*X**j for j in range(2, 5))\n    DD = Rat(\"5e-9\")+HH-X\n    transfer = (Rat(\"1e-4\")*sum((100*HH)**j for j in range(5))\n                +6*((1-160*(X+DD))**-2-(1-160*X)**-2))\n    series = s.series(transfer, X, 0, 5).removeO().expand()\n    for j in range(2, 5):\n        val = series.coeff(X, j)/100**j\n        check(f\"middle_radius_fixed_jet_{j}\", val < Rat(\".0021\"), str(val))\n        check(f\"middle_radius_background_{j}\", 6*Rat(\".32\")**j+33*Rat(\".0021\") < 1)\n    check(\"middle_low_radius_gradient\", Rat(\"20.1\")+33*Rat(\"6.3e-6\") < 100)\n    check(\"middle_complex_seed_radius_log\", mp.log(40)+mp.log(4) < 6)\n    check(\"middle_relative_complex_z\", Rat(\".5\")*Rat(\".035\")*40 < Rat(\".75\"))\n    check(\"middle_complex_strip_derivative\", Rat(\".3\")+2*Rat(\".02\")+17*Rat(\".02\")**2/2+13*Rat(\".02\")**3/6 < Rat(\".4\"))\n    check(\"middle_complex_curvature_guard\", 2+17*Rat(\".02\")+13*Rat(\".02\")**2/2 < 3)\n    check(\"middle_normal_coordinate_margin\", Rat(1, 32)/(1-3*Rat(1, 32)**2) < Rat(\".035\"))\n    check(\"middle_complex_z_speed\", Rat(\".2\")+Rat(\".4\")*Rat(\".02\") < Rat(\".5\")**2)\n    check(\"middle_value_radius_log\", mp.log(40)+mp.mpf(\"4e-7\") < 4)\n    eta, qbar = Rat(\"8.5e-33\"), 160000\n    b4 = 2*10**4*100*24*100**4\n    b5 = 2*10**5*100*120*100**5\n    cold = eta/3*(b4+qbar*100/6)\n    check(\"cold_Weyl_and_radius_complex\", cold < Rat(\"1e-15\"), str(cold))\n    bolt = Rat(\"2.2\")*eta/3*(b5+qbar*100*100/6)\n    check(\"bolt_Weyl_modulus\", bolt < Rat(\"1e-11\"), str(bolt))\n    mid = eta/3*(2*10**4*4*24*100**4+qbar*4/6)\n    check(\"middle_Weyl_and_radius_complex\", mid < Rat(\"1e-16\"), str(mid))\n    ref = Rat(\"1.71e-26\")\n    check(\"cold_T_budget\", Rat(\"1e-15\")+ref*(2*Rat(\"4.1\")+3*Rat(\"8.1\")) < Rat(\"1e-14\"))\n    check(\"middle_T_budget\", Rat(\"1e-16\")+ref*(2*41**4+3*(2*Rat(\"1.001\")+3*Rat(\"1.001\")**2)) < Rat(\"1e-15\"))\n    check(\"outer_reference_E_budget\", eta/12*10**8*(1+qbar) < Rat(\"1e-15\"))\n    check(\"outer_T_budget\", eta/12*b4+Rat(\"1e-15\")+ref*3*(2*Rat(\".026\")+3*Rat(\".026\")**2) < Rat(\"1e-12\"))\n    check(\"outer_vacuum_exponential_remainder\",\n          mp.mpf(11)/30*(mp.mpf(2)/3+2*mp.mpf(\".081\"))**2*mp.exp(mp.mpf(\".006\")) < 1)\n    dg = Rat(\"3e-7\")\n    B = list(map(Rat, [\"1e-15\", \"1e-11\", \"1e-16\"]))\n    N1, N2 = [[v*factor for v in B] for factor in [Rat(\".032\"), Rat(\".002\")]]\n    for i in range(3):\n        check(f\"Weyl_Cauchy_first_{i}\", B[i]/32 < N1[i])\n        check(f\"Weyl_Cauchy_second_{i}\", 2*B[i]/32**2 < N2[i])\n    mass = [Rat(\"1.003\")*c+Rat(\"4.02\")*dg*b+Rat(\"5.54\")*dg**2*a for a, b, c in zip(B, N1, N2)]\n    lapse = [Rat(\"1.006\")*c+Rat(\"10.08\")*dg*b+Rat(\"26.5\")*dg**2*a for a, b, c in zip(B, N1, N2)]\n    outs = [(46*mass[0]+279*mass[2])/2, (Rat(\".000002\")*mass[0]+mass[2])/2,\n            (13122*lapse[0]+486*lapse[1]+1300*lapse[2])/2]\n    for name, val, limit in zip([\"mass\", \"density\", \"lapse\"], outs, [\"8e-17\", \"1.1e-19\", \"5e-12\"]):\n        check(\"new_Weyl_second_\"+name, val < Rat(limit), str(val))\n    full = [Rat(\"7.2e-8\")+Rat(\"4.4e-12\")+Rat(\"1.5e-14\")+Rat(\"2.9e-19\")+outs[0],\n            Rat(\"3.2e-15\")+Rat(\"1.6e-14\")+Rat(\"7.4e-11\")+Rat(\"1.1e-21\")+outs[1],\n            Rat(\"3.6e-5\")+Rat(\"2.1e-11\")+Rat(\"1e-15\")+Rat(\"1.4e-18\")+outs[2]]\n    for name, val, limit in zip([\"mass\", \"density\", \"lapse\"], full, [\"7.21e-8\", \"7.41e-11\", \"3.61e-5\"]):\n        check(\"complete_source_second_\"+name, val < Rat(limit), str(val))\n    pairs = [[Rat(x) for x in row] for row in [\n        [\"1.11e-6\", \"1.71e-10\", \"3.11e-9\"], [\"1.71e-9\", \"1.41e-12\", \"3.11e-14\"],\n        [\"3.12e-7\", \"3.21e-11\", \"2.1e-12\"]]]\n    trace = [[Rat(x) for x in row] for row in [\n        [\"1e-14\", \"3.2e-16\", \"2e-17\"], [\"1e-15\", \"3.2e-17\", \"2e-18\"], [\"1e-12\", \"3.2e-14\", \"2e-15\"]]]\n    angular = [[\"1.7e-6\", \"2.6e-10\", \"4.7e-9\"], [\"2.6e-9\", \"2.2e-12\", \"4.7e-14\"],\n               [\"4.7e-7\", \"4.9e-11\", \"3.2e-12\"]]\n    component_rows = [\n        [[\"1.1e-6\", \"1.7e-10\", \"3.1e-9\"], [\"1e-15\", \"3.2e-17\", \"2e-18\"], [\"1e-23\", \"3.2e-25\", \"2e-26\"]],\n        [[\"1.7e-9\", \"1.4e-12\", \"3.1e-14\"], [\"1e-16\", \"3.2e-18\", \"2e-19\"], [\"1e-18\", \"3.2e-20\", \"2e-21\"]],\n        [[\"3.1e-7\", \"7e-14\", \"9.2e-14\"], [\"1e-9\", \"3.2e-11\", \"2e-12\"], [\"1e-21\", \"3.2e-23\", \"2e-24\"]],\n    ]\n    for i in range(3):\n        for j in range(3):\n            check(f\"complete_orbit_region_{i}_order_{j}\", sum(Rat(row[j]) for row in component_rows[i]) < pairs[i][j])\n            check(f\"angular_source_region_{i}_order_{j}\", Rat(3, 2)*pairs[i][j]+trace[i][j] < Rat(angular[i][j]))\n    hmax = Rat(\"1e-30\")\n    J1, J2 = 4*Rat(\"1e-8\")*hmax, 20*Rat(\"1e-16\")*hmax\n    for label, vals, limits in [\n        (\"angular\", list(map(Rat, angular[0])), [\"1.1e-8\", \"2e-7\"]),\n        (\"orbit\", pairs[0], [\"7.1e-9\", \"1.3e-7\"])]:\n        first = Rat(\".506\")*81*(Rat(\"1.000001\")*vals[1]+J1*vals[0])\n        second = Rat(\".506\")*81*(Rat(\"1.000001\")*vals[2]+2*J1*vals[1]+J2*vals[0])\n        check(label+\"_moving_bolt_first\", first < Rat(limits[0]))\n        check(label+\"_moving_bolt_second\", second < Rat(limits[1]))\n    NUMERICS.append({\"new_Weyl_second_exact\": [str(v) for v in outs],\n                     \"complete_source_second_exact\": [str(v) for v in full],\n                     \"complete_E0_residual\": False, \"goal_complete\": False})\n\n\ndef fixtures(cart, radial):\n    H, ec, qc, sig, phi, mtc, mnc, Ec, mxy = cart\n    w, p, er, qr, mtr, mnr, Er = radial\n    y, lam = s.symbols(\"y lam\", positive=True)\n    w0 = Rat(\".001\")*y*y/2+Rat(\".02\")*y**3\n    p0 = -s.log(Rat(\".41\")*y)-Rat(\".001\")*y*y/6-Rat(\".02\")*y**3/4\n    u = Rat(\".001\")*y**3+Rat(\".002\")*y**4*(1-s.log(y))\n    wf, pf = w0+lam*u, p0-Rat(\".0005\")*lam*y**3+Rat(\".003\")*lam*y**4*(1-s.log(y))\n    Dx, Dr = lambda f: s.exp(w0)*s.diff(f, y), lambda f: s.exp(-lam*u)*s.diff(f, y)\n    def jets(f, D):\n        ans = [f]\n        for _ in range(4):\n            ans.append(s.expand(D(ans[-1])))\n        return ans\n    cjets, rjets = [jets(f, Dx) for f in (wf, pf)], [jets(f, Dr) for f in (wf, pf)]\n    cv = [H, *sig.values(), *phi.values()]\n    cexpr = [s.exp(-2*wf)]\n    for family in cjets:\n        cexpr += [family[i] if j == 0 and i <= 4 else 0 for i, j in sig]\n    cfun = s.lambdify((y, lam), cexpr, \"mpmath\", cse=True)\n    cder = s.lambdify((y, lam), [[s.diff(f, lam, j)/s.factorial(j) for j in range(3)]\n                                for f in cexpr], \"mpmath\", cse=True)\n    cpoly = s.lambdify(cv, [f.subs({ec: Rat(\".001\"), qc: 4}) for f in (mtc, mnc, Ec)], \"mpmath\", cse=True)\n    rfun = s.lambdify((y, lam), rjets[0]+rjets[1], \"mpmath\", cse=True)\n    rpoly = s.lambdify((*w, *p), [f.subs({er: Rat(\".001\"), qr: 4}) for f in (mtr, mnr, Er)], \"mpmath\", cse=True)\n    phifun = s.lambdify((y, lam), pf, \"mpmath\")\n    phider = s.lambdify((y, lam), s.diff(pf, lam), \"mpmath\")\n    def value(yy, q):\n        ans = cpoly(*cfun(yy, q))\n        ans[2] += mp.mpf(11)/15*mp.mpf(\".41\")**4*mp.exp(4*phifun(yy, q))\n        return ans\n    def target(yy, q):\n        ans = cpoly(*(Jet(*v) for v in cder(yy, q)))\n        ph = Jet(phifun(yy, q), phider(yy, q))\n        ans[2] += mp.mpf(11)/15*mp.mpf(\".41\")**4*(4*ph).exp()\n        return [2*v.v[2] for v in ans]\n    def fd(fun, q, step):\n        if q == 0:\n            return (2*fun(q)-5*fun(q+step)+4*fun(q+2*step)-fun(q+3*step))/step**2\n        if q == 1:\n            return (2*fun(q)-5*fun(q-step)+4*fun(q-2*step)-fun(q-3*step))/step**2\n        return (fun(q+step)-2*fun(q)+fun(q-step))/step**2\n    for ys in PROTOCOL[\"y\"]:\n        yy = mp.mpf(ys)\n        for qs in PROTOCOL[\"parameters\"]:\n            q = mp.mpf(qs)\n            tag = f\"fixture_{ys}_{qs}\"\n            va, vb = cpoly(*cfun(yy, q)), rpoly(*rfun(yy, q))\n            for j, label in enumerate([\"density\", \"null\", \"radius\"]):\n                check(tag+\"_\"+label+\"_radial_vs_Cartesian\", abs(va[j]-vb[j]) < mp.mpf(\"1e-30\"))\n            targ = target(yy, q)\n            radius = mp.mpf(\".01\")\n            for n in PROTOCOL[\"contour_nodes\"]:\n                sums = [mp.mpc(0)]*3\n                for k in range(n):\n                    phase = mp.exp(2j*mp.pi*k/n)\n                    vals = value(yy, q+radius*phase)\n                    sums = [a+b/phase**2 for a, b in zip(sums, vals)]\n                for j, label in enumerate([\"density\", \"null\", \"radius_regular\"]):\n                    err = abs(2*sums[j]/n/radius**2-targ[j])\n                    check(tag+f\"_{label}_contour_{n}\", err < mp.mpf(\"1e-6\")*(1+abs(targ[j])), mp.nstr(err, 25))\n            for j, label in enumerate([\"density\", \"null\", \"radius_regular\"]):\n                errs = []\n                for step in PROTOCOL[\"real_steps\"]:\n                    err = abs(fd(lambda z: value(yy, z)[j], q, mp.mpf(step))-targ[j])\n                    errs.append(err)\n                    check(tag+f\"_{label}_difference_{step}\", err < mp.mpf(\"1e-6\")*(1+abs(targ[j])), mp.nstr(err, 25))\n                check(tag+f\"_{label}_refinement\", errs[1] < mp.mpf(\".35\")*errs[0] or max(errs) < mp.mpf(\"1e-35\"))\n            NUMERICS.append({\"y\": ys, \"lambda\": qs, \"second_responses\": [mp.nstr(v, 35) for v in targ]})\n    x, z = s.symbols(\"x z\")\n    r2 = x*x+z*z\n    sf, pf = Rat(\".02\")*r2+lam*Rat(\".003\")*r2, Rat(\".01\")+Rat(\".03\")*r2+lam*Rat(\".002\")*r2\n    sub = {H: 1, ec: Rat(\".001\"), qc: 4}\n    for family, expr in [(sig, sf), (phi, pf)]:\n        sub.update({var: s.diff(expr, x, i, z, j).subs({x: 0, z: 0}) for (i, j), var in family.items()})\n    check(\"Cartesian_bolt_null_zero\", s.expand(mnc.subs(sub)) == 0)\n    check(\"Cartesian_bolt_offdiagonal_zero\", s.expand(mxy.subs(sub)) == 0)\n    product_sub = {H: 1, ec: Rat(\".001\"), qc: 4}\n    sh = -s.log(1-r2/4)\n    for family, expr in [(sig, sh), (phi, s.Integer(0))]:\n        product_sub.update({var: s.diff(expr, x, i, z, j).subs({x: 0, z: 0}) for (i, j), var in family.items()})\n    check(\"Cartesian_product_orbit_zero\", mtc.subs(product_sub) == 0 and mnc.subs(product_sub) == 0)\n    check(\"Cartesian_product_angular_nonzero\", Ec.subs(product_sub) != 0)\n\n\ndef hashes():\n    return {p: sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    mp.mp.dps = 70\n    before, error = hashes(), None\n    print(json.dumps({\"event\": \"start\", \"story\": \"S160\", \"input_count\": len(before)}), flush=True)\n    try:\n        predecessors()\n        cart = cartesian_polynomials()\n        radial = radial_polynomials()\n        angular_identities()\n        budgets()\n        fixtures(cart, radial)\n    except Exception:\n        error = traceback.format_exc()\n        print(error, file=sys.stderr, flush=True)\n    after = hashes()\n    ok = error is None and before == after and all(r[\"passed\"] for r in ROWS)\n    record = {\n        \"story\": \"S160\", \"created_utc\": datetime.now(timezone.utc).isoformat(),\n        \"status\": \"passed\" if ok else \"failed\", \"python\": sys.version,\n        \"mpmath\": mp.__version__, \"sympy\": s.__version__, \"protocol\": PROTOCOL,\n        \"input_sha256_before\": before, \"input_sha256_after\": after, \"unchanged_inputs\": before == after,\n        \"checks\": ROWS, \"numerics\": NUMERICS, \"exception\": error,\n        \"scope\": \"complete retained Dirac-minus-reference source response on the specified comparison path\",\n        \"unresolved\": [\"E0 and complete residual assembly\", \"general family and full inverse\",\n                       \"coupled solution and physical completion\"],\n    }\n    if error:\n        record[\"failed_checker_source_utf8\"] = Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"] = (ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    out = ROOT/\"evidence\"/(STEM+\".json\")\n    history = json.loads(out.read_text()) if out.exists() else {\"runs\": []}\n    history[\"runs\"].append(record)\n    out.write_text(json.dumps(history, indent=2)+\"\\n\", encoding=\"utf-8\", newline=\"\\n\")\n    print(json.dumps({\"status\": record[\"status\"], \"checks\": len(ROWS), \"unchanged_inputs\": before == after}), flush=True)\n    return 0 if ok else 1\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+      "superseded_note_source_utf8": "# Complete retained source response on the comparison path\n\n2026-10-20, E003/S160 supporting S139/S074. Ordinary argument and\npredeclared verification before acceptance.\n\nThis completes the retained Dirac-minus-reference density, null and\nangular SOURCE response on the specified comparison path. It combines\nS155, S156, S158 and S159 with the remaining Weyl cold/middle stress\nand the independent local anomaly/radius allocation. It does not\ncomplete the E0 operator, a general-family source theorem, full\nhigher-order inverse, coupled solution or physical stability proof.\n\n## 1. Independent radius variation and the exact trace allocation\n\nUse the retained spherical action and chain rule in\n[the anomaly source derivation](spherical-anomaly-sources.md).\nIts underlying Weyl transgression is\n[Mazur--Mottola](https://arxiv.org/html/hep-th/0106151v1), inspected\n2026-10-20. That paper does not supply the bounds below.\nNo finite coefficient, scale, flux, state or boundary ensemble changes.\n\nUse dimensionless product-frame derivatives in A units and set\n\n    e=1/C, qbar=q^2/C^2<160000, eta_G=GC/B^2<8.5e-33,\n    phi=log(r/B), aA=11/360, cA=1/20, bA=1/30,\n    dA=bA-2aA/3,\n    R=R_product, U=Box phi, V=(grad phi)^2,\n    Q=bA R-6bA U-6dA V,\n    Z=bA R+(2bA-4aA)e-6dA(U+V),\n    E=cA(R+2e)^2/3-4aA e R-qbar/3\n                            +Box Q-2 div(Z grad phi). (1)\n\nE is the independent Weyl-field Euler derivative. It is not\nreplaced by the orbit trace. Let M_t,M_r be the mixed local\nEuler components in S158. Their normalized sources are\n\n    W_rho=eta_G M_t/pi, W_N=eta_G(M_t-M_r)/pi,\n    S_W=-eta_G(M_t+M_r)/pi,\n    A_W=eta_G E/(4pi)-S_W/2.                     (2)\n\nFor any physical source use\n\n    rho=(2G/(B^2 C))r^2 rho2,\n    N=(2G/(B^2 C))r^2(rho2+p2),\n    A=(8piG/(B^2 C))r^4 pS.\n\nThe canonical massive/LLL contribution has A_can=-S_can/2.\nThus the full Dirac-minus-reference source satisfies exactly\n\n    A_rest=rho_rest-N_rest/2+T,\n    T=eta_G E/(4pi)\n                  -K[2pv t^4+DP g(t)],\n    K=8piG B^2/C, g(t)=-2/t+3/t^2, t=r/B.        (3)\n\nIndeed the chain rule gives\nJ_X=(2G/X)exp(-2phi)(s_W-tau_hat,total), and pS=J_X/(16piG).\nAlso S_total=N_total-2rho_total and\nt^4(pA_ref+pS_ref)=2pv t^4+DP g(t). This derivation keeps\nthe independent radius source; it does not differentiate an\nuncontrolled spatial stress profile or infer the angular equation\nfrom solved orbit constraints.\n\nAt the exact product, phi=0, R=-2, and all its covariant\nderivatives vanish. The Weyl ORBIT stress is zero, but\n\n    E_*=(1+e^2)/15+e/9-qbar/3,\n    eta_G E_* /(4pi)=K(p0A+p0S)=K(2pv+DP).       (4)\n\nThe angular product value is generally nonzero. Consequently\nthe cold local allocation is exactly\n\n    T=eta_G(E-E_*)/(4pi)\n           -K[2pv(t^4-1)+DP(g(t)-1)].            (5)\n\nIt vanishes at the product before a norm is taken.\n\nAt the outer boundary use the actual proper coordinate and\ncorrelated jets from S158,\n\n    w=eY^2/2+cY^3+O_4(Y^4 L),\n    phi=-log(dY)-eY^2/6-cY^3/4+O_4(Y^4 L).\n\nSubstitution in (1) gives the negative powers\n\n    E=-11/(15Y^4)+22e/(45Y^2)+11c/(15Y)+O(L).\n\nThey are exactly those of\nE_vac=-11d^4 exp(4phi)/15. The fixed vacuum identity is\neta_G E_vac/(4pi)=2K pv t^4. Thus\n\n    T=eta_G(E-E_vac)/(4pi)-K DP g(t)              (6)\n\nis integrable in the outer squared-log profile norm.\nThere is no separate mass cubic in T. For an independent phi\ncubic f3 the 1/Y coefficient of E itself is still 11c/15;\nsubtracting its actual-radius vacuum leaves (11c+44f3)/(15Y).\nThe correlation f3=-c/4 is essential.\n\n## 2. Finite conformal jet algebra and coefficient reserves\n\nAt a fixed real observation use conformal Cartesian coordinates,\ng_product=exp(2sigma)(dx^2+dy^2). Treat H=exp(-2sigma) as\na formal coefficient with D_i H=-2H sigma_i. Then\n\n    R=-2H(sigma_xx+sigma_yy),\n    U=H(phi_xx+phi_yy), V=H(phi_x^2+phi_y^2).\n\nInsert these in the retained action L,P,Q,Z and\n\n    M_ij^mixed=-delta_ij L/2+R delta_ij P/2\n       +delta_ij Box P-H Hess_ij P\n       +H Z phi_i phi_j-H phi_(i Q_j)\n       +delta_ij[H grad Q.grad phi+QU]/2.        (7)\n\nThe Hessian uses the full conformal connection. In particular\nHess_xx P=P_xx-sigma_x P_x+sigma_y P_y and\nHess_yy P=P_yy+sigma_x P_x-sigma_y P_y.\nAt a radial observation y is the angular/time direction.\nFormula (1) is expanded in the same variables.\n\nThe resulting polynomials have total derivative order at most four,\nat most one undifferentiated phi and H power at most two.\nSeparate the algebraic magnetic monomials M_t=qbar phi/6\nand E=-qbar/3. Count absolute coefficients times\nmax(1, total field-jet degree+2 degree_H); the 2 degree_H\naccounts for varying H. For M_t, M_t-M_r and E the count\nis below 1e4. After one Cartesian derivative each analogous\ncount is below 1e5, with total derivative order at most five.\nThe checker expands the full two-variable formulas to verify\nthese finite counts; it does not assume a proper-coordinate\nformula is regular at the bolt.\n\nBackground differentiated jets are bounded by j!100^j. The\nundifferentiated phi bound is one in the cold region and four\nin the middle. Products at total derivative order four or five\nare bounded by 4!100^4 or 5!100^5. Along the cold interpolations\nbelow |H|^k<2 for k<=2. Therefore a weighted field difference\nof 100 a_x j!100^j gives regular polynomial differences\n\n    order four: 2*1e4*100*(4!100^4)a_x,\n    order five: 2*1e5*100*(5!100^5)a_x.          (8)\n\nThe magnetic terms are counted at derivative order zero/one;\nthe constant in E cancels from E-E_*.\n\n## 3. Actual cold and middle charts\n\nAll unknown spatial arguments remain real. Allow |lambda|<=33\non the original path sigma_lambda=sigma0+lambda u,\nr_lambda=B+(r0-B)exp(lambda V). Only finite jets are used.\n\nFor cold points s=t0-1<=.001, put a_x=s[1+log(.01/s)]<=.00331.\nUse a fixed H2 normal conformal chart and compare with the exact\nH2 x S2 product in that chart. The seed cold functions are analytic.\nHere are explicit margins sufficient for their weighted jets.\nIn the transvection-centered bidisk |z|,|w|<=1/64,\nthe fractional change of cosh chi is below .017. The retained\ninverse-s bound of two gives |s_complex-s0|<.04s0, within the\nquarter s-disk. The exact cold q0,D formulas give\n|sigma_seed-sigma_H2|<20a_x and |phi_seed|<3s0 there.\nChanging to Cartesian complex coordinates halves that radius.\nCauchy therefore bounds their normalized j-jets, j<=5, by\n20(1.28)^j a_x and 3(1.28)^j a_x.\n\nThe same seed normalizer and its inverse have a finite\ncomposition cost below four through degree five. For example\nuse inverse linear coefficient 1.1, higher coefficients bounded\nby 2 Cat_(j-1)(.3)^(j-1)/(.9)^(2j-1), and divide the\ncomposition coefficients by 100^j. The once-made endpoint\ntransfer of S155/S159, with cold weighted low jets, then gives\n\n    u: normalized jets <=4e-6 a_x,\n    nu=tau V: normalized jets <=4e-5 a_x, tau=s/t0.\n\nThis is a finite identification of the actual tangent, not\nparameter differentiation of a moving normalizer.\n\nFor completeness finite radius exponentiation preserves this\nideal also at complex lambda. In the larger transvection\nbidisk |z|,|w|<=.1, the same inverse-s bound gives relative\ns change <.22. The analytic inverse-tau normalized jet sum\nthrough five is below 2/s, using the Cartesian radius .05\nand the geometric sum of (20/100)^j. Thus lambda V has\nnormalized high jets at most A=33(8e-5)L_c<=.214.\nIts scalar value remains below 4e-7. The finite exponential\ncoefficients through five are bounded by A(1+A)^4.\nThe tau product and logarithm in\nlog[1+tau(exp(lambda V)-1)] consequently cost less than\n.02 a_x. The scalar logarithm denominator stays above .999999.\nTogether with the seed bounds and affine orbit path this proves\n\n    |partial^alpha(delta sigma,phi)|\n              <=100 a_x j!100^j, j<=5,           (9)\n\nrelative to H2 and phi=0. The sharper values give |delta sigma|<.05,\n|phi|<.002. Background differentiated jets on the straight\ninterpolation to the product obey j!100^j, since\n100a_x<.331 and the H2 normal metric coefficients are smaller\nthan the remaining margin.\n\nOn S152's middle interval, 1.001<=t0<=40, S155's fixed\nnormal-chart orbit bounds apply. The seed radius log has\ncomplex modulus <6 on its 1/32 normal bidisk. One can check\nthis directly from z_Y^2=calB(z)/C: on the real strip\n|calB'|/C<.3, |calB''|/C<=2, and in the .02 complex strip\n|z_Y|<.5. The normal-coordinate/Jacobi recurrence with\ncomplex |R|<3 gives |Y-Y0|<.035. Since z0>=1/40, the\nrelative z change is <.75; hence |log z|<log40+log4<6.\nThe low seed radial gradient is <20.1. For j>=2 the\nnormalized seed bound is 6(.32)^j.\n\nRepeat S155's inverse-quadratic scalar transfer with radius\nendpoint bound 1e-4 and seed modulus 6. Through degree four\nthe normalized changed radius jets are <.0021. After multiplication\nby 33, the seed plus change remains below one. The orbit jets\nlikewise remain below one. The point values obey |phi|<4\nand |sigma_lambda|<4e-7 in the fixed seed normal chart.\nThus the middle coefficient bounds in section 2 apply on the\nentire complex parameter disk.\n\n## 4. Local weighted response bounds\n\nEquations (8)-(9), the factors eta_G/pi and eta_G/(4pi),\nand qbar<160000 give the following joint complex bounds:\n\n    cold: max(|W_rho|,|W_N|,eta_G|E-E_*|/(4pi))\n                                                   <1e-15 a_x,\n    middle: max(|W_rho|,|W_N|,eta_G|E|/(4pi))<1e-16.\n\nThe Weyl orbit source vanishes on phi=0 for every metric,\nso its cold comparison has no product constant. Rotational\nregularity gives W_N(0)=0 for every complex parameter.\nUse the order-five bound along the radial segment, where\na_x<=2h L_h and seed proper length<1.1chi. It gives\n\n    |W_N|<1e-11 h L_h chi\n                         <=1e-11 h L_h sqrt(chi). (10)\n\nThe fixed-chart polynomial argument establishes holomorphy\nin these weighted spaces, including the bolt modulus.\nCauchy circles of radius 32 give first bounds .032B and\nsecond bounds .002B from each complex value bound B.\n\nFor the local T in (3), the reference coefficients obey\nK q^2/B^4<1.71e-26, |pv|B^4/q^2<1, |DP|B^4/q^2<3.\nUse (5) in the cold region, (3) in the middle and (6) outside.\nIn the outer estimate use S158's proper remainder bound\n100 j!100^j Y^(4-j)L through order four. The polynomial E\nhas no undifferentiated phi. Its variation and the explicit\nvacuum exponential difference lose no more than L^2.\nOn the truncated reference jets, the remaining nonnegative\npower coefficient majorant is below 1e8(1+qbar); the\nvacuum exponential remainder is bounded by its convergent\nTaylor estimate. Normalization puts that reference remainder\nbelow 1e-15 L^2. The proper-distance and radius responses\nremain in these formulas; they are not frozen.\n\nSufficient T bounds are:\n\n| Region/weight | Complex value | First response | Second response |\n| --- | ---: | ---: | ---: |\n| cold / a_x | 1e-14 | 3.2e-16 | 2e-17 |\n| middle / 1 | 1e-15 | 3.2e-17 | 2e-18 |\n| outer / L_e^2 | 1e-12 | 3.2e-14 | 2e-15 |\n\nAll homogeneous and vacuum cancellations precede these norms.\n\n## 5. Complete source assembly and its limits\n\nApply S152 to the new Weyl cold/middle profiles, with\nsquare-root bolt column 486, d_g=3e-7 and the full product\nrules for changing geometry. Its second-response contributions\nto mass primitive, absolute mass density /BC and lapse L1 are\n\n    (8e-17, 1.1e-19, 5e-12).                    (11)\n\nAdding S155, S156, S158 and S159 separately, with their\ndistinct regional/logarithmic columns, gives for the COMPLETE\nretained Dirac-minus-reference source:\n\n| Constraint density output | Second response |\n| --- | ---: |\n| zero-datum mass primitive | 7.21e-8 |\n| absolute mass density /BC | 7.41e-11 |\n| absolute lapse density L1 | 3.61e-5 |\n\nTaylor allowances are half these values times lambda^2.\nThe cold massive allowance still dominates. These are source-map\nbounds only, not an E0 residual, inverse estimate or solution error.\n\nFor the full radius source, (3) and the now complete orbit\nprofiles give the following angular bounds:\n\n| Region and respective weights | Value | First | Second |\n| --- | ---: | ---: | ---: |\n| cold, a_x throughout | 1.7e-6 | 2.6e-10 | 4.7e-9 |\n| middle, unweighted | 2.6e-9 | 2.2e-12 | 4.7e-14 |\n| outer, L_e^2 / L_e^4 / L_e^6 | 4.7e-7 | 4.9e-11 | 3.2e-12 |\n\nThe outer source is C2 in the slightly weaker L_e^7 space,\nas in S157. No angular source spatial derivative is inferred\nfrom these parameter bounds. The radius equation remains a\nrequired equation of any eventual solution.\n\nAt the actual moving bolt the force ratio\n8piG pS/(2kappa/r_lambda)=A_rest/[2gamma t_lambda^3],\ngamma=kappa B/C>.99h. The known t_lambda derivative\nfactors are retained. With L_h<81, first/second angular-force\nresponses are below 1.1e-8 and 2e-7; the corresponding\norbit-pressure responses are below 7.1e-9 and 1.3e-7.\nThese coarse derivative bounds do not replace the much sharper\nfixed-seed forcing value, set the thermal gap, or solve its return\ncondition.\n\nThis theorem concerns one specified affine common-chart path.\nIt supplies no preservation theorem for iterates of an unknown\nsolver. The E0 operator/complete residual assembly and a usable\nfull higher-order inverse remain necessary next steps.\n\n## 6. Predeclared verification\n\nRevalidate S155-S159 and S152 receipts and exact current inputs.\nExpand the two-variable conformal action/stress/radius polynomials;\ncheck their derivative order, H powers and coefficient reserves,\nboth metric Euler variations, scalar Euler variation and Ward\nidentity. Independently reduce to proper radial jets. Check product,\nangular/reference and outer Laurent cancellations, finite chart\nmajorants, all regional/constraint budgets and moving-bolt factors.\nPreserve every run and any failed source snapshots.\n\nUse 70 digits. For radial proper-chart diagnostics take\n\n    w0=.001 y^2/2+.02 y^3,\n    phi0=-log(.41y)-.001 y^2/6-.02 y^3/4,\n    u=.001 y^3+.002 y^4(1-log y),\n    w_lambda=w0+lambda u,\n    phi_lambda=phi0-.0005lambda y^3\n                             +.003lambda y^4(1-log y).\n\nThe proper derivative is exp(-lambda u)partial_y.\nAt y=.002,.02,.06 and lambda=0,.4,1 compare the direct\nradial Euler expressions and the conformal-Cartesian formula\nafter a one-dimensional conformal-coordinate conversion.\nCompare eta-free Weyl density, null and E-minus-vacuum second\nresponses from symbolic differentiation with 64/128-node Cauchy\ncontours of radius .01 and real steps .001,.0005. Use\nabsolute tolerance 1e-6(1+|target|), refinement ratio .35,\nor floor 1e-35 when both errors are below it. Use one-sided\nsecond-order stencils at the parameter endpoints. Formula\ncomparisons have tolerance 1e-30.\n\nAlso test a regular Cartesian bolt fixture\nsigma=.02(x^2+y^2)+lambda*.003(x^2+y^2),\nphi=.01+.03(x^2+y^2)+lambda*.002(x^2+y^2).\nRequire isotropic stress at the origin, a finite nonzero angular\nproduct value and the local Ward identity. Check a manufactured\ncomplete trace/radius combination and require that omitting E_*\nfrom the cold cancellation or omitting the vacuum correlation\nleaves a detectable error.\n\nThese fixtures test local algebra and parameter calculus, not\ncontinuum determinants, a physical state, a nonlinear branch or\nstability. Uniform spatial/weighted arguments remain ordinary proofs.\n\nRemaining to-do list: E0 and complete residual assembly; general\nadmissible family and usable full inverse; coupled exterior/state,\ncharge, return and signed-source solve; opening, stability, transport,\npreparation, separate creation and full-result audit.\n",
+      "post_run_review": "Middle-region radius exponentiation made explicit with finite nonlinear jet products; no numerical tolerance or stated source bound changed."
+    },
+    {
+      "story": "S160",
+      "created_utc": "2026-10-20T13:56:49.927957+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 70,
+        "y": [
+          ".002",
+          ".02",
+          ".06"
+        ],
+        "parameters": [
+          "0",
+          ".4",
+          "1"
+        ],
+        "formula_tolerance": "1e-30",
+        "contour_nodes": [
+          64,
+          128
+        ],
+        "contour_radius": ".01",
+        "real_steps": [
+          ".001",
+          ".0005"
+        ],
+        "second_tolerance": "1e-6",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-35",
+        "endpoint_differences": "second-order one-sided within [0,1]",
+        "target": "symbolic jet parameter derivatives and independent Taylor polynomial arithmetic",
+        "fixtures_are_physical_states": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_complete_source_response.py": "3499e90df0082577f0553db623d478613ffaccba46ff7f050d2231d599aa5659",
+        "notes/comparison-path-complete-source-response.md": "05fe5c48f3983a074f2f1c7a91b4bbb5539a815cb30b1b0bbc98c51722a555bb",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_complete_source_response.py": "3499e90df0082577f0553db623d478613ffaccba46ff7f050d2231d599aa5659",
+        "notes/comparison-path-complete-source-response.md": "05fe5c48f3983a074f2f1c7a91b4bbb5539a815cb30b1b0bbc98c51722a555bb",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "comparison-path-interior-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-interior-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-cold-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-regular-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-regular-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-recombination_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-outer-recombination_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-lll-reference-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-lll-reference-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "two_dimensional_Ward_x",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "two_dimensional_Ward_y",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_conformal_metric_variation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_total_order_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_H_power_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_phi_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_coefficient_reserve_4",
+          "passed": true,
+          "detail": "2666/45"
+        },
+        {
+          "name": "density_total_order_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_H_power_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_phi_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_coefficient_reserve_5",
+          "passed": true,
+          "detail": "20081/45"
+        },
+        {
+          "name": "null_total_order_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_H_power_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_phi_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_coefficient_reserve_4",
+          "passed": true,
+          "detail": "1532/15"
+        },
+        {
+          "name": "null_total_order_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_H_power_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_phi_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_coefficient_reserve_5",
+          "passed": true,
+          "detail": "11606/15"
+        },
+        {
+          "name": "radius_total_order_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_H_power_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_phi_degree_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_coefficient_reserve_4",
+          "passed": true,
+          "detail": "6703/45"
+        },
+        {
+          "name": "radius_total_order_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_H_power_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_phi_degree_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_coefficient_reserve_5",
+          "passed": true,
+          "detail": "48664/45"
+        },
+        {
+          "name": "density_magnetic_monomial",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "null_magnetic_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_magnetic_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radial_orbit_Euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radial_lapse_Euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radius_Euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_Laurent_-1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_vacuum_cancellation_-1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "uncorrelated_vacuum_pole_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_reference_regular_majorant",
+          "passed": true,
+          "detail": "1432537/9720"
+        },
+        {
+          "name": "nonzero_angular_product_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_angular_chain_rule",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_trace_centering",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "missing_angular_product_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_trace_vacuum_allocation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_chart_composition_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_seed_jet_5",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_cold_s_displacement_1/64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_cold_s_displacement_1/10",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_tau_jet_sum",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_gap_direction_jets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "finite_cold_radius_ideal",
+          "passed": true,
+          "detail": "175606434056922420179736831327958353/15258789062500000000000000000000000000"
+        },
+        {
+          "name": "cold_background_jet_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_exponential_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_radius_fixed_jet_2",
+          "passed": true,
+          "detail": "8328875416447368671574997655820139699398287625005999999/24413911133213866597461456874726250079999990000000000000000"
+        },
+        {
+          "name": "middle_radius_fixed_jet_3",
+          "passed": true,
+          "detail": "24276624389299103504887572384551743780995944870264690861063958968776124991750001/30517303467907712185062763911536634195506110938068749887500010000000000000000000000"
+        },
+        {
+          "name": "middle_radius_fixed_jet_4",
+          "passed": true,
+          "detail": "70714176942027506555893660576069276819550823383426076270556451055628348570844241493997124955062510499999/38146522524421683760089203766440844163812684550796414783793018749030625144999990000000000000000000000000000"
+        },
+        {
+          "name": "middle_nonlinear_radius_2",
+          "passed": true,
+          "detail": "70636622587719471448673372161283/6249995000001000000000000000000000"
+        },
+        {
+          "name": "middle_radius_background_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_nonlinear_radius_3",
+          "passed": true,
+          "detail": "24645875452589370542958704974647492824725222546027/292968398437640624981250000000000000000000000000000"
+        },
+        {
+          "name": "middle_radius_background_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_nonlinear_radius_4",
+          "passed": true,
+          "detail": "79652588788540592141872808216350925487642974461735597354024222832687/195312187500187499950000005000000000000000000000000000000000000000000"
+        },
+        {
+          "name": "middle_radius_background_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_tau_complex_ratio",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_tau_complex_displacement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_tau_bracket_strip",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_low_radius_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_seed_radius_log",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_relative_complex_z",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_strip_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_curvature_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_normal_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_complex_z_speed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_value_radius_log",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_Weyl_and_radius_complex",
+          "passed": true,
+          "detail": "1.36000000075556e-17"
+        },
+        {
+          "name": "bolt_Weyl_modulus",
+          "passed": true,
+          "detail": "1.49600000001662e-13"
+        },
+        {
+          "name": "middle_Weyl_and_radius_complex",
+          "passed": true,
+          "detail": "5.44000000302222e-19"
+        },
+        {
+          "name": "cold_T_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_T_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_reference_E_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_T_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_vacuum_exponential_remainder",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_first_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_second_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_first_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_second_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_first_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Weyl_Cauchy_second_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "new_Weyl_second_mass",
+          "passed": true,
+          "detail": "7412312599282327/100000000000000000000000000000000"
+        },
+        {
+          "name": "new_Weyl_second_density",
+          "passed": true,
+          "detail": "501519678317612493/5000000000000000000000000000000000000"
+        },
+        {
+          "name": "new_Weyl_second_lapse",
+          "passed": true,
+          "detail": "490272730523612101/100000000000000000000000000000"
+        },
+        {
+          "name": "complete_source_second_mass",
+          "passed": true,
+          "detail": "7200441507441312599282327/100000000000000000000000000000000"
+        },
+        {
+          "name": "complete_source_second_density",
+          "passed": true,
+          "detail": "370096000507019678317612493/5000000000000000000000000000000000000"
+        },
+        {
+          "name": "complete_source_second_lapse",
+          "passed": true,
+          "detail": "3600002590372870523612101/100000000000000000000000000000"
+        },
+        {
+          "name": "complete_orbit_region_0_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_0_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_0_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_0_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_0_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_0_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_1_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_1_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_1_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_1_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_1_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_1_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_2_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_2_order_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_2_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_2_order_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_orbit_region_2_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_source_region_2_order_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_moving_bolt_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_moving_bolt_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "orbit_moving_bolt_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "orbit_moving_bolt_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_density_contour_64",
+          "passed": true,
+          "detail": "2.453757313920075119569485e-58"
+        },
+        {
+          "name": "fixture_.002_0_null_contour_64",
+          "passed": true,
+          "detail": "7.136968813463087635391779e-58"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_contour_64",
+          "passed": true,
+          "detail": "2.996939241523687259545955e-57"
+        },
+        {
+          "name": "fixture_.002_0_density_contour_128",
+          "passed": true,
+          "detail": "1.47927341515524393475461e-59"
+        },
+        {
+          "name": "fixture_.002_0_null_contour_128",
+          "passed": true,
+          "detail": "2.17539044940724700396599e-58"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.454634579393614218947178e-57"
+        },
+        {
+          "name": "fixture_.002_0_density_difference_.001",
+          "passed": true,
+          "detail": "9.066786115451894058824304e-36"
+        },
+        {
+          "name": "fixture_.002_0_density_difference_.0005",
+          "passed": true,
+          "detail": "2.266696528863059330539453e-36"
+        },
+        {
+          "name": "fixture_.002_0_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_null_difference_.001",
+          "passed": true,
+          "detail": "1.048709322238462719080021e-35"
+        },
+        {
+          "name": "fixture_.002_0_null_difference_.0005",
+          "passed": true,
+          "detail": "2.621773305596258837575104e-36"
+        },
+        {
+          "name": "fixture_.002_0_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.761488176707622846864062e-37"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.903720441769384577921986e-38"
+        },
+        {
+          "name": "fixture_.002_0_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_density_contour_64",
+          "passed": true,
+          "detail": "4.962788742006938219175385e-58"
+        },
+        {
+          "name": "fixture_.002_.4_null_contour_64",
+          "passed": true,
+          "detail": "4.21821593401428420408773e-58"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_contour_64",
+          "passed": true,
+          "detail": "1.016816308978137129936199e-56"
+        },
+        {
+          "name": "fixture_.002_.4_density_contour_128",
+          "passed": true,
+          "detail": "1.325968069293543868212405e-58"
+        },
+        {
+          "name": "fixture_.002_.4_null_contour_128",
+          "passed": true,
+          "detail": "1.231737052514797715628115e-58"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_contour_128",
+          "passed": true,
+          "detail": "3.659201262447160039214547e-57"
+        },
+        {
+          "name": "fixture_.002_.4_density_difference_.001",
+          "passed": true,
+          "detail": "8.242532832000768027737406e-37"
+        },
+        {
+          "name": "fixture_.002_.4_density_difference_.0005",
+          "passed": true,
+          "detail": "2.060633208000192019526763e-37"
+        },
+        {
+          "name": "fixture_.002_.4_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_null_difference_.001",
+          "passed": true,
+          "detail": "9.533721110987384969982228e-37"
+        },
+        {
+          "name": "fixture_.002_.4_null_difference_.0005",
+          "passed": true,
+          "detail": "2.383430277746846252105356e-37"
+        },
+        {
+          "name": "fixture_.002_.4_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.510443796919861458486427e-38"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.276109492299657664174567e-39"
+        },
+        {
+          "name": "fixture_.002_.4_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_density_contour_64",
+          "passed": true,
+          "detail": "1.112014784473270512560859e-57"
+        },
+        {
+          "name": "fixture_.002_1_null_contour_64",
+          "passed": true,
+          "detail": "5.589945677778078932816659e-58"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_contour_64",
+          "passed": true,
+          "detail": "2.041163050499871175138526e-57"
+        },
+        {
+          "name": "fixture_.002_1_density_contour_128",
+          "passed": true,
+          "detail": "6.825122867596113860391878e-58"
+        },
+        {
+          "name": "fixture_.002_1_null_contour_128",
+          "passed": true,
+          "detail": "2.288003838385340063041805e-58"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_contour_128",
+          "passed": true,
+          "detail": "7.412835052207866593471754e-57"
+        },
+        {
+          "name": "fixture_.002_1_density_difference_.001",
+          "passed": true,
+          "detail": "9.066786114823927698675202e-36"
+        },
+        {
+          "name": "fixture_.002_1_density_difference_.0005",
+          "passed": true,
+          "detail": "2.266696528705896099952741e-36"
+        },
+        {
+          "name": "fixture_.002_1_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_null_difference_.001",
+          "passed": true,
+          "detail": "1.048709322163795969946514e-35"
+        },
+        {
+          "name": "fixture_.002_1_null_difference_.0005",
+          "passed": true,
+          "detail": "2.621773305409387877316565e-36"
+        },
+        {
+          "name": "fixture_.002_1_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.761488176468058382862635e-37"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.903720441169818206333372e-38"
+        },
+        {
+          "name": "fixture_.002_1_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_density_contour_64",
+          "passed": true,
+          "detail": "1.274212518092640255440461e-62"
+        },
+        {
+          "name": "fixture_.02_0_null_contour_64",
+          "passed": true,
+          "detail": "2.182348006319800379763739e-62"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_contour_64",
+          "passed": true,
+          "detail": "5.310378876333795451901908e-61"
+        },
+        {
+          "name": "fixture_.02_0_density_contour_128",
+          "passed": true,
+          "detail": "9.351373616895299749183377e-62"
+        },
+        {
+          "name": "fixture_.02_0_null_contour_128",
+          "passed": true,
+          "detail": "1.236799791149303302693835e-62"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.392095789956708662826672e-61"
+        },
+        {
+          "name": "fixture_.02_0_density_difference_.001",
+          "passed": true,
+          "detail": "1.267205785585492224523473e-27"
+        },
+        {
+          "name": "fixture_.02_0_density_difference_.0005",
+          "passed": true,
+          "detail": "3.168014464101382844390452e-28"
+        },
+        {
+          "name": "fixture_.02_0_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_null_difference_.001",
+          "passed": true,
+          "detail": "1.449226617121100866838279e-27"
+        },
+        {
+          "name": "fixture_.02_0_null_difference_.0005",
+          "passed": true,
+          "detail": "3.623066542965402366926784e-28"
+        },
+        {
+          "name": "fixture_.02_0_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.566919699823443246036642e-28"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.41729924981591356640202e-29"
+        },
+        {
+          "name": "fixture_.02_0_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_density_contour_64",
+          "passed": true,
+          "detail": "6.525913056683314787602676e-62"
+        },
+        {
+          "name": "fixture_.02_.4_null_contour_64",
+          "passed": true,
+          "detail": "1.299507132279696064854231e-62"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_contour_64",
+          "passed": true,
+          "detail": "9.650026030507571236242469e-61"
+        },
+        {
+          "name": "fixture_.02_.4_density_contour_128",
+          "passed": true,
+          "detail": "4.126424597555164854176236e-62"
+        },
+        {
+          "name": "fixture_.02_.4_null_contour_128",
+          "passed": true,
+          "detail": "9.059687560235122107714206e-63"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_contour_128",
+          "passed": true,
+          "detail": "3.922550375296153474303336e-61"
+        },
+        {
+          "name": "fixture_.02_.4_density_difference_.001",
+          "passed": true,
+          "detail": "1.152005223016010516796785e-28"
+        },
+        {
+          "name": "fixture_.02_.4_density_difference_.0005",
+          "passed": true,
+          "detail": "2.880013057540026291991567e-29"
+        },
+        {
+          "name": "fixture_.02_.4_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_null_difference_.001",
+          "passed": true,
+          "detail": "1.317478699582269465855515e-28"
+        },
+        {
+          "name": "fixture_.02_.4_null_difference_.0005",
+          "passed": true,
+          "detail": "3.293696748955673664638309e-29"
+        },
+        {
+          "name": "fixture_.02_.4_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.333563295048202605914842e-29"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "5.833908237620506514786407e-30"
+        },
+        {
+          "name": "fixture_.02_.4_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_density_contour_64",
+          "passed": true,
+          "detail": "7.53152366102798187994538e-62"
+        },
+        {
+          "name": "fixture_.02_1_null_contour_64",
+          "passed": true,
+          "detail": "4.506315960037229440387639e-63"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_contour_64",
+          "passed": true,
+          "detail": "4.531457913022613419641134e-61"
+        },
+        {
+          "name": "fixture_.02_1_density_contour_128",
+          "passed": true,
+          "detail": "4.76905924403275842767338e-62"
+        },
+        {
+          "name": "fixture_.02_1_null_contour_128",
+          "passed": true,
+          "detail": "5.220731924574864234762727e-63"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_contour_128",
+          "passed": true,
+          "detail": "9.957896740835811876066523e-62"
+        },
+        {
+          "name": "fixture_.02_1_density_difference_.001",
+          "passed": true,
+          "detail": "1.267205684860731754503431e-27"
+        },
+        {
+          "name": "fixture_.02_1_density_difference_.0005",
+          "passed": true,
+          "detail": "3.168014212014177112662084e-28"
+        },
+        {
+          "name": "fixture_.02_1_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_null_difference_.001",
+          "passed": true,
+          "detail": "1.449226498104532165009548e-27"
+        },
+        {
+          "name": "fixture_.02_1_null_difference_.0005",
+          "passed": true,
+          "detail": "3.623066245098680224139315e-28"
+        },
+        {
+          "name": "fixture_.02_1_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "2.566919511544473785913217e-28"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "6.417298778603879030178397e-29"
+        },
+        {
+          "name": "fixture_.02_1_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_density_contour_64",
+          "passed": true,
+          "detail": "2.186428522595881792606259e-64"
+        },
+        {
+          "name": "fixture_.06_0_null_contour_64",
+          "passed": true,
+          "detail": "5.887944378250983989146376e-64"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_contour_64",
+          "passed": true,
+          "detail": "3.898490072118396531114163e-63"
+        },
+        {
+          "name": "fixture_.06_0_density_contour_128",
+          "passed": true,
+          "detail": "1.136623487308738968249488e-63"
+        },
+        {
+          "name": "fixture_.06_0_null_contour_128",
+          "passed": true,
+          "detail": "3.04422414513014168725949e-64"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.485520465565433837591134e-63"
+        },
+        {
+          "name": "fixture_.06_0_density_difference_.001",
+          "passed": true,
+          "detail": "1.476363536925774152356859e-23"
+        },
+        {
+          "name": "fixture_.06_0_density_difference_.0005",
+          "passed": true,
+          "detail": "3.690908847502117333904813e-24"
+        },
+        {
+          "name": "fixture_.06_0_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_null_difference_.001",
+          "passed": true,
+          "detail": "1.648677648635060612877541e-23"
+        },
+        {
+          "name": "fixture_.06_0_null_difference_.0005",
+          "passed": true,
+          "detail": "4.121694127604132870810198e-24"
+        },
+        {
+          "name": "fixture_.06_0_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "7.178980280779190231873757e-24"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "1.794745072581576297335301e-24"
+        },
+        {
+          "name": "fixture_.06_0_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_density_contour_64",
+          "passed": true,
+          "detail": "8.139892741915607425538303e-64"
+        },
+        {
+          "name": "fixture_.06_.4_null_contour_64",
+          "passed": true,
+          "detail": "1.665076582834648117176605e-64"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_contour_64",
+          "passed": true,
+          "detail": "1.37432760387029071450884e-63"
+        },
+        {
+          "name": "fixture_.06_.4_density_contour_128",
+          "passed": true,
+          "detail": "1.175781202048181541780468e-63"
+        },
+        {
+          "name": "fixture_.06_.4_null_contour_128",
+          "passed": true,
+          "detail": "1.190735883318554523640176e-64"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_contour_128",
+          "passed": true,
+          "detail": "1.650783336290443523121416e-63"
+        },
+        {
+          "name": "fixture_.06_.4_density_difference_.001",
+          "passed": true,
+          "detail": "1.342147290324142399360217e-24"
+        },
+        {
+          "name": "fixture_.06_.4_density_difference_.0005",
+          "passed": true,
+          "detail": "3.355368225810355997917691e-25"
+        },
+        {
+          "name": "fixture_.06_.4_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_null_difference_.001",
+          "passed": true,
+          "detail": "1.498796262376839300740807e-24"
+        },
+        {
+          "name": "fixture_.06_.4_null_difference_.0005",
+          "passed": true,
+          "detail": "3.746990655942098251278468e-25"
+        },
+        {
+          "name": "fixture_.06_.4_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "6.526339362417068129600555e-25"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "1.6315848406042670321867e-25"
+        },
+        {
+          "name": "fixture_.06_.4_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_density_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_null_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_radius_radial_vs_Cartesian",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_density_contour_64",
+          "passed": true,
+          "detail": "4.028783071716056398383823e-64"
+        },
+        {
+          "name": "fixture_.06_1_null_contour_64",
+          "passed": true,
+          "detail": "3.823139379912937918315492e-64"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_contour_64",
+          "passed": true,
+          "detail": "3.263943356178266504934942e-64"
+        },
+        {
+          "name": "fixture_.06_1_density_contour_128",
+          "passed": true,
+          "detail": "6.961783055092255825908808e-64"
+        },
+        {
+          "name": "fixture_.06_1_null_contour_128",
+          "passed": true,
+          "detail": "1.04081735612620528060806e-64"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_contour_128",
+          "passed": true,
+          "detail": "5.641342143494748456121432e-64"
+        },
+        {
+          "name": "fixture_.06_1_density_difference_.001",
+          "passed": true,
+          "detail": "1.476359740930197788588279e-23"
+        },
+        {
+          "name": "fixture_.06_1_density_difference_.0005",
+          "passed": true,
+          "detail": "3.690899347137824083835043e-24"
+        },
+        {
+          "name": "fixture_.06_1_density_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_null_difference_.001",
+          "passed": true,
+          "detail": "1.648673246180141963051352e-23"
+        },
+        {
+          "name": "fixture_.06_1_null_difference_.0005",
+          "passed": true,
+          "detail": "4.121683109433887306781662e-24"
+        },
+        {
+          "name": "fixture_.06_1_null_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_difference_.001",
+          "passed": true,
+          "detail": "7.17896281594226568491228e-24"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_difference_.0005",
+          "passed": true,
+          "detail": "1.794740701598792794190115e-24"
+        },
+        {
+          "name": "fixture_.06_1_radius_regular_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_bolt_null_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_bolt_offdiagonal_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_product_orbit_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Cartesian_product_angular_nonzero",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "polynomial": "density",
+          "order": 4,
+          "monomials": 72,
+          "weighted_count": "2666/45"
+        },
+        {
+          "polynomial": "density",
+          "order": 5,
+          "monomials": 172,
+          "weighted_count": "20081/45"
+        },
+        {
+          "polynomial": "null",
+          "order": 4,
+          "monomials": 64,
+          "weighted_count": "1532/15"
+        },
+        {
+          "polynomial": "null",
+          "order": 5,
+          "monomials": 168,
+          "weighted_count": "11606/15"
+        },
+        {
+          "polynomial": "radius",
+          "order": 4,
+          "monomials": 68,
+          "weighted_count": "6703/45"
+        },
+        {
+          "polynomial": "radius",
+          "order": 5,
+          "monomials": 163,
+          "weighted_count": "48664/45"
+        },
+        {
+          "new_Weyl_second_exact": [
+            "7412312599282327/100000000000000000000000000000000",
+            "501519678317612493/5000000000000000000000000000000000000",
+            "490272730523612101/100000000000000000000000000000"
+          ],
+          "complete_source_second_exact": [
+            "7200441507441312599282327/100000000000000000000000000000000",
+            "370096000507019678317612493/5000000000000000000000000000000000000",
+            "3600002590372870523612101/100000000000000000000000000000"
+          ],
+          "complete_E0_residual": false,
+          "goal_complete": false
+        },
+        {
+          "y": ".002",
+          "lambda": "0",
+          "second_responses": [
+            "0.00000000075141528496741221871830123184811278",
+            "0.00000000074748368089086082155847892976942359",
+            "7.8562148869073683717679013772487397e-15"
+          ]
+        },
+        {
+          "y": ".002",
+          "lambda": ".4",
+          "second_responses": [
+            "0.0000000007514152849227479072153929211418568",
+            "0.00000000074748368084159413913613835537184492",
+            "7.8562157472536990474830942908519327e-15"
+          ]
+        },
+        {
+          "y": ".002",
+          "lambda": "1",
+          "second_responses": [
+            "0.00000000075141528485575143996399776690197937",
+            "0.00000000074748368076769411550605963337541604",
+            "7.8562170377731949706799069726654872e-15"
+          ]
+        },
+        {
+          "y": ".02",
+          "lambda": "0",
+          "second_responses": [
+            "0.000000080819711126862973587526628399049315",
+            "0.000000075717750160975548502528464085900348",
+            "0.000000021946084135116707829830844436523004"
+          ]
+        },
+        {
+          "y": ".02",
+          "lambda": ".4",
+          "second_responses": [
+            "0.00000008081970567094009630042690673160437",
+            "0.000000075717744273799276873011528777970222",
+            "0.000000021946082893098699930870096276632163"
+          ]
+        },
+        {
+          "y": ".02",
+          "lambda": "1",
+          "second_responses": [
+            "0.000000080819697487056195091655407557807589",
+            "0.000000075717735443035343721065373030022892",
+            "0.000000021946081030071772090707184083387677"
+          ]
+        },
+        {
+          "y": ".06",
+          "lambda": "0",
+          "second_responses": [
+            "0.00000089446044844336190297243950043627463",
+            "0.00000076680940735894753848340061162787764",
+            "0.00000054670305157068166009716025009792505"
+          ]
+        },
+        {
+          "y": ".06",
+          "lambda": ".4",
+          "second_responses": [
+            "0.00000089445848405579705497302116054072553",
+            "0.00000076680736266728644782207870246521885",
+            "0.00000054670201268863142600173437836351466"
+          ]
+        },
+        {
+          "y": ".06",
+          "lambda": "1",
+          "second_responses": [
+            "0.0000008944555374792815123890328396210843",
+            "0.00000076680429563519047741201709565374735",
+            "0.00000054670045436790555664718173087721879"
+          ]
+        }
+      ],
+      "exception": null,
+      "scope": "complete retained Dirac-minus-reference source response on the specified comparison path",
+      "unresolved": [
+        "E0 and complete residual assembly",
+        "general family and full inverse",
+        "coupled solution and physical completion"
+      ]
+    }
+  ]
+}
