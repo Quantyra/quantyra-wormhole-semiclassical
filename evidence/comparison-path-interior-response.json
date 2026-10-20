@@ -1,0 +1,775 @@
+{
+  "runs": [
+    {
+      "story": "S155",
+      "created_utc": "2026-10-20T11:47:39.738286+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 70,
+        "coordinate_frequencies": [
+          200,
+          1000,
+          4000
+        ],
+        "coordinate_points": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            ".01",
+            "-.006"
+          ],
+          [
+            ".005",
+            "-.003"
+          ]
+        ],
+        "coordinate_jet_tolerance": "1e-20",
+        "coordinate_jet_normalization": "j!100^j",
+        "pressure_backgrounds": [
+          ".3",
+          ".8"
+        ],
+        "pressure_cuts": [
+          ".1",
+          "1",
+          "4"
+        ],
+        "pressure_steps": [
+          ".001",
+          ".0005"
+        ],
+        "gauss_nodes": [
+          32,
+          64
+        ],
+        "pressure_panel_max_length": ".25",
+        "pressure_second_normalization": "1e-14",
+        "pressure_difference_tolerance": "1e-7",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-40",
+        "pressure_quadrature_tolerance": "1e-25",
+        "fixtures_are_quantum_sources": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_interior_response.py": "de7285fcf9dca8d26a09e1aeedfb337144087f5d189200274e15690768ac2194",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "evidence/divided-jet-dirac-response.json": "5a70e4e52f1853d1b012fafab043055236d00b96610dc4d03906e06bc07259aa",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/curved-remote-dirac-response.md": "36623d47971a4f1fbddfdb5cf15ea39086b9ad6610abe68b37d8285550219858"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_interior_response.py": "de7285fcf9dca8d26a09e1aeedfb337144087f5d189200274e15690768ac2194",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "evidence/divided-jet-dirac-response.json": "5a70e4e52f1853d1b012fafab043055236d00b96610dc4d03906e06bc07259aa",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/curved-remote-dirac-response.md": "36623d47971a4f1fbddfdb5cf15ea39086b9ad6610abe68b37d8285550219858"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "divided-jet-dirac-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "divided-jet-dirac-response_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_current_inputs",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_quadratic_coefficients",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_catalan_first_terms",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_chart_divided_jet_2",
+          "passed": true,
+          "detail": "493577476101892547843893767602998106456038217183354934600013/4882777343860546676718971882653875070749982000002000000000000000"
+        },
+        {
+          "name": "fixed_chart_divided_jet_3",
+          "passed": true,
+          "detail": "78681220570336420264260234523815879187710603176858481661942891488287573134624697916727/762931823765106106933764471219318066471797885798945295468753062499750000000000000000000000"
+        },
+        {
+          "name": "fixed_chart_divided_jet_4",
+          "passed": true,
+          "detail": "367474294571293544822595303239019615419894950224011371287487344352256409819913355087376692507282090918478928679/3405936105169567798071914614039024796693617923045702141730199549643917510212039732143750000000000000000000000000000"
+        },
+        {
+          "name": "fixed_chart_divided_jet_5",
+          "passed": true,
+          "detail": "40059755928921370246716534521797034208924949026990251221194442832680520690908288467827060157232194106468685811366300420694616886614424809/338657471305416211378059716388097550976450265327981651719667476498860897568401701558344048983488547585156250000000000000000000000000000000000"
+        },
+        {
+          "name": "chart_image_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_denominator",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_displacement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_linear_coordinate_norm",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_middle_cover",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "point_evaluation_disk_fits",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "smaller_cap_taylor_division_1",
+          "passed": true,
+          "detail": "808/5"
+        },
+        {
+          "name": "smaller_cap_taylor_division_2",
+          "passed": true,
+          "detail": "36928"
+        },
+        {
+          "name": "smaller_cap_taylor_division_3",
+          "passed": true,
+          "detail": "6954240"
+        },
+        {
+          "name": "smaller_cap_taylor_division_4",
+          "passed": true,
+          "detail": "1116339200"
+        },
+        {
+          "name": "actual_cap_rows_and_commutator",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "smaller_cap_complete_complex_bound",
+          "passed": true,
+          "detail": "45132161/3750000000000000000"
+        },
+        {
+          "name": "smaller_cap_first_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "smaller_cap_mixed_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_background_inside_source_ball",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_scalar_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_scalar_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_scalar_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_ward_first_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_ward_second_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_pressure_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_pressure_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_profiles_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_profiles_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "path_profiles_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_mass_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_infinity_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "middle_lapse_second",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "geometry_cross_terms_retained",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "normalizer_a_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "normalizer_c_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_log_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_endpoint_cover",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "local_low_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "capped_low_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "smaller_cap_linear_potential",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "smaller_gluing_cutoff_slope",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "smaller_gluing_proper_separation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_normalizer_200",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_200_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_200_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_200_0",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_200_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_200_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_200_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_200_1",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_200_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_200_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_200_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_200_2",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_200_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "jacobian_omission_detected_200",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_normalizer_1000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_1000_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_1000_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_1000_0",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_1000_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_1000_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_1000_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_1000_1",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_1000_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_1000_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_1000_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_1000_2",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_1000_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "jacobian_omission_detected_1000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_normalizer_4000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_4000_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_4000_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_4000_0",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_4000_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_4000_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_4000_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_4000_1",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_4000_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_inverse_4000_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_value_identity_4000_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_jets_through_five_4000_2",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_high_jet_budget_4000_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "jacobian_omission_detected_4000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.3_.1_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.3_.1_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_node_agreement_.3_.1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_difference_.3_.1",
+          "passed": true,
+          "detail": "{'normalized_target': '0.3980110368513745495341125', 'errors': ['6.41915621989e-30', '1.60478905497e-30']}"
+        },
+        {
+          "name": "pressure_difference_refinement_.3_.1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_kernel_omission_detected_.3_.1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.3_1_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.3_1_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_node_agreement_.3_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_difference_.3_1",
+          "passed": true,
+          "detail": "{'normalized_target': '0.2679979885298001307867181', 'errors': ['4.23128567195e-25', '1.05782141799e-25']}"
+        },
+        {
+          "name": "pressure_difference_refinement_.3_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_kernel_omission_detected_.3_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.3_4_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.3_4_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_node_agreement_.3_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_difference_.3_4",
+          "passed": true,
+          "detail": "{'normalized_target': '0.03262275496451914923534576', 'errors': ['2.058693114e-26', '5.146732785e-27']}"
+        },
+        {
+          "name": "pressure_difference_refinement_.3_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_kernel_omission_detected_.3_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.8_.1_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.8_.1_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_node_agreement_.8_.1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_difference_.8_.1",
+          "passed": true,
+          "detail": "{'normalized_target': '0.3980110368511797904118446', 'errors': ['6.41915621925e-30', '1.60478905481e-30']}"
+        },
+        {
+          "name": "pressure_difference_refinement_.8_.1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_kernel_omission_detected_.8_.1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.8_1_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.8_1_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_node_agreement_.8_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_difference_.8_1",
+          "passed": true,
+          "detail": "{'normalized_target': '0.2679979882477451716060042', 'errors': ['4.23128565215e-25', '1.05782141304e-25']}"
+        },
+        {
+          "name": "pressure_difference_refinement_.8_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_kernel_omission_detected_.8_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.8_4_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_quadrature_.8_4_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_node_agreement_.8_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_second_difference_.8_4",
+          "passed": true,
+          "detail": "{'normalized_target': '0.03262275495020714719099632', 'errors': ['2.05869310015e-26', '5.14673275038e-27']}"
+        },
+        {
+          "name": "pressure_difference_refinement_.8_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_kernel_omission_detected_.8_4",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "divided_jet_totals_exact": [
+            "493577476101892547843893767602998106456038217183354934600013/4882777343860546676718971882653875070749982000002000000000000000",
+            "78681220570336420264260234523815879187710603176858481661942891488287573134624697916727/762931823765106106933764471219318066471797885798945295468753062499750000000000000000000000",
+            "367474294571293544822595303239019615419894950224011371287487344352256409819913355087376692507282090918478928679/3405936105169567798071914614039024796693617923045702141730199549643917510212039732143750000000000000000000000000000",
+            "40059755928921370246716534521797034208924949026990251221194442832680520690908288467827060157232194106468685811366300420694616886614424809/338657471305416211378059716388097550976450265327981651719667476498860897568401701558344048983488547585156250000000000000000000000000000000000"
+          ],
+          "complex_K_exact": "45132161/3750000000000000000",
+          "middle_second_bounds_exact": {
+            "mass": "433770915004299/100000000000000000000000000",
+            "infinity": "1554734462381/100000000000000000000000000",
+            "lapse": "810946179017/40000000000000000000000"
+          },
+          "full_geometry_is_solution": false,
+          "general_family_preservation_proved": false
+        },
+        {
+          "pressure_background": ".3",
+          "cut": ".1",
+          "normalized_second": "0.3980110368513745495341125"
+        },
+        {
+          "pressure_background": ".3",
+          "cut": "1",
+          "normalized_second": "0.2679979885298001307867181"
+        },
+        {
+          "pressure_background": ".3",
+          "cut": "4",
+          "normalized_second": "0.03262275496451914923534576"
+        },
+        {
+          "pressure_background": ".8",
+          "cut": ".1",
+          "normalized_second": "0.3980110368511797904118446"
+        },
+        {
+          "pressure_background": ".8",
+          "cut": "1",
+          "normalized_second": "0.2679979882477451716060042"
+        },
+        {
+          "pressure_background": ".8",
+          "cut": "4",
+          "normalized_second": "0.03262275495020714719099632"
+        }
+      ],
+      "exception": null,
+      "scope": "canonical interior and middle-constraint response on retained comparison path",
+      "unresolved": [
+        "general family admissibility",
+        "cold/outer and other source mappings",
+        "full higher-order inverse and coupled solve",
+        "physical completion requirements"
+      ]
+    }
+  ]
+}
