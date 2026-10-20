@@ -1,0 +1,83 @@
+{"name": "overlap_density_normalization", "passed": true, "detail": ""}
+{"name": "overlap_cumulative_polynomial", "passed": true, "detail": ""}
+{"name": "overlap_c2_zero_extension", "passed": true, "detail": ""}
+{"name": "overlap_first_derivative_factor", "passed": true, "detail": ""}
+{"name": "overlap_second_derivative_lobes", "passed": true, "detail": ""}
+{"name": "overlap_peak_value", "passed": true, "detail": ""}
+{"name": "averaged_ward_recovery", "passed": true, "detail": ""}
+{"name": "fixed_disk_overlap_first_kernel", "passed": true, "detail": ""}
+{"name": "fixed_disk_overlap_mixed_kernel", "passed": false, "detail": ""}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\averaged_ward_matching.py", line 313, in main
+    exact_checks()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\averaged_ward_matching.py", line 69, in exact_checks
+    check("fixed_disk_overlap_mixed_kernel",s.simplify(s.diff(field,ss,tt).subs(zero)-mixed)==0)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\averaged_ward_matching.py", line 44, in check
+    raise AssertionError(name)
+AssertionError: fixed_disk_overlap_mixed_kernel
+
+{"status": "failed", "checks": 9, "unchanged_inputs": true}
+{"name": "overlap_density_normalization", "passed": true, "detail": ""}
+{"name": "overlap_cumulative_polynomial", "passed": true, "detail": ""}
+{"name": "overlap_c2_zero_extension", "passed": true, "detail": ""}
+{"name": "overlap_first_derivative_factor", "passed": true, "detail": ""}
+{"name": "overlap_second_derivative_lobes", "passed": true, "detail": ""}
+{"name": "overlap_peak_value", "passed": true, "detail": ""}
+{"name": "averaged_ward_recovery", "passed": true, "detail": ""}
+{"name": "fixed_disk_overlap_first_kernel", "passed": true, "detail": ""}
+{"name": "fixed_disk_overlap_mixed_kernel", "passed": true, "detail": ""}
+{"name": "proper_ward_factor_first", "passed": true, "detail": ""}
+{"name": "proper_ward_factor_mixed_acceleration", "passed": true, "detail": ""}
+{"name": "pressure_recovery_second_response", "passed": true, "detail": ""}
+{"name": "normalized_mass_memory_prefactor", "passed": true, "detail": ""}
+{"name": "normalized_lapse_memory_prefactor", "passed": true, "detail": ""}
+{"name": "rough_trace_local_ward", "passed": true, "detail": ""}
+{"name": "rough_trace_moving_cut_hessian_diverges", "passed": true, "detail": ""}
+{"name": "support_inside_interior_cover", "passed": true, "detail": ""}
+{"name": "density_variation_constants", "passed": true, "detail": ""}
+{"name": "overlap_kernel_response_budgets", "passed": true, "detail": "{'first': '196421/6400', 'mixed': '13631329/3200'}"}
+{"name": "overlap_pressure_moment_budgets", "passed": true, "detail": ""}
+{"name": "full_outer_trace_value_budget", "passed": true, "detail": ""}
+{"name": "full_outer_trace_first_budget", "passed": true, "detail": ""}
+{"name": "full_outer_trace_mixed_acceleration_budget", "passed": true, "detail": ""}
+{"name": "proper_ward_factor_budgets", "passed": true, "detail": ""}
+{"name": "overlap_log_weight_integral_budget", "passed": true, "detail": "0.1008252575423776078632138"}
+{"name": "outer_correction_mixed_budget", "passed": true, "detail": "3958569/1000000000"}
+{"name": "matching_pressure_mixed_budget", "passed": true, "detail": "216151/50000000"}
+{"name": "matching_mass_memory_budget", "passed": true, "detail": "110190533/160000000000"}
+{"name": "matching_lapse_memory_budget", "passed": true, "detail": "11026221/500000000000000"}
+{"name": "regular_mass_first_for_acceleration", "passed": true, "detail": "5337213/500000000000"}
+{"name": "regular_lapse_first_for_acceleration", "passed": true, "detail": "9478209699/25000000000000000000"}
+{"name": "combined_outer_component_budgets", "passed": true, "detail": ""}
+{"name": "conditional_component_taylor_budgets", "passed": true, "detail": ""}
+{"name": "averaged_matching_all_response_components_32", "passed": true, "detail": "{'recovered': ['0.7432291833265727504748911', '0.2754838029063456728281082', '0.1458724350078216559808878', '0.09934675475379145525997642'], 'direct': ['0.743229183326573557933019', '0.2754838029063459732833095', '0.1458724350078218046893927', '0.09934675475379132545624383']}"}
+{"name": "overlap_transport_omission_detected_32", "passed": true, "detail": ""}
+{"name": "outer_correction_omission_detected_32", "passed": true, "detail": ""}
+{"name": "proper_coordinate_acceleration_omission_detected_32", "passed": true, "detail": ""}
+{"name": "overlap_moment_mixed_difference_32", "passed": true, "detail": "{'target': '0.1169356374963651113722784', 'errors': ['1.149585501724691e-9', '2.873962143953896e-10']}"}
+{"name": "overlap_moment_step_refinement_32", "passed": true, "detail": ""}
+{"name": "outer_correction_mixed_difference_32", "passed": true, "detail": "{'target': '-0.001790506632309668287605387', 'errors': ['8.653264271100003e-12', '2.163316060717842e-12']}"}
+{"name": "outer_correction_step_refinement_32", "passed": true, "detail": ""}
+{"name": "recovered_pressure_mixed_difference_32", "passed": true, "detail": "{'target': '0.09934675475379145525997642', 'errors': ['1.798943457068822e-11', '4.497536275078257e-12']}"}
+{"name": "recovered_pressure_step_refinement_32", "passed": true, "detail": ""}
+{"name": "direct_pressure_mixed_difference_32", "passed": true, "detail": "{'target': '0.09934675475379132545624383', 'errors': ['1.798919764681816e-11', '4.497299351208186e-12']}"}
+{"name": "direct_pressure_step_refinement_32", "passed": true, "detail": ""}
+{"name": "independent_adaptive_base_pressure_32", "passed": true, "detail": ""}
+{"name": "averaged_matching_all_response_components_64", "passed": true, "detail": "{'recovered': ['0.7432291833265724281074211', '0.2754838029063453324507252', '0.1458724350078203339149095', '0.09934675475379088173098011'], 'direct': ['0.7432291833265713172557449', '0.2754838029063449240258222', '0.1458724350078201332434379', '0.09934675475379088432672422']}"}
+{"name": "overlap_transport_omission_detected_64", "passed": true, "detail": ""}
+{"name": "outer_correction_omission_detected_64", "passed": true, "detail": ""}
+{"name": "proper_coordinate_acceleration_omission_detected_64", "passed": true, "detail": ""}
+{"name": "overlap_moment_mixed_difference_64", "passed": true, "detail": "{'target': '0.1169356374963644175530997', 'errors': ['1.149585849843354e-9', '2.873965625140563e-10']}"}
+{"name": "overlap_moment_step_refinement_64", "passed": true, "detail": ""}
+{"name": "outer_correction_mixed_difference_64", "passed": true, "detail": "{'target': '-0.001790506632309668549676982', 'errors': ['8.65326426192075e-12', '2.163316051538587e-12']}"}
+{"name": "outer_correction_step_refinement_64", "passed": true, "detail": ""}
+{"name": "recovered_pressure_mixed_difference_64", "passed": true, "detail": "{'target': '0.09934675475379088173098011', 'errors': ['1.7989048039352e-11', '4.497149743742029e-12']}"}
+{"name": "recovered_pressure_step_refinement_64", "passed": true, "detail": ""}
+{"name": "direct_pressure_mixed_difference_64", "passed": true, "detail": "{'target': '0.09934675475379088432672422', 'errors': ['1.798919790542851e-11', '4.497299609818558e-12']}"}
+{"name": "direct_pressure_step_refinement_64", "passed": true, "detail": ""}
+{"name": "independent_adaptive_base_pressure_64", "passed": true, "detail": ""}
+{"name": "quadrature_refinement_all_mixed_maps", "passed": true, "detail": ""}
+{"name": "missing_proper_source_contract_detected", "passed": true, "detail": "['7.4386825598795399082', '23.565512936964191308', '74.534108567821633448']"}
+{"status": "passed", "checks": 61, "unchanged_inputs": true}

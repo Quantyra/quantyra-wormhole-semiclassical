@@ -1,0 +1,497 @@
+{
+  "runs": [
+    {
+      "story": "S150",
+      "created_utc": "2026-10-20T09:57:47.613333+00:00",
+      "status": "failed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "quadrature_nodes": [
+          32,
+          64
+        ],
+        "digits": 55,
+        "steps": [
+          ".001",
+          ".0005"
+        ],
+        "mixed_tolerance": "2e-6",
+        "identity_tolerance": "1e-10",
+        "refinement_ratio": ".35"
+      },
+      "input_sha256_before": {
+        "checks/averaged_ward_matching.py": "7bcfac42ca41e79d2ae53cbc71b11228bbd583dd18cc562eec665ae8a8ce8072",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6"
+      },
+      "input_sha256_after": {
+        "checks/averaged_ward_matching.py": "7bcfac42ca41e79d2ae53cbc71b11228bbd583dd18cc562eec665ae8a8ce8072",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "overlap_density_normalization",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_cumulative_polynomial",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_c2_zero_extension",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_first_derivative_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_second_derivative_lobes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_peak_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaged_ward_recovery",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_disk_overlap_first_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_disk_overlap_mixed_kernel",
+          "passed": false,
+          "detail": ""
+        }
+      ],
+      "numerics": [],
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\averaged_ward_matching.py\", line 313, in main\n    exact_checks()\n    ~~~~~~~~~~~~^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\averaged_ward_matching.py\", line 69, in exact_checks\n    check(\"fixed_disk_overlap_mixed_kernel\",s.simplify(s.diff(field,ss,tt).subs(zero)-mixed)==0)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\averaged_ward_matching.py\", line 44, in check\n    raise AssertionError(name)\nAssertionError: fixed_disk_overlap_mixed_kernel\n",
+      "scope": "averaged HH matching on a stated joint coordinate/source contract",
+      "unresolved": [
+        "global preservation of the joint contract",
+        "cold weighted response",
+        "other source sectors",
+        "actual global inverse and exterior/state solve",
+        "all physical completion gates"
+      ],
+      "failed_checker_source_utf8": "\"\"\"S150: averaged canonical pressure matching on a joint chart contract.\n\nManufactured Ward data test the map, not a physical quantum state.\nThe global coordinate/source contract is an unresolved hypothesis.\n\"\"\"\nfrom __future__ import annotations\n\nfrom datetime import datetime, timezone\nfrom fractions import Fraction as Q\nfrom hashlib import sha256\nfrom pathlib import Path\nimport importlib.util\nimport json\nimport sys\nimport traceback\n\nimport mpmath as mp\nimport numpy as np\nimport sympy as s\nfrom numpy.polynomial.legendre import leggauss\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM=\"averaged-ward-matching\"\nINPUTS=[\n    \"checks/averaged_ward_matching.py\",\"notes/averaged-ward-matching.md\",\n    \"notes/interior-pressure-and-bolt-primitive.md\",\n    \"checks/interior_pressure_and_bolt_primitive.py\",\n    \"notes/general-interior-dirac-response.md\",\n    \"notes/outer-finite-background-response.md\",\n    \"notes/outer-ward-and-constraint-transfer.md\",\n    \"notes/spatial-response-norm-audit.md\",\n]\nROWS,NUMERICS=[],[]\nPROTOCOL={\"quadrature_nodes\":[32,64],\"digits\":55,\"steps\":[\".001\",\".0005\"],\n          \"mixed_tolerance\":\"2e-6\",\"identity_tolerance\":\"1e-10\",\"refinement_ratio\":\".35\"}\n\n\ndef check(name,passed,detail=\"\"):\n    assert not any(row[\"name\"]==name for row in ROWS)\n    row={\"name\":name,\"passed\":bool(passed),\"detail\":str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row),flush=True)\n    if not row[\"passed\"]:\n        raise AssertionError(name)\n\n\ndef exact_checks():\n    z,Y=s.symbols(\"z Y\")\n    poly=140*z**3*(1-z)**3\n    Z=35*z**4-84*z**5+70*z**6-20*z**7\n    check(\"overlap_density_normalization\",s.integrate(poly,(z,0,1))==1)\n    check(\"overlap_cumulative_polynomial\",s.diff(Z,z)==s.expand(poly) and Z.subs(z,1)==1)\n    check(\"overlap_c2_zero_extension\",all(s.diff(poly,z,j).subs(z,endpoint)==0 for j in range(3) for endpoint in [0,1]))\n    check(\"overlap_first_derivative_factor\",s.simplify(s.diff(poly,z)-420*z*z*(1-z)**2*(1-2*z))==0)\n    check(\"overlap_second_derivative_lobes\",s.simplify(s.diff(poly,z,2)-840*z*(1-z)*(1-5*z+5*z*z))==0)\n    check(\"overlap_peak_value\",poly.subs(z,s.Rational(1,2))==s.Rational(35,16))\n    # (Z a^2 P)'=zeta a^2 P+Z a a' S; integrate across the overlap.\n    aa,ap,PP,SS,zz,zp=s.symbols(\"a ap P S Z zp\")\n    ward=ap/aa*(SS-2*PP)\n    check(\"averaged_ward_recovery\",s.simplify(zp*aa**2*PP+zz*(2*aa*ap*PP+aa**2*ward)-\n                                            (zp*aa**2*PP+zz*aa*ap*SS))==0)\n    ss,tt,h,k,yh,yk,yhk=s.symbols(\"ss tt h k yh yk yhk\")\n    zet=s.Function(\"zeta\")\n    field=s.exp(3*(ss*h+tt*k))*zet(Y+ss*yh+tt*yk+ss*tt*yhk)\n    zero={ss:0,tt:0}\n    first=3*h*zet(Y)+s.diff(zet(Y),Y)*yh\n    mixed=9*h*k*zet(Y)+3*s.diff(zet(Y),Y)*(h*yk+k*yh)+s.diff(zet(Y),Y,2)*yh*yk+s.diff(zet(Y),Y)*yhk\n    check(\"fixed_disk_overlap_first_kernel\",s.simplify(s.diff(field,ss).subs(zero)-first)==0)\n    check(\"fixed_disk_overlap_mixed_kernel\",s.simplify(s.diff(field,ss,tt).subs(zero)-mixed)==0)\n    j,hp,kp,jp,w=s.symbols(\"j hp kp jp w\")\n    qa=s.exp(-2*(ss*h+tt*k+ss*tt*j))*(w-ss*hp-tt*kp-ss*tt*jp)\n    check(\"proper_ward_factor_first\",s.simplify(s.diff(qa,ss).subs(zero)+2*h*w+hp)==0)\n    check(\"proper_ward_factor_mixed_acceleration\",s.simplify(s.diff(qa,ss,tt).subs(zero)-\n                (4*h*k*w+2*h*kp+2*k*hp-2*j*w-jp))==0)\n    p0,ph,pk,phk=s.symbols(\"p0 ph pk phk\")\n    ff=s.exp(-2*(ss*h+tt*k+ss*tt*j))*(p0+ss*ph+tt*pk+ss*tt*phk)\n    f_hk=s.diff(ff,ss,tt).subs(zero)\n    check(\"pressure_recovery_second_response\",s.simplify(\n          f_hk+2*h*pk+2*k*ph+(2*j-4*h*k)*p0-phk)==0)\n    G,B,C,x=s.symbols(\"G B C x\",positive=True)\n    scale=B*B*C/(2*G)\n    check(\"normalized_mass_memory_prefactor\",s.simplify(G/(B*B*x)*scale-C/(2*x))==0)\n    check(\"normalized_lapse_memory_prefactor\",s.simplify(G/(C*B*B)*scale-s.Rational(1,2))==0)\n    eps=s.symbols(\"eps\",positive=True)\n    # Local Ward fixture W=1+x, trace x_+^(1/2), P=x_+^(3/2)/(3(1+x)).\n    pp=eps**s.Rational(3,2)/(3*(1+eps))\n    check(\"rough_trace_local_ward\",s.simplify(s.diff((1+eps)*pp,eps)-s.sqrt(eps)/2)==0)\n    mixedquot=(2*eps)**s.Rational(3,2)/(12*eps**2*(1+2*eps))\n    check(\"rough_trace_moving_cut_hessian_diverges\",s.limit(mixedquot,eps,0,dir=\"+\")==s.oo)\n\n\ndef budget_checks():\n    mp.mp.dps=60\n    ya,yb,y0=Q(41,1000),Q(49,1000),Q(1,20)\n    width=yb-ya\n    tv=Q(35,8)/width\n    tv2=Q(105)/width**2\n    check(\"support_inside_interior_cover\",mp.mpf(\".041\")*mp.exp(-mp.mpf(\".001\"))>mp.mpf(\".04\"))\n    check(\"density_variation_constants\",tv==Q(4375,8) and tv2==1640625)\n    K0=Q(103,100)\n    K1=K0*(3+yb*tv)\n    K2=K0*(9+7*yb*tv+yb*yb*tv2)\n    check(\"overlap_kernel_response_budgets\",K1<31 and K2<4300,{\"first\":str(K1),\"mixed\":str(K2)})\n    p0,p1,p2=Q(6,10**10),Q(36,10**8),Q(44,10**7)\n    q0=K0*p0\n    q1=K0*p1+31*p0\n    q2=K0*p2+62*p1+4300*p0\n    check(\"overlap_pressure_moment_budgets\",q0==Q(618,10**12) and q1<Q(4,10**7) and q2<Q(3,10**5))\n    eta=Q(85,10**34)\n    cubic0=2*eta/(15*ya)\n    check(\"full_outer_trace_value_budget\",2*eta*4*10**25+cubic0<Q(7,10**7))\n    check(\"full_outer_trace_first_budget\",2*eta*2*10**25+cubic0*Q(75,1000)<Q(35,10**8))\n    check(\"full_outer_trace_mixed_acceleration_budget\",2*eta*(10**30+2*10**25)+cubic0*Q(75,1000)<Q(18,1000))\n    check(\"proper_ward_factor_budgets\",K0*Q(1,5)==Q(206,1000) and K0*140<145 and K0*(48000+140)<50000)\n    Hbound=mp.mpf(\".009\")*(1+mp.log(mp.mpf(\".041\"))**2)\n    check(\"overlap_log_weight_integral_budget\",Hbound<mp.mpf(\".102\"),mp.nstr(Hbound,25))\n    imix=Q(102,1000)*(Q(206,1000)*Q(18,1000)+290*Q(35,10**8)+50000*Q(7,10**7))\n    check(\"outer_correction_mixed_budget\",imix<Q(4,1000),str(imix))\n    pmix=K0*(Q(3,10**5)+Q(4,1000))+400*Q(37,10**8)+40200*p0\n    check(\"matching_pressure_mixed_budget\",pmix<Q(44,10000),str(pmix))\n    memM=Q(25,8)*(Q(5,100)*Q(44,10000)+2*Q(51,100)*Q(37,10**8)+Q(611,100)*p0)\n    memA=Q(1,2)*(Q(1,10**5)*Q(44,10000)+2*Q(14,10**5)*Q(37,10**8)+Q(214,10**5)*p0)\n    check(\"matching_mass_memory_budget\",memM<Q(7,10000),str(memM))\n    check(\"matching_lapse_memory_budget\",memA<Q(23,10**9),str(memA))\n    # First response estimates of S147's regular trace-forcing component.\n    r0,r1=Q(4*10**25),Q(2*10**25)\n    pp0,pp1=Q(284,100)*10**24,Q(400142,100000)*10**27\n    firstM=2*Q(42,100)*Q(5,10**32)*(y0*(pp1+pp0)+Q(899,1000)*(r1+r0))\n    firstA=16*Q(42,100)**2*eta*(Q(1,640000)*(2*pp1+8*pp0)+Q(1813,10**8)*(r1+4*r0))\n    check(\"regular_mass_first_for_acceleration\",firstM<Q(11,10**6),str(firstM))\n    check(\"regular_lapse_first_for_acceleration\",firstA<Q(4,10**10),str(firstA))\n    check(\"combined_outer_component_budgets\",\n          Q(39,1000)+Q(11,10**6)+Q(7,10000)<Q(4,100) and\n          Q(46,10**8)+Q(4,10**10)+Q(23,10**9)<Q(49,10**8))\n    check(\"conditional_component_taylor_budgets\",\n          Q(4,100)/2*Q(1,10**14)==Q(2,10**16) and\n          Q(49,10**8)/2*Q(1,10**14)==Q(245,10**23))\n    NUMERICS.append({\"moment_mixed_upper\":str(q2),\"correction_mixed_upper\":str(imix),\n                    \"pressure_mixed_upper\":str(pmix),\"mass_memory_upper\":str(memM),\"lapse_memory_upper\":str(memA),\n                    \"joint_global_contract_proved\":False})\n\n\ndef unary(x,f,fp,fpp):\n    if not isinstance(x,Jet):\n        return f(x)\n    a,b,c,d=x.v\n    return Jet(f(a),fp(a)*b,fp(a)*c,fpp(a)*b*c+fp(a)*d)\n\n\ndef ex(x):\n    return x.exp() if isinstance(x,Jet) else mp.exp(x)\n\n\ndef sh(x):\n    return unary(x,mp.sinh,mp.cosh,mp.sinh)\n\n\ndef ch(x):\n    return unary(x,mp.cosh,mp.sinh,mp.cosh)\n\n\ndef shape(x):\n    x2=x*x\n    return mp.mpf(\".03\")+x2/100, -mp.mpf(\".02\")+mp.mpf(\".002\")*x2*x2\n\n\ndef fields(x,ss,tt):\n    h,k=shape(x)\n    b=ss*h+tt*k\n    bp=ss*x/50+tt*mp.mpf(\".008\")*x*x*x\n    trace=1+x*x/5+ss*(mp.mpf(\".3\")+x*x/10)+tt*(-mp.mpf(\".2\")+mp.mpf(\".07\")*x*x*x*x)+ss*tt*(mp.mpf(\".11\")+mp.mpf(\".03\")*x*x)\n    return b,bp,trace\n\n\ndef numerical_checks():\n    mp.mp.dps=55\n    ya,yb,y0,D=map(mp.mpf,[\".041\",\".049\",\".05\",\"2\"])\n    width=yb-ya\n    snapshots=[]\n    for n in PROTOCOL[\"quadrature_nodes\"]:\n        rx,rw=leggauss(n)\n        nodes=[(mp.mpf(float(x))+1)/2 for x in rx]\n        weights=[mp.mpf(float(w))/2 for w in rw]\n        def quad(fun,lo,hi):\n            return sum((hi-lo)*wt*fun(lo+(hi-lo)*z) for z,wt in zip(nodes,weights))\n        # Small, separately chosen proper-map quadrature for the inverse solve.\n        cx,cw=leggauss(16)\n        cn=[(mp.mpf(float(x))+1)/2 for x in cx]\n        cwt=[mp.mpf(float(w))/2 for w in cw]\n        def properY(x,ss,tt):\n            return sum((D-x)*wt*mp.exp(fields(x+(D-x)*z,ss,tt)[0]) for z,wt in zip(cn,cwt))\n        def cut(Y,ss=0,tt=0):\n            return mp.findroot(lambda x:properY(x,ss,tt)-Y,(D-Y-mp.mpf(\".001\"),D-Y+mp.mpf(\".001\")))\n        def cutjet(Y,noacc=False):\n            x=D-Y\n            yh=quad(lambda v:shape(v)[0],x,D)\n            yk=quad(lambda v:shape(v)[1],x,D)\n            yhk=quad(lambda v:shape(v)[0]*shape(v)[1],x,D)\n            h,k=shape(x)\n            return Jet(x,yh,yk,0 if noacc else yhk-h*yk-k*yh)\n        def pressure(c,ss,tt):\n            bc,_,_=fields(c,ss,tt)\n            denom=ex(2*bc)*sh(c)*sh(c)\n            def kernel(z):\n                x=c*z\n                b,bp,T=fields(x,ss,tt)\n                return c*ex(2*b)*sh(x)*(ch(x)+bp*sh(x))*T/denom\n            return sum(wt*kernel(z) for z,wt in zip(nodes,weights))\n        def zeta_jet(Y):\n            z=(Y.v[0]-ya)/width\n            v=140*z**3*(1-z)**3/width\n            vp=420*z*z*(1-z)**2*(1-2*z)/width**2\n            vpp=840*z*(1-z)*(1-5*z+5*z*z)/width**3\n            return Jet(v,vp*Y.v[1],vp*Y.v[2],vpp*Y.v[1]*Y.v[2]+vp*Y.v[3])\n        def zeta(Y):\n            z=(Y-ya)/width\n            return 140*z**3*(1-z)**3/width\n        def cumulative(Y):\n            if Y>=yb:\n                return mp.mpf(1)\n            z=(Y-ya)/width\n            return 35*z**4-84*z**5+70*z**6-20*z**7\n        sj,tj=Jet(0,1,0),Jet(0,0,1)\n        def momentjet(freeze_transport=False):\n            def integrand(x):\n                yh=quad(lambda v:shape(v)[0],x,D)\n                yk=quad(lambda v:shape(v)[1],x,D)\n                yhk=quad(lambda v:shape(v)[0]*shape(v)[1],x,D)\n                Yj=Jet(D-x) if freeze_transport else Jet(D-x,yh,yk,yhk)\n                bj,_,_=fields(x,sj,tj)\n                weight=zeta_jet(Yj)*ex(3*bj)*mp.sinh(x)**2/mp.sinh(D)**2\n                return weight*pressure(x,sj,tj)\n            return quad(integrand,D-yb,D-ya)\n        def correctionjet(noacc=False):\n            def integrand(Y):\n                x=cutjet(Y,noacc)\n                b,bp,T=fields(x,sj,tj)\n                a=ex(b)*sh(x)/mp.sinh(D)\n                ay=-(bp*sh(x)+ch(x))/mp.sinh(D)\n                return cumulative(Y)*a*ay*T\n            return quad(integrand,ya,yb)+quad(integrand,yb,y0)\n        Qj,Ij=momentjet(),correctionjet()\n        c0=cutjet(y0)\n        b0,_,_=fields(c0,sj,tj)\n        a0=ex(b0)*sh(c0)/mp.sinh(D)\n        recovered=(Qj+Ij)/(a0*a0)\n        direct=pressure(c0,sj,tj)\n        tol=mp.mpf(PROTOCOL[\"identity_tolerance\"])\n        check(f\"averaged_matching_all_response_components_{n}\",\n              all(abs(a-b)<tol*(1+abs(b)) for a,b in zip(recovered.v,direct.v)),\n              {\"recovered\":[mp.nstr(v,25) for v in recovered.v],\"direct\":[mp.nstr(v,25) for v in direct.v]})\n        check(f\"overlap_transport_omission_detected_{n}\",abs(Qj.v[3]-momentjet(True).v[3])>mp.mpf(\"1e-8\"))\n        check(f\"outer_correction_omission_detected_{n}\",abs(Ij.v[0])>mp.mpf(\"1e-5\"))\n        check(f\"proper_coordinate_acceleration_omission_detected_{n}\",\n              abs(Ij.v[3]-correctionjet(True).v[3])>mp.mpf(\"1e-10\"))\n        def scalar_maps(ss,tt):\n            def moment(Y):\n                x=cut(Y,ss,tt)\n                b,_,_=fields(x,ss,tt)\n                a=mp.exp(b)*mp.sinh(x)/mp.sinh(D)\n                return zeta(Y)*a*a*pressure(x,ss,tt)\n            def correction(Y):\n                x=cut(Y,ss,tt)\n                b,bp,T=fields(x,ss,tt)\n                a=mp.exp(b)*mp.sinh(x)/mp.sinh(D)\n                ay=-(bp*mp.sinh(x)+mp.cosh(x))/mp.sinh(D)\n                return cumulative(Y)*a*ay*T\n            qv=quad(moment,ya,yb)\n            iv=quad(correction,ya,yb)+quad(correction,yb,y0)\n            x=cut(y0,ss,tt)\n            b,_,_=fields(x,ss,tt)\n            a=mp.exp(b)*mp.sinh(x)/mp.sinh(D)\n            return qv,iv,(qv+iv)/(a*a),pressure(x,ss,tt)\n        errors=[[],[],[],[]]\n        targets=[Qj.v[3],Ij.v[3],recovered.v[3],direct.v[3]]\n        for step_text in PROTOCOL[\"steps\"]:\n            step=mp.mpf(step_text)\n            vals=[scalar_maps(ss,tt) for ss,tt in [(step,step),(step,-step),(-step,step),(-step,-step)]]\n            for j in range(4):\n                observed=(vals[0][j]-vals[1][j]-vals[2][j]+vals[3][j])/(4*step**2)\n                errors[j].append(abs(observed-targets[j]))\n        for label,errs,target in zip([\"overlap_moment\",\"outer_correction\",\"recovered_pressure\",\"direct_pressure\"],errors,targets):\n            check(f\"{label}_mixed_difference_{n}\",max(errs)<mp.mpf(PROTOCOL[\"mixed_tolerance\"])*(1+abs(target)),\n                  {\"target\":mp.nstr(target,25),\"errors\":[mp.nstr(e,16) for e in errs]})\n            check(f\"{label}_step_refinement_{n}\",errs[1]<mp.mpf(PROTOCOL[\"refinement_ratio\"])*errs[0] or max(errs)<mp.mpf(\"1e-35\"))\n        # Independently adaptive base pressure integral.\n        c=D-y0\n        adaptive=mp.quad(lambda x:mp.sinh(x)*mp.cosh(x)*(1+x*x/5),[0,c/2,c])/mp.sinh(c)**2\n        check(f\"independent_adaptive_base_pressure_{n}\",abs(adaptive-direct.v[0])<tol)\n        snapshots.append(targets)\n        NUMERICS.append({\"nodes\":n,\"mixed_targets\":[mp.nstr(v,30) for v in targets],\n                         \"manufactured_ward_data_are_physical_states\":False})\n    check(\"quadrature_refinement_all_mixed_maps\",\n          all(abs(a-b)<mp.mpf(PROTOCOL[\"identity_tolerance\"])*(1+abs(b)) for a,b in zip(*snapshots)))\n    quotients=[mp.sqrt(2)/(6*mp.sqrt(eps)*(1+2*eps)) for eps in map(mp.mpf,[\".001\",\".0001\",\".00001\"])]\n    check(\"missing_proper_source_contract_detected\",all(b>3*a for a,b in zip(quotients,quotients[1:])),\n          [mp.nstr(v,20) for v in quotients])\n\n\ndef hashes():\n    return {name:sha256((ROOT/name).read_bytes()).hexdigest() for name in INPUTS}\n\n\ndef main():\n    global Jet\n    before=hashes()\n    error=None\n    try:\n        spec=importlib.util.spec_from_file_location(\"s150_pressure_input\",ROOT/\"checks\"/\"interior_pressure_and_bolt_primitive.py\")\n        dependency=importlib.util.module_from_spec(spec)\n        spec.loader.exec_module(dependency)\n        Jet=dependency.Jet\n        exact_checks()\n        budget_checks()\n        numerical_checks()\n    except Exception:\n        error=traceback.format_exc()\n        print(error,file=sys.stderr)\n    after=hashes()\n    ok=error is None and before==after and all(row[\"passed\"] for row in ROWS)\n    record={\"story\":\"S150\",\"created_utc\":datetime.now(timezone.utc).isoformat(),\"status\":\"passed\" if ok else \"failed\",\n            \"python\":sys.version,\"numpy\":np.__version__,\"sympy\":s.__version__,\"mpmath\":mp.__version__,\n            \"protocol\":PROTOCOL,\"input_sha256_before\":before,\"input_sha256_after\":after,\"unchanged_inputs\":before==after,\n            \"checks\":ROWS,\"numerics\":NUMERICS,\"exception\":error,\n            \"scope\":\"averaged HH matching on a stated joint coordinate/source contract\",\n            \"unresolved\":[\"global preservation of the joint contract\",\"cold weighted response\",\"other source sectors\",\n                          \"actual global inverse and exterior/state solve\",\"all physical completion gates\"]}\n    if error:\n        record[\"failed_checker_source_utf8\"]=Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"]=(ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    output=ROOT/\"evidence\"/f\"{STEM}.json\"\n    history=json.loads(output.read_text(encoding=\"utf-8\")) if output.exists() else {\"runs\":[]}\n    history[\"runs\"].append(record)\n    output.write_text(json.dumps(history,indent=2)+\"\\n\",encoding=\"utf-8\",newline=\"\\n\")\n    print(json.dumps({\"status\":record[\"status\"],\"checks\":len(ROWS),\"unchanged_inputs\":before==after}),flush=True)\n    return 0 if ok else 1\n\n\nif __name__==\"__main__\":\n    raise SystemExit(main())\n",
+      "failed_note_source_utf8": "# Averaged Ward matching without a pointwise cut derivative\n\n2026-10-19, E003/S150 supporting S139/S074. Ordinary argument and\nverification protocol before execution.\n\nA smooth overlap average determines the HH matching pressure at the\nouter proper cut. Its second response can be bounded using scalar\nsource values in the two coordinate descriptions, without inserting\nan estimate for S_chi into S148's pointwise chain rule. The result\nrequires an explicit common-family contract. It does not prove that\nan arbitrary raw C5 metric family satisfies that contract.\n\n## 1. Common family and units\n\nKeep B,A,C,x,d, the physical period, paired domain and common scale\nof S145-S149. Use S148's normalized canonical trace and pressure:\n\n    S=2G Theta/(B^2 C), P=2G (B^2 p_hat)/(B^2 C).\n\nOn the fixed disk set E=exp(sigma), W=E^2 sinh^2 chi,\nsigma=sigma0+b, and\n\n    Y_b(chi)=integral_chi^D0 E(t)dt,\n    a(Y_b(chi))=Omega E(chi)sinh chi,\n    Omega=kappa A/sqrt(x).\n\nOmega is fixed by the physical clock; it is not reset along a path.\nY increases inward. The same scalar pressure is used in both charts.\n\nThe following is the sufficient JOINT coordinate-family contract:\n\n1. In the fixed disk b=b0+s h+t k is affine. The background and\n   directions meet S145/S148 on the cover through seed Y0=.04,\n   with background norm at most .001 and direction norms at most U,V.\n   The global value bounds also hold. Thus\n   |P|<6e-10, |P_h|<3.6e-7 U, |P_hk|<4.4e-6 UV.\n2. In outer proper coordinates write a=a0 exp(-beta). The background\n   meets S146/S147, including N(beta)<=1e-7 and .99<a<1.01.\n   Its first coordinate directions obey N(beta_h)<=U and\n   N(beta_k)<=V. Its mixed acceleration j=beta_hk obeys N(j)<=UV.\n   All these are jets of the SAME geometry family and fixed domain.\n   In particular |beta_h|,|beta_h,Y|<=100U, and similarly for k,j.\n3. The actual canonical source at fixed Y meets the S146 source\n   contract for those jets, including its actual-domain terms.\n   Composition with j adds the first-source bound to the mixed\n   bound. It is not omitted because b is affine in the other chart.\n4. For outer constraint transfer, u=B/r obeys S147's value/first-jet\n   guards. Its first relative value/derivative direction norms are\n   at most U,V; the mixed acceleration has relative norm at most UV.\n   The correlated mass/radius jets remain imposed.\n\nThese are conditional coefficient and source hypotheses. A C5 field\ncomposed with its varying proper-coordinate map need not be a C2\npath in C5. S149's flat gradient obstruction is not bypassed by\nsilently asserting otherwise. Compatibility and preservation of this\njoint contract by the global solve remain unproved.\n\n## 2. Exact smooth-average prescription\n\nChoose fixed proper numbers\n\n    ya=.041, yb=.049, y0=.05, L=yb-ya=.008.\n\nLet z=(Y-ya)/L and define the C2, compactly supported density\n\n    zeta(Y)=140 z^3(1-z)^3/L, ya<=Y<=yb,\n    zeta(Y)=0 otherwise,\n    Z(Y)=integral_ya^Y zeta(v)dv.\n\nUse Z=0 below ya and Z=1 above yb. Its integral is one.\nAll its first two derivatives vanish at the support endpoints.\nThe moving support stays inside the S148 interior cover because\nya exp(-.001)>.04.\n\nDefine the pressure moment\n\n    Q(b)=integral_ya^yb zeta(Y) a(Y)^2 P(Y)dY\n        =integral_0^D0 G_b(chi) P_b(chi)dchi,\n    G_b=zeta(Y_b) E_b a(Y_b)^2\n       =Omega^2 zeta(Y_b) E_b^3 sinh^2 chi.          (1)\n\nThe canonical Ward equation is (a^2 P)_Y=a a_Y S.\nIntegrating it from Y to y0 and averaging proves exactly\n\n    a(y0)^2 Pm=Q+I,\n    I=integral_ya^y0 Z(Y) a(Y)a_Y(Y)S(Y)dY,\n    Pm=P(y0).                                     (2)\n\nThe moment is calculated in fixed disk coordinates and I in fixed\nproper coordinates. No pressure integration constant is assigned:\nP_b inside Q is S148's bolt-regular HH pressure functional.\nThe nonzero pressure carried from the interior is retained.\n\nThe full canonical trace occurs in I. Its explicit cubic part is\nnot dropped. In the outer source budget write\n\n    S=(2G/(B^2 C))R + 2eta_G c/(5pi Y).\n\nThe cubic and its first/mixed jets on [ya,y0] are negligible relative\nto the following enlarged bounds, obtained from S147 and |c|<1,\n|c_h|<.075U, |c_hk|<.075UV:\n\n    |S|<7e-7 H(Y), |S_h|<3.5e-7 U H(Y),\n    |S_hk|<.018 UV H(Y), H=1+log^2 Y.              (3)\n\nFor the mixed regular term the bound before rounding is\n2eta_G(1e30+2e25)<.01700034. The second summand is the\ncoordinate acceleration contribution.\n\n## 3. Fixed-disk transport kernel\n\nAt fixed chi,\n\n    Y_h=integral_chi^D0 E h, Y_hk=integral_chi^D0 E hk,\n    |Y_h|<=Y U, |Y_hk|<=Y UV.\n\nWith zeta and its derivatives evaluated at Y_b(chi), direct\ndifferentiation of (1) gives\n\n    G_h=E a^2[3h zeta+zeta' Y_h],\n    G_hk=E a^2[9hk zeta+3zeta'(hY_k+kY_h)\n                         +zeta''Y_hY_k+zeta'Y_hk]. (4)\n\nThe factor three includes both the orbit area factor and the\nproper-distance Jacobian. No derivative of the quantum trace\nappears. Because zeta is C2 and has compact support strictly\ninside the cover, differentiation under this fixed integral is\njustified by the uniform source bounds.\n\nUnimodality gives integral |zeta'|=35/(8L)=546.875.\nThe derivative z^3(1-z)^3 is 3z^2(1-z)^2(1-2z),\nof absolute value at most 3/16 and with one positive and one\nnegative lobe. Thus\n\n    integral |zeta''|<=105/L^2=1640625.\n\nUsing a^2<1.03 and E dchi=-dY yields the kernel norms\n\n    ||G||_1<1.03,\n    ||G_h||_1<1.03[3+yb*546.875] U<31U,\n    ||G_hk||_1\n      <1.03[9+7yb*546.875+yb^2*1640625]UV<4300UV.\n\nConsequently\n\n    |Q|<6.18e-10, |Q_h|<4e-7 U, |Q_hk|<3e-5 UV. (5)\n\nThese are response bounds on the actual curved family under\nsection 1, not a flat multiplier substitution.\n\n## 4. Proper-coordinate correction and pressure Hessian\n\nPut w=a_Y/a and q_a=a a_Y=a^2 w. On [ya,y0],\n|w|<.2. With h_o=beta_h, k_o=beta_k and j=beta_hk,\n\n    (q_a)_h=a^2[-2h_o w-h_o,Y],\n    (q_a)_hk=a^2[4h_o k_o w\n                    +2(h_o k_o,Y+k_o h_o,Y)-2j w-j_Y].\n\nThe joint contract therefore gives\n\n    |q_a|<.206, |(q_a)_h|<145U, |(q_a)_hk|<50000UV.\n\nAlso integral_ya^y0 H(Y)dY<.102. Equations (2),(3) give\n\n    |I_hk|<.102[.206*.018+290*3.5e-7+50000*7e-7]UV\n            <.004UV.                              (6)\n\nS148 already bounds |Pm|<6e-10 and |Pm_h|<3.7e-7 U\nusing no spatial trace derivative. Differentiate (2) twice:\n\n    Pm_hk=a(y0)^-2(Q_hk+I_hk)\n            +2h_o Pm_k+2k_o Pm_h+(2j-4h_o k_o)Pm.\n\nThe right side is bounded by\n\n    [1.03(.00003+.004)+400*3.7e-7+40200*6e-10]UV\n       <.0044 UV.                                 (7)\n\nThis replaces the explicit missing S_chi in the matching-pressure\nbound ON THE JOINT CONTRACT. It is not an unconditional C5\nmoving-cut theorem. If the source is only C2 in fixed disk values\nbut not in fixed proper values, hypothesis 3 can fail and (6)\ncannot be invoked.\n\nFor example a continuous fixed-disk trace (chi-c0)_+^alpha,\n0<alpha<1, with a cut crossing c0 can have a pressure whose first\nderivative is only alpha-H\u00f6lder. Its moving-cut second response\nneed not exist. The proper-coordinate trace jets then fail the\ncontract. Smooth averaging alone does not fix that failure.\n\n## 5. Outer constraint consequence, with acceleration retained\n\nAllocate the outer canonical pressure as\n\n    P=H_b Pm+L_b[R]+L_b[cubic],\n\nwith both forcing pieces chosen zero at y0. The first term now\ncarries the FULL interior pressure. This is an exact linear\nallocation, not a second choice of state. The cubic forcing must\nstill be combined with its Weyl partner before the physical\nabsolute mass integral is bounded.\n\nS147's memory coefficients, after converting from its unnormalized\npressure to P here, carry factors C/(2x)<25/8 for mass and\n1/2 for lapse. Its affine/log mixed coefficient bounds acquire\nat most their first bounds for the allowed coordinate acceleration:\n\n    mass coefficients: (.05,.51,5.6+.51),\n    lapse coefficients: (1e-5,1.4e-4,.002+.00014).\n\nUsing (7) and the sharper lower pressure jets gives\n\n    |D^2 M_mem|<(25/8)[.05*.0044\n                       +2*.51*3.7e-7+6.11*6e-10]UV<.0007UV,\n    |D^2 A_mem|<(1/2)[1e-5*.0044\n                       +2*1.4e-4*3.7e-7+.00214*6e-10]UV<2.3e-8UV.\n\nFor the regular trace-forcing component, direct first product\nrules in S147 give |D M_reg|<1.1e-5 U and\n|D A_reg|<4e-10 U. Thus its mixed bounds on the nonaffine proper\npath are at most .039+1.1e-5 and 4.6e-7+4e-10.\nCombining the regular forcing and full interior memory,\n\n    |D^2(M_reg+M_mem)|<.04 UV,\n    |D^2(A_reg+A_mem)|<4.9e-7 UV.                  (8)\n\nThe corresponding component Taylor remainders at segment norm\n1e-7 are below 2e-16 and 2.45e-21, IF the joint contract\nholds along the segment. These are not full physical error bounds:\nthe cubic/Weyl contribution, other source sectors, interior/cold\nconstraints and actual global inverse remain outside (8).\n\n## 6. Verification and research decision\n\nBefore execution freeze exact checks of the averaging normalization,\nWard recovery, geometric transport, scalar normalization, coordinate\nacceleration and all response budgets. Smooth manufactured traces\nmust satisfy the same Ward equation in both coordinates. They are\nnot quantum states or metrics satisfying the physical solution gates.\n\nUse 32 and 64 Gauss nodes with 55-digit arithmetic for pressure and\noverlap integrals; compare the average formula with independently\ncomputed moving-cut pressure. Mixed finite differences at .001 and\n.0005 must have error below 2e-6(1+|target|), and ratio below .35\nunless both errors are below 1e-35. Quadrature refinement and direct\nidentity comparisons must agree to 1e-10(1+|target|). Omitting the\noverlap transport, correction integral or coordinate acceleration\nmust be detected. Failed runs retain source snapshots.\n\nThe model and boundary-state distinctions remain those of\n[Bintanja--Freivogel--Rolph](https://arxiv.org/html/2308.00871v2).\nThis averaging argument follows from the retained Ward identities;\nthe original construction is not treated as a proof of its norm\nconstants or of the global contract.\n\nThe smooth average closes matching memory as a conditional map\nbetween the existing regional estimates. The next global proof\nmust either establish the joint coordinate/source contract or work\nin a fixed-coordinate integrated norm that supplies equivalent\ncontrol. S149's endpoint result and S148's cold limitations remain\nin force. No additional physical gate is completed.\n\nRemaining to-do list: prove and preserve the global coordinate/source\ncontract and cold weighted response; complete cubic/Weyl, LLL,\nreference and radius maps; solve the global exterior/state, charge\nand signed source problem; opening, stability, finite-energy\ntransport, preparation and creation.\n"
+    },
+    {
+      "story": "S150",
+      "created_utc": "2026-10-20T09:59:23.363133+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "quadrature_nodes": [
+          32,
+          64
+        ],
+        "digits": 55,
+        "steps": [
+          ".001",
+          ".0005"
+        ],
+        "mixed_tolerance": "2e-6",
+        "identity_tolerance": "1e-10",
+        "refinement_ratio": ".35"
+      },
+      "input_sha256_before": {
+        "checks/averaged_ward_matching.py": "9ab874fb43104d01f89a222606455899361562a00f941627ef3e42688317242d",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6"
+      },
+      "input_sha256_after": {
+        "checks/averaged_ward_matching.py": "9ab874fb43104d01f89a222606455899361562a00f941627ef3e42688317242d",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "overlap_density_normalization",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_cumulative_polynomial",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_c2_zero_extension",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_first_derivative_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_second_derivative_lobes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_peak_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaged_ward_recovery",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_disk_overlap_first_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_disk_overlap_mixed_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_ward_factor_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_ward_factor_mixed_acceleration",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_recovery_second_response",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "normalized_mass_memory_prefactor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "normalized_lapse_memory_prefactor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "rough_trace_local_ward",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "rough_trace_moving_cut_hessian_diverges",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "support_inside_interior_cover",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_variation_constants",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_kernel_response_budgets",
+          "passed": true,
+          "detail": "{'first': '196421/6400', 'mixed': '13631329/3200'}"
+        },
+        {
+          "name": "overlap_pressure_moment_budgets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_outer_trace_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_outer_trace_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_outer_trace_mixed_acceleration_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_ward_factor_budgets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_log_weight_integral_budget",
+          "passed": true,
+          "detail": "0.1008252575423776078632138"
+        },
+        {
+          "name": "outer_correction_mixed_budget",
+          "passed": true,
+          "detail": "3958569/1000000000"
+        },
+        {
+          "name": "matching_pressure_mixed_budget",
+          "passed": true,
+          "detail": "216151/50000000"
+        },
+        {
+          "name": "matching_mass_memory_budget",
+          "passed": true,
+          "detail": "110190533/160000000000"
+        },
+        {
+          "name": "matching_lapse_memory_budget",
+          "passed": true,
+          "detail": "11026221/500000000000000"
+        },
+        {
+          "name": "regular_mass_first_for_acceleration",
+          "passed": true,
+          "detail": "5337213/500000000000"
+        },
+        {
+          "name": "regular_lapse_first_for_acceleration",
+          "passed": true,
+          "detail": "9478209699/25000000000000000000"
+        },
+        {
+          "name": "combined_outer_component_budgets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "conditional_component_taylor_budgets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaged_matching_all_response_components_32",
+          "passed": true,
+          "detail": "{'recovered': ['0.7432291833265727504748911', '0.2754838029063456728281082', '0.1458724350078216559808878', '0.09934675475379145525997642'], 'direct': ['0.743229183326573557933019', '0.2754838029063459732833095', '0.1458724350078218046893927', '0.09934675475379132545624383']}"
+        },
+        {
+          "name": "overlap_transport_omission_detected_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_correction_omission_detected_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_coordinate_acceleration_omission_detected_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_moment_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '0.1169356374963651113722784', 'errors': ['1.149585501724691e-9', '2.873962143953896e-10']}"
+        },
+        {
+          "name": "overlap_moment_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_correction_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '-0.001790506632309668287605387', 'errors': ['8.653264271100003e-12', '2.163316060717842e-12']}"
+        },
+        {
+          "name": "outer_correction_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "recovered_pressure_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '0.09934675475379145525997642', 'errors': ['1.798943457068822e-11', '4.497536275078257e-12']}"
+        },
+        {
+          "name": "recovered_pressure_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "direct_pressure_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '0.09934675475379132545624383', 'errors': ['1.798919764681816e-11', '4.497299351208186e-12']}"
+        },
+        {
+          "name": "direct_pressure_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_base_pressure_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaged_matching_all_response_components_64",
+          "passed": true,
+          "detail": "{'recovered': ['0.7432291833265724281074211', '0.2754838029063453324507252', '0.1458724350078203339149095', '0.09934675475379088173098011'], 'direct': ['0.7432291833265713172557449', '0.2754838029063449240258222', '0.1458724350078201332434379', '0.09934675475379088432672422']}"
+        },
+        {
+          "name": "overlap_transport_omission_detected_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_correction_omission_detected_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_coordinate_acceleration_omission_detected_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "overlap_moment_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '0.1169356374963644175530997', 'errors': ['1.149585849843354e-9', '2.873965625140563e-10']}"
+        },
+        {
+          "name": "overlap_moment_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outer_correction_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '-0.001790506632309668549676982', 'errors': ['8.65326426192075e-12', '2.163316051538587e-12']}"
+        },
+        {
+          "name": "outer_correction_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "recovered_pressure_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '0.09934675475379088173098011', 'errors': ['1.7989048039352e-11', '4.497149743742029e-12']}"
+        },
+        {
+          "name": "recovered_pressure_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "direct_pressure_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '0.09934675475379088432672422', 'errors': ['1.798919790542851e-11', '4.497299609818558e-12']}"
+        },
+        {
+          "name": "direct_pressure_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_base_pressure_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadrature_refinement_all_mixed_maps",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "missing_proper_source_contract_detected",
+          "passed": true,
+          "detail": "['7.4386825598795399082', '23.565512936964191308', '74.534108567821633448']"
+        }
+      ],
+      "numerics": [
+        {
+          "moment_mixed_upper": "3679/125000000",
+          "correction_mixed_upper": "3958569/1000000000",
+          "pressure_mixed_upper": "216151/50000000",
+          "mass_memory_upper": "110190533/160000000000",
+          "lapse_memory_upper": "11026221/500000000000000",
+          "joint_global_contract_proved": false
+        },
+        {
+          "nodes": 32,
+          "mixed_targets": [
+            "0.116935637496365111372278411496",
+            "-0.00179050663230966828760538701905",
+            "0.0993467547537914552599764200154",
+            "0.099346754753791325456243827826"
+          ],
+          "manufactured_ward_data_are_physical_states": false
+        },
+        {
+          "nodes": 64,
+          "mixed_targets": [
+            "0.116935637496364417553099748627",
+            "-0.00179050663230966854967698235561",
+            "0.0993467547537908817309801063917",
+            "0.0993467547537908843267242230313"
+          ],
+          "manufactured_ward_data_are_physical_states": false
+        }
+      ],
+      "exception": null,
+      "scope": "averaged HH matching on a stated joint coordinate/source contract",
+      "unresolved": [
+        "global preservation of the joint contract",
+        "cold weighted response",
+        "other source sectors",
+        "actual global inverse and exterior/state solve",
+        "all physical completion gates"
+      ]
+    }
+  ]
+}
