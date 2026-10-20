@@ -1,0 +1,1690 @@
+{
+  "runs": [
+    {
+      "story": "S151",
+      "created_utc": "2026-10-20T10:18:59.795328+00:00",
+      "status": "failed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "nodes": [
+          32,
+          64
+        ],
+        "digits": 55,
+        "steps": [
+          ".001",
+          ".0005"
+        ],
+        "observations": [
+          ".025",
+          ".05",
+          ".09"
+        ],
+        "mixed_tolerance": "2e-6",
+        "quadrature_tolerance": "1e-11",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-30"
+      },
+      "input_sha256_before": {
+        "checks/common_chart_coordinate_transfer.py": "25f9dfb6e65816acdd0a30512468aa26642ca75204ee3f11c2bd8c64753f4d25",
+        "notes/common-chart-coordinate-transfer.md": "31cbec625e5d982624cd0aec3533ff841db6da24c44d5ddbe24d7971573220d3",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "evidence/averaged-ward-matching.json": "582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e"
+      },
+      "input_sha256_after": {
+        "checks/common_chart_coordinate_transfer.py": "25f9dfb6e65816acdd0a30512468aa26642ca75204ee3f11c2bd8c64753f4d25",
+        "notes/common-chart-coordinate-transfer.md": "31cbec625e5d982624cd0aec3533ff841db6da24c44d5ddbe24d7971573220d3",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "evidence/averaged-ward-matching.json": "582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "s150_committed_artifact_hashes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s150_final_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s150_all_eight_inputs_unchanged",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_first_implicit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_implicit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_euler_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_first_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_mixed_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_mixed_euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_first_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_acceleration_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_cubic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_cubic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_quartic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_quadratic_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_cubic_correlation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_radius_cubic_removes_lapse",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radius_cubic_leaves_lapse",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_mass_parameter",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "relative_radius_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "relative_radius_gradient_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_bilinear_unbounded_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_bilinear_growth_limit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ordinary_euler_conversion_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_euler_norm",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_weight_embedding",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "exponential_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaging_integral_weights",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_multiplier_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_first_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_margin",
+          "passed": true,
+          "detail": "646000586980317/1000000000000000"
+        },
+        {
+          "name": "target_collar_inside_image",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weight_ratio_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "composition_five_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cubic_reexpression_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_first_response_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_mixed_response_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_mass_norm_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_precomposition_reserves",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_relative_and_scaling_reserves",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "explicit_seed_constants_finite",
+          "passed": true,
+          "detail": "{'M': '68069605200', 'P': '161600000000/3', 'C1': '10372040780153/3', 'C2': '10210440780150', 'sufficient_local_background': '3/103720407801530000000'}"
+        },
+        {
+          "name": "scaled_coordinate_contract",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_complex_first_derivative_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "unbounded_fixture_growth",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '-1.327366289105645056089174e-11', 'errors': ['9.950084107284185e-26', '3.82525518058636e-26']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.025",
+          "passed": false,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "seed_constants": {
+            "M": "68069605200",
+            "P": "161600000000/3",
+            "C1": "10372040780153/3",
+            "C2": "10210440780150"
+          },
+          "M_R_numerically_enclosed": false,
+          "existing_C5_endpoint_in_C7_ball_established": false
+        }
+      ],
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\common_chart_coordinate_transfer.py\", line 285, in main\n    numerical_checks()\n    ~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\common_chart_coordinate_transfer.py\", line 258, in numerical_checks\n    check(f\"{name}_mixed_refinement_{tag}\", errs[j][1] < mp.mpf(\".35\")*errs[j][0]\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n          or max(errs[j]) < mp.mpf(\"1e-30\"))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\common_chart_coordinate_transfer.py\", line 49, in check\n    raise AssertionError(name)\nAssertionError: inverse_mixed_refinement_32_.025\n",
+      "scope": "local weighted C7-to-C5 coordinate transfer and radius/mass correlation",
+      "unresolved": [
+        "global common-family/source contract",
+        "cold response",
+        "actual C7 input and global inverse",
+        "other source sectors",
+        "exterior/state solve and all physical completion conditions"
+      ],
+      "failed_checker_source_utf8": "\"\"\"S151: weighted common-chart/proper-coordinate transfer.\n\nManufactured smooth metrics test coordinate identities, not a physical state.\n\"\"\"\nfrom __future__ import annotations\n\nfrom datetime import datetime, timezone\nfrom fractions import Fraction as Q\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport math\nimport sys\nimport traceback\n\nimport mpmath as mp\nimport numpy as np\nimport sympy as s\nfrom numpy.polynomial.legendre import leggauss\nfrom sympy.functions.combinatorial.numbers import stirling\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = \"common-chart-coordinate-transfer\"\nINPUTS = [\n    \"checks/common_chart_coordinate_transfer.py\",\n    \"notes/common-chart-coordinate-transfer.md\",\n    \"notes/averaged-ward-matching.md\",\n    \"evidence/averaged-ward-matching.json\",\n    \"notes/outer-finite-background-response.md\",\n    \"notes/outer-ward-and-constraint-transfer.md\",\n    \"notes/stationary-centered-canonical-response.md\",\n    \"notes/stationary-completed-metric-response-norm.md\",\n]\nROWS, NUMERICS = [], []\nPROTOCOL = {\n    \"nodes\": [32, 64], \"digits\": 55, \"steps\": [\".001\", \".0005\"],\n    \"observations\": [\".025\", \".05\", \".09\"],\n    \"mixed_tolerance\": \"2e-6\", \"quadrature_tolerance\": \"1e-11\",\n    \"refinement_ratio\": \".35\", \"refinement_floor\": \"1e-30\",\n}\n\n\ndef check(name, passed, detail=\"\"):\n    assert not any(r[\"name\"] == name for r in ROWS)\n    row = {\"name\": name, \"passed\": bool(passed), \"detail\": str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row), flush=True)\n    if not passed:\n        raise AssertionError(name)\n\n\ndef predecessor_checks():\n    expected = {\n        \"notes/averaged-ward-matching.md\":\n            \"8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f\",\n        \"checks/averaged_ward_matching.py\":\n            \"9ab874fb43104d01f89a222606455899361562a00f941627ef3e42688317242d\",\n        \"evidence/averaged-ward-matching.json\":\n            \"582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341\",\n        \"evidence/averaged-ward-matching.log\":\n            \"b9b3779ca485a0091de01785c468885dc5c31f1f51af4dc1f56870f6db8ff3e8\",\n    }\n    check(\"s150_committed_artifact_hashes\", all(\n        sha256((ROOT / p).read_bytes()).hexdigest() == h for p, h in expected.items()))\n    receipt = json.loads((ROOT / INPUTS[3]).read_text(encoding=\"utf-8\"))\n    last = receipt[\"runs\"][-1]\n    check(\"s150_final_receipt\", last[\"status\"] == \"passed\"\n          and len(last[\"checks\"]) == 61 and all(r[\"passed\"] for r in last[\"checks\"])\n          and last[\"unchanged_inputs\"])\n    check(\"s150_all_eight_inputs_unchanged\", len(last[\"input_sha256_after\"]) == 8\n          and all(sha256((ROOT / p).read_bytes()).hexdigest() == h\n                  for p, h in last[\"input_sha256_after\"].items()))\n\n\ndef exact_checks():\n    st, tt, y = s.symbols(\"st tt y\")\n    eb, bp, h, k, Ih, Ik, Ihk = s.symbols(\"eb bp h k Ih Ik Ihk\", nonzero=True)\n    yh, yk = -Ih/eb, -Ik/eb\n    yhk = -Ihk/eb-h*yk-k*yh-bp*yh*yk\n    shift = st*yh+tt*yk+st*tt*yhk\n    F = eb*shift+eb*bp*shift**2/2 + st*(Ih+eb*h*shift) + tt*(Ik+eb*k*shift)+st*tt*Ihk\n    zero = {st: 0, tt: 0}\n    check(\"inverse_first_implicit\", s.simplify(s.diff(F, st).subs(zero)) == 0)\n    check(\"inverse_mixed_implicit\", s.simplify(s.diff(F, st, tt).subs(zero)) == 0)\n    Db, Ah, Ak, Ahk = s.symbols(\"Db Ah Ak Ahk\")\n    B = -Ahk+h*Ak+k*Ah-Db*Ah*Ak\n    check(\"inverse_euler_mixed\", s.simplify(yhk.subs({\n        Ih: eb*y*Ah, Ik: eb*y*Ak, Ihk: eb*y*Ahk, bp: Db/y})-y*B) == 0)\n    gp, gpp, hp, kp = s.symbols(\"gp gpp hp kp\")\n    beta = -gp*shift-gpp*shift**2/2-st*(h+hp*shift)-tt*(k+kp*shift)\n    beta1 = -h-gp*yh\n    beta2 = -hp*yk-kp*yh-gpp*yh*yk-gp*yhk\n    check(\"beta_first_chain\", s.simplify(s.diff(beta, st).subs(zero)-beta1) == 0)\n    check(\"beta_mixed_chain\", s.simplify(s.diff(beta, st, tt).subs(zero)-beta2) == 0)\n    Dg, D2g, Dh, Dk = s.symbols(\"Dg D2g Dh Dk\")\n    euler2 = Dh*Ak+Dk*Ah-(D2g-Dg)*Ah*Ak-Dg*B\n    check(\"beta_mixed_euler\", s.simplify(beta2.subs({\n        Ih: eb*y*Ah, Ik: eb*y*Ak, Ihk: eb*y*Ahk, bp: Db/y,\n        gp: Dg/y, gpp: (D2g-Dg)/y**2, hp: Dh/y, kp: Dk/y})-euler2) == 0)\n    nh, nk, nhp, nkp = s.symbols(\"nh nk nhp nkp\")\n    rho = gp*shift+gpp*shift**2/2+st*(nh+nhp*shift)+tt*(nk+nkp*shift)\n    rho2 = nhp*yk+nkp*yh+gpp*yh*yk+gp*yhk\n    check(\"radius_log_first_chain\", s.simplify(s.diff(rho, st).subs(zero)-nh-gp*yh) == 0)\n    check(\"radius_log_mixed_chain\", s.simplify(s.diff(rho, st, tt).subs(zero)-rho2) == 0)\n    check(\"inverse_acceleration_omission_detected\",\n          s.simplify(beta2-(-hp*yk-kp*yh-gpp*yh*yk)+gp*yhk) == 0\n          and s.simplify(gp*yhk) != 0)\n    Y, m, n3, d, c0, a2 = s.symbols(\"Y m n3 d c0 a2\")\n    yy = Y-m*Y**4/4\n    aa = (1+m*yy**3)*(1+a2*yy**2+c0*yy**3)\n    uu = (d*yy+d*a2*yy**3/3+d*c0*yy**4/4)*(1+n3*yy**3)\n    aser = s.series(aa, Y, 0, 4).removeO().expand()\n    user = s.series(uu, Y, 0, 5).removeO().expand()\n    check(\"inverse_cubic_series\", s.series(yy+m*yy**4/4-Y, Y, 0, 5).removeO() == 0)\n    check(\"warp_cubic_series\", aser.coeff(Y, 3) == c0+m)\n    check(\"radius_quartic_series\", s.simplify(user.coeff(Y, 4)-d*(c0/4+n3-m/4)) == 0)\n    al = s.series(s.log(d*aser/s.diff(user, Y)), Y, 0, 4).removeO().expand()\n    check(\"lapse_quadratic_zero\", al.coeff(Y, 2) == 0)\n    check(\"lapse_cubic_correlation\", al.coeff(Y, 3) == 2*m-4*n3)\n    check(\"correlated_radius_cubic_removes_lapse\", al.coeff(Y, 3).subs(n3, m/2) == 0)\n    check(\"independent_radius_cubic_leaves_lapse\", al.coeff(Y, 3).subs(n3, m/4) == m)\n    BC, x = s.symbols(\"BC x\", positive=True)\n    check(\"physical_mass_parameter\", s.simplify((-BC*m/d)/(BC*d**2)+m/d**3) == 0)\n    rh, rk, rhk, l, Dh0, Dk0, Dhk0 = s.symbols(\"rh rk rhk l Dh0 Dk0 Dhk0\")\n    u = s.exp(st*rh+tt*rk+st*tt*rhk)\n    up = u*(l+st*Dh0+tt*Dk0+st*tt*Dhk0)/l\n    target = rhk+rh*rk+(Dhk0+rh*Dk0+rk*Dh0)/l\n    check(\"relative_radius_mixed\", s.diff(u, st, tt).subs(zero) == rhk+rh*rk)\n    check(\"relative_radius_gradient_mixed\", s.simplify(s.diff(up, st, tt).subs(zero)-target) == 0)\n    freq, center, primitive = s.symbols(\"freq center primitive\", positive=True)\n    osc = s.cos(freq*(Y-center))/freq**5\n    bilinear = s.diff(osc, Y)*(Y-center+primitive)\n    growth = s.diff(bilinear, Y, 5).subs(Y, center)\n    check(\"c5_bilinear_unbounded_exact\", s.simplify(growth+freq*primitive) == 0)\n    check(\"c5_bilinear_growth_limit\", s.limit(-growth, freq, s.oo) == s.oo)\n    check(\"ordinary_euler_conversion_reserve\", all(math.factorial(j) <= 100**j for j in range(6)))\n\n\ndef budget_checks():\n    mp.mp.dps = PROTOCOL[\"digits\"]\n    r, eps = Q(11, 100), Q(1, 1000)\n    check(\"mass_euler_norm\", sum(Q(3**i, math.factorial(i)) for i in range(8)) < 21)\n    check(\"log_weight_embedding\", mp.mpf(\".11\")*(1-mp.log(mp.mpf(\".11\"))) < mp.mpf(\".36\"))\n    check(\"exponential_jet_margin\", mp.exp(mp.mpf(str(float(r**3*eps)))) < mp.mpf(\"1.001\"))\n    check(\"averaging_integral_weights\", Q(1, 4) < Q(251, 1000)/Q(1001, 1000)\n          and Q(1001, 1000)**2/7 < Q(144, 1000))\n    logcap = Q(1001, 1000)/4/(1-Q(251, 1000)*eps*r**3)\n    check(\"log_coordinate_margin\", logcap < Q(252, 1000))\n    check(\"coordinate_multiplier_margin\",\n          mp.exp(mp.mpf(str(float(Q(1252, 1000)*eps*r**3)))) < mp.mpf(\"1.001\"))\n    check(\"inverse_first_margin\", Q(1001, 1000)**2/4 < Q(251, 1000))\n    bcap = Q(144, 1000)+2*Q(251, 1000)+7*eps*Q(251, 1000)**2*r**3\n    check(\"inverse_mixed_margin\", bcap < Q(65, 100), str(bcap))\n    check(\"target_collar_inside_image\", mp.mpf(\".11\")*mp.exp(-mp.mpf(\".001\")*mp.mpf(\".11\")**3) > mp.mpf(\".1\"))\n    check(\"weight_ratio_margin\", mp.exp(mp.mpf(\"7\")*mp.mpf(\".252\")*mp.mpf(\".001\")*mp.mpf(\".11\")**3) < mp.mpf(\"1.01\"))\n    check(\"composition_five_jet_margin\", Q(101, 100)*Q(2001, 1000)**5 < 33)\n    check(\"cubic_reexpression_margin\", 21*Q(757, 1000) < 16 and Q(16, 21) < Q(762, 1000))\n    # Affine in M>=1: compare both the constant and M coefficients.\n    first0 = 33*(1+Q(762, 1000)*eps+7*eps*Q(251, 1000))\n    first1 = 33*Q(251, 1000)\n    check(\"proper_first_response_margin\", first0 < 50 and first1 < 50)\n    second0 = 33*(Q(3514, 1000)+49*eps*Q(251, 1000)**2+7*eps*Q(65, 100))\n    second1 = 33*(Q(251, 1000)**2+Q(65, 100))\n    check(\"proper_mixed_response_margin\", second0 < 150 and second1 < 150)\n    check(\"physical_mass_norm_margin\", 21*Q(2, 5)**3 > 1)\n    check(\"radius_precomposition_reserves\", 3*(Q(2, 1000)+Q(2, 1000)) < 1\n          and 3*(Q(12, 10**6)+Q(2, 10**6)+Q(4, 10**6)) < 1)\n    check(\"radius_relative_and_scaling_reserves\", 5+9 == 14 and 14 < 5**2)\n    R = {1: Q(1800)}\n    for l in range(2, 8):\n        R[l] = 9*math.factorial(l-1)*200**(l-1)*r**(l-2)\n    E = {j: sum(int(stirling(j, l, kind=2))*R[l] for l in range(1, j+1)) for j in range(1, 8)}\n    M = max(Q(1), sum(E[j+1]/math.factorial(j) for j in range(7)),\n            sum((E[j+2]+E[j+1])/math.factorial(j) for j in range(6)))\n    V = {l: Q(10*math.factorial(4)*100**4, math.factorial(4-l)) for l in range(5)}\n    V[5] = 10*math.factorial(5)*100**5*r\n    P = V[0]+sum(sum(int(stirling(j, l, kind=2))*V[l] for l in range(1, j+1))/math.factorial(j)\n                 for j in range(1, 6))\n    C1, C2 = 51+50*M+P, 150*(1+M)\n    check(\"explicit_seed_constants_finite\", M > 1 and P > 0 and C1 > 0 and C2 > 0,\n          {\"M\": str(M), \"P\": str(P), \"C1\": str(C1), \"C2\": str(C2),\n           \"sufficient_local_background\": str(Q(1, 10**7)/C1)})\n    check(\"scaled_coordinate_contract\", C1**2 > C2)\n    check(\"seed_complex_first_derivative_margin\", Q(25, 2)*Q(61, 10) < 81)\n    check(\"unbounded_fixture_growth\", [Q(n, 20) for n in [100, 1000, 10000]] == [5, 50, 500])\n    NUMERICS.append({\"seed_constants\": {\"M\": str(M), \"P\": str(P), \"C1\": str(C1), \"C2\": str(C2)},\n                     \"M_R_numerically_enclosed\": False,\n                     \"existing_C5_endpoint_in_C7_ball_established\": False})\n\n\ndef numerical_checks():\n    mp.mp.dps = PROTOCOL[\"digits\"]\n    Ysym = s.symbols(\"y\", positive=True)\n    polynomials = {\n        \"b\": Ysym**3/5+Ysym**4/10, \"h\": 3*Ysym**3+2*Ysym**4,\n        \"k\": -2*Ysym**3+Ysym**5,\n        \"n\": Ysym**3/10+Ysym**4/5, \"nh\": 3*Ysym**3/2+2*Ysym**4/5,\n        \"nk\": -Ysym**3+Ysym**5/2,\n        \"L\": Ysym**2/5-Ysym**3/10,\n        \"R\": s.log(s.Rational(41, 100)*Ysym)+Ysym**2/15-Ysym**3/40,\n    }\n    fun = {name: [s.lambdify(Ysym, s.diff(expr, Ysym, j), \"mpmath\") for j in range(3)]\n           for name, expr in polynomials.items()}\n    all_targets = []\n    for count in PROTOCOL[\"nodes\"]:\n        nodes, weights = leggauss(count)\n        nodes = [mp.mpf(float(a)) for a in nodes]\n        weights = [mp.mpf(float(a)) for a in weights]\n\n        def quad(f, y):\n            return y/2*sum(w*f(y*(1+z)/2) for z, w in zip(nodes, weights))\n\n        def values(Y, st, tt):\n            field = lambda z: fun[\"b\"][0](z)+st*fun[\"h\"][0](z)+tt*fun[\"k\"][0](z)\n            root = mp.findroot(lambda z: quad(lambda w: mp.exp(field(w)), z)-Y, (Y*.99, Y*1.01))\n            beta = fun[\"L\"][0](Y)-fun[\"L\"][0](root)-field(root)\n            radiuslog = fun[\"n\"][0](root)+st*fun[\"nh\"][0](root)+tt*fun[\"nk\"][0](root)+fun[\"R\"][0](root)\n            rho = radiuslog-fun[\"R\"][0](Y)\n            return [root, beta, rho, mp.exp(radiuslog)]\n\n        targets_for_nodes = []\n        for Ytext in PROTOCOL[\"observations\"]:\n            Y = mp.mpf(Ytext)\n            base = values(Y, mp.mpf(0), mp.mpf(0))\n            y = base[0]\n            b, h, k = [fun[name][0](y) for name in [\"b\", \"h\", \"k\"]]\n            Ih = quad(lambda z: mp.exp(fun[\"b\"][0](z))*fun[\"h\"][0](z), y)\n            Ik = quad(lambda z: mp.exp(fun[\"b\"][0](z))*fun[\"k\"][0](z), y)\n            Ihk = quad(lambda z: mp.exp(fun[\"b\"][0](z))*fun[\"h\"][0](z)*fun[\"k\"][0](z), y)\n            yh, yk = -mp.exp(-b)*Ih, -mp.exp(-b)*Ik\n            yhk = -mp.exp(-b)*Ihk-h*yk-k*yh-fun[\"b\"][1](y)*yh*yk\n            gp = fun[\"b\"][1](y)+fun[\"L\"][1](y)\n            gpp = fun[\"b\"][2](y)+fun[\"L\"][2](y)\n            betah = -h-gp*yh\n            betahk = -fun[\"h\"][1](y)*yk-fun[\"k\"][1](y)*yh-gpp*yh*yk-gp*yhk\n            rp = fun[\"n\"][1](y)+fun[\"R\"][1](y)\n            rpp = fun[\"n\"][2](y)+fun[\"R\"][2](y)\n            rhoh = fun[\"nh\"][0](y)+rp*yh\n            rhok = fun[\"nk\"][0](y)+rp*yk\n            rhohk = fun[\"nh\"][1](y)*yk+fun[\"nk\"][1](y)*yh+rpp*yh*yk+rp*yhk\n            targets = [yhk, betahk, rhohk, base[3]*(rhohk+rhoh*rhok)]\n            first_targets = [yh, betah, rhoh, base[3]*rhoh]\n            errs = [[] for _ in targets]\n            first_errs = [[] for _ in targets]\n            for steptext in PROTOCOL[\"steps\"]:\n                step = mp.mpf(steptext)\n                four = [values(Y, st, tt) for st, tt in [(step, step), (step, -step), (-step, step), (-step, -step)]]\n                two = [values(Y, st, mp.mpf(0)) for st in [step, -step]]\n                for j in range(4):\n                    mixed = (four[0][j]-four[1][j]-four[2][j]+four[3][j])/(4*step**2)\n                    first = (two[0][j]-two[1][j])/(2*step)\n                    errs[j].append(abs(mixed-targets[j]))\n                    first_errs[j].append(abs(first-first_targets[j]))\n            tag = f\"{count}_{Ytext}\"\n            for j, name in enumerate([\"inverse\", \"warp\", \"radius_log\", \"radius\"]):\n                check(f\"{name}_mixed_difference_{tag}\", max(errs[j]) < mp.mpf(PROTOCOL[\"mixed_tolerance\"])*(1+abs(targets[j])),\n                      {\"target\": mp.nstr(targets[j], 25), \"errors\": [mp.nstr(e, 16) for e in errs[j]]})\n                check(f\"{name}_mixed_refinement_{tag}\", errs[j][1] < mp.mpf(\".35\")*errs[j][0]\n                      or max(errs[j]) < mp.mpf(\"1e-30\"))\n            check(f\"all_first_differences_{tag}\", all(\n                max(es) < mp.mpf(PROTOCOL[\"mixed_tolerance\"])*(1+abs(target))\n                for es, target in zip(first_errs, first_targets)))\n            adaptive_residual = mp.quad(lambda z: mp.exp(fun[\"b\"][0](z)), [0, y])-Y\n            check(f\"independent_adaptive_inverse_{tag}\", abs(adaptive_residual) < mp.mpf(\"1e-11\"))\n            targets_for_nodes.extend(targets)\n            NUMERICS.append({\"nodes\": count, \"Y\": Ytext, \"mixed_targets\": [mp.nstr(v, 30) for v in targets],\n                             \"manufactured_fixture_is_physical_solution\": False})\n        all_targets.append(targets_for_nodes)\n    check(\"quadrature_refinement_all_coordinate_maps\", all(\n        abs(a-b) < mp.mpf(PROTOCOL[\"quadrature_tolerance\"])*(1+abs(b))\n        for a, b in zip(*all_targets)))\n\n\ndef hashes():\n    return {p: sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    before = hashes()\n    error = None\n    try:\n        predecessor_checks()\n        exact_checks()\n        budget_checks()\n        numerical_checks()\n    except Exception:\n        error = traceback.format_exc()\n        print(error, file=sys.stderr, flush=True)\n    after = hashes()\n    ok = error is None and before == after and all(r[\"passed\"] for r in ROWS)\n    record = {\n        \"story\": \"S151\", \"created_utc\": datetime.now(timezone.utc).isoformat(),\n        \"status\": \"passed\" if ok else \"failed\", \"python\": sys.version,\n        \"numpy\": np.__version__, \"sympy\": s.__version__, \"mpmath\": mp.__version__,\n        \"protocol\": PROTOCOL, \"input_sha256_before\": before,\n        \"input_sha256_after\": after, \"unchanged_inputs\": before == after,\n        \"checks\": ROWS, \"numerics\": NUMERICS, \"exception\": error,\n        \"scope\": \"local weighted C7-to-C5 coordinate transfer and radius/mass correlation\",\n        \"unresolved\": [\"global common-family/source contract\", \"cold response\",\n                       \"actual C7 input and global inverse\", \"other source sectors\",\n                       \"exterior/state solve and all physical completion conditions\"],\n    }\n    if error:\n        record[\"failed_checker_source_utf8\"] = Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"] = (ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    out = ROOT/\"evidence\"/f\"{STEM}.json\"\n    history = json.loads(out.read_text(encoding=\"utf-8\")) if out.exists() else {\"runs\": []}\n    history[\"runs\"].append(record)\n    out.write_text(json.dumps(history, indent=2)+\"\\n\", encoding=\"utf-8\", newline=\"\\n\")\n    print(json.dumps({\"status\": record[\"status\"], \"checks\": len(ROWS), \"unchanged_inputs\": before == after}), flush=True)\n    return 0 if ok else 1\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+      "failed_note_source_utf8": "# Common-chart transfer into outer proper coordinates\n\n2026-10-20, E003/S151 supporting S139/S074. Ordinary argument and\nverification protocol fixed before the acceptance run.\n\nThis resolves the local coordinate portion of\n[S150's joint contract](averaged-ward-matching.md) on a stronger\ncommon-chart space. It does not prove preservation by the unknown\nglobal source/equation map. In particular it does not promote the\npreviously constructed C5 endpoint to C7, supply a cold estimate, or\nprove a bounded inverse of the full equations.\n\nThe regularity issue is consistent with the general composition\nproblem studied by [Inci, Kappeler and Topalov](https://arxiv.org/abs/1107.0488v2).\nTheir paper concerns Sobolev diffeomorphisms; it is background, not\na citation for the weighted estimates below. Those are derived here.\nNo new quantum-state estimate is imported from that paper.\n\n## 1. Exact map and its parameter jets\n\nFix the seed inward proper coordinate y=Y0(chi) once. On 0<y<=r,\nr=.11, the common-disk conformal deformation reads\n\n    g_b=exp(2b(y))[dy^2+a0(y)^2 d tau^2],\n    F_b(y)=integral_0^y exp(b(z)) dz, Y=F_b(y),\n    y=y_b(Y), a_b(Y)=exp(b(y))a0(y),\n    beta_b(Y)=L0(Y)-L0(y)-b(y), L0=log a0.          (1)\n\nThe same physical clock tau is used throughout. We compare on the\nfixed target interval 0<Y<=.1; the larger input collar leaves room\nfor inversion. There is no endpoint movement at Y=0.\n\nLet b=b_*+s h+t k be affine in the common chart. At its current\nreal background define D=y partial_y, Jf=y^(-1) integral_0^y f,\n\n    q=log(F_b/y), T=exp(q-b),\n    A_h=exp(-b) J(exp(b)h),\n    A_hk=exp(-b) J(exp(b)hk),\n    B_hk=-A_hk+h A_k+k A_h-(Db)A_h A_k.           (2)\n\nAll right sides in the following identities are evaluated at\ny_b(Y):\n\n    y_h=-y A_h, y_hk=y B_hk, D_Y=T D,\n    beta_h=-h+(Db+DL0)A_h,\n    beta_hk=Dh A_k+Dk A_h\n       -(D^2b-Db+D^2L0-DL0)A_h A_k\n       -(Db+DL0)B_hk.                             (3)\n\nHere A_hk means the integral of the product hk, NOT the mixed\nparameter derivative of A_h. Differentiate F_b(y_b)=Y twice to\nobtain y_hk: the terms are -exp(-b) integral exp(b)hk,\n-h y_k-k y_h-b' y_h y_k. This checks both the sign and the\nacceleration. Differentiating (1) gives the remaining identities.\n\n## 2. A sufficient weighted space and explicit finite constants\n\nWrite ell(y)=1-log y, w3=y^3, w4=y^4 ell(y). Define the Euler jet\nnorm on the input collar by\n\n    |f|_{j,w}=sum_{i=0}^j sup |D^i f|/(i! w).\n    b=m y^3+v, N7(b)=21|m|+|v|_{7,w4}.            (4)\n\nFunctions have seven continuous derivatives on the open collar and\nthe indicated finite weighted norms. The cubic coefficient is part\nof the data. This is stronger than the earlier ordinary weighted C5\ncontract. Since sum_{i=0}^7 3^i/i!<21 and r ell(r)<.36,\n|b|_{7,w3}<=N7(b). Assume N7(b)<=.001, and write H=N7(h),\nK=N7(k). Norms below are for real coefficients, without complex\nspatial evaluation of b, h or k.\n\nThe norm is a product algebra with multiplied weights. D costs\nat most j when mapping j jets to j-1 jets. J commutes with D;\non w3 and w6 its norms are 1/4 and 1/7, respectively. In\nparticular, elementary exponential and logarithmic series give\n\n    |exp(+/-b)|_{7,1}<1.001,\n    |q|_{7,w3}<.252 N7(b), |T|_{7,1}<1.001,\n    |A_h|_{6,w3}<.251 H,\n    |A_hk|_{5,w6}<.144 HK,\n    |B_hk|_{5,w6}<.65 HK.                         (5)\n\nFor example |exp(b)-1|_{7,w3}<1.001 N7(b), so\n|F/y-1|_{7,w3}<.251 N7(b). For the last bound the two\nlinear product terms cost .502 and the Db product costs at\nmost 7*.001*.251^2*r^3; their sum with .144 is below .65.\nThe numerical constants are uniform on the full input collar.\n\nLet M>=1 bound both\n\n    |DL0|_{6,y^2}, |D^2L0-DL0|_{5,y^2}.\n\nLet P bound |psi-d^3Y^3|_{5,w4}, where psi is S146's fixed\nanalytic mass mode and .4<d=sqrt(x/C)<.42. These are FIXED\nseed constants, not unknown geometry norms. Explicit bounds for\nthem are given below. Composing a j-jet with y_b costs at most\n\n    (1+1.001)^j times the weight-ratio bound.\n\nTo see this, iterate D_Y=T D: applying D from n to n-1 jets\ncosts n and multiplication costs |T|. Sum the resulting\nbinomial majorants. Because |q|<.252*.001*r^3<4e-7,\nthe ratios of w3, w4, w6 and y^2 at y and Y are below 1.01.\nThus composition of five jets costs less than 33.\nThe image of r is greater than .1.\n\nSubtract the cubic BEFORE using w4. Formula (3) becomes\n\n    beta_h+m_h Y^3 =\n      [-v_h+m_h(F^3-y^3)+(Db+DL0)A_h](y_b(Y)).     (6)\n\nHere |F^3-y^3|_{5,y^6}<16 N7(b): the exponential costs\nless than .757 and multiplication by y^3 costs less than 21.\nSince |m_h|<=H/21, this term costs less than .762 N7(b)H.\nProducts y^5, y^6 and higher are bounded by w4 on this collar.\nEquations (5)-(6)\ntherefore bound the right side in Euler w4 norm by\n50(1+M)H. Equation (3) bounds the mixed response by\n\n    33[3.514+49*.001*.251^2+7*.001*.65\n                       +(.251^2+.65)M] HK\n       <150(1+M)HK.                              (7)\n\nThis deliberately keeps a loose finite reserve; it is not an\noptimized norm for proving contraction.\n\nThe ordinary weighted C5 seminorm used in S146 is bounded by\nthis Euler five-jet norm: y^j partial_y^j is\nD(D-1)...(D-j+1), its absolute coefficient sum is j!, and\nj!<=100^j for j<=5. Hence\n|partial_y^j f|/(j!100^j y^(4-j)ell)<=|f|_{5,w4}.\n\nThe exact output mass parameter is p=-m/d^3. Its remaining\nmass-basis correction is (m/d^3)(psi-d^3Y^3).\nSince 21 d^3>1, define\n\n    C1=51+50M+P, C2=150(1+M).\n\nWith N_out^loc denoting S146's mass-plus-remainder norm restricted\nto Y<=.1, we have\n\n    N_out^loc(beta)<=C1 N7(b),\n    N_out^loc(beta_h)<=C1 H,\n    N_out^loc(beta_hk)<=C2 HK.                     (8)\n\nThe first follows by integrating the first response on the radial\nsegment from zero to b. For an affine common-chart family the\nmixed cubic vanishes exactly. It must not be counted as a new\nmass datum.\n\nThese are Frechet C2 maps into the weighted output space, not\njust formal pointwise derivatives. On [delta,r] the usual chain\nand inverse differentiation is continuous in the indicated norms.\nAt y=0 every transported term in beta_hk has weight at least\nsix, and the terms containing the seventh background derivative\nhave weight at least eight (the b part has weight nine).\nAfter division by w4 they tend uniformly to zero on bounded\ninput balls. This controls the possibly nonuniform continuity\nof the highest weighted derivative near zero. The untransported\nlinear term has two spare derivatives. Splitting at delta and\nthen sending delta to zero proves continuity and the difference\nquotient limits. No weighted C8 premise is used.\n\nFor clarity the fixed constants can be enclosed without fitting\nsampled data. The retained seed collar has |calB|>x/2,\n|calB'|<5C, C/x<6.1 on its .01 complex strip, and\nL0'=calB'/(2 sqrt(C calB)); thus |L0'|<9.\nOn the half strip, |L0^(l)|<=9(l-1)!200^(l-1).\nUse L0'(0)=0 to bound |L0'|/y<=1800. For l>=2 put\n\n    R_l=9(l-1)!200^(l-1) r^(l-2), R_1=1800,\n    E_j=sum_{l=1}^j Stirling2(j,l) R_l,\n    M=max(1, sum_{j=0}^6 E_(j+1)/j!,\n             sum_{j=0}^5 [E_(j+2)+E_(j+1)]/j!).   (9)\n\nS146's |psi|<10 on the .01 strip and its zero jets through\norder two with cubic d^3 imply, for f=psi-d^3Y^3,\n|f^(l)|<=10*4!*100^4 Y^(4-l)/(4-l)! for l<=4;\nfor l=5 use 10*5!*100^5. With\n\n    V_l=10*4!*100^4/(4-l)! (0<=l<=4),\n    V_5=10*5!*100^5 r,\n    P=V_0+sum_{j=1}^5 sum_{l=1}^j\n                         Stirling2(j,l)V_l/j!,    (10)\n\nwe obtain an explicit rational enclosure. Using ell>=1 makes it\nconservative. The checker evaluates (9)-(10); these enclosures\nare not optimal and do not certify the existing endpoint.\n\n## 3. Radius jets and the physical correlation\n\nLet the same common-chart radius be\n\n    u_disk(y)=u0(y)exp(n(y)), n=n3 y^3+z,\n    N7(n)=21|n3|+|z|_{7,w4}.\n\nThen u_b(Y)=u_disk(y_b(Y)). Write rho=log(u_b/u0(Y)),\nR0=log u0, and allow n to be affine in the same parameters.\nThe logarithm R0 contains log y, but DR0 and D^2R0 are regular.\n\n    rho_h=n_h-(Dn+DR0)A_h,\n    rho_hk=-Dn_h A_k-Dn_k A_h\n       +(D^2n-Dn+D^2R0-DR0)A_h A_k\n       +(Dn+DR0)B_hk.                            (11)\n\nThese identities also retain the acceleration. Suppose the joint\nbackground N7(b)+N7(n)<=.001 and use joint direction sizes\nH=N7(h)+N7(n_h), K=N7(k)+N7(n_k).\nTake M_R>=1 bounding |DR0|_{2,1} and\n|D^2R0-DR0|_{1,1}. This is a finite fixed seed constant:\nu0/(dy) is positive and smooth on the closed real collar.\nIt can be evaluated from the retained seed; no numerical value\nfor M_R is asserted here.\n\nThe unweighted consequences of (5), r^3<.002 and r^6<2e-6\ngive, after the one-jet composition,\n\n    |rho_h|_{1,1}<=M_R H,\n    |rho_hk|_{1,1}<=M_R HK.                        (12)\n\nFor example the first precomposition norm is bounded by\n.002H+2M_R*.001H. The mixed one is below\n.000012HK+.000002M_R HK+.000004M_R HK.\nComposition for one jet costs less than three, so the reserves\nin (12) are ample. The two-jet norms of the factors used here\nare controlled by the seven input jets.\n\nUnder S147's retained real radius guards D_Y log u>=1/4,\n\n    u_h/u=rho_h,\n    u_h'/u'=rho_h+(D_Y rho_h)/(D_Y log u),\n    u_hk/u=rho_hk+rho_h rho_k,\n    u_hk'/u'=rho_hk+rho_h rho_k\n       +(D_Y rho_hk+rho_h D_Y rho_k\n                       +rho_k D_Y rho_h)/(D_Y log u).\n\nThus first relative value/derivative norms are <=5 M_R H,\nand mixed norms <=14 M_R^2 HK. These are coordinate estimates;\nthe real low guards must also hold for the chosen family.\n\nMore importantly, the finite boundary coefficients are fixed\nalgebraically. If the seed has\n\n    a0=1+Y^2/(2C)+c0 Y^3+...,\n    u0=dY+dY^3/(6C)+d c0 Y^4/4+...,\n\nthen (1) gives\n\n    F=y+m y^4/4+O(y^5 ell), y=Y-mY^4/4+...,\n    c=c0+m,\n    e4=d c0/4+d(n3-m/4),\n    [Y^3]alpha=2m-4n3.                           (13)\n\nConsequently the zero cubic lapse condition is precisely\nn3=m/2. Then e4=dc/4 and p=delta mass/(Bx)=-m/d^3,\nas in S147. The proper radius-log cubic is m/4; it is the\nCOMMON-CHART radius-log cubic that equals m/2. Confusing the\ntwo leaves an unwanted cubic lapse. All these coefficients are\nexact in the small family, not first-order-only correlations.\n\nLet Q=max(C1,sqrt(C2),5M_R,1). With U=QH and V=QK,\n(8) and (12) imply the local first/mixed coordinate and radius\njet portions of S150. A background N7(b)<=1e-7/C1 meets the\nlocal S146 size bound. This statement does not establish the\ncap extension, actual global operator/domain coefficients,\ninterior raw norm, source differentiability in the same family,\ncold weights or preservation of the input C7 ball.\n\n## 4. Why the earlier C5 estimate cannot be substituted\n\nAt the seed with a0=1 and b=0, (3) reduces to\n\n    D^2 beta[ h,k ]=h' integral_0^Y k\n                              +k' integral_0^Y h. (14)\n\nChoose smooth cutoffs supported strictly inside the outer collar,\nwith k=1 on a smaller interval and its primitive nonzero there.\nLet h_N=N^-5 sin(NY) on that smaller interval, with a fixed\ncutoff outside it. These are legitimate zero-cubic weighted\ndirections with uniformly bounded C5 norm, but on the interval\nthe fifth derivative of (14) has leading term\nN cos(NY) integral_0^Y k (up to an immaterial phase).\nThe remaining derivatives are uniformly bounded. Hence the\nbilinear map is unbounded C5 x C5 -> C5. For an analytic\nnonconstant seed the extra L0 terms contain at most fifth\nderivatives of h_N after the primitive factors are used;\nthey do not cancel this leading sixth derivative.\n\nThis is a coordinate regularity obstruction, not a quantum\nstate or physical nonexistence theorem. Seven background\nderivatives are sufficient for the finite-background mixed\nestimate; we do not claim that C7 is the minimal possible space\nor that the existing C5 source estimates provide C7.\n\nThe next global proof must either preserve a stronger space\nwith its own quantitative inverse, or use a formulation that\navoids this moving-coordinate differentiation. Merely rescaling\nthe old C5 ball cannot make an unbounded bilinear map bounded.\nThe stronger local coordinate theorem does not remove S149's\nseparate source-gradient limitation.\n\n## 5. Focused verification protocol\n\nBefore execution: exact symbolic chain-rule/inverse identities,\ncubic/radius/lapse series and algebraic bounds (5)-(10).\nThe test geometry is manufactured smooth real data, not a\nsolution or quantum state. Use exp(b) with cubic/quartic smooth\nb, and independent n and seed polynomials. Compare (3) and\n(11) against independently solved coordinate inversions at\nY=.025,.05,.09, using 32/64-point Gauss integration, 55 digits,\nand centered mixed steps .001,.0005. Require absolute mixed\nerror <=2e-6(1+|target|), refinement ratio <=.35 unless both\nerrors <1e-30; quadrature agreement <=1e-11(1+|target|).\nCheck exact omission differences for the inverse acceleration\nand radius-cubic correlation. Test the unbounded sequence in\n(14) analytically and at increasing integer frequencies.\n\nPreserve all runs, failed source snapshots, input hashes before\nand after and raw output. Verification supports the ordinary\nproof and the limited coordinate scope. It is not an acceptance\ntest for a full semiclassical wormhole.\n\nRemaining to-do list: prove a usable global common-family/source\ncontract and cold response; complete remaining source sectors,\nglobal inverse and exterior/state solve; complete charge, signed\nsource, opening, stability, transport, preparation and creation.\n"
+    },
+    {
+      "story": "S151",
+      "created_utc": "2026-10-20T10:19:27.249889+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "nodes": [
+          32,
+          64
+        ],
+        "digits": 55,
+        "steps": [
+          ".001",
+          ".0005"
+        ],
+        "observations": [
+          ".025",
+          ".05",
+          ".09"
+        ],
+        "mixed_tolerance": "2e-6",
+        "quadrature_tolerance": "1e-11",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-30"
+      },
+      "input_sha256_before": {
+        "checks/common_chart_coordinate_transfer.py": "74edad838c16e393c69add522a170a8494293286f54220528270b160480278df",
+        "notes/common-chart-coordinate-transfer.md": "31cbec625e5d982624cd0aec3533ff841db6da24c44d5ddbe24d7971573220d3",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "evidence/averaged-ward-matching.json": "582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e"
+      },
+      "input_sha256_after": {
+        "checks/common_chart_coordinate_transfer.py": "74edad838c16e393c69add522a170a8494293286f54220528270b160480278df",
+        "notes/common-chart-coordinate-transfer.md": "31cbec625e5d982624cd0aec3533ff841db6da24c44d5ddbe24d7971573220d3",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "evidence/averaged-ward-matching.json": "582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "s150_committed_artifact_hashes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s150_final_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s150_all_eight_inputs_unchanged",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_first_implicit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_implicit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_euler_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_first_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_mixed_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_mixed_euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_first_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_acceleration_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_cubic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_cubic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_quartic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_quadratic_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_cubic_correlation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_radius_cubic_removes_lapse",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radius_cubic_leaves_lapse",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_mass_parameter",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "relative_radius_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "relative_radius_gradient_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_bilinear_unbounded_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_bilinear_growth_limit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ordinary_euler_conversion_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_euler_norm",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_weight_embedding",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "exponential_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaging_integral_weights",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_multiplier_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_first_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_margin",
+          "passed": true,
+          "detail": "646000586980317/1000000000000000"
+        },
+        {
+          "name": "target_collar_inside_image",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weight_ratio_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "composition_five_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cubic_reexpression_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_first_response_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_mixed_response_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_mass_norm_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_precomposition_reserves",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_relative_and_scaling_reserves",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "explicit_seed_constants_finite",
+          "passed": true,
+          "detail": "{'M': '68069605200', 'P': '161600000000/3', 'C1': '10372040780153/3', 'C2': '10210440780150', 'sufficient_local_background': '3/103720407801530000000'}"
+        },
+        {
+          "name": "scaled_coordinate_contract",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_complex_first_derivative_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "unbounded_fixture_growth",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '-1.327366289105643940582992e-11', 'errors': ['8.166438568930385e-26', '2.041609642232584e-26']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '-2.235341264802750074613145e-9', 'errors': ['1.505064190541442e-23', '3.76266047635358e-24']}"
+        },
+        {
+          "name": "warp_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '6.721794313258925505991233e-10', 'errors': ['5.089289414884401e-24', '1.272322353721092e-24']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '5.952231891811539956030234e-12', 'errors': ['3.695209556099467e-26', '9.238023890248615e-27']}"
+        },
+        {
+          "name": "radius_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '-1.722924225642556391829819e-9', 'errors': ['6.943862646105481e-22', '1.735965661525698e-22']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '-0.0000001453638769413130482661569', 'errors': ['6.420897123262539e-20', '1.605224280814974e-20']}"
+        },
+        {
+          "name": "warp_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '4.330292863822497313232141e-8', 'errors': ['2.144513084817523e-20', '5.361282712041489e-21']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '7.680152825908041944265886e-10', 'errors': ['3.127557606995126e-22', '7.818894017484849e-23']}"
+        },
+        {
+          "name": "radius_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '-0.0000001076692907834787661619305', 'errors': ['1.529461286853129e-18', '3.823653217080814e-19']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '-0.000005058747835499814505933653', 'errors': ['7.893163385213096e-17', '1.973290846274718e-17']}"
+        },
+        {
+          "name": "warp_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '0.000001484597671185818387745808', 'errors': ['2.585015812560503e-17', '6.46253953130314e-18']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '4.751472299489740147689025e-8', 'errors': ['6.833647213486196e-19', '1.708411803348723e-19']}"
+        },
+        {
+          "name": "radius_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '-1.327366289105643940582992e-11', 'errors': ['8.166438568930385e-26', '2.041609642232584e-26']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '-2.235341264802750074613145e-9', 'errors': ['1.505064190541442e-23', '3.76266047635358e-24']}"
+        },
+        {
+          "name": "warp_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '6.721794313258925505991233e-10', 'errors': ['5.089289414884401e-24', '1.272322353721092e-24']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '5.952231891811539956030234e-12', 'errors': ['3.695209556099467e-26', '9.238023890248615e-27']}"
+        },
+        {
+          "name": "radius_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '-1.722924225642556391829819e-9', 'errors': ['6.943862646105481e-22', '1.735965661525698e-22']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '-0.0000001453638769413130482661569', 'errors': ['6.420897123262539e-20', '1.605224280814974e-20']}"
+        },
+        {
+          "name": "warp_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '4.330292863822497313232141e-8', 'errors': ['2.144513084817523e-20', '5.361282712041489e-21']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '7.680152825908041944265886e-10', 'errors': ['3.127557606995126e-22', '7.818894017484849e-23']}"
+        },
+        {
+          "name": "radius_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '-0.0000001076692907834787661619305', 'errors': ['1.529461286853129e-18', '3.823653217080814e-19']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '-0.000005058747835499814505933653', 'errors': ['7.893163385213096e-17', '1.973290846274718e-17']}"
+        },
+        {
+          "name": "warp_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '0.000001484597671185818387745808', 'errors': ['2.585015812560503e-17', '6.46253953130314e-18']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '4.751472299489740147689025e-8', 'errors': ['6.833647213486196e-19', '1.708411803348723e-19']}"
+        },
+        {
+          "name": "radius_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadrature_refinement_all_coordinate_maps",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "seed_constants": {
+            "M": "68069605200",
+            "P": "161600000000/3",
+            "C1": "10372040780153/3",
+            "C2": "10210440780150"
+          },
+          "M_R_numerically_enclosed": false,
+          "existing_C5_endpoint_in_C7_ball_established": false
+        },
+        {
+          "nodes": 32,
+          "Y": ".025",
+          "mixed_targets": [
+            "-1.32736628910564394058299176661e-11",
+            "-0.0000000022353412648027500746131450718",
+            "6.7217943132589255059912326494e-10",
+            "5.95223189181153995603023433127e-12"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 32,
+          "Y": ".05",
+          "mixed_targets": [
+            "-0.00000000172292422564255639182981854889",
+            "-0.000000145363876941313048266156900795",
+            "0.0000000433029286382249731323214100405",
+            "7.68015282590804194426588585949e-10"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 32,
+          "Y": ".09",
+          "mixed_targets": [
+            "-0.000000107669290783478766161930494115",
+            "-0.00000505874783549981450593365254119",
+            "0.00000148459767118581838774580762807",
+            "0.0000000475147229948974014768902495022"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 64,
+          "Y": ".025",
+          "mixed_targets": [
+            "-1.32736628910564394058299176661e-11",
+            "-0.0000000022353412648027500746131450718",
+            "6.7217943132589255059912326494e-10",
+            "5.95223189181153995603023433127e-12"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 64,
+          "Y": ".05",
+          "mixed_targets": [
+            "-0.00000000172292422564255639182981854889",
+            "-0.000000145363876941313048266156900795",
+            "0.0000000433029286382249731323214100405",
+            "7.68015282590804194426588585949e-10"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 64,
+          "Y": ".09",
+          "mixed_targets": [
+            "-0.000000107669290783478766161930494115",
+            "-0.00000505874783549981450593365254119",
+            "0.00000148459767118581838774580762807",
+            "0.0000000475147229948974014768902495022"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        }
+      ],
+      "exception": null,
+      "scope": "local weighted C7-to-C5 coordinate transfer and radius/mass correlation",
+      "unresolved": [
+        "global common-family/source contract",
+        "cold response",
+        "actual C7 input and global inverse",
+        "other source sectors",
+        "exterior/state solve and all physical completion conditions"
+      ],
+      "superseded_checker_source_utf8": "\"\"\"S151: weighted common-chart/proper-coordinate transfer.\n\nManufactured smooth metrics test coordinate identities, not a physical state.\n\"\"\"\nfrom __future__ import annotations\n\nfrom datetime import datetime, timezone\nfrom fractions import Fraction as Q\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport math\nimport sys\nimport traceback\n\nimport mpmath as mp\nimport numpy as np\nimport sympy as s\nfrom sympy.functions.combinatorial.numbers import stirling\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = \"common-chart-coordinate-transfer\"\nINPUTS = [\n    \"checks/common_chart_coordinate_transfer.py\",\n    \"notes/common-chart-coordinate-transfer.md\",\n    \"notes/averaged-ward-matching.md\",\n    \"evidence/averaged-ward-matching.json\",\n    \"notes/outer-finite-background-response.md\",\n    \"notes/outer-ward-and-constraint-transfer.md\",\n    \"notes/stationary-centered-canonical-response.md\",\n    \"notes/stationary-completed-metric-response-norm.md\",\n]\nROWS, NUMERICS = [], []\nPROTOCOL = {\n    \"nodes\": [32, 64], \"digits\": 55, \"steps\": [\".001\", \".0005\"],\n    \"observations\": [\".025\", \".05\", \".09\"],\n    \"mixed_tolerance\": \"2e-6\", \"quadrature_tolerance\": \"1e-11\",\n    \"refinement_ratio\": \".35\", \"refinement_floor\": \"1e-30\",\n}\n\n\ndef check(name, passed, detail=\"\"):\n    assert not any(r[\"name\"] == name for r in ROWS)\n    row = {\"name\": name, \"passed\": bool(passed), \"detail\": str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row), flush=True)\n    if not passed:\n        raise AssertionError(name)\n\n\ndef predecessor_checks():\n    expected = {\n        \"notes/averaged-ward-matching.md\":\n            \"8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f\",\n        \"checks/averaged_ward_matching.py\":\n            \"9ab874fb43104d01f89a222606455899361562a00f941627ef3e42688317242d\",\n        \"evidence/averaged-ward-matching.json\":\n            \"582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341\",\n        \"evidence/averaged-ward-matching.log\":\n            \"b9b3779ca485a0091de01785c468885dc5c31f1f51af4dc1f56870f6db8ff3e8\",\n    }\n    check(\"s150_committed_artifact_hashes\", all(\n        sha256((ROOT / p).read_bytes()).hexdigest() == h for p, h in expected.items()))\n    receipt = json.loads((ROOT / INPUTS[3]).read_text(encoding=\"utf-8\"))\n    last = receipt[\"runs\"][-1]\n    check(\"s150_final_receipt\", last[\"status\"] == \"passed\"\n          and len(last[\"checks\"]) == 61 and all(r[\"passed\"] for r in last[\"checks\"])\n          and last[\"unchanged_inputs\"])\n    check(\"s150_all_eight_inputs_unchanged\", len(last[\"input_sha256_after\"]) == 8\n          and all(sha256((ROOT / p).read_bytes()).hexdigest() == h\n                  for p, h in last[\"input_sha256_after\"].items()))\n\n\ndef exact_checks():\n    st, tt, y = s.symbols(\"st tt y\")\n    eb, bp, h, k, Ih, Ik, Ihk = s.symbols(\"eb bp h k Ih Ik Ihk\", nonzero=True)\n    yh, yk = -Ih/eb, -Ik/eb\n    yhk = -Ihk/eb-h*yk-k*yh-bp*yh*yk\n    shift = st*yh+tt*yk+st*tt*yhk\n    F = eb*shift+eb*bp*shift**2/2 + st*(Ih+eb*h*shift) + tt*(Ik+eb*k*shift)+st*tt*Ihk\n    zero = {st: 0, tt: 0}\n    check(\"inverse_first_implicit\", s.simplify(s.diff(F, st).subs(zero)) == 0)\n    check(\"inverse_mixed_implicit\", s.simplify(s.diff(F, st, tt).subs(zero)) == 0)\n    Db, Ah, Ak, Ahk = s.symbols(\"Db Ah Ak Ahk\")\n    B = -Ahk+h*Ak+k*Ah-Db*Ah*Ak\n    check(\"inverse_euler_mixed\", s.simplify(yhk.subs({\n        Ih: eb*y*Ah, Ik: eb*y*Ak, Ihk: eb*y*Ahk, bp: Db/y})-y*B) == 0)\n    gp, gpp, hp, kp = s.symbols(\"gp gpp hp kp\")\n    beta = -gp*shift-gpp*shift**2/2-st*(h+hp*shift)-tt*(k+kp*shift)\n    beta1 = -h-gp*yh\n    beta2 = -hp*yk-kp*yh-gpp*yh*yk-gp*yhk\n    check(\"beta_first_chain\", s.simplify(s.diff(beta, st).subs(zero)-beta1) == 0)\n    check(\"beta_mixed_chain\", s.simplify(s.diff(beta, st, tt).subs(zero)-beta2) == 0)\n    Dg, D2g, Dh, Dk = s.symbols(\"Dg D2g Dh Dk\")\n    euler2 = Dh*Ak+Dk*Ah-(D2g-Dg)*Ah*Ak-Dg*B\n    check(\"beta_mixed_euler\", s.simplify(beta2.subs({\n        Ih: eb*y*Ah, Ik: eb*y*Ak, Ihk: eb*y*Ahk, bp: Db/y,\n        gp: Dg/y, gpp: (D2g-Dg)/y**2, hp: Dh/y, kp: Dk/y})-euler2) == 0)\n    nh, nk, nhp, nkp = s.symbols(\"nh nk nhp nkp\")\n    rho = gp*shift+gpp*shift**2/2+st*(nh+nhp*shift)+tt*(nk+nkp*shift)\n    rho2 = nhp*yk+nkp*yh+gpp*yh*yk+gp*yhk\n    check(\"radius_log_first_chain\", s.simplify(s.diff(rho, st).subs(zero)-nh-gp*yh) == 0)\n    check(\"radius_log_mixed_chain\", s.simplify(s.diff(rho, st, tt).subs(zero)-rho2) == 0)\n    check(\"inverse_acceleration_omission_detected\",\n          s.simplify(beta2-(-hp*yk-kp*yh-gpp*yh*yk)+gp*yhk) == 0\n          and s.simplify(gp*yhk) != 0)\n    Y, m, n3, d, c0, a2 = s.symbols(\"Y m n3 d c0 a2\")\n    yy = Y-m*Y**4/4\n    aa = (1+m*yy**3)*(1+a2*yy**2+c0*yy**3)\n    uu = (d*yy+d*a2*yy**3/3+d*c0*yy**4/4)*(1+n3*yy**3)\n    aser = s.series(aa, Y, 0, 4).removeO().expand()\n    user = s.series(uu, Y, 0, 5).removeO().expand()\n    check(\"inverse_cubic_series\", s.series(yy+m*yy**4/4-Y, Y, 0, 5).removeO() == 0)\n    check(\"warp_cubic_series\", aser.coeff(Y, 3) == c0+m)\n    check(\"radius_quartic_series\", s.simplify(user.coeff(Y, 4)-d*(c0/4+n3-m/4)) == 0)\n    al = s.series(s.log(d*aser/s.diff(user, Y)), Y, 0, 4).removeO().expand()\n    check(\"lapse_quadratic_zero\", al.coeff(Y, 2) == 0)\n    check(\"lapse_cubic_correlation\", al.coeff(Y, 3) == 2*m-4*n3)\n    check(\"correlated_radius_cubic_removes_lapse\", al.coeff(Y, 3).subs(n3, m/2) == 0)\n    check(\"independent_radius_cubic_leaves_lapse\", al.coeff(Y, 3).subs(n3, m/4) == m)\n    BC, x = s.symbols(\"BC x\", positive=True)\n    check(\"physical_mass_parameter\", s.simplify((-BC*m/d)/(BC*d**2)+m/d**3) == 0)\n    rh, rk, rhk, l, Dh0, Dk0, Dhk0 = s.symbols(\"rh rk rhk l Dh0 Dk0 Dhk0\")\n    u = s.exp(st*rh+tt*rk+st*tt*rhk)\n    up = u*(l+st*Dh0+tt*Dk0+st*tt*Dhk0)/l\n    target = rhk+rh*rk+(Dhk0+rh*Dk0+rk*Dh0)/l\n    check(\"relative_radius_mixed\", s.diff(u, st, tt).subs(zero) == rhk+rh*rk)\n    check(\"relative_radius_gradient_mixed\", s.simplify(s.diff(up, st, tt).subs(zero)-target) == 0)\n    freq, center, primitive = s.symbols(\"freq center primitive\", positive=True)\n    osc = s.cos(freq*(Y-center))/freq**5\n    bilinear = s.diff(osc, Y)*(Y-center+primitive)\n    growth = s.diff(bilinear, Y, 5).subs(Y, center)\n    check(\"c5_bilinear_unbounded_exact\", s.simplify(growth+freq*primitive) == 0)\n    check(\"c5_bilinear_growth_limit\", s.limit(-growth, freq, s.oo) == s.oo)\n    check(\"ordinary_euler_conversion_reserve\", all(math.factorial(j) <= 100**j for j in range(6)))\n\n\ndef budget_checks():\n    mp.mp.dps = PROTOCOL[\"digits\"]\n    r, eps = Q(11, 100), Q(1, 1000)\n    check(\"mass_euler_norm\", sum(Q(3**i, math.factorial(i)) for i in range(8)) < 21)\n    check(\"log_weight_embedding\", mp.mpf(\".11\")*(1-mp.log(mp.mpf(\".11\"))) < mp.mpf(\".36\"))\n    check(\"exponential_jet_margin\", mp.exp(mp.mpf(str(float(r**3*eps)))) < mp.mpf(\"1.001\"))\n    check(\"averaging_integral_weights\", Q(1, 4) < Q(251, 1000)/Q(1001, 1000)\n          and Q(1001, 1000)**2/7 < Q(144, 1000))\n    logcap = Q(1001, 1000)/4/(1-Q(251, 1000)*eps*r**3)\n    check(\"log_coordinate_margin\", logcap < Q(252, 1000))\n    check(\"coordinate_multiplier_margin\",\n          mp.exp(mp.mpf(str(float(Q(1252, 1000)*eps*r**3)))) < mp.mpf(\"1.001\"))\n    check(\"inverse_first_margin\", Q(1001, 1000)**2/4 < Q(251, 1000))\n    bcap = Q(144, 1000)+2*Q(251, 1000)+7*eps*Q(251, 1000)**2*r**3\n    check(\"inverse_mixed_margin\", bcap < Q(65, 100), str(bcap))\n    check(\"target_collar_inside_image\", mp.mpf(\".11\")*mp.exp(-mp.mpf(\".001\")*mp.mpf(\".11\")**3) > mp.mpf(\".1\"))\n    check(\"weight_ratio_margin\", mp.exp(mp.mpf(\"7\")*mp.mpf(\".252\")*mp.mpf(\".001\")*mp.mpf(\".11\")**3) < mp.mpf(\"1.01\"))\n    check(\"composition_five_jet_margin\", Q(101, 100)*Q(2001, 1000)**5 < 33)\n    check(\"cubic_reexpression_margin\", 21*Q(757, 1000) < 16 and Q(16, 21) < Q(762, 1000))\n    # Affine in M>=1: compare both the constant and M coefficients.\n    first0 = 33*(1+Q(762, 1000)*eps+7*eps*Q(251, 1000))\n    first1 = 33*Q(251, 1000)\n    check(\"proper_first_response_margin\", first0 < 50 and first1 < 50)\n    second0 = 33*(Q(3514, 1000)+49*eps*Q(251, 1000)**2+7*eps*Q(65, 100))\n    second1 = 33*(Q(251, 1000)**2+Q(65, 100))\n    check(\"proper_mixed_response_margin\", second0 < 150 and second1 < 150)\n    check(\"physical_mass_norm_margin\", 21*Q(2, 5)**3 > 1)\n    check(\"radius_precomposition_reserves\", 3*(Q(2, 1000)+Q(2, 1000)) < 1\n          and 3*(Q(12, 10**6)+Q(2, 10**6)+Q(4, 10**6)) < 1)\n    check(\"radius_relative_and_scaling_reserves\", 5+9 == 14 and 14 < 5**2)\n    R = {1: Q(1800)}\n    for l in range(2, 8):\n        R[l] = 9*math.factorial(l-1)*200**(l-1)*r**(l-2)\n    E = {j: sum(int(stirling(j, l, kind=2))*R[l] for l in range(1, j+1)) for j in range(1, 8)}\n    M = max(Q(1), sum(E[j+1]/math.factorial(j) for j in range(7)),\n            sum((E[j+2]+E[j+1])/math.factorial(j) for j in range(6)))\n    V = {l: Q(10*math.factorial(4)*100**4, math.factorial(4-l)) for l in range(5)}\n    V[5] = 10*math.factorial(5)*100**5*r\n    P = V[0]+sum(sum(int(stirling(j, l, kind=2))*V[l] for l in range(1, j+1))/math.factorial(j)\n                 for j in range(1, 6))\n    C1, C2 = 51+50*M+P, 150*(1+M)\n    check(\"explicit_seed_constants_finite\", M > 1 and P > 0 and C1 > 0 and C2 > 0,\n          {\"M\": str(M), \"P\": str(P), \"C1\": str(C1), \"C2\": str(C2),\n           \"sufficient_local_background\": str(Q(1, 10**7)/C1)})\n    check(\"scaled_coordinate_contract\", C1**2 > C2)\n    check(\"seed_complex_first_derivative_margin\", Q(25, 2)*Q(61, 10) < 81)\n    check(\"unbounded_fixture_growth\", [Q(n, 20) for n in [100, 1000, 10000]] == [5, 50, 500])\n    NUMERICS.append({\"seed_constants\": {\"M\": str(M), \"P\": str(P), \"C1\": str(C1), \"C2\": str(C2)},\n                     \"M_R_numerically_enclosed\": False,\n                     \"existing_C5_endpoint_in_C7_ball_established\": False})\n\n\ndef numerical_checks():\n    mp.mp.dps = PROTOCOL[\"digits\"]\n    Ysym = s.symbols(\"y\", positive=True)\n    polynomials = {\n        \"b\": Ysym**3/5+Ysym**4/10, \"h\": 3*Ysym**3+2*Ysym**4,\n        \"k\": -2*Ysym**3+Ysym**5,\n        \"n\": Ysym**3/10+Ysym**4/5, \"nh\": 3*Ysym**3/2+2*Ysym**4/5,\n        \"nk\": -Ysym**3+Ysym**5/2,\n        \"L\": Ysym**2/5-Ysym**3/10,\n        \"R\": s.log(s.Rational(41, 100)*Ysym)+Ysym**2/15-Ysym**3/40,\n    }\n    fun = {name: [s.lambdify(Ysym, s.diff(expr, Ysym, j), \"mpmath\") for j in range(3)]\n           for name, expr in polynomials.items()}\n    all_targets = []\n    for count in PROTOCOL[\"nodes\"]:\n        # Nodes and weights must share the working precision. Binary64\n        # quadrature data left a floor in the tiny inverse mixed response.\n        nodes, weights = mp.gauss_quadrature(count, \"legendre\")\n\n        def quad(f, y):\n            return y/2*sum(w*f(y*(1+z)/2) for z, w in zip(nodes, weights))\n\n        def values(Y, st, tt):\n            field = lambda z: fun[\"b\"][0](z)+st*fun[\"h\"][0](z)+tt*fun[\"k\"][0](z)\n            root = mp.findroot(lambda z: quad(lambda w: mp.exp(field(w)), z)-Y, (Y*.99, Y*1.01))\n            beta = fun[\"L\"][0](Y)-fun[\"L\"][0](root)-field(root)\n            radiuslog = fun[\"n\"][0](root)+st*fun[\"nh\"][0](root)+tt*fun[\"nk\"][0](root)+fun[\"R\"][0](root)\n            rho = radiuslog-fun[\"R\"][0](Y)\n            return [root, beta, rho, mp.exp(radiuslog)]\n\n        targets_for_nodes = []\n        for Ytext in PROTOCOL[\"observations\"]:\n            Y = mp.mpf(Ytext)\n            base = values(Y, mp.mpf(0), mp.mpf(0))\n            y = base[0]\n            b, h, k = [fun[name][0](y) for name in [\"b\", \"h\", \"k\"]]\n            Ih = quad(lambda z: mp.exp(fun[\"b\"][0](z))*fun[\"h\"][0](z), y)\n            Ik = quad(lambda z: mp.exp(fun[\"b\"][0](z))*fun[\"k\"][0](z), y)\n            Ihk = quad(lambda z: mp.exp(fun[\"b\"][0](z))*fun[\"h\"][0](z)*fun[\"k\"][0](z), y)\n            yh, yk = -mp.exp(-b)*Ih, -mp.exp(-b)*Ik\n            yhk = -mp.exp(-b)*Ihk-h*yk-k*yh-fun[\"b\"][1](y)*yh*yk\n            gp = fun[\"b\"][1](y)+fun[\"L\"][1](y)\n            gpp = fun[\"b\"][2](y)+fun[\"L\"][2](y)\n            betah = -h-gp*yh\n            betahk = -fun[\"h\"][1](y)*yk-fun[\"k\"][1](y)*yh-gpp*yh*yk-gp*yhk\n            rp = fun[\"n\"][1](y)+fun[\"R\"][1](y)\n            rpp = fun[\"n\"][2](y)+fun[\"R\"][2](y)\n            rhoh = fun[\"nh\"][0](y)+rp*yh\n            rhok = fun[\"nk\"][0](y)+rp*yk\n            rhohk = fun[\"nh\"][1](y)*yk+fun[\"nk\"][1](y)*yh+rpp*yh*yk+rp*yhk\n            targets = [yhk, betahk, rhohk, base[3]*(rhohk+rhoh*rhok)]\n            first_targets = [yh, betah, rhoh, base[3]*rhoh]\n            errs = [[] for _ in targets]\n            first_errs = [[] for _ in targets]\n            for steptext in PROTOCOL[\"steps\"]:\n                step = mp.mpf(steptext)\n                four = [values(Y, st, tt) for st, tt in [(step, step), (step, -step), (-step, step), (-step, -step)]]\n                two = [values(Y, st, mp.mpf(0)) for st in [step, -step]]\n                for j in range(4):\n                    mixed = (four[0][j]-four[1][j]-four[2][j]+four[3][j])/(4*step**2)\n                    first = (two[0][j]-two[1][j])/(2*step)\n                    errs[j].append(abs(mixed-targets[j]))\n                    first_errs[j].append(abs(first-first_targets[j]))\n            tag = f\"{count}_{Ytext}\"\n            for j, name in enumerate([\"inverse\", \"warp\", \"radius_log\", \"radius\"]):\n                check(f\"{name}_mixed_difference_{tag}\", max(errs[j]) < mp.mpf(PROTOCOL[\"mixed_tolerance\"])*(1+abs(targets[j])),\n                      {\"target\": mp.nstr(targets[j], 25), \"errors\": [mp.nstr(e, 16) for e in errs[j]]})\n                check(f\"{name}_mixed_refinement_{tag}\", errs[j][1] < mp.mpf(\".35\")*errs[j][0]\n                      or max(errs[j]) < mp.mpf(\"1e-30\"))\n            check(f\"all_first_differences_{tag}\", all(\n                max(es) < mp.mpf(PROTOCOL[\"mixed_tolerance\"])*(1+abs(target))\n                for es, target in zip(first_errs, first_targets)))\n            adaptive_residual = mp.quad(lambda z: mp.exp(fun[\"b\"][0](z)), [0, y])-Y\n            check(f\"independent_adaptive_inverse_{tag}\", abs(adaptive_residual) < mp.mpf(\"1e-11\"))\n            targets_for_nodes.extend(targets)\n            NUMERICS.append({\"nodes\": count, \"Y\": Ytext, \"mixed_targets\": [mp.nstr(v, 30) for v in targets],\n                             \"manufactured_fixture_is_physical_solution\": False})\n        all_targets.append(targets_for_nodes)\n    check(\"quadrature_refinement_all_coordinate_maps\", all(\n        abs(a-b) < mp.mpf(PROTOCOL[\"quadrature_tolerance\"])*(1+abs(b))\n        for a, b in zip(*all_targets)))\n\n\ndef hashes():\n    return {p: sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    before = hashes()\n    error = None\n    try:\n        predecessor_checks()\n        exact_checks()\n        budget_checks()\n        numerical_checks()\n    except Exception:\n        error = traceback.format_exc()\n        print(error, file=sys.stderr, flush=True)\n    after = hashes()\n    ok = error is None and before == after and all(r[\"passed\"] for r in ROWS)\n    record = {\n        \"story\": \"S151\", \"created_utc\": datetime.now(timezone.utc).isoformat(),\n        \"status\": \"passed\" if ok else \"failed\", \"python\": sys.version,\n        \"numpy\": np.__version__, \"sympy\": s.__version__, \"mpmath\": mp.__version__,\n        \"protocol\": PROTOCOL, \"input_sha256_before\": before,\n        \"input_sha256_after\": after, \"unchanged_inputs\": before == after,\n        \"checks\": ROWS, \"numerics\": NUMERICS, \"exception\": error,\n        \"scope\": \"local weighted C7-to-C5 coordinate transfer and radius/mass correlation\",\n        \"unresolved\": [\"global common-family/source contract\", \"cold response\",\n                       \"actual C7 input and global inverse\", \"other source sectors\",\n                       \"exterior/state solve and all physical completion conditions\"],\n    }\n    if error:\n        record[\"failed_checker_source_utf8\"] = Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"] = (ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    out = ROOT/\"evidence\"/f\"{STEM}.json\"\n    history = json.loads(out.read_text(encoding=\"utf-8\")) if out.exists() else {\"runs\": []}\n    history[\"runs\"].append(record)\n    out.write_text(json.dumps(history, indent=2)+\"\\n\", encoding=\"utf-8\", newline=\"\\n\")\n    print(json.dumps({\"status\": record[\"status\"], \"checks\": len(ROWS), \"unchanged_inputs\": before == after}), flush=True)\n    return 0 if ok else 1\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+      "superseded_note_source_utf8": "# Common-chart transfer into outer proper coordinates\n\n2026-10-20, E003/S151 supporting S139/S074. Ordinary argument and\nverification protocol fixed before the acceptance run.\n\nThis resolves the local coordinate portion of\n[S150's joint contract](averaged-ward-matching.md) on a stronger\ncommon-chart space. It does not prove preservation by the unknown\nglobal source/equation map. In particular it does not promote the\npreviously constructed C5 endpoint to C7, supply a cold estimate, or\nprove a bounded inverse of the full equations.\n\nThe regularity issue is consistent with the general composition\nproblem studied by [Inci, Kappeler and Topalov](https://arxiv.org/abs/1107.0488v2).\nTheir paper concerns Sobolev diffeomorphisms; it is background, not\na citation for the weighted estimates below. Those are derived here.\nNo new quantum-state estimate is imported from that paper.\n\n## 1. Exact map and its parameter jets\n\nFix the seed inward proper coordinate y=Y0(chi) once. On 0<y<=r,\nr=.11, the common-disk conformal deformation reads\n\n    g_b=exp(2b(y))[dy^2+a0(y)^2 d tau^2],\n    F_b(y)=integral_0^y exp(b(z)) dz, Y=F_b(y),\n    y=y_b(Y), a_b(Y)=exp(b(y))a0(y),\n    beta_b(Y)=L0(Y)-L0(y)-b(y), L0=log a0.          (1)\n\nThe same physical clock tau is used throughout. We compare on the\nfixed target interval 0<Y<=.1; the larger input collar leaves room\nfor inversion. There is no endpoint movement at Y=0.\n\nLet b=b_*+s h+t k be affine in the common chart. At its current\nreal background define D=y partial_y, Jf=y^(-1) integral_0^y f,\n\n    q=log(F_b/y), T=exp(q-b),\n    A_h=exp(-b) J(exp(b)h),\n    A_hk=exp(-b) J(exp(b)hk),\n    B_hk=-A_hk+h A_k+k A_h-(Db)A_h A_k.           (2)\n\nAll right sides in the following identities are evaluated at\ny_b(Y):\n\n    y_h=-y A_h, y_hk=y B_hk, D_Y=T D,\n    beta_h=-h+(Db+DL0)A_h,\n    beta_hk=Dh A_k+Dk A_h\n       -(D^2b-Db+D^2L0-DL0)A_h A_k\n       -(Db+DL0)B_hk.                             (3)\n\nHere A_hk means the integral of the product hk, NOT the mixed\nparameter derivative of A_h. Differentiate F_b(y_b)=Y twice to\nobtain y_hk: the terms are -exp(-b) integral exp(b)hk,\n-h y_k-k y_h-b' y_h y_k. This checks both the sign and the\nacceleration. Differentiating (1) gives the remaining identities.\n\n## 2. A sufficient weighted space and explicit finite constants\n\nWrite ell(y)=1-log y, w3=y^3, w4=y^4 ell(y). Define the Euler jet\nnorm on the input collar by\n\n    |f|_{j,w}=sum_{i=0}^j sup |D^i f|/(i! w).\n    b=m y^3+v, N7(b)=21|m|+|v|_{7,w4}.            (4)\n\nFunctions have seven continuous derivatives on the open collar and\nthe indicated finite weighted norms. The cubic coefficient is part\nof the data. This is stronger than the earlier ordinary weighted C5\ncontract. Since sum_{i=0}^7 3^i/i!<21 and r ell(r)<.36,\n|b|_{7,w3}<=N7(b). Assume N7(b)<=.001, and write H=N7(h),\nK=N7(k). Norms below are for real coefficients, without complex\nspatial evaluation of b, h or k.\n\nThe norm is a product algebra with multiplied weights. D costs\nat most j when mapping j jets to j-1 jets. J commutes with D;\non w3 and w6 its norms are 1/4 and 1/7, respectively. In\nparticular, elementary exponential and logarithmic series give\n\n    |exp(+/-b)|_{7,1}<1.001,\n    |q|_{7,w3}<.252 N7(b), |T|_{7,1}<1.001,\n    |A_h|_{6,w3}<.251 H,\n    |A_hk|_{5,w6}<.144 HK,\n    |B_hk|_{5,w6}<.65 HK.                         (5)\n\nFor example |exp(b)-1|_{7,w3}<1.001 N7(b), so\n|F/y-1|_{7,w3}<.251 N7(b). For the last bound the two\nlinear product terms cost .502 and the Db product costs at\nmost 7*.001*.251^2*r^3; their sum with .144 is below .65.\nThe numerical constants are uniform on the full input collar.\n\nLet M>=1 bound both\n\n    |DL0|_{6,y^2}, |D^2L0-DL0|_{5,y^2}.\n\nLet P bound |psi-d^3Y^3|_{5,w4}, where psi is S146's fixed\nanalytic mass mode and .4<d=sqrt(x/C)<.42. These are FIXED\nseed constants, not unknown geometry norms. Explicit bounds for\nthem are given below. Composing a j-jet with y_b costs at most\n\n    (1+1.001)^j times the weight-ratio bound.\n\nTo see this, iterate D_Y=T D: applying D from n to n-1 jets\ncosts n and multiplication costs |T|. Sum the resulting\nbinomial majorants. Because |q|<.252*.001*r^3<4e-7,\nthe ratios of w3, w4, w6 and y^2 at y and Y are below 1.01.\nThus composition of five jets costs less than 33.\nThe image of r is greater than .1.\n\nSubtract the cubic BEFORE using w4. Formula (3) becomes\n\n    beta_h+m_h Y^3 =\n      [-v_h+m_h(F^3-y^3)+(Db+DL0)A_h](y_b(Y)).     (6)\n\nHere |F^3-y^3|_{5,y^6}<16 N7(b): the exponential costs\nless than .757 and multiplication by y^3 costs less than 21.\nSince |m_h|<=H/21, this term costs less than .762 N7(b)H.\nProducts y^5, y^6 and higher are bounded by w4 on this collar.\nEquations (5)-(6)\ntherefore bound the right side in Euler w4 norm by\n50(1+M)H. Equation (3) bounds the mixed response by\n\n    33[3.514+49*.001*.251^2+7*.001*.65\n                       +(.251^2+.65)M] HK\n       <150(1+M)HK.                              (7)\n\nThis deliberately keeps a loose finite reserve; it is not an\noptimized norm for proving contraction.\n\nThe ordinary weighted C5 seminorm used in S146 is bounded by\nthis Euler five-jet norm: y^j partial_y^j is\nD(D-1)...(D-j+1), its absolute coefficient sum is j!, and\nj!<=100^j for j<=5. Hence\n|partial_y^j f|/(j!100^j y^(4-j)ell)<=|f|_{5,w4}.\n\nThe exact output mass parameter is p=-m/d^3. Its remaining\nmass-basis correction is (m/d^3)(psi-d^3Y^3).\nSince 21 d^3>1, define\n\n    C1=51+50M+P, C2=150(1+M).\n\nWith N_out^loc denoting S146's mass-plus-remainder norm restricted\nto Y<=.1, we have\n\n    N_out^loc(beta)<=C1 N7(b),\n    N_out^loc(beta_h)<=C1 H,\n    N_out^loc(beta_hk)<=C2 HK.                     (8)\n\nThe first follows by integrating the first response on the radial\nsegment from zero to b. For an affine common-chart family the\nmixed cubic vanishes exactly. It must not be counted as a new\nmass datum.\n\nThese are Frechet C2 maps into the weighted output space, not\njust formal pointwise derivatives. On [delta,r] the usual chain\nand inverse differentiation is continuous in the indicated norms.\nAt y=0 every transported term in beta_hk has weight at least\nsix, and the terms containing the seventh background derivative\nhave weight at least eight (the b part has weight nine).\nAfter division by w4 they tend uniformly to zero on bounded\ninput balls. This controls the possibly nonuniform continuity\nof the highest weighted derivative near zero. The untransported\nlinear term has two spare derivatives. Splitting at delta and\nthen sending delta to zero proves continuity and the difference\nquotient limits. No weighted C8 premise is used.\n\nFor clarity the fixed constants can be enclosed without fitting\nsampled data. The retained seed collar has |calB|>x/2,\n|calB'|<5C, C/x<6.1 on its .01 complex strip, and\nL0'=calB'/(2 sqrt(C calB)); thus |L0'|<9.\nOn the half strip, |L0^(l)|<=9(l-1)!200^(l-1).\nUse L0'(0)=0 to bound |L0'|/y<=1800. For l>=2 put\n\n    R_l=9(l-1)!200^(l-1) r^(l-2), R_1=1800,\n    E_j=sum_{l=1}^j Stirling2(j,l) R_l,\n    M=max(1, sum_{j=0}^6 E_(j+1)/j!,\n             sum_{j=0}^5 [E_(j+2)+E_(j+1)]/j!).   (9)\n\nS146's |psi|<10 on the .01 strip and its zero jets through\norder two with cubic d^3 imply, for f=psi-d^3Y^3,\n|f^(l)|<=10*4!*100^4 Y^(4-l)/(4-l)! for l<=4;\nfor l=5 use 10*5!*100^5. With\n\n    V_l=10*4!*100^4/(4-l)! (0<=l<=4),\n    V_5=10*5!*100^5 r,\n    P=V_0+sum_{j=1}^5 sum_{l=1}^j\n                         Stirling2(j,l)V_l/j!,    (10)\n\nwe obtain an explicit rational enclosure. Using ell>=1 makes it\nconservative. The checker evaluates (9)-(10); these enclosures\nare not optimal and do not certify the existing endpoint.\n\n## 3. Radius jets and the physical correlation\n\nLet the same common-chart radius be\n\n    u_disk(y)=u0(y)exp(n(y)), n=n3 y^3+z,\n    N7(n)=21|n3|+|z|_{7,w4}.\n\nThen u_b(Y)=u_disk(y_b(Y)). Write rho=log(u_b/u0(Y)),\nR0=log u0, and allow n to be affine in the same parameters.\nThe logarithm R0 contains log y, but DR0 and D^2R0 are regular.\n\n    rho_h=n_h-(Dn+DR0)A_h,\n    rho_hk=-Dn_h A_k-Dn_k A_h\n       +(D^2n-Dn+D^2R0-DR0)A_h A_k\n       +(Dn+DR0)B_hk.                            (11)\n\nThese identities also retain the acceleration. Suppose the joint\nbackground N7(b)+N7(n)<=.001 and use joint direction sizes\nH=N7(h)+N7(n_h), K=N7(k)+N7(n_k).\nTake M_R>=1 bounding |DR0|_{2,1} and\n|D^2R0-DR0|_{1,1}. This is a finite fixed seed constant:\nu0/(dy) is positive and smooth on the closed real collar.\nIt can be evaluated from the retained seed; no numerical value\nfor M_R is asserted here.\n\nThe unweighted consequences of (5), r^3<.002 and r^6<2e-6\ngive, after the one-jet composition,\n\n    |rho_h|_{1,1}<=M_R H,\n    |rho_hk|_{1,1}<=M_R HK.                        (12)\n\nFor example the first precomposition norm is bounded by\n.002H+2M_R*.001H. The mixed one is below\n.000012HK+.000002M_R HK+.000004M_R HK.\nComposition for one jet costs less than three, so the reserves\nin (12) are ample. The two-jet norms of the factors used here\nare controlled by the seven input jets.\n\nUnder S147's retained real radius guards D_Y log u>=1/4,\n\n    u_h/u=rho_h,\n    u_h'/u'=rho_h+(D_Y rho_h)/(D_Y log u),\n    u_hk/u=rho_hk+rho_h rho_k,\n    u_hk'/u'=rho_hk+rho_h rho_k\n       +(D_Y rho_hk+rho_h D_Y rho_k\n                       +rho_k D_Y rho_h)/(D_Y log u).\n\nThus first relative value/derivative norms are <=5 M_R H,\nand mixed norms <=14 M_R^2 HK. These are coordinate estimates;\nthe real low guards must also hold for the chosen family.\n\nMore importantly, the finite boundary coefficients are fixed\nalgebraically. If the seed has\n\n    a0=1+Y^2/(2C)+c0 Y^3+...,\n    u0=dY+dY^3/(6C)+d c0 Y^4/4+...,\n\nthen (1) gives\n\n    F=y+m y^4/4+O(y^5 ell), y=Y-mY^4/4+...,\n    c=c0+m,\n    e4=d c0/4+d(n3-m/4),\n    [Y^3]alpha=2m-4n3.                           (13)\n\nConsequently the zero cubic lapse condition is precisely\nn3=m/2. Then e4=dc/4 and p=delta mass/(Bx)=-m/d^3,\nas in S147. The proper radius-log cubic is m/4; it is the\nCOMMON-CHART radius-log cubic that equals m/2. Confusing the\ntwo leaves an unwanted cubic lapse. All these coefficients are\nexact in the small family, not first-order-only correlations.\n\nLet Q=max(C1,sqrt(C2),5M_R,1). With U=QH and V=QK,\n(8) and (12) imply the local first/mixed coordinate and radius\njet portions of S150. A background N7(b)<=1e-7/C1 meets the\nlocal S146 size bound. This statement does not establish the\ncap extension, actual global operator/domain coefficients,\ninterior raw norm, source differentiability in the same family,\ncold weights or preservation of the input C7 ball.\n\n## 4. Why the earlier C5 estimate cannot be substituted\n\nAt the seed with a0=1 and b=0, (3) reduces to\n\n    D^2 beta[ h,k ]=h' integral_0^Y k\n                              +k' integral_0^Y h. (14)\n\nChoose smooth cutoffs supported strictly inside the outer collar,\nwith k=1 on a smaller interval and its primitive nonzero there.\nLet h_N=N^-5 sin(NY) on that smaller interval, with a fixed\ncutoff outside it. These are legitimate zero-cubic weighted\ndirections with uniformly bounded C5 norm, but on the interval\nthe fifth derivative of (14) has leading term\nN cos(NY) integral_0^Y k (up to an immaterial phase).\nThe remaining derivatives are uniformly bounded. Hence the\nbilinear map is unbounded C5 x C5 -> C5. For an analytic\nnonconstant seed the extra L0 terms contain at most fifth\nderivatives of h_N after the primitive factors are used;\nthey do not cancel this leading sixth derivative.\n\nThis is a coordinate regularity obstruction, not a quantum\nstate or physical nonexistence theorem. Seven background\nderivatives are sufficient for the finite-background mixed\nestimate; we do not claim that C7 is the minimal possible space\nor that the existing C5 source estimates provide C7.\n\nThe next global proof must either preserve a stronger space\nwith its own quantitative inverse, or use a formulation that\navoids this moving-coordinate differentiation. Merely rescaling\nthe old C5 ball cannot make an unbounded bilinear map bounded.\nThe stronger local coordinate theorem does not remove S149's\nseparate source-gradient limitation.\n\n## 5. Focused verification protocol\n\nBefore execution: exact symbolic chain-rule/inverse identities,\ncubic/radius/lapse series and algebraic bounds (5)-(10).\nThe test geometry is manufactured smooth real data, not a\nsolution or quantum state. Use exp(b) with cubic/quartic smooth\nb, and independent n and seed polynomials. Compare (3) and\n(11) against independently solved coordinate inversions at\nY=.025,.05,.09, using 32/64-point Gauss integration, 55 digits,\nand centered mixed steps .001,.0005. Require absolute mixed\nerror <=2e-6(1+|target|), refinement ratio <=.35 unless both\nerrors <1e-30; quadrature agreement <=1e-11(1+|target|).\nCheck exact omission differences for the inverse acceleration\nand radius-cubic correlation. Test the unbounded sequence in\n(14) analytically and at increasing integer frequencies.\n\nPreserve all runs, failed source snapshots, input hashes before\nand after and raw output. Verification supports the ordinary\nproof and the limited coordinate scope. It is not an acceptance\ntest for a full semiclassical wormhole.\n\nRemaining to-do list: prove a usable global common-family/source\ncontract and cold response; complete remaining source sectors,\nglobal inverse and exterior/state solve; complete charge, signed\nsource, opening, stability, transport, preparation and creation.\n",
+      "supersession_reason": "Enclose the remaining fixed seed radius constant explicitly from the retained analytic guards."
+    },
+    {
+      "story": "S151",
+      "created_utc": "2026-10-20T10:21:12.854915+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "nodes": [
+          32,
+          64
+        ],
+        "digits": 55,
+        "steps": [
+          ".001",
+          ".0005"
+        ],
+        "observations": [
+          ".025",
+          ".05",
+          ".09"
+        ],
+        "mixed_tolerance": "2e-6",
+        "quadrature_tolerance": "1e-11",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-30"
+      },
+      "input_sha256_before": {
+        "checks/common_chart_coordinate_transfer.py": "00343b43b61e41f1477e09c9e45595fc971b4cdbfc29df97104b068d55e870ce",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "evidence/averaged-ward-matching.json": "582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e"
+      },
+      "input_sha256_after": {
+        "checks/common_chart_coordinate_transfer.py": "00343b43b61e41f1477e09c9e45595fc971b4cdbfc29df97104b068d55e870ce",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "notes/averaged-ward-matching.md": "8ba87d20fca5ea3c51fac7e5cd0bb9f575c682321ba4b854e746dbb1595e091f",
+        "evidence/averaged-ward-matching.json": "582466967a1a4c70514f9eb1b0a50ee960c2c6684c5b96ef0caa9653d7ea2341",
+        "notes/outer-finite-background-response.md": "326ec858d62733a83858b6848915e183265daac21cd09fbf6a47ffe6db70ea7f",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "s150_committed_artifact_hashes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s150_final_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "s150_all_eight_inputs_unchanged",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_first_implicit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_implicit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_euler_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_first_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_mixed_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "beta_mixed_euler",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_first_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_chain",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_acceleration_omission_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_cubic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_cubic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_quartic_series",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_quadratic_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_cubic_correlation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "correlated_radius_cubic_removes_lapse",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radius_cubic_leaves_lapse",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_mass_parameter",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "relative_radius_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "relative_radius_gradient_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_bilinear_unbounded_exact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_bilinear_growth_limit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ordinary_euler_conversion_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_euler_norm",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_weight_embedding",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "exponential_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "averaging_integral_weights",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "log_coordinate_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "coordinate_multiplier_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_first_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_margin",
+          "passed": true,
+          "detail": "646000586980317/1000000000000000"
+        },
+        {
+          "name": "target_collar_inside_image",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weight_ratio_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "composition_five_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cubic_exponential_jet_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cubic_reexpression_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_first_response_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_mixed_response_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_mass_norm_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_precomposition_reserves",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_relative_and_scaling_reserves",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_seed_first_derivative_guards",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_seed_logarithmic_coefficients",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_seed_explicit_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "explicit_seed_constants_finite",
+          "passed": true,
+          "detail": "{'M': '68069605200', 'P': '161600000000/3', 'C1': '10372040780153/3', 'C2': '10210440780150', 'sufficient_local_background': '3/103720407801530000000'}"
+        },
+        {
+          "name": "scaled_coordinate_contract",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_complex_first_derivative_margin",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "unbounded_fixture_growth",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '-1.327366289105643940582992e-11', 'errors': ['8.166438568930385e-26', '2.041609642232584e-26']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '-2.235341264802750074613145e-9', 'errors': ['1.505064190541442e-23', '3.76266047635358e-24']}"
+        },
+        {
+          "name": "warp_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '6.721794313258925505991233e-10', 'errors': ['5.089289414884401e-24', '1.272322353721092e-24']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_32_.025",
+          "passed": true,
+          "detail": "{'target': '5.952231891811539956030234e-12', 'errors': ['3.695209556099467e-26', '9.238023890248615e-27']}"
+        },
+        {
+          "name": "radius_mixed_refinement_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_32_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '-1.722924225642556391829819e-9', 'errors': ['6.943862646105481e-22', '1.735965661525698e-22']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '-0.0000001453638769413130482661569', 'errors': ['6.420897123262539e-20', '1.605224280814974e-20']}"
+        },
+        {
+          "name": "warp_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '4.330292863822497313232141e-8', 'errors': ['2.144513084817523e-20', '5.361282712041489e-21']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_32_.05",
+          "passed": true,
+          "detail": "{'target': '7.680152825908041944265886e-10', 'errors': ['3.127557606995126e-22', '7.818894017484849e-23']}"
+        },
+        {
+          "name": "radius_mixed_refinement_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_32_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '-0.0000001076692907834787661619305', 'errors': ['1.529461286853129e-18', '3.823653217080814e-19']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '-0.000005058747835499814505933653', 'errors': ['7.893163385213096e-17', '1.973290846274718e-17']}"
+        },
+        {
+          "name": "warp_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '0.000001484597671185818387745808', 'errors': ['2.585015812560503e-17', '6.46253953130314e-18']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_32_.09",
+          "passed": true,
+          "detail": "{'target': '4.751472299489740147689025e-8', 'errors': ['6.833647213486196e-19', '1.708411803348723e-19']}"
+        },
+        {
+          "name": "radius_mixed_refinement_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_32_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '-1.327366289105643940582992e-11', 'errors': ['8.166438568930385e-26', '2.041609642232584e-26']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '-2.235341264802750074613145e-9', 'errors': ['1.505064190541442e-23', '3.76266047635358e-24']}"
+        },
+        {
+          "name": "warp_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '6.721794313258925505991233e-10', 'errors': ['5.089289414884401e-24', '1.272322353721092e-24']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_64_.025",
+          "passed": true,
+          "detail": "{'target': '5.952231891811539956030234e-12', 'errors': ['3.695209556099467e-26', '9.238023890248615e-27']}"
+        },
+        {
+          "name": "radius_mixed_refinement_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_64_.025",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '-1.722924225642556391829819e-9', 'errors': ['6.943862646105481e-22', '1.735965661525698e-22']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '-0.0000001453638769413130482661569', 'errors': ['6.420897123262539e-20', '1.605224280814974e-20']}"
+        },
+        {
+          "name": "warp_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '4.330292863822497313232141e-8', 'errors': ['2.144513084817523e-20', '5.361282712041489e-21']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_64_.05",
+          "passed": true,
+          "detail": "{'target': '7.680152825908041944265886e-10', 'errors': ['3.127557606995126e-22', '7.818894017484849e-23']}"
+        },
+        {
+          "name": "radius_mixed_refinement_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_64_.05",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '-0.0000001076692907834787661619305', 'errors': ['1.529461286853129e-18', '3.823653217080814e-19']}"
+        },
+        {
+          "name": "inverse_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "warp_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '-0.000005058747835499814505933653', 'errors': ['7.893163385213096e-17', '1.973290846274718e-17']}"
+        },
+        {
+          "name": "warp_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_log_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '0.000001484597671185818387745808', 'errors': ['2.585015812560503e-17', '6.46253953130314e-18']}"
+        },
+        {
+          "name": "radius_log_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radius_mixed_difference_64_.09",
+          "passed": true,
+          "detail": "{'target': '4.751472299489740147689025e-8', 'errors': ['6.833647213486196e-19', '1.708411803348723e-19']}"
+        },
+        {
+          "name": "radius_mixed_refinement_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_first_differences_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_adaptive_inverse_64_.09",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadrature_refinement_all_coordinate_maps",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "seed_constants": {
+            "M": "68069605200",
+            "P": "161600000000/3",
+            "C1": "10372040780153/3",
+            "C2": "10210440780150"
+          },
+          "M_R": 500,
+          "existing_C5_endpoint_in_C7_ball_established": false
+        },
+        {
+          "nodes": 32,
+          "Y": ".025",
+          "mixed_targets": [
+            "-1.32736628910564394058299176661e-11",
+            "-0.0000000022353412648027500746131450718",
+            "6.7217943132589255059912326494e-10",
+            "5.95223189181153995603023433127e-12"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 32,
+          "Y": ".05",
+          "mixed_targets": [
+            "-0.00000000172292422564255639182981854889",
+            "-0.000000145363876941313048266156900795",
+            "0.0000000433029286382249731323214100405",
+            "7.68015282590804194426588585949e-10"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 32,
+          "Y": ".09",
+          "mixed_targets": [
+            "-0.000000107669290783478766161930494115",
+            "-0.00000505874783549981450593365254119",
+            "0.00000148459767118581838774580762807",
+            "0.0000000475147229948974014768902495022"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 64,
+          "Y": ".025",
+          "mixed_targets": [
+            "-1.32736628910564394058299176661e-11",
+            "-0.0000000022353412648027500746131450718",
+            "6.7217943132589255059912326494e-10",
+            "5.95223189181153995603023433127e-12"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 64,
+          "Y": ".05",
+          "mixed_targets": [
+            "-0.00000000172292422564255639182981854889",
+            "-0.000000145363876941313048266156900795",
+            "0.0000000433029286382249731323214100405",
+            "7.68015282590804194426588585949e-10"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        },
+        {
+          "nodes": 64,
+          "Y": ".09",
+          "mixed_targets": [
+            "-0.000000107669290783478766161930494115",
+            "-0.00000505874783549981450593365254119",
+            "0.00000148459767118581838774580762807",
+            "0.0000000475147229948974014768902495022"
+          ],
+          "manufactured_fixture_is_physical_solution": false
+        }
+      ],
+      "exception": null,
+      "scope": "local weighted C7-to-C5 coordinate transfer and radius/mass correlation",
+      "unresolved": [
+        "global common-family/source contract",
+        "cold response",
+        "actual C7 input and global inverse",
+        "other source sectors",
+        "exterior/state solve and all physical completion conditions"
+      ]
+    }
+  ]
+}
