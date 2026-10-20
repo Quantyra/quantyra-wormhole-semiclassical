@@ -1,0 +1,633 @@
+{
+  "runs": [
+    {
+      "story": "S149",
+      "created_utc": "2026-10-20T09:38:14.281930+00:00",
+      "status": "failed",
+      "stage": "startup_import",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "protocol": {
+        "gauss_nodes": [
+          48,
+          96
+        ],
+        "tower_levels": [
+          512,
+          1024
+        ],
+        "quadrature_tolerance": "1e-10",
+        "finite_difference_steps": [
+          ".0001",
+          ".00005"
+        ],
+        "finite_difference_tolerance": "2e-7",
+        "refinement_ratio": ".35"
+      },
+      "input_sha256_before": {
+        "checks/spatial_response_norm_audit.py": "b764d547cf6b01c18cceb24156f60b15be8be7d87eec5dd6784359bef2753ed9",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6",
+        "notes/flat-variable-dirac-three-point.md": "845c142bde8b9bf02972d6a19c636dfe26d444747d95a194ffa9f73b8455139b",
+        "checks/flat_variable_dirac_three_point.py": "4b285a9300765f2d4f61a70c94fec485f06797fd1c2374c92ca5218f5da6673c",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d"
+      },
+      "input_sha256_after": {
+        "checks/spatial_response_norm_audit.py": "b764d547cf6b01c18cceb24156f60b15be8be7d87eec5dd6784359bef2753ed9",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6",
+        "notes/flat-variable-dirac-three-point.md": "845c142bde8b9bf02972d6a19c636dfe26d444747d95a194ffa9f73b8455139b",
+        "checks/flat_variable_dirac_three_point.py": "4b285a9300765f2d4f61a70c94fec485f06797fd1c2374c92ca5218f5da6673c",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d"
+      },
+      "unchanged_inputs": true,
+      "checks": [],
+      "numerics": [],
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\spatial_response_norm_audit.py\", line 21, in <module>\n    from flat_variable_dirac_three_point import parameter_remainder\nModuleNotFoundError: No module named 'flat_variable_dirac_three_point'\n",
+      "failed_checker_source_utf8": "\"\"\"S149: exact flat regularity endpoint and sufficient Fourier response norm.\n\nFinite diagnostics do not prove a curved mapping or a physical solution.\nThe infinite-frequency conclusion is the harmonic lower-bound argument.\n\"\"\"\nfrom __future__ import annotations\n\nfrom datetime import datetime, timezone\nfrom fractions import Fraction as Q\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport sys\nimport traceback\n\nimport mpmath as mp\nimport numpy as np\nimport sympy as s\nfrom numpy.polynomial.legendre import leggauss\n\nfrom flat_variable_dirac_three_point import parameter_remainder\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = \"spatial-response-norm-audit\"\nINPUTS = [\n    \"checks/spatial_response_norm_audit.py\",\n    \"notes/spatial-response-norm-audit.md\",\n    \"notes/flat-variable-dirac-three-point.md\",\n    \"checks/flat_variable_dirac_three_point.py\",\n    \"notes/stationary-curved-quantum-tt.md\",\n    \"notes/general-interior-dirac-response.md\",\n    \"notes/interior-pressure-and-bolt-primitive.md\",\n    \"notes/stationary-centered-canonical-response.md\",\n    \"notes/stationary-centered-complete-residual.md\",\n]\nROWS, NUMERICS = [], []\nPROTOCOL = {\"gauss_nodes\":[48,96],\"tower_levels\":[512,1024],\n            \"quadrature_tolerance\":\"1e-10\",\"finite_difference_steps\":[\".0001\",\".00005\"],\n            \"finite_difference_tolerance\":\"2e-7\",\"refinement_ratio\":\".35\"}\n\n\ndef check(name, passed, detail=\"\"):\n    assert not any(row[\"name\"] == name for row in ROWS)\n    row = {\"name\":name,\"passed\":bool(passed),\"detail\":str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row),flush=True)\n    if not row[\"passed\"]:\n        raise AssertionError(name)\n\n\ndef exact_checks():\n    v,t,z,n,q,C,M,k,cc = s.symbols(\"v t z n q C M k cc\", positive=True)\n    R = s.log(1+v)-v+v**2/2\n    check(\"positive_log_remainder_derivative\", s.simplify(s.diff(R,v)-v**2/(1+v)) == 0)\n    check(\"quadratic_remainder_upper_identity\", s.simplify(v**2/2-R-(v-s.log(1+v))) == 0)\n    check(\"cubic_remainder_upper_derivative\", s.simplify(s.diff(v**3/3-R,v)-v**3/(1+v)) == 0)\n    a=z*(1-z)\n    check(\"second_and_third_parameter_moments\",\n          s.integrate(a**2,(z,0,1))==s.Rational(1,30) and s.integrate(a**3,(z,0,1))==s.Rational(1,140))\n    check(\"central_parameter_lower_interval\", (s.Rational(1,4)*(1-s.Rational(1,4)))==s.Rational(3,16))\n    check(\"large_argument_quadratic_lower\", s.simplify(v**2/2-v-v**2/6-v*(v-3)/3) == 0)\n    check(\"mode_lower_coefficient\", Q(1,2)*Q(1,2)*Q(1,6)*Q(3,16)**2==Q(3,2048))\n    Mn2=n*(n+q)/C\n    dn=2*(q+2*n)\n    check(\"inverse_square_partial_fraction\", s.simplify(dn/Mn2-2*C*(1/n+1/(n+q))) == 0)\n    check(\"inverse_fourth_partial_fraction\", s.simplify(dn/Mn2**2-2*C**2/q*(1/n**2-1/(n+q)**2)) == 0)\n    check(\"counting_function_bound\", s.simplify(4*n*(n+q)-2*n*(q+n+1)-2*n*(n+q-1)) == 0)\n    check(\"split_tower_constant\", Q(4,120)+Q(8,840)==Q(3,70))\n    check(\"normalized_harmonic_lower_coefficient\", 2*Q(3,2048)*2==Q(3,512))\n    check(\"contact_reserve\", Q(100,60*3)==Q(5,9))\n    check(\"high_frequency_linear_upper_budget\", Q(5,9)+2*Q(3,70)/3 < Q(6,10) and Q(2,45)<Q(5,100))\n    check(\"low_frequency_linear_upper_budget\", Q(5,9)+Q(16,840*3) < Q(6,10))\n    check(\"third_contact_normalization\", Q(32*100*3,960*3)==Q(10,3))\n    # The actual simpler estimate: 10/3 < 5 log 2, using log 2 > 2/3.\n    check(\"third_contact_log_reserve\", Q(10,3)==5*Q(2,3))\n    check(\"mixed_scalar_multiplier_reserve\", 20+5+2+2 < 30)\n    check(\"output_gradient_frequency_budget\", 30*2*16*2==1920 < 2000)\n    x,ss,tt=s.symbols(\"x ss tt\")\n    f0,fs,ft,fst,h0,w0=s.symbols(\"f0 fs ft fst h0 w0\")\n    scalar=s.exp(-2*(ss*h0+tt*w0))*(f0+ss*fs+tt*ft+ss*tt*fst)\n    check(\"scalar_density_mixed_conversion\", s.simplify(s.diff(scalar,ss,tt).subs({ss:0,tt:0})-\n          (fst-2*h0*ft-2*w0*fs+4*h0*w0*f0)) == 0)\n    vac=s.symbols(\"vac\")\n    check(\"vacuum_scalar_response_cancellation\",\n          s.simplify((fst-2*h0*ft-2*w0*fs+4*h0*w0*f0).subs(\n              {f0:vac,fs:2*h0*vac,ft:2*w0*vac,fst:4*h0*w0*vac})) == 0)\n    Pmode=M**2/(2*s.pi)*R.subs(v,a*k**2/M**2)\n    Vconst=M**2/s.pi*(s.log(1+a*k**2/M**2)-(a*k**2/M**2)/(1+a*k**2/M**2)-\n                                (a*k**2/M**2)**2/2)\n    check(\"constant_action_vertex_identity\", s.simplify(Vconst-2*Pmode+k*s.diff(Pmode,k)) == 0)\n    check(\"common_contact_constant_identity\", s.simplify(-2*cc*k**4-2*cc*k**4+k*s.diff(cc*k**4,k)) == 0)\n    # Every derivative of k^-5 cos(k x), through five, has amplitude k^(j-5).\n    check(\"c5_sequence_derivative_amplitudes\",\n          all(s.simplify(s.diff(k**-5*s.exp(s.I*k*x),x,j)/(s.I**j*s.exp(s.I*k*x))-k**(j-5)) == 0\n              for j in range(6)))\n    check(\"source_gradient_sequence_cancellation\", s.simplify(k*k**-5*k**4-1) == 0)\n    check(\"source_value_sequence_decay\", s.limit(s.log(2+k)/k,k,s.oo) == 0)\n    check(\"harmonic_lower_bound_diverges\", s.limit(s.log(n+1),n,s.oo) == s.oo)\n    check(\"extra_power_single_wave_decay\", s.limit(s.log(2+k)/s.sqrt(k),k,s.oo) == 0)\n\n\ndef Rvalue(v):\n    return mp.log1p(v)-v+v*v/2\n\n\ndef closed_parameter(t):\n    if t == 0:\n        return mp.mpf(0)\n    y=mp.sqrt(t/(t+4))\n    return 2*mp.atanh(y)/y-2-t/6+t*t/60\n\n\ndef mode(k,M=1):\n    M=mp.mpf(M)\n    return M*M*closed_parameter(k*k/(M*M))/(2*mp.pi)\n\n\ndef diagnostic_checks():\n    mp.mp.dps=60\n    check(\"logarithm_budget_guards\", mp.log(2)>mp.mpf(2)/3 and mp.log(18)>2)\n    for index,(momentum,mass) in enumerate([(\".2\",\"1\"),(\"1\",\"1\"),(\"4\",\"1\"),(\"19\",\"3\")]):\n        k,M=mp.mpf(momentum),mp.mpf(mass)\n        target=mode(k,M)\n        adaptive=M*M/(2*mp.pi)*mp.quad(lambda z:Rvalue(z*(1-z)*k*k/(M*M)),[0,.5,1])\n        check(f\"closed_parameter_vs_adaptive_{index}\", abs(target-adaptive)<mp.mpf(\"1e-45\")*(1+abs(target)))\n        for nodes in PROTOCOL[\"gauss_nodes\"]:\n            xx,ww=leggauss(nodes)\n            observed=M*M/(2*mp.pi)*sum(mp.mpf(float(w))/2*Rvalue(\n                ((mp.mpf(float(x))+1)/2)*((1-mp.mpf(float(x)))/2)*k*k/(M*M)) for x,w in zip(xx,ww))\n            check(f\"independent_gauss_parameter_{index}_{nodes}\",\n                  abs(observed-target)<mp.mpf(PROTOCOL[\"quadrature_tolerance\"])*(1+abs(target)))\n        lower=3*k**4/(2048*mp.pi*M*M)\n        check(f\"mode_envelopes_{index}\", 0<=target<=min(k**4/(120*mp.pi*M*M),k**6/(840*mp.pi*M**4)) and\n              (k<4*M or target>=lower))\n        contact=mp.mpf(\".13\")\n        K=lambda p:mode(p,M)+contact*p**4\n        vertex=M*M/mp.pi*mp.quad(lambda z:mp.log1p(z*(1-z)*k*k/M**2)-\n              (z*(1-z)*k*k/M**2)/(1+z*(1-z)*k*k/M**2),[0,.5,1])-k**4/(60*mp.pi*M*M)-2*contact*k**4\n        mixed=vertex-2*K(k)\n        target_mixed=-k*mp.diff(K,k)\n        check(f\"independent_constant_scalar_identity_{index}\",\n              abs(mixed-target_mixed)<mp.mpf(\"1e-45\")*(1+abs(target_mixed)))\n        errors=[]\n        for step_text in PROTOCOL[\"finite_difference_steps\"]:\n            step=mp.mpf(step_text)\n            observed=(K(k*mp.exp(-step))-K(k*mp.exp(step)))/(2*step)\n            errors.append(abs(observed-mixed))\n        check(f\"constant_scale_finite_difference_{index}\",\n              max(errors)<mp.mpf(PROTOCOL[\"finite_difference_tolerance\"])*(1+abs(mixed)),\n              {\"mixed\":mp.nstr(mixed,28),\"errors\":[mp.nstr(e,18) for e in errors]})\n        check(f\"constant_scale_step_refinement_{index}\",\n              errors[1]<mp.mpf(PROTOCOL[\"refinement_ratio\"])*errors[0] or max(errors)<mp.mpf(\"1e-35\"))\n        check(f\"density_omission_detected_{index}\", abs(vertex-mixed)>mp.mpf(\"1e-5\"))\n    # Synthetic parameters test arithmetic only, without replacing the benchmark.\n    q,C,F=7,mp.mpf(2),mp.mpf(-11)\n    def tower(k,N):\n        return -F*k**4/(60*mp.pi)+2/C*sum(2*(q+2*n)*mode(k,mp.sqrt(n*(n+q)/C)) for n in range(1,N+1))\n    def tail(k,N):\n        inv4=2*C*C/q*sum(mp.mpf(1)/j**2 for j in range(N+1,N+q+1))\n        return 2/C*k**6/(840*mp.pi)*inv4\n    for ktext in [\"1\",\"7\",\"25\",\"80\"]:\n        k=mp.mpf(ktext)\n        vals=[tower(k,N) for N in PROTOCOL[\"tower_levels\"]]\n        tails=[tail(k,N) for N in PROTOCOL[\"tower_levels\"]]\n        check(f\"positive_tower_tail_{ktext}\", 0<vals[1]-vals[0]<tails[0] and tails[1]<tails[0])\n        check(f\"nested_tower_enclosures_{ktext}\", vals[0]+tails[0]>vals[1]+tails[1])\n        # For this fixture M1=2, use the unreduced counting upper bound.\n        M1=mp.sqrt((1+q)/C)\n        if k>=M1:\n            bound=k**4*(abs(F)/(60*mp.pi)+2/mp.pi*(mp.mpf(3)/70+mp.log(k/M1)/15))\n        else:\n            bound=abs(F)*k**4/(60*mp.pi)+16*k**6/(840*mp.pi*M1*M1)\n        check(f\"full_tower_enclosure_vs_upper_{ktext}\", vals[1]+tails[1]<bound)\n        NUMERICS.append({\"fixture\":\"q=7,C=2,F=-11; eta factored out\",\"k\":ktext,\n                         \"partial_sums\":[mp.nstr(x,30) for x in vals],\n                         \"rigorous_tail_upper\":[mp.nstr(x,25) for x in tails]})\n    seq=[]\n    for power in [4,8,16,32,64]:\n        N=2**power\n        H=mp.digamma(N+1)+mp.euler\n        lower=-F/(60*mp.pi)+3*H/(512*mp.pi)\n        seq.append(lower)\n        check(f\"harmonic_lower_comparison_{power}\", H>=mp.log(N+1))\n    check(\"increasing_gradient_lower_sequence\", all(b>a for a,b in zip(seq,seq[1:])))\n    NUMERICS.append({\"gradient_lower_eta_factored_out\":[mp.nstr(x,30) for x in seq],\n                     \"infinite_growth_proof\":\"harmonic lower bound, not finite extrapolation\"})\n    for index,(p1,p2) in enumerate([((.7,.2),(-.1,.8)),((3.,.5),(-1.,2.)),((0.,0.),(2.,0.))]):\n        p1,p2=np.array(p1),np.array(p2)\n        mags=[np.linalg.norm(p1),np.linalg.norm(p2),np.linalg.norm(p1+p2)]\n        squares=[v*v for v in mags]\n        contact=float(F)/(30*np.pi)*(squares[0]*squares[1]+squares[0]*squares[2]+squares[1]*squares[2])\n        vertices=[]\n        for nodes in PROTOCOL[\"gauss_nodes\"]:\n            rem=0.\n            for n in range(1,65):\n                Mn=np.sqrt(n*(n+q)/float(C))\n                rem+=2*(q+2*n)*Mn*Mn*parameter_remainder(p1/Mn,p2/Mn,nodes)\n            vertices.append(contact+2/float(C)*rem)\n        K1,K2=float(tower(mp.mpf(float(mags[0])),64)),float(tower(mp.mpf(float(mags[1])),64))\n        Bmix=vertices[1]-2*K1-2*K2\n        check(f\"mode_pair_vertex_quadrature_{index}\",\n              abs(vertices[1]-vertices[0])<1e-10*(1+abs(vertices[1])))\n        check(f\"mode_pair_scalar_density_omission_{index}\", abs(Bmix-vertices[1])>1e-5)\n        Kmax=max(mags)\n        inv4=2*float(C)**2/q*sum(1/j**2 for j in range(65,65+q))\n        a6=3037/(7560*np.pi)\n        Btail=2/float(C)*a6*Kmax**6*inv4+2*float(tail(mp.mpf(float(mags[0])),64))+2*float(tail(mp.mpf(float(mags[1])),64))\n        W=lambda p:(1+p)**5*np.log(2+p)\n        check(f\"mode_pair_gradient_norm_with_tail_{index}\",\n              mags[2]*(abs(Bmix)+Btail)<2000*(W(mags[0])+W(mags[1])))\n        NUMERICS.append({\"mode_pair\":index,\"density_vertex\":vertices[1],\"scalar_mixed\":Bmix,\n                         \"retained_tail_upper\":Btail})\n\n\ndef hashes():\n    return {p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    before=hashes()\n    error=None\n    try:\n        exact_checks()\n        diagnostic_checks()\n    except Exception:\n        error=traceback.format_exc()\n        print(error,file=sys.stderr)\n    after=hashes()\n    ok=error is None and before==after and all(row[\"passed\"] for row in ROWS)\n    record={\"story\":\"S149\",\"created_utc\":datetime.now(timezone.utc).isoformat(),\n            \"status\":\"passed\" if ok else \"failed\",\"python\":sys.version,\"numpy\":np.__version__,\n            \"sympy\":s.__version__,\"mpmath\":mp.__version__,\"protocol\":PROTOCOL,\n            \"input_sha256_before\":before,\"input_sha256_after\":after,\"unchanged_inputs\":before==after,\n            \"checks\":ROWS,\"numerics\":NUMERICS,\"exception\":error,\n            \"scope\":\"flat comparison spatial regularity; no curved finite-background mapping or wormhole solution\",\n            \"unresolved\":[\"actual curved spatial response and norm transfer\",\"cold weighted mixed response\",\n                          \"other source maps and global solve\",\"all physical completion gates\"]}\n    if error:\n        record[\"failed_checker_source_utf8\"]=Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"]=(ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    output=ROOT/\"evidence\"/f\"{STEM}.json\"\n    history=json.loads(output.read_text(encoding=\"utf-8\")) if output.exists() else {\"runs\":[]}\n    history[\"runs\"].append(record)\n    output.write_text(json.dumps(history,indent=2)+\"\\n\",encoding=\"utf-8\",newline=\"\\n\")\n    print(json.dumps({\"status\":record[\"status\"],\"checks\":len(ROWS),\"unchanged_inputs\":before==after}),flush=True)\n    return 0 if ok else 1\n\n\nif __name__==\"__main__\":\n    raise SystemExit(main())\n",
+      "failed_note_source_utf8": "# The spatial-gradient endpoint and a sufficient flat response norm\n\n2026-10-19, E003/S149 supporting S139/S074. Ordinary argument and\ndiagnostic protocol before execution.\n\nThe retained flat canonical linear response is not a bounded map\nfrom the ordinary uniform C5 norm to the uniform source-gradient\nnorm. Its angular tower has a positive fourth-order logarithmic\ntail. A logarithmically weighted Fourier norm controls both the\nfirst and mixed scalar-gradient responses at the flat basepoint.\n\nThis is a regularity result for the exact flat comparison operator.\nIt does not identify the actual curved operator with that comparison,\nsupply S148's missing finite-background J, or disprove a physical\nwormhole. In particular a bounded C5 source-value theorem is not\ncontradicted by failure of the stronger spatial-gradient endpoint.\n\n## 1. Fixed convention and the complete linear multiplier\n\nRetain S142's rank-two complex convention, the whole massive tower\nand the common scale/contact:\n\n    M_n^2=n(n+q)/C, d_n=2(q+2n), q=2000^4,\n    eta_G=GC/B^2<8.5e-33, M_1>18, |F_eff|<100.\n\nLet K be the flat action Hessian after the constant-vacuum and\ntwo-derivative allocations, with the common fourth contact restored:\n\n    K(k)=-C F_eff k^4/(120pi)\n       +sum_n d_n M_n^2/(2pi) integral_0^1 R(a k^2/M_n^2) dz,\n    a=z(1-z), R(v)=log(1+v)-v+v^2/2.                (1)\n\nThis is the multiplier already derived in the curved-form note,\nsection 7. No per-level unsigned inverse-square sum replaces its\ncommon finite part. The normalized multiplier is\nKhat=(2G/B^2)K. The Lorentzian scalar trace has the opposite action\nsign; all estimates here concern absolute values.\n\nAt a flat basepoint the vacuum scalar is a spatial constant and\nhas zero scalar variation. Its coordinate-density variations cancel\nwhen converting the action derivatives to scalar derivatives. No\nphysical vacuum value is assigned zero.\n\nThe fermionic minus trace-log and bubble conventions agree with\n[Carmi--Di Pietro--Komatsu, section 6.1](https://arxiv.org/html/1810.04185#S6.SS1),\nre-inspected on 2026-10-19. Their interacting model is not used\nas a theorem about this exterior. The proof below uses elementary\npositive parameter integrals and exact angular sums; it does not\nneed to assume a high-frequency asymptotic or a curved symbol theorem.\n\n## 2. Upper bound with the entire tower\n\nFor v>=0,\n\n    0<=R(v)<=min(v^2/2,v^3/3),\n    R(v)=v^3 integral_0^1 t^2/(1+tv)dt.\n\nSince integral a^2=1/30 and integral a^3=1/140, a single\nremainder term L_M(k) obeys\n\n    0<=L_M(k)<=min[k^4/(120pi M^2),k^6/(840pi M^4)].\n\nThe exact counting function N(E)<=4CE^2 gives\n\n    sum_(M<=k) d/M^2 <=4C+8C log(k/M1),\n    sum_(M>k) d/M^4 <=8C/k^2,                       (2)\n\nfor k>=M1. Split there. The normalized remainder is at most\n\n    (2eta_G/pi) k^4 [3/70+log(k/M1)/15].\n\nFor k<M1 use sum d/M^4<=8C/M1^2 and the sixth-order bound.\nTogether with the common contact, pi>3 and M1>18, both cases give\n\n    |Khat(k)|<=eta_G k^4[.6+.05 log_+(k/18)]\n              <=eta_G k^4 log(2+k).                (3)\n\nThe contact alone costs less than (5/9)eta_G k^4.\nThe second inequality follows from log 2>.6 for k<=18,\nand log k>=log 18>2 for k>=18. These are continuum estimates;\nno angular truncation or finite grid establishes them.\n\n## 3. Lower bound and the failed C5 gradient endpoint\n\nOn z in [1/4,3/4], a>=3/16. If k>=4M then\nv=a k^2/M^2>=3, so R(v)>=v^2/2-v>=v^2/6.\nThus\n\n    L_M(k)>=3 k^4/(2048pi M^2), k>=4M.             (4)\n\nFor any integer N>=1, put k_N=4M_N. Exact partial fractions give\n\n    d_n/M_n^2=2C[1/n+1/(n+q)],\n    sum_(n<=N) d_n/M_n^2\n       =2C[H_N+H_(N+q)-H_q]>=2C H_N.\n\nAll unretained remainder terms are positive. Therefore\n\n    Khat(k_N)/(eta_G k_N^4)\n       >=-|F_eff|/(60pi)+(3/(512pi))H_N\n       >=-|F_eff|/(60pi)+(3/(512pi))log(N+1).       (5)\n\nThe right side grows without bound at fixed positive eta_G.\nA finite local fourth-order counterterm changes the constant in\n(5), not this growth.\n\nConsider the smooth bounded functions on the flat plane\n\n    u_N(x1,x2)=k_N^-5 cos(k_N x1).\n\nFor k_N>=1, max_(|beta|<=5)||partial^beta u_N||inf=1.\nAs a Fourier multiplier on periodic bounded functions,\n\n    ||grad Khat(D)u_N||inf=|Khat(k_N)|/k_N^4,\n\nwhich is unbounded by (5). The use of bounded periodic fields\navoids a false compact-support claim. This is an exact flat\ncomparison, not a direction asserted to satisfy the curved paired\ndomain. No localization remainder or equivalence of curved norms\nis inferred here.\n\nBy contrast (3) gives\n||Khat(D)u_N||inf<=eta_G log(2+k_N)/k_N, tending to zero.\nThis distinguishes the source-value endpoint from its gradient.\nFor any exponent 5+delta, delta>0, the single-wave gradient is\nbounded, but a single-wave test alone is not a general function-space\nmapping theorem.\n\nThe conclusion concerns the retained operator at arbitrarily high\nfrequency. It is not a physical ultraviolet impossibility statement.\nAn explicitly specified cutoff would replace the divergent factor\nby a cutoff-dependent logarithm; introducing one would be an\nadditional model decision, not a proof in the present norm.\n\n## 4. A sufficient norm for first and mixed scalar gradients\n\nUse Fourier measure dp/(2pi)^2. For integrable Fourier transforms set\n\n    A0(u)=integral |uhat(p)| dp/(2pi)^2,\n    A5log(u)=integral (1+|p|)^5 log(2+|p|)|uhat(p)| dp/(2pi)^2.\n\nThe identical inequalities hold for discrete Fourier sums.\nEquation (3) gives the actual linear mapping estimate\n\n    ||grad Khat(D)u||inf<=eta_G A5log(u).            (6)\n\nThis Fourier norm is a sufficient norm, not another name for\nordinary C5. Also log(2+r)<=1+r, so A5log<=A6, where\nA6 uses weight (1+|p|)^6. This last statement concerns Fourier\nabsolute integrability, not an unproved C6-to-A6 embedding.\n\nThe mixed source must include the scalar-area conversion. Let\nVhat(p,q,r) be S142's complete third action variation with\np+q+r=0, vacuum removed and the common fourth contact restored.\nThe scalar mixed kernel at the flat basepoint is\n\n    Bhat(q,r)=Vhat(-q-r,q,r)-2Khat(|q|)-2Khat(|r|).  (7)\n\nIt follows by differentiating exp(-2b) delta Gamma/delta b.\nThe zero-momentum vacuum terms cancel exactly. Omitting the two\nterms in (7) would give a coordinate-density response instead.\n\nPut Kmax=max(|q+r|,|q|,|r|). S142 bounds the third-action remainder\nby 20 eta_G Kmax^4 log(2+Kmax). Its restored contact costs\nat most (10/3)eta_G Kmax^4, hence less than\n5 eta_G Kmax^4 log(2+Kmax). Equation (3) consequently gives\n\n    |Bhat(q,r)|<30 eta_G Kmax^4 log(2+Kmax).        (8)\n\nWrite m=max(|q|,|r|). Then |q+r|<=2m, Kmax<=2m and\nlog(2+2m)<=2log(2+m). Multiplying (8) by the output\ngradient costs at most 1920 eta_G m^5 log(2+m).\nFubini and the elementary maximum bound prove\n\n    ||grad D^2 S_flat[ u,v ]||inf\n       <2000 eta_G [A5log(u) A0(v)+A0(u) A5log(v)]. (9)\n\nThe action/trace sign does not change (9). This is a full\nbilinear Fourier mapping estimate at the flat basepoint, including\nboth seagulls, both triangle orientations, the common contact and\nthe density terms. It is not a finite-background curved theorem.\n\nThere is a useful independent constant-direction check. If the\nsecond direction is spatially constant, covariance of the flat\nscalar under a constant scale gives\n\n    Bhat(0,p)=-k dKhat(k)/dk.\n\nFor the action vertex the corresponding formula is\nVhat(0,p,-p)=2Khat(k)-kKhat'(k). Both formulas retain the\nfourth contact, and differ by the required density term.\n\n## 5. Consequence for S148 and the cold problem\n\nS148 correctly leaves the moving-cut Hessian conditional on a\nspatial trace bound. The ordinary C5 source-value estimate alone\ndoes not supply the missing spatial-response norm: even the exact\nflat comparison has the endpoint failure (5). Equations (6),(9)\nprovide a sufficient flat norm in which to seek the actual\nfinite-background estimates. They cannot be inserted as the\nactual curved J without that proof and a norm-transfer argument.\n\nThe prior centered-canonical-response note already proves a\ncold oscillation estimate for its particular endpoint contract,\nproportional to epsilon h L_h sqrt(chi). The complete-residual\nnote already carries it through the lapse integral. Those results\nare retained, not counted as a new cold theorem here.\nThey concern the specified endpoint comparison and do not supply\nan arbitrary finite-background mixed response on S145's raw C5 ball.\n\nThe distinction matters quantitatively: S148's H_bolt scales as\n1/h. A spatial regularity repair alone does not preserve the h\nweight that cancels this amplification. The next coupled estimate\nmust retain both the logarithmic spatial control and the physical\ncold weight, or use a fixed-interface formulation that proves the\nneeded integrated response directly. No new radius, temperature,\ncounterterm or ultraviolet cutoff is selected by this audit.\n\n## 6. Verification protocol\n\nBefore execution freeze exact algebraic checks of the mode and\ncounting bounds, common contact, scalar/density conversion and\nconstant-direction identity. Check the high-frequency sequence\nby its proven harmonic lower bound, not a finite cutoff extrapolation.\n\nIndependent parameter quadratures use 48 and 96 Gauss nodes,\nwith a 1e-10 relative-to-(1+|value|) comparison to adaptive\nquadrature. A manufactured q=7,C=2 tower diagnostic sums 512\nand 1024 levels and retains the exact inverse-fourth tail bound;\nthese are not replacement physical parameters. Two finite\ndifferences at steps 1e-4 and 5e-5 must agree with the constant-\ndirection identity to 2e-7 relative-to-(1+|target|), with error\nratio below .35 unless both errors are below 1e-35. Fourier\nmode-pair diagnostics must detect omission of the density terms.\nAll failed acceptance runs retain their source snapshots.\n\nRemaining to-do list: prove the curved finite-background spatial\nmapping and compatible norm transfer; retain cold weighted response;\ncomplete other source maps and the global exterior/state solve;\ncharge and signed source; opening, stability, transport, preparation\nand creation.\n"
+    },
+    {
+      "story": "S149",
+      "created_utc": "2026-10-20T09:38:31.589795+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "gauss_nodes": [
+          48,
+          96
+        ],
+        "tower_levels": [
+          512,
+          1024
+        ],
+        "quadrature_tolerance": "1e-10",
+        "finite_difference_steps": [
+          ".0001",
+          ".00005"
+        ],
+        "finite_difference_tolerance": "2e-7",
+        "refinement_ratio": ".35"
+      },
+      "input_sha256_before": {
+        "checks/spatial_response_norm_audit.py": "2f7c58eee87fc435d9384d013fda41f9d7014e918b35c43e1811c9a5a991121c",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6",
+        "notes/flat-variable-dirac-three-point.md": "845c142bde8b9bf02972d6a19c636dfe26d444747d95a194ffa9f73b8455139b",
+        "checks/flat_variable_dirac_three_point.py": "4b285a9300765f2d4f61a70c94fec485f06797fd1c2374c92ca5218f5da6673c",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d"
+      },
+      "input_sha256_after": {
+        "checks/spatial_response_norm_audit.py": "2f7c58eee87fc435d9384d013fda41f9d7014e918b35c43e1811c9a5a991121c",
+        "notes/spatial-response-norm-audit.md": "837457efcada964c52642c01096eb6d2659df986e6167f112f4b7ed7409e8bd6",
+        "notes/flat-variable-dirac-three-point.md": "845c142bde8b9bf02972d6a19c636dfe26d444747d95a194ffa9f73b8455139b",
+        "checks/flat_variable_dirac_three_point.py": "4b285a9300765f2d4f61a70c94fec485f06797fd1c2374c92ca5218f5da6673c",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "positive_log_remainder_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadratic_remainder_upper_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cubic_remainder_upper_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "second_and_third_parameter_moments",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "central_parameter_lower_interval",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "large_argument_quadratic_lower",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_lower_coefficient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_square_partial_fraction",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inverse_fourth_partial_fraction",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "counting_function_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "split_tower_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "normalized_harmonic_lower_coefficient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "contact_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "high_frequency_linear_upper_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "low_frequency_linear_upper_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "third_contact_normalization",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "third_contact_log_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_scalar_multiplier_reserve",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "output_gradient_frequency_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_density_mixed_conversion",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "vacuum_scalar_response_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_action_vertex_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "common_contact_constant_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "c5_sequence_derivative_amplitudes",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "source_gradient_sequence_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "source_value_sequence_decay",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "harmonic_lower_bound_diverges",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "extra_power_single_wave_decay",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "logarithm_budget_guards",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "closed_parameter_vs_adaptive_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_0_48",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_0_96",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_envelopes_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_constant_scalar_identity_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_scale_finite_difference_0",
+          "passed": true,
+          "detail": "{'mixed': '-0.0008321442312922266121446820012', 'errors': ['2.2195261595844131e-11', '5.54881536565237598e-12']}"
+        },
+        {
+          "name": "constant_scale_step_refinement_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_omission_detected_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "closed_parameter_vs_adaptive_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_1_48",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_1_96",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_envelopes_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_constant_scalar_identity_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_scale_finite_difference_1",
+          "passed": true,
+          "detail": "{'mixed': '-0.5218617260044759072965944569', 'errors': ['1.39635129007927599e-8', '3.49087820414122253e-9']}"
+        },
+        {
+          "name": "constant_scale_step_refinement_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_omission_detected_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "closed_parameter_vs_adaptive_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_2_48",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_2_96",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_envelopes_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_constant_scalar_identity_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_scale_finite_difference_2",
+          "passed": true,
+          "detail": "{'mixed': '-135.2029753193706424415457855', 'errors': ['3.61650172492006787e-6', '9.04125425798626501e-7']}"
+        },
+        {
+          "name": "constant_scale_step_refinement_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_omission_detected_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "closed_parameter_vs_adaptive_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_3_48",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_gauss_parameter_3_96",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_envelopes_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_constant_scalar_identity_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_scale_finite_difference_3",
+          "passed": true,
+          "detail": "{'mixed': '-67903.76249528565775304201609', 'errors': ['0.00181108589593661391', '0.000452771471267378782']}"
+        },
+        {
+          "name": "constant_scale_step_refinement_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "density_omission_detected_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_tower_tail_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "nested_tower_enclosures_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_tower_enclosure_vs_upper_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_tower_tail_7",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "nested_tower_enclosures_7",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_tower_enclosure_vs_upper_7",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_tower_tail_25",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "nested_tower_enclosures_25",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_tower_enclosure_vs_upper_25",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "positive_tower_tail_80",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "nested_tower_enclosures_80",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_tower_enclosure_vs_upper_80",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "harmonic_lower_comparison_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "harmonic_lower_comparison_8",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "harmonic_lower_comparison_16",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "harmonic_lower_comparison_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "harmonic_lower_comparison_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "increasing_gradient_lower_sequence",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_vertex_quadrature_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_scalar_density_omission_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_gradient_norm_with_tail_0",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_vertex_quadrature_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_scalar_density_omission_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_gradient_norm_with_tail_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_vertex_quadrature_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_scalar_density_omission_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mode_pair_gradient_norm_with_tail_2",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "fixture": "q=7,C=2,F=-11; eta factored out",
+          "k": "1",
+          "partial_sums": [
+            "0.0589918201871007623717881274127",
+            "0.0589918287046885350861519758196"
+          ],
+          "rigorous_tail_upper": [
+            "1.138625743824779826190691e-8",
+            "2.868662990265689248103175e-9"
+          ]
+        },
+        {
+          "fixture": "q=7,C=2,F=-11; eta factored out",
+          "k": "7",
+          "partial_sums": [
+            "175.334360173897662861359232994",
+            "175.335362221887050370194956497"
+          ],
+          "rigorous_tail_upper": [
+            "0.001339581801352415217715086",
+            "0.0003374953321417680743500905"
+          ]
+        },
+        {
+          "fixture": "q=7,C=2,F=-11; eta factored out",
+          "k": "25",
+          "partial_sums": [
+            "37938.7075350773833801774730169",
+            "37940.786007952030599227908843"
+          ],
+          "rigorous_tail_upper": [
+            "2.779848007384716372535867",
+            "0.7003571753578342890876892"
+          ]
+        },
+        {
+          "fixture": "q=7,C=2,F=-11; eta factored out",
+          "k": "80",
+          "partial_sums": [
+            "4975342.82827262707676411440159",
+            "4977564.5333938414534963540057"
+          ],
+          "rigorous_tail_upper": [
+            "2984.839069892030827569325",
+            "752.0027909202088422547587"
+          ]
+        },
+        {
+          "gradient_lower_eta_factored_out": [
+            "0.064662199934135489343848054424",
+            "0.0697793098189695411090279486975",
+            "0.0801179774096821707031257038358",
+            "0.100802550694685800234767210501",
+            "0.1421717257230908481304071946"
+          ],
+          "infinite_growth_proof": "harmonic lower bound, not finite extrapolation"
+        },
+        {
+          "mode_pair": 0,
+          "density_vertex": -0.23334359176641478,
+          "scalar_mixed": -0.3159836490472215,
+          "retained_tail_upper": 0.000558500545216212
+        },
+        {
+          "mode_pair": 1,
+          "density_vertex": -26.328467502916,
+          "scalar_mixed": -40.19108826872458,
+          "retained_tail_upper": 0.24006583520918603
+        },
+        {
+          "mode_pair": 2,
+          "density_vertex": -2.0090231021910463,
+          "scalar_mixed": -3.9511330748630975,
+          "retained_tail_upper": 0.014279734312952489
+        }
+      ],
+      "exception": null,
+      "scope": "flat comparison spatial regularity; no curved finite-background mapping or wormhole solution",
+      "unresolved": [
+        "actual curved spatial response and norm transfer",
+        "cold weighted mixed response",
+        "other source maps and global solve",
+        "all physical completion gates"
+      ]
+    }
+  ]
+}
