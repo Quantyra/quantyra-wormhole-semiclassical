@@ -245,8 +245,8 @@ every changing-Ward-kernel term, give:
 
 | Profile weight | Value | First / U | Mixed / UV |
 | --- | ---: | ---: | ---: |
-| max(|Rho_c|,|N_c|) / a_x | 1.1e-6 | 9e-6 | 8600 |
-| |N_c| / [h L_h chi^(1/4)], chi<=1 | .0017 | 7e-5 | 86000 |
+| Maximum absolute density/null deviation / a_x | 1.1e-6 | 9e-6 | 8600 |
+| Absolute null profile / [h L_h chi^(1/4)], chi<=1 | .0017 | 7e-5 | 86000 |
 
 For the first row, the pressure first bound is
 1.2(2e-6)+700(.00331)(3e-7)<3.2e-6. Its mixed
