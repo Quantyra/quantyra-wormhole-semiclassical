@@ -1,0 +1,2060 @@
+{
+  "runs": [
+    {
+      "story": "S164",
+      "created_utc": "2026-10-20T15:43:37.520177+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "protocol": {
+        "digits": 80,
+        "kernel_k": [
+          "1",
+          "10",
+          "1e4"
+        ],
+        "kernel_pairs": [
+          [
+            "1e-8",
+            "2e-8"
+          ],
+          [
+            ".1",
+            ".5"
+          ],
+          [
+            ".5",
+            "2"
+          ],
+          [
+            "2",
+            "3"
+          ],
+          [
+            "10",
+            "40"
+          ],
+          [
+            "100",
+            "100"
+          ]
+        ],
+        "identity_tolerance": "1e-45",
+        "source_k": [
+          "1",
+          "3",
+          "10"
+        ],
+        "source_rho": [
+          ".01",
+          ".3",
+          "1",
+          "2"
+        ],
+        "quadrature_endpoint": "12",
+        "reconstruction_tolerance": "1e-40",
+        "incompatible_rho": [
+          "1e-8",
+          "1e-10"
+        ],
+        "bolt_slope_tolerance": "1e-10",
+        "fixtures_are_physical_preparation_sources": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_complete_equation_residual.py": "70ce9c9fbe5d694b33d3926da38f54c1530d95aa2d21edf6f2ffdf2a221c0e57",
+        "checks/comparison_path_complete_source_response.py": "3499e90df0082577f0553db623d478613ffaccba46ff7f050d2231d599aa5659",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "checks/fixed_chart_global_constraint_transfer.py": "100191fc073b91c49f39ad0594cc14956aded67ce7c59bb6e8046a645290c58f",
+        "checks/general_background_newton_operator.py": "e04af22cf0e5bb198c36ea47899fc41559186054004d13acaededf5a83325832",
+        "checks/global_compatible_scalar_response.py": "4f3fd559211481bc14ef070f136ec00e014eea0371a1bf7d005edbd50ed5a198",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "checks/stationary_adjoint_phase.py": "67548d3dfdfa9dc60528ef1ab3efaeb65fc5d167d12faec43cba37d31119dd90",
+        "checks/stationary_centered_complete_residual.py": "e333461520bbf8cd55ed69aa9eda778bc72fba1e618a06acc77033cb117b5e1b",
+        "checks/stationary_disk_and_normal_inverse.py": "e1de8e21a7fc7c22f92b3c1ff94399d4a70fd6f81444b537c709c8203c253995",
+        "checks/stationary_global_weighted_map.py": "f27e08cb0c5926fe5e7b5fbc0d7fd98ec0378a1ae4db15a2851cd98bd779f0ec",
+        "checks/stationary_scalar_outgoing_inverse.py": "64c4db2e9c568a336dd938a5999351fa169924a1bb2db98cc1339a1ed65b3d87",
+        "checks/stationary_scalar_phase_moment.py": "ff64ed4130a22292a1aec385feece74d35cb63909fa28bda411356e5c5c5be4b",
+        "checks/stationary_shape_logarithmic_response.py": "35f84c3661a4a7fe0721ec923ef57739bb64a337d4cdbe9baad8b9af33fbcc1e",
+        "checks/stationary_weighted_tt_inverse.py": "c5482e3caf03da28a5d33e2678bbd1fdcc4a23486178d00c9741ba9a9880d0cc",
+        "checks/weighted_normal_inverse_scale.py": "82565da3dc60fcddd2a39fefc17ad07168604f57d70768426f395105990c5633",
+        "evidence/common-chart-coordinate-transfer.json": "e835a6f48b6abbaf73f084e9ed4eddbc9f0904b12ae81add96d7d88063de7e08",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "evidence/comparison-path-complete-equation-residual.json": "f53177aeca70a4badba38b259759bcec4cb0c4bae21285a0aeb0442cd40a9d25",
+        "evidence/comparison-path-complete-source-response.json": "27e3543e45c401bfa724f4a9b7d07f86d40a9362c0b489dd8540bffaa88e671a",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "evidence/general-background-newton-operator.json": "b129bdf4a2293a6a84071431ab21134f11dcf379f62c35a901d932f62e7a6324",
+        "evidence/stationary-adjoint-phase.json": "5a1473c8205bd764cc8eadae6aa4888f5cf19d65049650f3bef1642e48a8d193",
+        "evidence/stationary-centered-complete-residual.json": "9378994b9ee8fb70574d3637041d03d82e64e8c467bb20e2eb59543e39ec20a5",
+        "evidence/stationary-disk-and-normal-inverse.json": "b7e9f6ec6d569e270b87b6f692fb93e7488738edfbdf507665fe4d3cd6533efa",
+        "evidence/stationary-global-weighted-map.json": "d061121d3a8dc35613f996e38446b5c06c202d75db55067bd67b08f3e7b622e3",
+        "evidence/stationary-scalar-outgoing-inverse.json": "a0d5742b4eaa48190f54c36628bd449398fffd43c32b0a7d3199a5b766cdae97",
+        "evidence/stationary-scalar-phase-moment.json": "1993d90a43ae20087db59647c264cb1ad5f88ab94234b32259338d6743171a4a",
+        "evidence/stationary-shape-logarithmic-response.json": "0b61ac0de83ad23b534e309c0a1cc3e43d164ba36ae522407bab7e694b7ad0ea",
+        "evidence/stationary-weighted-tt-inverse.json": "2287903aa9a84ae29ecb8dfb82a4e64b1152477ef399c38d9bbbfb5fd71d3e95",
+        "evidence/weighted-normal-inverse-scale.json": "4570ee5efaad2b1dfd21214b339c02f9306071f8200bbe5e95a18b21b7387744",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "notes/comparison-path-complete-equation-residual.md": "86722e7b0e8107d2aba4268ba13d010db48f01db7b786ec095ac01fff1f17740",
+        "notes/comparison-path-complete-source-response.md": "05fe5c48f3983a074f2f1c7a91b4bbb5539a815cb30b1b0bbc98c51722a555bb",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "notes/exact-spherical-em-reduction.md": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "notes/general-background-newton-operator.md": "dd5a2508565b68b530eeddfcbb1ad0a0c115ba689e27011f70c756770226b83e",
+        "notes/global-compatible-scalar-response.md": "4cb86d026e47b0739bc8f2ac465a3ee5cddb5a3f3672e424db03c4cbf2152742",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-adjoint-phase.md": "63d4558676aa1d061cc56e10e6d8f8b17d69480b2a680c625d9e70edd82cbaed",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/stationary-centered-constraint-residual.md": "e877b3f8b32cef8fd866c1cb7370279f82b853d1a12ceea048792950f6e040a9",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-coupled-asymptotic-obstruction.md": "667699207ce5b2d4267dddd89dde56bb28ca29b6927cdb43909e76797a797dcc",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-exterior-boundary-weyl.md": "bfb3e03390da039973e8a049023a0847e48dc7922e7d0a3667143adf16e8fab9",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-fast-phase-variation.md": "0fb4629172deceefc658bff0cbc592ca61b662b92af3dba2a691515a95f5a9ae",
+        "notes/stationary-global-tt-reduction.md": "47517cd7213d79d5abdc02644662fe729bae7e9cb7468c5d02f0bf4b17d7cbaf",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-reference-finite-mass.md": "e04d7dbff927e99f915d1b175f418dbd5ffb0d0fd03fc60df95e00259b9c25e9",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-same-source-boundary-charge.md": "b2d9260f73ab4e532430f70c9dff3c124f39e359528ffaf1fdbf2bda0fcb796f",
+        "notes/stationary-scalar-outgoing-inverse.md": "033ff8494010308fec446ae9f1d6ab46a3e4f50f6c4bb3eaeea450c5b54109a6",
+        "notes/stationary-scalar-phase-moment.md": "1b60f6e602be296ab1c9c8502c6e04e4131633bebae4718d15204e0674533640",
+        "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+        "notes/stationary-shape-logarithmic-response.md": "1221163c9fec92cbb00c26318eef71fe2b56878b6f06d1bbc9ec3efdc87e783c",
+        "notes/stationary-trace-range-condition.md": "ea51eb18b6ca77f267b16ad181bac444dea375bd608cb903fc407635d5c163f1",
+        "notes/stationary-weighted-conformal-range.md": "8e4c7442fec6fd670bf0c9bb3083722c112fe785a8db6b079894e9b01683f336",
+        "notes/stationary-weighted-tt-inverse.md": "74f1bb11a67131f766ee2d476c1171185b49bf722b86cdb40d039748030346c8",
+        "notes/stationary-weyl-radial-sources.md": "8206ce935d2085614baef919ac16dbceba2e98c80f82162c7ab8ef8aace70ad0",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "notes/weighted-normal-inverse-scale.md": "70c569775adce691d2d7e9b7a91a92591d43983bce64f1d287b22aeb4c48ea46"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_complete_equation_residual.py": "70ce9c9fbe5d694b33d3926da38f54c1530d95aa2d21edf6f2ffdf2a221c0e57",
+        "checks/comparison_path_complete_source_response.py": "3499e90df0082577f0553db623d478613ffaccba46ff7f050d2231d599aa5659",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "checks/fixed_chart_global_constraint_transfer.py": "100191fc073b91c49f39ad0594cc14956aded67ce7c59bb6e8046a645290c58f",
+        "checks/general_background_newton_operator.py": "e04af22cf0e5bb198c36ea47899fc41559186054004d13acaededf5a83325832",
+        "checks/global_compatible_scalar_response.py": "4f3fd559211481bc14ef070f136ec00e014eea0371a1bf7d005edbd50ed5a198",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "checks/stationary_adjoint_phase.py": "67548d3dfdfa9dc60528ef1ab3efaeb65fc5d167d12faec43cba37d31119dd90",
+        "checks/stationary_centered_complete_residual.py": "e333461520bbf8cd55ed69aa9eda778bc72fba1e618a06acc77033cb117b5e1b",
+        "checks/stationary_disk_and_normal_inverse.py": "e1de8e21a7fc7c22f92b3c1ff94399d4a70fd6f81444b537c709c8203c253995",
+        "checks/stationary_global_weighted_map.py": "f27e08cb0c5926fe5e7b5fbc0d7fd98ec0378a1ae4db15a2851cd98bd779f0ec",
+        "checks/stationary_scalar_outgoing_inverse.py": "64c4db2e9c568a336dd938a5999351fa169924a1bb2db98cc1339a1ed65b3d87",
+        "checks/stationary_scalar_phase_moment.py": "ff64ed4130a22292a1aec385feece74d35cb63909fa28bda411356e5c5c5be4b",
+        "checks/stationary_shape_logarithmic_response.py": "35f84c3661a4a7fe0721ec923ef57739bb64a337d4cdbe9baad8b9af33fbcc1e",
+        "checks/stationary_weighted_tt_inverse.py": "c5482e3caf03da28a5d33e2678bbd1fdcc4a23486178d00c9741ba9a9880d0cc",
+        "checks/weighted_normal_inverse_scale.py": "82565da3dc60fcddd2a39fefc17ad07168604f57d70768426f395105990c5633",
+        "evidence/common-chart-coordinate-transfer.json": "e835a6f48b6abbaf73f084e9ed4eddbc9f0904b12ae81add96d7d88063de7e08",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "evidence/comparison-path-complete-equation-residual.json": "f53177aeca70a4badba38b259759bcec4cb0c4bae21285a0aeb0442cd40a9d25",
+        "evidence/comparison-path-complete-source-response.json": "27e3543e45c401bfa724f4a9b7d07f86d40a9362c0b489dd8540bffaa88e671a",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "evidence/general-background-newton-operator.json": "b129bdf4a2293a6a84071431ab21134f11dcf379f62c35a901d932f62e7a6324",
+        "evidence/stationary-adjoint-phase.json": "5a1473c8205bd764cc8eadae6aa4888f5cf19d65049650f3bef1642e48a8d193",
+        "evidence/stationary-centered-complete-residual.json": "9378994b9ee8fb70574d3637041d03d82e64e8c467bb20e2eb59543e39ec20a5",
+        "evidence/stationary-disk-and-normal-inverse.json": "b7e9f6ec6d569e270b87b6f692fb93e7488738edfbdf507665fe4d3cd6533efa",
+        "evidence/stationary-global-weighted-map.json": "d061121d3a8dc35613f996e38446b5c06c202d75db55067bd67b08f3e7b622e3",
+        "evidence/stationary-scalar-outgoing-inverse.json": "a0d5742b4eaa48190f54c36628bd449398fffd43c32b0a7d3199a5b766cdae97",
+        "evidence/stationary-scalar-phase-moment.json": "1993d90a43ae20087db59647c264cb1ad5f88ab94234b32259338d6743171a4a",
+        "evidence/stationary-shape-logarithmic-response.json": "0b61ac0de83ad23b534e309c0a1cc3e43d164ba36ae522407bab7e694b7ad0ea",
+        "evidence/stationary-weighted-tt-inverse.json": "2287903aa9a84ae29ecb8dfb82a4e64b1152477ef399c38d9bbbfb5fd71d3e95",
+        "evidence/weighted-normal-inverse-scale.json": "4570ee5efaad2b1dfd21214b339c02f9306071f8200bbe5e95a18b21b7387744",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "notes/comparison-path-complete-equation-residual.md": "86722e7b0e8107d2aba4268ba13d010db48f01db7b786ec095ac01fff1f17740",
+        "notes/comparison-path-complete-source-response.md": "05fe5c48f3983a074f2f1c7a91b4bbb5539a815cb30b1b0bbc98c51722a555bb",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "notes/exact-spherical-em-reduction.md": "68ea17446fb8b0663363fe029cbd65ff3ca965609ceb9cb1aa6411daf04aa513",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "notes/general-background-newton-operator.md": "dd5a2508565b68b530eeddfcbb1ad0a0c115ba689e27011f70c756770226b83e",
+        "notes/global-compatible-scalar-response.md": "4cb86d026e47b0739bc8f2ac465a3ee5cddb5a3f3672e424db03c4cbf2152742",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/spherical-anomaly-action.md": "a3dc5deb0a6ca729f41a8d6b8c9e1bcbfe98f7e06974265558578040e4ad18af",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-adjoint-phase.md": "63d4558676aa1d061cc56e10e6d8f8b17d69480b2a680c625d9e70edd82cbaed",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/stationary-centered-constraint-residual.md": "e877b3f8b32cef8fd866c1cb7370279f82b853d1a12ceea048792950f6e040a9",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-coupled-asymptotic-obstruction.md": "667699207ce5b2d4267dddd89dde56bb28ca29b6927cdb43909e76797a797dcc",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/stationary-disk-and-normal-inverse.md": "dbdd7ba2ca3ef972c79925f55c3b1db5ec778f3ab56cd7ef8fb200e3c78fd279",
+        "notes/stationary-exterior-boundary-weyl.md": "bfb3e03390da039973e8a049023a0847e48dc7922e7d0a3667143adf16e8fab9",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/stationary-fast-phase-variation.md": "0fb4629172deceefc658bff0cbc592ca61b662b92af3dba2a691515a95f5a9ae",
+        "notes/stationary-global-tt-reduction.md": "47517cd7213d79d5abdc02644662fe729bae7e9cb7468c5d02f0bf4b17d7cbaf",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-reference-finite-mass.md": "e04d7dbff927e99f915d1b175f418dbd5ffb0d0fd03fc60df95e00259b9c25e9",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-same-source-boundary-charge.md": "b2d9260f73ab4e532430f70c9dff3c124f39e359528ffaf1fdbf2bda0fcb796f",
+        "notes/stationary-scalar-outgoing-inverse.md": "033ff8494010308fec446ae9f1d6ab46a3e4f50f6c4bb3eaeea450c5b54109a6",
+        "notes/stationary-scalar-phase-moment.md": "1b60f6e602be296ab1c9c8502c6e04e4131633bebae4718d15204e0674533640",
+        "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+        "notes/stationary-shape-logarithmic-response.md": "1221163c9fec92cbb00c26318eef71fe2b56878b6f06d1bbc9ec3efdc87e783c",
+        "notes/stationary-trace-range-condition.md": "ea51eb18b6ca77f267b16ad181bac444dea375bd608cb903fc407635d5c163f1",
+        "notes/stationary-weighted-conformal-range.md": "8e4c7442fec6fd670bf0c9bb3083722c112fe785a8db6b079894e9b01683f336",
+        "notes/stationary-weighted-tt-inverse.md": "74f1bb11a67131f766ee2d476c1171185b49bf722b86cdb40d039748030346c8",
+        "notes/stationary-weyl-radial-sources.md": "8206ce935d2085614baef919ac16dbceba2e98c80f82162c7ab8ef8aace70ad0",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b",
+        "notes/weighted-normal-inverse-scale.md": "70c569775adce691d2d7e9b7a91a92591d43983bce64f1d287b22aeb4c48ea46"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "stationary-weighted-tt-inverse_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_checks/stationary_weighted_tt_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-adjoint-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-coupled-asymptotic-obstruction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-disk-and-normal-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-global-tt-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-global-weighted-map.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-seed-quantum-form.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-shape-logarithmic-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-trace-range-condition.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-weighted-conformal-range.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-weighted-tt-inverse_input_notes/stationary-weighted-tt-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_checks/stationary_scalar_outgoing_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/exact-spherical-em-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-adjoint-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-centered-first-order-geometry.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-disk-and-normal-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-global-tt-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-global-weighted-map.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-reference-cold-bolt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-scalar-outgoing-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-seed-quantum-form.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-trace-range-condition.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-weighted-conformal-range.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-outgoing-inverse_input_notes/stationary-weighted-tt-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_checks/stationary_scalar_phase_moment.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-adjoint-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-centered-complete-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-centered-first-order-geometry.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-disk-and-normal-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-global-tt-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-global-weighted-map.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-scalar-outgoing-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-scalar-phase-moment.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-trace-range-condition.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-weighted-conformal-range.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/stationary-weighted-tt-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-scalar-phase-moment_input_notes/uniform-dirac-reference.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/comparison_path_complete_equation_residual.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/comparison_path_complete_source_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/comparison_path_outer_recombination.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/fixed_chart_global_constraint_transfer.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/general_background_newton_operator.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/interior_pressure_and_bolt_primitive.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_adjoint_phase.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_centered_complete_residual.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_disk_and_normal_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_global_weighted_map.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_scalar_outgoing_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_scalar_phase_moment.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_checks/stationary_shape_logarithmic_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/common-chart-coordinate-transfer.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-cold-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-complete-equation-residual.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-complete-source-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-interior-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-lll-reference-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-outer-recombination.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/comparison-path-outer-regular-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/fixed-chart-global-constraint-transfer.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-adjoint-phase.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-centered-complete-residual.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-disk-and-normal-inverse.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-global-weighted-map.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-scalar-outgoing-inverse.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-scalar-phase-moment.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_evidence/stationary-shape-logarithmic-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/common-chart-coordinate-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-cold-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-complete-equation-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-complete-source-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-interior-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-lll-reference-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-outer-recombination.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/comparison-path-outer-regular-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/exact-spherical-em-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/fixed-chart-global-constraint-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/general-background-newton-operator.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/interior-pressure-and-bolt-primitive.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/spherical-anomaly-action.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-adjoint-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-complete-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-conormal-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-constraint-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-first-order-geometry.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-centered-local-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-completed-metric-response-norm.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-coupled-asymptotic-obstruction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-disk-and-normal-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-exterior-boundary-weyl.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-exterior-conformal-domain.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-fast-phase-variation.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-global-tt-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-global-weighted-map.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-horizon-source-defect.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-paired-dirac-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-reference-cold-bolt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-reference-finite-mass.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-reference-nonbolt-stress.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-same-source-boundary-charge.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-scalar-outgoing-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-scalar-phase-moment.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-seed-quantum-form.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-shape-logarithmic-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-trace-range-condition.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-weighted-conformal-range.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-weighted-tt-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/stationary-weyl-radial-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-background-newton-operator_input_notes/uniform-dirac-reference.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/comparison_path_complete_equation_residual.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/comparison_path_complete_source_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/comparison_path_outer_recombination.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/fixed_chart_global_constraint_transfer.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/general_background_newton_operator.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/interior_pressure_and_bolt_primitive.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_adjoint_phase.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_centered_complete_residual.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_disk_and_normal_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_global_weighted_map.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_scalar_outgoing_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_scalar_phase_moment.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_shape_logarithmic_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/stationary_weighted_tt_inverse.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_checks/weighted_normal_inverse_scale.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/common-chart-coordinate-transfer.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-cold-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-complete-equation-residual.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-complete-source-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-interior-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-lll-reference-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-outer-recombination.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/comparison-path-outer-regular-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/fixed-chart-global-constraint-transfer.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/general-background-newton-operator.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-adjoint-phase.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-centered-complete-residual.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-disk-and-normal-inverse.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-global-weighted-map.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-scalar-outgoing-inverse.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-scalar-phase-moment.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-shape-logarithmic-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_evidence/stationary-weighted-tt-inverse.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/common-chart-coordinate-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-cold-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-complete-equation-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-complete-source-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-interior-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-lll-reference-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-outer-recombination.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/comparison-path-outer-regular-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/exact-spherical-em-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/fixed-chart-global-constraint-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/general-background-newton-operator.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/interior-pressure-and-bolt-primitive.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/spherical-anomaly-action.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-adjoint-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-complete-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-conormal-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-constraint-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-first-order-geometry.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-centered-local-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-completed-metric-response-norm.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-coupled-asymptotic-obstruction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-curved-quantum-tt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-disk-and-normal-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-exterior-boundary-weyl.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-exterior-conformal-domain.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-fast-phase-variation.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-global-tt-reduction.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-global-weighted-map.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-horizon-source-defect.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-paired-dirac-phase.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-reference-cold-bolt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-reference-finite-mass.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-reference-nonbolt-stress.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-same-source-boundary-charge.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-scalar-outgoing-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-scalar-phase-moment.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-seed-quantum-form.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-shape-logarithmic-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-trace-range-condition.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-weighted-conformal-range.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-weighted-tt-inverse.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/stationary-weyl-radial-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/uniform-dirac-reference.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted-normal-inverse-scale_input_notes/weighted-normal-inverse-scale.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted_scalar_form_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted_weak_source_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fourth_order_resolvent_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "second_graph_resolvent_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_flat_homogeneous",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_source_jump_sign",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "manufactured_weak_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "manufactured_Bessel_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "elliptic_weight_coercivity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "source_gradient_weight",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stronger_TT_vertex_weight",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stronger_scalar_vertex_g",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stronger_scalar_vertex_f",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_kernel_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_kernel_input_derivative_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "outgoing_kernel_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bessel_large_input_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Bessel_small_input_derivative",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted_Helmholtz_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "weighted_Helmholtz_vector_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fourth_reference_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fourth_reference_graph_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "auxiliary_inverse_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "auxiliary_scalar_budget",
+          "passed": true,
+          "detail": "3557333333333339949751/1280000000000000000000"
+        },
+        {
+          "name": "auxiliary_vector_budget",
+          "passed": true,
+          "detail": "5776732256000000000002001/960000000000000000000"
+        },
+        {
+          "name": "total_force_vector_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_value_scalar_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_value_vector_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_value_after_E",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_graph_scalar_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "full_graph_vector_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "TT_source_scalar_normalization",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "TT_source_vector_normalization",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "trace_source_normalization",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_value_scalar",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_value_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_graph_scalar",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_graph_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fourth_root_g_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "physical_gradient_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "benchmark_value_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "benchmark_graph_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "benchmark_gradient_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_1e-8_2e-8_value",
+          "passed": true,
+          "detail": "-9.8025814346854717525e-9"
+        },
+        {
+          "name": "kernel_1_1e-8_2e-8_input_derivative",
+          "passed": true,
+          "detail": "-0.70710678118654747941"
+        },
+        {
+          "name": "kernel_1_1e-8_2e-8_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_.1_.5_value",
+          "passed": true,
+          "detail": "-0.34998628741046329818"
+        },
+        {
+          "name": "kernel_1_.1_.5_input_derivative",
+          "passed": true,
+          "detail": "-0.38499440178300645188"
+        },
+        {
+          "name": "kernel_1_.1_.5_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_.5_2_value",
+          "passed": true,
+          "detail": "-0.90869908511996000636"
+        },
+        {
+          "name": "kernel_1_.5_2_input_derivative",
+          "passed": true,
+          "detail": "0.24491585479569194109"
+        },
+        {
+          "name": "kernel_1_.5_2_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_2_3_value",
+          "passed": true,
+          "detail": "-0.835314830423565594"
+        },
+        {
+          "name": "kernel_1_2_3_input_derivative",
+          "passed": true,
+          "detail": "-0.3861340739102947715"
+        },
+        {
+          "name": "kernel_1_2_3_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_10_40_value",
+          "passed": true,
+          "detail": "0.98590693414537002404"
+        },
+        {
+          "name": "kernel_1_10_40_input_derivative",
+          "passed": true,
+          "detail": "-0.17567377726084922982"
+        },
+        {
+          "name": "kernel_1_10_40_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_100_100_value",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "kernel_1_100_100_input_derivative",
+          "passed": true,
+          "detail": "-1.0"
+        },
+        {
+          "name": "kernel_1_100_100_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_jump",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1_diagonal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_1e-8_2e-8_value",
+          "passed": true,
+          "detail": "-9.8025814346854717525e-9"
+        },
+        {
+          "name": "kernel_10_1e-8_2e-8_input_derivative",
+          "passed": true,
+          "detail": "-0.70710678118654747941"
+        },
+        {
+          "name": "kernel_10_1e-8_2e-8_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_.1_.5_value",
+          "passed": true,
+          "detail": "-0.34998628741046329818"
+        },
+        {
+          "name": "kernel_10_.1_.5_input_derivative",
+          "passed": true,
+          "detail": "-0.38499440178300645188"
+        },
+        {
+          "name": "kernel_10_.1_.5_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_.5_2_value",
+          "passed": true,
+          "detail": "-0.90869908511996000636"
+        },
+        {
+          "name": "kernel_10_.5_2_input_derivative",
+          "passed": true,
+          "detail": "0.24491585479569194109"
+        },
+        {
+          "name": "kernel_10_.5_2_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_2_3_value",
+          "passed": true,
+          "detail": "-0.835314830423565594"
+        },
+        {
+          "name": "kernel_10_2_3_input_derivative",
+          "passed": true,
+          "detail": "-0.3861340739102947715"
+        },
+        {
+          "name": "kernel_10_2_3_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_10_40_value",
+          "passed": true,
+          "detail": "0.98590693414537002404"
+        },
+        {
+          "name": "kernel_10_10_40_input_derivative",
+          "passed": true,
+          "detail": "-0.17567377726084922982"
+        },
+        {
+          "name": "kernel_10_10_40_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_100_100_value",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "kernel_10_100_100_input_derivative",
+          "passed": true,
+          "detail": "-1.0"
+        },
+        {
+          "name": "kernel_10_100_100_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_jump",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_10_diagonal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_1e-8_2e-8_value",
+          "passed": true,
+          "detail": "-9.8025814346854717525e-9"
+        },
+        {
+          "name": "kernel_1e4_1e-8_2e-8_input_derivative",
+          "passed": true,
+          "detail": "-0.70710678118654747941"
+        },
+        {
+          "name": "kernel_1e4_1e-8_2e-8_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_.1_.5_value",
+          "passed": true,
+          "detail": "-0.34998628741046329818"
+        },
+        {
+          "name": "kernel_1e4_.1_.5_input_derivative",
+          "passed": true,
+          "detail": "-0.38499440178300645188"
+        },
+        {
+          "name": "kernel_1e4_.1_.5_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_.5_2_value",
+          "passed": true,
+          "detail": "-0.90869908511996000636"
+        },
+        {
+          "name": "kernel_1e4_.5_2_input_derivative",
+          "passed": true,
+          "detail": "0.24491585479569194109"
+        },
+        {
+          "name": "kernel_1e4_.5_2_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_2_3_value",
+          "passed": true,
+          "detail": "-0.835314830423565594"
+        },
+        {
+          "name": "kernel_1e4_2_3_input_derivative",
+          "passed": true,
+          "detail": "-0.3861340739102947715"
+        },
+        {
+          "name": "kernel_1e4_2_3_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_10_40_value",
+          "passed": true,
+          "detail": "0.98590693414537002404"
+        },
+        {
+          "name": "kernel_1e4_10_40_input_derivative",
+          "passed": true,
+          "detail": "-0.17567377726084922982"
+        },
+        {
+          "name": "kernel_1e4_10_40_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_100_100_value",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "kernel_1e4_100_100_input_derivative",
+          "passed": true,
+          "detail": "-1.0"
+        },
+        {
+          "name": "kernel_1e4_100_100_derivative_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_jump",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_1e4_diagonal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "Gaussian_tail_allowance",
+          "passed": true,
+          "detail": "2.8946403116483002803e-60"
+        },
+        {
+          "name": "manufactured_1_zero_moment",
+          "passed": true,
+          "detail": "5.9555090938100125231e-62"
+        },
+        {
+          "name": "manufactured_1_.01_direct",
+          "passed": true,
+          "detail": "6.7495547657709452243e-63"
+        },
+        {
+          "name": "manufactured_1_.01_weak",
+          "passed": true,
+          "detail": "3.9757544724865525428e-63"
+        },
+        {
+          "name": "manufactured_1_.3_direct",
+          "passed": true,
+          "detail": "1.2326411565849193331e-61"
+        },
+        {
+          "name": "manufactured_1_.3_weak",
+          "passed": true,
+          "detail": "7.0590259297395406259e-63"
+        },
+        {
+          "name": "manufactured_1_1_direct",
+          "passed": true,
+          "detail": "2.2989813562080442982e-61"
+        },
+        {
+          "name": "manufactured_1_1_weak",
+          "passed": true,
+          "detail": "1.3079453855200209694e-63"
+        },
+        {
+          "name": "manufactured_1_2_direct",
+          "passed": true,
+          "detail": "1.4627771211901174106e-61"
+        },
+        {
+          "name": "manufactured_1_2_weak",
+          "passed": true,
+          "detail": "7.8133985346387347105e-63"
+        },
+        {
+          "name": "manufactured_3_zero_moment",
+          "passed": true,
+          "detail": "-1.7242168464349231437e-61"
+        },
+        {
+          "name": "manufactured_3_.01_direct",
+          "passed": true,
+          "detail": "4.1059468968900870046e-62"
+        },
+        {
+          "name": "manufactured_3_.01_weak",
+          "passed": true,
+          "detail": "1.3975519491937744851e-63"
+        },
+        {
+          "name": "manufactured_3_.3_direct",
+          "passed": true,
+          "detail": "5.4009049182354213891e-62"
+        },
+        {
+          "name": "manufactured_3_.3_weak",
+          "passed": true,
+          "detail": "7.603971530764692515e-63"
+        },
+        {
+          "name": "manufactured_3_1_direct",
+          "passed": true,
+          "detail": "7.8998555182745495388e-62"
+        },
+        {
+          "name": "manufactured_3_1_weak",
+          "passed": true,
+          "detail": "6.3221618935138383725e-64"
+        },
+        {
+          "name": "manufactured_3_2_direct",
+          "passed": true,
+          "detail": "7.7050234283842518318e-62"
+        },
+        {
+          "name": "manufactured_3_2_weak",
+          "passed": true,
+          "detail": "1.8499277088366117799e-63"
+        },
+        {
+          "name": "manufactured_10_zero_moment",
+          "passed": true,
+          "detail": "2.5356049009035206328e-61"
+        },
+        {
+          "name": "manufactured_10_.01_direct",
+          "passed": true,
+          "detail": "1.7748981543529011403e-62"
+        },
+        {
+          "name": "manufactured_10_.01_weak",
+          "passed": true,
+          "detail": "4.9001061424523038952e-63"
+        },
+        {
+          "name": "manufactured_10_.3_direct",
+          "passed": true,
+          "detail": "2.407111357036435324e-62"
+        },
+        {
+          "name": "manufactured_10_.3_weak",
+          "passed": true,
+          "detail": "6.9154058202577151743e-63"
+        },
+        {
+          "name": "manufactured_10_1_direct",
+          "passed": true,
+          "detail": "1.1341152035766012117e-62"
+        },
+        {
+          "name": "manufactured_10_1_weak",
+          "passed": true,
+          "detail": "1.0003366193715247335e-62"
+        },
+        {
+          "name": "manufactured_10_2_direct",
+          "passed": true,
+          "detail": "3.3832782456412318563e-63"
+        },
+        {
+          "name": "manufactured_10_2_weak",
+          "passed": true,
+          "detail": "8.692694648386680731e-63"
+        },
+        {
+          "name": "incompatible_source_logarithmic_bolt",
+          "passed": true,
+          "detail": "0.389400391535702469414992374411"
+        },
+        {
+          "name": "incompatible_source_moment_nonzero",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "k": "1",
+          "rho": ".01",
+          "value": "0.0999900004999833337499916668056",
+          "direct_error": "6.7495547657709452243e-63",
+          "weak_error": "3.9757544724865525428e-63"
+        },
+        {
+          "k": "1",
+          "rho": ".3",
+          "value": "0.500580726180484905806322126535",
+          "direct_error": "1.2326411565849193331e-61",
+          "weak_error": "7.0590259297395406259e-63"
+        },
+        {
+          "k": "1",
+          "rho": "1",
+          "value": "0.367879441171442321595523770161",
+          "direct_error": "2.2989813562080442982e-61",
+          "weak_error": "1.3079453855200209694e-63"
+        },
+        {
+          "k": "1",
+          "rho": "2",
+          "value": "0.0259022249199759609693555559181",
+          "direct_error": "1.4627771211901174106e-61",
+          "weak_error": "7.8133985346387347105e-63"
+        },
+        {
+          "k": "3",
+          "rho": ".01",
+          "value": "0.0999900004999833337499916668056",
+          "direct_error": "4.1059468968900870046e-62",
+          "weak_error": "1.3975519491937744851e-63"
+        },
+        {
+          "k": "3",
+          "rho": ".3",
+          "value": "0.500580726180484905806322126535",
+          "direct_error": "5.4009049182354213891e-62",
+          "weak_error": "7.603971530764692515e-63"
+        },
+        {
+          "k": "3",
+          "rho": "1",
+          "value": "0.367879441171442321595523770161",
+          "direct_error": "7.8998555182745495388e-62",
+          "weak_error": "6.3221618935138383725e-64"
+        },
+        {
+          "k": "3",
+          "rho": "2",
+          "value": "0.0259022249199759609693555559181",
+          "direct_error": "7.7050234283842518318e-62",
+          "weak_error": "1.8499277088366117799e-63"
+        },
+        {
+          "k": "10",
+          "rho": ".01",
+          "value": "0.0999900004999833337499916668056",
+          "direct_error": "1.7748981543529011403e-62",
+          "weak_error": "4.9001061424523038952e-63"
+        },
+        {
+          "k": "10",
+          "rho": ".3",
+          "value": "0.500580726180484905806322126535",
+          "direct_error": "2.407111357036435324e-62",
+          "weak_error": "6.9154058202577151743e-63"
+        },
+        {
+          "k": "10",
+          "rho": "1",
+          "value": "0.367879441171442321595523770161",
+          "direct_error": "1.1341152035766012117e-62",
+          "weak_error": "1.0003366193715247335e-62"
+        },
+        {
+          "k": "10",
+          "rho": "2",
+          "value": "0.0259022249199759609693555559181",
+          "direct_error": "3.3832782456412318563e-63",
+          "weak_error": "8.692694648386680731e-63"
+        },
+        {
+          "incompatible_bolt_slope": "0.38940039153570246941499237441107288",
+          "predicted": "0.38940039153570243412258513348916032"
+        }
+      ],
+      "exception": null,
+      "scope": "global fast value/gradient/second-graph bounds for the actual coupled York scalar",
+      "unresolved": [
+        "whole-metric fourth/log inverse",
+        "mass response and norm conversions",
+        "nonlinear family",
+        "actual signed source",
+        "physical completion"
+      ]
+    }
+  ]
+}
