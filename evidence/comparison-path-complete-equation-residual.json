@@ -1,0 +1,2160 @@
+{
+  "runs": [
+    {
+      "story": "S161",
+      "created_utc": "2026-10-20T14:16:27.713085+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 100,
+        "h": [
+          "1e-5",
+          "1e-30"
+        ],
+        "s": [
+          "2h",
+          ".001",
+          ".1",
+          "3",
+          "49"
+        ],
+        "parameters": [
+          "0",
+          ".4",
+          "1"
+        ],
+        "amplitude": ".02",
+        "normalization": "amplitude^2 min(s,1)",
+        "formula_tolerance": "1e-30",
+        "contour_nodes": [
+          64,
+          128
+        ],
+        "contour_radius": ".01",
+        "contour_tolerance": "1e-30",
+        "real_steps": [
+          ".001",
+          ".0005"
+        ],
+        "difference_tolerance": "1e-6",
+        "refinement_ratio": ".35",
+        "refinement_floor": "1e-35",
+        "endpoints": "second-order one-sided within [0,1]",
+        "fixtures_are_physical_states": false
+      },
+      "input_sha256_before": {
+        "checks/comparison_path_complete_equation_residual.py": "70ce9c9fbe5d694b33d3926da38f54c1530d95aa2d21edf6f2ffdf2a221c0e57",
+        "checks/comparison_path_complete_source_response.py": "3499e90df0082577f0553db623d478613ffaccba46ff7f050d2231d599aa5659",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "checks/fixed_chart_global_constraint_transfer.py": "100191fc073b91c49f39ad0594cc14956aded67ce7c59bb6e8046a645290c58f",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "checks/stationary_centered_complete_residual.py": "e333461520bbf8cd55ed69aa9eda778bc72fba1e618a06acc77033cb117b5e1b",
+        "evidence/common-chart-coordinate-transfer.json": "e835a6f48b6abbaf73f084e9ed4eddbc9f0904b12ae81add96d7d88063de7e08",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "evidence/comparison-path-complete-source-response.json": "27e3543e45c401bfa724f4a9b7d07f86d40a9362c0b489dd8540bffaa88e671a",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "evidence/stationary-centered-complete-residual.json": "9378994b9ee8fb70574d3637041d03d82e64e8c467bb20e2eb59543e39ec20a5",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "notes/comparison-path-complete-equation-residual.md": "86722e7b0e8107d2aba4268ba13d010db48f01db7b786ec095ac01fff1f17740",
+        "notes/comparison-path-complete-source-response.md": "05fe5c48f3983a074f2f1c7a91b4bbb5539a815cb30b1b0bbc98c51722a555bb",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/stationary-centered-constraint-residual.md": "e877b3f8b32cef8fd866c1cb7370279f82b853d1a12ceea048792950f6e040a9",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-reference-finite-mass.md": "e04d7dbff927e99f915d1b175f418dbd5ffb0d0fd03fc60df95e00259b9c25e9",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-weyl-radial-sources.md": "8206ce935d2085614baef919ac16dbceba2e98c80f82162c7ab8ef8aace70ad0",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b"
+      },
+      "input_sha256_after": {
+        "checks/comparison_path_complete_equation_residual.py": "70ce9c9fbe5d694b33d3926da38f54c1530d95aa2d21edf6f2ffdf2a221c0e57",
+        "checks/comparison_path_complete_source_response.py": "3499e90df0082577f0553db623d478613ffaccba46ff7f050d2231d599aa5659",
+        "checks/comparison_path_outer_recombination.py": "b3e37a03bdc0651ecec9ae7428612e8651aae82a7202267c2f37ddf44f358a10",
+        "checks/fixed_chart_global_constraint_transfer.py": "100191fc073b91c49f39ad0594cc14956aded67ce7c59bb6e8046a645290c58f",
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "checks/stationary_centered_complete_residual.py": "e333461520bbf8cd55ed69aa9eda778bc72fba1e618a06acc77033cb117b5e1b",
+        "evidence/common-chart-coordinate-transfer.json": "e835a6f48b6abbaf73f084e9ed4eddbc9f0904b12ae81add96d7d88063de7e08",
+        "evidence/comparison-path-cold-response.json": "4de8e473b2210d11008e6b8f3eb7e157a9fcbbc740ce3a2a4947c03e0b05f819",
+        "evidence/comparison-path-complete-source-response.json": "27e3543e45c401bfa724f4a9b7d07f86d40a9362c0b489dd8540bffaa88e671a",
+        "evidence/comparison-path-interior-response.json": "28b15bc59b18da49d4e240efd9a1342065f7b52cafdf11c5526ecbe206fbf89a",
+        "evidence/comparison-path-lll-reference-response.json": "6250e442aa6620a205832c456f6a31aeb99925e70b3eece851b6900de8c10262",
+        "evidence/comparison-path-outer-recombination.json": "f0aa614d13bbafd111a474ab796f9d02cce1009b5dc7235ca6959b7fe9dd6407",
+        "evidence/comparison-path-outer-regular-response.json": "ca9b8037bf513ce994d3a090ffeee0ba326d00138a25919a4dec951b4f77c5cf",
+        "evidence/fixed-chart-global-constraint-transfer.json": "e82a0783eb159a55c88bfa30389798d1f16afc3220e4ee86248a8362fcdf6991",
+        "evidence/stationary-centered-complete-residual.json": "9378994b9ee8fb70574d3637041d03d82e64e8c467bb20e2eb59543e39ec20a5",
+        "notes/common-chart-coordinate-transfer.md": "805d7695a16b839b0deca4befdf0181d57e72474058ff46e39bfae385e58a1fd",
+        "notes/comparison-path-cold-response.md": "402f884dffb03ab8283b276b2c637072522c380f5a3b07c7133346314010f0cf",
+        "notes/comparison-path-complete-equation-residual.md": "86722e7b0e8107d2aba4268ba13d010db48f01db7b786ec095ac01fff1f17740",
+        "notes/comparison-path-complete-source-response.md": "05fe5c48f3983a074f2f1c7a91b4bbb5539a815cb30b1b0bbc98c51722a555bb",
+        "notes/comparison-path-interior-response.md": "7617ead07f76127c6df2affde219f9468c14ee71bfb18ae24cce691de27edbd1",
+        "notes/comparison-path-lll-reference-response.md": "ec16d9614e6fba7ca10a0addfefb804b1436870c8392df95889be30fa28cf16a",
+        "notes/comparison-path-outer-recombination.md": "09ba840f72970e744c2cd7b572918050d41b929e6568e4bf8166a2f2ff0da961",
+        "notes/comparison-path-outer-regular-response.md": "b10cb76c40ce19806336b2619c177ff9ca2ef229b3f15c3089aa4608e0c164a9",
+        "notes/fixed-chart-global-constraint-transfer.md": "4a95f0047265323e89ceba23cfb75c658ea99284f28a3f0abefaa48b7c8f2bd6",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/spherical-anomaly-sources.md": "fc42ddb22e672427a2d775338fb1b66b593fa47323b5f9b929ddd65b6dd5c32b",
+        "notes/stationary-centered-canonical-response.md": "a38744de1b8e906b49ac3fc9f714ba9f5a5faa7314151b9bca12e7085476dacf",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-conormal-source.md": "cf48069e746d1de4032e581f067d603591aa2e3669a314c776204b951503852f",
+        "notes/stationary-centered-constraint-residual.md": "e877b3f8b32cef8fd866c1cb7370279f82b853d1a12ceea048792950f6e040a9",
+        "notes/stationary-centered-covariant-seed.md": "16386b4ef2574b921d6a53f208c5e954b4a16520189c6010c5771620424d23c5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/stationary-centered-local-response.md": "42410b19be9e130d0adea86542e8ad9bcd559078c13e4fc788ef773a8543602c",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "notes/stationary-horizon-source-defect.md": "05108c8aae833f6c2dfd639ac6f504f18ebd6203ea323842814ebbd0aff8e81d",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-reference-finite-mass.md": "e04d7dbff927e99f915d1b175f418dbd5ffb0d0fd03fc60df95e00259b9c25e9",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-weyl-radial-sources.md": "8206ce935d2085614baef919ac16dbceba2e98c80f82162c7ab8ef8aace70ad0",
+        "notes/uniform-dirac-reference.md": "a8214316cb9a7338680b55b92c446fa201c93f82f31dd0c7e94a2847296a361b"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "comparison-path-complete-source-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_checks/comparison_path_complete_source_response.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/comparison-path-complete-source-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_checks/comparison_path_outer_recombination.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/comparison-path-interior-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_evidence/comparison-path-interior-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/comparison-path-cold-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_evidence/comparison-path-cold-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/comparison-path-outer-regular-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_evidence/comparison-path-outer-regular-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/comparison-path-outer-recombination.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_evidence/comparison-path-outer-recombination.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/comparison-path-lll-reference-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_evidence/comparison-path-lll-reference-response.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/fixed-chart-global-constraint-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_evidence/fixed-chart-global-constraint-transfer.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/stationary-completed-metric-response-norm.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/stationary-centered-local-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/stationary-reference-cold-bolt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "comparison-path-complete-source-response_input_notes/stationary-horizon-source-defect.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_checks/fixed_chart_global_constraint_transfer.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_notes/fixed-chart-global-constraint-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_notes/stationary-centered-complete-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_notes/stationary-centered-constraint-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_notes/interior-pressure-and-bolt-primitive.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_checks/interior_pressure_and_bolt_primitive.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_notes/common-chart-coordinate-transfer.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed-chart-global-constraint-transfer_input_evidence/common-chart-coordinate-transfer.json",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_checks/stationary_centered_complete_residual.py",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/spherical-anomaly-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-canonical-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-complete-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-conormal-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-constraint-residual.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-covariant-seed.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-exterior-source.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-first-order-geometry.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-centered-local-response.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-completed-metric-response-norm.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-reference-cold-bolt.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-reference-finite-mass.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-reference-nonbolt-stress.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/stationary-weyl-radial-sources.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stationary-centered-complete-residual_input_notes/uniform-dirac-reference.md",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_radius_Euler_variation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "gradient_square_coefficient_detected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "exact_angular_nonlinear_decomposition",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "T_minus_k_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_Ltau",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "radial_T_gradient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "LT_product_formula",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_residual_allocation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "quadratic_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "angular_physical_conversion",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mass_prefactor_once",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "lapse_prefactor_once",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "small_exponential_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "scalar_Cp_majorant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "potential_leading_coefficients",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_positive_weighted_polynomial",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_E0_angular_remainder",
+          "passed": true,
+          "detail": "3526913735171/3125000000000000000000000"
+        },
+        {
+          "name": "middle_E0_angular_remainder",
+          "passed": true,
+          "detail": "6318075583107/125000000000000000000000"
+        },
+        {
+          "name": "outer_E0_angular_remainder",
+          "passed": true,
+          "detail": "1370125807397/708000000000000000000000000"
+        },
+        {
+          "name": "middle_upper_subregion",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_angular_cold",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_angular_middle",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_angular_outer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "retained_mass_defect",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "retained_lapse_defect",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "retained_horizon_defect",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "exact_seed_angular_equation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "manufactured_tangent_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_0_areal_angular",
+          "passed": true,
+          "detail": "1.83714957167353272917412e-93"
+        },
+        {
+          "name": "fixture_1e-5_2h_0_remainder",
+          "passed": true,
+          "detail": "1.785917798878554659712162e-93"
+        },
+        {
+          "name": "fixture_1e-5_2h_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_0_contour_64",
+          "passed": true,
+          "detail": "2.334786444736239483598379e-90"
+        },
+        {
+          "name": "fixture_1e-5_2h_0_contour_128",
+          "passed": true,
+          "detail": "1.69440907918636691295737e-90"
+        },
+        {
+          "name": "fixture_1e-5_2h_0_difference_.001",
+          "passed": true,
+          "detail": "3.581142240131785459458753e-13"
+        },
+        {
+          "name": "fixture_1e-5_2h_0_difference_.0005",
+          "passed": true,
+          "detail": "8.952843392165906068996474e-14"
+        },
+        {
+          "name": "fixture_1e-5_2h_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_areal_angular",
+          "passed": true,
+          "detail": "3.100176276727598454399023e-93"
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_remainder",
+          "passed": true,
+          "detail": "2.628383149310115333237349e-93"
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_contour_64",
+          "passed": true,
+          "detail": "8.447108929612875584811601e-91"
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_contour_128",
+          "passed": true,
+          "detail": "2.344773544919106115883404e-90"
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_difference_.001",
+          "passed": true,
+          "detail": "3.258832106605877210093439e-14"
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_difference_.0005",
+          "passed": true,
+          "detail": "8.147080266513419973146147e-15"
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_1_areal_angular",
+          "passed": true,
+          "detail": "4.709943980208951922088794e-93"
+        },
+        {
+          "name": "fixture_1e-5_2h_1_remainder",
+          "passed": true,
+          "detail": "7.959529938742516381174101e-94"
+        },
+        {
+          "name": "fixture_1e-5_2h_1_contour_64",
+          "passed": true,
+          "detail": "3.754760143368020482556541e-90"
+        },
+        {
+          "name": "fixture_1e-5_2h_1_contour_128",
+          "passed": true,
+          "detail": "2.268870641172175676308665e-90"
+        },
+        {
+          "name": "fixture_1e-5_2h_1_difference_.001",
+          "passed": true,
+          "detail": "3.590086514648330621329513e-13"
+        },
+        {
+          "name": "fixture_1e-5_2h_1_difference_.0005",
+          "passed": true,
+          "detail": "8.975228525284416433580574e-14"
+        },
+        {
+          "name": "fixture_1e-5_2h_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_2h_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_0_areal_angular",
+          "passed": true,
+          "detail": "1.590801047170021161123003e-95"
+        },
+        {
+          "name": "fixture_1e-5_.001_0_remainder",
+          "passed": true,
+          "detail": "1.785917798878554659712162e-95"
+        },
+        {
+          "name": "fixture_1e-5_.001_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_0_contour_64",
+          "passed": true,
+          "detail": "4.300837304314821113260958e-92"
+        },
+        {
+          "name": "fixture_1e-5_.001_0_contour_128",
+          "passed": true,
+          "detail": "3.606320716907725350131732e-92"
+        },
+        {
+          "name": "fixture_1e-5_.001_0_difference_.001",
+          "passed": true,
+          "detail": "3.496981988637354073001348e-13"
+        },
+        {
+          "name": "fixture_1e-5_.001_0_difference_.0005",
+          "passed": true,
+          "detail": "8.742443082461673007060276e-14"
+        },
+        {
+          "name": "fixture_1e-5_.001_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_areal_angular",
+          "passed": true,
+          "detail": "1.405254826634677182743973e-94"
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_remainder",
+          "passed": true,
+          "detail": "3.260248315768928869303034e-95"
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_contour_64",
+          "passed": true,
+          "detail": "5.747755570884875792426306e-92"
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_contour_128",
+          "passed": true,
+          "detail": "4.463582448006643763322381e-92"
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_difference_.001",
+          "passed": true,
+          "detail": "3.18223790297155410405312e-14"
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_difference_.0005",
+          "passed": true,
+          "detail": "7.955594757427644381688224e-15"
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_1_areal_angular",
+          "passed": true,
+          "detail": "1.186833068493023872982545e-95"
+        },
+        {
+          "name": "fixture_1e-5_.001_1_remainder",
+          "passed": true,
+          "detail": "7.257661889983044843401503e-95"
+        },
+        {
+          "name": "fixture_1e-5_.001_1_contour_64",
+          "passed": true,
+          "detail": "1.255831827692257187624729e-92"
+        },
+        {
+          "name": "fixture_1e-5_.001_1_contour_128",
+          "passed": true,
+          "detail": "4.080479843387620100801201e-92"
+        },
+        {
+          "name": "fixture_1e-5_.001_1_difference_.001",
+          "passed": true,
+          "detail": "3.505692535003350784161911e-13"
+        },
+        {
+          "name": "fixture_1e-5_.001_1_difference_.0005",
+          "passed": true,
+          "detail": "8.764243256369356928682984e-14"
+        },
+        {
+          "name": "fixture_1e-5_.001_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.001_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_0_areal_angular",
+          "passed": true,
+          "detail": "3.195554577143781030525008e-97"
+        },
+        {
+          "name": "fixture_1e-5_.1_0_remainder",
+          "passed": true,
+          "detail": "1.785917798878554659712162e-97"
+        },
+        {
+          "name": "fixture_1e-5_.1_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_0_contour_64",
+          "passed": true,
+          "detail": "1.321780470924424802378731e-94"
+        },
+        {
+          "name": "fixture_1e-5_.1_0_contour_128",
+          "passed": true,
+          "detail": "4.401223183229605154590217e-94"
+        },
+        {
+          "name": "fixture_1e-5_.1_0_difference_.001",
+          "passed": true,
+          "detail": "2.723297075677031051415099e-13"
+        },
+        {
+          "name": "fixture_1e-5_.1_0_difference_.0005",
+          "passed": true,
+          "detail": "6.808223712748663981029591e-14"
+        },
+        {
+          "name": "fixture_1e-5_.1_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_areal_angular",
+          "passed": true,
+          "detail": "8.511014510280612050190771e-98"
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_remainder",
+          "passed": true,
+          "detail": "4.003054519410158772172206e-97"
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_contour_64",
+          "passed": true,
+          "detail": "7.643921298238456548903602e-94"
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_contour_128",
+          "passed": true,
+          "detail": "5.537252658705442243660166e-94"
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_difference_.001",
+          "passed": true,
+          "detail": "2.480776617619566174562687e-14"
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_difference_.0005",
+          "passed": true,
+          "detail": "6.201941544044653978579361e-15"
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_1_areal_angular",
+          "passed": true,
+          "detail": "3.610204925467390767191577e-98"
+        },
+        {
+          "name": "fixture_1e-5_.1_1_remainder",
+          "passed": true,
+          "detail": "1.053129041875321532552678e-96"
+        },
+        {
+          "name": "fixture_1e-5_.1_1_contour_64",
+          "passed": true,
+          "detail": "2.40647204244997000301368e-94"
+        },
+        {
+          "name": "fixture_1e-5_.1_1_contour_128",
+          "passed": true,
+          "detail": "4.314548858911601823472297e-94"
+        },
+        {
+          "name": "fixture_1e-5_.1_1_difference_.001",
+          "passed": true,
+          "detail": "2.737220102738037603363412e-13"
+        },
+        {
+          "name": "fixture_1e-5_.1_1_difference_.0005",
+          "passed": true,
+          "detail": "6.843069335418192579845269e-14"
+        },
+        {
+          "name": "fixture_1e-5_.1_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_.1_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_0_areal_angular",
+          "passed": true,
+          "detail": "4.40370197068552410405525e-97"
+        },
+        {
+          "name": "fixture_1e-5_3_0_remainder",
+          "passed": true,
+          "detail": "6.250713658622090111600797e-97"
+        },
+        {
+          "name": "fixture_1e-5_3_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_0_contour_64",
+          "passed": true,
+          "detail": "2.303277942508948656576948e-92"
+        },
+        {
+          "name": "fixture_1e-5_3_0_contour_128",
+          "passed": true,
+          "detail": "1.18764277569470396482023e-92"
+        },
+        {
+          "name": "fixture_1e-5_3_0_difference_.001",
+          "passed": true,
+          "detail": "2.533586375079154479576419e-13"
+        },
+        {
+          "name": "fixture_1e-5_3_0_difference_.0005",
+          "passed": true,
+          "detail": "6.333969750130277703401652e-14"
+        },
+        {
+          "name": "fixture_1e-5_3_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_.4_areal_angular",
+          "passed": true,
+          "detail": "3.221349229727192967455812e-96"
+        },
+        {
+          "name": "fixture_1e-5_3_.4_remainder",
+          "passed": true,
+          "detail": "7.330397654389855436476826e-96"
+        },
+        {
+          "name": "fixture_1e-5_3_.4_contour_64",
+          "passed": true,
+          "detail": "9.030289761978362700794116e-94"
+        },
+        {
+          "name": "fixture_1e-5_3_.4_contour_128",
+          "passed": true,
+          "detail": "3.895913697799635644637752e-93"
+        },
+        {
+          "name": "fixture_1e-5_3_.4_difference_.001",
+          "passed": true,
+          "detail": "2.302246642158764297982016e-14"
+        },
+        {
+          "name": "fixture_1e-5_3_.4_difference_.0005",
+          "passed": true,
+          "detail": "5.755616605396771701131673e-15"
+        },
+        {
+          "name": "fixture_1e-5_3_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_1_areal_angular",
+          "passed": true,
+          "detail": "2.259186015581371644535885e-96"
+        },
+        {
+          "name": "fixture_1e-5_3_1_remainder",
+          "passed": true,
+          "detail": "4.812530700061159816796735e-96"
+        },
+        {
+          "name": "fixture_1e-5_3_1_contour_64",
+          "passed": true,
+          "detail": "9.932506063738760546674707e-93"
+        },
+        {
+          "name": "fixture_1e-5_3_1_contour_128",
+          "passed": true,
+          "detail": "1.136523040928063967881876e-92"
+        },
+        {
+          "name": "fixture_1e-5_3_1_difference_.001",
+          "passed": true,
+          "detail": "2.530797909781481745857516e-13"
+        },
+        {
+          "name": "fixture_1e-5_3_1_difference_.0005",
+          "passed": true,
+          "detail": "6.32699096535138943590127e-14"
+        },
+        {
+          "name": "fixture_1e-5_3_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_3_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_0_areal_angular",
+          "passed": true,
+          "detail": "1.94848823050739348403341e-92"
+        },
+        {
+          "name": "fixture_1e-5_49_0_remainder",
+          "passed": true,
+          "detail": "2.0662300988353263305046e-92"
+        },
+        {
+          "name": "fixture_1e-5_49_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_0_contour_64",
+          "passed": true,
+          "detail": "3.46378284423479773128734e-88"
+        },
+        {
+          "name": "fixture_1e-5_49_0_contour_128",
+          "passed": true,
+          "detail": "2.957392373105824812978544e-88"
+        },
+        {
+          "name": "fixture_1e-5_49_0_difference_.001",
+          "passed": true,
+          "detail": "6.817478234697275108588552e-17"
+        },
+        {
+          "name": "fixture_1e-5_49_0_difference_.0005",
+          "passed": true,
+          "detail": "1.704369590928056491684439e-17"
+        },
+        {
+          "name": "fixture_1e-5_49_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_.4_areal_angular",
+          "passed": true,
+          "detail": "1.998599177711403977027964e-92"
+        },
+        {
+          "name": "fixture_1e-5_49_.4_remainder",
+          "passed": true,
+          "detail": "8.497939008494423128432265e-92"
+        },
+        {
+          "name": "fixture_1e-5_49_.4_contour_64",
+          "passed": true,
+          "detail": "3.861333795456210457753425e-88"
+        },
+        {
+          "name": "fixture_1e-5_49_.4_contour_128",
+          "passed": true,
+          "detail": "1.775108586541114722574565e-88"
+        },
+        {
+          "name": "fixture_1e-5_49_.4_difference_.001",
+          "passed": true,
+          "detail": "6.197621711085784296180392e-18"
+        },
+        {
+          "name": "fixture_1e-5_49_.4_difference_.0005",
+          "passed": true,
+          "detail": "1.549405427771446043270836e-18"
+        },
+        {
+          "name": "fixture_1e-5_49_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_1_areal_angular",
+          "passed": true,
+          "detail": "6.023543552057589156277179e-94"
+        },
+        {
+          "name": "fixture_1e-5_49_1_remainder",
+          "passed": true,
+          "detail": "1.873053605548195626630801e-92"
+        },
+        {
+          "name": "fixture_1e-5_49_1_contour_64",
+          "passed": true,
+          "detail": "9.648231843321487504761383e-89"
+        },
+        {
+          "name": "fixture_1e-5_49_1_contour_128",
+          "passed": true,
+          "detail": "5.33058508832544805515083e-89"
+        },
+        {
+          "name": "fixture_1e-5_49_1_difference_.001",
+          "passed": true,
+          "detail": "6.817242226044019963873432e-17"
+        },
+        {
+          "name": "fixture_1e-5_49_1_difference_.0005",
+          "passed": true,
+          "detail": "1.70431052425800438625683e-17"
+        },
+        {
+          "name": "fixture_1e-5_49_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-5_49_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_0_areal_angular",
+          "passed": true,
+          "detail": "3.492480851810845416087504e-69"
+        },
+        {
+          "name": "fixture_1e-30_2h_0_remainder",
+          "passed": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "fixture_1e-30_2h_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_0_contour_64",
+          "passed": true,
+          "detail": "2.113750536611509132620307e-65"
+        },
+        {
+          "name": "fixture_1e-30_2h_0_contour_128",
+          "passed": true,
+          "detail": "6.405167154393130940703631e-66"
+        },
+        {
+          "name": "fixture_1e-30_2h_0_difference_.001",
+          "passed": true,
+          "detail": "3.582672531331321164290521e-13"
+        },
+        {
+          "name": "fixture_1e-30_2h_0_difference_.0005",
+          "passed": true,
+          "detail": "8.956669114674849158820304e-14"
+        },
+        {
+          "name": "fixture_1e-30_2h_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_areal_angular",
+          "passed": true,
+          "detail": "3.619470246079248503158101e-68"
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_remainder",
+          "passed": true,
+          "detail": "9.29947968409935090931861e-69"
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_contour_64",
+          "passed": true,
+          "detail": "1.021829231392100989039722e-65"
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_contour_128",
+          "passed": true,
+          "detail": "7.223052476071732590696223e-66"
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_difference_.001",
+          "passed": true,
+          "detail": "3.260224741005882221861917e-14"
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_difference_.0005",
+          "passed": true,
+          "detail": "8.150561852513432029365337e-15"
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_1_areal_angular",
+          "passed": true,
+          "detail": "9.35797381797631332618952e-69"
+        },
+        {
+          "name": "fixture_1e-30_2h_1_remainder",
+          "passed": true,
+          "detail": "5.226986344202489049361915e-68"
+        },
+        {
+          "name": "fixture_1e-30_2h_1_contour_64",
+          "passed": true,
+          "detail": "3.527275082711331145559566e-65"
+        },
+        {
+          "name": "fixture_1e-30_2h_1_contour_128",
+          "passed": true,
+          "detail": "3.517870047334842288987595e-65"
+        },
+        {
+          "name": "fixture_1e-30_2h_1_difference_.001",
+          "passed": true,
+          "detail": "3.591620827134534085330022e-13"
+        },
+        {
+          "name": "fixture_1e-30_2h_1_difference_.0005",
+          "passed": true,
+          "detail": "8.979064312001156203814548e-14"
+        },
+        {
+          "name": "fixture_1e-30_2h_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_2h_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_0_areal_angular",
+          "passed": true,
+          "detail": "1.590801047170021161123003e-95"
+        },
+        {
+          "name": "fixture_1e-30_.001_0_remainder",
+          "passed": true,
+          "detail": "1.785917798878554659712162e-95"
+        },
+        {
+          "name": "fixture_1e-30_.001_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_0_contour_64",
+          "passed": true,
+          "detail": "6.038815915624681335482093e-92"
+        },
+        {
+          "name": "fixture_1e-30_.001_0_contour_128",
+          "passed": true,
+          "detail": "2.538025578966315224597679e-92"
+        },
+        {
+          "name": "fixture_1e-30_.001_0_difference_.001",
+          "passed": true,
+          "detail": "3.496978263110332301110605e-13"
+        },
+        {
+          "name": "fixture_1e-30_.001_0_difference_.0005",
+          "passed": true,
+          "detail": "8.742433768663452278211072e-14"
+        },
+        {
+          "name": "fixture_1e-30_.001_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_areal_angular",
+          "passed": true,
+          "detail": "6.908877070832553188591079e-95"
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_remainder",
+          "passed": true,
+          "detail": "2.278628473357065821896698e-95"
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_contour_64",
+          "passed": true,
+          "detail": "6.692257582211755484646596e-92"
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_contour_128",
+          "passed": true,
+          "detail": "8.950219619988562516609853e-93"
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_difference_.001",
+          "passed": true,
+          "detail": "3.182234510983124567644372e-14"
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_difference_.0005",
+          "passed": true,
+          "detail": "7.955586277456570543881069e-15"
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_1_areal_angular",
+          "passed": true,
+          "detail": "4.758668666250133192406869e-95"
+        },
+        {
+          "name": "fixture_1e-30_.001_1_remainder",
+          "passed": true,
+          "detail": "4.125983523175130086716298e-95"
+        },
+        {
+          "name": "fixture_1e-30_.001_1_contour_64",
+          "passed": true,
+          "detail": "5.74912675108743318490491e-92"
+        },
+        {
+          "name": "fixture_1e-30_.001_1_contour_128",
+          "passed": true,
+          "detail": "3.843084546004506836015159e-92"
+        },
+        {
+          "name": "fixture_1e-30_.001_1_difference_.001",
+          "passed": true,
+          "detail": "3.505688795301051939802006e-13"
+        },
+        {
+          "name": "fixture_1e-30_.001_1_difference_.0005",
+          "passed": true,
+          "detail": "8.764233907094199084851505e-14"
+        },
+        {
+          "name": "fixture_1e-30_.001_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.001_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_0_areal_angular",
+          "passed": true,
+          "detail": "3.762810206133282888993153e-98"
+        },
+        {
+          "name": "fixture_1e-30_.1_0_remainder",
+          "passed": true,
+          "detail": "1.785917798878554659712162e-97"
+        },
+        {
+          "name": "fixture_1e-30_.1_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_0_contour_64",
+          "passed": true,
+          "detail": "5.662655917878743896806657e-94"
+        },
+        {
+          "name": "fixture_1e-30_.1_0_contour_128",
+          "passed": true,
+          "detail": "3.25979839638601159038073e-94"
+        },
+        {
+          "name": "fixture_1e-30_.1_0_difference_.001",
+          "passed": true,
+          "detail": "2.723297089745040915117776e-13"
+        },
+        {
+          "name": "fixture_1e-30_.1_0_difference_.0005",
+          "passed": true,
+          "detail": "6.808223747918624469257736e-14"
+        },
+        {
+          "name": "fixture_1e-30_.1_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_areal_angular",
+          "passed": true,
+          "detail": "2.720734146729048114405246e-97"
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_remainder",
+          "passed": true,
+          "detail": "8.281234559106540198220969e-97"
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_contour_64",
+          "passed": true,
+          "detail": "1.651119498999587539903169e-94"
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_contour_128",
+          "passed": true,
+          "detail": "3.153655203226060175006341e-94"
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_difference_.001",
+          "passed": true,
+          "detail": "2.480776630425743934237028e-14"
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_difference_.0005",
+          "passed": true,
+          "detail": "6.20194157606009837775556e-15"
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_1_areal_angular",
+          "passed": true,
+          "detail": "3.932856090303848396143481e-97"
+        },
+        {
+          "name": "fixture_1e-30_.1_1_remainder",
+          "passed": true,
+          "detail": "1.144430601222286704853393e-96"
+        },
+        {
+          "name": "fixture_1e-30_.1_1_contour_64",
+          "passed": true,
+          "detail": "3.776811594132425809598888e-94"
+        },
+        {
+          "name": "fixture_1e-30_.1_1_contour_128",
+          "passed": true,
+          "detail": "5.090525539378333498505328e-94"
+        },
+        {
+          "name": "fixture_1e-30_.1_1_difference_.001",
+          "passed": true,
+          "detail": "2.73722011685308809909211e-13"
+        },
+        {
+          "name": "fixture_1e-30_.1_1_difference_.0005",
+          "passed": true,
+          "detail": "6.84306937070588322144039e-14"
+        },
+        {
+          "name": "fixture_1e-30_.1_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_.1_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_0_areal_angular",
+          "passed": true,
+          "detail": "4.40370197068552410405525e-97"
+        },
+        {
+          "name": "fixture_1e-30_3_0_remainder",
+          "passed": true,
+          "detail": "8.518827764395990846566189e-96"
+        },
+        {
+          "name": "fixture_1e-30_3_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_0_contour_64",
+          "passed": true,
+          "detail": "1.244532268480791887865076e-92"
+        },
+        {
+          "name": "fixture_1e-30_3_0_contour_128",
+          "passed": true,
+          "detail": "9.1384279914637378495986e-93"
+        },
+        {
+          "name": "fixture_1e-30_3_0_difference_.001",
+          "passed": true,
+          "detail": "2.533586375056989093346295e-13"
+        },
+        {
+          "name": "fixture_1e-30_3_0_difference_.0005",
+          "passed": true,
+          "detail": "6.33396975007486421388827e-14"
+        },
+        {
+          "name": "fixture_1e-30_3_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_.4_areal_angular",
+          "passed": true,
+          "detail": "1.350600335401906961407322e-96"
+        },
+        {
+          "name": "fixture_1e-30_3_.4_remainder",
+          "passed": true,
+          "detail": "1.106474125298092447379942e-96"
+        },
+        {
+          "name": "fixture_1e-30_3_.4_contour_64",
+          "passed": true,
+          "detail": "1.971739727762949349236894e-93"
+        },
+        {
+          "name": "fixture_1e-30_3_.4_contour_128",
+          "passed": true,
+          "detail": "1.391564647264747892438092e-92"
+        },
+        {
+          "name": "fixture_1e-30_3_.4_difference_.001",
+          "passed": true,
+          "detail": "2.302246642138620311969686e-14"
+        },
+        {
+          "name": "fixture_1e-30_3_.4_difference_.0005",
+          "passed": true,
+          "detail": "5.755616605346411736100849e-15"
+        },
+        {
+          "name": "fixture_1e-30_3_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_1_areal_angular",
+          "passed": true,
+          "detail": "2.31276354954772828432725e-96"
+        },
+        {
+          "name": "fixture_1e-30_3_1_remainder",
+          "passed": true,
+          "detail": "7.322780743318619095947404e-96"
+        },
+        {
+          "name": "fixture_1e-30_3_1_contour_64",
+          "passed": true,
+          "detail": "8.708336843457444289588084e-93"
+        },
+        {
+          "name": "fixture_1e-30_3_1_contour_128",
+          "passed": true,
+          "detail": "7.4619056750893835081801e-93"
+        },
+        {
+          "name": "fixture_1e-30_3_1_difference_.001",
+          "passed": true,
+          "detail": "2.530797909759333869235971e-13"
+        },
+        {
+          "name": "fixture_1e-30_3_1_difference_.0005",
+          "passed": true,
+          "detail": "6.326990965296019768267234e-14"
+        },
+        {
+          "name": "fixture_1e-30_3_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_3_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_0_areal_angular",
+          "passed": true,
+          "detail": "9.439170398014910807482769e-92"
+        },
+        {
+          "name": "fixture_1e-30_49_0_remainder",
+          "passed": true,
+          "detail": "2.0662300988353263305046e-92"
+        },
+        {
+          "name": "fixture_1e-30_49_0_seed_zero",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_0_contour_64",
+          "passed": true,
+          "detail": "3.928792623241198245864863e-88"
+        },
+        {
+          "name": "fixture_1e-30_49_0_contour_128",
+          "passed": true,
+          "detail": "1.888313736010412360231884e-88"
+        },
+        {
+          "name": "fixture_1e-30_49_0_difference_.001",
+          "passed": true,
+          "detail": "6.817478234698087417285438e-17"
+        },
+        {
+          "name": "fixture_1e-30_49_0_difference_.0005",
+          "passed": true,
+          "detail": "1.704369590928259568860665e-17"
+        },
+        {
+          "name": "fixture_1e-30_49_0_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_0_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_.4_areal_angular",
+          "passed": true,
+          "detail": "9.489281345218921300477323e-92"
+        },
+        {
+          "name": "fixture_1e-30_49_.4_remainder",
+          "passed": true,
+          "detail": "1.603031840467400431610099e-93"
+        },
+        {
+          "name": "fixture_1e-30_49_.4_contour_64",
+          "passed": true,
+          "detail": "3.30936649731954679872933e-88"
+        },
+        {
+          "name": "fixture_1e-30_49_.4_contour_128",
+          "passed": true,
+          "detail": "2.370210516372625140905043e-88"
+        },
+        {
+          "name": "fixture_1e-30_49_.4_difference_.001",
+          "passed": true,
+          "detail": "6.19762171108652275330146e-18"
+        },
+        {
+          "name": "fixture_1e-30_49_.4_difference_.0005",
+          "passed": true,
+          "detail": "1.549405427771630657551103e-18"
+        },
+        {
+          "name": "fixture_1e-30_49_.4_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_.4_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_1_areal_angular",
+          "passed": true,
+          "detail": "6.023543552057589156277179e-94"
+        },
+        {
+          "name": "fixture_1e-30_49_1_remainder",
+          "passed": true,
+          "detail": "3.99043774789861003118554e-92"
+        },
+        {
+          "name": "fixture_1e-30_49_1_contour_64",
+          "passed": true,
+          "detail": "5.224774505348482362325543e-89"
+        },
+        {
+          "name": "fixture_1e-30_49_1_contour_128",
+          "passed": true,
+          "detail": "1.268554896927937046210103e-88"
+        },
+        {
+          "name": "fixture_1e-30_49_1_difference_.001",
+          "passed": true,
+          "detail": "6.817242226044832257903099e-17"
+        },
+        {
+          "name": "fixture_1e-30_49_1_difference_.0005",
+          "passed": true,
+          "detail": "1.704310524258207459762242e-17"
+        },
+        {
+          "name": "fixture_1e-30_49_1_refinement",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_1e-30_49_1_complete_source",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "omitted_gradient_square_detected",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "cold_E0_exact": "3526913735171/3125000000000000000000000",
+          "middle_E0_exact": "6318075583107/125000000000000000000000",
+          "outer_E0_exact": "1370125807397/708000000000000000000000000",
+          "inverse_proved": false,
+          "goal_complete": false
+        },
+        {
+          "fixture": "fixture_1e-5_2h_0",
+          "second": "0.0625164060316030392257149295537941",
+          "contours": [
+            "(0.0625164060316030392257149295537941 - 4.1369111513085270047238747811588574e-98j)",
+            "(0.0625164060316030392257149295537941 + 3.1393086308412093627752844039148159e-100j)"
+          ],
+          "difference_errors": [
+            "3.581142240131785459458753e-13",
+            "8.952843392165906068996474e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_2h_.4",
+          "second": "0.062578948860955331694590340128525735",
+          "contours": [
+            "(0.062578948860955331694590340128525735 - 5.2238095617197723796580732481142536e-97j)",
+            "(0.062578948860955331694590340128525735 - 6.1279304474020406761373551564417206e-97j)"
+          ],
+          "difference_errors": [
+            "3.258832106605877210093439e-14",
+            "8.147080266513419973146147e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_2h_1",
+          "second": "0.062672880442509278547420087202693972",
+          "contours": [
+            "(0.062672880442509278547420087202693972 - 2.0895238246879089518632292992457014e-96j)",
+            "(0.062672880442509278547420087202693972 - 1.397480677622469021224766603982702e-96j)"
+          ],
+          "difference_errors": [
+            "3.590086514648330621329513e-13",
+            "8.975228525284416433580574e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_.001_0",
+          "second": "0.061599058011687365298827655427378821",
+          "contours": [
+            "(0.061599058011687365298827655427378821 - 2.2184447657944546163612009787664699e-98j)",
+            "(0.061599058011687365298827655427378821 + 1.7649890746729465972936598982009965e-98j)"
+          ],
+          "difference_errors": [
+            "3.496981988637354073001348e-13",
+            "8.742443082461673007060276e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_.001_.4",
+          "second": "0.061660408442803186195959562239459834",
+          "contours": [
+            "(0.061660408442803186195959562239459834 + 8.0366300949534959687047280740219286e-98j)",
+            "(0.061660408442803186195959562239459834 + 2.2323972485981933246402022427838691e-99j)"
+          ],
+          "difference_errors": [
+            "3.18223790297155410405312e-14",
+            "7.955594757427644381688224e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_.001_1",
+          "second": "0.061752548669099718648943664593760669",
+          "contours": [
+            "(0.061752548669099718648943664593760669 - 5.5363451765235194451077015621039953e-97j)",
+            "(0.061752548669099718648943664593760669 - 1.3751567051364870879783645815548633e-96j)"
+          ],
+          "difference_errors": [
+            "3.505692535003350784161911e-13",
+            "8.764243256369356928682984e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_.1_0",
+          "second": "-0.0069732940121017361140926307779917758",
+          "contours": [
+            "(-0.0069732940121017361140926307779917758 - 3.9415763920561850888178570849152688e-99j)",
+            "(-0.0069732940121017361140926307779917758 + 1.2470031505841470524357379715550519e-99j)"
+          ],
+          "difference_errors": [
+            "2.723297075677031051415099e-13",
+            "6.808223712748663981029591e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_.1_.4",
+          "second": "-0.006993788284583108594276090420072457",
+          "contours": [
+            "(-0.006993788284583108594276090420072457 - 3.7950753226169286518883438127325774e-98j)",
+            "(-0.006993788284583108594276090420072457 + 2.455636973458012657104222467062256e-98j)"
+          ],
+          "difference_errors": [
+            "2.480776617619566174562687e-14",
+            "6.201941544044653978579361e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_.1_1",
+          "second": "-0.0070246190317482292897211098077243805",
+          "contours": [
+            "(-0.0070246190317482292897211098077243805 + 5.8042328463553026440645258312380596e-98j)",
+            "(-0.0070246190317482292897211098077243805 - 4.4647944971963866492804044855677381e-97j)"
+          ],
+          "difference_errors": [
+            "2.737220102738037603363412e-13",
+            "6.843069335418192579845269e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_3_0",
+          "second": "0.22724339247064395783167581295797891",
+          "contours": [
+            "(0.22724339247064395783167581295797891 + 3.8173992951029105851347458351604161e-97j)",
+            "(0.22724339247064395783167581295797891 + 4.1801638480001170003887786996127948e-97j)"
+          ],
+          "difference_errors": [
+            "2.533586375079154479576419e-13",
+            "6.333969750130277703401652e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_3_.4",
+          "second": "0.22710324663191550131417860004558138",
+          "contours": [
+            "(0.22710324663191550131417860004558138 + 1.3144354999746162295481510805511421e-95j)",
+            "(0.22710324663191550131417860004558138 - 1.0608351725338614678690241057708946e-95j)"
+          ],
+          "difference_errors": [
+            "2.302246642158764297982016e-14",
+            "5.755616605396771701131673e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_3_1",
+          "second": "0.22689311074860604185226467127692759",
+          "contours": [
+            "(0.22689311074860604185226467127692759 + 1.4573089238849006023251240240893097e-95j)",
+            "(0.22689311074860604185226467127692759 + 2.7860317662505452691509723989942686e-96j)"
+          ],
+          "difference_errors": [
+            "2.530797909781481745857516e-13",
+            "6.32699096535138943590127e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_49_0",
+          "second": "0.63601622682818862301152601201368818",
+          "contours": [
+            "(0.63601622682818862301152601201368818 + 5.2291673151164080436372097334969349e-95j)",
+            "(0.63601622682818862301152601201368818 + 2.8217501222281163623452156348788105e-95j)"
+          ],
+          "difference_errors": [
+            "6.817478234697275108588552e-17",
+            "1.704369590928056491684439e-17"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_49_.4",
+          "second": "0.63601540655569090881637880728956278",
+          "contours": [
+            "(0.63601540655569090881637880728956278 + 3.054062309506238752480573641071871e-93j)",
+            "(0.63601540655569090881637880728956278 + 2.5602917564722959601633551482039637e-94j)"
+          ],
+          "difference_errors": [
+            "6.197621711085784296180392e-18",
+            "1.549405427771446043270836e-18"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-5_49_1",
+          "second": "0.6360141761246329509688443973883642",
+          "contours": [
+            "(0.6360141761246329509688443973883642 + 5.9983978294493791066684320615064294e-93j)",
+            "(0.6360141761246329509688443973883642 - 4.7639714468645221258753858293366611e-93j)"
+          ],
+          "difference_errors": [
+            "6.817242226044019963873432e-17",
+            "1.70431052425800438625683e-17"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_2h_0",
+          "second": "0.062533749999999999999999999998265505",
+          "contours": [
+            "(0.062533749999999999999999999998265505 + 8.5807769242993055915857773707004967e-99j)",
+            "(0.062533749999999999999999999998265505 + 1.0342277878271317511809686952897143e-98j)"
+          ],
+          "difference_errors": [
+            "3.582672531331321164290521e-13",
+            "8.956669114674849158820304e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_2h_.4",
+          "second": "0.062596315027299897760784781504526695",
+          "contours": [
+            "(0.062596315027299897760784781504526695 - 2.4109890284860487906114184222065786e-97j)",
+            "(0.062596315027299897760784781504526695 - 1.0034625632448878994257709081313491e-96j)"
+          ],
+          "difference_errors": [
+            "3.260224741005882221861917e-14",
+            "8.150561852513432029365337e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_2h_1",
+          "second": "0.062690279955918888395031768954184152",
+          "contours": [
+            "(0.062690279955918888395031768954184152 - 1.5894668410019136471438239968621148e-96j)",
+            "(0.062690279955918888395031768954184152 + 6.6078958558506522409349986386402524e-97j)"
+          ],
+          "difference_errors": [
+            "3.591620827134534085330022e-13",
+            "8.979064312001156203814548e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_.001_0",
+          "second": "0.061599030038063901523176944612523893",
+          "contours": [
+            "(0.061599030038063901523176944612523893 - 3.4881207009346770697503160043497954e-99j)",
+            "(0.061599030038063901523176944612523893 - 2.4190117060981985478718441490165831e-98j)"
+          ],
+          "difference_errors": [
+            "3.496978263110332301110605e-13",
+            "8.742433768663452278211072e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_.001_.4",
+          "second": "0.061660380425710405597369428973938587",
+          "contours": [
+            "(0.061660380425710405597369428973938587 - 3.9290191575328202513667559472996095e-97j)",
+            "(0.061660380425710405597369428973938587 + 2.3998270422430578239882174109926592e-97j)"
+          ],
+          "difference_errors": [
+            "3.182234510983124567644372e-14",
+            "7.955586277456570543881069e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_.001_1",
+          "second": "0.061752520586680820206126744549700107",
+          "contours": [
+            "(0.061752520586680820206126744549700107 - 2.3395523165309066042229319504374948e-96j)",
+            "(0.061752520586680820206126744549700107 - 1.0894098573159183424244186944785281e-96j)"
+          ],
+          "difference_errors": [
+            "3.505688795301051939802006e-13",
+            "8.764233907094199084851505e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_.1_0",
+          "second": "-0.0069732941671158722217405879509711902",
+          "contours": [
+            "(-0.0069732941671158722217405879509711902 - 2.0231100065421127004551832825228813e-99j)",
+            "(-0.0069732941671158722217405879509711902 - 1.8312633679907054616189159022836426e-99j)"
+          ],
+          "difference_errors": [
+            "2.723297089745040915117776e-13",
+            "6.808223747918624469257736e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_.1_.4",
+          "second": "-0.0069937884398046717211440297856770638",
+          "contours": [
+            "(-0.0069937884398046717211440297856770638 - 2.3440171110281029908722123549230625e-97j)",
+            "(-0.0069937884398046717211440297856770638 + 6.9204314706543993063846269526299941e-98j)"
+          ],
+          "difference_errors": [
+            "2.480776630425743934237028e-14",
+            "6.20194157606009837775556e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_.1_1",
+          "second": "-0.0070246191872813940707695139332808485",
+          "contours": [
+            "(-0.0070246191872813940707695139332808485 - 7.5008547552899295707910795357538e-97j)",
+            "(-0.0070246191872813940707695139332808485 - 1.6296499914766811269873476372322244e-97j)"
+          ],
+          "difference_errors": [
+            "2.73722011685308809909211e-13",
+            "6.84306937070588322144039e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_3_0",
+          "second": "0.2272433924676",
+          "contours": [
+            "(0.2272433924676 + 2.1096153999252926917849911194307563e-97j)",
+            "(0.2272433924676 + 1.1608465692710605288129051662476119e-97j)"
+          ],
+          "difference_errors": [
+            "2.533586375056989093346295e-13",
+            "6.33396975007486421388827e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_3_.4",
+          "second": "0.22710324662887269251634468755128794",
+          "contours": [
+            "(0.22710324662887269251634468755128794 + 1.0144013097630190467165078991209901e-95j)",
+            "(0.22710324662887269251634468755128794 + 3.1074969700486851078991615219551457e-96j)"
+          ],
+          "difference_errors": [
+            "2.302246642138620311969686e-14",
+            "5.755616605346411736100849e-15"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_3_1",
+          "second": "0.22689311074556495588004839203568094",
+          "contours": [
+            "(0.22689311074556495588004839203568094 + 1.0858380217181612331049943708900739e-95j)",
+            "(0.22689311074556495588004839203568094 - 7.0722344835590764524601607051392972e-96j)"
+          ],
+          "difference_errors": [
+            "2.530797909759333869235971e-13",
+            "6.326990965296019768267234e-14"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_49_0",
+          "second": "0.63601622682816748096380867558224961",
+          "contours": [
+            "(0.63601622682816748096380867558224961 + 4.4576508260008724306415558383908297e-95j)",
+            "(0.63601622682816748096380867558224961 + 3.8361514319911354090617235339998006e-95j)"
+          ],
+          "difference_errors": [
+            "6.817478234698087417285438e-17",
+            "1.704369590928259568860665e-17"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_49_.4",
+          "second": "0.63601540655566976695229925802148588",
+          "contours": [
+            "(0.63601540655566976695229925802148588 + 1.4630238608413119772362029418308364e-93j)",
+            "(0.63601540655566976695229925802148588 + 1.142987391282274982215783548305341e-93j)"
+          ],
+          "difference_errors": [
+            "6.19762171108652275330146e-18",
+            "1.549405427771630657551103e-18"
+          ]
+        },
+        {
+          "fixture": "fixture_1e-30_49_1",
+          "second": "0.63601417612461180938021887042290106",
+          "contours": [
+            "(0.63601417612461180938021887042290106 - 2.5602917564722959601633551482039637e-94j)",
+            "(0.63601417612461180938021887042290106 + 9.8754110606788558463443698573581459e-94j)"
+          ],
+          "difference_errors": [
+            "6.817242226044832257903099e-17",
+            "1.704310524258207459762242e-17"
+          ]
+        }
+      ],
+      "exception": null,
+      "scope": "complete retained-equation defect on the specified comparison path",
+      "unresolved": [
+        "general family",
+        "usable full inverse",
+        "coupled solution",
+        "physical completion"
+      ]
+    }
+  ]
+}
