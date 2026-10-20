@@ -1,0 +1,94 @@
+{"name": "regular_pressure_ward_identity", "passed": true, "detail": ""}
+{"name": "first_ward_operator_kernel", "passed": true, "detail": ""}
+{"name": "mixed_ward_operator_kernel", "passed": true, "detail": ""}
+{"name": "constant_trace_exact_cancellation", "passed": true, "detail": ""}
+{"name": "implicit_cut_first", "passed": true, "detail": ""}
+{"name": "implicit_cut_mixed", "passed": true, "detail": ""}
+{"name": "moving_cut_full_chain_rule", "passed": false, "detail": ""}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\interior_pressure_and_bolt_primitive.py", line 350, in main
+    symbolic_checks()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\interior_pressure_and_bolt_primitive.py", line 80, in symbolic_checks
+    check("moving_cut_full_chain_rule", s.simplify(s.diff(composite, ss, tt)-chain) == 0)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\interior_pressure_and_bolt_primitive.py", line 46, in check
+    raise AssertionError(name)
+AssertionError: moving_cut_full_chain_rule
+
+{"status": "failed", "checks": 7, "unchanged_inputs": true}
+{"name": "regular_pressure_ward_identity", "passed": true, "detail": ""}
+{"name": "first_ward_operator_kernel", "passed": true, "detail": ""}
+{"name": "mixed_ward_operator_kernel", "passed": true, "detail": ""}
+{"name": "constant_trace_exact_cancellation", "passed": true, "detail": ""}
+{"name": "implicit_cut_first", "passed": true, "detail": ""}
+{"name": "implicit_cut_mixed", "passed": true, "detail": ""}
+{"name": "moving_cut_full_chain_rule", "passed": true, "detail": ""}
+{"name": "bolt_lapse_ward_sign", "passed": true, "detail": ""}
+{"name": "bolt_coefficient_geometric_transfer", "passed": true, "detail": ""}
+{"name": "regular_bolt_coefficient_limit", "passed": true, "detail": ""}
+{"name": "horizon_slope_coefficient", "passed": true, "detail": ""}
+{"name": "signed_primitive_integration_by_parts", "passed": true, "detail": ""}
+{"name": "cold_coefficient_inverse_gap", "passed": true, "detail": ""}
+{"name": "counterexample_pressure_ibp_amplitude", "passed": true, "detail": ""}
+{"name": "counterexample_pressure_integrable_bound", "passed": true, "detail": ""}
+{"name": "counterexample_absolute_trace_harmonic_lower_bound", "passed": true, "detail": ""}
+{"name": "interior_radius_guard", "passed": true, "detail": ""}
+{"name": "seed_normalized_trace_budget", "passed": true, "detail": ""}
+{"name": "complex_scalar_budget", "passed": true, "detail": "2247377917/468750000000000000000"}
+{"name": "first_cauchy_budget", "passed": true, "detail": ""}
+{"name": "mixed_cauchy_budget", "passed": true, "detail": ""}
+{"name": "finite_background_trace_budget", "passed": true, "detail": ""}
+{"name": "ward_kernel_integral_guard", "passed": true, "detail": ""}
+{"name": "ward_total_variation_guard", "passed": true, "detail": ""}
+{"name": "first_operator_budget", "passed": true, "detail": ""}
+{"name": "mixed_operator_budget", "passed": true, "detail": ""}
+{"name": "pressure_value_budget", "passed": true, "detail": ""}
+{"name": "pressure_first_budget", "passed": true, "detail": ""}
+{"name": "pressure_mixed_budget", "passed": true, "detail": ""}
+{"name": "cut_first_budget", "passed": true, "detail": ""}
+{"name": "cut_mixed_budget", "passed": true, "detail": ""}
+{"name": "proper_cut_inside_interior_cover", "passed": true, "detail": ""}
+{"name": "seam_connection_guard", "passed": true, "detail": ""}
+{"name": "seam_log_warp_first_guard", "passed": true, "detail": ""}
+{"name": "seam_log_warp_second_guard", "passed": true, "detail": ""}
+{"name": "chi_second_chart_conversion_guard", "passed": true, "detail": ""}
+{"name": "pressure_spatial_first_budget", "passed": true, "detail": ""}
+{"name": "pressure_mixed_spatial_first_budget", "passed": true, "detail": ""}
+{"name": "pressure_spatial_second_conditional_budget", "passed": true, "detail": ""}
+{"name": "proper_cut_first_pressure_budget", "passed": true, "detail": ""}
+{"name": "proper_cut_mixed_conditional_constant", "passed": true, "detail": "4595159/1000000000000"}
+{"name": "proper_cut_unresolved_spatial_coefficient", "passed": true, "detail": ""}
+{"name": "bolt_pressure_subtraction_budgets", "passed": true, "detail": ""}
+{"name": "mixed_primitive_product_rule_constants", "passed": true, "detail": ""}
+{"name": "dini_response_operator_constants", "passed": true, "detail": ""}
+{"name": "independent_pressure_quadrature_32", "passed": true, "detail": ""}
+{"name": "nonzero_hh_pressure_retained_32", "passed": true, "detail": ""}
+{"name": "kernel_variation_omission_detected_32", "passed": true, "detail": ""}
+{"name": "cut_transport_omission_detected_32", "passed": true, "detail": ""}
+{"name": "fixed_pressure_independent_mixed_difference_32", "passed": true, "detail": "{'target': '0.09567094333239459168339368', 'errors': ['6.80029190042133e-12', '1.70007297483196e-12']}"}
+{"name": "fixed_pressure_step_refinement_32", "passed": true, "detail": ""}
+{"name": "moving_pressure_independent_mixed_difference_32", "passed": true, "detail": "{'target': '0.09755271568183341645765843', 'errors': ['9.83122146060182e-12', '2.4577985577761e-12']}"}
+{"name": "moving_pressure_step_refinement_32", "passed": true, "detail": ""}
+{"name": "proper_cut_independent_mixed_difference_32", "passed": true, "detail": "{'target': '-0.000005291959529962416645947799', 'errors': ['9.62562809532213e-15', '2.40640730235744e-15']}"}
+{"name": "proper_cut_step_refinement_32", "passed": true, "detail": ""}
+{"name": "constant_trace_operator_annihilation_32", "passed": true, "detail": ""}
+{"name": "signed_bolt_primitive_all_parameter_components_32", "passed": true, "detail": "['-0.04686310652379921216162848', '-0.02639335025579956585653064', '-0.003721634162822271803959434', '-0.006509584164355348227558732']"}
+{"name": "bolt_lapse_independent_mixed_difference_32", "passed": true, "detail": "['1.65349600313546e-11', '4.13374000560165e-12']"}
+{"name": "bolt_lapse_step_refinement_32", "passed": true, "detail": ""}
+{"name": "independent_pressure_quadrature_64", "passed": true, "detail": ""}
+{"name": "nonzero_hh_pressure_retained_64", "passed": true, "detail": ""}
+{"name": "kernel_variation_omission_detected_64", "passed": true, "detail": ""}
+{"name": "cut_transport_omission_detected_64", "passed": true, "detail": ""}
+{"name": "fixed_pressure_independent_mixed_difference_64", "passed": true, "detail": "{'target': '0.09567094333239426345160707', 'errors': ['6.80029190042131e-12', '1.70007297483196e-12']}"}
+{"name": "fixed_pressure_step_refinement_64", "passed": true, "detail": ""}
+{"name": "moving_pressure_independent_mixed_difference_64", "passed": true, "detail": "{'target': '0.09755271568183309849880742', 'errors': ['9.83124524190654e-12', '2.4578223390808e-12']}"}
+{"name": "moving_pressure_step_refinement_64", "passed": true, "detail": ""}
+{"name": "proper_cut_independent_mixed_difference_64", "passed": true, "detail": "{'target': '-0.000005291959529962417299701038', 'errors': ['9.62562744156889e-15', '2.4064066486042e-15']}"}
+{"name": "proper_cut_step_refinement_64", "passed": true, "detail": ""}
+{"name": "constant_trace_operator_annihilation_64", "passed": true, "detail": ""}
+{"name": "signed_bolt_primitive_all_parameter_components_64", "passed": true, "detail": "['-0.04686310652379736943793383', '-0.02639335025579895273699504', '-0.003721634162822794190947602', '-0.00650958416435521392876086']"}
+{"name": "bolt_lapse_independent_mixed_difference_64", "passed": true, "detail": "['1.65349600313542e-11', '4.13374000560155e-12']"}
+{"name": "bolt_lapse_step_refinement_64", "passed": true, "detail": ""}
+{"name": "all_mixed_responses_quadrature_refinement", "passed": true, "detail": ""}
+{"status": "passed", "checks": 74, "unchanged_inputs": true}

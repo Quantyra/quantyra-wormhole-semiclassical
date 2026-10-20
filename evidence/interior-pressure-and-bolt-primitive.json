@@ -1,0 +1,540 @@
+{
+  "runs": [
+    {
+      "story": "S148",
+      "created_utc": "2026-10-20T09:19:44.936334+00:00",
+      "status": "failed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "input_sha256_before": {
+        "checks/interior_pressure_and_bolt_primitive.py": "e5c14c99b7314eb8cd9ee2d0bdbfbc80f351a593ce55dea9a79c4227bb2f2f83",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/retained-benchmark-parameter-recovery.md": "b4a38711e4a1050ef25d09929460d3674c99abe383c4a911b60204c37554a62d"
+      },
+      "input_sha256_after": {
+        "checks/interior_pressure_and_bolt_primitive.py": "e5c14c99b7314eb8cd9ee2d0bdbfbc80f351a593ce55dea9a79c4227bb2f2f83",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/retained-benchmark-parameter-recovery.md": "b4a38711e4a1050ef25d09929460d3674c99abe383c4a911b60204c37554a62d"
+      },
+      "unchanged_inputs": true,
+      "protocol": {
+        "finite_difference_steps": [
+          ".001",
+          ".0005"
+        ],
+        "quadrature_nodes": [
+          32,
+          64
+        ],
+        "finite_difference_tolerance": "2e-7",
+        "quadrature_tolerance": "1e-11"
+      },
+      "checks": [
+        {
+          "name": "regular_pressure_ward_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "first_ward_operator_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_ward_operator_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_trace_exact_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "implicit_cut_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "implicit_cut_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_cut_full_chain_rule",
+          "passed": false,
+          "detail": ""
+        }
+      ],
+      "numerics": [],
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\interior_pressure_and_bolt_primitive.py\", line 350, in main\n    symbolic_checks()\n    ~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\interior_pressure_and_bolt_primitive.py\", line 80, in symbolic_checks\n    check(\"moving_cut_full_chain_rule\", s.simplify(s.diff(composite, ss, tt)-chain) == 0)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\interior_pressure_and_bolt_primitive.py\", line 46, in check\n    raise AssertionError(name)\nAssertionError: moving_cut_full_chain_rule\n",
+      "scope": "fixed-cut canonical pressure response, conditional moving-cut Hessian and signed bolt primitive; manufactured sources are diagnostics",
+      "unresolved": [
+        "spatial trace bound at moving proper cut",
+        "cold geometric/source error control",
+        "other local and radius source maps",
+        "global exterior/state solve and physical gates"
+      ],
+      "failed_checker_source_utf8": "\"\"\"S148: pressure response, moving proper cut and signed bolt primitive.\n\nManufactured radial sources test identities, not a quantum state. Tolerances,\nsteps and resolutions below are fixed before the first acceptance run.\n\"\"\"\nfrom __future__ import annotations\n\nfrom datetime import datetime, timezone\nfrom fractions import Fraction as Q\nfrom hashlib import sha256\nfrom pathlib import Path\nimport json\nimport sys\nimport traceback\n\nimport mpmath as mp\nimport numpy as np\nimport sympy as s\nfrom numpy.polynomial.legendre import leggauss\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = \"interior-pressure-and-bolt-primitive\"\nINPUTS = [\n    \"checks/interior_pressure_and_bolt_primitive.py\",\n    \"notes/interior-pressure-and-bolt-primitive.md\",\n    \"notes/general-interior-dirac-response.md\",\n    \"notes/outer-ward-and-constraint-transfer.md\",\n    \"notes/stationary-centered-exterior-source.md\",\n    \"notes/stationary-centered-complete-residual.md\",\n    \"notes/stationary-centered-first-order-geometry.md\",\n    \"notes/retained-benchmark-parameter-recovery.md\",\n]\nROWS, NUMERICS = [], []\nFD_STEPS = [\".001\", \".0005\"]\nQUADRATURE_NODES = [32, 64]\nFD_TOL = \"2e-7\"\nQUAD_TOL = \"1e-11\"\n\n\ndef check(name, passed, detail=\"\"):\n    assert not any(row[\"name\"] == name for row in ROWS)\n    row = {\"name\": name, \"passed\": bool(passed), \"detail\": str(detail)}\n    ROWS.append(row)\n    print(json.dumps(row), flush=True)\n    if not row[\"passed\"]:\n        raise AssertionError(name)\n\n\ndef symbolic_checks():\n    W, Wp, I, SS = s.symbols(\"W Wp I S\", nonzero=True)\n    P = I/(2*W)\n    Pp = s.diff(P, I)*Wp*SS+s.diff(P, W)*Wp\n    check(\"regular_pressure_ward_identity\", s.simplify(Pp-Wp/W*(SS/2-P)) == 0)\n    ss, tt, dh, dk, hp, kp, ell = s.symbols(\"ss tt dh dk hp kp ell\")\n    kernel = s.exp(2*(ss*dh+tt*dk))*(ell+2*ss*hp+2*tt*kp)/2\n    zero = {ss: 0, tt: 0}\n    check(\"first_ward_operator_kernel\",\n          s.simplify(s.diff(kernel, ss).subs(zero)-(dh*ell+hp)) == 0)\n    check(\"mixed_ward_operator_kernel\",\n          s.simplify(s.diff(kernel, ss, tt).subs(zero)-\n                     (2*dh*dk*ell+2*dh*kp+2*dk*hp)) == 0)\n    # W(0)=0 makes F[constant]=constant/2 for every parameter.\n    wc, const = s.symbols(\"wc const\", nonzero=True)\n    check(\"constant_trace_exact_cancellation\", s.simplify(const*(wc-0)/(2*wc)-const/2) == 0)\n    ch, ck, chk, E, Eh, Ek, Echi, Ih, Ik, Ihk = s.symbols(\n        \"ch ck chk E Eh Ek Echi Ih Ik Ihk\", nonzero=True)\n    cutfirst = -E*ch+Ih\n    cutmixed = -E*chk-Eh*ck-Ek*ch-Echi*ch*ck+Ihk\n    check(\"implicit_cut_first\", s.simplify(cutfirst.subs(ch, Ih/E)) == 0)\n    check(\"implicit_cut_mixed\", s.simplify(cutmixed.subs(\n        chk, Ihk/E-Eh*ck/E-Ek*ch/E-Echi*ch*ck/E)) == 0)\n    xx = s.symbols(\"xx\")\n    pf = s.Function(\"P\")(ss, tt, xx)\n    cf = s.Function(\"c\")(ss, tt)\n    composite = pf.subs(xx, cf)\n    chain = (s.diff(pf, ss, tt)+s.diff(pf, ss, xx)*s.diff(cf, tt)+\n             s.diff(pf, tt, xx)*s.diff(cf, ss)+\n             s.diff(pf, xx, xx)*s.diff(cf, ss)*s.diff(cf, tt)+\n             s.diff(pf, xx)*s.diff(cf, ss, tt)).subs(xx, cf)\n    check(\"moving_cut_full_chain_rule\", s.simplify(s.diff(composite, ss, tt)-chain) == 0)\n    B, C, r, rp, F, sig, PP = s.symbols(\"B C r rp F sig P\", nonzero=True)\n    source = B**2*C*rp*(2*PP-SS)/(2*r**3*F)\n    HH = B**2*C*rp*W/(r**3*F*Wp)\n    check(\"bolt_lapse_ward_sign\", s.simplify(source+HH*Wp/W*(SS/2-PP)) == 0)\n    check(\"bolt_coefficient_geometric_transfer\", s.simplify(\n        HH.subs(F, C*s.exp(-2*sig)*(rp/r)**2)-\n        B**2*s.exp(2*sig)*W/(r*rp*Wp)) == 0)\n    rh, r2, w2, chi = s.symbols(\"rh r2 w2 chi\", positive=True)\n    HHseries = B**2*s.exp(2*sig)*w2*chi**2/(\n        (rh+r2*chi**2)*(2*r2*chi)*(2*w2*chi))\n    H0 = B**2*s.exp(2*sig)/(4*rh*r2)\n    check(\"regular_bolt_coefficient_limit\", s.simplify(s.limit(HHseries, chi, 0)-H0) == 0)\n    Fhprime = 4*C*s.exp(-2*sig)*r2/rh**2\n    check(\"horizon_slope_coefficient\", s.simplify(B**2*C/(Fhprime*rh**3)-H0) == 0)\n    Hv, Hprime, Zv, Zprime = s.symbols(\"H Hp Z Zp\")\n    check(\"signed_primitive_integration_by_parts\",\n          s.simplify(-Hprime*Zv-Hv*Zprime+Hprime*Zv+Hv*Zprime) == 0)\n    gap = s.symbols(\"gap\", positive=True)\n    fixtureH0 = 1/(2*gap*(1+gap))\n    check(\"cold_coefficient_inverse_gap\", s.limit(gap*fixtureH0, gap, 0) == s.Rational(1, 2))\n    # Oscillatory counterexample: after integration by parts in (t+v)^2,\n    # |P(t)| <= a(0)+integral |a'|=1/t^2, where a decreases to zero.\n    t, v = s.symbols(\"t v\", positive=True)\n    amp = s.exp(-2*v)/(2*(t+v)**2)\n    check(\"counterexample_pressure_ibp_amplitude\",\n          s.simplify(s.diff(amp, v)+s.exp(-2*v)*((t+v)**-2+(t+v)**-3)) == 0)\n    check(\"counterexample_pressure_integrable_bound\", s.simplify(2*amp.subs(v, 0)-1/t**2) == 0)\n    n = s.symbols(\"n\", positive=True)\n    check(\"counterexample_absolute_trace_harmonic_lower_bound\",\n          s.integrate(s.sin(v), (v, 0, s.pi)) == 2 and\n          s.simplify((s.Rational(1, 2)*2/((n+1)*s.pi))-1/((n+1)*s.pi)) == 0)\n\n\ndef quantitative_checks():\n    mp.mp.dps = 60\n    check(\"interior_radius_guard\", 1/(1-mp.exp(-mp.mpf(\".04\")/mp.sqrt(8))) < 80)\n    seed = 2*4*10**15*Q(68, 10**29)*80\n    check(\"seed_normalized_trace_budget\", seed == Q(4352, 10**13))\n    K = 2*Q(85, 10**34)*(Q(2, 3)*10**17+7*10**11*24*256**3+10**17)\n    check(\"complex_scalar_budget\", K < Q(5, 10**12), str(K))\n    check(\"first_cauchy_budget\", 200*K < Q(1, 10**9))\n    check(\"mixed_cauchy_budget\", 40000*K < Q(2, 10**7))\n    S0, S1, S2 = Q(5, 10**10), Q(1, 10**9), Q(2, 10**7)\n    check(\"finite_background_trace_budget\", seed+Q(1, 1000)*S1 < S0)\n    check(\"ward_kernel_integral_guard\", mp.exp(mp.mpf(\".004\"))*mp.mpf(\"1.01\")*82 < 84)\n    check(\"ward_total_variation_guard\", mp.exp(mp.mpf(\".004\"))*(\n        mp.mpf(\"1.02\")+2*mp.mpf(\".008\")*mp.mpf(\"1.01\")*82) < mp.mpf(\"2.4\"))\n    F0, F1, F2 = Q(12, 10), Q(700), Q(5500)\n    check(\"first_operator_budget\", 2*Q(24, 10)+8*84 < F1)\n    check(\"mixed_operator_budget\", 8*Q(24, 10)+64*84 < F2)\n    P0, P1, P2 = Q(6, 10**10), Q(36, 10**8), Q(44, 10**7)\n    check(\"pressure_value_budget\", F0*S0 == P0)\n    check(\"pressure_first_budget\", F0*S1+F1*S0 < P1)\n    check(\"pressure_mixed_budget\", F0*S2+2*F1*S1+F2*S0 == Q(439, 10**8) < P2)\n    emin = mp.mpf(\".39\")*mp.exp(-mp.mpf(\".001\"))\n    cut1 = mp.mpf(\".05\")/emin\n    check(\"cut_first_budget\", cut1 < mp.mpf(\".13\"))\n    check(\"cut_mixed_budget\", cut1+2*mp.mpf(\".13\")+3*mp.mpf(\".13\")**2 < mp.mpf(\".45\"))\n    check(\"proper_cut_inside_interior_cover\", mp.mpf(\".05\")*mp.exp(-mp.mpf(\".001\")) > mp.mpf(\".04\"))\n    seamY = mp.mpf(\".05\")*mp.exp(mp.mpf(\".001\"))\n    check(\"seam_connection_guard\", mp.mpf(\"7.31\")*2*seamY+mp.coth(1)+mp.mpf(\".008\") < 3)\n    check(\"seam_log_warp_first_guard\", 2*mp.mpf(\"7.31\")*2*seamY+mp.mpf(\".016\") < 2)\n    check(\"seam_log_warp_second_guard\", 2*mp.mpf(\"7.31\")*(\n        3*2*seamY+mp.mpf(\"7.31\")*(1+(2*seamY)**2))+mp.mpf(\".2\") < 120)\n    check(\"chi_second_chart_conversion_guard\", Q(731, 100)**2+3*Q(731, 100) < 100)\n    diff = S0/2+P0\n    Pc, Phc, Pcc0 = Q(2, 10**9), Q(74, 10**8), Q(11, 10**8)\n    check(\"pressure_spatial_first_budget\", 2*diff < Pc)\n    check(\"pressure_mixed_spatial_first_budget\", 16*diff+2*(S1/2+P1) < Phc)\n    check(\"pressure_spatial_second_conditional_budget\", 120*diff+2*Pc < Pcc0)\n    check(\"proper_cut_first_pressure_budget\", P1+Pc*Q(13, 100) < Q(37, 10**8))\n    base2 = P2+2*Phc*Q(13, 100)+Pcc0*Q(13, 100)**2+Pc*Q(45, 100)\n    check(\"proper_cut_mixed_conditional_constant\", base2 < Q(46, 10**7), str(base2))\n    check(\"proper_cut_unresolved_spatial_coefficient\", Q(13, 100)**2 < Q(17, 1000))\n    check(\"bolt_pressure_subtraction_budgets\",\n          P0+S0/2 == Q(85, 10**11) and P1+S1/2 < Q(37, 10**8) and\n          P2+S2/2 == Q(45, 10**7))\n    check(\"mixed_primitive_product_rule_constants\",\n          2*Q(37, 10**8) == Q(74, 10**8))\n    check(\"dini_response_operator_constants\", 2*F0 == Q(24, 10) and 2*F1 == 1400 and 2*F2 == 11000)\n    NUMERICS.append({\"complex_scalar_budget\": str(K), \"moving_cut_mixed_constant\": str(base2),\n                     \"spatial_trace_bound_J_supplied\": False,\n                     \"cold_geometry_B0_B1_B2_supplied\": False})\n\n\nclass Jet:\n    \"\"\"Value, ds, dt, dsdt, without factorial scaling.\"\"\"\n    def __init__(self, value, ds=0, dt=0, dst=0):\n        self.v = [mp.mpf(v) for v in [value, ds, dt, dst]]\n    @staticmethod\n    def cast(x):\n        return x if isinstance(x, Jet) else Jet(x)\n    def __add__(self, other):\n        return Jet(*(a+b for a,b in zip(self.v, self.cast(other).v)))\n    __radd__ = __add__\n    def __neg__(self):\n        return Jet(*(-x for x in self.v))\n    def __sub__(self, other):\n        return self+-self.cast(other)\n    def __rsub__(self, other):\n        return self.cast(other)+-self\n    def __mul__(self, other):\n        a,b,c,d = self.v\n        e,f,g,h = self.cast(other).v\n        return Jet(a*e, b*e+a*f, c*e+a*g, d*e+b*g+c*f+a*h)\n    __rmul__ = __mul__\n    def reciprocal(self):\n        a,b,c,d = self.v\n        return Jet(1/a, -b/a**2, -c/a**2, 2*b*c/a**3-d/a**2)\n    def __truediv__(self, other):\n        return self*self.cast(other).reciprocal()\n    def exp(self):\n        a,b,c,d = self.v\n        e = mp.exp(a)\n        return Jet(e, e*b, e*c, e*(d+b*c))\n\n\ndef fixture(x):\n    \"\"\"Smooth even radial data, deliberately unrelated to a Dirac state.\"\"\"\n    b = mp.mpf(\".003\")*x*x\n    bp = mp.mpf(\".006\")*x\n    bpp = mp.mpf(\".006\")\n    h, k = mp.mpf(\".03\")+x*x/100, -mp.mpf(\".02\")+mp.sin(x)**2/40\n    hp, kp = x/50, mp.sin(x)*mp.cos(x)/20\n    hpp, kpp = mp.mpf(\".02\"), mp.cos(2*x)/20\n    trace = [1+x*x/5, mp.mpf(\".3\")+x*x/10, -mp.mpf(\".2\")+mp.mpf(\".07\")*x**4,\n             mp.mpf(\".11\")+mp.mpf(\".03\")*x*x]\n    return b,bp,bpp,h,k,hp,kp,hpp,kpp,trace\n\n\ndef manufactured_checks():\n    mp.mp.dps = 55\n    summaries = []\n    for n in QUADRATURE_NODES:\n        rawx, raww = leggauss(n)\n        nodes = [(mp.mpf(float(x))+1)/2 for x in rawx]\n        weights = [mp.mpf(float(w))/2 for w in raww]\n        def quad(fun, lo, hi):\n            return sum((hi-lo)*wt*fun(lo+(hi-lo)*xx) for xx,wt in zip(nodes,weights))\n        def jet_fields(x, freeze=False):\n            b,bp,bpp,h,k,hp,kp,hpp,kpp,T = fixture(x)\n            if freeze:\n                h=k=hp=kp=hpp=kpp=0\n            return Jet(b,h,k), Jet(bp,hp,kp), Jet(bpp,hpp,kpp), Jet(*T)\n        def scalar_fields(x, ss=0, tt=0):\n            b,bp,bpp,h,k,hp,kp,hpp,kpp,T = fixture(x)\n            return b+ss*h+tt*k, bp+ss*hp+tt*kp, T[0]+ss*T[1]+tt*T[2]+ss*tt*T[3]\n        def pressure_jet(c, freeze=False):\n            b,_,_,_ = jet_fields(c, freeze)\n            denom = (2*b).exp()*mp.sinh(c)**2\n            def integrand(x):\n                b,bp,_,T = jet_fields(x, freeze)\n                return (2*b).exp()*mp.sinh(x)*(mp.cosh(x)+bp*mp.sinh(x))*T/denom\n            return quad(integrand, mp.mpf(0), c)\n        def pressure_scalar(c, ss=0, tt=0):\n            bc,_,_ = scalar_fields(c,ss,tt)\n            denom = mp.exp(2*bc)*mp.sinh(c)**2\n            def integrand(x):\n                b,bp,T = scalar_fields(x,ss,tt)\n                return mp.exp(2*b)*mp.sinh(x)*(mp.cosh(x)+bp*mp.sinh(x))*T/denom\n            return quad(integrand, mp.mpf(0), c)\n        def cut(ss=0,tt=0):\n            # Independent adaptive quadrature and nonlinear root solve.\n            return mp.findroot(lambda c: mp.quad(\n                lambda x: mp.exp(scalar_fields(x,ss,tt)[0]), [c,2])-mp.mpf(\".05\"), (mp.mpf(\"1.94\"),mp.mpf(\"1.97\")))\n        c = cut()\n        b,bp,bpp,h,k,hp,kp,hpp,kpp,T = fixture(c)\n        Ec = mp.exp(b)\n        ch = quad(lambda x: mp.exp(fixture(x)[0])*fixture(x)[3],c,mp.mpf(2))/Ec\n        ck = quad(lambda x: mp.exp(fixture(x)[0])*fixture(x)[4],c,mp.mpf(2))/Ec\n        chk = quad(lambda x: mp.exp(fixture(x)[0])*fixture(x)[3]*fixture(x)[4],c,mp.mpf(2))/Ec-h*ck-k*ch-bp*ch*ck\n        pj = pressure_jet(c)\n        pv,ph,pk,phk = pj.v\n        ell = 2*mp.coth(c)+2*bp\n        ellp = -2/mp.sinh(c)**2+2*bpp\n        pc = ell*(T[0]/2-pv)\n        phc = 2*hp*(T[0]/2-pv)+ell*(T[1]/2-ph)\n        pkc = 2*kp*(T[0]/2-pv)+ell*(T[2]/2-pk)\n        pcc = ellp*(T[0]/2-pv)+ell*(c/5-pc)\n        moving = phk+phc*ck+pkc*ch+pcc*ch*ck+pc*chk\n        bc = scalar_fields(c)[0]\n        independent = mp.quad(lambda x: mp.exp(2*(scalar_fields(x)[0]-bc))*mp.sinh(x)*(\n            mp.cosh(x)+scalar_fields(x)[1]*mp.sinh(x))*scalar_fields(x)[2]/mp.sinh(c)**2, [0,c/2,c])\n        check(f\"independent_pressure_quadrature_{n}\", abs(independent-pv) < mp.mpf(QUAD_TOL))\n        check(f\"nonzero_hh_pressure_retained_{n}\", pv > mp.mpf(\".5\"))\n        check(f\"kernel_variation_omission_detected_{n}\", abs(phk-pressure_jet(c,True).v[3]) > mp.mpf(\"1e-7\"))\n        check(f\"cut_transport_omission_detected_{n}\", abs(moving-phk) > mp.mpf(\"1e-7\"))\n        fixed_errors, moving_errors, cut_errors = [],[],[]\n        for step_text in FD_STEPS:\n            step = mp.mpf(step_text)\n            fvals,mvals,cvals = [],[],[]\n            for ss,tt in [(step,step),(step,-step),(-step,step),(-step,-step)]:\n                cb = cut(ss,tt)\n                fvals.append(pressure_scalar(c,ss,tt))\n                mvals.append(pressure_scalar(cb,ss,tt))\n                cvals.append(cb)\n            mixed = lambda vals: (vals[0]-vals[1]-vals[2]+vals[3])/(4*step**2)\n            fixed_errors.append(abs(mixed(fvals)-phk))\n            moving_errors.append(abs(mixed(mvals)-moving))\n            cut_errors.append(abs(mixed(cvals)-chk))\n        for label, errors, target in [(\"fixed_pressure\",fixed_errors,phk),\n                                      (\"moving_pressure\",moving_errors,moving),\n                                      (\"proper_cut\",cut_errors,chk)]:\n            check(f\"{label}_independent_mixed_difference_{n}\",\n                  max(errors) < mp.mpf(FD_TOL)*(1+abs(target)),\n                  {\"target\":mp.nstr(target,25),\"errors\":[mp.nstr(e,15) for e in errors]})\n            check(f\"{label}_step_refinement_{n}\",\n                  errors[1] < mp.mpf(\".35\")*errors[0] or max(errors) < mp.mpf(\"1e-35\"))\n        # Constant traces test the integrated kernel and its responses.\n        def constant_kernel(x):\n            bx,bpx,_,_ = jet_fields(x)\n            bcj,_,_,_ = jet_fields(c)\n            return (2*(bx-bcj)).exp()*mp.sinh(x)*(mp.cosh(x)+bpx*mp.sinh(x))/mp.sinh(c)**2\n        constj = quad(constant_kernel, mp.mpf(0),c)\n        check(f\"constant_trace_operator_annihilation_{n}\",\n              abs(constj.v[0]-mp.mpf(\".5\")) < mp.mpf(QUAD_TOL) and\n              max(abs(v) for v in constj.v[1:]) < mp.mpf(QUAD_TOL))\n        # Bolt fixture r=1+gap*cosh(chi), B=C=1; geometry response is in b.\n        gap, end = mp.mpf(\".2\"), mp.mpf(\".7\")\n        def bolt_coefficients(x):\n            bj,bpj,bppj,Tj = jet_fields(x)\n            rr, rp, rpp = 1+gap*mp.cosh(x), gap*mp.sinh(x), gap*mp.cosh(x)\n            ej = 2*mp.coth(x)+2*bpj\n            epj = -2/mp.sinh(x)**2+2*bppj\n            Hj = (2*bj).exp()/(rr*rp*ej)\n            Hpj = Hj*(2*bpj-rp/rr-rpp/rp-epj/ej)\n            qj = (2*bj).exp()/(2*rr*rp)\n            return Hj,Hpj,qj,Tj\n        Pbolt = Jet(*fixture(mp.mpf(0))[-1])/2\n        direct = quad(lambda x: bolt_coefficients(x)[2]*(2*pressure_jet(x)-bolt_coefficients(x)[3]),mp.mpf(0),end)\n        primitive = -bolt_coefficients(end)[0]*(pressure_jet(end)-Pbolt)+quad(\n            lambda x: bolt_coefficients(x)[1]*(pressure_jet(x)-Pbolt),mp.mpf(0),end)\n        check(f\"signed_bolt_primitive_all_parameter_components_{n}\",\n              max(abs(a-b) for a,b in zip(direct.v,primitive.v)) < mp.mpf(QUAD_TOL),\n              [mp.nstr(v,25) for v in direct.v])\n        def scalar_lapse(ss,tt):\n            def integrand(x):\n                bx,_,Tx = scalar_fields(x,ss,tt)\n                rr,rp = 1+gap*mp.cosh(x),gap*mp.sinh(x)\n                return mp.exp(2*bx)/(2*rr*rp)*(2*pressure_scalar(x,ss,tt)-Tx)\n            return quad(integrand,mp.mpf(0),end)\n        lapse_errors = []\n        for step_text in FD_STEPS:\n            step = mp.mpf(step_text)\n            vals = [scalar_lapse(ss,tt) for ss,tt in [(step,step),(step,-step),(-step,step),(-step,-step)]]\n            observed = (vals[0]-vals[1]-vals[2]+vals[3])/(4*step**2)\n            lapse_errors.append(abs(observed-direct.v[3]))\n        check(f\"bolt_lapse_independent_mixed_difference_{n}\",\n              max(lapse_errors) < mp.mpf(FD_TOL)*(1+abs(direct.v[3])),\n              [mp.nstr(v,15) for v in lapse_errors])\n        check(f\"bolt_lapse_step_refinement_{n}\",\n              lapse_errors[1] < mp.mpf(\".35\")*lapse_errors[0] or max(lapse_errors) < mp.mpf(\"1e-35\"))\n        summaries.append([phk,moving,chk,direct.v[3]])\n        NUMERICS.append({\"nodes\":n,\"fixed_pressure_mixed\":mp.nstr(phk,35),\n                         \"moving_pressure_mixed\":mp.nstr(moving,35),\"proper_cut_mixed\":mp.nstr(chk,35),\n                         \"bolt_lapse_mixed\":mp.nstr(direct.v[3],35),\n                         \"cut_transport_contribution\":mp.nstr(moving-phk,35)})\n    check(\"all_mixed_responses_quadrature_refinement\",\n          max(abs(a-b) for a,b in zip(*summaries)) < mp.mpf(QUAD_TOL))\n\n\ndef hashes():\n    return {p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n\n\ndef main():\n    before = hashes()\n    error = None\n    try:\n        symbolic_checks()\n        quantitative_checks()\n        manufactured_checks()\n    except Exception:\n        error = traceback.format_exc()\n        print(error,file=sys.stderr)\n    after = hashes()\n    ok = error is None and before == after and all(row[\"passed\"] for row in ROWS)\n    record = {\n        \"story\":\"S148\",\"created_utc\":datetime.now(timezone.utc).isoformat(),\n        \"status\":\"passed\" if ok else \"failed\",\"python\":sys.version,\n        \"numpy\":np.__version__,\"sympy\":s.__version__,\"mpmath\":mp.__version__,\n        \"input_sha256_before\":before,\"input_sha256_after\":after,\"unchanged_inputs\":before==after,\n        \"protocol\":{\"finite_difference_steps\":FD_STEPS,\"quadrature_nodes\":QUADRATURE_NODES,\n                    \"finite_difference_tolerance\":FD_TOL,\"quadrature_tolerance\":QUAD_TOL},\n        \"checks\":ROWS,\"numerics\":NUMERICS,\"exception\":error,\n        \"scope\":\"fixed-cut canonical pressure response, conditional moving-cut Hessian and signed bolt primitive; manufactured sources are diagnostics\",\n        \"unresolved\":[\"spatial trace bound at moving proper cut\",\"cold geometric/source error control\",\n                      \"other local and radius source maps\",\"global exterior/state solve and physical gates\"],\n    }\n    if error:\n        record[\"failed_checker_source_utf8\"] = Path(__file__).read_text(encoding=\"utf-8\")\n        record[\"failed_note_source_utf8\"] = (ROOT/INPUTS[1]).read_text(encoding=\"utf-8\")\n    output = ROOT/\"evidence\"/f\"{STEM}.json\"\n    history = json.loads(output.read_text(encoding=\"utf-8\")) if output.exists() else {\"runs\":[]}\n    history[\"runs\"].append(record)\n    output.write_text(json.dumps(history,indent=2)+\"\\n\",encoding=\"utf-8\",newline=\"\\n\")\n    print(json.dumps({\"status\":record[\"status\"],\"checks\":len(ROWS),\"unchanged_inputs\":before==after}),flush=True)\n    return 0 if ok else 1\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+      "failed_note_source_utf8": "# Interior canonical pressure and the bolt lapse primitive\n\n2026-10-19, E003/S148 supporting S139/S074. Ordinary argument and\nverification protocol before execution.\n\nBolt regularity determines the canonical pressure integration\nconstant. This note bounds that pressure functional at fixed\ninterior cuts, derives the transport to a cut of fixed outer proper\ndistance, and gives an exact signed bolt lapse primitive. The\nmoving cut's second response still needs one spatial trace bound.\nThe lapse identity is not a proof of full physical bolt smoothness.\n\n## 1. Fixed disk, source normalization and hypotheses\n\nUse the common disk of the centered reconstruction,\n\n    ghat_2=A^2 exp(2sigma)(dchi^2+sinh^2 chi dvarphi^2),\n    sigma=sigma0+b, 0<=chi<D0<82,\n    W_b=exp(2sigma)sinh^2 chi.\n\nThe physical period, paired domain, B,A,C and mu0 stay fixed.\nAll variations are stationary and smooth radial fields at the bolt,\nor the stated C5 radial limits. The full global shape perturbation\nis conformal in this common disk, as required by S145. Its norm\nis the supremum of S145's chart/cap/global norms over the interior\ncover; b has norm at most 1e-3, and direction norms are U,V.\nIn particular |b|<=.001, |b_chi|<=.008 and\n|h|<=U, |h_chi|<=8U, since exp(sigma0)<7.31<8.\n\nLet c_* be the seed point with outer proper distance Y0=1/25.\nThe normal charts of S145 stay before the actual outer boundary\non 0<=chi<=c_*. This is a sufficient coefficient hypothesis,\nnot a demonstration that every previously constructed endpoint\nlies in the raw C5 ball. The seed outer estimate gives r/B<80\nthere: Y0<=sqrt(8)log[1/(1-B/r)] implies\nr/B<=1/[1-exp(-.04/sqrt(8))]<80.\n\nDefine normalized canonical scalar trace and pressure by\n\n    S=(2G/(B^2 C))Theta,\n    P=(2G/(B^2 C))(B^2 p_hat).\n\nS is the Lorentzian trace. Its sign is opposite to S145's\ncanonical scalar ACTION source, whose mass term is -M tr R.\nTheir absolute derivative bounds agree; no coordinate-density\nfactor is inserted into this scalar Ward equation.\n\nThe seed satisfies |Theta0|<=4e15 q^2(r/B) and\nGq^2/(CB^2)<6.8e-28, so |S0|<4.352e-10 on this cover.\nS145 also supplies a first-response bound, not just its second:\nthe nonconstant part on its parameter circle is bounded by\n\n    K=2 eta_G[(2/3)1e17+7e11*24*256^3+1e17]<5e-12,\n    eta_G<8.5e-33.\n\nThe terms are the subtracted local remainder, actual-domain\ncomparison and common curvature restoration. The fixed vacuum\nconstant has zero scalar variation, not zero value.\nCauchy on radius 1/(200U) gives |D_h S|<1e-9 U.\nTogether with the real background radius and S145,\n\n    ||S||inf<5e-10,\n    ||D_h S||inf<1e-9 U,\n    ||D_h D_k S||inf<2e-7 U V.                      (1)\n\nThe complete angular remainder converges uniformly in these\nnorms on the interior cover. The individual renormalized mode\ndiagonals and local terms are continuous in the observation;\nthe limit and its two parameter derivatives are therefore\ncontinuous at the bolt. This statement gives no quantitative\nspatial derivative or modulus of continuity.\n\n## 2. HH regularity fixes the pressure functional\n\nThe canonical Ward identity is\n\n    (W_b P)'=W_b' S/2.\n\nA nonzero homogeneous integration constant gives P~constant/chi^2\nat the smooth Euclidean bolt. Regularity excludes it. Hence\n\n    P_b(c)=F_b[S](c)\n          =[2W_b(c)]^-1 integral_0^c W_b'(t)S(t)dt,\n    P_b(0)=S(0)/2.                                  (2)\n\nThis is a prescription for the canonical HH pressure on every\nspecified geometry, not an independent state parameter. It does\nnot compute the unknown geometry or its trace. It includes the\nfull canonical massive trace, not the outer regular remainder\nalone. S147's separated cubic allocation is made only after\nthe full pressure and its matching value have been reconstructed.\n\nThe seed W0 has one maximum, past/current ratio at most 1.01,\nand total variation on [0,c] at most 1.02 W0(c), as proved in\nthe centered complete-response calculation. Consequently\n\n    integral_0^c W_b(t)/W_b(c)dt <84,\n    J_b(c)=integral_0^c |W_b'(t)|dt/W_b(c) <2.4.      (3)\n\nFor example the upper bounds are\nexp(.004)*1.01*82 and\nexp(.004)[1.02+2*.008*1.01*82].\nNo monotonicity of the perturbed warp is assumed.\n\nWith K_b(t,c)=W_b(t)/W_b(c), ell_b=W_b'/W_b and\nd_h=h(t)-h(c),\n\n    F_b[S]=(1/2)integral_0^c K_b ell_b S,\n    D_h F_b[S]=integral_0^c K_b[d_h ell_b+h']S,\n    D_h D_k F_b[S]\n      =integral_0^c K_b[2d_h d_k ell_b\n                         +2d_h k'+2d_k h']S.        (4)\n\nHere the derivatives act on the operator, holding S fixed.\nSince |d_h|<=2U and |h'|<=8U, (3) gives\n\n    ||F_b||<=1.2,\n    ||D_h F_b||<=700 U,\n    ||D_h D_k F_b||<=5500 U V.                      (5)\n\nThe unsimplified last two constants are\n2*2.4+8*84=676.8 and 8*2.4+64*84=5395.2.\nEvery operator derivative in (4) annihilates a spatial constant:\nF_b[constant]=constant/2 for every geometry.\n\nApplying the full product rule to (1), not freezing the Ward kernel,\n\n    ||P_b||inf<6e-10,\n    ||D_h P_b||inf<3.6e-7 U,\n    ||D_h D_k P_b||inf<4.4e-6 U V.                  (6)\n\nThe mixed subtotal is 4.39e-6. The bolt values and parameter\nderivatives follow by continuous extension of (2); no new\nintegration constant appears upon differentiating.\n\n## 3. Transport to the outer proper cut\n\nThe cut in S147 is Y=1/20, not a fixed chi. In this common\nconformal disk its location c_b is determined by\n\n    Y_b(c)=integral_c^D0 E_b(t)dt=1/20,\n    E_b=exp(sigma0+b).\n\nThe whole boundary collar participates in this integral.\nThe global bounds .39<exp(sigma0)<7.31 and |b|<=.001 imply\nthat the seed Y0 at c_b lies between .05 exp(-.001) and\n.05 exp(.001). Thus c_b lies inside the cover ending at c_*.\nThe value estimate in (6) applies to P_b(c_b).\n\nLet I_h=integral_c^D0 E_b h and similarly I_hk. Exact\nimplicit differentiation gives\n\n    c_h=I_h/E_b(c),\n    c_hk=I_hk/E_b(c)-h(c)c_k-k(c)c_h\n                          -(log E_b)'(c)c_h c_k.    (7)\n\nThe outer seed curvature and geodesic boundary give\n|a0,Y/a0|<=2Y0. At these cuts c>1 and\nsigma0'=-E0(a0,Y/a0)-coth c, so\n|(log E_b)'|<3. Therefore\n\n    |c_h|<.13 U, |c_hk|<.45 U V.                   (8)\n\nThese are derived cut responses, not independent free quantities.\nThe fixed-proper-cut pressure is Pm(b)=P_b(c_b), with\n\n    D_h Pm=P_h+P_chi c_h,\n    D_h D_k Pm=P_hk+(P_h)_chi c_k+(P_k)_chi c_h\n                       +P_chichi c_h c_k+P_chi c_hk. (9)\n\nAll right-hand quantities are evaluated at c_b. In particular\nthe fixed-cut bound (6) cannot be relabeled as the complete\nmoving-cut Hessian.\n\nWard differentiation yields, with ell=W'/W,\n\n    P_chi=ell(S/2-P),\n    (P_h)_chi=2h'(S/2-P)+ell(S_h/2-P_h),\n    P_chichi=ell'(S/2-P)+ell(S_chi/2-P_chi).         (10)\n\nOn this cut |ell|<2 and |ell'|<120. For the seed these follow\nfrom ell0=-2E0 a0,Y/a0, |E0|<7.31,\n|sigma0'|<3 and |(a0,Y/a0)_Y|<=1+(2Y0)^2.\nThe b terms add 2b' and 2b''; at the observation\n|b''_chi|<=100*1e-3 from its covariant C2 bound and connection.\nThese allowances give\n\n    |P_chi|<2e-9,\n    |(P_h)_chi|<7.4e-7 U,\n    |P_chichi|<1.1e-7+|S_chi|.                     (11)\n\nConsequently the value and first pressure responses at the actual\nproper cut are bounded:\n\n    |Pm|<6e-10, |D_h Pm|<3.7e-7 U.\n\nIF a spatial bound |S_chi|<=J is supplied there, then\n\n    |D_h D_k Pm|<(4.6e-6+.017 J) U V.              (12)\n\nThe inherited C5 value theorem does not supply J. Neither J nor\nthe last transport term is set to zero. If the trace is not\ndifferentiable at the cut, (9)-(12) require a stronger regularity\nspace or a joint transport argument; this note does not claim\ntheir unconditional C2 existence.\n\n## 4. An exact signed bolt lapse primitive\n\nThere is a useful value statement even before a spatial trace\nderivative is controlled. In the common disk put r=r(chi) and\nuse the exact geometric identity\n\n    F=C exp(-2sigma)(r_chi/r)^2.\n\nFor the canonical sector, the lapse-constraint source is\n\n    alpha_src,chi\n      =(B^2 C/2) r_chi (2P-S)/(r^3 F).\n\nThis defines the source integral on a specified geometry; it is\nnot an assertion that that geometry solves the constraint.\nOn a bolt neighborhood where W'>0, Ward gives\n\n    alpha_src,chi=-H_bolt P_chi,\n    H_bolt=B^2 C r_chi W/(r^3 F W')\n          =B^2 exp(2sigma) W/(r r_chi W').          (13)\n\nFor a regular nonextremal bolt,\nr=r_h+r2 chi^2+O(chi^4), r2>0, and W=w2 chi^2+O(chi^4).\nThe coefficient extends smoothly and evenly:\n\n    H_bolt(0)=B^2 exp(2sigma_h)/(4r_h r2)\n             =B^2 C/[F'_h r_h^3].\n\nThis is finite at fixed positive temperature. It is generally\nof order 1/h for the retained cold gap, not bounded by one.\nAn arbitrary value of this coefficient is not declared small.\n\nWriting Z=P-P(0), integration by parts gives the exact primitive\n\n    alpha_src(c)-alpha_src(0)\n       =-H_bolt(c) Z(c)+integral_0^c H_bolt'(t)Z(t)dt. (14)\n\nContinuity of S implies Z(0)=0; a C1 extension of H_bolt suffices\nto take the lower endpoint limit. Thus the signed lapse primitive\nis finite under the actual value/continuity hypotheses. It does\nnot require an integral of an absolute unsigned bound 1/chi.\n\nFor the norm B(H)=|H(c)|+integral_0^c |H'|, (6) gives\n\n    ||Z||inf<8.5e-10,\n    ||Z_h||inf<3.7e-7 U,\n    ||Z_hk||inf<4.5e-6 U V.\n\nIf the geometry family has B(H)<=B0,\nB(H_h)<=B1 U and B(H_hk)<=B2 U V, the mixed primitive obeys\n\n    |D_h D_k alpha_src(c)|\n      <[4.5e-6 B0+7.4e-7 B1+8.5e-10 B2] U V.      (15)\n\nThe BV coefficient bounds in (15) remain geometric inputs. They\nare not replaced by one, and the inverse-gap size of B0 means\nthis estimate alone does not give a useful physical error budget.\nWeighted cold response and/or the coupled horizon equations\nare still needed to control that size.\n\n## 5. What the primitive does and does not establish\n\nEquation (14) is a signed primitive, not an absolute lapse-\nvariation bound or a smoothness theorem. This distinction is\nnecessary even for W=chi^2. Let t=log(1/chi)>=1 and\n\n    S(chi)=sin(t^2)/t, S(0)=0.\n\nIt is continuous, bounded and smooth for chi>0. Its regular\npressure is P(t)=integral_0^infinity exp(-2s)S(t+s)ds.\nOne integration by parts in the phase proves |P(t)|<=1/t^2.\nYet integral_1^infinity |S(t)|dt diverges:\nit equals (1/2)integral_1^infinity |sin v|dv/v.\nHence integral |2P-S|dchi/chi diverges, whereas the signed\nprimitive with H_bolt=1 equals -P(c)+P(0) and is finite.\nThis is a counterexample to inference from mere scalar continuity,\nnot a proposed Dirac trace or an admissible physical solution.\n\nA sufficient condition for absolute control is a Dini bound on\nthe trace oscillation. With\nomega_S(c)=sup_(0<=t<=c)|S(t)-S(c)|, the exact constant\ncancellation in (2) gives\n\n    |2P(c)-S(c)|<=J_b(c) omega_S(c)<=2.4 omega_S(c).\n\nThe parameter responses have the analogous bound\n2.4 omega_hk+1400(U omega_k+V omega_h)+11000UV omega_S.\nAn integrable omega(c)/c is sufficient near a fixed nonextremal\nbolt, and a power modulus is one way to supply it. This note\ndoes not infer such a quantitative modulus from the pointwise\nsource estimate.\n\n## 6. Verification and research consequence\n\nThe checker is to validate the exact Ward derivatives, moving-cut\nchain rule and lapse primitive; all numerical constants and\nnormalizations; and the cold coefficient's inverse-gap behavior.\nIndependent quadratures and mixed finite differences use smooth\nmanufactured radial traces and nonzero regular pressures. Cut\nlocations are also solved independently before differencing.\nOmitting a kernel or cut-transport term must be detected.\nThese manufactured traces are not physical quantum states.\n\nThe pre-execution protocol fixes 55-digit arithmetic for the\nmanufactured checks, 32 and 64 Gauss nodes, mixed-difference steps\n.001 and .0005, relative-to-(1+|target|) error tolerance 2e-7,\nand absolute quadrature/primitive tolerance 1e-11. Step refinement\nmust reduce the error by a factor below .35 unless both errors\nare below 1e-35. The independent proper-cut solve uses adaptive\nquadrature. Failed runs, if any, retain their source snapshots.\n\nThe retained model and ensemble originate in the\n[Bintanja--Freivogel--Rolph construction](https://arxiv.org/html/2308.00871v2).\nIts distinction between a semiclassical construction, phase choice\nand preparation remains in force. The estimates here derive from\nthe repository's fixed-domain source calculations and the explicit\nWard identities, not from assuming the original paper already\nproves this finite-background match.\n\nThe canonical pressure integration constant is no longer an\nunassigned datum on a specified geometry: (2) fixes it. Its\nfixed-cut response and the proper-cut value/first response are\nbounded. A complete proper-cut Hessian still needs J, and the\nbolt primitive still needs quantitative cold geometric/source\ncontrol for the physical error norm. The local/radius sectors,\nglobal inverse composition and physical gates remain open.\n\nRemaining to-do list: bound the spatial trace/cut transport and\ncold bolt response in the actual solution space; complete the\nother source mappings and global exterior/state solve; determine\ncharge and signed source; establish opening, stability, transport,\npreparation and creation.\n"
+    },
+    {
+      "story": "S148",
+      "created_utc": "2026-10-20T09:20:48.281985+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.3",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "input_sha256_before": {
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/retained-benchmark-parameter-recovery.md": "b4a38711e4a1050ef25d09929460d3674c99abe383c4a911b60204c37554a62d"
+      },
+      "input_sha256_after": {
+        "checks/interior_pressure_and_bolt_primitive.py": "3129de96fbb4e854d8975d7d3008186bf5bc0b9a4854f85253e76f21a140f214",
+        "notes/interior-pressure-and-bolt-primitive.md": "f58d5a88b435f5355a91dfa3c1c7b21fe5de91741abf9320b7fc052effd2ca11",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/outer-ward-and-constraint-transfer.md": "d2f36167c2ecaca33a740f0c8a9f8fb4f6b316b735911e74a91a46c24a692dd5",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/stationary-centered-complete-residual.md": "e84a1d1f1cf12c67dd281d2d4c0005c2fc0f917d647de1b1baac04b777f6fa7d",
+        "notes/stationary-centered-first-order-geometry.md": "e30239a1b30eaddb624af42377d046258cb67dc310f4ef706a7377f8a7e77681",
+        "notes/retained-benchmark-parameter-recovery.md": "b4a38711e4a1050ef25d09929460d3674c99abe383c4a911b60204c37554a62d"
+      },
+      "unchanged_inputs": true,
+      "protocol": {
+        "finite_difference_steps": [
+          ".001",
+          ".0005"
+        ],
+        "quadrature_nodes": [
+          32,
+          64
+        ],
+        "finite_difference_tolerance": "2e-7",
+        "quadrature_tolerance": "1e-11"
+      },
+      "checks": [
+        {
+          "name": "regular_pressure_ward_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "first_ward_operator_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_ward_operator_kernel",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_trace_exact_cancellation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "implicit_cut_first",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "implicit_cut_mixed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_cut_full_chain_rule",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "bolt_lapse_ward_sign",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "bolt_coefficient_geometric_transfer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "regular_bolt_coefficient_limit",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "horizon_slope_coefficient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "signed_primitive_integration_by_parts",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold_coefficient_inverse_gap",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "counterexample_pressure_ibp_amplitude",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "counterexample_pressure_integrable_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "counterexample_absolute_trace_harmonic_lower_bound",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "interior_radius_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seed_normalized_trace_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complex_scalar_budget",
+          "passed": true,
+          "detail": "2247377917/468750000000000000000"
+        },
+        {
+          "name": "first_cauchy_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_cauchy_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "finite_background_trace_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_kernel_integral_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "ward_total_variation_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "first_operator_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_operator_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_value_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_mixed_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cut_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cut_mixed_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cut_inside_interior_cover",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seam_connection_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seam_log_warp_first_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "seam_log_warp_second_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "chi_second_chart_conversion_guard",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_spatial_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_mixed_spatial_first_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pressure_spatial_second_conditional_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cut_first_pressure_budget",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cut_mixed_conditional_constant",
+          "passed": true,
+          "detail": "4595159/1000000000000"
+        },
+        {
+          "name": "proper_cut_unresolved_spatial_coefficient",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "bolt_pressure_subtraction_budgets",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_primitive_product_rule_constants",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "dini_response_operator_constants",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_pressure_quadrature_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "nonzero_hh_pressure_retained_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_variation_omission_detected_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cut_transport_omission_detected_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_pressure_independent_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '0.09567094333239459168339368', 'errors': ['6.80029190042133e-12', '1.70007297483196e-12']}"
+        },
+        {
+          "name": "fixed_pressure_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_pressure_independent_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '0.09755271568183341645765843', 'errors': ['9.83122146060182e-12', '2.4577985577761e-12']}"
+        },
+        {
+          "name": "moving_pressure_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cut_independent_mixed_difference_32",
+          "passed": true,
+          "detail": "{'target': '-0.000005291959529962416645947799', 'errors': ['9.62562809532213e-15', '2.40640730235744e-15']}"
+        },
+        {
+          "name": "proper_cut_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_trace_operator_annihilation_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "signed_bolt_primitive_all_parameter_components_32",
+          "passed": true,
+          "detail": "['-0.04686310652379921216162848', '-0.02639335025579956585653064', '-0.003721634162822271803959434', '-0.006509584164355348227558732']"
+        },
+        {
+          "name": "bolt_lapse_independent_mixed_difference_32",
+          "passed": true,
+          "detail": "['1.65349600313546e-11', '4.13374000560165e-12']"
+        },
+        {
+          "name": "bolt_lapse_step_refinement_32",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "independent_pressure_quadrature_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "nonzero_hh_pressure_retained_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "kernel_variation_omission_detected_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cut_transport_omission_detected_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixed_pressure_independent_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '0.09567094333239426345160707', 'errors': ['6.80029190042131e-12', '1.70007297483196e-12']}"
+        },
+        {
+          "name": "fixed_pressure_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "moving_pressure_independent_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '0.09755271568183309849880742', 'errors': ['9.83124524190654e-12', '2.4578223390808e-12']}"
+        },
+        {
+          "name": "moving_pressure_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "proper_cut_independent_mixed_difference_64",
+          "passed": true,
+          "detail": "{'target': '-0.000005291959529962417299701038', 'errors': ['9.62562744156889e-15', '2.4064066486042e-15']}"
+        },
+        {
+          "name": "proper_cut_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "constant_trace_operator_annihilation_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "signed_bolt_primitive_all_parameter_components_64",
+          "passed": true,
+          "detail": "['-0.04686310652379736943793383', '-0.02639335025579895273699504', '-0.003721634162822794190947602', '-0.00650958416435521392876086']"
+        },
+        {
+          "name": "bolt_lapse_independent_mixed_difference_64",
+          "passed": true,
+          "detail": "['1.65349600313542e-11', '4.13374000560155e-12']"
+        },
+        {
+          "name": "bolt_lapse_step_refinement_64",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "all_mixed_responses_quadrature_refinement",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "numerics": [
+        {
+          "complex_scalar_budget": "2247377917/468750000000000000000",
+          "moving_cut_mixed_constant": "4595159/1000000000000",
+          "spatial_trace_bound_J_supplied": false,
+          "cold_geometry_B0_B1_B2_supplied": false
+        },
+        {
+          "nodes": 32,
+          "fixed_pressure_mixed": "0.095670943332394591683393681324119309",
+          "moving_pressure_mixed": "0.097552715681833416457658432441113148",
+          "proper_cut_mixed": "-0.0000052919595299624166459477987012327232",
+          "bolt_lapse_mixed": "-0.0065095841643553482275587318852461364",
+          "cut_transport_contribution": "0.0018817723494388247742647511169938393"
+        },
+        {
+          "nodes": 64,
+          "fixed_pressure_mixed": "0.095670943332394263451607074528383032",
+          "moving_pressure_mixed": "0.097552715681833098498807419507017441",
+          "proper_cut_mixed": "-0.0000052919595299624172997010375778761825",
+          "bolt_lapse_mixed": "-0.0065095841643552139287608601910322704",
+          "cut_transport_contribution": "0.0018817723494388350472003449786344087"
+        }
+      ],
+      "exception": null,
+      "scope": "fixed-cut canonical pressure response, conditional moving-cut Hessian and signed bolt primitive; manufactured sources are diagnostics",
+      "unresolved": [
+        "spatial trace bound at moving proper cut",
+        "cold geometric/source error control",
+        "other local and radius source maps",
+        "global exterior/state solve and physical gates"
+      ]
+    }
+  ]
+}
