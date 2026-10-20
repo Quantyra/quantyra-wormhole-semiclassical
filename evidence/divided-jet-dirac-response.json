@@ -1,0 +1,593 @@
+{
+  "runs": [
+    {
+      "story": "S154",
+      "created_utc": "2026-10-20T11:24:08.277040+00:00",
+      "status": "passed",
+      "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0",
+      "protocol": {
+        "digits": 60,
+        "nodes_per_panel": [
+          32,
+          64
+        ],
+        "frequencies": [
+          400,
+          1000,
+          4000
+        ],
+        "segment_endpoints": [
+          "0.0001",
+          "0.005",
+          "0.015625"
+        ],
+        "max_panel_length": "1/frequency",
+        "nonanalytic_join": "0.005",
+        "join_panels": "square-distance substitution",
+        "normalized_identity_and_refinement_tolerance": "1e-20",
+        "remainder_normalization": "2e9*r^5",
+        "fixture_is_physical_Dirac_source": false
+      },
+      "input_sha256_before": {
+        "checks/divided_jet_dirac_response.py": "46800758eff6217d559538308b156bd21e678cabfa1795de8a87a2aae0011537",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/cold-response-from-real-endpoints.md": "a3dc40fa4bc23b720894f4dd1c277fe86d367365f83f5ab749cab37ffce09b31",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "evidence/general-interior-dirac-response.json": "b59de6589b6ba273b0aa120d2abf48a3be426a92fd4754e992a0af5a058a3c10",
+        "evidence/cold-response-from-real-endpoints.json": "5c3720f0a02e1bda8797337460863b23f4c59e038ca251429a43c5a4a8021796"
+      },
+      "input_sha256_after": {
+        "checks/divided_jet_dirac_response.py": "46800758eff6217d559538308b156bd21e678cabfa1795de8a87a2aae0011537",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/coincident-normal-dirac-response.md": "e4025b7b463d206632184c42d1864c1abfa799000c9e4a717ed979c00d04b9ad",
+        "notes/cold-response-from-real-endpoints.md": "a3dc40fa4bc23b720894f4dd1c277fe86d367365f83f5ab749cab37ffce09b31",
+        "notes/stationary-completed-metric-response-norm.md": "518d9c31133e007ad3de331085eaf05b6f2912689c7c40909444d4a20c7cb63e",
+        "evidence/general-interior-dirac-response.json": "b59de6589b6ba273b0aa120d2abf48a3be426a92fd4754e992a0af5a058a3c10",
+        "evidence/cold-response-from-real-endpoints.json": "5c3720f0a02e1bda8797337460863b23f4c59e038ca251429a43c5a4a8021796"
+      },
+      "unchanged_inputs": true,
+      "checks": [
+        {
+          "name": "general-interior-dirac-response_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "general-interior-dirac-response_input_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold-response-from-real-endpoints_receipt",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "cold-response-from-real-endpoints_input_identity",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "finite_exponential_recursion",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "real_ray_high_jet_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inner_real_remainder_2",
+          "passed": true,
+          "detail": "5637784579427/15625000000"
+        },
+        {
+          "name": "inner_real_remainder_3",
+          "passed": true,
+          "detail": "11076397634473171/244140625000"
+        },
+        {
+          "name": "inner_real_remainder_4",
+          "passed": true,
+          "detail": "18387593238849717966083/2929687500000000"
+        },
+        {
+          "name": "inner_real_remainder_5",
+          "passed": true,
+          "detail": "833443838454929860467141833/915527343750000000"
+        },
+        {
+          "name": "center_coefficient_1",
+          "passed": true,
+          "detail": "2/125"
+        },
+        {
+          "name": "center_coefficient_2",
+          "passed": true,
+          "detail": "7984379/31250"
+        },
+        {
+          "name": "center_coefficient_3",
+          "passed": true,
+          "detail": "257489250004/5859375"
+        },
+        {
+          "name": "center_coefficient_4",
+          "passed": true,
+          "detail": "35380481400046891/5859375000"
+        },
+        {
+          "name": "global_taylor_division_1",
+          "passed": true,
+          "detail": "3232/25"
+        },
+        {
+          "name": "global_taylor_division_2",
+          "passed": true,
+          "detail": "686848/25"
+        },
+        {
+          "name": "global_taylor_division_3",
+          "passed": true,
+          "detail": "123958272/25"
+        },
+        {
+          "name": "global_taylor_division_4",
+          "passed": true,
+          "detail": "19133329408/25"
+        },
+        {
+          "name": "complete_product_remainder_1",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_product_remainder_2",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_product_remainder_3",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_product_remainder_4",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_tail_ratio",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "whole_born_remainder",
+          "passed": true,
+          "detail": "99580236469224653775168/5421875"
+        },
+        {
+          "name": "scalar_area_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "born_tail_finite_plus_remainder",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "complete_contact_polynomial",
+          "passed": true,
+          "detail": "375001651637456301331/3125"
+        },
+        {
+          "name": "contact_scalar_factor",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "unchanged_complete_complex_bound",
+          "passed": true,
+          "detail": "2247377917/468750000000000000000"
+        },
+        {
+          "name": "first_response_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "mixed_response_constant",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "raw_norm_rescaling_is_weaker",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fractional_fifth_continuous",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fractional_sixth_unbounded",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "inner_exponential_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "contact_exponential_value",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_full_coefficient_cone_400",
+          "passed": true,
+          "detail": "0.007473238338771861085786406"
+        },
+        {
+          "name": "fixture_background_after_scaling_400",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_raw_fifth_not_small_400",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_400_0.0001_32",
+          "passed": true,
+          "detail": "{'target': '0.0002133185799167782511227071', 'error': '2.170948692e-51'}"
+        },
+        {
+          "name": "fifth_integral_identity_400_0.0001_64",
+          "passed": true,
+          "detail": "{'target': '0.0002133185799167782511227071', 'error': '2.170948692e-51'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_400_0.0001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_400_0.0001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_400_0.005_32",
+          "passed": true,
+          "detail": "{'target': '0.0001941043584060283134993022', 'error': '9.180390861e-60'}"
+        },
+        {
+          "name": "fifth_integral_identity_400_0.005_64",
+          "passed": true,
+          "detail": "{'target': '0.0001941043584060283134993022', 'error': '9.180314897e-60'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_400_0.005",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_400_0.005",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_400_0.015625_32",
+          "passed": true,
+          "detail": "{'target': '0.00009236389614822958351058438', 'error': '2.983136133e-41'}"
+        },
+        {
+          "name": "fifth_integral_identity_400_0.015625_64",
+          "passed": true,
+          "detail": "{'target': '0.00009236389614822958351058438', 'error': '1.659825242e-62'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_400_0.015625",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_400_0.015625",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "capped_global_taylor_400_1",
+          "passed": true,
+          "detail": "0.001170354639420344453931455"
+        },
+        {
+          "name": "capped_global_taylor_400_2",
+          "passed": true,
+          "detail": "0.001066651342569742955144236"
+        },
+        {
+          "name": "capped_global_taylor_400_3",
+          "passed": true,
+          "detail": "0.0004123253494268347823601026"
+        },
+        {
+          "name": "capped_global_taylor_400_4",
+          "passed": true,
+          "detail": "0.000213326503193534547788481"
+        },
+        {
+          "name": "fixture_full_coefficient_cone_1000",
+          "passed": true,
+          "detail": "0.007113238338771861085786406"
+        },
+        {
+          "name": "fixture_background_after_scaling_1000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_raw_fifth_not_small_1000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_1000_0.0001_32",
+          "passed": true,
+          "detail": "{'target': '0.00833131301423373999087379', 'error': '1.102536619e-51'}"
+        },
+        {
+          "name": "fifth_integral_identity_1000_0.0001_64",
+          "passed": true,
+          "detail": "{'target': '0.00833131301423373999087379', 'error': '1.102536619e-51'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_1000_0.0001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_1000_0.0001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_1000_0.005_32",
+          "passed": true,
+          "detail": "{'target': '0.004759881653746654354177372', 'error': '3.773918445e-60'}"
+        },
+        {
+          "name": "fifth_integral_identity_1000_0.005_64",
+          "passed": true,
+          "detail": "{'target': '0.004759881653746654354177372', 'error': '3.776957027e-60'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_1000_0.005",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_1000_0.005",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_1000_0.015625_32",
+          "passed": true,
+          "detail": "{'target': '0.0006660088335533326001094115', 'error': '1.42756596e-34'}"
+        },
+        {
+          "name": "fifth_integral_identity_1000_0.015625_64",
+          "passed": true,
+          "detail": "{'target': '0.0006660088335533326001094115', 'error': '6.45542212e-54'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_1000_0.015625",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_1000_0.015625",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "capped_global_taylor_1000_1",
+          "passed": true,
+          "detail": "0.001816788166207737370686847"
+        },
+        {
+          "name": "capped_global_taylor_1000_2",
+          "passed": true,
+          "detail": "0.006666619030786713953298758"
+        },
+        {
+          "name": "capped_global_taylor_1000_3",
+          "passed": true,
+          "detail": "0.006799727926572930162576979"
+        },
+        {
+          "name": "capped_global_taylor_1000_4",
+          "passed": true,
+          "detail": "0.008333272257041044532840515"
+        },
+        {
+          "name": "fixture_full_coefficient_cone_4000",
+          "passed": true,
+          "detail": "0.005000000051540339476207895"
+        },
+        {
+          "name": "fixture_background_after_scaling_4000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fixture_raw_fifth_not_small_4000",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_4000_0.0001_32",
+          "passed": true,
+          "detail": "{'target': '0.02490496803664742399747242', 'error': '1.31985839e-52'}"
+        },
+        {
+          "name": "fifth_integral_identity_4000_0.0001_64",
+          "passed": true,
+          "detail": "{'target': '0.02490496803664742399747242', 'error': '1.319858389e-52'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_4000_0.0001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_4000_0.0001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_4000_0.005_32",
+          "passed": true,
+          "detail": "{'target': '0.001232111993312011401613821', 'error': '1.757819501e-61'}"
+        },
+        {
+          "name": "fifth_integral_identity_4000_0.005_64",
+          "passed": true,
+          "detail": "{'target': '0.001232111993312011401613821', 'error': '1.742626593e-61'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_4000_0.005",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_4000_0.005",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_identity_4000_0.015625_32",
+          "passed": true,
+          "detail": "{'target': '0.00012780434423514375531549', 'error': '3.404350635e-38'}"
+        },
+        {
+          "name": "fifth_integral_identity_4000_0.015625_64",
+          "passed": true,
+          "detail": "{'target': '0.00012780434423514375531549', 'error': '2.482464258e-60'}"
+        },
+        {
+          "name": "fifth_integral_node_refinement_4000_0.015625",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "fifth_integral_global_bound_4000_0.015625",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "capped_global_taylor_4000_1",
+          "passed": true,
+          "detail": "0.0006946808427303948548343113"
+        },
+        {
+          "name": "capped_global_taylor_4000_2",
+          "passed": true,
+          "detail": "0.001249895397437856949835455"
+        },
+        {
+          "name": "capped_global_taylor_4000_3",
+          "passed": true,
+          "detail": "0.004946877253806557889831848"
+        },
+        {
+          "name": "capped_global_taylor_4000_4",
+          "passed": true,
+          "detail": "0.0249990399982685357303827"
+        }
+      ],
+      "numerics": [
+        {
+          "loop_majorant_exact": "99580236469224653775168/5421875",
+          "source_K_exact": "2247377917/468750000000000000000",
+          "raw_rescaling_constant": "288000000000000000",
+          "global_family_admissibility_proved": false
+        },
+        {
+          "frequency": 400,
+          "endpoint": "0.0001",
+          "normalized_remainder": "0.0002133185799167782511227071",
+          "panels": 1
+        },
+        {
+          "frequency": 400,
+          "endpoint": "0.005",
+          "normalized_remainder": "0.0001941043584060283134993022",
+          "panels": 2
+        },
+        {
+          "frequency": 400,
+          "endpoint": "0.015625",
+          "normalized_remainder": "0.00009236389614822958351058438",
+          "panels": 8
+        },
+        {
+          "frequency": 1000,
+          "endpoint": "0.0001",
+          "normalized_remainder": "0.00833131301423373999087379",
+          "panels": 1
+        },
+        {
+          "frequency": 1000,
+          "endpoint": "0.005",
+          "normalized_remainder": "0.004759881653746654354177372",
+          "panels": 5
+        },
+        {
+          "frequency": 1000,
+          "endpoint": "0.015625",
+          "normalized_remainder": "0.0006660088335533326001094115",
+          "panels": 17
+        },
+        {
+          "frequency": 4000,
+          "endpoint": "0.0001",
+          "normalized_remainder": "0.02490496803664742399747242",
+          "panels": 1
+        },
+        {
+          "frequency": 4000,
+          "endpoint": "0.005",
+          "normalized_remainder": "0.001232111993312011401613821",
+          "panels": 20
+        },
+        {
+          "frequency": 4000,
+          "endpoint": "0.015625",
+          "normalized_remainder": "0.00012780434423514375531549",
+          "panels": 64
+        }
+      ],
+      "exception": null,
+      "scope": "actual-domain interior scalar response on divided high-jet coefficient ball",
+      "unresolved": [
+        "full common-chart family admissibility",
+        "outer/other source sectors",
+        "full higher-order inverse and coupled solve",
+        "physical completion requirements"
+      ]
+    }
+  ]
+}
