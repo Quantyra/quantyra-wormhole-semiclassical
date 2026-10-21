@@ -1,0 +1,288 @@
+{"event": "start", "story": "S168 global optical gauge and boundary clock", "input_count": 339}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "all_predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "prior_domains_pinned", "passed": true, "detail": ""}
+{"name": "review_scope", "passed": true, "detail": ""}
+{"name": "four_dimensional_Lie_tt", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_yy", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_ty", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_sphere", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_angular_isotropy", "passed": true, "detail": "0"}
+{"name": "outgoing_characteristic_sign", "passed": true, "detail": "0"}
+{"name": "incoming_characteristic_sign", "passed": true, "detail": "0"}
+{"name": "both_fixed_traces_force_both_zero", "passed": true, "detail": "0"}
+{"name": "compatible_outgoing_moment", "passed": true, "detail": "0"}
+{"name": "nonzero_boundary_gauge_moment", "passed": true, "detail": "0"}
+{"name": "incompatible_moment_value", "passed": true, "detail": "0"}
+{"name": "moment_functional_norm", "passed": true, "detail": "0"}
+{"name": "explicit_outgoing_resolvent", "passed": true, "detail": "0"}
+{"name": "explicit_reflected_incoming", "passed": true, "detail": "0"}
+{"name": "endpoint_preservation", "passed": true, "detail": "0"}
+{"name": "fixed_clock_rejects_positive_source", "passed": true, "detail": ""}
+{"name": "homogeneous_transport_1", "passed": true, "detail": "0"}
+{"name": "homogeneous_transport_-1", "passed": true, "detail": "0"}
+{"name": "reflected_boundary_flux_cancelled", "passed": true, "detail": "0"}
+{"name": "compact_retarded_clock_pulse_nonzero", "passed": true, "detail": "32768/109395"}
+{"name": "retarded_convolution_independent_beta", "passed": true, "detail": "0"}
+{"name": "exact_charged_pure_gauge_curvature", "passed": true, "detail": "0"}
+{"name": "off_shell_trace_gauge_contact", "passed": true, "detail": "0"}
+{"name": "outer_conformal_trace", "passed": true, "detail": "0"}
+{"name": "outer_shape_trace", "passed": true, "detail": "0"}
+{"name": "outer_orbit_trace", "passed": true, "detail": "0"}
+{"name": "nonintegrable_q_coefficient", "passed": true, "detail": "0"}
+{"name": "q_not_in_L2", "passed": true, "detail": ""}
+{"name": "outgoing_EF_power_at_resonance", "passed": true, "detail": "0"}
+{"name": "outgoing_EF_power_above_resonance", "passed": true, "detail": "0"}
+{"name": "outgoing_EF_diverges_above_resonance", "passed": true, "detail": ""}
+{"name": "linear_horizon_exact_exception", "passed": true, "detail": "0"}
+{"name": "initial_gauge_contact_retained", "passed": true, "detail": "0"}
+{"name": "gauge_ODE_success_0_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_0_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_0_incompatible", "passed": true, "detail": "2.5980208540055116e-09"}
+{"name": "gauge_fine_error_0_incompatible", "passed": true, "detail": "1.1794468179893158e-10"}
+{"name": "gauge_refinement_0_incompatible", "passed": true, "detail": "[2.5980208540055116e-09, 1.1794468179893158e-10]"}
+{"name": "incompatible_clock_0_incompatible", "passed": true, "detail": "0.12328288194163776"}
+{"name": "full_norm_quadrature_refinement_0_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_0_incompatible", "passed": true, "detail": "0.2093650824987878"}
+{"name": "incoming_horizon_tail_retained_0_incompatible", "passed": true, "detail": "0.016417880312512272"}
+{"name": "gauge_ODE_success_0_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_0_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_0_compatible", "passed": true, "detail": "7.891630751655221e-10"}
+{"name": "gauge_fine_error_0_compatible", "passed": true, "detail": "5.2357909674505265e-12"}
+{"name": "gauge_refinement_0_compatible", "passed": true, "detail": "[7.891630751655221e-10, 5.2357909674505265e-12]"}
+{"name": "compatible_clock_0_compatible", "passed": true, "detail": "1.0061396160665481e-16"}
+{"name": "full_norm_quadrature_refinement_0_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_0_compatible", "passed": true, "detail": "0.033874529439823095"}
+{"name": "incoming_horizon_tail_retained_0_compatible", "passed": true, "detail": "0.011762421916371078"}
+{"name": "gauge_ODE_success_1_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_1_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_1_incompatible", "passed": true, "detail": "4.954001237011951e-10"}
+{"name": "gauge_fine_error_1_incompatible", "passed": true, "detail": "6.189895818131674e-11"}
+{"name": "gauge_refinement_1_incompatible", "passed": false, "detail": "[4.954001237011951e-10, 6.189895818131674e-11]"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_optical_gauge_and_boundary_clock.py", line 195, in main
+    try:provenance();exact_checks();gauge_fixtures();seed_fixtures()
+                                    ~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_optical_gauge_and_boundary_clock.py", line 147, in gauge_fixtures
+    check('gauge_refinement_'+tag,errors[1]<PROTOCOL['refinement_ratio']*errors[0]+PROTOCOL['refinement_floor'],errors)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_optical_gauge_and_boundary_clock.py", line 31, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: gauge_refinement_1_incompatible
+
+{"status": "failed", "checks": 61, "unchanged_inputs": true}
+{"event": "start", "story": "S168 global optical gauge and boundary clock", "input_count": 339}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "all_predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "prior_domains_pinned", "passed": true, "detail": ""}
+{"name": "review_scope", "passed": true, "detail": ""}
+{"name": "four_dimensional_Lie_tt", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_yy", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_ty", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_sphere", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_angular_isotropy", "passed": true, "detail": "0"}
+{"name": "outgoing_characteristic_sign", "passed": true, "detail": "0"}
+{"name": "incoming_characteristic_sign", "passed": true, "detail": "0"}
+{"name": "both_fixed_traces_force_both_zero", "passed": true, "detail": "0"}
+{"name": "compatible_outgoing_moment", "passed": true, "detail": "0"}
+{"name": "nonzero_boundary_gauge_moment", "passed": true, "detail": "0"}
+{"name": "incompatible_moment_value", "passed": true, "detail": "0"}
+{"name": "moment_functional_norm", "passed": true, "detail": "0"}
+{"name": "explicit_outgoing_resolvent", "passed": true, "detail": "0"}
+{"name": "explicit_reflected_incoming", "passed": true, "detail": "0"}
+{"name": "endpoint_preservation", "passed": true, "detail": "0"}
+{"name": "fixed_clock_rejects_positive_source", "passed": true, "detail": ""}
+{"name": "homogeneous_transport_1", "passed": true, "detail": "0"}
+{"name": "homogeneous_transport_-1", "passed": true, "detail": "0"}
+{"name": "reflected_boundary_flux_cancelled", "passed": true, "detail": "0"}
+{"name": "compact_retarded_clock_pulse_nonzero", "passed": true, "detail": "32768/109395"}
+{"name": "retarded_convolution_independent_beta", "passed": true, "detail": "0"}
+{"name": "exact_charged_pure_gauge_curvature", "passed": true, "detail": "0"}
+{"name": "off_shell_trace_gauge_contact", "passed": true, "detail": "0"}
+{"name": "outer_conformal_trace", "passed": true, "detail": "0"}
+{"name": "outer_shape_trace", "passed": true, "detail": "0"}
+{"name": "outer_orbit_trace", "passed": true, "detail": "0"}
+{"name": "nonintegrable_q_coefficient", "passed": true, "detail": "0"}
+{"name": "q_not_in_L2", "passed": true, "detail": ""}
+{"name": "outgoing_EF_power_at_resonance", "passed": true, "detail": "0"}
+{"name": "outgoing_EF_power_above_resonance", "passed": true, "detail": "0"}
+{"name": "outgoing_EF_diverges_above_resonance", "passed": true, "detail": ""}
+{"name": "linear_horizon_exact_exception", "passed": true, "detail": "0"}
+{"name": "initial_gauge_contact_retained", "passed": true, "detail": "0"}
+{"name": "gauge_ODE_success_0_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_0_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_0_incompatible", "passed": true, "detail": "2.5980208540055116e-09"}
+{"name": "gauge_fine_error_0_incompatible", "passed": true, "detail": "3.6579073103837345e-13"}
+{"name": "gauge_refinement_0_incompatible", "passed": true, "detail": "[2.5980208540055116e-09, 3.6579073103837345e-13]"}
+{"name": "incompatible_clock_0_incompatible", "passed": true, "detail": "0.12328288194163776"}
+{"name": "full_norm_quadrature_refinement_0_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_0_incompatible", "passed": true, "detail": "0.2093650824987878"}
+{"name": "incoming_horizon_tail_retained_0_incompatible", "passed": true, "detail": "0.016417880312512272"}
+{"name": "gauge_ODE_success_0_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_0_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_0_compatible", "passed": true, "detail": "7.891630751655221e-10"}
+{"name": "gauge_fine_error_0_compatible", "passed": true, "detail": "1.174679844272976e-14"}
+{"name": "gauge_refinement_0_compatible", "passed": true, "detail": "[7.891630751655221e-10, 1.174679844272976e-14]"}
+{"name": "compatible_clock_0_compatible", "passed": true, "detail": "1.0061396160665481e-16"}
+{"name": "full_norm_quadrature_refinement_0_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_0_compatible", "passed": true, "detail": "0.033874529439823095"}
+{"name": "incoming_horizon_tail_retained_0_compatible", "passed": true, "detail": "0.011762421916371078"}
+{"name": "gauge_ODE_success_1_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_1_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_1_incompatible", "passed": true, "detail": "4.954001237011951e-10"}
+{"name": "gauge_fine_error_1_incompatible", "passed": true, "detail": "8.206805027222153e-12"}
+{"name": "gauge_refinement_1_incompatible", "passed": true, "detail": "[4.954001237011951e-10, 8.206805027222153e-12]"}
+{"name": "incompatible_clock_1_incompatible", "passed": true, "detail": "0.021168406034870406"}
+{"name": "full_norm_quadrature_refinement_1_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_1_incompatible", "passed": true, "detail": "0.4038503203274558"}
+{"name": "incoming_horizon_tail_retained_1_incompatible", "passed": true, "detail": "0.0015442928279392496"}
+{"name": "gauge_ODE_success_1_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_1_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_1_compatible", "passed": true, "detail": "7.41358519712465e-10"}
+{"name": "gauge_fine_error_1_compatible", "passed": true, "detail": "1.522393322517246e-14"}
+{"name": "gauge_refinement_1_compatible", "passed": true, "detail": "[7.41358519712465e-10, 1.522393322517246e-14]"}
+{"name": "compatible_clock_1_compatible", "passed": true, "detail": "2.5587171270657905e-17"}
+{"name": "full_norm_quadrature_refinement_1_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_1_compatible", "passed": true, "detail": "0.17318035413518074"}
+{"name": "incoming_horizon_tail_retained_1_compatible", "passed": true, "detail": "0.0015290942646722305"}
+{"name": "gauge_ODE_success_2_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_2_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_2_incompatible", "passed": true, "detail": "5.919860401437278e-10"}
+{"name": "gauge_fine_error_2_incompatible", "passed": true, "detail": "3.173109610744442e-12"}
+{"name": "gauge_refinement_2_incompatible", "passed": true, "detail": "[5.919860401437278e-10, 3.173109610744442e-12]"}
+{"name": "incompatible_clock_2_incompatible", "passed": true, "detail": "0.05067319844596876"}
+{"name": "full_norm_quadrature_refinement_2_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_2_incompatible", "passed": true, "detail": "0.30496084148282016"}
+{"name": "incoming_horizon_tail_retained_2_incompatible", "passed": true, "detail": "0.0037221999732398032"}
+{"name": "gauge_ODE_success_2_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_2_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_2_compatible", "passed": true, "detail": "9.291764212224291e-10"}
+{"name": "gauge_fine_error_2_compatible", "passed": true, "detail": "2.0242869554197333e-15"}
+{"name": "gauge_refinement_2_compatible", "passed": true, "detail": "[9.291764212224291e-10, 2.0242869554197333e-15]"}
+{"name": "compatible_clock_2_compatible", "passed": true, "detail": "4.157007018585401e-17"}
+{"name": "full_norm_quadrature_refinement_2_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_2_compatible", "passed": true, "detail": "0.09257274745740529"}
+{"name": "incoming_horizon_tail_retained_2_compatible", "passed": true, "detail": "0.003770189343159786"}
+{"name": "retarded_compact_pulse_quadrature", "passed": true, "detail": "0.2995383701266052"}
+{"name": "actual_seed_horizon", "passed": true, "detail": ""}
+{"name": "actual_seed_simple_horizon", "passed": true, "detail": "1.1255335266468387"}
+{"name": "charged_outer_jet_refinement_0.8", "passed": false, "detail": "[np.float64(0.0005443534908637915), np.float64(0.00024655594585243357), np.float64(7.596175379198655e-05), np.float64(2.0812744603526667e-05)]"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_optical_gauge_and_boundary_clock.py", line 195, in main
+    try:provenance();exact_checks();gauge_fixtures();seed_fixtures()
+                                                     ~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_optical_gauge_and_boundary_clock.py", line 187, in seed_fixtures
+    check('charged_outer_jet_refinement_'+str(gamma),all(b<PROTOCOL['outer_jet_refinement_ratio']*a for a,b in zip(errors,errors[1:])),errors)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_optical_gauge_and_boundary_clock.py", line 31, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: charged_outer_jet_refinement_0.8
+
+{"status": "failed", "checks": 96, "unchanged_inputs": true}
+{"event": "start", "story": "S168 global optical gauge and boundary clock", "input_count": 339}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "all_predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "prior_domains_pinned", "passed": true, "detail": ""}
+{"name": "review_scope", "passed": true, "detail": ""}
+{"name": "four_dimensional_Lie_tt", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_yy", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_ty", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_sphere", "passed": true, "detail": "0"}
+{"name": "four_dimensional_Lie_angular_isotropy", "passed": true, "detail": "0"}
+{"name": "outgoing_characteristic_sign", "passed": true, "detail": "0"}
+{"name": "incoming_characteristic_sign", "passed": true, "detail": "0"}
+{"name": "both_fixed_traces_force_both_zero", "passed": true, "detail": "0"}
+{"name": "compatible_outgoing_moment", "passed": true, "detail": "0"}
+{"name": "nonzero_boundary_gauge_moment", "passed": true, "detail": "0"}
+{"name": "incompatible_moment_value", "passed": true, "detail": "0"}
+{"name": "moment_functional_norm", "passed": true, "detail": "0"}
+{"name": "explicit_outgoing_resolvent", "passed": true, "detail": "0"}
+{"name": "explicit_reflected_incoming", "passed": true, "detail": "0"}
+{"name": "endpoint_preservation", "passed": true, "detail": "0"}
+{"name": "fixed_clock_rejects_positive_source", "passed": true, "detail": ""}
+{"name": "homogeneous_transport_1", "passed": true, "detail": "0"}
+{"name": "homogeneous_transport_-1", "passed": true, "detail": "0"}
+{"name": "reflected_boundary_flux_cancelled", "passed": true, "detail": "0"}
+{"name": "compact_retarded_clock_pulse_nonzero", "passed": true, "detail": "32768/109395"}
+{"name": "retarded_convolution_independent_beta", "passed": true, "detail": "0"}
+{"name": "exact_charged_pure_gauge_curvature", "passed": true, "detail": "0"}
+{"name": "off_shell_trace_gauge_contact", "passed": true, "detail": "0"}
+{"name": "outer_conformal_trace", "passed": true, "detail": "0"}
+{"name": "outer_shape_trace", "passed": true, "detail": "0"}
+{"name": "outer_orbit_trace", "passed": true, "detail": "0"}
+{"name": "nonintegrable_q_coefficient", "passed": true, "detail": "0"}
+{"name": "q_not_in_L2", "passed": true, "detail": ""}
+{"name": "outgoing_EF_power_at_resonance", "passed": true, "detail": "0"}
+{"name": "outgoing_EF_power_above_resonance", "passed": true, "detail": "0"}
+{"name": "outgoing_EF_diverges_above_resonance", "passed": true, "detail": ""}
+{"name": "linear_horizon_exact_exception", "passed": true, "detail": "0"}
+{"name": "initial_gauge_contact_retained", "passed": true, "detail": "0"}
+{"name": "gauge_ODE_success_0_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_0_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_0_incompatible", "passed": true, "detail": "2.5980208540055116e-09"}
+{"name": "gauge_fine_error_0_incompatible", "passed": true, "detail": "3.6579073103837345e-13"}
+{"name": "gauge_refinement_0_incompatible", "passed": true, "detail": "[2.5980208540055116e-09, 3.6579073103837345e-13]"}
+{"name": "incompatible_clock_0_incompatible", "passed": true, "detail": "0.12328288194163776"}
+{"name": "full_norm_quadrature_refinement_0_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_0_incompatible", "passed": true, "detail": "0.2093650824987878"}
+{"name": "incoming_horizon_tail_retained_0_incompatible", "passed": true, "detail": "0.016417880312512272"}
+{"name": "gauge_ODE_success_0_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_0_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_0_compatible", "passed": true, "detail": "7.891630751655221e-10"}
+{"name": "gauge_fine_error_0_compatible", "passed": true, "detail": "1.174679844272976e-14"}
+{"name": "gauge_refinement_0_compatible", "passed": true, "detail": "[7.891630751655221e-10, 1.174679844272976e-14]"}
+{"name": "compatible_clock_0_compatible", "passed": true, "detail": "1.0061396160665481e-16"}
+{"name": "full_norm_quadrature_refinement_0_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_0_compatible", "passed": true, "detail": "0.033874529439823095"}
+{"name": "incoming_horizon_tail_retained_0_compatible", "passed": true, "detail": "0.011762421916371078"}
+{"name": "gauge_ODE_success_1_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_1_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_1_incompatible", "passed": true, "detail": "4.954001237011951e-10"}
+{"name": "gauge_fine_error_1_incompatible", "passed": true, "detail": "8.206805027222153e-12"}
+{"name": "gauge_refinement_1_incompatible", "passed": true, "detail": "[4.954001237011951e-10, 8.206805027222153e-12]"}
+{"name": "incompatible_clock_1_incompatible", "passed": true, "detail": "0.021168406034870406"}
+{"name": "full_norm_quadrature_refinement_1_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_1_incompatible", "passed": true, "detail": "0.4038503203274558"}
+{"name": "incoming_horizon_tail_retained_1_incompatible", "passed": true, "detail": "0.0015442928279392496"}
+{"name": "gauge_ODE_success_1_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_1_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_1_compatible", "passed": true, "detail": "7.41358519712465e-10"}
+{"name": "gauge_fine_error_1_compatible", "passed": true, "detail": "1.522393322517246e-14"}
+{"name": "gauge_refinement_1_compatible", "passed": true, "detail": "[7.41358519712465e-10, 1.522393322517246e-14]"}
+{"name": "compatible_clock_1_compatible", "passed": true, "detail": "2.5587171270657905e-17"}
+{"name": "full_norm_quadrature_refinement_1_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_1_compatible", "passed": true, "detail": "0.17318035413518074"}
+{"name": "incoming_horizon_tail_retained_1_compatible", "passed": true, "detail": "0.0015290942646722305"}
+{"name": "gauge_ODE_success_2_incompatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_2_incompatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_2_incompatible", "passed": true, "detail": "5.919860401437278e-10"}
+{"name": "gauge_fine_error_2_incompatible", "passed": true, "detail": "3.173109610744442e-12"}
+{"name": "gauge_refinement_2_incompatible", "passed": true, "detail": "[5.919860401437278e-10, 3.173109610744442e-12]"}
+{"name": "incompatible_clock_2_incompatible", "passed": true, "detail": "0.05067319844596876"}
+{"name": "full_norm_quadrature_refinement_2_incompatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_2_incompatible", "passed": true, "detail": "0.30496084148282016"}
+{"name": "incoming_horizon_tail_retained_2_incompatible", "passed": true, "detail": "0.0037221999732398032"}
+{"name": "gauge_ODE_success_2_compatible_0", "passed": true, "detail": ""}
+{"name": "gauge_ODE_success_2_compatible_1", "passed": true, "detail": ""}
+{"name": "gauge_coarse_error_2_compatible", "passed": true, "detail": "9.291764212224291e-10"}
+{"name": "gauge_fine_error_2_compatible", "passed": true, "detail": "2.0242869554197333e-15"}
+{"name": "gauge_refinement_2_compatible", "passed": true, "detail": "[9.291764212224291e-10, 2.0242869554197333e-15]"}
+{"name": "compatible_clock_2_compatible", "passed": true, "detail": "4.157007018585401e-17"}
+{"name": "full_norm_quadrature_refinement_2_compatible", "passed": true, "detail": ""}
+{"name": "global_gauge_resolvent_bound_2_compatible", "passed": true, "detail": "0.09257274745740529"}
+{"name": "incoming_horizon_tail_retained_2_compatible", "passed": true, "detail": "0.003770189343159786"}
+{"name": "retarded_compact_pulse_quadrature", "passed": true, "detail": "0.2995383701266052"}
+{"name": "actual_seed_horizon", "passed": true, "detail": ""}
+{"name": "actual_seed_simple_horizon", "passed": true, "detail": "1.1255335266468387"}
+{"name": "charged_outer_jet_refinement_0.8", "passed": true, "detail": "[np.float64(0.00024655594585243357), np.float64(7.596175379198655e-05), np.float64(2.0812744603526667e-05), np.float64(5.432963313012351e-06)]"}
+{"name": "charged_outer_jet_limit_0.8", "passed": true, "detail": "5.432963313012351e-06"}
+{"name": "charged_outer_jet_refinement_2.0", "passed": true, "detail": "[np.float64(0.0005090445568556312), np.float64(0.00014158603750691334), np.float64(3.721894976593809e-05), np.float64(9.534523009557816e-06)]"}
+{"name": "charged_outer_jet_limit_2.0", "passed": true, "detail": "9.534523009557816e-06"}
+{"name": "charged_outer_jet_refinement_4.0", "passed": true, "detail": "[np.float64(0.0014466913459016961), np.float64(0.00037597019745461147), np.float64(9.581327204299939e-05), np.float64(2.4182996273491852e-05)]"}
+{"name": "charged_outer_jet_limit_4.0", "passed": true, "detail": "2.4182996273491852e-05"}
+{"status": "passed", "checks": 101, "unchanged_inputs": true}
