@@ -1,0 +1,183 @@
+{"event": "start", "story": "S168 global thermal curvature-free form", "input_count": 376}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "retained_inputs_pinned", "passed": true, "detail": ""}
+{"name": "source_scope", "passed": true, "detail": ""}
+{"name": "unrestricted_Weyl_Hessian", "passed": true, "detail": "0"}
+{"name": "Young_shift", "passed": true, "detail": "0"}
+{"name": "Young_D_square", "passed": true, "detail": "0"}
+{"name": "Young_L_square", "passed": true, "detail": "0"}
+{"name": "full_weighted_IMS_with_flux", "passed": true, "detail": "0"}
+{"name": "time_term_is_required", "passed": true, "detail": "0"}
+{"name": "static_formula_not_valid_for_nonzero_modes", "passed": true, "detail": ""}
+{"name": "partition_left_value", "passed": true, "detail": "0"}
+{"name": "partition_right_value", "passed": true, "detail": "0"}
+{"name": "partition_C5", "passed": true, "detail": ""}
+{"name": "HR_negative", "passed": true, "detail": ""}
+{"name": "D_S_coefficient", "passed": true, "detail": ""}
+{"name": "D_T_coefficient", "passed": true, "detail": ""}
+{"name": "L_T_coefficient", "passed": true, "detail": ""}
+{"name": "J_coefficient", "passed": true, "detail": ""}
+{"name": "W_coefficient", "passed": true, "detail": ""}
+{"name": "D_integral_budget", "passed": true, "detail": ""}
+{"name": "L_integral_budget", "passed": true, "detail": ""}
+{"name": "J_integral_budget", "passed": true, "detail": ""}
+{"name": "mixed_gradient_budget", "passed": true, "detail": ""}
+{"name": "Z_integral_budget", "passed": true, "detail": ""}
+{"name": "loworder_ledger", "passed": true, "detail": ""}
+{"name": "lambda_cost", "passed": true, "detail": ""}
+{"name": "magnetic_cost", "passed": true, "detail": ""}
+{"name": "benchmark_Weyl_cost", "passed": true, "detail": ""}
+{"name": "canonical_margin", "passed": true, "detail": ""}
+{"name": "interior_margin", "passed": true, "detail": ""}
+{"name": "full_classical_margin", "passed": true, "detail": ""}
+{"name": "thermal_absorption", "passed": true, "detail": "0"}
+{"name": "J2_physical_rescaling", "passed": true, "detail": "0"}
+{"name": "J0_optical_rescaling", "passed": true, "detail": "0"}
+{"name": "physical_frequency_warp", "passed": true, "detail": "0"}
+{"name": "warped_IMS_direct_1_64", "passed": true, "detail": "4.482458254882059e-15"}
+{"name": "warped_IMS_missing_time_detected_1_64", "passed": true, "detail": "22.678316151119056"}
+{"name": "warped_IMS_direct_1_128", "passed": true, "detail": "4.802633844516583e-16"}
+{"name": "warped_IMS_missing_time_detected_1_128", "passed": true, "detail": "22.67831615111872"}
+{"name": "warped_IMS_refinement_1", "passed": true, "detail": "1.8890359788431892e-14"}
+{"name": "warped_IMS_direct_3_64", "passed": true, "detail": "3.697839570839887e-15"}
+{"name": "warped_IMS_missing_time_detected_3_64", "passed": true, "detail": "204.1048453600715"}
+{"name": "warped_IMS_direct_3_128", "passed": true, "detail": "2.5502341867861743e-16"}
+{"name": "warped_IMS_missing_time_detected_3_128", "passed": true, "detail": "204.10484536006854"}
+{"name": "warped_IMS_refinement_3", "passed": true, "detail": "1.7851639307503218e-14"}
+{"name": "warped_IMS_direct_8_64", "passed": true, "detail": "1.9134840674833773e-15"}
+{"name": "warped_IMS_missing_time_detected_8_64", "passed": true, "detail": "1451.4122336716196"}
+{"name": "warped_IMS_direct_8_128", "passed": true, "detail": "0.0"}
+{"name": "warped_IMS_missing_time_detected_8_128", "passed": true, "detail": "1451.4122336715982"}
+{"name": "warped_IMS_refinement_8", "passed": true, "detail": "1.573309122153024e-14"}
+{"name": "positive_thermal_frequency_0", "passed": true, "detail": "1.1255335266468396"}
+{"name": "geometry_solve_0", "passed": true, "detail": "The solver successfully reached the end of the integration interval."}
+{"name": "reconstruction_BVP_0_0", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "nonlinear_Weyl_difference_0_0_0.002", "passed": true, "detail": "1.5825538379430071e-06"}
+{"name": "nonlinear_Weyl_difference_0_0_0.001", "passed": true, "detail": "3.82721814569444e-06"}
+{"name": "nonlinear_step_refinement_0_0", "passed": false, "detail": "[{'step': 0.002, 'value': -4338.373583742447, 'normalized_error': 1.5825538379430071e-06}, {'step': 0.001, 'value': -4338.350108757958, 'normalized_error': 3.82721814569444e-06}]"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_thermal_curvature_free_form.py", line 241, in main
+    for index,row in enumerate(PROTOCOL['seed_fixtures']):seed_fixture(index,row)
+                                                          ~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_thermal_curvature_free_form.py", line 218, in seed_fixture
+    check('nonlinear_step_refinement_'+tag,diffs[1]['normalized_error']<.4*diffs[0]['normalized_error']+1e-8,diffs)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\global_thermal_curvature_free_form.py", line 38, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: nonlinear_step_refinement_0_0
+
+{"status": "failed", "checks": 58, "unchanged_inputs": true}
+{"event": "start", "story": "S168 global thermal curvature-free form", "input_count": 376}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "retained_inputs_pinned", "passed": true, "detail": ""}
+{"name": "source_scope", "passed": true, "detail": ""}
+{"name": "unrestricted_Weyl_Hessian", "passed": true, "detail": "0"}
+{"name": "Young_shift", "passed": true, "detail": "0"}
+{"name": "Young_D_square", "passed": true, "detail": "0"}
+{"name": "Young_L_square", "passed": true, "detail": "0"}
+{"name": "full_weighted_IMS_with_flux", "passed": true, "detail": "0"}
+{"name": "time_term_is_required", "passed": true, "detail": "0"}
+{"name": "static_formula_not_valid_for_nonzero_modes", "passed": true, "detail": ""}
+{"name": "partition_left_value", "passed": true, "detail": "0"}
+{"name": "partition_right_value", "passed": true, "detail": "0"}
+{"name": "partition_C5", "passed": true, "detail": ""}
+{"name": "HR_negative", "passed": true, "detail": ""}
+{"name": "D_S_coefficient", "passed": true, "detail": ""}
+{"name": "D_T_coefficient", "passed": true, "detail": ""}
+{"name": "L_T_coefficient", "passed": true, "detail": ""}
+{"name": "J_coefficient", "passed": true, "detail": ""}
+{"name": "W_coefficient", "passed": true, "detail": ""}
+{"name": "D_integral_budget", "passed": true, "detail": ""}
+{"name": "L_integral_budget", "passed": true, "detail": ""}
+{"name": "J_integral_budget", "passed": true, "detail": ""}
+{"name": "mixed_gradient_budget", "passed": true, "detail": ""}
+{"name": "Z_integral_budget", "passed": true, "detail": ""}
+{"name": "loworder_ledger", "passed": true, "detail": ""}
+{"name": "lambda_cost", "passed": true, "detail": ""}
+{"name": "magnetic_cost", "passed": true, "detail": ""}
+{"name": "benchmark_Weyl_cost", "passed": true, "detail": ""}
+{"name": "canonical_margin", "passed": true, "detail": ""}
+{"name": "interior_margin", "passed": true, "detail": ""}
+{"name": "full_classical_margin", "passed": true, "detail": ""}
+{"name": "thermal_absorption", "passed": true, "detail": "0"}
+{"name": "J2_physical_rescaling", "passed": true, "detail": "0"}
+{"name": "J0_optical_rescaling", "passed": true, "detail": "0"}
+{"name": "physical_frequency_warp", "passed": true, "detail": "0"}
+{"name": "warped_IMS_direct_1_64", "passed": true, "detail": "4.482458254882059e-15"}
+{"name": "warped_IMS_missing_time_detected_1_64", "passed": true, "detail": "22.678316151119056"}
+{"name": "warped_IMS_direct_1_128", "passed": true, "detail": "4.802633844516583e-16"}
+{"name": "warped_IMS_missing_time_detected_1_128", "passed": true, "detail": "22.67831615111872"}
+{"name": "warped_IMS_refinement_1", "passed": true, "detail": "1.8890359788431892e-14"}
+{"name": "warped_IMS_direct_3_64", "passed": true, "detail": "3.697839570839887e-15"}
+{"name": "warped_IMS_missing_time_detected_3_64", "passed": true, "detail": "204.1048453600715"}
+{"name": "warped_IMS_direct_3_128", "passed": true, "detail": "2.5502341867861743e-16"}
+{"name": "warped_IMS_missing_time_detected_3_128", "passed": true, "detail": "204.10484536006854"}
+{"name": "warped_IMS_refinement_3", "passed": true, "detail": "1.7851639307503218e-14"}
+{"name": "warped_IMS_direct_8_64", "passed": true, "detail": "1.9134840674833773e-15"}
+{"name": "warped_IMS_missing_time_detected_8_64", "passed": true, "detail": "1451.4122336716196"}
+{"name": "warped_IMS_direct_8_128", "passed": true, "detail": "0.0"}
+{"name": "warped_IMS_missing_time_detected_8_128", "passed": true, "detail": "1451.4122336715982"}
+{"name": "warped_IMS_refinement_8", "passed": true, "detail": "1.573309122153024e-14"}
+{"name": "positive_thermal_frequency_0", "passed": true, "detail": "1.1255335266468396"}
+{"name": "geometry_solve_0", "passed": true, "detail": "The solver successfully reached the end of the integration interval."}
+{"name": "reconstruction_BVP_0_0", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "direct_60digit_nonlinear_points_0_0", "passed": true, "detail": "[9.87665653491785e-21, 3.189330090517734e-17, 8.385735636853507e-19]"}
+{"name": "nonlinear_Weyl_difference_0_0_0.002", "passed": true, "detail": "4.479527990246546e-06"}
+{"name": "nonlinear_Weyl_difference_0_0_0.001", "passed": true, "detail": "1.1198810001153343e-06"}
+{"name": "nonlinear_step_refinement_0_0", "passed": true, "detail": "[{'step': 0.002, 'value': -4338.386154775662, 'normalized_error': 4.479527990246546e-06}, {'step': 0.001, 'value': -4338.371576035334, 'normalized_error': 1.1198810001153343e-06}]"}
+{"name": "global_conformal_gradient_identity_0_0", "passed": true, "detail": "3.0885551720641783e-10"}
+{"name": "global_conformal_gradient_upper_0_0", "passed": true, "detail": "[146.75675270416215, 164.78144812410065]"}
+{"name": "conformal_tail_retained_0_0", "passed": true, "detail": "-0.022239909241710033"}
+{"name": "reconstruction_BVP_0_1", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "direct_60digit_nonlinear_points_0_1", "passed": true, "detail": "[2.3947118805147662e-20, 1.0374315027200806e-18, 9.249884102338358e-19]"}
+{"name": "nonlinear_Weyl_difference_0_1_0.002", "passed": true, "detail": "4.479527990466792e-06"}
+{"name": "nonlinear_Weyl_difference_0_1_0.001", "passed": true, "detail": "1.1198809999084063e-06"}
+{"name": "nonlinear_step_refinement_0_1", "passed": true, "detail": "[{'step': 0.002, 'value': -4338.386154765342, 'normalized_error': 4.479527990466792e-06}, {'step': 0.001, 'value': -4338.3715760250125, 'normalized_error': 1.1198809999084063e-06}]"}
+{"name": "global_conformal_gradient_identity_0_1", "passed": true, "detail": "2.187457923603736e-12"}
+{"name": "global_conformal_gradient_upper_0_1", "passed": true, "detail": "[146.75675278365037, 164.78144825708256]"}
+{"name": "conformal_tail_retained_0_1", "passed": true, "detail": "-0.02223990952712875"}
+{"name": "charged_Weyl_refinement_0", "passed": true, "detail": "2.3784451856977563e-12"}
+{"name": "positive_thermal_frequency_1", "passed": true, "detail": "5.8434027777777775"}
+{"name": "geometry_solve_1", "passed": true, "detail": "The solver successfully reached the end of the integration interval."}
+{"name": "reconstruction_BVP_1_0", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "direct_60digit_nonlinear_points_1_0", "passed": true, "detail": "[1.828920344079762e-22, 2.33295800727165e-16, 4.789464216847743e-18]"}
+{"name": "nonlinear_Weyl_difference_1_0_0.002", "passed": true, "detail": "6.71689393342791e-06"}
+{"name": "nonlinear_Weyl_difference_1_0_0.001", "passed": true, "detail": "1.6792216793660647e-06"}
+{"name": "nonlinear_step_refinement_1_0", "passed": true, "detail": "[{'step': 0.002, 'value': -202.37358568041785, 'normalized_error': 6.71689393342791e-06}, {'step': 0.001, 'value': -202.37256115782967, 'normalized_error': 1.6792216793660647e-06}]"}
+{"name": "global_conformal_gradient_identity_1_0", "passed": true, "detail": "3.060900965283286e-10"}
+{"name": "global_conformal_gradient_upper_1_0", "passed": true, "detail": "[3.7917180163943915, 3.8698271257326917]"}
+{"name": "conformal_tail_retained_1_0", "passed": true, "detail": "-0.003963944174898734"}
+{"name": "reconstruction_BVP_1_1", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "direct_60digit_nonlinear_points_1_1", "passed": true, "detail": "[3.714067536818766e-21, 6.803154636684652e-17, 2.049009148746585e-18]"}
+{"name": "nonlinear_Weyl_difference_1_1_0.002", "passed": true, "detail": "6.7168939343927855e-06"}
+{"name": "nonlinear_Weyl_difference_1_1_0.001", "passed": true, "detail": "1.6792216796422216e-06"}
+{"name": "nonlinear_step_refinement_1_1", "passed": true, "detail": "[{'step': 0.002, 'value': -202.37358568082345, 'normalized_error': 6.7168939343927855e-06}, {'step': 0.001, 'value': -202.37256115823513, 'normalized_error': 1.6792216796422216e-06}]"}
+{"name": "global_conformal_gradient_identity_1_1", "passed": true, "detail": "3.219650883417694e-12"}
+{"name": "global_conformal_gradient_upper_1_1", "passed": true, "detail": "[3.791718018139454, 3.8698271289205812]"}
+{"name": "conformal_tail_retained_1_1", "passed": true, "detail": "-0.003963944168699973"}
+{"name": "charged_Weyl_refinement_1", "passed": true, "detail": "1.9934249820875224e-12"}
+{"name": "positive_thermal_frequency_2", "passed": true, "detail": "4.644984342943516"}
+{"name": "geometry_solve_2", "passed": true, "detail": "The solver successfully reached the end of the integration interval."}
+{"name": "reconstruction_BVP_2_0", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "direct_60digit_nonlinear_points_2_0", "passed": true, "detail": "[3.598923085733543e-23, 2.823718053921293e-16, 4.84073596280007e-19]"}
+{"name": "nonlinear_Weyl_difference_2_0_0.002", "passed": true, "detail": "9.832560356057511e-06"}
+{"name": "nonlinear_Weyl_difference_2_0_0.001", "passed": true, "detail": "2.4581372015078195e-06"}
+{"name": "nonlinear_step_refinement_2_0", "passed": true, "detail": "[{'step': 0.002, 'value': -244.58511243099161, 'normalized_error': 9.832560356057511e-06}, {'step': 0.001, 'value': -244.58330140025916, 'normalized_error': 2.4581372015078195e-06}]"}
+{"name": "global_conformal_gradient_identity_2_0", "passed": true, "detail": "4.2842796226481436e-10"}
+{"name": "global_conformal_gradient_upper_2_0", "passed": true, "detail": "[1.608501913872786, 1.6153778877659362]"}
+{"name": "conformal_tail_retained_2_0", "passed": true, "detail": "-0.00037656850395009257"}
+{"name": "reconstruction_BVP_2_1", "passed": true, "detail": "The algorithm converged to the desired accuracy."}
+{"name": "direct_60digit_nonlinear_points_2_1", "passed": true, "detail": "[1.1321840462809191e-23, 1.5871216107498021e-16, 4.405336311279105e-19]"}
+{"name": "nonlinear_Weyl_difference_2_1_0.002", "passed": true, "detail": "9.832560366230348e-06"}
+{"name": "nonlinear_Weyl_difference_2_1_0.001", "passed": true, "detail": "2.4581372041378276e-06"}
+{"name": "nonlinear_step_refinement_2_1", "passed": true, "detail": "[{'step': 0.002, 'value': -244.5851124341733, 'normalized_error': 9.832560366230348e-06}, {'step': 0.001, 'value': -244.58330140343898, 'normalized_error': 2.4581372041378276e-06}]"}
+{"name": "global_conformal_gradient_identity_2_1", "passed": true, "detail": "3.419578040068494e-12"}
+{"name": "global_conformal_gradient_upper_2_1", "passed": true, "detail": "[1.608501915888339, 1.6153778909133003]"}
+{"name": "conformal_tail_retained_2_1", "passed": true, "detail": "-0.00037656859740984444"}
+{"name": "charged_Weyl_refinement_2", "passed": true, "detail": "1.2945403650890231e-11"}
+{"status": "passed", "checks": 109, "unchanged_inputs": true}

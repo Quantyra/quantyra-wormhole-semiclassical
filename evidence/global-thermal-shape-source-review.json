@@ -1,0 +1,54 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {
+      "title": "William Beckner, Pitt's inequality with sharp convolution estimates",
+      "url": "https://arxiv.org/pdf/math/0612486v2",
+      "reviewed": "Corollary 2, logarithmic uncertainty, including its derivation by differentiating the weighted inequality at exponent zero.",
+      "use": "Established comparison behind the retained outer logarithmic form. The present proof reuses the already normalized outer theorem; it does not replace the actual Dirac response with a flat scalar multiplier.",
+      "limits": "Does not establish the charged geometry, thermal kernel, finite contacts or physical stability."
+    },
+    {
+      "title": "Pawel O. Mazur and Emil Mottola, Weyl Cohomology and the Effective Action for Conformal Anomalies",
+      "url": "https://arxiv.org/html/hep-th/0106151v1",
+      "reviewed": "Equations (54)-(59), the local curvature representative, its Weyl variation, and the independent Weyl-invariant functional.",
+      "use": "The fixed spherical action is differentiated with its volume contacts. Its independent canonical determinant is retained separately and exactly once.",
+      "limits": "The anomaly does not determine the complete state-dependent functional, boundary data or this charged-seed bound."
+    }
+  ],
+  "retained_inputs": [
+    "notes/global-classical-curvature-free-form.md",
+    "checks/global_classical_curvature_free_form.py",
+    "notes/stationary-curved-quantum-tt.md",
+    "checks/stationary_curved_quantum_tt.py",
+    "notes/uniform-logarithmic-frequency-comparison.md",
+    "notes/spherical-anomaly-action.md",
+    "notes/stationary-centered-exterior-source.md"
+  ],
+  "strongest_comparators": "Whole-exterior classical curvature-free coercivity and outer-only uniform canonical logarithmic compensation. The earlier global full quantum TT result is static and cannot supply the dynamic curvature-free reconstruction estimates.",
+  "new_consequence": "Full curvature-free shape core coercivity across the exterior for all sufficiently large positive Matsubara frequencies, including both reconstructed tails and a specified stronger completion.",
+  "hardest_step": "Global two-dimensional localization requires all normal-coordinate quadratic contacts and the time term in the weighted fourth-order IMS formula. The unrestricted exact Weyl completion is then estimated using the global curvature-free reconstruction.",
+  "time_contact_generalization_explicit": true,
+  "physical_time_and_thermal_period_unchanged": true,
+  "full_global_shape_inverse_proved": false,
+  "continuous_causal_bound_proved": false,
+  "threshold_numerically_calibrated": false,
+  "physical_boundary_domain_selected": false,
+  "novelty_scope": "Application and combination of established inequalities with retained charged-seed estimates; no claim of a new general logarithmic or anomaly theorem.",
+  "source_access": "Primary sources opened and relevant passages reviewed with the web tool; no downloaded-source digest is claimed.",
+  "verification_scope": "Symbolic identities and budgets, independent warped-cylinder quadrature, and charged reconstruction/nonlinear-Weyl finite differences. Continuum proof remains ordinary mathematics; the actual canonical kernel and benchmark threshold are not numerically evaluated.",
+  "formal_verification": false,
+  "subagents_used": false,
+  "development_runs": [
+    {
+      "run": 1,
+      "status": "failed",
+      "failed_check": "nonlinear_step_refinement_0_0",
+      "observation": "The two normalized nonlinear differences were 1.5825538379430071e-6 and 3.82721814569444e-6; both met the identity tolerance, but halving the step worsened the result and correctly failed the separate refinement gate.",
+      "cause_and_change": "On this Windows NumPy build longdouble has float64 precision. Directly subtracting the full large background density outside compact shape support loses the small second variation. The revised checker evaluates the exact symmetric finite action by polynomial/exponential factorization with sinh/cosh, and compares three points per reconstruction to a separate 60-digit direct nonlinear density. Steps and all existing identity/refinement tolerances remain unchanged.",
+      "provenance": "Full failed note, checker and review snapshots, input hashes, terminal outcome and raw traceback are retained in global-thermal-curvature-free-form.json and its append-only log."
+    }
+  ]
+}
