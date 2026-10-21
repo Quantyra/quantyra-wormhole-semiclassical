@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-21",
+  "story": "S168",
+  "question": "Does the actual high-frequency causal shape response have a global closed auxiliary realization, including the horizon?",
+  "retained_inputs": [
+    "notes/outer-continuous-causal-shape-bound.md",
+    "notes/uniform-logarithmic-frequency-comparison.md",
+    "notes/canonical-frequency-core-bound.md",
+    "notes/global-thermal-curvature-free-form.md",
+    "notes/global-thermal-shape-inverse.md",
+    "notes/high-frequency-zero-fast-injectivity.md",
+    "notes/coupled-boundary-phase-winding.md",
+    "notes/thermal-curvature-shape-schur.md"
+  ],
+  "primary_sources": [
+    {
+      "title": "Hansen and Pedersen, Jensen's Operator Inequality",
+      "url": "https://arxiv.org/pdf/math/0204049",
+      "locator": "Theorem 2.1, PDF page 3; proof begins PDF page 6",
+      "inspected": true,
+      "use": "Unital operator Jensen inequality. The note supplies its unbounded positive-operator application directly through variational resolvent compression."
+    },
+    {
+      "title": "Teschl, Mathematical Methods in Quantum Mechanics, second edition",
+      "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+      "locator": "Theorem 6.24 and proof, printed page 175, PDF page 187",
+      "inspected": true,
+      "use": "KLMN: relative Hermitian form bound below one preserves closure with equivalent form norms. The model's core-to-H mapping and charged error bound are established in this note."
+    },
+    {
+      "title": "Beckner, Pitt's inequality with sharp convolution estimates",
+      "url": "https://arxiv.org/pdf/math/0612486v2",
+      "locator": "Equation (3), PDF page 1, differentiated at alpha=0",
+      "inspected_in_predecessor_review": true,
+      "use": "Retained logarithmic uncertainty constant with the preceding corrected locator and Fourier conversion. No new uncertainty principle is claimed."
+    }
+  ],
+  "comparison": "The preceding result controlled outer-supported inputs using a bounded time multiplier. The global multiplier is unbounded at the bolt. A radial graph identity, the factored logarithmic derivative and Jensen localization now control it without that assumption.",
+  "hardest_steps": [
+    "Extend the full two-dimensional scalar/geodesic comparison to a finite atlas containing both bolts, with fixed second contacts and global returns.",
+    "Bound derivatives of g(H_s) using form resolvents without commuting the unbounded frequency multiplier.",
+    "Prove the comparison core maps to physical L2, then restore the actual causal form by a strict relative form bound."
+  ],
+  "global_continuous_shape_coercivity_proved": true,
+  "closed_auxiliary_causal_shape_inverse_proved": true,
+  "uniform_continuous_ray_strong_feedback_bound_proved": true,
+  "actual_continuous_Schur_family_verified": false,
+  "parameter_continuity_proved": false,
+  "actual_numeric_threshold_certified": false,
+  "physical_boundary_state_admissibility_proved": false,
+  "charged_Lorentzian_instability_proved": false,
+  "nonlinear_geometry_constructed": false,
+  "formal_verification": false,
+  "goal_complete": false,
+  "next_decision": "Prove parameter continuity of the actual eliminated strong response on a common realization and resolve its physical gravitational, constraint and initial/state domain."
+}
