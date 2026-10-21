@@ -1,0 +1,52 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {
+      "title": "Ashbaugh et al., Spectral Theory for Perturbed Krein Laplacians in Nonsmooth Domains",
+      "url": "https://www.mat.univie.ac.at/~gerald/ftp/articles/KreinWeyl.pdf",
+      "reviewed": "Section 2, equations (2.18)-(2.21), already opened and reviewed in the preceding inverse milestone.",
+      "use": "Established closed-form realization underlying the Riesz solution in the shape energy space. The Schur completion is derived explicitly here; no domain-specific spectrum is imported."
+    },
+    {
+      "title": "Paul A. Griffin and David A. Kosower, Curved Spacetime One-Loop Gravity in a Physical Gauge",
+      "url": "https://lss.fnal.gov/archive/1989/pub/Pub-89-177-T.pdf",
+      "reviewed": "Pages 2-6: distinction between the covariant Euclidean conformal-factor problem and the authors' physical constrained FRW calculation, including lapse/shift constraints and its background restrictions.",
+      "use": "Primary comparison explaining why negative Euclidean conformal directions alone do not establish a Lorentzian instability. Their constrained FRW result is not transferred to the charged higher-order model, and no contour rotation is adopted."
+    }
+  ],
+  "retained_inputs": [
+    "notes/global-thermal-shape-inverse.md",
+    "checks/global_thermal_shape_inverse.py",
+    "notes/global-thermal-curvature-free-form.md",
+    "notes/physical-curvature-reconstruction.md",
+    "notes/charged-curvature-free-shape-form.md",
+    "notes/explicit-curvature-metric-source.md",
+    "notes/charged-conformal-response-and-constraints.md",
+    "notes/local-coupled-frequency-polynomial.md"
+  ],
+  "strongest_comparators": "The complete auxiliary thermal shape inverse, the exact charged trace-density identity, and bounded conformal feedback with shape held fixed. None previously controlled the full curvature-to-shape forcing in the original physical L2 norm or its induced compact Schur feedback.",
+  "new_consequence": "A bounded compact mixed map from physical curvature L2 to the full thermal shape form dual, unique auxiliary shape elimination, compact positive feedback, and survival of negative Euclidean curvature directions with vanishing induced shape energy on the escaping sequence.",
+  "hardest_step": "Use the exact trace before estimating the mixed fourth-order Hessian, preserving residual contacts and avoiding an unjustified stronger curvature norm. Endpoint coefficients vanish relative to the controlled shape norms, and localized physical reconstruction is compact.",
+  "original_physical_curvature_L2_retained": true,
+  "physical_constraint_mode_constructed": false,
+  "Lorentzian_instability_proved": false,
+  "actual_Schur_feedback_evaluated": false,
+  "threshold_numerically_calibrated": false,
+  "physical_boundary_realization_identified": false,
+  "novelty_scope": "Charged-seed mixed-form control and compact feedback, not a new general Schur theorem or discovery of Euclidean conformal indefiniteness.",
+  "source_access": "The Fermilab primary PDF was opened directly. Direct attempts to open the original Gibbons-Hawking-Perry DOI and publisher page failed; that paper is not represented as read. The preceding directly reviewed mathematical primary source is reused. No downloaded-source digest is claimed.",
+  "verification_scope": "Exact coefficient/trace identities, endpoint limits and rational negative-margin arithmetic; independent charged action versus trace mixed forms with refined reconstruction, plus refined outer-dilation action limits. Compactness and the infinite-dimensional reduction remain ordinary proofs.",
+  "formal_verification": false,
+  "subagents_used": false,
+  "development_runs": [
+    {
+      "run": 1,
+      "status": "terminated_invalid_mesh",
+      "reason": "The first charged BVP encountered nearly duplicate initial mesh points: nine gaps below 1e-12, with minimum 1.3877787807814457e-17. SciPy emitted invalid-division warnings. The supervisor stopped the exact checker process and verified terminal session status before any restart.",
+      "retention": "The interrupted checker had not written its normal receipt. A clearly labeled supervisor receipt retains all emitted checks, exact note/checker/review sources, verified input hashes, mesh diagnostic, process termination and the wrapper's subsequent missing-receipt error. The append-only log retains the original warnings and explicit supervisor terminal record.",
+      "change": "Coalesce mesh points separated by less than 1e-12 times max(1,L), assert a separated initial mesh, and convert BVP runtime warnings to errors. The equations, collocation tolerances, quadrature counts and identity/refinement acceptance thresholds are unchanged."
+    }
+  ]
+}
