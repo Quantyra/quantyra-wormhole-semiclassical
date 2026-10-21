@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-21",
+  "story": "S167",
+  "ordinary_argument_reviewed_before_execution": true,
+  "hardest_step": "Separate the outgoing correction, which need not be unweighted L2, from the positive elliptic and returned TT corrections. Bound the latter in the physical scaled H1 norm, convert with the full Liouville connection on intervals away from the bolt, and use the unchanged cutoff to cover the entire cold source support.",
+  "quantitative_consequence": "The actual two-component fixed direction has 3e43 < X_c(P) < 1e49 on the entire cold region. An actual coefficient at most 1e-49 epsilon_c is sufficient for the subtracted source value to be below epsilon_c. Explicit three-step certificate targets imply the stronger factor .271, but their actual source norms remain unverified.",
+  "retained_inputs": [
+    "notes/cold-projection-source-lower-bound.md",
+    "notes/quantile-cutoff-localization-and-jets.md",
+    "notes/on-shell-adjoint-error-and-trace-gradient.md",
+    "notes/finite-comparison-adjoint-and-fixed-projection.md",
+    "notes/finite-comparison-weighted-mixed-form.md",
+    "notes/finite-comparison-disk-return-form.md",
+    "notes/on-shell-finite-range-response.md",
+    "notes/coercive-signed-moment-certificate.md"
+  ],
+  "primary_source": {
+    "title": "Gerald Teschl, Mathematical Methods in Quantum Mechanics, second edition",
+    "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+    "location": "Theorem 7.14, printed page 196, PDF page index 207",
+    "inspected": "2026-10-21",
+    "established_result": "Sobolev embedding gives pointwise control from sufficient Sobolev regularity. The explicit vector interval inequality used here is proved directly by the fundamental theorem of calculus and Cauchy-Schwarz.",
+    "does_not_supply": "The charged adjoint constants, cutoff support, physical normalization or the actual signed-source bound. No novelty is claimed for Sobolev embedding."
+  },
+  "comparison": "The previous lower bound gave only a necessary coefficient threshold. The new actual-direction upper bound supplies a sufficient value test, with three-step targets tighter by a factor of one million. A single Sobolev bound for the rapidly oscillating reference would unnecessarily lose its large frequency; the known reference pointwise bound is retained instead.",
+  "actual_direction_upper_bound_proved": true,
+  "actual_source_certificate_passed": false,
+  "actual_signed_coefficient_evaluated": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "formal_verification": false,
+  "goal_complete": false
+}
