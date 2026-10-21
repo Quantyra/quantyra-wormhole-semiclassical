@@ -1,0 +1,42 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {
+      "title": "Iyer and Wald, Some Properties of Noether Charge",
+      "url": "https://arxiv.org/pdf/gr-qc/9403028",
+      "reviewed": "Equations (30)-(43), explicit integration fluxes and the ambiguity of the symplectic potential.",
+      "use": "Retaining literal surface terms is distinct from choosing a convenient bulk representative."
+    },
+    {
+      "title": "Teschl, Mathematical Methods in Quantum Mechanics, second edition",
+      "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+      "reviewed": "Section 2.3, equations (2.53)-(2.59), form completion versus the stronger operator domain.",
+      "use": "The existing energy domain does not give a pointwise second-derivative boundary trace. The necessary H2 estimates are derived directly here."
+    }
+  ],
+  "source_access": "Primary sources opened directly; no downloaded-byte digest claimed.",
+  "retained_inputs": [
+    "notes/thermal-curvature-shape-schur.md",
+    "notes/global-thermal-shape-inverse.md",
+    "notes/global-thermal-curvature-free-form.md",
+    "notes/coupled-fast-metric-boundary-traces.md",
+    "notes/fast-trace-finite-cut-action.md",
+    "notes/coupled-fast-quadratic-boundary-obstruction.md",
+    "notes/stationary-exterior-boundary-weyl.md",
+    "notes/local-coupled-frequency-polynomial.md"
+  ],
+  "strongest_comparator": "The preceding result sets first-order shape to zero. The energy-space mixed form is finite, but that alone does not identify its literal cutoff behavior.",
+  "hardest_step": "Derive the exact charged boundary flux before estimating it. Third derivatives and reconstructed conformal second derivatives cancel; a subleading shape second derivative remains, and has only a logarithmic L1 limit from the available norms.",
+  "new_consequence": "The full energy-class shape response cannot contribute a persistent fast cutoff oscillation through its mixed pairing. The exact pure conformal lift preserves its leading quadratic term. The pure shape coefficient and shape-dependent second-order trace forcing remain open.",
+  "regulator_contract": "Same fixed background cut and subtraction. Logarithmic L1 is a necessary-limit diagnostic; no averaging prescription is adopted for the physical action.",
+  "development_record": "Symbolic exploration derived the endpoint and checked the bulk row. A preliminary comparison used the Euclidean mixed-row sign against the positive areal representative; the sign convention was corrected before acceptance, giving an exact zero residual. No acceptance run had occurred at that point.",
+  "physical_fast_branch_excluded": false,
+  "pure_shape_finite_cut_limit_proved": false,
+  "new_boundary_prescription_adopted": false,
+  "physical_stability_proved": false,
+  "verification_scope": "Symbolic original charged action and independent trace row; unexpanded two-amplitude extraction; normal annular quadrature; Sobolev spike controls. Fixed thermal transfer and continuum limits remain ordinary arguments. No quantum determinant or actual shape solution is numerically evaluated.",
+  "formal_verification": false,
+  "subagents_used": false
+}
