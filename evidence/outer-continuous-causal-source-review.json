@@ -1,0 +1,37 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {"title": "Romatschke and Son, Spectral sum rules for the quark-gluon plasma", "url": "https://arxiv.org/pdf/0903.3946v1", "reviewed": "Section II spectral/subtracted response framework", "use": "Established dispersion-relation context. No QGP estimate is imported into the charged exterior."},
+    {"title": "Schweitzer, Integral representations for higher-order Frechet derivatives of matrix functions", "url": "https://arxiv.org/pdf/2203.03930", "reviewed": "Section 2.2, Corollary 3 and Theorem 4", "use": "Resolvent integral framework for higher logarithmic derivatives. The note proves the specific bounded noncommuting operator estimate directly."},
+    {"title": "Beckner, Pitt's inequality with sharp convolution estimates", "url": "https://arxiv.org/pdf/math/0612486v2", "reviewed": "Page 1, equation (3), including the 2pi Fourier convention", "use": "Differentiate the sharp Pitt constant at alpha=0, then convert momentum to obtain psi(1/4)+log 2. This corrects the older note's mismatched Corollary 2/equation (10) locator without changing its constant."}
+  ],
+  "source_access": "Opened the listed primary sources. An additional Manchester matrix-log PDF timed out and the original 1995 AMS Beckner PDF returned 403; neither inaccessible text is claimed as reviewed. No downloaded-byte digest claimed.",
+  "retained_inputs": [
+    "notes/coupled-boundary-phase-winding.md",
+    "notes/thermal-shape-response-and-subtractions.md",
+    "notes/uniform-logarithmic-frequency-comparison.md",
+    "notes/canonical-frequency-core-bound.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/global-classical-curvature-free-form.md",
+    "notes/global-thermal-curvature-free-form.md",
+    "notes/global-thermal-shape-inverse.md",
+    "notes/local-coupled-frequency-polynomial.md"
+  ],
+  "strongest_comparator": "The retained scalar outer logarithmic bound already holds at every real frequency, but the uniform comparison with the actual canonical response was only thermal. Actual positive third divided differences alone do not control the negative interpolation weights or imply global coercivity.",
+  "hardest_step": "Use two-sided thermal comparisons at four neighboring squared frequencies, bound both quadratic interpolants, and control the scalar model's third derivative in J0 through its noncommuting resolvent formula and the complete summable angular tower. This avoids assuming endpoint-uniform bounds for the actual spectral measure.",
+  "new_consequence": "The actual canonical causal response has uniform outer logarithmic compensation at every sufficiently large real Laplace frequency. Combining it with the retained real classical bound, unchanged Weyl completion and explicit noninteger horizon-tail integrability proves full causal curvature-free core coercivity for outer-supported shape inputs and their global conformal reconstructions.",
+  "scope_boundary": "The outer auxiliary cylinder has bounded time-frequency multiplier; the full disk does not at its bolt. No global causal shape closure, horizon-supported coercivity, full strong Schur-family continuity, charged resonance, Lorentzian instability, physical boundary selection, nonlinear geometry or stability is proved.",
+  "citation_correction": "The canonical-frequency note's Beckner Corollary 2/equation (10) locator is incorrect. Equation (3) on page 1 of the linked primary paper gives the required result by differentiation and Fourier conversion. Its psi(1/4)+log 2 constant and the retained >-4 bound are unchanged. Frozen predecessor bytes are preserved.",
+  "regulator_contract": "Keep all original contacts, state, flux, clock, angular multiplicities, action coefficients and auxiliary reconstruction. Interpolation bounds the actual causal function; it neither replaces that function nor chooses a new finite polynomial.",
+  "actual_outer_continuous_compensation_proved": true,
+  "outer_supported_full_causal_core_bound_proved": true,
+  "four_anchor_interpolation_controls_negative_weights": true,
+  "global_continuous_shape_coercivity_proved": false,
+  "actual_continuous_Schur_family_verified": false,
+  "actual_numeric_threshold_certified": false,
+  "verification_scope": "Exact interpolation identities and uniform budgets, complete angular-tail identity, Fourier-normalization correction, independent spectral/Laplace integrals for a positive matrix measure, and noncommuting matrix-log derivatives via independent refined finite differences. Fixtures do not evaluate the charged kernel or certify the continuum theorem by matrix rank.",
+  "formal_verification": false,
+  "subagents_used": false
+}
