@@ -1,0 +1,239 @@
+{"event": "start", "story": "S168 physical curvature source and range", "input_count": 323}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "all_predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "physical_inputs_pinned", "passed": true, "detail": ""}
+{"name": "source_scope", "passed": true, "detail": ""}
+{"name": "wave_transform_and_source_sign", "passed": true, "detail": "0"}
+{"name": "kinetic_measure", "passed": true, "detail": "0"}
+{"name": "source_measure", "passed": true, "detail": "0"}
+{"name": "areal_kinetic_weight", "passed": true, "detail": "0"}
+{"name": "areal_source_weight", "passed": true, "detail": "0"}
+{"name": "curvature_gauge_invariance", "passed": true, "detail": "0"}
+{"name": "off_shell_source_gauge_invariance", "passed": true, "detail": "0"}
+{"name": "dropping_trace_contact_changes_source", "passed": true, "detail": ""}
+{"name": "exact_seed_scalar_curvature", "passed": true, "detail": "0"}
+{"name": "exact_tortoise_r_second_derivative", "passed": true, "detail": "0"}
+{"name": "tortoise_leading_series", "passed": true, "detail": "0"}
+{"name": "tortoise_cubic_series", "passed": true, "detail": "0"}
+{"name": "tortoise_mass_series", "passed": true, "detail": "0"}
+{"name": "bounded_potential_remainder_limit", "passed": true, "detail": "0"}
+{"name": "fast_parameter", "passed": true, "detail": "0"}
+{"name": "negative_test_kinetic_ratio", "passed": true, "detail": "0"}
+{"name": "retained_a_exceeds_compact_threshold", "passed": true, "detail": ""}
+{"name": "outer_basis_Wronskian", "passed": true, "detail": "0"}
+{"name": "Volterra_diagonal_value", "passed": true, "detail": "0"}
+{"name": "Volterra_derivative_jump", "passed": true, "detail": "0"}
+{"name": "Volterra_kernel_equation", "passed": true, "detail": "0"}
+{"name": "Volterra_Gronwall_exponent", "passed": true, "detail": "0"}
+{"name": "horizon_weighted_kernel", "passed": false, "detail": "(-exp(2*gamma*s) + exp(2*gamma*y) + 2*exp(gamma*(s + y))*sinh(gamma*(s - y)))*exp(-2*gamma*s)/(2*gamma)"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 199, in main
+    try:provenance();exact_checks();seed_fixtures();horizon_fixtures()
+                     ~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 99, in exact_checks
+    zero('horizon_weighted_kernel',S.exp(gamma*y)*S.sinh(gamma*(s-y))/gamma*S.exp(-gamma*s)-H)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 31, in zero
+    value=S.simplify(S.sympify(expr).doit());check(name,value==0,value)
+                                             ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 28, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: horizon_weighted_kernel
+
+{"status": "failed", "checks": 28, "unchanged_inputs": true}
+{"event": "start", "story": "S168 physical curvature source and range", "input_count": 323}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "all_predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "physical_inputs_pinned", "passed": true, "detail": ""}
+{"name": "source_scope", "passed": true, "detail": ""}
+{"name": "wave_transform_and_source_sign", "passed": true, "detail": "0"}
+{"name": "kinetic_measure", "passed": true, "detail": "0"}
+{"name": "source_measure", "passed": true, "detail": "0"}
+{"name": "areal_kinetic_weight", "passed": true, "detail": "0"}
+{"name": "areal_source_weight", "passed": true, "detail": "0"}
+{"name": "curvature_gauge_invariance", "passed": true, "detail": "0"}
+{"name": "off_shell_source_gauge_invariance", "passed": true, "detail": "0"}
+{"name": "dropping_trace_contact_changes_source", "passed": true, "detail": ""}
+{"name": "exact_seed_scalar_curvature", "passed": true, "detail": "0"}
+{"name": "exact_tortoise_r_second_derivative", "passed": true, "detail": "0"}
+{"name": "tortoise_leading_series", "passed": true, "detail": "0"}
+{"name": "tortoise_cubic_series", "passed": true, "detail": "0"}
+{"name": "tortoise_mass_series", "passed": true, "detail": "0"}
+{"name": "bounded_potential_remainder_limit", "passed": true, "detail": "0"}
+{"name": "fast_parameter", "passed": true, "detail": "0"}
+{"name": "negative_test_kinetic_ratio", "passed": true, "detail": "0"}
+{"name": "retained_a_exceeds_compact_threshold", "passed": true, "detail": ""}
+{"name": "outer_basis_Wronskian", "passed": true, "detail": "0"}
+{"name": "Volterra_diagonal_value", "passed": true, "detail": "0"}
+{"name": "Volterra_derivative_jump", "passed": true, "detail": "0"}
+{"name": "Volterra_kernel_equation", "passed": true, "detail": "0"}
+{"name": "Volterra_Gronwall_exponent", "passed": true, "detail": "0"}
+{"name": "horizon_weighted_kernel", "passed": true, "detail": "0"}
+{"name": "horizon_Wronskian", "passed": true, "detail": "0"}
+{"name": "growing_coefficient_sign", "passed": true, "detail": "0"}
+{"name": "Laplace_initial_contact_sign", "passed": true, "detail": "0"}
+{"name": "source_weight_stronger_than_volume", "passed": true, "detail": ""}
+{"name": "seed_fixture_simple_horizon", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_finite_100", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_finite_200", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_refinement_200", "passed": true, "detail": "0.50235072943518"}
+{"name": "seed_outer_potential_finite_400", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_refinement_400", "passed": true, "detail": "0.50117171144203"}
+{"name": "seed_exterior_positive_0.01", "passed": true, "detail": ""}
+{"name": "seed_horizon_potential_refinement_0.005", "passed": true, "detail": "0.49244327998499"}
+{"name": "seed_exterior_positive_0.005", "passed": true, "detail": ""}
+{"name": "seed_horizon_potential_refinement_0.0025", "passed": true, "detail": "0.49611677516233"}
+{"name": "seed_exterior_positive_0.0025", "passed": true, "detail": ""}
+{"name": "horizon_value_match_0", "passed": true, "detail": ""}
+{"name": "horizon_derivative_match_0", "passed": true, "detail": ""}
+{"name": "outer_Wronskian_0_0.05", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_0_0.05", "passed": true, "detail": "0.39882574585361"}
+{"name": "outer_Wronskian_0_0.2", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_0_0.2", "passed": true, "detail": "0.39828184981116"}
+{"name": "outer_Wronskian_0_0.7", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_0_0.7", "passed": true, "detail": "0.39178167869026"}
+{"name": "nonzero_bounded_moment_0", "passed": true, "detail": ""}
+{"name": "compatible_compact_source_0", "passed": true, "detail": "1.1243238384e-58"}
+{"name": "forced_horizon_coefficient_0_128", "passed": true, "detail": "5.35345361738e-11"}
+{"name": "compatible_horizon_coefficient_0_128", "passed": false, "detail": "3.85396650711e-5"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 199, in main
+    try:provenance();exact_checks();seed_fixtures();horizon_fixtures()
+                                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 185, in horizon_fixtures
+    check('compatible_horizon_coefficient_'+str(ix)+'_'+str(grid),errors[1]<mp.mpf('2e-5'),mp.nstr(errors[1],12))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\physical_curvature_source_and_boundary_range.py", line 28, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: compatible_horizon_coefficient_0_128
+
+{"status": "failed", "checks": 55, "unchanged_inputs": true}
+{"event": "start", "story": "S168 physical curvature source and range", "input_count": 323}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "all_predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "physical_inputs_pinned", "passed": true, "detail": ""}
+{"name": "source_scope", "passed": true, "detail": ""}
+{"name": "wave_transform_and_source_sign", "passed": true, "detail": "0"}
+{"name": "kinetic_measure", "passed": true, "detail": "0"}
+{"name": "source_measure", "passed": true, "detail": "0"}
+{"name": "areal_kinetic_weight", "passed": true, "detail": "0"}
+{"name": "areal_source_weight", "passed": true, "detail": "0"}
+{"name": "curvature_gauge_invariance", "passed": true, "detail": "0"}
+{"name": "off_shell_source_gauge_invariance", "passed": true, "detail": "0"}
+{"name": "dropping_trace_contact_changes_source", "passed": true, "detail": ""}
+{"name": "exact_seed_scalar_curvature", "passed": true, "detail": "0"}
+{"name": "exact_tortoise_r_second_derivative", "passed": true, "detail": "0"}
+{"name": "tortoise_leading_series", "passed": true, "detail": "0"}
+{"name": "tortoise_cubic_series", "passed": true, "detail": "0"}
+{"name": "tortoise_mass_series", "passed": true, "detail": "0"}
+{"name": "bounded_potential_remainder_limit", "passed": true, "detail": "0"}
+{"name": "fast_parameter", "passed": true, "detail": "0"}
+{"name": "negative_test_kinetic_ratio", "passed": true, "detail": "0"}
+{"name": "retained_a_exceeds_compact_threshold", "passed": true, "detail": ""}
+{"name": "outer_basis_Wronskian", "passed": true, "detail": "0"}
+{"name": "Volterra_diagonal_value", "passed": true, "detail": "0"}
+{"name": "Volterra_derivative_jump", "passed": true, "detail": "0"}
+{"name": "Volterra_kernel_equation", "passed": true, "detail": "0"}
+{"name": "Volterra_Gronwall_exponent", "passed": true, "detail": "0"}
+{"name": "horizon_weighted_kernel", "passed": true, "detail": "0"}
+{"name": "horizon_Wronskian", "passed": true, "detail": "0"}
+{"name": "growing_coefficient_sign", "passed": true, "detail": "0"}
+{"name": "Laplace_initial_contact_sign", "passed": true, "detail": "0"}
+{"name": "source_weight_stronger_than_volume", "passed": true, "detail": ""}
+{"name": "seed_fixture_simple_horizon", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_finite_100", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_finite_200", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_refinement_200", "passed": true, "detail": "0.50235072943518"}
+{"name": "seed_outer_potential_finite_400", "passed": true, "detail": ""}
+{"name": "seed_outer_potential_refinement_400", "passed": true, "detail": "0.50117171144203"}
+{"name": "seed_exterior_positive_0.01", "passed": true, "detail": ""}
+{"name": "seed_horizon_potential_refinement_0.005", "passed": true, "detail": "0.49244327998499"}
+{"name": "seed_exterior_positive_0.005", "passed": true, "detail": ""}
+{"name": "seed_horizon_potential_refinement_0.0025", "passed": true, "detail": "0.49611677516233"}
+{"name": "seed_exterior_positive_0.0025", "passed": true, "detail": ""}
+{"name": "horizon_value_match_0", "passed": true, "detail": ""}
+{"name": "horizon_derivative_match_0", "passed": true, "detail": ""}
+{"name": "outer_Wronskian_0_0.05", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_0_0.05", "passed": true, "detail": "0.39882574585361"}
+{"name": "outer_Wronskian_0_0.2", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_0_0.2", "passed": true, "detail": "0.39828184981116"}
+{"name": "outer_Wronskian_0_0.7", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_0_0.7", "passed": true, "detail": "0.39178167869026"}
+{"name": "nonzero_bounded_moment_0", "passed": true, "detail": ""}
+{"name": "compatible_compact_source_0", "passed": true, "detail": "1.12442107302e-58"}
+{"name": "forced_horizon_coefficient_0_384", "passed": true, "detail": "4.72246913653e-13"}
+{"name": "compatible_horizon_coefficient_0_384", "passed": true, "detail": "1.28004603709e-8"}
+{"name": "forced_horizon_coefficient_0_768", "passed": true, "detail": "2.97033130648e-14"}
+{"name": "compatible_horizon_coefficient_0_768", "passed": true, "detail": "7.99934939787e-10"}
+{"name": "independent_ODE_refinement_0_0", "passed": true, "detail": "0.062897844763039"}
+{"name": "independent_ODE_refinement_0_1", "passed": true, "detail": "0.062492669529632"}
+{"name": "horizon_value_match_1", "passed": true, "detail": ""}
+{"name": "horizon_derivative_match_1", "passed": true, "detail": ""}
+{"name": "outer_Wronskian_1_0.05", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_1_0.05", "passed": true, "detail": "0.39853562588209"}
+{"name": "outer_Wronskian_1_0.2", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_1_0.2", "passed": true, "detail": "0.39365443572211"}
+{"name": "outer_Wronskian_1_0.7", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_1_0.7", "passed": true, "detail": "0.33737438708382"}
+{"name": "nonzero_bounded_moment_1", "passed": true, "detail": ""}
+{"name": "compatible_compact_source_1", "passed": true, "detail": "6.9420652463e-59"}
+{"name": "forced_horizon_coefficient_1_384", "passed": true, "detail": "6.92797526945e-14"}
+{"name": "compatible_horizon_coefficient_1_384", "passed": true, "detail": "3.05235128747e-9"}
+{"name": "forced_horizon_coefficient_1_768", "passed": true, "detail": "4.32313905819e-15"}
+{"name": "compatible_horizon_coefficient_1_768", "passed": true, "detail": "1.9075193205e-10"}
+{"name": "independent_ODE_refinement_1_0", "passed": true, "detail": "0.062401190680528"}
+{"name": "independent_ODE_refinement_1_1", "passed": true, "detail": "0.062493440002459"}
+{"name": "horizon_value_match_2", "passed": true, "detail": ""}
+{"name": "horizon_derivative_match_2", "passed": true, "detail": ""}
+{"name": "outer_Wronskian_2_0.05", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_2_0.05", "passed": true, "detail": "0.45442216461644"}
+{"name": "outer_Wronskian_2_0.2", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_2_0.2", "passed": true, "detail": "0.45405526278791"}
+{"name": "outer_Wronskian_2_0.7", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_2_0.7", "passed": true, "detail": "0.44966309891818"}
+{"name": "nonzero_bounded_moment_2", "passed": true, "detail": ""}
+{"name": "compatible_compact_source_2", "passed": true, "detail": "1.92936809921e-57"}
+{"name": "forced_horizon_coefficient_2_384", "passed": true, "detail": "1.28323221235e-12"}
+{"name": "compatible_horizon_coefficient_2_384", "passed": true, "detail": "5.33778906384e-9"}
+{"name": "forced_horizon_coefficient_2_768", "passed": true, "detail": "8.03539507964e-14"}
+{"name": "compatible_horizon_coefficient_2_768", "passed": true, "detail": "3.34032908302e-10"}
+{"name": "independent_ODE_refinement_2_0", "passed": true, "detail": "0.062618402205972"}
+{"name": "independent_ODE_refinement_2_1", "passed": true, "detail": "0.062578888807037"}
+{"name": "horizon_value_match_3", "passed": true, "detail": ""}
+{"name": "horizon_derivative_match_3", "passed": true, "detail": ""}
+{"name": "outer_Wronskian_3_0.05", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_3_0.05", "passed": true, "detail": "0.45422646671545"}
+{"name": "outer_Wronskian_3_0.2", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_3_0.2", "passed": true, "detail": "0.4509299180531"}
+{"name": "outer_Wronskian_3_0.7", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_3_0.7", "passed": true, "detail": "0.41226954704627"}
+{"name": "nonzero_bounded_moment_3", "passed": true, "detail": ""}
+{"name": "compatible_compact_source_3", "passed": true, "detail": "1.99266783274e-57"}
+{"name": "forced_horizon_coefficient_3_384", "passed": true, "detail": "2.13750448344e-13"}
+{"name": "compatible_horizon_coefficient_3_384", "passed": true, "detail": "7.46467328182e-10"}
+{"name": "forced_horizon_coefficient_3_768", "passed": true, "detail": "1.34210035105e-14"}
+{"name": "compatible_horizon_coefficient_3_768", "passed": true, "detail": "4.66599265375e-11"}
+{"name": "independent_ODE_refinement_3_0", "passed": true, "detail": "0.062788188817607"}
+{"name": "independent_ODE_refinement_3_1", "passed": true, "detail": "0.062507660785615"}
+{"name": "horizon_value_match_4", "passed": true, "detail": ""}
+{"name": "horizon_derivative_match_4", "passed": true, "detail": ""}
+{"name": "outer_Wronskian_4_0.05", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_4_0.05", "passed": true, "detail": "0.4543988843953"}
+{"name": "outer_Wronskian_4_0.2", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_4_0.2", "passed": true, "detail": "0.45368281659042"}
+{"name": "outer_Wronskian_4_0.7", "passed": true, "detail": ""}
+{"name": "Volterra_remainder_bound_4_0.7", "passed": true, "detail": "0.44510691813506"}
+{"name": "nonzero_bounded_moment_4", "passed": true, "detail": ""}
+{"name": "compatible_compact_source_4", "passed": true, "detail": "2.08679230273e-57"}
+{"name": "forced_horizon_coefficient_4_384", "passed": true, "detail": "8.23686361744e-13"}
+{"name": "compatible_horizon_coefficient_4_384", "passed": true, "detail": "2.88074846892e-9"}
+{"name": "forced_horizon_coefficient_4_768", "passed": true, "detail": "5.15929752944e-14"}
+{"name": "compatible_horizon_coefficient_4_768", "passed": true, "detail": "1.80256178265e-10"}
+{"name": "independent_ODE_refinement_4_0", "passed": true, "detail": "0.062636675427236"}
+{"name": "independent_ODE_refinement_4_1", "passed": true, "detail": "0.062572689080379"}
+{"status": "passed", "checks": 123, "unchanged_inputs": true}
