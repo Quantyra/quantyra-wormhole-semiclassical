@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-21",
+  "story": "S167",
+  "question": "Can the actual signed projection moment be certified through positive auxiliary solves with explicit errors, retaining the full coupled source and density?",
+  "retained_inputs": [
+    "notes/cold-projection-source-lower-bound.md",
+    "notes/on-shell-finite-range-response.md",
+    "notes/on-shell-adjoint-error-and-trace-gradient.md",
+    "notes/finite-trace-gradient-and-projection-transversality.md",
+    "notes/finite-comparison-adjoint-and-fixed-projection.md",
+    "notes/cold-reference-overlap-and-adjoint-budget.md",
+    "notes/seed-residual-constraint-obstruction.md",
+    "notes/general-background-newton-operator.md"
+  ],
+  "primary_sources": [
+    {
+      "title": "Teschl, Mathematical Methods in Quantum Mechanics, second edition",
+      "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+      "locator": "Theorem 6.24 (KLMN), printed page 175, PDF page 187",
+      "inspected": true,
+      "use": "Closed form realization after the negative local term is shown relatively bounded below one. The full charged moment, its physical normalization, and its three-step numerical budget are derived separately."
+    }
+  ],
+  "comparison": "The previous signed-coefficient representation uses the actual oscillatory adjoint and full real auxiliary resolvent. Its unsigned bound does not meet the necessary cold-source budget. The new identity pairs the same adjoint with errors and a transferred source after positive solves; it does not approximate the adjoint, omit the TT source, or change the physical projection.",
+  "hardest_steps": [
+    "Preserve density conversion and both York source components when identifying the original signed coefficient.",
+    "Use the divisor E rather than E+4 with a justified local-form bound, while retaining the positive TT block without a smallness assumption.",
+    "Specify a core-limit domain that justifies moment annihilation and retain every inexact-solve and actual-operator error.",
+    "Separate the explicit sufficient numerical targets from the still-unverified actual weighted residual and graph bounds."
+  ],
+  "full_coupled_moment_certificate_proved": true,
+  "inexact_three_step_cold_budget_proved": true,
+  "actual_source_evaluated": false,
+  "actual_certificate_passed": false,
+  "actual_signed_coefficient_bounded_to_cold_target": false,
+  "actual_signed_compatibility_zero_proved": false,
+  "actual_weighted_graph_iterates_certified": false,
+  "nonlinear_solution_constructed": false,
+  "formal_verification": false,
+  "goal_complete": false,
+  "next_decision": "Construct admissible trials for the actual density-correct full source and certify N(r0), N(r1), N(r2), N(q3), including full quantum operator errors; alternatively prove the actual weighted graph bound for exact positive solves. The current C5 and low-residual contracts alone do not meet this gate."
+}
