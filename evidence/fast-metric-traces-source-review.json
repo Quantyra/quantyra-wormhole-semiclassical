@@ -1,0 +1,57 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {
+      "title": "Ishibashi and Wald, Dynamics in Non-Globally-Hyperbolic Static Spacetimes III: Anti-de Sitter Spacetime",
+      "url": "https://arxiv.org/pdf/hep-th/0402184v4",
+      "reviewed": "Section 1, equations (1)-(4), and section 3 boundary-domain discussion and Theorem 3.2. The PDF was opened directly in this milestone; its boundary-extension framework and limited scalar positivity scope were checked.",
+      "use": "Established distinction between a prescribed leading geometry and a complete dynamical boundary domain. The AdS scalar theorem is not imported as a charged semiclassical metric theorem."
+    },
+    {
+      "title": "Stefan Haller, The Atiyah-Singer index theorem",
+      "url": "https://www.mat.univie.ac.at/~stefan/files/ASIT/ASIT.pdf",
+      "reviewed": "Corollary I.3.3 and its parametrix/index-preservation proof, directly reviewed in the preceding boundary-index milestone and reused here.",
+      "use": "Finite-dimensional domain extension changes the Fredholm index by the number of added trace coordinates; this argument is also given explicitly in the note."
+    }
+  ],
+  "source_access": "The Ishibashi-Wald author preprint was opened directly. Haller's directly reviewed proof from the preceding milestone is reused. No fresh downloaded-byte digest is claimed.",
+  "retained_inputs": [
+    "notes/coupled-thermal-boundary-index.md",
+    "notes/thermal-curvature-shape-schur.md",
+    "notes/global-thermal-shape-inverse.md",
+    "notes/global-classical-curvature-free-form.md",
+    "notes/physical-curvature-reconstruction.md",
+    "checks/physical_curvature_reconstruction.py",
+    "notes/physical-curvature-source-and-boundary-range.md",
+    "notes/stationary-fast-phase-variation.md",
+    "notes/stationary-same-source-boundary-charge.md",
+    "notes/spherical-anomaly-boundary.md"
+  ],
+  "strongest_comparators": "The pure-vacuum conformal lift identifies its metric fast branch. The charged scalar trace theorem identifies curvature coefficients, and the previous coupled index theorem analyzes their simultaneous exclusion. None establishes the leading charged metric trace after the complete auxiliary shape responds.",
+  "hardest_step": "Compare the weighted physical reconstruction to U/[6(E+4lambda)] on the maximal scalar graph domain. The difference is an ordinary positive resolvent of an L2 source; its endpoint gain and the H1-zero-trace shape estimate prevent cancellation of the leading metric coefficient.",
+  "new_consequence": "Leading boundary metric and clock do not distinguish the two fast curvature amplitudes in the auxiliary reconstruction. Their admitted dimension gives indices -1,0,+1; the maximal auxiliary domain has a nonzero kernel at each admitted thermal frequency. This sharpens the missing physical boundary matching task.",
+  "physical_boundary_selected": false,
+  "physical_mode_constructed": false,
+  "full_boundary_action_evaluated": false,
+  "physical_matter_domain_for_all_fast_traces_proved": false,
+  "verification_scope": "Exact charged coefficient and Green identities, high-precision inverse-square reconstruction with a nonzero shape tail, and finite-rank controls of infinite shift domain extensions. These do not evaluate the charged quantum kernel or select a physical boundary action.",
+  "additional_committed_inputs": {
+    "notes/spherical-anomaly-boundary.md": {
+      "commit": "3b30278fb59c6f27d2bb9f32483d2ffb3c52bfb6",
+      "sha256": "341b46fe4f57322791534224cf7ebb2ea86269b1441d95433b317141db578e4c"
+    }
+  },
+  "development_runs": [
+    {
+      "run": 1,
+      "status": "failed",
+      "check": "review_inputs_pinned",
+      "cause": "The reviewed local anomaly boundary note was not an input of the preceding boundary-index milestone. The checker incorrectly required every reviewed source to be inherited from that milestone.",
+      "resolution": "Add the note explicitly as a new input, pin its committed bytes and digest, and check the expanded source set. The first run retains its original 392 inputs, four checks, exception and exact checker/note/review sources. No mathematical formula or numerical tolerance changed."
+    }
+  ],
+  "formal_verification": false,
+  "subagents_used": false
+}
