@@ -1,0 +1,148 @@
+{"event": "start", "story": "S168 Ward sources and fast compatibility", "input_count": 449}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "retained_review_pinned", "passed": true, "detail": ""}
+{"name": "scope", "passed": true, "detail": ""}
+{"name": "covariant_stress_symmetric", "passed": true, "detail": ""}
+{"name": "four_dimensional_divergence_0", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_1", "passed": false, "detail": "2*o(x)*Derivative(r(x), x)/r(x) - 2*tau(x)*Derivative(r(x), x)/r(x) - 2*o(x)*Derivative(N(x), x)/N(x)"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 204, in main
+    provenance(); geometric_identities(); weighted_source_identities(); transport_fixtures()
+                  ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 72, in geometric_identities
+    zero('four_dimensional_divergence_'+str(b),S.exp(-gamma*t)*div-targets[b])
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 35, in zero
+    check(name,value==0,value)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 31, in check
+    if not ok: raise AssertionError(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: four_dimensional_divergence_1
+
+{"status": "failed", "checks": 8, "unchanged_inputs": true}
+{"event": "start", "story": "S168 Ward sources and fast compatibility", "input_count": 449}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "retained_review_pinned", "passed": true, "detail": ""}
+{"name": "scope", "passed": true, "detail": ""}
+{"name": "covariant_stress_symmetric", "passed": true, "detail": ""}
+{"name": "four_dimensional_divergence_0", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_1", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_2", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_3", "passed": true, "detail": "0"}
+{"name": "original_trace", "passed": true, "detail": "0"}
+{"name": "original_orbit_trace", "passed": true, "detail": "0"}
+{"name": "source_work_contraction", "passed": true, "detail": "0"}
+{"name": "trace_source_normalization", "passed": true, "detail": "0"}
+{"name": "orbit_source_normalization", "passed": true, "detail": "0"}
+{"name": "characteristic_first_equation", "passed": true, "detail": "0"}
+{"name": "characteristic_second_equation", "passed": true, "detail": "0"}
+{"name": "energy_pair_norm", "passed": true, "detail": "0"}
+{"name": "boundary_flux", "passed": true, "detail": "0"}
+{"name": "Kruskal_coefficient_1", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_1", "passed": true, "detail": "-1"}
+{"name": "Kruskal_coefficient_2", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_2", "passed": true, "detail": "0"}
+{"name": "Kruskal_coefficient_3", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_3", "passed": true, "detail": "1"}
+{"name": "Kruskal_coefficient_5", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_5", "passed": true, "detail": "3"}
+{"name": "first_harmonic_pole", "passed": true, "detail": ""}
+{"name": "Hilbert_Gram_positive", "passed": true, "detail": ""}
+{"name": "energy_Gram_positive", "passed": true, "detail": ""}
+{"name": "shape_embedding_injective", "passed": true, "detail": ""}
+{"name": "Riesz_shape_source", "passed": true, "detail": "0"}
+{"name": "Riesz_mixed_adjoint", "passed": true, "detail": "0"}
+{"name": "full_original_source_work", "passed": true, "detail": "0"}
+{"name": "full_original_source_compatibility", "passed": true, "detail": "0"}
+{"name": "cross_form_adjoint", "passed": true, "detail": "0"}
+{"name": "shape_elimination", "passed": true, "detail": "0"}
+{"name": "omitted_induced_shape_source_changes_overlap", "passed": true, "detail": "-11939/12 + 4697*I/12"}
+{"name": "tracefree_nonzero_adjoint_overlap", "passed": true, "detail": "0"}
+{"name": "tracefree_incompatible_control", "passed": true, "detail": "236278/5"}
+{"name": "zero_shape_adjoint_control", "passed": false, "detail": ""}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 204, in main
+    provenance(); geometric_identities(); weighted_source_identities(); transport_fixtures()
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 131, in weighted_source_identities
+    check('zero_shape_adjoint_control',nu0==S.zeros(2,1))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\ward_sources_and_fast_compatibility.py", line 31, in check
+    if not ok: raise AssertionError(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: zero_shape_adjoint_control
+
+{"status": "failed", "checks": 41, "unchanged_inputs": true}
+{"event": "start", "story": "S168 Ward sources and fast compatibility", "input_count": 449}
+{"name": "predecessor_passed", "passed": true, "detail": ""}
+{"name": "predecessor_immutable", "passed": true, "detail": ""}
+{"name": "predecessor_hashes", "passed": true, "detail": "[]"}
+{"name": "retained_review_pinned", "passed": true, "detail": ""}
+{"name": "scope", "passed": true, "detail": ""}
+{"name": "covariant_stress_symmetric", "passed": true, "detail": ""}
+{"name": "four_dimensional_divergence_0", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_1", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_2", "passed": true, "detail": "0"}
+{"name": "four_dimensional_divergence_3", "passed": true, "detail": "0"}
+{"name": "original_trace", "passed": true, "detail": "0"}
+{"name": "original_orbit_trace", "passed": true, "detail": "0"}
+{"name": "source_work_contraction", "passed": true, "detail": "0"}
+{"name": "trace_source_normalization", "passed": true, "detail": "0"}
+{"name": "orbit_source_normalization", "passed": true, "detail": "0"}
+{"name": "characteristic_first_equation", "passed": true, "detail": "0"}
+{"name": "characteristic_second_equation", "passed": true, "detail": "0"}
+{"name": "energy_pair_norm", "passed": true, "detail": "0"}
+{"name": "boundary_flux", "passed": true, "detail": "0"}
+{"name": "Kruskal_coefficient_1", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_1", "passed": true, "detail": "-1"}
+{"name": "Kruskal_coefficient_2", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_2", "passed": true, "detail": "0"}
+{"name": "Kruskal_coefficient_3", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_3", "passed": true, "detail": "1"}
+{"name": "Kruskal_coefficient_5", "passed": true, "detail": "0"}
+{"name": "Kruskal_regular_5", "passed": true, "detail": "3"}
+{"name": "first_harmonic_pole", "passed": true, "detail": ""}
+{"name": "Hilbert_Gram_positive", "passed": true, "detail": ""}
+{"name": "energy_Gram_positive", "passed": true, "detail": ""}
+{"name": "shape_embedding_injective", "passed": true, "detail": ""}
+{"name": "Riesz_shape_source", "passed": true, "detail": "0"}
+{"name": "Riesz_mixed_adjoint", "passed": true, "detail": "0"}
+{"name": "full_original_source_work", "passed": true, "detail": "0"}
+{"name": "full_original_source_compatibility", "passed": true, "detail": "0"}
+{"name": "cross_form_adjoint", "passed": true, "detail": "0"}
+{"name": "shape_elimination", "passed": true, "detail": "0"}
+{"name": "omitted_induced_shape_source_changes_overlap", "passed": true, "detail": "-11939/12 + 4697*I/12"}
+{"name": "tracefree_nonzero_adjoint_overlap", "passed": true, "detail": "0"}
+{"name": "tracefree_incompatible_control", "passed": true, "detail": "236278/5"}
+{"name": "zero_shape_adjoint_control", "passed": true, "detail": ""}
+{"name": "zero_shape_adjoint_traceless_compatibility", "passed": true, "detail": "0"}
+{"name": "zero_shape_adjoint_traceful_overlap", "passed": true, "detail": "0"}
+{"name": "zero_shape_adjoint_traceful_incompatibility", "passed": true, "detail": ""}
+{"name": "outer_zero_flux_2_50", "passed": true, "detail": ""}
+{"name": "horizon_characteristic_2_50", "passed": true, "detail": ""}
+{"name": "horizon_amplitude_2_50", "passed": true, "detail": "8.0462533717591110775457132172766209908894640404202e-53"}
+{"name": "Ward_ODE_refinement_2_50", "passed": true, "detail": "0.063659686225525250310052530262934258350570968489726"}
+{"name": "Ward_ODE_final_error_2_50", "passed": true, "detail": "0.000000000023486827537704255502107348215388187667404257470771"}
+{"name": "outer_zero_flux_2_80", "passed": true, "detail": ""}
+{"name": "horizon_characteristic_2_80", "passed": true, "detail": ""}
+{"name": "horizon_amplitude_2_80", "passed": true, "detail": "0.0"}
+{"name": "Ward_ODE_refinement_2_80", "passed": true, "detail": "0.063659686225525250310052530262934258350570933437724490192433581140454443191936186"}
+{"name": "Ward_ODE_final_error_2_80", "passed": true, "detail": "0.000000000023486827537704255502107348215388187667404250458281801654014617806769773282020184"}
+{"name": "transport_precision_2", "passed": true, "detail": "7.2561222352793475246294885655002804066453973298141066530992220211746058706741611e-53"}
+{"name": "outer_zero_flux_4_50", "passed": true, "detail": ""}
+{"name": "horizon_characteristic_4_50", "passed": true, "detail": ""}
+{"name": "horizon_amplitude_4_50", "passed": true, "detail": "8.9433934119550485992459655892232238166875448121834e-52"}
+{"name": "Ward_ODE_refinement_4_50", "passed": true, "detail": "0.066239717592725414266775082599554567821747560522441"}
+{"name": "Ward_ODE_final_error_4_50", "passed": true, "detail": "0.000000025891066593015436806161504309319163929909512704312"}
+{"name": "outer_zero_flux_4_80", "passed": true, "detail": ""}
+{"name": "horizon_characteristic_4_80", "passed": true, "detail": ""}
+{"name": "horizon_amplitude_4_80", "passed": true, "detail": "0.0"}
+{"name": "Ward_ODE_refinement_4_80", "passed": true, "detail": "0.066239717592725414266775082599554567821747560412557834890371819350299771769848164"}
+{"name": "Ward_ODE_final_error_4_80", "passed": true, "detail": "0.000000025891066593015436806161504309319163929909509864519642102130829287774936485268658"}
+{"name": "transport_precision_4", "passed": true, "detail": "4.9507131981140017557967273868151692598670372667528524263192946634266881131094246e-52"}
+{"status": "passed", "checks": 66, "unchanged_inputs": true}
