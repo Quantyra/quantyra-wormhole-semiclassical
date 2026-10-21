@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-21",
+  "story": "S168",
+  "scope": "Global classical curvature-free form on the actual charged seed at sufficiently large real causal frequency",
+  "primary_sources": [
+    {
+      "author": "Gerald Teschl",
+      "url": "https://radon.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+      "version": "Second edition, author-hosted online text",
+      "reviewed": "Section 2.3, Theorems 2.13-2.14 and their proofs; section 6.5, Theorems 6.24-6.25 and relative-form argument",
+      "supports": "Established closed-form construction and relative-form/resolvent framework",
+      "does_not_supply": "The charged seed coefficient comparison, residual budget, full quantum inverse or physical stability",
+      "downloaded_hash_claimed": false
+    }
+  ],
+  "retained_inputs": [
+    "notes/stationary-centered-covariant-seed.md",
+    "notes/stationary-centered-exterior-source.md",
+    "notes/physical-curvature-reconstruction.md",
+    "notes/charged-curvature-free-shape-form.md",
+    "notes/curvature-free-all-frequency-bound.md",
+    "notes/local-coupled-frequency-polynomial.md"
+  ],
+  "ordinary_argument_completed_before_acceptance": true,
+  "strongest_retained_comparator": "The all-frequency normal classical bound E0-18P >= N/9; this milestone transfers it to all compact profiles on the charged exterior using bounded coefficient differences.",
+  "novelty_scope": "Seed-specific global classical coercivity with residual and physical-charge contacts; no novelty claimed for general form theory.",
+  "hard_step": "Control the first-order reconstruction-source difference in the dual energy norm and retain the nonzero classical trace residual.",
+  "physical_charge_kept_separate": true,
+  "full_angular_tower_retained_in_model": true,
+  "full_global_shape_inverse_proved": false,
+  "physical_stability_proved": false,
+  "goal_complete": false,
+  "development_runs": [
+    {
+      "phase": "pre-acceptance development",
+      "checker_source_utf8": "import numpy as np\nfrom scipy.integrate import solve_ivp, solve_bvp\nfrom numpy.polynomial.legendre import leggauss\n\npoly=np.polynomial.Polynomial([1.,0.,-1.])**6\ndef fixture(lam,d,rh,dl,Q,gamma,lo,hi):\n    qh=1+3*lam+d\n    mass=rh*(1+lam*rh**2+qh/rh**2-2*d/rh**3+d/rh**4)/2\n    L=hi+32/gamma\n    fun=lambda y,u:lam+u*u-2*mass*u**3+qh*u**4-2*d*u**5+d*u**6\n    geo=solve_ivp(fun,[0,L],[0.],rtol=2e-13,atol=2e-15,dense_output=True,max_step=.01)\n    def fields(y):\n        u=geo.sol(y)[0];r=1/u\n        F=lam*r*r+1-2*mass/r+qh/r**2-2*d/r**3+d/r**4\n        Fr=2*lam*r+2*mass/r**2-2*qh/r**3+6*d/r**4-4*d/r**5\n        R=-12*lam+4*d/r**5-6*d/r**6\n        Rr=-20*d/r**6+36*d/r**7\n        HR=2*R+r*Rr\n        Cv=24*lam+4/r**2-8*d/r**5+12*d/r**6\n        VK=F*(Fr/r-HR/6)\n        return r,F,Fr,R,Rr,Cv,VK\n    def shape(y,order=0):\n        x=(2*y-lo-hi)/(hi-lo)\n        return np.where(abs(x)<1,poly.deriv(order)(np.clip(x,-1,1))*(2/(hi-lo))**order,0.)\n    def src(y):\n        r,F,Fr,R,Rr,Cv,VK=fields(y)\n        return r*(-shape(y,2)+(gamma**2+F*Cv/2)*shape(y))\n    solutions=[]\n    values=[]\n    for left,tol,nquad in [(1e-4,1e-7,48),(5e-5,1e-10,96)]:\n        grid=np.unique(np.concatenate([np.geomspace(left,lo,75),np.linspace(lo,hi,180),np.linspace(hi,L,350)]))\n        def ode(y,state):\n            VK=fields(y)[-1]\n            return np.vstack([state[1],(VK+gamma**2)*state[0]+src(y)/3])\n        slope=3/left+(gamma**2+2*lam)*left/7\n        sol=solve_bvp(ode,lambda a,b:np.array([a[1]-slope*a[0],b[0]]),grid,np.zeros((2,len(grid))),tol=tol,max_nodes=50000)\n        print('BVP',gamma,tol,sol.success,len(sol.x))\n        solutions.append(sol)\n        zz,ww=leggauss(nquad)\n        edges=np.unique(np.concatenate([np.geomspace(left,lo,12),np.linspace(lo,hi,16),np.linspace(hi,L,40)]))\n        y=np.concatenate([(a+b)/2+(b-a)*zz/2 for a,b in zip(edges[:-1],edges[1:])])\n        weights=np.concatenate([(b-a)*ww/2 for a,b in zip(edges[:-1],edges[1:])])\n        r,F,Fr,R,Rr,Cv,VK=fields(y);v=shape(y);vy=shape(y,1)\n        q,qp=sol.sol(y);p=q/r;py=(qp+F*q/r)/r;w=r*v\n        Pp=-F/r;Wp=F/r-Fr/2\n        kinetic=r*r*(4*p*p*(6*Pp*Pp+4*Pp*Wp)+4*p*(12*Pp*py+4*Pp*vy+4*py*Wp)+12*py*py+8*py*vy+12*gamma**2*p*p+8*gamma**2*p*v)\n        potential=F/(r*r)*(2*r*r*(2*p+2*v)**2+6*(lam+dl)*r**4*(4*p+2*v)**2-2*Q*(2*v)**2)\n        direct=-np.dot(weights,kinetic+potential)/4\n        E=-3*np.dot(weights,src(y)*q)\n        Egradient=9*np.dot(weights,qp*qp+(VK+gamma**2)*q*q)\n        Tc=R+12*(lam+dl)\n        contact=np.dot(weights,F*((2*Tc+r*Rr/2)*q*q+2*Tc*q*w))\n        via=E/3-2*np.dot(weights,F*(1/r**2+3*(lam+dl)-Q/r**4)*w*w)-contact\n        G=np.dot(weights,r*r*(vy*vy+gamma**2*v*v))\n        values.append([float(direct),float(via),float(E),float(Egradient),float(contact),float(G)])\n    print('fixture',lam,d,rh,dl,Q,gamma,lo,hi,'values',values)\n    return values\n\nif __name__=='__main__':\n    for row in [(2.,.01,1.1,.02,7.2,4.,.08,.18),(3.,-.02,1.2,.01,10.3,12.,.35,.75),(4.,1e-14,1.05,1e-10,13.,32.,1.,1.8)]:fixture(*row)\n",
+      "source_sha256": "ef235f652942c454a49bf3ca623a36abdd52b8d23451f08417b6d798ed1566e5",
+      "terminal_exit_code": 0,
+      "observed_collocation_results": [
+        {
+          "gamma": 4,
+          "tolerance": 1e-07,
+          "success": true,
+          "nodes": 1977
+        },
+        {
+          "gamma": 4,
+          "tolerance": 1e-10,
+          "success": false,
+          "nodes": 33351
+        },
+        {
+          "gamma": 12,
+          "tolerance": 1e-07,
+          "success": true,
+          "nodes": 1460
+        },
+        {
+          "gamma": 12,
+          "tolerance": 1e-10,
+          "success": false,
+          "nodes": 38727
+        },
+        {
+          "gamma": 32,
+          "tolerance": 1e-07,
+          "success": true,
+          "nodes": 1281
+        },
+        {
+          "gamma": 32,
+          "tolerance": 1e-10,
+          "success": true,
+          "nodes": 8909
+        }
+      ],
+      "retention_note": "Source retained exactly; structured statuses transcribed from the tool-returned terminal output. Original stdout was not saved as a standalone raw file. No acceptance claim is based on the unsuccessful solves."
+    },
+    {
+      "phase": "pre-acceptance development, factored source profile",
+      "checker_source_utf8": "import numpy as np\nfrom scipy.integrate import solve_ivp, solve_bvp\nfrom numpy.polynomial.legendre import leggauss\n\npoly=np.polynomial.Polynomial([1.,0.,-1.])**6\ndef fixture(lam,d,rh,dl,Q,gamma,lo,hi):\n    qh=1+3*lam+d\n    mass=rh*(1+lam*rh**2+qh/rh**2-2*d/rh**3+d/rh**4)/2\n    L=hi+32/gamma\n    fun=lambda y,u:lam+u*u-2*mass*u**3+qh*u**4-2*d*u**5+d*u**6\n    geo=solve_ivp(fun,[0,L],[0.],rtol=2e-13,atol=2e-15,dense_output=True,max_step=.01)\n    def fields(y):\n        u=geo.sol(y)[0];r=1/u\n        F=lam*r*r+1-2*mass/r+qh/r**2-2*d/r**3+d/r**4\n        Fr=2*lam*r+2*mass/r**2-2*qh/r**3+6*d/r**4-4*d/r**5\n        R=-12*lam+4*d/r**5-6*d/r**6\n        Rr=-20*d/r**6+36*d/r**7\n        HR=2*R+r*Rr\n        Cv=24*lam+4/r**2-8*d/r**5+12*d/r**6\n        VK=F*(Fr/r-HR/6)\n        return r,F,Fr,R,Rr,Cv,VK\n    def shape(y,order=0):\n        x=(2*y-lo-hi)/(hi-lo)\n        z=np.clip(x,-1,1);u=1-z*z\n        val=[u**6,-12*z*u**5,-12*u**4*(1-11*z*z)][order]\n        return np.where(abs(x)<1,val*(2/(hi-lo))**order,0.)\n    def src(y):\n        r,F,Fr,R,Rr,Cv,VK=fields(y)\n        return r*(-shape(y,2)+(gamma**2+F*Cv/2)*shape(y))\n    solutions=[]\n    values=[]\n    for left,tol,nquad in [(1e-4,1e-7,48),(5e-5,1e-10,96)]:\n        grid=np.unique(np.concatenate([np.geomspace(left,lo,75),np.linspace(lo,hi,180),np.linspace(hi,L,350)]))\n        def ode(y,state):\n            VK=fields(y)[-1]\n            return np.vstack([state[1],(VK+gamma**2)*state[0]+src(y)/3])\n        slope=3/left+(gamma**2+2*lam)*left/7\n        sol=solve_bvp(ode,lambda a,b:np.array([a[1]-slope*a[0],b[0]]),grid,np.zeros((2,len(grid))),tol=tol,max_nodes=50000)\n        print('BVP',gamma,tol,sol.success,len(sol.x))\n        solutions.append(sol)\n        zz,ww=leggauss(nquad)\n        edges=np.unique(np.concatenate([np.geomspace(left,lo,12),np.linspace(lo,hi,16),np.linspace(hi,L,40)]))\n        y=np.concatenate([(a+b)/2+(b-a)*zz/2 for a,b in zip(edges[:-1],edges[1:])])\n        weights=np.concatenate([(b-a)*ww/2 for a,b in zip(edges[:-1],edges[1:])])\n        r,F,Fr,R,Rr,Cv,VK=fields(y);v=shape(y);vy=shape(y,1)\n        q,qp=sol.sol(y);p=q/r;py=(qp+F*q/r)/r;w=r*v\n        Pp=-F/r;Wp=F/r-Fr/2\n        kinetic=r*r*(4*p*p*(6*Pp*Pp+4*Pp*Wp)+4*p*(12*Pp*py+4*Pp*vy+4*py*Wp)+12*py*py+8*py*vy+12*gamma**2*p*p+8*gamma**2*p*v)\n        potential=F/(r*r)*(2*r*r*(2*p+2*v)**2+6*(lam+dl)*r**4*(4*p+2*v)**2-2*Q*(2*v)**2)\n        direct=-np.dot(weights,kinetic+potential)/4\n        E=-3*np.dot(weights,src(y)*q)\n        Egradient=9*np.dot(weights,qp*qp+(VK+gamma**2)*q*q)\n        Tc=R+12*(lam+dl)\n        contact=np.dot(weights,F*((2*Tc+r*Rr/2)*q*q+2*Tc*q*w))\n        via=E/3-2*np.dot(weights,F*(1/r**2+3*(lam+dl)-Q/r**4)*w*w)-contact\n        G=np.dot(weights,r*r*(vy*vy+gamma**2*v*v))\n        values.append([float(direct),float(via),float(E),float(Egradient),float(contact),float(G)])\n    print('fixture',lam,d,rh,dl,Q,gamma,lo,hi,'values',values)\n    return values\n\nif __name__=='__main__':\n    for row in [(2.,.01,1.1,.02,7.2,4.,.08,.18),(3.,-.02,1.2,.01,10.3,12.,.35,.75),(4.,1e-14,1.05,1e-10,13.,32.,1.,1.8)]:fixture(*row)\n",
+      "source_sha256": "75cff85ba21a200e229175439feb542161049f472c695b213f8b27a3ffc50624",
+      "retention_note": "Source retained exactly; structured statuses transcribed from tool-returned terminal output. Original stdout was not saved as a standalone raw file. Factored profile evaluation did not eliminate fine-collocation failures. Their numerical cause is not certified; no acceptance claim uses the unsuccessful solves.",
+      "terminal_exit_code": 0,
+      "observed_collocation_results": [
+        {
+          "gamma": 4,
+          "tolerance": 1e-07,
+          "success": true,
+          "nodes": 1977
+        },
+        {
+          "gamma": 4,
+          "tolerance": 1e-10,
+          "success": false,
+          "nodes": 32807
+        },
+        {
+          "gamma": 12,
+          "tolerance": 1e-07,
+          "success": true,
+          "nodes": 1460
+        },
+        {
+          "gamma": 12,
+          "tolerance": 1e-10,
+          "success": false,
+          "nodes": 42301
+        },
+        {
+          "gamma": 32,
+          "tolerance": 1e-07,
+          "success": true,
+          "nodes": 1281
+        },
+        {
+          "gamma": 32,
+          "tolerance": 1e-10,
+          "success": true,
+          "nodes": 8910
+        }
+      ]
+    }
+  ],
+  "acceptance_protocol_decision": "Freeze successful-solve requirements at 1e-6 and 1e-8 collocation tolerances, 48/96 quadrature nodes and left endpoints 1e-4/5e-5. Require independent normalized action and energy identity errors and action refinement below 2e-7. This protocol is selected before the acceptance run; the earlier 1e-10 exploratory solves are not accepted."
+}
