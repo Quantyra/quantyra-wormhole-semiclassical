@@ -1,0 +1,40 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {
+      "title": "NIST DLMF, modified Bessel integral representations",
+      "url": "https://dlmf.nist.gov/10.32",
+      "reviewed": "Positive-real integral representations (10.32.9)-(10.32.10), underlying the retained flat Dirac envelope.",
+      "use": "Absolute Born-series majorant; the tagged half-plane convolution and corner estimates are derived here."
+    },
+    {
+      "title": "Vassilevich, Heat kernel expansion: user's manual",
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "reviewed": "Heat expansion (2.21), zeta action (2.28)-(2.32), and mixed boundary coefficient (5.33).",
+      "use": "Common subtraction and derivative-weight classification. Continuity of the finite corner anchor is justified on a compact smooth half-domain/probe family, not on the Lipschitz double or an arbitrary rough family."
+    }
+  ],
+  "source_access": "Primary formulas opened directly; no downloaded-byte digest claimed.",
+  "retained_inputs": [
+    "notes/moving-cut-constant-quantum-row.md",
+    "notes/moving-cut-global-quantum-locality.md",
+    "notes/energy-domain-and-chart-contact.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/finite-cut-normal-shape-limit.md",
+    "notes/stationary-exterior-boundary-weyl.md"
+  ],
+  "strongest_comparator": "The previous exact even-mass representation retains a positive-cut linear cusp but supplies no two-point boundary estimate. The limiting geodesic-seam comparison cannot directly be applied to that cusp.",
+  "hardest_step": "Separate the reflected mass from a smooth continuation, keep its odd linear and cubic tags through the full resolvent identity, and control the resulting corner finite part and its contact on H2 shapes without a pointwise second-derivative trace.",
+  "new_consequence": "The actual reflected-boundary correction relative to the specified smooth-continuation representative has an ordinary moving-cut limit after the full constant row is allocated. Its corner contacts vanish with the first-derivative trace; this contribution cannot supply a persistent oscillation.",
+  "remaining_quantum_gap": "The smooth-continuation representative is not yet identified with the normal model. Density factors, the smooth local comparison, fixed derivative contacts and all local shape partners remain to be combined.",
+  "regulator_contract": "Original paired domain, Euclidean period, mass chart, angular tower and common subtraction. The smooth continuation is a comparison representative, not a new physical state or boundary prescription. The actual cusp and finite corner contact are retained.",
+  "smooth_local_to_normal_comparison_proved": false,
+  "physical_fast_branch_excluded": false,
+  "physical_stability_proved": false,
+  "verification_scope": "Bessel and Born envelopes, tagged convolution integrals, logarithmic corner finite parts against independent direct subtraction, ordinary cut convergence and concentrated H2 remainder tests. No full charged two-point kernel evaluation or formal continuum certification is claimed.",
+  "formal_verification": false,
+  "initial_diagnostic_failure": "The first frozen run raised a complex-ordering exception in tagged-convolution quadrature after 35 passed checks. Reproduction showed endpoint cosine values slightly below zero at finite precision. The exact substitution cos(theta)=1-w^2 keeps the incomplete-gamma arguments positive and removes the endpoint singularity. Preserve the original run and sources; do not project complex results or change tolerances.",
+  "subagents_used": false
+}
