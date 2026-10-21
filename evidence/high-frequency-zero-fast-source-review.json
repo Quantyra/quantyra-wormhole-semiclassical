@@ -1,0 +1,33 @@
+{
+  "story": "S168",
+  "date": "2026-10-21",
+  "ordinary_argument_completed_before_acceptance": true,
+  "primary_sources": [
+    {"title": "NIST DLMF 10.28, Wronskians and Cross-Products", "url": "https://dlmf.nist.gov/10.28", "reviewed": "10.28.2", "use": "Wronskian sign and normalization for I_(ik), K_(ik)."},
+    {"title": "NIST DLMF 10.45, Functions of Imaginary Order", "url": "https://dlmf.nist.gov/10.45", "reviewed": "Imaginary-order equation and small-argument behavior", "use": "Both outer branches are of order sqrt(y), with nonzero oscillatory traces."},
+    {"title": "NIST DLMF 10.40, Asymptotic Expansions for Large Argument", "url": "https://dlmf.nist.gov/10.40", "reviewed": "10.40.1-10.40.2 with fixed complex order", "use": "Finite exponential Green-kernel bounds at the horizon for each fixed k; no uniform large-order numerical constant is claimed."}
+  ],
+  "source_access": "Primary NIST formulas opened directly; no downloaded-byte digest claimed.",
+  "retained_inputs": [
+    "notes/physical-curvature-source-and-boundary-range.md",
+    "notes/explicit-curvature-metric-source.md",
+    "notes/physical-curvature-reconstruction.md",
+    "notes/global-thermal-shape-inverse.md",
+    "notes/thermal-curvature-shape-schur.md",
+    "notes/coupled-thermal-boundary-index.md",
+    "notes/ward-sources-and-fast-compatibility.md",
+    "notes/causal-preparation-source-map.md"
+  ],
+  "strongest_comparator": "The retained full coupled operator has index -1 at each admitted thermal frequency, but its kernel and precise cokernel dimension were not determined. The mixed-form and reconstruction estimates already provide uniform bounds once their frequency dependence is retained.",
+  "hardest_step": "Combine those bounds into one uniform strong-operator remainder, construct a scaled compatible inverse for the minimal inverse-square operator, and control the full non-self-adjoint perturbation without choosing a self-adjoint fast phase or discarding shape feedback.",
+  "new_consequence": "Above a finite uncalibrated threshold the actual auxiliary two-zero coupled operator is injective with exactly one compatibility condition and an O(gamma^-2) inverse on its range. A convergent Neumann formula fixes the normalized adjoint vector and exposes the residual of any projected solve.",
+  "scope_boundary": "Only sufficiently high admitted Matsubara frequencies on the auxiliary minimal curvature/Friedrichs shape domain are covered. Neither that domain's physical admissibility nor an effective-theory frequency window is certified. No continuous causal inverse, exact nonlinear geometry or physical stability theorem is established.",
+  "regulator_contract": "Keep the original state, action, clock, flux, full angular response and all residual contacts. No new finite coefficient, gravitational boundary phase, physical source projection or order reduction is adopted.",
+  "high_frequency_auxiliary_injectivity_proved": true,
+  "single_compatibility_condition_above_threshold": true,
+  "actual_numeric_threshold_certified": false,
+  "physical_stability_proved": false,
+  "verification_scope": "Exact inverse-square scaling and perturbation identities, independent Bessel Green integrals, compatible moments and Wronskians, and finite-rank perturbations of an unchanged infinite shift tail. Fixtures do not evaluate the charged Dirac kernel or certify benchmark constants.",
+  "formal_verification": false,
+  "subagents_used": false
+}
