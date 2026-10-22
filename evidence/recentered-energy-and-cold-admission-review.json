@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-22",
+  "story": "S169",
+  "scope": "Bound the actual coupled reference response in its physical energy unit and execute a finite-reference cold admission test. No pointwise correction lower bound or nonlinear solution.",
+  "retained_inputs": [
+    "notes/recentered-physical-endpoint.md",
+    "notes/recentered-reference-inverse.md",
+    "notes/recentered-mixed-form.md",
+    "notes/recentered-quantum-tt-form.md",
+    "notes/recentered-r2-scalar-boundary.md",
+    "notes/stationary-centered-exterior-source.md",
+    "notes/stationary-weyl-radial-sources.md",
+    "notes/stationary-reference-nonbolt-stress.md",
+    "notes/finite-r2-scalar-window.md"
+  ],
+  "strongest_comparator": "The retained actual energy inverse is bounded by one but had no substituted full-source energy allowance. The previous normal Volterra comparison is not the actual quantum inverse. Use the actual source and form, then test admission with an actual regular scalar field.",
+  "new_claim": "The coupled reference linear response has E<1.44e-10. A cold-uniform TT Hardy lift bound avoids an artificial inverse-temperature factor. An actual finite-reference scalar test proves any generic energy-to-bolt embedding constant exceeds 2.6e15, whereas the current allowance would require <=625/18 for the design target.",
+  "hypothesis_audit": [
+    "Recheck old fixed-reference source hypotheses on the new analytic d=0 RN geometry, actual thermal interval, canonical scales and full paired domains.",
+    "Keep log(mu0 B)<1e-8 and the common restored angular finite parts; do not assign old product-centered Gamma_rest to the new action.",
+    "Subtract only the vacuum already matched by the local RN tensor; keep complete canonical, LLL, Weyl and trace stresses.",
+    "Use current/Ward conservation for the first source pairing with a return diffeomorphism; retain all second-variation contacts in the Hessian.",
+    "The energy bound is for the actual coupled inverse and does not quantify the mass trace or a physical C5 norm.",
+    "The cold field is an admissible infinitesimal test, not the actual correction. Its form is evaluated with the exact curvature coefficient and finite temperature.",
+    "Reject a generic upper certificate, not the construction; a source-specific cold response may still be small."
+  ],
+  "external_sources_read": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3#S5.SS3",
+      "locator": "Section 5.3, complementary mixed data (5.27)-(5.28) and complete local coefficient (5.33)",
+      "use": "Check the boundary conventions retained by the reused full-source proof.",
+      "limitation": "The local heat coefficient is not a state-dependent source bound or a nonlinear derivative estimate."
+    }
+  ],
+  "protocol": {
+    "TT_lift_fixture_digits": 80,
+    "actual_cold_field_digits": [100, 150],
+    "prepared_zi": [".25", ".265", ".28"],
+    "cross_precision_tolerance": "1e-55",
+    "actual_temperature_relative_tolerance": "1e-80",
+    "cold_integral": "Exact rational RN horizon polynomial, with analytic cancellation before quadrature",
+    "independent_fixture": "TT integral lift compared with its exponential-integral expression and radial L2 norms",
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "actual_quantum_source_sampled": false,
+    "continuum_source_theorem_machine_verified": false,
+    "lean_selected": false
+  },
+  "admission_norm_inverse_quantified": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "goal_complete": false
+}
