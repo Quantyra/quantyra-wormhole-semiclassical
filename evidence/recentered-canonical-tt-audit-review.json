@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "story": "S169",
+  "scope": "Exact canonical quotient, dated regularity correction, mixed AdS boundary limit and recentered local TT comparison budget; full construction incomplete.",
+  "retained_inputs": [
+    "notes/recentered-r2-scalar-boundary.md",
+    "notes/charged-r2-trace-block.md",
+    "notes/stationary-shape-logarithmic-response.md",
+    "notes/stationary-centered-canonical-response.md",
+    "notes/finite-outer-admission-and-response.md",
+    "notes/stationary-exterior-boundary-weyl.md",
+    "notes/stationary-same-source-boundary-charge.md",
+    "notes/stationary-global-tt-reduction.md",
+    "notes/stationary-weighted-tt-inverse.md",
+    "notes/stationary-centered-covariant-seed.md",
+    "notes/construction-feasibility-audit.md"
+  ],
+  "strongest_applicable_comparators": [
+    "The retained global TT theorem already supplies the classical positive form and nonlocal TT constraint; specialize its proof to recentered RN with d=0 and G_eff, checking the thermal guards.",
+    "The existing actual-domain outer response already permits weighted Y^4 log Y; no new low-regularity theorem follows from the scalar tail.",
+    "The complete boundary Weyl polynomial already contains the finite-cut normal-smearing rows. Their new application must retain radial metric variation.",
+    "The old quantum TT lower bound is for another background and cannot be imported as eta_Q on this construction."
+  ],
+  "new_claims": [
+    "Local square contribution has exact TT Hessian -128 pi beta_T c_R integral r^2 (Z/r^4)^2 xi^2, bounded by 7.07e-8 E_eff on the selected recentered reference.",
+    "The full local mixed boundary term vanishes on scalar Y^4 log^p and fixed-source shape Y^3+Y^4 log^p tangents, including the radial logarithm.",
+    "The previous closed-C4 warning does not imply rebuilding the canonical kernel framework; dated correction preserves the original artifacts."
+  ],
+  "hardest_unclosed_steps": [
+    "Actual negative finite quantum/contact TT form <=1/4 E_eff, with closed physical boundary domain and full angular subtraction.",
+    "Actual local mixed Schur product <=3/8 and reference-to-finite defect <=1/4.",
+    "Full source, metric admission, nonlinear map, signed compatibility, physical matching, validity and all-sector stability."
+  ],
+  "verification_role": "Symbolic variations, rational bounds and independent finite-cut/radial quadrature diagnostics support the ordinary proof. They do not evaluate the quantum spectral kernel or establish continuum estimates by passing tests.",
+  "protocol": {
+    "digits": [60, 90],
+    "radial_relative_tolerance": "1e-40",
+    "boundary_central_steps": ["1e-5", "5e-6"],
+    "boundary_scaled_error_tolerance": "1e-8",
+    "boundary_refinement_ratio_interval": [".24", ".26"],
+    "source_freeze_before_run": true,
+    "preserve_all_runs_and_snapshots": true,
+    "lean_selected": false
+  },
+  "physical_coupled_inverse_proved": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "goal_complete": false
+}
