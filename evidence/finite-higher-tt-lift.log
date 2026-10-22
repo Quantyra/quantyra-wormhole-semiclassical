@@ -1,0 +1,307 @@
+{"event": "start", "story": "S167 higher physical TT lift", "input_count": 601}
+{"name": "prior_radius_source_passed", "passed": true, "detail": ""}
+{"name": "all_prior_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "low_return_vector_guard", "passed": true, "detail": ""}
+{"name": "low_Psi_guard", "passed": true, "detail": ""}
+{"name": "low_full_tensor_guard", "passed": true, "detail": ""}
+{"name": "gradient_log_radius_guard", "passed": true, "detail": ""}
+{"name": "finite_intrinsic_Psi_equation", "passed": true, "detail": ""}
+{"name": "finite_intrinsic_divergence", "passed": true, "detail": ""}
+{"name": "returned_disk_radius", "passed": true, "detail": ""}
+{"name": "returned_disk_shape", "passed": true, "detail": ""}
+{"name": "intrinsic_lift_component_0", "passed": true, "detail": ""}
+{"name": "intrinsic_lift_component_1", "passed": true, "detail": ""}
+{"name": "intrinsic_lift_component_2", "passed": true, "detail": ""}
+{"name": "intrinsic_lift_component_3", "passed": true, "detail": ""}
+{"name": "quadratic_q_term_is_nonzero", "passed": true, "detail": ""}
+{"name": "independent_4D_Ricci", "passed": true, "detail": ""}
+{"name": "independent_4D_TT_equation", "passed": true, "detail": ""}
+{"name": "independent_4D_angular_divergence_1", "passed": true, "detail": ""}
+{"name": "independent_4D_angular_divergence_2", "passed": false, "detail": ""}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 208, in main
+    inputs();intrinsic_identities();independent_four_geometry();co=coefficient_arrays();lift_matrices(*co);independent_integrals()
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 76, in independent_four_geometry
+    for j in range(1,4):zero('independent_4D_angular_divergence_'+str(j),div[j])
+                        ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 28, in zero
+    def zero(name,value):check(name,S.simplify(value)==0)
+                         ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 26, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: independent_4D_angular_divergence_2
+
+{"status": "failed", "checks": 19, "unchanged_inputs": true}
+{"event": "start", "story": "S167 higher physical TT lift", "input_count": 601}
+{"name": "prior_radius_source_passed", "passed": true, "detail": ""}
+{"name": "all_prior_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "low_return_vector_guard", "passed": true, "detail": ""}
+{"name": "low_Psi_guard", "passed": true, "detail": ""}
+{"name": "low_full_tensor_guard", "passed": true, "detail": ""}
+{"name": "gradient_log_radius_guard", "passed": true, "detail": ""}
+{"name": "finite_intrinsic_Psi_equation", "passed": true, "detail": "0"}
+{"name": "finite_intrinsic_divergence", "passed": true, "detail": "0"}
+{"name": "returned_disk_radius", "passed": true, "detail": "0"}
+{"name": "returned_disk_shape", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_0", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_1", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_2", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_3", "passed": true, "detail": "0"}
+{"name": "quadratic_q_term_is_nonzero", "passed": true, "detail": ""}
+{"name": "independent_4D_Ricci", "passed": true, "detail": "0"}
+{"name": "independent_4D_TT_equation", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_1", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_2", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_3", "passed": true, "detail": "0"}
+{"name": "independent_4D_vector_divergence", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_0", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_1", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_2", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_3", "passed": true, "detail": "0"}
+{"name": "frozen_geometry_reconciled_M0", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_M1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_C0", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_C1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_J1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_CW1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_Sc1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_S1", "passed": true, "detail": ""}
+{"name": "available_metric_orders_suffice", "passed": true, "detail": ""}
+{"name": "all_full_coefficient_arrays_positive", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_0", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_0", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_1", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_1", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_2", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_2", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_3", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_3", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_4", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_4", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_5", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_5", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_6", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_6", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_7", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_7", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_8", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_8", "passed": true, "detail": ""}
+{"name": "lift_matrices_nonnegative", "passed": true, "detail": ""}
+{"name": "input_order_triangular", "passed": true, "detail": ""}
+{"name": "vector_gain_one_derivative", "passed": true, "detail": ""}
+{"name": "exact_column_sum_bound", "passed": true, "detail": ""}
+{"name": "upward_L8_enclosure", "passed": true, "detail": "{'L8': '2.31563396773333346e+43', 'power': 44}"}
+{"name": "independent_tensor_induced_norm", "passed": true, "detail": ""}
+{"name": "independent_return_induced_norm", "passed": true, "detail": ""}
+{"name": "upward_mixed_row_enclosure", "passed": true, "detail": ""}
+{"name": "equal_split_source_budgets", "passed": true, "detail": ""}
+{"name": "manufactured_TT_polynomial_1/10_1/5", "passed": false, "detail": "x*(-x**8 - x**4 - x**2 - 1)/625000"}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 209, in main
+    inputs();intrinsic_identities();independent_four_geometry();co=coefficient_arrays();lift_matrices(*co);independent_integrals()
+                                                                                                           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 178, in independent_integrals
+    configs=[(F(1,10),F(1,5)),(F(7,20),F(1,7))];polys={key:manufactured_polynomials(S.Rational(key[0]),S.Rational(key[1])) for key in configs};records=[]
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 167, in manufactured_polynomials
+    zero('manufactured_TT_polynomial_'+str(alpha)+'_'+str(beta),S.diff(bp,x)-2*k*x*bp+2*(aa+rr)*bp+2*(aa-rr)*cp)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 29, in zero
+    simplified=S.simplify(S.expand_trig(value));check(name,simplified==0,simplified)
+                                                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 26, in check
+    if not ok:raise AssertionError(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: manufactured_TT_polynomial_1/10_1/5
+
+{"status": "failed", "checks": 63, "unchanged_inputs": true}
+{"event": "start", "story": "S167 higher physical TT lift", "input_count": 601}
+{"name": "prior_radius_source_passed", "passed": true, "detail": ""}
+{"name": "all_prior_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "low_return_vector_guard", "passed": true, "detail": ""}
+{"name": "low_Psi_guard", "passed": true, "detail": ""}
+{"name": "low_full_tensor_guard", "passed": true, "detail": ""}
+{"name": "gradient_log_radius_guard", "passed": true, "detail": ""}
+{"name": "finite_intrinsic_Psi_equation", "passed": true, "detail": "0"}
+{"name": "finite_intrinsic_divergence", "passed": true, "detail": "0"}
+{"name": "returned_disk_radius", "passed": true, "detail": "0"}
+{"name": "returned_disk_shape", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_0", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_1", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_2", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_3", "passed": true, "detail": "0"}
+{"name": "quadratic_q_term_is_nonzero", "passed": true, "detail": ""}
+{"name": "independent_4D_Ricci", "passed": true, "detail": "0"}
+{"name": "independent_4D_TT_equation", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_1", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_2", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_3", "passed": true, "detail": "0"}
+{"name": "independent_4D_vector_divergence", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_0", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_1", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_2", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_3", "passed": true, "detail": "0"}
+{"name": "frozen_geometry_reconciled_M0", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_M1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_C0", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_C1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_J1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_CW1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_Sc1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_S1", "passed": true, "detail": ""}
+{"name": "available_metric_orders_suffice", "passed": true, "detail": ""}
+{"name": "all_full_coefficient_arrays_positive", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_0", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_0", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_1", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_1", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_2", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_2", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_3", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_3", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_4", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_4", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_5", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_5", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_6", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_6", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_7", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_7", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_8", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_8", "passed": true, "detail": ""}
+{"name": "lift_matrices_nonnegative", "passed": true, "detail": ""}
+{"name": "input_order_triangular", "passed": true, "detail": ""}
+{"name": "vector_gain_one_derivative", "passed": true, "detail": ""}
+{"name": "exact_column_sum_bound", "passed": true, "detail": ""}
+{"name": "upward_L8_enclosure", "passed": true, "detail": "{'L8': '2.31563396773333346e+43', 'power': 44}"}
+{"name": "independent_tensor_induced_norm", "passed": true, "detail": ""}
+{"name": "independent_return_induced_norm", "passed": true, "detail": ""}
+{"name": "upward_mixed_row_enclosure", "passed": true, "detail": ""}
+{"name": "equal_split_source_budgets", "passed": true, "detail": ""}
+{"name": "manufactured_TT_polynomial_1/10_1/5", "passed": true, "detail": "0"}
+{"name": "manufactured_Psi_polynomial_1/10_1/5", "passed": true, "detail": "0"}
+{"name": "manufactured_not_seed_identity_1/10_1/5", "passed": true, "detail": ""}
+{"name": "manufactured_regular_tensor_bolt_1/10_1/5", "passed": true, "detail": ""}
+Traceback (most recent call last):
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 209, in main
+    inputs();intrinsic_identities();independent_four_geometry();co=coefficient_arrays();lift_matrices(*co);independent_integrals()
+                                                                                                           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 178, in independent_integrals
+    configs=[(F(1,10),F(1,5)),(F(7,20),F(1,7))];polys={key:manufactured_polynomials(S.Rational(key[0]),S.Rational(key[1])) for key in configs};records=[]
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 172, in manufactured_polynomials
+    return {name:coefficients(v) for name,v in [('Y',yp),('Psi',pp),('c',cp),('b',bp),('b_plus_c',S.expand(bp+cp))]}
+                 ~~~~~~~~~~~~^^^
+  File "C:\Users\dfred\Desktop\Projects\IGH\quantyra-wormhole-semiclassical\checks\finite_higher_tt_lift.py", line 171, in coefficients
+    def coefficients(v):return [F(str(v.coeff(x,j))) for j in range(S.degree(v,x)+1)]
+                                ~^^^^^^^^^^^^^^^^^^^
+  File "fractions.py", line 256, in __new__
+ValueError: Invalid literal for Fraction: 'x**8/1000000 + x**4/1000000 + x**2/1000000 + 1/1000000'
+
+{"status": "failed", "checks": 66, "unchanged_inputs": true}
+{"event": "start", "story": "S167 higher physical TT lift", "input_count": 601}
+{"name": "prior_radius_source_passed", "passed": true, "detail": ""}
+{"name": "all_prior_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "low_return_vector_guard", "passed": true, "detail": ""}
+{"name": "low_Psi_guard", "passed": true, "detail": ""}
+{"name": "low_full_tensor_guard", "passed": true, "detail": ""}
+{"name": "gradient_log_radius_guard", "passed": true, "detail": ""}
+{"name": "finite_intrinsic_Psi_equation", "passed": true, "detail": "0"}
+{"name": "finite_intrinsic_divergence", "passed": true, "detail": "0"}
+{"name": "returned_disk_radius", "passed": true, "detail": "0"}
+{"name": "returned_disk_shape", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_0", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_1", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_2", "passed": true, "detail": "0"}
+{"name": "intrinsic_lift_component_3", "passed": true, "detail": "0"}
+{"name": "quadratic_q_term_is_nonzero", "passed": true, "detail": ""}
+{"name": "independent_4D_Ricci", "passed": true, "detail": "0"}
+{"name": "independent_4D_TT_equation", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_1", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_2", "passed": true, "detail": "0"}
+{"name": "independent_4D_angular_divergence_3", "passed": true, "detail": "0"}
+{"name": "independent_4D_vector_divergence", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_0", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_1", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_2", "passed": true, "detail": "0"}
+{"name": "independent_4D_disk_return_3", "passed": true, "detail": "0"}
+{"name": "frozen_geometry_reconciled_M0", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_M1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_C0", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_C1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_J1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_CW1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_Sc1", "passed": true, "detail": ""}
+{"name": "frozen_geometry_reconciled_S1", "passed": true, "detail": ""}
+{"name": "available_metric_orders_suffice", "passed": true, "detail": ""}
+{"name": "all_full_coefficient_arrays_positive", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_0", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_0", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_1", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_1", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_2", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_2", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_3", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_3", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_4", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_4", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_5", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_5", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_6", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_6", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_7", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_7", "passed": true, "detail": ""}
+{"name": "curvature_Gaffney_square_root_8", "passed": true, "detail": ""}
+{"name": "ordered_commutator_count_8", "passed": true, "detail": ""}
+{"name": "lift_matrices_nonnegative", "passed": true, "detail": ""}
+{"name": "input_order_triangular", "passed": true, "detail": ""}
+{"name": "vector_gain_one_derivative", "passed": true, "detail": ""}
+{"name": "exact_column_sum_bound", "passed": true, "detail": ""}
+{"name": "upward_L8_enclosure", "passed": true, "detail": "{'L8': '2.31563396773333346e+43', 'power': 44}"}
+{"name": "independent_tensor_induced_norm", "passed": true, "detail": ""}
+{"name": "independent_return_induced_norm", "passed": true, "detail": ""}
+{"name": "upward_mixed_row_enclosure", "passed": true, "detail": ""}
+{"name": "equal_split_source_budgets", "passed": true, "detail": ""}
+{"name": "manufactured_TT_polynomial_1/10_1/5", "passed": true, "detail": "0"}
+{"name": "manufactured_Psi_polynomial_1/10_1/5", "passed": true, "detail": "0"}
+{"name": "manufactured_not_seed_identity_1/10_1/5", "passed": true, "detail": ""}
+{"name": "manufactured_regular_tensor_bolt_1/10_1/5", "passed": true, "detail": ""}
+{"name": "manufactured_TT_polynomial_7/20_1/7", "passed": true, "detail": "0"}
+{"name": "manufactured_Psi_polynomial_7/20_1/7", "passed": true, "detail": "0"}
+{"name": "manufactured_not_seed_identity_7/20_1/7", "passed": true, "detail": ""}
+{"name": "manufactured_regular_tensor_bolt_7/20_1/7", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_1/10_1/5_0.0_60_0", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.0_60_3", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.0_60_8", "passed": true, "detail": "2.06729794408954379e-167"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_1/10_1/5_0.0_60", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_1/10_1/5_0.3_60_0", "passed": true, "detail": "2.96736492054993711e-67"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.3_60_3", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.3_60_8", "passed": true, "detail": "0.0"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_1/10_1/5_0.3_60", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_7/20_1/7_0.0_60_0", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.0_60_3", "passed": true, "detail": "8.78516495269210269e-83"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.0_60_8", "passed": true, "detail": "2.06729794408954379e-167"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_7/20_1/7_0.0_60", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_7/20_1/7_0.3_60_0", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.3_60_3", "passed": true, "detail": "7.91297312146649896e-67"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.3_60_8", "passed": true, "detail": "0.0"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_7/20_1/7_0.3_60", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_1/10_1/5_0.0_90_0", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.0_90_3", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.0_90_8", "passed": true, "detail": "5.14593067598406374e-227"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_1/10_1/5_0.0_90", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_1/10_1/5_0.3_90_0", "passed": true, "detail": "5.85209544336524791e-98"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.3_90_3", "passed": true, "detail": "7.80279392448699721e-98"}
+{"name": "independent_fixed_integrals_1/10_1/5_0.3_90_8", "passed": true, "detail": "0.0"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_1/10_1/5_0.3_90", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_7/20_1/7_0.0_90_0", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.0_90_3", "passed": true, "detail": "1.3860546354193199e-112"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.0_90_8", "passed": true, "detail": "1.71531022532802125e-227"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_7/20_1/7_0.0_90", "passed": true, "detail": ""}
+{"name": "independent_fixed_integrals_7/20_1/7_0.3_90_0", "passed": true, "detail": "5.85209544336524791e-98"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.3_90_3", "passed": true, "detail": "0.0"}
+{"name": "independent_fixed_integrals_7/20_1/7_0.3_90_8", "passed": true, "detail": "0.0"}
+{"name": "omitted_Ricci_or_quadratic_q_fails_7/20_1/7_0.3_90", "passed": true, "detail": ""}
+{"status": "passed", "checks": 102, "unchanged_inputs": true}
