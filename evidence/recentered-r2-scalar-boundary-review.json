@@ -1,0 +1,38 @@
+{
+  "story": "S169",
+  "date": "2026-10-22",
+  "scope": "Exact quantum-vacuum-centered radial trace source/response; complete paired Dirac normal-smearing coefficient and its finite-cut obstruction; AdS boundary limit in the forced scalar response class.",
+  "retained_inputs": [
+    "notes/charged-r2-trace-block.md",
+    "notes/curved-fermion-boundary.md",
+    "checks/curved_fermion_boundary.py",
+    "notes/coupled-fermion-domain.md",
+    "notes/stationary-exterior-conformal-domain.md",
+    "notes/stationary-same-source-boundary-charge.md",
+    "notes/spherical-anomaly-action.md",
+    "notes/spherical-anomaly-boundary.md"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "read": "Section 5.3, mixed coefficient (5.33), all normal-smearing rows; section 5.2 normal convention",
+      "use": "Input mixed heat formula only. The rank-eight paired projector, Robin and Clifford traces are derived/rechecked, including both partner domains. No smooth-boundary theorem is applied directly to the nonsmooth compactified response."
+    }
+  ],
+  "closest_comparator": "Previous charged bulk comparison, and established mixed heat-coefficient theorem. This result computes the actual trace source after exact recentering, its continuum energy response, and the previously missing non-angle normal heat rows.",
+  "hardest_steps": [
+    "Continuum coercivity and source admissibility in the complete-end energy space, not sampled matrix positivity.",
+    "Regular-singular asymptotics exclude energy-inadmissible modes and determine the nonzero forced logarithm; no amplitudes of the remaining admissible modes are assigned zero.",
+    "Finite-cut Dirac boundary variation is nonzero on local metric/curvature Dirichlet tangents; this is not promoted to a physical finite-cut realization.",
+    "The actual AdS scalar boundary limit uses smooth finite cuts and finite-jet power counting. Shape variations, a full nonlinear domain, and rough determinant differentiability remain open."
+  ],
+  "forced_tail_regular_in_canonical_C4": false,
+  "old_C5_kernel_bounds_transferred": false,
+  "full_physical_boundary_completed": false,
+  "physical_coupled_inverse_proved": false,
+  "coupled_correction_norm_proved": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "goal_complete": false,
+  "formal_verification": false
+}
