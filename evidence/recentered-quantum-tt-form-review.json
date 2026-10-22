@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-22",
+  "story": "S169",
+  "scope": "Transfer the ordinary one-sided quantum TT form argument to the c_R=1e22 recentered RN reference by verifying its actual geometry, matter domain, fixed-scale and contact hypotheses.",
+  "retained_inputs": [
+    "notes/recentered-canonical-tt-audit.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/stationary-seed-quantum-form.md",
+    "notes/stationary-centered-exterior-source.md",
+    "notes/stationary-reference-cold-bolt.md",
+    "notes/stationary-reference-nonbolt-stress.md",
+    "notes/stationary-paired-dirac-phase.md",
+    "notes/stationary-massive-boundary-layer.md",
+    "notes/stationary-global-tt-reduction.md",
+    "notes/stationary-exterior-boundary-weyl.md",
+    "notes/stationary-exterior-conformal-domain.md",
+    "notes/spherical-anomaly-action.md",
+    "checks/stationary_curved_quantum_tt.py",
+    "evidence/stationary-curved-quantum-tt.json",
+    "evidence/stationary-curved-quantum-tt.log"
+  ],
+  "primary_sources_read_this_turn": [
+    {"url": "https://arxiv.org/pdf/math/0612486", "source": "Beckner, Pitt's inequality with sharp convolution estimates, v2", "used": "Corollary 2, equation (10), n=1 p=2; log(-Delta)^1/2 convention checked directly."},
+    {"url": "https://arxiv.org/html/math-ph/9907022", "source": "Simon, A Feynman-Kac Formula for Unbounded Semigroups", "used": "Theorem 1.1, continuous bounded-below potential; explicit change from -Delta/2 to -Delta retained."},
+    {"url": "https://dlmf.nist.gov/5.9.E13", "source": "NIST DLMF", "used": "Digamma Laplace representation for positive real part; common angular finite part comparison."},
+    {"url": "https://dlmf.nist.gov/10.32", "source": "NIST DLMF", "used": "Equations 10.32.9-10 on positive-real arguments for Bessel sign and moment argument."}
+  ],
+  "strongest_comparator": "The existing analytic-seed curved quantum TT proof supplies a .005 remainder allowance in its own scope. Reuse its conditional continuum estimates, not its conclusion, after checking d=0 geometry, the new thermal gap, paired massive resolvent, common scale and changed vacuum reference.",
+  "new_result": "Recomputed quantum/contact lower allowance below .003602 E_eff, hence eta_Q<.005; full local-plus-quantum TT lower form >.994 E_eff on the specified core and stronger completion.",
+  "hard_continuum_requirements_audited": [
+    "Actual paired anti-self-adjoint massive realization and geometric localization with both endpoint buffers.",
+    "Common angular finite parts, full constant probe with tadpole, finite second-contact anchor and row-sum subtraction.",
+    "Positive geodesic spectral form, even full-line logarithmic uncertainty, Feynman-Kac variance convention and both auxiliary escape terms.",
+    "TT-preserving outer approximation and both boundary traces; no inference of physical coupled-domain completeness or actual form closedness from a stronger-norm completion."
+  ],
+  "protocol": {
+    "digits": [80, 110],
+    "preparation_points": ["1/4", "53/200", "7/25"],
+    "angular_partial_counts": [32, 128],
+    "angular_shift_regimes": ["q/5", "q^2/2", "4q^2"],
+    "cross_precision_relative_tolerance": "1e-60",
+    "freeze_before_run": true,
+    "retain_all_runs_and_source_snapshots": true,
+    "curved_quantum_kernel_numerically_evaluated": false,
+    "continuum_machine_verified": false,
+    "lean_selected": false
+  },
+  "physical_coupled_inverse_proved": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "goal_complete": false
+}
