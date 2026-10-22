@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-22",
+  "story": "S169",
+  "scope": "Actual compact-test bulk Hessian closure on the recentered RN reference, mass-extended weighted inverse, and discontinuity of the mass boundary trace; physical boundary identification remains open.",
+  "retained_inputs": [
+    "notes/recentered-mixed-form.md",
+    "notes/recentered-quantum-tt-form.md",
+    "notes/charged-r2-trace-block.md",
+    "notes/stationary-weighted-tt-inverse.md",
+    "notes/stationary-global-weighted-map.md",
+    "notes/stationary-disk-and-normal-inverse.md",
+    "notes/stationary-global-tt-reduction.md",
+    "notes/charged-conformal-response-and-constraints.md"
+  ],
+  "strongest_comparator": "Reuse the retained actual weighted parametrix and graph-density argument after checking its geometry, paired-domain, normal-symbol and finite-contact hypotheses. The new positive coefficient removes the scalar roots from the strip, unlike the old phase-obstructed operator.",
+  "new_claim": "The actual reference compact-test bulk operator is invertible with the single mass datum; the favorable saddle sign gives energy inverse bound 1. A nonzero mass boundary momentum cannot be treated as a small energy-space perturbation.",
+  "external_sources_read": [
+    {
+      "url": "https://web.math.ku.dk/~grubb/CPDE14.pdf",
+      "locator": "Theorem 2.3, PDF page 9",
+      "used_for": "Normalized symbol H^(s+d) to H^s bound with |s|<tau and N>m/2+1; output s=0, m=1 permits two frequency derivatives.",
+      "not_used_for": "Automatic mapping of the determinant Hessian or any physical gravitational boundary realization."
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0703878",
+      "version": "v2",
+      "locator": "Theorem 2.4 and Proposition 2.9, PDF pages 8 and 13",
+      "used_for": "Differential boundary resolvent symbol-kernel estimates and the logarithmic reflected contribution; the actual finite expansion is still required.",
+      "not_used_for": "Treating the full logarithmic Hessian as an ordinary classical boundary operator without its actual kernel construction."
+    },
+    {
+      "url": "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/melrose.pdf",
+      "locator": "Section 6.2 relative index theorem, PDF page 224",
+      "used_for": "Contour/residue index bookkeeping comparator for b-differential operators.",
+      "not_used_for": "A direct theorem for this logarithmic determinant; its two-power remainder and finite-strip inverse are supplied by the retained argument."
+    }
+  ],
+  "hard_requirements_retained": [
+    "The physical renormalized shape/mass boundary momentum is not determined by compact tests or their completion.",
+    "The TT form is identified via the actual graph and maximal adjoint domain, not continuity in the stronger N norm alone.",
+    "The fixed physical measure, density contact, York tail and complementary partner domains remain explicit.",
+    "The original scalar phase condition is absent only in the new reference bulk realization; physical boundary/current/finite-geometry compatibility is not discarded.",
+    "No numerical fast/admission inverse, nonlinear correction, finite-state solution or Lorentzian stability follows from the energy inverse."
+  ],
+  "protocol": {
+    "digits": [70, 100],
+    "normal_diagnostic_points": [["1.5", "0"], ["1.5", ".25"], ["3.5", "2"], ["3.5", "100"], ["3.5", "1000000"]],
+    "removable_pole_step": "1e-22",
+    "normal_identity_tolerance": "1e-50",
+    "mass_profile": "r^-3(1-L/r)^5 on r>=L, zero below; graph-smoothable, exact mass coefficient and norm scaling",
+    "independent_action_fixtures": "Unexpanded conformal AdS full trace density; sectional-curvature reconstruction of anisotropic local EH plus R-squared action.",
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "root_sampling_is_proof": false,
+    "physical_domain_machine_verified": false,
+    "lean_selected": false
+  },
+  "physical_coupled_inverse_proved": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "goal_complete": false
+}
