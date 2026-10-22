@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-21",
+  "story": "S167",
+  "ordinary_argument_reviewed_before_execution": true,
+  "hardest_step": "Extend the existing weighted Hessian kernel argument to each finite differentiated order using interior dyadic regularity and retained low-order boundary bounds; identify the actual finite-metric source by compact-test differentiation and integration along the original path. Then retain the original TT realization and nonlocal Q while proving the precise certificate core closure.",
+  "consequence": "The actual residual and Schur source have all finite weighted Sobolev orders. Actual positive solves and every finite graph transfer are admissible in the original D_cert, so beta=E^-3 M(q3) is justified on the actual residual. Quantification reduces to R0 R2 R4 N6(p), but those high norms/constants have not been evaluated and no cold cancellation target passes.",
+  "retained_inputs": [
+    "notes/finite-comparison-conormal-regularity.md",
+    "notes/stationary-global-weighted-map.md",
+    "notes/general-background-newton-operator.md",
+    "notes/finite-comparison-tt-realization-and-range.md",
+    "notes/finite-strong-schur-source.md",
+    "notes/finite-positive-weighted-inverse.md",
+    "notes/coercive-signed-moment-certificate.md",
+    "notes/cold-projection-value-upper-bound.md",
+    "notes/matched-residual-inverse-composition.md"
+  ],
+  "primary_sources": [
+    {
+      "title": "Gerd Grubb, Spectral Asymptotics for Nonsmooth Singular Green Operators (2014)",
+      "url": "https://web.math.ku.dk/~grubb/CPDE14.pdf",
+      "location": "Theorem 2.3, printed page 537, PDF index 8; surrounding symbol definitions inspected",
+      "inspected": "2026-10-21",
+      "established_result": "Finite Holder symbol seminorms and sufficiently many frequency derivatives control the normalized operator in L2. Apply this at order zero to each differentiated normalized symbol; the higher-order extension is proved separately by commutators.",
+      "does_not_supply": "The actual charged coefficients, conormal endpoint extension, mass column, nonlinear quantum source identification or useful numerical constants."
+    },
+    {
+      "title": "Anders Gaarde and Gerd Grubb, Logarithms and sectorial projections for elliptic boundary problems",
+      "url": "https://arxiv.org/pdf/math/0703878",
+      "location": "Theorem 2.4 equations (2.20)-(2.24), Proposition 2.9; PDF indices 7 and 12",
+      "inspected": "2026-10-21",
+      "established_result": "Smooth differential boundary models have reflected resolvent symbol estimates; their logarithms include a specific singular boundary term, so an ordinary smoothing assertion is insufficient.",
+      "does_not_supply": "An all-order theorem for the actual logarithmic compactification. Higher derivatives here come from scaled interior estimates applied to the retained boundary remainder, not an unqualified use of a smooth boundary theorem."
+    }
+  ],
+  "comparison": "The predecessor proves every finite conormal metric order but not finite-metric source regularity. The earlier weighted inverse controls only two derivatives. This result supplies source regularity, higher critical TT regularity, the positive inverse bootstrap and compact-core convergence. It supplies admissibility rather than the unevaluated numerical cancellation inequality. The coupled periodic fixture has a nonzero resonant moment preserved through all three transfers, detecting a false inference of suppression from admissibility.",
+  "verification_scope": "Exact actual-path/density identities, weighted-kernel commutators with contact omission control, tail integrals, finite derivative accounting and a coupled noncommuting finite-Fourier continuum model. It does not compute the charged source, kernel, high norms or actual signed moment; continuum estimates remain ordinary proofs.",
+  "ordinary_finite_metric_source_regularity_proved": true,
+  "ordinary_actual_certificate_admissibility_proved": true,
+  "ordinary_actual_graph_transfers_admissible": true,
+  "ordinary_actual_three_transfer_moment_identity_justified": true,
+  "actual_source_high_norms_evaluated": false,
+  "actual_transfer_norms_numerically_bounded": false,
+  "actual_transfer_certificate_passed": false,
+  "actual_signed_moment_evaluated": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "formal_verification": false,
+  "goal_complete": false
+}
