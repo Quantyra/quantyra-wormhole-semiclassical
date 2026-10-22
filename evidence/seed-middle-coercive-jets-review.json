@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-21",
+  "story": "S167",
+  "ordinary_argument_reviewed_before_execution": true,
+  "hardest_step": "Use the positive mass in the flat conformal Dirac square, control its gradient cross term, and nest local energy estimates without charging M per derivative. Weaken the row separation explicitly; keep both commutators, physical endpoint factors and the actual middle inverse.",
+  "consequence": "The complete fixed-seed middle trace through three covariant derivatives has normalized constant 1e22 instead of 1e26. The actual gluing part separately has explicit fixed-coordinate derivatives through nine. This is a quantitative source input, not the finite-metric source H6 bound or the cancellation certificate.",
+  "retained_inputs": [
+    "notes/stationary-centered-canonical-response.md",
+    "notes/stationary-centered-conormal-source.md",
+    "notes/stationary-centered-exterior-source.md",
+    "notes/stationary-completed-metric-response-norm.md",
+    "notes/finite-graph-admissibility.md",
+    "notes/cold-projection-value-upper-bound.md"
+  ],
+  "primary_sources": [
+    {
+      "title": "Thomas Walpuski, Spin Geometry",
+      "url": "https://walpu.ski/Teaching/SpinGeometry.pdf",
+      "location": "Section 15.2, Proposition 15.5 and its proof, printed page 79, PDF index 78; inspected 2026-10-21. Search snippet's section 14.2 is stale and is not the cited locator.",
+      "established_result": "Conformal covariance of the geometric Dirac operator; the dimension-two formula identifies the local flat variable-mass equation after spinor rescaling.",
+      "does_not_supply": "The quantitative coercive recurrence, seed chart bounds, actual cap-row separation, angular sum or charged-source estimate. These are derived in the ordinary note with the Euclidean skew-adjoint convention explicit."
+    }
+  ],
+  "source_screening": "The inspected Kashkynbayev-Oralsyn Caccioppoli paper treats a different nonlinear Dirac-p-Laplacian problem and supplies none of the numerical constants here. No estimate is imported from it.",
+  "comparison": "The earlier proven j<=3 row estimate costs j!(2000M)^j and yields complete middle K_m=1e26. Simply extending it to j=9 would be unproved. The new finite interior recurrence removes M from the derivative coefficients at the explicit cost of a weaker exponential exp(-M/176) per row. Monotonicity of the exact paired angular summand gives the full sum <=4C*88^2. The unchanged local UV/restoration bounds complete only the three-jet result. Earlier endpoint C5 and all physical gates remain unchanged.",
+  "verification_scope": "Exact coefficient, separation, finite recurrence, endpoint, Fourier, angular and source budgets; independent variable-mass Dirac energy integrals at 60 and 90 digits with a cross-term omission control; guard-point angular sums with an explicit uncomputed tail. Fixtures do not evaluate the actual quantum kernel or benchmark C, and numerical quadrature is supplementary rather than an interval proof.",
+  "complete_seed_source_order": 3,
+  "gluing_coordinate_order": 9,
+  "complete_seed_middle_Km": "1e22",
+  "actual_finite_source_H6_bounded": false,
+  "actual_transfer_certificate_passed": false,
+  "actual_signed_moment_evaluated": false,
+  "endpoint_C5_contract_changed": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "formal_verification": false,
+  "goal_complete": false
+}
