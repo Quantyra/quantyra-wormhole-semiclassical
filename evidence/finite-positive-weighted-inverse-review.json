@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-21",
+  "story": "S167",
+  "ordinary_argument_reviewed_before_execution": true,
+  "hardest_step": "Preserve the required outer weight for the actual positive inverse without treating a positive nonlocal term as positive after weighting; identify its second-order domain and establish weighted tensor-forcing, Laplacian and Hessian bounds before using the actual source.",
+  "quantitative_consequence": "K maps the actual regular weighted second-order domain bijectively onto L2_W, with inverse constants 4200, 9500, 18000 and 100000 for value, gradient, Laplacian and Hessian. The actual first positive solve has normalized weighted Hessian below 2e33 ell^2 for positive ell, with zero solution at ell=0. Fourth-order certificate admissibility and the first transferred source remain unproved.",
+  "retained_inputs": [
+    "notes/finite-strong-schur-source.md",
+    "notes/coercive-signed-moment-certificate.md",
+    "notes/cold-projection-value-upper-bound.md",
+    "notes/general-background-newton-operator.md",
+    "notes/finite-comparison-scalar-curvature-remainder.md",
+    "notes/finite-comparison-classical-tt-form.md",
+    "notes/finite-comparison-scalar-resolvent.md",
+    "notes/finite-comparison-weighted-mixed-form.md",
+    "notes/finite-trace-gradient-and-projection-transversality.md",
+    "notes/global-compatible-scalar-response.md"
+  ],
+  "primary_source": {
+    "title": "Gerald Teschl, Mathematical Methods in Quantum Mechanics, second edition",
+    "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+    "location": "Theorem 6.4, printed page 159, PDF page index 170; Theorem 6.24 supplies background for the retained form realization",
+    "inspected": "2026-10-21",
+    "established_result": "A symmetric perturbation of relative operator bound below one preserves the selfadjoint operator domain. The new proof explicitly verifies this condition for the actual radial local coefficients plus the bounded tensor term.",
+    "does_not_supply": "The charged coefficients, physical measure/weight estimates, noncommuting tensor energy estimate, actual source bound or signed compatibility. No novelty is claimed for Kato--Rellich or the weighted integration identities."
+  },
+  "comparison": "The prior coercive certificate supplies only an unweighted positive inverse. The new strong tensor vertex permits a weighted second-order inverse with all original coefficients retained. This does not provide the stronger fourth-order certificate graph closure or suppress a resonant source. The exact rank-one control has positive Q but weighted quadratic value -1/35, rejecting the shortcut of dropping that term after weighting.",
+  "actual_first_positive_solve_weighted_second_order_bounded": true,
+  "actual_certificate_domain_membership_proved": false,
+  "actual_first_transferred_source_bounded": false,
+  "actual_transfer_certificate_passed": false,
+  "actual_signed_moment_evaluated": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "formal_verification": false,
+  "goal_complete": false
+}
