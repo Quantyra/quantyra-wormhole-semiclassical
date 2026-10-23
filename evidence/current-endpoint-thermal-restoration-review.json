@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Canonical mass-action endpoint normalization, finite-cut sensitivity terms, all-thermal bolt-tip allowance and complete local flat thermal restoration; not the full angular or metric operator.",
+  "retained_inputs": [
+    "notes/current-subtracted-thermal-action.md",
+    "checks/current_subtracted_thermal_action.py",
+    "notes/current-coincident-dirac-action-assembly.md",
+    "checks/current_coincident_dirac_action_assembly.py",
+    "notes/current-bolt-adjoint-domain.md",
+    "evidence/current-bolt-adjoint-domain.json",
+    "notes/current-seed-boundary-phase-and-trace-defect.md",
+    "notes/current-controlled-solution-audit-closeout.md"
+  ],
+  "ordinary_argument_review": [
+    "Factor the true regular Frobenius branch with a mass-independent leading norm. The explicit flat-polar Bessel normalization depends on mass; dropping it changes the gradient by 2j times the bolt direction and produces a nonsummable error.",
+    "The exact rotated action difference has vanishing lower endpoint variation only at the true bolt. At a finite cut, retain positive ell*Y and ell*Z boundary terms in addition to the separately bounded tip integral.",
+    "The lowest half-integer thermal channel is resonant for the auxiliary action adjoint: rho log rho appears but its product with a regular sensitivity still vanishes. This auxiliary function is not the gravitational point-source adjoint.",
+    "The one-sided mass cubic and weight-four log phase provide the continuous first derivatives needed by the finite-mode transfer. This does not upgrade their reflected regularity or certify the angular parametrix.",
+    "Uniform cap barriers use the actual smooth bolt geometry, M epsilon<=.001 and unit direction/epsilon-derivative bounds. The 3100 coefficient and exact sum 6-pi^2/2 give an all-thermal cap, before angular weights.",
+    "The actual finite-seed factorization encloses a/rho and a proper derivative on the full chi interval [0,.001], retaining the current positive-temperature h box.",
+    "Restore the nonzero-winding local flat thermal term using shifted Gaussian Poisson summation before the proper-time integral. Do not directly apply the Abel-Plana formula at its branch singularities or assign a value to a divergent unregulated sum.",
+    "The Gaussian and its second derivative meet DLMF 1.8.14 hypotheses. Positive-real K integrals meet their phase conditions, and the absolute integrated winding series converges at each positive mass-radius y, justifying interchange and mass derivatives.",
+    "Near zero, the half-integer finite part fixes the Euler/log constant. Its convergent binomial series and explicit geometric derivative tails overlap the alternating Bessel algorithm. The mass-independent -1/(12a) term remains in the metric/Weyl restoration.",
+    "The independently evaluated Fermi integrals and flat-polar Bessel action are diagnostics. The analytic tails and ordinary endpoint comparison supply continuum coverage; checker counts do not establish a full physical solution.",
+    "The first run passed the endpoint and actual cap checks but failed the y=1e-40 diagnostic: its exponent-100 Fermi cutoff omitted an action tail about 3.81e-43, above the unchanged 1e-45 comparison target. Retain the failed snapshot and numerical record, increase the diagnostic endpoint to exponent 160, and replay the entire package. No analytical bound or target changes.",
+    "The fixed-cap upper allowance grows as M_n^2 and cannot be summed with angular degeneracy; its small-cap hypothesis also eventually fails. This rejects that uniform certificate and selects matched bolt/angular cancellation, not nonexistence or a new scheme."
+  ],
+  "external_sources_read": [
+    {"url":"https://dlmf.nist.gov/10.25#E2","scope":"Positive-real modified I series and its leading coefficient; used for the exact flat-polar diagnostic."},
+    {"url":"https://dlmf.nist.gov/10.29#E2","scope":"Modified Bessel recurrences and derivatives; normalization and alternating-term monotonicity."},
+    {"url":"https://dlmf.nist.gov/10.32#E9","scope":"Equations 10.32.9-10 at positive real argument; Fermi and proper-time integrals."},
+    {"url":"https://dlmf.nist.gov/1.8#E14","scope":"Poisson formula for a twice continuously differentiable function with integrable function and second derivative; applied only to the shifted Gaussian."},
+    {"url":"https://dlmf.nist.gov/2.10#E2","scope":"Inspected analytic/closure hypotheses. Not imported for a square-root branch point on the contour; Gaussian Poisson derivation selected instead."}
+  ],
+  "strongest_comparator": "The accepted compact thermal difference has exactly zero initial sensitivities. The earlier j=0 bolt matrix includes one frequency but supplies no summable all-frequency tip error. This package addresses those missing endpoint/restoration operations directly.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0, existing isolated installation",
+    "precision_bits": 256,
+    "independent_mpmath_digits": 60,
+    "proper_tip_cutoff": "5e-9",
+    "mass_upper_for_benchmark": "26",
+    "combined_tip_action_error_target": "1e-10",
+    "small_mass_series_terms": 16,
+    "Bessel_next_term_target": "1e-22",
+    "dimensionless_restoration_width_target": "1e-12",
+    "independent_Fermi_comparison_absolute_tolerance": "1e-45",
+    "physical_solve_executed_by_this_run": false,
+    "full_angular_restoration_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

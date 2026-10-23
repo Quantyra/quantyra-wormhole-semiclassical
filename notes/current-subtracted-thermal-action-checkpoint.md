@@ -1,3 +1,58 @@
+# Active checkpoint: physical endpoints and local thermal restoration
+
+2026-10-23, E003/S169. The full stable-wormhole goal remains active and
+incomplete. The feasibility audit stays closed.
+
+The [endpoint/restoration package](current-endpoint-thermal-restoration.md)
+derives the mass-independent regular-bolt leading normalization, the
+required ell*Y and ell*Z terms at a finite inner cut, and the lowest
+thermal channel's auxiliary-adjoint rho log rho term. The mass/log outer
+phase meets the first-order transfer's endpoint regularity; no closed C5
+regularity is asserted. These are canonical mass-action results, not the
+full physical metric boundary action or gravitational bolt adjoint.
+
+The actual seed's whole-cap geometry verifies the stated bounds. At
+epsilon=5e-9 and M<=26, the all-thermal difference plus local thermal
+restoration tip allowance is <2.926e-11 in unweighted paired-action units
+per angular state. It meets the 1e-10 assembly target. It excludes the
+separate finite-cut adjoint terms, which must be retained in propagation.
+
+The complete local thermal restoration and its first two mass derivatives
+are executable for positive ma, using convergent small-mass or alternating
+Bessel series with explicit infinite tails. Its validation widths are
+<1e-12. The physical zero-temperature vacuum, Weyl allocation and common
+angular a0/a1/a2 restoration remain to be assembled. No finite coefficient
+or physical target changed.
+
+The fixed-cap upper allowance grows as M_n^2 and cannot certify the
+infinite angular sum; the cap hypothesis also eventually fails. This is
+a failed sufficient certificate, not an actual divergence or nonexistence
+result. Continue with the matched bolt/high-angular local subtraction
+and original-scheme restoration in the SAME weak H e=-r1 solve. Retain
+both gravitational point sources, physical mass/log phase and exact
+compatibility. Do not substitute another isolated mode or cold-value test.
+
+The frozen final run passed 55 supporting checks over 867
+unchanged inputs. All 2 runs, 1 failure(s), source snapshots,
+numerical records and 93 raw rows are retained. The first diagnostic
+cutoff left a 3.81e-43 action tail above its fixed 1e-45 comparison target;
+extending that diagnostic integral and replaying the full package resolved
+the failure. No scientific edit followed success and no Lean ran.
+
+The full physical correction/residual test is still unexecuted. Its bolt
+target <1.667e-9, exterior return <6.67e-10, Y0<=5e-9 and all nonlinear
+and X/admission targets remain unchanged and unproved.
+
+Remaining to-do list: matched bolt/angular subtraction and original-scheme
+restoration in the physical weak operator; actual coupled correction,
+certified dual residual/X admission, nonlinear closure and compatibility;
+matching, causal realization, validity/noise, stability, charge/return,
+opening, transport, preparation, separate creation and stable wormholes.
+
+---
+
+The following is the preserved preceding checkpoint and its history.
+
 # Active research checkpoint: thermal subtraction replay completed
 
 2026-10-23, E003/S169. Research resumed by explicit continuation of the
