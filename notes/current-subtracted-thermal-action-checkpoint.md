@@ -1,3 +1,77 @@
+# Active checkpoint: canonical local restoration and boundary-remainder priority
+
+2026-10-23, E003/S169. Full stable-wormhole research is active and incomplete.
+The feasibility audit remains closed. Previous goal turn: progress.
+
+The [current assembly](current-canonical-heat-restoration-assembly.md)
+now includes the common a0/a1/a2 allocation and canonical LLL weak rows
+on the actual finite seed. a1 has zero physical first/second variation.
+The signed a0 value remains unevaluated, but its KNOWN sufficient bound
+|c0|<2.39121e-25 is retained as one shared coefficient multiplying the
+exact Gram matrix. It is not zeroed or independently randomized by entry.
+
+For the three retained global TT fields, the largest a0 entry allowance
+is <4.23918E-26; the largest a2 and LLL entry magnitudes are
+<1.04148E-33 and <9.28243E-33. These close specified local
+assembly entries, not an operator norm or a bound on the actual correction.
+All known TT entry widths are <5.55170E-20, within the
+retained 1e-14 numerical assembly tolerance. The massive geometric shape
+remainder remains missing. Scalar/mixed completeness from the prior local
+action assembly and the corrected trace sign are unchanged.
+
+The first scientific run exposed a stale scale hypothesis in the seed and
+curved quantum notes. At the unchanged original mu0=1/b0, the actual
+L=log(mu0 B) is 2.9452431301493e-9, not <1e-21. This agrees with the
+executed bolt-contact and vacuum calculations. The current note supersedes
+that assertion while preserving old sources. Every affected displayed
+fourth margin survives: -F_eff/120>.001, |F_eff|<100, x>4e9,
+.5log(x)-L>9 and -F_eff/4>13.9. Numerically F_eff=-59.65278833475...,
+the outer scale margin is 11.41288308859... and kappa4=14.91319708368....
+This correction does not validate the other continuum hypotheses.
+
+The remaining term must be the common-subtracted GEOMETRIC heat Hessian,
+including its second operator vertex on the actual paired domain. A raw
+fixed-metric mass action additionally needs its two-dimensional Weyl
+conversion. Undifferentiated source bounds and the full-tower endpoint
+certificate do not provide the differentiated seam remainder.
+
+If the reduced heat Hessian remainder is bounded by Aij*t^(1+alpha),
+alpha>0, the omitted cap is at most
+2.343750000048e-32*Aij*t0^alpha/alpha in normalized entry units. For
+1e-14 entry accuracy, Aij*t0^alpha/alpha must be <=4.2666666665798e17
+(use the exact interval in the receipt). Aij and alpha are UNKNOWN.
+No finite-entry estimate establishes the required V-to-V* operator norm.
+
+For a residual operator allowance eta_H, the physical bolt test requires
+
+    |Q0|+eta_H E P+(Db0+eta_H P)(D0+eta_H E)<1.667e-9.
+
+The note gives the exact positive quadratic threshold for eta_H. E,P are
+the actual forward/adjoint V norms and D0,Db0 their computed residual
+norms; these quantities and Q0 are still unknown. The physical test is
+UNEXECUTED. Exterior return <6.67e-10, Y0<=5e-9 and all nonlinear,
+admission and exact compatibility requirements remain open.
+
+Decision: continue the geometric fixed-domain weak primal-dual method.
+The single next calculation is a quantitative differentiated heat-remainder
+bound at the actual paired seam, with a controlled form-domain extension
+to the logarithmic bolt adjoint. This boundary/regularity calculation
+precedes more source optimization. It has not been executed here. The
+entry prefactor alone does not show that the operator target is attainable;
+the older oversized upper bounds still do not imply nonexistence.
+
+Final frozen replay: 55 checks over 897 unchanged inputs.
+Retain one failed scientific run, two successful runs and one pre-check
+launch failure; 139 raw log rows and all snapshots remain.
+Independent rational closeout reaggregated 33
+integrals / 578 moments and all six known entries.
+No scientific edit followed final success. No Lean ran. All 18 inherited
+paths, closed-audit record and story checkboxes are preserved.
+
+Remaining to-do list: differentiated paired-seam heat remainder and logarithmic-adjoint form extension; full physical forward/adjoint residual certificate and X/admission; nonlinear closure and exact compatibility; matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and stable wormholes.
+
+---
+
 # Active checkpoint: full-tower bolt-cut certificate
 
 2026-10-23, E003/S169. The full stable-wormhole objective remains active
