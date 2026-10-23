@@ -1,3 +1,85 @@
+# Active checkpoint: two-sided complete-geodesic remainder bound
+
+2026-10-23, E003/S169. Full stable-wormhole research remains active and
+incomplete. The feasibility audit stays closed. Previous turn: progress.
+
+The [two-sided calculation](current-geodesic-two-sided-remainder.md)
+now bounds the actual finite-seed difference from the COMPLETE geodesic
+comparison in the physical action form norm:
+
+    ||H-H0||_(V to V*) < 2.1040238E-3 < .0022,
+    ||H0^-1||_(V* to V) < 1.0021085E+0,
+    ||H0^-1(H-H0)||_(V to V) < 2.1084600E-3.
+
+This is the actual finite-kernel/contact comparison with its original
+paired domain and fixed linear York map, not the old one-sided .005
+quantum lower bound relabeled as an absolute estimate. The full geodesic
+logarithmic term, exact finite fourth contact, known local/LLL terms and
+shared bounded vacuum allocation are retained. No heat or angular cutoff
+is made physical. The fourth contact cancels exactly; its difference is
+the known curvature-gradient and zero polynomial.
+
+The joint lower form keeps both .99F_lambda E0 and C*S2/(100pi).
+Actual physically weighted return constants are
+j0=3.51562500014315e-29, j1=1.17187500002386e-27,
+j0,outer=2.25000000009161e-37, j0star=1.05468750004294e-28 and
+j1star=4.68766875009562e-27, with certified intervals in the receipt.
+The lower-order E0 allowance is Berr=0.00208298346529094... . Its main
+components are 0.00105468750004294... from the gluing/zero envelope,
+0.000559529090238430... from the actual constant contact, and
+0.000468766875009562... from the gradient/contact envelope. The vacuum,
+explicit curvature and partition corrections are much smaller.
+
+With epsilon=1e-6 the fourth relative allowance is
+50pi^2 epsilon=0.000493480220054468... . Joint coercivity makes eta the
+MAXIMUM of that number and Berr/(.99F_lambda), which is
+0.00210402372710152... . No normalization or source optimization creates
+the bound. The actual finite-kernel proof's absolute estimates and fixed
+constant/second contacts, rather than a smooth seam theorem, supply it.
+
+Polarization extends the estimate to V and therefore to the logarithmic
+bolt adjoint in its actual form domain. Its norm remains uncomputed.
+The combined model is defined by the original common cut/limit, retaining
+the outer Weyl cancellation. No extra H3/smooth-bolt condition is imposed.
+
+This closes the seed LINEAR form-comparison requirement. It does not
+evaluate nonlinear X-space Z0, K_c/K_m, higher admission norms, or the
+operator on a neighborhood of finite metrics. Those requirements remain.
+
+The physical bolt test is still
+
+    |Q0|+eta E P+(Db0+eta P)(D0+eta E)<1.667e-9.
+
+Even with exact H0 solves and |Q0|<=8.335e-10, using the sufficient
+eta_star=.0022 requires EP<3.78031966038352e-7, or a model-norm product
+E0app*P0app<3.77200295713068e-7 (exact intervals in the receipt).
+The actual E,P,D0,Db0,Q0 are UNKNOWN. The comparison pair and full
+physical feasibility test remain UNEXECUTED. A failed upper allowance
+would call for directional residual/signed-pairing estimates, not a
+nonexistence claim. Exterior <6.67e-10, Y0<=5e-9 and all exact
+compatibility/admission/nonlinear requirements remain unchanged.
+
+Decision: continue the complete-geodesic weak primal-dual method. The
+single next calculation is a global H0 forward/bolt-adjoint trial pair,
+with certified model residuals, norms and signed Q0. Evaluate the actual
+geodesic-flow form; the existing scalar Kflat quadrature already averages
+over directions and cannot silently be applied to the flow generator.
+The contact-complete adjoint and exact local rows are available inputs.
+Test the physical product/pairing target before further generic source
+or remainder optimization. This solve is proposed, not executed here.
+
+Final frozen run: 36 checks across 907 unchanged inputs;
+one success, no failed run, 38 raw rows. Exact-rational
+closeout independently verified all six remainder components, weighted
+norm substitutions, joint margins, inverse factors and physical product
+thresholds, using rational Machin/atanh enclosures where needed. No
+scientific edit followed success, no Lean ran and all 18 inherited paths
+remain unchanged. No story checkbox or full-goal completion is promoted.
+
+Remaining to-do list: physical geodesic-comparison forward/adjoint solve and two-residual bolt certificate; X/admission, nonlinear closure and exact compatibility; matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and stable wormholes.
+
+---
+
 # Active checkpoint: heat-cutoff form obstruction; retain the full principal part
 
 2026-10-23, E003/S169. Full stable-wormhole research remains active and
