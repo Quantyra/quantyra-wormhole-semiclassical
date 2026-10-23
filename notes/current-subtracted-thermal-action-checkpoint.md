@@ -1,3 +1,74 @@
+# Active checkpoint: full-tower bolt-cut certificate
+
+2026-10-23, E003/S169. The full stable-wormhole objective remains active
+and incomplete. The feasibility audit stays closed.
+
+The [actual endpoint certificate](current-angular-bolt-cut-certificate.md)
+closes the previous fixed-cap summability obstacle for the subtracted
+mass-action tip, local thermal restoration AND finite-cut action-adjoint
+boundary terms. It includes every massive angular level, every thermal
+frequency, two exteriors and direction inner norms up to 2.
+
+Use frozen numerical cuts epsilon_n=eta*(18/M_n)^3 with eta=2e-17.
+The actual first mass is about 18.04813; the largest cut is about
+1.984042e-17 in canonical proper units. They are computational cuts,
+not physical boundaries or a claim of semiclassical validity at that scale.
+No factor gamma or normalization change improves the tolerance.
+
+The complete endpoint error is <2.05233E-11 in the SAME
+unweighted action units, below the 1e-10 assembly target. Before the
+factor 8 for two exteriors and two direction norms, its components are
+
+    subtracted tip: <2.72432e-14,
+    local thermal restoration: <2.65681e-15,
+    finite-cut boundary terms: <2.53550e-12.
+
+The boundary term dominates and cannot be discarded using the tip bound.
+The maximal sufficient eta for factor 8 lies between 4.43220e-17 and
+4.43222e-17. The selected value has room within that specific budget.
+It does not give a permissible gravitational solution radius.
+
+The ordinary argument uses the actual polynomial to prove Q''<=2 and
+|a'|<=sqrt(1+a^2) throughout the disk. Thus the auxiliary action adjoint
+has |ell|<3 globally and |ell(rho)|<=4.1(Mrho/.001)^.99 near the bolt.
+This is not the gravitational bolt adjoint. The exact count N(E)<=4CE^2
+and the mass-dependent cuts make all three endpoint error sums finite.
+The existing three global TT trial directions meet the inner norm <=2.
+Other forward/adjoint trials still need their own norm verification.
+
+The common zero-temperature, a0/a1/a2 and two-dimensional Weyl allocation,
+global curved remainder and physical forward/adjoint residuals remain
+uncomputed. This certificate does not exchange limits in the unsubtracted
+action or replace the actual paired boundary data. It supplies a validated
+endpoint ingredient for the physical operator, not that complete operator.
+
+Decision: continue the specified direct weak primal-dual calculation.
+The single next decisive calculation is the complete canonical shape
+contribution with common curved/boundary restoration on the forward and
+gravitational bolt-adjoint pair. Combine it with the already exact local
+scalar/mixed rows and corrected signed trace convention. Require
+|Q_app|+||d_b||_V*||d||_V*<1.667e-9, exterior return <6.67e-10,
+Y0<=5e-9 and every X/admission, nonlinear and compatibility condition.
+The full physical feasibility test is STILL UNEXECUTED.
+
+The final frozen replay passed 52 supporting checks over 892
+unchanged inputs. Both successful snapshots/runs and 108 raw rows
+remain. The second replay retains C for independent reconstruction.
+No scientific edit followed success. Exact-rational closeout verifies
+all three budgets and all three threshold brackets using Machin/atanh
+series bounds and an integer 100th-power comparison. No Lean ran.
+All 18 inherited paths and all story checkboxes remain unchanged.
+
+Remaining to-do list: full canonical shape/curved/boundary operator and
+physical forward/adjoint residual certificate; X/admission, nonlinear
+closure and compatibility; matching, causal realization, semiclassical
+validity/noise, all-sector stability, charge/return, opening, transport,
+preparation, separate creation and the full stable-wormhole objective.
+
+---
+
+The preceding checkpoint and its history are preserved below.
+
 # Active checkpoint: actual finite-seed local action and signed trace
 
 2026-10-23, E003/S169. Research is active; the full stable semiclassical
