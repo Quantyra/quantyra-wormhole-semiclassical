@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Actual signed scalar projection and an all-trial feasibility test of the full-V uniform bolt certificate, followed by exact scalar Schur reduction if that test rejects the method.",
+  "retained_inputs": [
+    "notes/product-centered-scalar-cold-response.md",
+    "notes/current-seed-full-trace-defect.md",
+    "notes/current-seed-directional-cold-response.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/current-finite-local-action-assembly.md",
+    "notes/current-geodesic-two-sided-remainder.md",
+    "notes/current-geodesic-flow-multiplier.md"
+  ],
+  "ordinary_argument_review": [
+    "The displacement supersolution keeps r-B and the actual positive thermal mass subtraction. Replacing it by r-R at a simple bolt would be invalid.",
+    "The full trace projection includes the moving-density term and its bolt endpoint. Integrating once avoids an unnecessary unknown displacement derivative.",
+    "The exact product-root identity correlates the radius and magnetic terms. The actual thermal polynomial and finite-seed parameters remain; no extremal replacement or changed subtraction is made.",
+    "Read the actual source/paired-domain and Ward argument supplying H,a,f,Q bounds. They remain inputs. A scalar test annihilates the unknown independent shape source but does not compute that source.",
+    "The exact complete scalar energy and physical point functional give lower bounds on source/adjoint norms. The 2x2 bilinear minimization tests every trial pair, including nonzero residuals.",
+    "Failure of the sufficient expression at eta=.0022 is not a lower bound on the actual operator error or physical correction. It is not a nonexistence or stability theorem.",
+    "The zero scalar/mixed blocks of the remainder justify exact Schur elimination. Keep the effective source, effective point functional and scalar contribution. The scalar cold-norm bound requires the L_h factor before it bounds the physical bolt.",
+    "The actual Schur solve, TT norms/residuals, nonlinear admission and physical requirements remain unexecuted. Freeze this targeted feasibility test before running it."
+  ],
+  "source_review": "The read ordinary arguments listed above supply the exact trace, correlated product root, source bounds, physical normalization and complete scalar/mixed forms. No new external continuum theorem is invoked; polynomial integration and Hilbert-space block identities are derived in the note.",
+  "strongest_comparator": "The existing sufficient certificate uses full V norms even though the actual comparison remainder is only TT/TT. Test the unavoidable full-norm contribution before commissioning a global pair whose certificate might already be impossible.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 256,
+    "source_projection_lower_target": "I>1e-38",
+    "norm_product_lower_target": "R0 L0/M^2>1e-5",
+    "uniform_eta": "0.0022",
+    "model_operator_norm_upper": "1.16",
+    "physical_bolt_target": "1.667e-9",
+    "scalar_schur_bolt_upper_target": "1.2e-11",
+    "full_physical_solve_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

@@ -1,3 +1,88 @@
+# Active checkpoint: full-V uniform bolt certificate rejected
+
+2026-10-23, E003/S169. The full stable-wormhole objective remains active
+and incomplete. The feasibility audit stays closed. Previous turn: progress.
+
+The [executed actual-source test](current-uniform-bolt-certificate-obstruction.md)
+rejects the current full-V/.0022 sufficient bolt certificate for EVERY
+trial pair, including pairs with nonzero model residuals. Its remainder
+allowance alone is at least 4.6633786E-8, more than
+2.7974677E+1 times the entire physical target 1.667e-9.
+This is not a lower bound on the actual operator difference, the physical
+bolt correction, or existence/stability. It rules out that certificate
+with its current uniform upper bound, not stable wormholes.
+
+The actual signed scalar projection uses v=(z^4,0). The complete trace
+row, correlated product-root cancellation, actual finite-temperature
+polynomial and full moving-density/bolt endpoint terms give
+
+    <r1,v>=W I, W<0, I>1.9192870E-38.
+
+A global supersolution proves F integral_r^infinity 1/F <=2(r-B).
+It keeps the actual nonextremal root and improves the displacement bound
+needed for this SIGNED projection. The scalar energy is
+a(v,v)=|W|*1.333333344957609... and L_b(v)=ell_b z_h^4.
+Together with ||Hc||<1.16, these imply R0 L0/M^2>2.1150644E-5.
+The old ideal EP<3.78031966038352e-7 target is therefore unattainable
+for the full norms. Bilinear minimization shows residuals cannot repair
+the sufficient expression. No unknown shape-source value was set to zero.
+
+The known areal integral is about 1.7494e-37 in normalized trace units.
+Unevaluated areal terms cost <6.118e-39 and moving-density/endpoint terms
+<5.366e-38 before multiplication by x/C. These are known upper bounds,
+not assumed signs. The physical factors W and ell_b are retained; the
+cancellation of W in the norm-product ratio is an identity, not a change
+of normalization. Even assigning the entire budget to a uniform error
+would need eta<7.881e-5; half-budget needs eta<3.941e-5. These are only
+necessary ceilings and would require over 27-fold/55-fold sharpening
+of the present .0022 allowance, before other errors are paid.
+
+Research decision: park that full-V certificate and eliminate the exact
+scalar block before bounding the remainder. In the frozen chart Rc is
+only TT/TT. Use the actual scalar form inverse and
+
+    Sc=Dc+B* A^-1 B,
+    r_eff=r_T+B* A^-1 r_s, ell_eff=ell_T+B* A^-1 ell_s,
+    q_s=<ell_s,A^-1 r_s>.
+
+The existing scalar source/inverse bounds, converted to the PHYSICAL
+bolt with L_h=73.06179148..., give |q_s|<1.0715730E-11.
+The cold norm's 1.4667e-13 bound is not itself a bolt value; L_h is kept.
+The TT certificate is
+
+    |q_s+Q_T|+.0022 E_T P_T
+       +(Db_T+.0022 P_T)(D_T+.0022 E_T)<1.667e-9.
+
+With zero TT residuals and half the post-scalar budget for |Q_T|, a
+sufficient target is E_T P_T<3.7560191E-7.
+Those actual TT norms, effective sources, signed pairing and residuals
+are UNKNOWN. Scalar elimination exploits exact zero remainder blocks;
+it does not prove that this remaining target is attainable.
+
+The single next calculation is the actual finite-geometry Schur
+forward/bolt-adjoint pair with its effective point source and two
+certified TT residuals. The full physical solve remains UNEXECUTED.
+The signed source projection and all-trial certificate rejection ARE
+EXECUTED. Direct directional Rc pairings are the alternative if this
+block-specific certificate also fails. Generic source optimization stays
+parked. All admission, compatibility, matching, validity and stability
+requirements remain in force.
+
+Final frozen scientific run: 45 checks across 917
+unchanged inputs, one success, no scientific failures, 47
+raw rows. Independent exact-rational closeout verified 29
+moments, the source bounds and all numerical decision thresholds. Two
+closeout diagnostic attempts failed an overly strict equality-tolerance
+comparison of serialized outward radii; the final verifier recomputes
+conservative bounds and rechecks the original decision inequalities.
+All four closeout snapshots/outcomes are retained separately. No scientific
+edit followed success, no Lean ran, all 18 inherited paths remain intact,
+and no story checkbox or physical construction claim is promoted.
+
+Remaining to-do list: actual scalar-Schur forward/adjoint pair and physical bolt/exterior certificate; X/admission, nonlinear closure and exact compatibility; matching and causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: exact geodesic multiplier and its form error
 
 2026-10-23, E003/S169. Research is active and the full stable-wormhole
