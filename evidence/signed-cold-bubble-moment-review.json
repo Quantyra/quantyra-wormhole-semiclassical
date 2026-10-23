@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-22",
+  "story": "S169",
+  "scope": "Execute the resonant signed product moment inside the selected matched finite-seed response calculation; retain its unresolved finite boundary and weighted remainder.",
+  "retained_inputs": [
+    "notes/current-product-full-metric-inverse.md",
+    "notes/stationary-product-contour-inverse.md",
+    "notes/stationary-reduced-cold-response.md",
+    "notes/recentered-product-and-cold-residual.md",
+    "notes/stationary-centered-first-order-geometry.md",
+    "notes/physical-metric-block-and-preconditioner.md"
+  ],
+  "strongest_comparator": "The existing alpha_q allowance 1.7e-8 and exact convergent pole moment, with a full current product inverse but no signed slope evaluation or finite boundary return.",
+  "new_claim": "Rogers-Dougall evaluates every massive slope exactly to zero, leaving alpha_q=-Gq/(6pi B^2) in (-1.012546e-31,-1.012545e-31). The corresponding first cold normal-model residual coefficients, including local contacts and the R2 cancellation, are explicitly evaluated.",
+  "hypothesis_audit": [
+    "The original rank-two residues and two-dimensional anomaly coefficient are used without a new subtraction or normalization.",
+    "The 5F4 parameter identity is derived term by term. The convergence condition has b+c+d-a=0<1, all denominator gamma arguments are positive for M>0, and the series is absolutely convergent.",
+    "The common four-dimensional local p^2 restoration has zero slope; the previously established local uniform convergence licenses the summed derivative. The massive cancellation does not remove higher response H(p).",
+    "The LLL is retained separately and is not treated as a massive resolvent with M=0.",
+    "The slope enclosure uses the rigorous product radius enclosure, not a pressure quadrature or a retuned scale.",
+    "The first cold seed shape is a generalized Ward field with P T=chi_g S, rather than being incorrectly declared a pure diffeomorphism. The complete first conformal residual is retained.",
+    "The normal-model first jet is not a uniform remainder theorem at the finite seam, nor an application of the L2 inverse to a growing source.",
+    "The <5.8e-30 radius comparison is only the classical zero-seam shape component. It excludes the full coupled operator, boundary return, other source row and higher remainder.",
+    "The original closed audit and its envelope lower bound remain valid in their scopes. No full finite inverse, compatibility, nonlinear admission or stability requirement is marked complete.",
+    "The single selected calculation remains the complete signed matched boundary-to-bolt response. The boundary map and weighted C5 remainder take priority over a new generic source-estimate chain."
+  ],
+  "external_sources_read": [
+    {"url": "https://dlmf.nist.gov/16.4.E9", "locator": "Rogers-Dougall very well-poised 5F4 sum and convergence condition", "use": "Exact evaluation of the retained massive slope sum; no global boundary theorem imported."}
+  ],
+  "protocol": {
+    "ordinary_argument_first": true,
+    "symbolic": "Residue-to-5F4 ratio, convergence excess, gamma simplification, full first cold conformal row and seed curvature jet",
+    "rational": "Rouche bound with evaluated slope, exponent factor, first-jet source bounds and narrowly scoped classical shape comparison",
+    "interval": "80-digit signed slope enclosure from exact product radius bounds",
+    "numerical": "70/110-digit independent hypergeometric evaluation and 1024 positive residue terms with analytic tail majorant for four masses",
+    "benchmark_digits": [70,110],
+    "cross_precision_tolerance": "1e-40",
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "actual_finite_seed_response_computed": false,
+    "continuum_boundary_domain_machine_verified": false,
+    "lean_selected": false
+  },
+  "physical_coupled_inverse_proved": false,
+  "nonlinear_solution_constructed": false,
+  "physical_stability_proved": false,
+  "goal_complete": false
+}
