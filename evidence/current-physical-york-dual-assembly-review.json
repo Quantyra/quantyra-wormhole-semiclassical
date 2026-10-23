@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Exact frozen canonical-to-York weak transpose, physical action and bolt-source normalization, actual global trial directions and exterior source-conversion bounds; not the full Hessian solve.",
+  "retained_inputs": [
+    "notes/current-seed-cold-action-defect.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/current-bolt-adjoint-domain.md",
+    "evidence/current-bolt-adjoint-domain.json",
+    "notes/stationary-seed-quantum-form.md",
+    "notes/current-seed-boundary-phase-and-trace-defect.md",
+    "notes/current-all-angular-principal-operator.md"
+  ],
+  "ordinary_argument_review": [
+    "The canonical normalized rows are densities against constant dz after the angular/time integrations. The physical factor W must remain in the adjoint source, even though it cancels from the forward equation.",
+    "The frozen TT return becomes a positive differential auxiliary Green problem with boundary conditions inherited from the original physical phase. This auxiliary operator is not a gravitational inverse.",
+    "Two integrations by parts give the transpose; the outer mass/log decay and regular bolt remove its boundary terms without adding a zero-mass condition.",
+    "The derivative-free numerator combines source differences before division by Q squared. Dini continuity at the bolt suffices; the available quarter-power source modulus meets that condition at fixed h.",
+    "Both bolt delta sources survive the transpose. Their small coefficient in normalized rows compensates the large action measure and is not a gain from changing normalization.",
+    "The exterior-source conversion has an exact gamma factor at the bolt. Its computed constants apply to this kinematic map only, not the unknown physical H inverse or the exterior metric-return budget.",
+    "Polynomial auxiliary directions give global finite-seed TT trial fields including a nonzero mass cubic, nonzero bolt values and the induced radial tail. No claim of full basis completeness is inferred.",
+    "Manufactured polynomial source families verify the global transpose against independent direct pairings. They are explicitly not the actual quantum defect or adjoint residual.",
+    "The seed is off shell. All prior action-density, gauge/chart and full-gradient contacts remain; a moving nonlinear chart would require its second-variation contact.",
+    "The full angular logarithmic model is retained. The common curved/boundary remainder and actual two-residual physical feasibility test remain open.",
+    "The first frozen run stopped at the initial symbolic TT check: its test expression used a minus instead of a plus on Qprime*xi/z^4. Transforming the original areal equation gives (Q b/z^4)'=-Qprime*xi/z^4. Correct that verification expression and replay the complete package; the stated auxiliary equation, trial formula and targets are unchanged. Preserve the failed snapshot and traceback.",
+    "The second run passed the algebra and normalization but stopped at an interval-library API error: Arb exposes absolute value through Python abs(qp), not qp.abs(). Correct the call and replay the entire package with the same bounds and targets; preserve the failed run."
+  ],
+  "external_sources_read": [
+    {"url":"https://arxiv.org/pdf/1209.2021","scope":"Smooth spin-Dirac diffeomorphism equivariance. The paper explicitly assumes smooth manifolds; it does not establish the paired reflected/log boundary realization."}
+  ],
+  "strongest_comparator": "The retained forward York map and physical bolt functional. The new result supplies their exact weak transpose with density factors and endpoint cancellation, rather than substituting canonical source rows as TT dual rows.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 256,
+    "outer_source_support": "0<=z<=1/2",
+    "whole_interval_cells": [128,256],
+    "f_conversion_upper_target": ".04",
+    "g_conversion_upper_target": ".08",
+    "global_polynomial_pairing_width_target": "1e-16",
+    "physical_solve_executed_by_this_run": false,
+    "full_curved_operator_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

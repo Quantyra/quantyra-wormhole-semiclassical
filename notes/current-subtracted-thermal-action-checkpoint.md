@@ -1,3 +1,61 @@
+# Active checkpoint: physical weak source conversion
+
+2026-10-23, E003/S169. The full stable semiclassical wormhole goal is
+active and incomplete. The feasibility audit remains closed.
+
+The [physical weak transpose](current-physical-york-dual-assembly.md)
+now specifies the canonical-to-York source conversion on the actual
+finite seed. A shared positive auxiliary Green problem generates the
+forward TT return and its transpose. Its derivative-free source numerator
+retains the bolt cancellation before division by Q squared. The original
+outer mass/log phase, induced radial tail and both gravitational point
+sources remain; no zero-mass or artificial wall condition is added.
+
+The physical action factor is W=-N pi B^2/(G gamma). For N=1 it is
+about -5.20706e76, while the normalized bolt source is about -3.79705e-44
+and its TT component is half. Their product preserves the physical
+ell_b about 1.97714e33. This is necessary normalization, not an improvement
+in an error bound. The frozen map retains the prior off-shell contacts.
+
+For canonical sources supported in z<=1/2, the returned TT source at the
+bolt divided by h is bounded by
+
+    1.66663E-2 ||f||_infinity + 5.37835E-2 ||g||_infinity.
+
+These whole-interval constants quantify the KINEMATIC source conversion.
+They are not K_c, a gravitational inverse or the metric exterior-return
+target. The global moment and exact gamma factor are both retained.
+Three global finite-seed TT trial fields include the mass cubic and
+nonzero bolt data. Eighteen manufactured whole-domain pairings verify
+their transpose; none is the actual quantum residual or a computed solution.
+
+Continue the physical weak primal-dual calculation with the complete
+angular logarithmic principal model and this source/measure conversion.
+Next assemble the common curved/boundary remainder on the forward/bolt-
+adjoint trial pair and evaluate the actual two-residual certificate.
+The full physical test remains unexecuted: bolt target <1.667e-9,
+exterior return <6.67e-10, Y0<=5e-9 and every X/admission, nonlinear
+and exact compatibility requirement remain open.
+
+The final frozen replay passed 81 supporting checks over 877
+unchanged inputs. All three runs, two failures, snapshots and 126
+raw rows are retained. The failures were a sign in the initial symbolic
+test expression and an unsupported absolute-value method call. Correcting
+those and replaying the complete package left the argument and targets
+unchanged. Exact-rational closeout reaggregated all 384 interval cells
+and checked all 18 saved pairing enclosures. No scientific edit followed
+success and no Lean ran. All 18 inherited worktree paths remain unchanged.
+
+Remaining to-do list: full common curved/boundary operator and physical
+forward/adjoint residual certificate; X/admission, nonlinear closure and
+exact compatibility; physical matching, causal realization, semiclassical
+validity/noise, all-sector stability, charge/return, opening, transport,
+preparation, separate creation and stable wormholes.
+
+---
+
+The preceding checkpoint and its history are preserved below.
+
 # Active checkpoint: complete angular principal model retained
 
 2026-10-23, E003/S169. Resumed at Dan's explicit request. The full stable
