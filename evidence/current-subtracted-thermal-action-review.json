@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Executable action-level subtraction and complete discrete thermal gradient/Hessian sums for compact weak directions at n=1,2; a prerequisite of the selected physical weak solve, not the full operator.",
+  "retained_inputs": [
+    "notes/current-coincident-dirac-action-assembly.md",
+    "checks/current_coincident_dirac_action_assembly.py",
+    "notes/current-seed-separated-quantum-response.md",
+    "checks/current_seed_separated_quantum_response.py",
+    "notes/current-seed-radial-green-enclosure.md",
+    "checks/current_seed_radial_green_enclosure.py",
+    "notes/current-controlled-solution-audit-closeout.md",
+    "notes/current-bolt-adjoint-domain.md",
+    "notes/current-seed-diagonal-restoration-contract.md"
+  ],
+  "ordinary_argument_review": [
+    "Rotate the real first-order transfer into its instantaneous eigenvector. The transformed Riccati equation and logarithmic-norm action difference are exact; subtract before interval bounds.",
+    "The endpoint characteristic already incorporates the even paired boundary variation. Integrating the action difference through the seam includes propagated sensitivities outside the compact support.",
+    "The direction vanishes before the inner cut, so its initial sensitivities and normalization variation are zero. The unperturbed physical impedance stays unknown within its invariant interval; no wall is substituted.",
+    "Signed variation-of-constants bounds use whole-cell coefficients and length intervals. Y and Z are not constrained nonnegative. Their triangular enclosure uses the already enclosed X and Y.",
+    "After the first numerical width failure, replace independent E/Phi bounding by monotone barriers approaching the lower and upper F/a equilibria. Choose slow or fast damping according to which side of the equilibrium the barrier starts; this is valid for arbitrary signed states and variable coefficients. Refine to (128,32),(256,64) without changing either target. Retain both initial failures and document that the first failed final interval was not recorded before its assertion.",
+    "That refinement still missed the fixed width. The next replay uses the exact auxiliary action-adjoint integration identity to eliminate Z, evaluates mixed entries directly, and refines to (256,64),(512,128). Its two endpoint terms vanish because Z is zero initially and the action adjoint is zero at the seam. This auxiliary scalar transfer adjoint is not the physical bolt adjoint. All failed snapshots remain; no target changes.",
+    "The first auxiliary-adjoint replay produced nonfinite output in the zero-direction prefix and was deliberately terminated. The receipt marks its reconstructed unchanged sources, observed failure and unavailable partial data explicitly. Remove only the identically zero prefix contribution, retaining its X propagation; intersect X squared with the nonnegative range. Assert finite outputs per bin and retain partial bins on ordinary exceptions.",
+    "The corrected replay still missed .02, with H11 width approximately .03725. Retain the mesh and targets; replace dependency-heavy polynomial ranges by exact Bernstein subdivision ranges for Q,Qprime,u,uprime. The nonnegative partition-of-unity basis proves the whole-cell bounds; no point sampling replaces an enclosure.",
+    "The first Bernstein fixture demanded 1e-11 endpoint tightness after a nondyadic split, below the outward ball-radius rounding at that width. Use an exactly dyadic linear fixture on [.25,.625] with the same tightness guard; the thermal tail and matrix targets are unchanged. Preserve that startup failure.",
+    "The dyadic fixture also exceeded that inappropriate 1e-11 guard because the interval union itself is outward rounded. Record its exact enclosure and use a 1e-8 helper guard with exact endpoint containment. This changes only a library-rounding diagnostic, not either scientific acceptance target. Both helper failures are retained.",
+    "The Bernstein replay gives n=1 H11 width .0205847753, just above .02. Preserve it and refine the final level from (512,128) to (640,160), retaining the coarse (256,64) replay and all original scientific targets.",
+    "Each frequency block has exact integer endpoints, current gamma weights, and a whole-frequency interval. This encloses the discrete sum with no continuum thermal replacement.",
+    "The explicit p^-3 tail follows from the direction-free prefix, positive damping, whole-path geometry guards and derivative equations. Its M<26 hypothesis limits it to n=1,2.",
+    "The local flat action remains a restoration obligation in the fixed physical scheme. This subtraction is an exact rearrangement, not a changed finite counterterm.",
+    "The compact argument is not transferred to bolt-reaching directions. Both gravitational point sources, actual mass/log phase and dual residual remain obligations of the full solve."
+  ],
+  "external_source_scope": "No new external analytic theorem is imported. The original paired first-order and action arguments are read directly. The new rotation, sensitivity, comparison and tail arguments are derived in the ordinary note before execution.",
+  "strongest_comparator": "Existing raw finite-mode matrices cannot be summed and their independent interval vacuum subtraction need not have summable widths. Exact action-level subtraction preserves the cancellation before enclosing the full thermal spectrum.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0, existing isolated installation",
+    "precision_bits": 256,
+    "angular_levels": [1, 2],
+    "refinement_schedule": [[256, 64], [640, 160]],
+    "frequency_allocation": "B linear blocks on [0,1], B per factor two through 32, max(4,B/4) through 128, four per factor two above 128",
+    "thermal_cutoff_nominal": "1048576",
+    "omitted_thermal_tail_target": "3e-5",
+    "final_matrix_absolute_width_target": ".02",
+    "physical_solve_executed_by_this_run": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}
