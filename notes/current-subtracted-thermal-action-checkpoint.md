@@ -1,3 +1,72 @@
+# Active checkpoint: heat-cutoff form obstruction; retain the full principal part
+
+2026-10-23, E003/S169. Full stable-wormhole research remains active and
+incomplete. The feasibility audit remains closed. Previous turn: progress.
+
+The [executed heat-cutoff test](current-heat-cutoff-form-obstruction.md)
+rules out treating the locally subtracted small-time heat Hessian as a
+uniformly small operator on the full physical form space. For EVERY
+fixed T>0, the omitted relative principal form has supremum exactly 1.
+Its p^4 log p term remains entirely in the omitted part; the retained
+t>=T integral and local fourth contacts grow at most as p^4.
+
+This is a lower-bound obstruction, not an oversized upper estimate.
+The actual compact-interior TT moment construction preserves both endpoints
+and gives the same asymptotic ratio in the physical l form. Hence the
+actual omitted V-to-V* norm is >=1 if bounded. No smooth-seam theorem or
+numeric global embedding constant is needed for this obstruction.
+
+The old conditional Aop*t^(1+alpha), alpha>0, estimate for the UNREMOVED
+complete nonlocal principal remainder cannot have finite Aop on V.
+The preceding checkpoint's finite-entry calculation and general residual
+algebra remain valid; only that proposed uniform interpretation is ruled
+out. Fixed-direction/frequency convergence is not contradicted.
+
+All-angular interval witnesses for the proposed 1/4 relative allowance:
+
+| Heat cutoff T | Witness frequency p, rounded | Omitted principal fraction |
+| --- | --- | --- |
+| 1e-2 | 6.54115642019e4 | >0.323542 |
+| 1e-8 | 6.82952257978e12 | >0.290283 |
+| 1e-16 | 3.16998357453e23 | >0.275152 |
+
+These finite frequencies concern the principal model. The actual compact-
+core conclusion is asymptotic; the numbers are not finite thresholds for
+the full lower-order Hessian, physical poles or semiclassical validity.
+No physical UV cutoff or normalization change is introduced.
+
+Decision: retain the complete logarithmic principal operator, including
+its actual metric/York symbol and exact finite fourth contact. The existing
+all-angular quadrature has <2e-5 relative MODEL error; it does not bound
+the physical curved/seam remainder. Reject local-restoration-plus-heat-cut
+as a uniform small-form approximation. Source optimization remains parked.
+
+The single next calculation is the quantitative actual-minus-complete-
+principal remainder on the physical paired mass/log phase, including the
+seam and logarithmic bolt-adjoint form extension. This is proposed, not
+executed here. Function-specific residual bounds can be used directly:
+
+    |Q0|+min(P eta_e,E eta_psi)
+                  +(Db0+eta_psi)(D0+eta_e)<1.667e-9,
+
+where eta_e>=||R e_app||_V*, eta_psi>=||R psi_app||_V*. These bounds and
+the actual norms/residuals remain unknown. Exterior <6.67e-10, Y0<=5e-9,
+every admission/nonlinear requirement and exact compatibility remain open.
+The full physical feasibility test is unexecuted. No nonexistence or
+instability theorem follows from the failed uniform approximation.
+
+The final frozen run passed 43 checks over 902 unchanged
+inputs. Preserve both attempts, one failure and 54 raw rows.
+The failure was structural symbolic equality in the heat-integral checker;
+its ordinary formula was unchanged. Exact-rational closeout independently
+enclosed E1/exponentials/logarithms, checked all three witness signs and
+reaggregated 960 angular quadrature cells. No scientific edit followed
+success and no Lean ran. All 18 inherited paths remain unchanged.
+
+Remaining to-do list: quantitative actual-minus-complete-principal paired remainder and physical forward/adjoint residuals; X/admission, nonlinear closure and exact compatibility; matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and stable wormholes.
+
+---
+
 # Active checkpoint: canonical local restoration and boundary-remainder priority
 
 2026-10-23, E003/S169. Full stable-wormhole research is active and incomplete.

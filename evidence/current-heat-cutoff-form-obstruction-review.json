@@ -1,0 +1,44 @@
+{
+  "date":"2026-10-23",
+  "story":"S169",
+  "scope":"Decisive feasibility test of treating the locally subtracted short-time heat Hessian as a uniformly small operator in the full physical form space. No physical solution or nonexistence theorem.",
+  "retained_inputs":[
+    "notes/current-all-angular-principal-operator.md",
+    "checks/current_all_angular_principal_operator.py",
+    "notes/stationary-shape-logarithmic-response.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/current-bolt-adjoint-domain.md",
+    "notes/current-bolt-contact-parametrix.md",
+    "notes/stationary-massive-boundary-layer.md"
+  ],
+  "ordinary_argument_review":[
+    "The preceding turn made progress by assembling canonical local/LLL terms and correcting a stale scale hypothesis. Its proposed uniform heat-cap estimate requires a feasibility test before further seam bounds.",
+    "Derive the positive Laplace representation of the exact all-angular principal remainder from r(s)=1-exp(-s)-s+s^2/2. Tonelli is justified by positivity, not by an unrenormalized signed mode sum.",
+    "For each fixed T, keep the original fourth contact and bound the complete t>=T coefficient by kappa0+4[(324T+2)exp(-324T)+E1(324T)]. This follows from the existing gap and counting function. It is a known finite bound.",
+    "The complete principal coefficient grows as 4log p. Thus the omitted relative short-time form has supremum exactly one for every T>0. This is a lower-bound obstruction, not an oversized upper bound or a new normalization.",
+    "Transfer the obstruction to the actual compact TT core: impose the exact radial TT moment, preserve both endpoint conditions, and use the nonzero interior logarithmic symbol. At fixed positive heat cutoff the Duhamel expression and local subtractions admit an H2 bound. No smooth-seam theorem is invoked.",
+    "Moller Theorem 1 assumes a closed smooth manifold and locally stable kernel. Use only its local symbol via the retained compact-interior parametrix transfer. It does not supply the actual paired boundary remainder, inverse or stability theorem.",
+    "The old per-direction conditional heat estimate is not contradicted. The uniform Aop t^(1+alpha) estimate for the complete unremoved principal remainder cannot hold on V. A fixed-band comparison makes the quantifier distinction explicit and introduces no physical UV cutoff.",
+    "Retain the full angular logarithmic principal operator with the actual York/metric symbol and exact contact. The quantitative actual-minus-principal paired remainder and directional residual bounds remain open; the model quadrature is not their certificate.",
+    "Execute finite model witnesses for T=1e-2,1e-8,1e-16 and eta=1/4 using p=2p_eta, with the retained complete angular quadrature. Preserve nodes, exact intervals and every run. Supporting checks do not replace the all-T proof or the actual compact-core argument.",
+    "The first run failed because the checker compared structurally different SymPy representations of the same elementary heat integral. Compare their simplified difference to zero; the ordinary formula is unchanged. Preserve the failed snapshot and rerun all checks."
+  ],
+  "source_review":"Read the actual local/LLL checkpoint, complete-angular principal proof, compact geometric heat Hessian, physical full-Hessian form definition, bolt-adjoint domain and paired cubic seam argument. Consult Moller arXiv:0705.3857v3 Theorem 1 and equation 1.29 for the local log symbol with its hypotheses; DLMF 5.11.2 for the digamma asymptotic and 6.2.1/6.6.2 for E1 integral/series. No external smooth theorem is promoted to a nonsmooth boundary estimate.",
+  "strongest_comparator":"The already known fixed-angular-cutoff obstruction is another loss of the same logarithmic principal part. The heat-cutoff test must detect that obstruction in the currently proposed Aop estimate. Compare with fixed-frequency convergence, not another finite sample claimed to bound all frequencies.",
+  "protocol":{
+    "ordinary_argument_first":true,
+    "source_freeze_before_run":true,
+    "preserve_all_runs_snapshots_and_failures":true,
+    "interval_library":"python-flint==0.9.0",
+    "precision_bits":256,
+    "heat_cutoffs":["1e-2","1e-8","1e-16"],
+    "uniform_relative_target":"1/4",
+    "finite_witness_frequency":"2p_eta(T)",
+    "existing_principal_quadrature_width":".002",
+    "E1_alternating_series_terms":96,
+    "full_physical_solve_executed":false,
+    "full_curved_quantum_residual_executed":false,
+    "lean_selected":false
+  },
+  "goal_complete":false
+}
