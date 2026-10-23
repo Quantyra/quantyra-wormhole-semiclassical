@@ -1,3 +1,68 @@
+# Paused checkpoint: endpoint/restoration result retained
+
+2026-10-23, E003/S169. Paused at Dan's explicit request to stop and set
+a checkpoint. The full stable semiclassical wormhole objective is preserved
+and incomplete. Resume research only after an explicit request.
+No workstream research process was running at this pause; no calculation
+was interrupted and no scientific calculation or Lean was run to checkpoint.
+
+The complete thermal-action replay and the endpoint/local-restoration
+package have passed their scoped acceptance targets. At epsilon=5e-9,
+M<=26 and the stated direction bounds, the actual seed's all-thermal
+omitted-tip allowance is <2.92582e-11 per angular state, below the 1e-10
+assembly target. It excludes the separate finite-cut ell*Y and ell*Z
+terms and is not the physical bolt error. The canonical regular-bolt
+normalization and local thermal restoration are explicit. The accepted
+endpoint package retains both runs, its diagnostic failure, source
+snapshots and raw records; no scientific source changed after success.
+
+The fixed-cap M_n^2 allowance cannot certify the infinite angular sum,
+and its small-cap hypothesis eventually fails. This is a failed upper
+certificate, not an actual divergence or a nonexistence result. The
+common restored angular remainder is unknown. The outer mass/log phase
+does not supply a closed C5 domain. Physical boundary identification,
+regularity and exact compatibility precede further source optimization.
+
+The feasibility audit remains closed with a conditional continue using
+the selected sharper method. The full physical weak primal-dual solve
+H e=-r1, with both gravitational bolt point sources and the actual
+mass/log phase, is STILL UNEXECUTED. Its decisive certificate remains
+
+    |Q_app| + ||d_b||_V* ||d||_V* < 1.667e-9,
+
+alongside exterior return <6.67e-10, Y0<=5e-9 and every preserved-ball,
+X/admission and compatibility condition in the closed audit. No actual
+controlled solution, semiclassical validity or stability is certified.
+
+On explicit resume, first establish the joint bolt/high-angular local
+subtraction and its common remainder with the original Weyl/vacuum and
+a0/a1/a2 restoration. This is an unresolved prerequisite of that same
+physical solve, not an executed feasibility test. Begin with the actual
+domain hypotheses and the existing curved quantum TT source argument;
+do not import a smooth closed heat expansion across the mass/log seam.
+No new joint-remainder derivation or numerical run was completed between
+the accepted endpoint result and this pause. No isolated compact-mode or
+additional cold-value calculation is selected. The full objective and
+S169.2-S169.5 remain incomplete.
+
+Last accepted scientific satellite commit:
+c86a54829b74464e8aad1502c32b28499074c88f.
+See [endpoint proof](current-endpoint-thermal-restoration.md) and its
+[retained receipt](../evidence/current-endpoint-thermal-restoration.json).
+The earlier pause/replay instructions below are historical; the complete
+thermal replay has since passed and is not the next pending calculation.
+
+Remaining to-do list on explicit resume: matched bolt/angular subtraction
+and original-scheme restoration in the physical weak operator; actual coupled
+correction with certified dual error and X/admission; nonlinear closure and
+exact compatibility; physical matching, causal realization, semiclassical
+validity/noise, all-sector stability, charge/return, opening, transport,
+preparation, separate creation and the full stable-wormhole objective.
+
+---
+
+Preserved preceding checkpoint and history (status statements below are historical).
+
 # Active checkpoint: physical endpoints and local thermal restoration
 
 2026-10-23, E003/S169. The full stable-wormhole goal remains active and
