@@ -1,3 +1,50 @@
+# Active research checkpoint: thermal subtraction replay completed
+
+2026-10-23, E003/S169. Research resumed by explicit continuation of the
+full stable semiclassical wormhole goal. The earlier pause below is a
+historical snapshot; it no longer describes the active status.
+
+The unchanged frozen (N,B)=(256,64),(640,160) replay completed both
+angular levels n=1,2. Every final Hessian width is below .02 and each
+infinite thermal-tail allowance is below 3e-5 in the declared gamma-
+weighted action units. The receipt retains complete coarse and fine
+integer blocks. These are compact-direction, per-angular-state thermal
+differences, before angular degeneracies and physical restoration.
+
+The replay began 2026-10-23T18:36:21.845440+00:00 and ended
+2026-10-23T18:50:19.146444+00:00. It passed 35 supporting checks over
+862 unchanged inputs. All ten attempts remain: eight failures,
+one user interruption and this accepted replay. The previous missing
+interrupted-run bins and reconstructed source limitations remain disclosed.
+All scientific sources are identical to the paused commit. No scientific
+edit followed success. No Lean was invoked.
+
+This closes the declared thermal summability/assembly requirement for
+these two compact directions at n=1,2. It closes no physical inverse,
+weighted admission, nonlinear, matching, validity or stability requirement.
+The feasibility audit stays closed and the full objective stays incomplete.
+
+Continue the selected physical weak primal-dual H e=-r1 calculation.
+Before applying this compact formula at the bolt or mass/log end, derive
+its endpoint normalization and boundary contributions. Assemble the flat,
+Weyl and common a0/a1/a2 restorations and the full angular remainder in
+the original scheme. Those are prerequisites of the same coupled solve,
+not permission to keep commissioning isolated compact-mode demonstrations.
+The two-residual bolt target is <1.667e-9, with exterior return <6.67e-10,
+Y0<=5e-9 and the full X/admission and nonlinear inequalities unchanged.
+That physical feasibility calculation is still proposed, not executed.
+
+Remaining to-do list: physical boundary realization and full restored
+weak operator; actual coupled correction with certified dual residual and
+X/admission; nonlinear closure and exact compatibility; physical matching,
+causal realization, semiclassical validity/noise, all-sector stability,
+charge/return, opening, transport, preparation, separate creation and the
+full stable-wormhole objective.
+
+---
+
+The following is the preserved checkpoint at the earlier user pause.
+
 # Paused research checkpoint
 
 2026-10-23, E003/S169. Paused at Dan's explicit request.
