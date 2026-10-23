@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Actual scalar inverse point returns in the effective Schur bolt functional on three physical TT fields, with full-angular diagonal energy bounds and necessary reduced-source thresholds; not a full Schur solve.",
+  "retained_inputs": [
+    "notes/product-centered-scalar-cold-response.md",
+    "notes/current-finite-local-action-assembly.md",
+    "notes/current-canonical-heat-restoration-assembly.md",
+    "notes/current-geodesic-two-sided-remainder.md",
+    "notes/current-geodesic-flow-multiplier.md",
+    "notes/current-uniform-bolt-certificate-obstruction.md"
+  ],
+  "ordinary_argument_review": [
+    "Use the actual scalar Green barrier, whose finite-geometry and regular-bolt hypotheses have been read. Extending it to bounded auxiliary forcing preserves the same positive Green exhaustion and perturbation bound.",
+    "The constant subtraction is an auxiliary function outside the physical form domain. Its nonzero asymptotic limit cancels with the auxiliary response so the actual solution has the original decaying boundary realization. No new scalar boundary datum is imposed.",
+    "The normalized scalar/mixed source has a minus sign when solving A^-1 B because W is negative. Keep all local anomaly and off-shell York contacts; the canonical determinant has no scalar/mixed row.",
+    "The remainder's exact bolt zero is used algebraically through a correlated c_i. Do not infer it merely from a zero-containing numeric coefficient or discard uncertain terms.",
+    "The sixth-moment bound applies only to the fixed smooth TT trial fields. The singular adjoint is not assumed H3 and the full angular logarithmic operator is not truncated.",
+    "Compute the physical diagonal and point-functional lower bounds before deriving source thresholds. These do not upper-bound the actual adjoint norm or evaluate a reduced source.",
+    "The next decisive calculation is a signed reduced-source projection with its quantum and scalar terms. No cancellation is assumed from the preceding scalar-only source result."
+  ],
+  "source_review": "The read ordinary scalar maximum-principle/Green argument, fixed York/local action, common restoration and Bessel moments supply the inputs. The geodesic third-derivative and point-response identities are derived here. No new external continuum theorem is invoked across the paired seam.",
+  "strongest_comparator": "A finite-dimensional scalar inverse or an assumed cancellation of the bolt functional would not certify the actual Schur reduction. Use the full scalar inverse barrier and preserve the 1/h observable.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 256,
+    "scalar_point_error_target": "e_i<1e-7",
+    "noncancellation_test": "abs(ell_eff(xi_i)/ell_b)>.99 abs(xi_i(bolt))",
+    "uniform_eta": "0.0022",
+    "Schur_operator_norm_upper": "1.341",
+    "physical_bolt_target": "1.667e-9",
+    "signed_reduced_source_computed": false,
+    "full_physical_solve_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

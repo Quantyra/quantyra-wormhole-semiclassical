@@ -1,3 +1,81 @@
+# Active checkpoint: actual Schur bolt functional and source thresholds
+
+2026-10-23, E003/S169. The full stable-wormhole objective remains active
+and incomplete. The feasibility audit stays closed. Previous turn: progress.
+
+The [actual scalar point-return calculation](current-schur-bolt-functional.md)
+certifies the effective Schur bolt functional on the three retained global
+TT fields. After division by the required ell_b=(1+h)/h, its values are
+approximately -4/3, -5/6 and 1 for TT_J4, TT_J5 and TT_zero_J. Scalar
+elimination does not cancel this functional on these fields. The values
+retain finite-seed corrections, rather than replacing them by those
+rational limits. Exact interval results are in the receipt.
+
+The actual scalar inverse is controlled by its global Green barrier.
+Subtracting the source's exact bolt value leaves a correlated zero there;
+the response from the full remaining geometry is bounded by
+K*C_i*[2h/(1+h)]^(2/5). The constant subtraction is auxiliary, outside
+the physical form domain. Its asymptotic constant cancels against the
+auxiliary response, leaving the original decaying scalar solution. No
+wall, new boundary datum, scalar Galerkin inverse or smooth bolt-adjoint
+substitution is introduced.
+
+| Physical TT field | Scalar bolt error allowance | Necessary source ceiling, full budget | Necessary source ceiling, half post-scalar budget |
+| --- | ---: | ---: | ---: |
+| TT_J4 | 2.4683904E-11 | 3.1260683E-40 | 1.5529868E-40 |
+| TT_J5 | 2.8171858E-11 | 1.8113390E-40 | 8.9984770E-41 |
+| TT_zero_J | 1.6098185E-12 | 2.6035780E-40 | 1.2934209E-40 |
+
+The last two columns concern |r_eff(xi)|/|W|, in the SAME original
+action normalization. They are necessary conditions for the .0022
+uniform TT certificate, not observed source values or sufficient solution
+criteria. The actual signed reduced projections remain UNKNOWN. The
+previous scalar-only source projection does not determine their signs
+or rule out cancellation with the shape source.
+
+The full angular geodesic term on these fixed smooth trials is bounded
+by the exact sixth moment and the actual geodesic equation. Its normalized
+diagonal contributions are below 3.496e-38, 1.821e-38 and 5.026e-39.
+Combining these with the known local/LLL/common-restoration entries gives
+actual TT energy upper allowances 0.606122, 0.219504 and 0.378611
+in |W| units. The Schur operator norm is <1.341 in l-to-l* units.
+Each trial therefore gives a true adjoint-norm LOWER bound exceeding
+1e-5. No upper norm or singular-adjoint approximation follows from this
+finite set. The sixth-moment estimate is not applied to the non-H3
+point adjoint or substituted for the full logarithmic operator.
+
+Decision: retain exact scalar Schur reduction, and evaluate the signed
+reduced-source projection for xi=z^4,J=0 BEFORE a global pair relying
+on the uniform TT certificate. This single projection includes both
+r_T(xi) and r_s(A^-1B xi), with the full quantum source and actual scalar
+return. Its full-budget necessary ceiling is 2.6035780e-40; the
+conditional half-budget ceiling is 1.2934209e-40. No available result
+proves these demanding conditions attainable. Exceeding the ceiling
+would reject the uniform TT certificate and require direct signed or
+directional remainder estimates, without implying nonexistence.
+
+The actual scalar point returns, smooth-trial energy bounds and source
+thresholds ARE EXECUTED. The signed reduced-source projection, complete
+geodesic forward/adjoint solve and physical error certificate remain
+UNEXECUTED. The old full-V certificate stays rejected. Scalar q_s<
+1.0715730e-11, the physical 1.667e-9 bolt target and 6.67e-10 exterior
+target, Y0 and every nonlinear/compatibility/physical requirement remain.
+
+Final frozen run: 49 checks across 922 unchanged inputs,
+one success, no scientific failure and 51 raw rows.
+Independent rational closeout verified 78
+moments, the fifth-power bolt weight, point-error budgets, actual energy
+conversions and necessary source ceilings. One closeout diagnostic failed
+an unnecessary ordering assumption between two outward bounds; the final
+verification independently recomputes the bounds and retains the larger
+ceiling. Both snapshots/outcomes are preserved. No scientific edit
+followed success, no Lean ran, all 18 inherited paths remain intact and
+no checkbox or physical solution claim is promoted.
+
+Remaining to-do list: signed reduced-source projection, actual scalar-Schur forward/adjoint pair and physical bolt/exterior certificate; X/admission, nonlinear closure and exact compatibility; matching and causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: full-V uniform bolt certificate rejected
 
 2026-10-23, E003/S169. The full stable-wormhole objective remains active
