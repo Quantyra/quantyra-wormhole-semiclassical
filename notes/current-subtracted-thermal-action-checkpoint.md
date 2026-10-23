@@ -1,3 +1,84 @@
+# Active checkpoint: actual finite-seed local action and signed trace
+
+2026-10-23, E003/S169. Research is active; the full stable semiclassical
+wormhole objective remains incomplete. The feasibility audit stays closed.
+
+The [local action assembly](current-finite-local-action-assembly.md)
+now implements the actual finite-seed Einstein, magnetic, c_R R2 and
+complete local Weyl Hessian in the frozen affine canonical/York chart.
+The canonical determinant has no conformal dependence, so the scalar
+and scalar/shape mixed rows are complete. Its independent shape/shape
+row is still missing. The generator retains off-shell density/curvature
+terms, the physical mass tail and the original scale and temperature.
+
+An exact sign correction is required before the signed solve:
+
+    W=-N pi B^2/(G gamma),
+    r1,nu=+r0^4 e_disk/(B^2 C).
+
+The minus sign in section 1 of current-seed-cold-action-defect.md is
+superseded for the signed row. Its absolute value/oscillation bounds
+and the scalar-only <1.467e-13 return remain unchanged. Earlier frozen
+sources are preserved. No full signed physical pairing existed to revise.
+
+Fifteen local weak pairings were integrated on the whole physical domain
+0<z<z_h, using exact polynomial/log primitives and Arb parameters.
+The five directions are s=z^4,z^5 and the physical TT fields from J=z^4,
+J=z^5 and xi=z^4,J=0. Nine pairings involve a scalar direction and are
+complete. The six pure-TT pairings are only the local contribution.
+All widths are <1e-14 in normalized action units; independent rational
+reaggregation gives maximum width <5.55170E-20.
+This is assembly accuracy, not a residual or admission bound.
+
+The two complete normalized scalar rows, rounded for display, are
+
+    [1.333333344958, 1.111111120877, .267676769541, .156695157754, -.222222223838]
+    [1.111111120877,  .961038969852, .245014246884, .144688645773, -.200000001558].
+
+The original physical action multiplier for N=1 is about -5.20706e76.
+It is retained, not interpreted as a gain. Scalar and mixed rows have
+separate covariant/Euler trace checks, allocation by allocation. These
+five directions do not certify a complete approximation space or inverse.
+
+The second-variation Weyl flux vanishes for these mass/fast directions;
+the first-variation boundary representative remains required. The solver
+still needs the actual paired quantum boundary domain and the weighted
+mass/log adjoint. The local integration does not evaluate the singular
+log-log bolt adjoint, prove an X embedding or supply a curved remainder.
+The small local Weyl entries do not bound the nonlocal shape operator.
+
+Decision: continue the specified weak primal-dual method. The single
+next calculation is the complete canonical shape contribution and its
+common curved/boundary remainder on the forward/bolt-adjoint pair,
+combined with these exact local rows, to evaluate the physical certificate
+
+    |Q_app|+||d_b||_V* ||d||_V*<1.667e-9.
+
+The half allocations remain |Q_app|<=8.335e-10 and the residual product
+<8.335e-10; exterior return <6.67e-10, Y0<=5e-9 and all admission and
+nonlinear requirements are unchanged. That full test is STILL UNEXECUTED.
+The relevant unknown operator/domain constants have no numerical value
+yet; no known failing upper bound is relabeled as a nonexistence result.
+This calculation closes local assembly requirements, not solution feasibility.
+
+The final frozen replay passed 116 supporting checks over 887
+unchanged inputs. Four runs and 250 raw rows are retained: two failed
+curvature diagnostics exposed a new interval-container exact-zero bug,
+then the corrected assembly and extended mixed-row replay both passed.
+No scientific edit followed final success. Independent closeout checked
+372 exact-rational moments, including rigorous log bounds.
+No Lean ran; all 18 inherited paths and story checkboxes are preserved.
+
+Remaining to-do list: actual canonical shape/curved/boundary contribution
+and physical forward/adjoint residual certificate; X/admission, nonlinear
+closure and exact compatibility; matching, causal realization, semiclassical
+validity/noise, all-sector stability, charge/return, opening, transport,
+preparation, separate creation and the full stable-wormhole objective.
+
+---
+
+The preceding checkpoint and its history are preserved below.
+
 # Active checkpoint: exact bolt contact and local parametrix
 
 2026-10-23, E003/S169. The stable semiclassical wormhole goal is active

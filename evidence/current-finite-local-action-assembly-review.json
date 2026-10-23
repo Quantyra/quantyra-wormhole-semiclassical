@@ -1,0 +1,49 @@
+{
+  "date":"2026-10-23",
+  "story":"S169",
+  "scope":"Actual finite-seed local weak action, complete scalar and mixed rows, and a corrected signed trace conversion. Canonical shape determinant and physical solution remain incomplete.",
+  "retained_inputs":[
+    "notes/current-seed-cold-action-defect.md",
+    "notes/current-seed-full-trace-defect.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/product-centered-scalar-cold-response.md",
+    "notes/spherical-anomaly-action.md",
+    "notes/recentered-mass-boundary.md",
+    "notes/current-physical-york-dual-assembly.md",
+    "notes/current-bolt-contact-parametrix.md"
+  ],
+  "ordinary_argument_review":[
+    "Derive both local Hessian and signed source in the same affine canonical chart. A nonlinear tensor chart would require a full-gradient acceleration contact and is not silently substituted.",
+    "The retained Euclidean action and negative W imply a positive normalized trace-density row. The minus sign in the earlier cold-defect note is superseded for signed assembly; its absolute bounds and frozen history remain intact.",
+    "Reduce the exact Einstein, magnetic, additional R2 and full Weyl actions before interval arithmetic. Keep the original lambda0, finite nonconstant curvature and density derivatives.",
+    "The Weyl integration by parts changes an explicit boundary flux. Its second variation vanishes on the declared mass/fast directions and at the regular bolt; this does not authorize dropping its first variation.",
+    "The canonical determinant is conformally independent. Hence the scalar and mixed rows are complete, while every TT/TT entry still needs the canonical shape determinant with all angular/thermal modes and restorations.",
+    "Test the scalar action block separately by allocation against the full covariant density-trace Hessian; symmetry alone is insufficient.",
+    "After the first successful local assembly, extend independent comparison to all six mixed entries by differentiating the complete Einstein/R2/anomaly Euler trace row once. This tests the off-shell density terms and integration endpoints independently of the two-direction action jet. Freeze and replay the full package.",
+    "Use full-domain polynomial/log primitives on actual global York trial fields, including mass cubic and induced tails. Finite-dimensional pairings do not prove a full-space inverse or nonlinear solution.",
+    "Before the first run, inspect polynomial/jet reflected arithmetic and retain correlated d=C*eps instead of a cancellation-losing subtraction. Store every integrated moment for independent exact-rational reaggregation.",
+    "Retain the first failed curvature-identity run. Add the actual coefficient discrepancy to its check record before diagnosing or changing the scientific formula; replay the full package.",
+    "The retained diagnostic failure identifies an interval-container bug: Arb inequality with zero is not an exact-zero predicate. Preserve every nonexact zero-containing coefficient using is_zero, including scalar constructor values, and verify this invariant before full replay. No curvature formula or target was relaxed.",
+    "The physical residual, curved quantum remainder, admission constants, compatibility and stability remain unproved. No physical target is relaxed and no old inverse normalization is reassigned."
+  ],
+  "external_sources_read":[
+    {"url":"https://arxiv.org/html/1002.4928v2#S2.SS1","scope":"Equation 2.4, metric f(R) variation including Hessian terms; does not supply the quantum boundary realization."},
+    {"url":"https://arxiv.org/html/hep-th/0106151v1","scope":"Four-dimensional Weyl transgression and equation 56; boundary representative retained separately from the repository derivation."}
+  ],
+  "strongest_comparator":"The independent full covariant conformal density operator on the actual finite seed; all action allocations must agree, including the small Weyl term.",
+  "protocol":{
+    "ordinary_argument_first":true,
+    "source_freeze_before_run":true,
+    "preserve_all_runs_snapshots_and_failures":true,
+    "interval_library":"python-flint==0.9.0",
+    "precision_bits":256,
+    "physical_global_directions":5,
+    "upper_triangle_pairings":15,
+    "local_matrix_interval_width_target":"1e-14",
+    "integration":"Exact full-domain polynomial/log primitives with interval parameter coefficients",
+    "full_physical_solve_executed":false,
+    "full_curved_quantum_residual_executed":false,
+    "lean_selected":false
+  },
+  "goal_complete":false
+}
