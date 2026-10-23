@@ -1,0 +1,25 @@
+{
+  "date":"2026-10-23",
+  "story":"S169",
+  "scope":"Identify the actual physical bolt functional, its distributional adjoint domain, current scalar and TT leading singular coefficients, and the correct residual pairing certificate. This is a boundary/domain calculation within the selected full solve; the global adjoint and correction are not evaluated.",
+  "retained_inputs":["notes/current-seed-full-hessian-realization.md","notes/current-seed-boundary-phase-and-trace-defect.md","notes/current-seed-cold-action-defect.md","notes/recentered-reference-inverse.md","notes/recentered-mass-boundary.md","notes/recentered-r2-scalar-boundary.md","notes/stationary-shape-logarithmic-response.md","notes/auxiliary-physical-return-feasibility.md"],
+  "strongest_comparator":"The current form inverse already exists, but a bolt evaluation is not an L2 source and the smooth forward bolt domain cannot be assigned to its adjoint. The old zero-c homogeneous oscillatory adjoint has a different purpose and is not imported. The current interior regularity budget remains valid but does not define the bolt adjoint.",
+  "hypothesis_audit":[
+    "Use the actual current physical radius functional delta R/(B h), with both conformal and TT sphere components and the actual York dual map. Smooth gauge vectors have no bolt-area contribution.",
+    "The scalar action block is negative. The sphere/angle measure and identical-exterior multiplicity are retained; a common queried radius is not a sum over mouths.",
+    "The form-space existence statement depends on the retained actual finite-kernel and closedness arguments. Compact local ellipticity at the bolt is checked in smooth Cartesian disk coordinates and through the full spin-two symbol, not by treating a radial puncture as a boundary.",
+    "The local symbol of the Dirac Hessian is transferred from a smooth closed extension only at the interior bolt. Reflected and state-dependent lower terms are retained. The external papers are not numerical finite-domain inverse theorems.",
+    "The scalar rho^2 log coefficient gives the exact delta source. The TT rho^2 log log coefficient is a leading ultraviolet asymptotic; its finite-radius error, ordinary fourth contact and regular global term are uncomputed.",
+    "A smooth homogeneous adjoint erases the bolt functional. Leading TT subtraction alone does not justify an L2 residual. Neither failure is an obstruction to a smooth forward solution.",
+    "Outer mass/log data and stationary boundary cancellation are retained; no new zero-mass equation, old scalar projection or retarded realization is asserted.",
+    "The exact current fixed-temperature root is enclosed before numerical coefficient substitution. Large adjoint coefficients are not metric correction bounds, inverse norms or nonexistence evidence."
+  ],
+  "external_sources_read":[
+    {"title":"Moller, Extremal metrics for spectral functions of Dirac operators","url":"https://arxiv.org/html/0705.3857v3","locator":"local zeta-Hessian symbol and logarithmic pseudodifferential operator; retained Theorem 1 and Lemma 6.1 comparison","use":"Closed smooth-manifold local principal symbol only; the bolt transfer and physical measure are derived here."},
+    {"title":"Grubb, Spectral Asymptotics for Nonsmooth Singular Green Operators","url":"https://web.math.ku.dk/~grubb/CPDE14.pdf","locator":"Theorem 2.3","use":"Symbol-to-Sobolev mapping subject to spatial regularity; not an actual determinant-Hessian or numerical domain theorem."},
+    {"title":"Gaarde and Grubb, Logarithms and sectorial projections for elliptic boundary problems","url":"https://arxiv.org/pdf/math/0703878","locator":"Theorem 2.4 and Proposition 2.9","use":"Differential boundary resolvent hypotheses and the retained singular logarithmic boundary term; no smoothing claim for the full logarithm."}
+  ],
+  "protocol":{"ordinary_argument_first":true,"source_freeze_before_run":true,"preserve_all_runs_snapshots_and_failures":true,"interval_library":"python-flint==0.9.0, existing isolated installation","precision_bits":256,"current_temperature_root_relative_bracket":"1e-28 around the gamma parameter endpoints","identical_exterior_multiplicities":[1,2],"physical_cold_difference_target":"1.667e-9","full_pairing_selected_for_this_run":false,"lean_selected":false},
+  "research_decision":"Keep the direct physical H e=-r1 solve as the next numerical milestone. A bolt adjoint check is valid only with both distributional sources, the prescribed local parametrix and its full regular remainder. Do not extend the generic cold-value chain or replace this observable by a smooth homogeneous adjoint.",
+  "goal_complete":false
+}
