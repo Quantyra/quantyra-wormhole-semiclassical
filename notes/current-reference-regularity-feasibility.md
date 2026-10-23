@@ -29,6 +29,19 @@ Alternatively the Lipschitz remainder is bounded by kappa5 H6 delta/12.
 The executed receipt decides whether these bounds meet the frozen target.
 An insufficient bound would not be a lower bound on the actual modulus.
 
+Also substitute the newly obtained H5 into the PREVIOUS all-mode value
+majorant, rather than keeping its old 2e8 direction allowance:
+
+    E_value(delta)<=H5/60 sum_(j=2)^5 kappa_j delta^(6-j)/(6-j).
+
+Test both delta=1e-5 and the already permitted .01 collar against 1e-28,
+simultaneously with the principal Lipschitz derivative error. This is
+a budget substitution using the same proved kernel majorant, not an
+extension of the source-estimate chain. If .01 passes, the old 1e-5
+resolution diagnostic is no longer necessary for these components.
+The 32-attenuation mode scale still is not a certified truncation tolerance.
+Remaining local moments and the full differentiated remainder are unchanged.
+
 ## 2. Fourth derivative of the current fixed-cap source
 
 Extend [the fixed-cap C3 proof](fixed-cap-seed-source-three.md), using

@@ -202,6 +202,17 @@ def execute_geometry(canonical):
         check('current_reference_modulus_target_'+str(cells),holder<threshold,encoded(holder))
         check('principal_derivative_error_'+str(cells),err<arb('1e-28') and lip<arb('1e-28'))
         NUMERICS.append(dict(kind='current_reference_modulus',cells=cells,region_z=['.49','.88'],H5_upper=encoded(h5),H6_upper=encoded(h6),Holder_half_using_old_H5_upper=encoded(holder),Holder_half_using_current_H5_upper=encoded(actual_holder),Holder_half_threshold=encoded(threshold),principal_error_Holder=encoded(err),principal_error_Lipschitz=encoded(lip),threshold_margin_factor=encoded(threshold/holder),cell_bounds=records))
+        if cells==128:
+            previous=json.loads((ROOT/'evidence'/(PREVIOUS+'.json')).read_bytes())['runs'][-1]
+            majorant=next(r for r in previous['numerics'] if r['kind']=='all_mode_kernel_majorant')['kappa']
+            def decoded(x):
+                enc=x['decimal_enclosure'];return arb(enc['mid'],enc['rad'])*arb(10)**int(enc['exponent'])
+            ks={int(j):decoded(x) for j,x in majorant.items()}
+            for label in ['.00001','.01']:
+                cut=arb(label);value=h5/60*sum((ks[j]*cut**(6-j)/(6-j) for j in ks),arb(0));derivative=kap*h6*cut/12
+                resolution=next(r for r in previous['numerics'] if r.get('kind')=='near_diagonal_budget' and r['delta']==label)
+                check('actual_direction_simultaneous_integration_budget_'+label,value<arb('1e-28') and derivative<arb('1e-28'))
+                NUMERICS.append(dict(kind='current_direction_simultaneous_integration_budget',delta=label,all_mode_value_remainder_upper=encoded(value),principal_Lipschitz_derivative_remainder_upper=encoded(derivative),angular_32_attenuation_scale=resolution['angular_index_scale'],thermal_32_attenuation_scale=resolution['thermal_index_scale'],scale_counts_are_truncation_tolerance=False,full_differentiated_remainder_bounded=False))
     FIXTURES.append(dict(fixture='current_reference_radial_jet_and_principal_modulus_test',actual_full_quantum_Hessian_evaluated=False))
 
 def main():
