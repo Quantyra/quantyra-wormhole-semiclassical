@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Exact all-angular geodesic-flow multiplier and contact-preserving numerical form allowance; not a physical correction solve.",
+  "retained_inputs": [
+    "notes/current-geodesic-two-sided-remainder.md",
+    "notes/current-all-angular-principal-operator.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/current-bolt-contact-parametrix.md"
+  ],
+  "ordinary_argument_review": [
+    "Invert the flat angular transform with its actual 2pi measure before applying spectral calculus to the geodesic generator. The base lift and actual flow remain indispensable.",
+    "The positive elliptic weight follows by an explicit Abel substitution, with parameter m rather than modulus k. Check its exact primitive and Mellin moments.",
+    "Use the retained full-tower digamma formula and its uniform first/second log derivative bounds; no finite angular or flow cutoff is made physical.",
+    "Preserve both the low-frequency fourth contact and the high-frequency finite contact by exact mass and log-moment correction. Mere normalization does not repair the wrong angular multiplier.",
+    "Bound the midpoint and tip errors analytically before running numerical fixtures. Convert absolute p^4 error through the actual joint coercivity, not a relative positive-model bound that ignores outer Weyl cancellation.",
+    "The prior continuum paired-domain/source proof remains an input, not a conclusion of checker passes. The actual global flow matrix and full forward/adjoint feasibility test remain unexecuted."
+  ],
+  "source_review": "Read DLMF 19.2, 19.4 and 15.4.20 for elliptic conventions, derivatives and Gauss summation. Read the retained Bessel/finite-part, full-angular derivative and actual form-coercivity arguments. No new external theorem is applied across the C2,1 seam.",
+  "strongest_comparator": "The existing flat coefficient already averages directions. Even after fourth-coefficient normalization its high-frequency finite contact differs by 4log2-7/3. Use the exact unaveraged flow identity.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 256,
+    "log_subdivisions_per_octave": 256,
+    "octaves": 20,
+    "quadrature_form_target": "eta_quad<4e-5",
+    "combined_form_target": "eta_previous+eta_quad<.0022",
+    "full_physical_solve_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

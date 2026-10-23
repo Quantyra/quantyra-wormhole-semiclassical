@@ -1,3 +1,69 @@
+# Active checkpoint: exact geodesic multiplier and its form error
+
+2026-10-23, E003/S169. Research is active and the full stable-wormhole
+objective remains incomplete. The feasibility audit stays closed.
+
+The [full flow multiplier](current-geodesic-flow-multiplier.md) is now
+implemented with the complete angular tower and the correct directional
+measure. Its exact representation is
+
+    A(w)=C w^4 chi(w)/(90pi^2),
+    chi(w)=(45/32) integral_0^1 v E(1-v)[-F(Cw^2v/4)-4L]dv.
+
+E uses elliptic parameter m, not modulus. The actual operator remains
+J* A(P) J on the actual paired double, with P=iX and the fixed base lift.
+No geodesic is replaced by a scalar Laplacian. The flat multiplier alone,
+even rescaled to match the fourth coefficient, has the wrong finite
+contact by 4log2-7/3=0.4392553889... . No previously computed global pair
+used that substitution; none exists yet.
+
+The positive 5121-node quadrature preserves mass one and the exact log
+moment 4log2-97/30. Its common node shift therefore keeps BOTH chi(0)
+and the exact high-frequency contact. A rounded contact cannot replace
+this identity in the singular-adjoint subtraction. Analytic log-derivative
+bounds give a frequency-uniform coefficient error <1.5214324E-5.
+Using the actual joint coercivity, its physical V-to-V* error is
+<2.5357207E-5. Combining the prior continuum error and this
+allowance gives <2.1293811E-3<.0022. The old physical test
+and its EP threshold therefore do not change.
+
+This closes the flow-multiplier implementation and its numerical form
+allowance. It does not compute the actual global propagation/matrix,
+forward/adjoint pair, source, E/P/D0/Db0/Q0, or nonlinear admission.
+The prior paired-domain and source arguments remain required inputs;
+special-function identities and checker passes do not prove them.
+
+The same decision remains: continue the physical weak primal-dual solve.
+The single next calculation is the global comparison pair with certified
+residuals on the actual finite geometry. The physical test remains
+
+    |Q0|+.0022 E P+(Db0+.0022 P)(D0+.0022 E)<1.667e-9.
+
+Even exact model solves with |Q0|<=8.335e-10 require
+EP<3.78031966038352e-7. The actual values remain unknown. Exterior
+<6.67e-10, Y0<=5e-9, exact compatibility, every nonlinear neighborhood
+inequality, matching, validity and stability remain open. The multiplier
+test IS EXECUTED; the full physical feasibility test IS NOT.
+
+Final frozen replay: 50 checks across 912 unchanged
+inputs, 2 scientific attempts, 1 preserved
+failure, 104 raw rows. The first attempt passed its arithmetic
+checks but correctly failed the configuration-identity gate: mpmath
+precision changed after the initial dependency snapshot. Moving that
+setting before the snapshot gave a successful full replay. Independent
+Fraction/Machin/atanh/Taylor closeout verified all 5121 positive weights,
+mass/log moments, error budgets and actual form conversions. Six direct
+real-integral diagnostics agree; they are not the uniform proof.
+No scientific edit followed success and no Lean ran. All 18 inherited
+paths and story checkboxes remain unchanged.
+
+One earlier API-inspection launch failed before any science. Its raw
+command/result are retained in evidence/current-geodesic-flow-multiplier-launch.log.
+
+Remaining to-do list: global comparison forward/adjoint pair and physical bolt/exterior certificate; X/admission, nonlinear closure and exact compatibility; matching and causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: two-sided complete-geodesic remainder bound
 
 2026-10-23, E003/S169. Full stable-wormhole research remains active and

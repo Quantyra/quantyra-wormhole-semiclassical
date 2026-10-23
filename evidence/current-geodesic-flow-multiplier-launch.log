@@ -1,0 +1,9 @@
+Pre-scientific API inspection, 2026-10-23. No numeric computation executed.
+Command submitted via PowerShell:
+python.exe -c 'import sys; sys.path.insert(0,"C:/Users/dfred/AppData/Local/Temp/s169af-arb"); from flint import acb; print([n for n in dir(acb) if "elliptic" in n])'
+Raw result (exit_code=1):
+  File "<string>", line 1
+    import sys; sys.path.insert(0,C:/Users/dfred/AppData/Local/Temp/s169af-arb); from flint import acb; print([n for n in dir(acb) if elliptic in n])
+                                   ^
+SyntaxError: invalid syntax
+Disposition: invoke the frozen checker as a file, with --arb-path. The scientific receipt preserves both subsequent runs.
