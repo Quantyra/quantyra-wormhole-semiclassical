@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "All-angular principal comparison operator and decisive obstruction to a fixed angular cutoff in the uncut relative form norm; not the full physical correction.",
+  "retained_inputs": [
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/current-bolt-adjoint-domain.md",
+    "notes/current-controlled-solution-audit-closeout.md",
+    "notes/current-endpoint-thermal-restoration.md"
+  ],
+  "ordinary_argument_review": [
+    "Start from the retained rank-two scalar spectral multiplier with the original common fourth finite part. It is not the full physical Hessian.",
+    "Partial fractions give the complete angular digamma sum; both roots have nonnegative real part and their coalescence is removable. Use the stable small-root expression.",
+    "Integrate the exact z derivative and exchange the alpha/v integrals to obtain a single positive-weight integral. Its weight mass fixes the coefficient against the existing a2 contact.",
+    "The exact counting function satisfies N(A)<=4A. Stieltjes integration bounds both first and second logarithmic derivatives by four, uniformly over all positive radial frequencies.",
+    "Log-linear interpolation with exact two weight moments gives the explicit uniform quadrature error. The first interval is controlled by the logarithmic derivative bound, not dropped or sampled.",
+    "Every finite angular cutoff has bounded K_N/p^4 while the full K/p^4 grows logarithmically. Thus the relative omitted principal-form norm is one and a truncated fourth-order inverse does not preserve operator order.",
+    "This obstruction concerns uncut continuum norms. It proves neither nonexistence nor physical high-frequency instability, and does not rule out direct residual certification of particular trial functions.",
+    "The exact fourth-power angular tail identity checks low-frequency normalization but supplies no uniform bound on the entire action-form unit ball.",
+    "Scalar bolt point sources and reflected mass/log boundary regularity remain. Spectral calculus for a closed Laplacian defines only the comparison operator; the complete physical boundary realization is not inferred from it.",
+    "The numerical thresholds certify principal-model approximation claims only. The full primal-dual correction, curved remainder and X/admission test remain unexecuted."
+  ],
+  "external_sources_read": [
+    {"url":"https://dlmf.nist.gov/5.9#E13","scope":"Digamma integral in Re z>0; both factor roots plus one lie there."},
+    {"url":"https://dlmf.nist.gov/5.9#E16","scope":"Convergent digamma difference and partial fractions for the angular sum."},
+    {"url":"https://dlmf.nist.gov/5.11#E2","scope":"Digamma large-argument asymptotic away from the negative real axis; roots meet the sector condition."},
+    {"url":"https://web.math.ku.dk/~grubb/CPDE14.pdf","scope":"Theorem 2.3: |s|<tau and N>m/2+1; not a quantitative physical inverse theorem."},
+    {"url":"https://arxiv.org/pdf/math/0703878","scope":"Smooth parameter-elliptic boundary calculus and spectral cut; not by itself a reflected/log determinant-Hessian identification."}
+  ],
+  "strongest_comparator": "Existing all-frequency scalar multiplier and its lower bound. The new integral implements its complete angular sum with uniform frequency error; fixed angular sums plus local a2 cannot approximate its full form norm uniformly.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 256,
+    "independent_mpmath_digits": 60,
+    "log_intervals_per_factor_two": 16,
+    "lowest_y": "2^-20",
+    "coefficient_width_target": ".002",
+    "uniform_principal_relative_error_target": "2e-5",
+    "omitted_principal_fraction_witness_target": ".25",
+    "witness_angular_cutoffs": [2, 1000000, 10000000000000000],
+    "physical_solve_executed_by_this_run": false,
+    "full_curved_operator_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

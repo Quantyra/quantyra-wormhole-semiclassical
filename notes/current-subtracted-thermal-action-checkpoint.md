@@ -1,3 +1,57 @@
+# Active checkpoint: complete angular principal model retained
+
+2026-10-23, E003/S169. Resumed at Dan's explicit request. The full stable
+semiclassical wormhole goal is active and incomplete. The pause below is
+historical; the feasibility audit remains closed.
+
+The [all-angular principal calculation](current-all-angular-principal-operator.md)
+executes a decisive solver-approximation test. Every fixed angular cutoff,
+even with the common local fourth contact, loses the full p^4 log p
+principal behavior. Its omitted fraction tends to one in the uncut
+principal form norm. Increasing that fixed cutoff cannot establish a
+uniform error below 1/4. This is an obstruction to that approximation,
+not a wormhole nonexistence or physical instability result.
+
+The complete angular finite part is now evaluated by one positive-weight
+digamma integral with the original F_eff. The analytic quadrature has
+coefficient error <9.38385E-4 and relative principal
+error <1.57311E-5, uniformly in radial frequency.
+All fixture coefficient widths are <.002. The exact argument, not the
+frequency samples, supplies the uniform statement. The result transfers
+to the scalar comparison Laplacian by spectral calculus; it is not a
+bound on the full physical Z0 or the curved quantum remainder.
+
+Retain this full logarithmic principal operator in the weak primal-dual
+method. A finite Galerkin calculation is still allowed with an actual
+infinite-dimensional residual/tail certificate. The physical bolt point
+sources, finite-cut ell*Y/ell*Z, reflected mass/log phase, original
+Weyl/vacuum/a0/a1/a2 restoration and canonical-to-York dual map all remain.
+The accepted endpoint cap <2.92582e-11 is unchanged and still per angular
+state in its stated mass range. It does not become a full angular bound.
+
+The next unresolved operation in the single physical correction test is
+the common-subtracted curved/boundary remainder on the forward/bolt-adjoint
+trial pair. The actual two-residual pairing remains unexecuted: target
+|Q_app|+||d_b||_V*||d||_V*<1.667e-9, exterior return <6.67e-10,
+Y0<=5e-9 and all X/admission, nonlinear and compatibility inequalities.
+No controlled wormhole solution, validity or stability has been certified.
+
+The frozen package passed 45 supporting checks over 872
+unchanged inputs in 1 run, with 0 failed scientific runs.
+All 47 raw check-log rows, source snapshots and numerical node data
+are retained. Independent exact-rational closeout reaggregated all ten
+saved quadratures. No scientific source changed after success and no Lean ran.
+
+Remaining to-do list: common curved/bolt/boundary restoration and remainder;
+actual coupled correction with certified dual residual and X/admission;
+nonlinear closure and exact compatibility; physical matching, causal
+realization, semiclassical validity/noise, all-sector stability, charge/return,
+opening, transport, preparation, separate creation and stable wormholes.
+
+---
+
+The preceding pause checkpoint and its history are preserved below.
+
 # Paused checkpoint: endpoint/restoration result retained
 
 2026-10-23, E003/S169. Paused at Dan's explicit request to stop and set
