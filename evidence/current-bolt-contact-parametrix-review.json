@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Exact fourth-order TT bolt contact, local point-source parametrix and explicit all-angular principal-model residual tail. Not the full physical residual or solution.",
+  "retained_inputs": [
+    "notes/current-bolt-adjoint-domain.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/current-all-angular-principal-operator.md",
+    "notes/recentered-reference-inverse.md",
+    "notes/current-physical-york-dual-assembly.md"
+  ],
+  "ordinary_argument_review": [
+    "Convert the exact angular principal model with the physical TT high-frequency lift and radial action measure; keep both bolt sources.",
+    "The Weyl fourth-order coefficient is omega+1/6, not the 19/60 inequality reserve. Its exact sum with 31/30 yields the physical finite contact 6/5.",
+    "The Einstein term in the parametrix improves finite-frequency conditioning but is not asserted to include all lower-order terms.",
+    "A nonzero contact mismatch leaves a non-L2 point residual even if its coefficient is tiny. Numerical ball enclosures retain the exact correlated definitions.",
+    "Use the explicit complex digamma remainder in its valid sector, the conjugate reciprocal sum, and the already established logarithmic derivative bound to integrate the small-y endpoint before taking an asymptotic limit.",
+    "The angular residual tail is an analytic whole-frequency estimate; numerical fixtures do not establish the continuum theorem.",
+    "The local L2 conclusion depends on the retained actual finite-kernel symbol identification and its normal-coordinate vanishing orders. No smooth reflected outer double is assumed.",
+    "The positive integral computes only the local parametrix value. The physical adjoint, curved/boundary remainder and its V-dual norm remain unknown.",
+    "Keep the full objective and all physical thresholds unchanged. The previous visible continuation only verified committed state and is classified as no progress.",
+    "After the initial successful frozen execution, add the complete finite-frequency principal-model mismatch and replay the entire package. The telescoping angular inverse-square sum bounds the interval from p=0 to p=1; the logarithmic derivative bound then covers 1 to p0. Keep the Einstein denominator and distinguish this frozen relative-form estimate from physical Z0. Preserve the initial successful snapshot and evidence."
+  ],
+  "external_sources_read": [
+    {"url":"https://dlmf.nist.gov/5.11#ii", "scope":"Complex digamma asymptotic and secant error factor, used with |arg z|<=pi/2 and the first omitted Bernoulli term."},
+    {"url":"https://dlmf.nist.gov/10.22#v", "scope":"Hankel inversion after square-root conjugation; the distributional point normalization is separately derived in the retained bolt note."}
+  ],
+  "strongest_comparator": "The retained leading TT bolt profile leaves a non-L2 residual. The exact finite contact and analytic symbol subtraction remove this implementation obstacle while retaining the unresolved physical remainder.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 256,
+    "monotone_quadrature_cells": [1024,4096],
+    "log_frequency_endpoint": 80,
+    "local_parametrix_value_relative_width_target": ".001",
+    "independent_precision_digits": [70,100],
+    "angular_residual_tail_cutoffs": ["1e12","1e16","1e20"],
+    "complete_frozen_multiplier_relative_error_target": "1e-12",
+    "full_physical_solve_executed": false,
+    "full_curved_residual_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

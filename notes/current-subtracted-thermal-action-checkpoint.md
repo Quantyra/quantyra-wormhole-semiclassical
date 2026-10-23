@@ -1,3 +1,55 @@
+# Active checkpoint: exact bolt contact and local parametrix
+
+2026-10-23, E003/S169. The stable semiclassical wormhole goal is active
+and incomplete. The feasibility audit remains closed.
+
+The [contact-complete bolt calculation](current-bolt-contact-parametrix.md)
+identifies the physical TT fourth-order constant a_b=11.10876282322...
+from the original angular finite part and EXACT Weyl coefficient 1/6.
+The resulting contact is -6/5 in physical logarithmic units. The 19/60
+number in the form inequality is a reserve, not an action coefficient.
+Both point sources and the outer mass/log phase remain unchanged.
+
+A leading-log subtraction or a nonzero rounded contact error leaves a
+non-L2 point residual. The implemented local Hankel parametrix retains
+the exact coefficient and the Einstein crossover, p about 1.05683e16.
+This is a spatial frequency in a local model, not a physical pole or
+semiclassical validity cutoff. Its N=1 value is about 9.233e-10, with
+certified relative width <.001. It is NOT the actual adjoint or metric error.
+
+For p>=1 the entire angular principal model, combined with the same
+Weyl/Einstein terms, differs from this local multiplier by relative form
+allowance <8.71983E-17. The complete radial L2 source
+allowance is <5.11105E+24 after the physical delta coefficient.
+That large number is in rho d rho action-source units, not V* or metric
+units. No physical pass/fail follows from either of these model numbers.
+The curved, mixed, cutoff and actual boundary residual norms remain unknown.
+
+Continue the weak primal-dual route with the analytic singular enrichment.
+The next calculation is H on that cut-off two-component parametrix and
+the forward trial correction, including the common curved/boundary
+remainder, to evaluate the actual residual norms and signed bolt pairing.
+The physical target remains |Q_app|+||d_b||_V*||d||_V*<1.667e-9,
+exterior return <6.67e-10 and Y0<=5e-9 with all admission/nonlinear
+conditions. That full test remains unexecuted.
+
+The final full replay passed 53 checks over 882 unchanged
+inputs. Both successful snapshots/runs and 105 raw rows remain.
+The second replay extended the first result to the complete frozen-model
+finite-frequency mismatch. No scientific edit followed final success.
+Exact-rational closeout reaggregated 10240 interval cells.
+No Lean ran; all 18 inherited paths and all story checkboxes are preserved.
+
+Remaining to-do list: actual curved/boundary and forward/adjoint residual
+certificate; X/admission, nonlinear closure and exact compatibility;
+matching, causal realization, semiclassical validity/noise, all-sector
+stability, charge/return, opening, transport, preparation, separate creation
+and the full stable-wormhole objective.
+
+---
+
+The preceding checkpoint and its history are preserved below.
+
 # Active checkpoint: physical weak source conversion
 
 2026-10-23, E003/S169. The full stable semiclassical wormhole goal is
