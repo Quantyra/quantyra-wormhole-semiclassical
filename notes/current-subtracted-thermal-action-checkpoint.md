@@ -1,3 +1,120 @@
+# Active checkpoint: complete local contacts bounded; signed quantum value open
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit stays CLOSED; the full-projection milestone is OPEN.
+See the [ordinary full-domain assembly](current-full-domain-contact-assembly.md).
+
+EXECUTED: the entire remaining local action, with its curvature-square,
+nonmagnetic Weyl, LLL, a2, reference/vacuum potentials and product-gradient
+contacts, has the complete actual-h1 allowance
+
+    |P_local,whole| <1.875137e-42.
+
+The exact reference trace removes the highest h1 derivatives from the
+curvature-square term. Its known signed integral is enclosed within
+4.04e-52 of zero; the larger 1.875137e-42 number is an ABSOLUTE ALLOWANCE
+for the actual remaining pairing, not its measured signed value. The
+264-cell interval calculation includes the analytic outer interval, the
+actual positive-temperature bolt and the retained integration endpoint.
+
+The initial independent-parameter allowance was +/-2.27e-38. An executed
+sensitivity test identified the loss: the coarse d interval discarded the
+exact product trace relation. Reimposing that EXISTING equation contracted
+d from [-8e-19 +/-3.51e-20] to near -8.10034511986107546656e-19, with radius
+below 5.76e-40. The physical seed, theory, normalization and trial did not
+change. The failed allowance was neither an unknown source constant nor a
+lower bound on the projection.
+
+Also EXECUTED: the complete positive-time angular tail, with ALL thermal
+modes, is <4.624e-45 above angular level 80. At level 64 the known allowance
+is about 8.479523e-43 and fails the 2.5e-43 numerical/tail reserve. That is
+an excessive bound for that cutoff, not a failed physical screen. No finite
+selection of modes replaces the physical domain.
+
+The whole-domain resolvent and the original bulk/cold screen are now
+reconciled BEFORE interpreting a signed value:
+
+    P_new=P_M,bulk+P_M,cold+P_rest,whole+scalar-trial error.
+
+The magnetic cold term fits the existing 2e-43 reserve using the already
+known global bounds. Do not add the old COMPLETE cold defect a second time.
+The magnetic bulk, scalar error, 1.287e-40 rest target and closed audit are
+unchanged. This is an assembly correction, not a new cold optimization.
+
+The actual paired-domain selected response and common-regulator limit
+remain defined with h1 as a mass/log smearing and smooth v=-z^4 as the metric
+direction. This does NOT prove a C2 action on a rough nonlinear base-metric
+neighborhood. The boundary realization is the original paired square and
+regular disk bolt; no smooth physical double or artificial wall is used.
+
+The full signed quantum/contact projection remains UNEVALUATED. In
+particular the actual h1 values and positive-time trace, with certified
+thermal/quadrature error, are still missing. The full-projection milestone
+remains OPEN. No actual controlled solution, physical feasibility or
+all-sector stability follows from these local/tail estimates.
+
+At radius 1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain
+unproved. The proposed sufficient Y0<=5e-9, Z0<=.25 and Z2<=5e7 have not
+been certified for the actual operator/domain. Rough nonlinear action,
+the admission inverse, exact compatibility, physical matching/causal
+realization, semiclassical validity/noise and all-sector stability stay
+unresolved. No existence or nonexistence theorem is asserted.
+
+Research decision: continue the same construction with the specified
+two-sided resolvent evaluation. The local contacts and complete angular
+tail now fit the unchanged screen. Their executed bounds expose no
+construction obstruction; the signed finite-geometry quantum response is
+still unknown. Reducing the local allowance all the way to zero would
+recover only 1.46% of the 1.287e-40 target. Further local/cold/scalar or
+propagation optimization is not the next decisive work.
+
+The SINGLE next calculation is the signed, locally and product-subtracted
+Q_(P64) trace for angular levels 1..80, paired with the ACTUAL full-source
+h1, with the entire thermal spectrum and certified combined h1/thermal/
+quadrature error <2.4537e-43. Complete the higher angular levels using the
+proved positive-time tail and the existing heat-cap bound on their omitted
+UV subset. This is a complete-spectrum computation with a tail certificate,
+not a finite-mode physical model. Retain the nonzero smeared a1 constant,
+all local contacts and any finite-time boundary term.
+
+The sufficient numerical targets for that calculation are
+
+    |P_hat_quantum,1..80| <1.2642e-40,
+    E_remaining <2.280e-42,
+    hence |P_hat_rest|+E_rest <1.287e-40.
+
+The error envelope uses 1.875137e-42 for all local contacts, 1.5483364e-43
+for ONLY the omitted high-angular UV subset, 2.5e-43 for the combined
+numerical/thermal/positive-time angular allowance, and 3.744e-48 for the
+actual resolvent propagation. Its sum is <2.280e-42, CONDITIONAL on the
+unexecuted 2.4537e-43 h1/thermal/numerical certificate. The first 80 full
+resolvents already include their own short times; no cap is added to them.
+The product-gradient contact is already in the subtracted trace/tail and
+is not counted again. The previous optional E_rest<=1e-42 suballocation is
+NOT certified by this local allowance; the sufficient total screen is
+unchanged, with the value/error allocation explicitly recalculated.
+
+This signed calculation is PROPOSED, NOT EXECUTED. The current executed
+test certifies local/tail feasibility and identifies an interval-dependency
+loss; it does not certify the complete projection or an actual solution.
+
+The final frozen scientific execution passed 28 supporting
+checks over 985 unchanged inputs. All 3 attempts are preserved:
+one interrupted coarse-parameter refinement, one failed unnecessary nesting
+assertion, and the accepted correlated-parameter run. No scientific source
+changed after the accepted run. Independent verification passed on attempt
+3; its two earlier failures were numerical equality tests on
+outward-rounded balls, preserved and corrected to shared serialized nodes
+and exact rational budget arithmetic. It checked the full action identity,
+product subtraction, expanded geometry/heat coefficients, complete angular
+tail and every cell with independent constraint primitives. These checks
+support the ordinary argument; they do not prove unknown continuum or
+projection claims. No Lean ran. All 18 inherited paths are unchanged.
+
+Remaining to-do list: execute the complete signed quantum/contact screen with certified actual-h1, thermal and numerical error; controlled forward/adjoint correction, rough nonlinear action/domain, nonlinear admission and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: actual resolvent propagation certified; signed trace open
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
