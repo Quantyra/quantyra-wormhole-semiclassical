@@ -1,3 +1,128 @@
+# Active checkpoint: original global moment defined; actual strong error still unknown
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the original-row global moment argument](current-global-boundary-moment-return.md).
+
+EXECUTED: justify extraction of the slow boundary coefficient for the
+actual fixed-seed LINEAR response, derive a stable original-equation moment
+formula, and quantify normal strong-return requirements. The actual global
+moment and remainder norms are NOT evaluated here. This is not a passed
+physical feasibility test or a controlled nonlinear solution.
+
+The actual localization retains
+
+    A0 v=chi[-F-A(m e_m)-R w]+[A0,chi]w,
+    B(D)v_b=G, B(s)=4D0(s-4)N(s),
+    G=g0 z^4+O_b(z^5 log^N z),
+    g0=-4.397608332111...e-29.
+
+Mass, actual-minus-normal kernel, original-row cutoff commutators, regular
+bolt, local contacts and all angular/thermal contributions stay in G.
+The canonical differentiated row removes a remote moment only near zero;
+it does not remove that moment from the original global problem.
+
+An entire-strip argument crosses exactly the retained slow root between
+weights 4 and 4.005. It gives an actual coefficient/remainder decomposition
+at this fixed seed. A one-order extension of the paired Gaussian derivative
+argument and fixed-seed graph bootstrap makes the required H3 data finite,
+with UNKNOWN numerical constants. This does not transfer analyticity or
+uniform higher derivatives to arbitrary nonlinear C5 families.
+
+The exact coefficient is defined through the finite-part moment
+
+    M_G(s)=int_0^1 z^-s(G-g0 z^4) dz/z
+                           +int_1^infinity z^-s G dz/z,
+    Delta=B0[1+B(4)/(e_* B'(4+e_*))]-M_G(4+e_*)/B'(4+e_*).
+
+The cancellation is evaluated using an integral of B'', not subtraction
+of two separately rounded coefficients near 530515. The resulting bound is
+
+    |Delta| <= 2|B0|e_*+|M_G|/B',
+    1/B' = 2.250000026553...,
+    2|B0|e_* < 1.979e-28.
+
+This removes a numerical conditioning loss in the original-equation formula;
+it does not assume or demonstrate a small actual global moment.
+
+Whole-frequency normal multiplier bounds at weight 4.005 give
+
+    ||r||_H6 <= 1800.000022 ||g_c||_H3,
+    ||r||_H6 <= 6.4428840e17 ||g_c||_H2,
+
+in the stated weighted logarithmic coordinate, with g_c the exact pole-
+subtracted continued source. One additional BOUNDED derivative changes the
+allowance by about 3.57938e14. This is stronger data, not a renamed norm.
+The canonical C5 mass/log phase conversion factor on z<=.1 is <.211657.
+The .1 collar remains a phase-definition collar, not a radius where the
+normal model is assumed to equal the physical operator.
+
+The known endpoint-source split was computed with its entire tail:
+
+    ||g_known||_H2 < 5.061e-28,
+    ||g_known||_H3 < 1.613e-27,
+    |M_known| < 1.453e-28.
+
+Even the H2 route bounds this known piece's phase remainder by <6.902e-11.
+It is only one part of the actual source decomposition. Its evaluation does
+not discard G_R, replace the quantum source, or construct a finite-mode
+physical solution.
+
+Define E3=||z^-4.005 G_R||_H3 on the normal log line and
+Efar=||z^-3.5 G_R||_L2(dz/z) on z>1. The original-row global terms above
+are included in G_R. The numerical sufficient sensitivity targets
+
+    E3 <= 1e-11, Efar <= 1e-10
+
+would give |Delta|<4.501e-10, C5 phase remainder <3.810e-9 and combined
+mass-subtracted SHAPE phase bound <3.947e-9<1e-8. The half-budget remainder
+threshold is E3<1.3124008e-11; using only H2 requires E2<3.6159533e-26.
+These are targets for UNKNOWN actual estimates. They are not upper bounds
+already obtained, and neither success nor failure for the physical response
+is inferred. Scalar, mass, interior, bolt and X-ball admission remain extra
+requirements. The factor 1800 is not assigned to Y0, Z0, Z2 or physical K_c.
+
+CLOSED HERE: the fixed-seed coefficient extraction, stable moment formula,
+entire-frequency normal remainder estimates and known endpoint contribution.
+OPEN: actual global E3/Efar and moment values, full correction, nonlinear
+admission and the physical obligations. The previous projection screen
+P_hat_rest=0, E_rest<2.123e-42<1.287e-40 retains its sufficient-only scope.
+No already controlled cold or scalar component was optimized.
+
+At rho=1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain unclosed,
+with unproved allocations Y0<=5e-9, Z0<=.25, Z2<=5e7. C2 on bounded admitted
+stationary families does not prove X-ball admission. Exact compatibility,
+physical matching/causal realization, semiclassical validity/noise and
+all-sector stability remain unproved. No actual controlled solution exists
+in the certification record; no nonexistence or instability result follows.
+
+RESEARCH DECISION: retain the construction and use the stable original-row
+moment formula with strong-data return. The quantified extra-derivative
+sensitivity makes this a specified sharper method. Do not fit two large
+asymptotic amplitudes independently or optimize already passing source pieces.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the ACTUAL global
+G_R in the displayed E3 and Efar norms against 1e-11 and 1e-10, retaining its
+mass, curved kernel, original-row commutator and regular-bolt contributions.
+The coefficient is now well-defined, but its value and those actual error
+bounds are not known. The executed formula and conditional threshold tests
+must not be reported as that global calculation or a controlled solution.
+
+Verification: one frozen scientific run passed 30
+supporting checks over 929 unchanged inputs.
+Independent verification passed on attempt 1. It checks the ordinary
+strip/contour inequalities, evaluates the untruncated normal derivative and
+full known-source integrals independently, and verifies the residue sign on
+an exactly transformed auxiliary source. That fixture is explicitly not the
+physical source. Frequency diagnostics support but do not prove the whole-
+frequency bounds; the ordinary inequalities do. No post-success scientific
+edits and no Lean runs occurred. All 18 inherited paths and the immutable
+closed/paused audit records remain unchanged. No task checkbox is promoted.
+
+Remaining to-do list: bound the actual original-row global remainder and moment; control the full correction and nonlinear admission; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: coupled endpoint return, global matching still unknown
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.

@@ -1,0 +1,114 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T12:26:52.697470+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169bv-closeout.json';meta=json.loads(mf.read_bytes());r=Path(meta['satellite_root']);stem='current-global-boundary-moment-return'\nsys.path[:0]=[str(p/'s169af-arb'),str(r/'checks')]\nfrom flint import arb,ctx\nimport sympy as sp\nimport mpmath as mp\nimport current_product_matched_source_projection as prev\nctx.prec=512;mp.mp.dps=180\nout=r/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\na=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(encoding='utf-8-sig'),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(a)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\ndef value(x):\n e=prev.encoded(x)['decimal_enclosure'];return mp.mpf(e['mid'])*mp.power(10,e['exponent'])\nsave()\ntry:\n run=json.loads((r/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((r/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n z=run['result'];dec=prev.decode\n # Independent contour inequalities from the series, not frequency samples.\n d=sp.Rational(1,200);eps=sp.Rational(1,100)\n assert 1+2*(sp.Rational(1,9)+sp.Rational(1,3))<2\n assert sp.Rational(2001,1000)/2*sp.Rational(10,6)/(1-eps**2/4)<2\n assert 1+sp.Rational(7)*(sp.Rational(1,27)+sp.Rational(1,18))+sp.Rational(108,10)+sp.Rational(1,100)<15\n assert 21*(1/d+18)<5000\n assert 5*(6+5*eps+eps**2)+(5+2*eps)*5<61\n # Re-derive the two Cauchy-Schwarz factors as entire positive integrals.\n t,delta,ee=sp.symbols('t delta e',positive=True)\n assert sp.integrate(sp.exp(-2*delta*t),(t,0,sp.oo))==1/(2*delta)\n # Actual parameters, untruncated normal family, independent derivative.\n pars,h,zh,env=prev.scalar.prev.york.actual_parameters();mp.mp.dps=180\n C,B2,be,la,Fl=[value(pars[k]) for k in ['C','B2','beta','g','Fl']]\n K=C*be**2/(15*mp.pi*B2);D0=-120*mp.pi**2*K;d0=1/(480*mp.pi**2)\n Fs=Fl+23*la/(180*mp.pi);L=10*mp.pi*Fs/la;AT=L*d0;eta=6/L\n kap=mp.log(la*B2)/2-mp.mpf('2.9452431301493e-9')-mp.mpf(6)/5\n def HH(s):return mp.digamma(s-1)+mp.pi/2*mp.cot(mp.pi*(s-4)/2)+kap\n def BB(s):\n  q=s*(s-3);return 4*D0*d0*(s-4)*q*((q+2)*HH(s)-L)\n def rr(x):\n  e=eta*x;ss=4+e;q=ss*(ss-3);return e*(q+2)*HH(ss)-L*e\n xx=mp.findroot(rr,(mp.mpf(1)-mp.mpf('1e-30'),mp.mpf(1)+mp.mpf('1e-30')),tol=mp.mpf('1e-130'))\n e=eta*xx;ss=4+e;bp=mp.diff(BB,ss)\n assert dec(z['Bprime_at_slow_root']).contains(arb(mp.nstr(bp,100)))\n assert bp>0\n c3=1/value(dec(z['C3_H3_to_H6']));c4=1/value(dec(z['C4_H2_to_H6']))\n ratios=[]\n for t in map(mp.mpf,['0','.0001','.005','.01','.1','.5','1','2','2.65','4','10','1000','1e10','1e17','1e18','1e20','1e40']):\n  b=abs(BB(mp.mpf('4.005')+1j*t));r3=b/(c3*(1+t*t)**mp.mpf('1.5'));r4=b/(c4*(1+t*t)**2)\n  assert r3>=1 and r4>=1;ratios.append([mp.nstr(t,8),mp.nstr(r3,16),mp.nstr(r4,16)])\n # Known source: independently integrate each full squared derivative,\n # including the analytic infinite tail. These fixtures are not G_R.\n g0=value(dec(z['g0']));B0=g0/(-24*K);a0=mp.mpf('.1');dd=mp.mpf('.005');xa=mp.log(a0);x0=xa-1\n u=sp.symbols('u');S=35*u**4-84*u**5+70*u**6-20*u**7;P=S;polys=[]\n for j in range(4):\n  if j:P=sp.diff(P,u)-sp.Rational(1,200)*P\n  polys.append(sp.lambdify(u,sp.expand(P),'mpmath'))\n norms={}\n for m in [2,3]:\n  integ=sum(mp.binomial(m,j)*mp.quad(lambda y:mp.exp(-2*dd*(x0+y))*polys[j](y)**2,[0,1]) for j in range(m+1))\n  tail=mp.exp(-2*dd*xa)*(1+dd*dd)**m/(2*dd)\n  norms[m]=abs(g0)*mp.sqrt(integ+tail)\n  assert arb(mp.nstr(norms[m],100))<dec(z['known_source_H'+str(m)+'_upper'])\n # Test residue sign and stable subtraction against an exactly transformed\n # auxiliary source g0*z^4*exp(-z); it is NOT the physical source.\n greg=g0*(mp.gamma(-e)+1/e);cs=-g0*mp.gamma(-e)/bp\n stable=B0*(1+(-24*K)/(e*bp))-greg/bp\n assert abs((B0+cs)-stable)<mp.mpf('1e-130')\n assert abs(B0*(1+(-24*K)/(e*bp)))<2*abs(B0)*e\n assert dec(z['conditional_total_shape_phase_upper'])<arb('3.947e-9')\n assert not z['actual_E3_upper_known'] and not z['actual_Efar_upper_known'] and not z['actual_controlled_solution']\n a['result']=dict(actual_localization_and_original_row_obligation_reviewed=True,\n  fixed_seed_extra_derivative_scope_reviewed=True,whole_strip_root_exclusion_and_contour_estimates_reviewed=True,\n  original_equation_coefficient_defined_but_not_evaluated=True,\n  independent_untruncated_Bprime=mp.nstr(bp,65),frequency_diagnostics=ratios,\n  independent_known_H2_norm=mp.nstr(norms[2],50),independent_known_H3_norm=mp.nstr(norms[3],50),\n  exact_Gamma_transform_fixture_is_not_actual_source=True,stable_residue_sign_verified=True,\n  conditional_phase_upper='3.947e-9',actual_E3_and_Efar_still_unknown=True,actual_controlled_solution=False,\n  scientific_checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']))\n a['status']='passed';meta['independent_result']=a['result'];meta['scientific_frozen_sha256']=dict(run['input_sha256_after'])\n for suffix in ['.json','.log']:\n  f='evidence/'+stem+suffix;meta['scientific_frozen_sha256'][f]=sha256((r/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nexcept Exception:a['status']='failed';a['exception']=traceback.format_exc()\na['finished_utc']=datetime.now(timezone.utc).isoformat();save();print(json.dumps({k:v for k,v in a.items() if 'source' not in k},indent=2))\nif a['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "d01e66382237d8631d9b9086ecef2f977b933c7f16e9088f0b65ce332aece220",
+      "result": {
+        "actual_localization_and_original_row_obligation_reviewed": true,
+        "fixed_seed_extra_derivative_scope_reviewed": true,
+        "whole_strip_root_exclusion_and_contour_estimates_reviewed": true,
+        "original_equation_coefficient_defined_but_not_evaluated": true,
+        "independent_untruncated_Bprime": "0.44444443919940849395648162388956486015957057674267243574664062312",
+        "frequency_diagnostics": [
+          [
+            "0.0",
+            "4.025025",
+            "1440709376137733.0"
+          ],
+          [
+            "0.0001",
+            "4.025829885312438",
+            "1440997467967247.0"
+          ],
+          [
+            "0.005",
+            "5.692106370986838",
+            "2037395671378022.0"
+          ],
+          [
+            "0.01",
+            "8.999353165154479",
+            "3221049374899541.0"
+          ],
+          [
+            "0.1",
+            "79.82398229969463",
+            "2.843023855324712e+16"
+          ],
+          [
+            "0.5",
+            "324.1956255606178",
+            "1.037910592991226e+17"
+          ],
+          [
+            "1.0",
+            "413.8341003501963",
+            "1.047415693486525e+17"
+          ],
+          [
+            "2.0",
+            "358.4886564579276",
+            "5.738497756739542e+16"
+          ],
+          [
+            "2.65",
+            "317.4618363444316",
+            "4.011847920396905e+16"
+          ],
+          [
+            "4.0",
+            "266.450072845481",
+            "2.313125429156158e+16"
+          ],
+          [
+            "10.0",
+            "213.3212576459523",
+            "7597684390867976.0"
+          ],
+          [
+            "1000.0",
+            "200.00140499967",
+            "71588066000062.86"
+          ],
+          [
+            "1.0e+10",
+            "200.0000000000207",
+            "7158759.88913302"
+          ],
+          [
+            "1.0e+17",
+            "3268.509183511418",
+            "11.69923622009102"
+          ],
+          [
+            "1.0e+18",
+            "321366.066935402",
+            "115.0291254852678"
+          ],
+          [
+            "1.0e+20",
+            "3497963841.039224",
+            "12520.54161943334"
+          ],
+          [
+            "1.0e+40",
+            "6.360993357891263e+49",
+            "2.276841205275441e+24"
+          ]
+        ],
+        "independent_known_H2_norm": "5.0576992089742578580385309211505909733144722362617e-28",
+        "independent_known_H3_norm": "1.6086713112271459494945482066677692250068220259325e-27",
+        "exact_Gamma_transform_fixture_is_not_actual_source": true,
+        "stable_residue_sign_verified": true,
+        "conditional_phase_upper": "3.947e-9",
+        "actual_E3_and_Efar_still_unknown": true,
+        "actual_controlled_solution": false,
+        "scientific_checks": 30,
+        "frozen_inputs": 929
+      },
+      "finished_utc": "2026-10-24T12:26:54.089425+00:00"
+    }
+  ]
+}
