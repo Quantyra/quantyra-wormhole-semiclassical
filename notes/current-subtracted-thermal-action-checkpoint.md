@@ -1,3 +1,85 @@
+# Active checkpoint: actual paired regulator/domain prerequisite
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit stays CLOSED. This is a partial domain assessment,
+not completion of the requested full-projection milestone.
+
+The [ordinary argument and executed domain tests](current-paired-regulator-domain-audit.md) identify the
+first unsupported step: a uniform approximation/common-regulator estimate
+that identifies the candidate weak form with the metric derivatives of
+the actual action on the mass/log phase. Finite-M conversion, closed-form
+extension and smooth local heat coefficients do not by themselves prove it.
+The original paired boundary, regular bolt, contacts and state are retained.
+
+The all-angular candidate boundary traces a1,a3,a5 vanish. The a4 bulk
+divergence cancels its inward-normal boundary derivative before any limit.
+For a5 the complete surviving mixed trace is zero because E=-R/4 is scalar
+and chi Omega_an chi=-Omega_an. This eliminates one candidate M^-3 boundary
+term in the local coefficient ledger. The source theorem is smooth; this
+algebra does not prove a rough heat expansion or exclude nonclassical terms.
+
+The actual mass/log leading jets admit finite weak third-derivative moments.
+A physical-half cutoff of the cubic has exact H3 squared error K3 epsilon
+and fourth-derivative squared cost K4/epsilon, where
+
+    K3=555991660224/6678671,
+    K4=2627243828352/215441>0.
+
+Thus a weak approximation converges while its higher-norm cost diverges.
+A smooth-domain theorem needing uniform H4/C4 control is inapplicable.
+This is a method failure, not a physical divergence or a substituted domain.
+
+The known row-subtracted gluing certificate gives an upper allowance
+<2.8125001E-16, about 2.1853148E+24 screening units.
+It is not the actual projection or a lower bound. With the same crude
+norm pairing its coefficient 6e24 would need to be <=
+2.7455999; cold/scalar optimization cannot repair that loss.
+
+For |r_hv^prod(t)|<=t omega(t), the sufficient heat-cap condition is
+int_0^.001 omega(t)dt/t<=1.0666666E-11. Finiteness/uniformity
+is needed before precision is interpreted. The log constant above and
+the power-law alternatives in the receipt remain UNKNOWN.
+
+Retain the magnetic <1.284506e-40, complete cold <1.693010e-43 and scalar
+trial <2.331e-44 bounds. No total-source improvement is certified.
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain open in the actual
+admission norm, as do compatibility, matching, causal energy balance,
+validity/noise and all-sector stability. S169.2-S169.5 remain unchecked.
+
+Research decision: retain this construction and sharpen the method at the
+continuum prerequisite. Park further adiabatic/finite-mode projection work
+until the common-regulator identification is established on the actual
+paired mass/log domain. The existing candidate weak-form estimates retain
+their scope; their extension alone is not a uniform determinant-variation
+theorem. No construction switch or nonexistence conclusion is justified.
+
+The SINGLE next calculation is the regulator-uniform product-subtracted
+mixed geometric Duhamel remainder on h1,-z^4, with the second vertex and
+all boundary contacts retained. Test |r_hv^prod(t)|<=A_log t^2(1+|log t|)
+for 0<t<=.001. First prove a finite uniform constant; for the allocated
+2.5e-43 heat error, sufficient A_log<=1.1974584E-9.
+The constant is UNKNOWN. Uniform family estimates are additionally needed
+for a C2 action statement, not merely the selected pair.
+
+The boundary/regularity and estimator tests below were EXECUTED. The full
+remaining signed projection was NOT executed or certified. Its unchanged
+sufficient screen is |P_hat_rest|+E_rest<1.287e-40; it is not a necessary
+condition for wormhole existence. No actual controlled solution is proved.
+
+Verification retained 4 attempts, including 3 failures:
+one isolated-Python import failure before scientific execution and two
+structural-equality checks corrected to algebraic equality. The final
+replay passed 43 checks with 950 unchanged inputs. Independent
+beta-integral/physical-cutoff quadrature, endpoint log integrals, an
+alternate Clifford basis and Dini/physical-prefactor arithmetic passed.
+All source snapshots and failures remain inspectable; no source changed
+after final replay. These checks do not prove the missing continuum step.
+No Lean ran. All 18 inherited paths remain unchanged.
+
+Remaining to-do list: prove the actual-domain uniform regulator/metric-variation estimate; certify the complete quantum/contact projection and forward/adjoint correction with admission; nonlinear closure, exact compatibility, physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: geometric conversion and exact contact cancellation
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-23",
+  "story": "E003/S169",
+  "scope": "Actual paired boundary coefficient cancellation, mass/log cutoff regularity, and quantitative diagnosis of an excessive gluing certificate. No determinant-limit theorem or full signed projection.",
+  "retained_inputs": [
+    "notes/stationary-paired-dirac-phase.md",
+    "notes/stationary-exterior-conformal-domain.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/finite-comparison-massive-geodesic-form.md",
+    "notes/current-geodesic-two-sided-remainder.md",
+    "notes/current-seed-full-hessian-realization.md",
+    "notes/current-canonical-heat-restoration-assembly.md",
+    "notes/current-controlled-solution-audit-closeout.md",
+    "notes/current-seed-directional-cold-response.md",
+    "notes/current-product-matched-source-projection.md"
+  ],
+  "ordinary_argument_review": [
+    "The actual first-order pair has complementary adjoint domains. Keep the induced square boundary condition, physical-half normalization, thermal bolt and identical scalar deformations.",
+    "At the limiting seam the physical phase preserves K=S=0 and chi_:a=0. Rank-two E is scalar and normal-tangential spin curvature anticommutes with chi.",
+    "The inward a4 boundary derivative cancels the integrated bulk divergence. All remaining a5 mixed traces cancel algebraically, before a potentially undefined fourth log jet is evaluated.",
+    "The smooth coefficient theorem supplies a counterterm test only. Its hypotheses do not give a heat expansion on the actual log phase; a5 cancellation is not a regulator theorem.",
+    "The mass cubic has an H3 approximation but its fourth derivative cost grows as inverse cutoff. This tests a proof strategy, not a substituted smooth geometry or a physical obstruction.",
+    "The prior candidate weak-form closure retains its scope. Identifying it with two derivatives of the commonly regulated functional requires a uniform approximation/regulator bound, not just boundedness of a limiting form.",
+    "A Dini heat majorant would justify the ultraviolet step; its constant is unknown. Evaluate sufficient power and log thresholds at actual physical constants.",
+    "The existing gluing allowance is a known upper certificate. Its large size is not an actual source value or a nonexistence result.",
+    "Park the adiabatic coefficient extension and numerical projection until the actual-domain uniform identification is established. Do not optimize the controlled cold or scalar components."
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/hep-th/9906144",
+      "authors": "Branson, Gilkey, Kirsten, Vassilevich",
+      "use": "Theorems 2.1 and 2.4: complete mixed a1-a5 local coefficients. Smooth metric/boundary hypotheses retained; no nonsmooth remainder theorem imported."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1809.05614",
+      "author": "Hart Smith",
+      "use": "Theorem 1.1 checks the distinction between finite regularity and heat remainders. Its fixed complete manifold and potential perturbation hypotheses do not establish the present metric/boundary limit."
+    }
+  ],
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_attempts_and_failures": true,
+    "precision_bits": 512,
+    "interval_library": "python-flint==0.9.0",
+    "exact_cutoff_degree": 15,
+    "heat_t0": "0.001",
+    "heat_power_exponents": [".25", ".5", "1"],
+    "heat_cap_error_allocation": "2.5e-43",
+    "remaining_projection_sufficient_target": "1.287e-40",
+    "complete_projection_executed": false,
+    "uniform_common_regulator_identification_proved": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

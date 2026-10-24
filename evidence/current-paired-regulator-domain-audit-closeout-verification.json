@@ -1,0 +1,66 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T02:18:43.138875+00:00",
+      "source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom fractions import Fraction\nfrom decimal import Decimal,localcontext\nfrom datetime import datetime,timezone\nimport json, subprocess, tempfile, traceback\nimport mpmath as mp\nfolder=Path(tempfile.gettempdir());mf=folder/'s169bg-closeout.json';meta=json.loads(mf.read_bytes())\nroot=Path(meta['satellite_root']);stem='current-paired-regulator-domain-audit'\nreceipt=json.loads((root/'evidence'/f'{stem}.json').read_bytes());run=receipt['runs'][-1]\nevfile=root/'evidence'/f'{stem}-closeout-verification.json'\nev=json.loads(evfile.read_bytes()) if evfile.exists() else {'attempts':[]}\nattempt={'started_utc':datetime.now(timezone.utc).isoformat(),'source_utf8':Path(__file__).read_text(encoding='utf-8'),'source_sha256':sha256(Path(__file__).read_bytes()).hexdigest()}\ndef bounds(x):\n a=x['decimal_enclosure'];u=Fraction(10)**int(a['exponent']);m=Fraction(a['mid'])*u;r=Fraction(a['rad'])*u\n return m-r,m,m+r\ndef fm(f):return mp.mpf(f.numerator)/f.denominator\ndef mm(x,i=1):return fm(bounds(x)[i])\ndef inside(value,x):return mm(x,0)<=value<=mm(x,2)\ndef out(value,up=True):\n with localcontext() as c:\n  c.prec=8;c.rounding='ROUND_CEILING' if up else 'ROUND_FLOOR';return str(+Decimal(str(value)))\ntry:\n assert run['status']=='passed' and all(x['passed'] for x in run['checks'])\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/p).read_bytes()).hexdigest()==h for p,h in run['input_sha256_after'].items())\n for kind in ['planning','satellite']:\n  rr=Path(meta[kind+'_root'])\n  assert all(sha256((rr/p).read_bytes()).hexdigest()==h for p,h in meta[kind+'_inherited'].items())\n  assert subprocess.check_output(['git','rev-parse','HEAD'],cwd=rr,text=True).strip()==meta[kind+'_previous_commit']\n  assert not subprocess.check_output(['git','diff','--cached','--name-only'],cwd=rr).strip()\n mp.mp.dps=100\n costs=next(x for x in run['numerics'] if x['kind']=='exact_cutoff_costs')\n numeric=next(x for x in run['numerics'] if x['kind']=='domain_and_estimator_thresholds')\n density=lambda t:mp.factorial(15)/mp.factorial(7)**2*t**7*(1-t)**7\n theta=lambda t:mp.betainc(8,8,0,t,regularized=True)\n def jets(x):\n  t=x-1\n  return [theta(t),density(t),mp.diff(density,t),mp.diff(density,t,2),mp.diff(density,t,3)]\n def cubic3(x):\n  j=jets(x);return 6*j[0]+18*x*j[1]+9*x*x*j[2]+x**3*j[3]\n def cubic4(x):\n  j=jets(x);return 24*j[1]+36*x*j[2]+12*x*x*j[3]+x**3*j[4]\n def quartic3(x):\n  j=jets(x);return 24*x*j[0]+36*x*x*j[1]+12*x**3*j[2]+x**4*j[3]\n K3=36+mp.quad(lambda x:(cubic3(x)-6)**2,[1,mp.mpf('1.5'),2])\n K4=mp.quad(lambda x:cubic4(x)**2,[1,mp.mpf('1.5'),2])\n K3v=192+mp.quad(lambda x:(quartic3(x)-24*x)**2,[1,mp.mpf('1.5'),2])\n for k,value in [('K3',K3),('K4',K4),('K3v',K3v)]:\n  expected=fm(Fraction(costs[k]));assert abs(value-expected)<mp.mpf('1e-80')*max(1,abs(expected)),k\n # Physical-coordinate cutoff quadrature, independent of the symbolic integral.\n scale_rows=[]\n for power in [6,12,24]:\n  e=mp.mpf(2)**(-power)\n  err=36*e+mp.quad(lambda z:(cubic3(z/e)-6)**2,[e,mp.mpf('1.5')*e,2*e])\n  high=mp.quad(lambda z:(cubic4(z/e)/e)**2,[e,mp.mpf('1.5')*e,2*e])\n  assert abs(err/(K3*e)-1)<mp.mpf('1e-80')\n  assert abs(high/(K4/e)-1)<mp.mpf('1e-80')\n  scale_rows.append(dict(epsilon=mp.nstr(e,40),H3_squared_error=mp.nstr(err,60),H4_squared_cost=mp.nstr(high,60)))\n c=mp.mpf('.3');d=-mp.mpf('.2')\n for delta in [mp.mpf('.001'),mp.mpf('.25')]:\n  h3=lambda z:6*c+d*z*(24*mp.log(z)+26)\n  hnorm=mp.quad(lambda z:h3(z)**2,[0,delta])\n  cross=mp.quad(lambda z:h3(z)*(-24*z),[0,delta])\n  L=mp.log(delta)\n  exact=36*c*c*delta+c*d*delta**2*(144*L+84)+d*d*delta**3*(192*L*L+288*L+mp.mpf(388)/3)\n  assert abs(hnorm-exact)<mp.mpf('1e-85')\n  assert abs(cross-(-72*c*delta**2-d*delta**3*(192*L+144)))<mp.mpf('1e-85')\n # Use a different Clifford basis for the surviving a5 matrix trace.\n chi=mp.matrix([[1,0],[0,-1]]);I=mp.eye(2)\n for rv in [mp.mpf('-2'),mp.mpf('0.1'),mp.mpf(4)]:\n  E=-rv*I/4;Om=rv*mp.matrix([[0,1],[-1,0]])/4\n  mat=-180*E**2+180*chi*E*chi*E-45*Om**2+180*chi*Om**2-45*chi*Om*chi*Om\n  assert abs(mat[0,0]+mat[1,1])<mp.mpf('1e-90')\n B2=mm(numeric['B_squared']);C=mm(numeric['C']);Fl=mm(numeric['F_lambda']);t0=mp.mpf('.001')\n threshold=mp.mpf('2.5e-43')*B2*Fl/(4*C)\n logfactor=mp.quad(lambda t:1-mp.log(t),[0,t0])\n Al=threshold/logfactor;glue=mp.mpf('12e24')*C*mp.mpf('4e-9')/(B2*Fl)\n Kmax=mp.mpf('1.287e-40')*B2*Fl/(mp.mpf('8e-9')*C)\n assert inside(threshold,numeric['Dini_integral_threshold'])\n assert inside(logfactor,numeric['logarithmic_Dini_factor'])\n assert inside(Al,numeric['A_log_threshold']) and inside(glue,numeric['known_gluing_upper_allowance'])\n assert inside(Kmax,numeric['required_crude_gluing_coefficient_upper'])\n powerrows=[]\n for row in numeric['power_thresholds']:\n  a=mp.mpf(row['alpha']);req=threshold*a/t0**a\n  assert inside(req,row['A_threshold'])\n  powerrows.append(dict(alpha=row['alpha'],A_sufficient=out(mm(row['A_threshold'],0),False)))\n result=dict(K3_exact=costs['K3'],K4_exact=costs['K4'],K3v_exact=costs['K3v'],\n  K3=out(K3),K4=out(K4),K3v=out(K3v),cutoff_scaling_checks=scale_rows,\n  Dini_integral_sufficient=out(mm(numeric['Dini_integral_threshold'],0),False),power_thresholds=powerrows,\n  A_log_sufficient=out(mm(numeric['A_log_threshold'],0),False),\n  known_gluing_upper_allowance=out(mm(numeric['known_gluing_upper_allowance'],2)),\n  gluing_allowance_target_factor=out(mm(numeric['gluing_allowance_target_factor'],2)),\n  required_crude_gluing_coefficient_sufficient=out(mm(numeric['required_crude_gluing_coefficient_upper'],0),False),\n  all_angular_candidate_a5='0',uniform_regulator_identification_proved=False,complete_projection_evaluated=False,\n  actual_obstruction_proved=False,nonlinear_solution_certified=False)\n frozen={p:sha256((root/p).read_bytes()).hexdigest() for p in run['frozen_sources_utf8']}\n meta.update(checks=len(run['checks']),inputs=len(run['input_sha256_after']),runs=len(receipt['runs']),\n  failed_runs=sum(x['status']!='passed' for x in receipt['runs']),json_rows=len((root/'evidence'/f'{stem}.log').read_text().splitlines()),\n  scientific_frozen_sha256=frozen,independent_result=result)\n mf.write_text(json.dumps(meta,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n attempt.update(status='passed',results=result,scientific_source_hashes=frozen,\n  scope='Independent beta-integral cutoff quadrature and physical scaling, leading mass/log endpoint integrals, alternate Clifford basis, Dini integral and actual-constant thresholds. Does not prove the continuum regulator step.')\nexcept Exception:attempt.update(status='failed',exception=traceback.format_exc())\nattempt['finished_utc']=datetime.now(timezone.utc).isoformat();ev['attempts'].append(attempt)\nevfile.write_text(json.dumps(ev,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:attempt[k] for k in ['status','results','exception'] if k in attempt}),flush=True)\nif attempt['status']!='passed':raise SystemExit(1)\n",
+      "source_sha256": "10e1c1f5382816f9e045199346a3fba3aeb07f2448e6af5126aabd3f40acc469",
+      "status": "passed",
+      "results": {
+        "K3_exact": "555991660224/6678671",
+        "K4_exact": "2627243828352/215441",
+        "K3v_exact": "1341060809088/6678671",
+        "K3": "83248.847",
+        "K4": "12194726",
+        "K3v": "200797.56",
+        "cutoff_scaling_checks": [
+          {
+            "epsilon": "0.015625",
+            "H3_squared_error": "1300.76323433209990430730904396997546368132222713171527688667",
+            "H4_squared_cost": "780462423.654401901216574375351024178313320120125695666098839"
+          },
+          {
+            "epsilon": "0.000244140625",
+            "H3_squared_error": "20.3244255364390610048017038120308666200206597989330512013543",
+            "H4_squared_cost": "49949595113.8817216778607600224655474120524876880445226303257"
+          },
+          {
+            "epsilon": "0.000000059604644775390625",
+            "H3_squared_error": "0.00496201795323219262812541596973409829590348139622388945345564",
+            "H4_squared_cost": "204593541586459.531992517673052018882199766989570230364693814"
+          }
+        ],
+        "Dini_integral_sufficient": "1.0666666E-11",
+        "power_thresholds": [
+          {
+            "alpha": ".25",
+            "A_sufficient": "1.4995768E-11"
+          },
+          {
+            "alpha": ".5",
+            "A_sufficient": "1.6865480E-10"
+          },
+          {
+            "alpha": "1",
+            "A_sufficient": "1.0666666E-8"
+          }
+        ],
+        "A_log_sufficient": "1.1974584E-9",
+        "known_gluing_upper_allowance": "2.8125001E-16",
+        "gluing_allowance_target_factor": "2.1853148E+24",
+        "required_crude_gluing_coefficient_sufficient": "2.7455999",
+        "all_angular_candidate_a5": "0",
+        "uniform_regulator_identification_proved": false,
+        "complete_projection_evaluated": false,
+        "actual_obstruction_proved": false,
+        "nonlinear_solution_certified": false
+      },
+      "scientific_source_hashes": {
+        "notes/current-paired-regulator-domain-audit.md": "601691ac28913aea26c09d638c2bfbc9c817bc1a01f3b88dbf289ea16a0e2665",
+        "checks/current_paired_regulator_domain_audit.py": "cbddada54f37230c529c7156669925cac52376f72cceb5648b5d1a2dfe2e3150",
+        "evidence/current-paired-regulator-domain-audit-review.json": "bf94cbbc8586260c33a860402698de48dafad3bcc4106b417ae0d5dfd8e05b3c"
+      },
+      "scope": "Independent beta-integral cutoff quadrature and physical scaling, leading mass/log endpoint integrals, alternate Clifford basis, Dini integral and actual-constant thresholds. Does not prove the continuum regulator step.",
+      "finished_utc": "2026-10-24T02:18:52.813851+00:00"
+    }
+  ]
+}
