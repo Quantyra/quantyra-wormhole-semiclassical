@@ -1,0 +1,41 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T19:20:30.277761+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import factorial,comb\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169cj-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-angular-strong-graph'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n runs=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'];run=runs[-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n t,xi,z=S.symbols('t xi z');sig=S.Rational(801,200);jets=S.symbols('e0:8')\n # Direct repeated differentiation of eta(y/h) y^sigma w(log y),\n # independent of the acceptance's binomial/falling-factor decomposition.\n T=[jets[0]]\n for n in range(7):\n  f=T[-1]\n  T.append(S.expand(t*S.diff(f,t)+sum(t*jets[i+1]*S.diff(f,jets[i]) for i in range(7))+(xi+sig-n)*f))\n A=[arb(x) for x in ans['cutoff_derivative_guards']]\n W=[arb(x) for x in ['895','4.48','4.5','18.1','4.48','4.5','18.1','1.206e18']]\n Cb=[old.decode(x) for x in ans['normal_bounds']]\n for exact,wide in zip(Cb,[W[0],W[1],W[2],W[3],W[7]]):assert exact<wide\n def rat(v):return arb(int(v.p))/int(v.q)\n DN=[]\n for n,form in enumerate(T):\n  coeff={};bound=arb(0)\n  for i,e in enumerate(jets):\n   poly=S.Poly(S.expand(form).coeff(e),t,xi)\n   for (power,deriv),co in poly.terms():\n    if co==0:continue\n    assert power==i and deriv<=n-i\n    # Exact identity comparison with the accepted finite coefficient\n    # formula; this checks every derivative distribution, not samples.\n    expected=S.binomial(n,i)*S.Poly(S.prod(sig+xi-k for k in range(n-i)),xi).nth(deriv)\n    assert S.simplify(co-expected)==0\n    exp=sig+S.Rational(1,2)-n+power;base=arb(3) if exp>=0 else arb('.5')\n    bound+=rat(abs(co))*A[i]*(rat(exp)*base.log()).exp()*W[deriv]\n  DN.append(bound)\n f=S.Function('f')(z);base=z**5*S.diff(f,z);outputs=[]\n for l in range(4):\n  expr=S.expand(base);row=[]\n  for j in range(l+1):\n   c=S.simplify(expr.coeff(S.diff(f,z,j+1))/z**(5+j));row.append(c)\n   assert c==S.Rational(ans['output_polynomials'][l][j])\n  outputs.append(row);base=S.expand(z*S.diff(base,z)-sig*base)\n a=arb('.01');near=arb(0)\n for l in range(4):\n  for j,c in enumerate(outputs[l]):\n   for k in range(4):\n    near+=arb(comb(3,l)).sqrt()*rat(abs(c))*((5+j-rat(sig))*arb(2).log()).exp()*arb(comb(3,k)).sqrt()*(a/2)**(4-k)*DN[1+j+k]\n near*=100*arb(8).sqrt()*1000*pars['C']*2/pars['B2']\n # Coarser independent far estimate: one maximum kernel constant and\n # the full derivative polynomial sum, keeping both Schur directions.\n output_sum=sum((arb(comb(3,l)).sqrt()*sum((rat(abs(c)) for c in row),arb(0)) for l,row in enumerate(outputs)),arb(0))\n assert output_sum<30\n assert 1/(rat(sig)+1)+1/(6-rat(sig))<1\n constants=[]\n for r in range(1,5):\n  constants.append(2*100*factorial(r)*4**r*5**(4+r))\n  if r%2:constants.append(2*100*factorial(r+1)*4**(r+1)*5**(5+r))\n assert max(constants)==480000000000\n b=arb('.02');far=100*2/pars['B2']*(pars['q']*b*b+pars['C'].sqrt()*b)*W[0]*30*max(constants)\n assert near+far<arb('3.04e-9') and near+far<arb('4e-9')\n # The inherited failed scientific run is preserved with its own exact\n # source/review snapshots and traceback, not overwritten by the repair.\n assert len(runs)==2 and runs[0]['status']=='failed'\n assert \"'int' object has no attribute 'digamma'\" in runs[0]['exception']\n assert 'frozen_sources_utf8' in runs[0]\n for key in ['seed_flat_angular_graph_certified','all_angular_levels_retained','all_frequencies_and_annuli_retained','reflected_far_cancellation_retained','finite_fourth_contact_retained']:assert ans[key]\n for key in ['normal_operator_changed','physical_domain_changed','physical_source_changed','normalization_changed','finite_physical_modes_selected','actual_curved_thermal_remainder_certified','actual_diagonal_contact_jets_certified','uniform_complete_metric_variation_certified','original_X_graph_comparison_known','full_signed_projection_executed','actual_global_correction','actual_controlled_solution','nonlinear_admission','exact_compatibility','physical_matching','validity_noise','all_sector_stability','next_complete_response_calculation_executed']:assert not ans[key]\n for kind in ['planning','satellite']:\n  rr=Path(m[kind+'_root']);assert all(sha256((rr/f).read_bytes()).hexdigest()==h for f,h in m[kind+'_inherited'].items())\n at.update(status='passed',independent_direct_derivative_recurrence=True,independent_output_differentiation=True,coarser_near=old.encoded(near),coarser_far=old.encoded(far),coarser_total=old.encoded(near+far),scientific_runs_preserved=len(runs),failed_scientific_runs_preserved=1,scope='Current seed flat entire-angular strong component only; no complete curved/thermal response or nonlinear metric variation certificate',post_success_scientific_edits=False)\nexcept Exception:at.update(status='failed',exception=traceback.format_exc())\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n files=list(run['input_sha256_after'])+[f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in sorted(set(files))};mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps({k:v for k,v in at.items() if k!='verifier_source_utf8'},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "2271f985af819e6c25ab8d204168ed7dff7e1ef0a9aae21fc3f352b2bc64ea12",
+      "independent_direct_derivative_recurrence": true,
+      "independent_output_differentiation": true,
+      "coarser_near": {
+        "ball": "[3.038841024050054983905e-9 +/- 7.46e-31]",
+        "decimal_enclosure": {
+          "mid": "3038841024050054983905417223366809825449",
+          "rad": "328204858156908545",
+          "exponent": "-48"
+        }
+      },
+      "coarser_far": {
+        "ball": "[1.967847968053335818125e-15 +/- 1.61e-37]",
+        "decimal_enclosure": {
+          "mid": "1967847968053335818124945777073033361462",
+          "rad": "106267073377730561",
+          "exponent": "-54"
+        }
+      },
+      "coarser_total": {
+        "ball": "[3.038842991898023037241e-9 +/- 5.64e-31]",
+        "decimal_enclosure": {
+          "mid": "3038842991898023037241235348312586898483",
+          "rad": "328204964994220033",
+          "exponent": "-48"
+        }
+      },
+      "scientific_runs_preserved": 2,
+      "failed_scientific_runs_preserved": 1,
+      "scope": "Current seed flat entire-angular strong component only; no complete curved/thermal response or nonlinear metric variation certificate",
+      "post_success_scientific_edits": false,
+      "finished_utc": "2026-10-24T19:20:30.765266+00:00"
+    }
+  ]
+}

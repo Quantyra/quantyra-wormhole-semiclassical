@@ -1,3 +1,89 @@
+# Active checkpoint: full angular component bounded in H3; curved uniform response open
+
+2026-10-24, E003/S169.
+See [the current angular strong-graph proof](current-angular-strong-graph.md).
+
+EXECUTED: a strong current-graph estimate for the entire flat angular
+tower minus its prescribed logarithmic normal model, on output z<.01
+and input z'<.02, at sigma=4.005. The exact multiplier includes its
+finite contacts. No angular or frequency cutoff is used. A complex
+Bessel counting integral proves the separated kernel derivatives;
+an infinite annulus estimate retains the seventh input derivative in
+L2 and each lower derivative's own normal-inverse allowance. Reflection
+supplies the remote cancellation required above Mellin weight four.
+
+The resulting SEED OUTER FAST component is
+  ||R_angular||_(H3->H3)<3.038e-9,
+with near contribution 3.037932455e-9 and far contribution <1.576e-16.
+This closes a required strong comparison component in the existing
+physical units. It does not identify the actual curved/thermal kernel
+with the flat one, certify its metric variation, or close a nonlinear
+inequality. Actual-domain returns and inputs beyond .02 retain their
+existing allocations. The full normal contact, including its mass-power
+Weyl cancellation, agrees with the independent Fourier check; B is unchanged.
+
+Allocate 4e-9 to this component. The remaining curved/thermal and other
+unallocated nonlocal SEED feedback target becomes <.159916396. The
+separate contact targets M_A<=3.18e27 and M_V<=2.66e30 remain unknown.
+For graph radius 1e-11 the conditional combined condition is
+  eta_curved_seed+1e-11 C3<.159916396.
+C3 must control the COMPLETE first metric variation, including changes
+of this split. It is not the value of the seed bound above. Both remaining
+constants and their original X/graph comparisons are UNKNOWN, not known
+finite bounds that fail their targets. No actual operator or wormhole
+obstruction is established. The now small angular certificate does not
+justify further optimization of this component.
+
+The first unsupported continuum step remains the complete strong curved/
+thermal response and its uniform metric variation on the actual admitted
+mass/log family, with all diagonal contacts, common principal subtraction
+and finite-domain return. Translation invariance in the executed comparison
+does not transfer to that operator. A real kernel envelope cannot be
+differentiated to obtain the missing estimates.
+
+Preserve E_rest<2.123e-42<1.287e-40 as the earlier sufficient screen;
+zero is its enclosure center, not a measured signed projection. No full
+signed projection or actual global correction is executed here. At
+rho=1e-8 the conditions Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1
+remain unclosed; Y0<=5e-9, Z0<=.25 and Z2<=5e7 remain unproved
+allocations. Nonlinear admission, exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability remain open. The
+audit stays CLOSED and the full stable-wormhole goal ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and the direct strong graph
+method; park the now controlled flat angular component. Its proof moves
+derivatives using translation invariance and derives a complex kernel
+bound before Cauchy. Neither is permission to differentiate the existing
+real envelope for the actual curved response. No source, domain, finite
+contact or normalization is changed.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the actual
+curved/thermal remainder and its first metric variation in the coupled
+H3 graph uniformly on the admitted mass/log neighborhood. Combine all
+common-regulated vertices before norms and retain diagonal contacts and
+actual finite-domain returns. Test eta_curved_seed+1e-11 C3<.159916396
+and the original nonlinear norm comparison. This is still the decisive
+strong feasibility calculation; the executed angular bound closes one
+required component and does not replace it.
+
+Verification: frozen acceptance passed 24 supporting checks across
+35 unchanged inputs on its second attempt. The first attempt called
+digamma on the integer q+1; the repair converts it to an Arb number.
+That failed run, source/review snapshots and traceback are retained.
+Independent direct differentiation reproduces every near derivative
+distribution and output polynomial. Larger rounded inverse constants
+and a coarser far Schur bound give <3.038843e-9<3.04e-9<4e-9.
+Independent verification passed on its first attempt. The ordinary
+complete-spectrum, kernel and infinite-annulus argument supplies the
+continuum scope; checkers do not certify the unknown curved response.
+Development source/output are retained. No post-success scientific
+edits or Lean runs occurred. All 18 inherited paths and immutable
+audits are preserved. No story checkbox is promoted.
+
+Remaining to-do list: curved/thermal strong response and its diagonal contacts, uniform complete metric variation, actual global correction, original X/graph comparison and nonlinear admission/contraction, mass/slow matching, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete regulator inventory tested; strong response still unknown
 
 2026-10-24, E003/S169.
