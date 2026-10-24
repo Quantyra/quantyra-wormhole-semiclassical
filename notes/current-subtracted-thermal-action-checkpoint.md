@@ -1,3 +1,95 @@
+# Active checkpoint: uniform near-domain return bounded; local response and global admission open
+
+2026-10-24, E003/S169.
+See [the uniform relative-domain argument](current-uniform-relative-domain-return.md).
+
+EXECUTED: the near actual-minus-cylinder Hessian now has a uniform
+strong H3 bound on a specified admitted mass/log family, and its first
+metric variation has an explicit coefficient-norm bound. The actual bolt,
+paired projector, full massive angular/thermal tower, seagull, images and
+diagonal jumps are retained. No global clock-frequency gap is used.
+
+Define A as the maximum of the global mass-field supremum, its first
+three ordinary derivative suprema on z<.04, and the supremum of z times
+the absolute fourth derivative there.
+Retain the admitted mass/log class and regular disk bolt. For real
+backgrounds with ||b||A<=.001, the complete relative near block satisfies
+  ||R_b||_(H3->H3)<2.205e-13,
+  ||D R_b[v]g||H3<2.205e-10 ||v||A ||g||H3.
+The explicit fast extension supported in z<.03 obeys
+  ||eta z^sigma B_sigma^-1 g||A<5.681e6 ||g||H3,
+  C_return,fast<.001253.
+This executes and passes the proposed 1e9 target for that fast near
+component. It is not the complete C3 or an original X norm comparison.
+
+The ordinary proof propagates actual complex-parameter Riccati data in
+the unit disk. Finite Taylor germs compute only the needed spatial jets;
+the missing fourth mass vertex is restored explicitly and has positive
+weighted L2 powers. A separate finite-propagation/relative-heat argument
+identifies the common strong regulator limit. An uncomputed heat constant
+is not used for numerical bounds, and no rough domain is replaced by a
+smooth one. Local ultraviolet contacts cancel only in this relative
+problem; they remain in the full local response.
+
+The fast radius 1e-11 costs <5.681e-5 in A. The remaining mass/slow/global
+background must have A norm <=.00094319 for the stated family admission.
+That actual background is still UNKNOWN. For arbitrary global directions,
+an Xgraph-to-A constant <4.535e18 would suffice for C_return<1e9; that
+comparison is also unknown. The explicit fast comparison passes, but
+does not bound an unobserved global direction by its outer trace.
+
+Reserve an additional 1e-12 for the uniform near-domain allowance while
+preserving all prior allocations. The remaining condition becomes
+  eta_local_curved_seed+1e-11 C3_other<.159916395999.
+Both remaining constants are unknown. The seed contact targets
+M_A<=3.18e27 and M_V<=2.66e30 and the original nonlinear norm comparison
+remain unknown. No excessive complete bound or physical obstruction is
+established for those operators.
+
+At rho=1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain
+unclosed. Y0<=5e-9, Z0<=.25 and Z2<=5e7 remain unproved allocations.
+Preserve the selected E_rest<2.123e-42<1.287e-40 screen with its
+original scope: zero is an enclosure center, not a measured full signed
+projection. No global correction or actual controlled solution is
+computed. Nonlinear admission, compatibility, physical matching,
+validity/noise and all-sector stability remain open. The audit stays
+CLOSED and the full stable-wormhole objective ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and direct strong method;
+park the near relative-domain component on the explicit admitted family.
+Its fast derivative target passes. Do not call the remaining conditional
+global admission a preserved nonlinear X ball. Cold/scalar and the
+controlled flat angular component remain parked.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete local
+cylinder massive Hessian minus the matched normal operator and its first
+metric variation in the coupled H3 graph on the admitted mass/log family.
+Combine all ultraviolet contacts before norms; retain the thermal tower,
+finite contacts and certified actual-domain return. Test
+eta_local_curved_seed+1e-11 C3_other<.159916395999 together with the
+contact targets and original norm comparisons. The strong local common
+regulator limit still requires its full cancellation argument; the
+relative proof above does not supply it.
+
+Verification: acceptance passed 43 supporting checks over 34 unchanged
+inputs. After the first successful run, an ambiguous result label was
+renamed to state explicitly that the global graph-to-A comparison is
+unknown; acceptance and independent verification were then repeated.
+Both successful source snapshots and verification attempts are retained.
+The independent calculation uses direct output differentiation, larger
+kernel/point constants and a 32-cell taper enclosure instead of 64. It
+gives relative norm <2.206e-13 and fast bilinear bound <.001255<1e9.
+The ordinary domain, locality and entire-mode argument supplies the
+continuum scope; checks do not certify the unknown local response or
+global admission. Exact development source/output are retained. There
+were no failed scientific runs, mathematical changes after success, or
+Lean runs. All 18 inherited paths and immutable audits are preserved;
+no story checkbox is promoted.
+
+Remaining to-do list: local curved strong response and contacts, far/global metric response and admission, actual correction, original X/graph comparison and nonlinear closure, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: global thermal-gap shortcut rejected; local uniform response unknown
 
 2026-10-24, E003/S169.

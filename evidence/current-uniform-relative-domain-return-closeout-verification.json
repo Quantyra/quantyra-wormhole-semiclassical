@@ -1,0 +1,78 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T20:12:41.615205+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb,ceil,floor,log10\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169cl-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-uniform-relative-domain-return'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];sig=S.Rational(801,200);sigma=arb('4.005');aa=arb('.01');bb=arb('.02')\n def rat(v):return arb(int(v.p))/int(v.q)\n def rounded_up(v):\n  unit=arb(10)**(floor(log10(float(v.upper())))-3)\n  nn=ceil(float(v.upper()/unit));rounded=nn*unit\n  if not rounded>v:rounded=(nn+1)*unit\n  assert rounded>v\n  return rounded\n K=[rounded_up(old.decode(v)) for v in ans['bubble_derivative_bounds']]\n SG=[rounded_up(old.decode(v)) for v in ans['seagull_derivative_bounds']]\n X,z=S.symbols('X z',positive=True);FF=S.Function('F')(z)\n poly=[S.Poly(S.prod(sig+X-i for i in range(j)),X) for j in range(5)]\n LL=[rat(pp.eval(1)) for pp in poly]\n response={}\n for n in range(1,5):\n  terms=[(bb**(sigma+1)*K[n],arb(0))]\n  # Differentiated diagonal jumps J_r times the input's derivatives.\n  for rr in range(1,n):\n   for ell in range(n-rr):\n    mm=n-rr-1-ell\n    terms.append((comb(n-rr-1,ell)*arb(2*(rr+ell+1))/(rr+1)*K[rr+ell]*LL[mm],sigma-mm))\n  terms.extend((comb(n,ell)*SG[ell]*LL[n-ell],sigma-(n-ell)) for ell in range(n+1))\n  if n==4:terms.extend([(arb('.002')*bb**(sigma+1)*K[0],arb(-1)),(arb('.002')*SG[0],sigma-1)])\n  response[n]=terms\n # Differentiate the output row directly, without the accepted coefficient\n # recurrence, then evaluate each monomial's exact weighted L2 norm.\n outputs=[];expr=z**(5-sig)*S.diff(FF,z)\n for kk in range(4):\n  cells=[]\n  for n in range(1,kk+2):\n   coeff=S.simplify(S.expand(expr).coeff(S.diff(FF,z,n))/z**(4-sig+n))\n   assert coeff>=0\n   cells.append((n,rat(coeff),rat(4-sig+n)))\n  outputs.append(cells);expr=S.expand(z*S.diff(expr,z))\n caps=[1,3,10,60];rows=[]\n for kk in range(4):\n  val=arb(0)\n  for ell in range(kk+1):\n   for n,co,power in outputs[kk-ell]:\n    for co2,power2 in response[n]:\n     totalpower=power+power2;assert totalpower>0\n     val+=comb(kk,ell)*caps[ell]*co*co2*aa**totalpower/(2*totalpower).sqrt()\n  rows.append(val)\n eta=1801/arb(2).sqrt()*sum((comb(3,k)*v*v for k,v in enumerate(rows)),arb(0)).sqrt()\n assert eta>old.decode(ans['relative_uniform_graph_bound']) and eta<arb('2.3e-13')\n # Independently use a 32-cell Bernstein enclosure and rounded-up H6\n # point evaluation constants, not the acceptance's 64-cell subdivision.\n t=S.symbols('t');cut=1-S.integrate(t**8*(1-t)**8,(t,0,t))*S.factorial(17)/S.factorial(8)**2\n def guard(pp,N=32):\n  degree=pp.degree();answer=S.Rational(0)\n  for cell in range(N):\n   sub=S.Poly(pp.as_expr().subs(t,(t+cell)/N).expand(),t)\n   coeff=[sum(sub.nth(i)*S.binomial(j,i)/S.binomial(degree,i) for i in range(j+1)) for j in range(degree+1)]\n   answer=max(answer,max(abs(v) for v in coeff))\n  return answer\n guards=[S.Integer(1)]+[100**j*guard(S.Poly(S.diff(cut,t,j),t)) for j in range(1,5)]\n point=[arb(v) for v in ['.351','.117','.077','.077','.117','.351']]\n for j,exact in enumerate([63,7,3,3,7,63]):assert point[j]>(arb(exact)/512).sqrt()\n WW=[1801*sum((rat(pp.nth(i))*point[i] for i in range(j+1)),arb(0)) for j,pp in enumerate(poly)]\n embeds=[]\n for j in range(5):\n  inner=WW[j]*arb('.02')**(sigma-j)\n  cap=sum((comb(j,ell)*rat(guards[ell])*WW[j-ell]*arb('.03')**(sigma-j+ell) for ell in range(j+1)),arb(0))\n  if j==4:inner*=arb('.02');cap*=arb('.03')\n  embeds.append(max(inner,cap))\n KA=max(embeds);bilinear=eta*1000*KA\n assert KA>old.decode(ans['fast_extension_A_bound']) and KA<arb('6e6')\n assert bilinear>old.decode(ans['fast_graph_metric_return_bound']) and bilinear<arb('.0014') and bilinear<arb('1e9')\n # Check the exponential-vertex correction by an independent formal\n # Taylor series with a free fourth coefficient.\n eps=S.symbols('eps');b0,b1,b2,b3,b4=S.symbols('b0 b1 b2 b3 b4')\n low=b0+b1*eps+b2*eps**2/2+b3*eps**3/6\n diff=S.series(S.exp(low+b4*eps**4/24)-S.exp(low),eps,0,5).removeO().expand()\n assert S.simplify(diff.coeff(eps,4)*24-S.exp(b0)*b4)==0\n at['result']=dict(independent_coarser_relative_graph_bound=old.encoded(eta),independent_coarser_fast_embedding=old.encoded(KA),independent_coarser_fast_bilinear_bound=old.encoded(bilinear),independent_taper_subdivision_count=32,highest_vertex_correction_verified=True,original_global_X_admission_certified=False,actual_controlled_solution=False)\n at['status']='passed'\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in run['input_sha256_after']}\n for f in [f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']:\n  m['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps(dict(status=at['status'],exception=at.get('exception'),result=at.get('result')),indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "31a8b4a74897662ef81ef9353a7f15a9533562c9364975295259f3373620dcd3",
+      "result": {
+        "independent_coarser_relative_graph_bound": {
+          "ball": "[2.20555609330648481134808997512e-13 +/- 2.06e-43]",
+          "decimal_enclosure": {
+            "mid": "2205556093306484811348089975117943690327",
+            "rad": "2",
+            "exponent": "-52"
+          }
+        },
+        "independent_coarser_fast_embedding": {
+          "ball": "[5689096.02042797159952413839511 +/- 9.76e-25]",
+          "decimal_enclosure": {
+            "mid": "5689096020427971599524138395109024456567",
+            "rad": "2",
+            "exponent": "-33"
+          }
+        },
+        "independent_coarser_fast_bilinear_bound": {
+          "ball": "[0.00125476203932605867495234556449 +/- 4.17e-34]",
+          "decimal_enclosure": {
+            "mid": "1254762039326058674952345564489583863808",
+            "rad": "2",
+            "exponent": "-42"
+          }
+        },
+        "independent_taper_subdivision_count": 32,
+        "highest_vertex_correction_verified": true,
+        "original_global_X_admission_certified": false,
+        "actual_controlled_solution": false
+      },
+      "finished_utc": "2026-10-24T20:12:44.943436+00:00"
+    },
+    {
+      "started_utc": "2026-10-24T20:15:31.123688+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb,ceil,floor,log10\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169cl-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-uniform-relative-domain-return'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];sig=S.Rational(801,200);sigma=arb('4.005');aa=arb('.01');bb=arb('.02')\n def rat(v):return arb(int(v.p))/int(v.q)\n def rounded_up(v):\n  unit=arb(10)**(floor(log10(float(v.upper())))-3)\n  nn=ceil(float(v.upper()/unit));rounded=nn*unit\n  if not rounded>v:rounded=(nn+1)*unit\n  assert rounded>v\n  return rounded\n K=[rounded_up(old.decode(v)) for v in ans['bubble_derivative_bounds']]\n SG=[rounded_up(old.decode(v)) for v in ans['seagull_derivative_bounds']]\n X,z=S.symbols('X z',positive=True);FF=S.Function('F')(z)\n poly=[S.Poly(S.prod(sig+X-i for i in range(j)),X) for j in range(5)]\n LL=[rat(pp.eval(1)) for pp in poly]\n response={}\n for n in range(1,5):\n  terms=[(bb**(sigma+1)*K[n],arb(0))]\n  # Differentiated diagonal jumps J_r times the input's derivatives.\n  for rr in range(1,n):\n   for ell in range(n-rr):\n    mm=n-rr-1-ell\n    terms.append((comb(n-rr-1,ell)*arb(2*(rr+ell+1))/(rr+1)*K[rr+ell]*LL[mm],sigma-mm))\n  terms.extend((comb(n,ell)*SG[ell]*LL[n-ell],sigma-(n-ell)) for ell in range(n+1))\n  if n==4:terms.extend([(arb('.002')*bb**(sigma+1)*K[0],arb(-1)),(arb('.002')*SG[0],sigma-1)])\n  response[n]=terms\n # Differentiate the output row directly, without the accepted coefficient\n # recurrence, then evaluate each monomial's exact weighted L2 norm.\n outputs=[];expr=z**(5-sig)*S.diff(FF,z)\n for kk in range(4):\n  cells=[]\n  for n in range(1,kk+2):\n   coeff=S.simplify(S.expand(expr).coeff(S.diff(FF,z,n))/z**(4-sig+n))\n   assert coeff>=0\n   cells.append((n,rat(coeff),rat(4-sig+n)))\n  outputs.append(cells);expr=S.expand(z*S.diff(expr,z))\n caps=[1,3,10,60];rows=[]\n for kk in range(4):\n  val=arb(0)\n  for ell in range(kk+1):\n   for n,co,power in outputs[kk-ell]:\n    for co2,power2 in response[n]:\n     totalpower=power+power2;assert totalpower>0\n     val+=comb(kk,ell)*caps[ell]*co*co2*aa**totalpower/(2*totalpower).sqrt()\n  rows.append(val)\n eta=1801/arb(2).sqrt()*sum((comb(3,k)*v*v for k,v in enumerate(rows)),arb(0)).sqrt()\n assert eta>old.decode(ans['relative_uniform_graph_bound']) and eta<arb('2.3e-13')\n # Independently use a 32-cell Bernstein enclosure and rounded-up H6\n # point evaluation constants, not the acceptance's 64-cell subdivision.\n t=S.symbols('t');cut=1-S.integrate(t**8*(1-t)**8,(t,0,t))*S.factorial(17)/S.factorial(8)**2\n def guard(pp,N=32):\n  degree=pp.degree();answer=S.Rational(0)\n  for cell in range(N):\n   sub=S.Poly(pp.as_expr().subs(t,(t+cell)/N).expand(),t)\n   coeff=[sum(sub.nth(i)*S.binomial(j,i)/S.binomial(degree,i) for i in range(j+1)) for j in range(degree+1)]\n   answer=max(answer,max(abs(v) for v in coeff))\n  return answer\n guards=[S.Integer(1)]+[100**j*guard(S.Poly(S.diff(cut,t,j),t)) for j in range(1,5)]\n point=[arb(v) for v in ['.351','.117','.077','.077','.117','.351']]\n for j,exact in enumerate([63,7,3,3,7,63]):assert point[j]>(arb(exact)/512).sqrt()\n WW=[1801*sum((rat(pp.nth(i))*point[i] for i in range(j+1)),arb(0)) for j,pp in enumerate(poly)]\n embeds=[]\n for j in range(5):\n  inner=WW[j]*arb('.02')**(sigma-j)\n  cap=sum((comb(j,ell)*rat(guards[ell])*WW[j-ell]*arb('.03')**(sigma-j+ell) for ell in range(j+1)),arb(0))\n  if j==4:inner*=arb('.02');cap*=arb('.03')\n  embeds.append(max(inner,cap))\n KA=max(embeds);bilinear=eta*1000*KA\n assert KA>old.decode(ans['fast_extension_A_bound']) and KA<arb('6e6')\n assert bilinear>old.decode(ans['fast_graph_metric_return_bound']) and bilinear<arb('.0014') and bilinear<arb('1e9')\n # Check the exponential-vertex correction by an independent formal\n # Taylor series with a free fourth coefficient.\n eps=S.symbols('eps');b0,b1,b2,b3,b4=S.symbols('b0 b1 b2 b3 b4')\n low=b0+b1*eps+b2*eps**2/2+b3*eps**3/6\n diff=S.series(S.exp(low+b4*eps**4/24)-S.exp(low),eps,0,5).removeO().expand()\n assert S.simplify(diff.coeff(eps,4)*24-S.exp(b0)*b4)==0\n at['result']=dict(independent_coarser_relative_graph_bound=old.encoded(eta),independent_coarser_fast_embedding=old.encoded(KA),independent_coarser_fast_bilinear_bound=old.encoded(bilinear),independent_taper_subdivision_count=32,highest_vertex_correction_verified=True,original_global_X_admission_certified=False,actual_controlled_solution=False)\n at['status']='passed'\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in run['input_sha256_after']}\n for f in [f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']:\n  m['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps(dict(status=at['status'],exception=at.get('exception'),result=at.get('result')),indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "31a8b4a74897662ef81ef9353a7f15a9533562c9364975295259f3373620dcd3",
+      "result": {
+        "independent_coarser_relative_graph_bound": {
+          "ball": "[2.20555609330648481134808997512e-13 +/- 2.06e-43]",
+          "decimal_enclosure": {
+            "mid": "2205556093306484811348089975117943690327",
+            "rad": "2",
+            "exponent": "-52"
+          }
+        },
+        "independent_coarser_fast_embedding": {
+          "ball": "[5689096.02042797159952413839511 +/- 9.76e-25]",
+          "decimal_enclosure": {
+            "mid": "5689096020427971599524138395109024456567",
+            "rad": "2",
+            "exponent": "-33"
+          }
+        },
+        "independent_coarser_fast_bilinear_bound": {
+          "ball": "[0.00125476203932605867495234556449 +/- 4.17e-34]",
+          "decimal_enclosure": {
+            "mid": "1254762039326058674952345564489583863808",
+            "rad": "2",
+            "exponent": "-42"
+          }
+        },
+        "independent_taper_subdivision_count": 32,
+        "highest_vertex_correction_verified": true,
+        "original_global_X_admission_certified": false,
+        "actual_controlled_solution": false
+      },
+      "finished_utc": "2026-10-24T20:15:34.787889+00:00"
+    }
+  ]
+}
