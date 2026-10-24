@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    {
+      "status": "completed_development",
+      "kind": "complete-comparison replacement and whole-patch interval; not full actual remainder",
+      "result": {
+        "multiplier": {
+          "ball": "[0.0031377465413950281578001011253 +/- 4.59e-32]",
+          "decimal_enclosure": {
+            "mid": "3137746541395028157800101125262670840464",
+            "rad": "8567327881",
+            "exponent": "-42"
+          }
+        },
+        "complete_comparison_defect": {
+          "ball": "[406338.17711065614643511309572 +/- 2.63e-24]",
+          "decimal_enclosure": {
+            "mid": "4063381771106561464351130957215158738401",
+            "rad": "11094689665",
+            "exponent": "-34"
+          }
+        },
+        "packet_rho": {
+          "ball": "[+/- 7.41e-8]",
+          "decimal_enclosure": {
+            "mid": "-639039980057696202815691222868023676808",
+            "rad": "101086894213192886021494275374109949953",
+            "exponent": "-46"
+          }
+        },
+        "packet_coefficient_2absrho": {
+          "ball": "[1e-7 +/- 4.81e-8]",
+          "decimal_enclosure": {
+            "mid": "1278079960115392405631382445736047353617",
+            "rad": "202173789377123722214160601870747303937",
+            "exponent": "-46"
+          }
+        },
+        "remaining_using_bound": {
+          "ball": "[0.0304123326172288934385356488690 +/- 4.28e-32]",
+          "decimal_enclosure": {
+            "mid": "3041233261722889343853564886904278484126",
+            "rad": "1109470",
+            "exponent": "-41"
+          }
+        },
+        "source_sha256": "7d71cf53bacfa93de15f8df32cbebfd1e17a3ccb1ee30fb1f09441be669e952a",
+        "source_utf8": "from pathlib import Path\nimport json,sys,hashlib,subprocess\nfrom math import comb\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nsat=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nplan=Path('C:/Users/dfred/Desktop/Projects/IGH/Quantyra-Space-Planning')\nsys.path.insert(0,str(sat/'checks'))\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\ndef h(p):return hashlib.sha256(p.read_bytes()).hexdigest()\ndef git(r,*a):return subprocess.check_output(['git',*a],cwd=r,text=True).strip()\nmeta={}\nfor key,r in [('planning',plan),('satellite',sat)]:\n    status=subprocess.check_output(['git','status','--short','--untracked-files=all'],cwd=r,text=True)\n    files=[l[3:].replace('\\\\','/') for l in status.splitlines()]\n    meta[key+'_root']=str(r);meta[key+'_previous_commit']=git(r,'rev-parse','HEAD')\n    meta[key+'_inherited']={f:h(r/f) for f in files}\nmeta['previous_goal_turn']='progress'\nmeta['previous_goal_turn_reason']='Restored completed projection screen and bounded uniform principal coefficient; committed and pushed both repositories'\nPath(__file__).with_name('s169cr-closeout.json').write_text(json.dumps(meta,indent=2)+'\\n')\nprior=json.loads((sat/'evidence/current-uniform-principal-coefficient.json').read_bytes())['runs'][-1]['result']\nR=[old.decode(x) for x in prior['curvature_coefficient_caps']]\nB=[old.decode(x) for x in prior['background_Euler_caps']]\nex=(2*B[0]).exp();E=[ex-1,2*ex*B[1],ex*(2*B[2]+4*B[1]**2),ex*(2*B[3]+12*B[1]*B[2]+8*B[1]**3)]\nF=[ex]+E[1:]\nA=[sum((comb(j,k)*R[k]*F[j-k] for k in range(j+1)),arb(0))+E[j] for j in range(4)]\nmult=sum((w*a for w,a in zip([100,51,12,1],A)),arb(0))\ncost=arb('1.295e10')*mult/100\npars,_,_,_=old.scalar.prev.york.actual_parameters();q=[arb(1),arb(0),pars['u']/pars['beta'],(-4*pars['beta']-2*pars['u']-pars['tau'])/pars['beta'],(3*pars['beta']+pars['u']+pars['eps'])/pars['beta'],-2*pars['eps']/pars['beta'],pars['eps']/pars['beta']]\nz=arb('.002','.0001');d=sum((q[k]*z**k for k in range(1,7)),arb(0));rho=2*d+d*d\nresult={'multiplier':old.encoded(mult),'complete_comparison_defect':old.encoded(cost),'packet_rho':old.encoded(rho),'packet_coefficient_2absrho':old.encoded(-2*rho),'remaining_using_bound':old.encoded(arb('.159916395999')-arb('1e-11')*(arb('1.295e10')+cost)),'source_sha256':h(Path(__file__)),'source_utf8':Path(__file__).read_text()}\nPath(__file__).with_name('s169cr-development.json').write_text(json.dumps(result,indent=2)+'\\n')\nprint(json.dumps({k:v for k,v in result.items() if k not in ['source_utf8','source_sha256']},indent=2))\n"
+      }
+    }
+  ]
+}

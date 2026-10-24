@@ -1,3 +1,93 @@
+# Active checkpoint: strong estimate unresolved; differentiated cutoff inference rejected
+
+2026-10-24, E003/S169.
+
+See [the direct strong-response attempt](current-strong-response-decision.md).
+
+OUTCOME: the COMPLETE strong estimate is UNRESOLVED. The direct attempt
+retained the tadpole, three pair contacts and both triangle orientations, actual
+paired mass/log domain, common cutoff, full angular/thermal sums and
+finite-domain returns. Its first unsupported step is the uniform bounded
+graph-to-H3 realization of that combined finite part throughout the
+nonlinear neighborhood. No eta_seed or complete C3 value is supplied.
+
+EXECUTED FAILURE OF A SPECIFIED INFERENCE: differentiating only the
+matched left principal coefficient cannot give bilinear operator-norm
+cutoff convergence. Actual-domain interior packets with the high
+frequency in the METRIC input retain coefficient 2K rho after subtracting
+even the complete regulated seed-flat comparison. On the entire patch
+.0019<z<.0021, 1.07e-7<2|rho|<1.49e-7. The low input has a fixed finite
+graph datum, not presumed one. The packet argument is an all-frequency
+norm-limit obstruction; it gives no finite frequency at which the
+physical budget fails and no lower bound obstructing a wormhole.
+
+EXECUTED QUANTIFIED REPLACEMENT: multiply the COMPLETE mixed-frequency
+third comparison by a0 exp(-2b), keeping its entire mixed tails and
+contacts, and define the actual remainder by exact subtraction. On the
+same admitted A<=.001 family, the additional full-comparison bound is
+406338.177110656...<407000, costing <4.07e-6 at radius 1e-11. It restores
+the missing orientation. It is not a bound for the actual remainder.
+Its lower commutators, low contacts and non-fast backgrounds remain in
+that remainder. No physical source, domain, theory or normalization changes.
+
+The full requested target eta_seed+1e-11 C3<.1599164, with the retained
+4.001e-9 reserve and C3<=1.295e10+407000+C_rem, becomes the sufficient
+test eta_seed+1e-11 C_rem<.030412325999. Both constants remain UNKNOWN.
+Best-case C_rem<3.0412325999e9; equal split requires eta_seed<.0152061629995
+and C_rem<1.52061629995e9. The previous 2e-11 direct coefficient allowance
+is reassigned, not charged again. Its historical mathematical bound stands.
+
+Operator-norm cutoff convergence is stronger than contraction needs.
+Use a UNIFORM strong bound for the combined expression, its common weak
+limit and the pathwise identity; do not infer a strong estimate merely
+from weak convergence. Dense-core H3 convergence would additionally be
+needed for pointwise strong cutoff convergence. The required actual
+simultaneous derivative/finite-part estimate remains unproved.
+
+Original X comparisons also remain UNKNOWN. With alpha=X-to-fast-data,
+beta=original preconditioned H3-to-X return, one needs
+E_center+1e-8 alpha<=1e-11 and beta alpha^2 C3+Z2_other<=5e7, as well as
+the seed Z0 return. Even the zero-offset radius requires alpha<=.001;
+using the entire Z2 budget for the guarded comparison alone requires
+beta alpha^2<about .003861. The one-way H6 inverse 1801 and fast-to-A
+embedding 5.681e6 are not those comparisons. The full Y0/Z0/Z2 conditions,
+global admission, compatibility, matching, validity/noise and all-sector
+stability remain open. No actual controlled solution is established.
+
+The selected complete projection screen E_rest<2.123e-42<1.287e-40
+remains certified, with sign unmeasured. It is not reevaluated and is
+sufficient only. The closed feasibility audit and full active objective
+are preserved. No story checkbox is promoted.
+
+RESEARCH DECISION: change the estimation method, retain the construction.
+Reject the specified differentiated left-principal norm-limit inference.
+Use the complete mixed-frequency comparison and seek the uniform bound
+of the combined actual expression before its common weak limit. The
+replacement comparison is affordable; full attainability is undecided.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): the actual-minus-full-
+comparison simultaneous-derivative/finite-part estimate, including its
+seed partner, low contacts, paired seam and finite-domain returns, with
+eta_seed+1e-11 C_rem<.030412325999 and the original X returns explicit.
+This is the COMPLETE missing response estimate, not another isolated
+coefficient calculation. The present inference-failure test and comparison
+cost are executed; the actual remainder and controlled solution are not.
+
+Verification: the ordinary packet and multiplier arguments were frozen
+before one successful arithmetic execution. Its independent product-rule
+coefficient assembly, formal exponential jets and full interval subdivision
+agree with the reporting guards. All 1023 input hashes remained unchanged.
+These checks support the executed claims, not the unknown quantum norm.
+The scope of the cited propagation and symbol theorems was inspected;
+no smooth closed-manifold theorem is imported onto the paired seam.
+Development and exact source are retained; no failed acceptance runs,
+post-success scientific edits or Lean executions occurred. All 18 inherited
+paths, closed audits and previous evidence remain preserved.
+
+Remaining to-do list: complete combined strong quantum response and original norm comparisons; actual correction and nonlinear admission/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: projection screen restored; uniform principal coefficient controlled
 
 2026-10-24, E003/S169.
