@@ -1,3 +1,110 @@
+# Active checkpoint: projection screen restored; uniform principal coefficient controlled
+
+2026-10-24, E003/S169.
+See [the correction and uniform coefficient argument](current-uniform-principal-coefficient.md).
+
+CORRECTION: the recent statement that the selected complete quantum/contact
+screen was unexecuted was inaccurate. The earlier actual-domain radial
+certificate already supplied the COMPLETE signed interval
+P_hat_rest=0, |P_rest,whole-P_hat_rest|<2.123e-42<1.287e-40.
+Zero is an enclosure center; the sign and a nonzero source value remain
+unmeasured. A complete zero-centered interval is still a valid sufficient
+screen. The new checkpoint restores that completed status and supersedes
+the recent unexecuted wording, without altering frozen prior evidence.
+
+REVALIDATED, NOT NEWLY EVALUATED: all 992 prior recorded inputs still match.
+The actual-domain smearing and common-regulator argument, full radial
+residual and variation, seam, regular bolt and complete spectral-tail
+accounting were reread. Summing all 13 errors gives
+2.575788327495768029...e-42 at order 9 and
+2.122334912082011885...e-42 at order 11. The original paired domain,
+rough h1 smearing and smooth differentiated v=-z^4 remain essential.
+The approximation retains its entire residual, all thermal frequencies
+and angular tails; it is not a finite physical-mode theory.
+
+The weaker screen does not certify a correction. The retained localized
+bolt sensitivity requires |I_g|<1.066541114962688e-54 for the particular
+uniform .0022 comparison certificate. The known complete source upper
+allowance is about 1.22636538e14 times that threshold. This is an
+insufficient upper certificate, not a measured violation by I_g or an
+existence obstruction. Continue the directional/weighted correction
+route; do not optimize the completed source screen, cold or scalar terms.
+
+NEWLY EXECUTED: the nonlinear actual logarithmic principal COEFFICIENT
+is uniformly bounded on the same admitted real mass/log family with
+||b||A<=.001. With a0=(Q/beta)^2 and P=K D^5 log(2+|D|), the coefficient
+after subtracting the already allocated seed curved and flat linear
+pieces is r_b=a0(exp(-2b)-1)+2b. The full nonlinear exponential is kept.
+The actual vanishing traces and |partial_z^3 b|<=.001 imply
+|D^j b|<=.001*3^j z^3/6 for j<=3. No bounded fourth log derivative,
+smooth reflected surrogate, physical wall or normalization change is used.
+
+The original full normal inverse and cutoff then give
+||chi r_b P B_sigma^-1||H3->H3 <=6.6080222007826873...e-12 <2e-11.
+Its fast coefficient-variation ORIENTATION is <8.39e-7. This is not the
+entire third quantum response: high derivatives in lower coefficient
+terms can reach the same final graph order. The earlier A-only/C5
+obstruction is therefore retained, not contradicted.
+
+This leading coefficient is not the dominant unknown under the stated
+admission hypothesis. Separating its 2e-11 direct-family allowance ONCE
+leaves the sufficient test
+  eta_other+1e-11 C3_other<.030416395979.
+Both actual remaining constants are UNKNOWN. Even at zero seed defect,
+C3_other must be <3.0416395979e9; equal splitting gives
+eta_other<.0152081979895 and C3_other<1.52081979895e9.
+The known seed comparison C3_flat<1.295e10 and its .1295 allocation are
+unchanged. Global membership in this mass/log family is still unproved.
+
+FIRST UNSUPPORTED CONTINUUM STEP FOR A CONTROLLED SOLUTION: the complete
+actual curved/low-contact strong response after the variable principal
+subtraction, uniformly on the admitted graph family with a matched
+common-regulator limit. The completed selected weak projection does not
+need that stronger theorem; nonlinear admission and contraction do.
+No finite fourth contact, boundary term or lower operator coefficient
+has been discarded by defining the principal comparison.
+
+The original rho=1e-8 conditions remain
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with unproved allocations
+Y0<=5e-9, Z0<=.25, Z2<=5e7. Contact targets M_A<=3.18e27 and
+M_V<=2.66e30, global A admission, original X/graph comparison and the
+actual global correction remain unresolved. Exact compatibility,
+physical matching, semiclassical validity/noise and all-sector stability
+are not supplied by either the selected screen or the new multiplier
+bound. The audit remains CLOSED and the full objective ACTIVE/INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and full-graph method.
+Restore the completed selected projection screen and park source
+optimization. The new uniform coefficient test gives no reason to
+change construction; it identifies the actual strong lower/contact
+remainder as the decision calculation.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): obtain the actual
+two-sided, common-regulated zero-winding remainder after the variable
+principal subtraction, combining low contacts and finite paired-boundary
+completions before the strong weighted estimate. Test
+eta_other+1e-11 C3_other<.030416395979 with original graph admission
+explicit. The historical complete selected projection is revalidated,
+and the coefficient test is newly executed; the full actual remainder
+estimate and controlled solution are still unexecuted.
+
+Verification: frozen acceptance passed 23 supporting checks over
+1011 unchanged inputs on its first attempt. Independent verification
+passed using product-rule bounds for 2d+d^2 instead of an expanded
+squared polynomial, formal exponential jets, and exact rational addition
+of every historical error enclosure. Its first attempt incorrectly
+required strict ordering between overlapping independent interval bounds;
+that verifier-only condition was corrected, with both attempts retained.
+No accepted scientific formula, source or target changed. The ordinary
+domain/smearing proof and multiplier argument are the mathematics;
+checker passes do not prove the unknown strong remainder. No Lean ran.
+All 18 inherited paths, immutable audits and previous evidence remain
+preserved. No story checkbox or complete-solution requirement is promoted.
+
+Remaining to-do list: complete actual strong curved/contact remainder and common regulator limit; directional/weighted controlled correction and global admission; original norm comparison and nonlinear closure; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: weighted third comparison bounded; uniform actual defect open
 
 2026-10-24, E003/S169.
