@@ -1,0 +1,112 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T21:25:47.234378+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import factorial\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169co-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-mixed-frequency-third-response'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters();C=pars['C'];q=pars['q'];B2=pars['B2']\n def rat(v):return arb(int(v.p))/int(v.q)\n # Compute moment partial fractions directly as Laurent residues at BOTH\n # poles, rather than using the accepted closed combinatorial formula.\n n,Q=S.symbols('n Q',positive=True);mom={}\n for rr in range(2,8):\n  rational=(2*n+Q)/(n**rr*(n+Q)**rr);value=arb(0)\n  for jj in range(2,rr+1):\n   first=S.residue(rational*n**(jj-1),n,0)\n   second=S.residue(rational*(n+Q)**(jj-1),n,-Q)\n   value+=rat(first.subs(Q,q))*arb(jj).zeta()+rat(second.subs(Q,q))*arb(jj).zeta(arb(q+1))\n  mom[rr]=2*C**rr*value\n assert mom[2].overlaps(old.decode(ans['all_angular_second_inverse_moment'])) and mom[2]<arb('5e8')\n # Independently use the two-dimensional Feynman simplex formula, not\n # the accepted collinear divided difference or Newton-polynomial series.\n def simplex(power,squares):\n  total=S.Rational(0)\n  for i in range(power+1):\n   for j in range(power-i+1):\n    k=power-i-j\n    mult=S.Rational(factorial(power),factorial(i)*factorial(j)*factorial(k))\n    weight=S.Rational(factorial(i+k)*factorial(i+j)*factorial(j+k),factorial(2*power+2))\n    total+=mult*weight*squares[0]**i*squares[1]**j*squares[2]**k\n  return total\n results={}\n for name,aa,bb in [('equal_inputs',S.Integer(1),S.Integer(1)),('zero_frequency_input',S.Integer(1),S.Integer(-1)),('near_canceling_inputs',S.Integer(1),-1+S.Rational(1,2**20))]:\n  ps=[aa,bb,-aa-bb];squares=[v*v for v in ps];totalS=sum(squares);JJ=8;value=arb(0);coeff=[]\n  for power in range(1,JJ+1):\n   In=S.Rational(factorial(power)**2,factorial(2*power+1))\n   co=(((-1)**(power+1)/S.Integer(power)+2*(-1)**power)*In*sum(v**power for v in squares)-8*(-1)**power*(power+1)*simplex(power,squares)-totalS*(-1)**(power-1)*power*simplex(power-1,squares))\n   if power==1:assert co==0\n   elif power==2:assert S.simplify(co-sum(squares[i]*squares[j] for i,j in [(0,1),(0,2),(1,2)])/30)==0\n   else:value+=rat(co)*mom[power-1]/(2*arb.pi())\n   coeff.append(str(co))\n  PP=rat(max(abs(v) for v in ps));r=PP**2/(4*arb(18)**2)\n  tail=5*arb('5e8')*PP**6/(280*arb.pi())*r**(JJ-2)*((JJ+2)**2/(1-r)+2*(JJ+2)*r/(1-r)**2+r*(1+r)/(1-r)**3)\n  enclosure=value+arb(0,tail.abs_upper())\n  assert enclosure.contains(old.decode(ans['probes'][name]['raw_subtracted_enclosure']))\n  results[name]=dict(independent_simplex_degree=JJ,coefficients=coeff,center=old.encoded(value),coarser_entire_tail=old.encoded(tail),contains_accepted_enclosure=True)\n # Differentiate the unique stationary cubic fourth density directly.\n b,v,w,z,kappa,Csym=S.symbols('b v w z kappa C');U,V,W=S.symbols('U V W')\n cubic=Csym*(1-2*kappa)/(60*S.pi)*(b+v+w)*(U+V+W)**2\n mixed=S.expand(cubic).coeff(b*V*W)\n assert S.simplify(mixed-Csym*(1-2*kappa)/(30*S.pi))==0\n # Direct integral checks for the inverse angular count envelope.\n mm,AA=S.symbols('m A',positive=True)\n integral=S.integrate(2*(2*mm**2+AA)/(mm*(mm**2+AA)**2),mm)\n assert S.simplify(S.diff(integral+S.log(1+AA/mm**2)/AA+1/(mm**2+AA),mm))==0\n at['result']=dict(independent_simplex_diagnostics=results,moments_from_two_pole_residues=True,independent_stationary_cubic_contact=str(mixed),all_angular_tail_retained=True,comparison_block_only=True,actual_weighted_transfer_certified=False,full_signed_projection_executed=False,actual_controlled_solution=False)\n at['status']='passed'\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in run['input_sha256_after']}\n for f in [f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']:\n  m['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps(dict(status=at['status'],exception=at.get('exception'),diagnostic_count=len(at.get('result',{}).get('independent_simplex_diagnostics',{}))),indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "9e76b9066af6cc5d0ee9dbff52addf8e5395c193d644530411dae4a239d88502",
+      "result": {
+        "independent_simplex_diagnostics": {
+          "equal_inputs": {
+            "independent_simplex_degree": 8,
+            "coefficients": [
+              "0",
+              "3/10",
+              "-26/105",
+              "27/140",
+              "-59/385",
+              "7507/60060",
+              "-522/5005",
+              "8623/97240"
+            ],
+            "center": {
+              "ball": "[-19517129.87288796411121 +/- 3.97e-15]",
+              "decimal_enclosure": {
+                "mid": "-1951712987288796411121184676865332721013",
+                "rad": "211714654647353345",
+                "exponent": "-32"
+              }
+            },
+            "coarser_entire_tail": {
+              "ball": "[1.57821750225168855098374396882e-5 +/- 4.94e-35]",
+              "decimal_enclosure": {
+                "mid": "1578217502251688550983743968815068624183",
+                "rad": "2",
+                "exponent": "-44"
+              }
+            },
+            "contains_accepted_enclosure": true
+          },
+          "zero_frequency_input": {
+            "independent_simplex_degree": 8,
+            "coefficients": [
+              "0",
+              "1/30",
+              "-1/105",
+              "1/420",
+              "-2/3465",
+              "5/36036",
+              "-1/30030",
+              "7/875160"
+            ],
+            "center": {
+              "ball": "[-751548.402877941300488 +/- 2.08e-16]",
+              "decimal_enclosure": {
+                "mid": "-751548402877941300487874268442974597616",
+                "rad": "81283615299731457",
+                "exponent": "-33"
+              }
+            },
+            "coarser_entire_tail": {
+              "ball": "[6.00354477715396708065622287248e-11 +/- 2.55e-41]",
+              "decimal_enclosure": {
+                "mid": "600354477715396708065622287247745571986",
+                "rad": "2",
+                "exponent": "-49"
+              }
+            },
+            "contains_accepted_enclosure": true
+          },
+          "near_canceling_inputs": {
+            "independent_simplex_degree": 8,
+            "coefficients": [
+              "0",
+              "1208923513774918493798401/36267774588438875241185280",
+              "-1329224192840066504184403230169497601/139568939557416166654899741329436180480",
+              "1461496062157895545223361973436208449096830156801/613830687678979225645547629740838868255491668049920",
+              "-1606930381804121863882643435514847479619881648869388189696001/2784020161678700652376449324981064208869716686728688587159633920",
+              "8834184774173504295045240785424641058495068506181938195591686863978496005/63670100826353857700863708736771811636359209707809804774870201069780846247936",
+              "-1942655923566359354026468947126326132030841556494715445577069848079765266738734694401/58338346833538643999711441061910272766471477376735749823191926664459295684712411200225280",
+              "14951795177983411943446379690824727220081531507205154382130464367458603253286270363901771330355207/1869330414356543667708827196371345228615702889785648238146852933501693815214185383758095500003413852160"
+            ],
+            "center": {
+              "ball": "[-751546.253086313189175 +/- 3.00e-16]",
+              "decimal_enclosure": {
+                "mid": "-751546253086313189174781635934653125158",
+                "rad": "81283382566191105",
+                "exponent": "-33"
+              }
+            },
+            "coarser_entire_tail": {
+              "ball": "[6.00354477715396708065622287248e-11 +/- 2.55e-41]",
+              "decimal_enclosure": {
+                "mid": "600354477715396708065622287247745571986",
+                "rad": "2",
+                "exponent": "-49"
+              }
+            },
+            "contains_accepted_enclosure": true
+          }
+        },
+        "moments_from_two_pole_residues": true,
+        "independent_stationary_cubic_contact": "-C*kappa/(15*pi) + C/(30*pi)",
+        "all_angular_tail_retained": true,
+        "comparison_block_only": true,
+        "actual_weighted_transfer_certified": false,
+        "full_signed_projection_executed": false,
+        "actual_controlled_solution": false
+      },
+      "finished_utc": "2026-10-24T21:25:48.004409+00:00"
+    }
+  ]
+}

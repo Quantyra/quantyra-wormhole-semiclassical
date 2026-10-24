@@ -1,3 +1,131 @@
+# Active checkpoint: mixed-frequency third comparison bounded; actual weighted transfer open
+
+2026-10-24, E003/S169.
+See [the complete mixed-frequency calculation](current-mixed-frequency-third-response.md).
+
+EXECUTED: the retained stationary zero-winding comparison now has an
+explicit contact-complete mixed-frequency third-loop formula and a
+whole-frequency bilinear Sobolev bound for its fourth-order block.
+This is a previously unbounded nonlinear component, not optimization
+of the already controlled linear angular, cold or scalar terms.
+
+For p1+p2+p3=0, define A by the entire angular sum of
+M^2 R3(alpha(1-alpha)p^2/M^2)/(2pi), and B by the sum of
+2M^4 R4(alpha(1-alpha)p^2/M^2)/pi, integrated over alpha in [0,1].
+Here R3=log(1+t)-t+t^2/2 and R4=R3-t^3/3. The common-Taylor-subtracted
+third loop is
+  T_sub=sum_i A(p_i)+sum_i B(p_i)/(p_j p_k).
+All three pair contacts and both triangle orientations are included.
+Writing f=pB, the apparent second sum is exactly one half the integral
+of f-third-derivative over a unit cube, at arguments bounded by
+P=max|p_i|. It extends continuously through every zero or opposing
+frequency. No small denominator is bounded separately.
+
+The fixed fourth restoration is
+  d4 sum_(i<j) p_i^2 p_j^2, d4=C(1-2kappa4)/(30pi).
+The +C/(30pi) part is required by rescaling the SAME regulator under a
+constant mass shift. It cannot be omitted or fitted. The actual
+kappa4=14.9131970836881707874899... is retained. Degree-zero and
+degree-two Taylor/tadpole contacts stay in T_low in the actual allocation;
+this bound does not set them to zero or certify their uniform response.
+
+Entire angular counting gives the executed all-frequency estimate
+  |T_ge4(p,q,-p-q)| <= 7 C P^4 log(2+P).
+Convexity of the Sobolev weight, Fourier convolution and Young's inequality
+then give
+  ||partial_z T_ge4[u,v]||H3
+    <=1280 C (||u||H8,log ||v||H1+||v||H8,log ||u||H1).
+The highest logarithmic derivative remains in L2. This closes a
+mixed-frequency regularity prerequisite for this comparison block.
+It is not a complete physical weighted or curved operator estimate.
+
+Signed evaluations at equal, zero-input and nearly opposing frequencies
+retain the entire angular spectrum through exact Hurwitz-zeta moment
+identities. The convergent frequency expansion is taken through degree
+12 with a certified full tail: <2.640e-15 at (1,1,-2) and <3.924e-23
+at the two soft diagnostics in unnormalized action units. Archived
+intervals also include parameter and arithmetic uncertainty, and the
+fixed fourth contact is explicitly added. These diagnostic values are
+NOT the physical remaining projection or a selection of physical states.
+
+The original action factor turns the tame prefactor into
+  D_flat=2560GC/B^2=1.500000000030537656815...e-29.
+If L_transfer certifies the two actual fast returns, weights, local
+coordinate changes, paired even extensions and complete annular/tail
+return of this estimate, the remaining condition is
+  eta_zero+1e-11[D_flat L_transfer+C3_add]<.159916395999.
+L_transfer, eta_zero and C3_add are UNKNOWN. Even with eta_zero=C3_add=0,
+L_transfer must be <1.066109306638295679911...e39. An equal seed/variation
+split would require <5.33054653319147839956...e38 if C3_add=0.
+These are computed thresholds, not measured transfer constants.
+
+FIRST UNSUPPORTED STEP: the actual paired weighted bilinear return and
+curved/low-contact defect, with a matched strong common-regulator limit
+uniform on stated background graph/mass-log fields. The sharp input
+indicator at z=.02 has a jump and cannot be inserted into a whole-line
+H8 estimate. Smooth annular ANALYSIS cutoffs inside the split and all
+separated mixed tails must be retained. They impose no new physical
+wall and do not smooth the paired seam. The even-return norm factors,
+boundary completions and original coordinate weights are not set to one.
+
+The comparison's common finite part is identified distributionally and
+on smooth test inputs by combining the Taylor-subtracted loop before
+the entire angular sum. No raw operator-norm cutoff limit or global
+rough strong theorem is claimed. The prior A/C5 obstruction persists;
+the existing full graph remains the selected space. The new finite
+Fourier bound gives no contradiction to that method, but does not show
+the actual transfer meets the target. There is still no finite complete
+actual upper bound to classify as excessive and no existence obstruction.
+
+Controlled relative and thermal components remain parked. Contact
+targets M_A<=3.18e27 and M_V<=2.66e30, remaining global A<=.00094319,
+and the original X/graph comparisons remain unknown. The exact nonlinear
+requirements at rho=1e-8 remain Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1, with unproved allocations Y0<=5e-9, Z0<=.25 and Z2<=5e7.
+The complete |P_hat_rest|+E_rest<1.287e-40 screening test is unexecuted;
+the prior selected 2.123e-42 enclosure keeps its limited scope and zero
+was not a measured full signed value. The screen is sufficient, not
+necessary for existence. No actual controlled solution is established.
+Compatibility, physical matching, semiclassical validity/noise and
+all-sector stability remain open. The audit stays CLOSED and the full
+stable-wormhole objective ACTIVE/INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and direct full-graph method.
+Use the combined divided difference with its fixed regulator contact;
+do not separately estimate the singular-looking triangle denominators.
+The executed all-frequency comparison bound is finite and has the
+required derivative order. Actual weighted/curved feasibility is undecided.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): execute the physical
+weighted bilinear return using annular analysis cutoffs, BOTH original
+normal inverses and every separated mixed tail, together with the
+retained curved-defect decomposition. Prove the matched strong regulator
+limit on the admitted background graph family, retain T_low and boundary
+completions, and test
+eta_zero+1e-11[D_flat L_transfer+C3_add]<.159916395999.
+Do not replace this calculation by an identity of Sobolev norms or a
+renormalization of constants. The all-frequency comparison is executed;
+this actual transfer and the full signed projection are not.
+
+Verification: frozen acceptance passed 48 supporting checks over
+34 unchanged inputs on its first attempt. Independent verification also
+passed on its first attempt. It computes the complete Feynman simplex
+coefficients through degree 8 rather than using the divided-difference
+series, obtains angular moments from residues at both poles rather
+than the closed coefficient formula, and uses larger entire-series
+tails. All three independent enclosures contain the accepted degree-12
+enclosures, including the exactly zero-frequency case. Exact source,
+development output, review and verification are retained. The ordinary
+loop, counting and convolution argument proves the all-frequency scope;
+checker passes do not prove the missing physical graph transfer.
+No failed runs, post-success scientific edits or Lean executions occurred.
+All 18 inherited paths and immutable audits remain preserved; no story
+checkbox or complete-solution requirement is promoted.
+
+Remaining to-do list: actual weighted bilinear graph transfer and curved/low-contact response, global admission/correction and original X comparison, nonlinear closure, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: zero-winding coefficient-only bridge fails; full graph estimate remains open
 
 2026-10-24, E003/S169.
