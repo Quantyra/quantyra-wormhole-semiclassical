@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-23",
+  "story": "E003/S169",
+  "scope": "Certified finite-time capped paired-boundary parametrix, with full analytic collar functions, all auxiliary excursions and thermal windings. Actual-disk interior and propagation/comparison remain unbounded.",
+  "retained_inputs": [
+    "notes/stationary-massive-boundary-layer.md",
+    "notes/stationary-reference-nonbolt-stress.md",
+    "notes/current-smeared-heat-projection-domain.md",
+    "notes/current-controlled-solution-audit-closeout.md"
+  ],
+  "ordinary_argument_review": [
+    "The boundary parametrix uses the actual analytic seam germ and its true C2,1 reflection. Auxiliary caps justify the local path representation only; no global disk transfer is inferred.",
+    "All metric and time derivatives are taken before selecting crossing paths that stay within the collar. No event indicator is differentiated.",
+    "A complex Picard contraction and explicit Cauchy tails certify full functions on the collar; the degree-64 polynomial is not substituted for the metric.",
+    "The fixed-z observation shift, density factor, connection vertex and both square partners are retained. The original time normalization supplies sqrt(beta), not an altered tolerance.",
+    "Positive pathwise polynomial bounds, exact bridge-max moments and integration over the entire observation collar bound the full local functional for every t in (0,.001].",
+    "Explicit C3 warping and C2 test caps retain the actual collar and its reflection. A global relative path bound and Gaussian tail include every auxiliary excursion; no disk transfer is inferred.",
+    "Poisson summation retains every half-integer thermal frequency. A complete nonzero-winding tail is included explicitly, including paths outside the collar.",
+    "The capped boundary parametrix is not the entire actual-domain heat remainder. Smooth interior and actual-disk propagation/comparison, including physical excursions, remain separate UNKNOWN estimates."
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/math-ph/9907022",
+      "use": "Theorem 1.1, semibounded scalar Feynman-Kac formula on auxiliary capped extensions. No transfer to the actual bolt is assumed."
+    }
+  ],
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_attempts_and_failures": true,
+    "precision_bits": 512,
+    "interval_library": "python-flint==0.9.0",
+    "analytic_radius": "3/4",
+    "physical_collar_radius": "1/2",
+    "Taylor_degree": 64,
+    "heat_t0": "0.001",
+    "local_boundary_D_prespecified_budget": "600",
+    "full_D_sufficient_target": "1777.7385",
+    "local_bound_rounding": "Smallest positive integer strictly above the certified bound, at most 600.",
+    "remaining_projection_sufficient_target": "1.287e-40",
+    "full_heat_residual_executed": false,
+    "complete_projection_executed": false,
+    "C2_action_on_rough_base_family_proved": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

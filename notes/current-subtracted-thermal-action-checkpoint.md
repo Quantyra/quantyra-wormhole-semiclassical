@@ -1,3 +1,93 @@
+# Active checkpoint: complete boundary parametrix bound; disk complement unknown
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED; the full-projection milestone is open.
+See the [ordinary path/remainder argument](current-local-boundary-heat-remainder.md) and frozen execution.
+
+Executed: the COMPLETE capped paired-boundary parametrix has
+
+    D_boundary <148.21377, conservatively <=149,
+    B_boundary <=1.788e-6,
+    normalized heat-cap allowance <2.0953127E-44.
+
+These are upper allowances, not the signed physical projection. The
+parametrix uses the actual analytic seam germ and its C2,1 reflection.
+A complex Picard contraction and explicit Cauchy tails certify the full
+collar functions; the degree-64 series does not replace the metric.
+Fixed-z coordinate and density variations, connection terms and both
+paired squares are retained. Positive pathwise bounds are integrated over
+all Brownian bridges after differentiation, with no path sampling.
+
+Explicit caps provide a complete auxiliary kernel. Their entire excursion
+allowance is <2.0202402E-11; Poisson summation retains
+every thermal frequency, with all nonzero winding allowance
+<4.1916917E-6078. Both are included in the 149 guard.
+The full angular counting bound remains available for the heat integral.
+
+The original total requirement is D_actual<=1777.7385, equivalent to a
+sufficient B_heat<=2.1332863e-5 using the known |h1|<1.2e-8. The executed
+component uses less than 8.4 percent of that D budget. It leaves the
+explicit sufficient target D_other<=1628.7385, or
+B_other<=1.9544862e-5, for the actual-domain complement.
+This is not a normalization improvement and does not bound that complement.
+
+The first unsupported continuum step is still numerical control of the
+actual disk's smooth interior and the metric/time differentiated parametrix
+propagation/comparison. Physical excursions have not acquired the auxiliary
+cap bound without that comparison. Those constants are UNKNOWN; older
+excessive reference/gluing allowances are not actual source lower bounds.
+The boundary component is affordable, but full numerical attainability
+remains undecided. No construction obstruction is established.
+
+The selected regulated weak response retains its actual-half-domain
+argument. A C2 action on rough base metrics and the nonlinear physical
+domain remain unproved. The leading heat allowance <5.4970775e-48,
+magnetic <1.284506e-40, complete cold <1.693010e-43 and scalar <2.331e-44
+are unchanged. No cold/scalar optimization or total-source improvement
+is claimed. At solution radius 1e-8, the requirements
+Y0+1e-8Z0+5e-17Z2<=1e-8 and Z0+1e-8Z2<1 remain open, as do exact
+compatibility, physical matching, causal boundary realization,
+semiclassical validity/noise and all-sector stability.
+
+Research decision: retain the construction and the geometric smearing method.
+The complete capped boundary parametrix is quantitatively affordable; use
+its certificate without further optimization. Continue with the actual
+disk heat-defect estimate in coordinates regular at the bolt. A capped
+operator is a parametrix component, not the physical boundary realization.
+
+The SINGLE next calculation is a certified bound on the complementary
+ACTUAL-domain response, R_other=R_actual-R_boundary, in the same norm:
+
+    sup_(0<t<=.001) t^-3 int |R_other(t,z)| dz <=1628.7385.
+
+This must include the smooth interior and every differentiated propagation/
+comparison error, including physical paths leaving the collar and the
+regular bolt. Its numerical value remains UNKNOWN. This calculation is
+PROPOSED, NOT EXECUTED. The executed boundary certificate does not transfer
+an auxiliary cylinder estimate through the bolt or prove the full heat cap.
+The complete signed screen |P_hat_rest|+E_rest<1.287e-40 is UNEXECUTED
+and sufficient only. No actual controlled solution is established.
+
+The final frozen execution passed 75 checks over 965 unchanged
+inputs. All 3 scientific attempts are retained: one failed helper guard,
+one accepted in-collar run and one accepted extension to complete auxiliary
+excursions and thermal windings. The first absolute third-derivative
+allowance was about 1.660999 and missed its proposed 1.5 guard. The replay
+used 2 and propagated that change; the pre-stated component target 600
+was never relaxed. An intermediate accepted source was extended and
+reverified; no scientific source changed after the FINAL accepted run.
+
+Independent verification passed on its first attempt. It recomputed full
+analytic-tail guards with exact rational enclosures, independently generated
+66 coefficients from z'=sqrt(Q), and reproduced the Gaussian path integrals,
+all-excursion and thermal bounds and physical budget. The ordinary path
+argument supplies the continuum claim; checker success is not a global
+heat or solution proof. No Lean ran and all 18 inherited paths are unchanged.
+
+Remaining to-do list: bound the actual-domain interior and differentiated propagation/comparison remainder, then complete the signed quantum/contact projection; controlled forward/adjoint correction and nonlinear admission; C2 action/domain on the rough nonlinear phase and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: actual-domain heat remainder and bolt transfer gate
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.

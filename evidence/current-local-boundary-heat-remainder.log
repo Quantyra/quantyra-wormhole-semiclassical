@@ -1,0 +1,169 @@
+{"event": "start", "run": 1, "source_sha256": {"notes/current-local-boundary-heat-remainder.md": "00a65bc19b60c8c4c4a79d4510c4db8ea746d1c7e647a577236721441ef142ae", "checks/current_local_boundary_heat_remainder.py": "84ad9437faf87383370b722b13393fdcee8f2eaba5d9ea8d05cdf0035cd061b8", "evidence/current-local-boundary-heat-remainder-review.json": "6cc41e591f11b712c0eb47981d40a95fafb09f69c2913a65d1617eafecf2ed8b"}}
+{"name": "previous_scoped_execution_passed", "passed": true, "detail": ""}
+{"name": "previous_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "interval_library_pinned", "passed": true, "detail": ""}
+{"name": "exact_seed_parameter_guards", "passed": true, "detail": ""}
+{"name": "global_positive_radial_potential_guard", "passed": true, "detail": "{'ball': '[0.296296296300443385493266164472 +/- 2.95e-31]', 'decimal_enclosure': {'mid': '2962962963004433854932661644718989794534', 'rad': '1934680785', 'exponent': '-40'}}"}
+{"name": "retained_temperature_root_relation", "passed": true, "detail": ""}
+{"name": "positive_exact_bolt_slope", "passed": true, "detail": ""}
+{"name": "physical_normalized_adjoint_source_1", "passed": true, "detail": ""}
+{"name": "physical_normalized_source_radius_1", "passed": true, "detail": ""}
+{"name": "physical_normalized_adjoint_source_2", "passed": true, "detail": ""}
+{"name": "physical_normalized_source_radius_2", "passed": true, "detail": ""}
+{"name": "actual_complex_ODE_coefficient_guards", "passed": true, "detail": ""}
+{"name": "analytic_Picard_ball_preserved", "passed": true, "detail": ""}
+{"name": "analytic_Picard_contraction", "passed": true, "detail": ""}
+{"name": "complex_reciprocal_has_no_pole", "passed": true, "detail": ""}
+{"name": "complex_full_function_guards", "passed": true, "detail": ""}
+{"name": "complex_metric_variation_guard", "passed": true, "detail": ""}
+{"name": "exact_vanishing_low_odd_jets", "passed": true, "detail": ""}
+{"name": "collar_f_minus_one", "passed": true, "detail": "[0.0199023068454785715994101969254164953626785743531928201152315455648928104684119245805206887599660104192770132122386922009755649391673062654233160435539853 +/- 2.72e-155]"}
+{"name": "collar_v_fourth_order", "passed": true, "detail": "[0.02831353637394868170026329445088531910079258403884050856409590886795364855805892617614110619285375225209017837072406126071880252385341187639713845145903 +/- 4.21e-153]"}
+{"name": "collar_f_second_jet", "passed": true, "detail": "2.03584378760338977920869949066433872466000427092591812314458571961778230501120259474112650366350862896069884300231933593750000000000000000000000000000000e-11"}
+{"name": "collar_f_prime_after_linear", "passed": true, "detail": "[0.506077251246479370808591193418567249687613333112370879215011110492767373045279493622463623356823028416707470217293040792797389410310671943634198114060750 +/- 5.41e-154]"}
+{"name": "collar_f_second_after_constant", "passed": true, "detail": "[1.14409858233739997112372705249544735316777460300923475447997443382297756841405270873612494609252127318099262048829919104322241799666218752154918513404920 +/- 1.51e-154]"}
+{"name": "collar_f_third", "passed": false, "detail": "[1.66099863148014133421321818695921379161001317779199370606010903970536898014740524744001918693085455994360588259155097605824255169424828967732410688065870 +/- 5.85e-154]"}
+{"event": "finish", "status": "failed", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\current_local_boundary_heat_remainder.py\", line 173, in main\n    p=collar();H_guards();polynomial_bound(p)\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\current_local_boundary_heat_remainder.py\", line 75, in collar\n    guard('collar_f_third',norm(f,3,3,'1.72'),'1.5')\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\current_local_boundary_heat_remainder.py\", line 69, in guard\n    check(name,value<arb(str(target)),str(value));guards.append(dict(name=name,bound=encoded(value),guard=str(target)))\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\dfred\\Desktop\\Projects\\IGH\\quantyra-wormhole-semiclassical\\checks\\current_local_boundary_heat_remainder.py\", line 20, in check\n    if not ok:raise AssertionError(name)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: collar_f_third\n"}
+{"event": "start", "run": 2, "source_sha256": {"notes/current-local-boundary-heat-remainder.md": "679896d18b976abd281052a70534aa16e92365bdf9f1bc33978914494f017e19", "checks/current_local_boundary_heat_remainder.py": "0bec169d2de6ff388e046bd92d22a0871de51ea5c79a6cc23989737bf80340ef", "evidence/current-local-boundary-heat-remainder-review.json": "6cc41e591f11b712c0eb47981d40a95fafb09f69c2913a65d1617eafecf2ed8b"}}
+{"name": "previous_scoped_execution_passed", "passed": true, "detail": ""}
+{"name": "previous_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "interval_library_pinned", "passed": true, "detail": ""}
+{"name": "exact_seed_parameter_guards", "passed": true, "detail": ""}
+{"name": "global_positive_radial_potential_guard", "passed": true, "detail": "{'ball': '[0.296296296300443385493266164472 +/- 2.95e-31]', 'decimal_enclosure': {'mid': '2962962963004433854932661644718989794534', 'rad': '1934680785', 'exponent': '-40'}}"}
+{"name": "retained_temperature_root_relation", "passed": true, "detail": ""}
+{"name": "positive_exact_bolt_slope", "passed": true, "detail": ""}
+{"name": "physical_normalized_adjoint_source_1", "passed": true, "detail": ""}
+{"name": "physical_normalized_source_radius_1", "passed": true, "detail": ""}
+{"name": "physical_normalized_adjoint_source_2", "passed": true, "detail": ""}
+{"name": "physical_normalized_source_radius_2", "passed": true, "detail": ""}
+{"name": "actual_complex_ODE_coefficient_guards", "passed": true, "detail": ""}
+{"name": "analytic_Picard_ball_preserved", "passed": true, "detail": ""}
+{"name": "analytic_Picard_contraction", "passed": true, "detail": ""}
+{"name": "complex_reciprocal_has_no_pole", "passed": true, "detail": ""}
+{"name": "complex_full_function_guards", "passed": true, "detail": ""}
+{"name": "complex_metric_variation_guard", "passed": true, "detail": ""}
+{"name": "exact_vanishing_low_odd_jets", "passed": true, "detail": ""}
+{"name": "collar_f_minus_one", "passed": true, "detail": "[0.0199023068454785715994101969254164953626785743531928201152315455648928104684119245805206887599660104192770132122386922009755649391673062654233160435539853 +/- 2.72e-155]"}
+{"name": "collar_v_fourth_order", "passed": true, "detail": "[0.02831353637394868170026329445088531910079258403884050856409590886795364855805892617614110619285375225209017837072406126071880252385341187639713845145903 +/- 4.21e-153]"}
+{"name": "collar_f_second_jet", "passed": true, "detail": "2.03584378760338977920869949066433872466000427092591812314458571961778230501120259474112650366350862896069884300231933593750000000000000000000000000000000e-11"}
+{"name": "collar_f_prime_after_linear", "passed": true, "detail": "[0.506077251246479370808591193418567249687613333112370879215011110492767373045279493622463623356823028416707470217293040792797389410310671943634198114060750 +/- 5.41e-154]"}
+{"name": "collar_f_second_after_constant", "passed": true, "detail": "[1.14409858233739997112372705249544735316777460300923475447997443382297756841405270873612494609252127318099262048829919104322241799666218752154918513404920 +/- 1.51e-154]"}
+{"name": "collar_f_third", "passed": true, "detail": "[1.66099863148014133421321818695921379161001317779199370606010903970536898014740524744001918693085455994360588259155097605824255169424828967732410688065870 +/- 5.85e-154]"}
+{"name": "collar_metric_variation_derivative_0", "passed": true, "detail": "[0.028142421466530978612277734650517443422462612373426756069700653695167596835240831285596889403593748937318601070731965285028252512425551038045324812131507 +/- 1.91e-154]"}
+{"name": "collar_metric_variation_derivative_1", "passed": true, "detail": "[0.11376534251047371451634319279309980647956784831189216078223396523623945127510371154800950191304384778126527658053261474355173056191745089019295395155630 +/- 4.12e-153]"}
+{"name": "collar_metric_variation_derivative_2", "passed": true, "detail": "[0.35014501929097058699837555516464469910438463114964883152320644749604949902115422575818865106057886186720619274454252125309382044985130304285182053519125 +/- 2.63e-153]"}
+{"name": "collar_f_odd_derivative_0", "passed": true, "detail": "[0.136601802373531460024268904791257544327741275227443782375934446184847715027295839259521430101339435550486990753551372460851718138380023556842425231892559 +/- 4.00e-154]"}
+{"name": "collar_f_odd_derivative_1", "passed": true, "detail": "[0.411930592596494005384040213160677139238526314313991609884630282228182989466159901484269193247367496217768468299112708450838372946447925619250797127163280 +/- 1.75e-154]"}
+{"name": "collar_f_odd_derivative_2", "passed": true, "detail": "[0.839046243564349521286900357901798601757642407286060861360212149205848374431594110219877652528159247283590841207576457211672793367659919316451598948628227 +/- 4.00e-154]"}
+{"name": "collar_f_odd_derivative_3", "passed": true, "detail": "[0.933088452141716143819900285908887374411332604419498814459352976016632836669097939029270731715325657085984634380531052230476365346156239424470997601032511 +/- 5.52e-154]"}
+{"name": "collar_metric_odd_derivative_0", "passed": true, "detail": "[0.0022855305123869469078834159459760554110795401627227592975958886794288245565857944782525082326882996747316759946122109475529416228137390538453472984217758 +/- 3.42e-155]"}
+{"name": "collar_metric_odd_derivative_1", "passed": true, "detail": "[0.016070436412532249552436566379678446070257604389505416011347792630185339622705763536304261635935833737772231725101773456041694296258850543091862092347125 +/- 3.18e-154]"}
+{"name": "collar_metric_odd_derivative_2", "passed": true, "detail": "[0.097223264675738378242958556278820120758154596235735388868369905089581348675327431988853880262331281750378437905488091298509581450547917645116587022093175 +/- 6.14e-154]"}
+{"name": "all_full_collar_guards", "passed": true, "detail": ""}
+{"name": "path_G_guard", "passed": true, "detail": ""}
+{"name": "path_time_G_guard", "passed": true, "detail": ""}
+{"name": "shifted_metric_vertex_guards", "passed": true, "detail": ""}
+{"name": "H_derivative_100", "passed": true, "detail": "[0.583187033377861655119421166435468994966409474895600507385604271529937697713722938918888608415893848459229081094460657584007716751758113272149666331961035 +/- 6.29e-154]"}
+{"name": "H_derivative_010", "passed": true, "detail": "[0.583179271116372142188276527463960783521631576170604663187802007295463861968967368591447938312448997164405327721608296564991110706641920988409086537886757 +/- 6.68e-154]"}
+{"name": "H_derivative_200", "passed": true, "detail": "[0.96929882937472085305648729123586616529994692764621085223388502033093260085836201236069402780651415947721348264091735898691697878900088197655490661978063 +/- 4.41e-153]"}
+{"name": "H_derivative_110", "passed": true, "detail": "[0.96927732720809193323876688164176762438209009819213841205607107264313873775715106709240137675390129794351231941145554056176727876179609709084090825913271 +/- 4.77e-153]"}
+{"name": "H_derivative_020", "passed": true, "detail": "[0.583187033377861655119421166435468994966409474895600507385604271529937697713722938918888608415893848459229081094460657584007716751758113272149666331961035 +/- 6.29e-154]"}
+{"name": "H_derivative_300", "passed": true, "detail": "[2.68507404641228232568444893179401320044669561224681391521794210173475070910602320298958975035492802869814243058972692160861975586026423191643033702517181 +/- 6.83e-153]"}
+{"name": "H_derivative_210", "passed": true, "detail": "[2.68499065828647567092052898493237488245335585618546509720674200050054712015898408904725736001225448822784640459099142450636348688985333536837592224726398 +/- 3.70e-153]"}
+{"name": "H_derivative_120", "passed": true, "detail": "[0.96929882937472085305648729123586616529994692764621085223388502033093260085836201236069402780651415947721348264091735898691697878900088197655490661978063 +/- 4.41e-153]"}
+{"name": "H_derivative_030", "passed": true, "detail": "[0.96927732720809193323876688164176762438209009819213841205607107264313873775715106709240137675390129794351231941145554056176727876179609709084090825913271 +/- 4.77e-153]"}
+{"name": "H_derivative_101", "passed": true, "detail": "[0.484638663604045966619383440820883812191045049096069206028035536321569368878575533546200688376950648971756159705727770280883639380898048545420454129566357 +/- 5.78e-154]"}
+{"name": "H_derivative_011", "passed": true, "detail": "[0.583183152247116898653848846949714889244020525533102585286703139412700779841345153755168273364171422811817204408034477074499413729200017130279376434923896 +/- 5.32e-154]"}
+{"name": "H_derivative_201", "passed": true, "detail": "[1.34249532914323783546026449246618744122667792809273254860337100025027356007949204452362868000612724411392320229549571225318174344492666768418796112363199 +/- 1.85e-153]"}
+{"name": "H_derivative_111", "passed": true, "detail": "[0.96928807829140639314762708643881689484101851291917463214497804648703566930775653972654770228020772871036290102618644977434212877539848953369790743945667 +/- 1.30e-153]"}
+{"name": "H_derivative_021", "passed": true, "detail": "[0.583198676821754742323769197122634716699997364752905040448279095083697823417810246696082055887432104698570627536197587693688714981194239347765970058371498 +/- 5.54e-154]"}
+{"name": "nonnegative_path_monomial_9_1", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_9_0", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_7_2", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_7_1", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_7_0", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_5_1", "passed": true, "detail": ""}
+{"name": "seventh_bridge_moment_factor", "passed": true, "detail": ""}
+{"name": "fifth_bridge_moment_factor", "passed": true, "detail": ""}
+{"name": "original_period_guard", "passed": true, "detail": ""}
+{"name": "complete_thermal_image_tail", "passed": true, "detail": ""}
+{"name": "prespecified_local_boundary_budget", "passed": true, "detail": "[148.2137654693816172365891814884 +/- 5.81e-29]"}
+{"name": "positive_other_remainder_capacity", "passed": true, "detail": ""}
+{"event": "finish", "status": "passed", "exception": null}
+{"event": "start", "run": 3, "source_sha256": {"notes/current-local-boundary-heat-remainder.md": "dea57191554566d10e737eac785216074cdf0b06da19e81fb968ba286be9b270", "checks/current_local_boundary_heat_remainder.py": "0ba6d81c475265e635a6d644088b6e75739e5195cc204d39647ba2c281a77a31", "evidence/current-local-boundary-heat-remainder-review.json": "18569cc730a98ebd3fe9b2edffe6a563e0b2f00f01d822aea8ea4871cb4a2612"}}
+{"name": "previous_scoped_execution_passed", "passed": true, "detail": ""}
+{"name": "previous_inputs_unchanged", "passed": true, "detail": ""}
+{"name": "interval_library_pinned", "passed": true, "detail": ""}
+{"name": "exact_seed_parameter_guards", "passed": true, "detail": ""}
+{"name": "global_positive_radial_potential_guard", "passed": true, "detail": "{'ball': '[0.296296296300443385493266164472 +/- 2.95e-31]', 'decimal_enclosure': {'mid': '2962962963004433854932661644718989794534', 'rad': '1934680785', 'exponent': '-40'}}"}
+{"name": "retained_temperature_root_relation", "passed": true, "detail": ""}
+{"name": "positive_exact_bolt_slope", "passed": true, "detail": ""}
+{"name": "physical_normalized_adjoint_source_1", "passed": true, "detail": ""}
+{"name": "physical_normalized_source_radius_1", "passed": true, "detail": ""}
+{"name": "physical_normalized_adjoint_source_2", "passed": true, "detail": ""}
+{"name": "physical_normalized_source_radius_2", "passed": true, "detail": ""}
+{"name": "actual_complex_ODE_coefficient_guards", "passed": true, "detail": ""}
+{"name": "analytic_Picard_ball_preserved", "passed": true, "detail": ""}
+{"name": "analytic_Picard_contraction", "passed": true, "detail": ""}
+{"name": "complex_reciprocal_has_no_pole", "passed": true, "detail": ""}
+{"name": "complex_full_function_guards", "passed": true, "detail": ""}
+{"name": "complex_metric_variation_guard", "passed": true, "detail": ""}
+{"name": "exact_vanishing_low_odd_jets", "passed": true, "detail": ""}
+{"name": "collar_f_minus_one", "passed": true, "detail": "[0.0199023068454785715994101969254164953626785743531928201152315455648928104684119245805206887599660104192770132122386922009755649391673062654233160435539853 +/- 2.72e-155]"}
+{"name": "collar_v_fourth_order", "passed": true, "detail": "[0.02831353637394868170026329445088531910079258403884050856409590886795364855805892617614110619285375225209017837072406126071880252385341187639713845145903 +/- 4.21e-153]"}
+{"name": "cap_v_endpoint_first_derivative", "passed": true, "detail": "[0.0143671008397209842981476820517356095149320199938955258663847790164190091221695103584877754331772118464277242759077933550848914460305706319285859890175429 +/- 8.57e-155]"}
+{"name": "cap_v_endpoint_second_derivative", "passed": true, "detail": "[0.089232904850523657862770270955253375162677424815976873539344741548184877555603100476038579969648822879860268892798831426875218846462125223621239023994769 +/- 7.98e-154]"}
+{"name": "collar_f_second_jet", "passed": true, "detail": "2.03584378760338977920869949066433872466000427092591812314458571961778230501120259474112650366350862896069884300231933593750000000000000000000000000000000e-11"}
+{"name": "collar_f_prime_after_linear", "passed": true, "detail": "[0.506077251246479370808591193418567249687613333112370879215011110492767373045279493622463623356823028416707470217293040792797389410310671943634198114060750 +/- 5.41e-154]"}
+{"name": "collar_f_second_after_constant", "passed": true, "detail": "[1.14409858233739997112372705249544735316777460300923475447997443382297756841405270873612494609252127318099262048829919104322241799666218752154918513404920 +/- 1.51e-154]"}
+{"name": "collar_f_third", "passed": true, "detail": "[1.66099863148014133421321818695921379161001317779199370606010903970536898014740524744001918693085455994360588259155097605824255169424828967732410688065870 +/- 5.85e-154]"}
+{"name": "collar_metric_variation_derivative_0", "passed": true, "detail": "[0.028142421466530978612277734650517443422462612373426756069700653695167596835240831285596889403593748937318601070731965285028252512425551038045324812131507 +/- 1.91e-154]"}
+{"name": "collar_metric_variation_derivative_1", "passed": true, "detail": "[0.11376534251047371451634319279309980647956784831189216078223396523623945127510371154800950191304384778126527658053261474355173056191745089019295395155630 +/- 4.12e-153]"}
+{"name": "collar_metric_variation_derivative_2", "passed": true, "detail": "[0.35014501929097058699837555516464469910438463114964883152320644749604949902115422575818865106057886186720619274454252125309382044985130304285182053519125 +/- 2.63e-153]"}
+{"name": "collar_f_odd_derivative_0", "passed": true, "detail": "[0.136601802373531460024268904791257544327741275227443782375934446184847715027295839259521430101339435550486990753551372460851718138380023556842425231892559 +/- 4.00e-154]"}
+{"name": "collar_f_odd_derivative_1", "passed": true, "detail": "[0.411930592596494005384040213160677139238526314313991609884630282228182989466159901484269193247367496217768468299112708450838372946447925619250797127163280 +/- 1.75e-154]"}
+{"name": "collar_f_odd_derivative_2", "passed": true, "detail": "[0.839046243564349521286900357901798601757642407286060861360212149205848374431594110219877652528159247283590841207576457211672793367659919316451598948628227 +/- 4.00e-154]"}
+{"name": "collar_f_odd_derivative_3", "passed": true, "detail": "[0.933088452141716143819900285908887374411332604419498814459352976016632836669097939029270731715325657085984634380531052230476365346156239424470997601032511 +/- 5.52e-154]"}
+{"name": "collar_metric_odd_derivative_0", "passed": true, "detail": "[0.0022855305123869469078834159459760554110795401627227592975958886794288245565857944782525082326882996747316759946122109475529416228137390538453472984217758 +/- 3.42e-155]"}
+{"name": "collar_metric_odd_derivative_1", "passed": true, "detail": "[0.016070436412532249552436566379678446070257604389505416011347792630185339622705763536304261635935833737772231725101773456041694296258850543091862092347125 +/- 3.18e-154]"}
+{"name": "collar_metric_odd_derivative_2", "passed": true, "detail": "[0.097223264675738378242958556278820120758154596235735388868369905089581348675327431988853880262331281750378437905488091298509581450547917645116587022093175 +/- 6.14e-154]"}
+{"name": "all_full_collar_guards", "passed": true, "detail": ""}
+{"name": "path_G_guard", "passed": true, "detail": ""}
+{"name": "path_time_G_guard", "passed": true, "detail": ""}
+{"name": "shifted_metric_vertex_guards", "passed": true, "detail": ""}
+{"name": "cap_endpoint_log_jets", "passed": true, "detail": ""}
+{"name": "cap_log_derivative_guards", "passed": true, "detail": ""}
+{"name": "cap_relative_warping_guards", "passed": true, "detail": ""}
+{"name": "cap_value_guards", "passed": true, "detail": ""}
+{"name": "cap_metric_test_guards", "passed": true, "detail": ""}
+{"name": "complete_cap_path_derivative_bound", "passed": true, "detail": ""}
+{"name": "excursion_time_bound_increases", "passed": true, "detail": ""}
+{"name": "complete_thermal_path_moment", "passed": true, "detail": ""}
+{"name": "H_derivative_100", "passed": true, "detail": "[0.583187033377861655119421166435468994966409474895600507385604271529937697713722938918888608415893848459229081094460657584007716751758113272149666331961035 +/- 6.29e-154]"}
+{"name": "H_derivative_010", "passed": true, "detail": "[0.583179271116372142188276527463960783521631576170604663187802007295463861968967368591447938312448997164405327721608296564991110706641920988409086537886757 +/- 6.68e-154]"}
+{"name": "H_derivative_200", "passed": true, "detail": "[0.96929882937472085305648729123586616529994692764621085223388502033093260085836201236069402780651415947721348264091735898691697878900088197655490661978063 +/- 4.41e-153]"}
+{"name": "H_derivative_110", "passed": true, "detail": "[0.96927732720809193323876688164176762438209009819213841205607107264313873775715106709240137675390129794351231941145554056176727876179609709084090825913271 +/- 4.77e-153]"}
+{"name": "H_derivative_020", "passed": true, "detail": "[0.583187033377861655119421166435468994966409474895600507385604271529937697713722938918888608415893848459229081094460657584007716751758113272149666331961035 +/- 6.29e-154]"}
+{"name": "H_derivative_300", "passed": true, "detail": "[2.68507404641228232568444893179401320044669561224681391521794210173475070910602320298958975035492802869814243058972692160861975586026423191643033702517181 +/- 6.83e-153]"}
+{"name": "H_derivative_210", "passed": true, "detail": "[2.68499065828647567092052898493237488245335585618546509720674200050054712015898408904725736001225448822784640459099142450636348688985333536837592224726398 +/- 3.70e-153]"}
+{"name": "H_derivative_120", "passed": true, "detail": "[0.96929882937472085305648729123586616529994692764621085223388502033093260085836201236069402780651415947721348264091735898691697878900088197655490661978063 +/- 4.41e-153]"}
+{"name": "H_derivative_030", "passed": true, "detail": "[0.96927732720809193323876688164176762438209009819213841205607107264313873775715106709240137675390129794351231941145554056176727876179609709084090825913271 +/- 4.77e-153]"}
+{"name": "H_derivative_101", "passed": true, "detail": "[0.484638663604045966619383440820883812191045049096069206028035536321569368878575533546200688376950648971756159705727770280883639380898048545420454129566357 +/- 5.78e-154]"}
+{"name": "H_derivative_011", "passed": true, "detail": "[0.583183152247116898653848846949714889244020525533102585286703139412700779841345153755168273364171422811817204408034477074499413729200017130279376434923896 +/- 5.32e-154]"}
+{"name": "H_derivative_201", "passed": true, "detail": "[1.34249532914323783546026449246618744122667792809273254860337100025027356007949204452362868000612724411392320229549571225318174344492666768418796112363199 +/- 1.85e-153]"}
+{"name": "H_derivative_111", "passed": true, "detail": "[0.96928807829140639314762708643881689484101851291917463214497804648703566930775653972654770228020772871036290102618644977434212877539848953369790743945667 +/- 1.30e-153]"}
+{"name": "H_derivative_021", "passed": true, "detail": "[0.583198676821754742323769197122634716699997364752905040448279095083697823417810246696082055887432104698570627536197587693688714981194239347765970058371498 +/- 5.54e-154]"}
+{"name": "nonnegative_path_monomial_9_1", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_9_0", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_7_2", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_7_1", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_7_0", "passed": true, "detail": ""}
+{"name": "nonnegative_path_monomial_5_1", "passed": true, "detail": ""}
+{"name": "seventh_bridge_moment_factor", "passed": true, "detail": ""}
+{"name": "fifth_bridge_moment_factor", "passed": true, "detail": ""}
+{"name": "original_period_guard", "passed": true, "detail": ""}
+{"name": "complete_thermal_image_tail", "passed": true, "detail": ""}
+{"name": "complete_auxiliary_excursion_allowance", "passed": true, "detail": "[2.02024010614142541323303785642e-11 +/- 5.34e-41]"}
+{"name": "prespecified_local_boundary_budget", "passed": true, "detail": "[148.2137654694018196376505957425 +/- 7.09e-29]"}
+{"name": "positive_other_remainder_capacity", "passed": true, "detail": ""}
+{"event": "finish", "status": "passed", "exception": null}
