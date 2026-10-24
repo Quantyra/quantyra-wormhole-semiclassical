@@ -1,3 +1,110 @@
+# Active checkpoint: weighted third comparison bounded; uniform actual defect open
+
+2026-10-24, E003/S169.
+See [the complete weighted comparison argument](current-weighted-third-comparison.md).
+
+EXECUTED: the specified seed comparison's complete fourth-order third
+response now returns TWO original fast normal-inverse inputs to the
+weighted H3 source row with C3_flat<1.295e10. The calculation retains
+the full angular tower, prescribed fourth contact, paired even images,
+original sharp input split at .02, and every separated mixed tail.
+It does not replace the physical domain by a smooth surrogate.
+
+Infinite output annuli handle the local interaction. The highest eighth
+logarithmic derivative stays in L2. The divided-difference identity
+(pB)'=-p^3 A' gives a remote primitive formula: output derivatives act
+on separated kernels and local input jets, never on the remote jump.
+Lower Taylor contacts remain in the exact unbounded actual allocation.
+
+The executed near bound is 12946370060.2512027481... and the full mixed
+far bound is 6.20567943831811042312...e-15. The eighth input derivative
+contributes all but .000127 of the near bound. The first development
+guard, 22837863173.8066102069..., failed the comparison-only budget.
+Replacing the proved logarithmic norm converse 65 by the sharper 19
+reduces that guard without changing inputs, domain, graph, normalization
+or physical assumptions. Both development runs are preserved. The first
+was an excessive upper bound, not an actual obstruction.
+
+At the fast radius 1e-11 the rounded comparison allocation costs .1295
+of the unchanged .159916395999 sufficient budget. The remaining test is
+
+  eta_zero+1e-11 C3_add < .030416395999.
+
+eta_zero is the unbounded remaining actual seed defect. C3_add must
+UNIFORMLY bound the actual complete third response minus this seed
+comparison, including background variation, curved/low contacts,
+conversion and finite paired-boundary completions. Even with eta_zero=0
+it must be <3.0416395999e9. An equal split requires
+eta_zero<.0152081979995 and C3_add<1.52081979995e9. These are computed
+thresholds for UNKNOWN estimates, not achieved constants. The guard
+passes the comparison-only full budget but not an optional half-budget
+allocation. No signed cancellation is presumed in these tests.
+
+FIRST UNSUPPORTED CONTINUUM STEP: the actual curved zero-winding defect
+and low contacts, uniformly on admitted background GRAPH/mass-log fields,
+with the actual paired domain and matched strong common-regulator removal.
+The new result defines a continuous seed comparison on the specified
+fast inputs and agrees with its identified finite part on smooth tests.
+It does NOT prove convergence of the raw cutoff third response in this
+graph. Density or distributional agreement cannot replace that limit.
+The earlier first-order domain/weak-action theorem is not this strong
+theorem, and the A-only/C5 metric-response obstruction remains valid.
+
+The remaining budget is positive but modest. The actual curvature and
+contacts can affect the logarithmic principal coefficient, so calling
+them a small lower-order error is unjustified. Their combined coefficient
+and contacts must be computed before declaring the target attainable.
+There is no complete actual upper bound to classify as excessive and
+no demonstrated obstruction to an actual controlled solution. The
+relative, thermal, cold, scalar and linear angular pieces stay parked.
+
+Contact targets M_A<=3.18e27, M_V<=2.66e30, remaining global A<=.00094319,
+and original X/graph comparisons remain unproved. The original nonlinear
+conditions remain Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with
+unproved allocations Y0<=5e-9, Z0<=.25 and Z2<=5e7. The complete signed
+|P_hat_rest|+E_rest<1.287e-40 screening test is UNEXECUTED; the earlier
+selected 2.123e-42 enclosure retains its limited scope and zero was not
+a measured full projection. That screen is sufficient, not necessary
+for existence. No controlled solution, exact compatibility, physical
+matching, semiclassical validity/noise or all-sector stability is proved.
+The audit stays CLOSED and the full objective ACTIVE/INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and combined full-graph
+method. Park the completed seed comparison transfer. Its bound fits
+the unchanged sufficient budget, but actual feasibility remains undecided.
+Prioritize the uniform actual-domain/regulator bridge over source
+optimization or numerical interpretation of the full projection.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute the complete
+actual-minus-comparison zero-winding third response in the same graph,
+combining its variable logarithmic principal coefficient with T_low
+and finite paired-boundary contacts before taking norms. Prove its
+matched strong common-regulator limit on the admitted mass/log graph
+family and bound its seed/variation pair against
+eta_zero+1e-11 C3_add<.030416395999. The comparison transfer is executed;
+that uniform actual defect calculation and full signed projection are not.
+
+Verification: frozen acceptance passed 35 supporting checks over
+33 unchanged inputs. Its first attempt stopped on the unsupported
+diagnostic conversion int(arb); direct exact-Arb comparison corrected
+the checker without changing the argument or numerical formula. Both
+source/review snapshots and all outcomes/logs are retained. Independent
+verification passed on its first attempt. It derives cutoff bounds from
+an integrated power polynomial with 32 cells instead of 64 de Casteljau
+cells, sums 40 annuli explicitly with the entire analytic remainder,
+and enlarges remote Cauchy and pointwise guards. Its independent near
+bound is 13385105983.3530767487... and far bound <2.994e-14; the same
+comparison-only budget passes. The ordinary localization, logarithmic
+norm and primitive-kernel argument proves the stated continuum scope;
+checker passes do not establish the missing actual uniform theorem.
+No post-success scientific edits or Lean executions occurred. All 18
+inherited paths and immutable audits remain preserved. S169.2-S169.5
+and all full-solution requirements remain open.
+
+Remaining to-do list: actual uniform curved/low-contact graph response and common regulator removal, global admission/correction and original X comparison, nonlinear closure, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: mixed-frequency third comparison bounded; actual weighted transfer open
 
 2026-10-24, E003/S169.
