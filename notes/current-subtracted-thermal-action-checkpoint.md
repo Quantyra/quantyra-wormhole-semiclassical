@@ -1,3 +1,95 @@
+# Active checkpoint: complete strong estimate unresolved; global series majorant rejected
+
+2026-10-24, E003/S169.
+
+See [the complete response series attempt](current-complete-response-series-attempt.md).
+
+OUTCOME: UNRESOLVED ESTIMATE. No eta_seed or actual C3 is certified.
+The complete response attempt preserves the paired mass/log domain,
+common regulator, all angular/thermal sums, contacts and finite-domain
+returns. Its first unsupported step remains the uniform weighted
+graph-to-H3 bound on the combined differentiated finite part.
+
+EXECUTED: an exact first-order conjugation on the retained cylinder
+gives a variable-mass perturbation with norm <.001500876 and a uniformly
+convergent resolvent series. The actual bolt stays in the existing
+relative return; the time period and paired projectors are unchanged.
+The heat endpoint conversion and its boundary terms remain mandatory.
+Resolvent convergence is not trace-ideal convergence or regulator removal.
+
+The direct attempt derives an all-order subtracted direct-word estimate
+with the ENTIRE angular counting function. Its global Fourier-Sobolev
+majorant nevertheless fails: the ACTUAL flattened mass has cubic seam
+coefficient -2.000167<c3<-1.999833. Its fourth distributional derivative
+contains 12 c3 delta_0, so the required global H8,log norm is infinite.
+This fails already at the first background-inserted word. Reflected
+words and common contacts are retained in the full inventory, not
+declared bounded by the direct-word calculation. This is a failure of
+the specified positive majorant, not a construction obstruction. The
+two correction inputs vanish at the seam, information the majorant loses.
+
+EXECUTED QUANTITATIVE CHANGE: keep beta^2 in the existing complete
+comparison proof. It was previously bounded by one. Proper momenta are
+sqrt(beta) times coordinate momenta, and both the full local kernel
+and every separated mixed tail gain the same beta^2. No physical norm,
+time, field, inverse, unit or normalization is changed. This gives
+C_flat<359723000 and C_delta<11306. Their joint feedback allowance falls
+from .12950407 to .00359734306.
+
+After the retained 4.001e-9 reserve, a sufficient test is now
+eta_seed+1e-11 C_rem<.156319052939, with both actual constants UNKNOWN.
+The best-case remainder ceiling is 1.56319052939e10; equal allocation
+requires eta_seed<.0781595264695 and C_rem<7.81595264695e9. This is about
+5.14 times the former remaining budget. No numerical evidence yet puts
+the actual remainder below it. The prior principal debit is not counted twice.
+
+Original norm comparisons remain missing: E_center+1e-8 alpha<=1e-11,
+R_X alpha eta_seed+Z0_other<=.25, and R_X alpha^2 C3+Z2_other<=5e7.
+For the comparison ALONE the product ceiling is about .13899147; this
+is not the allowable return for the complete response. Even zero center
+offset requires alpha<=.001. The original preservation/contraction
+inequalities, Y0/Z0/Z2, actual correction and admission remain unproved.
+
+The completed selected projection screen E_rest<2.123e-42<1.287e-40
+stands without reevaluation; its sign is unmeasured. Exact compatibility,
+physical matching/causal realization, validity/noise and all-sector
+stability remain unresolved. The full objective remains active, the
+feasibility audit closed, and no story checkbox is promoted.
+
+RESEARCH DECISION: change the estimation method; retain the construction.
+Reject the global Sobolev Born majorant on the actual rough seam. Keep
+background insertions together with both vanishing graph inputs in the
+paired weighted kernel until common subtraction and conversion are combined.
+The recovered comparison budget supports trying this method, but does
+not prove quantitative attainability.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): the COMPLETE
+actual-minus-comparison zero-winding kernel and seed partner on the
+original infinite paired annuli, with all background orders, contacts,
+conversion and returns. Establish simultaneous derivative bounds and
+a summable all-order remainder to test
+eta_seed+1e-11 C_rem<.156319052939, reporting original X returns explicitly.
+The present series failure and comparison improvement are executed;
+the complete strong bound and controlled solution are not.
+
+Verification: the ordinary argument and scope were frozen before
+arithmetic acceptance (11 checks, 1028 unchanged input hashes per run).
+Two successful runs retain identical results: the second verifies the
+packaged sources after Git's exact-byte check caught CRLF normalization
+in two metadata JSON files. Their original bytes and normalization record
+are retained; equations, code and targets were unchanged. The execution
+verifies parameter enclosures, the nonzero cubic coefficient,
+comparison guards and budget arithmetic; it does not prove an unknown
+operator bound. Grubb's symbol hypotheses were checked and are not
+used to assert H3 control at a C2,1 seam. Development values and exact
+sources are retained. No failed acceptance run, post-success scientific
+edit, Lean run or independent specialist review is claimed. All 18
+inherited paths, previous evidence and closed audits remain preserved.
+
+Remaining to-do list: complete strong response and original norm comparisons; actual correction and nonlinear admission/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: strong estimate unresolved; differentiated cutoff inference rejected
 
 2026-10-24, E003/S169.
