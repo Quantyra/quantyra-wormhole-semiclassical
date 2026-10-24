@@ -1,3 +1,129 @@
+# Active checkpoint: rough paired domain and endpoint test; curved bridge open
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the scoped ordinary argument](current-rough-paired-variation.md).
+
+The Jacobian--Weyl transfer is applied at the level of the actual domain:
+for real admitted scalar b in W1,infinity, multiplication by exp(-b/2)
+preserves both complementary first-order projector domains. Thus
+D_b=exp(-b/2)D0 exp(-b/2) is closed on Dom D0 and its adjoint has the
+corresponding complementary domain. The square's composed operator domain
+is allowed to vary. The regular bolt and the original paired realization
+are retained. This proves an operator-domain statement, not a determinant
+or renormalized trace theorem.
+
+For ||b||infinity<=.001, the complex parameter radius 1/8 has Neumann
+loss <.134. The massive geometric resolvent is bounded by 1.32/M;
+its first and mixed second metric derivatives are bounded by
+10.56||u||infinity/M and 337.92||u||||w||/M. These are operator norms.
+Their bare angular trace sum diverges, so they cannot justify common
+regulator removal or supply nonlinear source constants.
+
+EXECUTED: a complete-frequency tangent calculation retains the actual
+mass cubic and weight-four logarithmic jets. It yields the boundary terms
+
+    -15/(1024 sqrt(pi)) c_u c_w t^(5/2),
+    -(c_u d_w+d_u c_w)/(70pi) t^3 log t.
+
+These coefficients are approximately -.00826449585275 and -.00454728408834
+in boundary orthonormal time. The original canonical time adds sqrt(beta).
+Their curved-family transfer with uniform remainder is NOT established.
+No smooth even replacement for the cubic or finite mode truncation is
+used. The tangent problem is an endpoint diagnostic, not a substitute for
+the global quantum functional or its finite-temperature/bolt terms.
+
+The stronger executed result is an exact bound for ALL tangent frequencies:
+
+    0<=F(x)-1+x^2/120<=min(x^3/840,x^2/120), x>=0,
+    |r_flat(u,w;t)|<=t^2 ||u'''||_(2,half)||w'''||_(2,half)/(420pi).
+
+Its dt/t^2 integral to .001 has coefficient <7.578807e-7. The full norms
+include localization transition terms. On the .1 collar, the exact
+mass/log third-derivative Gram matrix is approximately
+
+    [[3.6, -1.23786126696],[-1.23786126696, .484153263763]],
+
+with determinant >.21065. Both independent rough coefficients therefore
+pass this endpoint regularity test, including their cross term. The
+nonclassical boundary terms are integrable under the full angular UV
+weight. No endpoint divergence or construction obstruction was found.
+
+The FIRST UNSUPPORTED CONTINUUM STEP remains the uniform subtracted mixed
+heat response for rough VARIABLE base metrics on the original paired
+domain. The pre-verification draft asserted a Taylor/Volterra remainder
+without controlling all differentiated boundary and commutator terms.
+That assertion was withdrawn before execution; its complete text, hash
+and rejection reason are preserved. The accepted result does not claim
+a rough-family C2 action. Supporting checks do not supply this missing
+ordinary argument.
+
+A sufficient remaining target is
+
+    |r_curved(g;u,w;t)|<=A(K)||u||A||w||A t^(3/2),
+    0<t<=.001, uniformly in the original regulators and admitted family.
+
+It gives a Dini integral <=.063245553204 A(K)||u||A||w||A. Here A(K) is
+UNKNOWN, not a known excessive allowance. The exact dyadic spatial moment
+is .00121197280878 and the candidate bridge moment is B(3,3)=1/30.
+These finite moments and the whole-frequency H3 bound make a weak dyadic
+method plausible. They do not bound the curved commutator. The known
+nonuniform C4/H4 smoothing loss rejects that proof method; it is not
+evidence that the physical functional diverges.
+
+The Navier--Stokes transfer remains explicit remainder/contraction
+accounting after this domain step. Its local analytic spaces and constants
+do not apply automatically. The quantum stress remains fixed by the
+specified theory, state and boundary action; it is not adjustable forcing.
+
+The earlier selected sufficient screen remains certified:
+|P_hat_rest|+E_rest<2.123e-42<1.287e-40, with P_hat_rest=0 and sign unmeasured.
+The complete reduced-source allowance stays <1.3079691e-40<2.60e-40.
+Neither is an actual correction bound. No cold/scalar/source optimization
+is selected because it cannot change that passing screening decision.
+
+Nonlinear preservation still requires
+
+    Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.
+
+The allocation Y0<=5e-9, Z0<=.25, Z2<=5e7 remains unknown for the actual
+map. So do the return/admission quantities: Km<=61.2745098039...,
+Kc<=1.47058823529..., Yrest<=2e-9 under their retained allocation;
+G_(1/4)^lo E_D^2<=1/402; and the outer, cold, middle and strong-direction
+admissions. At zero strong-direction center offset E_D<=.025, giving
+G<=800/201 at that endpoint. The actual bolt-difference target remains
+<1.667e-9. No X-ball embedding or controlled correction is inferred.
+
+Exact compatibility, physical matching and causal realization,
+semiclassical validity/noise and all-sector stability remain unresolved.
+S169.2--S169.5 stay unchecked. The full stable-wormhole goal is active.
+
+Research decision: CONTINUE THE CONSTRUCTION WITH A SHARPER DYADIC
+WEAK-FORM ESTIMATE. Keep the closed audit and completed selected screen.
+Do not promote the nonlinear domain bridge or start a correction
+certificate that assumes it. No construction switch is justified by the
+executed endpoint test.
+
+The SINGLE NEXT CALCULATION is the full curved mixed Duhamel commutator
+remainder above, uniformly on the admitted mass/log family, including
+actual paired boundary contacts and common regulator removal. This is
+PROPOSED, NOT EXECUTED. The domain proof, tangent endpoint coefficients,
+whole-frequency H3 estimate and explicit moments are EXECUTED. An actual
+weighted forward/adjoint correction and X-to-admission return remain
+subsequent obligations even if the curved remainder succeeds.
+
+Verification: one frozen scientific execution passed 40 supporting
+checks over 14 unchanged inputs; an independent exact/Arb review passed.
+The complete pre-verification rejected draft is retained. There were no
+failed scientific runs or post-success scientific edits. No Lean ran.
+These checks support the scoped ordinary arguments; they do not prove
+the unknown curved remainder or a controlled semiclassical solution.
+All 18 inherited paths and unrelated concurrent work are preserved.
+
+Remaining to-do list: uniform curved mass/log action and source domain; actual controlled correction and weighted return; nonlinear admission and higher source remainder; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete quantum/contact screening target certified
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
