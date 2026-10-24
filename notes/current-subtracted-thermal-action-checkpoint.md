@@ -1,3 +1,90 @@
+# Active checkpoint: actual resolvent propagation certified; signed trace open
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED; the full-projection milestone is OPEN.
+See the [ordinary paired-domain resolvent argument](current-positive-time-resolvent-reduction.md).
+
+EXECUTED: the actual paired-domain resolvent propagation error can be
+certified without extrapolating the t<=.001 heat estimate. Integrate the
+existing boundary-compatible parametrix only over that short interval;
+its exact residual has complete bounds
+
+    ||F0,M||<.723, ||delta F0,M||<4,
+    f0,M<=173(M1/M)^4, g0,M<=680(M1/M)^4.
+
+The columns include the full original thermal circle, physical-half spin
+trace, paired boundary and regular disk bolt. The exact two-sided identity
+R-Q_P=F^dagger R F makes the propagation error quadratic. Six residual
+squarings give m=64 and, after the COMPLETE angular sum,
+
+    E_res,64<3.744e-48 <5e-43.
+
+The known error allowances at m=16 and m=32 are respectively about
+3.102402e-35 and 1.934730e-39. They fail this estimator's precision target;
+they are not values or lower bounds on the physical projection. The m=64
+result is an executed actual-domain bound, not the earlier hypothetical
+.01/.2 design targets. No physical spectral modes were discarded.
+
+Also EXECUTED: the full product-gradient remainder contact is exactly
+-C_prod integral h v dz, with C_prod>0 enclosed near 2.983017595080897e-37.
+Its entire absolute contribution is <2.000e-48, using the retained actual
+constraint pairing bound. The Bose spectral integral and angular tails
+are included. This is only the product contact, not all restored local
+terms or the finite-geometry quantum response.
+
+The complete signed screen |P_hat_rest|+E_rest<1.287e-40 remains
+UNEXECUTED and sufficient only. The trace of the explicitly constructed
+Q_(P64), its actual h1 pairing, restored local contributions and validated
+numerical integration are still missing. No actual controlled solution is
+established. The full-projection milestone stays OPEN.
+
+The selected common-regulator limit and this propagation certificate use
+the actual mass/log smearing and smooth v variation. They do not prove a
+twice differentiable action on a rough nonlinear base-metric neighborhood.
+No normalization, boundary domain, physical state or finite coupling is
+changed. All contacts stay correlated, including the nonzero smeared a1
+constant and the finite-time boundary term if a positive-time split is used.
+The full resolvent representation already includes t<=.001; adding the
+previous heat-cap allowance to that same contribution would double count.
+The prior E_cap<1.5483364e-43 remains valid for its separate heat-split use.
+
+At radius 1e-8 the requirements Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1 remain open. Rough nonlinear action/domain, actual inverse,
+exact compatibility, physical matching/causal boundary realization,
+semiclassical validity/noise and all-sector stability remain unresolved.
+The controlled magnetic/cold/scalar components, closed audit and story
+checkboxes are unchanged. An oversized upper bound is not nonexistence.
+
+Research decision: pursue the specified two-sided resolvent method on
+the same construction. Its formerly conditional propagation precision is
+now quantitatively attainable on the actual paired domain. This closes
+that error requirement, while leaving the value and sign of the complete
+projection undecided. There is no demonstrated construction obstruction.
+
+The SINGLE next calculation is the complete signed subtracted Q_(P64)
+trace/contact projection, with the actual h1 constraint pairing and all
+local, angular, thermal and numerical errors, followed by the unchanged
+1.287e-40 screen. Its propagation error is already <3.744e-48; retain the
+2.5e-43 numerical/tail reserve and the sufficient total E_rest<=1e-42
+allocation. This trace evaluation is PROPOSED, NOT EXECUTED. Do not spend
+the next calculation optimizing the cold/scalar or propagation estimates.
+
+The final frozen execution passed 55 supporting checks over
+979 unchanged inputs. Both scientific runs are preserved: the first
+computed the complete contact and conditional capacity test; the second
+added and verified the ordinary complete-domain propagation argument.
+No scientific source changed after the final accepted run. Independent
+verification passed on its first attempt using exact partial-fraction/
+harmonic-tail mass sums, gamma-zeta Bose moments, an independent global
+gradient bound, all eight complete kernel guards and the operator/error
+arithmetic. The ordinary argument supplies the continuum result; checker
+passes do not establish unknown projection values. No Lean ran, and all
+18 inherited paths are unchanged.
+
+Remaining to-do list: evaluate the complete signed subtracted resolvent/contact projection with certified actual-h1, local, angular and thermal errors; controlled forward/adjoint correction, rough nonlinear action/domain, nonlinear admission and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: actual-disk short-time heat gate closed; signed projection open
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
