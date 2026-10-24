@@ -1,3 +1,111 @@
+# Active checkpoint: geometric conversion and exact contact cancellation
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit stays CLOSED. Previous turn: progress, magnetic and
+complete cold projections certified at unchanged physical normalization.
+
+The [executed conversion/contact test](current-geometric-mass-conversion.md) addresses an earlier
+representation requirement of the remaining quantum projection. The ODE
+evaluator differentiates Dsharp+M exp(b); the required geometric operator
+is exp(-b/2)Dsharp exp(-b/2)+M. The positive paired modulus and both
+partner squares give, at finite angular cutoff,
+
+    Gamma_geo,M=Gamma_mass,M+C_M,
+    C_M=-(1/(24pi))[integral(b R+|grad b|^2)
+                                 +2 integral_boundary b K]
+                         -(M^2/(2pi)) integral b exp(2b).
+
+This is derived by the homogeneous path
+A_t=exp(-tb/2)[Dsharp+M exp(b)]exp(-tb/2). Positive mass prevents kernels;
+identical scalar multiplication preserves the first-order paired domain.
+Keep its induced square boundary condition. The balanced boundary a2
+coefficient cancels the b partial_n b flux. Take the same finite-cut limit
+of the two actions: bK tends to zero in the mass/log phase, and the fixed
+affine boundary term has zero Hessian. No smooth C5 double or infinite
+angular differentiation theorem is inferred from that finite-mode identity.
+
+The b exp(2b) contact is not removed by the pure-area a0 cancellation.
+Its product-subtracted flat Hessian is -M^2/pi per area and cancels the
++M^2/pi from the mass determinant EXACTLY. The continuous frequency
+integral of M^4/[pi(M^2+p^2)^(3/2)] is M^2/pi, including its complete
+tail. This independently checks the tadpole, sign and normalization.
+It is a local continuum contact calculation, not the actual finite-
+temperature variable-geometry projection.
+
+The actual radial envelope gives |integral_0^zc b_h(-z^4)|
+<6.7026496E-12, with its finite-cut endpoint retained. If the two
+correlated contacts were bounded separately, their finite-N coefficient
+would be 2G N(N+1)(N+q)(N+q+1)/(pi C B^2), giving these allowances:
+
+| Finite angular cutoff N | Separate contact upper allowance | Factor of remaining target | Sufficient full-time B_hv threshold |
+| ---: | ---: | ---: | ---: |
+| 1 | 5.3056280E-39 | 41.224771 | 3.4745066E-9 |
+| 2 | 1.5916884E-38 | 123.67432 | 6.9490133E-9 |
+| 16 | 7.2156541E-37 | 5606.5689 | 5.5592107E-8 |
+| 128 | 4.3803265E-35 | 340351.71 | 4.4473685E-7 |
+
+The separate bounds fail the selected target, but the contact cancels
+exactly for every N. They are not measured errors or lower bounds on
+the actual source. Truncating this known local contact would require
+proper-frequency ratios kappa at least the sufficient integers
+104,179,1202,9360 in these four cases for a 2.5e-43 tail allowance.
+Analytic integration removes that unnecessary numerical loss.
+
+The last column is conditional: if the time-reduced product-subtracted
+geometric remainder satisfies |R_M,hv|<=B_hv/M^4, the full angular tail
+is <=4GC^2 B_hv/[B^2 F_lambda N(N+q)]. B_hv is UNKNOWN. It is not
+supplied by the flat contact calculation or a short-time bound alone.
+
+For the heat cap, |D_hD_v r(t)-product_contact(t)|<=A_hv t^(1+alpha)
+would give E_cap<=4GC A_hv t0^alpha/(alpha B^2 F_lambda). Allocate
+2.5e-43 and require A_hv t0^alpha/alpha<=1.0666666E-11.
+At alpha=1,t0=.001, sufficient A_hv<=1.0666666E-8.
+A_hv and alpha remain UNKNOWN. Reserve another 2.5e-43 for the angular
+tail and 5e-43 for thermal/spatial/rounding errors. The latter are also
+unproved. A discontinuously truncated metric test is not admitted.
+
+Keep the previous magnetic <1.284506e-40, complete cold <1.693010e-43,
+scalar-trial <2.331e-44 and working full screen 2.60e-40. Total-source
+improvement, the full signed source and an actual controlled solution
+remain uncertified. The nonlinear inequalities, missing physical return
+constants, scaled middle admission and remaining bolt budget 1.66699e-9
+are unchanged. Exact compatibility, physical matching, causal realization,
+validity/noise and all-sector stability remain full obligations.
+
+Research decision: retain the actual construction and implement the remaining
+projection using the GEOMETRICALLY CONVERTED mass determinant. Combine the
+conversion, mass determinant and geometric heat polynomial at each finite
+angular cutoff before the common limit. Integrate the known flat contact
+analytically. Do not independently zeta-sum the divergent contacts, add a
+new finite coupling, replace the state, or continue compact-probe tests as
+a substitute for the actual response.
+
+The SINGLE next calculation is the complete signed quantum/contact
+projection with |P_hat_rest|+E_rest<1.287e-40. Its implementation now needs
+an explicit thermal subtraction matching the auxiliary mass modulus and
+a uniform differentiated common-tail estimate on the actual pair. The
+finite-mode conversion/contact test was EXECUTED; that complete projection
+remains PROPOSED. Its full solution, admission and stability implications
+remain unproved. Boundary and infinite-limit regularity failures take
+priority over more source optimization.
+
+Final replay passed 52 checks over 945 unchanged
+inputs. All 3 scientific attempts, 1 failure,
+2 successes and 110 raw rows are retained.
+The failure used structural equality for two equivalent exponentials;
+symbolic simplification corrected that check without changing the identity.
+After the first success, the independent continuous-frequency contact
+identity and tail test were added and the entire package replayed.
+Independent verification passed integer angular sums, direct logarithmic
+moments, complete/partial frequency contact integrals, physical prefactors
+and outward thresholds. Its 1 attempt(s) are retained. No scientific
+source changed after final replay, no Lean ran and all 18 inherited paths
+remain unchanged. Numerical checks do not replace the ordinary domain proof.
+
+Remaining to-do list: complete the geometrically converted thermal/angular quantum projection and differentiated common-tail bound; global Schur forward/adjoint solution, physical bolt/exterior return and X/admission; nonlinear closure and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: magnetic and complete cold projections meet their allocations
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.

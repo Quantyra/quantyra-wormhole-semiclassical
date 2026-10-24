@@ -1,0 +1,72 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T01:38:35.958551+00:00",
+      "source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom fractions import Fraction\nfrom decimal import Decimal,localcontext\nfrom datetime import datetime,timezone\nimport json,subprocess,tempfile,traceback\nimport mpmath as mp\nfolder=Path(tempfile.gettempdir());mf=folder/'s169bf-closeout.json';meta=json.loads(mf.read_bytes())\nroot=Path(meta['satellite_root']);stem='current-geometric-mass-conversion'\nreceipt=json.loads((root/'evidence'/f'{stem}.json').read_bytes());run=receipt['runs'][-1]\nevfile=root/'evidence'/f'{stem}-closeout-verification.json';ev=json.loads(evfile.read_bytes()) if evfile.exists() else {'attempts':[]}\nattempt={'started_utc':datetime.now(timezone.utc).isoformat(),'source_utf8':Path(__file__).read_text(encoding='utf-8'),'source_sha256':sha256(Path(__file__).read_bytes()).hexdigest()}\ndef bounds(x):\n a=x['decimal_enclosure'];u=Fraction(10)**int(a['exponent']);m=Fraction(a['mid'])*u;r=Fraction(a['rad'])*u\n return m-r,m,m+r\ndef fm(f):return mp.mpf(f.numerator)/f.denominator\ndef mm(x,i=1):return fm(bounds(x)[i])\ndef inside(value,x):return mm(x,0)<=value<=mm(x,2)\ndef out(value,up=True):\n with localcontext() as c:\n  c.prec=8;c.rounding='ROUND_CEILING' if up else 'ROUND_FLOOR';return str(+Decimal(str(value)))\ntry:\n assert run['status']=='passed' and all(x['passed'] for x in run['checks'])\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/p).read_bytes()).hexdigest()==h for p,h in run['input_sha256_after'].items())\n for kind in ['planning','satellite']:\n  rr=Path(meta[kind+'_root'])\n  assert all(sha256((rr/p).read_bytes()).hexdigest()==h for p,h in meta[kind+'_inherited'].items())\n  assert subprocess.check_output(['git','rev-parse','HEAD'],cwd=rr,text=True).strip()==meta[kind+'_previous_commit']\n  assert not subprocess.check_output(['git','diff','--cached','--name-only'],cwd=rr).strip()\n mp.mp.dps=110\n pair=next(x for x in run['numerics'] if x['kind']=='actual_contact_pairing_envelope')\n cuts=next(x for x in run['numerics'] if x['kind']=='finite_cutoff_contact_strategy_test')['cutoffs']\n cap=next(x for x in run['numerics'] if x['kind']=='required_differentiated_remainder_thresholds')\n q=int(pair['q']);B2=mm(pair['B_squared']);C=mm(pair['C']);h=mm(pair['h']);Fl=mm(pair['F_lambda']);zc=1-mp.mpf(2)**-49\n A=mp.mpf('3.768e-12');a=mp.mpf('4e-28');f=mp.mpf('4.34e-11');sr=mp.mpf('3.33e-10')*h\n w=sr+2*(1-zc)/zc*(A*(-mp.log1p(-zc)-zc)+f+a)\n endpoint=zc**6*w/2\n U=A*(mp.mpf(29)/200+4*mp.mpf(103)/4200)+4*f/30+a*(mp.mpf(1)/10+mp.mpf(4)/30)+sr/3+endpoint\n assert inside(U,pair['pairing_upper']) and U<mp.mpf('6.704e-12')\n # Independent direct integrals of the two logarithmic moments.\n L=lambda z:-mp.log1p(-z)-z\n qa=mp.quad(lambda z:z**4*L(z),[0,mp.mpf('.5'),mp.mpf('.9'),1])\n qb=mp.quad(lambda z:z**4*(1-z)*L(z),[0,mp.mpf('.5'),mp.mpf('.9'),1])\n assert abs(qa-mp.mpf(29)/100)<mp.mpf('1e-100')\n assert abs(qb-mp.mpf(103)/4200)<mp.mpf('1e-100')\n numerical=[]\n for row in cuts:\n  N=row['N'];moment=sum(2*(q+2*n)*n*(n+q) for n in range(1,N+1))\n  assert moment==N*(N+1)*(N+q)*(N+q+1)\n  assert bounds(row['finite_mass_moment'])[0]<=moment<=bounds(row['finite_mass_moment'])[2]\n  coefficient=2*moment/(mp.pi*C*B2);allowance=coefficient*U/Fl\n  assert inside(coefficient,row['contact_coefficient']) and inside(allowance,row['separate_contact_projection_allowance'])\n  assert allowance>mp.mpf('1.287e-40')\n  Bthreshold=mp.mpf('2.5e-43')*B2*Fl*N*(N+q)/(4*C*C)\n  assert inside(Bthreshold,row['required_full_time_B_hv_upper'])\n  chosen_kappa=int(mp.ceil(mm(row['sufficient_kappa_if_flat_contact_were_truncated'],2)))\n  # Integrate the continuum contact directly after p=M*x. Its full\n  # integral is one; its partial integral and tail have closed forms.\n  nodes=[mp.mpf(0),mp.mpf(1),mp.mpf(10),mp.mpf(100),mp.mpf(chosen_kappa)]\n  thermal=mp.quad(lambda x:(1+x*x)**(-mp.mpf('1.5')),nodes)\n  exact=mp.mpf(chosen_kappa)/mp.sqrt(1+mp.mpf(chosen_kappa)**2)\n  assert abs(thermal-exact)<mp.mpf('1e-100')\n  remaining=mm(row['separate_contact_projection_allowance'],2)*(1-exact)\n  assert remaining<mp.mpf('2.5e-43')\n  numerical.append(dict(N=N,separate_contact_allowance_upper=out(mm(row['separate_contact_projection_allowance'],2)),\n   allowance_target_factor_upper=out(mm(row['allowance_target_factor'],2)),\n   B_hv_threshold_sufficient=out(mm(row['required_full_time_B_hv_upper'],0),False),\n   integer_kappa_sufficient=chosen_kappa,exact_flat_contact_after_combination='0',\n   independent_continuous_frequency_partial_integral=mp.nstr(thermal,80),\n   thermal_diagnostic_scope='Flat local contact only; not finite-temperature variable-geometry remainder.'))\n full=mp.quad(lambda x:(1+x*x)**(-mp.mpf('1.5')),[0,1,10,mp.inf])\n assert abs(full-1)<mp.mpf('1e-100')\n heatfactor=B2*Fl/(4*C);threshold=mp.mpf('2.5e-43')*heatfactor;Aexample=threshold/mp.mpf('.001')\n assert inside(heatfactor,cap['physical_heat_factor']) and inside(Aexample,cap['required_A_hv_example_upper'])\n assert Fraction('2.5e-43')*2+Fraction('5e-43')==Fraction('1e-42')\n result=dict(pairing_upper=out(mm(pair['pairing_upper'],2)),cutoffs=numerical,\n  A_times_t0_alpha_over_alpha_threshold_sufficient=out(mm(cap['required_A_times_t0_power_over_alpha_upper'],0),False),\n  A_alpha1_t0_001_threshold_sufficient=out(mm(cap['required_A_hv_example_upper'],0),False),\n  cap_error_allocation='2.5e-43',angular_error_allocation='2.5e-43',remaining_error_allocation='5e-43',\n  exact_flat_contact_full_frequency_integral=mp.nstr(full,80),remaining_projection_target='1.287e-40',\n  complete_signed_projection_evaluated=False,differentiated_common_tail_proved=False,thermal_subtraction_matched=False)\n frozen={p:sha256((root/p).read_bytes()).hexdigest() for p in run['frozen_sources_utf8']}\n meta.update(checks=len(run['checks']),inputs=len(run['input_sha256_after']),runs=len(receipt['runs']),\n  failed_runs=sum(x['status']!='passed' for x in receipt['runs']),json_rows=len((root/'evidence'/f'{stem}.log').read_text().splitlines()),\n  scientific_frozen_sha256=frozen,independent_result=result)\n mf.write_text(json.dumps(meta,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n attempt.update(status='passed',results=result,scientific_source_hashes=frozen,\n  scope='Independent integer finite sums, logarithmic moment quadrature, full and partial continuous-frequency contact integrals, physical prefactors, outward numerical thresholds, immutable inputs and 18 inherited paths. No full quantum projection or continuum-domain theorem is inferred from these checks.')\nexcept Exception:attempt.update(status='failed',exception=traceback.format_exc())\nattempt['finished_utc']=datetime.now(timezone.utc).isoformat();ev['attempts'].append(attempt)\nevfile.write_text(json.dumps(ev,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:attempt[k] for k in ['status','results','exception'] if k in attempt}),flush=True)\nif attempt['status']!='passed':raise SystemExit(1)\n",
+      "source_sha256": "dd337f433a1b955eb475a42901ae6642058f4b446c585a0e7ee770d844c49528",
+      "status": "passed",
+      "results": {
+        "pairing_upper": "6.7026496E-12",
+        "cutoffs": [
+          {
+            "N": 1,
+            "separate_contact_allowance_upper": "5.3056280E-39",
+            "allowance_target_factor_upper": "41.224771",
+            "B_hv_threshold_sufficient": "3.4745066E-9",
+            "integer_kappa_sufficient": 104,
+            "exact_flat_contact_after_combination": "0",
+            "independent_continuous_frequency_partial_integral": "0.99995377539461787547636468232356994802817591162228468656926042366621510956775761",
+            "thermal_diagnostic_scope": "Flat local contact only; not finite-temperature variable-geometry remainder."
+          },
+          {
+            "N": 2,
+            "separate_contact_allowance_upper": "1.5916884E-38",
+            "allowance_target_factor_upper": "123.67432",
+            "B_hv_threshold_sufficient": "6.9490133E-9",
+            "integer_kappa_sufficient": 179,
+            "exact_flat_contact_after_combination": "0",
+            "independent_continuous_frequency_partial_integral": "0.99998439535917887011978483585418688470302605458332767648920194262150555810524827",
+            "thermal_diagnostic_scope": "Flat local contact only; not finite-temperature variable-geometry remainder."
+          },
+          {
+            "N": 16,
+            "separate_contact_allowance_upper": "7.2156541E-37",
+            "allowance_target_factor_upper": "5606.5689",
+            "B_hv_threshold_sufficient": "5.5592107E-8",
+            "integer_kappa_sufficient": 1202,
+            "exact_flat_contact_after_combination": "0",
+            "independent_continuous_frequency_partial_integral": "0.99999965393247772751648944687034571043370100684610496598707867529274829765011134",
+            "thermal_diagnostic_scope": "Flat local contact only; not finite-temperature variable-geometry remainder."
+          },
+          {
+            "N": 128,
+            "separate_contact_allowance_upper": "4.3803265E-35",
+            "allowance_target_factor_upper": "340351.71",
+            "B_hv_threshold_sufficient": "4.4473685E-7",
+            "integer_kappa_sufficient": 9360,
+            "exact_flat_contact_after_combination": "0",
+            "independent_continuous_frequency_partial_integral": "0.99999999429286293146359300043463899131070094841390500848727962136112033050840174",
+            "thermal_diagnostic_scope": "Flat local contact only; not finite-temperature variable-geometry remainder."
+          }
+        ],
+        "A_times_t0_alpha_over_alpha_threshold_sufficient": "1.0666666E-11",
+        "A_alpha1_t0_001_threshold_sufficient": "1.0666666E-8",
+        "cap_error_allocation": "2.5e-43",
+        "angular_error_allocation": "2.5e-43",
+        "remaining_error_allocation": "5e-43",
+        "exact_flat_contact_full_frequency_integral": "1.0",
+        "remaining_projection_target": "1.287e-40",
+        "complete_signed_projection_evaluated": false,
+        "differentiated_common_tail_proved": false,
+        "thermal_subtraction_matched": false
+      },
+      "scientific_source_hashes": {
+        "notes/current-geometric-mass-conversion.md": "dadb1db0d235f26718d9c97e8df5a821d9861eb83729245c2a979b975f8a784b",
+        "checks/current_geometric_mass_conversion.py": "09289b706326420107236fc4a60864cecd012b9af7d0c433ffb4f65b4a020492",
+        "evidence/current-geometric-mass-conversion-review.json": "e7d693f5350a5f038d138b485a4647a7d7026f686812f22cd6b399db0273e867"
+      },
+      "scope": "Independent integer finite sums, logarithmic moment quadrature, full and partial continuous-frequency contact integrals, physical prefactors, outward numerical thresholds, immutable inputs and 18 inherited paths. No full quantum projection or continuum-domain theorem is inferred from these checks.",
+      "finished_utc": "2026-10-24T01:38:37.344297+00:00"
+    }
+  ]
+}
