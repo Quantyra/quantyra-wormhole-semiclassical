@@ -1,0 +1,189 @@
+{
+  "status": "retained_development_not_acceptance",
+  "source_utf8": "from pathlib import Path\nimport sys,json\nr=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path[:0]=['C:/Users/dfred/AppData/Local/Temp/s169af-arb',str(r/'checks')]\nimport current_common_regulator_conversion_test as m\nm.ctx.prec=512\nfailed=[]\ndef check(name,ok):\n if not ok:failed.append(name)\nm.check=check\nans=m.execute()\np=Path('C:/Users/dfred/AppData/Local/Temp/s169cb-width-diagnostic.json')\np.write_bytes((json.dumps(dict(status='development_only_failed_guard_not_overridden_for_acceptance',failed=failed,result=ans),indent=2)+'\\n').encode())\nfor k in ['normalized_conversion_second_derivative','volume_second_derivative','curvature_second_derivative','curvature_to_volume_ratio']:\n print(k,ans[k])\n",
+  "source_sha256": "53591ce562adee6a55e427db596c541a4bf9c00a1627f9165583d296d62a44f8",
+  "execution": "PowerShell here-string piped to the pinned Python; this file preserves that exact Python source, not an additional run",
+  "result": {
+    "status": "development_only_failed_guard_not_overridden_for_acceptance",
+    "failed": [
+      "certified_interval_width"
+    ],
+    "result": {
+      "symbolic_cutoff_identity": "A0*C*(exp(4*b) - 1)*exp(-2*b)/(8*pi*epsilon**2) + b*(A0*H1*exp(2*b) + A1*H0 + 2*A2*C*exp(-2*b))/(4*pi) + (A0*H0 + 2*A1*C*exp(-2*b))*(exp(2*b) - 1)/(8*pi*epsilon)",
+      "symbolic_common_finite_part": "b*(A0*H1*exp(2*b) + A1*H0 + 2*A2*C*exp(-2*b))/(4*pi)",
+      "actual_parameters": {
+        "C": {
+          "ball": "[49119682270.77026011517 +/- 3.20e-12]",
+          "decimal_enclosure": {
+            "mid": "4911968227077026011517054680842811476004",
+            "rad": "265250338049622017",
+            "exponent": "-29"
+          }
+        },
+        "B2": {
+          "ball": "[8.383092440707457726322e+42 +/- 8.93e+20]",
+          "decimal_enclosure": {
+            "mid": "838309244070745772632243998877545852934",
+            "rad": "45269390433714177",
+            "exponent": "4"
+          }
+        },
+        "beta": {
+          "ball": "[0.166666666663273593687327683704 +/- 1.53e-31]",
+          "decimal_enclosure": {
+            "mid": "1666666666632735936873276837040440174130",
+            "rad": "1085165899",
+            "exponent": "-40"
+          }
+        },
+        "u": {
+          "ball": "[2.035843787603389779209e-11 +/- 5.21e-33]",
+          "decimal_enclosure": {
+            "mid": "2035843787603389779208589550060983391754",
+            "rad": "109938922791895041",
+            "exponent": "-50"
+          }
+        },
+        "eps": {
+          "ball": "[-2e-29 +/- 4.31e-30]",
+          "decimal_enclosure": {
+            "mid": "-1634999997896645676239486403159991341709",
+            "rad": "65000014860838146572641946999659167745",
+            "exponent": "-68"
+          }
+        },
+        "tau": {
+          "ball": "[2.558133502177617821629e-67 +/- 7.69e-89]",
+          "decimal_enclosure": {
+            "mid": "2558133502177617821628646048458919107031",
+            "rad": "414432925304487937",
+            "exponent": "-106"
+          }
+        },
+        "gamma": {
+          "ball": "[5.057799424826589366111e-34 +/- 5.81e-56]",
+          "decimal_enclosure": {
+            "mid": "5057799424826589366111170890949621816627",
+            "rad": "409696354839822337",
+            "exponent": "-73"
+          }
+        }
+      },
+      "q": "16000000000000",
+      "z_h": {
+        "ball": "[1.00000000000000000000000000000 +/- 5.3e-34]",
+        "decimal_enclosure": {
+          "mid": "9999999999999999999999999999999994942200",
+          "rad": "2",
+          "exponent": "-40"
+        }
+      },
+      "integrated_R_squared": {
+        "ball": "[0.533333333327904416566612009 +/- 3.52e-28]",
+        "decimal_enclosure": {
+          "mid": "5333333333279044165666120091319458387270",
+          "rad": "2194463049729",
+          "exponent": "-40"
+        }
+      },
+      "A0": {
+        "ball": "[2.00000000000000000000000000000 +/- 1.3e-33]",
+        "decimal_enclosure": {
+          "mid": "1999999999999999999999999999999998988440",
+          "rad": "2",
+          "exponent": "-39"
+        }
+      },
+      "A1": {
+        "ball": "[+/- 2.61e-30]",
+        "decimal_enclosure": {
+          "mid": "-168593314160886312203705696364987351",
+          "rad": "2602932347654775999426957073589435629569",
+          "exponent": "-69"
+        }
+      },
+      "A2": {
+        "ball": "[-0.00444444444439920347138843341 +/- 2.40e-30]",
+        "decimal_enclosure": {
+          "mid": "-4444444444399203471388433409432881989391",
+          "rad": "1828719212545",
+          "exponent": "-42"
+        }
+      },
+      "H0": {
+        "ball": "[-16000000000000.3333333333333333 +/- 3.34e-17]",
+        "decimal_enclosure": {
+          "mid": "-1600000000000033333333333333333333333333",
+          "rad": "2",
+          "exponent": "-26"
+        }
+      },
+      "H1": {
+        "ball": "[868626682710779.6391290 +/- 4.88e-8]",
+        "decimal_enclosure": {
+          "mid": "868626682710779639128998207347420734691",
+          "rad": "46907273796124673",
+          "exponent": "-24"
+        }
+      },
+      "normalized_conversion_first_derivative": {
+        "ball": "[-3.298214745636313290710e-29 +/- 5.03e-51]",
+        "decimal_enclosure": {
+          "mid": "-3298214745636313290709853529496105663602",
+          "rad": "356220883657818113",
+          "exponent": "-68"
+        }
+      },
+      "normalized_conversion_second_derivative": {
+        "ball": "[-1.319286561400121539265e-28 +/- 3.32e-50]",
+        "decimal_enclosure": {
+          "mid": "-1319286561400121539264811327559857934453",
+          "rad": "142488388950294529",
+          "exponent": "-67"
+        }
+      },
+      "volume_second_derivative": {
+        "ball": "[-1.319286229827323427774e-28 +/- 5.19e-50]",
+        "decimal_enclosure": {
+          "mid": "-1319286229827323427774376369679148313664",
+          "rad": "142488352979943425",
+          "exponent": "-67"
+        }
+      },
+      "curvature_second_derivative": {
+        "ball": "[-3.315727981114904349579e-35 +/- 5.52e-57]",
+        "decimal_enclosure": {
+          "mid": "-3315727981114904349578807096207886658452",
+          "rad": "358110927502966785",
+          "exponent": "-74"
+        }
+      },
+      "curvature_to_volume_ratio": {
+        "ball": "[2.51327415245506497501e-7 +/- 2.08e-28]",
+        "decimal_enclosure": {
+          "mid": "2513274152455064975011531150748468085747",
+          "rad": "542895193653772289",
+          "exponent": "-46"
+        }
+      },
+      "all_spectrum_constant_family_common_limit_proved": true,
+      "two_dimensional_only_conversion_rejected": true,
+      "physical_correction_direction": false,
+      "variable_conversion_proved": false,
+      "full_signed_projection_executed": false,
+      "strong_response_bound_executed": false,
+      "selected_remaining_feedback_target": ".18368",
+      "proposed_heat_target": ".18",
+      "proposed_other_global_target": ".00368",
+      "actual_controlled_solution": false,
+      "uniform_nonlinear_admission": false,
+      "exact_compatibility": false,
+      "physical_matching": false,
+      "semiclassical_validity_noise": false,
+      "all_sector_stability": false
+    }
+  },
+  "result_sha256": "3c4cb03b62fefae79476ada75e7729758a09a5a48aeffa03869e342875853338",
+  "acceptance_checker_snapshot": "runs[0].frozen_sources_utf8 in current-common-regulator-conversion-test.json",
+  "scientific_formula_changed": false
+}

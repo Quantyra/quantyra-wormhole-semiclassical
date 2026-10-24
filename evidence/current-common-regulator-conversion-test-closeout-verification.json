@@ -1,0 +1,33 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T15:22:19.322270+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb\nimport sys,json,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169cb-closeout.json';meta=json.loads(mf.read_bytes());root=Path(meta['satellite_root']);stem='current-common-regulator-conversion-test'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nfrom flint import arb,ctx\nimport sympy as S\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json'\narchive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nattempt=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest())\narchive['attempts'].append(attempt)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n    runs=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'];run=runs[-1]\n    assert len(runs)==2 and runs[0]['status']=='failed' and run['status']=='passed'\n    assert [x['name'] for x in runs[0]['checks'] if not x['passed']]==['certified_interval_width']\n    assert run['input_sha256_before']==run['input_sha256_after']\n    assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n    res=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n    # Independent polynomial: differentiate the factored Q symbolically,\n    # then integrate the square using Bernstein multiplication on [0,1].\n    z,be,u,ep,ta=S.symbols('z beta u eps tau')\n    Q=(1-z)**2*(be*(1+2*z+3*z*z)+u*z*z+ep*z**4)-ta*z**3\n    R=S.Poly(S.diff(Q,z,2),z)\n    mapping={be:pars['beta'],u:pars['u'],ep:pars['eps'],ta:pars['tau']}\n    def value(v):\n        if v in mapping:return mapping[v]\n        if v.is_Rational:return arb(int(v.p))/int(v.q)\n        if v.is_Add:return sum((value(w) for w in v.args),arb(0))\n        if v.is_Mul:\n            a=arb(1)\n            for w in v.args:a*=value(w)\n            return a\n        if v.is_Pow:return value(v.base)**int(v.exp)\n        raise ValueError(v)\n    n=R.degree()\n    coeff=[value(R.nth(i))*zh**i for i in range(n+1)]\n    bern=[sum((coeff[i]*comb(k,i)/comb(n,i) for i in range(k+1)),arb(0)) for k in range(n+1)]\n    integral=zh/(2*n+1)*sum((bern[i]*bern[j]*comb(n,i)*comb(n,j)/comb(2*n,i+j) for i in range(n+1) for j in range(n+1)),arb(0))\n    assert integral>0 and integral.overlaps(old.decode(res['integrated_R_squared']))\n    C=pars['C'];B2=pars['B2'];q=arb(pars['q']);gamma=pars['gamma']\n    a0=2*zh;a1=-gamma/3;a2=-integral/120\n    h0=-q-arb(1)/3;h1=(q*q/6-arb(1)/30)/C\n    assert a1.overlaps(old.decode(res['A1']))\n    # The zeta scaling identity independently determines both derivatives.\n    b,s,X,Y,Z=S.symbols('b s X Y Z')\n    common_zeta_zero=X*S.exp(2*b)+Y+Z*S.exp(-2*b)\n    j=S.diff((S.exp(2*b*s)-1)*common_zeta_zero/2,s).subs(s,0)\n    assert S.expand(S.diff(j,b,2).subs(b,0))==4*X-4*Z\n    second=-4*(zh*h1-C*a2)/(arb.pi()*B2)\n    first=-(a0*h1+a1*h0+2*C*a2)/(2*arb.pi()*B2)\n    assert second<0 and second.rad()<arb('1e-48')\n    assert second.overlaps(old.decode(res['normalized_conversion_second_derivative']))\n    assert first.overlaps(old.decode(res['normalized_conversion_first_derivative']))\n    printed=arb('-1.319286561400121539265e-28')\n    assert (second-printed).abs_upper()<arb('4e-50')\n    assert all(not res[k] for k in ['physical_correction_direction','variable_conversion_proved','full_signed_projection_executed','strong_response_bound_executed','actual_controlled_solution','uniform_nonlinear_admission','exact_compatibility','physical_matching','semiclassical_validity_noise','all_sector_stability'])\n    assert arb('.18')+arb('.00368')==arb('.18368') or (arb('.18')+arb('.00368')-arb('.18368')).contains(0)\n    for kind in ['planning','satellite']:\n        rr=Path(meta[kind+'_root'])\n        assert all(sha256((rr/f).read_bytes()).hexdigest()==h for f,h in meta[kind+'_inherited'].items())\n    attempt.update(status='passed',integrated_curvature_Bernstein=old.encoded(integral),conversion_Hessian=old.encoded(second),reported_absolute_error_upper='4e-50',first_attempt_retained=True,scientific_edits_after_success=False,finite_physical_modes_selected=False,physical_test_not_replaced=True,scope='Independent polynomial integral and common-zeta algebra; ordinary argument supplies continuum scope')\nexcept Exception:attempt.update(status='failed',exception=traceback.format_exc())\nattempt['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif attempt['status']=='passed':\n    files=list(run['input_sha256_after'])+[f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']\n    meta['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in sorted(set(files))}\n    mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nprint(json.dumps({k:v for k,v in attempt.items() if k!='verifier_source_utf8'},indent=2))\nif attempt['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "e13b2762628a9705b6192bcac2b0fea3ad55da97bc6062793894c00ae20c87d4",
+      "integrated_curvature_Bernstein": {
+        "ball": "[0.5333333333279044165666120091 +/- 6.88e-29]",
+        "decimal_enclosure": {
+          "mid": "5333333333279044165666120091319458387270",
+          "rad": "368320091137",
+          "exponent": "-40"
+        }
+      },
+      "conversion_Hessian": {
+        "ball": "[-1.319286561400121539265e-28 +/- 3.32e-50]",
+        "decimal_enclosure": {
+          "mid": "-1319286561400121539264811327559854361888",
+          "rad": "142488389218729985",
+          "exponent": "-67"
+        }
+      },
+      "reported_absolute_error_upper": "4e-50",
+      "first_attempt_retained": true,
+      "scientific_edits_after_success": false,
+      "finite_physical_modes_selected": false,
+      "physical_test_not_replaced": true,
+      "scope": "Independent polynomial integral and common-zeta algebra; ordinary argument supplies continuum scope",
+      "finished_utc": "2026-10-24T15:22:19.878774+00:00"
+    }
+  ]
+}

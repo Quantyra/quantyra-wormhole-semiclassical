@@ -1,3 +1,105 @@
+# Active checkpoint: common-regulator conversion tested; use geometric response directly
+
+2026-10-24, E003/S169.
+See [the ordinary common-regulator test](current-common-regulator-conversion-test.md).
+
+EXECUTED: an exact common-regulator consistency test of the proposed
+metric-to-mass conversion, using the original paired seed operator and
+complete angular/thermal spectrum. For constant b, the closed squares obey
+P_g(b)=exp(-2b)P_m(b). Changing heat time at the SAME regulator gives
+
+ Jbar(b)=b[A0 H1 exp(2b)+A1 H0+2C A2 exp(-2b)]/(4pi),
+
+where A0=2z_h, A1=-gamma/3, A2=-integral R^2/120 is the integrated
+paired completion, H0=-q-1/3 and H1=(q^2/6-1/30)/C. The cutoff's two
+power divergences are retained before its finite part is taken. The rough
+seam, actual bolt and every thermal/angular mode remain. The previously
+proved paired heat remainder makes this constant-family common limit
+well-defined; no smooth reflected surrogate or finite physical spectrum
+was substituted.
+
+In the retained normalized action, the second derivative is
+
+ j_conversion=-1.319286561400121539265e-28,
+ absolute enclosure error <4e-50.
+
+Its volume part is about -1.3192862298273234e-28 and its curvature part
+about -3.3157279811149043e-35. A two-dimensional massless Weyl cocycle
+has zero constant-rescaling Hessian and therefore cannot supply this
+conversion by itself. This is an obstruction to that shortcut, not a
+nonexistence theorem or an obstruction to the original construction.
+Prior notes reserved these contacts; no certified prior block is changed.
+
+Constant b is an auxiliary consistency direction, not an admissible
+fixed-source correction. It preserves the original fermion domain but
+does not obey the physical correction's b(0)=0. The result is NOT the
+complete signed source projection, a strong operator bound, or a test of
+the remaining .18368 feedback allocation. Its numerical size must not
+be compared directly with that norm or the 1.287e-40 projection target.
+
+The variable mass-chart conversion still requires a uniform differentiated
+common-regulator argument on rough variable backgrounds. That is the
+first unsupported step in the proposed shortcut. It is UNKNOWN. The
+canonical geometric representation avoids needing that conversion, but
+its remaining strong graph bound is also UNKNOWN. A weak C2 action on
+bounded admitted coefficient families does not establish either uniform
+nonlinear X-ball admission or the three-output-derivative bound.
+
+The prior explicit contact, classical, principal, separated-input and
+domain-transfer certificates retain their exact scope. The combined
+remaining feedback target is <=.18368. One proposed split is canonical
+heat <=.18 and all other unresolved global feedback <=.00368; neither
+is measured. No present result says these constants fit or fail. The
+full normal graph controls the earlier H6-only high-frequency loss;
+the residual coefficients and operator-norm regulator limit remain open.
+
+Joint affine <=7.49e-12 and known-source <=1e-14 are also UNKNOWN.
+Together with the feedback target they would imply E<9.946377e-12.
+Independent Mellin Efar<=1e-10 and actual mass/slow coefficients remain
+unknown. The prior sufficient screen E_rest<2.123e-42<1.287e-40 is
+unchanged and NOT recomputed here; its zero enclosure center is not a
+measured signed projection. Cold/scalar bounds were not optimized.
+
+At rho=1e-8, the unclosed nonlinear requirements remain
+
+ Y0+1e-8 Z0+5e-17 Z2<=1e-8,     Z0+1e-8 Z2<1,
+
+with unproved allocations Y0<=5e-9, Z0<=.25 and Z2<=5e7. Uniform
+nonlinear admission, exact compatibility, physical matching/causal
+realization, semiclassical validity/noise and all-sector stability remain
+unresolved. No actual controlled solution is certified. The audit stays
+CLOSED and the full stable-wormhole objective ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and use the original
+geometric Duhamel response directly. Do not extend a mass-vertex estimate
+chain before its full variable conversion is proved. The executed test
+rejects adding only the two-dimensional anomaly; it does not bound the
+remaining geometric response or settle physical feasibility.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): on the actual cubic
+paired collar, subtract the full normal and already allocated logarithmic
+principal terms from the geometric Duhamel Hessian, retaining its second
+vertex. Prove a common-regulator Cauchy estimate in the coupled H3 graph
+and bound the canonical remainder by .18. Retain angular/thermal tails,
+finite diagonal and boundary contacts, and original global coupling;
+all other remaining global feedback would still need <=.00368.
+
+Verification: the accepted run passed 17
+supporting checks over 959 unchanged inputs.
+The ordinary cutoff identity supplies the continuum argument. An independent
+Bernstein-product curvature integral and common-zeta derivation agreed on
+the first verification attempt. Both scientific runs are retained: the
+first confirmed the identity/sign but failed an unnecessary 1e-110
+arithmetic-width guard. Inherited parameter intervals give radius about
+1.425e-50. The guard became 1e-48 without changing any formula, parameter
+interval or physical target; the diagnostic source/output is archived.
+No post-success scientific edits or Lean runs occurred. All 18 inherited
+paths and immutable audits remain unchanged; no checkbox is promoted.
+
+Remaining to-do list: direct geometric strong remainder and common limit; global feedback and joint sources, mass/slow moments and independent Mellin far tail; actual controlled correction and nonlinear admission; exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: explicit quantum contacts bounded; canonical heat response remains open
 
 2026-10-24, E003/S169.
