@@ -1,3 +1,97 @@
+# Active checkpoint: coupled classical local graph bound closes; quantum/global return open
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the coupled local graph argument](current-coupled-local-graph-bound.md).
+
+EXECUTED: assemble the full Einstein/cosmological, magnetic and additional
+R2 local Hessian difference on the actual .01 outer collar, retaining the
+coupled scalar and shape rows, all finite-Q coefficients and fixed physical
+normalization. The fifth and fourth derivatives in the differentiated R2
+shape row cancel identically for arbitrary Q. The normal input scalar/shape
+combination also reduces the mixed first row to order two.
+
+The crude all-frequency supremum estimate gives the component matrix
+
+    [1.015449, 1.110308; .165795, 5.797325].
+
+Those are EXCESSIVE UPPER BOUNDS, not measured operator norms or an actual
+obstruction. Keeping exact coefficient cancellations and bounding the narrow
+low-frequency response by its integrated kernel norm gives instead
+
+    [.006443418, .004335811; .000838206, .051592563].
+
+The certified maximum row sum is <.052430768<.06. This is a whole-frequency
+bound on the classical local component of the same coupled graph feedback.
+No collar shrinkage, normalization change, physical surrogate domain or
+finite physical-mode selection was used. The cutoff acts only on output.
+
+Together with the prior quantum log-principal component <.007302177, the
+executed component sum is <.059732944. The rest of the .24 allocation for
+nonprincipal feedback is .1875692328..., so choose the explicit remaining
+target eta_remaining<=.187. This is UNKNOWN, not yet an excessive evaluated
+bound or an actual obstruction. It includes all other Weyl/paired quantum
+contacts, curved/separated kernels and original-domain global feedback.
+
+The complete closure must control BOTH rows. With
+E=max(||f_R||_H3,||G_R||_H3), its unproved form is
+
+ E<=S_coupled+(eta_pr+eta_c+eta_remaining)(E+k_coupled).
+
+The old known shape-source norm k3<1.613e-27 cannot simply replace the joint
+known-data norm k_coupled. Under the still-UNKNOWN joint targets
+S_coupled<=7.49e-12, k_coupled<=1e-14 and eta_remaining<=.187, the executed
+arithmetic gives E<9.946629e-12<1e-11. Then E3<=E, but neither is an actual
+certified source or solution norm. The independent Efar<=1e-10 remains open.
+
+The actual paired realization and common-regulator C2 action on bounded
+ADMITTED stationary mass/log families retain their previous scope. They do
+not prove admission of the nonlinear X ball or this missing strong quantum
+estimate. No external Navier--Stokes or Jacobian--Weyl existence theorem is
+transferred. The local endpoint Hessian representatives are retained; global
+source boundary terms and regular-bolt/remote data remain obligations.
+
+No complete correction or nonlinear solution is established. The sufficient
+projection screen E_rest<2.123e-42<1.287e-40 retains its scope and unmeasured
+sign. Nonlinear admission still requires Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1, with unproved Y0<=5e-9, Z0<=.25, Z2<=5e7. Exact compatibility,
+physical matching/causal realization, semiclassical validity/noise and
+all-sector stability remain unresolved. The feasibility audit stays CLOSED.
+
+RESEARCH DECISION: retain the construction; use the exact coupled
+cancellations and low-frequency integral estimate for the strong return.
+The failed crude local bound is resolved by a sharper executed bound, so it
+does not justify changing construction. Do not optimize passing cold/scalar
+source components while the complete quantum operator has no certified
+bound in the required norm.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): derive and bound the
+remaining Weyl-plus-paired-determinant operator in this SAME coupled graph,
+with explicit outer log cancellation, all angular/thermal tails, finite
+contacts and original-domain remote/boundary terms, against eta_remaining
+<=.187. The joint affine/known-source estimates and independent far-tail
+target must also pass before claiming an actual controlled correction.
+
+Verification: the accepted frozen run passed 57
+supporting checks over 938 unchanged inputs.
+There were 2 scientific attempts: the first stopped on a duplicate
+check name; only the label was corrected. Independent verification passed
+on attempt 2. It derives the rows from arbitrary weak-action jets,
+checks the arbitrary-Q cancellation, matches the original-product-Q
+coefficients, and independently bounds the cutoff with Taylor intervals
+rather than Bernstein hulls. Its first attempt stopped because SymPy parsed
+beta as its built-in function; explicit symbol binding repaired the parser.
+Both failures, exact sources and the earlier prototype syntax failure are
+retained. Mathematical formulas and targets were unchanged; no post-success
+scientific edits or Lean runs occurred. These checks support the displayed
+ordinary proof, not a substitute domain or full-operator argument. All 18
+inherited paths and immutable closed/paused audit records remain unchanged.
+No task checkbox is promoted.
+
+Remaining to-do list: remaining quantum/global graph bound and joint source return; actual controlled correction and nonlinear admission; exact compatibility; physical matching/causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: actual principal graph feedback bounded; full return open
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
