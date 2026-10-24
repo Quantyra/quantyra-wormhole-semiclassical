@@ -1,3 +1,115 @@
+# Active checkpoint: prescribed magnetic response reconstructed; full source remains
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the exact reconstruction and signed certificate](current-magnetic-reference-reconstruction.md).
+
+EXECUTED: reconstruct the response h_M to the EXACT product-matched
+magnetic potential J_M, with the actual positive temperature, fixed outer
+clock, regular bolt and mass/log phase. Its radius-potential source has
+p_M=-rho_M and zero lapse response. The two fixed-temperature horizon
+constraints remove the apparent logarithmic bolt singularity. The
+outward Green integral gives the full radial response, with no wall.
+
+This is a component of the prescribed first reference correction,
+h1=h_M+h_rest. It is not the full quantum correction or an adjustable
+source. Its source and all coefficient normalizations are unchanged.
+Its five weighted outer derivatives have the required mass/log phase;
+this is a domain check for this tangent, not nonlinear X-ball admission.
+
+The executed signed projection, including both endpoints and the
+previous scalar-trial error, satisfies
+
+    -2.344e-60 < P_MM < -1.857e-60,
+    P_MM=J_M''[h_M,(v,-z^4)]/(F_lambda W).
+
+Whole-interval nested integration retains the exact thermal Q and the
+finite z_c boundary term. The complete original cold mixed density and
+analytic outer cap are bounded separately. There is no physical mode
+truncation or replacement of the paired quantum boundary realization.
+The sign belongs to THIS component only. An independent conservative
+unsigned argument gives |P_MM|<2.188e-57. The scalar-trial contribution
+to the error is <1.971e-66; its already controlled inverse is reused.
+
+Other executed physical guards are
+
+    k_M = 1.649107787284...e-29,
+    |nu_M| <1.633e-27, |b_M| <9.895e-27,
+    L_b h_M = 1.668171283600...e-62 >0.
+
+The old localized necessary threshold for the current uniform .0022
+certificate is about 1.066541114963e-54. The signed component allowance
+is more than 455,000 times smaller. It therefore does not explain the
+old 1.3079691e-40 complete-source upper allowance. That allowance is
+not an observed obstruction, and no actual complete source lower bound
+is established by this component's nonzero sign.
+
+The exact decomposition still requires
+
+    I_g=P_MM+P_cross,
+    P_cross={J_M''h_rest+J_rest''h_M+J_rest''h_rest}[test]/(F_lambda W).
+
+A sufficient allocation for this necessary screening condition is
+|P_cross|<1.066537e-54. P_cross is UNKNOWN. The inherited total upper
+allowance remains excessive for this stricter screen; the component
+calculation supplies no new bound for P_cross. Cancellation with P_MM
+is allowed. Even a pass of this screen would not prove the full bolt
+certificate, strong return, or existence.
+
+In particular, using h_M/F_lambda alone as a full trial leaves
+f_rest+J''h_M/F_lambda, where f_rest=J_rest'(g0). The FIRST-ORDER
+f_rest cannot be omitted. The current implementation provides full-source
+envelopes, but has not reconstructed h_rest or the actual coupled trial.
+This is the first missing input before evaluating its directional
+operator error. It has priority over refining passing component bounds.
+
+The earlier complete quantum/contact screen <2.123e-42<1.287e-40
+retains its original sufficient scope. The qualitative C2 action on
+bounded ADMITTED stationary mass/log families also retains its scope.
+The actual X ball, strong source return and higher metric variations
+remain unproved. The uniform V* to C5 inverse bound is proved impossible;
+a strong-data inverse is unknown. These are distinct from an excessive
+upper allowance or a physical nonexistence obstruction.
+
+Nonlinear requirements remain Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1, with unproved sufficient allocations Y0<=5e-9,
+Z0<=.25 and Z2<=5e7. The existing admission inequalities, actual bolt
+difference <1.667e-9, exterior return <6.67e-10, exact compatibility,
+physical matching/causal realization, semiclassical validity/noise and
+all-sector stability remain open. No actual controlled solution is claimed.
+
+RESEARCH DECISION: continue this construction with the specified
+directional/weighted correction method. The magnetic response is now
+reconstructed and does not justify a construction switch. Keep the global
+.0022 norm-product strategy parked at the available full-source precision.
+Do not infer its impossibility, or promote h_M to the full correction.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): reconstruct
+h_rest=-I0''^-1 J_rest'(g0), including the complete first-order
+quantum/contact source, paired boundary asymptotics, common regulator,
+all thermal/angular tails and a strong weighted error. Use the resulting
+actual h1 in the coupled directional forward/point-adjoint certificate.
+This supplies the missing input to the previously selected solve; that
+full solve remains unexecuted. The executed result here is the exact
+magnetic reference reconstruction and its certified signed self-projection.
+
+Verification: 21 supporting checks over
+914 unchanged inputs, with both scientific
+runs preserved. The first failed because direct interval evaluation lost
+the double zero at the bolt; the accepted replay retains that correlation
+using a convergent series with its entire tail. The independent verifier
+passed on attempt 1: covariant potential/source identities,
+whole-geometry amplitude and endpoint bounds, and a separate high-precision
+ODE quadrature. The latter is a diagnostic, not the error certificate;
+the ordinary whole-interval integration argument supplies that certificate.
+No scientific input changed after acceptance. No Lean ran. All 18 inherited
+paths and the immutable closed/paused audit records remain unchanged.
+No S169 task checkbox is promoted.
+
+Remaining to-do list: complete prescribed quantum/contact source reconstruction with mass/log endpoint and strong weighted error; coupled directional forward/adjoint correction and nonlinear admission; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: localized bolt sensitivity requires directional error control
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
