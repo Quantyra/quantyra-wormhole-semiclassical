@@ -1,3 +1,83 @@
+# Active checkpoint: remove the reference-prefactor source by changing the trial
+
+2026-10-23, E003/S169. Research is active, the full stable-wormhole
+objective incomplete and the feasibility audit closed. Previous turn:
+progress, controlled global scalar source component.
+
+The [executed local joint test](current-reference-rescaled-source-test.md) selects the sharper first
+approximation h_tilde=h1/F_lambda, where F_lambda=1-epsilon_R and
+epsilon_R=384 pi G c_R lambda. The full physical action, Hessian,
+renormalization scale, domain and norms remain fixed. The reference action
+with prefactor F_lambda/G is F_lambda times the original-G reference,
+including its consistently repartitioned boundary representative. Hence
+
+    I=F_lambda I0+J, I0''h1=-I'(g0),
+    r_new=I'(g0)+H h_tilde=(r_old-epsilon_R I'(g0))/F_lambda
+         =J''h1/F_lambda.
+
+Subtract BOTH complete seed-gradient rows. This changes the approximate
+metric and removes an exact reference-prefactor contribution. It is not
+a norm normalization or a replacement of h1 by an unevaluated surrogate.
+The full linear Newton correction is unchanged. The physical bolt change
+is <3.9230639E-18; charge it to the original
+2e-9 total budget and use the conservative remaining 1.66699e-9.
+
+For the same controlled scalar-Schur test xi=z^4,J_Y=0, the explicit
+trace-only curvature terms formerly left approximately -2.546455e-38.
+After the exact seed-source subtraction their certified absolute
+allowance, including scalar numerical error, is
+<8.9818211E-43. The remaining unknown principal
+shape stress has coefficient -2chi(d/x)(4z^5-6z^6), rather than
+-2chi(R/lambda). Its existing global source bound now gives projection
+<1.0223641E-44. These two pieces together are
+<9.0840575E-43, below the 2.60e-40 working screen.
+This executes those component tests; it does not evaluate the full source.
+
+The complete J'' mixed projection remains UNKNOWN. The inherited upper
+allowance for the remaining scalar contacts is
+<5.8053856E-39, about 22.33 target units. It does
+not certify the target and is not a measured violation. The independent
+quantum shape response, full angular tail, common restoration and density/
+transport/domain contacts remain essential. A total-source improvement
+is NOT yet certified. Trace anomaly information cannot supply that row.
+
+Research decision: adopt the sharper h_tilde first approximation and
+retain exact scalar Schur elimination. Stop scalar numerical refinement
+and separate unsigned source optimization. The SINGLE next calculation
+is J''(h1,(v,-z^4))/(F_lambda W), v=z^4/2+A^-1 B xi, with a controlled
+joint quantum/contact remainder |P_remaining|<2.589e-40. The known pieces
+have allocation <1.1e-42, giving the working screen <2.60e-40. This next
+calculation is PROPOSED, not executed here. Missing a chosen allocation
+alone does not reject the uniform certificate: compare with its properly
+scaled necessary ceiling first. Neither outcome is a nonexistence theorem.
+
+Constant scaling preserves linear homogeneous boundary/phase conditions,
+not an entire nonlinear physical neighborhood. Full paired-domain quantum
+variation, one-sided mass/log regularity and exact compatibility precede
+any interpretation of a finite-mode sum as the complete projection.
+Causal boundary/energy balance, matching, admission, nonlinear closure,
+semiclassical validity/noise and all-sector stability remain open.
+
+Final replay: 36 checks over 934 unchanged inputs;
+4 scientific runs, 1 failure, 3 successes,
+and 151 raw rows retained. The failed run used interval
+equality for an exact rational budget identity; exact rational arithmetic
+corrected that check without changing its target. The final replay followed
+a clarification distinguishing the selected allocation from the necessary
+ceiling. A further replay followed LF normalization of the retained
+diagnostic JSON; its exact earlier CRLF bytes are preserved in that file.
+Two exploratory diagnostics, including a missing +22 in Ps,
+are retained separately. Independent 70/100-digit direct quadrature agrees
+with the interval moments. Its first closeout attempt over-demanded decimal
+serialization precision; the corrected interval audit and failure are kept.
+No scientific source changed after final replay. No Lean ran; all 18
+inherited paths are unchanged. Checks do not certify the continuum source
+or a physical solution. All S169 checkboxes remain as before.
+
+Remaining to-do list: complete the joint quantum/contact source projection; actual Schur forward/adjoint solve and physical bolt/exterior certificate; X/admission, nonlinear closure and exact compatibility; matching and causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: controlled global scalar component of the source test
 
 2026-10-23, E003/S169. Research remains active, the full stable-wormhole
