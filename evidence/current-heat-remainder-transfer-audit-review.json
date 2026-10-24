@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23",
+  "story": "E003/S169",
+  "scope": "Exact paired-seam cancellation, bolt coordinate/domain transfer test and a whole-remainder numerical target. No numerical full heat residual or signed projection is claimed.",
+  "retained_inputs": [
+    "notes/stationary-massive-boundary-layer.md",
+    "notes/stationary-reference-nonbolt-stress.md",
+    "notes/stationary-paired-dirac-phase.md",
+    "notes/current-seed-directional-cold-response.md",
+    "notes/current-controlled-solution-audit-closeout.md"
+  ],
+  "ordinary_argument_review": [
+    "The exact image-trace cancellation is applied to the actual paired domain and its C2,1 reflected coefficient. The analytic interior continuation is a comparison only; its boundary difference remains in the error.",
+    "Conformal variation at fixed proper coordinate includes -f' integral(v). Fixed-z observation and density changes also remain.",
+    "No odd warping variation occurs below weight seven. Every boundary difference contains an odd jet; combining seed weight three and variation weight four starts at seven.",
+    "The full boundary remainder has a qualitative integrable O(t^3) trace allowance with a bounded smearing. No numerical heat-calculus constant is inferred from this order.",
+    "The actual smooth disk has an unbounded reciprocal-warping logarithmic derivative in the cylinder coordinate. Regularity of the disk and failure of the cylinder bound are compatible.",
+    "The critical thermal radial channel requires the regular log-free extension; square integrability alone is insufficient. Symbolic j covers all thermal frequencies.",
+    "The intrinsic diagonal L1 norm and its sufficient target refer to the entire response. Its numerical value remains unknown, as does certification of the full signed projection."
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "use": "Smooth strongly elliptic physical-half heat parametrix and boundary jet weights, sections 2 and 5. No quantitative constant or rough-base theorem is imported."
+    }
+  ],
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_attempts_and_failures": true,
+    "precision_bits": 512,
+    "interval_library": "python-flint==0.9.0",
+    "heat_t0": "0.001",
+    "heat_cap_error_allocation": "2.5e-43",
+    "intrinsic_diagonal_norm_sufficient_target": "1777.7385",
+    "remaining_projection_sufficient_target": "1.287e-40",
+    "full_heat_residual_executed": false,
+    "complete_projection_executed": false,
+    "C2_action_on_rough_base_family_proved": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

@@ -1,3 +1,81 @@
+# Active checkpoint: actual-domain heat remainder and bolt transfer gate
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED; the full-projection milestone is open.
+Executed work is a boundary/bolt METHOD TEST, not a full remainder certificate.
+See the [ordinary argument](current-heat-remainder-transfer-audit.md) and its frozen execution.
+
+The exact paired image cancellation remains on the actual C2,1 reflection.
+At fixed proper distance, conformal variation of reciprocal warping is
+dot f=-v f-f' integral(v), with v=-z^4. Its odd jets of weights one,
+three and five vanish. The first possible odd term has weight seven;
+the actual coefficient is in (0.0022680,0.0022681). The fixed-z coordinate
+and density terms also start at that weight and are retained.
+
+The smooth physical-half parametrix then gives a boundary diagonal
+response O(t^(5/2)) with a Gaussian profile, whose integral is O(t^3).
+This removes the unknown coefficient in |h1|<=H z^3 from a sufficient
+whole-residual estimate: the known global |h1|<1.2e-8 suffices. The
+intrinsic diagonal L1 constant D_heat is finite, but numerically UNKNOWN.
+This is a structural cancellation, not an improvement by normalization.
+
+The executed bolt test finds partial_rho log f=-1/rho+O(rho), independently
+of the retained positive gamma. A bounded |f'/f| cylinder estimate cannot
+cover the actual bolt. The metric itself is smooth there: in the original
+thermal angle, A(rho)/rho is smooth, even and equals one at zero. The full
+thermal family has radial potentials (j^2-1/4)/rho^2 and
+((j+1)^2-1/4)/rho^2. Its critical j=0 channel requires the regular log-free
+branch; square integrability alone is insufficient. This is an obstruction
+to direct transfer of that estimator, not a geometric or physical
+nonexistence result. The actual-domain qualitative heat argument survives.
+
+Older scalar stress and resolvent-gluing allowances do not supply the
+mixed heat residual. Differentiating a bound is not a bound on a metric
+derivative. The first unsupported quantitative step is the full propagated
+metric/time heat defect on the actual paired domain, including the bolt.
+
+The selected regulated weak response remains defined by the ordinary
+smearing argument. A C2 action on rough base metrics and the nonlinear
+domain are still unproved. The leading heat allowance <5.4970775e-48,
+magnetic <1.284506e-40, complete cold <1.693010e-43 and scalar <2.331e-44
+are unchanged. No cold/scalar optimization or total-source improvement
+is claimed. At solution radius 1e-8, the inequalities
+Y0+1e-8Z0+5e-17Z2<=1e-8 and Z0+1e-8Z2<1 remain open, along with exact
+compatibility, physical matching, causal boundary realization,
+semiclassical validity/noise and all-sector stability.
+
+Research decision: retain the construction and geometric smearing definition;
+sharpen the method to a heat-defect estimate on the actual paired half-domain,
+with a regular Cartesian bolt patch and the exact seam contribution. Park
+direct transfer of bounded-log-derivative cylinder estimates and attempts
+to replace a whole residual by further local coefficients.
+
+The SINGLE next calculation is a certified bound on the entire response
+kernel after the retained subtractions and a6 coefficient:
+
+    D_heat = sup_(0<t<=.001) t^-3 int |R_v(t,z)| dz <=1777.7385.
+
+The known |h1|<1.2e-8 then gives B_heat<=2.1332863e-5 and closes the
+reserved heat cap. The proposed calculation must control the actual-domain
+parametrix defect and its metric/time derivatives, including propagation,
+boundary and gluing errors. It has NOT BEEN EXECUTED; no numerical D_heat
+or B_heat certificate is supplied. Its attainability remains unknown.
+The complete signed screen |P_hat_rest|+E_rest<1.287e-40 is UNEXECUTED
+and sufficient only. No actual controlled solution is established.
+
+The frozen execution passed 38 checks over 960 unchanged inputs
+in 1 scientific run, with 0 scientific failures. Independent
+verification passed on its first attempt, using proper-distance integral
+inversion, the bolt energy identity and exact rational budget arithmetic.
+The checks support the displayed identities, not a numerical heat bound
+or the continuum parametrix theorem. All source snapshots are retained;
+no scientific source changed after success, no Lean ran, and all 18
+inherited paths remain unchanged.
+
+Remaining to-do list: certify the entire actual-domain heat remainder and complete signed quantum/contact projection; controlled forward/adjoint correction and nonlinear admission; C2 action/domain on the rough nonlinear phase and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: selected mixed heat limit and local coefficient capacity
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.

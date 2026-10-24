@@ -1,0 +1,86 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T03:12:54.896877+00:00",
+      "source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom fractions import Fraction as F\nfrom datetime import datetime,timezone\nimport json,subprocess,tempfile,traceback\nimport sympy as sp\nt=Path(tempfile.gettempdir());mf=t/'s169bi-closeout.json';meta=json.loads(mf.read_bytes())\nroot=Path(meta['satellite_root']);stem='current-heat-remainder-transfer-audit'\nreceipt=json.loads((root/'evidence'/f'{stem}.json').read_bytes());run=receipt['runs'][-1]\nevfile=root/'evidence'/f'{stem}-closeout-verification.json';ev=json.loads(evfile.read_bytes()) if evfile.exists() else {'attempts':[]}\nattempt=dict(started_utc=datetime.now(timezone.utc).isoformat(),source_utf8=Path(__file__).read_text(encoding='utf-8'),source_sha256=sha256(Path(__file__).read_bytes()).hexdigest())\ndef bounds(x):\n a=x['decimal_enclosure'];u=F(10)**int(a['exponent']);m=F(a['mid'])*u;r=F(a['rad'])*u\n return m-r,m+r\ntry:\n assert run['status']=='passed' and all(x['passed'] for x in run['checks'])\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/p).read_bytes()).hexdigest()==h for p,h in run['input_sha256_after'].items())\n for kind in ['planning','satellite']:\n  rr=Path(meta[kind+'_root'])\n  assert all(sha256((rr/p).read_bytes()).hexdigest()==h for p,h in meta[kind+'_inherited'].items())\n  assert subprocess.check_output(['git','rev-parse','HEAD'],cwd=rr,text=True).strip()==meta[kind+'_previous_commit']\n  assert not subprocess.check_output(['git','diff','--cached','--name-only'],cwd=rr).strip()\n # Independently invert the proper-distance integral by Lagrange inversion.\n # This does not call or import the production ODE/reciprocal-series code.\n z=sp.symbols('z');cases=[]\n for b,u,c3,c4,c5,c6 in [(1,2,3,4,5,6),(2,-3,5,7,-11,13),(3,5,-7,11,13,-17)]:\n  Q=b*b+u*z*z+c3*z**3+c4*z**4+c5*z**5+c6*z**6\n  inv=sp.series(1/sp.sqrt(Q),z,0,9).removeO()\n  YY=sp.integrate(inv,z)\n  I4=sp.integrate(sp.series(z**4*inv,z,0,9).removeO(),z)\n  FF=sp.series(b*z**4*inv-b*sp.diff(Q,z)*I4/(2*Q),z,0,9).removeO()\n  result=[]\n  for n in range(1,8):\n   # FF starts at degree four, so only terms through n-4 are needed.\n   if n<4:cc=sp.Integer(0)\n   else:\n    ratio=sp.series((YY/z)**(-n),z,0,n-3).removeO()\n    cc=sp.expand(sp.diff(FF,z)*ratio).coeff(z,n-1)/n\n   expect={4:sp.Integer(b)**4,6:-sp.Rational(u*b**4,30),7:-sp.Rational(3*c3*b**5,10)}.get(n,0)\n   assert sp.simplify(cc-expect)==0,(b,n,cc,expect)\n   result.append(str(cc))\n  cases.append(dict(parameters=[b,u,c3,c4,c5,c6],variation_coefficients_1_to_7=result))\n r,g,q2,q3=sp.symbols('r g q2 q3')\n ss=g*r*r/2+g*q2*r**4/48+(g*q2*q2/2880-g*g*q3/480)*r**6\n energy=sp.expand(sp.diff(ss,r)**2-2*g*ss-q2*ss**2/2+q3*ss**3/6)\n assert all(energy.coeff(r,k)==0 for k in range(7))\n # Original physical heat budget, calculated with exact rational arithmetic.\n dguard=F('1777.7385');hg=F('1.2e-8');bg=F('2.1332863e-5')\n assert dguard*hg<bg\n budget=F('2.3454197e-13')*F('.001')+hg*dguard*F('.001')**2/2\n assert budget<F('1.0666666e-11')\n data=run['numerics'][-1]\n lo,hi=bounds(data['D_heat_threshold']);assert lo<=bg/hg<=hi\n lo,hi=bounds(data['conditional_heat_budget']);assert lo<=budget<=hi\n lo,hi=bounds(data['first_odd_variation_coefficient']);assert F('.0022680')<lo<hi<F('.0022681')\n assert all(run[k] is False for k in ['B_heat_numerically_bounded','D_heat_numerically_bounded','full_heat_cap_certified','complete_signed_projection_evaluated','goal_complete'])\n result=dict(D_heat_sufficient=str(data['D_heat_sufficient']),B_heat_sufficient='2.1332863e-5',\n  global_h_bound='1.2e-8',conditional_heat_budget_exact=str(budget),\n  first_odd_variation_coefficient_enclosure=['0.0022680','0.0022681'],\n  independent_Lagrange_inversion_cases=cases,independent_bolt_energy_identity=True,\n  direct_cylinder_transfer_obstruction='unbounded radial log derivative, residue -1',\n  D_heat_numerically_bounded=False,full_heat_cap_certified=False,complete_projection_evaluated=False,\n  controlled_solution_certified=False)\n attempt.update(status='passed',result=result)\n meta.update(checks=len(run['checks']),inputs=len(run['input_sha256_after']),runs=len(receipt['runs']),failed_runs=sum(x['status']!='passed' for x in receipt['runs']),\n  json_rows=sum(2+len(x['checks']) for x in receipt['runs']),independent_result=result,\n  scientific_frozen_sha256={p:run['input_sha256_after'][p] for p in run['frozen_sources_utf8']})\n mf.write_text(json.dumps(meta,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nexcept Exception:attempt.update(status='failed',exception=traceback.format_exc())\nattempt['finished_utc']=datetime.now(timezone.utc).isoformat();ev['attempts'].append(attempt)\nevfile.write_text(json.dumps(ev,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:v for k,v in attempt.items() if k not in ['source_utf8','result']}),flush=True)\nif attempt['status']!='passed':raise SystemExit(1)\n",
+      "source_sha256": "720d831d9cd131adf39acefa723180d46d8334918fab0ee8dadf8d9dfce52749",
+      "status": "passed",
+      "result": {
+        "D_heat_sufficient": "1777.7385",
+        "B_heat_sufficient": "2.1332863e-5",
+        "global_h_bound": "1.2e-8",
+        "conditional_heat_budget_exact": "1066666554197/100000000000000000000000",
+        "first_odd_variation_coefficient_enclosure": [
+          "0.0022680",
+          "0.0022681"
+        ],
+        "independent_Lagrange_inversion_cases": [
+          {
+            "parameters": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "variation_coefficients_1_to_7": [
+              "0",
+              "0",
+              "0",
+              "1",
+              "0",
+              "-1/15",
+              "-9/10"
+            ]
+          },
+          {
+            "parameters": [
+              2,
+              -3,
+              5,
+              7,
+              -11,
+              13
+            ],
+            "variation_coefficients_1_to_7": [
+              "0",
+              "0",
+              "0",
+              "16",
+              "0",
+              "8/5",
+              "-48"
+            ]
+          },
+          {
+            "parameters": [
+              3,
+              5,
+              -7,
+              11,
+              13,
+              -17
+            ],
+            "variation_coefficients_1_to_7": [
+              "0",
+              "0",
+              "0",
+              "81",
+              "0",
+              "-27/2",
+              "5103/10"
+            ]
+          }
+        ],
+        "independent_bolt_energy_identity": true,
+        "direct_cylinder_transfer_obstruction": "unbounded radial log derivative, residue -1",
+        "D_heat_numerically_bounded": false,
+        "full_heat_cap_certified": false,
+        "complete_projection_evaluated": false,
+        "controlled_solution_certified": false
+      },
+      "finished_utc": "2026-10-24T03:12:57.237959+00:00"
+    }
+  ]
+}
