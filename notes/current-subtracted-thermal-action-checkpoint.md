@@ -1,3 +1,102 @@
+# Active checkpoint: seed conversion closed; actual coincident quantum norm remains unknown
+
+2026-10-24, E003/S169.
+See [the ordinary paired conversion argument](current-variable-contact-conversion.md).
+
+EXECUTED: the complete first two jets of the geometric-to-mass
+common-regulator conversion at the actual paired seed. The proof uses
+closed first-order congruences, complementary adjoint/composition domains,
+the exact curved Brownian bridge with a second scalar insertion, and
+weak integrations by parts on the original cubic mass/log seam. It
+retains every angular and thermal mode, the regular bolt, divergence
+completion and diagonal contacts. No smooth surrogate domain is used.
+
+For Delta=div grad, R=-Q'', H0=-q-1/3 and
+H1=(q^2/6-1/30)/C, the time-reduced conversion is
+
+ J''[u,v]=(4pi)^-1 integral {
+  [8H1+C R^2/15+2C Delta R/15]uv
+  -[H0/3+C R/5]grad u.grad v-C(Delta u)(Delta v)/15 }.
+
+The original normalized action multiplies this by -2G/B^2. The seam
+distribution is included before the physical traces make its pairing
+vanish. Common regulator removal is proved for these seed jets on
+bounded admitted directions; a strong norm limit or uniform nonlinear
+conversion is not inferred.
+
+The complete LOCAL conversion minus its normal has graph bound
+
+ eta_conv <8.357937945e-5,
+ .18-eta_conv >.1799164206205.
+
+It consumes less than .047 percent of the existing canonical allocation.
+For a converted-mass implementation, the sufficient remaining norm
+target is .1799164, with all previously allocated local terms counted
+once. This target is UNKNOWN on the actual nonlocal operator. It is
+not a failing measured value or an excessive known upper bound.
+
+The conversion has a nonzero finite fourth normal, but an exact
+all-mass heat-integral identity confirms that the EXISTING geometric
+normal already has the correct finite contact. The -31/30 and combined
+-6/5 constants, normal inverse and slow-root definition are unchanged.
+Adding the conversion again to that normal would double-count it.
+In a mass implementation use N_mass=N_geom-Hconv,0, so the sum restores
+N_geom exactly. The constant probe also reproduces the prior signed
+-1.319286561400121539265e-28 result; it is not the selected projection.
+
+This closes the seed representation/contact gap, not the complete strong
+response. Existing separated and identical-collar domain-transfer bounds
+remain usable: the conversion is local and cancels in those differences.
+The near-diagonal remainder still needs genuine output/simultaneous
+derivative and weighted moment estimates. Differentiating the older
+weak-form kernel envelope would not supply them.
+
+The .00368 extra global allowance, combined .18368 allocation, joint
+affine <=7.49e-12, known-source <=1e-14, and independent Mellin
+Efar<=1e-10 remain unproved actual bounds. No full strong data or
+correction is computed. The earlier sufficient projection enclosure
+E_rest<2.123e-42<1.287e-40 is unchanged and not recomputed; its zero
+center is an enclosure center, not a measured signed projection.
+
+At rho=1e-8 the unclosed conditions remain
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with unproved
+Y0<=5e-9, Z0<=.25, Z2<=5e7. Fast-sector coefficient admission does
+not admit the full nonlinear X ball. Mass/slow matching, exact
+compatibility, physical matching, validity/noise and all-sector stability
+remain unresolved. No actual controlled solution is established.
+The feasibility audit stays CLOSED and the full objective ACTIVE.
+
+RESEARCH DECISION: retain the construction and matched principal
+subtraction, sharpening the method with the now exact seed conversion.
+Use the radial mass-kernel identities only with the complete local
+conversion and common geometric restoration. The contact budget fits;
+the nonlocal strong estimate and nonlinear conditions have no certified
+size. No cold/scalar optimization or construction switch is justified.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): derive and evaluate the
+complete coincident, moment-subtracted radial mass-kernel response in
+the coupled H3 graph on admitted fast inputs, against .1799164. Include
+the symmetric reflected kernel, diagonal jumps/seagulls, all angular and
+thermal tails, the explicit conversion and original global coupling;
+count the already allocated local blocks once. Finite mode samples and
+pointwise envelopes do not certify this norm.
+
+Verification: the frozen acceptance run passed 29 supporting checks
+over 978 unchanged inputs. Independent Euler variation reproduced the
+entire local strong row; a normal-coordinate calculation checked the
+curvature-gradient insertion coefficient and a separate graph sum
+verified the numerical allocation. Both runs passed on their first
+attempt. The ordinary closed-domain, trace and weak-remainder arguments
+supply the continuum scope. Checkers do not prove the open nonlocal
+estimate. Two development calculations, their exact sources and outputs
+are retained. No failed scientific runs, post-success scientific edits
+or Lean runs occurred. All 18 inherited paths and immutable audits remain
+unchanged, and no task checkbox is promoted.
+
+Remaining to-do list: actual strong coincident quantum response and global data; mass/slow matching, full nonlinear admission and contraction; exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: fast graph domain admitted; actual matched response remains open
 
 2026-10-24, E003/S169.
