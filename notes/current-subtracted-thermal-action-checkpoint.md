@@ -1,3 +1,133 @@
+# Active checkpoint: massive thermal near response bounded; zero-winding response and admission open
+
+2026-10-24, E003/S169.
+See [the massive thermal argument](current-massive-thermal-strong-return.md).
+
+EXECUTED: the complete massive nonzero-winding near response on the
+retained cylinder comparison, and its first metric variation, each have
+strong bounds below 1e-1000 on the SAME admitted mass/log family. This
+is a component of the actual paired problem through the exact split
+  H_actual = H_cylinder,zero + H_cylinder,thermal + Delta H_actual,cylinder.
+The last term retains the actual finite bolt and its previously bounded
+uniform return. The continuous-frequency term is not a newly selected
+physical state on the actual geometry. The failed global bolt-frequency
+gap shortcut remains rejected.
+
+The ordinary argument proves a fixed-domain frequency strip for the
+cylinder, differentiates its diagonal and reflected kernels on the
+physical side, retains the rough fourth mass vertex, and identifies the
+common thermal regulator limit using nonzero-winding separation. All
+angular levels and thermal windings are included by entire counting and
+geometric-tail estimates. Local ultraviolet contacts and finite local
+restorations remain in the zero-winding term; the thermal seagull remains
+in the differentiated thermal functional. The original near input split,
+normalization, state and paired realization are unchanged. No smooth
+surrogate domain or finite physical mode selection is used.
+
+Explicit constants: frequency Neumann ratio <.111, kernel factor <1.125,
+near input jet factor <1503.018, and weighted output factor <.999.
+The period is enclosed about 1.242276488137924e34. With all angular,
+winding, normalization and Cauchy factors retained, natural-log bounds
+for the near H3 norm, its metric derivative per A norm, and its fast
+bilinear metric derivative are each <-2.236e33. Hence each is <1e-1000.
+The independent verification uses still larger constants, not an
+underflowed floating-point exponential.
+
+This closes ONLY the thermal near component and its first variation on
+the already admitted family. Replacing its bound by zero changes the
+seed/fast-neighborhood budget by <2e-1000. The existing extra 1e-12
+reserve therefore suffices for the uniform relative return and this
+thermal term together; no allocation is renormalized or enlarged.
+The remaining condition is
+  eta_zero_winding_curved_seed + 1e-11 C3_other < .159916395999.
+Both constants remain UNKNOWN. Necessary individual thresholds for this
+sufficient budget are eta_zero_winding_curved_seed<.159916395999 and
+C3_other<1.59916395999e10, but these alone do not ensure their sum passes.
+An equal split would require eta<.0799581979995 and C3_other<7.99581979995e9.
+Those are conditional targets, not executed estimates or new allocations.
+The contact seminorm targets M_A<=3.18e27 and M_V<=2.66e30 remain unknown.
+
+FIRST UNSUPPORTED CONTINUUM STEP: the common-regulated zero-winding
+curved Hessian minus the matched normal operator, with ALL contacts
+combined, and its first metric variation in the strong H3 graph on the
+actual admitted mass/log fields. The relative and thermal regulator
+arguments do not supply that local ultraviolet cancellation. The weak
+functional/seed-domain results do not imply this strong statement.
+Do not import the zero-winding smooth-symbol theorem or replace the
+actual rough domain. The A norm alone is not a demonstrated substitute
+for every higher spatial norm the local response may require.
+
+The uniform relative result <2.205e-13 and its fast derivative <.001253
+remain valid in their stated scopes. After the fast radius 1e-11, the
+remaining mass/slow/global background still needs A<=.00094319. Its
+value, global graph-to-A comparison, complete C3 and original X/graph
+comparison remain unknown. These are earlier admission/regularity
+requirements, not numerical errors that thermal optimization can repair.
+The present evidence gives neither a certified excessive COMPLETE upper
+bound nor an actual obstruction to the local response or construction.
+Attainability of the remaining targets is not yet established: unlike
+the thermal term, zero winding has no Boltzmann suppression, and surviving
+mass/contact vertices require their own cancellation and norm accounting.
+
+At rho=1e-8 the exact nonlinear conditions remain
+  Y0+1e-8 Z0+5e-17 Z2<=1e-8,  Z0+1e-8 Z2<1.
+Allocations Y0<=5e-9, Z0<=.25, Z2<=5e7 are still unproved. They would
+give preserved radius <=1e-8 and contraction <=.75 if all their actual
+operator/domain hypotheses held. They are not obtained from this bound.
+The prior selected E_rest<2.123e-42<1.287e-40 screen keeps its original
+scope: zero was an enclosure center, not the measured remaining signed
+projection. The COMPLETE |P_hat_rest|+E_rest<1.287e-40 test has not been
+executed or certified here; it is sufficient, not necessary for existence.
+No actual controlled solution is established. Exact compatibility,
+physical matching, semiclassical validity/noise and all-sector stability
+remain open. The full stable-wormhole objective stays ACTIVE/INCOMPLETE,
+and the closed feasibility audit is preserved.
+
+The proposed transfer from the Jacobian-Weyl work is methodological:
+domain and adjoint control must precede quantum differentiation. The
+Navier-Stokes pattern then organizes the actual remainder and contraction
+constants. No existence theorem or analytic regularity assumption from
+either project is imported into the wormhole argument.
+
+RESEARCH DECISION: retain this construction and sharpen the complete
+zero-winding method. Park the thermal near component, controlled relative
+return, cold/scalar and flat angular components; improving them cannot
+resolve the unknown zero-winding condition. The result is component-level
+progress, not a positive feasibility verdict for an actual solution.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute the complete
+common-regulated zero-winding cylinder Hessian minus its matched normal
+operator and its first metric variation in the existing strong H3 graph.
+Combine the local contacts before taking norms, establish the strong
+regulator limit on the actual mass/log domain, then test
+eta_zero_winding_curved_seed+1e-11 C3_other<.159916395999 and the contact
+targets. Keep the certified actual-boundary return and all original norm
+comparisons explicit. If the required regularity is stronger than the
+current graph controls, exhibit that failure before assigning a number.
+
+Verification: acceptance passed 37 supporting checks over 34 unchanged
+inputs on its second attempt. The first run compared expanded and
+factored Sympy expressions by structural equality; expanding their
+difference repairs that check without changing the ordinary identity.
+Independent verification also passed on its second attempt. Its first
+run demanded exact equality between interval enclosures; the repair uses
+overlap plus a strict rational lower bound and a larger Cauchy factor.
+Both failed runs, exact source snapshots and tracebacks are retained.
+Independent direct output differentiation, exact angular summation,
+a trigonometric frequency integral, a coarser jet induction and larger
+source/Cauchy/embedding constants all preserve the <1e-1000 conclusion.
+The ordinary domain and common-regulator argument supplies the continuum
+scope; checkers do not establish the unknown zero-winding response.
+Both exploratory development paths and their exact outputs are retained;
+the three-dilation approach was not selected and no new analyticity
+assumption was adopted. No post-success scientific edits or Lean runs
+occurred. All 18 inherited paths and immutable audits are preserved;
+no story checkbox is promoted.
+
+Remaining to-do list: zero-winding curved response and contact jets, far/global metric response and admission, actual correction, original X/graph comparison and nonlinear closure, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: uniform near-domain return bounded; local response and global admission open
 
 2026-10-24, E003/S169.
