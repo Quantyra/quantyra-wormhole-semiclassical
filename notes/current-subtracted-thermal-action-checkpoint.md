@@ -1,3 +1,86 @@
+# Active checkpoint: complete regulator inventory tested; strong response still unknown
+
+2026-10-24, E003/S169.
+See [the mass response regulator audit](current-mass-response-regulator-audit.md).
+
+EXECUTED: the exact positive-common-cutoff third mass derivative,
+including the two cyclic triangle orientations, three pair contacts and
+the triple coincidence contact; the common divergent coefficients;
+actual admissible z^5 contact integrals; and a certified complete-angular
+cancellation diagnostic. D means the skew-adjoint paired representative,
+not the unpaired covariant operator. The mass square domain follows by
+composition from the unchanged first-order domain. All thermal and
+finite-domain effects remain inside its exact heat kernel.
+
+The surviving cubic logarithmic contact contains b(Delta b)^2. Its
+coefficient does NOT share the finite conversion's cancellation. The
+complete constant-direction angular diagnostic has ultraviolet ratios
+triangle/complete=6 and absolute-sum/absolute-complete=13. At t=1e-6,
+the certified ratios are 6.000000053051645... and
+13.000000106103289.... Every angular level and its remainder is included.
+This is an auxiliary coefficient diagnostic; the actual-domain z^5
+calculation separately confirms nonzero common contacts. Neither is
+the full nonlocal strong norm, a physical projection, or an actual
+corrected geometry. No new nonlinear inequality is closed.
+
+The first unsupported continuum step remains the complete strong
+common-regulated response on the admitted mass/log neighborhood, with
+matched principal subtraction and finite-domain return. The raw
+separate-word ultraviolet estimator diverges; the common-subtracted weak
+functional does not thereby fail. The strong remainder constant is
+UNKNOWN, not a known finite bound that exceeds its target. No actual
+operator or wormhole obstruction is established by this test.
+
+For fast graph radius 1e-11 the conditional nonlocal requirement is
+eta_seed+1e-11 C3<.1599164. Thus C3<1.599164e10-1e11 eta_seed;
+both eta_seed and C3 remain unknown. Relating this to Z2<=5e7 requires
+the original X/input-graph and preconditioned output comparisons, plus
+global/slow and other-sector bounds. Setting those comparisons to one
+would not be certification. The <9.841e-33 conversion bound remains
+ONLY a seed outer fast contribution, not a uniform global constant.
+
+Preserve the previously sufficient E_rest<2.123e-42<1.287e-40 screen;
+zero is its enclosure center, not a measured signed value. No full
+signed projection is recomputed here. The seed contact targets
+M_A<=3.18e27, M_V<=2.66e30 and the original nonlinear inequalities
+Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1 remain unclosed.
+Y0<=5e-9, Z0<=.25 and Z2<=5e7 remain unproved allocations.
+Nonlinear admission, exact compatibility, physical matching/causal
+realization, validity/noise and all-sector stability are unresolved.
+The audit stays CLOSED; the full objective stays ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and use the complete
+same-regulator Duhamel combination for the direct Sobolev method.
+Reject triangle-only and separately absolutized ultraviolet estimators.
+Do not optimize cold/scalar terms, the seed tube or the controlled
+conversion contact. The cancellation test is executed; the decisive
+strong feasibility bound is NOT executed and remains unknown.
+
+SINGLE NEXT CALCULATION (PROPOSED): bound the first metric variation of
+the common-regulated, moment/principal-subtracted mass Hessian from the
+coupled fast graph to H3 uniformly on the actual admitted mass/log
+family. Combine all contacts before norms, keep the highest derivative
+in L2, and retain all angular/thermal terms and finite-domain returns.
+An explicit C3 and the original X/graph comparison must test the stated
+targets. No change of field theory, physical source or domain is selected.
+
+Verification: frozen acceptance passed 23 supporting checks over 36
+unchanged inputs. Noncommuting trace expansions through seventh order
+check the Duhamel factors; they are algebra tests, not selected physical
+modes. Independent infinite sums using Stirling numbers and a different
+Taylor order reproduce the angular intervals. Independent integration
+by parts retains the actual nonzero Q'(z_h) endpoint in the z^5 contact
+test. Acceptance and independent verification each passed on their first
+attempt. The ordinary domain/Duhamel argument supplies the continuum
+scope; checks do not establish the missing strong norm. Development
+source/output are retained. No failed scientific runs, post-success
+scientific edits or Lean runs occurred. All 18 inherited paths and the
+immutable audit are preserved; no story checkbox is promoted.
+
+Remaining to-do list: complete strong nonlocal response and seed quantum norms, actual global correction, original X/graph comparison and nonlinear admission/contraction, mass/slow matching, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: third seed conversion closed; strong nonlocal metric response open
 
 2026-10-24, E003/S169.

@@ -1,0 +1,48 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T18:51:22.407543+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import factorial,comb\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169ci-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-mass-response-regulator-audit'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters();q=pars['q'];C=pars['C']\n # Independent all-n implementation: Stirling numbers instead of Eulerian\n # polynomials; eight Taylor terms instead of twelve.\n stir=[[1]]\n for n in range(1,27):\n  oldrow=stir[-1];stir.append([0]+[(oldrow[k-1] if k-1<len(oldrow) else 0)+k*(oldrow[k] if k<len(oldrow) else 0) for k in range(1,n+1)])\n reports=[]\n for rec in ans['angular']:\n  t=old.decode(rec['t']);r=(-q*t/C).exp();v=r/(1-r);b=t/C\n  sums=[v]+[sum((coef*factorial(k)*v**k/(1-r) for k,coef in enumerate(stir[n]) if coef),arb(0)) for n in range(1,27)]\n  def moment(k,j):\n   return sum((comb(k,i)*q**(k-i)*(2*q*sums[k+i+2*j]+4*sums[k+i+2*j+1]) for i in range(k+1)),arb(0))/C**k\n  moments=[]\n  for k in range(4):\n   partial=sum(((-b)**j/factorial(j)*moment(k,j) for j in range(9)),arb(0))\n   error=b**9/factorial(9)*moment(k,9);moments.append(partial+arb(0,error.abs_upper()))\n  combined=(-8*t*moments[1]+24*t*t*moments[2]-8*t**3*moments[3])/(2*C/t)\n  assert combined.overlaps(old.decode(rec['combined']))\n  reports.append(old.encoded(combined))\n # Independent integration by parts for a1, including the regular bolt's\n # nonzero Q' endpoint. The actual Q(z_h)=0, not Q'(z_h)=0.\n Q=[pars['beta'],arb(0),pars['u'],-4*pars['beta']-2*pars['u']-pars['tau'],3*pars['beta']+pars['u']+pars['eps'],-2*pars['eps'],pars['eps']]\n qp=sum((j*Q[j]*zh**(j-1) for j in range(1,7)),arb(0))\n intQ=sum((Q[j]*zh**(j+14)/(j+14) for j in range(7)),arb(0))\n A1=2*C/(3*arb.pi())*(-qp*zh**15-135*intQ)\n assert A1.overlaps(old.decode(ans['admissible_z5_third_heat_coefficients'][1]))\n A0=-C*zh**16/(2*arb.pi());assert A0.overlaps(old.decode(ans['admissible_z5_third_heat_coefficients'][0]))\n # Independently differentiate the product-frame invariant coefficient.\n z,b,cc,qq,R,dd=S.symbols('z b C q R d')\n H1=(qq**2/6-S.Rational(1,30))/cc\n exact=(2*H1*S.exp(2*b*z**5)-cc*S.exp(-2*b*z**5)*(R-2*b*dd)**2/60)/(4*S.pi)\n third=S.diff(exact,b,3).subs(b,0)\n expected=(16*H1*z**15+2*cc*R**2*z**15/15+4*cc*R*z**10*dd/5+4*cc*z**5*dd**2/5)/(4*S.pi)\n assert S.expand(third-expected)==0\n # Direct whole family coefficient: (2t d/dt)^3 on the universal angular\n # heat powers gives (-8,0,8), reproducing both the power and log contacts.\n assert [(2*k)**3 for k in [-1,0,1]]==[-8,0,8]\n for key in ['exact_positive_cutoff_vertex_inventory','actual_mass_square_domain_from_composition','common_logarithmic_third_contact_retained','complete_angular_test_executed','admissible_finite_seed_contact_test_executed']:assert ans[key]\n for key in ['physical_domain_changed','physical_source_changed','normalization_changed','finite_physical_modes_selected','actual_strong_remainder_certified','uniform_strong_regulator_limit_proved','original_X_graph_comparison_known','actual_contact_jets_certified','full_signed_projection_executed','actual_controlled_solution','nonlinear_admission','exact_compatibility','physical_matching','validity_noise','all_sector_stability','next_strong_calculation_executed']:assert not ans[key]\n for kind in ['planning','satellite']:\n  rr=Path(m[kind+'_root']);assert all(sha256((rr/f).read_bytes()).hexdigest()==h for f,h in m[kind+'_inherited'].items())\n at.update(status='passed',independent_stirling_complete_sums=reports,independent_a1_boundary_integration=old.encoded(A1),independent_a0=old.encoded(A0),independent_cubic_heat_invariant=True,scope='Regulator identity and contact/cancellation tests only; no strong response certificate',post_success_scientific_edits=False)\nexcept Exception:at.update(status='failed',exception=traceback.format_exc())\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n files=list(run['input_sha256_after'])+[f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in sorted(set(files))};mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps({k:v for k,v in at.items() if k!='verifier_source_utf8'},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "d531f9c7a2db7fb369da4dadf2a50b84c6d13d54b727bd49eaf06e008b2a5eb3",
+      "independent_stirling_complete_sums": [
+        {
+          "ball": "[-7.9999999292644739476 +/- 7.43e-20]",
+          "decimal_enclosure": {
+            "mid": "-7999999929264473947641406353905610102038",
+            "rad": "32834290469792907265",
+            "exponent": "-39"
+          }
+        },
+        {
+          "ball": "[-7.9999999999929264471 +/- 7.58e-20]",
+          "decimal_enclosure": {
+            "mid": "-7999999999992926447057060647685270919272",
+            "rad": "32834317201669357569",
+            "exponent": "-39"
+          }
+        }
+      ],
+      "independent_a1_boundary_integration": {
+        "ball": "[-656944557.6871030791573 +/- 4.43e-14]",
+        "decimal_enclosure": {
+          "mid": "-656944557687103079157308808149848421258",
+          "rad": "35476518482214913",
+          "exponent": "-30"
+        }
+      },
+      "independent_a0": {
+        "ball": "[-7817640236.496421009858 +/- 8.84e-13]",
+        "decimal_enclosure": {
+          "mid": "-7817640236496421009858461733906244916190",
+          "rad": "422165471681314817",
+          "exponent": "-30"
+        }
+      },
+      "independent_cubic_heat_invariant": true,
+      "scope": "Regulator identity and contact/cancellation tests only; no strong response certificate",
+      "post_success_scientific_edits": false,
+      "finished_utc": "2026-10-24T18:51:22.561479+00:00"
+    }
+  ]
+}
