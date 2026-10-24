@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-23",
+  "story": "S169",
+  "scope": "Actual global scalar inverse and scalar component of the reduced-source projection; independent canonical shape row remains unevaluated.",
+  "retained_inputs": [
+    "notes/current-schur-bolt-functional.md",
+    "notes/current-uniform-bolt-certificate-obstruction.md",
+    "notes/current-seed-full-trace-defect.md",
+    "notes/current-seed-directional-cold-response.md",
+    "notes/current-finite-local-action-assembly.md",
+    "notes/product-centered-scalar-cold-response.md",
+    "evidence/current-schur-scalar-projection-development.json"
+  ],
+  "ordinary_argument_review": [
+    "The complete scalar form is coercive in the weighted L2 mass term. Its actual infinite-domain residual certifies the trial; the Galerkin matrix alone does not.",
+    "The fractional cold exponent only selects trial functions. They remain smooth at the actual positive-temperature bolt and retain the allowed outer phase. The complete finite-geometry operator is used in the residual.",
+    "Keep the factored thermal geometry when applying high derivatives. Coefficient midpoint/residual-radius splitting is a triangle bound, not a change of normalization.",
+    "Use the corrected positive normalized trace row and negative physical action factor. The complete reduced projection has both canonical scalar and shape contributions.",
+    "Density, displacement and the nonzero bolt endpoint enter the source projection. Unknown quantum source terms are bounded or explicitly left unknown, never assigned zero.",
+    "The scalar inverse error target is distinct from the unknown source/contact uncertainty. Do not infer full feasibility from this component or interpret an oversized allowance as nonexistence."
+  ],
+  "strongest_comparator": "The independently bounded bolt value disproves using the tested polynomial Galerkin point value as an accurate global scalar inverse. Fractional trial functions are assessed by the complete residual, not sample agreement.",
+  "source_review": "Read the actual scalar form, Green-domain realization, signed full trace identity, finite-seed displacement theorem and current quantum-domain limitations. No new external continuum theorem is imported; the residual bound follows directly from the retained scalar form and Cauchy--Schwarz.",
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_runs_snapshots_and_failures": true,
+    "interval_library": "python-flint==0.9.0",
+    "precision_bits": 512,
+    "trial_dimension": 22,
+    "weighted_strong_residual_target": "<1e-9",
+    "scalar_inverse_pairing_error_target": "<1e-40",
+    "mass_coercivity_lower": "3.99",
+    "reduced_source_entire_budget_necessary_ceiling": "2.6035780e-40",
+    "full_signed_reduced_source_computed": false,
+    "full_physical_solve_executed": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

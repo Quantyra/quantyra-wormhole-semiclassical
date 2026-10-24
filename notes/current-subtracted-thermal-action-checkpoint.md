@@ -1,3 +1,83 @@
+# Active checkpoint: controlled global scalar component of the source test
+
+2026-10-23, E003/S169. Research remains active, the full stable-wormhole
+objective incomplete and the feasibility audit closed. Previous turn:
+progress, completion of the saved-result planning reconciliation.
+
+The [executed scalar projection](current-schur-scalar-projection.md) now
+uses a controlled GLOBAL scalar inverse, rather than its bolt value alone.
+For xi=z^4,J=0, with the fixed York return S=z^4/2,T=-z^4,
+
+    r_eff(xi)/W = R_nu(z^4/2+A^-1 B xi) - R_b(z^4),
+    1.11e-38 < R_nu(z^4/2+A^-1 B xi) < 2.274e-38.
+
+These are outward bounds for the actual scalar component, including
+known upper allowances for unevaluated source/density/transport terms.
+R_b is the COMPLETE canonical shape defect, not a seed gradient, local
+trace identity or finite angular truncation. Its actual value is UNKNOWN.
+The full signed reduced-source test is still UNEXECUTED.
+
+The selected 22-dimensional fractional trial is checked against the
+complete finite-seed scalar operator. Its weighted strong residual is
+<1.4719774E-11; mass coercivity >3.99 gives scalar form
+error <7.3691037E-12 and weighted L2 error
+<3.6891662E-12. The resulting error in the
+actual scalar source pairing is <2.3300059E-44.
+This closes the numerical scalar-inversion precision required by the
+projection. It does not supply an admission-space inverse or a full solve.
+
+The scalar inverse uses the physical positive-temperature bolt and mass/log
+phase. Fractional cold behavior only selects trial functions. The actual
+thermal geometry and all local/anomaly terms remain in the residual.
+Ordinary polynomial trials missed the independently bounded bolt value
+by about .075 despite plausible interior samples; those diagnostics remain.
+The outer source majorant required an exact vacuum/Weyl cancellation
+before interval estimation. No zero-containing physical coefficient was
+dropped and no normalization or boundary condition changed.
+
+The known areal scalar pairing is approximately 1.69240136e-38. The
+unevaluated trace contacts have upper allowance <5.8053855e-39; including
+scalar numerical error the rounded allowance is <5.8054088e-39, over 22
+times the necessary reduced-source ceiling 2.6035780e-40. This is a KNOWN
+UPPER allowance that fails to resolve the cancellation, not a lower bound
+on the actual error. The full shape contribution remains an UNKNOWN value.
+
+Necessary coarse shape interval for the current uniform TT certificate:
+
+    1.085e-38 < R_b(z^4) < 2.300e-38,
+    |R_nu(z^4/2+A^-1 B xi)-R_b(z^4)| < 2.6035780e-40.
+
+The interval alone is not sufficient. The actual paired source/contact
+values must satisfy the difference condition, with correlations retained.
+Numerical inversion accuracy is demonstrated; the required cancellation
+is not. There is no basis yet for calling the source condition attainable
+or impossible. The old full-V/.0022 certificate remains rejected.
+
+Research decision: keep exact scalar Schur elimination and the controlled
+global scalar test. Stop scalar solver refinement. The single next
+calculation is the complete canonical shape projection R_b(z^4) together
+with the correlated scalar contacts, using the actual first reference
+correction and common-subtracted quantum Hessian on the paired domain.
+Compare the SIGNED difference with 2.6035780e-40. A violation rejects the
+uniform TT certificate and selects direct signed/directional remainder
+control; it would not prove nonexistence. A passing projection only permits
+the subsequent global forward/point-adjoint and admission tests.
+
+Final replay: 24 checks across 928 unchanged inputs,
+5 scientific attempts, 3 failures, two successes
+and 115 raw rows, all snapshots retained. Two separate
+exploratory diagnostics are preserved with their narrower provenance.
+Independent Decimal verification recomputed 1469
+moments, the prior-polynomial pairing, residual/error budgets and coverage
+of the 5 final positivity cells. Post-success
+scientific changes received a complete replay; no scientific edit followed
+the final success. No Lean ran. Checks support the ordinary arguments,
+not a physical continuum solution or stability theorem.
+
+Remaining to-do list: complete signed reduced-source projection with correlated quantum/contact errors; actual Schur forward/adjoint solve and physical bolt/exterior certificate; X/admission, nonlinear closure and exact compatibility; matching and causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: actual Schur bolt functional and source thresholds
 
 2026-10-23, E003/S169. The full stable-wormhole objective remains active
