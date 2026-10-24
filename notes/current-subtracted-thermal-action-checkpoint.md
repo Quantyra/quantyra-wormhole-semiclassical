@@ -1,3 +1,104 @@
+# Active checkpoint: separated quantum graph bound closes; near-diagonal return open
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the separated quantum graph argument](current-separated-quantum-graph-bound.md).
+
+EXECUTED: a whole-operator bound on the separated canonical massive
+part of the actual-minus-normal quantum response. Output is 0<z<=.01;
+input is the entire physical region .02<=z'<z_h, including the actual
+regular bolt. This is not a second point kernel or a finite-mode test.
+
+Four observation derivatives follow from analytic germs of the actual
+one-sided Riccati ODE, with the original paired transmission and regular-
+bolt branches. The physical C2,1 double is unchanged. Entire angular
+counting and a discrete thermal sum bound justify those derivatives,
+the bolt limit and common regulator removal on separated supports.
+Local Weyl/LLL/seagull/restoration contacts remain in the complementary
+coupled calculation; they are not discarded from the full operator.
+
+The executed bounds are
+
+ ||chi z^-sigma (D-4)[z4 Rfar v]||_H3
+                    <1.240352e-9 ||v||_infinity,
+
+ eta_far <1.578710e-6<2e-6,
+
+where the second line composes with the COMPLETE normal shape inverse
+and uses the original normalization. The .01 output collar is unchanged.
+The remaining .187 feedback allocation is now .186998421290...; select
+the conservative combined remaining target <=.18699. Its actual value
+is UNKNOWN. The known local and log-principal contributions retain their
+previous bounds <.052430768 and <.007302177.
+
+The full coupled return remains conditional. With the remaining feedback
+<=.18699, S_coupled<=7.49e-12 and k_coupled<=1e-14, arithmetic yields
+E<9.946517e-12<1e-11. Those actual joint estimates are not certified.
+The old known shape-source norm is not a joint scalar/shape certificate.
+The independent Mellin Efar<=1e-10 requirement is NOT this cross-collar
+estimate and is not closed by it.
+
+For a prescribed finite-dimensional shape contribution, the entire affine
+allocation permits a supremum <=.0060386099... under the new bound.
+Its actual value is unknown. Keep the quartic/slow pair correlated:
+||z4[B0(1-z^e_*)+Delta z^e_*]||_infinity<=9.101e-30+|Delta|.
+At the previous CONDITIONAL Delta cap 4.500000054e-10, its separated
+affine contribution is <5.582e-19. The valid but excessive triangle
+bound on the two coefficients separately is .001316051, which fails
+the 7.49e-12 affine budget. This is an estimation loss, not an actual
+obstruction. No mass, slow coefficient or original-row moment was measured.
+
+CLOSED HERE: separated fixed-seed quantum observation regularity through
+order four and its whole-mode cross-collar graph bound. STILL UNKNOWN:
+the commonly subtracted near/diagonal response, all its finite contacts,
+transition input, other original-domain feedback and joint source return.
+The existing weak and lower-output-order bounds cannot be differentiated
+to supply the missing strong estimate. A smooth surrogate or numerical
+checker would not settle that continuum step.
+
+No actual complete correction or nonlinear solution is certified. The
+paired C2 action on bounded ADMITTED stationary mass/log families retains
+its scope; uniform nonlinear X-ball admission is open. The sufficient
+projection screen E_rest<2.123e-42<1.287e-40 retains its scope and unmeasured
+sign. At rho=1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain
+unclosed, with unproved allocations Y0<=5e-9, Z0<=.25, Z2<=5e7.
+Exact compatibility, physical matching/causal realization, semiclassical
+validity/noise and all-sector stability remain unresolved. The closed
+audit and full stable-wormhole objective are preserved.
+
+RESEARCH DECISION: retain the construction. The executed cross-collar
+bound shows that this remote paired-kernel contribution fits its graph
+budget, so it supplies no reason to change construction. It does not
+establish feasibility of the complete near-diagonal quantum estimate.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): derive and bound the
+commonly subtracted near/diagonal Weyl-plus-paired determinant response
+through four observation derivatives, including all finite contacts and
+input 0<z'<.02. Preserve the outer logarithmic cancellation and every
+angular/thermal tail. The combined remaining feedback budget, including
+other still-unknown original-domain terms, is <=.18699. Joint sources and
+the independent Mellin far-tail target must also pass before claiming an
+actual controlled correction.
+
+Verification: the accepted frozen run passed 47
+supporting checks over 942 unchanged inputs.
+There were 2 scientific attempts: the first tried to compare two
+rounded enclosures of the exact .79 denominator identity non-strictly.
+The replay verifies that identity with exact rationals; no mathematical
+bound or target changed. Both attempts and source snapshots are retained.
+Independent verification passed on attempt 1. It checks the
+constant-flow comparison, Picard/Cauchy reserves, original product Q,
+Abel-regularized normal kernel, entire moments by a double Laplace integral
+and weighted output derivatives by a separate Stirling expansion.
+No post-success scientific edits or Lean runs occurred. The ordinary
+domain/ODE argument supplies the continuum justification. All 18 inherited
+paths and immutable closed/paused audits remain unchanged; no checkbox
+is promoted.
+
+Remaining to-do list: near/diagonal quantum graph estimate and remaining global assembly; joint source and independent Mellin far-tail bounds; actual controlled correction and nonlinear admission; compatibility, physical matching/causal realization, semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: coupled classical local graph bound closes; quantum/global return open
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.

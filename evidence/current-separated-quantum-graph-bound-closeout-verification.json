@@ -1,0 +1,58 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T13:44:55.734191+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb,factorial\nimport json,sys,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169by-closeout.json';meta=json.loads(mf.read_bytes());root=Path(meta['satellite_root']);stem='current-separated-quantum-graph-bound'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom sympy.functions.combinatorial.numbers import stirling\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\ndef result(st):return json.loads((root/'evidence'/f'{st}.json').read_bytes())['runs'][-1]['result']\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n # Independent constant-Riccati flow formula: the tanh comparison is a\n # subsolution, not an assumed solution. Integrating its lower bound\n # uses log cosh >= t-log2; no unverified buffer is required.\n M,w,T,k=S.symbols('M w T k',positive=True)\n exact=w*T/(k+M*T);sub=w*T/(k+M)\n assert S.simplify(exact-sub-w*M*T*(1-T)/((k+M*T)*(k+M)))==0\n assert S.Rational(4)*S.Rational(11,10)/S.Rational(79,100)**2 < S.Rational(71,10)\n assert arb('7.1')*arb('.036').exp()<8\n assert S.Rational(16)*(1+S.Rational(11,10)**2)<36 and 8*S.Rational(11,10)<36\n assert S.Rational(16)*2*S.Rational(11,10)<36\n # Independently expand the original product Q on the complex disk.\n z,be,u,ep,tau=S.symbols('z beta u ep tau')\n qp=S.Poly(S.expand(((1-z)**2*(be*(1+2*z+3*z*z)+u*z*z+ep*z**4)-tau*z**3)/be-1),z)\n mapping={be:pars['beta'],u:pars['u'],ep:pars['eps'],tau:pars['tau']}\n def val(e):\n  if e in mapping:return mapping[e]\n  if e.is_Rational:return arb(int(e.p))/int(e.q)\n  if e.is_Add:return sum((val(v) for v in e.args),arb(0))\n  if e.is_Mul:\n   v=arb(1)\n   for f in e.args:v*=val(f)\n   return v\n  if e.is_Pow:return val(e.base)**int(e.exp)\n  raise ValueError(e)\n err=sum((val(qp.nth(j)).abs_upper()*arb('.02')**j for j in range(7)),arb(0));assert err<arb('.001')\n assert pars['beta']*(1-err)>arb(1)/16\n # Abel-regularized Fourier transform: differentiated gamma/cos formula,\n # independent of the acceptance check's four-derivative identity.\n ss,xx=S.symbols('s x',positive=True)\n transform=S.gamma(ss+1)*S.cos(S.pi*(ss+1)/2)/(S.pi*xx**(ss+1))\n assert S.simplify(S.diff(transform,ss).subs(ss,0)+1/(2*xx))==0\n assert S.simplify(S.diff(transform,ss).subs(ss,4)+12/xx**5)==0\n # Recover the entire angular/thermal majorant via an exact double\n # Laplace integral, rather than the acceptance binomial factorial sum.\n cm,cp=S.symbols('cm cp',positive=True);lap=6/(cm**4*cp);der=lap\n a=arb('.01');b=arb('.02');sep=arb(5).sqrt()*(b-a)\n mapping.update({cm:arb(2).sqrt()*sep,cp:arb(10).sqrt()*sep})\n K=pars['C']*pars['beta']**2/(15*arb.pi()*pars['B2']);F=[];actual=[]\n for j in range(1,5):\n  der=-S.diff(der,cm)-S.diff(der,cp)\n  moment=val(S.expand(cm*der))\n  A=2560*pars['C']/(arb.pi()*pars['B2'])*factorial(j)*arb(1000)**j*moment*(1+pars['gamma']*mapping[cp])\n  assert A.overlaps(old.decode(ans['actual_entire_mode_derivative_upper'][j-1]))\n  # Integrate both absolute normal image envelopes directly.\n  v=24*K*arb(factorial(j+4))/24/(j+4)/(b-a)**(j+4)\n  assert v.overlaps(old.decode(ans['matched_normal_derivative_upper'][j-1]))\n  F.append(A+v);actual.append(A)\n alpha=S.Rational(199,200);caps=[1,3,10,60];lk=[]\n for k0 in range(4):\n  acc=arb(0)\n  for l in range(k0+1):\n   for j in range(k0-l+1):\n    # Closed Stirling expansion of (z d_z)^m, independent of recurrence.\n    c=sum(comb(k0-l,m)*alpha**(k0-l-m)*stirling(m,j,kind=2) for m in range(j,k0-l+1))\n    aa=val(alpha+j)\n    acc+=comb(k0,l)*caps[l]*val(c)*a**aa/(2*aa).sqrt()*F[j]\n  lk.append(acc)\n norm=sum((comb(3,k0)*v*v for k0,v in enumerate(lk)),arb(0)).sqrt()\n C3=old.decode(result('current-global-boundary-moment-return')['C3_H3_to_H6'])\n eta=norm*C3/arb(2).sqrt();assert eta<arb('1.579e-6')\n assert norm.overlaps(old.decode(ans['L_infinity_to_outer_H3_upper']))\n assert eta.overlaps(old.decode(ans['separated_quantum_graph_feedback_upper']))\n assert arb('.187')-eta>arb('.18699')\n assert not ans['near_diagonal_finite_contacts_certified'] and not ans['independent_Mellin_Efar_target_closed']\n assert not ans['mass_slow_original_row_coefficients_evaluated'] and not ans['actual_controlled_solution']\n # Correlated pair bound on the entire physical interval, with unchanged\n # coefficients. This remains conditional on the unknown actual Delta.\n B0=old.decode(result('current-coupled-outer-return-test')['full_normal_shape_particular'])\n eps=old.decode(result('current-global-boundary-moment-return')['exact_slow_exponent_offset'])\n pair=norm*(B0*eps/(4*arb(1).exp())+arb('4.500000054e-10'));assert pair<arb('6e-19')\n at['result']=dict(actual_Riccati_regular_domain_and_both_path_normalizations_reviewed=True,\n  independent_constant_flow_subsolution_identity=True,complex_seed_disk=old.encoded(err),\n  analytic_ODE_Picard_and_Cauchy_bounds_reviewed=True,\n  common_regulator_and_four_derivative_dominated_convergence_on_separated_supports=True,\n  independent_Abel_normal_kernel=True,entire_moment_double_Laplace_integral_checked=True,\n  discrete_positive_temperature_midpoint_variation_bound_reviewed=True,\n  independent_Stirling_output_derivatives=True,separated_graph_feedback_upper=old.encoded(eta),\n  L_infinity_to_H3_upper=old.encoded(norm),conditional_correlated_pair_affine=old.encoded(pair),\n  near_diagonal_and_other_global_bounds_unknown=True,independent_Mellin_Efar_target_closed=False,\n  actual_controlled_solution=False,scientific_checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']))\n at['status']='passed';meta['independent_result']=at['result'];meta['scientific_frozen_sha256']=dict(run['input_sha256_after'])\n for suffix in ['.json','.log']:\n  f='evidence/'+stem+suffix;meta['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save();print(json.dumps({k:v for k,v in at.items() if 'source' not in k},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "c4d22454f4ab6d867755d1e2224c98c5acf3ac05397b58470c3b7eb29de2bd66",
+      "result": {
+        "actual_Riccati_regular_domain_and_both_path_normalizations_reviewed": true,
+        "independent_constant_flow_subsolution_identity": true,
+        "complex_seed_disk": {
+          "ball": "[3.24800000508342050399765064362e-5 +/- 4.14e-35]",
+          "decimal_enclosure": {
+            "mid": "3248000005083420503997650643624135680689",
+            "rad": "2",
+            "exponent": "-44"
+          }
+        },
+        "analytic_ODE_Picard_and_Cauchy_bounds_reviewed": true,
+        "common_regulator_and_four_derivative_dominated_convergence_on_separated_supports": true,
+        "independent_Abel_normal_kernel": true,
+        "entire_moment_double_Laplace_integral_checked": true,
+        "discrete_positive_temperature_midpoint_variation_bound_reviewed": true,
+        "independent_Stirling_output_derivatives": true,
+        "separated_graph_feedback_upper": {
+          "ball": "[1.578709976147740071853e-6 +/- 4.38e-28]",
+          "decimal_enclosure": {
+            "mid": "1578709976147740071852903243586811407739",
+            "rad": "341022201283084289",
+            "exponent": "-45"
+          }
+        },
+        "L_infinity_to_H3_upper": {
+          "ball": "[1.240351684985443286100e-9 +/- 1.88e-31]",
+          "decimal_enclosure": {
+            "mid": "1240351684985443286100053724635293756588",
+            "rad": "133964125616209921",
+            "exponent": "-48"
+          }
+        },
+        "conditional_correlated_pair_affine": {
+          "ball": "[5.581582649413485776777e-19 +/- 6.55e-41]",
+          "decimal_enclosure": {
+            "mid": "5581582649413485776777052046438839872733",
+            "rad": "602838576345907201",
+            "exponent": "-58"
+          }
+        },
+        "near_diagonal_and_other_global_bounds_unknown": true,
+        "independent_Mellin_Efar_target_closed": false,
+        "actual_controlled_solution": false,
+        "scientific_checks": 47,
+        "frozen_inputs": 942
+      },
+      "finished_utc": "2026-10-24T13:44:56.498998+00:00"
+    }
+  ]
+}
