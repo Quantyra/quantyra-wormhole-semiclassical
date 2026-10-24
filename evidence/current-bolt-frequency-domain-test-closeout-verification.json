@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T19:49:26.493436+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169ck-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-bolt-frequency-domain-test'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n # Independently differentiate the factored seed and use its Bernstein\n # convex hull on [0,1], instead of the accepted coefficient l1 bound.\n pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n z,be,u,ep,ta=S.symbols('z beta u ep tau')\n Q=(1-z)**2*(be*(1+2*z+3*z*z)+u*z*z+ep*z**4)-ta*z**3\n qp=S.Poly(S.diff(Q,z,2),z);mapping={be:pars['beta'],u:pars['u'],ep:pars['eps'],ta:pars['tau']}\n def val(e):\n  if e in mapping:return mapping[e]\n  if e.is_Rational:return arb(int(e.p))/int(e.q)\n  if e.is_Add:return sum((val(v) for v in e.args),arb(0))\n  if e.is_Mul:\n   v=arb(1)\n   for aa in e.args:v*=val(aa)\n   return v\n  if e.is_Pow:return val(e.base)**int(e.exp)\n  raise ValueError(e)\n n=qp.degree();coeff=[val(qp.nth(i)) for i in range(n+1)]\n bern=[sum((coeff[i]*comb(j,i)/comb(n,i) for i in range(j+1)),arb(0)) for j in range(n+1)]\n qguard=max(x.abs_upper() for x in bern);assert qguard<12\n # Independent H1 profile and fixed (not parameter-tuned) optical support.\n t=S.symbols('t',real=True);chi=S.sqrt(30)*t*(1-t)\n assert S.integrate(chi**2,(t,0,1))==1\n derivative_sq=S.integrate(S.diff(chi,t)**2,(t,0,1));assert derivative_sq==10\n assert chi.subs(t,0)==chi.subs(t,1)==0\n glo=arb('5.057e-34');ghi=arb('5.059e-34');Mhi=arb(19)\n assert pars['gamma']>glo and pars['gamma']<ghi and ((1+pars['q'])/pars['C']).sqrt()<Mhi\n RR=arb('4e34');LL=arb('2e36')\n derivative=arb(10).sqrt()/LL\n potential=Mhi*arb('.001').exp()*ghi/arb(2).sqrt()*(-glo*RR/2).exp()\n residual=derivative+potential\n assert residual<glo/200 and residual<arb('1.9e-36')\n # Direct action on a scalar profile times the clock eigenvector.\n r,E,R,L=S.symbols('r E R L',real=True);f=S.Function('f')\n sig2=S.Matrix([[0,-S.I],[S.I,0]]);ev=S.Matrix([1,S.I])/S.sqrt(2)\n wave=S.exp(S.I*E*r)*f(r)*ev\n residual_vector=-S.I*sig2*wave.diff(r)-E*wave\n assert S.simplify(residual_vector+S.I*S.exp(S.I*E*r)*S.diff(f(r),r)*ev)==S.zeros(2,1)\n assert S.Rational('.159916396')-S.Rational('1e-11')*10**9==S.Rational('.149916396')\n at['result']=dict(independent_factored_Q_Bernstein_bound=old.encoded(qguard),independent_packet_profile='sqrt(30) t (1-t), zero extended',independent_packet_L='2e36',independent_packet_R='4e34',independent_packet_derivative_bound=old.encoded(derivative),independent_packet_potential_bound=old.encoded(potential),independent_packet_residual_bound=old.encoded(residual),residual_below_gamma_over_200=True,no_local_thermal_response_certified=True,no_actual_controlled_solution=True)\n at['status']='passed'\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in run['input_sha256_after']}\n for f in [f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']:\n  m['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps(dict(status=at['status'],exception=at.get('exception'),result=at.get('result')),indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "c10b3b6facbf237b7704b79a583a0410d5e5aa0bbe3f151a0fd526096839d216",
+      "result": {
+        "independent_factored_Q_Bernstein_bound": {
+          "ball": "[2.00000000000000000000000000006 +/- 1.61e-31]",
+          "decimal_enclosure": {
+            "mid": "2000000000000000000000000000059839591949",
+            "rad": "2",
+            "exponent": "-39"
+          }
+        },
+        "independent_packet_profile": "sqrt(30) t (1-t), zero extended",
+        "independent_packet_L": "2e36",
+        "independent_packet_R": "4e34",
+        "independent_packet_derivative_bound": {
+          "ball": "[1.58113883008418966599944677222e-36 +/- 3.65e-66]",
+          "decimal_enclosure": {
+            "mid": "1581138830084189665999446772216359266859",
+            "rad": "2",
+            "exponent": "-75"
+          }
+        },
+        "independent_packet_potential_bound": {
+          "ball": "[2.75602521758975993343099507805e-37 +/- 3.11e-67]",
+          "decimal_enclosure": {
+            "mid": "2756025217589759933430995078046893676833",
+            "rad": "2",
+            "exponent": "-76"
+          }
+        },
+        "independent_packet_residual_bound": {
+          "ball": "[1.85674135184316565934254628002e-36 +/- 1.05e-66]",
+          "decimal_enclosure": {
+            "mid": "1856741351843165659342546280021048634543",
+            "rad": "2",
+            "exponent": "-75"
+          }
+        },
+        "residual_below_gamma_over_200": true,
+        "no_local_thermal_response_certified": true,
+        "no_actual_controlled_solution": true
+      },
+      "finished_utc": "2026-10-24T19:49:26.690855+00:00"
+    }
+  ]
+}

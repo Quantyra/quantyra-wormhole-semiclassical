@@ -1,3 +1,86 @@
+# Active checkpoint: global thermal-gap shortcut rejected; local uniform response unknown
+
+2026-10-24, E003/S169.
+See [the actual bolt frequency-domain test](current-bolt-frequency-domain-test.md).
+
+EXECUTED: an ordinary continuum packet test rules out a positive global
+clock-frequency gap on the actual finite seed, even though the paired
+Euclidean massive operator retains its positive lower bound. The exact
+bolt identities and |Q''|<12 give an optical-end potential tending to
+zero. Normalized compact packets have residual <=pi/L+V0 exp(-gamma R/2).
+Every packet satisfies the original endpoint traces, and the argument
+works for every angular mass and bounded admitted mass field. It requires
+no finite-mode approximation or replacement boundary. The norm-gap
+counterexample needs no self-adjointness; spectral/resolvent conclusions
+are explicitly conditional on a compatible self-adjoint clock realization.
+No physical causal extension is selected.
+
+For M1=18.0481302637 and the actual gamma=5.05779942483e-34, an executed
+packet has residual <2.529e-36, against the proposed .01 M1 gap >.1804.
+An independent polynomial-profile packet gives <1.857e-36. Thus the
+putative exponent .01 M1 T>2.242e33 cannot be used to certify thermal
+suppression through this GLOBAL gap method. Off-lattice frequency changes
+also require their own disk-domain/endpoint argument. This is a method
+obstruction, not nonexistence, instability or divergence of the action.
+
+The LOCALIZED thermal/curved response and its uniform metric derivative
+remain UNKNOWN. No excessive finite upper bound for that response is
+obtained here. The already controlled cylinder comparison is usable only
+with its actual-domain return; its seed bound <2.012953e-13 is not a
+bound on the derivative of the Hessian throughout a neighborhood. Common
+local contacts, all angular/thermal tails and bolt normalization remain
+required. The accepted weak mass/log regulator limit is not a strong H3
+limit. No new nonlinear or projected-solution requirement closes.
+
+Keep the angular component <3.038e-9, its 4e-9 allocation, and the
+unchanged remaining condition
+  eta_curved_seed+1e-11 C3<.159916396.
+Both constants are unknown; even at zero eta the C3 ceiling would be
+1.59916396e10. Seed contact targets M_A<=3.18e27 and M_V<=2.66e30,
+and the original X/graph comparisons, remain unknown. A proposed .01
+budget for the uniform return derivative gives C_return<1e9 and would
+leave .149916396 for the OTHER terms. This is a target, not a certificate.
+
+At rho=1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain
+unclosed. The allocations Y0<=5e-9, Z0<=.25 and Z2<=5e7 are still
+unproved. Preserve the selected E_rest<2.123e-42<1.287e-40 screen
+with its original scope: zero is an enclosure center, not a measured
+signed projection. No full signed projection or controlled solution is
+executed here. Compatibility, physical matching, validity/noise and
+all-sector stability remain open. The audit stays CLOSED and full goal
+ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction; reject the global
+Boltzmann-gap shortcut and sharpen the localized actual-domain method.
+Do not optimize controlled cold, scalar or angular components. Uniform
+strong common-regulator convergence precedes further source optimization.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the first metric
+variation of the actual-minus-cylinder near Hessian in the current coupled
+H3 graph, uniformly on the admitted mass/log family with the regular bolt,
+including all seagull/diagonal terms and normalized endpoint sensitivities.
+Use localized propagation or the complete relative heat/resolvent identity;
+retain all angular and thermal modes and test C_return<1e9. Specify global
+coefficient/admission hypotheses and prove the common strong regulator
+limit. A passing result would close one finite-domain neighborhood
+requirement; local curved response, contact jets and the original X
+comparison would still be needed. Its attainability is not yet certified.
+
+Verification: frozen acceptance passed 23 supporting checks over
+37 unchanged inputs on its first attempt. Independent verification also
+passed on its first attempt: a factored-Q Bernstein bound is <2.000001,
+and a different H1 packet profile with fixed optical support gives residual
+<1.857e-36. The ordinary escaping-packet argument supplies the continuum
+result; checks supply algebra and parameter enclosures, not the missing
+quantum response theorem. Exact development source/output are retained.
+No failed scientific runs, post-success scientific edits or Lean runs
+occurred. All 18 inherited paths and immutable audits remain preserved;
+no story checkbox is promoted.
+
+Remaining to-do list: uniform actual-domain return, complete curved strong response and contacts, actual global correction, X/graph comparison and nonlinear admission/contraction, mass/slow matching, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: full angular component bounded in H3; curved uniform response open
 
 2026-10-24, E003/S169.
