@@ -1,0 +1,31 @@
+{
+  "scope": "Preliminary arithmetic; not acceptance and not a finite physical-mode approximation",
+  "runs": [
+    {
+      "arithmetic": "ordinary floating-point background-order exploration, 99 terms; no certified tail in this development run",
+      "source": "from math import comb,log,pi\nA=lambda k: ((79/3)/log(2)+10)/pi if k==2 else ((8/(k-2)+2*(k+1)+4*comb(k+3,4)/(k+2)+8*comb(k+5,6)/(k+4))/log(2)+8*comb(k+3,4)/(k+2))/pi\ndef D(n):\n out=0\n for m in [1,2,3]:\n  for j in range(m+1):\n   k=n+m-j\n   if k<max(m,2):continue\n   aa=[0,1,3*(k-1),(k-1)*(k-2)][m]\n   out+=aa*comb(m,j)*A(k)\n return out\nr=.000251\nfor ell in range(5,9):\n ts=[D(n)*(n+2)**(ell-1)*(1+log(n+2,2))/16*r**n for n in range(1,100)]\n G=sum(ts);Gp=sum((n+1)*t/r for n,t in enumerate(ts))\n print(ell,'G',G,'Gp',Gp,'old relative',G/(7*2**ell),'first',ts[0])\nprint('A2,3,4,D1',A(2),A(3),A(4),D(1))\n",
+      "output_excerpt": {
+        "G8": "85.32072195501547",
+        "G8prime": "343245.78462228173",
+        "D1": "952.6885039210275"
+      },
+      "terminal": "completed"
+    },
+    {
+      "arithmetic": "512-bit Arb parameter calculation before guard freeze",
+      "output_values": {
+        "principal_multiplier": ".00313761720522319731553949784533",
+        "principal_norm": ".0073043728537596033505759509839",
+        "Wiener_radius": ".000250901105492036",
+        "specified_positive_estimator_term": "327570735.777664008307766494727554275817086212927675986018023373121695218688388682596565826771732685164100860445238889130092503264489100554203194213476708",
+        "remaining": ".149009052939"
+      },
+      "terminal": "completed",
+      "exact_algorithm": "The accepted checker calc() records the same parameter, coefficient-product, principal and positive-estimator formulas; its source is frozen separately."
+    }
+  ],
+  "executed_scientific_conclusion": "Specified positive seed estimator fails. Full strong response remains unknown.",
+  "failure_not_nonexistence": true,
+  "scientific_failed_acceptance_runs_before_freeze": 0,
+  "post_success_scientific_edits": false
+}

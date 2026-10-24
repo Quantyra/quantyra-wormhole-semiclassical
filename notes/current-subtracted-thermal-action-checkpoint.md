@@ -1,3 +1,89 @@
+# Active checkpoint: unsigned annular estimator rejected; signed principal returned
+
+2026-10-24, E003/S169.
+
+See [the annular response feasibility test](current-annular-response-feasibility.md).
+
+EXECUTED OUTCOME: the specified unsigned annular estimator fails before
+the remaining terms are added. One nonnegative term in its seed allowance
+is at least 327570735.777664..., against the remaining sufficient budget
+.156319052939. This is a lower bound on an ESTIMATOR'S upper-bound formula,
+NOT on the physical response. The complete actual strong estimate is
+still UNRESOLVED; no obstruction to the construction is established.
+
+The attempt uses the actual paired-domain cylinder conjugation, full
+angular counting and all background insertion orders. The auxiliary
+balanced mass trace unfolds by the original J/reflection intertwining.
+Its local Fourier radius is proved, not inferred from an L-infinity
+resolvent bound: on every annulus W(f_j)<=2000 h_j^3+1e-6 h_j^2<.000251.
+The full third-response nonlocal series has G8<85.321 and G8'<343246,
+including its analytic infinite-order tail and coincidence chain rule.
+No physical angular or thermal modes are truncated. The actual-minus-cap
+return and common local Taylor restorations remain in the inventory;
+they are not bounded by the auxiliary series.
+
+The failure comes from taking absolute values before principal matching
+and normal inversion. The tiny gravitational prefactor cancels against
+the eighth-logarithmic-derivative inverse allowance. Even hypothetically
+setting the formula's composition, cutoff and output-return guards to
+one leaves its selected positive term above 3000. This is a sensitivity
+test of this formula, not a universal impossibility result.
+
+EXECUTED QUANTIFIED COMPONENT OF A REPLACEMENT: with rho=(Q/beta)^2-1,
+P=K D^5 log(2+|D|), retain the actual full B_sigma inverse before bounding.
+The original H3 multiplier calculation gives
+||chi rho P B_sigma^-1||<=.007304372853759603...<.00731.
+This is the matched seed logarithmic PRINCIPAL component only. It does
+not replace the whole excessive allowance, bound its subprincipal
+completion, or prove a gain-two strong remainder. No fields, domain,
+source, finite coupling, physical normalization or norm is changed.
+
+Retain C_flat<359723000, C_delta<11306 and the existing 4.001e-9 reserve.
+With eta_seed<=.00731+eta_seed,remaining, the unchanged user test has
+the sufficient repartition
+eta_seed,remaining+1e-11 C_rem<.149009052939.
+Both actual constants remain UNKNOWN. Equal allocation requires
+eta_seed,remaining<.0745045264695 and C_rem<7.45045264695e9; the optimistic
+zero-seed-remainder ceiling is C_rem<1.49009052939e10. The new debit is
+a seed linear component, not a repeated nonlinear principal allocation.
+
+The unproved local-contact targets M_A<=3.18e27 and M_V<=2.66e30 remain
+conditions. Original X comparisons, full background graph admission,
+actual correction, Y0/Z0/Z2, exact compatibility, physical matching,
+validity/noise and all-sector stability are still unresolved. The previous
+complete projection screen E_rest<2.123e-42<1.287e-40 is retained without
+reevaluation or a measured sign. The audit remains closed and the full
+stable-wormhole objective active. No story checkbox is promoted.
+
+RESEARCH DECISION: change the estimator, retain the construction.
+Reject this unsigned annular seed estimate. Subtract the full signed
+principal and subprincipal completion BEFORE localization/absolute
+values, and retain the full normal inverse. The all-order series bound
+may support the remaining tame terms; it is not the physical solution.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): derive and quantitatively
+bound the combined actual kernel minus the full symmetric frozen
+comparison, and its metric variation, including common local restoration
+and actual boundary/finite-domain returns. Test
+eta_seed,remaining+1e-11 C_rem<.149009052939 with the original X returns.
+Existing gain-two form/value bounds cannot be differentiated into this
+strong estimate. The estimator failure and signed principal bound are
+executed; this combined remainder and a controlled solution are not.
+
+Verification: the ordinary argument and scope were frozen before one
+successful interval execution (17 checks, 1034 unchanged input hashes).
+It verifies actual coefficient/radius bounds, the complete analytic-order
+tail, the failed estimator allowance, and independent coefficient assembly
+for the principal guard. The checker supports those ordinary arguments;
+it supplies no missing physical operator norm. Development and exact
+source are retained. No failed acceptance run, post-success scientific
+edit or Lean run occurred. All 18 inherited worktree paths, closed audits
+and previous evidence remain preserved.
+
+Remaining to-do list: combined strong remainder and original norm comparisons; actual correction and nonlinear admission/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete strong estimate unresolved; global series majorant rejected
 
 2026-10-24, E003/S169.
