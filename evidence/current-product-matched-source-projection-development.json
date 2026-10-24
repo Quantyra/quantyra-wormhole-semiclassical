@@ -1,0 +1,77 @@
+{
+  "runs": [
+    {
+      "name": "s169be-magnetic-probe",
+      "source_sha256": "70dbce62782118838be6c34b1001c2158637f9eb075185648120d0c06a411126",
+      "source_utf8": "\"\"\"Diagnostic of the product-matched leading magnetic local functional only.\"\"\"\nfrom pathlib import Path\nfrom fractions import Fraction\nimport sys,json,tempfile\nimport mpmath as mp\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path[:0]=[str(root/'checks'),'C:/Users/dfred/AppData/Local/Temp/s169af-arb']\nimport current_schur_scalar_projection as s\nfrom flint import arb,ctx\nctx.prec=512;mp.mp.dps=60\np,h,zh,env=s.prev.york.actual_parameters()\ndef am(x):return mp.mpf(x.mid().str(80,radius=False))\ndef dm(x):\n a=x['decimal_enclosure'];f=Fraction(a['mid'])*Fraction(10)**int(a['exponent']);return mp.mpf(f.numerator)/f.denominator\nold=json.loads((root/'evidence/current-schur-scalar-projection.json').read_bytes())['runs'][-1]\nsr=next(r for r in old['numerics'] if r['kind']=='actual_global_scalar_inverse');nu=dm(sr['fractional_power'])\nterms=[(r['z_power'],r['fractional_multiplicity']*nu+r['y_integer_power'],dm(r['coefficient'])) for r in sr['trial_coefficients']]\nterms.append((4,mp.mpf(0),mp.mpf('.5')))\ndef vt(z):return sum(c*z**k*(1-z)**a for k,a,c in terms)\ndef vtp(z):return sum(c*(k*z**(k-1)*(1-z)**a-(a*z**k*(1-z)**(a-1) if a else 0)) for k,a,c in terms)\ndef g(z):return 4*z-3*z*z-1+2*mp.log(z)\ndef gp(z):return -4*z+6*z*z-2\ndef gpp(z):return 4*z-12*z*z\ndef kgz(z):return 4-6*z+2/z\ndef kgpz(z):return -4+12*z\ndef ka(z):return gp(z)*vt(z)-2*g(z)*z**4\ndef kw(z):\n kn=gpp(z)*vt(z)-2*gp(z)*z**4\n kup=2*(kgpz(z)*vt(z)+gp(z)*vtp(z))-4*(kgz(z)*z**4+4*g(z)*z**3)\n return z*kn+z*z*kup/2\nnodes=[mp.mpf('0'),mp.mpf('.1'),mp.mpf('.25'),mp.mpf('.5'),mp.mpf('.75'),mp.mpf('.9'),mp.mpf('.99'),mp.mpf('.9999'),am(zh)]\nia=mp.quad(lambda z:abs(ka(z)),nodes);iw=mp.quad(lambda z:(1-z)/z*abs(kw(z)),nodes)\nS=am(arb(p['q'])**2/(60*arb.pi()*p['g']*p['B2']**2));beta=am(p['g']*p['B2']/p['C'])\nallow=5*S*beta*(mp.mpf('3.3e-10')*ia+2*mp.mpf('1.08e-9')*iw)\ndata={'scope':'Exploratory leading magnetic/product-potential sector; quantum remainder and other local terms not included.',\n 'a_kernel_L1':mp.nstr(ia,50),'displacement_kernel_weighted_L1':mp.nstr(iw,50),'prefactor':mp.nstr(5*S*beta,50),\n 'value_allowance_diagnostic':mp.nstr(allow,50),'target_factor':mp.nstr(allow/mp.mpf('2.589e-40'),40),\n 'samples':[{'z':str(z),'ka':mp.nstr(ka(z),15),'kw':mp.nstr(kw(z),15)} for z in nodes[1:-1]],\n 'source_utf8':Path(__file__).read_text(encoding='utf-8'),'complete_projection_evaluated':False}\n(Path(tempfile.gettempdir())/'s169be-magnetic-probe.json').write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:v for k,v in data.items() if k not in ['source_utf8','samples']}))\n",
+      "output": {
+        "scope": "Exploratory leading magnetic/product-potential sector; quantum remainder and other local terms not included.",
+        "a_kernel_L1": "0.077690408864706777714870862725655969647779844767649",
+        "displacement_kernel_weighted_L1": "0.081811036245681473761495611762749668684759769005044",
+        "prefactor": "1.6491077872841542847179704633871675312724345242717e-29",
+        "value_allowance_diagnostic": "3.3369642185495105009774650544901712503699578578341e-39",
+        "target_factor": "12.8890081828872557009558325781775637326",
+        "samples": [
+          {
+            "z": "0.1",
+            "ka": "0.00091573846314031",
+            "kw": "0.000366285391646738"
+          },
+          {
+            "z": "0.25",
+            "ka": "0.0173532828459058",
+            "kw": "0.0173389464990564"
+          },
+          {
+            "z": "0.5",
+            "ka": "0.0522161797592451",
+            "kw": "0.101304710221188"
+          },
+          {
+            "z": "0.75",
+            "ka": "-0.14787046614777",
+            "kw": "-0.515617757141924"
+          },
+          {
+            "z": "0.9",
+            "ka": "-0.274498925512733",
+            "kw": "-1.28565462842088"
+          },
+          {
+            "z": "0.99",
+            "ka": "-0.0632940619298507",
+            "kw": "-0.690353030864082"
+          },
+          {
+            "z": "0.9999",
+            "ka": "-0.000781151594066434",
+            "kw": "-0.0855718989330269"
+          }
+        ],
+        "source_utf8": "\"\"\"Diagnostic of the product-matched leading magnetic local functional only.\"\"\"\nfrom pathlib import Path\nfrom fractions import Fraction\nimport sys,json,tempfile\nimport mpmath as mp\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path[:0]=[str(root/'checks'),'C:/Users/dfred/AppData/Local/Temp/s169af-arb']\nimport current_schur_scalar_projection as s\nfrom flint import arb,ctx\nctx.prec=512;mp.mp.dps=60\np,h,zh,env=s.prev.york.actual_parameters()\ndef am(x):return mp.mpf(x.mid().str(80,radius=False))\ndef dm(x):\n a=x['decimal_enclosure'];f=Fraction(a['mid'])*Fraction(10)**int(a['exponent']);return mp.mpf(f.numerator)/f.denominator\nold=json.loads((root/'evidence/current-schur-scalar-projection.json').read_bytes())['runs'][-1]\nsr=next(r for r in old['numerics'] if r['kind']=='actual_global_scalar_inverse');nu=dm(sr['fractional_power'])\nterms=[(r['z_power'],r['fractional_multiplicity']*nu+r['y_integer_power'],dm(r['coefficient'])) for r in sr['trial_coefficients']]\nterms.append((4,mp.mpf(0),mp.mpf('.5')))\ndef vt(z):return sum(c*z**k*(1-z)**a for k,a,c in terms)\ndef vtp(z):return sum(c*(k*z**(k-1)*(1-z)**a-(a*z**k*(1-z)**(a-1) if a else 0)) for k,a,c in terms)\ndef g(z):return 4*z-3*z*z-1+2*mp.log(z)\ndef gp(z):return -4*z+6*z*z-2\ndef gpp(z):return 4*z-12*z*z\ndef kgz(z):return 4-6*z+2/z\ndef kgpz(z):return -4+12*z\ndef ka(z):return gp(z)*vt(z)-2*g(z)*z**4\ndef kw(z):\n kn=gpp(z)*vt(z)-2*gp(z)*z**4\n kup=2*(kgpz(z)*vt(z)+gp(z)*vtp(z))-4*(kgz(z)*z**4+4*g(z)*z**3)\n return z*kn+z*z*kup/2\nnodes=[mp.mpf('0'),mp.mpf('.1'),mp.mpf('.25'),mp.mpf('.5'),mp.mpf('.75'),mp.mpf('.9'),mp.mpf('.99'),mp.mpf('.9999'),am(zh)]\nia=mp.quad(lambda z:abs(ka(z)),nodes);iw=mp.quad(lambda z:(1-z)/z*abs(kw(z)),nodes)\nS=am(arb(p['q'])**2/(60*arb.pi()*p['g']*p['B2']**2));beta=am(p['g']*p['B2']/p['C'])\nallow=5*S*beta*(mp.mpf('3.3e-10')*ia+2*mp.mpf('1.08e-9')*iw)\ndata={'scope':'Exploratory leading magnetic/product-potential sector; quantum remainder and other local terms not included.',\n 'a_kernel_L1':mp.nstr(ia,50),'displacement_kernel_weighted_L1':mp.nstr(iw,50),'prefactor':mp.nstr(5*S*beta,50),\n 'value_allowance_diagnostic':mp.nstr(allow,50),'target_factor':mp.nstr(allow/mp.mpf('2.589e-40'),40),\n 'samples':[{'z':str(z),'ka':mp.nstr(ka(z),15),'kw':mp.nstr(kw(z),15)} for z in nodes[1:-1]],\n 'source_utf8':Path(__file__).read_text(encoding='utf-8'),'complete_projection_evaluated':False}\n(Path(tempfile.gettempdir())/'s169be-magnetic-probe.json').write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:v for k,v in data.items() if k not in ['source_utf8','samples']}))\n",
+        "complete_projection_evaluated": false
+      },
+      "scope": "Unvalidated exploratory quadrature of one specified component; not acceptance evidence.",
+      "independent_dependency_freeze": false
+    },
+    {
+      "name": "s169be-weighted-probe",
+      "source_sha256": "bb7ef60332c6a0f8af66331358118964680c8d80be20d16abe0c33209f6396e0",
+      "source_utf8": "\"\"\"Diagnostic radial envelope applied to the same leading magnetic functional.\"\"\"\nfrom pathlib import Path\nfrom fractions import Fraction\nimport sys,json,tempfile\nimport mpmath as mp\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path[:0]=[str(root/'checks'),'C:/Users/dfred/AppData/Local/Temp/s169af-arb']\nimport current_schur_scalar_projection as s\nfrom flint import arb,ctx\nctx.prec=512;mp.mp.dps=60\np,h,zh,env=s.prev.york.actual_parameters()\ndef am(x):return mp.mpf(x.mid().str(80,radius=False))\ndef dm(x):\n a=x['decimal_enclosure'];f=Fraction(a['mid'])*Fraction(10)**int(a['exponent']);return mp.mpf(f.numerator)/f.denominator\nold=json.loads((root/'evidence/current-schur-scalar-projection.json').read_bytes())['runs'][-1]\nsr=next(r for r in old['numerics'] if r['kind']=='actual_global_scalar_inverse');nu=dm(sr['fractional_power'])\nterms=[(r['z_power'],r['fractional_multiplicity']*nu+r['y_integer_power'],dm(r['coefficient'])) for r in sr['trial_coefficients']]\nterms.append((4,mp.mpf(0),mp.mpf('.5')))\ndef vt(z):return sum(c*z**k*(1-z)**a for k,a,c in terms)\ndef vtp(z):return sum(c*(k*z**(k-1)*(1-z)**a-(a*z**k*(1-z)**(a-1) if a else 0)) for k,a,c in terms)\ndef g(z):return 4*z-3*z*z-1+2*mp.log(z)\ndef gp(z):return -4*z+6*z*z-2\ndef gpp(z):return 4*z-12*z*z\ndef kgz(z):return 4-6*z+2/z\ndef kgpz(z):return -4+12*z\ndef ka(z):return gp(z)*vt(z)-2*g(z)*z**4\ndef kw(z):\n kn=gpp(z)*vt(z)-2*gp(z)*z**4\n kup=2*(kgpz(z)*vt(z)+gp(z)*vtp(z))-4*(kgz(z)*z**4+4*g(z)*z**3)\n return z*kn+z*z*kup/2\nL=lambda z:-mp.log1p(-z)-z\nA=am(arb('1e15')*arb(p['q'])**2/(arb('.99')*p['g']*p['B2']**2))\nnodes=[mp.mpf('0'),mp.mpf('.1'),mp.mpf('.25'),mp.mpf('.5'),mp.mpf('.75'),mp.mpf('.9'),mp.mpf('.99'),mp.mpf('.9999'),1/(1+mp.mpf('1e-15'))]\nia=mp.quad(lambda z:abs(ka(z))*L(z),nodes)\niw=mp.quad(lambda z:(1-z)/z*abs(kw(z)),nodes)\niwL=mp.quad(lambda z:(1-z)/z*abs(kw(z))*L(z),nodes)\nS=am(arb(p['q'])**2/(60*arb.pi()*p['g']*p['B2']**2));beta=am(p['g']*p['B2']/p['C'])\nallow=5*S*beta*(A*(ia+2*iwL)+2*mp.mpf('4.34e-11')*iw)\ndata={'scope':'Exploratory leading magnetic/product-potential sector with position-dependent actual first-reference bounds; not the complete source.',\n 'a_log_kernel_L1':mp.nstr(ia,50),'displacement_kernel_weighted_L1':mp.nstr(iw,50),'displacement_log_kernel_L1':mp.nstr(iwL,50),\n 'prefactor':mp.nstr(5*S*beta,50),'A_lapse_bound_coefficient':mp.nstr(A,50),\n 'value_allowance_diagnostic':mp.nstr(allow,50),'target_factor':mp.nstr(allow/mp.mpf('2.589e-40'),40),\n 'source_utf8':Path(__file__).read_text(encoding='utf-8'),'complete_projection_evaluated':False}\n(Path(tempfile.gettempdir())/'s169be-weighted-probe.json').write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:v for k,v in data.items() if k!='source_utf8'}))\n",
+      "output": {
+        "scope": "Exploratory leading magnetic/product-potential sector with position-dependent actual first-reference bounds; not the complete source.",
+        "a_log_kernel_L1": "0.078218043838296315208209705511866802285974030110191",
+        "displacement_kernel_weighted_L1": "0.081811036245681473761495611762749668361027850191139",
+        "displacement_log_kernel_L1": "0.049093255478174772630373368354369491033137031924393",
+        "prefactor": "1.6491077872841542847179704633871675312724345242717e-29",
+        "A_lapse_bound_coefficient": "0.0000000000037678726615382487626863558964452209851285578650391",
+        "value_allowance_diagnostic": "1.2806753139044756235490134130945452310896436855173e-40",
+        "target_factor": "0.4946602216703266216875293213961163503629",
+        "source_utf8": "\"\"\"Diagnostic radial envelope applied to the same leading magnetic functional.\"\"\"\nfrom pathlib import Path\nfrom fractions import Fraction\nimport sys,json,tempfile\nimport mpmath as mp\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path[:0]=[str(root/'checks'),'C:/Users/dfred/AppData/Local/Temp/s169af-arb']\nimport current_schur_scalar_projection as s\nfrom flint import arb,ctx\nctx.prec=512;mp.mp.dps=60\np,h,zh,env=s.prev.york.actual_parameters()\ndef am(x):return mp.mpf(x.mid().str(80,radius=False))\ndef dm(x):\n a=x['decimal_enclosure'];f=Fraction(a['mid'])*Fraction(10)**int(a['exponent']);return mp.mpf(f.numerator)/f.denominator\nold=json.loads((root/'evidence/current-schur-scalar-projection.json').read_bytes())['runs'][-1]\nsr=next(r for r in old['numerics'] if r['kind']=='actual_global_scalar_inverse');nu=dm(sr['fractional_power'])\nterms=[(r['z_power'],r['fractional_multiplicity']*nu+r['y_integer_power'],dm(r['coefficient'])) for r in sr['trial_coefficients']]\nterms.append((4,mp.mpf(0),mp.mpf('.5')))\ndef vt(z):return sum(c*z**k*(1-z)**a for k,a,c in terms)\ndef vtp(z):return sum(c*(k*z**(k-1)*(1-z)**a-(a*z**k*(1-z)**(a-1) if a else 0)) for k,a,c in terms)\ndef g(z):return 4*z-3*z*z-1+2*mp.log(z)\ndef gp(z):return -4*z+6*z*z-2\ndef gpp(z):return 4*z-12*z*z\ndef kgz(z):return 4-6*z+2/z\ndef kgpz(z):return -4+12*z\ndef ka(z):return gp(z)*vt(z)-2*g(z)*z**4\ndef kw(z):\n kn=gpp(z)*vt(z)-2*gp(z)*z**4\n kup=2*(kgpz(z)*vt(z)+gp(z)*vtp(z))-4*(kgz(z)*z**4+4*g(z)*z**3)\n return z*kn+z*z*kup/2\nL=lambda z:-mp.log1p(-z)-z\nA=am(arb('1e15')*arb(p['q'])**2/(arb('.99')*p['g']*p['B2']**2))\nnodes=[mp.mpf('0'),mp.mpf('.1'),mp.mpf('.25'),mp.mpf('.5'),mp.mpf('.75'),mp.mpf('.9'),mp.mpf('.99'),mp.mpf('.9999'),1/(1+mp.mpf('1e-15'))]\nia=mp.quad(lambda z:abs(ka(z))*L(z),nodes)\niw=mp.quad(lambda z:(1-z)/z*abs(kw(z)),nodes)\niwL=mp.quad(lambda z:(1-z)/z*abs(kw(z))*L(z),nodes)\nS=am(arb(p['q'])**2/(60*arb.pi()*p['g']*p['B2']**2));beta=am(p['g']*p['B2']/p['C'])\nallow=5*S*beta*(A*(ia+2*iwL)+2*mp.mpf('4.34e-11')*iw)\ndata={'scope':'Exploratory leading magnetic/product-potential sector with position-dependent actual first-reference bounds; not the complete source.',\n 'a_log_kernel_L1':mp.nstr(ia,50),'displacement_kernel_weighted_L1':mp.nstr(iw,50),'displacement_log_kernel_L1':mp.nstr(iwL,50),\n 'prefactor':mp.nstr(5*S*beta,50),'A_lapse_bound_coefficient':mp.nstr(A,50),\n 'value_allowance_diagnostic':mp.nstr(allow,50),'target_factor':mp.nstr(allow/mp.mpf('2.589e-40'),40),\n 'source_utf8':Path(__file__).read_text(encoding='utf-8'),'complete_projection_evaluated':False}\n(Path(tempfile.gettempdir())/'s169be-weighted-probe.json').write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nprint(json.dumps({k:v for k,v in data.items() if k!='source_utf8'}))\n",
+        "complete_projection_evaluated": false
+      },
+      "scope": "Unvalidated exploratory quadrature of one specified component; not acceptance evidence.",
+      "independent_dependency_freeze": false
+    }
+  ]
+}

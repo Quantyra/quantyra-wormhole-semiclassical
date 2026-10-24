@@ -1,3 +1,109 @@
+# Active checkpoint: magnetic and complete cold projections meet their allocations
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit stays CLOSED. Previous turn: progress, removing the
+reference-prefactor source by changing the actual first approximation.
+
+The [executed product-matched projection](current-product-matched-source-projection.md) keeps the physical
+action, Hessian, common prescription and normalization unchanged. With
+I=F_lambda I0+J and h_tilde=h1/F_lambda, r_new=J''h1/F_lambda.
+The exact product shape equation removes the shared area contact:
+
+    J=L-(g_*/2) integral exp(2b) dz,
+    J''=L''-2g_* integral b_h b_v dz.
+
+The a0 coefficient cancels exactly; the full curvature-dependent product
+quantum response g_* remains. B,C,mu0 and g_* are fixed in the variation.
+The specified magnetic functional is k_M integral g(phi)exp(2b), with
+g=4exp(-phi)-3exp(-2phi)-1-2phi and k_M=Gq^2/(12pi C B^2).
+The difference in its coefficient and ALL other terms remain in J_rest.
+
+Actual full-source constraint integration gives |a|<=3.768e-12 L(z)+4e-28,
+L=-log(1-z)-z, and |fbar/F|<4.34e-11 on t-1>=1e-15. The integrated
+displacement kernel cancels its derivatives before absolute values.
+This replaces a bulk use of the global throat logarithm; it changes no
+quantum-source constant or physical norm. The old uniform-envelope
+diagnostic gave about 3.34e-39 for this component and did not certify it.
+
+| Executed component | Outward upper allowance | Frozen allocation |
+| --- | ---: | ---: |
+| Magnetic bulk projection | 1.2845059E-40 | 1.31e-40 |
+| Complete omitted cold projection, BOTH rows and full tower | 1.6930091E-43 | 2e-43 |
+| Global scalar-trial pairing error, charged once | 2.3303199E-44 | 2.331e-44 |
+| Sum of these executed allowances | 1.2864319E-40 | 1.3122331e-40 |
+
+The remaining signed bulk projection is UNKNOWN and must satisfy
+|P_rest,bulk|<1.287e-40 for this sufficient working allocation. Its sum
+with the three frozen allocations is 2.5992331e-40<2.60e-40.
+This repartition replaces the preceding trace/principal allocation; do
+not count those pieces twice. The old scalar-contact allowance >22 screen
+units was a known loose upper certificate, not an observed error. Exact
+area cancellation does not set the remaining quantum response to zero
+or certify a total-source improvement. No full signed projection was run.
+
+The integration split at z_c=1-2^-49 introduces no new boundary condition.
+The nonlocal Green operator remains on the full paired geometry. Compute
+its actual source row before restricting the observation integral, or
+use a smooth partition with transition confined to s<=s_c, retaining all
+cutoff/domain contacts and the entire cold allowance. A sharply truncated
+metric test is not assumed to be in the Hessian domain. The actual paired
+variation, common regulator removal, full angular/thermal tails and
+one-sided mass/log regularity precede interpreting any mode sum as this
+functional. A smooth compact-surface heat formula or a selected set of
+mass-vertex modes supplies neither the required seam theorem nor the
+complete geometric response. An earlier failure of boundary, compatibility
+or regularity changes the order of work before more source optimization.
+
+The cold allowance now uses less than .066 percent of the working screen.
+Its optimization cannot decide the unknown bulk quantum response. The
+radial/magnetic target is demonstrably attainable; physical inverse,
+admission and nonlinear targets have no comparable numerical certificate.
+In particular the changed first trial must also be charged in center
+admission: b45<=1.3e-4/F_lambda permits the conservative E45<=86999.9998,
+not the unscaled endpoint 87000. Cold/outer/stronger embeddings remain
+unknown. The remaining physical bolt budget is 1.66699e-9.
+
+At rho=1e-8, preserved-ball and contraction requirements remain
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1. The sufficient targets
+(Y0,Z0,Z2)<=(5e-9,.25,5e7), the full admitted metric map and EXACT
+complementary equations are not proved. The quarter-power nonlinear
+product needs G_quarter E_D^2<=1/402; at E_D=.025 it needs
+G_quarter<=3.98009950248. No graph inverse or fixed-seed source value
+supplies those operator constants. Physical matching, causal constraint
+boundary data/energy balance, validity/noise and all-sector stability
+remain prior obligations for any actual stable solution.
+
+Research decision: CONTINUE THE SPECIFIED SHARPER METHOD with h_tilde=h1/F_lambda
+and exact scalar Schur elimination. Further cold-value optimization and
+scalar inverse refinement are not selected. The SINGLE next calculation is
+the product-subtracted geometric quantum/contact remainder P_rest,bulk,
+including every remaining local term, on the full physical paired domain.
+Its required certificate is |P_hat_rest|+E_rest<1.287e-40. For example,
+E_rest<=1e-42 and |P_hat_rest|<1.277e-40 suffice. This calculation is
+PROPOSED; the magnetic and complete cold component tests are EXECUTED.
+Passing this one projection would still not certify the full correction.
+Missing its chosen allocation alone would not establish nonexistence.
+
+Verification: final replay passed 41 checks over 940
+unchanged inputs; 2 scientific runs, 0 failures,
+2 successes and 86 raw rows retained. The replay
+followed a domain/cutoff clarification and range-intersection assertions.
+Independent verification checked all 6938
+serialized leaf joints, ordered endpoints, exact cuts and rational interval
+sums, physical constants and projection budgets. Both 70- and 100-digit
+direct quadratures lie inside the three interval enclosures; their values
+differ by up to 2.65e-8, so their displayed digits are NOT a quadrature
+accuracy certificate. The 2 independent attempts include 1 failure:
+an initial audit incorrectly demanded zero-radius decimal serialization
+of exact dyadic endpoints. Its source and failure are retained with the
+corrected audit. Two exploratory diagnostics are preserved separately.
+No scientific source changed after final replay, no Lean ran and all 18
+inherited paths remain unchanged. Checks do not replace continuum proofs.
+
+Remaining to-do list: complete the signed bulk quantum/contact projection on the actual paired domain; global Schur forward/adjoint solution and physical bolt/exterior certificate; X/admission, nonlinear closure and exact compatibility; matching and causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: remove the reference-prefactor source by changing the trial
 
 2026-10-23, E003/S169. Research is active, the full stable-wormhole
