@@ -1,3 +1,93 @@
+# Active checkpoint: seed dilation inverse controlled; uniform W3-infinity method obstructed
+
+2026-10-24, E003/S169.
+See [the ordinary dilation and regularity assessment](current-dilation-regularity-feasibility.md).
+
+EXECUTED: a fixed-domain complex resolvent test at the actual seed
+comparison, and a continuum test of the proposed nonlinear extension.
+The auxiliary C8 cylinder retains the original cubic seam and its paired
+transmission domain; its previously bounded actual-minus-cylinder return
+is retained. The whole-line five-jet family has relative deviation
+<.104 on |lambda|<=.20. For every angular and thermal mode the first-order
+inverse has norm <1.45/k and kernel bound 2.13 exp(-.40 k|z-z'|).
+The computed inverse constant is 1.4352571053; the kernel constant is
+2.113135253. These are seed first-order bounds, not quantum trace bounds.
+
+The bare angular estimator still diverges exactly:
+sum_(n<=N) d_n/M_n^2=2C[H_N+H_(N+q)-H_q]. Thus modewise holomorphy
+does not justify common-regulator removal for the renormalized response.
+This divergent estimator is not a divergence of the subtracted action.
+
+The neighborhood test is decisive for one proposed method. Smooth
+packets b_N=z^4.005 N^(-15/2) psi(N(log z-log .002))/log N, nu_N=0,
+have bounded coupled FAST normal graph norm and vanishing C5 norms.
+They are supported inside the actual collar and preserve every seam
+and bolt trace exactly. The complete actual normal symbol obeys
+|B(4.005+it)|<2(1+|t|)^5 log(2+|t|), at every frequency.
+Nevertheless ||partial_z^3 D^5 b_N||infinity grows like sqrt(N)/log N.
+Its leading coefficient at the center is 1680 z0^(1.005). A fixed
+rescaling puts the sequence in any positive graph ball; the divergence
+persists. Its eighth derivative in L2 instead decays as 1/log N.
+
+Consequently a uniformly W3,infinity-bounded holomorphic family of
+fixed radius cannot reproduce these five dilation jets throughout the
+current fast graph. Banach-valued Cauchy would contradict the sequence.
+This is an ACTUAL METHOD OBSTRUCTION, not an excessive finite bound,
+an operator-domain obstruction, or a wormhole nonexistence theorem.
+It does not invalidate the seed tube or the weak C2 admitted-family
+result, and does not by itself settle full nonlinear X-ball admission.
+
+The contact and nonlocal estimates remain UNKNOWN. The unchanged real
+targets are M_A<=3.18e27, M_V<=2.66e30 and eta_nonlocal<.1599164.
+A genuinely proved complex response tube at radius .20 would require
+amplitudes S_A<=8.48e21 and S_V<=1.773333333333e26 in the direct
+coefficient convention; these are conditional thresholds, not measured
+amplitudes. The density convention and all regulator-scale anomalies
+must be included before using a scaling identity. The first-order
+resolvent certificate supplies none of those response estimates.
+
+No full signed projection or actual controlled correction was computed.
+The earlier sufficient E_rest<2.123e-42<1.287e-40 enclosure is preserved;
+zero is its enclosure center, not a measured signed value. At rho=1e-8
+the requirements Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain
+unclosed; Y0<=5e-9, Z0<=.25 and Z2<=5e7 are unproved allocations.
+Global data, mass/slow matching, full nonlinear admission, compatibility,
+physical matching, validity/noise and all-sector stability remain open.
+The closed audit and full ACTIVE, INCOMPLETE objective are preserved.
+
+RESEARCH DECISION: retain the construction and symmetric subtraction,
+but reject uniform five-jet Cauchy control through a W3,infinity tube
+as the nonlinear bridge. Pursue a direct Sobolev estimate that keeps
+the highest derivatives in L2. Use the seed tube only within its proved
+scope. Do not spend another milestone optimizing it or cold/scalar terms.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): estimate the first
+metric variation of the complete symmetric, common-regulated subtracted
+quantum Hessian as a bilinear map from the coupled fast graph into H3.
+Test existence of a finite uniform common-regulator limit on the admitted
+mass/log family while retaining all contacts, seagulls, reflected/thermal
+terms and the actual-domain return. If finite, its numerical contribution
+must fit the remaining TOTAL Z2<=5e7 allocation alongside other sectors;
+no part of that budget or the open seed norm is already certified.
+
+Verification: frozen acceptance passed 29 supporting checks over 33
+unchanged inputs on the second attempt. The first attempt used exact
+equality on nonzero-radius Arb balls; it is retained with its exact
+sources and log. The repair uses rational identities and enclosure
+containment. Independent verification passed on its first attempt:
+rational resolvent guards and a direct local Taylor recurrence reproduce
+the packet's degree-eight growth. The ordinary complete-frequency and
+domain arguments establish the continuum scope; checkers do not certify
+the unknown quantum response. The exploratory cap calculation and a
+failed raw DLMF source fetch are retained; the rendered primary identity
+was inspected and its transcription is labeled. No post-success scientific
+edits or Lean runs occurred. All 18 inherited paths and immutable audits
+remain unchanged; no story checkbox is promoted.
+
+Remaining to-do list: tame common-regulated quantum response, seed contact/nonlocal bounds, global data and actual controlled correction; full nonlinear admission and contraction, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: probe extraction fails on current collar; symmetric quantum estimate open
 
 2026-10-24, E003/S169.
