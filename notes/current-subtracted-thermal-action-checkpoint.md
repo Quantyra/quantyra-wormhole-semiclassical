@@ -1,3 +1,140 @@
+# Active checkpoint: localized bolt sensitivity requires directional error control
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the actual-domain sensitivity argument](current-localized-bolt-adjoint-sensitivity.md).
+
+EXECUTED: a localized genuine TT test near the actual regular bolt
+shows that the Schur point-adjoint norm is much larger than the broad
+xi=z^4 test revealed. Its scalar return is bounded using the actual
+finite-domain inverse. The original paired boundary, full spectra,
+York return, local contacts, regulator and all physical units remain.
+
+This is a sensitivity test of the proposed correction certificate. It
+does not optimize the already controlled physical cold source or scalar
+correction. It changes the method decision before the full solve.
+
+Use t=(z_h-z)/h, a=1e-4 and the compact auxiliary direction
+J=h^-1(1-t/a)^8 on 0<=t<=a. Its genuine TT/York fields are regular at
+the bolt, vanish before their cold support and retain all constraint
+terms. The actual scalar source is the complete local trace variation;
+the canonical determinant has no scalar/mixed row. No shape term is
+discarded and no finite physical mode problem replaces the continuum.
+
+The key ordinary step is a GLOBAL positive Green barrier. The actual
+thermal polynomial satisfies Q>=beta[(1-z)^2-(1-z_h)^2]. Integrating
+the regular-bolt Poisson equation bounds the compact-source return by
+
+    V_P <= z_h^2/(beta z_a^4)
+      [log(1+a/kappa)+(a/kappa)log(1+kappa/a)], kappa=2/(1+h).
+
+The actual commuting L_D and L_4 resolvents and their ORDERED 1e-26
+scalar perturbation give the Schur return. The perturbation itself is
+not commuted. The complete mixed row is combined algebraically before
+Bernstein bounds; the TT curvature cancellations are retained.
+
+| Executed quantity | Certified outward guard |
+| --- | --- |
+| Complete mixed scalar source, in its declared dimensionless units | <24.136 |
+| Actual scalar return at the bolt for this test | <.002194 |
+| Effective bolt functional divided by ell_b | absolute value >.997806 |
+| Actual TT test energy divided by absolute W | <6.326e-30 |
+| Comparison adjoint norm, N=1 | >2.563e9 |
+| Comparison adjoint norm, N=2 | >1.812e9 |
+
+The energy includes the full positive geodesic sixth moment, every
+angular level, local/LLL/a0/a2 terms and the actual thermal/boundary
+comparison allowance. These are adjoint LOWER bounds, not an adjoint
+approximation or a solved forward equation.
+
+For the existing uniform eta=.0022 certificate, use the old broad test
+to lower-bound the primal norm and this localized test to lower-bound
+the dual norm. The all-trial minimization then forces the new necessary
+condition on the SAME full reduced-source projection I_g:
+
+    |I_g| < T_new,
+    T_new = 1.667e-9 (1.341)^2 sqrt(L_g L_c)
+                    /[.0022(1.0022) ell_b b_low],
+    T_new is enclosed near 1.066541114963e-54, hence <1.067e-54.
+
+This gives the uniform remainder the ENTIRE bolt budget, so adding
+the signed main correction, scalar remainder and other errors cannot
+weaken this necessary condition. It applies only to that sufficient
+certificate, not to wormhole existence.
+
+The certified complete source allowance 1.3079691e-40 is about
+1.22636538e14 times T_new. The rest allowance 2.123e-42 alone is about
+1.99e12 times that threshold. These are KNOWN UPPER ALLOWANCES that
+cannot certify this new requirement. The actual signed projection
+still has no nonzero lower bound. It may be much smaller. Therefore
+the actual uniform certificate is NOT proved impossible, and neither
+the source nor the operator difference is asserted to saturate its bound.
+
+If the full allowance were the actual projection magnitude, the necessary
+uniform eta would be below about 1.798e-17. That is a HYPOTHETICAL design
+target, not a measured operator norm or a necessary eta for the unknown
+actual source. No gain of that magnitude is established. A direct signed
+or weighted operator estimate can retain the cold localization that the
+global norm product loses; its attainable numerical gain is still unknown.
+
+The earlier screens remain valid in their weaker scope:
+|P_hat_rest|+E_rest<2.123e-42<1.287e-40 and complete reduced-source
+allowance <1.3079691e-40<2.60e-40. P_hat_rest=0 and its sign is unmeasured.
+They do not certify the full uniform remainder. Their records and the
+closed audit are preserved, not rewritten as failed physical solutions.
+
+Also retain the proved obstruction to a finite V* to C5 admission
+constant. The curved action is C2 on bounded ADMITTED stationary mass/log
+families; admission of the actual X ball is unproved. Strong-data return
+constants, the source's higher metric variations and all nonlinear
+requirements remain unknown, including
+
+    Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1,
+    Y0<=5e-9, Z0<=.25, Z2<=5e7 as sufficient allocations,
+    1.632e-11 K_m+1.36e-9 K_c+Y_rest<=5e-9,
+    G_(1/4)^lo E_D^2<=1/402; at E_D=.025, G<=800/201.
+
+The original admission margins, actual bolt-difference target <1.667e-9
+and exterior-return target <6.67e-10 remain unchanged. Exact compatibility,
+physical matching/causal realization, semiclassical validity/noise and
+all-sector stability are still unproved. No controlled solution is claimed.
+
+RESEARCH DECISION: retain this construction and pursue the specified
+sharper DIRECTIONAL/WEIGHTED operator-remainder method. The available
+global .0022 error product cannot certify the target, and further
+refinement of already passing source components has no demonstrated
+advantage over preserving the actual cold localization in the correction.
+This parks that current uniform-bound certificate as a working strategy;
+it is not a theorem that the actual .0022 certificate or construction fails.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the actual
+coupled Schur forward correction and physical point adjoint with a direct
+signed/directional bound on their FULL R_c contribution, including
+residual terms and all contacts, thermal/angular tails and boundary data.
+Certify its strong weighted residual return separately and test the
+original bolt, Y0 and admission targets together. The executed calculation
+here is the localized adjoint sensitivity and the new necessary threshold;
+the actual correction/adjoint solve remains unexecuted.
+
+Verification: one frozen scientific run passed
+13 supporting checks over 894
+unchanged inputs. Independent verification passed on attempt 4.
+It varies the four-dimensional covariant trace from warped-metric Ricci
+eigenvalues, independently checks the entire source polynomial by a polar
+Bernstein representation, verifies the global Green integral and the
+sixth-moment coordinate conversion, and recomputes the physical thresholds.
+The finite covariant fixtures support the algebra; they do not substitute
+for the continuum argument or the whole-interval certificate. All attempts
+are retained, including one verifier dispatch error and two overly tight
+comparisons of exported interval bounds. The accepted independent result
+uses outward guards and propagates them to the threshold. No scientific
+inputs changed after acceptance. No Lean ran. All 18 inherited paths and
+the immutable closed audit remain unchanged. No task checkbox is promoted.
+
+Remaining to-do list: actual coupled correction with directional operator error and strong weighted return; X-ball admission and nonlinear source remainder; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: strong return is essential for nonlinear admission
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
