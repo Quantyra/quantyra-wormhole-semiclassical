@@ -1,0 +1,92 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T12:48:34.449053+00:00",
+      "status": "failed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169bw-closeout.json';meta=json.loads(mf.read_bytes());r=Path(meta['satellite_root']);stem='current-outer-graph-feedback'\nsys.path[:0]=[str(p/'s169af-arb'),str(r/'checks')]\nfrom flint import arb,ctx\nimport sympy as sp\nimport mpmath as mp\nimport current_product_matched_source_projection as prev\nctx.prec=512;mp.mp.dps=100\nout=r/'evidence'/f'{stem}-closeout-verification.json';ar=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(encoding='utf-8-sig'),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());ar['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(ar,indent=2)+'\\n').encode())\ndef value(x):\n e=prev.encoded(x)['decimal_enclosure'];return mp.mpf(e['mid'])*mp.power(10,e['exponent'])\nsave()\ntry:\n run=json.loads((r/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((r/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];dec=prev.decode\n # Analytic extrema of all three cutoff derivatives independently of\n # the acceptance checker's Bernstein subdivisions.\n u=sp.symbols('u',real=True);S=35*u**4-84*u**5+70*u**6-20*u**7\n assert sp.simplify(sp.diff(S,u).subs(u,sp.Rational(1,2)))==sp.Rational(35,16)\n assert sp.simplify(sp.diff(S,u,2).subs(u,(5-sp.sqrt(5))/10))==sp.Rational(84,5)/sp.sqrt(5)\n assert sp.simplify(sp.diff(S,u,3).subs(u,sp.Rational(1,2)))==-sp.Rational(105,2)\n assert sp.simplify(sp.diff(S,u,3).subs(u,(5-sp.sqrt(15))/10))==42\n assert sp.Rational(35,16)<3 and sp.Rational(84,5)/sp.sqrt(5)<10 and sp.Rational(105,2)<60\n assert sp.factor(sp.diff(S,u,4))==840*(2*u-1)*(10*u**2-10*u+1)*(-1)\n # The real-part lower bound holds uniformly from t=4 onward by the\n # decreasing error bound, not from the subsequent frequency fixtures.\n gap=arb('7.8')-arb('.25')-arb.pi()/((4*arb.pi()).exp()-1)-arb('1.5').log()\n assert gap>7\n pars,h,zh,env=prev.scalar.prev.york.actual_parameters();mp.mp.dps=100\n # Independent expansion from the ORIGINAL product expression for Q.\n z,be,uu,ep,ta=sp.symbols('z beta u epsilon tau');Q=(1-z)**2*(be*(1+2*z+3*z*z)+uu*z*z+ep*z**4)-ta*z**3\n rho=sp.Poly(sp.expand(Q**2/be**2-1),z)\n mapping={be:pars['beta'],uu:pars['u'],ep:pars['eps'],ta:pars['tau']}\n def interval(expr):\n  if expr.is_Number:return arb(int(sp.numer(expr)))/int(sp.denom(expr))\n  if expr in mapping:return mapping[expr]\n  if expr.is_Add:return sum((interval(v) for v in expr.args),arb(0))\n  if expr.is_Mul:\n   val=arb(1)\n   for v in expr.args:val*=interval(v)\n   return val\n  if expr.is_Pow:return interval(expr.args[0])**int(expr.args[1])\n  raise ValueError(expr)\n rj=[]\n for j in range(4):\n  bound=sum((interval(rho.nth(k)).abs_upper()*k**j*arb('.01')**k for k in range(2,13)),arb(0))\n  # Different interval factorizations need not nest. Compare a common\n  # outward guard, then derive an independent operator bound below.\n  rj.append(bound)\n aa=[rj[0],rj[1]+3*rj[0],rj[2]+6*rj[1]+10*rj[0],rj[3]+9*rj[2]+30*rj[1]+60*rj[0]]\n mult=aa[0]+3*aa[1]+3*aa[2]+aa[3];cq=2*(arb(17)/16)**arb('2.5');eta=mult*cq\n assert eta<arb('.007303')\n # Diagnostic only: full untruncated normal multiplier in the new graph.\n C,B2,beta,lam,fl=[value(pars[k]) for k in ['C','B2','beta','g','Fl']]\n K=C*beta**2/(15*mp.pi*B2);Fs=fl+23*lam/(180*mp.pi);L=10*mp.pi*Fs/lam\n kap=mp.log(lam*B2)/2-mp.mpf('2.9452431301493e-9')-mp.mpf(6)/5\n ratios=[]\n for t in map(mp.mpf,['0','.005','.1','1','4','100','1e10','1e16','1e17','1e20','1e40','1e100']):\n  ss=mp.mpf('4.005')+1j*t;q=ss*(ss-3)\n  HH=mp.digamma(ss-1)+mp.pi/2*mp.cot(mp.pi*(ss-4)/2)+kap\n  B=-K*(ss-4)*q*((q+2)*HH-L)\n  ratio=K*(1+t*t)**mp.mpf('2.5')*mp.log(2+t)/abs(B)\n  assert ratio<value(cq);ratios.append([mp.nstr(t,8),mp.nstr(ratio,20)])\n # Recompute the closure with independent outward guards.\n other=arb('.24');S3=arb('7.49e-12');known=arb('1.613e-27')\n bound=(S3+(eta+other)*known)/(1-eta-other)\n assert bound<arb('9.952e-12')\n assert not ans['full_graph_feedback_certified'] and not ans['actual_E3_upper_known'] and not ans['actual_controlled_solution']\n at['result']=dict(actual_metric_symbol_and_same_domain_wave_packet_argument_reviewed=True,\n  H6_only_feedback_constant_exists=False,whole_frequency_graph_estimate_reviewed=True,\n  cutoff_derivative_analytic_extrema=['35/16','84/(5sqrt(5))','105/2'],\n  original_product_polynomial_independent_feedback_bound=prev.encoded(eta),\n  full_normal_frequency_diagnostics=ratios,conditional_E3_upper_guard='9.952e-12',\n  full_graph_remainder_and_affine_source_unknown=True,actual_controlled_solution=False,\n  scientific_checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']))\n at['status']='passed';meta['independent_result']=at['result'];meta['scientific_frozen_sha256']=dict(run['input_sha256_after'])\n for suffix in ['.json','.log']:\n  f='evidence/'+stem+suffix;meta['scientific_frozen_sha256'][f]=sha256((r/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save();print(json.dumps({k:v for k,v in at.items() if 'source' not in k},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "8e8c6331319f6426c96b9f4fd83fe587bda1c342e20f83e3d9dabc43f65da1e0",
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\dfred\\AppData\\Local\\Temp/s169bw-verify.py\", line 31, in <module>\n    assert sp.factor(sp.diff(S,u,4))==840*(2*u-1)*(10*u**2-10*u+1)*(-1)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "finished_utc": "2026-10-24T12:48:35.187946+00:00"
+    },
+    {
+      "started_utc": "2026-10-24T12:48:53.453367+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169bw-closeout.json';meta=json.loads(mf.read_bytes());r=Path(meta['satellite_root']);stem='current-outer-graph-feedback'\nsys.path[:0]=[str(p/'s169af-arb'),str(r/'checks')]\nfrom flint import arb,ctx\nimport sympy as sp\nimport mpmath as mp\nimport current_product_matched_source_projection as prev\nctx.prec=512;mp.mp.dps=100\nout=r/'evidence'/f'{stem}-closeout-verification.json';ar=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(encoding='utf-8-sig'),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());ar['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(ar,indent=2)+'\\n').encode())\ndef value(x):\n e=prev.encoded(x)['decimal_enclosure'];return mp.mpf(e['mid'])*mp.power(10,e['exponent'])\nsave()\ntry:\n run=json.loads((r/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((r/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];dec=prev.decode\n # Analytic extrema of all three cutoff derivatives independently of\n # the acceptance checker's Bernstein subdivisions.\n u=sp.symbols('u',real=True);S=35*u**4-84*u**5+70*u**6-20*u**7\n assert sp.simplify(sp.diff(S,u).subs(u,sp.Rational(1,2)))==sp.Rational(35,16)\n assert sp.simplify(sp.diff(S,u,2).subs(u,(5-sp.sqrt(5))/10))==sp.Rational(84,5)/sp.sqrt(5)\n assert sp.simplify(sp.diff(S,u,3).subs(u,sp.Rational(1,2)))==-sp.Rational(105,2)\n assert sp.simplify(sp.diff(S,u,3).subs(u,(5-sp.sqrt(15))/10))==42\n assert sp.Rational(35,16)<3 and sp.Rational(84,5)/sp.sqrt(5)<10 and sp.Rational(105,2)<60\n assert sp.simplify(sp.diff(S,u,4)+840*(2*u-1)*(10*u**2-10*u+1))==0\n # The real-part lower bound holds uniformly from t=4 onward by the\n # decreasing error bound, not from the subsequent frequency fixtures.\n gap=arb('7.8')-arb('.25')-arb.pi()/((4*arb.pi()).exp()-1)-arb('1.5').log()\n assert gap>7\n pars,h,zh,env=prev.scalar.prev.york.actual_parameters();mp.mp.dps=100\n # Independent expansion from the ORIGINAL product expression for Q.\n z,be,uu,ep,ta=sp.symbols('z beta u epsilon tau');Q=(1-z)**2*(be*(1+2*z+3*z*z)+uu*z*z+ep*z**4)-ta*z**3\n rho=sp.Poly(sp.expand(Q**2/be**2-1),z)\n mapping={be:pars['beta'],uu:pars['u'],ep:pars['eps'],ta:pars['tau']}\n def interval(expr):\n  if expr.is_Number:return arb(int(sp.numer(expr)))/int(sp.denom(expr))\n  if expr in mapping:return mapping[expr]\n  if expr.is_Add:return sum((interval(v) for v in expr.args),arb(0))\n  if expr.is_Mul:\n   val=arb(1)\n   for v in expr.args:val*=interval(v)\n   return val\n  if expr.is_Pow:return interval(expr.args[0])**int(expr.args[1])\n  raise ValueError(expr)\n rj=[]\n for j in range(4):\n  bound=sum((interval(rho.nth(k)).abs_upper()*k**j*arb('.01')**k for k in range(2,13)),arb(0))\n  # Different interval factorizations need not nest. Compare a common\n  # outward guard, then derive an independent operator bound below.\n  rj.append(bound)\n aa=[rj[0],rj[1]+3*rj[0],rj[2]+6*rj[1]+10*rj[0],rj[3]+9*rj[2]+30*rj[1]+60*rj[0]]\n mult=aa[0]+3*aa[1]+3*aa[2]+aa[3];cq=2*(arb(17)/16)**arb('2.5');eta=mult*cq\n assert eta<arb('.007303')\n # Diagnostic only: full untruncated normal multiplier in the new graph.\n C,B2,beta,lam,fl=[value(pars[k]) for k in ['C','B2','beta','g','Fl']]\n K=C*beta**2/(15*mp.pi*B2);Fs=fl+23*lam/(180*mp.pi);L=10*mp.pi*Fs/lam\n kap=mp.log(lam*B2)/2-mp.mpf('2.9452431301493e-9')-mp.mpf(6)/5\n ratios=[]\n for t in map(mp.mpf,['0','.005','.1','1','4','100','1e10','1e16','1e17','1e20','1e40','1e100']):\n  ss=mp.mpf('4.005')+1j*t;q=ss*(ss-3)\n  HH=mp.digamma(ss-1)+mp.pi/2*mp.cot(mp.pi*(ss-4)/2)+kap\n  B=-K*(ss-4)*q*((q+2)*HH-L)\n  ratio=K*(1+t*t)**mp.mpf('2.5')*mp.log(2+t)/abs(B)\n  assert ratio<value(cq);ratios.append([mp.nstr(t,8),mp.nstr(ratio,20)])\n # Recompute the closure with independent outward guards.\n other=arb('.24');S3=arb('7.49e-12');known=arb('1.613e-27')\n bound=(S3+(eta+other)*known)/(1-eta-other)\n assert bound<arb('9.952e-12')\n assert not ans['full_graph_feedback_certified'] and not ans['actual_E3_upper_known'] and not ans['actual_controlled_solution']\n at['result']=dict(actual_metric_symbol_and_same_domain_wave_packet_argument_reviewed=True,\n  H6_only_feedback_constant_exists=False,whole_frequency_graph_estimate_reviewed=True,\n  cutoff_derivative_analytic_extrema=['35/16','84/(5sqrt(5))','105/2'],\n  original_product_polynomial_independent_feedback_bound=prev.encoded(eta),\n  full_normal_frequency_diagnostics=ratios,conditional_E3_upper_guard='9.952e-12',\n  full_graph_remainder_and_affine_source_unknown=True,actual_controlled_solution=False,\n  scientific_checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']))\n at['status']='passed';meta['independent_result']=at['result'];meta['scientific_frozen_sha256']=dict(run['input_sha256_after'])\n for suffix in ['.json','.log']:\n  f='evidence/'+stem+suffix;meta['scientific_frozen_sha256'][f]=sha256((r/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save();print(json.dumps({k:v for k,v in at.items() if 'source' not in k},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "7a17b700c23a5640375294ad2254fb2e264c6f68725f029d156f53f192b121e4",
+      "result": {
+        "actual_metric_symbol_and_same_domain_wave_packet_argument_reviewed": true,
+        "H6_only_feedback_constant_exists": false,
+        "whole_frequency_graph_estimate_reviewed": true,
+        "cutoff_derivative_analytic_extrema": [
+          "35/16",
+          "84/(5sqrt(5))",
+          "105/2"
+        ],
+        "original_product_polynomial_independent_feedback_bound": {
+          "ball": "[0.00730217606702805114743105429752 +/- 8.70e-34]",
+          "decimal_enclosure": {
+            "mid": "7302176067028051147431054297520869635286",
+            "rad": "2",
+            "exponent": "-42"
+          }
+        },
+        "full_normal_frequency_diagnostics": [
+          [
+            "0.0",
+            "1.0706241864955106603e-33"
+          ],
+          [
+            "0.005",
+            "7.5981017113780540355e-34"
+          ],
+          [
+            "0.1",
+            "5.83627015017731177e-35"
+          ],
+          [
+            "1.0",
+            "3.3008694296776714063e-35"
+          ],
+          [
+            "4.0",
+            "7.1071087004132094311e-34"
+          ],
+          [
+            "100.0",
+            "1.4368054631648399526e-30"
+          ],
+          [
+            "1.0e+10",
+            "7.1575742921915274452e-14"
+          ],
+          [
+            "1.0e+16",
+            "0.099907875100004861328"
+          ],
+          [
+            "1.0e+17",
+            "0.74455206416455575727"
+          ],
+          [
+            "1.0e+20",
+            "0.81848465191722797219"
+          ],
+          [
+            "1.0e+40",
+            "0.90018321220230414788"
+          ],
+          [
+            "1.0e+100",
+            "0.95752973779051570181"
+          ]
+        ],
+        "conditional_E3_upper_guard": "9.952e-12",
+        "full_graph_remainder_and_affine_source_unknown": true,
+        "actual_controlled_solution": false,
+        "scientific_checks": 20,
+        "frozen_inputs": 934
+      },
+      "finished_utc": "2026-10-24T12:48:54.220127+00:00"
+    }
+  ]
+}

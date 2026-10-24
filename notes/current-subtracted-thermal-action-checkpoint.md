@@ -1,3 +1,111 @@
+# Active checkpoint: actual principal graph feedback bounded; full return open
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the outer graph feedback argument](current-outer-graph-feedback.md).
+
+EXECUTED: test the operator estimate needed to bound G_R, which depends
+on the UNKNOWN full correction. The previous H3-to-H6 normal return remains
+valid for given data. It cannot by itself control feedback from that response
+back into H3. A finite H6-to-H3 feedback constant is impossible.
+
+The actual all-angular log principal term of the differentiated outer
+operator difference is
+
+    -K rho(z)(i xi)^5 log|xi|,
+    rho(z)=(Q(z)/beta)^2-1, K=3.453883313556...e-36.
+
+The coefficient is nonzero on the actual collar; at z=.005 it is about
+-9.96249746e-7. Compact oscillatory directions with bounded H6 norm have
+H3 feedback growing like K n^2 log n. They are admissible operator probes,
+not the physical source or a finite physical spectrum. Lower-order and
+nonlog contacts cannot cancel this leading growth. This rejects an H6-only
+closure, not the actual solution or the full graph method.
+
+Keeping the full graph order gives the new entire-frequency estimate
+
+    K ||w||_(H8,log) <= 2.327299856 ||B_sigma w||_H3,
+
+alongside the existing ||w||_H6<1801||B_sigma w||_H3. The fixed physical K
+is retained. This is a bound between concrete derivative norms, not a
+norm-one inverse obtained by changing units. The full B and its finite
+contacts remain in the inverse.
+
+The actual coefficient Q, including tau, u and epsilon, was evaluated on
+z<=.01 with a specified W3,infinity OUTPUT cutoff. All its derivatives
+needed for H3 multiplication were included. The result is
+
+    ||alpha P B_sigma^-1||_(H3 to H3)
+                  <.007302177<.008,
+    alpha=chi[(Q/beta)^2-1], P=K partial_x^5 log(2+|D_x|).
+
+This bounds the identified LOG-PRINCIPAL component of the actual outer
+feedback at every frequency. It does not bound the complete remainder.
+Nonlogarithmic fifth contacts, other coefficient derivatives, scalar mixing,
+curved and separated kernels, mass/slow components, commutators and regular-
+bolt data remain outside this component bound. The previous .0022 weak
+form estimate is in a different norm and cannot fill that gap.
+
+A complete coupled argument must still establish
+
+    E3 <= S3+(eta_pr+eta_other)(E3+k3), k3<1.613e-27.
+
+Here S3 must include all remaining affine/global contributions through
+their original equations; unknown finite-dimensional coefficients are not
+free forcing. eta_other must control every other feedback term in the SAME
+graph and actual domain. Both quantities remain UNKNOWN.
+
+For a concrete allocation, eta_other<=.24 and S3<=7.49e-12 would give
+E3<9.951e-12 using the executed principal bound. Reserving eta_pr<=.01
+instead gives E3<9.987e-12. Both lie below the prior E3 target 1e-11.
+The independent Efar<=1e-10 requirement remains unproved. These arithmetic
+results are CONDITIONAL thresholds, not evaluated full operator/source
+bounds. No actual E3, Efar or global correction is certified.
+
+CLOSED HERE: the principal-order audit, quantified normal graph control,
+and the actual outer log-principal feedback component. OPEN: the remaining
+coupled graph feedback and affine bound, original global remainder and full
+physical admission. No construction switch or nonexistence conclusion is
+supported. No already controlled cold/scalar component was optimized.
+
+The sufficient quantum/contact screen E_rest<2.123e-42<1.287e-40 retains its
+scope and unmeasured sign. At rho=1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1 remain unclosed, with unproved allocations Y0<=5e-9, Z0<=.25,
+Z2<=5e7. Fixed-seed graph control does not prove uniform X-ball admission.
+Exact compatibility, physical matching/causal realization, semiclassical
+validity/noise and all-sector stability remain unresolved. No actual
+controlled solution is established.
+
+RESEARCH DECISION: retain the construction and use the full graph order
+in the global remainder estimate. The executed component bound shows that
+the principal quantum feedback can fit a contraction budget, while the
+H6-only route cannot control its derivatives. Do not infer that the entire
+operator fits that budget.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): assemble and bound the
+complete remaining coupled graph feedback and affine/global term, retaining
+all original boundary, mass, scalar, contact, kernel, commutator and bolt
+contributions, against eta_other<=.24 and S3<=7.49e-12. The actual E3/Efar
+and full correction remain unknown until those bounds and the independent
+far-tail target are established.
+
+Verification: one frozen scientific run passed 20
+supporting checks over 934 unchanged inputs.
+Independent verification passed on attempt 2. It obtains the cutoff
+derivative maxima analytically, expands the original product Q independently,
+checks the full-frequency inequality and compares with the untruncated normal
+multiplier. The first attempt stopped on structural equality of differently
+factored symbolic polynomials; the replay simplifies their difference. The
+mathematics, scientific inputs and targets were unchanged, and both attempts
+are retained. Frequency fixtures support the ordinary uniform proof, not a
+finite-spectrum physical claim. No post-success scientific edits or Lean
+runs occurred. All 18 inherited paths and immutable closed/paused audit
+records remain unchanged; no task checkbox is promoted.
+
+Remaining to-do list: complete actual coupled graph feedback and global affine bound, actual E3/Efar and controlled correction; nonlinear admission and exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: original global moment defined; actual strong error still unknown
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
