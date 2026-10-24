@@ -1,0 +1,112 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T09:34:25.748121+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom fractions import Fraction as Q\nimport json,sys,traceback\nimport sympy as sp\ntmp=Path('C:/Users/dfred/AppData/Local/Temp');mf=tmp/'s169bp-closeout.json';meta=json.loads(mf.read_bytes())\nroot=Path(meta['satellite_root']);stem='current-curved-paired-heat-bridge'\nsys.path.insert(0,str(tmp/'s169af-arb'))\nfrom flint import arb,ctx\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json'\narchive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nattempt=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',\n verifier_source_utf8=Path(__file__).read_text(encoding='utf-8'),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest())\narchive['attempts'].append(attempt)\ndef save():out.write_text(json.dumps(archive,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nsave()\ntry:\n runs=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'];run=runs[-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/p).read_bytes()).hexdigest()==h for p,h in run['input_sha256_after'].items())\n assert all((root/p).read_text(encoding='utf-8')==s for p,s in run['frozen_sources_utf8'].items())\n review=json.loads((root/'evidence'/f'{stem}-review.json').read_bytes())\n assert review['ordinary_argument_sha256']==sha256((root/'notes'/f'{stem}.md').read_bytes()).hexdigest()\n assert review['claims']['qualitative_C2_action_on_bounded_admitted_stationary_scalar_family']\n assert not review['claims']['X_ball_admission_proved'] and not review['claims']['actual_controlled_solution']\n # Independent bridge moments from variance and integrated covariance,\n # without the checker's general Wick/simplex enumeration.\n s,t=sp.symbols('s t',positive=True)\n var=2*s*(1-s);integral_cov=s*(1-s)\n ev=sp.integrate(var,(s,0,1));area_cov=sp.integrate(integral_cov,(s,0,1))\n covsq=2*sp.integrate(sp.integrate((2*s*(1-t))**2,(s,0,t)),(t,0,1))\n independent={'(2,)':ev,'(1, 1)':area_cov,\n  '(4,)':sp.integrate(3*var**2,(s,0,1)),\n  '(3, 1)':sp.integrate(3*var*integral_cov,(s,0,1)),\n  '(2, 2)':ev**2+2*covsq,\n  '(2, 1, 1)':ev*area_cov+2*sp.integrate(integral_cov**2,(s,0,1)),\n  '(1, 1, 1, 1)':3*area_cov**2}\n exact=next(x for x in run['numerics'] if x['kind']=='exact')\n assert all(sp.simplify(v-sp.sympify(exact['bridge_moments'][k]))==0 for k,v in independent.items())\n # The boundary delta from the exact folded cubic equals the retained\n # physical-half heat completion, including its sign and half factor.\n c,a0=sp.symbols('c a0',positive=True);pi=sp.pi\n delta_f4=12*c\n double_delta=-delta_f4/(60*a0**2)/(2*pi)/2\n inward_Rprime=12*c/a0\n physical_boundary=-inward_Rprime/(240*pi*a0)\n assert sp.simplify(double_delta-physical_boundary)==0\n # Independent finite Gaussian recursion with all coefficient sectors.\n # This is a coefficient fixture, not a surrogate physical geometry.\n X=sp.symbols('X');P=[sp.Integer(1)]\n def vertex(r,p):\n  second=sp.diff(p,X,2)-X*sp.diff(p,X)+(X*X/4-sp.Rational(1,2))*p\n  first=sp.diff(p,X)-X*p/2\n  out=-(r+1)*X**r/sp.factorial(r)*second+(r+2)*X**(r-1)/sp.factorial(r-1)*first\n  if r>=2:out+=(r+3)*X**(r-2)/sp.factorial(r-2)*p\n  return sp.expand(out)\n for j in range(1,5):\n  rhs=sp.expand(-sum(vertex(r,P[j-r]) for r in range(1,j+1)))\n  degree=sp.degree(rhs,X);poly=sp.Integer(0);remaining=rhs\n  for n in range(degree,-1,-1):\n   coefficient=sp.expand(remaining).coeff(X,n)*2/(j+n)\n   term=coefficient*X**n;poly+=term\n   remaining=sp.expand(remaining-(sp.Rational(j,2)*term+X*sp.diff(term,X)/2-sp.diff(term,X,2)))\n  assert remaining==0\n  assert sp.expand(poly.subs(X,-X)-(-1)**j*poly)==0\n  P.append(sp.expand(poly))\n for j in range(1,5):\n  assert sp.expand(sp.Rational(j,2)*P[j]+X*sp.diff(P[j],X)/2-sp.diff(P[j],X,2)+sum(vertex(r,P[j-r]) for r in range(1,j+1)))==0\n # The entire generic transfer inventory satisfies the analytic guards.\n for item in exact['IBP_inventory']:\n  assert item['maximum_derivative']<=3 and item['maximum_cutoff_derivative']<=3\n  assert item['maximum_D_power']<=64 and Q(item['absolute_coefficient_sum'])<2**120\n  assert item['total_derivative_counts']==[6]\n numerical=next(x for x in run['numerics'] if x['kind']=='numerics')\n assert arb(numerical['global_Dini_factor']).overlaps(2*arb('.001').sqrt())\n assert arb(numerical['log10_universal_outer_prefactor'])>39\n assert numerical['complete_C_A_numeric_value'] is None\n assert not numerical['source_Z2_certified'] and not numerical['actual_controlled_solution']\n for kind in ['planning','satellite']:\n  rr=Path(meta[kind+'_root']);assert all(sha256((rr/p).read_bytes()).hexdigest()==h for p,h in meta[kind+'_inherited'].items())\n result=dict(ordinary_curved_domain_argument_reviewed=True,\n  proof_route='Exact curved all-frequency collar trace; weak derivative transfer; finite source-jet Gaussian recursion; complete actual-domain patching defect',\n  action_C2_on_bounded_admitted_stationary_scalar_family=True,X_ball_admission_proved=False,\n  complete_C_A_numerically_evaluated=False,source_third_variation_proved=False,\n  actual_controlled_solution=False,all_sector_stability_proved=False,\n  independent_bridge_moments={k:str(v) for k,v in independent.items()},\n  physical_boundary_contact=str(sp.simplify(physical_boundary)),\n  finite_Gaussian_recursion_degrees=[sp.degree(p,X) for p in P],\n  checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']),scientific_runs_preserved=len(runs))\n result['finite_Gaussian_recursion_degrees']=[int(x) for x in result['finite_Gaussian_recursion_degrees']]\n meta['independent_result']=result;meta['scientific_frozen_sha256']=run['input_sha256_after']\n mf.write_text(json.dumps(meta,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n attempt.update(status='passed',result=result,scientific_input_sha256=run['input_sha256_after'])\nexcept Exception:attempt.update(status='failed',exception=traceback.format_exc())\nfinally:attempt['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nprint(json.dumps({k:v for k,v in attempt.items() if k not in ['verifier_source_utf8','scientific_input_sha256']},indent=2))\nif attempt['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "da37042a2c9e03447080f1799ab5a241c789d5ed8be101f13d84b7fb6f134ae6",
+      "result": {
+        "ordinary_curved_domain_argument_reviewed": true,
+        "proof_route": "Exact curved all-frequency collar trace; weak derivative transfer; finite source-jet Gaussian recursion; complete actual-domain patching defect",
+        "action_C2_on_bounded_admitted_stationary_scalar_family": true,
+        "X_ball_admission_proved": false,
+        "complete_C_A_numerically_evaluated": false,
+        "source_third_variation_proved": false,
+        "actual_controlled_solution": false,
+        "all_sector_stability_proved": false,
+        "independent_bridge_moments": {
+          "(2,)": "1/3",
+          "(1, 1)": "1/6",
+          "(4,)": "2/5",
+          "(3, 1)": "1/5",
+          "(2, 2)": "1/5",
+          "(2, 1, 1)": "11/90",
+          "(1, 1, 1, 1)": "1/12"
+        },
+        "physical_boundary_contact": "-c/(20*pi*a0**2)",
+        "finite_Gaussian_recursion_degrees": [
+          0,
+          3,
+          6,
+          9,
+          12
+        ],
+        "checks": 38,
+        "frozen_inputs": 15,
+        "scientific_runs_preserved": 1
+      },
+      "scientific_input_sha256": {
+        "checks/current_curved_paired_heat_bridge.py": "a4453c7ef6ca1ed51c345dadffa4e291682d9acd8312eb005b3623f168e33668",
+        "notes/current-curved-paired-heat-bridge.md": "91fddd28deac92b2a217372acdad0bd99fb99b48c6a1f61ad7f232699dd00c1a",
+        "evidence/current-curved-paired-heat-bridge-review.json": "68b3132ffb9ded2cfaa678aec772cbe3f5c04b49dee5dc02cb99f05e4ba3e3bd",
+        "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+        "evidence/current-rough-paired-variation-closeout-verification.json": "3408391d5f32fe014bec94c7d28d06f27ef7ff123386a230386951e3f258c482",
+        "notes/current-paired-regulator-domain-audit.md": "601691ac28913aea26c09d638c2bfbc9c817bc1a01f3b88dbf289ea16a0e2665",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/current-smeared-heat-projection-domain.md": "0bf8637a731e77843ca3416de4a1242070f44e555b09762cb51d1d42b185a100",
+        "notes/finite-outer-admission-and-response.md": "27d0a0db4894b139dd7271e7c62d5ee3f0cbb7d5951e0e8246374c6dbd24108e",
+        "notes/finite-cold-admission-and-response.md": "85a54514f9c744cc5fc05ce4ff60d50de2c7c43e6f15ec0c9bfb9e1b25ee0600",
+        "notes/current-signed-resolvent-projection.md": "c5f43e44d197e4b597e8a6e7f9cc72d56a0e4eda3df297dffad968a2d2a75a7e",
+        "evidence/current-signed-resolvent-projection-closeout-verification.json": "24c1af629cc90ba78180c79c46b176b968dcccb6a59bca6559b63ba304941790",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e"
+      },
+      "finished_utc": "2026-10-24T09:34:26.172298+00:00"
+    },
+    {
+      "started_utc": "2026-10-24T09:36:05.239869+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom fractions import Fraction as Q\nimport json,sys,traceback\nimport sympy as sp\ntmp=Path('C:/Users/dfred/AppData/Local/Temp');mf=tmp/'s169bp-closeout.json';meta=json.loads(mf.read_bytes())\nroot=Path(meta['satellite_root']);stem='current-curved-paired-heat-bridge'\nsys.path.insert(0,str(tmp/'s169af-arb'))\nfrom flint import arb,ctx\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json'\narchive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nattempt=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',\n verifier_source_utf8=Path(__file__).read_text(encoding='utf-8'),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest())\narchive['attempts'].append(attempt)\ndef save():out.write_text(json.dumps(archive,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nsave()\ntry:\n runs=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'];run=runs[-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/p).read_bytes()).hexdigest()==h for p,h in run['input_sha256_after'].items())\n assert all((root/p).read_text(encoding='utf-8')==s for p,s in run['frozen_sources_utf8'].items())\n review=json.loads((root/'evidence'/f'{stem}-review.json').read_bytes())\n assert review['ordinary_argument_sha256']==sha256((root/'notes'/f'{stem}.md').read_bytes()).hexdigest()\n assert review['claims']['qualitative_C2_action_on_bounded_admitted_stationary_scalar_family']\n assert not review['claims']['X_ball_admission_proved'] and not review['claims']['actual_controlled_solution']\n # Independent bridge moments from variance and integrated covariance,\n # without the checker's general Wick/simplex enumeration.\n s,t=sp.symbols('s t',positive=True)\n var=2*s*(1-s);integral_cov=s*(1-s)\n ev=sp.integrate(var,(s,0,1));area_cov=sp.integrate(integral_cov,(s,0,1))\n covsq=2*sp.integrate(sp.integrate((2*s*(1-t))**2,(s,0,t)),(t,0,1))\n independent={'(2,)':ev,'(1, 1)':area_cov,\n  '(4,)':sp.integrate(3*var**2,(s,0,1)),\n  '(3, 1)':sp.integrate(3*var*integral_cov,(s,0,1)),\n  '(2, 2)':ev**2+2*covsq,\n  '(2, 1, 1)':ev*area_cov+2*sp.integrate(integral_cov**2,(s,0,1)),\n  '(1, 1, 1, 1)':3*area_cov**2}\n exact=next(x for x in run['numerics'] if x['kind']=='exact')\n assert all(sp.simplify(v-sp.sympify(exact['bridge_moments'][k]))==0 for k,v in independent.items())\n # The boundary delta from the exact folded cubic equals the retained\n # physical-half heat completion, including its sign and half factor.\n c,a0=sp.symbols('c a0',positive=True);pi=sp.pi\n delta_f4=12*c\n double_delta=-delta_f4/(60*a0**2)/(2*pi)/2\n inward_Rprime=12*c/a0\n physical_boundary=-inward_Rprime/(240*pi*a0)\n assert sp.simplify(double_delta-physical_boundary)==0\n # Independent finite Gaussian recursion with all coefficient sectors.\n # This is a coefficient fixture, not a surrogate physical geometry.\n X=sp.symbols('X');P=[sp.Integer(1)]\n def vertex(r,p):\n  second=sp.diff(p,X,2)-X*sp.diff(p,X)+(X*X/4-sp.Rational(1,2))*p\n  first=sp.diff(p,X)-X*p/2\n  out=-(r+1)*X**r/sp.factorial(r)*second+(r+2)*X**(r-1)/sp.factorial(r-1)*first\n  if r>=2:out+=(r+3)*X**(r-2)/sp.factorial(r-2)*p\n  return sp.expand(out)\n for j in range(1,5):\n  rhs=sp.expand(-sum(vertex(r,P[j-r]) for r in range(1,j+1)))\n  degree=sp.degree(rhs,X);poly=sp.Integer(0);remaining=rhs\n  for n in range(degree,-1,-1):\n   coefficient=sp.expand(remaining).coeff(X,n)*2/(j+n)\n   term=coefficient*X**n;poly+=term\n   remaining=sp.expand(remaining-(sp.Rational(j,2)*term+X*sp.diff(term,X)/2-sp.diff(term,X,2)))\n  assert remaining==0\n  assert sp.expand(poly.subs(X,-X)-(-1)**j*poly)==0\n  P.append(sp.expand(poly))\n for j in range(1,5):\n  assert sp.expand(sp.Rational(j,2)*P[j]+X*sp.diff(P[j],X)/2-sp.diff(P[j],X,2)+sum(vertex(r,P[j-r]) for r in range(1,j+1)))==0\n # The entire generic transfer inventory satisfies the analytic guards.\n for item in exact['IBP_inventory']:\n  assert item['maximum_derivative']<=3 and item['maximum_cutoff_derivative']<=3\n  assert item['maximum_D_power']<=64 and Q(item['absolute_coefficient_sum'])<2**120\n  assert item['total_derivative_counts']==[6]\n numerical=next(x for x in run['numerics'] if x['kind']=='numerics')\n assert arb(numerical['global_Dini_factor']).overlaps(2*arb('.001').sqrt())\n assert arb(numerical['log10_universal_outer_prefactor'])>39\n assert numerical['complete_C_A_numeric_value'] is None\n assert not numerical['source_Z2_certified'] and not numerical['actual_controlled_solution']\n for kind in ['planning','satellite']:\n  rr=Path(meta[kind+'_root']);assert all(sha256((rr/p).read_bytes()).hexdigest()==h for p,h in meta[kind+'_inherited'].items())\n result=dict(ordinary_curved_domain_argument_reviewed=True,\n  proof_route='Exact curved all-frequency collar trace; weak derivative transfer; finite source-jet Gaussian recursion; complete actual-domain patching defect',\n  action_C2_on_bounded_admitted_stationary_scalar_family=True,X_ball_admission_proved=False,\n  complete_C_A_numerically_evaluated=False,source_third_variation_proved=False,\n  actual_controlled_solution=False,all_sector_stability_proved=False,\n  independent_bridge_moments={k:str(v) for k,v in independent.items()},\n  physical_boundary_contact=str(sp.simplify(physical_boundary)),\n  finite_Gaussian_recursion_degrees=[sp.degree(p,X) for p in P],\n  checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']),scientific_runs_preserved=len(runs))\n result['finite_Gaussian_recursion_degrees']=[int(x) for x in result['finite_Gaussian_recursion_degrees']]\n meta['independent_result']=result;meta['scientific_frozen_sha256']=run['input_sha256_after']\n mf.write_text(json.dumps(meta,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n attempt.update(status='passed',result=result,scientific_input_sha256=run['input_sha256_after'])\nexcept Exception:attempt.update(status='failed',exception=traceback.format_exc())\nfinally:attempt['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nprint(json.dumps({k:v for k,v in attempt.items() if k not in ['verifier_source_utf8','scientific_input_sha256']},indent=2))\nif attempt['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "da37042a2c9e03447080f1799ab5a241c789d5ed8be101f13d84b7fb6f134ae6",
+      "result": {
+        "ordinary_curved_domain_argument_reviewed": true,
+        "proof_route": "Exact curved all-frequency collar trace; weak derivative transfer; finite source-jet Gaussian recursion; complete actual-domain patching defect",
+        "action_C2_on_bounded_admitted_stationary_scalar_family": true,
+        "X_ball_admission_proved": false,
+        "complete_C_A_numerically_evaluated": false,
+        "source_third_variation_proved": false,
+        "actual_controlled_solution": false,
+        "all_sector_stability_proved": false,
+        "independent_bridge_moments": {
+          "(2,)": "1/3",
+          "(1, 1)": "1/6",
+          "(4,)": "2/5",
+          "(3, 1)": "1/5",
+          "(2, 2)": "1/5",
+          "(2, 1, 1)": "11/90",
+          "(1, 1, 1, 1)": "1/12"
+        },
+        "physical_boundary_contact": "-c/(20*pi*a0**2)",
+        "finite_Gaussian_recursion_degrees": [
+          0,
+          3,
+          6,
+          9,
+          12
+        ],
+        "checks": 38,
+        "frozen_inputs": 15,
+        "scientific_runs_preserved": 2
+      },
+      "scientific_input_sha256": {
+        "checks/current_curved_paired_heat_bridge.py": "a4453c7ef6ca1ed51c345dadffa4e291682d9acd8312eb005b3623f168e33668",
+        "notes/current-curved-paired-heat-bridge.md": "62a9cab72eb98adce09669c4f37d84bb851a6c793acb52e0ba6d1204d44523e6",
+        "evidence/current-curved-paired-heat-bridge-review.json": "317cf4e6c71c725a01df6e6d0cfdda0a19d44557e5b9b1eeec82ca1261af805e",
+        "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+        "evidence/current-rough-paired-variation-closeout-verification.json": "3408391d5f32fe014bec94c7d28d06f27ef7ff123386a230386951e3f258c482",
+        "notes/current-paired-regulator-domain-audit.md": "601691ac28913aea26c09d638c2bfbc9c817bc1a01f3b88dbf289ea16a0e2665",
+        "notes/stationary-paired-dirac-phase.md": "39a1a4849d3709eaad3134fa3b9562f8004d0d6223a1e904703546a828ee5306",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+        "notes/stationary-exterior-conformal-domain.md": "331cd6fca4401dfd959d66d504ae446e760910476ff6c5f15f5756198b6c2887",
+        "notes/current-smeared-heat-projection-domain.md": "0bf8637a731e77843ca3416de4a1242070f44e555b09762cb51d1d42b185a100",
+        "notes/finite-outer-admission-and-response.md": "27d0a0db4894b139dd7271e7c62d5ee3f0cbb7d5951e0e8246374c6dbd24108e",
+        "notes/finite-cold-admission-and-response.md": "85a54514f9c744cc5fc05ce4ff60d50de2c7c43e6f15ec0c9bfb9e1b25ee0600",
+        "notes/current-signed-resolvent-projection.md": "c5f43e44d197e4b597e8a6e7f9cc72d56a0e4eda3df297dffad968a2d2a75a7e",
+        "evidence/current-signed-resolvent-projection-closeout-verification.json": "24c1af629cc90ba78180c79c46b176b968dcccb6a59bca6559b63ba304941790",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e"
+      },
+      "finished_utc": "2026-10-24T09:36:05.653180+00:00"
+    }
+  ]
+}

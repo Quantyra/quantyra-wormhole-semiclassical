@@ -1,3 +1,138 @@
+# Active checkpoint: curved C2 action on admitted stationary families
+
+2026-10-23, E003/S169. Full stable-wormhole goal ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED. X-ball admission is NOT established.
+See [the ordinary curved-domain argument](current-curved-paired-heat-bridge.md).
+
+EXECUTED: the curved common-regulator argument now gives a C2 quantum
+action on bounded ADMITTED stationary scalar mass/log coefficient families,
+with the original paired boundary, regular disk bolt, field theory, fixed
+period, complete angular tower and complete thermal spectrum. This is a
+qualitative domain result. It does not show that the unknown solution's
+X ball is admitted or prove an actual controlled solution.
+
+The new method uses an exact curved collar kernel. In proper distance,
+put f=1/a for g2=dy^2+a(y)^2 d tau^2. The two spin sectors are
+-partial_y^2+p^2 f^2 +/- p f'. With a Brownian bridge xi of covariance
+2(min(s,r)-sr), define A=int f(y+sqrt(t)xi)^2 and B=int f'(y+sqrt(t)xi).
+The complete continuous-frequency diagonal is exactly
+
+    k(t;y,y)=E[A^(-1/2) exp(t B^2/(4A))]/(2pi t).
+
+The entire antiperiodic thermal image sum is retained by Poisson
+summation, with a convergent exponential bound on every nonzero image.
+The auxiliary collar extension is only a local parametrix: its full
+cutoff/commutator defect is propagated on the actual finite geometry.
+No smooth physical double, replacement bolt datum or finite physical
+mode selection is introduced.
+
+The decisive ordinary step is integration by parts in the trace. The
+six total derivatives in its remainder can be distributed so that no
+coefficient factor carries more than three weak derivatives. The exact
+folded mass/log fields are W3,infinity, including their third-jet jump.
+This yields an outer remainder O(t^2), without a uniform C4/H4 bound.
+The complete Gaussian bridge moments were evaluated; the derivative
+inventory has absolute coefficient sums 84957, 5241 and 101 for its
+three groups, and maximum spatial derivative three in every group.
+These checks verify finite algebra in the ordinary argument.
+
+The calculated local coefficients are exactly
+
+    C2=-R/(12f),
+    C4=-R^2/(240f)-(R'/f)'/120,
+
+inside the prefactor 1/(2pi). The weak divergence retains the actual
+paired boundary completion. For a cubic coefficient c in f, its
+physical-half boundary contact is -c/(20pi f(0)^2), matching the
+independent mixed-boundary coefficient. It is not discarded. The finite
+restored contacts and original LLL prescription remain unchanged.
+
+The transfer to finite geometry is included. Away from the rough seam,
+including regular Cartesian bolt charts, an explicit finite Gaussian
+recursion uses principal C5, first-order C4 and potential C3 coefficients.
+Jets are frozen at the source; the operator acts on the other variable.
+Its entire defect has Schur order t^(3/2), and propagation gives a trace
+remainder O(t^(3/2)). Matrix order, all cutoff terms and two parameter
+derivatives are retained. Gaussian/Cauchy estimates use the admitted
+W2,infinity parameter tube; W1 graph-domain control alone is not enough
+to bound the square's potential. This hypothesis clarification was made
+before final acceptance, with both versions and executions preserved.
+
+The real proper-coordinate map is C2 from the weighted C5 mass/log phase
+to the collar W3,infinity coefficient. Its potentially singular fifth
+base jet is multiplied by two O(y^4) coordinate variations, giving
+O(y^7 log y). No complex inverse coordinate map or spatial analyticity
+is assumed. Combining the collar and regular-chart estimates gives
+
+    |D_uw r_sub(g;t)|<=C_A ||u||A ||w||A t^(3/2), C_A<infinity,
+    integral_0^.001 |D_uw r_sub|dt/t^2
+         <=.063245553204 C_A ||u||A ||w||A.
+
+This supplies a common-regulator majorant on the stated bounded admitted
+family and identifies the first two metric variations of the retained
+action. The previously unknown EXISTENCE of such a uniform finite
+constant is resolved in that scope. The complete numerical C_A and
+actual X-to-A/inverse constants remain UNEVALUATED. The deliberately
+coarse outer allowance has a universal prefactor about 10^39.1486 before
+coefficient powers; it is a sufficient integrability estimate, not an
+estimate of the actual correction or a useful Z2 certificate. A large
+allowance is not a construction obstruction. C2 of the action also does
+not automatically give the higher source variation required by Z2.
+
+The closed audit and prior numerical screen remain unchanged:
+
+    |P_hat_rest|+E_rest<2.123e-42<1.287e-40,
+    complete reduced-source allowance <1.3079691e-40<2.60e-40.
+
+The selected interval has P_hat_rest=0; its sign is unmeasured. These are
+sufficient screening results, not necessary existence conditions or
+correction norms. No cold/scalar/source optimization is selected.
+
+At rho=1e-8 the full nonlinear conditions remain
+
+    Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.
+
+The allocation Y0<=5e-9, Z0<=.25, Z2<=5e7 is still unproved for the
+actual map. Return/admission requirements remain
+
+    1.632e-11 Km+1.36e-9 Kc+Yrest<=5e-9,
+    G_(1/4)^lo E_D^2<=1/402,
+    b45+1e-8 E45<=1e-3, b_c+1e-8 E_c<=5e-7,
+    b_o+1e-8 E_o<=1.5e-7, b_D+1e-8 E_D<=2.5e-10.
+
+The conditional thresholds Km<=61.2745098039..., Kc<=1.47058823529...,
+Yrest<=2e-9, E45<=87000 at b45=1.3e-4 and E_D<=.025 at b_D=0 are unchanged.
+At the last endpoint G<=800/201. Actual operator and return constants
+remain unknown. The independent bolt-difference target stays <1.667e-9.
+Exact compatibility, physical matching/causal realization, validity/noise
+and all-sector stability remain unresolved. S169.2--S169.5 stay unchecked.
+
+Research decision: CONTINUE THE SAME CONSTRUCTION. Use the exact curved
+collar and finite-jet weak trace argument to close the qualitative domain
+requirement on admitted stationary families. Do not promote that result
+to X-ball admission, a controlled correction or stability.
+
+The SINGLE NEXT CALCULATION is the actual coupled Schur-reduced
+forward/adjoint correction, with a certified residual and return to the
+weighted mass/log admission norms. Test its bolt difference and
+Y0/admission requirements together. This solve is PROPOSED, NOT EXECUTED.
+The curved common-regulator argument and coefficient calculations are
+EXECUTED. Higher source variations and the other solution obligations
+remain explicit even if the next solve succeeds.
+
+Verification: the final frozen execution passed 38 supporting
+checks across 15 unchanged inputs. Both successful scientific runs and
+both independent verification attempts are preserved, including the
+pre-final W2 parameter-tube clarification. The earlier coefficient
+derivation is retained as development evidence. No scientific inputs
+changed after final acceptance; no Lean ran. The ordinary continuum
+argument supplies the result; checker passes alone do not establish it.
+All 18 inherited paths and the immutable closed audit remain unchanged.
+
+Remaining to-do list: actual controlled correction and weighted return; X-ball admission, quantitative inverse and higher source remainder; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: rough paired domain and endpoint test; curved bridge open
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
