@@ -1,3 +1,114 @@
+# Active checkpoint: coupled endpoint return, global matching still unknown
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the coupled outer return argument](current-coupled-outer-return-test.md).
+
+EXECUTED: the full coupled normal operator returns the forced squared-log
+source to the admitted single-log metric phase at the level of its endpoint
+polynomial. The required shape coefficient is
+
+    e_b,log = -b_L/F_lambda = 9.894618864020...e-29.
+
+The actual full linear source forces no quartic shape logarithm. Its normal
+constant shape particular coefficient is
+
+    B0=(c_log+2f_nu,0/3)/(24K)=530514.970744585...,
+
+and its scalar logarithm is -6.596431226983...e-30. The scalar mixing and
+finite quantum contact matter: Fstar=F_lambda+23G lambda/(180pi), not merely
+F_lambda. All normalization factors and both canonical rows were checked.
+The prescribed quantum stress was not adjusted.
+
+An ordinary pole-cleared sign and monotonicity argument encloses the exact
+slow zero of the full digamma/cotangent normal family, retaining its finite
+contact:
+
+    1.86509e-34 < e_* < 1.86510e-34, exponent=4+e_*.
+
+For the normal combination b_pair=z^4[B0(1-z^e_*)+Delta z^e_*], the EXISTING
+canonical mass/log coefficient seminorm satisfies the entire-collar bound
+
+    A5,a(b_pair) <= |B0|e_*+|Delta|/(1+log(1/a)),
+    |B0|e_* < 9.895e-29.
+
+The same polynomial argument controls six disk jets. This is a bound on the
+specified combined normal profile, not a finite-geometry solution or a new
+normalization. Separating its two coefficients loses about 5.36165e33.
+The earlier Volterra comparison is now supplemented by an exact full-normal
+root and actual-source coefficients; it is not substituted for the full
+paired operator.
+
+For an actual mass-subtracted field b-b_mass=b_pair+r, the quantitative
+condition remains
+
+    |B0|e_*+|Delta|/(1+log(1/a))+A5,a(r) <= K_adm.
+
+As a sensitivity allocation only, K_adm=1e-8 and a=.1 require
+|Delta|<3.302585092994...e-8 with zero remainder allocation, or
+|Delta|<1.651292546497...e-8 if half the budget is reserved for r.
+The former is relative accuracy about 6.22524e-14 against B0. These are
+conditional targets in a stated coefficient norm. The .1 collar is the
+phase definition, not a certified radius of normal approximation; this
+allocation does not replace any physical or X-ball admission requirement.
+
+UNKNOWN: the actual global matching coefficient Delta, a useful remainder
+decomposition and its strong bound, and the full coupled admission inverse.
+The differentiated row removes a remote boundary moment and therefore cannot
+fix Delta or certify the original equation. The original global row, fixed
+paired boundary domain, common regulator, all local contacts, angular and
+thermal contributions and regular bolt must fix them. A large B0 is not an
+obstruction: a compensating mode exists. Its existence does not establish
+that the actual global solution has the required cancellation. No numerical
+claim of realistic global closure is justified until that response is bounded.
+
+CLOSED HERE: the endpoint polynomial compatibility of the squared-log source
+with the mass/log metric phase and the quantitative combined-normal-profile
+bound. STILL CONDITIONAL: actual finite-geometry return and nonlinear admission.
+The fixed-seed realization and C2 action on bounded admitted stationary families
+retain their scope; they do not establish C2 on the unknown X ball or Z2.
+No full controlled solution, nonexistence result or stability result follows.
+
+The selected quantum/contact projection remains P_hat_rest=0,
+E_rest<2.123e-42<1.287e-40, a sufficient screen with unmeasured sign.
+It is distinct from the unknown directional correction and the much tighter
+uniform-certificate projection. No already passing cold or scalar component
+was optimized. At rho=1e-8 the unclosed conditions remain
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with unproved allocations
+Y0<=5e-9, Z0<=.25, Z2<=5e7. Exact compatibility, physical matching/causal
+realization, semiclassical validity/noise and all-sector stability stay open.
+
+RESEARCH DECISION: retain the construction and sharpen the ORIGINAL-ROW
+GLOBAL BOUNDARY RESPONSE. The executed test removes an endpoint polynomial
+objection and quantifies a genuine cancellation opportunity; it does not
+certify that the opportunity is realized. Do not switch construction merely
+because B0 is large, or resume source optimization before its matching and
+remainder conditions have been tested.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute the actual paired
+global boundary response fixing Delta, together with its mass-subtracted C5
+remainder in the displayed inequality. Retain the remote kernel moment and
+the regular bolt in the original equation. The exact normal endpoint test
+above is executed; this global response and its useful error bound are not.
+
+Verification: one frozen scientific run passed 26
+supporting checks over 925 unchanged inputs.
+The preceding parameter exploration is explicitly retained as exploratory.
+Independent verification passed on attempt 2: it derives the row
+elimination and full scalar contact independently, checks the continuum root
+bracket bounds, and compares against an untruncated digamma/cotangent root
+solve and stable combined-jet evaluations. The first diagnostic failed its
+near-pole residual tolerance at 150 digits; the retained replay at 180 digits
+passed, without changing the certified interval argument, inputs or targets.
+The diagnostic root solve is not the proof of the enclosed root or of a
+physical inverse. No scientific files changed after acceptance. No Lean ran.
+All 18 inherited paths and the immutable closed/paused audit records remain
+unchanged; no S169 checkbox or solution claim is promoted.
+
+Remaining to-do list: original-row global boundary response and mass-subtracted strong remainder; global controlled correction and nonlinear admission; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: full residual requires a squared-logarithm source weight
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
