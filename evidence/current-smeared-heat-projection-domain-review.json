@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-23",
+  "story": "E003/S169",
+  "scope": "Selected regulated weak mixed heat limit using the actual rough field as smearing and the actual smooth polynomial test; quantitative first omitted coefficient and remaining full-tail capacity. Not a nonlinear action theorem or complete projection.",
+  "retained_inputs": [
+    "notes/stationary-paired-dirac-phase.md",
+    "notes/stationary-exterior-conformal-domain.md",
+    "notes/stationary-curved-quantum-tt.md",
+    "notes/current-canonical-heat-restoration-assembly.md",
+    "notes/current-product-matched-source-projection.md",
+    "notes/current-seed-directional-cold-response.md",
+    "notes/current-controlled-solution-audit-closeout.md"
+  ],
+  "ordinary_argument_review": [
+    "The actual half-domain background and the family exp(2s v)g0 for v=-z^4 are smooth up to the outer boundary and regular at the bolt. A smooth double is not asserted.",
+    "The exact partner trace identity puts the actual h into a fixed scalar smearing; differentiation in the smooth test retains the second metric vertex.",
+    "Positive-time convergence uses W2,infinity approximation. Boundary profile variation starts at jet weight four because v and its first three boundary jets vanish.",
+    "Gaussian boundary profiles multiplied by the uniform |h_e|<=H z^3 bound contribute O(t^3); interior coefficients are expanded on the actual smooth half-domain. No fourth derivative of h_e is needed.",
+    "The resulting finite constant is qualitative. It establishes the selected regulator limit, not its numerical cap precision or C2 action regularity at a rough base metric.",
+    "The a6 coefficient is reduced from the universal bulk formula. Its mixed boundary completion vanishes by jet weight, with all bolt/outer fluxes checked in the ordinary argument.",
+    "The actual radial constraint identity moves derivatives off h1. Bernstein ranges and exact log moments bound its local coefficient, retaining the finite-cut endpoint and the remaining interval.",
+    "The whole residual after a6 remains unknown. Positive numerical capacity is not a certified heat cap or the full quantum/contact projection."
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0306138v3",
+      "use": "Smooth strongly elliptic heat construction, boundary jet weights, bulk a6 equation 4.29. Applied to the actual smooth half-domain and smooth v family only, with the rough smearing treated separately."
+    },
+    {
+      "url": "https://arxiv.org/pdf/hep-th/9906144",
+      "use": "Mixed boundary coefficient weight n-1 and retained balanced projector conventions. No smooth-double theorem imported."
+    }
+  ],
+  "protocol": {
+    "ordinary_argument_first": true,
+    "source_freeze_before_run": true,
+    "preserve_all_attempts_and_failures": true,
+    "precision_bits": 512,
+    "interval_library": "python-flint==0.9.0",
+    "initial_bulk_cells": 256,
+    "positive_envelope_width_target": "1e-12",
+    "maximum_bulk_cells": 20000,
+    "heat_t0": "0.001",
+    "heat_cap_error_allocation": "2.5e-43",
+    "remaining_projection_sufficient_target": "1.287e-40",
+    "complete_projection_executed": false,
+    "C2_action_on_rough_base_family_proved": false,
+    "lean_selected": false
+  },
+  "goal_complete": false
+}

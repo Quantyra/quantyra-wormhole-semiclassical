@@ -1,3 +1,87 @@
+# Active checkpoint: selected mixed heat limit and local coefficient capacity
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED; the full-projection milestone is open.
+
+The [ordinary actual-domain argument](current-smeared-heat-projection-domain.md) exploits the smoothness
+of the actual shape test v=-z^4. The paired trace identity is
+
+    delta_h delta_v K(t)
+      =-2t partial_t partial_s Tr[h exp(-tL_(s v))]|_0.
+
+The actual rough h1 remains a smearing. The seed and smooth v family are
+smooth on the physical HALF-domain, with the original paired projector,
+period and regular bolt. No smooth double or surrogate geometry is used.
+Because v has four vanishing outer jets, its boundary-profile response
+starts at weight four; multiplication by |h_e|<=H z^3 gives O(t^3).
+The interior expansion and its derivatives are uniform independently of
+the high derivatives of the approximating smearings. Complete angular
+counting supplies an integrable regulator majorant for this selected pair.
+
+This establishes the limit of the REGULATED mixed response and identifies
+its smooth-core extension at the seed. A C2 action on a rough base family,
+arbitrary rough pairs, operator-norm majorants and nonlinear admission
+remain unproved. The raw thermal ODE subtraction match is not claimed.
+
+The integrated rank-two a6 bulk coefficient is
+int (|grad R|^2/840-R^3/1008). Its mixed boundary completion vanishes by
+jet weight 3+4>5; the regular bolt is not a boundary. The product gradient
+-2/63 is retained. Derivatives were moved off the actual h1 using its
+radial constraint identity, including the finite-cut endpoint.
+
+The executed whole-geometry coefficient bound gives
+
+    |a_hv|<=2.3454197E-13,
+    leading heat-cap allowance <5.4970775E-48,
+    U6*.001+(B_heat/2)*(.001)^2<=1.0666666E-11.
+
+The 256 interval cells retain actual beta,C,epsilon,tau and all radial
+envelopes. Endpoint allowance <4.5129318E-27 and omitted local interval
+<3.2310397E-25 are included. The independent positive-envelope
+quadrature is approximately 0.000000000000231282174188665166905229340381831434663500614299023444369457; this is
+an envelope diagnostic, not the signed coefficient or full projection.
+
+The bound closes the leading local part of the reserved 2.5e-43 heat error.
+It does not close its full remainder, the complete source, or an actual
+solution. Magnetic <1.284506e-40, complete cold <1.693010e-43 and scalar
+trial <2.331e-44 are unchanged. All nonlinear/compatibility, physical
+matching, causal energy, validity/noise and stability obligations persist.
+
+Research decision: continue with the actual geometric smearing method.
+Keep h1 as the rough smearing and vary the smooth test -z^4 on the actual
+paired half-domain. This closes the selected regulated mixed weak-response
+limit; it does not establish a C2 action on a rough metric neighborhood.
+The first omitted local coefficient leaves positive precision capacity,
+so it supplies no reason to change construction or optimize cold/scalar terms.
+
+The SINGLE next calculation is a validated bound on the ENTIRE remaining
+heat response after that local coefficient, including boundary profiles:
+
+    |r_hv^prod(t)-a_hv t^2|<=B_heat t^3, 0<t<=.001,
+    B_heat<=0.000021332863.
+
+The ordinary argument gives finiteness for this selected response, but its
+numerical B_heat remains UNKNOWN. Computing another local coefficient
+would not establish this bound. The complete remaining signed projection
+and |P_hat_rest|+E_rest<1.287e-40 test are still NOT EXECUTED. That screen
+is sufficient only, and no controlled nonlinear solution is certified.
+
+The frozen execution passed 30 checks over 955 unchanged inputs
+in 1 scientific run, with 0 scientific failures. Independent
+verification reproduced the universal cubic tensor contractions, strong
+polynomial kernel, positive-envelope quadrature and 256-cell coverage,
+endpoint allowance and physical cap/capacity arithmetic. Its first attempt
+used an unjustified decimal midpoint summation tolerance; the correction
+checks overlap of the exact serialized rational enclosures and treats the
+endpoint allowance as an upper bound. Both independent attempts are retained.
+No scientific source changed after the successful run, no Lean ran and all
+18 inherited paths remain unchanged. Checks support the algebra and bounds;
+the continuum conclusion rests on the ordinary smearing/parametrix argument.
+
+Remaining to-do list: bound the complete residual heat response and evaluate the full quantum/contact projection; controlled forward/adjoint correction and admission; C2 action/domain on the rough nonlinear phase and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: actual paired regulator/domain prerequisite
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
