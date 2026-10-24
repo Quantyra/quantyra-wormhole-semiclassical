@@ -1,0 +1,61 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T20:55:55.883899+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport sys,json,traceback\np=Path(__file__).parent;mf=p/'s169cn-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-zero-winding-regularity-test'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1]\n assert run['status']=='passed' and run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n # Direct Euler variation of the surviving cubic contact, independent of\n # the acceptance's three-parameter differentiation of the full heat term.\n z,s,t=S.symbols('z s t',real=True);C=S.symbols('C',positive=True);b=S.Function('b')(z);vv=S.Function('v')(z)\n contact=C*b*S.diff(b,z,2)**2/(30*S.pi)\n EL=S.diff(contact,b)+S.diff(S.diff(contact,S.diff(b,z,2)),z,2)\n EL=S.expand(EL)\n substituted=EL.subs({S.diff(b,z,4):t*S.diff(vv,z,4),S.diff(b,z,3):t*S.diff(vv,z,3),S.diff(b,z,2):t*S.diff(vv,z,2),S.diff(b,z):t*S.diff(vv,z),b:s+t*vv},simultaneous=True)\n mixed=S.diff(substituted,s,t).subs({s:0,t:0})\n assert S.simplify(mixed-C*S.diff(vv,z,4)/(15*S.pi))==0\n # A constant mass shift acts on the leading complete flat symbol by\n # exp(2c) K(exp(-c)p). The logarithmic coefficient has derivative -2.\n c=S.symbols('c',real=True);k=S.symbols('k',positive=True)\n rescaled=S.exp(-2*c)*k**4*(S.log(k)-c)\n derivative=S.diff(rescaled,c).subs(c,0)\n assert S.simplify(derivative-k**4*(-2*S.log(k)-1))==0\n MM,T=S.symbols('M T',positive=True)\n full_weyl=S.integrate(4*C*MM*S.exp(-T*S.exp(2*c)*MM**2),(MM,0,S.oo))\n assert S.simplify(full_weyl-2*C*S.exp(-2*c)/T)==0\n # Direct physical-side differentiation verifies the highest N power\n # independently of the accepted product polynomial.\n x,N=S.symbols('x N',real=True);sig=S.Rational(801,200);psi=S.Function('psi')(x)\n expression=S.exp((sig+S.I*N)*x)*psi\n for order in range(1,6):\n  expression=S.exp(-x)*S.diff(expression,x)\n  reduced=S.simplify(expression/S.exp((sig-order+S.I*N)*x))\n  poly=S.Poly(S.expand(reduced),N)\n  assert poly.degree()==order and S.simplify(poly.LC()-S.I**order*psi)==0\n pars,h,zh,env=old.scalar.prev.york.actual_parameters();be=pars['beta'];u=pars['u'];ep=pars['eps'];ta=pars['tau']\n coeff=[be,arb(0),u,-4*be-2*u-ta,3*be+u+ep,-2*ep,ep]\n def Q(v):return sum((co*v**i for i,co in enumerate(coeff)),arb(0))\n zz=arb('.002','.0001')\n slope=sum((i*coeff[i]*zz**(i-1) for i in range(1,7)),arb(0))\n assert slope<0\n amin=(Q(arb('.0021'))/be)**2;amax=(Q(arb('.0019'))/be)**2\n assert amin>arb('.9999999') and amax<arb('1.0000001')\n K=pars['C']*be**2/(15*arb.pi()*pars['B2'])\n lower=2*K*amin;upper=2*K*amax\n assert lower>arb('6.9077e-36') and upper<arb('6.9078e-36')\n assert 2*amin>arb('1.9999998') and 2*amax<arb('2.0000002')\n at['result']=dict(independent_cubic_Euler_variation=str(mixed),independent_complete_Weyl_integral=str(full_weyl),independent_mass_scaling_log_derivative=str(derivative),actual_Q_derivative_interval=old.encoded(slope),independent_support_a_lower=old.encoded(amin),independent_support_a_upper=old.encoded(amax),independent_soft_log_lower=old.encoded(lower),independent_soft_log_upper=old.encoded(upper),direct_physical_derivative_orders_verified=5,ordinary_continuum_packet_argument_required=True,finite_N_crossing_claimed=False,complete_C3_upper_claimed=False,actual_controlled_solution=False)\n at['status']='passed'\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in run['input_sha256_after']}\n for f in [f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']:\n  m['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps(dict(status=at['status'],exception=at.get('exception'),result=at.get('result')),indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "00409b3cd05c7f6fdc96025105a239b378ff23e0d759ef5248e91cd551a7ec74",
+      "result": {
+        "independent_cubic_Euler_variation": "C*Derivative(v(z), (z, 4))/(15*pi)",
+        "independent_complete_Weyl_integral": "2*C*exp(-2*c)/T",
+        "independent_mass_scaling_log_derivative": "-2*k**4*log(k) - k**4",
+        "actual_Q_derivative_interval": {
+          "ball": "[-8e-6 +/- 8.39e-7]",
+          "decimal_enclosure": {
+            "mid": "-798399991889165776687493465409617793821",
+            "rad": "82252202363002502014803193396843249665",
+            "exponent": "-44"
+          }
+        },
+        "independent_support_a_lower": {
+          "ball": "[0.99999992602869104078702365965 +/- 4.53e-30]",
+          "decimal_enclosure": {
+            "mid": "9999999260286910407870236596480840786513",
+            "rad": "26044379041",
+            "exponent": "-40"
+          }
+        },
+        "independent_support_a_upper": {
+          "ball": "[0.99999994520619422916969623337 +/- 4.30e-30]",
+          "decimal_enclosure": {
+            "mid": "9999999452061942291696962333716895814903",
+            "rad": "26044379169",
+            "exponent": "-40"
+          }
+        },
+        "independent_soft_log_lower": {
+          "ball": "[6.90776611613523099611e-36 +/- 2.41e-57]",
+          "decimal_enclosure": {
+            "mid": "690776611613523099611166214750715997475",
+            "rad": "74606156495978497",
+            "exponent": "-74"
+          }
+        },
+        "independent_soft_log_upper": {
+          "ball": "[6.907766248608947512151e-36 +/- 8.05e-58]",
+          "decimal_enclosure": {
+            "mid": "690776624860894751215105883604221844773",
+            "rad": "74606158106591233",
+            "exponent": "-74"
+          }
+        },
+        "direct_physical_derivative_orders_verified": 5,
+        "ordinary_continuum_packet_argument_required": true,
+        "finite_N_crossing_claimed": false,
+        "complete_C3_upper_claimed": false,
+        "actual_controlled_solution": false
+      },
+      "finished_utc": "2026-10-24T20:55:57.679693+00:00"
+    }
+  ]
+}

@@ -1,3 +1,126 @@
+# Active checkpoint: zero-winding coefficient-only bridge fails; full graph estimate remains open
+
+2026-10-24, E003/S169.
+See [the actual-domain regularity test](current-zero-winding-regularity-test.md).
+
+EXECUTED: a continuum test on the actual paired domain rules out a
+finite A x fast-graph -> H3 bound for the complete canonical zero-winding
+Hessian's first metric variation, already at the seed. The A norm used
+successfully for the relative and thermal pieces cannot be copied to
+this local ultraviolet problem. Weighted C5 is insufficient as well.
+This is an obstruction to a proposed estimate, not a large numerical
+upper bound or a physical nonexistence/stability result.
+
+The complete mass heat contact contains C b(Delta b)^2/(30pi).
+Differentiating its logarithmic principal coefficient in a slow direction
+equal to one on the observation patch gives the ORIGINAL normalized row
+  2K a(z) partial_x^5 log|D_x| w + lower logarithmic order,
+  K=GC beta^2/(15pi B^2), a=(Q/beta)^2, v=z^sigma w.
+The actual interval .0019<z<.0021 has .9999999<a<1.0000001 and
+6.9077e-36<2K a<6.9078e-36. The coefficient is tiny but nonzero.
+The full angular Weyl term, all contacts, the thermal contributions and
+actual boundary return are retained. Fixed local fourth contacts and
+the geometric conversion have no frequency logarithm to cancel it.
+
+Take w_N=N^-6 psi(x) exp(iNx), x=log z, with a fixed smooth compact
+bump inside that actual patch, and take real directions by real/imaginary
+parts. They vanish near the paired seam and regular disk bolt, have
+zero mass/slow coefficients, and lie in the admitted boundary class.
+Their A norm is O(N^-2) and weighted C5 norm O(N^-1), but their LOCALIZED
+H3 quantum response is 2K N^2 log N ||a psi||2 (1+o(1)). Thus the
+response-to-A ratio grows at least as a positive constant times N^4 log N.
+No finite C_A can satisfy the tested bound. No finite-N crossing of the
+physical budget is claimed; the continuum limit itself disproves the
+bound. This uses admissible test directions, not a finite physical-mode
+selection or a surrogate smooth boundary realization.
+
+The ordinary argument localizes the common Duhamel finite part on fixed
+smooth interior patches of the ACTUAL domain. Its heat-symbol recursion
+and complete angular Weyl coefficient give the displayed logarithm;
+off-diagonal locality retains the seam, bolt and winding contributions
+without giving them a false local principal symbol. Only a fixed smooth
+slow-parameter family is differentiated. No rough global strong theorem
+or smooth closed-manifold spectral-Hessian theorem is imported. The
+existing weak third variation supplies symmetry of the mixed derivative.
+
+The FULL CURRENT coupled normal graph has a different conclusion:
+  ||data(v_N)||H3 = K N^2 log N ||psi||2 (1+o(1)).
+The scalar comparison datum is lower order. The localized response/data
+ratio tends to 2||a psi||2/||psi||2 in (1.9999998,2.0000002) for the
+fixed unnormalized slow direction. This is a necessary packet test,
+NOT a complete C3 upper bound or a unit-input bilinear estimate.
+Plain interior H8 still loses log N; the existing graph supplies that
+logarithmic weight. Its previous H6 inverse cap is too weak for this
+step. The counterexample packets are not bounded in the full graph,
+so this does not refute a graph x graph bound or the original X ball.
+
+FIRST UNSUPPORTED STEP, NOW MORE PRECISE: a uniform complete zero-winding
+graph x graph -> H3 estimate and matched strong common-regulator limit,
+with every contact combined and actual background graph/mass-log norms
+stated. A-only or C5 admission cannot substitute for those hypotheses.
+Using stronger graph control is necessary here, but a norm change alone
+does not certify the unknown background or any nonlinear inequality.
+The graph estimate's attainability remains unknown; the packet test
+removes one false bridge and finds no high-frequency contradiction to
+the already selected full graph.
+
+The relative <2.205e-13, relative fast derivative <.001253 and thermal
+<1e-1000 bounds keep their scopes. Their further optimization is parked.
+The remaining sufficient target is unchanged:
+  eta_zero_winding_curved_seed+1e-11 C3_other<.159916395999.
+Both constants are unknown. Its best-case ceilings are eta<.159916395999
+and C3_other<1.59916395999e10; an equal split requires eta<.0799581979995
+and C3_other<7.99581979995e9. These targets are not achieved estimates.
+The seed contact targets M_A<=3.18e27, M_V<=2.66e30, remaining global
+A<=.00094319, and original X/graph comparisons remain unknown. The A
+target remains useful for relative/thermal admission but is insufficient
+for the complete local strong response.
+
+At rho=1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain
+unclosed; Y0<=5e-9, Z0<=.25 and Z2<=5e7 remain unproved allocations.
+The complete |P_hat_rest|+E_rest<1.287e-40 projection test is unexecuted.
+The earlier selected 2.123e-42 enclosure keeps its limited scope; zero
+was not a measured full signed value. This screening condition is
+sufficient, not necessary for wormhole existence. No actual controlled
+solution is established. Exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability remain open.
+The feasibility audit stays CLOSED and full goal ACTIVE/INCOMPLETE.
+
+RESEARCH DECISION: retain the construction; reject the coefficient-only
+and C5 extensions of the complete zero-winding metric response. Continue
+with the ALREADY specified full coupled graph, keeping the highest
+derivative and its logarithmic weight in L2. Extract the variable
+logarithmic principal term and return it to the same nonlinear equation.
+Do not discard it, choose an adjustable contact, or smooth the domain.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete
+common-regulated zero-winding third response after BOTH fast inputs
+are returned through the full coupled normal inverse. Isolate the
+variable logarithmic principal term, combine the remaining contacts,
+and prove a uniform graph x graph -> H3 estimate with explicit
+background graph/mass-log hypotheses and matched strong regulator
+removal. Test the unchanged .159916395999 budget, contact targets and
+original X comparisons. The packet calculation is executed; that
+complete operator estimate and the signed projection are not.
+
+Verification: frozen acceptance passed 29 supporting checks over
+34 unchanged inputs on its first attempt. Independent verification also
+passed on its first attempt. It derives the soft coefficient from the
+cubic contact's Euler variation, evaluates the full continuum Weyl
+integral, differentiates physical-side packet jets directly, and uses
+monotonicity plus endpoint enclosures of the actual Q instead of the
+acceptance's whole-interval substitution. Exact source/output, review
+and verification are retained. The ordinary local heat and continuum
+packet argument establishes the estimate obstruction; checkers support
+its algebra and nonzero coefficient, not the missing full graph bound.
+No failed runs, post-success scientific edits or Lean executions occurred.
+All 18 inherited paths and immutable audits remain preserved; no story
+checkbox or full-goal requirement is promoted.
+
+Remaining to-do list: complete graph quantum response and contact bounds, global admission/correction and original X comparison, nonlinear closure, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: massive thermal near response bounded; zero-winding response and admission open
 
 2026-10-24, E003/S169.
