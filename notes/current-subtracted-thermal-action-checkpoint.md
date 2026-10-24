@@ -1,3 +1,119 @@
+# Active checkpoint: strong return is essential for nonlinear admission
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the ordinary inverse-norm argument](current-weak-to-admission-obstruction.md).
+
+EXECUTED: the actual-domain inverse test rules out a finite bound from
+the action-form dual V* alone to the physical five-jet admission norms.
+This is an obstruction to that certificate, not to the specified physical
+source or to wormhole existence. The closed audit already required a
+separate weighted return; that requirement is now shown to be essential.
+
+The proof constructs a continuum sequence of genuine TT directions on
+the actual finite seed, with the original paired boundary, fixed clock,
+regular bolt and preserved mass/log phase. Its compact auxiliary J
+generates the full global York tail, which is retained. The complete
+geodesic sixth-moment estimate, all local and vacuum contacts, LLL,
+full angular spectrum and actual thermal/boundary remainder bound give
+||H e_n||V*=O(n^(-3/2)), while a physical fifth shape derivative grows
+as sqrt(n). The bolt response also tends to zero. It is therefore
+impossible to recover a uniform C5 admission estimate by improving only
+the weak residual or bolt value, or by changing normalization.
+
+At n=1e20, the outward finite-geometry certificates are:
+
+| Executed inverse-norm diagnostic | Certified result |
+| --- | --- |
+| Full physical V* residual, N=1 or N=2 | <1.778e-10 |
+| Physical bolt response | <4.746e-76 |
+| Absolute fifth proper shape derivative | >2191317.2111 |
+| Same diagnostic divided by 5!100^5 | >1.826e-6 |
+
+The derivative diagnostic is NOT identified numerically with D_ell or
+P5_40. Fixed-chart norm equivalence proves unboundedness for every
+admission norm controlling those jets; an actual numerical chart
+conversion is still required in a positive certificate. The weak norm
+numbers are not X-radius or Y0 values. The synthetic d_n=H e_n is a
+test of the inverse, NOT the actual defect r_new or an adjustable quantum
+stress. This is a continuum mathematical test, not a claim that its
+arbitrarily short wavelengths are semiclassically valid. No physical
+cutoff or finite mode replacement has been selected.
+
+The first unsupported inference is thus quantitative return from weak
+control to the admitted coefficient family. The curved C2/common-regulator
+result on BOUNDED admitted stationary mass/log families is unchanged.
+No new defect of that paired boundary realization is found. A nonlinear
+X ball, higher source variations and numerical strong return are open.
+
+The selected quantum/contact interval remains
+|P_hat_rest|+E_rest<2.123e-42<1.287e-40, with P_hat_rest=0 and unmeasured
+sign. The complete reduced-source allowance stays <1.3079691e-40<2.60e-40.
+These close sufficient screens, not a correction norm or existence theorem.
+No cold, scalar or already passing projection optimization was performed.
+
+For a conforming actual trial e_p with d=H e_p+r_new, admission must be
+proved separately in each ORIGINAL norm N_j:
+
+    N_j(H^-1 d) <= m_j-N_j(e_p), with nonnegative right side.
+
+Retain the middle 1e-3, cold 5e-7, outer 1.5e-7 and strong-direction
+2.5e-10 margins, including every center offset. A radius 1e-8 ball still
+requires E45<=87000 at center bound 1.3e-4 and E_D<=.025 at zero strong
+center offset. The low-order nonlinear product needs
+G_(1/4)^lo E_D^2<=1/402; at E_D=.025, G<=800/201.
+These actual strong-data constants remain UNKNOWN. A finite V* to C5
+constant is DISPROVED, not a known excessive upper bound. Existing coarse
+quantum upper bounds remain upper bounds, not evidence of nonexistence.
+
+All nonlinear inequalities remain unresolved in an actual physical X:
+
+    Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1,
+    Y0<=5e-9, Z0<=.25, Z2<=5e7 as sufficient allocations,
+    1.632e-11 K_m+1.36e-9 K_c+Y_rest<=5e-9.
+
+The retained allocations K_m<=61.2745098039, K_c<=1.47058823529,
+Y_rest<=2e-9, actual bolt difference <1.667e-9 and exterior return
+<6.67e-10 are not certified. Neither exact compatibility, physical
+matching/causal realization, semiclassical validity/noise nor all-sector
+stability follows from this test. No task checkbox is promoted.
+
+RESEARCH DECISION: continue this construction with a strong weighted
+return certificate alongside the weak primal/adjoint bolt certificate.
+Further weak-residual accuracy alone cannot close admission. Strong
+regularity is structurally plausible for this fourth-order/logarithmic
+operator on sufficiently regular data, but no evaluated global strong
+inverse or actual residual currently shows that the numerical targets
+are attainable. This test gives no reason to switch construction.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct the actual
+coupled Schur forward/adjoint trial and certify the high-frequency and
+mass/log endpoint remainder of its FULL residual in a norm that returns
+the original admission jets. Test the weighted inequalities, Y0 and bolt
+difference together. The executed result here is the inverse-norm
+obstruction and finite-n diagnostic, not that actual coupled solve.
+
+Verification: 17 supporting checks passed over
+889 frozen inputs. All 3 scientific runs are
+preserved. The first lost shared-parameter correlation when independently
+subtracting the leading jet; the accepted code cancels that term
+algebraically before interval evaluation. Publication then caught CRLF-to-LF
+conversion; the original byte snapshots are retained in the publication
+repair receipt. Explicit LF serialization and a fresh successful run give
+identical numerical results. Independent verification passed
+on attempt 4. Its two earlier serialization-rounding comparisons
+are preserved; the final independent certificate carries an explicit
+relative 1e-18 outward allowance, including its effect on the weak norm.
+It independently differentiates the signed local action and reconstructs
+the fifth jet by a Taylor recurrence from the original TT equation.
+The ordinary continuum argument is the proof; checker counts are only
+support. No scientific inputs changed after final acceptance. No Lean ran.
+All 18 inherited paths and the immutable closed audit remain unchanged.
+
+Remaining to-do list: actual controlled correction with strong weighted return; X-ball admission and higher source remainder; exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: curved C2 action on admitted stationary families
 
 2026-10-23, E003/S169. Full stable-wormhole goal ACTIVE and INCOMPLETE.
