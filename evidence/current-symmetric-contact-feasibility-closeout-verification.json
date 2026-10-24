@@ -1,0 +1,54 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T17:09:31.120691+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport sys,json,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169cf-closeout.json';m=json.loads(mf.read_bytes());root=Path(m['satellite_root']);stem='current-symmetric-contact-feasibility'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n be,u,ep,ta=pars['beta'],pars['u'],pars['eps'],pars['tau']\n # Direct coefficient/triangle bounds, independent of Bernstein subdivision.\n q=[be,arb(0),u,-4*be-2*u-ta,3*be+u+ep,-2*ep,ep]\n d2=[(j+2)*(j+1)*q[j+2] for j in range(5)]\n d3=[(j+1)*d2[j+1] for j in range(4)]\n upper=d3[0]+sum((abs(d3[j])*arb('.01')**j for j in range(1,4)),arb(0))\n assert upper<arb('-3.8')\n fun=lambda x:sum((d2[j]*x**j for j in range(5)),arb(0))\n lo=arb('1.0179218937757907e-11');hi=arb('1.0179218937757909e-11')\n assert fun(lo)>0 and fun(hi)<0\n assert old.decode(ans['root_bracket'])>lo and old.decode(ans['root_bracket'])<hi\n dq=sum((abs(q[j])*hi**j for j in range(1,7)),arb(0))\n Ylo=lo/(be+dq).sqrt();Yhi=hi/(be-dq).sqrt()\n assert old.decode(ans['root_Y_enclosure'])>Ylo and old.decode(ans['root_Y_enclosure'])<Yhi\n assert Ylo>arb('1e-15')\n # Independent power-mode construction, starting from a quadratic action.\n z,s=S.symbols('z s');A=S.Function('A')(z);V=S.Function('V')(z)\n b0,b1=S.symbols('b0 b1');lag=(-A*b1*b1+V*b0*b0/z)/2\n E=S.diff(lag,b0).subs(b0,z**s)-S.diff(S.diff(lag,b1).subs(b1,s*z**(s-1)),z)\n row=S.expand((z*S.diff(z**4*E,z)-4*z**4*E)/z**s)\n DA=z*S.diff(A,z);D2A=z*S.diff(DA,z);DV=z*S.diff(V,z)\n target=z*z*(A*s*(s-1)*(s-2)+DA*(2*s*s-3*s)+D2A*s)+z**3*(V*(s-1)+DV)\n assert S.simplify(row-target)==0\n # Reconstruct the low derivative normal caps; use larger rounded guards.\n sig=arb('4.005');K=pars['C']*be*be/(15*arb.pi()*pars['B2'])\n LL=10*arb.pi()*(pars['Fl']+23*pars['g']/(180*arb.pi()))/pars['g']\n caps=[2/(K*LL*arb('.005')*sig*(sig-3)),2/(K*LL*sig*(sig-3)),2/(K*LL*sig),2/(K*LL)]\n rounded=[arb(895),arb('4.48'),arb('4.5'),arb('18.01')]\n assert all(x<y for x,y in zip(caps,rounded))\n TA=rounded[3]+(3*sig-1)*rounded[2]+(3*sig*sig-2*sig)*rounded[1]+sig*sig*(sig-1)*rounded[0]\n TV=rounded[1]+sig*rounded[0];fq=pars['C']/(arb.pi()*pars['B2'])\n AA=fq*arb('.01')**2*388*TA;VV=fq*arb('.01')**3*560*TV\n budget=AA*arb('3.18e27')+VV*arb('2.66e30')\n assert budget<arb('.02') and budget>old.decode(ans['conditional_contact_upper'])\n assert ans['actual_probe_division_uniformly_obstructed'] and ans['old_tiny_collar_theorem_preserved']\n for k in ['actual_operator_obstructed','full_symmetric_kernel_graph_bound_proved','actual_contact_jets_certified','actual_nonlocal_remainder_certified','actual_data_target_certified','full_X_ball_admission_proved','full_signed_projection_executed','actual_controlled_solution','nonlinear_preserved_ball','exact_compatibility','physical_matching','validity_noise','all_sector_stability','physical_source_or_norm_changed','normal_or_slow_root_changed','finite_physical_modes_selected']:\n  assert not ans[k]\n for kind in ['planning','satellite']:\n  rr=Path(m[kind+'_root']);assert all(sha256((rr/f).read_bytes()).hexdigest()==h for f,h in m[kind+'_inherited'].items())\n at.update(status='passed',independent_fixed_root_bracket=[old.encoded(lo),old.encoded(hi)],independent_monotonicity_upper=old.encoded(upper),independent_action_row_identity=True,independent_rounded_caps=[str(x) for x in rounded],independent_conditional_budget=old.encoded(budget),scope='Actual geometry, exact local identities and conditional thresholds only; unknown quantum graph norm not certified',post_success_scientific_edits=False)\nexcept Exception:at.update(status='failed',exception=traceback.format_exc())\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n files=list(run['input_sha256_after'])+[f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']\n m['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in sorted(set(files))};mf.write_bytes((json.dumps(m,indent=2)+'\\n').encode())\nprint(json.dumps({k:v for k,v in at.items() if k!='verifier_source_utf8'},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "7691242521afe717b3930321e8e7c579b629d30ff99e4a0075d6935b5aca8d9a",
+      "independent_fixed_root_bracket": [
+        {
+          "ball": "[1.01792189377579070000000000000e-11 +/- 3e-45]",
+          "decimal_enclosure": {
+            "mid": "1017921893775790699999999999999999999999",
+            "rad": "2",
+            "exponent": "-50"
+          }
+        },
+        {
+          "ball": "[1.01792189377579090000000000000e-11 +/- 1e-45]",
+          "decimal_enclosure": {
+            "mid": "1017921893775790900000000000000000000000",
+            "rad": "1",
+            "exponent": "-50"
+          }
+        }
+      ],
+      "independent_monotonicity_upper": {
+        "ball": "[-3.88000000016042449046314711467 +/- 4.06e-30]",
+        "decimal_enclosure": {
+          "mid": "-3880000000160424490463147114668800694458",
+          "rad": "2859864717",
+          "exponent": "-39"
+        }
+      },
+      "independent_action_row_identity": true,
+      "independent_rounded_caps": [
+        "895.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "[4.48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 2.88e-154]",
+        "4.50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "[18.0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.34e-153]"
+      ],
+      "independent_conditional_budget": {
+        "ball": "[0.01995524968685112146133 +/- 5.96e-24]",
+        "decimal_enclosure": {
+          "mid": "1995524968685112146133380119607957684213",
+          "rad": "215523284542816257",
+          "exponent": "-41"
+        }
+      },
+      "scope": "Actual geometry, exact local identities and conditional thresholds only; unknown quantum graph norm not certified",
+      "post_success_scientific_edits": false,
+      "finished_utc": "2026-10-24T17:09:31.903757+00:00"
+    }
+  ]
+}

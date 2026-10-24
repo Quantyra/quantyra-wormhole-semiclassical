@@ -1,3 +1,109 @@
+# Active checkpoint: probe extraction fails on current collar; symmetric quantum estimate open
+
+2026-10-24, E003/S169.
+See [the actual contact feasibility test](current-symmetric-contact-feasibility.md).
+
+EXECUTED: a feasibility test of the older covariant-probe extraction
+on the ACTUAL current collar. Its derivative is
+
+ d_Y v_*=Q''(z)sqrt(Q(z))/(2sqrt(beta)).
+
+The full polynomial has exactly one simple Q'' zero on 0<z<.01:
+
+ z_*=1.017921893775790765058e-11,
+ Y_*=2.49338923778360801478e-11,
+
+with certified interval enclosures in the evidence. Thus its reciprocal
+is unbounded on this collar. A value-bound/division estimate cannot be
+extended uniformly through that point. Multiplying the probe by another
+normalization does not remove its zero. The old Y<=1e-15 theorem remains
+valid; it did not claim this larger collar.
+
+This is an obstruction to one EXTRACTION METHOD, not to the actual
+quantum operator, its domain, or wormhole existence. The exact numerator
+has a removable zero there, but bounding its quotient requires additional
+derivative estimates. Neither a numerator value bound nor l'Hopital's
+rule supplies those estimates.
+
+The replacement keeps the near kernel subtraction symmetric on the
+original C2,1 even double, retaining the physical half, reflected kernel,
+common finite moments and global remainder. After matched higher
+contacts, formal adjoint equality forces the local second-order part
+to be in divergence form. Its first contact is the derivative of the
+same second contact; no division by the covariant probe is needed.
+This is a form identity, not a certified strong bound for the kernel.
+
+For the actual remaining local allocation write
+Hloc b=fq[(A b')'+z^-1 V b], fq=GC/(pi B^2), in the original dz measure.
+Let M_A bound five conormal derivatives of A and M_V four of V, each
+divided by 1+log(.01/z). These actual seminorms are UNKNOWN. The exact
+shape row and existing full normal inverse give the sufficient estimate
+
+ eta_local <=3.137593e-30 M_A+3.746000e-33 M_V.
+
+The explicit conditional targets M_A<=3.18e27 and M_V<=2.66e30 imply
+eta_local<.019941904<.02. Giving each coefficient .01 would allow,
+respectively, 3.1871569908e27 and 2.6695143244e30. These are thresholds
+for missing derivative estimates, not computed values of A or V.
+The more illustrative 1e27 and 1e29 give .003512193 conditionally.
+No physical normalization or source norm changed.
+
+With .02 reserved for these contacts, the complete remaining nonlocal
+response must be <.1599164 to fit the unchanged .1799164 allocation.
+Both the contact jets and the nonlocal norm remain UNKNOWN. There is
+no certified complete upper bound to label excessive, and no physical
+obstruction is established. Old value/form bounds do not imply these
+derivative bounds; the finite moment of a changed subtraction must be
+retained. The thresholds support trying the sharper method, not claiming
+that the conditions have already been attained.
+
+The preceding exact seed conversion, <8.357937945e-5 conversion graph
+bound, unchanged geometric normal and fast-domain embedding retain
+their scope. This turn does not evaluate the actual complete quantum
+graph norm, a correction, or the full signed projection. The sufficient
+projection enclosure E_rest<2.123e-42<1.287e-40 is preserved; its zero
+center is an enclosure center, not a measured signed projection.
+
+Global data, joint affine <=7.49e-12, known-source <=1e-14 and independent
+Mellin Efar<=1e-10 remain unproved. At rho=1e-8 the open inequalities are
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with unproved allocations
+Y0<=5e-9, Z0<=.25, Z2<=5e7. Full nonlinear X-ball admission, mass/slow
+matching, exact compatibility, physical matching, semiclassical
+validity/noise and all-sector stability remain unresolved. No actual
+controlled solution is established. The audit stays CLOSED and the
+full objective stays ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction, but reject extension of
+the covariant-probe division to the present collar. Use symmetric
+midpoint subtraction and divergence-form contacts in the exact converted
+mass representation. This is a specified sharper method, with actual
+solution feasibility still undecided. Do not reoptimize cold/scalar terms.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): derive and evaluate the
+actual conormal contact jets and symmetric moment-subtracted kernel in
+this ONE allocation, testing M_A<=3.18e27, M_V<=2.66e30 and the complete
+nonlocal graph norm <.1599164. Retain all angular/thermal tails, diagonal
+jumps and seagulls, reflected terms, finite moments and original global
+coupling. The allocation identity and conditional thresholds do not
+substitute for that actual estimate.
+
+Verification: the frozen acceptance passed 26 supporting checks over
+985 unchanged inputs. Independent direct coefficient bounds confirmed
+monotonicity and a fixed rational bracket for the root; an independent
+quadratic-action variation confirmed the exact strong row. Reconstructed
+normal caps with larger rounded guards still gave a conditional contact
+bound <.01995525<.02. Acceptance and independent verification each passed
+on the first attempt. The ordinary symmetry and domain argument supplies
+the continuum scope; no checker certifies the unknown quantum norm.
+The exploratory source and output are retained. No failed scientific
+runs, post-success scientific edits or Lean runs occurred. All 18
+inherited paths and immutable audits remain unchanged. No task checkbox
+is promoted.
+
+Remaining to-do list: actual symmetric contact jets and nonlocal quantum norm, global data and controlled correction; mass/slow matching, full nonlinear admission and contraction; exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: seed conversion closed; actual coincident quantum norm remains unknown
 
 2026-10-24, E003/S169.
