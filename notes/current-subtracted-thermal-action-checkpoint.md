@@ -1,3 +1,153 @@
+# Active checkpoint: complete quantum/contact screening target certified
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit stays CLOSED. The selected full-projection SCREEN
+is complete; nonlinear existence and stability are not established.
+See the [ordinary actual-domain argument](current-signed-resolvent-projection.md).
+
+EXECUTED: the complete remaining quantum/contact projection has the
+certified signed enclosure
+
+    P_hat_rest=0, |P_rest-P_hat_rest|<2.123e-42,
+    hence |P_hat_rest|+E_rest<2.123e-42<1.287e-40.
+
+The actual unrounded upper enclosure is 2.122334912082012e-42 at radial
+order 11. Order 9 independently passes with upper 2.575788327495769e-42.
+These are complete absolute allowances giving signed intervals centered
+at zero. The sign and a nonzero central value of the actual projection
+have NOT been measured. The user's SUFFICIENT SCREEN is certified; it
+is not a necessary condition for wormhole existence.
+
+The selected mass/log response is defined at the actual seed by its
+physical-half paired domain and common-regulator argument. The new exact
+radial resolvent identity matches that functional, including its density
+vertex, tadpole and finite-M conversion. The finite radial expansion is
+an auxiliary approximation with its ENTIRE residual propagated on the
+original domain. No smooth physical double, wall datum, or finite physical
+mode model is substituted. The true bolt data are enclosed and their
+uncertainty propagated; the paired-seam reflection is differentiated.
+All thermal frequencies and higher angular levels have complete bounds.
+
+The dominant accepted allowances are:
+
+| Contribution | Upper allowance |
+| --- | ---: |
+| All remaining local contacts | 1.875137e-42 |
+| Omitted higher-angular UV subset | 1.5483364e-43 |
+| Entire radial residual, including metric variation | 4.915182e-44 |
+| Entire rational remainder after local cancellations | 3.414529e-44 |
+| Higher-angular positive times | 4.624e-45 |
+| Cold observation, positive times | 4.325855e-45 |
+| Actual paired-seam reflection | 9.956038e-47 |
+| Remaining raw A3 local term | 1.576445e-47 |
+| Low-angular product-gradient contact | 2e-48 |
+| Cold UV | 6.958040e-55 |
+| Complete thermal sum/integral difference | 6.867683e-66 |
+| Cold product conversion | 2.858560e-71 |
+| True regular-bolt data uncertainty | 3.170181e-103 |
+
+The total is evaluated from the outward enclosures, not rounded table
+entries. The existing UV cap is used only as a positive majorant for
+the omitted angular subset. The low-level resolvents already include
+their short times. Every product contact is counted once. The older
+Q_(P64) error is NOT transferred to this different evaluator.
+
+The executed sensitivity test distinguishes an excessive upper bound
+from an actual obstruction. Separate interval geometry jets gave variation
+residual coefficients near 1.516e8 and 2.510e8 at order 9. Keeping the
+same exact geometry correlations INSIDE the full coefficient reduced the
+allowance to 9000.310. No geometry, domain, coupling or normalization was
+changed. Increasing the order before fixing this dependency loss made
+the estimate worse. A development run also stopped because a rounded
+wide positive y ball crossed zero before inversion; monotone endpoint
+powers corrected that implementation failure, preserving the actual
+positive endpoint and thermal term. All attempts remain in the evidence.
+
+The local allowance now dominates the error but consumes only 1.46% of
+the screening target. Optimizing it, the cold component or the scalar
+component cannot change this passing decision. No additional source
+optimization is selected.
+
+The whole-domain assembly is P_new=P_M,bulk+P_M,cold+P_rest,whole
++scalar-trial error. Reusing the existing magnetic bulk <1.284506e-40,
+magnetic cold <2e-43 and scalar error <2.331e-44 gives the complete
+selected reduced-source allowance <1.3079691e-40<2.60e-40. The old
+complete cold defect is NOT added again. This closes the selected
+source-projection screen only; it neither bounds the unknown actual
+correction nor establishes the exact complementary equation.
+
+The first remaining unsupported continuum step is the uniform
+identification of the action's metric derivatives on a NEIGHBORHOOD of
+rough mass/log base metrics. The selected result uses h1 as a smearing
+and the smooth v=-z^4 as the differentiated direction. It cannot be
+promoted to arbitrary rough pairs or a nonlinear action theorem. The
+known H3 endpoint integrability makes a weak form route plausible; the
+diverging H4/C4 smoothing cost rules out importing a smooth theorem with
+those uniform norms. No actual divergence of the renormalized form or
+construction obstruction has been established.
+
+At rho=1e-8 the same simultaneous requirements remain
+
+    Y0+1e-8 Z0+5e-17 Z2<=1e-8,  Z0+1e-8 Z2<1.
+
+The allocation Y0<=5e-9, Z0<=.25, Z2<=5e7 is still UNKNOWN for the actual
+operator, inverse and admission space. The return requirement remains
+1.632e-11 K_m+1.36e-9 K_c+Y_rest<=5e-9, with conditional allocations
+K_m<=61.2745098, K_c<=1.4705882 and Y_rest<=2e-9. The conditional nonlinear
+loss requirement G_(1/4)^lo E_D^2<=1/402 is unchanged. None of these
+operator/domain constants is supplied by the passing scalar projection.
+
+Exact compatibility, actual controlled forward/adjoint correction,
+physical matching and causal boundary/state realization, semiclassical
+validity/noise, and all-sector stability remain UNRESOLVED. No S169.2--.5
+checkbox is promoted. The full stable-wormhole objective stays active.
+
+Research decision: CONTINUE THE SAME CONSTRUCTION, using the certified
+actual-domain radial resolvent method for this selected projection. Close
+the quantum/contact SCREENING milestone and stop optimizing its already
+sufficient error. The failed earlier allowances were estimation losses;
+this execution provides no reason to switch the construction.
+
+The SINGLE next calculation is the commonly subtracted mixed heat/
+resolvent response for TWO GENERAL admitted mass/log directions on rough
+base metrics in the rho=1e-8 neighborhood. Compute its leading boundary
+term and a uniform remainder with all actual paired contacts retained.
+Test the concrete regulator-removal condition
+
+    integral_0^.001 t^-2
+      sup_(g in B_rho, ||u||_X,||w||_X<=1) |r_sub(g;u,w;t)| dt <infinity,
+
+in the actual physical phase and norm, together with continuity of that
+mixed response. A bound A_rho t^(1+alpha), alpha>0, would suffice for
+this UV condition; neither A_rho nor such an exponent is assumed. Keep
+the independently variable mass cubic and weight-four log coefficients.
+Do not replace them by smooth even data. If the original phase/norm does
+not control the required remainder, document that domain obstruction
+before selecting a stronger physical realization or changing construction.
+
+This next calculation is PROPOSED, NOT EXECUTED. Higher variations needed
+for the nonlinear source Z2, admission constants and the actual inverse
+remain subsequent obligations even if it succeeds. The executed result
+here is the complete selected projection screen, not nonlinear existence
+or stability.
+
+The final frozen scientific run passed 60 supporting checks
+over 992 unchanged inputs. All 5 runs are preserved: three
+coefficient-only development passes, one failed positive-interval inversion
+attempt, and the accepted full certificate. Independent verification passed
+on attempt 2; its earlier arb_poly scalar-division harness failure
+is preserved. It checked the rotation/trace identity, source Lipschitz
+guards, beta moments, all 10,121 geometry coefficient comparisons through
+a separate polynomial representation, complete cover, residual propagation
+arithmetic, seam jets and complete error assembly. The ordinary continuum
+argument is the justification; these passes support it. No Lean ran.
+Scientific sources have not changed since acceptance. All 18 inherited
+worktree paths remain unchanged; the closed audit is preserved.
+
+Remaining to-do list: uniform nonlinear mass/log action and source domain; actual controlled forward/adjoint correction, nonlinear admission and exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete local contacts bounded; signed quantum value open
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
