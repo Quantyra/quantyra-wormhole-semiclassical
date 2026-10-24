@@ -1,3 +1,110 @@
+# Active checkpoint: explicit quantum contacts bounded; canonical heat response remains open
+
+2026-10-24, E003/S169.
+See [the ordinary local-contact graph argument](current-local-quantum-contact-graph.md).
+
+EXECUTED: the complete explicit LOCAL W4+a0+a2+LLL Hessian difference
+from its normal part, in the same coupled H3 graph and .01 output collar:
+
+ eta_exp <.003299361<.004.
+
+This includes the original vacuum enclosure |c0|<2.39121e-25, finite
+curvature coefficient Fe=-59.65278833475..., LLL and every Weyl scalar,
+mixed and shape contact. The signed vacuum coefficient is still unmeasured;
+its shared upper enclosure suffices here. No normalization, physical
+source, boundary condition, thermal state or angular spectrum is changed.
+
+The action Hessian and independent Euler-row linearization give the same
+operator. The scalar/shape NORMAL mixed contacts cancel exactly after the
+classical and quantum pieces are combined. The scalar diagonal equals
+the retained full Jc. The highest shape contact keeps Fe/4+1/6-log z;
+the massive normal comparison cancels Fe and log z and yields the fixed
+-6/5 constant. No adjustable fourth contact or smooth seam is inserted.
+This checks a compatibility requirement before numerical interpretation.
+
+The entry bounds are
+
+ [5.522e-30, 3.305e-31;
+  5.922e-32, .003299361].
+
+The cubic collar terms dominate: .002438601 without log z and .000825478
+with log z. The estimate uses the full normal graph at every frequency;
+the fifth-power bound crosses at T=2.0121513e16 in log-frequency units.
+T is an analytic estimate split, not a cutoff in the physical theory.
+Higher-order graph control avoids the earlier H6-only order obstruction.
+The numerical bound includes the prescribed contacts before absolute values.
+
+This closes the EXPLICIT action-contact block only. The remaining
+subtracted canonical heat Hessian still contains its finite diagonal
+extension and the mass-vertex chart conversion; those terms are not
+discarded or certified by this calculation. The existing .0022 action-form
+estimate and lower-output-order bounds cannot be differentiated to supply
+the missing H3 estimate. That estimate is UNKNOWN, not a known excessive
+bound or a demonstrated obstruction.
+
+The earlier classical, logarithmic-principal, far-input and coincident
+domain-transfer bounds remain <.052430768, <.007302177, <1.578710e-6 and
+<2.013e-13, respectively. They are allocated once. Subtracting eta_exp
+from .18698 leaves .183680639313713...; select the conservative combined
+UNKNOWN target <=.18368 for all remaining quantum and global feedback.
+This chosen target is not a measured bound on the remainder.
+
+If that target, joint affine <=7.49e-12 and joint known-source <=1e-14
+hold, the conditional joint return is E<9.946377e-12<1e-11. None of those
+three actual estimates is certified. Independent Mellin Efar<=1e-10,
+the original mass/slow coefficients and the actual correction remain open.
+Only the known explicit-contact allocation has proved attainable here;
+the complete remaining operator's feasibility remains undecided.
+
+The original paired boundary completions and mass/log phase were used
+for the local variation; this is not uniform nonlinear X-ball admission.
+At rho=1e-8 the unclosed conditions remain
+
+ Y0+1e-8 Z0+5e-17 Z2<=1e-8,     Z0+1e-8 Z2<1,
+
+with unproved allocations Y0<=5e-9, Z0<=.25, Z2<=5e7. Exact compatibility,
+physical matching/causal realization, semiclassical validity/noise and
+all-sector stability remain unresolved. No actual controlled solution is
+certified. The prior sufficient projection screen E_rest<2.123e-42
+<1.287e-40 is unchanged and was not recomputed here. Its sign remains
+unmeasured. The audit is CLOSED; the full stable-wormhole goal is ACTIVE
+and INCOMPLETE.
+
+RESEARCH DECISION: retain the construction and pursue the remaining
+canonical heat-response estimate in the full normal graph. The explicit
+contacts and their normal matching fit the allocation. Optimizing this
+passing block, the cold/scalar sources or the remote transfer would not
+close the still-unknown canonical response.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the commonly
+subtracted canonical massive response on the identical-collar cylinder
+after removal of its full normal and already allocated log-frequency
+principal terms. Include its mass-vertex chart conversion, finite lower
+contacts, every angular/thermal mode and differentiated common regulator
+limit on the actual cubic paired realization. The combined remaining
+feedback target is <=.18368, including other unresolved global terms.
+This is still a fixed-seed prerequisite; uniform nonlinear domain control
+and the complete physical solution requirements remain separate obligations.
+
+Verification: the accepted frozen run passed 124
+supporting checks over 954 unchanged inputs.
+Both scientific attempts are retained. The first stopped when the checker
+treated a rational normal symbol as a polynomial; polynomial division
+preserved its lower-order rational remainder and corrected that extraction.
+No action, mathematical bound or target changed. The independent verifier
+passed on attempt 1, deriving all four entries from the Euler rows,
+checking normal matching and independently summing the logarithmic cutoff
+product bounds. The development integer/digamma startup failure, corrected
+development sources/results, frozen acceptance sources and logs are retained.
+No post-success scientific edits or Lean runs occurred. The ordinary
+action/domain and entire-frequency arguments supply the continuum scope;
+checker passes do not certify the unknown heat response. All 18 inherited
+paths and immutable audits remain unchanged. No checkbox is promoted.
+
+Remaining to-do list: remaining canonical quantum/contact graph bound and global assembly; joint sources, original mass/slow moments and independent Mellin far tail; actual controlled correction and nonlinear admission; exact compatibility, physical matching/causal realization, semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: coincident domain transfer bounded; local quantum response remains open
 
 2026-10-24, E003/S169.

@@ -1,0 +1,53 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T14:59:11.161265+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb\nimport sys,json,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169ca-closeout.json';meta=json.loads(mf.read_bytes());root=Path(meta['satellite_root']);stem='current-local-quantum-contact-graph'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nimport sympy as S\nfrom flint import arb,ctx\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n z,s,t,be,u,ep,ta,fe,q,c0=S.symbols('z s t beta u eps tau Fe q c0');syms=[z,s,t,be,u,ep,ta,fe,q,c0]\n Q=(1-z)**2*(be*(1+2*z+3*z*z)+u*z*z+ep*z**4)-ta*z**3\n phi=-S.log(z);R=-S.diff(Q,z,2);m0=-S.diff(Q,z)/z+Q/z**2;v0=Q/z**2\n baseA=phi*R**2/60+R*m0/30-m0**2/10+R*v0/30-7*m0*v0/90-7*v0**2/180\n AL=phi*R/30+(m0+v0)/30;AM=R/30-m0/5-7*v0/90;AV=R/30-7*m0/90-7*v0/90\n der=lambda v:S.diff(v,z)+s*v/z;lap=lambda v:der(Q*der(v));mag=(S.Rational(1,15)-q*q/3)*u*u\n # Independently linearize the displayed Euler trace and shape rows.\n # This does not take a second derivative of the acceptance Lagrangian.\n def rows(n,b):\n  dL=-2*lap(b);dM=lap(n);dV=-2*Q*der(n)/z\n  dA=n*R**2/60+AL*dL+AM*dM+AV*dV\n  dAV=dL/30-7*dM/90-7*dV/90\n  Fn=(-2*b*R**2/60+2*R*dL/60+lap(-2*b*AM+dL/30-dM/5-7*dV/90)\n      -der(2*Q*((-2*b*AV+dAV)*(-1/z)+AV*der(n)))-u*dL/18+2*mag*b+u*dM/9)/2\n  Fb=(4*b*baseA-2*dA-2*lap(-2*b*AL+n*R/30+phi*dL/30+(dM+dV)/30)\n      +u*dM/9+2*mag*(n+2*phi*b))/2\n  Fb+=fe/60*(lap(lap(b))+R*lap(b)+lap(R*b)+R**2*b/2)-q*u/6*lap(b)+c0*b\n  return S.expand(z**4*Fn),S.expand(z**4*Fb)\n nr=rows(1,0);br=rows(0,1);a=(s+3)/(3*(s+1))\n tt=lambda rr:z*S.diff(rr[1],z)+(s-4)*rr[1]-(z*S.diff(rr[0],z)+(s-6)*rr[0])/3\n matrix=[[nr[0],S.cancel(br[0]-a*nr[0])],[S.expand(tt(nr)),S.cancel(tt(br)-a*tt(nr))]]\n bindings={str(v):v for v in syms};reconstructed=[]\n for entry in ans['exact_local_symbols']:\n  i,j=entry['row'],entry['column'];expr=0\n  for row in entry['terms']:\n   expr+=z**row['z_power']*S.log(z)**row['log_power']*S.sympify(row['symbol'],locals=bindings)/(s+1 if j else 1)\n  assert S.cancel(matrix[i][j]-expr)==0\n  reconstructed.append(dict(row=i,column=j,entire_symbol_equal=True))\n # Independent coefficient arithmetic and cutoff product constants.\n C,B2=pars['C'],pars['B2'];factor=C/(arb.pi()*B2);sigma=arb('4.005');delta=arb('.005')\n coeffs=next(v for v in json.loads((root/'evidence/current-canonical-heat-restoration-assembly.json').read_bytes())['runs'][-1]['numerics'] if v['kind']=='common_restoration_coefficients')\n Fe=old.decode(coeffs['Feff']);vac=old.decode(coeffs['vacuum_coefficient_upper'])\n assert Fe.overlaps(old.decode(ans['Feff'])) and vac.overlaps(old.decode(ans['vacuum_coefficient_upper']))\n mapping={be:pars['beta'],u:pars['u'],ep:pars['eps'],ta:pars['tau'],fe:Fe,q:arb(pars['q']),c0:arb(0,(vac/factor).abs_upper())}\n def val(e):\n  if e in mapping:return mapping[e]\n  if e.is_Rational:return arb(int(e.p))/int(e.q)\n  if e.is_Add:return sum((val(v) for v in e.args),arb(0))\n  if e.is_Mul:\n   v=arb(1)\n   for a0 in e.args:v*=val(a0)\n   return v\n  if e.is_Pow:return val(e.base)**int(e.exp)\n  raise ValueError(e)\n K=C*pars['beta']**2/(15*arb.pi()*B2);L=10*arb.pi()*(pars['Fl']+23*pars['g']/(180*arb.pi()))/pars['g']\n threshold=(L/L.log()).sqrt();assert threshold>4\n r=(96*arb.pi()*arb('1e22')-1/(60*arb.pi()))*pars['g'];Av=1+11*pars['g']/(180*arb.pi())-r*sigma*(sigma-3)\n scalar=[1/(6*pars['beta']*Av*delta*(sigma+1)),1/(6*pars['beta']*Av*(sigma+1)),1/(6*pars['beta']*Av),1/(12*pars['beta']*(Av*r).sqrt()),1/(6*pars['beta']*r)]\n shape=[2/(K*L*delta*sigma*(sigma-3)),2/(K*L*sigma*(sigma-3)),2/(K*L*sigma),2/(K*L)]\n shape.append(max(shape[0].abs_upper(),(8/(K*L)).abs_upper(),(1/(K*(L*arb(6).log()).sqrt())).abs_upper()))\n shape.append(max(shape[0].abs_upper(),(2*threshold**2/(K*L)).abs_upper(),(2/(K*(2+threshold).log())).abs_upper()))\n # AM-GM giving the extra fourth-power graph bound, independently exact.\n aa,bb,xx=S.symbols('aa bb xx',positive=True)\n assert S.expand(aa+bb*xx**2-2*S.sqrt(aa*bb)*xx-(S.sqrt(aa)-S.sqrt(bb)*xx)**2)==0\n weights=[1,3,10,60];totals=[[arb(0),arb(0)],[arb(0),arb(0)]]\n for entry in ans['exact_local_symbols']:\n  i,j=entry['row'],entry['column'];caps=shape if j else scalar\n  for row in entry['terms']:\n   power,lg=row['z_power'],row['log_power']\n   if power==0:continue\n   P=S.Poly(S.sympify(row['symbol'],locals=bindings),s)\n   if j:P,rem=S.div(P,S.Poly(s+1,s));rb=val(rem.as_expr()).abs_upper()*caps[0]/(sigma+1)\n   else:rb=arb(0)\n   sh=S.Poly(S.expand(P.as_expr().subs(s,S.Rational(801,200)+t)),t)\n   bound=rb+sum((val(sh.nth(k)).abs_upper()*caps[k] for k in range(sh.degree()+1)),arb(0))\n   cut=arb(0)\n   for order in range(4):\n    for d in range(order+1):\n     j0=order-d\n     term=arb(power)**j0\n     if lg:term=term*(-arb('.01').log())+(j0*arb(power)**(j0-1) if j0 else 0)\n     cut+=comb(3,order)*comb(order,d)*weights[d]*term\n   totals[i][j]+=factor*arb('.01')**power*cut*bound\n for i in range(2):\n  for j in range(2):\n   ref=old.decode(ans['matrix_entry_upper'][i][j])\n   # Upper-endpoint extraction changes interval centers slightly. Compare\n   # a guarded relative difference, not an equality of rounded upper ends.\n   assert abs(totals[i][j]-ref)<ref.abs_upper()*arb('1e-18')\n eta=max(sum(row,arb(0)).abs_upper() for row in totals);assert eta<arb('.0033') and arb('.18698')-eta>arb('.18368')\n assert run['symbolic']['mixed_normal_contacts_cancel'] and run['symbolic']['highest_shape_finite_contact_matched']\n assert not ans['full_canonical_heat_remainder_contacts_certified'] and not ans['actual_controlled_solution']\n at['result']=dict(independent_Euler_row_linearization=reconstructed,exact_normal_compatibility_reviewed=True,\n  same_common_fourth_finite_part_and_outer_log_cancellation_reviewed=True,\n  scalar_and_shape_all_frequency_graph_constants_verified=True,cutoff_log_product_rule_independently_summed=True,\n  shared_signed_vacuum_enclosure_retained=True,explicit_local_quantum_graph_feedback_upper=old.encoded(eta),\n  boundary_Hessian_completion_retains_prior_mass_log_scope=True,\n  full_canonical_heat_remainder_and_uniform_nonlinear_domain_unknown=True,actual_controlled_solution=False,\n  scientific_checks=len(run['checks']),frozen_inputs=len(run['input_sha256_after']))\n at['status']='passed';meta['independent_result']=at['result'];meta['scientific_frozen_sha256']=dict(run['input_sha256_after'])\n for suffix in ['.json','.log']:\n  f='evidence/'+stem+suffix;meta['scientific_frozen_sha256'][f]=sha256((root/f).read_bytes()).hexdigest()\n mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nexcept Exception:at['status']='failed';at['exception']=traceback.format_exc()\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save();print(json.dumps({k:v for k,v in at.items() if 'source' not in k},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "a7fbb3490c60c10f61837c2bfbd11bb54b0471c30bd9c52747bb1f7e4aaeec33",
+      "result": {
+        "independent_Euler_row_linearization": [
+          {
+            "row": 0,
+            "column": 0,
+            "entire_symbol_equal": true
+          },
+          {
+            "row": 0,
+            "column": 1,
+            "entire_symbol_equal": true
+          },
+          {
+            "row": 1,
+            "column": 0,
+            "entire_symbol_equal": true
+          },
+          {
+            "row": 1,
+            "column": 1,
+            "entire_symbol_equal": true
+          }
+        ],
+        "exact_normal_compatibility_reviewed": true,
+        "same_common_fourth_finite_part_and_outer_log_cancellation_reviewed": true,
+        "scalar_and_shape_all_frequency_graph_constants_verified": true,
+        "cutoff_log_product_rule_independently_summed": true,
+        "shared_signed_vacuum_enclosure_retained": true,
+        "explicit_local_quantum_graph_feedback_upper": {
+          "ball": "[0.00329936068628690161474219094029 +/- 2.84e-33]",
+          "decimal_enclosure": {
+            "mid": "3299360686286901614742190940287164918949",
+            "rad": "2",
+            "exponent": "-42"
+          }
+        },
+        "boundary_Hessian_completion_retains_prior_mass_log_scope": true,
+        "full_canonical_heat_remainder_and_uniform_nonlinear_domain_unknown": true,
+        "actual_controlled_solution": false,
+        "scientific_checks": 124,
+        "frozen_inputs": 954
+      },
+      "finished_utc": "2026-10-24T14:59:30.891352+00:00"
+    }
+  ]
+}
