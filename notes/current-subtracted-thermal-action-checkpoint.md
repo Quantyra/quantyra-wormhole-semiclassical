@@ -1,3 +1,116 @@
+# Active checkpoint: full residual requires a squared-logarithm source weight
+
+2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED.
+See [the complete endpoint and variation argument](current-outer-logarithmic-source-realization.md).
+
+EXECUTED: determine the complete first-source outer logarithm on the
+actual paired boundary domain, then vary its actual reference correction.
+This identifies a boundary source-weight requirement before interpreting
+a global correction numerically. It is not another cold/scalar optimization.
+
+The ordinary all-angular estimate is
+
+    |sum d_n M_n^2 exp(-t M_n^2)-2C/t^2|
+                          <=7/t+3q^2/(4C), t>0.
+
+The trapezoid remainder applies to the ENTIRE tower. Together with the
+exact paired cubic heat profile and the cancellation of all fourth-weight
+even/smooth differences, it proves that the fixed-seed massive trace after
+its cubic pole has a finite limit R0 and O(Y log Y) remainder. There is
+no leading log Y term. R0 and the full numerical remainder constants remain
+unknown. The auxiliary smooth collar retains its complete kernel defect;
+it is not the physical domain. All thermal images, the true bolt,
+common regulator and completed boundary contacts remain in the argument.
+
+The massive 1/z source pole cancels the actual Weyl pole exactly. Combining
+the entire local action and source then fixes the COMPLETE first reference
+correction's coefficients, in the unchanged canonical chart:
+
+    nu1=a3 z^3+a_L z^4 log z+O(z^4),
+    b1=-2a3 z^3+b_L z^4 log z+O(z^4),
+    a_L = 3.957845633884...e-29,
+    b_L = -9.894618747452...e-29.
+
+The outer logarithms of the previously missing h_rest are
+delta a_L=-1.305567892604...e-34 and
+delta b_L=+2.797645484151...e-34. These are full-source asymptotic
+coefficients, not values obtained by substituting the magnetic component.
+The cubic mass, constant quartic coefficients and global h_rest remain
+unevaluated. The reference Ward and fixed-temperature data are retained.
+
+Metric variation exposes the consequential requirement. The complete
+universal massive response contributes +12K b_L(log z)^2 and the Weyl
+contact contributes -24K b_L(log z)^2, K=G C beta^2/(15pi B^2).
+Their COMBINED actual r_new=J''h1/F_lambda therefore satisfies
+
+    r_new,b=A_log2(log z)^2+O(1+|log z|),
+    4.1009e-63 < A_log2 < 4.1011e-63.
+
+Finite contacts, lower-order geometric terms and unknown global mass
+constants cannot remove this leading coefficient. A finite bound by
+1+|log z| on the entire exterior is therefore IMPOSSIBLE for this residual,
+regardless of its tiny coefficient. This is an actual obstruction to that
+particular source-weight estimate, not a known large upper allowance.
+No accepted strong inverse had established that estimate. The full quantum
+inverse may still return the squared-logarithm source to the admitted
+single-logarithm metric phase; this mapping and its constant are UNKNOWN.
+A second I0 reference iteration cannot supply that return. It stays rejected.
+
+The weak source pairings remain finite (for example,
+integral_0^1 z^3(log z)^2 dz=1/32), so the result does not contradict the
+C2 action on bounded admitted stationary families or the earlier passed
+quantum/contact screen <2.123e-42<1.287e-40. It is not a nonexistence or
+instability result. Enlarging a norm alone is not a controlled solution.
+
+The old full selected projection allowance 1.3079691e-40 still does not
+certify the localized uniform-certificate ceiling near 1.06654e-54. Its
+actual cross projection is unknown; the magnetic self-projection remains
+between -2.344e-60 and -1.857e-60. These are separate statements from the
+new source-weight obstruction. No sign for the full projection is inferred.
+
+Nonlinear requirements stay Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1, with unproved sufficient allocations Y0<=5e-9,
+Z0<=.25, Z2<=5e7. Actual X-ball admission, the strong inverse, higher
+source remainder, original quantitative admission margins, exact
+compatibility, physical matching/causal realization, semiclassical
+validity/noise and all-sector stability remain unproved. No controlled
+solution is claimed. The full stable-wormhole objective stays active.
+
+RESEARCH DECISION: retain the physical construction and pursue the
+specified sharper FULL COUPLED BOUNDARY INVERSE. Keep the paired
+logarithmic quantum kernel and Weyl contact together. The executed
+endpoint calculation changes the required source weight and therefore
+takes priority over a global numerical interpretation or another
+reference-only correction. It does not justify switching constructions.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): establish and quantify
+the full coupled outer inverse acting on the forced squared-logarithm
+source, with return to the admitted mass/log metric phase and a controlled
+remainder on the actual paired realization. Use it with the unfinished
+global prescribed-source reconstruction and directional forward/adjoint
+certificate. The complete endpoint coefficients and nonzero squared-log
+residual above are executed results; that inverse and global correction
+are not. No checker pass substitutes for their continuum argument.
+
+Verification: 28 supporting checks over
+920 unchanged inputs. Both scientific
+runs are preserved. The first stopped on structural equality between
+differently factored symbolic matrices; the accepted replay simplifies
+their difference without changing the mathematics or targets. Independent
+verification passed on attempt 1. It differentiates the full local
+Weyl Euler row in arbitrary mass/quartic/logarithmic directions, derives
+the massive coefficient independently from the Gaussian heat integral,
+checks the other negative-power source cancellations and recomputes the
+actual signed coefficients. The ordinary paired-domain and common-regulator
+argument is the proof; these checks only support it. No scientific input
+changed after acceptance. No Lean ran. All 18 inherited paths and immutable
+closed/paused audit records remain unchanged; no task checkbox is promoted.
+
+Remaining to-do list: quantitative full coupled outer inverse with the required logarithmic source weight; global prescribed-source reconstruction and controlled correction; nonlinear admission and exact compatibility; physical matching and causal realization; semiclassical validity/noise and all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: prescribed magnetic response reconstructed; full source remains
 
 2026-10-24, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
