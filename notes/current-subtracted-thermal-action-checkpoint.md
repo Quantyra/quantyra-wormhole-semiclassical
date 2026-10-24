@@ -1,3 +1,116 @@
+# Active checkpoint: raw cutoff norm limit obstructed; match the principal regulator
+
+2026-10-24, E003/S169.
+See [the ordinary actual-domain cutoff test](current-geometric-cutoff-graph-test.md).
+
+EXECUTED: the proposed raw common-cutoff limit fails in the required
+strong graph norm. At every positive cutoff epsilon the geometric heat
+Hessian has finite local order without the complete frequency logarithm.
+Subtracting the UNREGULATED full normal and already allocated principal
+part therefore leaves an order-one high-frequency error.
+
+Compact oscillatory metric directions supported in .0019<z<.0021 are
+admissible on the ORIGINAL paired domain and vanish near its seam and bolt.
+The original output cutoff is one there. The full normal graph and actual
+local symbol give, for every epsilon>0,
+
+ ||R_epsilon|| >= inf (Q/beta)^2 > .9999999.
+
+The executed interval lower bound is .9999999259873132748...; an
+independent Bernstein enclosure strengthens it to .9999999260286910407...
+The true local remainder has its logarithmic principal part canceled,
+and fixed smooth packets have the established weak regulator limit.
+The same packet argument prevents operator-norm convergence to that limit.
+Thus the previously proposed raw norm-Cauchy step cannot certify .18 or
+.18368. This is an ACTUAL obstruction to that procedure, not an excessive
+upper bound, wormhole nonexistence or a physical instability result.
+
+The calculation retains all angular/thermal modes, the actual finite seed,
+physical normalization, original boundary and full normal graph. It does
+not impose a smooth surrogate domain, finite physical spectrum or new force.
+The Duhamel second vertex and common local restorations remain essential.
+
+EXECUTED REPAIR TEST: identify the omitted universal principal heat cap
+
+ U_epsilon(k)=-4GC k^4/(pi B^2) I(epsilon k^2),
+ I(X)=integral_0^X [F(v)-1+v^2/120]dv/v^3,
+
+where F is the density-inclusive geometric heat multiplier. Exact
+integration by parts gives its Ein expression; whole-frequency bounds
+give I(X)=log(X)/120+O(1). This is precisely the missing log coefficient.
+The cap tends to zero frequency by frequency, but not in the normal
+graph operator norm. Restore it before attempting the strong limit.
+
+Every angular level is retained in the discrepancy estimate
+
+ |Theta(t)-2C/t| <= 2q+4sqrt(2C/t).
+
+On the FROZEN principal comparison at z=.002, this gives the uniform
+graph bound after universal-cap restoration
+
+ eta_cap,model <= a_* Cq/log(2)
+                    [q epsilon/(2C)+2sqrt(2epsilon/C)].
+
+The bounds at epsilon=1e-3, 1e-4 and 1e-6 are respectively
+.546842636, .054684557 and .000546885. The first two do not certify the
+chosen MODEL accuracy .001; they are excessive upper estimates, not
+lower error bounds. The last passes. The sufficient cutoff threshold
+is epsilon<=1.82857822245684e-6. This closes only the full-angular
+FROZEN principal cap convergence requirement. It does NOT bound the
+actual variable-coefficient, thermal-image, seam or bolt remainder, and
+is not deducted from the actual physical feedback budget.
+
+The actual matched curved remainder is UNKNOWN. The canonical target
+remains .18, other unknown global feedback .00368, combined .18368.
+Joint affine <=7.49e-12 and known-source <=1e-14 are also unknown;
+their conditional consequence remains E<9.946377e-12. Independent
+Mellin Efar<=1e-10 and actual mass/slow coefficients remain open.
+
+The prior sufficient projection enclosure E_rest<2.123e-42<1.287e-40
+is unchanged and not reevaluated; its zero center is not a measured
+signed projection. No cold/scalar optimization was performed. The
+closed audit and existing certified component bounds retain their scope.
+
+At rho=1e-8 the nonlinear requirements remain
+
+ Y0+1e-8 Z0+5e-17 Z2<=1e-8,     Z0+1e-8 Z2<1,
+
+with unproved allocations Y0<=5e-9, Z0<=.25, Z2<=5e7. No actual
+controlled correction, uniform nonlinear admission, exact compatibility,
+physical matching/causal realization, semiclassical validity/noise or
+all-sector stability is established. The full stable-wormhole objective
+remains ACTIVE and INCOMPLETE; the feasibility audit remains CLOSED.
+
+RESEARCH DECISION: retain the construction and geometric Duhamel
+representation, but replace raw cutoff convergence by MATCHED regulated
+principal subtraction. Form H_epsilon-P_epsilon with the same common
+regulator, then restore the complete uncut P analytically. Keep all
+lower symbols, contacts and commutators in the residual. This removes
+the identified missing-log obstruction without changing the theory.
+The actual revised strong estimate remains unknown.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the actual
+H_epsilon-P_epsilon uniformly in the coupled H3 graph through common
+regulator removal on the cubic paired collar. Retain coefficient
+derivatives, second vertex, finite diagonal contacts, all thermal images
+and original global coupling. Test the complete canonical remainder
+against .18, retaining .00368 for other unresolved global feedback.
+
+Verification: the accepted run passed 24
+supporting checks over 965 unchanged inputs.
+The independent verifier passed on its first attempt, using a Bernstein
+collar enclosure, the dimensional cap normalization and an independent
+heat-series calculation. The ordinary long-heat-factor and actual-domain
+wave-packet argument supplies the continuum obstruction. Checks do not
+prove the still-unknown curved remainder. All frozen sources and outputs
+are retained. No failed scientific runs, post-success scientific edits
+or Lean runs occurred. All 18 inherited paths and immutable audits remain
+unchanged, and no task checkbox is promoted.
+
+Remaining to-do list: actual matched geometric remainder and common limit; global feedback and joint sources, mass/slow moments and independent Mellin tail; controlled solution and nonlinear admission; exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: common-regulator conversion tested; use geometric response directly
 
 2026-10-24, E003/S169.

@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "started_utc": "2026-10-24T15:42:26.588873+00:00",
+      "status": "passed",
+      "verifier_source_utf8": "from pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nfrom math import comb\nimport sys,json,traceback\np=Path('C:/Users/dfred/AppData/Local/Temp');mf=p/'s169cc-closeout.json';meta=json.loads(mf.read_bytes());root=Path(meta['satellite_root']);stem='current-geometric-cutoff-graph-test'\nsys.path[:0]=[str(p/'s169af-arb'),str(root/'checks')]\nfrom flint import arb,ctx\nimport sympy as S\nimport current_product_matched_source_projection as old\nctx.prec=512\nout=root/'evidence'/f'{stem}-closeout-verification.json';archive=json.loads(out.read_bytes()) if out.exists() else {'attempts':[]}\nat=dict(started_utc=datetime.now(timezone.utc).isoformat(),status='running',verifier_source_utf8=Path(__file__).read_text(),verifier_sha256=sha256(Path(__file__).read_bytes()).hexdigest());archive['attempts'].append(at)\ndef save():out.write_bytes((json.dumps(archive,indent=2)+'\\n').encode())\nsave()\ntry:\n run=json.loads((root/'evidence'/f'{stem}.json').read_bytes())['runs'][-1];assert run['status']=='passed'\n assert run['input_sha256_before']==run['input_sha256_after']\n assert all(sha256((root/f).read_bytes()).hexdigest()==h for f,h in run['input_sha256_after'].items())\n ans=run['result'];pars,h,zh,env=old.scalar.prev.york.actual_parameters()\n z,beta,u,ep,tau=S.symbols('z beta u ep tau')\n Q=(1-z)**2*(beta*(1+2*z+3*z*z)+u*z*z+ep*z**4)-tau*z**3\n poly=S.Poly(S.expand(Q/beta),z);n=poly.degree()\n mapping={beta:pars['beta'],u:pars['u'],ep:pars['eps'],tau:pars['tau']}\n def val(v):\n  if v in mapping:return mapping[v]\n  if v.is_Rational:return arb(int(v.p))/int(v.q)\n  if v.is_Add:return sum((val(w) for w in v.args),arb(0))\n  if v.is_Mul:\n   out=arb(1)\n   for w in v.args:out*=val(w)\n   return out\n  if v.is_Pow:return val(v.base)**int(v.exp)\n  raise ValueError(v)\n coeff=[val(poly.nth(i)) for i in range(n+1)]\n lo=arb('.0019');width=arb('.0002')\n power=[sum((coeff[k]*comb(k,i)*lo**(k-i)*width**i for k in range(i,n+1)),arb(0)) for i in range(n+1)]\n bern=[sum((power[i]*comb(k,i)/comb(n,i) for i in range(k+1)),arb(0)) for k in range(n+1)]\n qlower=min(v.lower() for v in bern);lower=qlower**2\n assert qlower>0 and lower>arb('.9999999') and lower>old.decode(ans['raw_regulated_feedback_norm_lower'])\n C=pars['C'];B2=pars['B2'];q=arb(pars['q']);K=C*pars['beta']**2/(15*arb.pi()*B2)\n zp=arb('.002');Qp=(1-zp)**2*(pars['beta']*(1+2*zp+3*zp*zp)+pars['u']*zp*zp+pars['eps']*zp**4)-pars['tau']*zp**3\n Cq=2*(arb(17)/16).sqrt()**5\n rows=[]\n for case in ans['full_angular_model_caps']:\n  e=arb(case['epsilon'])\n  dimensional=Qp**2/(60*arb.pi()*B2)*(2*q*e+8*(2*C*e).sqrt())\n  answer=dimensional*Cq/(K*arb(2).log())\n  assert answer.overlaps(old.decode(case['angular_discrepancy_cap_upper']))\n  rows.append(dict(epsilon=case['epsilon'],bound=old.encoded(answer)))\n assert old.decode(rows[-1]['bound'])<arb('.00055')\n threshold=old.decode(ans['model_epsilon_threshold'])\n threshold_value=Qp**2/(60*arb.pi()*B2)*(2*q*threshold+8*(2*C*threshold).sqrt())*Cq/(K*arb(2).log())\n assert threshold_value.contains(arb('.001'))\n # Independent heat-series integration verifies the normalizing low cap term.\n v,a=S.symbols('v a');phi=(1+a*(1-a)*v)*S.exp(-a*(1-a)*v)\n F=S.Rational(1,2)+S.integrate(S.series(phi,v,0,5).removeO(),(a,0,1))/2\n assert S.expand(F)==1-v*v/120+v**3/840-v**4/10080\n assert S.integrate(S.expand((F-1+v*v/120)/v**3),(v,0,1))==S.Rational(1,840)-S.Rational(1,20160)\n assert ans['raw_unregulated_subtraction_norm_Cauchy_obstructed'] and ans['actual_compact_domain_directions_used']\n assert all(not ans[k] for k in ['physical_domain_replaced','finite_physical_modes_selected','actual_curved_matched_remainder_certified','actual_thermal_or_boundary_remainder_certified','full_signed_projection_executed','actual_controlled_solution','nonlinear_admission','exact_compatibility','physical_matching','validity_noise','all_sector_stability'])\n for kind in ['planning','satellite']:\n  rr=Path(meta[kind+'_root']);assert all(sha256((rr/f).read_bytes()).hexdigest()==h for f,h in meta[kind+'_inherited'].items())\n at.update(status='passed',actual_interval_Bernstein_lower=old.encoded(lower),independent_dimensional_caps=rows,source_scope='Checks coefficients and exact cap identities; ordinary packet/Duhamel proof supplies continuum scope',post_success_scientific_edits=False,physical_matched_estimate_not_claimed=True)\nexcept Exception:at.update(status='failed',exception=traceback.format_exc())\nat['finished_utc']=datetime.now(timezone.utc).isoformat();save()\nif at['status']=='passed':\n files=list(run['input_sha256_after'])+[f'evidence/{stem}.json',f'evidence/{stem}.log',f'evidence/{stem}-closeout-verification.json']\n meta['scientific_frozen_sha256']={f:sha256((root/f).read_bytes()).hexdigest() for f in sorted(set(files))}\n mf.write_bytes((json.dumps(meta,indent=2)+'\\n').encode())\nprint(json.dumps({k:v for k,v in at.items() if k!='verifier_source_utf8'},indent=2))\nif at['status']!='passed':raise SystemExit(1)\n",
+      "verifier_sha256": "e631a39bcc3c6a1ffd1bd311c622932bd4073dc7a23509c6a6e90f4d11a65ec4",
+      "actual_interval_Bernstein_lower": {
+        "ball": "[0.999999926028691040787023659648 +/- 8.41e-32]",
+        "decimal_enclosure": {
+          "mid": "9999999260286910407870236596480840784976",
+          "rad": "2",
+          "exponent": "-40"
+        }
+      },
+      "independent_dimensional_caps": [
+        {
+          "epsilon": ".001",
+          "bound": {
+            "ball": "[0.546842635709044610396 +/- 3.71e-22]",
+            "decimal_enclosure": {
+              "mid": "5468426357090446103957185727930780300729",
+              "rad": "885926036250820609",
+              "exponent": "-40"
+            }
+          }
+        },
+        {
+          "epsilon": ".0001",
+          "bound": {
+            "ball": "[0.05468455656275048001319 +/- 8.95e-24]",
+            "decimal_enclosure": {
+              "mid": "5468455656275048001319008381303230540558",
+              "rad": "885931576758632449",
+              "exponent": "-41"
+            }
+          }
+        },
+        {
+          "epsilon": ".000001",
+          "bound": {
+            "ball": "[0.000546884130027799470434 +/- 5.62e-25]",
+            "decimal_enclosure": {
+              "mid": "5468841300277994704335271008408716974186",
+              "rad": "886004464501129217",
+              "exponent": "-43"
+            }
+          }
+        }
+      ],
+      "source_scope": "Checks coefficients and exact cap identities; ordinary packet/Duhamel proof supplies continuum scope",
+      "post_success_scientific_edits": false,
+      "physical_matched_estimate_not_claimed": true,
+      "finished_utc": "2026-10-24T15:42:27.257561+00:00"
+    }
+  ]
+}
