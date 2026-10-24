@@ -1,3 +1,88 @@
+# Active checkpoint: actual-disk short-time heat gate closed; signed projection open
+
+2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
+The feasibility audit remains CLOSED; the full-projection milestone is open.
+See the [ordinary actual-domain argument](current-disk-heat-propagation.md) and frozen execution.
+
+EXECUTED: the actual paired disk's complementary short-time heat response
+has D_other<951.079058, conservatively <=952, below the retained sufficient
+target 1628.7385. The comparison to the ORIGINAL boundary-parametrix split
+is included; this does not change the normalization or target.
+
+    D_actual<=149+952=1101,
+    B_heat<=1.2e-8*1101=1.3212e-5,
+    E_cap<1.5483364e-43<2.5e-43.
+
+The heat-cap allowance includes the retained U6<=2.3454197e-13 leading
+term. It is a certified upper allowance, not a signed projection value.
+The exact normal-coordinate transport defect is bounded with full analytic
+tails. The paired boundary-compatible parametrix retains the physical
+regular bolt, both kernel integration directions and every differentiated
+propagation term. Explicit enlarged caps, distance/distant commutators,
+all thermal images, the entire Volterra series, the smooth-cap comparison
+and the whole product-gradient contact are included. The old-to-new
+boundary comparison costs <4.041e-11 in D. No physical modes are selected
+and no auxiliary cap is substituted for the actual domain.
+
+This closes the numerical SHORT-TIME common-regulator requirement for
+the selected weak h1,-z^4 response on the actual seed. The previous
+unknown interior/propagation constant is now affordable. The dominant
+allowances are the absolute mixed propagation estimates, not the cutoff
+or thermal tails. No further optimization of this heat allocation is
+needed before the remaining signed projection.
+
+The complete screen |P_hat_rest|+E_rest<1.287e-40 remains UNEXECUTED
+and is sufficient only. No actual controlled solution is established.
+The signed positive-time response, restored local contacts and remaining
+numerical/tail errors are still UNKNOWN; old excessive allowances are
+not source lower bounds or nonexistence results. A C2 action on rough
+base metrics and the nonlinear physical domain remain unproved.
+
+At solution radius 1e-8, Y0+1e-8 Z0+5e-17 Z2<=1e-8 and
+Z0+1e-8 Z2<1 remain open, as do exact compatibility, physical matching,
+causal boundary realization, semiclassical validity/noise and all-sector
+stability. The controlled magnetic, cold and scalar components are
+unchanged. The full stable-wormhole objective remains active/incomplete;
+the closed feasibility audit and all S169 checkboxes are preserved.
+
+Research decision: continue the actual paired geometric method.
+The formerly unknown short-time propagation requirement now meets its
+numerical target. This gives no reason to change the construction, and
+does not establish the full signed screen or nonlinear feasibility.
+
+The SINGLE next calculation is the COMPLETE signed positive-time
+quantum/contact projection on t>=.001, restoring the fixed local contacts
+once and retaining the entire angular and thermal sums. Combine its
+certified interval with E_cap<1.5483364e-43 and test
+|P_hat_rest|+E_rest<1.287e-40. This full projection is PROPOSED,
+NOT EXECUTED. Retain E_rest<=1e-42 as a sufficient error allocation,
+with <=7.5e-43 assigned to the remaining numerical/tail errors; no
+normalization change or cold/scalar optimization is selected.
+
+The final frozen execution passed 205 supporting checks over
+973 unchanged inputs, with recorded dependency hashes. All five
+frozen runs are retained: four development passes and the final accepted
+run. The first two Schur tables used a cell-specific volume factor and
+were superseded by the common 1.14 curvature guard for both integration
+directions. The final replay also includes the paired factor two in the
+distant commutator and the explicit all-image prefactor. These corrections
+are documented; no threshold was relaxed. Two exploratory probes are
+preserved and supply no acceptance evidence. The exact original four-run
+receipt is archived before lossless compact JSON serialization.
+
+Independent verification passed on its first attempt. It re-evaluated
+all 64 complete coefficient/tail covers and 1024 norm enclosures, used
+direct incomplete-gamma evaluation for the cutoff tails, checked the cap
+polynomials, reproduced both propagations and the complete contact/error
+budget, and verified input and inherited-file hashes. The ordinary domain
+and propagation argument supplies the continuum result; checker passes
+are supporting evidence. No scientific source changed after the final
+accepted run. No Lean ran; all 18 inherited paths are unchanged.
+
+Remaining to-do list: complete the signed positive-time quantum/contact projection with all local contacts and angular/thermal tails; controlled forward/adjoint correction, rough nonlinear domain, nonlinear admission and exact compatibility; physical matching, causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete boundary parametrix bound; disk complement unknown
 
 2026-10-23, E003/S169. Full stable-wormhole objective ACTIVE and INCOMPLETE.
