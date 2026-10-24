@@ -1,3 +1,116 @@
+# Active checkpoint: fast graph domain admitted; actual matched response remains open
+
+2026-10-24, E003/S169.
+See [the ordinary fast-domain embedding](current-fast-graph-domain-embedding.md).
+
+EXECUTED: a uniform continuous embedding of the FAST normal graph
+sector into the actual weighted C5 mass/log coefficient domain. This
+supplies a domain of admissible test inputs for the matched quantum
+estimate; it does NOT evaluate the actual H_epsilon-P_epsilon remainder.
+
+With unchanged sigma=4.005 and max(||f||_H3,||g||_H3)<=E, the retained
+shape inverse and the executed whole-frequency scalar estimate give
+
+ ||z^-sigma b_f||_H6 <=1801 E,
+ ||z^-sigma theta_f||_H6 <=9214.559386 E,
+ ||z^-sigma nu_f||_H6 <=10054.786159 E.
+
+The triangular relation nu=theta-a_op(D)b is retained. Exact Fourier
+Sobolev constants and the actual proper-distance derivative recurrence
+through order five give
+
+ A_out(r_f)<=.002021983 ||z^-sigma r_f||_H6,
+ ||r_f||_W1<=1.031351021 ||z^-sigma r_f||_H6.
+
+A_out is the original proper-distance mass/log coefficient norm with
+j!100^j Y^(4-j)(1+log(1/Y)), on z<=.01. W1 means value plus proper
+gradient on the entire physical half. Full proper W3 bounds are retained
+in the evidence. The fast even extension has vanishing seam jets; the
+background's actual mass cubic remains C2,1, with no smooth surrogate.
+The fixed regular-bolt chart gives bounded C5 fields there. This is not
+a numerical cold/bolt admission estimate in every physical atlas norm.
+
+At the EXISTING CONDITIONAL target E<=1e-11, the physical fast fields obey
+
+                 outer A_out          global W1
+ b_f             <3.641592e-11        <1.857464e-8
+ nu_f            <2.033061e-10        <1.037002e-7.
+
+The outer fast target 1e-8 is certified for data E<=4.918e-10; the W1
+guard 1e-3 is certified for E<=9.643e-8. Thus the selected 1e-11 data
+target has sufficient fast-sector regularity margin. This uses stronger
+source control, not a change of normalization or an embedding from the
+weak action-form norm, which remains impossible as previously proved.
+
+The bounds extend to the entire graph completion and its complex metric
+directions. Scalar multiplication preserves the original first-order
+paired domain and complementary adjoint; square domains remain defined
+by composition. Together with the prior bounded-admitted-family theorem,
+this admits the fast graph family to the weak C2 quantum action. A strong
+source norm, derivative bound or nonlinear contraction does not follow.
+
+For the COMPLETE correction the mass/slow and global pieces remain.
+At E=1e-11, sufficient remaining outer-phase allowances are
+
+ A_out(b_asym remainder) <=9.9635840e-9,
+ A_out(nu_asym remainder)<=9.7966939e-9,
+
+and sufficient W1 allowances are .0009999814253 and .0009998962998,
+respectively. Keep bounded original cubic coefficients and regular bolt
+data as well. These are thresholds for ACTUAL correlated fields, whose
+global coefficients are unknown. They are not bounds on independently
+separated large quartic and slow coefficients. No full X ball is admitted
+by this fast-sector result, and no physical source has been shown to
+satisfy E<=1e-11. The original physical nonlinear X norm is not renamed.
+
+The actual matched curved remainder is UNKNOWN, with canonical target
+.18 and combined remaining target .18368. The raw-cutoff norm obstruction
+and matched frozen-cap certificate retain their previous scope. Joint
+affine <=7.49e-12, known-source <=1e-14, independent Mellin Efar<=1e-10
+and actual mass/slow moments remain open. The prior sufficient projection
+enclosure E_rest<2.123e-42<1.287e-40 is unchanged and not recomputed;
+its zero enclosure center is not a measured signed projection.
+
+At rho=1e-8 the nonlinear requirements remain
+
+ Y0+1e-8 Z0+5e-17 Z2<=1e-8,     Z0+1e-8 Z2<1,
+
+with unproved allocations Y0<=5e-9, Z0<=.25, Z2<=5e7. No actual
+controlled solution, full nonlinear admission, exact compatibility,
+physical matching/causal realization, semiclassical validity/noise or
+all-sector stability is certified. The feasibility audit stays CLOSED;
+the full stable-wormhole objective stays ACTIVE and INCOMPLETE.
+
+RESEARCH DECISION: retain the matched geometric-principal method
+and use the quantified fast graph domain for its test inputs. Under the
+existing strong-data hypothesis, fast-sector coefficient regularity is
+now proved uniformly. The actual operator, source and global matching
+estimates remain the decisive unknowns. No cold/scalar source optimization
+or change of construction is justified by this result.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): prove and evaluate the
+actual matched H_epsilon-P_epsilon strong remainder on this admitted
+graph domain. Include the symmetric reflected principal kernel,
+coefficient derivatives, finite contacts, common regulator, all thermal
+tails and original global coupling. Test the canonical .18 allocation;
+the earlier frozen-cap bound cannot stand in for this actual estimate.
+
+Verification: the accepted run passed 20
+supporting checks over 970 unchanged inputs.
+An independent Faà di Bruno calculation verified all five proper-coordinate
+derivatives. Independent power-coefficient bounds, beta-moment recurrence
+and conservative scalar constants certified outer <2.034e-10 and global
+W1<1.038e-7 at the conditional data target. The ordinary Sobolev completion,
+domain and bolt arguments supply the continuum scope. Checks do not
+certify the actual data or matched quantum remainder. All sources and
+outputs are retained. No failed scientific runs, post-success scientific
+edits or Lean runs occurred. All 18 inherited paths and immutable audits
+remain unchanged; no task checkbox is promoted.
+
+Remaining to-do list: actual matched curved response and common limit; global sources, mass/slow matching and complete nonlinear admission; preserved ball and contraction, exact compatibility, physical matching/causal realization, semiclassical validity/noise, all-sector stability, charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: raw cutoff norm limit obstructed; match the principal regulator
 
 2026-10-24, E003/S169.
