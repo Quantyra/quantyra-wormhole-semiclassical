@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-25",
+  "story": "S169",
+  "status": "ordinary_argument_and_contract_frozen_before_development",
+  "previous_goal_turn": "progress",
+  "ordinary_argument": "notes/current-complete-weak-mass-residual.md",
+  "quantitative_role": "Bound the COMPLETE actual weak residual j Psi_ref in original E* units, then close the mass target for the full coupled LINEAR correction. Use all existing massive kernel parts and both explicit local rows; no isolated-contact or source optimization milestone.",
+  "first_unsupported_step_addressed": "Replace the uncomputed pointwise outer-response estimator by the actual complete weak kernel. Prove the joint trial is bounded on the whole interval and belongs to the needed fractional geodesic domain; control all mixed kernel/contact/local contributions and the compact-test auxiliary extension.",
+  "hard_continuum_review": [
+    {
+      "source": "notes/current-reference-clock-adjoint-trial.md",
+      "applies": "Same pole-removed correlated trial, both reference constraints and regular-bolt matching. The separate clock/mass directions remain inadmissible globally."
+    },
+    {
+      "source": "notes/stationary-reference-cold-bolt.md",
+      "applies": "Use the actual polynomial Goursat normal-chart equations. A new explicit self-map/contraction cone and joint-field complex bound are derived; no metric family or quantum operator is replaced by a smooth double."
+    },
+    {
+      "source": "notes/stationary-curved-quantum-tt.md sections 2-6",
+      "applies": "Complete actual paired kernel: global geodesic principal, actual row-subtracted gluing <=6e24 C J0, complete constant contact <=1e20 q^2(1+1/Y), gain-two and fixed second contacts. Extract these before unneeded model IMS envelopes. Thermal and angular sums and finite returns stay included."
+    },
+    {
+      "source": "notes/current-geodesic-two-sided-remainder.md",
+      "applies": "Confirms the absolute kernel/contact estimates and retained joint positive fourth reserve. Its final relative norm on physical TT fields is not applied to the auxiliary root-zero trial."
+    },
+    {
+      "source": "notes/current-seed-full-hessian-realization.md",
+      "applies": "Current finite seed transfer, actual form gaps and complete coupled inverse. No old theory, product inverse, neighborhood or high-order graph constant is imported."
+    },
+    {
+      "source": "https://dlmf.nist.gov/10.32.E9",
+      "retrieved": "2026-10-25",
+      "applies": "Positive-mass Bessel representations support the retained exact moments. Count the entire angular tower with exponent 9/4; these formulas supply no boundary-domain theorem."
+    },
+    {
+      "source": "new ordinary proof section 3",
+      "applies": "The actual geodesic flow is unitary at C2,1 regularity. One-sided C4 trial plus continuous second jets gives P^3 membership; the crossing-flux/difference estimate proves P^(13/4) membership without false H4 seam regularity. Spectral Tonelli has an explicit positive majorant."
+    },
+    {
+      "source": "notes/current-joint-adjoint-residual-attempt.md",
+      "applies": "Same physical E* output comparison and original units. The new weak kernel includes the density term already; adding the former density allowance would double count it."
+    },
+    {
+      "source": "notes/current-finite-local-action-assembly.md and notes/current-full-domain-contact-assembly.md",
+      "applies": "Both complete compact Euler rows from the affine action. Exact C*u_seed=1 and vacuum relation are imposed before estimation. Keep area-coefficient uncertainty. Use compact local covariance, not a separately admissible global clock or mass family."
+    },
+    {
+      "source": "notes/current-coupled-mass-adjoint.md",
+      "applies": "The E*-bounded compact-test result extends uniquely to the actual auxiliary source. Retain the boundary completion and normal flux; do not append an unrestricted open-clock boundary one-form. Common regulator removal precedes the auxiliary outer limit."
+    }
+  ],
+  "claims_boundary": {
+    "closes_if_execution_passes": [
+      "complete weak adjoint residual <2.1e-5",
+      "actual mass of full coupled LINEAR correction <2.29e-15"
+    ],
+    "does_not_close": [
+      "original coupled graph",
+      "kappa_m and independent phase columns",
+      "physical nonlinear-neighborhood comparisons",
+      "nonlinear mass or admission/contraction",
+      "exact compatibility",
+      "physical matching",
+      "validity/noise",
+      "all-sector stability",
+      "stable wormhole existence"
+    ]
+  },
+  "execution_contract": {
+    "precision_bits": 512,
+    "targets": [
+      "whole actual joint supremum <=1.000001, including bolt",
+      "one-sided geodesic jets and fractional trial bound with actual cubic seam",
+      "both complete local Euler rows <1e-18",
+      "all massive pieces plus LLL/local terms <2.1e-5",
+      "unchanged full coupled LINEAR mass target <2.29e-15"
+    ],
+    "support_scope": "Exact polynomial identities, explicit continuum majorant arithmetic and outward Arb intervals. Checks support the separately written ordinary proof and are not substitutes for the domain/common-regulator argument.",
+    "verification": "Retain every development snapshot and outcome, including superseded passing arithmetic with a documented proof defect; require matching unchanged-source acceptance of the corrected ordinary argument."
+  },
+  "exploration": {
+    "scope": "pre-freeze method exploration; never used as a substitute for a continuum supremum or a full operator",
+    "correction": "The first trial-bound exploratory script divided an Arb value by a SymPy factorial and displayed non-certified scalar conversions. Its exact v0 source is retained. The corrected code uses integer factorials and outward Arb throughout; no conclusion uses v0 numerics.",
+    "files": {
+      "s169ec-bound-explore-v0.py": {
+        "sha256": "09b2038e974b19f14bd0939c7e7dcc638697046e432e699f72e6bebf1b046d34",
+        "contents": "from pathlib import Path\nimport sys,json,sympy as s\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nfrom flint import arb,ctx\nctx.prec=512\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\ndef prior(n):return json.loads((root/'evidence'/(n+'.json')).read_bytes())['runs'][-1]['result']\ndef dec(v):\n d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\np=prior('current-global-mass-conversion')['parameters'];beta,uu,eps,tau,g,Fl=[dec(p[k]) for k in ['beta','u','eps','tau','g','Fl']]\ntr=prior('current-reference-clock-adjoint-trial');ret=prior('current-coupled-global-return-attempt')\nga=dec(ret['gamma']);h=dec(ret['h']);zh=1/(1+h);C=1/uu\nz=s.symbols('z',positive=True);d=s.symbols('d',real=True)\nbe,us,aa,bb,ep,cs=s.symbols('be uu aa bb ep C',real=True)\nQ=be+us*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\nav=4*beta+2*uu+tau;bv=3*beta+uu+eps\nvals={be:beta,us:uu,aa:av,bb:bv,ep:eps,cs:C}\ndef ev(ex,vs):\n if ex.is_Number:return arb(str(ex.p))/int(ex.q) if ex.is_Rational else arb(str(ex))\n if ex in vs:return vs[ex]\n if ex.is_Add:return sum((ev(x,vs) for x in ex.args),arb(0))\n if ex.is_Mul:\n  o=arb(1)\n  for x in ex.args:o*=ev(x,vs)\n  return o\n if ex.is_Pow:return ev(ex.base,vs)**int(ex.exp)\n raise ValueError(ex)\nqt=[arb(0),2*ga]+[ev(s.diff(Q,z,k),{**vals,z:zh})*((-1)**k)/s.factorial(k) for k in range(2,7)]\nprint('bolt Q coefficients',[str(v) for v in qt[2:]],flush=True)\ndef istar(v):\n return -4*(1-v).log()/3+2*(3*v*v+2*v+1).log()/3+7*arb(2).sqrt()/6*((3*v+1)/arb(2).sqrt()).atan()-7*arb(2).sqrt()/6*(1/arb(2).sqrt()).atan()+1/(1-v)-1\n# unique critical point in [.827,.829] for 5z^3-z-2; use a wider interval only if proved below.\nrr=arb('.827', '.002')\nprint('comparison critical H',arb('1.5')/(rr*rr*(1-rr))-istar(rr),flush=True)\nzc=1-arb('1e-8');dc=zh-zc\nac=qt[2];DA=ac*zh**2+3*ga*zh;massp=ga**2/(zh*DA);cc=zh**2/(2*DA)\nUc=sum((qt[k]*dc**(k-1) for k in range(1,7)),arb(0))\nV0=ac+6*massp*zh-cc*(ac*ac+4*ga*qt[3]);K=V0/ac\nIm=istar(zc)/(1-arb('1e-8'));Il=istar(zc)/(1+arb('1e-8'))\nIbound=arb.union(Il,Im)\nRc=Ibound-cc/dc-K/Uc\nprint('R anchor',Rc,'mass primitive correction upper',128*massp/(3*dc**3),flush=True)\n\n# Local source rows, with exact constant-curvature and vacuum cancellations.\nexprs=json.loads(Path(__file__).with_name('s169ec-local-explore.json').read_bytes())\nal,kv,dd,ar,hs,q=s.symbols('al kv dd ar h q',real=True)\nloc={}\nfor key,st in exprs.items():loc[key]=s.sympify(st,locals={str(v):v for v in [z,be,us,aa,bb,ep,cs,al,kv,dd,ar,hs,q]})\nhv=g/(2*arb.pi()*C*C*beta);alph=8*arb.pi()*arb('1e22')*g/(C*C*beta)\nlv={be:beta,cs:C,aa:av,bb:bv,ep:eps,al:alph,dd:Fl*eps,ar:arb(0,'6e-23'),hs:hv,q:arb(2000)**4}\nN0=arb(100);B0=arb('1.000001')\ndef norm(poly):\n out=arb(0);ll=s.symbols('ll')\n pp=s.Poly(s.expand(poly.subs(s.log(z),ll)*z**4),z,ll)\n for (j,k),coeff in pp.terms():\n  power=j-4\n  assert power>=-2,(power,k,coeff)\n  moment=arb(int(s.factorial(2*k)))/(2*power+5)**(2*k+1)\n  out+=abs(ev(coeff,lv))*moment.sqrt()\n return out\nfor label in ['nu','shape']:\n f=s.expand(sum(loc[name+'_'+label] for name in ['square','potential','weyl']).subs({us:1/cs,kv:hs*11*cs*cs*be*be/60}))\n nn=norm(f);nd=norm(z*s.diff(f,z));nm=norm(s.diff(f,aa))\n r=(2*B0*nn+N0*nd+2*massp*nm)/beta\n print(label,'source',nn,'radial',nd,'massparam',nm,'residual',r,flush=True)\nPath(__file__).with_suffix('.json').write_text(json.dumps({'exploration_only':True,'cold_anchor':str(Rc)},indent=2))\n"
+      },
+      "s169ec-bound-explore.json": {
+        "sha256": "c7eef5edb862a5c8510b482b43a9de30d5f17d2fefcfccbda6ed98ae84c2099a",
+        "contents": "{\n  \"exploration_only\": true,\n  \"cold_anchor\": \"[3e+1 +/- 5.90]\"\n}"
+      },
+      "s169ec-bound-explore.py": {
+        "sha256": "89ec0da71ac42d4c65b4ee4af1bc565291a9900ae6e706694433ca91fb2ea1fe",
+        "contents": "from pathlib import Path\nimport sys,json,sympy as s\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nfrom flint import arb,ctx\nctx.prec=512\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\ndef prior(n):return json.loads((root/'evidence'/(n+'.json')).read_bytes())['runs'][-1]['result']\ndef dec(v):\n d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\np=prior('current-global-mass-conversion')['parameters'];beta,uu,eps,tau,g,Fl=[dec(p[k]) for k in ['beta','u','eps','tau','g','Fl']]\ntr=prior('current-reference-clock-adjoint-trial');ret=prior('current-coupled-global-return-attempt')\nga=dec(ret['gamma']);h=dec(ret['h']);zh=1/(1+h);C=1/uu\nz=s.symbols('z',positive=True);d=s.symbols('d',real=True)\nbe,us,aa,bb,ep,cs=s.symbols('be uu aa bb ep C',real=True)\nQ=be+us*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\nav=4*beta+2*uu+tau;bv=3*beta+uu+eps\nvals={be:beta,us:uu,aa:av,bb:bv,ep:eps,cs:C}\ndef ev(ex,vs):\n if ex.is_Number:return arb(str(ex.p))/int(ex.q) if ex.is_Rational else arb(str(ex))\n if ex in vs:return vs[ex]\n if ex.is_Add:return sum((ev(x,vs) for x in ex.args),arb(0))\n if ex.is_Mul:\n  o=arb(1)\n  for x in ex.args:o*=ev(x,vs)\n  return o\n if ex.is_Pow:return ev(ex.base,vs)**int(ex.exp)\n raise ValueError(ex)\nqt=[arb(0),2*ga]+[ev(s.diff(Q,z,k),{**vals,z:zh})*((-1)**k)/int(s.factorial(k)) for k in range(2,7)]\nprint('bolt Q coefficients',[str(v) for v in qt[2:]],flush=True)\ndef istar(v):\n return -4*(1-v).log()/3+2*(3*v*v+2*v+1).log()/3+7*arb(2).sqrt()/6*((3*v+1)/arb(2).sqrt()).atan()-7*arb(2).sqrt()/6*(1/arb(2).sqrt()).atan()+1/(1-v)-1\n# unique critical point in [.827,.829] for 5z^3-z-2; use a wider interval only if proved below.\nrr=arb('.827', '.002')\nprint('comparison critical H',arb('1.5')/(rr*rr*(1-rr))-istar(rr),flush=True)\nzc=1-arb('1e-8');dc=zh-zc\nac=qt[2];DA=ac*zh**2+3*ga*zh;massp=ga**2/(zh*DA);cc=zh**2/(2*DA)\nUc=sum((qt[k]*dc**(k-1) for k in range(1,7)),arb(0))\nV0=ac+6*massp*zh-cc*(ac*ac+4*ga*qt[3]);K=V0/ac\nIm=istar(zc)/(1-arb('1e-8'));Il=istar(zc)/(1+arb('1e-8'))\nIbound=arb.union(Il,Im)\nRc=Ibound-cc/dc-K/Uc\nprint('R anchor',Rc,'mass primitive correction upper',128*massp/(3*dc**3),flush=True)\ngs,zs=s.symbols('gs zs',positive=True);qq=s.symbols('q2:7',real=True)\nUs=2*gs+sum(qq[k-2]*d**(k-1) for k in range(2,7))\nDAs=qq[0]*zs*zs+3*gs*zs;ps=gs*gs/(zs*DAs);ccs=zs*zs/(2*DAs)\nVn=s.Poly(s.expand(d*Us+2*ps*(zs-d)**3-ccs*Us*Us),d)\nassert s.cancel(Vn.nth(0))==s.cancel(Vn.nth(1))==0\nVs=sum(s.cancel(Vn.nth(k))*d**(k-2) for k in range(2,Vn.degree()+1))\nWn=s.Poly(s.expand(-ccs*(Us+d*s.diff(Us,d))*Us/2+ps*(zs-d)**3),d)\nassert s.cancel(Wn.nth(0))==0\nWs=sum(s.cancel(Wn.nth(k))*d**(k-1) for k in range(1,Wn.degree()+1))\nKs=s.cancel(Vs.subs(d,0)/qq[0])\nNs=s.Poly(s.expand(Vs-Ks*s.diff(Us,d)),d)\nassert s.cancel(Ns.nth(0))==0\nN1=sum(s.cancel(Ns.nth(k))*d**(k-1) for k in range(1,Ns.degree()+1))\nDs=s.Poly(s.expand(Us-Ks*(Us+d*s.diff(Us,d))/2+Ws),d)\nvs={gs:ga,zs:zh,**{qq[k-2]:qt[k] for k in range(2,7)}}\ndef polynorm(ex,radius):return sum((abs(ev(s.cancel(co),vs))*radius**degree for (degree,),co in s.Poly(ex,d).terms()),arb(0))\nvn=polynorm(Vs,arb('2e-8'));n1=polynorm(N1,arb('2e-8'))\nwn=sum((abs(ev(s.cancel(Ws.coeff(d,k)/(gs if k==0 else 1)),vs))*arb('2e-8')**max(k-1,0) for k in range(s.degree(Ws,d)+1)),arb(0))\ndn=sum((abs(ev(s.cancel(Ds.nth(k)/(gs**2 if k==0 else gs if k==1 else 1)),vs))*arb('2e-8')**max(k-2,0) for k in range(Ds.degree()+1)),arb(0))\nprint('cold bounds V,N1,W/(g+d), D numerator/(g+d)^2',vn,n1,wn,dn,flush=True)\n\n# Local source rows, with exact constant-curvature and vacuum cancellations.\nexprs=json.loads(Path(__file__).with_name('s169ec-local-explore.json').read_bytes())\nal,kv,dd,ar,hs,q=s.symbols('al kv dd ar h q',real=True)\nloc={}\nfor key,st in exprs.items():loc[key]=s.sympify(st,locals={str(v):v for v in [z,be,us,aa,bb,ep,cs,al,kv,dd,ar,hs,q]})\nhv=g/(2*arb.pi()*C*C*beta);alph=8*arb.pi()*arb('1e22')*g/(C*C*beta)\nlv={be:beta,cs:C,aa:av,bb:bv,ep:eps,al:alph,dd:Fl*eps,ar:arb(0,'6e-23'),hs:hv,q:arb(2000)**4}\nN0=arb(100);B0=arb('1.000001')\ndef norm(poly):\n out=arb(0);ll=s.symbols('ll')\n pp=s.Poly(s.expand(poly.subs(s.log(z),ll)*z**4),z,ll)\n for (j,k),coeff in pp.terms():\n  power=j-4\n  assert power>=-2,(power,k,coeff)\n  moment=arb(int(s.factorial(2*k)))/(2*power+5)**(2*k+1)\n  out+=abs(ev(coeff,lv))*moment.sqrt()\n return out\nfor label in ['nu','shape']:\n f=s.expand(sum(loc[name+'_'+label] for name in ['square','potential','weyl']).subs({us:1/cs,kv:hs*11*cs*cs*be*be/60}))\n nn=norm(f);nd=norm(z*s.diff(f,z));nm=norm(s.diff(f,aa))\n r=(2*B0*nn+N0*nd+2*massp*nm)/beta\n print(label,'source',nn,'radial',nd,'massparam',nm,'residual',r,flush=True)\nPath(__file__).with_suffix('.json').write_text(json.dumps({'exploration_only':True,'cold_anchor':str(Rc)},indent=2))\n"
+      },
+      "s169ec-local-explore.json": {
+        "sha256": "04308d0b73fbe808dc7f9d9c94dfe0c6d1103e3ed96d9d8c699555193520f789",
+        "contents": "{\n  \"square_nu\": \"-2592*C**2*aa*al*ep*z**5 + 1200*C**2*aa*al*ep*z**4 - 96*C**2*aa*al*uu*z + 3024*C**2*al*bb*ep*z**6 - 1440*C**2*al*bb*ep*z**5 + 144*C**2*al*bb*uu*z**2 + 1008*C**2*al*be*ep*z**2 - 288*C**2*al*be*ep*z - 144*C**2*al*be*uu/z**2 + 3888*C**2*al*ep**2*z**8 - 8832*C**2*al*ep**2*z**7 + 3360*C**2*al*ep**2*z**6 + 2400*C**2*al*ep*uu*z**4 - 1344*C**2*al*ep*uu*z**3 + 48*C**2*al*uu**2 + 96*C*aa*al*z - 144*C*al*bb*z**2 + 144*C*al*be/z**2 - 240*C*al*ep*z**4 + 384*C*al*ep*z**3 - 48*C*al*uu\",\n  \"square_shape\": \"-576*C**2*aa*al*ep*z**5 + 240*C**2*aa*al*ep*z**4 + 672*C**2*al*bb*ep*z**6 - 288*C**2*al*bb*ep*z**5 + 96*C**2*al*be*ep*z - 96*C**2*al*be*uu/z**2 + 792*C**2*al*ep**2*z**8 - 1824*C**2*al*ep**2*z**7 + 640*C**2*al*ep**2*z**6 + 432*C**2*al*ep*uu*z**4 - 160*C**2*al*ep*uu*z**3 - 8*C**2*al*uu**2 + 96*C*al*be/z**2 + 8*al\",\n  \"potential_nu\": \"-6*dd*z**2 + 4*dd*z + 4*kv/z**4\",\n  \"potential_shape\": \"2*ar + 6*dd*z**2 - 8*dd*z + 2*kv/z**4\",\n  \"weyl_nu\": \"7*C**2*aa**2*h*z**2/30 - 14*C**2*aa*bb*h*z**3/15 + 73*C**2*aa*ep*h*z**5/15 - 2*C**2*aa*ep*h*z**4/9 + C**2*aa*h*uu*z/9 + 53*C**2*bb**2*h*z**4/45 - 23*C**2*bb*ep*h*z**6/15 - 14*C**2*bb*ep*h*z**5/3 - C**2*bb*h*uu*z**2/3 - 11*C**2*be**2*h/(15*z**4) - 13*C**2*be*ep*h*z**2/3 + 82*C**2*be*ep*h*z/45 - C**2*be*h*uu/(9*z**2) - C**2*ep**2*h*z**8/5 - 16*C**2*ep**2*h*z**7/9 + 106*C**2*ep**2*h*z**6/15 - 64*C**2*ep*h*uu*z**4/9 + 4*C**2*ep*h*uu*z**3 - C**2*h*uu**2/15 - C*aa*h*z/9 + C*bb*h*z**2/3 + C*be*h/(9*z**2) + 10*C*ep*h*z**4/9 - 4*C*ep*h*z**3/3 - h*q**2/3 + h/15\",\n  \"weyl_shape\": \"-37*C**2*aa**2*h*z**2/30 + 16*C**2*aa*bb*h*z**3*log(z)/5 + 238*C**2*aa*bb*h*z**3/45 + 2*C**2*aa*be*h/(5*z) + 192*C**2*aa*ep*h*z**5*log(z)/5 + 248*C**2*aa*ep*h*z**5/15 - 28*C**2*aa*ep*h*z**4*log(z) - 886*C**2*aa*ep*h*z**4/45 + 44*C**2*aa*h*uu*z/45 - 16*C**2*bb**2*h*z**4*log(z)/5 - 401*C**2*bb**2*h*z**4/90 - 8*C**2*bb*be*h*log(z)/5 - 73*C**2*bb*be*h/45 - 216*C**2*bb*ep*h*z**6*log(z)/5 - 997*C**2*bb*ep*h*z**6/45 + 176*C**2*bb*ep*h*z**5*log(z)/5 + 144*C**2*bb*ep*h*z**5/5 - 16*C**2*bb*h*uu*z**2*log(z)/5 - 47*C**2*bb*h*uu*z**2/15 - 11*C**2*be**2*h/(30*z**4) - 24*C**2*be*ep*h*z**2*log(z) - 127*C**2*be*ep*h*z**2/15 + 16*C**2*be*ep*h*z*log(z) + 376*C**2*be*ep*h*z/45 - C**2*be*h*uu/(9*z**2) - 42*C**2*ep**2*h*z**8*log(z) - 201*C**2*ep**2*h*z**8/10 + 112*C**2*ep**2*h*z**7*log(z) + 2692*C**2*ep**2*h*z**7/45 - 176*C**2*ep**2*h*z**6*log(z)/3 - 1886*C**2*ep**2*h*z**6/45 - 36*C**2*ep*h*uu*z**4*log(z) - 569*C**2*ep*h*uu*z**4/45 + 80*C**2*ep*h*uu*z**3*log(z)/3 + 124*C**2*ep*h*uu*z**3/9 + 2*C**2*h*uu**2*log(z)/15 - C**2*h*uu**2/90 + 2*C*aa*h*z/9 - C*bb*h*z**2/3 + C*be*h/(9*z**2) - 5*C*ep*h*z**4/9 + 8*C*ep*h*z**3/9 - C*h*uu/9 + 2*h*q**2*log(z)/3 - 2*h*log(z)/15\"\n}"
+      },
+      "s169ec-local-explore.py": {
+        "sha256": "a8f94e2e44264c67ef9a2fdd7c0c81d7fe8a3fe8b79f624c5e3a8dbe4ab75f67",
+        "contents": "from pathlib import Path\nimport sympy as s,json,time\nz=s.symbols('z',positive=True)\nph=s.symbols('ph0:5');b=s.symbols('b0:5')\nbe,uu,aa,bb,ep,C=s.symbols('be uu aa bb ep C',real=True)\nal,kv,dd,ar,h,q=s.symbols('al kv dd ar h q',real=True)\nQ=be+uu*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\ndef D(f):return s.diff(f,z)+sum(s.diff(f,ph[j])*ph[j+1]+s.diff(f,b[j])*b[j+1] for j in range(4))\nLap=lambda p:Q*p[2]+s.diff(Q,z)*p[1]\nL=-s.diff(Q,z,2)-2*Lap(b);M=Lap(ph);N=Q*ph[1]**2;Di=L-6*M-6*N\nWd=s.exp(-2*ph[0])*(2+C*s.exp(-2*b[0])*Di)+12*C*be\nsq=al*s.exp(4*ph[0]+2*b[0])*Wd**2\npot=(kv*s.exp(4*ph[0])-dd*(4*s.exp(-ph[0])-3*s.exp(-2*ph[0]))+ar)*s.exp(2*b[0])\nwe=h*(C*C*s.exp(-2*b[0])*(ph[0]*L**2/s.Integer(60)+L*M/30-M*M/10+L*N/30-7*M*N/90-7*N*N/180)-C*ph[0]*L/18+(s.Rational(1,15)-q*q/3)*ph[0]*s.exp(2*b[0])-C*N/18)\nseed={ph[0]:-s.log(z),**{ph[j]:s.diff(-s.log(z),z,j) for j in range(1,5)},**{v:0 for v in b}}\nout={}\nfor name,expr in [('square',sq),('potential',pot),('weyl',we)]:\n for label,vars in [('nu',ph),('shape',b)]:\n  grad=s.diff(expr,vars[0])-D(s.diff(expr,vars[1]))+D(D(s.diff(expr,vars[2])))\n  f=s.expand(grad.subs(seed))\n  out[name+'_'+label]=str(f)\n  print(name,label,len(s.Add.make_args(f)),flush=True)\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2))\nprint('written',flush=True)\n"
+      }
+    }
+  },
+  "local_lean_invocations": 0,
+  "scientific_sha256": {
+    "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+    "checks/current_complete_weak_mass_residual.py": "46e2ae0164a6353f6a698fd24309da071dd4b0809a965659e9cc7cf7a0a86103"
+  },
+  "post_development_review": {
+    "change": "Make the complete geodesic long-flow return explicit inside the existing 1e15 gradient reserve. No result coefficient or target changes.",
+    "prior_passing_development_retained": "evidence/current-complete-weak-mass-residual-development.json runs[0] contains exact prior note, checker, review and input hashes",
+    "prior_source_hashes": {
+      "notes/current-complete-weak-mass-residual.md": "0b1583b3d377377ed81b40b5dea7734956314e678cdc83f324ef55aeed1d80e9",
+      "checks/current_complete_weak_mass_residual.py": "8fe94a3dc3dbdf737ffdd2218d97b38171d89e2fbb6ed4a3a98a581c5568052f",
+      "evidence/current-complete-weak-mass-residual-review.json": "7bfb3ea8945490817bc6a2aeea26889d2522a97a855b6c3336f2cc8bf626aec0"
+    },
+    "new_source_version": "2; ordinary proof clarification before acceptance",
+    "failed_frozen_runs": 0
+  },
+  "mixed_form_proof_correction": {
+    "before_acceptance": true,
+    "source_version": 3,
+    "superseded_runs": [
+      {
+        "started_utc": "2026-10-25T20:42:58.153771+00:00",
+        "checks": 66,
+        "status": "passed",
+        "input_sha256": {
+          "notes/current-complete-weak-mass-residual.md": "0b1583b3d377377ed81b40b5dea7734956314e678cdc83f324ef55aeed1d80e9",
+          "checks/current_complete_weak_mass_residual.py": "8fe94a3dc3dbdf737ffdd2218d97b38171d89e2fbb6ed4a3a98a581c5568052f",
+          "evidence/current-complete-weak-mass-residual-review.json": "7bfb3ea8945490817bc6a2aeea26889d2522a97a855b6c3336f2cc8bf626aec0",
+          "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+          "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+          "notes/current-complete-mass-moment-bound.md": "1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8",
+          "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+          "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+          "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+          "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+          "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+          "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+          "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+          "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+          "notes/current-full-domain-contact-assembly.md": "ace6fce7e68cb2aa1df7e8208ff10af37452ae0f0693ae48bbeb57fc7279b849",
+          "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+          "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+          "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+          "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+          "evidence/current-complete-mass-moment-bound.json": "5331e1b5c5d792339694c5d00eec12a55950a450d394f2afaf2ba62530a81ed6"
+        }
+      },
+      {
+        "started_utc": "2026-10-25T20:45:17.287567+00:00",
+        "checks": 67,
+        "status": "passed",
+        "input_sha256": {
+          "notes/current-complete-weak-mass-residual.md": "f69b5f0ce70e189feabfd10e9f7d81af27b47c26eb97a7f7e9154153dba90aab",
+          "checks/current_complete_weak_mass_residual.py": "dd77dd8435495576957915cb14a432f514152a8d2a8580a99f54da7a82ea0282",
+          "evidence/current-complete-weak-mass-residual-review.json": "d256874f820790b32e02145c941f0fafcc68e2dd7cde5e949bf2b31437057fe4",
+          "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+          "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+          "notes/current-complete-mass-moment-bound.md": "1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8",
+          "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+          "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+          "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+          "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+          "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+          "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+          "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+          "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+          "notes/current-full-domain-contact-assembly.md": "ace6fce7e68cb2aa1df7e8208ff10af37452ae0f0693ae48bbeb57fc7279b849",
+          "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+          "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+          "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+          "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+          "evidence/current-complete-mass-moment-bound.json": "5331e1b5c5d792339694c5d00eec12a55950a450d394f2afaf2ba62530a81ed6"
+        }
+      }
+    ],
+    "error": "The earlier draft inferred a sum of matching derivative products from a diagonal sum bound. Polarization instead supplies the product of combined norms. The two passing arithmetic snapshots do not certify the earlier ordinary proof.",
+    "correction": "Use the valid combined-norm product. The same finite-difference argument allows epsilon=1e-24 while its full gradient coefficient, including fixed contacts and long-flow tail, still fits 1e15. No normalization or boundary realization changes.",
+    "executed_so_far": "Earlier source snapshots and results retained unmodified inside development ledger. Corrected proof and execution contract frozen before version-three development.",
+    "quantitative_test": "Evaluate the valid product at old epsilon=1e-6 (excessive sufficient estimator), then at epsilon=1e-24; retain both. Test full residual <2.1e-5 and actual coupled LINEAR mass <2.29e-15.",
+    "failed_frozen_arithmetic_runs": 0,
+    "superseded_ordinary_proof_defect": true
+  }
+}

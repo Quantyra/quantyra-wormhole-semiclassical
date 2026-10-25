@@ -1,3 +1,131 @@
+# Active checkpoint: complete weak residual and linear mass bounded; graph unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary complete weak-residual argument](current-complete-weak-mass-residual.md) and its frozen evidence.
+
+The COMPLETE weak adjoint residual is now bounded by
+R<2.067204e-5<3.27169e-5 in the original E* norm. Together with the
+complete source pairing and actual coupled inverse, this proves
+|m_linear|<1.627532e-15<2.29e-15 for the FULL COUPLED LINEAR correction.
+The original mass-lift conversion remains unchanged and leaves a
+sufficient lifted graph allowance greater than 6.461745e-12.
+The actual original coupled GRAPH remains UNRESOLVED. No nonlinear
+admission, independent phase-column or wormhole-existence claim follows.
+
+EXECUTED: apply the complete actual weak kernel to the correlated,
+bolt-regular reference adjoint. The whole-interval joint shape supremum
+is <=1.000001; pole removal retains the opposite bolt logarithms in
+their regular sum. One-sided analytic charts only bound this explicit
+trial's jets. On the actual C2,1 paired double, the seam-flux and
+fractional-difference argument proves P^(13/4) membership without
+assuming an H4 seam or a smooth surrogate. The actual mass/log physical
+test domain and common-regulator order are unchanged. All angular and
+thermal sums, local coincidence contacts and finite-domain returns
+remain in the decomposition. The two complete local Euler rows are
+evaluated together, with exact curvature/vacuum cancellation and the
+uncertain area coefficient retained. The original boundary completion
+and normal mass flux remain in the compact-test E* extension.
+
+The complete upper-bound ledger, in unchanged units, is approximately
+
+    principal global geodesic form       9.360019378e-14,
+    complete mixed gain-two remainder   4.053257458e-6,
+    actual row-subtracted gluing        7.425007426e-6,
+    actual constant contact             9.193771453e-6,
+    both local rows reserve             1e-18,
+    complete fixed-domain LLL reserve   1e-17.
+
+The rigorously enclosed sum is 2.067203642892168252e-5 (rounding upward
+is used in the stated inequality). Its dominant losses are the full
+constant contact and actual gluing, followed by the mixed remainder.
+No unknown sign cancellation is used, and no part is a selected-mode
+approximation. The entire massive constant contact already includes
+the density return; adding an isolated density allowance would count
+it twice.
+
+The ordinary proof review caught and corrected a mixed-form mistake
+before acceptance: a diagonal sum bound gives a PRODUCT of combined
+norms, not a sum of matching derivative products. With epsilon=1e-6
+the valid product is about .04732713179, which fails to certify the
+3.27169e-5 target. The same finite-difference argument at epsilon=1e-24
+has a complete gradient coefficient <7.584902e14<1e15 and gives the
+4.053257458e-6 mixed cost above. This changes the proved estimate,
+not the normalization. The two earlier passing arithmetic snapshots
+and their invalid ordinary-proof inference are retained and explicitly
+superseded. Passing checks alone would not have found that defect.
+
+Use ||h^-1||E*->E<=1, ||F||E*<1.1e-10, the complete source pairing
+I_new<9.811394479e-16, and the actual normal flux K_m>1.9999999764:
+
+    |m_linear| <=(I_new+1.1e-10 R)/K_m
+               <1.627532e-15,
+    1e-11-2174|m_linear| >6.461745e-12.
+
+This is the mass of the actual complete linear solution, with scalar,
+slow, fast and bolt couplings inside the same h. It is not the tiny
+reference-family mass, a free boundary datum or a nonlinear solution's
+mass. The physical lift's .1/.2 transition, original .05/.1 graph cutoff,
+boundary conditions, regular bolt and 2133<||d_chi||H3<2174 conversion
+are unchanged. Neither a fixed-temperature zero mode nor an admission
+improvement by changing boundary basis is asserted.
+
+Still UNKNOWN: kappa_m<=5e-5, all remaining coupled graph entries and
+the restricted source-family comparison gamma_E. The conditional
+mass-column costs remain 2.14765e-12 affine and .0024731 direct graph;
+their residual budgets remain Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069. The actual graph has
+not been shown to fit either that budget or the new single-source
+lifted allowance. The scalar quartic row 20beta Fstar c4 and exact
+slow pair z^4-z^(4+e_star), e_star about 1.865097e-34, remain.
+
+The conditional quantum screen eta_seed+1e-11 C3<.1599164 retains
+only its proved two-fast-input scope: .028913+.10706=.135973. It
+does not control independent boundary phases or admit a nonlinear
+ball. The fixed-seed comparisons ||T/z^2||2<17.6 E and
+||nu/z^2||2<12.65 E are output estimates, not energy-to-H3 or
+physical-neighborhood input embeddings. In particular all of
+
+    E_center+1e-8 alpha_embed<=1e-11,
+    R_X alpha_embed*.028913+Z0_other<=.25,
+    R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,
+    Y0+1e-8 Z0+5e-17 Z2<=1e-8,  Z0+1e-8 Z2<1
+
+still require their original proofs and constants. Exact compatibility,
+physical matching, semiclassical validity/noise and all-sector stability
+are unresolved. No actual controlled wormhole or construction obstruction
+is established. The closed audit and full stable-wormhole objective remain.
+
+RESEARCH DECISION: retain the construction and the complete weak
+adjoint method for this mass observable. Its source pairing and residual
+now meet the sufficient linear mass target; stop optimizing them. The
+overall outcome remains an UNRESOLVED COUPLED GRAPH estimate with one
+quantitative requirement closed, not a full feasibility pass.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED HERE): certify the original
+coupled graph of the SAME full linear correction, retaining scalar quartic,
+the correlated slow pair, fast remainder, physical lift transition and
+finite-domain returns. The first missing passage is a quantitative strong
+bound for Rw and [A0,chi]w in the two original equations; the weak energy
+inverse alone supplies none. Test the lifted graph against 6.46e-12,
+or the original graph directly against 1e-11, with a complete residual
+certificate. Do not replace independent phase columns by the fast-input
+quantum screen or transfer this fixed-seed result to a nonlinear ball.
+
+Verification: the corrected ordinary argument and supporting execution
+contract were frozen before the final development and matching acceptance.
+There are 69 supporting symbolic/512-bit Arb checks on 20 frozen inputs.
+The ledger retains two superseded passing draft runs with the documented
+mixed-form proof defect; no failed frozen arithmetic runs were discarded.
+The retained Python executable and all 1595 flint/SymPy file hashes match.
+These checks verify arithmetic supporting the ordinary argument, not its
+continuum hypotheses. No Lean was invoked. All 18 inherited paths and
+closed audits remain unchanged; prior checkpoint content is preserved.
+
+Remaining to-do list: original coupled graph and independent phase columns; original physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: joint adjoint attempt; complete coupled estimate unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.

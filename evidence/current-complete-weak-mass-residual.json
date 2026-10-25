@@ -1,0 +1,741 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T20:50:03.835218+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+        "checks/current_complete_weak_mass_residual.py": "46e2ae0164a6353f6a698fd24309da071dd4b0809a965659e9cc7cf7a0a86103",
+        "evidence/current-complete-weak-mass-residual-review.json": "71cea0caaf6c36b197bb971153601d5258a1437dc0d142601e36a12d6b26011a",
+        "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "notes/current-complete-mass-moment-bound.md": "1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8",
+        "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+        "notes/current-full-domain-contact-assembly.md": "ace6fce7e68cb2aa1df7e8208ff10af37452ae0f0693ae48bbeb57fc7279b849",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-complete-mass-moment-bound.json": "5331e1b5c5d792339694c5d00eec12a55950a450d394f2afaf2ba62530a81ed6"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-complete-weak-mass-residual.md": "# Complete weak residual for the correlated current mass adjoint\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen verification.\nPrevious goal turn: progress (domain test and original output comparison).\nThe full stable semiclassical wormhole objective remains incomplete.\nThe closed feasibility audit and original physical targets are unchanged.\n\nCLAIM TO VERIFY: the COMPLETE current adjoint residual satisfies\nR=||j Psi_ref||E*<2.1e-5<3.27169e-5. Together with the already closed\nsource-pairing allowance, this certifies the mass of the FULL COUPLED\nLINEAR correction at the seed. It does not certify its original graph,\nthe mass-column operator norm kappa_m, a nonlinear solution or stability.\n\n## 1. Use the complete weak operator, not another pointwise estimate\n\nThe previous attempt left a pointwise outer derivative uncomputed.\nFor this ONE adjoint residual, the retained complete weak kernel is\nsufficient. Its constant probe already contains the density contact;\nits gluing is already the actual finite-domain return. Extract its\nabsolute bilinear estimates BEFORE the later outer spectral comparison\nand IMS localization, which are not needed for the present input.\n\nKeep Q, z_h, gamma, beta=lambda B^2/C, the paired mass/log physical\ntest domain, common subtraction and finite coefficients. The physical\nmass lift and its .1/.2 transition, original .05/.1 graph cutoff and\nregular bolt are unchanged. Use the pole-removed correlated trial\nPsi_ref=(n,b) of current-reference-clock-adjoint-trial.md:\n\n    p=beta m_T=gamma^2/(z_h D_A), D_A=z_h^2 Q''(z_h)/2+3gamma z_h,\n    A=I_Q+2p J, I_Q=int_0^z 1/Q, J=int_0^z t^3/Q^2,\n    n=-QA/z, b=1+Q'A/2+p z^3/Q.                         (1)\n\nBoth reference equations vanish, with their actual bolt matching.\nThe two separate shape profiles are NOT used as global directions.\nThey have opposite logarithmic bolt singularities; the sum in (1)\nis regular. No zero physical fixed-clock mode is asserted.\n\nLet alpha=2GC/(B^2 beta)=2eta_G/beta. Normalize orbit integrals by\nremoving their common factor 2pi N/gamma. Thus the reduced area is dz,\nand the reduced unit-tangent measure has total volume 2pi z_h. Multiplying\na canonical quadratic form with coefficient C by alpha converts it to\nthe same h=I''/(|W|beta) used in the mass certificate. This is accounting,\nnot an improvement by rescaling.\n\n## 2. Close the actual joint profile bounds, including the bolt\n\nWrite delta=z_h-z and\n\n    Q=delta U, U=2gamma+a delta+b3 delta^2+b4 delta^3+b5 delta^4+b6 delta^5.\n\nThe actual intervals give a in (.999999,1.000001), b3 in (-1.334,-1.333),\nb4 in (.5,.501), |b5|,|b6|<1e-27, 0<gamma<1e-30 and z_h>.99.\nConsequently P=(U-2gamma)/delta lies between .16 and 1.001 on the real\ninterval, Q>=delta^2/8, and Q<.17. All are statements about the actual\npolynomial, with the positive thermal term retained.\n\nFor z<=z_c=1-1e-8 compare integrals with the explicit polynomial\nQstar=(1-z)^2(1+2z+3z^2)/6. This is ONLY an inequality for the exact\nprimitive, not a replacement metric or quantum domain. Direct coefficient\nbounds give |Q/Qstar-1|<1e-8 and |Q'-Qstar'|<1e-9(1-z). Its primitive is\n\n    Istar=1/(1-z)-1-(4/3)log(1-z)+(2/3)log(1+2z+3z^2)\n       +(7sqrt(2)/6)[atan((3z+1)/sqrt(2))-atan(1/sqrt(2))].       (2)\n\nSince Qstar'=-2z^2(1-z), bstar=1-z^2(1-z)Istar. To bound it on the\nWHOLE interval, let H=1.5/[z^2(1-z)]-Istar. The sign of H' is the sign\nof 5z^3-z-2. This polynomial has one positive zero, lying in [.825,.829].\nH tends to positive infinity at both ends; interval evaluation over that\nroot bracket gives H>3. Thus -.5<=bstar<=1. The integral comparison\nIstar/(1+1e-8)<=I_Q<=Istar/(1-1e-8), Istar<=6/(1-z), and\nJ<=64/[3(z_h-z)^3] give |b-bstar|<1e-6 on this whole middle/outer interval.\nNo sampled maximum is used.\n\nAt the bolt use the exact pole-removed identity. Set c=z_h^2/(2D_A),\n\n    V=[delta U+2p(z_h-delta)^3-cU^2]/delta^2,\n    W=[-c(U+delta U_delta)U/2+p(z_h-delta)^3]/delta,\n    A=c/delta+Areg, Areg_z=V/U^2,\n    K=V(0)/a, Rreg=Areg-K/U.\n\nBoth divisions are exact polynomial divisions. Let N1=(V-K U_delta)/delta\nand Dnum=U-K(U+delta U_delta)/2+W. Then\n\n    b=Dnum/U-(U+delta U_delta)Rreg/2,\n    Rreg_z=delta N1/U^2.                              (3)\n\nThe constant and linear coefficients of Dnum have factors gamma^2 and\ngamma, respectively. The checker verifies these identities before interval\nsubstitution. The resulting coefficient bounds on |delta|<=2e-8 give\n|V|<100, |W|<100(gamma+|delta|), |N1|<1e4 and\n|Dnum|<5000(gamma+|delta|)^2. Real U>=gamma+delta/2 therefore gives\n|Dnum/U|<1e4(gamma+delta). The exact anchor from (2), retaining its\ncomparison error and the tiny J term, gives |Rreg(z_c)|<1e6.\n\nIntegrate (3), using delta/U^2<=4/(2gamma+delta), to obtain\n\n    |Rreg(delta)|<=1e6+4e4 log[(2gamma+delta_c)/(2gamma+delta)].\n\nHere delta_c=z_h-z_c<1e-8. Also U+delta U_delta<=3(gamma+delta).\nThe elementary maximum x log(A/x)<=A/e consequently gives\n\n    |b|<=1e4(gamma+1e-8)\n       +1.5[(gamma+1e-8)1e6+4e4(2gamma+1e-8)/e]<.02.       (4)\n\nThis bounds the whole arbitrarily small bolt interval without dividing\nindependently rounded roots. Equations (2)-(4) prove\n\n    ||b||infinity<=B0=1.000001, ||n||infinity<100.          (5)\n\nFor the latter, on z<=.1 use .16<Q<.17 in the integral in (1). On\nz>=.1 outside the cold interval, A<9/delta and\nQ<=1.001 delta^2+2gamma delta. In the cold interval use\nn=-U(c+delta Areg)/z and |Areg|<=1e9+400/(gamma+delta), as below.\n\nWe need deliberately loose ONE-SIDED geodesic derivative bounds, not\nthe earlier unknown whole-chart S145 norm. These can be proved uniformly\nfrom the actual polynomial. In the holomorphic normal Goursat chart,\n\n    z(w,0)=z0+sqrt(Q(z0))w/2, z(0,v)=z0+sqrt(Q(z0))v/2,\n    z_wv=Q'(z)exp(2sigma)/4, sigma_wv=Q''(z)exp(2sigma)/8.\n\nOn |w|,|v|<=1/32 the integral equations preserve\n\n    |delta-delta0|<=min((gamma+delta0)/8,.02), |sigma|<.026.  (6)\n\nIndeed |Q'|<6(gamma+delta0), also |Q'|<.7, |Q''|<20 and |Q'''|<30\nin this cone. The two displacement estimates are <.047(gamma+delta0)\nand <.014, and the sigma estimate is <.003. Their scaled Picard row sums\nare <.02, proving existence and analytic dependence on this disk.\nThis includes the regular-bolt chart. At the outer seam it is the\nanalytic continuation of the ONE-SIDED coefficients used solely to\nbound their jets. The physical even double remains C2,1 throughout.\n\nFor delta0>=delta_c, (6) gives |Q|>delta0^2/32 and |Q'|<6delta0.\nContinue A from its real value <9/delta0 along the straight segment;\nits increment is <5/delta0. Hence |b|<50 on that complex chart.\nFor delta0<=delta_c, the pole-removed polynomials instead give\n|U|>.8(gamma+delta0), |Areg|<1e9+420/(gamma+delta0), and |W/U|<142.\nThus |b|<800. Retain the generous uniform complex bound 1e6.\n\nCauchy's formula gives straight-ray jets through order four bounded by\n2^k k! 32^k 1e6. At a normal center gamma_geod''=0; the retained seed\nchart bounds give |gamma_geod'''|<=15 and |gamma_geod''''|<=4e6.\nThe chain rule then proves, on each physical side and at the regular bolt,\n\n    |Xb|<=K1=1e8, |X^2b|<=K2=1e11,\n    |X^3b|<=K3=1e14, |X^4b|<=K4=1e16.                (7)\n\nNo analytic assumption is made about general mass/log test fields.\nThese bounds apply only to the explicitly analytic reference trial.\n\n## 3. Complete principal form with its actual seam and all angular modes\n\nUse Qgeo and P=iX on the actual complete geodesic flow of the paired\nC2,1 double, exactly as in stationary-curved-quantum-tt.md. In reduced\nunit-tangent measure its spectral multiplier obeys\n\n    0<=q_geo(k)<=2C(k^2+|k|^(17/4)).                  (8)\n\nHere is an all-mode proof, avoiding an unbounded comparison of Qgeo\nwith the physical energy near the seam. The retained Bessel moments\nand 0<=g(s)<=min(s^6/720,s^4/24) give, per massive level,\n\n    P_M(k)<=min(k^6/(525pi^2 M^4), k^4/(90pi^2 M^2)).\n\nUse min(x,y)<=x^(1/8)y^(7/8) and the complete counting bound\nsum d/M^(9/4)<=36C 18^(-1/4). Its coefficient is <.02C.\nThe common fourth restoration has coefficient |F_eff|C/(90pi^2)<.113C.\nSince k^4<=k^2+|k|^(17/4), (8) follows. No angular, thermal, geodesic-time\nor finite-domain truncation is introduced. The Bessel integral theorem\nis used on positive masses; the paired domain and global flow are supplied\nby their separate ordinary arguments.\n\nThe trial is C2 across the actual seam and piecewise C4. Let f=X^3b.\nIt has |f|<=K3, one-sided |Xf|<=K4 and jump at most 2K3. In reduced\nLiouville measure the set of trajectories crossing the seam in time\nt<=t0=1/32 has measure <32t. This follows by integrating the normal\nflux: the normalized seam length is sqrt(beta), and\nint_0^(2pi)|cos theta|dtheta=4; 32 is a conservative reserve.\nThere is at most one crossing in this time. Between two crossings the\nnormal coordinate would satisfy Y''=c(t)Y with |c|<=2, since\n|a'/a|<=2|Y| on |Y|<=1/32. Poincare on the interval between its two\nzeros would require t>=pi/sqrt(2), a contradiction.\n\nThus\n\n    ||(exp(-itP)-1)f||2^2<=4pi K4^2 t^2+256K3^2 t, t<=t0,\n    ||(exp(-itP)-1)f||2^2<=8pi K3^2, t>=t0.\n\nSpectral calculus and Tonelli give the fractional-difference identity.\nIts coefficient for power 1/4 is <1 (integrating\n1-cos t>=2t^2/pi^2 on [0,pi] already proves this). Therefore\n\n    ||P^(13/4)b||2^2\n      <=(8pi/3)K4^2 t0^(3/2)+512K3^2 sqrt(t0)\n                                      +16pi K3^2/sqrt(t0)=Bfrac^2. (9)\n\nThe continuity through second derivatives ensures b is in Dom(P^3);\nthe fundamental theorem along the flow proves this successively.\nEquation (9) then supplies the extra quarter derivative. It does not\npretend the cubic seam is H4 or smooth.\n\n## 4. Physical test bounds and the entire massive residual\n\nKeep the fixed-seed physical energy and output comparison of the previous\nattempt: ||T/z^2||2<17.6 E and ||nu/z^2||2<12.65 E. The retained TT\ngradient bound C J1/E0<=2e5 eta_G and l>=.99 F_l E0 also give\n\n    ||XT||2<=T1 E, T1^2=pi*1e5 beta/(.99F_l).          (10)\n\nAll X norms in (7)-(10) are in reduced unit-tangent measure. The retained\njoint positive reserve l>=.99F_l E0+C S2/(100pi), together with\nJ2<=2S2+2*500^4 J0,outer, gives\n\n    sqrt(alpha)||X^2T||2<39 E.                        (11)\n\nFor an explicit substitution use j0=1000eta_G/beta, jo=(16*1e-8/25)j0,\nj1=2e5eta_G. The square of the left constant is at most\n150pi^2+[(3pi/2)500^4 jo+(pi/2)j1]/(.99F_l)<39^2.\nThis uses the joint positive reserve; it does not bound Qgeo[T] by E.\n\nNow extract the COMPLETE actual massive kernel decomposition from the\nordinary curved-form proof, sections 3-6, with its current-seed transfer:\n\n* Principal part: Qgeo with exactly its common fourth restoration.\n* Row-subtracted actual gluing: L2 operator norm <=6e24 C. Its complete\n  constant row is in the next item, not counted twice or omitted.\n* Actual constant contact: |Theta_p0|<=1e20q^2(1+1/Y), including tadpole,\n  bubble, density variation, common finite parts and the actual-to-cap\n  mass derivative. It is not a derivative of a source-value envelope.\n* Remaining gain-two/contact form: for epsilon=1e-24 its absolute\n  diagonal bound is (epsilon C/3)||X^2T||2^2+1e15C||XT||2^2.\n  The second contact and curvature contact are included before this bound.\n  Polarization gives the PRODUCT of the combined norms on the H2 core.\n  It does not give the sum of the two matching derivative products.\n\nAccount explicitly for the full geodesic tail outside the local pair\nradius 1/128. After its already fixed polynomial contacts are retained,\nits row-subtracted kernel is bounded by the second tail moment\n|J2,tail|<=36C*128^2. Unitarity and\n||exp(-irP)T-T||<=r||PT|| put this contribution inside an additional\n1e7 C||XT||2^2 reserve, including angular factors. Its second contact\nwas fixed by the whole-flow quadratic probe; its fourth contact is the\nsame common restoration, not an extra free coefficient. The finite-\ndifference gradient coefficient plus 1e13 for the second contact and\nthis 1e7 tail still totals less than 1e15. Thus no long geodesic return\nis silently replaced by a compact cap or omitted from (12).\n\nSpecifically use the retained finite-difference estimate with\nK=1e13, R0=1/400 and split radius bsplit=sqrt(epsilon/(4K)). Its\ngradient coefficient K[1/4+2log(R0/bsplit)]+1e13+1e7 remains below\n1e15 even for epsilon=1e-24. This is a change in the proved physical\nestimate, with the same norms and contacts. For epsilon=1e-6 the valid\ncombined-norm product is too large; the earlier separate-product draft\nwas invalid. Both passing draft arithmetic snapshots are preserved and\nsuperseded, not accepted as proof. The corrected product is evaluated\nbelow before acceptance. No sign or cross-derivative cancellation is\nassumed.\n\nOnly this last form is polarized on b. The full p0 form need not have\na finite diagonal value on a root-zero field. Its MIXED pairing with\nphysical tests is estimated separately using (5) and Y>=sqrt(5)z.\nThe seam Delta R contact pairs b(0)T(0)=0; integrations producing a\nfirst derivative also use the physical T'(0)=0. The log phase obeys\nthese conditions. No fourth derivative of the reflected metric is used.\n\nConsequently the FULL canonical massive Hessian acting on b has E* norm\nbounded by the sum\n\n    Rgeo =2alpha [sqrt(2pi)K1+Bfrac] T1,\n    Rgain=alpha sqrt[2pi((epsilon/3)K2^2+1e15 K1^2)]\n                  *sqrt[(epsilon/3)*39^2/alpha+1e15 T1^2],\n    epsilon=1e-24,\n    Rglue=17.6 alpha*6e24 B0,\n    Rp0=35.2 L_q*1e20 B0 sqrt(1/5+1/(2sqrt(5))+1/15).   (12)\n\nThe principal mixed bound follows from (8), spectral Cauchy--Schwarz\nwith derivative orders (1,1) and (13/4,1), and (9)-(10). The gluing\nuses ||b||L2(dz)<=B0. The p0 square-root is the EXACT integral of\n[z^2+z/sqrt(5)]^2 over [0,1], enlarged from [0,z_h]. Here\nL_q=Gq^2/(lambda B^4) is unchanged. No separate density cost is added:\nthe actual constant contact already contains it.\n\nFor the gain-two form, the diagonal estimate makes it a contraction\nrelative to G(T)^2=(epsilon/3)||X^2T||2^2+1e15||XT||2^2 on the\ngradient seminorm completion (constants lie in its kernel).\nPolarization and the self-adjoint Riesz representative therefore give\n|B(b,T)|<=C G(b)G(T), exactly the product used in (12). The fixed\ngradient contacts and tail are included in the same G bound.\n\nThis also addresses the needed continuum passage. On compact physical\ntests the restored actual kernel/constant-contact identity is the original\ncommon-regulator Hessian. Its all-mode bounds above act on the JOINT\nbounded, regular trial and dominate every displayed mixed term. Extend\nin the physical E norm using (9)-(12). This equals the retained auxiliary\nq_P-hv_ref by uniqueness of that extension. It is NOT a C2 theorem for\nan unrestricted open-clock nonlinear family. The common regulator is\nremoved on compact tests before the auxiliary outer cutoff, as before.\nNo joint rate, smooth surrogate or finite selection of modes is assumed.\n\n## 5. Both complete local rows, with the boundary representative retained\n\nUse the actual affine canonical action generator and compact tests.\nSet phi=-log z+nu, shape u, Delta=(Q partial_z)', and\n\n    L=-Q''-2Delta u, M=Delta phi, N=Q phi'^2, D=L-6M-6N,\n    Wdim=exp(-2phi)[2+C exp(-2u)D]+12C beta,\n    alpha_R=8pi c_R g/(C^2 beta), H=g/(2pi C^2 beta), g=G lambda.\n\nThe ENTIRE local difference from F_l I0, excluding the LLL evaluated\nseparately below, has density\n\n    alpha_R exp(4phi+2u) Wdim^2\n      +[k_vac exp(4phi)-F_l epsilon(4exp(-phi)-3exp(-2phi))+a_area]exp(2u)\n      +H{C^2 exp(-2u)[phi L^2/60+LM/30-M^2/10+LN/30-7MN/90-7N^2/180]\n                  -C phi L/18+(1/15-q^2/3)phi exp(2u)-CN/18},       (13)\n\nwhere k_vac=11g beta/(120pi)=H*11C^2 beta^2/60. The area coefficient is\nF_l Delta Q/(CB^2), so |a_area|<3.4e-22 beta<6e-23 by the current\nreference-potential bound. The exact relation C u_seed=1 is imposed\nbefore estimating; otherwise the curvature-square cancellation is lost.\nNo product-gradient subtraction, finite coupling or vacuum is retuned.\n\nCompute both Euler densities f_nu,f_b of (13) at the actual seed. They\nare finite Laurent/log polynomials. Their compact-test variation along\nthe joint trial has a particularly useful exact form. The radial\ngenerator is xi^z=QA=-nz, with (xi^z)'+1=2b; the reference family also\nchanges Q by 2p z^3. If a3 denotes the independent coefficient in\nQ=beta+u_seed z^2-a3 z^3+b4 z^4-2epsilon z^5+epsilon z^6, covariance gives\n\n    H_local Psi_ref: f_i ->2b f_i-nz f_i'-2p partial_(a3) f_i,\n    r_i=-(2b f_i-nz f_i'-2p partial_(a3) f_i)/beta.       (14)\n\nThis is a LOCAL compact-test Ward identity, not separate global mass\nor clock domain variations. The time-density and off-shell terms are\nretained. The seed is not declared stationary for the full action.\n\nThe code differentiates (13) by the Euler formula through order two,\nimposes C u_seed=1 and the exact k_vac relation, then estimates the\nresulting whole polynomials. For a monomial z^j log^k z the exact\nweighted L2 norm is sqrt((2k)!/(2j+5)^(2k+1)), j>-5/2.\nAll combined terms satisfy this condition. With (5), (14) and (6) of\nthe preceding output comparison, the ENTIRE two-row local residual\nis <1e-18. Its computed norm ledger is retained, including the\nuncertain a_area interval rather than choosing its midpoint.\n\nThe reduced Weyl density differs from the raw one by the known boundary\nflux. That flux need not vanish on an unrestricted open-clock action\nvariation. Here (14) is derived on compact physical tests; its weighted\nL2 bound proves a unique E* extension. The original boundary completion\nand normal mass flux remain in h and K_m. A noncontinuous mass-boundary\nfunctional cannot be appended to this extension. Thus no additional\nuncomputed boundary term is discarded or counted twice. This argument\ndoes not redefine the physical boundary charge or action domain.\n\nThe exact fixed-domain LLL Hessian is -q/(12pi)int grad b.grad T.\nUsing (7),(10) gives its normalized cost\n\n    R_LLL <=alpha(q/C)K1 T1/(12pi sqrt(pi))<1e-17.       (15)\n\nIt retains the prepared period and boundary realization of the accepted\nLLL formula; no separately adjustable thermal state is introduced.\n\n## 6. Execute the whole residual and state exactly what it closes\n\nFreeze the ordinary proof, checker and hypothesis review before execution.\nSubstitute all current Arb seed intervals in (2)-(15), including the\nlatest source-pairing bound. The COMPLETE residual ledger is\n\n    R <=Rgeo+Rgain+Rglue+Rp0+1e-18+1e-17 <2.1e-5.      (16)\n\nThe expected dominant contributions are about 7.42501e-6 (actual gluing),\n9.19378e-6 (constant contact) and 4.05326e-6 (gain-two gradient bound).\nAll three are upper bounds, not observed signed values. No cancellation\nbetween unknown signed quantities is assumed. The calculation preserves\nall angular/thermal modes, coincidence contacts and actual returns.\n\nApply the unchanged full coupled weak inverse ||h^-1||E*->E<=1,\n||F||E*<1.1e-10 and the complete normal flux K_m>1.9999999764:\n\n    |m_linear| <=[I_new+1.1e-10 R]/1.9999999764,\n    I_new<9.811394479e-16.                              (17)\n\nIf (16) passes, (17) closes the selected actual LINEAR mass target\n2.29e-15. This is the mass of the complete two-row linear correction,\nincluding its scalar/quartic, correlated slow, fast and bolt couplings\nthrough h. It is not m_T, an independent mass-column allowance or a\nnonlinear solution's mass. No finite trial space replaces that inverse.\n\nThe original norm conversion remains 2133<||d_chi||H3<2174. Compute\nthe sufficient remaining lifted allowance 1e-11-2174|m_linear| from\n(17), but do not assert that the actual lifted graph meets it. In\nparticular kappa_m<=5e-5 remains UNKNOWN: one affine-source mass\nobservable does not control an independent phase column.\n\nThe full graph still must retain the scalar quartic row 20beta Fstar c4\nand the exact slow pair z^4-z^(4+e_star), e_star about 1.865097e-34.\nThe conditional kappa_m costs and residual budgets remain\n\n    affine 2.14765e-12, direct graph .0024731,\n    Y_other<=5.34234999994958e-12,\n    eta_other+(.0195239+4.583e-13)gamma_E<.0012069.\n\nNo other entry is set to zero. The .135973<.1599164 screen keeps only\nits two-fast-input family scope. Original physical-neighborhood input\ncomparisons, nonlinear Y0/Z0/Z2, exact compatibility, matching,\nvalidity/noise and all-sector stability are unproved. The preserved-ball\nand contraction conditions stay Y0+1e-8 Z0+5e-17 Z2<=1e-8 and\nZ0+1e-8 Z2<1. This is not a controlled stationary wormhole theorem.\n\nRESEARCH DECISION: if (16)-(17) pass, retain the construction and the\ncomplete weak adjoint method for this observable. Stop optimizing its\nsource pairing or residual. The mass conversion obstacle is then removed\nfor the linear correction; the ORIGINAL coupled graph is the decisive\nremaining quantitative task. If a supporting bound fails, retain that\nfailure and do not publish the conditional mass conclusion as established.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED HERE): certify the original\ncoupled fast graph of the SAME full linear correction, with scalar quartic,\ncorrelated slow pair, physical lift transition and finite-domain returns;\ntest it against the remaining allowance from (17), or directly against\nthe original 1e-11 graph target. Do not substitute the fast-input quantum\nscreen or infer a neighborhood estimate from this single-source result.\n\nRemaining to-do list: original coupled graph and independent phase columns;\noriginal physical-norm/neighborhood comparisons; nonlinear admission and\ncontraction; exact compatibility; physical matching; semiclassical validity\nand noise; all-sector stability; charge/return, opening, transport,\npreparation, separate creation and the full stable-wormhole objective.\n",
+        "checks/current_complete_weak_mass_residual.py": "\"\"\"Complete weak residual and linear mass; original graph and nonlinear goal open.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys,traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nfrom flint import arb,ctx\nimport flint\nimport sympy as sp\ns=sp\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-complete-weak-mass-residual'\nOWN=['notes/'+STEM+'.md','checks/current_complete_weak_mass_residual.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-reference-clock-adjoint-trial.md',\n 'notes/current-coupled-mass-adjoint.md',\n 'notes/current-complete-mass-moment-bound.md',\n 'notes/current-joint-adjoint-residual-attempt.md',\n 'notes/current-geodesic-two-sided-remainder.md',\n 'notes/stationary-curved-quantum-tt.md',\n 'notes/stationary-reference-cold-bolt.md',\n 'notes/stationary-seed-quantum-form.md',\n 'notes/current-seed-full-hessian-realization.md',\n 'notes/current-global-return-energy-attempt.md',\n 'notes/current-finite-local-action-assembly.md',\n 'notes/current-full-domain-contact-assembly.md',\n 'notes/current-controlled-solution-audit-closeout.md',\n 'evidence/current-global-mass-conversion.json',\n 'evidence/current-reference-clock-adjoint-trial.json',\n 'evidence/current-coupled-global-return-attempt.json',\n 'evidence/current-complete-mass-moment-bound.json']\nCHECKS=[]\n\ndef check(name,value):\n    CHECKS.append({'name':name,'passed':bool(value)})\n    if not value:raise AssertionError(name)\n\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(50)\n    return {'ball':v.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef prior(stem):\n    r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n    check('accepted_input_'+stem,r['status']=='passed')\n    return r['result']\n\ndef local_rows():\n    z=s.symbols('z',positive=True)\n    ph=s.symbols('ph0:5');b=s.symbols('b0:5')\n    be,uu,aa,bb,ep,C=s.symbols('be uu aa bb ep C',real=True)\n    al,kv,dd,ar,h,q=s.symbols('al kv dd ar h q',real=True)\n    Q=be+uu*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\n    def D(f):return s.diff(f,z)+sum(s.diff(f,ph[j])*ph[j+1]+s.diff(f,b[j])*b[j+1] for j in range(4))\n    Lap=lambda p:Q*p[2]+s.diff(Q,z)*p[1]\n    L=-s.diff(Q,z,2)-2*Lap(b);M=Lap(ph);N=Q*ph[1]**2;Di=L-6*M-6*N\n    Wd=s.exp(-2*ph[0])*(2+C*s.exp(-2*b[0])*Di)+12*C*be\n    sq=al*s.exp(4*ph[0]+2*b[0])*Wd**2\n    pot=(kv*s.exp(4*ph[0])-dd*(4*s.exp(-ph[0])-3*s.exp(-2*ph[0]))+ar)*s.exp(2*b[0])\n    we=h*(C*C*s.exp(-2*b[0])*(ph[0]*L**2/s.Integer(60)+L*M/30-M*M/10+L*N/30-7*M*N/90-7*N*N/180)-C*ph[0]*L/18+(s.Rational(1,15)-q*q/3)*ph[0]*s.exp(2*b[0])-C*N/18)\n    seed={ph[0]:-s.log(z),**{ph[j]:s.diff(-s.log(z),z,j) for j in range(1,5)},**{v:0 for v in b}}\n    out={}\n    for name,expr in [('square',sq),('potential',pot),('weyl',we)]:\n     for label,vars in [('nu',ph),('shape',b)]:\n      grad=s.diff(expr,vars[0])-D(s.diff(expr,vars[1]))+D(D(s.diff(expr,vars[2])))\n      f=s.expand(grad.subs(seed))\n      out[name+'_'+label]=str(f)\n    return out\n\ndef execute():\n    ctx.prec=512\n    p=prior('current-global-mass-conversion')['parameters'];beta,uu,eps,tau,g,Fl=[dec(p[k]) for k in ['beta','u','eps','tau','g','Fl']]\n    tr=prior('current-reference-clock-adjoint-trial');ret=prior('current-coupled-global-return-attempt')\n    ga=dec(ret['gamma']);h=dec(ret['h']);zh=1/(1+h);C=1/uu\n    z=s.symbols('z',positive=True);d=s.symbols('d',real=True)\n    be,us,aa,bb,ep,cs=s.symbols('be uu aa bb ep C',real=True)\n    Q=be+us*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\n    av=4*beta+2*uu+tau;bv=3*beta+uu+eps\n    vals={be:beta,us:uu,aa:av,bb:bv,ep:eps,cs:C}\n    def ev(ex,vs):\n     if ex.is_Number:return arb(str(ex.p))/int(ex.q) if ex.is_Rational else arb(str(ex))\n     if ex in vs:return vs[ex]\n     if ex.is_Add:return sum((ev(x,vs) for x in ex.args),arb(0))\n     if ex.is_Mul:\n      o=arb(1)\n      for x in ex.args:o*=ev(x,vs)\n      return o\n     if ex.is_Pow:return ev(ex.base,vs)**int(ex.exp)\n     raise ValueError(ex)\n    qt=[arb(0),2*ga]+[ev(s.diff(Q,z,k),{**vals,z:zh})*((-1)**k)/int(s.factorial(k)) for k in range(2,7)]\n    check('positive_actual_temperature_and_bolt',ga>0 and ga<arb('1e-30') and zh>arb('.99') and zh<1)\n    check('actual_quadratic_bolt_coefficient',qt[2]>arb('.999999') and qt[2]<arb('1.000001'))\n    check('actual_cubic_bolt_coefficient',qt[3]>arb('-1.334') and qt[3]<arb('-1.333'))\n    check('actual_quartic_bolt_coefficient',qt[4]>arb('.5') and qt[4]<arb('.501'))\n    check('actual_degree_five_six_terms_retained',abs(qt[5])<arb('1e-27') and abs(qt[6])<arb('1e-27'))\n    check('whole_real_P_lower',arb('.999999')-arb('1.334')+arb('.5')-arb('2e-27')>arb('.16'))\n    check('whole_real_P_decreasing',-arb('1.333')+2*arb('.501')+arb('7e-27')<0)\n    check('whole_real_P_upper',qt[2]+arb('2e-27')<arb('1.001'))\n    check('retained_Q_real_global_upper',beta+uu+abs(eps)<arb('.17'))\n    check('outer_tenth_Q_lower',beta-av*arb('.1')**3-2*abs(eps)>arb('.16'))\n    check('exact_beta_parameter_relation_interval_consistency',(6*beta+uu+eps-1).contains(0))\n    check('middle_relative_Q_comparison',12*(uu+abs(eps))+6*tau/arb('1e-16')<arb('1e-8'))\n    check('middle_Qprime_comparison',(arb(22)/3)*uu+(arb(28)/3)*abs(eps)+3*tau/arb('1e-8')<arb('1e-9'))\n    check('middle_clock_comparison_error',(arb('3e-9')+arb('6e-8'))/(1-arb('1e-8'))<arb('1e-7'))\n    def istar(v):\n     return -4*(1-v).log()/3+2*(3*v*v+2*v+1).log()/3+7*arb(2).sqrt()/6*((3*v+1)/arb(2).sqrt()).atan()-7*arb(2).sqrt()/6*(1/arb(2).sqrt()).atan()+1/(1-v)-1\n    Ip=1/(1-z)-1-s.Rational(4,3)*s.log(1-z)+s.Rational(2,3)*s.log(1+2*z+3*z*z)+7*s.sqrt(2)/6*(s.atan((3*z+1)/s.sqrt(2))-s.atan(1/s.sqrt(2)))\n    Qp=(1-z)**2*(1+2*z+3*z*z)/6\n    check('exact_comparison_primitive',s.simplify(s.diff(Ip,z)-1/Qp)==0 and s.simplify(Ip.subs(z,0))==0)\n    Hprime=s.diff(s.Rational(3,2)/(z*z*(1-z))-Ip,z)\n    check('whole_interval_critical_polynomial',s.simplify(Hprime*z**3*(1-z)**2*(1+2*z+3*z*z)-s.Rational(3,2)*(5*z**3-z-2))==0)\n    Avec=s.Function('A')(z);mp=s.symbols('mp')\n    xiz=Q*Avec;bjoint=1+s.diff(Q,z)*Avec/2+mp*z**3/Q\n    check('local_density_Ward_factor',s.simplify((s.diff(xiz,z)+1-2*bjoint).subs(s.diff(Avec,z),(Q+2*mp*z**3)/Q**2))==0)\n    # unique critical point in [.827,.829] for 5z^3-z-2; use a wider interval only if proved below.\n    rr=arb('.827', '.002')\n    Hmin=arb('1.5')/(rr*rr*(1-rr))-istar(rr)\n    check('unique_H_critical_root_bracket',5*arb('.825')**3-arb('.825')-2<0 and 5*arb('.829')**3-arb('.829')-2>0)\n    check('whole_interval_clock_comparator',Hmin>3)\n    zc=1-arb('1e-8');dc=zh-zc\n    ac=qt[2];DA=ac*zh**2+3*ga*zh;massp=ga**2/(zh*DA);cc=zh**2/(2*DA)\n    Uc=sum((qt[k]*dc**(k-1) for k in range(1,7)),arb(0))\n    V0=ac+6*massp*zh-cc*(ac*ac+4*ga*qt[3]);K=V0/ac\n    Im=istar(zc)/(1-arb('1e-8'));Il=istar(zc)/(1+arb('1e-8'))\n    Ibound=arb.union(Il,Im)\n    Rc=Ibound-cc/dc-K/Uc\n    Jcor=128*massp/(3*dc**3)\n    check('middle_correlated_mass_not_dropped',100*massp/dc**2<arb('1e-48'))\n    check('cold_anchor_with_integral_comparison',abs(Rc)+Jcor<arb('1e6'))\n    check('cold_pole_removed_anchor',abs(Ibound-cc/dc)+Jcor<arb('1e9'))\n    gs,zs=s.symbols('gs zs',positive=True);qq=s.symbols('q2:7',real=True)\n    Us=2*gs+sum(qq[k-2]*d**(k-1) for k in range(2,7))\n    DAs=qq[0]*zs*zs+3*gs*zs;ps=gs*gs/(zs*DAs);ccs=zs*zs/(2*DAs)\n    Vn=s.Poly(s.expand(d*Us+2*ps*(zs-d)**3-ccs*Us*Us),d)\n    assert s.cancel(Vn.nth(0))==s.cancel(Vn.nth(1))==0\n    Vs=sum(s.cancel(Vn.nth(k))*d**(k-2) for k in range(2,Vn.degree()+1))\n    Wn=s.Poly(s.expand(-ccs*(Us+d*s.diff(Us,d))*Us/2+ps*(zs-d)**3),d)\n    assert s.cancel(Wn.nth(0))==0\n    Ws=sum(s.cancel(Wn.nth(k))*d**(k-1) for k in range(1,Wn.degree()+1))\n    Ks=s.cancel(Vs.subs(d,0)/qq[0])\n    Ns=s.Poly(s.expand(Vs-Ks*s.diff(Us,d)),d)\n    assert s.cancel(Ns.nth(0))==0\n    N1=sum(s.cancel(Ns.nth(k))*d**(k-1) for k in range(1,Ns.degree()+1))\n    Ds=s.Poly(s.expand(Us-Ks*(Us+d*s.diff(Us,d))/2+Ws),d)\n    vs={gs:ga,zs:zh,**{qq[k-2]:qt[k] for k in range(2,7)}}\n    def polynorm(ex,radius):return sum((abs(ev(s.cancel(co),vs))*radius**degree for (degree,),co in s.Poly(ex,d).terms()),arb(0))\n    vn=polynorm(Vs,arb('2e-8'));n1=polynorm(N1,arb('2e-8'))\n    wn=sum((abs(ev(s.cancel(Ws.coeff(d,k)/(gs if k==0 else 1)),vs))*arb('2e-8')**max(k-1,0) for k in range(s.degree(Ws,d)+1)),arb(0))\n    dn=sum((abs(ev(s.cancel(Ds.nth(k)/(gs**2 if k==0 else gs if k==1 else 1)),vs))*arb('2e-8')**max(k-2,0) for k in range(Ds.degree()+1)),arb(0))\n    check('cold_V_uniform_polynomial',vn<100)\n    check('cold_N1_uniform_polynomial',n1<arb('1e4'))\n    check('cold_W_uniform_polynomial',wn<100)\n    check('cold_Dnum_factor_and_bound',dn<5000)\n    cold_b=arb('1e4')*(ga+arb('1e-8'))+arb('1.5')*((ga+arb('1e-8'))*arb('1e6')+arb('4e4')*(2*ga+arb('1e-8'))/arb(1).exp())\n    check('entire_regular_bolt_bounded',cold_b<arb('.02'))\n    check('near_outer_n_bound',arb('.17')/arb('.16')+arb('1e-40')<100)\n    check('middle_n_bound',9*arb('1.001')/arb('.1')+18*ga/arb('.1')<100)\n    check('cold_n_bound',3*(ga+arb('1e-8'))*(1+arb('1e-8')*arb('1e9')+400)/arb('.99')<100)\n    Rchart=arb(1)/32\n    check('complex_Q_second_derivative_cone',2*arb('1.000001')+6*arb('1.334')*arb('1.02')+12*arb('.501')*arb('1.02')**2+arb('1e-20')<20)\n    check('complex_Q_third_derivative_cone',6*arb('1.334')+24*arb('.501')*arb('1.02')+arb('1e-20')<30)\n    check('Goursat_relative_displacement',arb(2).sqrt()*Rchart+6*arb('.052').exp()*Rchart**2/4<arb('.047'))\n    check('Goursat_absolute_displacement',arb('.17').sqrt()*Rchart+arb('.7')*arb('.052').exp()*Rchart**2/4<arb('.014'))\n    check('Goursat_sigma_cone',20*arb('.052').exp()*Rchart**2/8<arb('.003'))\n    check('Goursat_Picard_rows',32*arb('.052').exp()*Rchart**2/4<arb('.02') and 71*arb('.052').exp()*Rchart**2/8<arb('.02'))\n    check('complex_middle_P_real_lower',arb('.16')-arb('2.36')*arb('.02')>arb('.11'))\n    check('complex_middle_Q_lower',arb('.874')*(arb('.874')*arb('.11')-arb('.126')*arb('.05'))>arb(1)/32)\n    check('complex_middle_A_increment',arb('.126')*32+arb('1e-30')<5)\n    check('complex_middle_b_bound',1+6*14/2+arb('1e-30')<50)\n    check('complex_cold_U_lower',2-arb('1.01')/8>arb('.8') and arb('.98')-arb('1.01')/8>arb('.8'))\n    check('complex_cold_A_increment',100/(8*arb('.8')**2)<20)\n    check('complex_cold_W_quotient',100*arb('1.125')/arb('.8')<142)\n    check('complex_cold_b_bound',1+arb('1.5')*(arb('1e9')*(ga+arb('1e-8'))+420)+142<800)\n    jets={k:arb(2)**k*int(s.factorial(k))*32**k*arb('1e6') for k in range(1,5)}\n    K1,K2,K3,K4=map(arb,['1e8','1e11','1e14','1e16'])\n    check('joint_geodesic_first_jet',jets[1]<K1)\n    check('joint_geodesic_second_jet',jets[2]<K2)\n    check('joint_geodesic_third_jet',jets[3]+15*jets[1]<K3)\n    check('joint_geodesic_fourth_jet',jets[4]+60*jets[2]+arb('4e6')*jets[1]<K4)\n\n    # Local source rows, with exact constant-curvature and vacuum cancellations.\n    exprs=local_rows()\n    al,kv,dd,ar,hs,q=s.symbols('al kv dd ar h q',real=True)\n    loc={}\n    for key,st in exprs.items():loc[key]=s.sympify(st,locals={str(v):v for v in [z,be,us,aa,bb,ep,cs,al,kv,dd,ar,hs,q]})\n    hv=g/(2*arb.pi()*C*C*beta);alph=8*arb.pi()*arb('1e22')*g/(C*C*beta)\n    lv={be:beta,cs:C,aa:av,bb:bv,ep:eps,al:alph,dd:Fl*eps,ar:arb(0,'6e-23'),hs:hv,q:arb(2000)**4}\n    N0=arb(100);B0=arb('1.000001')\n    def norm(poly):\n     out=arb(0);ll=s.symbols('ll')\n     pp=s.Poly(s.expand(poly.subs(s.log(z),ll)*z**4),z,ll)\n     for (j,k),coeff in pp.terms():\n      power=j-4\n      assert power>=-2,(power,k,coeff)\n      moment=arb(int(s.factorial(2*k)))/(2*power+5)**(2*k+1)\n      out+=abs(ev(coeff,lv))*moment.sqrt()\n     return out\n    local_bound={}\n    for label in ['nu','shape']:\n     f=s.expand(sum(loc[name+'_'+label] for name in ['square','potential','weyl']).subs({us:1/cs,kv:hs*11*cs*cs*be*be/60}))\n     nn=norm(f);nd=norm(z*s.diff(f,z));nm=norm(s.diff(f,aa))\n     r=(2*B0*nn+N0*nd+2*massp*nm)/beta\n     local_bound[label]={'source':nn,'radial':nd,'mass_parameter':nm,'residual':r}\n\n    check('area_coefficient_uncertainty_retained',Fl<1 and arb('3.4e-22')*beta<arb('6e-23'))\n    local_total=arb('12.65')*local_bound['nu']['residual']+arb('17.6')*local_bound['shape']['residual']\n    check('complete_both_local_rows',local_total<arb('1e-18'))\n    pi=arb.pi();etaG=C/dec(tr['B_squared_over_G']);alpha=2*etaG/beta\n    Lq=dec(tr['dimensionless_complete_source_mass_factor']);Flmin=1-arb('1.179e-8')\n    T1=(pi*arb('1e5')*beta/(arb('.99')*Flmin)).sqrt()\n    j0=1000*etaG/beta;jo=arb('16e-8')/25*j0;j1=arb('2e5')*etaG\n    T2sq=150*pi*pi+((3*pi/2)*500**4*jo+(pi/2)*j1)/(arb('.99')*Flmin)\n    check('physical_fourth_joint_reserve',T2sq<39**2)\n    interp=(1/(525*pi*pi))**arb('.125')*(1/(90*pi*pi))**arb('.875')*36*arb(18)**arb('-.25')\n    check('complete_angular_fractional_multiplier',interp<arb('.02'))\n    check('complete_principal_multiplier_with_common_fourth',interp+100/(90*pi*pi)<2)\n    h0=arb(1)/32\n    check('single_seam_crossing_short_time',h0<pi/arb(2).sqrt())\n    check('seam_normalized_flux_reserve',8*beta.sqrt()<32)\n    check('fractional_difference_coefficient_less_than_one',8/(3*pi.sqrt())>1)\n    Bfrac=((8*pi/3)*K4*K4*h0**arb('1.5')+512*K3*K3*h0.sqrt()+16*pi*K3*K3/h0.sqrt()).sqrt()\n    epsmix=arb('1e-24')\n    anchor=arb(1)/400;small=(epsmix/(4*arb('1e13'))).sqrt()\n    check('full_geodesic_tail_gradient_reserve',2*pi*36*128**2<arb('1e7'))\n    gradient_raw=arb('1e13')*(arb('.25')+2*(anchor/small).log())+arb('1e13')+arb('1e7')\n    check('complete_gain_two_gradient_reserve',gradient_raw<arb('1e15'))\n    def gain_product(e):\n     return alpha*((2*pi)*(e*K2*K2/3+arb('1e15')*K1*K1)).sqrt()*(e*39**2/(3*alpha)+arb('1e15')*T1*T1).sqrt()\n    old_product=gain_product(arb('1e-6'))\n    check('old_epsilon_valid_product_does_not_certify_target',old_product>arb('3.27169e-5'))\n    new_product=gain_product(epsmix)\n    check('corrected_combined_norm_product_fits',new_product<arb('4.054e-6'))\n    costs={\n     'principal':2*alpha*((2*pi).sqrt()*K1+Bfrac)*T1,\n     'gain_two_complete_mixed_product':new_product,\n     'actual_row_subtracted_gluing':arb('17.6')*alpha*arb('6e24')*B0,\n     'actual_complete_constant_contact':arb('35.2')*Lq*arb('1e20')*B0*(arb(1)/5+1/(2*arb(5).sqrt())+arb(1)/15).sqrt(),\n     'local_both_rows_reserve':arb('1e-18'),'LLL_reserve':arb('1e-17')}\n    LLL=alpha*(arb(2000)**4/C)*K1*T1/(12*pi*pi.sqrt())\n    check('full_fixed_domain_LLL',LLL<costs['LLL_reserve'])\n    residual=sum(costs.values(),arb(0))\n    check('COMPLETE_RESIDUAL_CERTIFIED',residual<arb('2.1e-5') and residual<arb('3.27169e-5'))\n    moment=prior('current-complete-mass-moment-bound')\n    source=dec(moment['complete_reference_adjoint_pairing_upper'])\n    mass=(source+arb('1.1e-10')*residual)/arb('1.9999999764')\n    remaining=arb('1e-11')-2174*mass\n    check('FULL_COUPLED_LINEAR_MASS_TARGET_CLOSED',mass<arb('2.29e-15'))\n    check('sufficient_remaining_lifted_allowance',remaining>arb('6.46e-12'))\n    return {'precision_bits':ctx.prec,'joint_supremum':enc(B0),'joint_n_supremum':enc(N0),\n     'actual_bolt_polynomial_coefficients':[enc(v) for v in qt[2:]],\n     'whole_interval_comparator_H_lower':enc(Hmin),'pole_removed_cold_anchor':enc(Rc),\n     'retained_mass_integral_error':enc(Jcor),'cold_supremum_bound':enc(cold_b),\n     'cold_polynomial_guards':{'V':enc(vn),'N1':enc(n1),'W_scaled':enc(wn),'Dnum_scaled':enc(dn)},\n     'geodesic_jets':{str(k):enc(v) for k,v in enumerate([K1,K2,K3,K4],1)},\n     'fractional_trial_bound':enc(Bfrac),'complete_angular_interpolation_coefficient':enc(interp),\n     'physical_gradient_test_constant':enc(T1),'physical_fourth_test_constant_squared':enc(T2sq),\n     'mixed_estimator_review':{'epsilon':enc(epsmix),'gradient_coefficient_upper':enc(gradient_raw),\n       'old_epsilon_1e_minus_6_corrected_product':enc(old_product),\n       'separate_derivative_product_draft_valid':False,'combined_norm_product_used':True},\n     'local_row_norms':{k:{j:enc(v) for j,v in a.items()} for k,a in local_bound.items()},\n     'complete_local_residual_upper':enc(local_total),'LLL_residual_upper':enc(LLL),\n     'complete_residual_costs':{k:enc(v) for k,v in costs.items()},\n     'complete_adjoint_residual_upper':enc(residual),'full_coupled_linear_mass_upper':enc(mass),\n     'sufficient_remaining_lifted_graph_allowance':enc(remaining),\n     'scope':{'complete_weak_adjoint_residual_certified':True,'complete_source_pairing_retained':True,\n     'full_coupled_LINEAR_mass_target_closed':True,'actual_kappa_m_computed':False,\n     'original_coupled_graph_certified':False,'independent_phase_columns_bounded':False,\n     'nonlinear_mass_certified':False,'nonlinear_admission':False,'exact_compatibility':False,\n     'physical_matching':False,'validity_noise':False,'all_sector_stability':False,\n     'actual_controlled_wormhole':False,'construction_obstruction':False,'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n        'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    message=json.dumps({'mode':mode,'status':run['status'],'checks':len(CHECKS),'result':run.get('result'),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-complete-weak-mass-residual-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"progress\",\n  \"ordinary_argument\": \"notes/current-complete-weak-mass-residual.md\",\n  \"quantitative_role\": \"Bound the COMPLETE actual weak residual j Psi_ref in original E* units, then close the mass target for the full coupled LINEAR correction. Use all existing massive kernel parts and both explicit local rows; no isolated-contact or source optimization milestone.\",\n  \"first_unsupported_step_addressed\": \"Replace the uncomputed pointwise outer-response estimator by the actual complete weak kernel. Prove the joint trial is bounded on the whole interval and belongs to the needed fractional geodesic domain; control all mixed kernel/contact/local contributions and the compact-test auxiliary extension.\",\n  \"hard_continuum_review\": [\n    {\n      \"source\": \"notes/current-reference-clock-adjoint-trial.md\",\n      \"applies\": \"Same pole-removed correlated trial, both reference constraints and regular-bolt matching. The separate clock/mass directions remain inadmissible globally.\"\n    },\n    {\n      \"source\": \"notes/stationary-reference-cold-bolt.md\",\n      \"applies\": \"Use the actual polynomial Goursat normal-chart equations. A new explicit self-map/contraction cone and joint-field complex bound are derived; no metric family or quantum operator is replaced by a smooth double.\"\n    },\n    {\n      \"source\": \"notes/stationary-curved-quantum-tt.md sections 2-6\",\n      \"applies\": \"Complete actual paired kernel: global geodesic principal, actual row-subtracted gluing <=6e24 C J0, complete constant contact <=1e20 q^2(1+1/Y), gain-two and fixed second contacts. Extract these before unneeded model IMS envelopes. Thermal and angular sums and finite returns stay included.\"\n    },\n    {\n      \"source\": \"notes/current-geodesic-two-sided-remainder.md\",\n      \"applies\": \"Confirms the absolute kernel/contact estimates and retained joint positive fourth reserve. Its final relative norm on physical TT fields is not applied to the auxiliary root-zero trial.\"\n    },\n    {\n      \"source\": \"notes/current-seed-full-hessian-realization.md\",\n      \"applies\": \"Current finite seed transfer, actual form gaps and complete coupled inverse. No old theory, product inverse, neighborhood or high-order graph constant is imported.\"\n    },\n    {\n      \"source\": \"https://dlmf.nist.gov/10.32.E9\",\n      \"retrieved\": \"2026-10-25\",\n      \"applies\": \"Positive-mass Bessel representations support the retained exact moments. Count the entire angular tower with exponent 9/4; these formulas supply no boundary-domain theorem.\"\n    },\n    {\n      \"source\": \"new ordinary proof section 3\",\n      \"applies\": \"The actual geodesic flow is unitary at C2,1 regularity. One-sided C4 trial plus continuous second jets gives P^3 membership; the crossing-flux/difference estimate proves P^(13/4) membership without false H4 seam regularity. Spectral Tonelli has an explicit positive majorant.\"\n    },\n    {\n      \"source\": \"notes/current-joint-adjoint-residual-attempt.md\",\n      \"applies\": \"Same physical E* output comparison and original units. The new weak kernel includes the density term already; adding the former density allowance would double count it.\"\n    },\n    {\n      \"source\": \"notes/current-finite-local-action-assembly.md and notes/current-full-domain-contact-assembly.md\",\n      \"applies\": \"Both complete compact Euler rows from the affine action. Exact C*u_seed=1 and vacuum relation are imposed before estimation. Keep area-coefficient uncertainty. Use compact local covariance, not a separately admissible global clock or mass family.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-mass-adjoint.md\",\n      \"applies\": \"The E*-bounded compact-test result extends uniquely to the actual auxiliary source. Retain the boundary completion and normal flux; do not append an unrestricted open-clock boundary one-form. Common regulator removal precedes the auxiliary outer limit.\"\n    }\n  ],\n  \"claims_boundary\": {\n    \"closes_if_execution_passes\": [\n      \"complete weak adjoint residual <2.1e-5\",\n      \"actual mass of full coupled LINEAR correction <2.29e-15\"\n    ],\n    \"does_not_close\": [\n      \"original coupled graph\",\n      \"kappa_m and independent phase columns\",\n      \"physical nonlinear-neighborhood comparisons\",\n      \"nonlinear mass or admission/contraction\",\n      \"exact compatibility\",\n      \"physical matching\",\n      \"validity/noise\",\n      \"all-sector stability\",\n      \"stable wormhole existence\"\n    ]\n  },\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"whole actual joint supremum <=1.000001, including bolt\",\n      \"one-sided geodesic jets and fractional trial bound with actual cubic seam\",\n      \"both complete local Euler rows <1e-18\",\n      \"all massive pieces plus LLL/local terms <2.1e-5\",\n      \"unchanged full coupled LINEAR mass target <2.29e-15\"\n    ],\n    \"support_scope\": \"Exact polynomial identities, explicit continuum majorant arithmetic and outward Arb intervals. Checks support the separately written ordinary proof and are not substitutes for the domain/common-regulator argument.\",\n    \"verification\": \"Retain every development snapshot and outcome, including superseded passing arithmetic with a documented proof defect; require matching unchanged-source acceptance of the corrected ordinary argument.\"\n  },\n  \"exploration\": {\n    \"scope\": \"pre-freeze method exploration; never used as a substitute for a continuum supremum or a full operator\",\n    \"correction\": \"The first trial-bound exploratory script divided an Arb value by a SymPy factorial and displayed non-certified scalar conversions. Its exact v0 source is retained. The corrected code uses integer factorials and outward Arb throughout; no conclusion uses v0 numerics.\",\n    \"files\": {\n      \"s169ec-bound-explore-v0.py\": {\n        \"sha256\": \"09b2038e974b19f14bd0939c7e7dcc638697046e432e699f72e6bebf1b046d34\",\n        \"contents\": \"from pathlib import Path\\nimport sys,json,sympy as s\\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\\nfrom flint import arb,ctx\\nctx.prec=512\\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\\ndef prior(n):return json.loads((root/'evidence'/(n+'.json')).read_bytes())['runs'][-1]['result']\\ndef dec(v):\\n d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\\np=prior('current-global-mass-conversion')['parameters'];beta,uu,eps,tau,g,Fl=[dec(p[k]) for k in ['beta','u','eps','tau','g','Fl']]\\ntr=prior('current-reference-clock-adjoint-trial');ret=prior('current-coupled-global-return-attempt')\\nga=dec(ret['gamma']);h=dec(ret['h']);zh=1/(1+h);C=1/uu\\nz=s.symbols('z',positive=True);d=s.symbols('d',real=True)\\nbe,us,aa,bb,ep,cs=s.symbols('be uu aa bb ep C',real=True)\\nQ=be+us*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\\nav=4*beta+2*uu+tau;bv=3*beta+uu+eps\\nvals={be:beta,us:uu,aa:av,bb:bv,ep:eps,cs:C}\\ndef ev(ex,vs):\\n if ex.is_Number:return arb(str(ex.p))/int(ex.q) if ex.is_Rational else arb(str(ex))\\n if ex in vs:return vs[ex]\\n if ex.is_Add:return sum((ev(x,vs) for x in ex.args),arb(0))\\n if ex.is_Mul:\\n  o=arb(1)\\n  for x in ex.args:o*=ev(x,vs)\\n  return o\\n if ex.is_Pow:return ev(ex.base,vs)**int(ex.exp)\\n raise ValueError(ex)\\nqt=[arb(0),2*ga]+[ev(s.diff(Q,z,k),{**vals,z:zh})*((-1)**k)/s.factorial(k) for k in range(2,7)]\\nprint('bolt Q coefficients',[str(v) for v in qt[2:]],flush=True)\\ndef istar(v):\\n return -4*(1-v).log()/3+2*(3*v*v+2*v+1).log()/3+7*arb(2).sqrt()/6*((3*v+1)/arb(2).sqrt()).atan()-7*arb(2).sqrt()/6*(1/arb(2).sqrt()).atan()+1/(1-v)-1\\n# unique critical point in [.827,.829] for 5z^3-z-2; use a wider interval only if proved below.\\nrr=arb('.827', '.002')\\nprint('comparison critical H',arb('1.5')/(rr*rr*(1-rr))-istar(rr),flush=True)\\nzc=1-arb('1e-8');dc=zh-zc\\nac=qt[2];DA=ac*zh**2+3*ga*zh;massp=ga**2/(zh*DA);cc=zh**2/(2*DA)\\nUc=sum((qt[k]*dc**(k-1) for k in range(1,7)),arb(0))\\nV0=ac+6*massp*zh-cc*(ac*ac+4*ga*qt[3]);K=V0/ac\\nIm=istar(zc)/(1-arb('1e-8'));Il=istar(zc)/(1+arb('1e-8'))\\nIbound=arb.union(Il,Im)\\nRc=Ibound-cc/dc-K/Uc\\nprint('R anchor',Rc,'mass primitive correction upper',128*massp/(3*dc**3),flush=True)\\n\\n# Local source rows, with exact constant-curvature and vacuum cancellations.\\nexprs=json.loads(Path(__file__).with_name('s169ec-local-explore.json').read_bytes())\\nal,kv,dd,ar,hs,q=s.symbols('al kv dd ar h q',real=True)\\nloc={}\\nfor key,st in exprs.items():loc[key]=s.sympify(st,locals={str(v):v for v in [z,be,us,aa,bb,ep,cs,al,kv,dd,ar,hs,q]})\\nhv=g/(2*arb.pi()*C*C*beta);alph=8*arb.pi()*arb('1e22')*g/(C*C*beta)\\nlv={be:beta,cs:C,aa:av,bb:bv,ep:eps,al:alph,dd:Fl*eps,ar:arb(0,'6e-23'),hs:hv,q:arb(2000)**4}\\nN0=arb(100);B0=arb('1.000001')\\ndef norm(poly):\\n out=arb(0);ll=s.symbols('ll')\\n pp=s.Poly(s.expand(poly.subs(s.log(z),ll)*z**4),z,ll)\\n for (j,k),coeff in pp.terms():\\n  power=j-4\\n  assert power>=-2,(power,k,coeff)\\n  moment=arb(int(s.factorial(2*k)))/(2*power+5)**(2*k+1)\\n  out+=abs(ev(coeff,lv))*moment.sqrt()\\n return out\\nfor label in ['nu','shape']:\\n f=s.expand(sum(loc[name+'_'+label] for name in ['square','potential','weyl']).subs({us:1/cs,kv:hs*11*cs*cs*be*be/60}))\\n nn=norm(f);nd=norm(z*s.diff(f,z));nm=norm(s.diff(f,aa))\\n r=(2*B0*nn+N0*nd+2*massp*nm)/beta\\n print(label,'source',nn,'radial',nd,'massparam',nm,'residual',r,flush=True)\\nPath(__file__).with_suffix('.json').write_text(json.dumps({'exploration_only':True,'cold_anchor':str(Rc)},indent=2))\\n\"\n      },\n      \"s169ec-bound-explore.json\": {\n        \"sha256\": \"c7eef5edb862a5c8510b482b43a9de30d5f17d2fefcfccbda6ed98ae84c2099a\",\n        \"contents\": \"{\\n  \\\"exploration_only\\\": true,\\n  \\\"cold_anchor\\\": \\\"[3e+1 +/- 5.90]\\\"\\n}\"\n      },\n      \"s169ec-bound-explore.py\": {\n        \"sha256\": \"89ec0da71ac42d4c65b4ee4af1bc565291a9900ae6e706694433ca91fb2ea1fe\",\n        \"contents\": \"from pathlib import Path\\nimport sys,json,sympy as s\\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\\nfrom flint import arb,ctx\\nctx.prec=512\\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\\ndef prior(n):return json.loads((root/'evidence'/(n+'.json')).read_bytes())['runs'][-1]['result']\\ndef dec(v):\\n d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\\np=prior('current-global-mass-conversion')['parameters'];beta,uu,eps,tau,g,Fl=[dec(p[k]) for k in ['beta','u','eps','tau','g','Fl']]\\ntr=prior('current-reference-clock-adjoint-trial');ret=prior('current-coupled-global-return-attempt')\\nga=dec(ret['gamma']);h=dec(ret['h']);zh=1/(1+h);C=1/uu\\nz=s.symbols('z',positive=True);d=s.symbols('d',real=True)\\nbe,us,aa,bb,ep,cs=s.symbols('be uu aa bb ep C',real=True)\\nQ=be+us*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\\nav=4*beta+2*uu+tau;bv=3*beta+uu+eps\\nvals={be:beta,us:uu,aa:av,bb:bv,ep:eps,cs:C}\\ndef ev(ex,vs):\\n if ex.is_Number:return arb(str(ex.p))/int(ex.q) if ex.is_Rational else arb(str(ex))\\n if ex in vs:return vs[ex]\\n if ex.is_Add:return sum((ev(x,vs) for x in ex.args),arb(0))\\n if ex.is_Mul:\\n  o=arb(1)\\n  for x in ex.args:o*=ev(x,vs)\\n  return o\\n if ex.is_Pow:return ev(ex.base,vs)**int(ex.exp)\\n raise ValueError(ex)\\nqt=[arb(0),2*ga]+[ev(s.diff(Q,z,k),{**vals,z:zh})*((-1)**k)/int(s.factorial(k)) for k in range(2,7)]\\nprint('bolt Q coefficients',[str(v) for v in qt[2:]],flush=True)\\ndef istar(v):\\n return -4*(1-v).log()/3+2*(3*v*v+2*v+1).log()/3+7*arb(2).sqrt()/6*((3*v+1)/arb(2).sqrt()).atan()-7*arb(2).sqrt()/6*(1/arb(2).sqrt()).atan()+1/(1-v)-1\\n# unique critical point in [.827,.829] for 5z^3-z-2; use a wider interval only if proved below.\\nrr=arb('.827', '.002')\\nprint('comparison critical H',arb('1.5')/(rr*rr*(1-rr))-istar(rr),flush=True)\\nzc=1-arb('1e-8');dc=zh-zc\\nac=qt[2];DA=ac*zh**2+3*ga*zh;massp=ga**2/(zh*DA);cc=zh**2/(2*DA)\\nUc=sum((qt[k]*dc**(k-1) for k in range(1,7)),arb(0))\\nV0=ac+6*massp*zh-cc*(ac*ac+4*ga*qt[3]);K=V0/ac\\nIm=istar(zc)/(1-arb('1e-8'));Il=istar(zc)/(1+arb('1e-8'))\\nIbound=arb.union(Il,Im)\\nRc=Ibound-cc/dc-K/Uc\\nprint('R anchor',Rc,'mass primitive correction upper',128*massp/(3*dc**3),flush=True)\\ngs,zs=s.symbols('gs zs',positive=True);qq=s.symbols('q2:7',real=True)\\nUs=2*gs+sum(qq[k-2]*d**(k-1) for k in range(2,7))\\nDAs=qq[0]*zs*zs+3*gs*zs;ps=gs*gs/(zs*DAs);ccs=zs*zs/(2*DAs)\\nVn=s.Poly(s.expand(d*Us+2*ps*(zs-d)**3-ccs*Us*Us),d)\\nassert s.cancel(Vn.nth(0))==s.cancel(Vn.nth(1))==0\\nVs=sum(s.cancel(Vn.nth(k))*d**(k-2) for k in range(2,Vn.degree()+1))\\nWn=s.Poly(s.expand(-ccs*(Us+d*s.diff(Us,d))*Us/2+ps*(zs-d)**3),d)\\nassert s.cancel(Wn.nth(0))==0\\nWs=sum(s.cancel(Wn.nth(k))*d**(k-1) for k in range(1,Wn.degree()+1))\\nKs=s.cancel(Vs.subs(d,0)/qq[0])\\nNs=s.Poly(s.expand(Vs-Ks*s.diff(Us,d)),d)\\nassert s.cancel(Ns.nth(0))==0\\nN1=sum(s.cancel(Ns.nth(k))*d**(k-1) for k in range(1,Ns.degree()+1))\\nDs=s.Poly(s.expand(Us-Ks*(Us+d*s.diff(Us,d))/2+Ws),d)\\nvs={gs:ga,zs:zh,**{qq[k-2]:qt[k] for k in range(2,7)}}\\ndef polynorm(ex,radius):return sum((abs(ev(s.cancel(co),vs))*radius**degree for (degree,),co in s.Poly(ex,d).terms()),arb(0))\\nvn=polynorm(Vs,arb('2e-8'));n1=polynorm(N1,arb('2e-8'))\\nwn=sum((abs(ev(s.cancel(Ws.coeff(d,k)/(gs if k==0 else 1)),vs))*arb('2e-8')**max(k-1,0) for k in range(s.degree(Ws,d)+1)),arb(0))\\ndn=sum((abs(ev(s.cancel(Ds.nth(k)/(gs**2 if k==0 else gs if k==1 else 1)),vs))*arb('2e-8')**max(k-2,0) for k in range(Ds.degree()+1)),arb(0))\\nprint('cold bounds V,N1,W/(g+d), D numerator/(g+d)^2',vn,n1,wn,dn,flush=True)\\n\\n# Local source rows, with exact constant-curvature and vacuum cancellations.\\nexprs=json.loads(Path(__file__).with_name('s169ec-local-explore.json').read_bytes())\\nal,kv,dd,ar,hs,q=s.symbols('al kv dd ar h q',real=True)\\nloc={}\\nfor key,st in exprs.items():loc[key]=s.sympify(st,locals={str(v):v for v in [z,be,us,aa,bb,ep,cs,al,kv,dd,ar,hs,q]})\\nhv=g/(2*arb.pi()*C*C*beta);alph=8*arb.pi()*arb('1e22')*g/(C*C*beta)\\nlv={be:beta,cs:C,aa:av,bb:bv,ep:eps,al:alph,dd:Fl*eps,ar:arb(0,'6e-23'),hs:hv,q:arb(2000)**4}\\nN0=arb(100);B0=arb('1.000001')\\ndef norm(poly):\\n out=arb(0);ll=s.symbols('ll')\\n pp=s.Poly(s.expand(poly.subs(s.log(z),ll)*z**4),z,ll)\\n for (j,k),coeff in pp.terms():\\n  power=j-4\\n  assert power>=-2,(power,k,coeff)\\n  moment=arb(int(s.factorial(2*k)))/(2*power+5)**(2*k+1)\\n  out+=abs(ev(coeff,lv))*moment.sqrt()\\n return out\\nfor label in ['nu','shape']:\\n f=s.expand(sum(loc[name+'_'+label] for name in ['square','potential','weyl']).subs({us:1/cs,kv:hs*11*cs*cs*be*be/60}))\\n nn=norm(f);nd=norm(z*s.diff(f,z));nm=norm(s.diff(f,aa))\\n r=(2*B0*nn+N0*nd+2*massp*nm)/beta\\n print(label,'source',nn,'radial',nd,'massparam',nm,'residual',r,flush=True)\\nPath(__file__).with_suffix('.json').write_text(json.dumps({'exploration_only':True,'cold_anchor':str(Rc)},indent=2))\\n\"\n      },\n      \"s169ec-local-explore.json\": {\n        \"sha256\": \"04308d0b73fbe808dc7f9d9c94dfe0c6d1103e3ed96d9d8c699555193520f789\",\n        \"contents\": \"{\\n  \\\"square_nu\\\": \\\"-2592*C**2*aa*al*ep*z**5 + 1200*C**2*aa*al*ep*z**4 - 96*C**2*aa*al*uu*z + 3024*C**2*al*bb*ep*z**6 - 1440*C**2*al*bb*ep*z**5 + 144*C**2*al*bb*uu*z**2 + 1008*C**2*al*be*ep*z**2 - 288*C**2*al*be*ep*z - 144*C**2*al*be*uu/z**2 + 3888*C**2*al*ep**2*z**8 - 8832*C**2*al*ep**2*z**7 + 3360*C**2*al*ep**2*z**6 + 2400*C**2*al*ep*uu*z**4 - 1344*C**2*al*ep*uu*z**3 + 48*C**2*al*uu**2 + 96*C*aa*al*z - 144*C*al*bb*z**2 + 144*C*al*be/z**2 - 240*C*al*ep*z**4 + 384*C*al*ep*z**3 - 48*C*al*uu\\\",\\n  \\\"square_shape\\\": \\\"-576*C**2*aa*al*ep*z**5 + 240*C**2*aa*al*ep*z**4 + 672*C**2*al*bb*ep*z**6 - 288*C**2*al*bb*ep*z**5 + 96*C**2*al*be*ep*z - 96*C**2*al*be*uu/z**2 + 792*C**2*al*ep**2*z**8 - 1824*C**2*al*ep**2*z**7 + 640*C**2*al*ep**2*z**6 + 432*C**2*al*ep*uu*z**4 - 160*C**2*al*ep*uu*z**3 - 8*C**2*al*uu**2 + 96*C*al*be/z**2 + 8*al\\\",\\n  \\\"potential_nu\\\": \\\"-6*dd*z**2 + 4*dd*z + 4*kv/z**4\\\",\\n  \\\"potential_shape\\\": \\\"2*ar + 6*dd*z**2 - 8*dd*z + 2*kv/z**4\\\",\\n  \\\"weyl_nu\\\": \\\"7*C**2*aa**2*h*z**2/30 - 14*C**2*aa*bb*h*z**3/15 + 73*C**2*aa*ep*h*z**5/15 - 2*C**2*aa*ep*h*z**4/9 + C**2*aa*h*uu*z/9 + 53*C**2*bb**2*h*z**4/45 - 23*C**2*bb*ep*h*z**6/15 - 14*C**2*bb*ep*h*z**5/3 - C**2*bb*h*uu*z**2/3 - 11*C**2*be**2*h/(15*z**4) - 13*C**2*be*ep*h*z**2/3 + 82*C**2*be*ep*h*z/45 - C**2*be*h*uu/(9*z**2) - C**2*ep**2*h*z**8/5 - 16*C**2*ep**2*h*z**7/9 + 106*C**2*ep**2*h*z**6/15 - 64*C**2*ep*h*uu*z**4/9 + 4*C**2*ep*h*uu*z**3 - C**2*h*uu**2/15 - C*aa*h*z/9 + C*bb*h*z**2/3 + C*be*h/(9*z**2) + 10*C*ep*h*z**4/9 - 4*C*ep*h*z**3/3 - h*q**2/3 + h/15\\\",\\n  \\\"weyl_shape\\\": \\\"-37*C**2*aa**2*h*z**2/30 + 16*C**2*aa*bb*h*z**3*log(z)/5 + 238*C**2*aa*bb*h*z**3/45 + 2*C**2*aa*be*h/(5*z) + 192*C**2*aa*ep*h*z**5*log(z)/5 + 248*C**2*aa*ep*h*z**5/15 - 28*C**2*aa*ep*h*z**4*log(z) - 886*C**2*aa*ep*h*z**4/45 + 44*C**2*aa*h*uu*z/45 - 16*C**2*bb**2*h*z**4*log(z)/5 - 401*C**2*bb**2*h*z**4/90 - 8*C**2*bb*be*h*log(z)/5 - 73*C**2*bb*be*h/45 - 216*C**2*bb*ep*h*z**6*log(z)/5 - 997*C**2*bb*ep*h*z**6/45 + 176*C**2*bb*ep*h*z**5*log(z)/5 + 144*C**2*bb*ep*h*z**5/5 - 16*C**2*bb*h*uu*z**2*log(z)/5 - 47*C**2*bb*h*uu*z**2/15 - 11*C**2*be**2*h/(30*z**4) - 24*C**2*be*ep*h*z**2*log(z) - 127*C**2*be*ep*h*z**2/15 + 16*C**2*be*ep*h*z*log(z) + 376*C**2*be*ep*h*z/45 - C**2*be*h*uu/(9*z**2) - 42*C**2*ep**2*h*z**8*log(z) - 201*C**2*ep**2*h*z**8/10 + 112*C**2*ep**2*h*z**7*log(z) + 2692*C**2*ep**2*h*z**7/45 - 176*C**2*ep**2*h*z**6*log(z)/3 - 1886*C**2*ep**2*h*z**6/45 - 36*C**2*ep*h*uu*z**4*log(z) - 569*C**2*ep*h*uu*z**4/45 + 80*C**2*ep*h*uu*z**3*log(z)/3 + 124*C**2*ep*h*uu*z**3/9 + 2*C**2*h*uu**2*log(z)/15 - C**2*h*uu**2/90 + 2*C*aa*h*z/9 - C*bb*h*z**2/3 + C*be*h/(9*z**2) - 5*C*ep*h*z**4/9 + 8*C*ep*h*z**3/9 - C*h*uu/9 + 2*h*q**2*log(z)/3 - 2*h*log(z)/15\\\"\\n}\"\n      },\n      \"s169ec-local-explore.py\": {\n        \"sha256\": \"a8f94e2e44264c67ef9a2fdd7c0c81d7fe8a3fe8b79f624c5e3a8dbe4ab75f67\",\n        \"contents\": \"from pathlib import Path\\nimport sympy as s,json,time\\nz=s.symbols('z',positive=True)\\nph=s.symbols('ph0:5');b=s.symbols('b0:5')\\nbe,uu,aa,bb,ep,C=s.symbols('be uu aa bb ep C',real=True)\\nal,kv,dd,ar,h,q=s.symbols('al kv dd ar h q',real=True)\\nQ=be+uu*z*z-aa*z**3+bb*z**4-2*ep*z**5+ep*z**6\\ndef D(f):return s.diff(f,z)+sum(s.diff(f,ph[j])*ph[j+1]+s.diff(f,b[j])*b[j+1] for j in range(4))\\nLap=lambda p:Q*p[2]+s.diff(Q,z)*p[1]\\nL=-s.diff(Q,z,2)-2*Lap(b);M=Lap(ph);N=Q*ph[1]**2;Di=L-6*M-6*N\\nWd=s.exp(-2*ph[0])*(2+C*s.exp(-2*b[0])*Di)+12*C*be\\nsq=al*s.exp(4*ph[0]+2*b[0])*Wd**2\\npot=(kv*s.exp(4*ph[0])-dd*(4*s.exp(-ph[0])-3*s.exp(-2*ph[0]))+ar)*s.exp(2*b[0])\\nwe=h*(C*C*s.exp(-2*b[0])*(ph[0]*L**2/s.Integer(60)+L*M/30-M*M/10+L*N/30-7*M*N/90-7*N*N/180)-C*ph[0]*L/18+(s.Rational(1,15)-q*q/3)*ph[0]*s.exp(2*b[0])-C*N/18)\\nseed={ph[0]:-s.log(z),**{ph[j]:s.diff(-s.log(z),z,j) for j in range(1,5)},**{v:0 for v in b}}\\nout={}\\nfor name,expr in [('square',sq),('potential',pot),('weyl',we)]:\\n for label,vars in [('nu',ph),('shape',b)]:\\n  grad=s.diff(expr,vars[0])-D(s.diff(expr,vars[1]))+D(D(s.diff(expr,vars[2])))\\n  f=s.expand(grad.subs(seed))\\n  out[name+'_'+label]=str(f)\\n  print(name,label,len(s.Add.make_args(f)),flush=True)\\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2))\\nprint('written',flush=True)\\n\"\n      }\n    }\n  },\n  \"local_lean_invocations\": 0,\n  \"scientific_sha256\": {\n    \"notes/current-complete-weak-mass-residual.md\": \"7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc\",\n    \"checks/current_complete_weak_mass_residual.py\": \"46e2ae0164a6353f6a698fd24309da071dd4b0809a965659e9cc7cf7a0a86103\"\n  },\n  \"post_development_review\": {\n    \"change\": \"Make the complete geodesic long-flow return explicit inside the existing 1e15 gradient reserve. No result coefficient or target changes.\",\n    \"prior_passing_development_retained\": \"evidence/current-complete-weak-mass-residual-development.json runs[0] contains exact prior note, checker, review and input hashes\",\n    \"prior_source_hashes\": {\n      \"notes/current-complete-weak-mass-residual.md\": \"0b1583b3d377377ed81b40b5dea7734956314e678cdc83f324ef55aeed1d80e9\",\n      \"checks/current_complete_weak_mass_residual.py\": \"8fe94a3dc3dbdf737ffdd2218d97b38171d89e2fbb6ed4a3a98a581c5568052f\",\n      \"evidence/current-complete-weak-mass-residual-review.json\": \"7bfb3ea8945490817bc6a2aeea26889d2522a97a855b6c3336f2cc8bf626aec0\"\n    },\n    \"new_source_version\": \"2; ordinary proof clarification before acceptance\",\n    \"failed_frozen_runs\": 0\n  },\n  \"mixed_form_proof_correction\": {\n    \"before_acceptance\": true,\n    \"source_version\": 3,\n    \"superseded_runs\": [\n      {\n        \"started_utc\": \"2026-10-25T20:42:58.153771+00:00\",\n        \"checks\": 66,\n        \"status\": \"passed\",\n        \"input_sha256\": {\n          \"notes/current-complete-weak-mass-residual.md\": \"0b1583b3d377377ed81b40b5dea7734956314e678cdc83f324ef55aeed1d80e9\",\n          \"checks/current_complete_weak_mass_residual.py\": \"8fe94a3dc3dbdf737ffdd2218d97b38171d89e2fbb6ed4a3a98a581c5568052f\",\n          \"evidence/current-complete-weak-mass-residual-review.json\": \"7bfb3ea8945490817bc6a2aeea26889d2522a97a855b6c3336f2cc8bf626aec0\",\n          \"notes/current-reference-clock-adjoint-trial.md\": \"459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59\",\n          \"notes/current-coupled-mass-adjoint.md\": \"0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781\",\n          \"notes/current-complete-mass-moment-bound.md\": \"1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8\",\n          \"notes/current-joint-adjoint-residual-attempt.md\": \"bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417\",\n          \"notes/current-geodesic-two-sided-remainder.md\": \"f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de\",\n          \"notes/stationary-curved-quantum-tt.md\": \"90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f\",\n          \"notes/stationary-reference-cold-bolt.md\": \"00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c\",\n          \"notes/stationary-seed-quantum-form.md\": \"7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd\",\n          \"notes/current-seed-full-hessian-realization.md\": \"632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7\",\n          \"notes/current-global-return-energy-attempt.md\": \"c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b\",\n          \"notes/current-finite-local-action-assembly.md\": \"73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645\",\n          \"notes/current-full-domain-contact-assembly.md\": \"ace6fce7e68cb2aa1df7e8208ff10af37452ae0f0693ae48bbeb57fc7279b849\",\n          \"notes/current-controlled-solution-audit-closeout.md\": \"3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e\",\n          \"evidence/current-global-mass-conversion.json\": \"ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df\",\n          \"evidence/current-reference-clock-adjoint-trial.json\": \"4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204\",\n          \"evidence/current-coupled-global-return-attempt.json\": \"db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1\",\n          \"evidence/current-complete-mass-moment-bound.json\": \"5331e1b5c5d792339694c5d00eec12a55950a450d394f2afaf2ba62530a81ed6\"\n        }\n      },\n      {\n        \"started_utc\": \"2026-10-25T20:45:17.287567+00:00\",\n        \"checks\": 67,\n        \"status\": \"passed\",\n        \"input_sha256\": {\n          \"notes/current-complete-weak-mass-residual.md\": \"f69b5f0ce70e189feabfd10e9f7d81af27b47c26eb97a7f7e9154153dba90aab\",\n          \"checks/current_complete_weak_mass_residual.py\": \"dd77dd8435495576957915cb14a432f514152a8d2a8580a99f54da7a82ea0282\",\n          \"evidence/current-complete-weak-mass-residual-review.json\": \"d256874f820790b32e02145c941f0fafcc68e2dd7cde5e949bf2b31437057fe4\",\n          \"notes/current-reference-clock-adjoint-trial.md\": \"459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59\",\n          \"notes/current-coupled-mass-adjoint.md\": \"0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781\",\n          \"notes/current-complete-mass-moment-bound.md\": \"1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8\",\n          \"notes/current-joint-adjoint-residual-attempt.md\": \"bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417\",\n          \"notes/current-geodesic-two-sided-remainder.md\": \"f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de\",\n          \"notes/stationary-curved-quantum-tt.md\": \"90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f\",\n          \"notes/stationary-reference-cold-bolt.md\": \"00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c\",\n          \"notes/stationary-seed-quantum-form.md\": \"7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd\",\n          \"notes/current-seed-full-hessian-realization.md\": \"632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7\",\n          \"notes/current-global-return-energy-attempt.md\": \"c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b\",\n          \"notes/current-finite-local-action-assembly.md\": \"73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645\",\n          \"notes/current-full-domain-contact-assembly.md\": \"ace6fce7e68cb2aa1df7e8208ff10af37452ae0f0693ae48bbeb57fc7279b849\",\n          \"notes/current-controlled-solution-audit-closeout.md\": \"3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e\",\n          \"evidence/current-global-mass-conversion.json\": \"ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df\",\n          \"evidence/current-reference-clock-adjoint-trial.json\": \"4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204\",\n          \"evidence/current-coupled-global-return-attempt.json\": \"db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1\",\n          \"evidence/current-complete-mass-moment-bound.json\": \"5331e1b5c5d792339694c5d00eec12a55950a450d394f2afaf2ba62530a81ed6\"\n        }\n      }\n    ],\n    \"error\": \"The earlier draft inferred a sum of matching derivative products from a diagonal sum bound. Polarization instead supplies the product of combined norms. The two passing arithmetic snapshots do not certify the earlier ordinary proof.\",\n    \"correction\": \"Use the valid combined-norm product. The same finite-difference argument allows epsilon=1e-24 while its full gradient coefficient, including fixed contacts and long-flow tail, still fits 1e15. No normalization or boundary realization changes.\",\n    \"executed_so_far\": \"Earlier source snapshots and results retained unmodified inside development ledger. Corrected proof and execution contract frozen before version-three development.\",\n    \"quantitative_test\": \"Evaluate the valid product at old epsilon=1e-6 (excessive sufficient estimator), then at epsilon=1e-24; retain both. Test full residual <2.1e-5 and actual coupled LINEAR mass <2.29e-15.\",\n    \"failed_frozen_arithmetic_runs\": 0,\n    \"superseded_ordinary_proof_defect\": true\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "joint_supremum": {
+          "ball": "[1.0000010000000000000000000000000000 +/- 3e-39]",
+          "decimal_enclosure": {
+            "mid": "1000000999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-54"
+          }
+        },
+        "joint_n_supremum": {
+          "ball": "100.00000000000000000000000000000000",
+          "decimal_enclosure": {
+            "mid": "1000000000000000000000000000000000000000000000000000000",
+            "rad": "0",
+            "exponent": "-52"
+          }
+        },
+        "actual_bolt_polynomial_coefficients": [
+          {
+            "ball": "[1.000000000000000000000000000 +/- 3.00e-29]",
+            "decimal_enclosure": {
+              "mid": "9999999999999999999999999999999979768802300487704744794",
+              "rad": "299197968833471456544292865",
+              "exponent": "-55"
+            }
+          },
+          {
+            "ball": "[-1.3333333333469056252506892652 +/- 7.93e-29]",
+            "decimal_enclosure": {
+              "mid": "-1333333333346905625250689265151122918829944352000327257",
+              "rad": "30342869435061325766066177",
+              "exponent": "-54"
+            }
+          },
+          {
+            "ball": "[0.5000000000101792189380169488 +/- 2.34e-29]",
+            "decimal_enclosure": {
+              "mid": "5000000000101792189380169488061179478659894047656026424",
+              "rad": "172266535640055730413764609",
+              "exponent": "-55"
+            }
+          },
+          {
+            "ball": "[7e-29 +/- 7.21e-30]",
+            "decimal_enclosure": {
+              "mid": "653999999158658270495794561263996040513555246894506497",
+              "rad": "26000006549321925203117518405717727663983135090016257",
+              "exponent": "-82"
+            }
+          },
+          {
+            "ball": "[-2e-29 +/- 4.31e-30]",
+            "decimal_enclosure": {
+              "mid": "-1634999997896645676239486403159991341709195460205664942",
+              "rad": "65000016194898851419548810882008572978770945677197313",
+              "exponent": "-83"
+            }
+          }
+        ],
+        "whole_interval_comparator_H_lower": {
+          "ball": "[4e+0 +/- 0.706]",
+          "decimal_enclosure": {
+            "mid": "3588437954008082824923697456309687874812367941087412140",
+            "rad": "293934138933392261212930966918207062686789009659658241",
+            "exponent": "-54"
+          }
+        },
+        "pole_removed_cold_anchor": {
+          "ball": "[3e+1 +/- 5.90]",
+          "decimal_enclosure": {
+            "mid": "2510423700551002735441729250815786687011306185571230359",
+            "rad": "100000026987482863708920690201178394841126124059099137",
+            "exponent": "-53"
+          }
+        },
+        "retained_mass_integral_error": {
+          "ball": "[1.091470294262450270562e-41 +/- 6.22e-63]",
+          "decimal_enclosure": {
+            "mid": "1091470294262450270561555812955325400795749779410689948",
+            "rad": "176829924783353309360901742133249",
+            "exponent": "-95"
+          }
+        },
+        "cold_supremum_bound": {
+          "ball": "[0.015320727664702865392957315048152515 +/- 2.20e-37]",
+          "decimal_enclosure": {
+            "mid": "1532072766470286539295731504815251478083185808338543135",
+            "rad": "6367282",
+            "exponent": "-56"
+          }
+        },
+        "cold_polynomial_guards": {
+          "V": {
+            "ball": "[0.5000000000000003555555608961 +/- 7.24e-29]",
+            "decimal_enclosure": {
+              "mid": "5000000000000003555555608961274658369004640172751060002",
+              "rad": "448799254049184815855435777",
+              "exponent": "-55"
+            }
+          },
+          "N1": {
+            "ball": "[1.333333366124683670362439070 +/- 5.35e-28]",
+            "decimal_enclosure": {
+              "mid": "1333333366124683670362439070344121028949135942458341590",
+              "rad": "189916350970282661925355521",
+              "exponent": "-54"
+            }
+          },
+          "W_scaled": {
+            "ball": "[2.000000033333334167005983315 +/- 2.36e-28]",
+            "decimal_enclosure": {
+              "mid": "2000000033333334167005983314899299599455140755192978120",
+              "rad": "134640009191368488185233409",
+              "exponent": "-54"
+            }
+          },
+          "Dnum_scaled": {
+            "ball": "[4.000000041707384009933671388 +/- 5.36e-28]",
+            "decimal_enclosure": {
+              "mid": "4000000041707384009933671387875129877269349693828850026",
+              "rad": "410176796967214843714076673",
+              "exponent": "-54"
+            }
+          }
+        },
+        "geodesic_jets": {
+          "1": {
+            "ball": "100000000.00000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-46"
+            }
+          },
+          "2": {
+            "ball": "100000000000.00000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-43"
+            }
+          },
+          "3": {
+            "ball": "100000000000000.00000000000000000000",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-40"
+            }
+          },
+          "4": {
+            "ball": "10000000000000000.000000000000000000",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-38"
+            }
+          }
+        },
+        "fractional_trial_bound": {
+          "ball": "[2894226117794144.7663677461161944046 +/- 4.75e-20]",
+          "decimal_enclosure": {
+            "mid": "2894226117794144766367746116194404552554588781766856696",
+            "rad": "2",
+            "exponent": "-39"
+          }
+        },
+        "complete_angular_interpolation_coefficient": {
+          "ball": "[0.015783471137247460186117502055549517 +/- 1.28e-37]",
+          "decimal_enclosure": {
+            "mid": "1578347113724746018611750205554951712784174015641504855",
+            "rad": "2",
+            "exponent": "-56"
+          }
+        },
+        "physical_gradient_test_constant": {
+          "ball": "[229.975576604193336819572392813 +/- 4.18e-28]",
+          "decimal_enclosure": {
+            "mid": "2299755766041933368195723928126570670435519754055939919",
+            "rad": "748707831951736214388737",
+            "exponent": "-52"
+          }
+        },
+        "physical_fourth_test_constant_squared": {
+          "ball": "[1480.4406601634037928251736500502194 +/- 1.48e-32]",
+          "decimal_enclosure": {
+            "mid": "1480440660163403792825173650050219385234287544483948425",
+            "rad": "18578",
+            "exponent": "-51"
+          }
+        },
+        "mixed_estimator_review": {
+          "epsilon": {
+            "ball": "[1.0000000000000000000000000000000000e-24 +/- 3e-63]",
+            "decimal_enclosure": {
+              "mid": "999999999999999999999999999999999999999999999999999999",
+              "rad": "2",
+              "exponent": "-78"
+            }
+          },
+          "gradient_coefficient_upper": {
+            "ball": "[758490147076836.16953759253761667666 +/- 2.86e-21]",
+            "decimal_enclosure": {
+              "mid": "758490147076836169537592537616676657146853488560289977",
+              "rad": "2",
+              "exponent": "-39"
+            }
+          },
+          "old_epsilon_1e_minus_6_corrected_product": {
+            "ball": "[0.0473271317930761007426 +/- 4.20e-23]",
+            "decimal_enclosure": {
+              "mid": "4732713179307610074257726793351057140236001595051869051",
+              "rad": "1916929379069978737122814059347969",
+              "exponent": "-56"
+            }
+          },
+          "separate_derivative_product_draft_valid": false,
+          "combined_norm_product_used": true
+        },
+        "local_row_norms": {
+          "nu": {
+            "source": {
+              "ball": "[7e-29 +/- 4.46e-30]",
+              "decimal_enclosure": {
+                "mid": "721691570319244136351503786861348791266947434821354304",
+                "rad": "22827094411441080446068533879070664018478440162263041",
+                "exponent": "-82"
+              }
+            },
+            "radial": {
+              "ball": "[9e-29 +/- 3.71e-30]",
+              "decimal_enclosure": {
+                "mid": "901196114493639964161135026916433854863128257862327384",
+                "rad": "35827146279425830645855118488259643951249729238597633",
+                "exponent": "-82"
+              }
+            },
+            "mass_parameter": {
+              "ball": "[2.5e-34 +/- 3.01e-36]",
+              "decimal_enclosure": {
+                "mid": "2520504850752322786096085210284572100882173707913166580",
+                "rad": "9591872532648687795372676204837917326062323278807041",
+                "exponent": "-88"
+              }
+            },
+            "residual": {
+              "ball": "[5e-26 +/- 7.12e-27]",
+              "decimal_enclosure": {
+                "mid": "549377976205492501873268857872369947459219871946367597",
+                "rad": "21770216246150586036429977192693089601678771952287745",
+                "exponent": "-79"
+              }
+            }
+          },
+          "shape": {
+            "source": {
+              "ball": "[+/- 5.37e-23]",
+              "decimal_enclosure": {
+                "mid": "904827367457243418366393616261143661683014306310",
+                "rad": "536656362755910972123239631636160784632393358265810945",
+                "exponent": "-76"
+              }
+            },
+            "radial": {
+              "ball": "[1.4e-28 +/- 8.91e-30]",
+              "decimal_enclosure": {
+                "mid": "1443415819451469328354889891890670666890120208632107606",
+                "rad": "45654177226494657656213034159567826259808897214709761",
+                "exponent": "-82"
+              }
+            },
+            "mass_parameter": {
+              "ball": "[1.354e-33 +/- 5.67e-37]",
+              "decimal_enclosure": {
+                "mid": "1353639510773674023925599083570076078735178802522704519",
+                "rad": "206073241739144511916437400457908877697978518732801",
+                "exponent": "-87"
+              }
+            },
+            "residual": {
+              "ball": "[+/- 6.45e-22]",
+              "decimal_enclosure": {
+                "mid": "876901726548202827954704531811171586835884639299365",
+                "rad": "6439910301584550369440606432023998741280034299200929793",
+                "exponent": "-76"
+              }
+            }
+          }
+        },
+        "complete_local_residual_upper": {
+          "ball": "[+/- 1.14e-20]",
+          "decimal_enclosure": {
+            "mid": "223831017862478499206996508119620997636707010317903",
+            "rad": "1133426975362647346594652853194422763262577030736117761",
+            "exponent": "-74"
+          }
+        },
+        "LLL_residual_upper": {
+          "ball": "[7.88265709903650386588e-21 +/- 3.95e-42]",
+          "decimal_enclosure": {
+            "mid": "788265709903650386588139173165047454031434856004908464",
+            "rad": "255422470973901773180575013666817",
+            "exponent": "-74"
+          }
+        },
+        "complete_residual_costs": {
+          "principal": {
+            "ball": "[9.36001937722575818479e-14 +/- 5.64e-35]",
+            "decimal_enclosure": {
+              "mid": "936001937722575818478689229230970206692226978180663165",
+              "rad": "252741756851316062840217717964801",
+              "exponent": "-67"
+            }
+          },
+          "gain_two_complete_mixed_product": {
+            "ball": "[4.05325745756301721303e-6 +/- 2.27e-27]",
+            "decimal_enclosure": {
+              "mid": "4053257457563017213031173181120525155126727205104469555",
+              "rad": "1094471460357108796773385893838849",
+              "exponent": "-60"
+            }
+          },
+          "actual_row_subtracted_gluing": {
+            "ball": "[7.42500742530232310479e-6 +/- 3.15e-27]",
+            "decimal_enclosure": {
+              "mid": "7425007425302323104791138080290154278360789218562052830",
+              "rad": "2004920454894829549664765822894081",
+              "exponent": "-60"
+            }
+          },
+          "actual_complete_constant_contact": {
+            "ball": "[9.19377145244514842946e-6 +/- 5.70e-27]",
+            "decimal_enclosure": {
+              "mid": "919377145244514842945827737518819844125243763685359034",
+              "rad": "397198999243877298452575576653825",
+              "exponent": "-59"
+            }
+          },
+          "local_both_rows_reserve": {
+            "ball": "[1.0000000000000000000000000000000000e-18 +/- 3e-57]",
+            "decimal_enclosure": {
+              "mid": "999999999999999999999999999999999999999999999999999999",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          },
+          "LLL_reserve": {
+            "ball": "[1.0000000000000000000000000000000000e-17 +/- 1e-56]",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "1",
+              "exponent": "-71"
+            }
+          }
+        },
+        "complete_adjoint_residual_upper": {
+          "ball": "[2.067203642892168251954e-5 +/- 8.91e-27]",
+          "decimal_enclosure": {
+            "mid": "2067203642892168251953817048446780079783697472974281054",
+            "rad": "707138201891188673550979155623937",
+            "exponent": "-59"
+          }
+        },
+        "full_coupled_linear_mass_upper": {
+          "ball": "[1.62753174674476043471e-15 +/- 1.31e-36]",
+          "decimal_enclosure": {
+            "mid": "1627531746744760434710664250040561729302241229726433458",
+            "rad": "640086232033222025495764673757185",
+            "exponent": "-69"
+          }
+        },
+        "sufficient_remaining_lifted_graph_allowance": {
+          "ball": "[6.46174598257689081494e-12 +/- 2.38e-33]",
+          "decimal_enclosure": {
+            "mid": "6461745982576890814939015920411818800496927566574733661",
+            "rad": "1391547474072610077012349725704193",
+            "exponent": "-66"
+          }
+        },
+        "scope": {
+          "complete_weak_adjoint_residual_certified": true,
+          "complete_source_pairing_retained": true,
+          "full_coupled_LINEAR_mass_target_closed": true,
+          "actual_kappa_m_computed": false,
+          "original_coupled_graph_certified": false,
+          "independent_phase_columns_bounded": false,
+          "nonlinear_mass_certified": false,
+          "nonlinear_admission": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_wormhole": false,
+          "construction_obstruction": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+        "checks/current_complete_weak_mass_residual.py": "46e2ae0164a6353f6a698fd24309da071dd4b0809a965659e9cc7cf7a0a86103",
+        "evidence/current-complete-weak-mass-residual-review.json": "71cea0caaf6c36b197bb971153601d5258a1437dc0d142601e36a12d6b26011a",
+        "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "notes/current-complete-mass-moment-bound.md": "1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8",
+        "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-seed-quantum-form.md": "7349fbb0ccab7e57301d55384147a1d073ff159997a8b3661cd739483bf563fd",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+        "notes/current-full-domain-contact-assembly.md": "ace6fce7e68cb2aa1df7e8208ff10af37452ae0f0693ae48bbeb57fc7279b849",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-complete-mass-moment-bound.json": "5331e1b5c5d792339694c5d00eec12a55950a450d394f2afaf2ba62530a81ed6"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "accepted_input_current-global-mass-conversion",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-reference-clock-adjoint-trial",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-coupled-global-return-attempt",
+          "passed": true
+        },
+        {
+          "name": "positive_actual_temperature_and_bolt",
+          "passed": true
+        },
+        {
+          "name": "actual_quadratic_bolt_coefficient",
+          "passed": true
+        },
+        {
+          "name": "actual_cubic_bolt_coefficient",
+          "passed": true
+        },
+        {
+          "name": "actual_quartic_bolt_coefficient",
+          "passed": true
+        },
+        {
+          "name": "actual_degree_five_six_terms_retained",
+          "passed": true
+        },
+        {
+          "name": "whole_real_P_lower",
+          "passed": true
+        },
+        {
+          "name": "whole_real_P_decreasing",
+          "passed": true
+        },
+        {
+          "name": "whole_real_P_upper",
+          "passed": true
+        },
+        {
+          "name": "retained_Q_real_global_upper",
+          "passed": true
+        },
+        {
+          "name": "outer_tenth_Q_lower",
+          "passed": true
+        },
+        {
+          "name": "exact_beta_parameter_relation_interval_consistency",
+          "passed": true
+        },
+        {
+          "name": "middle_relative_Q_comparison",
+          "passed": true
+        },
+        {
+          "name": "middle_Qprime_comparison",
+          "passed": true
+        },
+        {
+          "name": "middle_clock_comparison_error",
+          "passed": true
+        },
+        {
+          "name": "exact_comparison_primitive",
+          "passed": true
+        },
+        {
+          "name": "whole_interval_critical_polynomial",
+          "passed": true
+        },
+        {
+          "name": "local_density_Ward_factor",
+          "passed": true
+        },
+        {
+          "name": "unique_H_critical_root_bracket",
+          "passed": true
+        },
+        {
+          "name": "whole_interval_clock_comparator",
+          "passed": true
+        },
+        {
+          "name": "middle_correlated_mass_not_dropped",
+          "passed": true
+        },
+        {
+          "name": "cold_anchor_with_integral_comparison",
+          "passed": true
+        },
+        {
+          "name": "cold_pole_removed_anchor",
+          "passed": true
+        },
+        {
+          "name": "cold_V_uniform_polynomial",
+          "passed": true
+        },
+        {
+          "name": "cold_N1_uniform_polynomial",
+          "passed": true
+        },
+        {
+          "name": "cold_W_uniform_polynomial",
+          "passed": true
+        },
+        {
+          "name": "cold_Dnum_factor_and_bound",
+          "passed": true
+        },
+        {
+          "name": "entire_regular_bolt_bounded",
+          "passed": true
+        },
+        {
+          "name": "near_outer_n_bound",
+          "passed": true
+        },
+        {
+          "name": "middle_n_bound",
+          "passed": true
+        },
+        {
+          "name": "cold_n_bound",
+          "passed": true
+        },
+        {
+          "name": "complex_Q_second_derivative_cone",
+          "passed": true
+        },
+        {
+          "name": "complex_Q_third_derivative_cone",
+          "passed": true
+        },
+        {
+          "name": "Goursat_relative_displacement",
+          "passed": true
+        },
+        {
+          "name": "Goursat_absolute_displacement",
+          "passed": true
+        },
+        {
+          "name": "Goursat_sigma_cone",
+          "passed": true
+        },
+        {
+          "name": "Goursat_Picard_rows",
+          "passed": true
+        },
+        {
+          "name": "complex_middle_P_real_lower",
+          "passed": true
+        },
+        {
+          "name": "complex_middle_Q_lower",
+          "passed": true
+        },
+        {
+          "name": "complex_middle_A_increment",
+          "passed": true
+        },
+        {
+          "name": "complex_middle_b_bound",
+          "passed": true
+        },
+        {
+          "name": "complex_cold_U_lower",
+          "passed": true
+        },
+        {
+          "name": "complex_cold_A_increment",
+          "passed": true
+        },
+        {
+          "name": "complex_cold_W_quotient",
+          "passed": true
+        },
+        {
+          "name": "complex_cold_b_bound",
+          "passed": true
+        },
+        {
+          "name": "joint_geodesic_first_jet",
+          "passed": true
+        },
+        {
+          "name": "joint_geodesic_second_jet",
+          "passed": true
+        },
+        {
+          "name": "joint_geodesic_third_jet",
+          "passed": true
+        },
+        {
+          "name": "joint_geodesic_fourth_jet",
+          "passed": true
+        },
+        {
+          "name": "area_coefficient_uncertainty_retained",
+          "passed": true
+        },
+        {
+          "name": "complete_both_local_rows",
+          "passed": true
+        },
+        {
+          "name": "physical_fourth_joint_reserve",
+          "passed": true
+        },
+        {
+          "name": "complete_angular_fractional_multiplier",
+          "passed": true
+        },
+        {
+          "name": "complete_principal_multiplier_with_common_fourth",
+          "passed": true
+        },
+        {
+          "name": "single_seam_crossing_short_time",
+          "passed": true
+        },
+        {
+          "name": "seam_normalized_flux_reserve",
+          "passed": true
+        },
+        {
+          "name": "fractional_difference_coefficient_less_than_one",
+          "passed": true
+        },
+        {
+          "name": "full_geodesic_tail_gradient_reserve",
+          "passed": true
+        },
+        {
+          "name": "complete_gain_two_gradient_reserve",
+          "passed": true
+        },
+        {
+          "name": "old_epsilon_valid_product_does_not_certify_target",
+          "passed": true
+        },
+        {
+          "name": "corrected_combined_norm_product_fits",
+          "passed": true
+        },
+        {
+          "name": "full_fixed_domain_LLL",
+          "passed": true
+        },
+        {
+          "name": "COMPLETE_RESIDUAL_CERTIFIED",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-complete-mass-moment-bound",
+          "passed": true
+        },
+        {
+          "name": "FULL_COUPLED_LINEAR_MASS_TARGET_CLOSED",
+          "passed": true
+        },
+        {
+          "name": "sufficient_remaining_lifted_allowance",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T20:50:09.785029+00:00"
+    }
+  ]
+}
