@@ -1,3 +1,100 @@
+# Active checkpoint: exact mass lift improves local feasibility; global map unresolved
+
+2026-10-24, E003/S169.
+
+See [the full ordinary calculation](current-lifted-boundary-graph-attempt.md).
+
+OUTCOME: UNRESOLVED COMPLETE GLOBAL GRAPH ESTIMATE, with a verified
+failure of the bare-mass positive estimator and a quantified sharper method.
+The first unsupported step is the actual coupled finite-seed global graph
+regularity/inverse, including boundary coefficients and original-row matching
+through the transition, interior and regular bolt. The actual paired mass/log
+domain, common regulator, full angular/thermal sums, contacts and finite-domain
+returns are retained. Unknown graph data may not yet even be finite.
+
+Executed joint energy/slow-moment/far accounting gives, CONDITIONAL on
+E_new<=1e-11 in the specified lifted decomposition,
+abs(m)<4.345e-8, abs(Delta)<2.251e-10 and Efar<3.901e-46.
+This does not assume nonlinear A admission to bound the mass coefficient.
+It also does not establish E_new<=1e-11 for the actual response.
+
+The complete bare mass local polynomial, with its cross terms and contacts,
+has larger row H3 norm .00595769650833 per unit mass. The old conditional
+mass allowance produces a 2.58586e-10 allowance, >34.5 times the entire
+7.49e-12 source allocation. That estimator would need abs(m)<1.25720e-9
+even if no other source spent the budget. This is a failed positive upper
+certificate, not an actual residual lower bound or nonexistence theorem.
+
+The sharper profile is the exact local reference mass tangent, returned to
+the original canonical coordinates. It cancels both reference equations.
+Its COMPLETE local gravitational remainder is <1.762e-24 per unit mass,
+hence <7.66e-32 under the conditional mass ceiling. The physical cutoff's
+transition source and fixed-temperature bolt are explicitly left in the
+global matching map; the mass tangent is not a global zero mode.
+
+This is not a normalization change. Moving the profile difference into the
+OLD fast remainder has graph cost >.009068 per unit mass; at the allowed
+mass endpoint its cost exceeds 3.93e-10, over 39 times the graph radius.
+The lift must be an explicit boundary component. Its finite phase jets
+through nine are bounded on the admitted family. The cap remains <2.062e30
+and its C3 debit <167500, retaining the conditional FAST-input screen
+eta_seed<.028913, C3<1.0706e10, and .135973<.1599164. Independent mass/scalar
+variation slots and admission of a nonlinear ball are not supplied by this.
+Conditional collar A is <6.116e-5; global and interior/bolt admission remain open.
+
+For the COMPLETE remaining mass-to-joint-data map AFTER global matching,
+the explicit unknown target kappa_m<=5e-5 would spend <2.148e-12 of affine
+source and <.002474 of feedback, leaving >5.342e-12 and >.001206 for other
+global components. These are proposed requirements, not measured operator
+norms. The separate global allocation is .00368; the quantum-fast reserve
+.0239434 is not spent twice. Scalar quartic, correlated shape phase, quantum
+mass column and finite-geometry matching remain jointly uncomputed.
+
+Original physical comparisons remain Ecenter+1e-8 alpha<=1e-11,
+R_X alpha*.028913+Z0_other<=.25, and
+R_X alpha^2*1.0706e10+Z2_other<=5e7. Even with zero other terms the ceilings
+are alpha<=.001, R_X alpha<=8.64663 and R_X alpha^2<=.00467028 (rounded
+display only). A bare C5-to-graph comparison is known to be unbounded;
+an appropriate stronger physical X return is unknown. The explicit basis
+conversion cost must be included. Preservation/contraction remain
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with unproved allocations
+(5e-9,.25,5e7). The nonlinear center residual is still required.
+
+No actual controlled solution, exact complementary compatibility, physical
+matching/causal realization, validity/noise or all-sector stability is proved.
+The original mass moment remains an EXACT condition, not a tolerance.
+The closed audit and earlier sufficient projection screen are preserved;
+the signed projection was not reevaluated.
+
+RESEARCH DECISION: retain the construction, and sharpen the global
+graph method by keeping the exact reference mass profile as an explicit
+boundary component. Its local gain is real and its admitted-family fast
+quantum cost fits, but this does not show the global requirements attainable.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete
+quantum and finite-geometry matching map for the mass lift, scalar quartic
+and correlated shape pair, with the actual regular bolt and both original
+equations. Test its mass entry against 5e-5 and the other entries against
+the residual budgets above, with physical norm returns and exact moments.
+This is the decisive missing global calculation, not another isolated contact.
+
+Verification: 45 supporting checks on 25 frozen
+inputs in one successful 512-bit interval acceptance run, matching the final
+development run exactly. Three successful development runs are retained.
+Two exploratory numerical failures (symbol parsing and a missing fourth H0
+jet) and two successful explorations are preserved, together with an
+unexecuted source fragment. Two wrapper launch failures (module path and
+legacy import-time argument parsing) are also retained with exact source
+snapshots and terminal output. No allowance was relaxed. Runtime identities
+are recorded. No post-acceptance scientific edit or Lean execution occurred.
+The ordinary argument supports the continuum claims; checker passes do not
+prove the missing global map. All 18 inherited paths and the closed audit
+remain unchanged.
+
+Remaining to-do list: complete coupled quantum/global matching map and original physical norm comparisons; actual correction, nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: quantum screen retained; global transition return unresolved
 
 2026-10-24, E003/S169.

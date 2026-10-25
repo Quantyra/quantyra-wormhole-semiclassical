@@ -1,0 +1,1002 @@
+{
+  "status": "pre_freeze_exploration_not_acceptance",
+  "runs_and_fragment": [
+    {
+      "file": "s169db-explore.py",
+      "status": "failed",
+      "source_sha256": "c8a68d9935e78fba80ca46886b7acbccfeee4dbbf972c3c2259bb00228d82e08",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nfrom math import comb\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path.insert(0,str(root/'checks'))\nfrom flint import arb,ctx\nimport sympy as sp\nimport current_product_matched_source_projection as prev\nctx.prec=512\na=arb\nrr=json.loads((root/'evidence/current-global-boundary-moment-return.json').read_bytes())['runs'][-1]['result']\ndec=prev.decode; enc=prev.encoded\ne=dec(rr['exact_slow_exponent_offset']); pole=dec(rr['full_normal_shape_particular']) if 'full_normal_shape_particular' in rr else None\nprior=json.loads((root/'evidence/current-coupled-outer-return-test.json').read_bytes())['runs'][-1]['result']\nB0=dec(prior['full_normal_shape_particular']); pole=B0.abs_upper()*e.abs_upper()\ng0=dec(rr['g0']); bp=dec(rr['Bprime_at_slow_root']); k3=dec(rr['known_source_H3_upper'])\nsig=a('4.005'); aa=a('.05'); eo=a('1.1e-10')\nco=1/(2*(a('.005')-e)).sqrt(); cf=1/(2*(a('.5')+e)).sqrt()\nmk=g0.abs_upper()*(1+a(10).log())*(e*(1+a(10).log())).exp()\nd0=2*pole+(mk+cf*a('1.02e-46'))/bp\nde=co/bp; dm=cf*a('6.50e-39')/bp\nmd=(a(3)/5).sqrt()*aa\nme=1801*(a(3)/2).sqrt()/(2*sig-3).sqrt()*aa**(sig-3)\nma=a(3).sqrt()*aa**a('-1.5')*a('2.518')*eo+pole*md*((-aa.log())**2+2*(-aa.log())/5+a(2)/25).sqrt()\nm0=(ma+md*d0+me*k3)/(1-md*dm); m1=(me+md*de)/(1-md*dm)\netest=a('1e-11'); mm=m0+m1*etest; delta=d0+de*etest+dm*mm\nout={'mass_intercept':enc(m0),'mass_slope':enc(m1),'mass_at_target':enc(mm),'delta_at_target':enc(delta),'phase_A':enc(6*mm+delta+6*pole),'far_at_target':enc(a('1.02e-46')+a('6.50e-39')*mm)}\npp,h,zh,env=prev.scalar.prev.york.actual_parameters(); B2=pp['B2']; C=pp['C']; pi=a.pi()\nmapping={'beta':pp['beta'],'u':pp['u'],'eps':pp['eps'],'tau':pp['tau'],'ell':a(2000)**-10*B2/C,'mag':pi*pp['q']**2*a(2000)**8/(C*B2),'cr':8*pi*a('1e22')*C/B2}\ndef val(x):\n    if x.is_Symbol:return mapping[str(x)]\n    if x.is_Rational:return a(int(x.p))/int(x.q)\n    if x.is_Add:return sum((val(v) for v in x.args),a(0))\n    if x.is_Mul:\n        r=a(1)\n        for v in x.args:r*=val(v)\n        return r\n    if x.is_Pow:return val(x.base)**int(x.exp)\n    raise ValueError(x)\nu,s=sp.symbols('u s'); cut=1-35*u**4+84*u**5-70*u**6+20*u**7\ndef integralmoment(rate, pol):\n    cs=sp.Poly(pol,u); top=cs.degree(); J=[(rate.exp()-1)/rate]\n    for j in range(1,top+1):J.append((rate.exp()-j*J[-1])/rate)\n    return sum((val(cs.nth(j))*J[j] for j in range(top+1)),a(0))\ndef inner(k,l):\n    pk=cut; pl=cut; kk=val(k); ll=val(l); v=a(0)\n    for j in range(4):\n        if j:pk=sp.expand(sp.diff(pk,u)+k*pk); pl=sp.expand(sp.diff(pl,u)+l*pl)\n        v+=comb(3,j)*(kk**j*ll**j/(kk+ll)+integralmoment(kk+ll,sp.expand(pk*pl)))\n    return a('.01')**(kk+ll)*(-(kk+ll)).exp()*v\ndata=json.loads((root/'evidence/current-coupled-local-graph-bound.json').read_bytes())['runs'][-1]['result']\nmasscols=[]\nfor i in range(2):\n    terms=[]\n    for term in data['matrix_bounds'][i][1]['terms']:\n        coef=sp.sympify(term['symbol']).subs(s,3)/4\n        terms.append((sp.Rational(term['z_power']+3)-sp.Rational(801,200),val(coef)))\n    normsq=sum((ci*cj*inner(ki,kj) for ki,ci in terms for kj,cj in terms),a(0))\n    norm=normsq.sqrt();masscols.append(norm)\n    out['local_bare_mass_row_'+str(i)]={'unit_H3':enc(norm),'energy_phase_allowance':enc(norm*mm),'threshold_mass_for_source':enc(a('7.49e-12')/norm),'coefficients':[{'power':str(k),'coef':enc(v)} for k,v in terms]}\nout['required_energy_reduction_phase_only']=enc(max(masscols)*mm/a('7.49e-12'))\nprint(json.dumps(out,indent=2))\nPath(__file__).with_suffix('.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "terminal_error": "TypeError: unsupported operand type(s) for *: Integer and FunctionClass; sympify interpreted beta as its built-in function"
+    },
+    {
+      "file": "s169db-explore-v2.py",
+      "status": "passed",
+      "source_sha256": "d39b9990452e7e1b5e69bd710e397cfd73434a3a9117223c57a4e621237aad51",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nfrom math import comb\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path.insert(0,str(root/'checks'))\nfrom flint import arb,ctx\nimport sympy as sp\nimport current_product_matched_source_projection as prev\nctx.prec=512\na=arb\nrr=json.loads((root/'evidence/current-global-boundary-moment-return.json').read_bytes())['runs'][-1]['result']\ndec=prev.decode; enc=prev.encoded\ne=dec(rr['exact_slow_exponent_offset']); pole=dec(rr['full_normal_shape_particular']) if 'full_normal_shape_particular' in rr else None\nprior=json.loads((root/'evidence/current-coupled-outer-return-test.json').read_bytes())['runs'][-1]['result']\nB0=dec(prior['full_normal_shape_particular']); pole=B0.abs_upper()*e.abs_upper()\ng0=dec(rr['g0']); bp=dec(rr['Bprime_at_slow_root']); k3=dec(rr['known_source_H3_upper'])\nsig=a('4.005'); aa=a('.05'); eo=a('1.1e-10')\nco=1/(2*(a('.005')-e)).sqrt(); cf=1/(2*(a('.5')+e)).sqrt()\nmk=g0.abs_upper()*(1+a(10).log())*(e*(1+a(10).log())).exp()\nd0=2*pole+(mk+cf*a('1.02e-46'))/bp\nde=co/bp; dm=cf*a('6.50e-39')/bp\nmd=(a(3)/5).sqrt()*aa\nme=1801*(a(3)/2).sqrt()/(2*sig-3).sqrt()*aa**(sig-3)\nma=a(3).sqrt()*aa**a('-1.5')*a('2.518')*eo+pole*md*((-aa.log())**2+2*(-aa.log())/5+a(2)/25).sqrt()\nm0=(ma+md*d0+me*k3)/(1-md*dm); m1=(me+md*de)/(1-md*dm)\netest=a('1e-11'); mm=m0+m1*etest; delta=d0+de*etest+dm*mm\nout={'mass_intercept':enc(m0),'mass_slope':enc(m1),'mass_at_target':enc(mm),'delta_at_target':enc(delta),'phase_A':enc(6*mm+delta+6*pole),'far_at_target':enc(a('1.02e-46')+a('6.50e-39')*mm)}\npp,h,zh,env=prev.scalar.prev.york.actual_parameters(); B2=pp['B2']; C=pp['C']; pi=a.pi()\nmapping={'beta':pp['beta'],'u':pp['u'],'eps':pp['eps'],'tau':pp['tau'],'ell':a(2000)**-10*B2/C,'mag':pi*pp['q']**2*a(2000)**8/(C*B2),'cr':8*pi*a('1e22')*C/B2}\ndef val(x):\n    if x.is_Symbol:return mapping[str(x)]\n    if x.is_Rational:return a(int(x.p))/int(x.q)\n    if x.is_Add:return sum((val(v) for v in x.args),a(0))\n    if x.is_Mul:\n        r=a(1)\n        for v in x.args:r*=val(v)\n        return r\n    if x.is_Pow:return val(x.base)**int(x.exp)\n    raise ValueError(x)\nu,s=sp.symbols('u s'); cut=1-35*u**4+84*u**5-70*u**6+20*u**7\ndef integralmoment(rate, pol):\n    cs=sp.Poly(pol,u); top=cs.degree(); J=[(rate.exp()-1)/rate]\n    for j in range(1,top+1):J.append((rate.exp()-j*J[-1])/rate)\n    return sum((val(cs.nth(j))*J[j] for j in range(top+1)),a(0))\ndef inner(k,l):\n    pk=cut; pl=cut; kk=val(k); ll=val(l); v=a(0)\n    for j in range(4):\n        if j:pk=sp.expand(sp.diff(pk,u)+k*pk); pl=sp.expand(sp.diff(pl,u)+l*pl)\n        v+=comb(3,j)*(kk**j*ll**j/(kk+ll)+integralmoment(kk+ll,sp.expand(pk*pl)))\n    return a('.01')**(kk+ll)*(-(kk+ll)).exp()*v\ndata=json.loads((root/'evidence/current-coupled-local-graph-bound.json').read_bytes())['runs'][-1]['result']\nmasscols=[]\nfor i in range(2):\n    terms=[]\n    for term in data['matrix_bounds'][i][1]['terms']:\n        coef=sp.sympify(term['symbol'], locals={k:sp.Symbol(k) for k in mapping}).subs(s,3)/4\n        terms.append((sp.Rational(term['z_power']+3)-sp.Rational(801,200),val(coef)))\n    normsq=sum((ci*cj*inner(ki,kj) for ki,ci in terms for kj,cj in terms),a(0))\n    norm=normsq.sqrt();masscols.append(norm)\n    out['local_bare_mass_row_'+str(i)]={'unit_H3':enc(norm),'energy_phase_allowance':enc(norm*mm),'threshold_mass_for_source':enc(a('7.49e-12')/norm),'coefficients':[{'power':str(k),'coef':enc(v)} for k,v in terms]}\nout['required_energy_reduction_phase_only']=enc(max(masscols)*mm/a('7.49e-12'))\nprint(json.dumps(out,indent=2))\nPath(__file__).with_suffix('.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "terminal_error": null,
+      "output_sha256": "e85ae0da6631fedc4aa42f4ada80d87c7ab2646c7a4e3c0e403aa7fabb26f586",
+      "output": {
+        "mass_intercept": {
+          "ball": "[4.29095570893012132325771826127e-8 +/- 1.46e-38]",
+          "decimal_enclosure": {
+            "mid": "4290955708930121323257718261271450439556",
+            "rad": "2",
+            "exponent": "-47"
+          }
+        },
+        "mass_slope": {
+          "ball": "[49.412042892799097503140 +/- 1.71e-22]",
+          "decimal_enclosure": {
+            "mid": "4941204289279909750314007648453389557519",
+            "rad": "9411925028896769",
+            "exponent": "-38"
+          }
+        },
+        "mass_at_target": {
+          "ball": "[4.340367751822920420760858e-8 +/- 4.32e-33]",
+          "decimal_enclosure": {
+            "mid": "4340367751822920420760858337755984335131",
+            "rad": "94119251279873",
+            "exponent": "-47"
+          }
+        },
+        "delta_at_target": {
+          "ball": "[2.250000026552994817953e-10 +/- 5.48e-32]",
+          "decimal_enclosure": {
+            "mid": "2250000026552994817952695495947475339925",
+            "rad": "243011149862273025",
+            "exponent": "-49"
+          }
+        },
+        "phase_A": {
+          "ball": "[2.606470651120305247280404e-7 +/- 7.69e-32]",
+          "decimal_enclosure": {
+            "mid": "2606470651120305247280404469467949930017",
+            "rad": "299482702413825",
+            "exponent": "-46"
+          }
+        },
+        "far_at_target": {
+          "ball": "[3.8412390386848982734945579e-46 +/- 8.08e-72]",
+          "decimal_enclosure": {
+            "mid": "3841239038684898273494557919541389817835",
+            "rad": "61177514033153",
+            "exponent": "-85"
+          }
+        },
+        "local_bare_mass_row_0": {
+          "unit_H3": {
+            "ball": "[0.0029788481299601001944531615256 +/- 4.36e-32]",
+            "decimal_enclosure": {
+              "mid": "2978848129960100194453161525575904061588",
+              "rad": "19452109313",
+              "exponent": "-42"
+            }
+          },
+          "energy_phase_allowance": {
+            "ball": "[1.2929296360856830757222793e-10 +/- 3.18e-36]",
+            "decimal_enclosure": {
+              "mid": "1292929636085683075722279303745405727783",
+              "rad": "28045138558977",
+              "exponent": "-49"
+            }
+          },
+          "threshold_mass_for_source": {
+            "ball": "[2.5143947167593011397552160937e-9 +/- 2.96e-38]",
+            "decimal_enclosure": {
+              "mid": "2514394716759301139755216093686915793645",
+              "rad": "16419443185",
+              "exponent": "-48"
+            }
+          },
+          "coefficients": [
+            {
+              "power": "2199/200",
+              "coef": {
+                "ball": "[-8e-63 +/- 8.25e-64]",
+                "decimal_enclosure": {
+                  "mid": "-8163034847957011554357509794754457498514",
+                  "rad": "661950382562945175812431824437565718529",
+                  "exponent": "-102"
+                }
+              }
+            },
+            {
+              "power": "1999/200",
+              "coef": {
+                "ball": "[2e-62 +/- 1.80e-63]",
+                "decimal_enclosure": {
+                  "mid": "2016194023789382251967468275695140312711",
+                  "rad": "163495615191965355298628343427628007425",
+                  "exponent": "-101"
+                }
+              }
+            },
+            {
+              "power": "1799/200",
+              "coef": {
+                "ball": "[2e-34 +/- 1.63e-35]",
+                "decimal_enclosure": {
+                  "mid": "2080284112799331598401072852536193533861",
+                  "rad": "82702446107050751962305104473608945665",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1599/200",
+              "coef": {
+                "ball": "[-3e-34 +/- 6.24e-35]",
+                "decimal_enclosure": {
+                  "mid": "-3484475888983349328939563470987445892691",
+                  "rad": "138526597688833352119594208035849895937",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1399/200",
+              "coef": {
+                "ball": "[1e-34 +/- 5.30e-36]",
+                "decimal_enclosure": {
+                  "mid": "986208764669483896587373566367955080264",
+                  "rad": "39207085710927417808967914333860265985",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1199/200",
+              "coef": {
+                "ball": "[-7.42201264471028885921e-7 +/- 3.68e-28]",
+                "decimal_enclosure": {
+                  "mid": "-7422012644710288859207123136885793914238",
+                  "rad": "801601883545272321",
+                  "exponent": "-46"
+                }
+              }
+            },
+            {
+              "power": "999/200",
+              "coef": {
+                "ball": "[8.48230016566380263672e-7 +/- 9.98e-29]",
+                "decimal_enclosure": {
+                  "mid": "8482300165663802636720003151379046683672",
+                  "rad": "994116458931814401",
+                  "exponent": "-46"
+                }
+              }
+            },
+            {
+              "power": "799/200",
+              "coef": {
+                "ball": "[-3.357790740859e-17 +/- 7.74e-30]",
+                "decimal_enclosure": {
+                  "mid": "-3357790740859123197111543600784816980718",
+                  "rad": "650000250538533320940060673",
+                  "exponent": "-56"
+                }
+              }
+            },
+            {
+              "power": "599/200",
+              "coef": {
+                "ball": "[2.92968746554507613284e-28 +/- 5.29e-49]",
+                "decimal_enclosure": {
+                  "mid": "2929687465545076132835352708431207494418",
+                  "rad": "632831827622494209",
+                  "exponent": "-67"
+                }
+              }
+            },
+            {
+              "power": "399/200",
+              "coef": {
+                "ball": "[1.9999998940526816885314542694 +/- 4.51e-29]",
+                "decimal_enclosure": {
+                  "mid": "1999999894052681688531454269367750016145",
+                  "rad": "12760250737",
+                  "exponent": "-39"
+                }
+              }
+            },
+            {
+              "power": "199/200",
+              "coef": {
+                "ball": "[-4.071687455285681677332e-11 +/- 5.80e-33]",
+                "decimal_enclosure": {
+                  "mid": "-4071687455285681677331640811028449402049",
+                  "rad": "219877866521755649",
+                  "exponent": "-50"
+                }
+              }
+            }
+          ]
+        },
+        "local_bare_mass_row_1": {
+          "unit_H3": {
+            "ball": "[0.00595769650832850426752115 +/- 7.83e-27]",
+            "decimal_enclosure": {
+              "mid": "5957696508328504267521151449493875032166",
+              "rad": "6374158531297281",
+              "exponent": "-42"
+            }
+          },
+          "energy_phase_allowance": {
+            "ball": "[2.58585937998970529542139e-10 +/- 5.65e-34]",
+            "decimal_enclosure": {
+              "mid": "2585859379989705295421387175375187641178",
+              "rad": "2822692621254657",
+              "exponent": "-49"
+            }
+          },
+          "threshold_mass_for_source": {
+            "ball": "[1.25719730596035344737569e-9 +/- 4.55e-33]",
+            "decimal_enclosure": {
+              "mid": "1257197305960353447375693203304723632467",
+              "rad": "1345099948621825",
+              "exponent": "-48"
+            }
+          },
+          "coefficients": [
+            {
+              "power": "2199/200",
+              "coef": {
+                "ball": "[-5e-64 +/- 8.33e-65]",
+                "decimal_enclosure": {
+                  "mid": "-4535019359976117530198616552641365276952",
+                  "rad": "367750211830719208657890234967145840641",
+                  "exponent": "-103"
+                }
+              }
+            },
+            {
+              "power": "1999/200",
+              "coef": {
+                "ball": "[3e-63 +/- 4.89e-64]",
+                "decimal_enclosure": {
+                  "mid": "2733608891985604177925277199786600736385",
+                  "rad": "221671655728721842488553850278120521729",
+                  "exponent": "-102"
+                }
+              }
+            },
+            {
+              "power": "1799/200",
+              "coef": {
+                "ball": "[6e-35 +/- 3.09e-36]",
+                "decimal_enclosure": {
+                  "mid": "6067495328998050495336462486719789097596",
+                  "rad": "241215468076325234937604346693172592641",
+                  "exponent": "-74"
+                }
+              }
+            },
+            {
+              "power": "1599/200",
+              "coef": {
+                "ball": "[-1.3e-34 +/- 5.79e-36]",
+                "decimal_enclosure": {
+                  "mid": "-1305956137499814918991614857397361110758",
+                  "rad": "51918757846195130678554879211872452609",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1399/200",
+              "coef": {
+                "ball": "[6e-35 +/- 5.50e-36]",
+                "decimal_enclosure": {
+                  "mid": "5675836900735939617772559966208479519155",
+                  "rad": "225644945860423648619468626768240312321",
+                  "exponent": "-74"
+                }
+              }
+            },
+            {
+              "power": "1199/200",
+              "coef": {
+                "ball": "[-1.5e-45 +/- 6.92e-47]",
+                "decimal_enclosure": {
+                  "mid": "-1490139560383707958435971582507326145903",
+                  "rad": "59241036430759655384336512539974172673",
+                  "exponent": "-84"
+                }
+              }
+            },
+            {
+              "power": "999/200",
+              "coef": {
+                "ball": "[9.42477796172874849844e-8 +/- 4.53e-29]",
+                "decimal_enclosure": {
+                  "mid": "942477796172874849844234070725800195661",
+                  "rad": "218790747216805889",
+                  "exponent": "-46"
+                }
+              }
+            },
+            {
+              "power": "799/200",
+              "coef": {
+                "ball": "[-4.4770543206e-18 +/- 4.40e-29]",
+                "decimal_enclosure": {
+                  "mid": "-4477054320622297604526554157666931172142",
+                  "rad": "21666672283221301770560995329",
+                  "exponent": "-57"
+                }
+              }
+            },
+            {
+              "power": "599/200",
+              "coef": {
+                "ball": "[+/- 6.49e-22]",
+                "decimal_enclosure": {
+                  "mid": "-1472860267129149191203549102851639",
+                  "rad": "6480198136536883787412768520407475027969",
+                  "exponent": "-61"
+                }
+              }
+            },
+            {
+              "power": "399/200",
+              "coef": {
+                "ball": "[-3.9999999530389776972426350394 +/- 4.27e-29]",
+                "decimal_enclosure": {
+                  "mid": "-3999999953038977697242635039365067801336",
+                  "rad": "7707126569",
+                  "exponent": "-39"
+                }
+              }
+            },
+            {
+              "power": "199/200",
+              "coef": {
+                "ball": "[6.786145878730567343305e-11 +/- 4.27e-33]",
+                "decimal_enclosure": {
+                  "mid": "678614587873056734330493964080759971820",
+                  "rad": "36646309230280705",
+                  "exponent": "-49"
+                }
+              }
+            }
+          ]
+        },
+        "required_energy_reduction_phase_only": {
+          "ball": "[34.5241572762310453327288 +/- 3.85e-23]",
+          "decimal_enclosure": {
+            "mid": "3452415727623104533272880073932150265908",
+            "rad": "3768672518668289",
+            "exponent": "-38"
+          }
+        }
+      }
+    },
+    {
+      "file": "s169db-extra.py",
+      "status": "unexecuted_source_fragment",
+      "source_sha256": "901a528d2eaf7ccba872f4f1783447f36eba02d63b72fc41b4894d22c7a2930d",
+      "source_utf8": "from math import factorial\nR=a('.1'); Rext=a('.2'); aa=a('.05'); ac=a('.04'); acore=a('.02')\nq=[a(1),a(0),pp['u']/pp['beta'],(-4*pp['beta']-2*pp['u']-pp['tau'])/pp['beta'],(3*pp['beta']+pp['u']+pp['eps'])/pp['beta'],-2*pp['eps']/pp['beta'],pp['eps']/pp['beta']]\ndef qbounds(radius):\n    dq=sum((abs(q[k])*radius**k for k in range(1,7)),a(0))\n    d1=sum((k*abs(q[k])*radius**k for k in range(1,7)),a(0))\n    return dq,d1,dq/(1-dq)+d1/(4*(1-dq)**2)\nout['mass_profile_complex_guards']={str(r):[enc(v) for v in qbounds(r)] for r in [aa,R,Rext]}\nassert qbounds(aa)[2]<a('.001') and qbounds(R)[2]<a('.008') and qbounds(Rext)[2]<1\nout['profile_A_coefficient_upper']=enc(max(a('1.02')*R**3*factorial(j)/(R-ac)**j*(ac if j==4 else 1) for j in range(5)))\nassert all(a('1.02')*a('1.5').exp()*factorial(j)*2**j <= 6*40**j for j in range(10))\n# Reclose the mass/slow/far system in the lifted phase decomposition.\ndm_new=dm*a('1.02'); den=1-a('.001')-md*dm_new\nmn0=(ma+md*d0+me*k3)/den;mn1=(me+md*de)/den\nmn=mn0+mn1*etest;dn=d0+de*etest+dm_new*mn\nout['lifted_boundary_block']={'mass_intercept':enc(mn0),'mass_slope':enc(mn1),'mass_at_target':enc(mn),'Delta_at_target':enc(dn),'phase_A_at_target':enc(100*mn+dn+6*pole),'Efar_at_target':enc(a('1.02e-46')+a('6.63e-39')*mn)}\n# Quantify the cost of treating the analytic lift correction as fast graph data.\nN=32\ninv=[a(1)]\nfor n in range(1,N+1):inv.append(-sum((q[j]*inv[n-j] for j in range(1,min(6,n)+1)),a(0)))\ninvsq=[sum((inv[j]*inv[n-j] for j in range(n+1)),a(0)) for n in range(N+1)]\nJ={n+4:invsq[n]/(n+4) for n in range(N+1)}\nbcoef={n+3:inv[n] for n in range(N-2)}\nfor j in range(1,7):\n    for n,v in J.items():\n        p=n+j-1\n        if p<=N:bcoef[p]=bcoef.get(p,a(0))+j*q[j]*v\nbcoef[3]-=1\nKL=2*pp['beta']*(pp['Fl']+23*pp['g']/(180*a.pi()))/3\ndef rawjet(n):\n    k=a(n)-sig\n    return acore**k*(1+k*k)**a('1.5')/(2*k).sqrt()\nlead=abs(KL*bcoef[6]*36)*rawjet(6)\nothers=sum((abs(KL*coef*(n-4)*n*(n-3))*rawjet(n) for n,coef in bcoef.items() if n>=5 and n!=6),a(0))\nn=N+1;ratio=acore/R*(a(n+1)/n)**6\ntail=abs(KL)*a('1.02')*R**3*acore**(-sig)*a(n)**6*(acore/R)**n*3/(1-ratio)\n# psi has the beta(11,11) smoothstep on log(.02)..log(.04).\nwexp=a(5)-sig\ncaps=[]\nfor j in range(10):\n    cap=a('1e9')*a('.5').exp()*ac**wexp/(2*wexp).sqrt()*sum((comb(j,l)*(21/a(2).log())**l*factorial(j-l)*2**(j-l) for l in range(j+1)),a(0))\n    caps.append(cap)\nh9=sum((comb(9,j)*caps[j]**2 for j in range(10)),a(0)).sqrt()\nquantum=6000*pp['g']*pp['beta']/(15*a.pi())*h9\nout['lift_original_graph_cost']={'classical_leading_raw_jets':enc(lead),'other_series_raw_jets_upper':enc(others),'analytic_tail_upper':enc(tail),'profile_H9_upper':enc(h9),'complete_normal_quantum_upper':enc(quantum),'graph_cost_lower_per_mass':enc(lead-others-tail-quantum),'allowed_mass_interval_cost_at_upper':enc((lead-others-tail-quantum)*mn)}\n# Uniform admitted-family extension: only the finite phase H9 guard changes.\nbg=json.loads((root/'evidence/current-complete-strong-response-attempt.json').read_bytes())['runs'][-1]['result']\nparts=bg['background_parts']; oldB=dec(bg['Bcap'])\ndeltaB=512/a(2).log()*dec(parts['Wxi'])*(2+512*dec(parts['Wa']))*dec(parts['slow_H8log_over_h2'])*(a('.02')/a('.00105681')-1)\nout['extended_phase_Bcap']=enc(oldB+deltaB)\nout['extended_phase_C3_cap_allowance']=enc((oldB+deltaB)*a('8.123e-26'))\n# Direct analytic-coefficient majorant for -Ipot''+Isq'' applied to the lift.\nR=a('.1'); cr=mapping['cr']; eps=abs(pp['eps']); dqmag=a('3.4e-22')*pp['beta'];fl=pp['Fl'];beta=pp['beta']\nsumshift=[a(2),a(8),a(36),a(188)]\nnu=[2*R**3*v for v in sumshift];bb=nu[:]\nQj=[pp['beta']*sum((abs(q[k])*k**j*R**k for k in range(7)),a(0)) for j in range(4)]\n# k^0 is 1 for k=0 in Python, retaining Q's constant.\nHj=[eps*(4*3**j*R**3+6*4**j*R**4) for j in range(4)]\ndef add(*vals):return [sum((v[j] for v in vals),a(0)) for j in range(min(map(len,vals)))]\ndef scale(c,v):return [c*x for x in v]\ndef mul(v,w):return [sum((comb(j,l)*v[l]*w[j-l] for l in range(j+1)),a(0)) for j in range(min(len(v),len(w)))]\ndef D(v):return v[1:]\ndef shift(p,v):return [R**p*sum((comb(j,l)*abs(p)**(j-l)*v[l] for l in range(j+1)),a(0)) for j in range(len(v))]\nA=scale(2*cr,mul(nu,D(Hj)))\nHi=add(scale(2,mul(bb,Hj)),mul(nu,D(Hj)))\nlapA=shift(-2,add(mul(Qj,add(D(D(A)),D(A))),mul(D(Qj),D(A))))\nQA=mul(Qj,A)\ntermgrad=mul(mul(Hj,Qj),D(nu))\nfn=add(scale(6,lapA),scale(12,shift(-2,add(D(QA),QA))),scale(24*beta,shift(-2,A)),scale(96*cr*beta,shift(-2,mul(Hj,add(nu,bb)))),scale(24*cr,shift(-2,add(D(termgrad),termgrad))))\nfb=add(scale(2,lapA),scale(4*pp['u'],A),scale(24*beta,shift(-2,A)),scale(cr,add(scale(4,mul(bb,mul(Hj,Hj))),scale(4,mul(Hj,Hi)))),scale(16*cr*pp['u'],mul(Hj,bb)),scale(96*cr*beta,shift(-2,mul(Hj,add(nu,bb)))))\npoly=lambda c1,c2:[abs(c1)*R+abs(c2)*2**j*R**2 for j in range(2)]\nfn=add(fn,scale(fl*eps,add(mul(poly(4,12),nu),mul(poly(8,12),bb))))\nfb=add(fb,scale(4*fl*dqmag,bb),scale(fl*eps,add(mul(poly(8,12),nu),mul(poly(16,12),bb))))\nFn=shift(4,fn);Fb=shift(4,fb)\nT=Fb[1]+4*Fb[0]+(Fn[1]+6*Fn[0])/3\nW=max(Fn[0],T);kk=a(7)-sig\nMpoly=lambda k:k**3+12*k*k+51*k+100\nlocalmass=W*R**-7*a('.01')**kk*Mpoly(kk)/(2*kk).sqrt()\nout['lifted_complete_gravitational_mass_column']={'analytic_coefficient_norm':enc(W),'outer_H3_upper_per_mass':enc(localmass),'source_at_mass_upper':enc(localmass*mn),'mass_feedback_slope':enc(localmass*mn1)}\nprint(json.dumps({k:v for k,v in out.items() if k not in ['local_bare_mass_row_0','local_bare_mass_row_1']},indent=2))\nPath('C:/Users/dfred/AppData/Local/Temp/s169db-explore-v3.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "terminal_error": null
+    },
+    {
+      "file": "s169db-explore-v3.py",
+      "status": "failed",
+      "source_sha256": "6fea1d801950f2964f33c4f966d71061ea00997006038b7b1c48bae7f54a2bba",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nfrom math import comb\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path.insert(0,str(root/'checks'))\nfrom flint import arb,ctx\nimport sympy as sp\nimport current_product_matched_source_projection as prev\nctx.prec=512\na=arb\nrr=json.loads((root/'evidence/current-global-boundary-moment-return.json').read_bytes())['runs'][-1]['result']\ndec=prev.decode; enc=prev.encoded\ne=dec(rr['exact_slow_exponent_offset']); pole=dec(rr['full_normal_shape_particular']) if 'full_normal_shape_particular' in rr else None\nprior=json.loads((root/'evidence/current-coupled-outer-return-test.json').read_bytes())['runs'][-1]['result']\nB0=dec(prior['full_normal_shape_particular']); pole=B0.abs_upper()*e.abs_upper()\ng0=dec(rr['g0']); bp=dec(rr['Bprime_at_slow_root']); k3=dec(rr['known_source_H3_upper'])\nsig=a('4.005'); aa=a('.05'); eo=a('1.1e-10')\nco=1/(2*(a('.005')-e)).sqrt(); cf=1/(2*(a('.5')+e)).sqrt()\nmk=g0.abs_upper()*(1+a(10).log())*(e*(1+a(10).log())).exp()\nd0=2*pole+(mk+cf*a('1.02e-46'))/bp\nde=co/bp; dm=cf*a('6.50e-39')/bp\nmd=(a(3)/5).sqrt()*aa\nme=1801*(a(3)/2).sqrt()/(2*sig-3).sqrt()*aa**(sig-3)\nma=a(3).sqrt()*aa**a('-1.5')*a('2.518')*eo+pole*md*((-aa.log())**2+2*(-aa.log())/5+a(2)/25).sqrt()\nm0=(ma+md*d0+me*k3)/(1-md*dm); m1=(me+md*de)/(1-md*dm)\netest=a('1e-11'); mm=m0+m1*etest; delta=d0+de*etest+dm*mm\nout={'mass_intercept':enc(m0),'mass_slope':enc(m1),'mass_at_target':enc(mm),'delta_at_target':enc(delta),'phase_A':enc(6*mm+delta+6*pole),'far_at_target':enc(a('1.02e-46')+a('6.50e-39')*mm)}\npp,h,zh,env=prev.scalar.prev.york.actual_parameters(); B2=pp['B2']; C=pp['C']; pi=a.pi()\nmapping={'beta':pp['beta'],'u':pp['u'],'eps':pp['eps'],'tau':pp['tau'],'ell':a(2000)**-10*B2/C,'mag':pi*pp['q']**2*a(2000)**8/(C*B2),'cr':8*pi*a('1e22')*C/B2}\ndef val(x):\n    if x.is_Symbol:return mapping[str(x)]\n    if x.is_Rational:return a(int(x.p))/int(x.q)\n    if x.is_Add:return sum((val(v) for v in x.args),a(0))\n    if x.is_Mul:\n        r=a(1)\n        for v in x.args:r*=val(v)\n        return r\n    if x.is_Pow:return val(x.base)**int(x.exp)\n    raise ValueError(x)\nu,s=sp.symbols('u s'); cut=1-35*u**4+84*u**5-70*u**6+20*u**7\ndef integralmoment(rate, pol):\n    cs=sp.Poly(pol,u); top=cs.degree(); J=[(rate.exp()-1)/rate]\n    for j in range(1,top+1):J.append((rate.exp()-j*J[-1])/rate)\n    return sum((val(cs.nth(j))*J[j] for j in range(top+1)),a(0))\ndef inner(k,l):\n    pk=cut; pl=cut; kk=val(k); ll=val(l); v=a(0)\n    for j in range(4):\n        if j:pk=sp.expand(sp.diff(pk,u)+k*pk); pl=sp.expand(sp.diff(pl,u)+l*pl)\n        v+=comb(3,j)*(kk**j*ll**j/(kk+ll)+integralmoment(kk+ll,sp.expand(pk*pl)))\n    return a('.01')**(kk+ll)*(-(kk+ll)).exp()*v\ndata=json.loads((root/'evidence/current-coupled-local-graph-bound.json').read_bytes())['runs'][-1]['result']\nmasscols=[]\nfor i in range(2):\n    terms=[]\n    for term in data['matrix_bounds'][i][1]['terms']:\n        coef=sp.sympify(term['symbol'], locals={k:sp.Symbol(k) for k in mapping}).subs(s,3)/4\n        terms.append((sp.Rational(term['z_power']+3)-sp.Rational(801,200),val(coef)))\n    normsq=sum((ci*cj*inner(ki,kj) for ki,ci in terms for kj,cj in terms),a(0))\n    norm=normsq.sqrt();masscols.append(norm)\n    out['local_bare_mass_row_'+str(i)]={'unit_H3':enc(norm),'energy_phase_allowance':enc(norm*mm),'threshold_mass_for_source':enc(a('7.49e-12')/norm),'coefficients':[{'power':str(k),'coef':enc(v)} for k,v in terms]}\nout['required_energy_reduction_phase_only']=enc(max(masscols)*mm/a('7.49e-12'))\n\nfrom math import factorial\nR=a('.1'); Rext=a('.2'); aa=a('.05'); ac=a('.04'); acore=a('.02')\nq=[a(1),a(0),pp['u']/pp['beta'],(-4*pp['beta']-2*pp['u']-pp['tau'])/pp['beta'],(3*pp['beta']+pp['u']+pp['eps'])/pp['beta'],-2*pp['eps']/pp['beta'],pp['eps']/pp['beta']]\ndef qbounds(radius):\n    dq=sum((abs(q[k])*radius**k for k in range(1,7)),a(0))\n    d1=sum((k*abs(q[k])*radius**k for k in range(1,7)),a(0))\n    return dq,d1,dq/(1-dq)+d1/(4*(1-dq)**2)\nout['mass_profile_complex_guards']={str(r):[enc(v) for v in qbounds(r)] for r in [aa,R,Rext]}\nassert qbounds(aa)[2]<a('.001') and qbounds(R)[2]<a('.008') and qbounds(Rext)[2]<1\nout['profile_A_coefficient_upper']=enc(max(a('1.02')*R**3*factorial(j)/(R-ac)**j*(ac if j==4 else 1) for j in range(5)))\nassert all(a('1.02')*a('1.5').exp()*factorial(j)*2**j <= 6*40**j for j in range(10))\n# Reclose the mass/slow/far system in the lifted phase decomposition.\ndm_new=dm*a('1.02'); den=1-a('.001')-md*dm_new\nmn0=(ma+md*d0+me*k3)/den;mn1=(me+md*de)/den\nmn=mn0+mn1*etest;dn=d0+de*etest+dm_new*mn\nout['lifted_boundary_block']={'mass_intercept':enc(mn0),'mass_slope':enc(mn1),'mass_at_target':enc(mn),'Delta_at_target':enc(dn),'phase_A_at_target':enc(100*mn+dn+6*pole),'Efar_at_target':enc(a('1.02e-46')+a('6.63e-39')*mn)}\n# Quantify the cost of treating the analytic lift correction as fast graph data.\nN=32\ninv=[a(1)]\nfor n in range(1,N+1):inv.append(-sum((q[j]*inv[n-j] for j in range(1,min(6,n)+1)),a(0)))\ninvsq=[sum((inv[j]*inv[n-j] for j in range(n+1)),a(0)) for n in range(N+1)]\nJ={n+4:invsq[n]/(n+4) for n in range(N+1)}\nbcoef={n+3:inv[n] for n in range(N-2)}\nfor j in range(1,7):\n    for n,v in J.items():\n        p=n+j-1\n        if p<=N:bcoef[p]=bcoef.get(p,a(0))+j*q[j]*v\nbcoef[3]-=1\nKL=2*pp['beta']*(pp['Fl']+23*pp['g']/(180*a.pi()))/3\ndef rawjet(n):\n    k=a(n)-sig\n    return acore**k*(1+k*k)**a('1.5')/(2*k).sqrt()\nlead=abs(KL*bcoef[6]*36)*rawjet(6)\nothers=sum((abs(KL*coef*(n-4)*n*(n-3))*rawjet(n) for n,coef in bcoef.items() if n>=5 and n!=6),a(0))\nn=N+1;ratio=acore/R*(a(n+1)/n)**6\ntail=abs(KL)*a('1.02')*R**3*acore**(-sig)*a(n)**6*(acore/R)**n*3/(1-ratio)\n# psi has the beta(11,11) smoothstep on log(.02)..log(.04).\nwexp=a(5)-sig\ncaps=[]\nfor j in range(10):\n    cap=a('1e9')*a('.5').exp()*ac**wexp/(2*wexp).sqrt()*sum((comb(j,l)*(21/a(2).log())**l*factorial(j-l)*2**(j-l) for l in range(j+1)),a(0))\n    caps.append(cap)\nh9=sum((comb(9,j)*caps[j]**2 for j in range(10)),a(0)).sqrt()\nquantum=6000*pp['g']*pp['beta']/(15*a.pi())*h9\nout['lift_original_graph_cost']={'classical_leading_raw_jets':enc(lead),'other_series_raw_jets_upper':enc(others),'analytic_tail_upper':enc(tail),'profile_H9_upper':enc(h9),'complete_normal_quantum_upper':enc(quantum),'graph_cost_lower_per_mass':enc(lead-others-tail-quantum),'allowed_mass_interval_cost_at_upper':enc((lead-others-tail-quantum)*mn)}\n# Uniform admitted-family extension: only the finite phase H9 guard changes.\nbg=json.loads((root/'evidence/current-complete-strong-response-attempt.json').read_bytes())['runs'][-1]['result']\nparts=bg['background_parts']; oldB=dec(bg['Bcap'])\ndeltaB=512/a(2).log()*dec(parts['Wxi'])*(2+512*dec(parts['Wa']))*dec(parts['slow_H8log_over_h2'])*(a('.02')/a('.00105681')-1)\nout['extended_phase_Bcap']=enc(oldB+deltaB)\nout['extended_phase_C3_cap_allowance']=enc((oldB+deltaB)*a('8.123e-26'))\n# Direct analytic-coefficient majorant for -Ipot''+Isq'' applied to the lift.\nR=a('.1'); cr=mapping['cr']; eps=abs(pp['eps']); dqmag=a('3.4e-22')*pp['beta'];fl=pp['Fl'];beta=pp['beta']\nsumshift=[a(2),a(8),a(36),a(188)]\nnu=[2*R**3*v for v in sumshift];bb=nu[:]\nQj=[pp['beta']*sum((abs(q[k])*k**j*R**k for k in range(7)),a(0)) for j in range(4)]\n# k^0 is 1 for k=0 in Python, retaining Q's constant.\nHj=[eps*(4*3**j*R**3+6*4**j*R**4) for j in range(4)]\ndef add(*vals):return [sum((v[j] for v in vals),a(0)) for j in range(min(map(len,vals)))]\ndef scale(c,v):return [c*x for x in v]\ndef mul(v,w):return [sum((comb(j,l)*v[l]*w[j-l] for l in range(j+1)),a(0)) for j in range(min(len(v),len(w)))]\ndef D(v):return v[1:]\ndef shift(p,v):return [R**p*sum((comb(j,l)*abs(p)**(j-l)*v[l] for l in range(j+1)),a(0)) for j in range(len(v))]\nA=scale(2*cr,mul(nu,D(Hj)))\nHi=add(scale(2,mul(bb,Hj)),mul(nu,D(Hj)))\nlapA=shift(-2,add(mul(Qj,add(D(D(A)),D(A))),mul(D(Qj),D(A))))\nQA=mul(Qj,A)\ntermgrad=mul(mul(Hj,Qj),D(nu))\nfn=add(scale(6,lapA),scale(12,shift(-2,add(D(QA),QA))),scale(24*beta,shift(-2,A)),scale(96*cr*beta,shift(-2,mul(Hj,add(nu,bb)))),scale(24*cr,shift(-2,add(D(termgrad),termgrad))))\nfb=add(scale(2,lapA),scale(4*pp['u'],A),scale(24*beta,shift(-2,A)),scale(cr,add(scale(4,mul(bb,mul(Hj,Hj))),scale(4,mul(Hj,Hi)))),scale(16*cr*pp['u'],mul(Hj,bb)),scale(96*cr*beta,shift(-2,mul(Hj,add(nu,bb)))))\npoly=lambda c1,c2:[abs(c1)*R+abs(c2)*2**j*R**2 for j in range(2)]\nfn=add(fn,scale(fl*eps,add(mul(poly(4,12),nu),mul(poly(8,12),bb))))\nfb=add(fb,scale(4*fl*dqmag,bb),scale(fl*eps,add(mul(poly(8,12),nu),mul(poly(16,12),bb))))\nFn=shift(4,fn);Fb=shift(4,fb)\nT=Fb[1]+4*Fb[0]+(Fn[1]+6*Fn[0])/3\nW=max(Fn[0],T);kk=a(7)-sig\nMpoly=lambda k:k**3+12*k*k+51*k+100\nlocalmass=W*R**-7*a('.01')**kk*Mpoly(kk)/(2*kk).sqrt()\nout['lifted_complete_gravitational_mass_column']={'analytic_coefficient_norm':enc(W),'outer_H3_upper_per_mass':enc(localmass),'source_at_mass_upper':enc(localmass*mn),'mass_feedback_slope':enc(localmass*mn1)}\nprint(json.dumps({k:v for k,v in out.items() if k not in ['local_bare_mass_row_0','local_bare_mass_row_1']},indent=2))\nPath('C:/Users/dfred/AppData/Local/Temp/s169db-explore-v3.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "terminal_error": "IndexError: list index out of range at T=Fb[1]+...; H0 derivative array stopped at order three"
+    },
+    {
+      "file": "s169db-explore-v4.py",
+      "status": "passed",
+      "source_sha256": "d5de6bc9400f16d8eeea9740724a90e17d678a05ca836f6299e6fa794e7036a9",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nfrom math import comb\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path.insert(0,str(root/'checks'))\nfrom flint import arb,ctx\nimport sympy as sp\nimport current_product_matched_source_projection as prev\nctx.prec=512\na=arb\nrr=json.loads((root/'evidence/current-global-boundary-moment-return.json').read_bytes())['runs'][-1]['result']\ndec=prev.decode; enc=prev.encoded\ne=dec(rr['exact_slow_exponent_offset']); pole=dec(rr['full_normal_shape_particular']) if 'full_normal_shape_particular' in rr else None\nprior=json.loads((root/'evidence/current-coupled-outer-return-test.json').read_bytes())['runs'][-1]['result']\nB0=dec(prior['full_normal_shape_particular']); pole=B0.abs_upper()*e.abs_upper()\ng0=dec(rr['g0']); bp=dec(rr['Bprime_at_slow_root']); k3=dec(rr['known_source_H3_upper'])\nsig=a('4.005'); aa=a('.05'); eo=a('1.1e-10')\nco=1/(2*(a('.005')-e)).sqrt(); cf=1/(2*(a('.5')+e)).sqrt()\nmk=g0.abs_upper()*(1+a(10).log())*(e*(1+a(10).log())).exp()\nd0=2*pole+(mk+cf*a('1.02e-46'))/bp\nde=co/bp; dm=cf*a('6.50e-39')/bp\nmd=(a(3)/5).sqrt()*aa\nme=1801*(a(3)/2).sqrt()/(2*sig-3).sqrt()*aa**(sig-3)\nma=a(3).sqrt()*aa**a('-1.5')*a('2.518')*eo+pole*md*((-aa.log())**2+2*(-aa.log())/5+a(2)/25).sqrt()\nm0=(ma+md*d0+me*k3)/(1-md*dm); m1=(me+md*de)/(1-md*dm)\netest=a('1e-11'); mm=m0+m1*etest; delta=d0+de*etest+dm*mm\nout={'mass_intercept':enc(m0),'mass_slope':enc(m1),'mass_at_target':enc(mm),'delta_at_target':enc(delta),'phase_A':enc(6*mm+delta+6*pole),'far_at_target':enc(a('1.02e-46')+a('6.50e-39')*mm)}\npp,h,zh,env=prev.scalar.prev.york.actual_parameters(); B2=pp['B2']; C=pp['C']; pi=a.pi()\nmapping={'beta':pp['beta'],'u':pp['u'],'eps':pp['eps'],'tau':pp['tau'],'ell':a(2000)**-10*B2/C,'mag':pi*pp['q']**2*a(2000)**8/(C*B2),'cr':8*pi*a('1e22')*C/B2}\ndef val(x):\n    if x.is_Symbol:return mapping[str(x)]\n    if x.is_Rational:return a(int(x.p))/int(x.q)\n    if x.is_Add:return sum((val(v) for v in x.args),a(0))\n    if x.is_Mul:\n        r=a(1)\n        for v in x.args:r*=val(v)\n        return r\n    if x.is_Pow:return val(x.base)**int(x.exp)\n    raise ValueError(x)\nu,s=sp.symbols('u s'); cut=1-35*u**4+84*u**5-70*u**6+20*u**7\ndef integralmoment(rate, pol):\n    cs=sp.Poly(pol,u); top=cs.degree(); J=[(rate.exp()-1)/rate]\n    for j in range(1,top+1):J.append((rate.exp()-j*J[-1])/rate)\n    return sum((val(cs.nth(j))*J[j] for j in range(top+1)),a(0))\ndef inner(k,l):\n    pk=cut; pl=cut; kk=val(k); ll=val(l); v=a(0)\n    for j in range(4):\n        if j:pk=sp.expand(sp.diff(pk,u)+k*pk); pl=sp.expand(sp.diff(pl,u)+l*pl)\n        v+=comb(3,j)*(kk**j*ll**j/(kk+ll)+integralmoment(kk+ll,sp.expand(pk*pl)))\n    return a('.01')**(kk+ll)*(-(kk+ll)).exp()*v\ndata=json.loads((root/'evidence/current-coupled-local-graph-bound.json').read_bytes())['runs'][-1]['result']\nmasscols=[]\nfor i in range(2):\n    terms=[]\n    for term in data['matrix_bounds'][i][1]['terms']:\n        coef=sp.sympify(term['symbol'], locals={k:sp.Symbol(k) for k in mapping}).subs(s,3)/4\n        terms.append((sp.Rational(term['z_power']+3)-sp.Rational(801,200),val(coef)))\n    normsq=sum((ci*cj*inner(ki,kj) for ki,ci in terms for kj,cj in terms),a(0))\n    norm=normsq.sqrt();masscols.append(norm)\n    out['local_bare_mass_row_'+str(i)]={'unit_H3':enc(norm),'energy_phase_allowance':enc(norm*mm),'threshold_mass_for_source':enc(a('7.49e-12')/norm),'coefficients':[{'power':str(k),'coef':enc(v)} for k,v in terms]}\nout['required_energy_reduction_phase_only']=enc(max(masscols)*mm/a('7.49e-12'))\n\nfrom math import factorial\nR=a('.1'); Rext=a('.2'); aa=a('.05'); ac=a('.04'); acore=a('.02')\nq=[a(1),a(0),pp['u']/pp['beta'],(-4*pp['beta']-2*pp['u']-pp['tau'])/pp['beta'],(3*pp['beta']+pp['u']+pp['eps'])/pp['beta'],-2*pp['eps']/pp['beta'],pp['eps']/pp['beta']]\ndef qbounds(radius):\n    dq=sum((abs(q[k])*radius**k for k in range(1,7)),a(0))\n    d1=sum((k*abs(q[k])*radius**k for k in range(1,7)),a(0))\n    return dq,d1,dq/(1-dq)+d1/(4*(1-dq)**2)\nout['mass_profile_complex_guards']={str(r):[enc(v) for v in qbounds(r)] for r in [aa,R,Rext]}\nassert qbounds(aa)[2]<a('.001') and qbounds(R)[2]<a('.008') and qbounds(Rext)[2]<1\nout['profile_A_coefficient_upper']=enc(max(a('1.02')*R**3*factorial(j)/(R-ac)**j*(ac if j==4 else 1) for j in range(5)))\nassert all(a('1.02')*a('1.5').exp()*factorial(j)*2**j <= 6*40**j for j in range(10))\n# Reclose the mass/slow/far system in the lifted phase decomposition.\ndm_new=dm*a('1.02'); den=1-a('.001')-md*dm_new\nmn0=(ma+md*d0+me*k3)/den;mn1=(me+md*de)/den\nmn=mn0+mn1*etest;dn=d0+de*etest+dm_new*mn\nout['lifted_boundary_block']={'mass_intercept':enc(mn0),'mass_slope':enc(mn1),'mass_at_target':enc(mn),'Delta_at_target':enc(dn),'phase_A_at_target':enc(100*mn+dn+6*pole),'Efar_at_target':enc(a('1.02e-46')+a('6.63e-39')*mn)}\n# Quantify the cost of treating the analytic lift correction as fast graph data.\nN=32\ninv=[a(1)]\nfor n in range(1,N+1):inv.append(-sum((q[j]*inv[n-j] for j in range(1,min(6,n)+1)),a(0)))\ninvsq=[sum((inv[j]*inv[n-j] for j in range(n+1)),a(0)) for n in range(N+1)]\nJ={n+4:invsq[n]/(n+4) for n in range(N+1)}\nbcoef={n+3:inv[n] for n in range(N-2)}\nfor j in range(1,7):\n    for n,v in J.items():\n        p=n+j-1\n        if p<=N:bcoef[p]=bcoef.get(p,a(0))+j*q[j]*v\nbcoef[3]-=1\nKL=2*pp['beta']*(pp['Fl']+23*pp['g']/(180*a.pi()))/3\ndef rawjet(n):\n    k=a(n)-sig\n    return acore**k*(1+k*k)**a('1.5')/(2*k).sqrt()\nlead=abs(KL*bcoef[6]*36)*rawjet(6)\nothers=sum((abs(KL*coef*(n-4)*n*(n-3))*rawjet(n) for n,coef in bcoef.items() if n>=5 and n!=6),a(0))\nn=N+1;ratio=acore/R*(a(n+1)/n)**6\ntail=abs(KL)*a('1.02')*R**3*acore**(-sig)*a(n)**6*(acore/R)**n*3/(1-ratio)\n# psi has the beta(11,11) smoothstep on log(.02)..log(.04).\nwexp=a(5)-sig\ncaps=[]\nfor j in range(10):\n    cap=a('1e9')*a('.5').exp()*ac**wexp/(2*wexp).sqrt()*sum((comb(j,l)*(21/a(2).log())**l*factorial(j-l)*2**(j-l) for l in range(j+1)),a(0))\n    caps.append(cap)\nh9=sum((comb(9,j)*caps[j]**2 for j in range(10)),a(0)).sqrt()\nquantum=6000*pp['g']*pp['beta']/(15*a.pi())*h9\nout['lift_original_graph_cost']={'classical_leading_raw_jets':enc(lead),'other_series_raw_jets_upper':enc(others),'analytic_tail_upper':enc(tail),'profile_H9_upper':enc(h9),'complete_normal_quantum_upper':enc(quantum),'graph_cost_lower_per_mass':enc(lead-others-tail-quantum),'allowed_mass_interval_cost_at_upper':enc((lead-others-tail-quantum)*mn)}\n# Uniform admitted-family extension: only the finite phase H9 guard changes.\nbg=json.loads((root/'evidence/current-complete-strong-response-attempt.json').read_bytes())['runs'][-1]['result']\nparts=bg['background_parts']; oldB=dec(bg['Bcap'])\ndeltaB=512/a(2).log()*dec(parts['Wxi'])*(2+512*dec(parts['Wa']))*dec(parts['slow_H8log_over_h2'])*(a('.02')/a('.00105681')-1)\nout['extended_phase_Bcap']=enc(oldB+deltaB)\nout['extended_phase_C3_cap_allowance']=enc((oldB+deltaB)*a('8.123e-26'))\n# Direct analytic-coefficient majorant for -Ipot''+Isq'' applied to the lift.\nR=a('.1'); cr=mapping['cr']; eps=abs(pp['eps']); dqmag=a('3.4e-22')*pp['beta'];fl=pp['Fl'];beta=pp['beta']\nsumshift=[a(2),a(8),a(36),a(188)]\nnu=[2*R**3*v for v in sumshift];bb=nu[:]\nQj=[pp['beta']*sum((abs(q[k])*k**j*R**k for k in range(7)),a(0)) for j in range(4)]\n# k^0 is 1 for k=0 in Python, retaining Q's constant.\nHj=[eps*(4*3**j*R**3+6*4**j*R**4) for j in range(5)]\ndef add(*vals):return [sum((v[j] for v in vals),a(0)) for j in range(min(map(len,vals)))]\ndef scale(c,v):return [c*x for x in v]\ndef mul(v,w):return [sum((comb(j,l)*v[l]*w[j-l] for l in range(j+1)),a(0)) for j in range(min(len(v),len(w)))]\ndef D(v):return v[1:]\ndef shift(p,v):return [R**p*sum((comb(j,l)*abs(p)**(j-l)*v[l] for l in range(j+1)),a(0)) for j in range(len(v))]\nA=scale(2*cr,mul(nu,D(Hj)))\nHi=add(scale(2,mul(bb,Hj)),mul(nu,D(Hj)))\nlapA=shift(-2,add(mul(Qj,add(D(D(A)),D(A))),mul(D(Qj),D(A))))\nQA=mul(Qj,A)\ntermgrad=mul(mul(Hj,Qj),D(nu))\nfn=add(scale(6,lapA),scale(12,shift(-2,add(D(QA),QA))),scale(24*beta,shift(-2,A)),scale(96*cr*beta,shift(-2,mul(Hj,add(nu,bb)))),scale(24*cr,shift(-2,add(D(termgrad),termgrad))))\nfb=add(scale(2,lapA),scale(4*pp['u'],A),scale(24*beta,shift(-2,A)),scale(cr,add(scale(4,mul(bb,mul(Hj,Hj))),scale(4,mul(Hj,Hi)))),scale(16*cr*pp['u'],mul(Hj,bb)),scale(96*cr*beta,shift(-2,mul(Hj,add(nu,bb)))))\npoly=lambda c1,c2:[abs(c1)*R+abs(c2)*2**j*R**2 for j in range(2)]\nfn=add(fn,scale(fl*eps,add(mul(poly(4,12),nu),mul(poly(8,12),bb))))\nfb=add(fb,scale(4*fl*dqmag,bb),scale(fl*eps,add(mul(poly(8,12),nu),mul(poly(16,12),bb))))\nFn=shift(4,fn);Fb=shift(4,fb)\nT=Fb[1]+4*Fb[0]+(Fn[1]+6*Fn[0])/3\nW=max(Fn[0],T);kk=a(7)-sig\nMpoly=lambda k:k**3+12*k*k+51*k+100\nlocalmass=W*R**-7*a('.01')**kk*Mpoly(kk)/(2*kk).sqrt()\nout['lifted_complete_gravitational_mass_column']={'analytic_coefficient_norm':enc(W),'outer_H3_upper_per_mass':enc(localmass),'source_at_mass_upper':enc(localmass*mn),'mass_feedback_slope':enc(localmass*mn1)}\nprint(json.dumps({k:v for k,v in out.items() if k not in ['local_bare_mass_row_0','local_bare_mass_row_1']},indent=2))\nPath('C:/Users/dfred/AppData/Local/Temp/s169db-explore-v4.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "terminal_error": null,
+      "output_sha256": "4897b7cbf3b6c5f7d446c8e716f928691eafc07c70a34a96edcbacd1189da762",
+      "output": {
+        "mass_intercept": {
+          "ball": "[4.29095570893012132325771826127e-8 +/- 1.46e-38]",
+          "decimal_enclosure": {
+            "mid": "4290955708930121323257718261271450439556",
+            "rad": "2",
+            "exponent": "-47"
+          }
+        },
+        "mass_slope": {
+          "ball": "[49.412042892799097503140 +/- 1.71e-22]",
+          "decimal_enclosure": {
+            "mid": "4941204289279909750314007648453389557519",
+            "rad": "9411925028896769",
+            "exponent": "-38"
+          }
+        },
+        "mass_at_target": {
+          "ball": "[4.340367751822920420760858e-8 +/- 4.32e-33]",
+          "decimal_enclosure": {
+            "mid": "4340367751822920420760858337755984335131",
+            "rad": "94119251279873",
+            "exponent": "-47"
+          }
+        },
+        "delta_at_target": {
+          "ball": "[2.250000026552994817953e-10 +/- 5.48e-32]",
+          "decimal_enclosure": {
+            "mid": "2250000026552994817952695495947475339925",
+            "rad": "243011149862273025",
+            "exponent": "-49"
+          }
+        },
+        "phase_A": {
+          "ball": "[2.606470651120305247280404e-7 +/- 7.69e-32]",
+          "decimal_enclosure": {
+            "mid": "2606470651120305247280404469467949930017",
+            "rad": "299482702413825",
+            "exponent": "-46"
+          }
+        },
+        "far_at_target": {
+          "ball": "[3.8412390386848982734945579e-46 +/- 8.08e-72]",
+          "decimal_enclosure": {
+            "mid": "3841239038684898273494557919541389817835",
+            "rad": "61177514033153",
+            "exponent": "-85"
+          }
+        },
+        "local_bare_mass_row_0": {
+          "unit_H3": {
+            "ball": "[0.0029788481299601001944531615256 +/- 4.36e-32]",
+            "decimal_enclosure": {
+              "mid": "2978848129960100194453161525575904061588",
+              "rad": "19452109313",
+              "exponent": "-42"
+            }
+          },
+          "energy_phase_allowance": {
+            "ball": "[1.2929296360856830757222793e-10 +/- 3.18e-36]",
+            "decimal_enclosure": {
+              "mid": "1292929636085683075722279303745405727783",
+              "rad": "28045138558977",
+              "exponent": "-49"
+            }
+          },
+          "threshold_mass_for_source": {
+            "ball": "[2.5143947167593011397552160937e-9 +/- 2.96e-38]",
+            "decimal_enclosure": {
+              "mid": "2514394716759301139755216093686915793645",
+              "rad": "16419443185",
+              "exponent": "-48"
+            }
+          },
+          "coefficients": [
+            {
+              "power": "2199/200",
+              "coef": {
+                "ball": "[-8e-63 +/- 8.25e-64]",
+                "decimal_enclosure": {
+                  "mid": "-8163034847957011554357509794754457498514",
+                  "rad": "661950382562945175812431824437565718529",
+                  "exponent": "-102"
+                }
+              }
+            },
+            {
+              "power": "1999/200",
+              "coef": {
+                "ball": "[2e-62 +/- 1.80e-63]",
+                "decimal_enclosure": {
+                  "mid": "2016194023789382251967468275695140312711",
+                  "rad": "163495615191965355298628343427628007425",
+                  "exponent": "-101"
+                }
+              }
+            },
+            {
+              "power": "1799/200",
+              "coef": {
+                "ball": "[2e-34 +/- 1.63e-35]",
+                "decimal_enclosure": {
+                  "mid": "2080284112799331598401072852536193533861",
+                  "rad": "82702446107050751962305104473608945665",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1599/200",
+              "coef": {
+                "ball": "[-3e-34 +/- 6.24e-35]",
+                "decimal_enclosure": {
+                  "mid": "-3484475888983349328939563470987445892691",
+                  "rad": "138526597688833352119594208035849895937",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1399/200",
+              "coef": {
+                "ball": "[1e-34 +/- 5.30e-36]",
+                "decimal_enclosure": {
+                  "mid": "986208764669483896587373566367955080264",
+                  "rad": "39207085710927417808967914333860265985",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1199/200",
+              "coef": {
+                "ball": "[-7.42201264471028885921e-7 +/- 3.68e-28]",
+                "decimal_enclosure": {
+                  "mid": "-7422012644710288859207123136885793914238",
+                  "rad": "801601883545272321",
+                  "exponent": "-46"
+                }
+              }
+            },
+            {
+              "power": "999/200",
+              "coef": {
+                "ball": "[8.48230016566380263672e-7 +/- 9.98e-29]",
+                "decimal_enclosure": {
+                  "mid": "8482300165663802636720003151379046683672",
+                  "rad": "994116458931814401",
+                  "exponent": "-46"
+                }
+              }
+            },
+            {
+              "power": "799/200",
+              "coef": {
+                "ball": "[-3.357790740859e-17 +/- 7.74e-30]",
+                "decimal_enclosure": {
+                  "mid": "-3357790740859123197111543600784816980718",
+                  "rad": "650000250538533320940060673",
+                  "exponent": "-56"
+                }
+              }
+            },
+            {
+              "power": "599/200",
+              "coef": {
+                "ball": "[2.92968746554507613284e-28 +/- 5.29e-49]",
+                "decimal_enclosure": {
+                  "mid": "2929687465545076132835352708431207494418",
+                  "rad": "632831827622494209",
+                  "exponent": "-67"
+                }
+              }
+            },
+            {
+              "power": "399/200",
+              "coef": {
+                "ball": "[1.9999998940526816885314542694 +/- 4.51e-29]",
+                "decimal_enclosure": {
+                  "mid": "1999999894052681688531454269367750016145",
+                  "rad": "12760250737",
+                  "exponent": "-39"
+                }
+              }
+            },
+            {
+              "power": "199/200",
+              "coef": {
+                "ball": "[-4.071687455285681677332e-11 +/- 5.80e-33]",
+                "decimal_enclosure": {
+                  "mid": "-4071687455285681677331640811028449402049",
+                  "rad": "219877866521755649",
+                  "exponent": "-50"
+                }
+              }
+            }
+          ]
+        },
+        "local_bare_mass_row_1": {
+          "unit_H3": {
+            "ball": "[0.00595769650832850426752115 +/- 7.83e-27]",
+            "decimal_enclosure": {
+              "mid": "5957696508328504267521151449493875032166",
+              "rad": "6374158531297281",
+              "exponent": "-42"
+            }
+          },
+          "energy_phase_allowance": {
+            "ball": "[2.58585937998970529542139e-10 +/- 5.65e-34]",
+            "decimal_enclosure": {
+              "mid": "2585859379989705295421387175375187641178",
+              "rad": "2822692621254657",
+              "exponent": "-49"
+            }
+          },
+          "threshold_mass_for_source": {
+            "ball": "[1.25719730596035344737569e-9 +/- 4.55e-33]",
+            "decimal_enclosure": {
+              "mid": "1257197305960353447375693203304723632467",
+              "rad": "1345099948621825",
+              "exponent": "-48"
+            }
+          },
+          "coefficients": [
+            {
+              "power": "2199/200",
+              "coef": {
+                "ball": "[-5e-64 +/- 8.33e-65]",
+                "decimal_enclosure": {
+                  "mid": "-4535019359976117530198616552641365276952",
+                  "rad": "367750211830719208657890234967145840641",
+                  "exponent": "-103"
+                }
+              }
+            },
+            {
+              "power": "1999/200",
+              "coef": {
+                "ball": "[3e-63 +/- 4.89e-64]",
+                "decimal_enclosure": {
+                  "mid": "2733608891985604177925277199786600736385",
+                  "rad": "221671655728721842488553850278120521729",
+                  "exponent": "-102"
+                }
+              }
+            },
+            {
+              "power": "1799/200",
+              "coef": {
+                "ball": "[6e-35 +/- 3.09e-36]",
+                "decimal_enclosure": {
+                  "mid": "6067495328998050495336462486719789097596",
+                  "rad": "241215468076325234937604346693172592641",
+                  "exponent": "-74"
+                }
+              }
+            },
+            {
+              "power": "1599/200",
+              "coef": {
+                "ball": "[-1.3e-34 +/- 5.79e-36]",
+                "decimal_enclosure": {
+                  "mid": "-1305956137499814918991614857397361110758",
+                  "rad": "51918757846195130678554879211872452609",
+                  "exponent": "-73"
+                }
+              }
+            },
+            {
+              "power": "1399/200",
+              "coef": {
+                "ball": "[6e-35 +/- 5.50e-36]",
+                "decimal_enclosure": {
+                  "mid": "5675836900735939617772559966208479519155",
+                  "rad": "225644945860423648619468626768240312321",
+                  "exponent": "-74"
+                }
+              }
+            },
+            {
+              "power": "1199/200",
+              "coef": {
+                "ball": "[-1.5e-45 +/- 6.92e-47]",
+                "decimal_enclosure": {
+                  "mid": "-1490139560383707958435971582507326145903",
+                  "rad": "59241036430759655384336512539974172673",
+                  "exponent": "-84"
+                }
+              }
+            },
+            {
+              "power": "999/200",
+              "coef": {
+                "ball": "[9.42477796172874849844e-8 +/- 4.53e-29]",
+                "decimal_enclosure": {
+                  "mid": "942477796172874849844234070725800195661",
+                  "rad": "218790747216805889",
+                  "exponent": "-46"
+                }
+              }
+            },
+            {
+              "power": "799/200",
+              "coef": {
+                "ball": "[-4.4770543206e-18 +/- 4.40e-29]",
+                "decimal_enclosure": {
+                  "mid": "-4477054320622297604526554157666931172142",
+                  "rad": "21666672283221301770560995329",
+                  "exponent": "-57"
+                }
+              }
+            },
+            {
+              "power": "599/200",
+              "coef": {
+                "ball": "[+/- 6.49e-22]",
+                "decimal_enclosure": {
+                  "mid": "-1472860267129149191203549102851639",
+                  "rad": "6480198136536883787412768520407475027969",
+                  "exponent": "-61"
+                }
+              }
+            },
+            {
+              "power": "399/200",
+              "coef": {
+                "ball": "[-3.9999999530389776972426350394 +/- 4.27e-29]",
+                "decimal_enclosure": {
+                  "mid": "-3999999953038977697242635039365067801336",
+                  "rad": "7707126569",
+                  "exponent": "-39"
+                }
+              }
+            },
+            {
+              "power": "199/200",
+              "coef": {
+                "ball": "[6.786145878730567343305e-11 +/- 4.27e-33]",
+                "decimal_enclosure": {
+                  "mid": "678614587873056734330493964080759971820",
+                  "rad": "36646309230280705",
+                  "exponent": "-49"
+                }
+              }
+            }
+          ]
+        },
+        "required_energy_reduction_phase_only": {
+          "ball": "[34.5241572762310453327288 +/- 3.85e-23]",
+          "decimal_enclosure": {
+            "mid": "3452415727623104533272880073932150265908",
+            "rad": "3768672518668289",
+            "exponent": "-38"
+          }
+        },
+        "mass_profile_complex_guards": {
+          "[0.0500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.88e-156]": [
+            {
+              "ball": "[0.00051875000033667766638176481609 +/- 2.08e-33]",
+              "decimal_enclosure": {
+                "mid": "5187500003366776663817648160913514424856",
+                "rad": "7205813401",
+                "exponent": "-43"
+              }
+            },
+            {
+              "ball": "[0.00157500000070541987241893580514 +/- 5.00e-33]",
+              "decimal_enclosure": {
+                "mid": "1575000000705419872418935805142800201071",
+                "rad": "2199143969",
+                "exponent": "-42"
+              }
+            },
+            {
+              "ball": "[0.00091317807546644739616809274562 +/- 6.12e-33]",
+              "decimal_enclosure": {
+                "mid": "9131780754664473961680927456151526550766",
+                "rad": "12722741249",
+                "exponent": "-43"
+              }
+            }
+          ],
+          "[0.100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.75e-156]": [
+            {
+              "ball": "[0.00430000000147802258983015121077 +/- 8.27e-33]",
+              "decimal_enclosure": {
+                "mid": "4300000001478022589830151210772117977844",
+                "rad": "6151264569",
+                "exponent": "-42"
+              }
+            },
+            {
+              "ball": "[0.0132000000032247765596294208235 +/- 2.85e-32]",
+              "decimal_enclosure": {
+                "mid": "1320000000322477655962942082349087033349",
+                "rad": "1933686095",
+                "exponent": "-41"
+              }
+            },
+            {
+              "ball": "[0.0076471339588330794660325922729 +/- 5.93e-32]",
+              "decimal_enclosure": {
+                "mid": "7647133958833079466032592272851907988384",
+                "rad": "11121864193",
+                "exponent": "-42"
+              }
+            }
+          ],
+          "[0.200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 7.49e-156]": [
+            {
+              "ball": "[0.036800000007035876130100554524 +/- 1.03e-31]",
+              "decimal_enclosure": {
+                "mid": "3680000000703587613010055452395510981855",
+                "rad": "5728731129",
+                "exponent": "-41"
+              }
+            },
+            {
+              "ball": "[0.115200000016417044303567960556 +/- 3.66e-31]",
+              "decimal_enclosure": {
+                "mid": "1152000000164170443035679605558241010434",
+                "rad": "1898401807",
+                "exponent": "-40"
+              }
+            },
+            {
+              "ball": "[0.069248683801823301043269039090 +/- 3.22e-31]",
+              "decimal_enclosure": {
+                "mid": "692486838018233010432690390902047115048",
+                "rad": "1165985801",
+                "exponent": "-40"
+              }
+            }
+          ]
+        },
+        "profile_A_coefficient_upper": {
+          "ball": "[75.5555555555555555555555555556 +/- 4.45e-29]",
+          "decimal_enclosure": {
+            "mid": "755555555555555555555555555555555555555",
+            "rad": "2",
+            "exponent": "-37"
+          }
+        },
+        "lifted_boundary_block": {
+          "mass_intercept": {
+            "ball": "[4.29525095989001133459231057184e-8 +/- 3.30e-38]",
+            "decimal_enclosure": {
+              "mid": "4295250959890011334592310571843293733289",
+              "rad": "2",
+              "exponent": "-47"
+            }
+          },
+          "mass_slope": {
+            "ball": "[49.461504397196293796937 +/- 1.08e-22]",
+            "decimal_enclosure": {
+              "mid": "4946150439719629379693701349803193559661",
+              "rad": "9421346375204865",
+              "exponent": "-38"
+            }
+          },
+          "mass_at_target": {
+            "ball": "[4.344712464287207628389248e-8 +/- 5.09e-33]",
+            "decimal_enclosure": {
+              "mid": "4344712464287207628389247585341325668886",
+              "rad": "94213464522753",
+              "exponent": "-47"
+            }
+          },
+          "Delta_at_target": {
+            "ball": "[2.250000026552994817953e-10 +/- 5.48e-32]",
+            "decimal_enclosure": {
+              "mid": "2250000026552994817952695495947475340059",
+              "rad": "243011149862273025",
+              "exponent": "-49"
+            }
+          },
+          "phase_A_at_target": {
+            "ball": "[4.344937464289862927871637e-6 +/- 5.87e-31]",
+            "decimal_enclosure": {
+              "mid": "4344937464289862927871636532022761601780",
+              "rad": "118514580586497",
+              "exponent": "-45"
+            }
+          },
+          "Efar_at_target": {
+            "ball": "[3.900544363822418657622071e-46 +/- 2.12e-71]",
+            "decimal_enclosure": {
+              "mid": "3900544363822418657622071149081298918471",
+              "rad": "62463527616513",
+              "exponent": "-85"
+            }
+          }
+        },
+        "lift_original_graph_cost": {
+          "classical_leading_raw_jets": {
+            "ball": "[0.009077696615621486419562464571 +/- 3.25e-31]",
+            "decimal_enclosure": {
+              "mid": "907769661562148641956246457123549603578",
+              "rad": "8886810833",
+              "exponent": "-41"
+            }
+          },
+          "other_series_raw_jets_upper": {
+            "ball": "[9.6147179624847680551925921e-6 +/- 6.02e-32]",
+            "decimal_enclosure": {
+              "mid": "961471796248476805519259205722263806537",
+              "rad": "1741762025473",
+              "exponent": "-44"
+            }
+          },
+          "analytic_tail_upper": {
+            "ball": "[3.15991371263999512510618854579e-11 +/- 5.31e-41]",
+            "decimal_enclosure": {
+              "mid": "3159913712639995125106188545786756718441",
+              "rad": "2057449859",
+              "exponent": "-50"
+            }
+          },
+          "profile_H9_upper": {
+            "ball": "[2190277127099372703586.71841146 +/- 3.53e-9]",
+            "decimal_enclosure": {
+              "mid": "2190277127099372703586718411456474267527",
+              "rad": "2",
+              "exponent": "-18"
+            }
+          },
+          "complete_normal_quantum_upper": {
+            "ball": "[4.53897697281098765985977047792e-11 +/- 3.90e-41]",
+            "decimal_enclosure": {
+              "mid": "4538976972810987659859770477920939239994",
+              "rad": "2955370965",
+              "exponent": "-50"
+            }
+          },
+          "graph_cost_lower_per_mass": {
+            "ball": "[0.009068081820670094796997444130 +/- 5.88e-31]",
+            "decimal_enclosure": {
+              "mid": "906808182067009479699744412951868316064",
+              "rad": "10628572945",
+              "exponent": "-41"
+            }
+          },
+          "allowed_mass_interval_cost_at_upper": {
+            "ball": "[3.939820811344159597033065e-10 +/- 4.40e-35]",
+            "decimal_enclosure": {
+              "mid": "3939820811344159597033065353521763707381",
+              "rad": "85479719043073",
+              "exponent": "-49"
+            }
+          }
+        },
+        "extended_phase_Bcap": {
+          "ball": "[2.061817088890793687805e+30 +/- 6.03e+8]",
+          "decimal_enclosure": {
+            "mid": "2061817088890793687805379941497873468128",
+            "rad": "222687251606274049",
+            "exponent": "-9"
+          }
+        },
+        "extended_phase_C3_cap_allowance": {
+          "ball": "[167481.4021305991712604 +/- 4.92e-17]",
+          "decimal_enclosure": {
+            "mid": "1674814021305991712604310126478722618160",
+            "rad": "180888855367385089",
+            "exponent": "-34"
+          }
+        },
+        "lifted_complete_gravitational_mass_column": {
+          "analytic_coefficient_norm": {
+            "ball": "[1.0880003e-27 +/- 5.01e-35]",
+            "decimal_enclosure": {
+              "mid": "1088000260793782669318645705344702359957",
+              "rad": "10878404045402047581429023375361",
+              "exponent": "-66"
+            }
+          },
+          "outer_H3_upper_per_mass": {
+            "ball": "[1.7616012e-24 +/- 4.15e-32]",
+            "decimal_enclosure": {
+              "mid": "1761601223805816610294378183920593322631",
+              "rad": "17613693238689134293091356770305",
+              "exponent": "-63"
+            }
+          },
+          "source_at_mass_upper": {
+            "ball": "[7.6536508e-32 +/- 8.24e-40]",
+            "decimal_enclosure": {
+              "mid": "7653650794172730252101080348755873275587",
+              "rad": "76526433029693356346928149823489",
+              "exponent": "-71"
+            }
+          },
+          "mass_feedback_slope": {
+            "ball": "[8.713145e-23 +/- 4.20e-30]",
+            "decimal_enclosure": {
+              "mid": "871314466773777707371607554425394643782",
+              "rad": "8711997652417806178946333540353",
+              "exponent": "-61"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "corrections": "Explicit symbol locals; retain H0 Euler jets through four, required by the differentiated shape row. No allowance relaxed.",
+  "failed_terminal_logs": "Exact raw stderr files were not retained; source and faithful terminal error summaries retained."
+}
