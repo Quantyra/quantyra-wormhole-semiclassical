@@ -1,3 +1,83 @@
+# Active checkpoint: near return bounded; complete strong estimate unresolved
+
+2026-10-24, E003/S169.
+
+See [the complete strong-response attempt](current-joint-return-feasibility-attempt.md).
+
+OUTCOME: UNRESOLVED COMPLETE STRONG ESTIMATE. Quantitative attainability
+of eta_seed+1e-11 C3<.1599164 remains undecided. The first unsupported
+strong step is the complete logarithmic coordinate return, with its
+finite local terms, complementary remote kernels and metric variation.
+The weak paired mass/log theorem does not supply this quantitative norm;
+admission of the original global X ball is also unknown.
+
+EXECUTED: a uniform near cylinder-minus-cap allowance <.01755, including
+the full angular/thermal sums, both interfaces, reflected propagation,
+seagull, diagonal jumps and weighted fourth mass vertex. The first metric
+variation on the existing fast extension has allowance <99710000.
+The original finite-geometry-minus-cylinder return stays allocated.
+The actual paired domain and common regulator are preserved.
+
+The point-evaluation annular estimator has an infinite positive sum.
+Keeping local L2 norms and their threefold input overlap makes the
+near-return allowance finite. This is a different estimator, not a
+normalization change or a lower bound on the actual response. Different
+cap responses are estimated in a direct sum of local jets; they are not
+glued as a discontinuous global H3 function. The complete response must
+still be assembled from the common identities before its global norm
+can be certified.
+
+The remaining sufficient condition is now
+eta_dd+1e-11 C_dd+8.123e-37 B_cap<.1292791320966.
+All three quantities are UNKNOWN. The example target B_cap<=1e33 would
+leave .1284668320966; equal allocation would need eta_dd<.0642334160483
+and C_dd<6.42334160483e9. No complete passing or excessive upper bound
+on the actual strong estimate is available.
+
+Exploratory arithmetic for the near constant-coefficient coordinate
+component gives 2.35749e-8 and for selected remote derivative terms
+gives .000815074. Their complete matching and missing terms are unproved;
+neither value receives any budget credit. Exact sources and results are
+retained so these attempts cannot be mistaken for executed full bounds.
+
+The original comparisons remain unproved:
+E_center+1e-8 alpha<=1e-11;
+R_X alpha(.0208300008424+eta_dd)+Z0_other<=.25;
+R_X alpha^2(980726306+8.123e-26 B_cap+C_dd)+Z2_other<=5e7.
+The original Y0/Z0/Z2 preservation and contraction requirements remain
+unchanged. No actual controlled solution, exact compatibility, physical
+matching, validity/noise or all-sector stability is established. There is
+no construction obstruction, no new physical domain and no changed
+normalization. The selected projection screen and CLOSED audit stand.
+
+RESEARCH DECISION: continue the construction with the common-restored
+signed method and local L2 return summation. The executed near return
+fits the budget; the incomplete coordinate/remote calculations justify
+no claim that the full target passes. Do not optimize controlled cold,
+scalar or tiny frozen spectral terms.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete
+returned logarithmic finite part and its first metric variation in the
+original Mellin graph, combining its local coordinate terms with the
+complementary remote kernels before taking the norm. Bound its actual
+background dependence against the remaining .1292791320966 budget.
+Uniform B_cap and the global X comparisons remain additional obligations;
+they are not assigned values by this proposal.
+
+Verification: one successful frozen interval acceptance run supports
+the ordinary argument (22 checks, 1071 unchanged inputs). It verifies
+numerical guards and allowance arithmetic, not the missing continuum
+estimate. Five exploratory calculations and their exact sources/results
+are retained. One temporary builder-authoring attempt failed before any
+calculator file was created; its reason/output is recorded. Development
+and acceptance both passed, with no failed acceptance, post-success
+scientific edit or Lean execution. All 18 inherited paths and prior
+evidence remain preserved.
+
+Remaining to-do list: complete strong logarithmic/remote response and uniform B_cap; original global norm comparisons and admission; actual correction and nonlinear preservation/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: restored frozen blocks; joint strong return unresolved
 
 2026-10-24, E003/S169.
