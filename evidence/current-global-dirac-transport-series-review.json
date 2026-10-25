@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25",
+  "story": "S169",
+  "status": "ordinary_argument_and_execution_contract_frozen_before_development",
+  "outcome_scope": "Unresolved complete coupled graph. Actual all-mode first-order propagator contraction and inverse-variation tail, not a renormalized Hessian tail or physical graph error.",
+  "quantitative_role": "Provide an exact full-geometry scalar-transport representation for the massive propagators needed in the remaining coupled quantum block. A uniform ratio below .385 controls its infinite correction series. Raw trace summation still fails; a common-restored strong tail must be derived before interpreting a physical error.",
+  "domain_review": [
+    "Constant frame and y-dependent rotation conjugate the actual paired domain; no independent Robin or seam boundary condition is imposed.",
+    "Both original regular-bolt Frobenius branches are retained. The irregular branch is excluded by the X_k weighted norm, including omega=1/2. Compact-source Green functions have vanishing bolt boundary flux; completion defines the same inverse extension.",
+    "The C2,1 even double is the existing identical-pair trace representative, not a smooth replacement. Its full trace is halved only on return to the per-half physical functional.",
+    "A_b=U_L B_b U_R^* with fixed unitary multipliers; the actual composed square is conjugated, preserving each common positive-cutoff heat trace. Truncated inverse words do not receive that assertion.",
+    "The seed-frozen mass chart b permits bounded Lipschitz physical mass/log directions. Operator holomorphy in b does not extend the renormalized action to an arbitrary L-infinity ball or certify the original X ball."
+  ],
+  "ordinary_inputs": [
+    {
+      "source": "notes/current-coincident-dirac-action-assembly.md",
+      "scope": "Actual first-order transfer system, tadpole/bubble and varied paired matching; its finite-mode numerical tests are not used as whole-spectrum evidence."
+    },
+    {
+      "source": "notes/stationary-massive-boundary-layer.md",
+      "scope": "Exact paired even-double trace identity with the actual nonsmooth seam and common subtraction."
+    },
+    {
+      "source": "notes/current-global-far-return-energy-bound.md",
+      "scope": "Actual positive-temperature geometry and lowest thermal bolt channel. The new curvature inequality is separately derived from the current polynomial."
+    },
+    {
+      "source": "notes/current-rough-paired-variation.md",
+      "scope": "Scalar Lipschitz mass multiplication preserves the original first-order complementary domains and composed square."
+    },
+    {
+      "source": "notes/current-short-travel-strong-domain.md",
+      "scope": "Retained geometric gravitational comparison only; its unknown strong constants are not filled by the new spinor estimate."
+    }
+  ],
+  "execution_contract": {
+    "precision_bits": 512,
+    "targets": [
+      "actual Q second derivative <2.1",
+      "all-mode coupling upper expression <.385",
+      "supremum family radius .001 gives ratio <.38601",
+      "complex parameter total .011 gives ratio <.3961",
+      "N128 inverse tail <1.980e-53",
+      "N128 third inverse variation coefficient <1.478e-44"
+    ],
+    "method": "Exact Clifford/frame algebra, whole-interval polynomial inequality, maximization over the entire continuous frequency ratio, outward Arb arithmetic and exact divergent degeneracy sum. No finite physical spectrum or discretized boundary domain.",
+    "verification": "Freeze before development; preserve failures and every frozen source. Matching unchanged-source acceptance after ordinary review. Checks support the domain/energy/analytic-series proof, not replace it."
+  },
+  "first_unsupported_step": "A uniform subtracted diagonal/thermal/angular strong-tail estimate with all heat-endpoint, local-contact and output-map contributions. Operator norm convergence does not imply a pointwise trace bound.",
+  "conditional_alternative": "An original-output per-angular tail d_n B_i tau_N/M_n^3 would sum to (2C/3)B_i tau_N. B_i and signed centers remain unknown; all physical comparison/input factors must be included.",
+  "claims_boundary": [
+    "No renormalized Hessian error",
+    "No coupled signed solve",
+    "No actual kappa_m",
+    "No original physical-norm admission",
+    "No exact compatibility/matching/validity/noise/stability claim",
+    "No construction obstruction"
+  ],
+  "scientific_sha256": {
+    "notes/current-global-dirac-transport-series.md": "f078c9704f1cd7898873de5561b64e9a18dcae3a321183d6d2e656ccfb11a260",
+    "checks/current_global_dirac_transport_series.py": "168ffcf09ac0b21eb4515b82449fbfa6cb1e4de651bd9fbee170d978d147511d"
+  },
+  "exploration": {
+    "s169eh-explore.py": {
+      "sha256": "f585ceb1486b77e2a7674ab9448180b47e6f80dfa16f47d85dcba3b3081363b4",
+      "contents": "import math,json\nfrom pathlib import Path\na=1.05/18**2\nb=8-2*a\ny=8/(b+math.sqrt(b*b+16*a))\ndelta=math.sqrt(y*(4+a*y)/(4*(1+y)**3))\nq=.385+math.expm1(.001)\nqc=.385+math.expm1(.011)\nout={'a':a,'ymax':y,'delta_upper_expression':delta,'q_family':q,'q_complex':qc,\n 'seed_inverse_upper':1/(1-.385),'family_inverse_upper':1/(1-.38601),\n 'tails':{str(n):{'inverse':.38601**n/(1-.38601),\n   'variation_1':100*.3961**n/(1-.3961),\n   'variation_2':200**2*.3961**n/(1-.3961),\n   'variation_3':300**3*.3961**n/(1-.3961)} for n in [16,32,64,128]}}\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\\n')\nprint(json.dumps(out,indent=2))\n",
+      "scope": "Preview only; floating values are not used as certified bounds."
+    },
+    "s169eh-explore.json": {
+      "sha256": "55f57a3a7711e5a32b5ee4763673b67a054318dc1f8f3ac64b71492d66ae74fe",
+      "contents": "{\r\n  \"a\": 0.003240740740740741,\r\n  \"ymax\": 0.5003039425318898,\r\n  \"delta_upper_expression\": 0.3849781553560726,\r\n  \"q_family\": 0.38600050016670834,\r\n  \"q_complex\": 0.39606072244471957,\r\n  \"seed_inverse_upper\": 1.6260162601626016,\r\n  \"family_inverse_upper\": 1.628691021026401,\r\n  \"tails\": {\r\n    \"16\": {\r\n      \"inverse\": 3.9574514256415723e-07,\r\n      \"variation_1\": 6.0801241729880195e-05,\r\n      \"variation_2\": 0.02432049669195208,\r\n      \"variation_3\": 16.41633526706765\r\n    },\r\n    \"32\": {\r\n      \"inverse\": 9.615956362578021e-14,\r\n      \"variation_1\": 2.232492082421187e-11,\r\n      \"variation_2\": 8.929968329684749e-09,\r\n      \"variation_3\": 6.027728622537205e-06\r\n    },\r\n    \"64\": {\r\n      \"inverse\": 5.6773578028773224e-27,\r\n      \"variation_1\": 3.0098502203464586e-24,\r\n      \"variation_2\": 1.2039400881385835e-21,\r\n      \"variation_3\": 8.126595594935438e-19\r\n    },\r\n    \"128\": {\r\n      \"inverse\": 1.9790366131925483e-53,\r\n      \"variation_1\": 5.470849882912561e-50,\r\n      \"variation_2\": 2.1883399531650243e-47,\r\n      \"variation_3\": 1.4771294683863915e-44\r\n    }\r\n  }\r\n}\r\n",
+      "scope": "Preview only; floating values are not used as certified bounds."
+    }
+  },
+  "local_lean_invocations": 0
+}

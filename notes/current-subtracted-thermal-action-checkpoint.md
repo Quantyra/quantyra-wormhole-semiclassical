@@ -1,3 +1,103 @@
+# Active checkpoint: global Dirac series bounded; coupled strong trace still unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: NO PROGRESS.
+
+See [the ordinary actual-domain transport argument](current-global-dirac-transport-series.md) and its frozen evidence.
+
+The COMPLETE coupled graph estimate remains UNRESOLVED. An actual global
+Dirac transport factorization now has a certified coupling bound
+.384978155356073<.385, uniformly over the full angular/thermal spectrum,
+including the lowest regular-bolt mode. It supplies a convergent inverse
+series on the original paired realization. It is not a gravitational
+inverse or a common-restored quantum Hessian error certificate.
+
+The exact rotated first-order operator is B0+alpha J, where
+B0=partial_y-k sigma3, k=sqrt(M^2+p^2/Q), alpha=(atan[p/(M sqrt(Q))])'/2.
+Its diagonal inverse consists of scalar transport integrals between the
+ACTUAL two regular bolts. The original paired transmission is conjugated,
+not replaced. Fixed unitary left/right factors also conjugate the composed
+square, preserving each common positive-cutoff heat trace. The cubic seam
+remains C2,1. No physical angular or thermal mode is omitted.
+
+From the full polynomial, Q''<2.1 and the exact bolt identity imply
+Q'^2<=4gamma^2+4.2Q. With y=M^2 Q/p^2, the coupling squared is bounded
+by y(4+(7/2160)y)/[4(1+y)^3]. Its entire-range maximum gives the stated
+number. This is a bound on the actual propagator calculation, not a
+sampled-mode diagnostic or an assigned conditional coefficient.
+
+In the fixed mass chart A_b=D+M exp(b), ||b||infinity<=.001 gives an
+auxiliary spinor contraction ratio <.38601. The N=128 inverse tail is
+<1.980e-53. Its first three mass-field variation coefficients are bounded
+by 5.472e-50, 2.189e-47 and 1.478e-44, respectively, times the actual
+input supremum norms. The retained action-domain hypotheses still apply.
+This is not admission of the original physical metric ball.
+
+Attempting to sum a uniform positive operator-tail bound directly FAILS:
+sum_(n<=L)d_n=2qL+2L(L+1) diverges, as does the thermal count. The small
+inverse tail is therefore NOT a bound for a coincident quantum trace,
+projection or original metric graph. No comparison with 1.287e-40 is made.
+This failure belongs to the raw trace estimator, not to the construction.
+
+The FIRST unsupported passage is a quantitative common-subtracted
+diagonal tail, with all observation/metric derivatives, thermal sums,
+coincidence/restoration terms and finite-domain returns, followed by
+the original coupled inverse and phase/bolt output maps. The exact
+first-order factorization preserves the regulator; its truncated inverse
+does not automatically provide the required regulated trace estimate.
+
+A precise sufficient alternative is an original-output per-angular tail
+d_n B_i tau_128/M_n^3, tau_128=1.478e-44, after the full thermal sum and
+common restoration. Since sum d_n/M_n^3<2C/3, its total is at most
+(2C/3) B_i tau_128. B_i MUST include the original physical conversion,
+all strong maps, actual input sizes and numerical errors. It is UNKNOWN.
+The best-case ceilings for the retained unused budgets are approximately
+1.33509176891e22 (near shape), 1.10380819269e22 (other affine) and
+2.49363315351e30 (feedback). These are conditional ceilings, not computed
+constants. Trial centers, energy feedback and other errors reduce them.
+No M^-3 strong tail or complete signed center was executed this turn.
+
+The exact mass lift's local cancellation, its .1/.2 transition and original
+fixed-temperature bolt matching are preserved. It is not a global zero
+mode. The established LINEAR mass <1.627532e-15 and original conversion
+2133<||d_chi||H3<2174 still debit at most 3.538254568e-12. Including the
+actual distant return <1.24e-20 leaves >6.4617454e-12 for near SHAPE only.
+The scalar quartic and exact correlated slow pair remain in both equations.
+
+kappa_m<=5e-5 remains unknown. Its conditional residual requirements are
+Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069. No remaining coupled
+entry is shown to fit. The fast screen .135973<.1599164 retains only
+its two-fast admitted-family scope. Original norm comparisons,
+nonlinear admission/contraction, exact compatibility, matching,
+semiclassical validity/noise and all-sector stability remain unproved.
+
+RESEARCH DECISION: sharpen the quantum computation to the exact global
+diagonal Dirac transport series, retaining the full geometric gravitational
+comparison and original bordered equations. Its verified contraction
+removes a propagator-computation uncertainty. Quantitative attainability
+of the strong coupled estimate remains undecided; no construction change
+or further cold/scalar optimization is supported by this result.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete commonly
+subtracted Hessian tail in the original output/phase maps for all coupled
+input columns, proving summable spectral decay and testing the remaining
+budgets after the signed center is assembled. Keep the actual heat
+subtractions and their finite restorations together. Operator-tail digits
+alone do not complete this calculation.
+
+Verification: ordinary proof and execution contract frozen before
+development; matching unchanged-source development/acceptance at 512 bits,
+32 supporting checks on 17 inputs. Exact frame algebra, a whole-interval
+coefficient bound and an entire-frequency maximization support the ordinary
+domain, energy and inverse-series argument. No failed frozen run. Python
+and all 1595 flint/SymPy fingerprints match; no Lean run. The checks do not
+certify a renormalized Hessian or a controlled wormhole. All 18 inherited
+paths, closed audits and previous checkpoint contents are preserved.
+
+Remaining to-do list: common-restored strong tail and complete coupled return; original scalar graph and physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: full geometric strong-return attempt remains unfinished
 
 2026-10-25 HST, E003/S169. Current continuation: NO NEW QUANTITATIVE RESULT.
