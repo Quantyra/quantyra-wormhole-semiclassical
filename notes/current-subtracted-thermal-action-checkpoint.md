@@ -1,3 +1,96 @@
+# Active checkpoint: complete relative thermal sums bounded; coupled estimate unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary response comparison, commutator and full thermal sum](current-paired-response-parametrix-bound.md).
+
+OUTCOME: COMPLETE COUPLED RETURN UNRESOLVED. An exact coefficient
+cancellation now gives a two-power response comparison and its FIRST
+conormal commutator on the actual paired finite seed. Keeping mass-to-
+frequency ratios closes their COMPLETE thermal sums at every angular
+level. The remaining absolute angular estimate diverges; the original
+common subtraction and strong coupled composition remain uncomputed.
+No kappa_m, actual mass, signed response or nonlinear gate is certified.
+
+Executed: for K^2=M_n^2+p_j^2/.17, the complete per-mode relative response
+error is <3.609/K and its first original-cutoff conormal commutator is
+<7059/K in proper-radial L2. The stronger bounds retain numerators:
+2.752 M^2/K^3+.85 M/K^2, and
+7004.311 M^2/K^3+53.794 M/K^2, respectively. They include the tadpole,
+both paired paths, actual regular-bolt return and the full cutoff
+transition. No finite mode sample or smooth replacement domain is used.
+
+Summing ALL thermal frequencies with the actual discrete mesh, including
+the lowest mode and every tail, gives response norm <1.686 and first
+commutator norm <2923, uniformly at each angular level. The original
+action/energy conversion costs <190 G d_n/(pi B^2) E(u) for the near
+source, and <329000 G d_n/(pi B^2) E(u) for its conormal commutator,
+including the density derivative. These are L2 source bounds, not the
+original H3 graph or physical C5 norm. No normalization gain is claimed.
+
+The initially coarsened 1/K estimate has a harmonic thermal tail; retaining
+its actual mass factors repairs that estimator. The remaining positive
+angular bound grows with sum_(n<=N)d_n=2qN+2N(N+1). It does not certify
+the common-subtracted physical response. This is an excessive estimator,
+not a divergence theorem or an obstruction to the construction.
+
+The auxiliary scalar comparison keeps the actual endpoint realization
+and agrees with it outside the original graph collar. It is NOT declared
+a physical action or Dirac square. The first unsupported quantitative step
+is matching this response parametrix to the retained short-geodesic
+principal part and original contacts at the SAME physical regulator,
+then bounding higher conormal derivatives and the all-angular remainder
+after the actual coupled inverse and original matching/bolt rows. A
+guessed heat factor on the auxiliary scalar operator does not supply it.
+The admitted-family weak identification is retained within its scope.
+
+The exact reference mass lift still retains both local cancellations,
+its original cutoff transition and regular-bolt matching; it is not a
+global fixed-temperature zero mode. Original-fast conversion
+>.00906808164|m| still requires actual |m|<2.20553814952e-9 if both
+graph ceilings are imposed. Scalar quartic, correlated slow pair, fast,
+interior and bolt slots remain coupled. Their actual coefficients and
+post-elimination entries remain UNKNOWN.
+
+IF kappa_m<=5e-5, the residual requirements remain
+Y_remaining<=5.34234999994958e-12 and
+eta_remaining+(.0195239+4.583e-13)gamma_E<.0012069. Even with no
+other feedback loss, the source-family energy-to-graph comparison must
+be <.06181654279993595; it remains unknown. The .135973<.1599164
+quantum-fast screen retains only its two-fast-input admitted-family
+scope. No independent phase or nonlinear-ball control is inferred.
+The closed audit and full stable-wormhole objective remain intact.
+
+RESEARCH DECISION: retain the construction and sharpen the exact
+paired response parametrix within the existing common-subtracted method.
+The quantitative two-power cancellation survives the actual finite-domain
+return and first conormal derivative, and the full relative thermal sums
+are now bounded. This supports this method without establishing feasibility
+of the complete coupled system or changing the admission target.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete commonly
+subtracted all-mode remainder using this parametrix inside the original
+short-geodesic/contact allocation, after composition with the actual coupled
+inverse and quartic/mass/slow/bolt rows. Include its higher conormal
+commutators and common-regulator error in T_old(H_s^-1 R_s)^4 and the
+signed all-column budget test. This remains the missing global estimate;
+another isolated contact or finite-mode diagnostic does not execute it.
+
+Verification: ordinary argument plus 96 supporting
+symbolic/512-bit Arb checks on 23 frozen inputs.
+One failed development snapshot is retained: a strict arithmetic test
+incorrectly compared equal decimal guards. Exact rational equality now
+records that step; the ordinary strict bound and every numerical target
+are unchanged. One successful development and one matching acceptance
+followed. All snapshots and logs are preserved. No Lean execution or
+post-acceptance scientific edit. These checks do not replace the continuum
+proof or execute the physical coupled solve. All 18 inherited paths,
+closed audits and the prior checkpoint remain preserved.
+
+Remaining to-do list: complete common-subtracted strong coupled return and signed response; original physical-norm/neighborhood comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: uniform paired auxiliary return; complete coupled estimate unresolved
 
 2026-10-25 HST, E003/S169.
