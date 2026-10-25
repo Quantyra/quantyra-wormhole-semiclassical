@@ -1,3 +1,102 @@
+# Active checkpoint: complete source pairing bounded; coupled adjoint residual unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary complete mass-moment argument](current-complete-mass-moment-bound.md) and its frozen evidence.
+
+The complete reference-adjoint source PAIRING allowance is now closed:
+|F(Psi_ref)|<9.811394479e-16<3.3e-15 in the original physical units.
+The bound retains the actual paired domain, every angular/thermal mode,
+common finite contacts, Weyl/LLL/local terms and finite-domain returns.
+Its sign is not determined. The actual coupled return remains UNRESOLVED:
+the complete quantum/contact adjoint residual is still unknown.
+
+This replaces the failed derivative-based complete source envelope by
+a direct heat VALUE bound integrated with the exact conserved mass weight.
+The ordinary proof controls the C2 reflected seam without a smooth physical
+double, retaining its cubic profile and logarithmic remainder. The cap
+Fourier potentials are continuous and bounded below, satisfying the
+inspected Simon Theorem 1.1 hypothesis. Caps enter only through the
+existing actual-domain positive-resolvent localization. No finite mode
+selection, temperature replacement or physical boundary change is made.
+
+The complete quantum mass coefficient is now enclosed near
+1.31512824857609e11, compared with the old available 8.001e15. The full
+source-pairing envelope improves by a factor above 60838.00164. Its three
+main coefficient allowances are approximately 6.486000106e10 for the
+constant trace bound, 6.454681380e10 for the integrated reflected remainder
+and 2.106e9 for the unchanged cold contribution. The tiny local and bolt
+allowances are retained separately. No cold/scalar optimization was needed.
+
+The bound is on the COMPLETE signed functional about zero, not a narrow
+signed quadrature value or a measurement of its sign. It can be represented
+by center zero and certified error 9.811394479e-16; this closes the combined
+source contribution to the physical mass certificate. It does not claim
+the formerly proposed separate quadrature error <=1e-16. No additional
+uncomputed numerical error is hidden in the analytic enclosure.
+
+For the explicit regular reference trial the unchanged coupled certificate
+therefore reads
+
+    |m_actual| <= [9.811394479e-16+1.1e-10 ||j Psi_ref||E*]
+                         /1.9999999764.
+
+The remaining sufficient residual ceiling for actual |m|<=2.29e-15 is
+approximately 3.27169136187e-5; the conservative target <=3.27169e-5
+fits. This is an allowance, NOT the actual norm. If the prior target
+||j Psi_ref||E*<=1e-5 were independently proved, the new certificate
+would give |m|<1.040569737e-15. That physical mass conclusion remains
+conditional because the full residual has not been computed.
+
+The residual includes BOTH current original rows, the quantum metric
+variation, density/York contacts, outer phase, scalar and finite-domain
+returns. A spatial source derivative or derivative of the new unsigned
+envelope cannot substitute for it. All source results here are fixed-seed;
+none establishes a metric neighborhood or independent phase derivative.
+
+The full mass lift and its .1/.2 transition, regular bolt, original clock
+and graph cutoff are unchanged. Its original conversion cost remains
+2133<||d_chi||H3<2174. Actual lifted graph <=5e-12 is still independently
+needed for the sufficient mass split. The first unsupported full-graph
+step remains the differentiated common-regulated core composed with the
+coupled inverse. kappa_m<=5e-5 and all other coupled entries are unknown;
+their unchanged conditional residual budgets are
+
+    Y_other<=5.34234999994958e-12,
+    eta_other+(.0195239+4.583e-13) gamma_E<.0012069.
+
+The .135973<.1599164 quantum-fast screen retains only its proved two-fast-
+input admitted-family scope. Original physical-norm comparisons, nonlinear
+admission/contraction, exact compatibility, physical matching, validity/noise
+and all-sector stability remain unresolved. The complete source-pairing
+bound is not a controlled semiclassical solution or a wormhole theorem.
+
+RESEARCH DECISION: retain the construction and coupled adjoint method.
+The complete source-pairing magnitude now fits its original allowance;
+stop optimizing that source moment. Direct value control and integration
+against the correct mass weight removed a genuine estimation loss.
+The former oversized bound was not an obstruction to the construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the complete restored
+current Hessian to the regular reference adjoint trial and certify
+||j Psi_ref||E*<=3.27169e-5, retaining both rows, all contacts, outer phase
+and finite-domain returns. This decides the stated actual mass certificate.
+The original coupled graph and physical/nonlinear requirements remain
+independently necessary; the full stable-wormhole objective stays active.
+
+Verification: the ordinary continuum/whole-source proof was frozen before
+execution. It is supported by 41 checks on 16 frozen inputs, exact integral
+identities and 512-bit Arb; one successful development and matching
+unchanged-source acceptance, with no failed current runs. All 1595 retained
+flint/SymPy file hashes and the Python executable match the dependency
+fingerprint. These checks verify algebra/arithmetic; they do not replace
+the paired-domain, common-regulator or heat argument. No Lean was invoked.
+All 18 inherited paths, prior checkpoint content and closed audits remain.
+
+Remaining to-do list: complete coupled adjoint residual and actual mass; original coupled graph return; physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: regular mass-adjoint trial; unsigned estimator insufficient
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.

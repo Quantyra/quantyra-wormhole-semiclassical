@@ -1,0 +1,360 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T19:22:57.076787+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-complete-mass-moment-bound.md": "1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8",
+        "checks/current_complete_mass_moment_bound.py": "5a32dfe79b9f230d9ef2788e0be8df5a75c3a3ac4d8d3483e943ba41236582c5",
+        "evidence/current-complete-mass-moment-bound-review.json": "5b4e6ab32c15a78511682640b6c2869f3d721b1ad2eaa91aff5f1f6678332184",
+        "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-reference-finite-mass.md": "e04d7dbff927e99f915d1b175f418dbd5ffb0d0fd03fc60df95e00259b9c25e9",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/fixed-clock-seed-bolt-feasibility.md": "b3cb0fbe5cd91dc36e1c57139541789ddca1eaf4708975195f8d041ddde632e3",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-mass-adjoint.json": "81857b2af1d8ffe4a3ff4cb857e280f8817fa3a0e165e0887118ec337b04eb1c"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-complete-mass-moment-bound.md": "# Complete source mass moment from value heat bounds\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen execution.\nPrevious goal turn: PROGRESS. The stable semiclassical wormhole objective\nis incomplete; the closed audit and original admission targets remain.\n\nThis attempts the COMPLETE source pairing of the regular reference\nadjoint, not an isolated contact, a selected mode or an unknown response\nreplaced by its allowance. The preceding 8.001e15 unsigned mass coefficient\nfails that pairing target. Its largest loss came from first estimating a\nspatial derivative and then recovering a value. Here use the retained\nheat VALUE proof and integrate the whole conserved source directly.\nThe complete quantum Hessian residual remains a separate requirement.\n\n## 1. Actual realization and the applicable continuum argument\n\nUse the exact current Q, positive gamma, z_h, paired complementary-adjoint\nsquare, original HH period, mu0 and local coefficients. Set t=r/B, z=1/t,\nv=1+h, beta=lambda B^2/C, q=2000^4 and r_c=C/q. The smooth source on the\nphysical half has its one-sided mass cubic and finite-log outer expansion;\nno smooth physical double is substituted. The balanced spin trace identity\nuses the closed-form even realization, whose coefficient is C2 with a\nbounded piecewise third derivative. The regular bolt is unchanged.\n\nThe current rational-family hypothesis check is in\nfixed-clock-seed-bolt-feasibility.md. Its strict geometry guards transfer\nthe value estimates in stationary-reference-nonbolt-stress.md, including\nthe fixed mu0 restoration. They require beta>1/7, C/q<.0035, M1>18,\nthe actual geodesic boundary, the specified paired projectors and the\npositive-square localization; all hold at this seed. The old reference\nmass allowance is NOT transferred to the present c_R theory.\n\nFor each real thermal momentum the auxiliary cap potentials are\nk^2 f^2 +/- k f'. They are continuous, including at the C2 seam, and\nbounded below by -1 since |f'/f|<=2. Thus the rescaled Brownian-bridge\nformula uses precisely the continuous semibounded case of\n[Simon, Theorem 1.1](https://arxiv.org/html/math-ph/9907022), inspected\n2026-10-25. It does not require a smooth reflected metric. The caps are\nauxiliary only: actual-to-cap transfer uses the original positive\nresolvent and its finite-domain return, not a cap boundary condition.\n\nKeep the common angular regulator until the local terms are restored.\nThe formulas (32)-(33) of the non-bolt proof include a0, a1 cancellation,\na2 and its pole's finite +2. Its current finite-scale a0 value is <167q^2;\n|Fang|<100. No mode is renormalized separately. Every thermal winding\nand angular level is retained by the bounds below. Their integrable\nmajorants justify the later spatial integration after this common\nrestoration. No metric derivative or neighborhood estimate is inferred.\n\n## 2. A boundary heat VALUE remainder, with an explicit constant\n\nUse proper distance Y from the outer boundary in ell=B/sqrt(C) units,\nheat time tau, and the same actual even and smooth auxiliary caps. For\n0<tau<=.01 define\n\n    R_k=k_even-k_smooth-K3,\n    K3=c/(2pi tau^2) integral_0^tau\n             E[|Y+X|^3-(Y+X)^3] ds, |c|<1.             (1)\n\nAll kernels here include the rank-two spin trace. The retained bridge\nhas S=sup|sqrt(2) bridge|, P(S>x)<=2exp(-x^2), and probability of crossing\nzero exp(-Y^2/tau). Its exact FK factor is J=f(Y) H(Fbar,Gbar).\nThe already proved pathwise bounds (20)-(23) give, on collar paths,\n\n    |H_even-H_smooth+DeltaF3/2| <=1.3e11(V^4+tau V^2),\n    f(Y)<=3, |f(Y)-1|<=12Y^2, |DeltaF3|<=4V^3,\n    V=sup|Y+sqrt(tau) bridge|<=.4.\n\nConsequently the complete density-converted remainder is at most\n4e11(V^4+tau V^2). On a crossing path V<=2sqrt(tau)S. Using\nE S8<=48, E S6<=12, E S4<=4 gives\n\n    E(16S^4+4S^2)^2 <=13888.\n\nCauchy--Schwarz on the crossing event, followed by the FK divisor\n2pi tau, bounds this local contribution by\n\n    [4e11 sqrt(13888)/(2pi)] tau exp(-Y^2/(2tau))\n          <8e12 tau exp(-Y^2/(2tau)).                    (2)\n\nFor Y<=.1 an exit requires S>=.3/sqrt(tau). The global cap value\nfactors satisfy |J_even|+|J_smooth|<=5e10 exp(tau). The exit probability\nand the cubic Gaussian tail therefore bound the omitted contribution by\n2e10 tau^-1 exp(-.09/tau). For the cubic tail one may use, for a>=3,\nE[S^3 1_(S>a)]<2.4a^3 exp(-a^2), and on exit\nV<=(4/3)sqrt(tau)S. Its extra heat coefficient is <tau^-1 exp(-.09/tau).\nSince Y^2/4<=.0025 and\n\n    sup_(tau<=.01) tau^-2 exp(-.0875/tau)<1.585,\n\nthis contribution fits below 3.17e10 tau exp(-Y^2/(4tau)).\n\nFor Y>=.1, without collar restriction, equality of the cap coefficients\non the positive half gives the direct crossing bound\n\n    |k_even-k_smooth|<=1e10 tau^-1 exp(-Y^2/tau).\n\nAlso |K3_Y|<=exp(-Y^2/(2tau)) and K3(infinity)=0 imply\n|K3|<=2sqrt(tau)exp(-Y^2/(2tau)). The two ratios to\ntau exp(-Y^2/(4tau)) are at most\n\n    1e10 * 64/[9 e^2 (.1)^4] <9.624e13,\n    2sqrt(2) exp(-1/2)/.1 <18.\n\nThe retained Poisson bound for ALL nonzero windings has minimum cap\ncircumference >=1e18 and Y<21 on the non-bolt patch. Its value contribution\nis <tau^2 exp(-Y^2/(4tau)), absorbed with strict margin. Thus on the\nentire non-bolt observation patch\n\n    |R_k|<=C_v tau exp(-Y^2/(4tau)), C_v=2e14.          (3)\n\nThis is a value bound derived from the actual FK integrand. It is not a\nderivative of an unsigned estimate or a smooth-seam heat expansion.\n\n## 3. Complete common-restored trace bound\n\nLet Atilde=sum_(n>=1) d_n M_n^2 exp(-M_n^2 tau), with BOTH angular signs.\nThe retained exact sum estimates are\n\n    Atilde<=24C/tau^2,\n    |Atilde-2C/tau^2|<=4q/tau+8sqrt(C)/tau^(3/2),\n    integral Atilde tau^2 dtau<8C^2/q.                 (4)\n\nOnly use the discrepancy on tau<=.01. Subtract the entire universal\ncubic profile, whose exact integral is Theta_sing=c C^2/(5pi Y).\nThe removed long model tail must be added to the error. The short cubic\ndiscrepancy, using the value bound following (2), is at most\n\n    1.6 Cq+16 C^(3/2) E1(25Y^2),\n\nwhere E1(x)=integral_x^infinity exp(-s) ds/s. The long model tail is\nat most 80C^2. The complete short reflected remainder (3) is bounded by\n24 C_v C^2 E1(25Y^2). The short smooth remainder and long even-cap value\nbounds are respectively 8e15 C^3/q and 1400(1e10)Cq. They hold at EVERY\nnon-bolt point, not just at the old t=2 anchor. The actual-cap return,\nlong polynomial subtractions, current a0/a2 restorations, model tail and\nthe 1.6Cq term fit within an additional 200q^2.\n\nPut R(t)=Theta(t)-Lt, L=-a lambda B^2/(5pi). The actual reciprocal-distance\ncalculation gives |Theta_sing-Lt|<q^2 for Y<=1. For Y>=1 use t<4,\n|L|<q^2/15 and |Theta_sing|<C^2/(5pi), giving the same bound.\nIt too fits inside 200. Hence for t>=t_c=1.001,\n\n    |R(t)|/q^2 <= B0+A0 E1(25Y(t)^2),\n    B0=8e15 r_c^3+1.4e13 r_c+200 <5e10,\n    A0=24 C_v r_c^2+16 C^(3/2)/q^2.                   (5)\n\nThis is a bound on the COMPLETE massive trace in the original scheme,\nincluding its actual state/domain return. It contains no selected finite\nlist of angular or thermal modes.\n\n## 4. Integrate the full conserved mass with the correct weight\n\nIn the exact original constraint let Bfun=F/t^2=CQ and\n\n    I(t)=integral_v^t Bfun'(s)Theta(s)ds,\n    B^2 rho_mass=I/(2F)-Theta/t^2.\n\nWrite Theta=Lt+R. Add the retained Weyl L/t BEFORE integration. The\ncombined source is I_L/(2F)+I_R/(2F)-R/t^2+R_W+Delta R_W+rho_LLL.\nFor the R part Tonelli with its absolute majorant gives\n\n    integral_v^infinity |I_R/(2F)-R/t^2| dt\n      <=integral_0^z_h w(z)|R(1/z)| dz,\n    w=1+|Q'(z) I_Q(z)|/2, I_Q=integral_0^z du/Q(u).    (6)\n\nBoth original source equations and HH regularity fix the integration\nconstant. No independent mass or bolt datum is selected to cancel it.\n\nThe exact factorization Q=(1-z)^2 R_Q(z)-tau_seed z^3, with R_Q increasing,\nR_Q(1)=1 and tau_seed<1e-65, gives on z<=z_c=1/1.001\n\n    I_Q<=1.001 z/[beta(1-z)], |Q'I_Q|<=15z, w<9.      (7)\n\nHere beta>1/7 and 1-z>=1/1001 make the retained thermal correction\n<1e-58 relatively. The tiny positive part of Q' is supported in z<.01:\nthere Q>=.16, Q'_+<5e-11 z, I_Q<=z/.16. Elsewhere the exact Q' formula\nis negative. Since Q I_Q tends to zero at the actual simple bolt,\n\n    integral_0^z_h w dz=1.5 z_h+integral_(Q'>0) Q'I_Q dz <1.501. (8)\n\nThe current geometry gives Y>=sqrt(5)z. Therefore the entire reflected\nterm in (5), with its boundary logarithm, has the finite integrated bound\n\n    integral_0^z_c w E1(25Y^2)dz\n      <=9 integral_0^infinity E1(125z^2)dz\n      =9sqrt(pi)/(5sqrt(5)).                          (9)\n\nThe equality follows by Tonelli; it does not exchange divergent signed\nsectors. This is the quantitative contribution of (3) to the full moment.\n\nRetain the existing cold derivative bound |Theta'|<3e14q^2 without\noptimizing it. At t_c, Y>=sqrt(5)/1.001 makes the E1 term in (5) <q^2.\nOver v<=t<=t_c this gives |R|<3.51e11q^2. Equations (7)-(8), now used\nat z_c only, imply\n\n    integral_z_c^z_h w dz\n      =1.5(z_h-z_c)+Q(z_c)I_Q(z_c)/2 <.006.          (10)\n\nThe cold part therefore costs at most 2.106e9q^2. No inverse temperature\nor fictitious bolt wall is introduced.\n\nFor the linear trace model, its combined Weyl cancellation leaves I_L/(2F).\nIts absolute integral is at most\n|L| integral_0^z_h |Q'I_Q| dz/(2z). Equations (7),(10) give an integral\n<16, so this costs <q^2. The complete Weyl remainder, degree-five/six\nperturbation and LLL add <10005q^2 by the retained exact polynomials.\nRound all these terms upwards to 10010q^2.\n\nCombining the WHOLE source, not just its boundary term, proves\n\n    B integral |rho_D-rho_vac| dr <= C_mass q^2,\n    C_mass=1.501 B0+[9sqrt(pi)/(5sqrt(5))]A0\n                     +2.106e9+10010.                 (11)\n\nThere is no unknown constant in (11). All full-source pieces and common\nfinite restorations have specified allowances. The old 8.001e15 bound\nremains valid but is no longer the chosen estimator for this moment.\n\n## 5. Original units, execution contract and remaining coupled test\n\nUse the same local and bolt allowances evaluated in\ncurrent-reference-clock-adjoint-trial.md, with L_q=Gq^2/(lambda B^4):\n\n    M_local=8pi(5.5e-23)+4pi c_R g(200w0+w0^2+10w2),\n    M_bolt=(gamma/beta)(1+h)h(3.33e-10),\n    |F(Psi_ref)| <= I_new=2(C_mass L_q+M_local+M_bolt). (12)\n\nThis is the same convergent compact-test source moment and original\nphysical mass normalization. No full-action open-clock boundary one-form\nis discarded or added twice. K_m, the original graph conversion and the\ncut mass lift are unchanged. Freeze the execution targets\n\n    C_mass<1.7e11, I_new<1.3e-15<3.3e-15.             (13)\n\nIf those tests pass, they close the COMPLETE reference-adjoint source\nPAIRING allowance by an enclosure about zero. They do not determine its\nsign or produce a narrow signed quadrature value. No extra quadrature\nerror is assumed: (12) is itself the outward analytic error enclosure.\nIts contribution to the actual coupled mass certificate is\n\n    |m_actual| <= [I_new+1.1e-10 ||j Psi_ref||E*]/K_m,\n    K_m>1.9999999764.                                 (14)\n\nThe full residual norm is UNKNOWN. Compute its sufficient ceiling\n[K_m(2.29e-15)-I_new]/(1.1e-10) from the new bound, but do not assign\nthat ceiling to the actual residual. In particular (12) is not a metric\nvariation estimate; differentiating its envelope would be invalid.\n\nThe first unsupported mass step is now the COMPLETE j Psi_ref in the\nactual dual-energy norm. The first unsupported full-graph step is still\nthe differentiated common-regulated core composed with the coupled\ninverse. kappa_m<=5e-5, the other coupled columns, the original-norm\ncomparisons and uniform nonlinear-neighborhood control remain unknown.\nThe .135973<.1599164 screen still covers only its two-fast-input family.\nNo actual mass, original graph, nonlinear admission/contraction, exact\ncompatibility, physical matching, validity/noise or stability follows.\n\nRESEARCH DECISION: retain the construction and the coupled adjoint\nmethod. If (13) passes, stop optimizing this complete source moment and\nfocus on its actual quantum/contact residual. The improvement comes\nfrom a direct value estimate and integrated boundary weight, not a\nnormalization change or assumed cancellation of an unknown source.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the complete restored\ncurrent Hessian to Psi_ref and certify ||j Psi_ref||E* against the ceiling\ncomputed from (14), including the outer phase, density contacts, scalar\nand finite-domain returns. This tests the actual mass certificate; the\nindependent original graph requirement remains afterward.\n\nRemaining to-do list: full coupled adjoint residual and actual mass;\noriginal coupled graph return; physical-norm/neighborhood comparisons;\nnonlinear admission/contraction; exact compatibility; physical matching;\nsemiclassical validity/noise; all-sector stability; charge/return, opening,\ntransport, preparation, separate creation and the full stable-wormhole objective.\n",
+        "checks/current_complete_mass_moment_bound.py": "\"\"\"Complete seed-source moment bound, not a Hessian or nonlinear solution.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys,traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nfrom flint import arb,ctx\nimport flint\nimport sympy as sp\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-complete-mass-moment-bound'\nOWN=['notes/'+STEM+'.md','checks/current_complete_mass_moment_bound.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-reference-clock-adjoint-trial.md',\n 'notes/current-coupled-mass-adjoint.md',\n 'notes/stationary-reference-nonbolt-stress.md',\n 'notes/stationary-reference-finite-mass.md',\n 'notes/stationary-reference-cold-bolt.md',\n 'notes/stationary-massive-boundary-layer.md',\n 'notes/stationary-centered-exterior-source.md',\n 'notes/fixed-clock-seed-bolt-feasibility.md',\n 'notes/current-global-return-energy-attempt.md',\n 'notes/current-controlled-solution-audit-closeout.md',\n 'evidence/current-global-mass-conversion.json',\n 'evidence/current-reference-clock-adjoint-trial.json',\n 'evidence/current-coupled-mass-adjoint.json']\nCHECKS=[]\n\ndef check(name,value):\n    CHECKS.append({'name':name,'passed':bool(value)})\n    if not value:raise AssertionError(name)\n\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(50)\n    return {'ball':v.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef prior(stem):\n    r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n    check('accepted_input_'+stem,r['status']=='passed')\n    return r['result']\n\ndef execute():\n    ctx.prec=512\n    z=sp.symbols('z',positive=True)\n    Q=sp.Function('Q')(z);I=sp.Function('I')(z)\n    check('mass_weight_primitive',sp.simplify(sp.diff(Q*I,z).subs(sp.diff(I,z),1/Q)-1-sp.diff(Q,z)*I)==0)\n    C=sp.symbols('C',positive=True)\n    # Bfun=CQ, d/dt=-z^2 d/dz, H(t)=I_Q/C.\n    check('original_mass_kernel_measure',sp.cancel((z**2+sp.Abs(-C*z**2*sp.diff(Q,z))*I/(2*C))/z**2-1-sp.Abs(sp.diff(Q,z))*I/2)==0)\n    s=sp.symbols('s',positive=True)\n    gaussian=sp.integrate(sp.exp(-s*z**2),(z,0,sp.oo))\n    check('integrated_E1_weight_identity',sp.simplify(sp.integrate(gaussian/s,(s,1,sp.oo))-sp.sqrt(sp.pi))==0)\n    check('bridge_moment_substitution',256*48+128*12+16*4==13888)\n\n    pi=arb.pi();exp=lambda x:arb(x).exp()\n    local=arb('4e11')*arb(13888).sqrt()/(2*pi)\n    exit_ratio=arb(10000)*exp('-8.75')\n    far_ratio=arb('1e10')*64/(9*exp(2)*arb('.1')**4)\n    cubic_ratio=2*arb(2).sqrt()*exp('-.5')/arb('.1')\n    check('local_boundary_value_remainder',local<arb('8e12'))\n    check('exit_value_ratio',exit_ratio<arb('1.585'))\n    check('far_crossing_value_ratio',far_ratio<arb('9.624e13'))\n    check('far_cubic_value_ratio',cubic_ratio<18)\n    Cv=arb('2e14')\n    check('whole_reflected_value_constant_local',local+arb('2e10')*exit_ratio+1<Cv)\n    check('whole_reflected_value_constant_far',far_ratio+cubic_ratio+1<Cv)\n    check('global_FK_value_factor',(arb('5e10')*exp('.01')/(2*pi))<arb('1e10'))\n    # Both local exit cap values and the cubic tail fit this prefactor.\n    check('exit_FK_and_cubic_factor',arb('5e10')*exp('.01')/pi+1<arb('2e10'))\n    check('local_density_remainder_constant',3*arb('1.3e11')+24*arb('.4')<arb('4e11'))\n    check('all_fixed_restorations_fit_200',167+3+80*arb('.0035')**2+arb('1.6')*arb('.0035')+1<200)\n\n    mass=prior('current-global-mass-conversion')\n    trial=prior('current-reference-clock-adjoint-trial')\n    adj=prior('current-coupled-mass-adjoint')\n    pp=mass['parameters'];be=dec(pp['beta']);u=dec(pp['u']);eps=dec(pp['eps']);tau=dec(pp['tau'])\n    q=arb(2000)**4;Ca=1/u;rc=Ca/q\n    check('current_beta_lower',be>arb(1)/7)\n    check('current_angular_ratio',rc<arb('.0035'))\n    check('retained_positive_thermal_mass',tau>0 and tau<arb('1e-65'))\n    check('increasing_reference_factor',2*be-4*abs(eps)>0)\n    check('Qprime_negative_beyond_one_hundredth',-12*be*arb('.01')+2*u+4*abs(eps)<0)\n    check('positive_Qprime_near_zero',2*u+4*abs(eps)<arb('5e-11'))\n    check('actual_outer_Q_lower',arb('.99')**2*be-tau>arb('.16'))\n    dc=arb(1)/1001;zc=1-dc\n    relative_thermal=tau/(be*dc**2)\n    check('nonbolt_thermal_relative_error',relative_thermal<arb('1e-58'))\n    check('retained_antiderivative_factor',1/(1-relative_thermal)<arb('1.001'))\n    qI_ratio=arb('1.001')*(2+3*tau/dc)/be\n    check('negative_Qprime_times_primitive',qI_ratio<15)\n    positive_weight=arb('5e-11')/arb('.16')*arb('.01')**3/3\n    check('complete_mass_weight_integral',arb('1.5')+positive_weight<arb('1.501'))\n    cold_weight=arb('1.5')*dc+arb('.5')*arb('1.001')*zc*dc/be\n    check('cold_weight_without_inverse_temperature',cold_weight<arb('.006'))\n    check('linear_trace_model_integral',15*zc+2*arb('.006')/zc<16)\n    check('linear_trace_and_Weyl_model_cost',arb(16)/30<1)\n\n    B0=arb('8e15')*rc**3+arb('1.4e13')*rc+200\n    A0=24*Cv*rc**2+16*Ca**arb('1.5')/q**2\n    check('complete_trace_constant',B0<arb('5e10'))\n    E1_anchor_bound=(-125*zc**2).exp()/(125*zc**2)\n    check('cold_anchor_reflection_cost',A0*E1_anchor_bound<1)\n    check('existing_cold_derivative_sufficient',arb('5e10')+1+arb('.001')*(arb('3e14')+arb(1)/15)<arb('3.51e11'))\n    kernel_weight=9*pi.sqrt()/(5*arb(5).sqrt())\n    constant_mass=arb('1.501')*B0\n    reflected_mass=kernel_weight*A0\n    cold_mass=arb('2.106e9')\n    Cmass=constant_mass+reflected_mass+cold_mass+10010\n    Lq=dec(trial['dimensionless_complete_source_mass_factor'])\n    locals=dec(trial['local_absolute_mass_allowance'])\n    bolt=dec(trial['bolt_absolute_mass_allowance'])\n    flux=2*(Cmass*Lq+locals+bolt)\n    old=dec(trial['complete_flux_absolute_envelope'])\n    Km=arb('1.9999999764')\n    ceiling=(Km*arb('2.29e-15')-flux)/arb('1.1e-10')\n    conditional_mass=(flux+arb('1.1e-10')*arb('1e-5'))/Km\n    check('complete_quantum_mass_coefficient',Cmass<arb('1.7e11'))\n    check('complete_pairing_budget_closed',flux<arb('1.3e-15') and flux<arb('3.3e-15'))\n    check('new_bound_actually_improves_old_estimator',flux<old)\n    check('sufficient_full_residual_ceiling',ceiling>arb('2.98e-5'))\n    check('conditional_actual_mass_fits_unchanged_target',conditional_mass<arb('2.29e-15'))\n    check('full_mass_flux_still_original',dec(adj['complete_mass_flux'])>Km)\n    return {'precision_bits':ctx.prec,'current_C_over_q':enc(rc),\n      'new_boundary_heat_value_constant':enc(Cv),'local_bridge_value_constant':enc(local),\n      'far_crossing_value_constant':enc(far_ratio),'complete_trace_B0':enc(B0),'complete_trace_A0':enc(A0),\n      'integrated_log_boundary_weight':enc(kernel_weight),'constant_trace_mass_allowance':enc(constant_mass),\n      'reflected_remainder_mass_allowance':enc(reflected_mass),'cold_mass_allowance':enc(cold_mass),\n      'complete_quantum_mass_coefficient':enc(Cmass),'complete_reference_adjoint_pairing_upper':enc(flux),\n      'old_envelope_to_new_envelope_ratio':enc(old/flux),\n      'sufficient_full_adjoint_residual_ceiling':enc(ceiling),\n      'conditional_actual_mass_if_residual_le_1e_minus5':enc(conditional_mass),\n      'scope':{'complete_source_pairing_allowance_closed':True,'narrow_signed_quadrature_executed':False,\n        'pairing_sign_determined':False,'full_adjoint_residual_norm_computed':False,\n        'actual_mass_certified':False,'actual_kappa_m_computed':False,'complete_coupled_return':'unresolved',\n        'physical_norm_comparisons_closed':False,'nonlinear_admission':False,'all_sector_stability':False,\n        'construction_obstruction':False,'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n        'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary={'mode':mode,'status':run['status'],'checks':len(CHECKS),'result':run.get('result'),'traceback':run.get('traceback')}\n    message=json.dumps(summary,indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-complete-mass-moment-bound-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"progress\",\n  \"complete_coupled_milestone\": false,\n  \"ordinary_argument\": \"notes/current-complete-mass-moment-bound.md\",\n  \"quantitative_role\": \"Bound the COMPLETE reference-adjoint source pairing in the original mass units, replacing the failed derivative-based envelope by direct heat values integrated with the exact conserved mass weight. Test <1.3e-15 versus the selected 3.3e-15 center allowance. This is not an isolated contact calculation.\",\n  \"first_missing_physical_calculation\": \"The COMPLETE j Psi_ref in dual energy, then the independent original graph and all-column nonlinear return. No metric derivative follows by differentiating the new source-value enclosure.\",\n  \"hypotheses_review\": [\n    {\n      \"source\": \"https://arxiv.org/html/math-ph/9907022\",\n      \"retrieved\": \"2026-10-25\",\n      \"theorem\": \"Simon Theorem 1.1\",\n      \"applicability\": \"Each real Fourier cap potential k^2 f^2 +/- k f' is continuous and >=-1 under |f'/f|<=2. Rescale the generator from -Delta/2 to -Delta. This applies to the C2 seam without asserting a smooth reflected physical metric.\"\n    },\n    {\n      \"source\": \"notes/stationary-reference-nonbolt-stress.md\",\n      \"applicability\": \"Retain the same actual paired realization, independent value proof, FK pathwise collar remainders, both cap ratios, complete thermal windings, positive actual-resolvent return and common a0/a1/a2 restoration. Derive a value remainder from its pathwise inequalities; do not differentiate an envelope.\"\n    },\n    {\n      \"source\": \"notes/fixed-clock-seed-bolt-feasibility.md\",\n      \"applicability\": \"Current rational-family guards and original finite-scale restoration; the old zero-c_R mass subtraction is not transferred.\"\n    },\n    {\n      \"source\": \"notes/stationary-reference-finite-mass.md\",\n      \"applicability\": \"Whole angular discrepancy and exact universal cubic profile, actual reciprocal-distance comparison and Weyl cancellation. The old derivative/anchor mass coefficient is replaced, not treated as an actual value.\"\n    },\n    {\n      \"source\": \"notes/stationary-centered-exterior-source.md\",\n      \"applicability\": \"Both actual conserved reference source equations, all-mode HH reconstruction, degree-five/six Weyl perturbation and LLL remainder. Preserve the massive/Weyl L/t cancellation before mass integration.\"\n    },\n    {\n      \"source\": \"notes/stationary-reference-cold-bolt.md\",\n      \"applicability\": \"Reuse the current-transferred 3e14 q^2 spatial derivative on the entire cold interval. It is neither optimized nor used as a metric derivative.\"\n    },\n    {\n      \"source\": \"notes/current-reference-clock-adjoint-trial.md\",\n      \"applicability\": \"Same regular reference trial, compact-test source moment, original units, current local terms and fixed-clock bolt allowance. No unrestricted open-clock action derivative.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-mass-adjoint.md\",\n      \"applicability\": \"Same full coupled residual identity and physical mass flux. Its residual norm and full graph remain unknown.\"\n    }\n  ],\n  \"ordinary_argument_checks\": [\n    \"Direct value proof includes the covariant density factor, collar exit, crossing event and every thermal winding.\",\n    \"Whole angular sums are bounded before integration; discrepancy is used only at short heat time and its long universal tail is restored.\",\n    \"All original finite local terms and actual-to-cap resolvent returns are retained in the constant ledger.\",\n    \"Only nonnegative integrable majorants are exchanged by Tonelli after common restoration; no cancellation between separately divergent masses.\",\n    \"The exact mass weight includes both original constraints and regular-bolt integration data. The finite-temperature logarithm is integrable with no inverse-temperature loss.\",\n    \"Current degree-six geometry and cutoff transitions are unchanged; no smooth surrogate or finite selection of modes supplies the result.\",\n    \"The analytic enclosure bounds the complete signed functional about zero, without determining its sign. This can close the magnitude allowance without narrow signed quadrature.\",\n    \"The sufficient adjoint residual ceiling is not an observed residual. kappa_m, other columns, physical comparisons and nonlinear/stability gates remain unproved.\"\n  ],\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"reflected heat value constant C_v=2e14 covers local and far regimes\",\n      \"actual current geometry satisfies all explicit mass-weight guards\",\n      \"complete quantum mass coefficient <1.7e11\",\n      \"complete reference-adjoint pairing bound <1.3e-15 <3.3e-15\",\n      \"new sufficient full residual ceiling >2.98e-5\"\n    ],\n    \"not_tested\": [\n      \"sign or narrow quadrature value of the source moment\",\n      \"actual full quantum/contact adjoint residual norm\",\n      \"actual mass, original global graph or full physical feasibility\"\n    ],\n    \"verification\": \"one successful development and matching unchanged-source acceptance; retain every failed run\",\n    \"checker_scope\": \"Exact integration identities and outward coefficient arithmetic only; the ordinary actual-domain, heat and whole-source proof is separate.\"\n  },\n  \"local_lean_invocations\": 0,\n  \"scientific_sha256\": {\n    \"notes/current-complete-mass-moment-bound.md\": \"1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8\",\n    \"checks/current_complete_mass_moment_bound.py\": \"5a32dfe79b9f230d9ef2788e0be8df5a75c3a3ac4d8d3483e943ba41236582c5\"\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "current_C_over_q": {
+          "ball": "[0.003069980141923141257198 +/- 3.25e-25]",
+          "decimal_enclosure": {
+            "mid": "3069980141923141257198159175526757172502989590157085331",
+            "rad": "165786524634254198110372153524225",
+            "exponent": "-57"
+          }
+        },
+        "new_boundary_heat_value_constant": {
+          "ball": "200000000000000.00000000000000000000",
+          "decimal_enclosure": {
+            "mid": "2000000000000000000000000000000000000000000000000000000",
+            "rad": "0",
+            "exponent": "-40"
+          }
+        },
+        "local_bridge_value_constant": {
+          "ball": "[7502395879783.4361409662788613887648 +/- 1.98e-23]",
+          "decimal_enclosure": {
+            "mid": "7502395879783436140966278861388764819708047944807732067",
+            "rad": "2",
+            "exponent": "-42"
+          }
+        },
+        "far_crossing_value_constant": {
+          "ball": "[96238423634924.580902399640869322242 +/- 4.24e-22]",
+          "decimal_enclosure": {
+            "mid": "962384236349245809023996408693222424232046548690317379",
+            "rad": "2",
+            "exponent": "-40"
+          }
+        },
+        "complete_trace_B0": {
+          "ball": "[43211193239.10370668316 +/- 2.38e-12]",
+          "decimal_enclosure": {
+            "mid": "4321119323910370668316001518383550850106594744941877045",
+            "rad": "235851138541394866779926307012609",
+            "exponent": "-44"
+          }
+        },
+        "complete_trace_A0": {
+          "ball": "[45238934744.65166657216 +/- 7.21e-12]",
+          "decimal_enclosure": {
+            "mid": "4523893474465166657215768035493637586856060112202633425",
+            "rad": "488602889582461683759531320934401",
+            "exponent": "-44"
+          }
+        },
+        "integrated_log_boundary_weight": {
+          "ball": "[1.4267978271381639648042103554432659 +/- 8.66e-36]",
+          "decimal_enclosure": {
+            "mid": "1426797827138163964804210355443265891348049512302630125",
+            "rad": "2",
+            "exponent": "-54"
+          }
+        },
+        "constant_trace_mass_allowance": {
+          "ball": "[64860001051.89466373142 +/- 6.73e-12]",
+          "decimal_enclosure": {
+            "mid": "6486000105189466373142318279093709826009998712157757445",
+            "rad": "354012560323671194663984471998465",
+            "exponent": "-44"
+          }
+        },
+        "reflected_remainder_mass_allowance": {
+          "ball": "[64546813795.7141883249 +/- 3.02e-11]",
+          "decimal_enclosure": {
+            "mid": "6454681379571418832492313887547043482196126883344403164",
+            "rad": "697137545596225415512227695296513",
+            "exponent": "-44"
+          }
+        },
+        "cold_mass_allowance": {
+          "ball": "2106000000.0000000000000000000000000",
+          "decimal_enclosure": {
+            "mid": "2106000000000000000000000000000000000000000000000000000",
+            "rad": "0",
+            "exponent": "-45"
+          }
+        },
+        "complete_quantum_mass_coefficient": {
+          "ball": "[131512824857.6088520563 +/- 5.69e-11]",
+          "decimal_enclosure": {
+            "mid": "1315128248576088520563463216664075330820612559550216061",
+            "rad": "105115010622212806507986946097153",
+            "exponent": "-43"
+          }
+        },
+        "complete_reference_adjoint_pairing_upper": {
+          "ball": "[9.81139447898386569096e-16 +/- 7.19e-37]",
+          "decimal_enclosure": {
+            "mid": "981139447898386569095783487619698430793911051009174290",
+            "rad": "502300877456027358695666336399361",
+            "exponent": "-69"
+          }
+        },
+        "old_envelope_to_new_envelope_ratio": {
+          "ball": "[60838.0016492643008536 +/- 6.44e-17]",
+          "decimal_enclosure": {
+            "mid": "6083800164926430085359308890709341191871563489165786187",
+            "rad": "5743117108774664194885820537110529",
+            "exponent": "-50"
+          }
+        },
+        "sufficient_full_adjoint_residual_ceiling": {
+          "ball": "[3.271691361870557664458e-5 +/- 8.36e-27]",
+          "decimal_enclosure": {
+            "mid": "3271691361870557664458378647617440953143721486740621170",
+            "rad": "456644132209741827605086966120449",
+            "exponent": "-59"
+          }
+        },
+        "conditional_actual_mass_if_residual_le_1e_minus5": {
+          "ball": "[1.040569736227916172037e-15 +/- 5.54e-37]",
+          "decimal_enclosure": {
+            "mid": "1040569736227916172037302573849753903097951744806426606",
+            "rad": "251154275858565136180833685602305",
+            "exponent": "-69"
+          }
+        },
+        "scope": {
+          "complete_source_pairing_allowance_closed": true,
+          "narrow_signed_quadrature_executed": false,
+          "pairing_sign_determined": false,
+          "full_adjoint_residual_norm_computed": false,
+          "actual_mass_certified": false,
+          "actual_kappa_m_computed": false,
+          "complete_coupled_return": "unresolved",
+          "physical_norm_comparisons_closed": false,
+          "nonlinear_admission": false,
+          "all_sector_stability": false,
+          "construction_obstruction": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-complete-mass-moment-bound.md": "1dae967f1462607ee6612d435addc701e7b28f8ed69c9493dd6b9c6ff8a22de8",
+        "checks/current_complete_mass_moment_bound.py": "5a32dfe79b9f230d9ef2788e0be8df5a75c3a3ac4d8d3483e943ba41236582c5",
+        "evidence/current-complete-mass-moment-bound-review.json": "5b4e6ab32c15a78511682640b6c2869f3d721b1ad2eaa91aff5f1f6678332184",
+        "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "notes/stationary-reference-nonbolt-stress.md": "2b9842d5b1c11fa29e69027937a9fec28d0659cac58662092d8a0f0c1aef802c",
+        "notes/stationary-reference-finite-mass.md": "e04d7dbff927e99f915d1b175f418dbd5ffb0d0fd03fc60df95e00259b9c25e9",
+        "notes/stationary-reference-cold-bolt.md": "00c32538a9248564d18f9e5cf11c47e5cfb0d38546e0ba125f8e3c206627829c",
+        "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/fixed-clock-seed-bolt-feasibility.md": "b3cb0fbe5cd91dc36e1c57139541789ddca1eaf4708975195f8d041ddde632e3",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-mass-adjoint.json": "81857b2af1d8ffe4a3ff4cb857e280f8817fa3a0e165e0887118ec337b04eb1c"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "mass_weight_primitive",
+          "passed": true
+        },
+        {
+          "name": "original_mass_kernel_measure",
+          "passed": true
+        },
+        {
+          "name": "integrated_E1_weight_identity",
+          "passed": true
+        },
+        {
+          "name": "bridge_moment_substitution",
+          "passed": true
+        },
+        {
+          "name": "local_boundary_value_remainder",
+          "passed": true
+        },
+        {
+          "name": "exit_value_ratio",
+          "passed": true
+        },
+        {
+          "name": "far_crossing_value_ratio",
+          "passed": true
+        },
+        {
+          "name": "far_cubic_value_ratio",
+          "passed": true
+        },
+        {
+          "name": "whole_reflected_value_constant_local",
+          "passed": true
+        },
+        {
+          "name": "whole_reflected_value_constant_far",
+          "passed": true
+        },
+        {
+          "name": "global_FK_value_factor",
+          "passed": true
+        },
+        {
+          "name": "exit_FK_and_cubic_factor",
+          "passed": true
+        },
+        {
+          "name": "local_density_remainder_constant",
+          "passed": true
+        },
+        {
+          "name": "all_fixed_restorations_fit_200",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-global-mass-conversion",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-reference-clock-adjoint-trial",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-coupled-mass-adjoint",
+          "passed": true
+        },
+        {
+          "name": "current_beta_lower",
+          "passed": true
+        },
+        {
+          "name": "current_angular_ratio",
+          "passed": true
+        },
+        {
+          "name": "retained_positive_thermal_mass",
+          "passed": true
+        },
+        {
+          "name": "increasing_reference_factor",
+          "passed": true
+        },
+        {
+          "name": "Qprime_negative_beyond_one_hundredth",
+          "passed": true
+        },
+        {
+          "name": "positive_Qprime_near_zero",
+          "passed": true
+        },
+        {
+          "name": "actual_outer_Q_lower",
+          "passed": true
+        },
+        {
+          "name": "nonbolt_thermal_relative_error",
+          "passed": true
+        },
+        {
+          "name": "retained_antiderivative_factor",
+          "passed": true
+        },
+        {
+          "name": "negative_Qprime_times_primitive",
+          "passed": true
+        },
+        {
+          "name": "complete_mass_weight_integral",
+          "passed": true
+        },
+        {
+          "name": "cold_weight_without_inverse_temperature",
+          "passed": true
+        },
+        {
+          "name": "linear_trace_model_integral",
+          "passed": true
+        },
+        {
+          "name": "linear_trace_and_Weyl_model_cost",
+          "passed": true
+        },
+        {
+          "name": "complete_trace_constant",
+          "passed": true
+        },
+        {
+          "name": "cold_anchor_reflection_cost",
+          "passed": true
+        },
+        {
+          "name": "existing_cold_derivative_sufficient",
+          "passed": true
+        },
+        {
+          "name": "complete_quantum_mass_coefficient",
+          "passed": true
+        },
+        {
+          "name": "complete_pairing_budget_closed",
+          "passed": true
+        },
+        {
+          "name": "new_bound_actually_improves_old_estimator",
+          "passed": true
+        },
+        {
+          "name": "sufficient_full_residual_ceiling",
+          "passed": true
+        },
+        {
+          "name": "conditional_actual_mass_fits_unchanged_target",
+          "passed": true
+        },
+        {
+          "name": "full_mass_flux_still_original",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T19:22:57.251275+00:00"
+    }
+  ]
+}
