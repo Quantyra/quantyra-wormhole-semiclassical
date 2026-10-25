@@ -1,3 +1,75 @@
+# Active checkpoint: global input-energy bound; strong coupled test open
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary global comparison](current-coupled-input-energy-bound.md).
+
+OUTCOME: COMPLETE STRONG COUPLED RETURN UNRESOLVED. A numerical global
+INPUT-to-energy comparison is now proved on the actual fixed seed:
+E(u)<31[N(nu)+N(T)]. N is the explicit logarithmically weighted norm of
+value, first, second and Q^(3/2)-weighted third derivatives in the ordinary
+argument. It is not a replacement for the original physical admission norm.
+
+The exact inverse frozen York equation has potential >=5/z^2. Its weighted
+energy controls the actual regular-bolt return. Substitution in the scalar
+Laplacian cancels inverse-Q coefficients before bounds are taken. Both
+positive diagonal energies are bounded separately using the complete
+local action, vacuum interval, a2, LLL and whole positive geodesic spectrum.
+The actual .0022 remainder retains all contacts, thermal, boundary and
+finite-domain contributions. Original action/radial normalization gives
+an upper expression <30.627827 and guard 31.
+
+Consequently E(H^-1 R_s v)<.0682000000001 N(v), while the comparison-return
+upper expression is <.068350371 N(v). These bound the COMPLETE coupled
+energy response at the seed, including independent phase inputs in this
+class. For an identified source F_j=R_s Phi_j they give
+U_j<=31 eta_s N(Phi_j). The 64-iteration conditional graph-tail target
+can then be written M_graph,4 N_feedback<=2.2085e157. Neither factor is
+assumed equal to one. Other matching source maps are not identified with
+R_s Phi_j. Individual cutoff-column norms are not inserted, and no signed
+operator application or coupled solve was performed.
+
+The missing strong argument remains numerical differentiated common-
+restored quantum kernel/contact bounds composed with the global inverse,
+original phase/moment rows and finite-domain reconstruction. M_graph,4,
+M_X,8, original matching feedback, actual mass and kappa_m remain UNKNOWN.
+No nonlinear feasibility requirement or actual solution is closed.
+
+The cut mass lift, its transition, original boundary conditions and
+regular-bolt matching are unchanged. Original-fast conversion
+>.00906808164|m| remains. Conditional kappa_m=5e-5 still leaves
+5.34235e-12 affine and .0012069 graph allowance, with independent energy
+coefficient .0195239; other entries have not been shown to fit. The
+.135973<.1599164 screen retains its two-fast-input admitted-family scope.
+The input-energy bound is neither R_X nor a nonlinear-neighborhood
+comparison. The closed audit and full objective remain intact.
+
+RESEARCH DECISION: retain the construction and complete strong-return
+method. Use the global input conversion in its actual error accounting;
+do not substitute it for the missing strong output map. Quantitative
+attainability remains undecided; no construction obstruction is established.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete original-
+output composition T_old(H_s^-1 R_s)^4 on the actual paired energy domain,
+including common-restored contacts, complete angular/thermal contributions,
+original matching rows and bolt returns. Use the input factor only for
+identified R_s columns. Remaining matching input maps and the signed solve
+are still required. This supporting result does not complete the requested
+coupled feasibility milestone.
+
+Verification: 26 supporting exact-symbolic/512-bit Arb checks
+on 19 frozen inputs; two successful development runs and
+one matching acceptance. The first development failed because the legacy
+parameter helper supplies a third check-detail argument; the wrapper
+signature was corrected. All snapshots and failure are retained. The
+ordinary argument precedes acceptance; checks do not replace the continuum
+proof. No Lean run or post-acceptance scientific edit. All 18 inherited
+paths, closed audits and prior checkpoint are preserved.
+
+Remaining to-do list: complete strong return and signed coupled response; original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: moving-comparison Cauchy test; coupled bound unresolved
 
 2026-10-25 HST, E003/S169.
