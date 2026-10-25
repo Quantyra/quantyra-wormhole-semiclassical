@@ -1,3 +1,84 @@
+# Active checkpoint: global truncated comparison fails; physical coupled return unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary global comparison defect argument](current-global-comparison-principal-test.md) and frozen evidence.
+
+The COMPLETE coupled return remains UNRESOLVED. A specified global
+comparison A34=A0+(Ac)_3+(Ac)_4 fails an ACTUAL continuum defect test:
+its inverse would have strong defect >187, against the proposed <=1/2.
+Both original rows lose their principal conformal coefficient at
+z=0.614272431845147..., where the actual coefficient remains positive.
+This is an obstruction to that comparison, not to the physical Hessian
+or wormhole construction. The preceding collar bound remains valid.
+
+EXECUTED: construct the original two-row candidate before presuming its
+inverse. Its leading scalar coefficient divided by 72c beta^2 is
+1-d_a+2q3 z^3+(2q4+q2^2)z^4. The complete physical coefficient is
+(1-d_a)q(z)^2 and exceeds .2499 at the artificial zero. The omitted
+square terms, including powers six through eight, are essential globally
+even though their original-cutoff remainder was small. Both comparison
+rows share this zero with principal ratio 1:1/3.
+
+A compact conformal continuum probe at N=1e8, width 1e-4 in log z,
+gives ||A34 u||_(H3 direct_sum H3)<3.853e-12 and
+||[A u]_nu||H3>7.27e-10. Hence the relative strong defect exceeds 187.
+The same packet family proves unboundedness as N grows. This is a test
+of the proposed unrestricted source-space estimator, not a choice of
+physical quantum stress or a bound on the actual restricted source.
+Fixed smooth positive norm weights cannot repair that unboundedness.
+
+The exact common-restored action has Gamma_hat[b] with no nu dependence.
+For this compact conformal column its complete nonlocal contribution
+vanishes identically; the FULL local Weyl anomaly is retained. Both
+original rows are computed. The paired boundary, complementary adjoint,
+mass/log domain, common regulator, regular bolt and all contacts remain.
+There is no finite physical mode truncation or smooth surrogate boundary.
+This executes a genuine comparison defect test but NOT the missing
+near shape-shape quantum response or complete coupled solution.
+
+Repair: retain the FULL geometric local polynomial and the full logarithmic
+principal part in the comparison. The existing short-travel H_s does so;
+its retained form bounds are eta_s=.0022000000000000032 and
+||H_s^-1||_(V*->V)<1.002205. These are NOT strong graph/phase bounds.
+The complete differentiated near/contact composition and its original
+matching maps remain numerically unknown.
+
+The exact mass lift and its transition/matching remain unchanged. The
+actual coupled LINEAR mass <1.627532e-15 and distant shape <1.24e-20
+remain established. The >6.4617454e-12 near allowance is SHAPE ONLY;
+the scalar graph is independent. kappa_m<=5e-5 remains conditional,
+with residual affine and feedback budgets 5.34234999994958e-12 and
+.0012069 including the independent energy debit. The fast quantum
+screen .135973<.1599164 retains its two-fast admitted-family scope.
+No nonlinear admission, compatibility, physical matching, validity/noise
+or all-sector stability follows.
+
+RESEARCH DECISION: retain the construction and reject the globally
+truncated A34 inverse. Use the full geometric comparison, preserving all
+local powers, common contacts and original phase/bolt rows. The actual
+comparison failure is verified; the physical coupled estimate is unresolved.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the full H_s inverse
+in the original bordered graph and certify its COMPLETE common-restored
+strong defect and output/phase maps, including the actual near quantum
+response. Test the signed affine and feedback errors against the unchanged
+budgets. This turn executed the A34 defect test, not that full solve.
+
+Verification: ordinary argument and execution contract frozen before
+development; matching unchanged-source development/acceptance, 26 supporting
+checks on 16 inputs at 512 bits. Exact polynomial integration, root brackets
+and whole-interval coefficient guards replace point or frequency sampling.
+The earlier N=1e80 exploration is retained; N=1e8 already gives a strict
+failure. No failed frozen run. Python and all 1595 flint/SymPy fingerprints
+match. No Lean invoked. Checks do not replace the ordinary domain argument.
+All 18 inherited paths, closed audits and exact prior checkpoint content
+are preserved.
+
+Remaining to-do list: complete coupled strong defect for the full geometric inverse and independent phase columns; original scalar graph and physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: original-cutoff estimator fails; complete coupled graph unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.
