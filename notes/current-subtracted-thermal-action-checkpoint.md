@@ -1,3 +1,77 @@
+# Active checkpoint: constrained weighted global return remains unresolved
+
+2026-10-24, E003/S169.
+
+See [the ordinary weighted-return attempt](current-weighted-global-return-attempt.md).
+
+OUTCOME: UNRESOLVED complete coupled global return. The actual cut reference
+mass lift, its exact transition/matching, the original scalar and slow rows,
+the closed feasibility audit and unchanged original norm targets are retained.
+No post-elimination mass/scalar/slow/fast column or actual mass is certified.
+
+The attempted weighted inverse exposes a domain/constraint issue before
+numerical interpretation. A weight constant near the paired seam and regular
+at the bolt repairs the naive reflected weight's composed-square problem.
+Weighting a TT field still violates its constraint; the exact regular correction
+and its nonzero outer quartic tail are derived. Its norm and phase return must
+be included in the global block. The paired mass/log domain is not replaced.
+
+On the ACTUAL finite seed, every massive Dirac resolvent has weighted inflation
+below 1.084338. The complete exponentially tilted geodesic sixth moment is
+below .002671854 C, with all angular modes and full flow returns. These results
+include no selected thermal spectrum, but are NOT the quantum Hessian bound;
+the LLL, Weyl, local restoration and gravitational/York blocks remain required.
+
+Two attempted extensions fail. Separately taking absolute values of polynomial
+contacts gives divergent second/fourth angular sums. Common-restored cancellation
+must precede the limit; the physical functional is not shown divergent. Blind
+similarity of the existing bounded gluing form produces an upper-bound expression
+above 3.56034e42 in E0 units. This is an excessive upper bound, not a lower bound
+on the actual operator. A .001 allowance instead requires weighted gluing row
+bound <=1.923076923e25 C, or inflation no greater than about 3.205128205.
+The small actual propagator inflation makes a sharper reconstruction plausible,
+but its complete constrained commutator remains unbounded in the required norms.
+
+At the CONDITIONAL mass-column target 5e-5, the fixed-source mass debit is
+2.14765e-12, leaving 5.34235e-12; the rounded graph debit is .0024731, leaving
+.0012069. Other entries are unknown and have not been shown to fit. Differences
+also carry the retained .0195239 energy coefficient. The actual mass is still
+unknown; preserving both graph radii still requires abs(m)<2.205539e-9.
+The conditional two-fast-input screen .135973<.1599164 remains within its proved
+scope and supplies no independent phase/interior variation constants.
+
+No original physical strong comparison, neighborhood admission, contraction,
+exact compatibility, physical matching, validity/noise or all-sector stability
+is established. This is evidence from an attempted complete-return method,
+not a completed global solve or a construction obstruction.
+
+RESEARCH DECISION: retain the construction and exact cut mass lift; sharpen
+the signed coupled weighted estimate. Park blind similarity and absolute-contact
+estimators. Prioritize the constraint-induced boundary return and common-restored
+commutator before any further cold/scalar source optimization.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete constrained
+weighted commutator in the bordered interior/phase system, including the exact
+York correction and original phase rows. Restore all contacts in the common
+regulator before taking absolute values. Test the explicit quantum sub-budget
+C J2/(200pi)+1e23 C J1*+1e25 C J0*, then return the complete coupled resolvent and
+phase constants to the unchanged source, feedback and physical-norm inequalities.
+No separated contact or product-model calculation substitutes for this operator.
+
+Verification: 26 supporting symbolic/512-bit interval checks,
+19 frozen inputs, one successful acceptance run matching the final
+development run. The first failed development snapshot and traceback are retained:
+an interval test discarded shared parameter dependence; the exact identity is now
+proved symbolically with a separate interval consistency check. No scientific target
+was relaxed. The successful exploratory replay, source and output are archived.
+No Lean run or post-acceptance scientific edit occurred. Checks support the ordinary
+argument and do not certify the missing continuum step. All 18 inherited paths and
+the closed audit are preserved.
+
+Remaining to-do list: complete constrained common-restored global return and phase rows; actual correction and original physical norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: coupled global return requires an independent interior bound
 
 2026-10-24, E003/S169.
