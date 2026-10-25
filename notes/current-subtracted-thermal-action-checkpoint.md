@@ -1,3 +1,117 @@
+# Active checkpoint: actual distant graph return bounded; near coupled graph unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary actual distant-return argument](current-actual-far-graph-energy-bound.md) and its frozen evidence.
+
+The actual linear solution's COMPLETE distant-input contribution to
+the ORIGINAL localized shape graph is now bounded by 1.24e-20. Its
+original shape-row finite-part forcing is retained and bounded by
+1.27e-34; the distant scalar row is zero by cross-support locality.
+This uses the full solution's proved energy and the actual paired kernel,
+not assumed independent phase amplitudes. The complete coupled graph
+remains UNRESOLVED, with its near-diagonal/transition block unbounded.
+The previous full linear mass bound <1.627532e-15 remains established.
+
+EXECUTED: in the exact localization, split the unknown input at z=.2,
+beyond the original .05/.1 graph cutoff. Its normal contribution cancels
+the complete commutator identically:
+
+    -chi R w_far+[A0,chi]w_far=-chi A w_far.
+
+The actual mass lift vanishes before .2, so this input is the full linear
+solution there. All original local/contact rows have zero cross-support
+action; the actual massive shape kernel remains. Write its output as f.
+The ORIGINAL graph includes BOTH terms
+
+    g_far=-chi z^(.995) f'-(Dchi)z^(-.005)f.
+
+The second term retains the original shape row's cutoff transition.
+No constant finite-part equation is silently killed by differentiation.
+
+The missing input supremum is replaced by a proved weighted L1 estimate.
+The actual energy gives ||T/z^2||2<17.6 E and ||sqrt(Q)T'||2<130 E.
+The exact positive-temperature bolt polynomial then proves
+
+    integral_(Y(.2))^(Y(z_h)) exp(-k[Y'-Y(.2)])|T(Y')|dY'
+                                      <=900 E/k, k>=18.
+
+This includes the entire regular-bolt limit; the possible energy-level
+logarithmic point majorant is integrable. It is not a cold-source value
+optimization or an energy-to-H3 embedding. On z<=.1, a rechecked complex
+germ of the actual one-sided polynomial has |Q/beta-1|<.005764 on
+|z|<=.11. Its actual Riccati kernel gives four observation derivatives.
+Complete angular counting and discrete thermal summation, including the
+original positive gamma correction, dominate the separated common limit.
+The actual paired domain and cubic seam are unchanged.
+
+In original units the resulting coefficients per unit E are approximately
+1.114960174e-10 for the differentiated output and 8.746971944e-13 for
+the original-row transition. Their joint bound is <1.124e-10. With
+E(u)<1.1e-10, the actual graph contribution is <1.24e-20. The full
+finite-part forcing is <1.27e-34; dividing this one forcing by the
+original scalar-quartic coefficient gives <3.82e-35, NOT the actual
+quartic coefficient, which still depends on the other coupled entries.
+
+This is distinct from the auxiliary Mellin tail. The latter's retained
+bound 1.02e-46+6.50e-39|m| now gives <1.020000106e-46 after substituting
+the already certified linear mass. Neither result controls the near core.
+
+The mass lift's original cutoff, boundary conditions and bolt matching
+remain; it is not a global fixed-temperature zero mode. Its existing
+2133<||d_chi||H3<2174 conversion is the SHAPE output. After the mass
+and new distant cost, the sufficient remaining SHAPE allowance is
+
+    1e-11-2174*(1.627532e-15)-1.24e-20 >6.4617454e-12.
+
+This is a target, not the actual near graph. No scalar mass-conversion
+comparison or complete scalar graph bound follows from 2174. Both
+original equations and the exact scalar quartic/slow matching remain
+independently necessary. The distant term consumes less than 2e-9 of
+the remaining shape allowance, so optimizing it cannot change the decision.
+
+Still unknown: the common-restored near-diagonal response and the original
+transition on 0<z<.2, the strong error of their coupled solve, independent
+phase columns and physical nonlinear-neighborhood comparisons. Existing
+.01 fast-input estimates cannot simply be applied at the original .05/.1
+transition. The weak inverse supplies no missing high derivatives.
+
+kappa_m<=5e-5 remains uncomputed. Its conditional affine/direct-feedback
+debits 2.14765e-12 and .0024731, and residual budgets
+Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069, are unchanged and
+not certified. The .135973<.1599164 quantum screen keeps only its proved
+two-fast-input scope. No nonlinear Y0/Z0/Z2, exact compatibility, physical
+matching, validity/noise or all-sector stability result follows. The
+closed feasibility audit and full stable-wormhole objective are preserved.
+
+RESEARCH DECISION: retain the construction and use the exact combined
+localization plus weighted energy return for the distant block. That
+block now has a negligible certified cost; stop improving it. Overall
+outcome: UNRESOLVED coupled estimate with an executed actual-solution
+distant bound, not a full feasibility pass or a construction obstruction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED HERE): enclose the near-diagonal
+and transition response of the SAME coupled linear solution in both original
+rows, including common-restored contacts and scalar/slow finite matching.
+Test the remaining shape graph against 6.4617454e-12 and bound the original
+scalar graph separately. A coupled strong defect certificate must supply
+the error; neither energy nor the fast-input screen can replace it.
+
+Verification: the ordinary argument and execution contract were frozen
+before development. The final 41 symbolic/512-bit Arb checks on 14 inputs
+have matching unchanged-source development and acceptance results. One
+earlier passing snapshot is retained before an explicit shape-only budget
+scope clarification; no failed frozen runs occurred. The Python executable
+and all 1595 flint/SymPy file fingerprints match. These checks support the
+ordinary domain/kernel argument and do not replace it. No Lean was invoked.
+All 18 inherited paths, closed audits and prior checkpoint content are
+preserved.
+
+Remaining to-do list: complete coupled near/transition graph and independent phase columns; original scalar graph and physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete weak residual and linear mass bounded; graph unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.

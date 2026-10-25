@@ -1,0 +1,859 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T21:09:41.000614+00:00",
+      "mode": "development",
+      "input_sha256_before": {
+        "notes/current-actual-far-graph-energy-bound.md": "08e1d82f939ff13a59056adc0906ecf5723c1838e12b6d91427754d855759b19",
+        "checks/current_actual_far_graph_energy_bound.py": "897f521400fd0e64c3250d20bf2f9cc030eb49845bd0c9a29179cc3365628193",
+        "evidence/current-actual-far-graph-energy-bound-review.json": "cc10ed44aad6a4bc7fb55172ebfec9ff63288eb0e6463986157ee2fca40a023e",
+        "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+        "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+        "notes/current-separated-quantum-graph-bound.md": "eab5d90dc3a2c818b330e0e0866521257d860db467b7076e8cc1e82bb19bbafd",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-complete-weak-mass-residual.json": "8a98bd122aafe737c52875536d9cefc53d021c6de02381771f9a56cd5cf00b8b"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-actual-far-graph-energy-bound.md": "# Actual distant-input graph return from the coupled solution's energy\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen verification.\nPrevious goal turn: progress (complete weak residual and linear mass bounded).\nThe full stable semiclassical wormhole objective remains incomplete.\nThe closed feasibility audit and original physical targets are unchanged.\n\nOUTCOME TO TEST: the complete distant-input contribution to the ORIGINAL\nlocalized graph is <1.24e-20 for the actual full linear solution. Its\noriginal shape-row finite part is retained and <1.27e-34. These close\nthis particular unknown input return, not the complete graph, kappa_m,\nindependent phase derivatives, nonlinear admission or a wormhole theorem.\n\n## 1. Attempt the complete graph identity before assigning estimates\n\nKeep the actual two-row H, A=z^4 H=A0+R, source F, paired mass/log\ndomain, original common regulator and all fixed finite contacts. The\nknown full linear solution has E(u)<1.1e-10. Let\n\n    u=m Phi_m+w,\n    V=chi[-F-A(m Phi_m)-R w]+[A0,chi]w,\n    G=(D-4)V_b-(D-6)V_nu/3, D=z partial_z.\n\nThe mass lift is the exact reference lift with its original .1/.2\ntransition; it vanishes before z=.2 and retains the regular-bolt\nmatching. Its local cancellation is not a fixed-temperature zero mode.\nThe ORIGINAL graph cutoff is the beta(11,11) logarithmic cutoff, one\nthrough a=.05 and zero from b=.1, exactly as in\ncurrent-global-mass-conversion.md. No basis or norm changes here.\n\nSplit the unknown input at c=.2. On its distant part w_far=1_(z>=c)u,\nchi w_far=0. Consequently the COMPLETE unknown distant contribution is\n\n    -chi R w_far+[A0,chi]w_far=-chi A w_far.          (1)\n\nThe normal part cancels exactly. Bounding the two terms independently\nwould lose this cancellation. Every local differential/contact block,\nincluding both local gravitational rows, Weyl and fixed-domain LLL,\nhas zero cross-support action. Thus the only surviving distant block\nis the actual massive canonical shape Hessian Hm; the scalar row is zero.\nSet f(z)=Hm[1_(z'>=c)T](z), where T=u_b is the ACTUAL coupled solution's\nshape, not a freely selected source or independent phase input. Then\n\n    V_far=(0,-chi z^4 f),\n    g_far=z^-sigma G_far\n          =-chi z^(5-sigma)f'-(Dchi)z^(4-sigma)f, sigma=4.005. (2)\n\nThe second term is essential. The constant coefficient f(0) disappears\nfrom the differentiated row only where chi=1; it remains in the original\nshape equation and its transition. We bound it separately below.\n\nEquation (1) holds with matched regulated A,A0,R first. The input split\nis used only in a separated integral, not as a discontinuous physical\nmetric or a new boundary condition. Smooth approximations to the split\nhave the same separated bounds and limit. The remaining near-diagonal\ncontacts and local rows stay in the UNRESOLVED complementary block.\n\n## 2. Replace the previously unknown supremum by a proved weighted return\n\nThe fixed-seed output comparison gives ||T/z^2||L2(dz)<17.6 E.\nThe retained TT gradient estimate, with the same physical normalization,\ngives ||sqrt(Q) T'||L2(dz)<130 E: its squared constant is\n1e5 beta/(.99 F_l)<130^2. This applies to the shape component of any\nphysical test under the fixed York return; the conformal scalar changes\nnu, not T. No energy-to-H3 or neighborhood embedding is asserted.\n\nThe actual bolt polynomial, already enclosed in the complete mass\nresidual calculation, gives, with delta=z_h-z and gamma>0,\n\n    2gamma delta+delta^2/8 <= Q <=2gamma delta+1.001 delta^2,\n    z_h>.99, gamma<1e-30, Q<.2.                     (3)\n\nThere is an anchor z_* in [.2,.3] with |T(z_*)|<=17.6 E/sqrt(.1).\nThe fundamental theorem and weighted Cauchy--Schwarz yield\n\n    |T(.2)|/E <=17.6/sqrt(.1)+130sqrt(.8/.69^2)<300.\n\nFor delta>=gamma, integration of 1/Q from c gives\n\n    |T(z)|/E<=300+130sqrt(8/delta)<=700/sqrt(delta). (4)\n\nWrite s=Y(z)-Y(c), dY=dz/sqrt(Q), delta_c=z_h-c>.79.\nWhile delta>=gamma, sqrt(Q)/delta<=sqrt(3.001)<2, so\ndelta>=delta_c exp(-2s). Therefore, for every k>=18,\n\n    integral_(delta>=gamma) e^-ks |T| dY\n                         <=800 E/(k-1).           (5)\n\nNo bolt point-evaluation norm is substituted here. On delta<=gamma use\n\n    integral_c^z Q^-1 dt <=gamma^-1[8+.5log(gamma/delta)],\n    dY<=d(delta)/sqrt(2gamma delta).\n\nUsing sqrt(A+B)<=sqrt(A)+sqrt(B) and the exact elementary gamma integral\nint_0^1 t^-1/2 sqrt(log(1/t))dt=sqrt(2pi) gives\n\n    integral_(delta<=gamma)|T|dY\n       <=[300sqrt(2)+130(2sqrt(8)+sqrt(pi))/sqrt(2)]E/sqrt(gamma)\n       <1110 E/sqrt(gamma).                         (6)\n\nFrom Q<=1.001(delta+gamma)^2, the distance to this last region is\ns_gamma>=log[(delta_c+gamma)/(2gamma)]/1.001. Its weighted cost is\nat most 1110 E gamma^-1/2(2gamma/.79)^(k/1.001). The product with\nk-1 decreases for k>=18; at gamma=1e-30, k=18 it is <1e-500.\nMonotonicity in gamma gives the same upper bound for the actual smaller\npositive gamma. Combining (5)-(6) proves the WHOLE physical-input bound\n\n    integral_(Y(c))^(Y(z_h)) e^(-k[Y'-Y(c)]) |T(Y')|dY'\n                               <=900 E/k, k>=18.    (7)\n\nThis includes the actual regular-bolt endpoint and all intermediate\ngeometry. Its purpose is to estimate a return from the coupled solution,\nnot to optimize the already controlled cold source. The singular value\nmajorant in (6) is integrable; no unproved bounded trace is assumed.\n\n## 3. Apply the actual complete paired kernel, not a normal surrogate\n\nUse the original first-order transfer and spin traces in\ncurrent-separated-quantum-graph-bound.md:\n\n    M_n^2=n(n+q)/C, d_n=2(q+2n), p_j=gamma(j+1/2),\n    Udot=W(1-U^2)-2M U, W=p/sqrt(Q), 0<=U,V<=1,\n    Bdir=-4U_A V_B exp(-2I_AB)/(1+U_B V_B)^2,\n    Bimg=-4U_A U_B exp(-2I_img)/(1+U_B V_B)^2,\n    Hm(z,Y')=-2G gamma/(pi B^2 sqrt(Q(z)))\n                         sum_(n>=1,j>=0)d_n M_n^2(Bdir+Bimg).  (8)\n\nThe invariant intervals, orientations, both thermal signs and physical\npaired image normalization are precisely the retained actual realization.\nThe regular endpoint branches and boundary projectors are not varied.\nFor k=sqrt(M^2+5p^2), the Riccati comparison gives the original bounds\nexp(-2I_AB)<=4 exp[-2k(Y'-Y)] and\nexp(-2I_img)<=16 exp[-2k(Y'-Y)]. Image travel is no shorter than direct\ntravel. These statements retain the actual thermal/bolt/domain return.\n\nThe observation collar is now z<=.1, so check its analytic germ rather\nthan importing the smaller-collar guard: the actual polynomial obeys\n|Q/beta-1|<.01 on the entire complex disk |z|<=.11. For each real\nobservation continue only its one-sided U,V germs on radius\n1/[1000(M+p)]. Then |Q^-1/2|<4, |Q^-1|<16. The Riccati right side and\nLipschitz constant are <36(M+p) on |U-U_real|,|V-V_real|<=.1.\nPicard preserves the .036 disk, |1+UV|>=.79, and\n|partial_z I|<=18(M+p). The same Cauchy bound is consequently valid:\n\n    |partial_z^j[(Bdir+Bimg)/sqrt(Q)]|\n       <=640 j! [1000(M+p)]^j exp[-2k(Y'-Y)], 0<=j<=4. (9)\n\nThis is an observation derivative of the ACTUAL kernel. It does not\ndifferentiate an unsigned bound, continue an arbitrary mass/log input,\nor replace the cubic paired double by a smooth geometry.\n\nThe proper separation is at least d=sqrt(5)(c-b). Factor the exponential\nin (9) at Y(c) and use (7) with 2k. It replaces the former hypothetical\nsupremum by 900 E with the same 1/(2k)<=1/(2M) integration factor.\nPut c_M=sqrt(2)d and c_p=sqrt(10)d. The COMPLETE sums obey\n\n    sum_n d_n M_n^r e^(-c_M M_n)<=4C(r+2)!/c_M^(r+2), r>=1,\n    gamma sum_(j>=0)p_j^l e^(-c_p p_j)\n                    <=l! c_p^(-l-1)(1+gamma c_p), l>=0.       (10)\n\nThe first follows from the complete counting function <=4CM^2.\nFor the second the midpoint sum differs from the integral of a positive\nunimodal function by at most gamma times its maximum. The inequality\n(l/e)^l<=l! supplies the displayed bound. The nonzero gamma factor is\nretained; no discrete thermal sum is replaced by an integral equality.\n\nExpanding (M+p)^j before summation gives\n\n    sup_(z<=b)|f^(j)(z)| <=900 E A_j,\n    A_j=2560 GC/(pi B^2) j!1000^j(1+gamma c_p)\n        sum_(l=0)^j binom(j,l)(j-l+3)!l!\n                            /[c_M^(j-l+3)c_p^(l+1)], j<=4.   (11)\n\nThe positive majorants (7),(9),(10) justify all four derivatives and\nthe common-regulator removal on this separated block. Local seagulls\nand restorations have zero cross-support action, not zero full action.\nBoth original equations, the mass/log completion and regular bolt remain.\n\n## 4. Original H3 output including every cutoff derivative\n\nUse exactly the original Fourier H3(dx), x=log z. For chi's logarithmic\nbeta(11,11) cutoff the Bernstein finite-difference bound gives\n\n    h_0=1, h_l=[21!/(21-l)!]2^(l-1)/log(2)^l, 1<=l<=4. (12)\n\nDefine C_00(alpha)=1 and\nC_(m+1),j(alpha)=(alpha+j)C_mj(alpha)+C_m,j-1(alpha).\nThe product rule and whole-interval integrals in (2) give, for 0<=k<=3,\n\n    L1_k=sum_(l=0)^k sum_(j=0)^(k-l) binom(k,l) h_l\n           |C_(k-l),j(.995)| b^(.995+j) A_(j+1)/sqrt(2(.995+j)),\n    L0_k=sqrt(log 2) sum_(l=0)^k sum_(j=0)^(k-l) binom(k,l) h_(l+1)\n           |C_(k-l),j(-.005)| max_(a<=z<=b)z^(j-.005) A_j,\n    C_far=900 sqrt[sum_(k=0)^3 binom(3,k)(L1_k+L0_k)^2].       (13)\n\nAll maxima in (13) are endpoint power maxima; there is no sampled\nderivative or quadrature tail. The original-row transition is L0 and\nhas not been killed by applying (D-4) before the cutoff.\n\nThe supporting evaluation will test\n\n    C_far<1.124e-10,\n    ||g_far||H3 <=C_far*1.1e-10 <1.24e-20,\n    |f(0)|<=900*1.1e-10 A0<1.27e-34.               (14)\n\nThe latter is the forcing of the original z^4 shape row, whose scalar\nquartic coefficient is 20beta Fstar>3.3333332. Its isolated algebraic\nconversion is <3.82e-35, but this is NOT the actual quartic coefficient:\nall other coupled row entries still determine that coefficient together.\n\nThe independently retained auxiliary Mellin tail is different from\n(14). Substituting the newly certified |m_linear|<1.627532e-15 into\nits original bound 1.02e-46+6.50e-39|m| gives <1.020000106e-46.\nNeither kind of distant return is the unknown near-diagonal graph.\n\n## 5. Decision for the complete coupled problem\n\nThe attempted full localization now has a certified distant-input term\non the actual linear response, with no assumed global supremum, independent\nphase amplitude or cold norm. The original mass conversion remains <2174\nper unit mass. After reserving the conservative mass bound and (14),\n\n    1e-11-2174*(1.627532e-15)-1.24e-20 >6.4617454e-12.       (15)\n\nThis is the remaining SUFFICIENT allowance, not the actual near graph.\nThe first still unsupported quantitative step is the common-restored\nnear-diagonal operator and its transition response on 0<z<.2, with both\noriginal local equations and their finite matching rows. Neither (7)\nnor the weak inverse controls the derivatives needed for this part.\nIts fixed-seed qualitative graph theorem supplies no numerical constant.\nNo inference from .01 local fast estimates to the full .05/.1 transition\nis made. The constants for independent phase columns and nonlinear\nneighborhoods remain unknown.\n\nThe conditional mass-column target kappa_m<=5e-5 is not evaluated here.\nIts costs 2.14765e-12 affine and .0024731 feedback, and residual budgets\nY_other<=5.34234999994958e-12 and\neta_other+(.0195239+4.583e-13)gamma_E<.0012069, remain conditional.\nThe screen .028913+1e-11*1.0706e10=.135973<.1599164 keeps only its\nproved two-fast-input scope. No actual independent phase coefficient is\nidentified with its allowance. The exact slow pair and scalar quartic\nremain in the unknown coupled near/transition solve.\n\nRESEARCH DECISION: retain the construction. Use (1) and (7)-(14) for\nthe complete distant response and stop assigning it hypothetical input\namplitudes. Its certified cost is negligible in the original allowance;\nfurther improvement there will not decide feasibility. The complete\ncoupled estimate remains UNRESOLVED, with no excessive upper bound or\nactual obstruction yet established for its near/transition block.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED HERE): enclose the actual\ntwo-row near/transition graph response of the same full linear solution,\nincluding common-restored coincidence contacts and original scalar/slow\nmatching, against the remaining 6.4617454e-12 allowance. A coupled defect\ncertificate must bound its strong error, rather than substitute energy\nor the two-fast-input screen. This is the unexecuted part of the requested\nglobal calculation, not a new smaller objective.\n\nRemaining to-do list: complete coupled graph and independent phase columns;\nphysical-norm/neighborhood comparisons; nonlinear admission/contraction;\nexact compatibility; physical matching; semiclassical validity/noise;\nall-sector stability; charge/return, opening, transport, preparation,\nseparate creation and the full stable semiclassical wormhole objective.\n",
+        "checks/current_actual_far_graph_energy_bound.py": "\"\"\"Original-cutoff distant return for the actual coupled linear solution.\n\nSupporting exact identities and outward arithmetic for the ordinary proof.\nNo finite angular/thermal selection and no numerical solution is substituted.\n\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import factorial, comb\nimport sys, json, traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0, sys.argv[sys.argv.index('--arb-path')+1])\nimport flint\nfrom flint import arb, ctx\nimport sympy as sp\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-actual-far-graph-energy-bound'\nOWN=['notes/'+STEM+'.md','checks/current_actual_far_graph_energy_bound.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-complete-weak-mass-residual.md',\n 'notes/current-joint-adjoint-residual-attempt.md',\n 'notes/current-separated-quantum-graph-bound.md',\n 'notes/current-global-mass-conversion.md',\n 'notes/current-global-return-energy-attempt.md',\n 'notes/current-coupled-global-return-attempt.md',\n 'notes/current-controlled-solution-audit-closeout.md',\n 'evidence/current-global-mass-conversion.json',\n 'evidence/current-reference-clock-adjoint-trial.json',\n 'evidence/current-coupled-global-return-attempt.json',\n 'evidence/current-complete-weak-mass-residual.json']\nCHECKS=[]\ndef check(name, ok):\n    assert name not in {x['name'] for x in CHECKS}\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    if not ok:raise AssertionError(name)\ndef enc(v):\n    mid,rad,exp=v.mid_rad_10exp(50)\n    return {'ball':str(v),'decimal_enclosure':{'mid':str(mid),'rad':str(rad),'exponent':str(exp)}}\ndef dec(v):\n    d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef prior(name):\n    r=json.loads((ROOT/'evidence'/(name+'.json')).read_bytes())['runs'][-1]\n    assert r['status']=='passed'\n    return r['result']\ndef execute():\n    ctx.prec=512\n    par=prior('current-global-mass-conversion')['parameters']\n    beta,u,eps,tau,g,Fl=[dec(par[k]) for k in ['beta','u','eps','tau','g','Fl']]\n    tr=prior('current-reference-clock-adjoint-trial')\n    ret=prior('current-coupled-global-return-attempt')\n    old=prior('current-complete-weak-mass-residual')\n    gamma=dec(ret['gamma']);zh=1/(1+dec(ret['h']));C=1/u\n    etaG=C/dec(tr['B_squared_over_G']);pi=arb.pi()\n    check('same_actual_positive_bolt',gamma>0 and gamma<arb('1e-30') and zh>arb('.99') and zh<1)\n    check('same_original_mass_certificate',dec(old['full_coupled_linear_mass_upper'])<arb('1.627532e-15'))\n    qt=[dec(v) for v in old['actual_bolt_polynomial_coefficients']]\n    check('bolt_coefficients_cover_full_polynomial',qt[0]>arb('.999999') and qt[0]<arb('1.000001')\n          and qt[1]>arb('-1.334') and qt[1]<arb('-1.333') and qt[2]>arb('.5') and qt[2]<arb('.501')\n          and abs(qt[3])<arb('1e-27') and abs(qt[4])<arb('1e-27'))\n    # P(delta)=a+b delta+c delta^2+... is decreasing on [0,1],\n    # using its coefficient enclosure; endpoints then give these reserves.\n    check('bolt_polynomial_P_decreasing',arb('-1.333')+2*arb('.501')+7*arb('1e-27')<0)\n    check('whole_interval_P_lower',arb('.999999')-arb('1.334')+arb('.5')-2*arb('1e-27')>arb('.16'))\n    check('whole_interval_P_upper',arb('1.000001')+2*arb('1e-27')<arb('1.001'))\n    check('lower_Q_includes_thermal_and_quadratic',arb('.16')>arb(1)/8)\n    # The old whole-interval Q<.17 bound is retained, not inferred from\n    # the much looser delta upper polynomial at delta=1.\n    q=[beta,arb(0),u,-4*beta-2*u-tau,3*beta+u+eps,-2*eps,eps]\n    radius=arb('.11')\n    complex_error=sum((abs(q[j]/beta)*radius**j for j in range(1,7)),arb(0))\n    check('actual_observation_germ_polynomial_guard',complex_error<arb('.01'))\n    check('observation_disk_stays_in_guard',arb('.1')+1/(1000*arb(18))<radius)\n    check('inverse_sqrt_Q_guard',1/(beta*(1-complex_error)).sqrt()<4)\n    check('inverse_Q_guard',1/(beta*(1-complex_error))<16)\n    check('riccati_rhs_and_lipschitz',16*(1+arb('1.1')**2)<36 and 8*arb('1.1')<36 and 32*arb('1.1')<36)\n    check('riccati_picard_radius',arb(36)/1000<arb('.1'))\n    check('denominator_germ_reserve',2*arb('.036')+arb('.036')**2<arb('.21'))\n    check('actual_kernel_cauchy_prefactor',4*arb('1.1')/arb('.79')**2*arb('.036').exp()<8 and 4*8*(4+16)<=640)\n    Flmin=1-arb('1.179e-8')\n    gradient_squared=arb('1e5')*beta/(arb('.99')*Flmin)\n    check('actual_gradient_energy_conversion',Fl>Flmin and gradient_squared<130**2)\n    anchor=arb('17.6')/arb('.1').sqrt()+130*(arb('.8')/arb('.69')**2).sqrt()\n    check('anchor_bound',anchor<300)\n    check('middle_value_bound',300+130*arb(8).sqrt()<700)\n    check('middle_growth_rate',arb('3.001').sqrt()<2)\n    check('middle_L1_coefficient',700/arb('.79').sqrt()<800)\n    cold=300*arb(2).sqrt()+130*(2*arb(8).sqrt()+pi.sqrt())/arb(2).sqrt()\n    check('cold_integrable_energy_majorant',cold<1110)\n    gu=arb('1e-30')\n    sg=(arb('.79')/(2*gu)).log()/arb('1.001')\n    check('cold_weight_product_decreases_with_k',sg>1/arb(17))\n    check('cold_weight_bound_monotone_in_gamma',18/arb('1.001')-arb('.5')>0)\n    cold_weight=1110*17/gu.sqrt()*(2*gu/arb('.79'))**(18/arb('1.001'))\n    check('entire_cold_weighted_integral',cold_weight<arb('1e-500'))\n    check('whole_weighted_return_constant',arb(801)*18/17<900)\n    a=arb('.05');b=arb('.1');c=arb('.2');d=arb(5).sqrt()*(c-b)\n    cm=arb(2).sqrt()*d;cp=arb(10).sqrt()*d\n    check('actual_separation_positive',d>0 and cm>0 and cp>0)\n    Aj=[]\n    for j in range(5):\n        Aj.append(2560*etaG/pi*factorial(j)*1000**j*(1+gamma*cp)*sum(\n            (comb(j,k)*factorial(j-k+3)*factorial(k)/(cm**(j-k+3)*cp**(k+1)) for k in range(j+1)),arb(0)))\n    t=sp.symbols('t')\n    cutoff=1-sp.Rational(factorial(21),factorial(10)**2)*sum(\n        ((-1)**j*comb(10,j)*t**(11+j)/sp.Integer(11+j) for j in range(11)))\n    coeff=sp.Poly(cutoff,t)\n    bern=[sum(coeff.nth(j)*sp.Rational(comb(i,j),comb(21,j)) for j in range(i+1)) for i in range(22)]\n    check('original_beta_cutoff_bernstein_identity',bern==[sp.Integer(1)]*11+[sp.Integer(0)]*11)\n    check('original_cutoff_endpoints',cutoff.subs(t,0)==1 and cutoff.subs(t,1)==0)\n    check('cutoff_endpoint_jets_retained',all(sp.diff(cutoff,t,j).subs(t,0)==0 and sp.diff(cutoff,t,j).subs(t,1)==0 for j in range(1,11)))\n    hh=[arb(1)]+[arb(factorial(21)//factorial(21-j))*2**(j-1)/arb(2).log()**j for j in range(1,5)]\n    def recurrence(alpha):\n        rows=[[arb(1)]]\n        for m in range(3):\n            old=rows[-1]\n            rows.append([(alpha+j)*(old[j] if j<len(old) else 0)+(old[j-1] if j else 0) for j in range(m+2)])\n        return rows\n    # Verify the derivative recurrence as a formal identity on arbitrary f jets.\n    z,al=sp.symbols('z al');jets=sp.symbols('f0:5');expr=jets[0]\n    symbolic=[[sp.Integer(1)]]\n    for k in range(1,4):\n        expr=sp.expand(al*expr+z*sp.diff(expr,z)+sum(z*sp.diff(expr,jets[j])*jets[j+1] for j in range(4)))\n        prev=symbolic[-1]\n        row=[(al+j)*(prev[j] if j<len(prev) else 0)+(prev[j-1] if j else 0) for j in range(k+1)]\n        symbolic.append(row)\n        check('Euler_derivative_identity_'+str(k),sp.expand(expr-sum(row[j]*z**j*jets[j] for j in range(k+1)))==0)\n    r1=recurrence(arb('.995'));r0=recurrence(arb('-.005'))\n    L1=[];L0=[]\n    for k in range(4):\n        one=arb(0);zero=arb(0)\n        for l in range(k+1):\n            for j in range(k-l+1):\n                one+=comb(k,l)*hh[l]*abs(r1[k-l][j])*b**(arb('.995')+j)*Aj[j+1]/(2*(arb('.995')+j)).sqrt()\n                power=arb('-.005')+j\n                maxpow=a**power if j==0 else b**power\n                zero+=comb(k,l)*hh[l+1]*abs(r0[k-l][j])*maxpow*Aj[j]*arb(2).log().sqrt()\n        L1.append(one);L0.append(zero)\n    nf=lambda vals:sum((comb(3,k)*vals[k]**2 for k in range(4)),arb(0)).sqrt()\n    Cfar=900*nf([L1[k]+L0[k] for k in range(4)])\n    actual=Cfar*arb('1.1e-10');row=900*arb('1.1e-10')*Aj[0]\n    quartic=20*beta*(Fl+23*g/(180*pi))\n    check('complete_actual_far_graph_per_energy',Cfar<arb('1.124e-10'))\n    check('complete_actual_linear_far_graph_target',actual<arb('1.24e-20'))\n    check('original_shape_finite_part_retained',row<arb('1.27e-34'))\n    check('original_scalar_quartic_row_coefficient',quartic>arb('3.3333332'))\n    check('far_row_only_algebraic_quartic_allowance',row/quartic<arb('3.82e-35'))\n    remaining=arb('1e-11')-2174*arb('1.627532e-15')-arb('1.24e-20')\n    check('remaining_near_allowance_is_positive',remaining>arb('6.4617454e-12'))\n    check('far_cost_not_decision_dominant',actual/remaining<arb('2e-9'))\n    aux=arb('1.02e-46')+arb('6.50e-39')*arb('1.627532e-15')\n    check('auxiliary_Mellin_tail_after_actual_mass_bound',aux<arb('1.020000106e-46'))\n    return {'precision_bits':ctx.prec,'complex_actual_polynomial_error':enc(complex_error),\n        'gradient_energy_constant_squared':enc(gradient_squared),'anchor_upper':enc(anchor),\n        'cold_unweighted_coefficient':enc(cold),'cold_weighted_reserve_test':enc(cold_weight),\n        'whole_input_weighted_L1_constant':'900/k for k>=18',\n        'actual_kernel_derivative_coefficients':[enc(v) for v in Aj],\n        'original_cutoff_derivative_guards':[enc(v) for v in hh],\n        'gradient_output_coefficient_per_energy':enc(900*nf(L1)),\n        'original_row_transition_coefficient_per_energy':enc(900*nf(L0)),\n        'complete_far_graph_coefficient_per_energy':enc(Cfar),\n        'actual_linear_far_graph_upper':enc(actual),'original_shape_row_finite_part_upper':enc(row),\n        'far_row_only_quartic_algebraic_allowance':enc(row/quartic),\n        'remaining_near_graph_allowance':enc(remaining),'auxiliary_Mellin_tail_upper':enc(aux),\n        'scope':{'actual_linear_far_graph_bounded':True,'original_shape_finite_part_retained':True,\n          'normal_far_cancels_commutator_exactly':True,'complete_angular_and_thermal_sums':True,\n          'common_regulator_and_actual_domain_retained':True,'actual_near_graph_bounded':False,\n          'actual_kappa_m_computed':False,'independent_phase_columns_bounded':False,\n          'complete_coupled_graph_certified':False,'nonlinear_admission':False,'nonlinear_contraction':False,\n          'exact_compatibility':False,'physical_matching':False,'validity_noise':False,\n          'all_sector_stability':False,'actual_controlled_wormhole':False,\n          'construction_obstruction':False,'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                 'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    message=json.dumps({'mode':mode,'status':run['status'],'checks':len(CHECKS),\n        'result':run.get('result'),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-actual-far-graph-energy-bound-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_execution_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"progress\",\n  \"ordinary_argument\": \"notes/current-actual-far-graph-energy-bound.md\",\n  \"quantitative_role\": \"Bound the distant-input contribution to the ORIGINAL coupled linear graph using the actual solution energy, including its cutoff transition and original shape finite part. This is not the already controlled auxiliary Mellin tail or an independent fast-input bound.\",\n  \"first_unsupported_step_addressed\": \"The previous separated kernel estimate requires an unknown global supremum of the actual solution. Prove a weighted L1 estimate from its actual energy through the bolt, then retain the exact cancellation of the normal far term against its commutator.\",\n  \"hard_continuum_review\": [\n    {\n      \"source\": \"notes/current-global-return-energy-attempt.md\",\n      \"applies\": \"Same full coupled seed solution, positive diagonal energy, original normal localization and complete finite-domain operator. No energy-to-H3 embedding is inferred.\"\n    },\n    {\n      \"source\": \"notes/current-joint-adjoint-residual-attempt.md\",\n      \"applies\": \"The actual shape output obeys ||T/z^2||<17.6 E; fixed York return gives the same physical gradient estimate. These are output bounds, not independent phase or neighborhood bounds.\"\n    },\n    {\n      \"source\": \"notes/current-complete-weak-mass-residual.md\",\n      \"applies\": \"Retain the actual whole-interval bolt polynomial, positive gamma, original source/inverse normalization and certified linear mass. Use the polynomial bounds to control an integrable weighted input, not a cold-source optimization.\"\n    },\n    {\n      \"source\": \"notes/current-separated-quantum-graph-bound.md\",\n      \"applies\": \"Same actual paired Riccati realization, both thermal signs, image rank, exponential bounds and complete counting function. Recheck analytic germ on z<=.1 instead of transferring its .01 guard. Use energy-weighted input instead of an assumed supremum.\"\n    },\n    {\n      \"source\": \"notes/current-global-mass-conversion.md\",\n      \"applies\": \"Retain beta(11,11) cutoff on .05/.1 and original H3(dx). Include fourth cutoff derivative and the original row term (Dchi)z^(4-sigma)f.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-global-return-attempt.md\",\n      \"applies\": \"Exact mass lift vanishes before .2; the distant unknown input is therefore the full solution there. Preserve scalar quartic finite-part row; its algebraic distant forcing conversion is not the actual coefficient.\"\n    }\n  ],\n  \"common_limit\": \"Prove the exact cancellation with matched regulators; all differentiated separated kernels have a positive all-angular/discrete-thermal/input majorant. Smooth split approximations converge on disjoint supports. No new discontinuous physical metric, smooth surrogate double or fixed squared domain is introduced.\",\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"C_far<1.124e-10 per original E\",\n      \"actual linear far H3<1.24e-20\",\n      \"original shape finite part<1.27e-34\",\n      \"remaining near allowance>6.4617454e-12\"\n    ],\n    \"verification\": \"One passing development and matching unchanged-source acceptance; retain every failure and source snapshot.\",\n    \"support_scope\": \"Exact cutoff/derivative identities and outward evaluation of explicit continuum majorants; not a replacement for the separately written domain argument.\"\n  },\n  \"claims_boundary\": {\n    \"closes_if_execution_passes\": [\n      \"actual linear distant-input H3 bound\",\n      \"its original-row finite-part forcing\"\n    ],\n    \"does_not_close\": [\n      \"complete coupled graph\",\n      \"kappa_m\",\n      \"independent phase columns\",\n      \"nonlinear-neighborhood comparisons\",\n      \"nonlinear admission/contraction\",\n      \"compatibility\",\n      \"physical matching\",\n      \"validity/noise\",\n      \"all-sector stability\",\n      \"stable wormhole existence\"\n    ]\n  },\n  \"exploration\": {\n    \"scope\": \"Pre-freeze exploration of the complete distant-input coefficient, not a physical mode truncation or a numerical solve.\",\n    \"files\": {\n      \"s169ed-far-explore.py\": {\n        \"sha256\": \"f029bf0b57bd87cf622a36445138ded295dcaf7bf0a60c321f3e765ddb75ce46\",\n        \"contents\": \"from pathlib import Path\\nimport sys,json,math\\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\\nfrom flint import arb,ctx\\nctx.prec=512\\nsat=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\\ndef p(n):return json.loads((sat/'evidence'/(n+'.json')).read_bytes())['runs'][-1]['result']\\ndef dec(v):\\n d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\\ntr=p('current-reference-clock-adjoint-trial');pa=p('current-global-mass-conversion')['parameters']\\nC=1/dec(pa['u']);etaG=C/dec(tr['B_squared_over_G'])\\nga=dec(p('current-coupled-global-return-attempt')['gamma'])\\npi=arb.pi();a=arb('.05');b=arb('.1');binp=arb('.2');d=arb(5).sqrt()*(binp-b)\\ncM=arb(2).sqrt()*d;cp=arb(10).sqrt()*d\\nAj=[]\\nfor j in range(5):\\n v=arb(2560)*etaG/pi*math.factorial(j)*1000**j*(1+ga*cp)*sum((math.comb(j,k)*math.factorial(j-k+3)*math.factorial(k)/(cM**(j-k+3)*cp**(k+1)) for k in range(j+1)),arb(0))\\n Aj.append(v)\\nhh=[arb(1)]+[arb(math.factorial(21)//math.factorial(21-l))*2**(l-1)/arb(2).log()**l for l in range(1,5)]\\ndef cc(alpha):\\n rows=[[arb(1)]]\\n for m in range(3):\\n  old=rows[-1];rows.append([(alpha+j)*(old[j] if j<len(old) else 0)+(old[j-1] if j else 0) for j in range(m+2)])\\n return rows\\nrows1=cc(arb('.995'));rows0=cc(arb('-.005'))\\nL=[];L0=[];L1=[]\\nfor k in range(4):\\n one=arb(0);zero=arb(0)\\n for l in range(k+1):\\n  for j in range(k-l+1):\\n   one+=math.comb(k,l)*hh[l]*abs(rows1[k-l][j])*b**(arb('.995')+j)*Aj[j+1]/(2*(arb('.995')+j)).sqrt()\\n   power=arb('-.005')+j\\n   maxpow=a**power if j==0 else b**power\\n   zero+=math.comb(k,l)*hh[l+1]*abs(rows0[k-l][j])*maxpow*Aj[j]*arb(2).log().sqrt()\\n L0.append(zero);L1.append(one);L.append(one+zero)\\nnf=lambda v:sum((math.comb(3,k)*v[k]*v[k] for k in range(4)),arb(0)).sqrt()\\nout={'exploratory':True,'Aj':[str(v) for v in Aj],'cutoff_guards':[str(v) for v in hh],\\n 'direct_gradient_coefficient':str(900*nf(L1)),'original_row_transition_coefficient':str(900*nf(L0)),\\n 'complete_actual_far_graph_per_energy':str(900*nf(L)),\\n 'actual_linear_far_graph_upper':str(900*nf(L)*arb('1.1e-10'))}\\nprint(json.dumps(out,indent=2))\\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2))\\n\"\n      },\n      \"s169ed-far-explore.json\": {\n        \"sha256\": \"928ca9ae6f00e9916a6e16cc118f53fc8fbd6681744ddf7a5755cfab3a1b5b2d\",\n        \"contents\": \"{\\r\\n  \\\"exploratory\\\": true,\\r\\n  \\\"Aj\\\": [\\r\\n    \\\"[1.281172578177001377599e-27 +/- 8.14e-49]\\\",\\r\\n    \\\"[1.801754532695625159052e-23 +/- 9.63e-45]\\\",\\r\\n    \\\"[6.14391659119014599572e-19 +/- 2.27e-40]\\\",\\r\\n    \\\"[3.69901777964992584919e-14 +/- 4.45e-35]\\\",\\r\\n    \\\"[3.41983609543525685200e-9 +/- 1.92e-30]\\\"\\r\\n  ],\\r\\n  \\\"cutoff_guards\\\": [\\r\\n    \\\"1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\\\",\\r\\n    \\\"[30.2965958586682315545584183010397348859595650372127046168444375455532936028048866775960590807636332344369478845027034293674551354305355524971339053226931 +/- 4.05e-152]\\\",\\r\\n    \\\"[1748.34994404471055021044854713739279705379961074270806656630908762273129321689381690260946983695402236428187109384778682400620763723264030394392958707678 +/- 2.82e-150]\\\",\\r\\n    \\\"[95848.7601724484217565125756384402120731642024070427666334152191108140941245940290893716811640950186466239878150436062479610652841117487977515379657461629 +/- 9.54e-149]\\\",\\r\\n    \\\"[4978099.11514128923369061977533704839478532583682955021544111099477890579195098480411348795665763267778107657862748060615693549634762736889128169946746113 +/- 5.27e-147]\\\"\\r\\n  ],\\r\\n  \\\"direct_gradient_coefficient\\\": \\\"[1.114960173989561539478e-10 +/- 7.06e-32]\\\",\\r\\n  \\\"original_row_transition_coefficient\\\": \\\"[8.74697194334837354550e-13 +/- 3.29e-34]\\\",\\r\\n  \\\"complete_actual_far_graph_per_energy\\\": \\\"[1.123707145910069508162e-10 +/- 3.98e-32]\\\",\\r\\n  \\\"actual_linear_far_graph_upper\\\": \\\"[1.236077860501076458978e-20 +/- 6.38e-42]\\\"\\r\\n}\"\n      }\n    }\n  },\n  \"local_lean_invocations\": 0,\n  \"scientific_sha256\": {\n    \"notes/current-actual-far-graph-energy-bound.md\": \"08e1d82f939ff13a59056adc0906ecf5723c1838e12b6d91427754d855759b19\",\n    \"checks/current_actual_far_graph_energy_bound.py\": \"897f521400fd0e64c3250d20bf2f9cc030eb49845bd0c9a29179cc3365628193\"\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "complex_actual_polynomial_error": {
+          "ball": "[0.00576323000182107163292972930679 +/- 9.16e-33]",
+          "decimal_enclosure": {
+            "mid": "5763230001821071632929729306790846002048053010570209608",
+            "rad": "8306866751492363141513217",
+            "exponent": "-57"
+          }
+        },
+        "gradient_energy_constant_squared": {
+          "ball": "[16835.0170331589511934013763585 +/- 2.15e-26]",
+          "decimal_enclosure": {
+            "mid": "1683501703315895119340137635848950175273935202475505915",
+            "rad": "1096143927172544797343745",
+            "exponent": "-50"
+          }
+        },
+        "anchor_upper": {
+          "ball": "[224.171354688512844668219701416836663936815119292412711315136515498058485501450382216745069947615798671260247215351197640500213375804463420007090429423284 +/- 4.33e-151]",
+          "decimal_enclosure": {
+            "mid": "2241713546885128446682197014168366639368151192924127113",
+            "rad": "2",
+            "exponent": "-52"
+          }
+        },
+        "cold_unweighted_coefficient": {
+          "ball": "[1107.19490656294354729753136077562736501635570075273041253394895385946883108814184002664498979286619411804480209251194128439376185193345901555549706676778 +/- 7.50e-151]",
+          "decimal_enclosure": {
+            "mid": "1107194906562943547297531360775627365016355700752730412",
+            "rad": "2",
+            "exponent": "-51"
+          }
+        },
+        "cold_weighted_reserve_test": {
+          "ball": "[1.172818262816413159251660082236118779600088532017921382418473313935898154843670483334364531719729162530095073603033555840806319194563271383052226011880e-513 +/- 5.98e-664]",
+          "decimal_enclosure": {
+            "mid": "1172818262816413159251660082236118779600088532017921382",
+            "rad": "2",
+            "exponent": "-567"
+          }
+        },
+        "whole_input_weighted_L1_constant": "900/k for k>=18",
+        "actual_kernel_derivative_coefficients": [
+          {
+            "ball": "[1.281172578177001377599e-27 +/- 8.14e-49]",
+            "decimal_enclosure": {
+              "mid": "1281172578177001377599467482305857157980955921425860133",
+              "rad": "345945659457359810941071896084481",
+              "exponent": "-81"
+            }
+          },
+          {
+            "ball": "[1.801754532695625159052e-23 +/- 9.63e-45]",
+            "decimal_enclosure": {
+              "mid": "1801754532695625159051524023415270031163001903886548416",
+              "rad": "486514594748436832167031396630529",
+              "exponent": "-77"
+            }
+          },
+          {
+            "ball": "[6.14391659119014599572e-19 +/- 2.27e-40]",
+            "decimal_enclosure": {
+              "mid": "6143916591190145995719394113801353793385798167453926656",
+              "rad": "1658996849266734058596413504225281",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[3.69901777964992584919e-14 +/- 4.45e-35]",
+            "decimal_enclosure": {
+              "mid": "3699017779649925849193446021384562062458250536917738336",
+              "rad": "998818711973903965363995540455425",
+              "exponent": "-68"
+            }
+          },
+          {
+            "ball": "[3.41983609543525685200e-9 +/- 1.92e-30]",
+            "decimal_enclosure": {
+              "mid": "3419836095435256851999013080721375763692036690603427581",
+              "rad": "923433326903599880703844045291521",
+              "exponent": "-63"
+            }
+          }
+        ],
+        "original_cutoff_derivative_guards": [
+          {
+            "ball": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-54"
+            }
+          },
+          {
+            "ball": "[30.2965958586682315545584183010397348859595650372127046168444375455532936028048866775960590807636332344369478845027034293674551354305355524971339053226931 +/- 4.05e-152]",
+            "decimal_enclosure": {
+              "mid": "3029659585866823155455841830103973488595956503721270461",
+              "rad": "2",
+              "exponent": "-53"
+            }
+          },
+          {
+            "ball": "[1748.34994404471055021044854713739279705379961074270806656630908762273129321689381690260946983695402236428187109384778682400620763723264030394392958707678 +/- 2.82e-150]",
+            "decimal_enclosure": {
+              "mid": "1748349944044710550210448547137392797053799610742708066",
+              "rad": "2",
+              "exponent": "-51"
+            }
+          },
+          {
+            "ball": "[95848.7601724484217565125756384402120731642024070427666334152191108140941245940290893716811640950186466239878150436062479610652841117487977515379657461629 +/- 9.54e-149]",
+            "decimal_enclosure": {
+              "mid": "958487601724484217565125756384402120731642024070427666",
+              "rad": "2",
+              "exponent": "-49"
+            }
+          },
+          {
+            "ball": "[4978099.11514128923369061977533704839478532583682955021544111099477890579195098480411348795665763267778107657862748060615693549634762736889128169946746113 +/- 5.27e-147]",
+            "decimal_enclosure": {
+              "mid": "4978099115141289233690619775337048394785325836829550215",
+              "rad": "2",
+              "exponent": "-48"
+            }
+          }
+        ],
+        "gradient_output_coefficient_per_energy": {
+          "ball": "[1.114960173989561539478e-10 +/- 7.06e-32]",
+          "decimal_enclosure": {
+            "mid": "1114960173989561539477595607841902494973139928388226291",
+            "rad": "301073737670604265675391909232641",
+            "exponent": "-64"
+          }
+        },
+        "original_row_transition_coefficient_per_energy": {
+          "ball": "[8.74697194334837354550e-13 +/- 3.29e-34]",
+          "decimal_enclosure": {
+            "mid": "8746971943348373545499079672635636131343495260160809315",
+            "rad": "2361916989289631149108554515873793",
+            "exponent": "-67"
+          }
+        },
+        "complete_far_graph_coefficient_per_energy": {
+          "ball": "[1.123707145910069508162e-10 +/- 3.98e-32]",
+          "decimal_enclosure": {
+            "mid": "1123707145910069508162093854291529664612570748857294371",
+            "rad": "303435655938937413976778130587649",
+            "exponent": "-64"
+          }
+        },
+        "actual_linear_far_graph_upper": {
+          "ball": "[1.236077860501076458978e-20 +/- 6.38e-42]",
+          "decimal_enclosure": {
+            "mid": "1236077860501076458978303239720682631073827823743023808",
+            "rad": "333779224041352231074811481161729",
+            "exponent": "-74"
+          }
+        },
+        "original_shape_row_finite_part_upper": {
+          "ball": "[1.268360852395231363823e-34 +/- 8.16e-56]",
+          "decimal_enclosure": {
+            "mid": "1268360852395231363823472807482798586401146362211601532",
+            "rad": "342486205794431325397136925786113",
+            "exponent": "-88"
+          }
+        },
+        "far_row_only_quartic_algebraic_allowance": {
+          "ball": "[3.80508260209073293719e-35 +/- 1.35e-56]",
+          "decimal_enclosure": {
+            "mid": "3805082602090732937190319499285343389107368621651116514",
+            "rad": "1027474315889524581958558924406785",
+            "exponent": "-89"
+          }
+        },
+        "remaining_near_graph_allowance": {
+          "ball": "[6.46174541960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-12 +/- 2.13e-165]",
+          "decimal_enclosure": {
+            "mid": "6461745419600000000000000000000000000000000000000000000",
+            "rad": "1",
+            "exponent": "-66"
+          }
+        },
+        "auxiliary_Mellin_tail_upper": {
+          "ball": "[1.02000010578958000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-46 +/- 1.47e-200]",
+          "decimal_enclosure": {
+            "mid": "1020000105789579999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-100"
+          }
+        },
+        "scope": {
+          "actual_linear_far_graph_bounded": true,
+          "original_shape_finite_part_retained": true,
+          "normal_far_cancels_commutator_exactly": true,
+          "complete_angular_and_thermal_sums": true,
+          "common_regulator_and_actual_domain_retained": true,
+          "actual_near_graph_bounded": false,
+          "actual_kappa_m_computed": false,
+          "independent_phase_columns_bounded": false,
+          "complete_coupled_graph_certified": false,
+          "nonlinear_admission": false,
+          "nonlinear_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_wormhole": false,
+          "construction_obstruction": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-actual-far-graph-energy-bound.md": "08e1d82f939ff13a59056adc0906ecf5723c1838e12b6d91427754d855759b19",
+        "checks/current_actual_far_graph_energy_bound.py": "897f521400fd0e64c3250d20bf2f9cc030eb49845bd0c9a29179cc3365628193",
+        "evidence/current-actual-far-graph-energy-bound-review.json": "cc10ed44aad6a4bc7fb55172ebfec9ff63288eb0e6463986157ee2fca40a023e",
+        "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+        "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+        "notes/current-separated-quantum-graph-bound.md": "eab5d90dc3a2c818b330e0e0866521257d860db467b7076e8cc1e82bb19bbafd",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-complete-weak-mass-residual.json": "8a98bd122aafe737c52875536d9cefc53d021c6de02381771f9a56cd5cf00b8b"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "same_actual_positive_bolt",
+          "passed": true
+        },
+        {
+          "name": "same_original_mass_certificate",
+          "passed": true
+        },
+        {
+          "name": "bolt_coefficients_cover_full_polynomial",
+          "passed": true
+        },
+        {
+          "name": "bolt_polynomial_P_decreasing",
+          "passed": true
+        },
+        {
+          "name": "whole_interval_P_lower",
+          "passed": true
+        },
+        {
+          "name": "whole_interval_P_upper",
+          "passed": true
+        },
+        {
+          "name": "lower_Q_includes_thermal_and_quadratic",
+          "passed": true
+        },
+        {
+          "name": "actual_observation_germ_polynomial_guard",
+          "passed": true
+        },
+        {
+          "name": "observation_disk_stays_in_guard",
+          "passed": true
+        },
+        {
+          "name": "inverse_sqrt_Q_guard",
+          "passed": true
+        },
+        {
+          "name": "inverse_Q_guard",
+          "passed": true
+        },
+        {
+          "name": "riccati_rhs_and_lipschitz",
+          "passed": true
+        },
+        {
+          "name": "riccati_picard_radius",
+          "passed": true
+        },
+        {
+          "name": "denominator_germ_reserve",
+          "passed": true
+        },
+        {
+          "name": "actual_kernel_cauchy_prefactor",
+          "passed": true
+        },
+        {
+          "name": "actual_gradient_energy_conversion",
+          "passed": true
+        },
+        {
+          "name": "anchor_bound",
+          "passed": true
+        },
+        {
+          "name": "middle_value_bound",
+          "passed": true
+        },
+        {
+          "name": "middle_growth_rate",
+          "passed": true
+        },
+        {
+          "name": "middle_L1_coefficient",
+          "passed": true
+        },
+        {
+          "name": "cold_integrable_energy_majorant",
+          "passed": true
+        },
+        {
+          "name": "cold_weight_product_decreases_with_k",
+          "passed": true
+        },
+        {
+          "name": "cold_weight_bound_monotone_in_gamma",
+          "passed": true
+        },
+        {
+          "name": "entire_cold_weighted_integral",
+          "passed": true
+        },
+        {
+          "name": "whole_weighted_return_constant",
+          "passed": true
+        },
+        {
+          "name": "actual_separation_positive",
+          "passed": true
+        },
+        {
+          "name": "original_beta_cutoff_bernstein_identity",
+          "passed": true
+        },
+        {
+          "name": "original_cutoff_endpoints",
+          "passed": true
+        },
+        {
+          "name": "cutoff_endpoint_jets_retained",
+          "passed": true
+        },
+        {
+          "name": "Euler_derivative_identity_1",
+          "passed": true
+        },
+        {
+          "name": "Euler_derivative_identity_2",
+          "passed": true
+        },
+        {
+          "name": "Euler_derivative_identity_3",
+          "passed": true
+        },
+        {
+          "name": "complete_actual_far_graph_per_energy",
+          "passed": true
+        },
+        {
+          "name": "complete_actual_linear_far_graph_target",
+          "passed": true
+        },
+        {
+          "name": "original_shape_finite_part_retained",
+          "passed": true
+        },
+        {
+          "name": "original_scalar_quartic_row_coefficient",
+          "passed": true
+        },
+        {
+          "name": "far_row_only_algebraic_quartic_allowance",
+          "passed": true
+        },
+        {
+          "name": "remaining_near_allowance_is_positive",
+          "passed": true
+        },
+        {
+          "name": "far_cost_not_decision_dominant",
+          "passed": true
+        },
+        {
+          "name": "auxiliary_Mellin_tail_after_actual_mass_bound",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T21:09:41.381078+00:00"
+    },
+    {
+      "started_utc": "2026-10-25T21:11:22.611366+00:00",
+      "mode": "development",
+      "input_sha256_before": {
+        "notes/current-actual-far-graph-energy-bound.md": "e20bb36f949c04bbf9bc380d2591d07a77e5d211c4685371ff849e05ab2b6c27",
+        "checks/current_actual_far_graph_energy_bound.py": "3481277c61fd1001286a635ad22efbf16aec878c5c4c9917aea73591a35f0636",
+        "evidence/current-actual-far-graph-energy-bound-review.json": "956d82f72f54a9a06b42bf4e8ff91292c43dc46f285b74f918d27e720ce908b0",
+        "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+        "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+        "notes/current-separated-quantum-graph-bound.md": "eab5d90dc3a2c818b330e0e0866521257d860db467b7076e8cc1e82bb19bbafd",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-complete-weak-mass-residual.json": "8a98bd122aafe737c52875536d9cefc53d021c6de02381771f9a56cd5cf00b8b"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-actual-far-graph-energy-bound.md": "# Actual distant-input graph return from the coupled solution's energy\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen verification.\nPrevious goal turn: progress (complete weak residual and linear mass bounded).\nThe full stable semiclassical wormhole objective remains incomplete.\nThe closed feasibility audit and original physical targets are unchanged.\n\nOUTCOME TO TEST: the complete distant-input contribution to the ORIGINAL\nlocalized graph is <1.24e-20 for the actual full linear solution. Its\noriginal shape-row finite part is retained and <1.27e-34. These close\nthis particular unknown input return, not the complete graph, kappa_m,\nindependent phase derivatives, nonlinear admission or a wormhole theorem.\n\n## 1. Attempt the complete graph identity before assigning estimates\n\nKeep the actual two-row H, A=z^4 H=A0+R, source F, paired mass/log\ndomain, original common regulator and all fixed finite contacts. The\nknown full linear solution has E(u)<1.1e-10. Let\n\n    u=m Phi_m+w,\n    V=chi[-F-A(m Phi_m)-R w]+[A0,chi]w,\n    G=(D-4)V_b-(D-6)V_nu/3, D=z partial_z.\n\nThe mass lift is the exact reference lift with its original .1/.2\ntransition; it vanishes before z=.2 and retains the regular-bolt\nmatching. Its local cancellation is not a fixed-temperature zero mode.\nThe ORIGINAL graph cutoff is the beta(11,11) logarithmic cutoff, one\nthrough a=.05 and zero from b=.1, exactly as in\ncurrent-global-mass-conversion.md. No basis or norm changes here.\n\nSplit the unknown input at c=.2. On its distant part w_far=1_(z>=c)u,\nchi w_far=0. Consequently the COMPLETE unknown distant contribution is\n\n    -chi R w_far+[A0,chi]w_far=-chi A w_far.          (1)\n\nThe normal part cancels exactly. Bounding the two terms independently\nwould lose this cancellation. Every local differential/contact block,\nincluding both local gravitational rows, Weyl and fixed-domain LLL,\nhas zero cross-support action. Thus the only surviving distant block\nis the actual massive canonical shape Hessian Hm; the scalar row is zero.\nSet f(z)=Hm[1_(z'>=c)T](z), where T=u_b is the ACTUAL coupled solution's\nshape, not a freely selected source or independent phase input. Then\n\n    V_far=(0,-chi z^4 f),\n    g_far=z^-sigma G_far\n          =-chi z^(5-sigma)f'-(Dchi)z^(4-sigma)f, sigma=4.005. (2)\n\nThe second term is essential. The constant coefficient f(0) disappears\nfrom the differentiated row only where chi=1; it remains in the original\nshape equation and its transition. We bound it separately below.\n\nEquation (1) holds with matched regulated A,A0,R first. The input split\nis used only in a separated integral, not as a discontinuous physical\nmetric or a new boundary condition. Smooth approximations to the split\nhave the same separated bounds and limit. The remaining near-diagonal\ncontacts and local rows stay in the UNRESOLVED complementary block.\n\n## 2. Replace the previously unknown supremum by a proved weighted return\n\nThe fixed-seed output comparison gives ||T/z^2||L2(dz)<17.6 E.\nThe retained TT gradient estimate, with the same physical normalization,\ngives ||sqrt(Q) T'||L2(dz)<130 E: its squared constant is\n1e5 beta/(.99 F_l)<130^2. This applies to the shape component of any\nphysical test under the fixed York return; the conformal scalar changes\nnu, not T. No energy-to-H3 or neighborhood embedding is asserted.\n\nThe actual bolt polynomial, already enclosed in the complete mass\nresidual calculation, gives, with delta=z_h-z and gamma>0,\n\n    2gamma delta+delta^2/8 <= Q <=2gamma delta+1.001 delta^2,\n    z_h>.99, gamma<1e-30, Q<.2.                     (3)\n\nThere is an anchor z_* in [.2,.3] with |T(z_*)|<=17.6 E/sqrt(.1).\nThe fundamental theorem and weighted Cauchy--Schwarz yield\n\n    |T(.2)|/E <=17.6/sqrt(.1)+130sqrt(.8/.69^2)<300.\n\nFor delta>=gamma, integration of 1/Q from c gives\n\n    |T(z)|/E<=300+130sqrt(8/delta)<=700/sqrt(delta). (4)\n\nWrite s=Y(z)-Y(c), dY=dz/sqrt(Q), delta_c=z_h-c>.79.\nWhile delta>=gamma, sqrt(Q)/delta<=sqrt(3.001)<2, so\ndelta>=delta_c exp(-2s). Therefore, for every k>=18,\n\n    integral_(delta>=gamma) e^-ks |T| dY\n                         <=800 E/(k-1).           (5)\n\nNo bolt point-evaluation norm is substituted here. On delta<=gamma use\n\n    integral_c^z Q^-1 dt <=gamma^-1[8+.5log(gamma/delta)],\n    dY<=d(delta)/sqrt(2gamma delta).\n\nUsing sqrt(A+B)<=sqrt(A)+sqrt(B) and the exact elementary gamma integral\nint_0^1 t^-1/2 sqrt(log(1/t))dt=sqrt(2pi) gives\n\n    integral_(delta<=gamma)|T|dY\n       <=[300sqrt(2)+130(2sqrt(8)+sqrt(pi))/sqrt(2)]E/sqrt(gamma)\n       <1110 E/sqrt(gamma).                         (6)\n\nFrom Q<=1.001(delta+gamma)^2, the distance to this last region is\ns_gamma>=log[(delta_c+gamma)/(2gamma)]/1.001. Its weighted cost is\nat most 1110 E gamma^-1/2(2gamma/.79)^(k/1.001). The product with\nk-1 decreases for k>=18; at gamma=1e-30, k=18 it is <1e-500.\nMonotonicity in gamma gives the same upper bound for the actual smaller\npositive gamma. Combining (5)-(6) proves the WHOLE physical-input bound\n\n    integral_(Y(c))^(Y(z_h)) e^(-k[Y'-Y(c)]) |T(Y')|dY'\n                               <=900 E/k, k>=18.    (7)\n\nThis includes the actual regular-bolt endpoint and all intermediate\ngeometry. Its purpose is to estimate a return from the coupled solution,\nnot to optimize the already controlled cold source. The singular value\nmajorant in (6) is integrable; no unproved bounded trace is assumed.\n\n## 3. Apply the actual complete paired kernel, not a normal surrogate\n\nUse the original first-order transfer and spin traces in\ncurrent-separated-quantum-graph-bound.md:\n\n    M_n^2=n(n+q)/C, d_n=2(q+2n), p_j=gamma(j+1/2),\n    Udot=W(1-U^2)-2M U, W=p/sqrt(Q), 0<=U,V<=1,\n    Bdir=-4U_A V_B exp(-2I_AB)/(1+U_B V_B)^2,\n    Bimg=-4U_A U_B exp(-2I_img)/(1+U_B V_B)^2,\n    Hm(z,Y')=-2G gamma/(pi B^2 sqrt(Q(z)))\n                         sum_(n>=1,j>=0)d_n M_n^2(Bdir+Bimg).  (8)\n\nThe invariant intervals, orientations, both thermal signs and physical\npaired image normalization are precisely the retained actual realization.\nThe regular endpoint branches and boundary projectors are not varied.\nFor k=sqrt(M^2+5p^2), the Riccati comparison gives the original bounds\nexp(-2I_AB)<=4 exp[-2k(Y'-Y)] and\nexp(-2I_img)<=16 exp[-2k(Y'-Y)]. Image travel is no shorter than direct\ntravel. These statements retain the actual thermal/bolt/domain return.\n\nThe observation collar is now z<=.1, so check its analytic germ rather\nthan importing the smaller-collar guard: the actual polynomial obeys\n|Q/beta-1|<.01 on the entire complex disk |z|<=.11. For each real\nobservation continue only its one-sided U,V germs on radius\n1/[1000(M+p)]. Then |Q^-1/2|<4, |Q^-1|<16. The Riccati right side and\nLipschitz constant are <36(M+p) on |U-U_real|,|V-V_real|<=.1.\nPicard preserves the .036 disk, |1+UV|>=.79, and\n|partial_z I|<=18(M+p). The same Cauchy bound is consequently valid:\n\n    |partial_z^j[(Bdir+Bimg)/sqrt(Q)]|\n       <=640 j! [1000(M+p)]^j exp[-2k(Y'-Y)], 0<=j<=4. (9)\n\nThis is an observation derivative of the ACTUAL kernel. It does not\ndifferentiate an unsigned bound, continue an arbitrary mass/log input,\nor replace the cubic paired double by a smooth geometry.\n\nThe proper separation is at least d=sqrt(5)(c-b). Factor the exponential\nin (9) at Y(c) and use (7) with 2k. It replaces the former hypothetical\nsupremum by 900 E with the same 1/(2k)<=1/(2M) integration factor.\nPut c_M=sqrt(2)d and c_p=sqrt(10)d. The COMPLETE sums obey\n\n    sum_n d_n M_n^r e^(-c_M M_n)<=4C(r+2)!/c_M^(r+2), r>=1,\n    gamma sum_(j>=0)p_j^l e^(-c_p p_j)\n                    <=l! c_p^(-l-1)(1+gamma c_p), l>=0.       (10)\n\nThe first follows from the complete counting function <=4CM^2.\nFor the second the midpoint sum differs from the integral of a positive\nunimodal function by at most gamma times its maximum. The inequality\n(l/e)^l<=l! supplies the displayed bound. The nonzero gamma factor is\nretained; no discrete thermal sum is replaced by an integral equality.\n\nExpanding (M+p)^j before summation gives\n\n    sup_(z<=b)|f^(j)(z)| <=900 E A_j,\n    A_j=2560 GC/(pi B^2) j!1000^j(1+gamma c_p)\n        sum_(l=0)^j binom(j,l)(j-l+3)!l!\n                            /[c_M^(j-l+3)c_p^(l+1)], j<=4.   (11)\n\nThe positive majorants (7),(9),(10) justify all four derivatives and\nthe common-regulator removal on this separated block. Local seagulls\nand restorations have zero cross-support action, not zero full action.\nBoth original equations, the mass/log completion and regular bolt remain.\n\n## 4. Original H3 output including every cutoff derivative\n\nUse exactly the original Fourier H3(dx), x=log z. For chi's logarithmic\nbeta(11,11) cutoff the Bernstein finite-difference bound gives\n\n    h_0=1, h_l=[21!/(21-l)!]2^(l-1)/log(2)^l, 1<=l<=4. (12)\n\nDefine C_00(alpha)=1 and\nC_(m+1),j(alpha)=(alpha+j)C_mj(alpha)+C_m,j-1(alpha).\nThe product rule and whole-interval integrals in (2) give, for 0<=k<=3,\n\n    L1_k=sum_(l=0)^k sum_(j=0)^(k-l) binom(k,l) h_l\n           |C_(k-l),j(.995)| b^(.995+j) A_(j+1)/sqrt(2(.995+j)),\n    L0_k=sqrt(log 2) sum_(l=0)^k sum_(j=0)^(k-l) binom(k,l) h_(l+1)\n           |C_(k-l),j(-.005)| max_(a<=z<=b)z^(j-.005) A_j,\n    C_far=900 sqrt[sum_(k=0)^3 binom(3,k)(L1_k+L0_k)^2].       (13)\n\nAll maxima in (13) are endpoint power maxima; there is no sampled\nderivative or quadrature tail. The original-row transition is L0 and\nhas not been killed by applying (D-4) before the cutoff.\n\nThe supporting evaluation will test\n\n    C_far<1.124e-10,\n    ||g_far||H3 <=C_far*1.1e-10 <1.24e-20,\n    |f(0)|<=900*1.1e-10 A0<1.27e-34.               (14)\n\nThe latter is the forcing of the original z^4 shape row, whose scalar\nquartic coefficient is 20beta Fstar>3.3333332. Its isolated algebraic\nconversion is <3.82e-35, but this is NOT the actual quartic coefficient:\nall other coupled row entries still determine that coefficient together.\n\nThe independently retained auxiliary Mellin tail is different from\n(14). Substituting the newly certified |m_linear|<1.627532e-15 into\nits original bound 1.02e-46+6.50e-39|m| gives <1.020000106e-46.\nNeither kind of distant return is the unknown near-diagonal graph.\n\n## 5. Decision for the complete coupled problem\n\nThe attempted full localization now has a certified distant-input term\non the actual linear response, with no assumed global supremum, independent\nphase amplitude or cold norm. The original mass conversion remains <2174\nper unit mass. After reserving the conservative mass bound and (14),\n\n    1e-11-2174*(1.627532e-15)-1.24e-20 >6.4617454e-12.       (15)\n\nThis is the remaining SUFFICIENT SHAPE-graph allowance, not the actual\nnear graph or a bound for the original scalar graph. The conversion\nd_chi=B_sigma[z^-sigma chi(b_m-z^3)] used in (15) is the shape output;\nno new scalar norm comparison is inferred from its value 2174.\nThe first still unsupported quantitative step is the common-restored\nnear-diagonal operator and its transition response on 0<z<.2, with both\noriginal local equations and their finite matching rows. Neither (7)\nnor the weak inverse controls the derivatives needed for this part.\nIts fixed-seed qualitative graph theorem supplies no numerical constant.\nNo inference from .01 local fast estimates to the full .05/.1 transition\nis made. The constants for independent phase columns and nonlinear\nneighborhoods remain unknown.\n\nThe conditional mass-column target kappa_m<=5e-5 is not evaluated here.\nIts costs 2.14765e-12 affine and .0024731 feedback, and residual budgets\nY_other<=5.34234999994958e-12 and\neta_other+(.0195239+4.583e-13)gamma_E<.0012069, remain conditional.\nThe screen .028913+1e-11*1.0706e10=.135973<.1599164 keeps only its\nproved two-fast-input scope. No actual independent phase coefficient is\nidentified with its allowance. The exact slow pair and scalar quartic\nremain in the unknown coupled near/transition solve.\n\nRESEARCH DECISION: retain the construction. Use (1) and (7)-(14) for\nthe complete distant response and stop assigning it hypothetical input\namplitudes. Its certified cost is negligible in the original allowance;\nfurther improvement there will not decide feasibility. The complete\ncoupled estimate remains UNRESOLVED, with no excessive upper bound or\nactual obstruction yet established for its near/transition block.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED HERE): enclose the actual\ntwo-row near/transition graph response of the same full linear solution,\nincluding common-restored coincidence contacts and original scalar/slow\nmatching, against the remaining 6.4617454e-12 allowance. A coupled defect\ncertificate must bound its strong error, rather than substitute energy\nor the two-fast-input screen. This is the unexecuted part of the requested\nglobal calculation, not a new smaller objective.\n\nRemaining to-do list: complete coupled graph and independent phase columns;\nphysical-norm/neighborhood comparisons; nonlinear admission/contraction;\nexact compatibility; physical matching; semiclassical validity/noise;\nall-sector stability; charge/return, opening, transport, preparation,\nseparate creation and the full stable semiclassical wormhole objective.\n",
+        "checks/current_actual_far_graph_energy_bound.py": "\"\"\"Original-cutoff distant return for the actual coupled linear solution.\n\nSupporting exact identities and outward arithmetic for the ordinary proof.\nNo finite angular/thermal selection and no numerical solution is substituted.\n\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import factorial, comb\nimport sys, json, traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0, sys.argv[sys.argv.index('--arb-path')+1])\nimport flint\nfrom flint import arb, ctx\nimport sympy as sp\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-actual-far-graph-energy-bound'\nOWN=['notes/'+STEM+'.md','checks/current_actual_far_graph_energy_bound.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-complete-weak-mass-residual.md',\n 'notes/current-joint-adjoint-residual-attempt.md',\n 'notes/current-separated-quantum-graph-bound.md',\n 'notes/current-global-mass-conversion.md',\n 'notes/current-global-return-energy-attempt.md',\n 'notes/current-coupled-global-return-attempt.md',\n 'notes/current-controlled-solution-audit-closeout.md',\n 'evidence/current-global-mass-conversion.json',\n 'evidence/current-reference-clock-adjoint-trial.json',\n 'evidence/current-coupled-global-return-attempt.json',\n 'evidence/current-complete-weak-mass-residual.json']\nCHECKS=[]\ndef check(name, ok):\n    assert name not in {x['name'] for x in CHECKS}\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    if not ok:raise AssertionError(name)\ndef enc(v):\n    mid,rad,exp=v.mid_rad_10exp(50)\n    return {'ball':str(v),'decimal_enclosure':{'mid':str(mid),'rad':str(rad),'exponent':str(exp)}}\ndef dec(v):\n    d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef prior(name):\n    r=json.loads((ROOT/'evidence'/(name+'.json')).read_bytes())['runs'][-1]\n    assert r['status']=='passed'\n    return r['result']\ndef execute():\n    ctx.prec=512\n    par=prior('current-global-mass-conversion')['parameters']\n    beta,u,eps,tau,g,Fl=[dec(par[k]) for k in ['beta','u','eps','tau','g','Fl']]\n    tr=prior('current-reference-clock-adjoint-trial')\n    ret=prior('current-coupled-global-return-attempt')\n    old=prior('current-complete-weak-mass-residual')\n    gamma=dec(ret['gamma']);zh=1/(1+dec(ret['h']));C=1/u\n    etaG=C/dec(tr['B_squared_over_G']);pi=arb.pi()\n    check('same_actual_positive_bolt',gamma>0 and gamma<arb('1e-30') and zh>arb('.99') and zh<1)\n    check('same_original_mass_certificate',dec(old['full_coupled_linear_mass_upper'])<arb('1.627532e-15'))\n    qt=[dec(v) for v in old['actual_bolt_polynomial_coefficients']]\n    check('bolt_coefficients_cover_full_polynomial',qt[0]>arb('.999999') and qt[0]<arb('1.000001')\n          and qt[1]>arb('-1.334') and qt[1]<arb('-1.333') and qt[2]>arb('.5') and qt[2]<arb('.501')\n          and abs(qt[3])<arb('1e-27') and abs(qt[4])<arb('1e-27'))\n    # P(delta)=a+b delta+c delta^2+... is decreasing on [0,1],\n    # using its coefficient enclosure; endpoints then give these reserves.\n    check('bolt_polynomial_P_decreasing',arb('-1.333')+2*arb('.501')+7*arb('1e-27')<0)\n    check('whole_interval_P_lower',arb('.999999')-arb('1.334')+arb('.5')-2*arb('1e-27')>arb('.16'))\n    check('whole_interval_P_upper',arb('1.000001')+2*arb('1e-27')<arb('1.001'))\n    check('lower_Q_includes_thermal_and_quadratic',arb('.16')>arb(1)/8)\n    # The old whole-interval Q<.17 bound is retained, not inferred from\n    # the much looser delta upper polynomial at delta=1.\n    q=[beta,arb(0),u,-4*beta-2*u-tau,3*beta+u+eps,-2*eps,eps]\n    radius=arb('.11')\n    complex_error=sum((abs(q[j]/beta)*radius**j for j in range(1,7)),arb(0))\n    check('actual_observation_germ_polynomial_guard',complex_error<arb('.01'))\n    check('observation_disk_stays_in_guard',arb('.1')+1/(1000*arb(18))<radius)\n    check('inverse_sqrt_Q_guard',1/(beta*(1-complex_error)).sqrt()<4)\n    check('inverse_Q_guard',1/(beta*(1-complex_error))<16)\n    check('riccati_rhs_and_lipschitz',16*(1+arb('1.1')**2)<36 and 8*arb('1.1')<36 and 32*arb('1.1')<36)\n    check('riccati_picard_radius',arb(36)/1000<arb('.1'))\n    check('denominator_germ_reserve',2*arb('.036')+arb('.036')**2<arb('.21'))\n    check('actual_kernel_cauchy_prefactor',4*arb('1.1')/arb('.79')**2*arb('.036').exp()<8 and 4*8*(4+16)<=640)\n    Flmin=1-arb('1.179e-8')\n    gradient_squared=arb('1e5')*beta/(arb('.99')*Flmin)\n    check('actual_gradient_energy_conversion',Fl>Flmin and gradient_squared<130**2)\n    anchor=arb('17.6')/arb('.1').sqrt()+130*(arb('.8')/arb('.69')**2).sqrt()\n    check('anchor_bound',anchor<300)\n    check('middle_value_bound',300+130*arb(8).sqrt()<700)\n    check('middle_growth_rate',arb('3.001').sqrt()<2)\n    check('middle_L1_coefficient',700/arb('.79').sqrt()<800)\n    cold=300*arb(2).sqrt()+130*(2*arb(8).sqrt()+pi.sqrt())/arb(2).sqrt()\n    check('cold_integrable_energy_majorant',cold<1110)\n    gu=arb('1e-30')\n    sg=(arb('.79')/(2*gu)).log()/arb('1.001')\n    check('cold_weight_product_decreases_with_k',sg>1/arb(17))\n    check('cold_weight_bound_monotone_in_gamma',18/arb('1.001')-arb('.5')>0)\n    cold_weight=1110*17/gu.sqrt()*(2*gu/arb('.79'))**(18/arb('1.001'))\n    check('entire_cold_weighted_integral',cold_weight<arb('1e-500'))\n    check('whole_weighted_return_constant',arb(801)*18/17<900)\n    a=arb('.05');b=arb('.1');c=arb('.2');d=arb(5).sqrt()*(c-b)\n    cm=arb(2).sqrt()*d;cp=arb(10).sqrt()*d\n    check('actual_separation_positive',d>0 and cm>0 and cp>0)\n    Aj=[]\n    for j in range(5):\n        Aj.append(2560*etaG/pi*factorial(j)*1000**j*(1+gamma*cp)*sum(\n            (comb(j,k)*factorial(j-k+3)*factorial(k)/(cm**(j-k+3)*cp**(k+1)) for k in range(j+1)),arb(0)))\n    t=sp.symbols('t')\n    cutoff=1-sp.Rational(factorial(21),factorial(10)**2)*sum(\n        ((-1)**j*comb(10,j)*t**(11+j)/sp.Integer(11+j) for j in range(11)))\n    coeff=sp.Poly(cutoff,t)\n    bern=[sum(coeff.nth(j)*sp.Rational(comb(i,j),comb(21,j)) for j in range(i+1)) for i in range(22)]\n    check('original_beta_cutoff_bernstein_identity',bern==[sp.Integer(1)]*11+[sp.Integer(0)]*11)\n    check('original_cutoff_endpoints',cutoff.subs(t,0)==1 and cutoff.subs(t,1)==0)\n    check('cutoff_endpoint_jets_retained',all(sp.diff(cutoff,t,j).subs(t,0)==0 and sp.diff(cutoff,t,j).subs(t,1)==0 for j in range(1,11)))\n    hh=[arb(1)]+[arb(factorial(21)//factorial(21-j))*2**(j-1)/arb(2).log()**j for j in range(1,5)]\n    def recurrence(alpha):\n        rows=[[arb(1)]]\n        for m in range(3):\n            old=rows[-1]\n            rows.append([(alpha+j)*(old[j] if j<len(old) else 0)+(old[j-1] if j else 0) for j in range(m+2)])\n        return rows\n    # Verify the derivative recurrence as a formal identity on arbitrary f jets.\n    z,al=sp.symbols('z al');jets=sp.symbols('f0:5');expr=jets[0]\n    symbolic=[[sp.Integer(1)]]\n    for k in range(1,4):\n        expr=sp.expand(al*expr+z*sp.diff(expr,z)+sum(z*sp.diff(expr,jets[j])*jets[j+1] for j in range(4)))\n        prev=symbolic[-1]\n        row=[(al+j)*(prev[j] if j<len(prev) else 0)+(prev[j-1] if j else 0) for j in range(k+1)]\n        symbolic.append(row)\n        check('Euler_derivative_identity_'+str(k),sp.expand(expr-sum(row[j]*z**j*jets[j] for j in range(k+1)))==0)\n    r1=recurrence(arb('.995'));r0=recurrence(arb('-.005'))\n    L1=[];L0=[]\n    for k in range(4):\n        one=arb(0);zero=arb(0)\n        for l in range(k+1):\n            for j in range(k-l+1):\n                one+=comb(k,l)*hh[l]*abs(r1[k-l][j])*b**(arb('.995')+j)*Aj[j+1]/(2*(arb('.995')+j)).sqrt()\n                power=arb('-.005')+j\n                maxpow=a**power if j==0 else b**power\n                zero+=comb(k,l)*hh[l+1]*abs(r0[k-l][j])*maxpow*Aj[j]*arb(2).log().sqrt()\n        L1.append(one);L0.append(zero)\n    nf=lambda vals:sum((comb(3,k)*vals[k]**2 for k in range(4)),arb(0)).sqrt()\n    Cfar=900*nf([L1[k]+L0[k] for k in range(4)])\n    actual=Cfar*arb('1.1e-10');row=900*arb('1.1e-10')*Aj[0]\n    quartic=20*beta*(Fl+23*g/(180*pi))\n    check('complete_actual_far_graph_per_energy',Cfar<arb('1.124e-10'))\n    check('complete_actual_linear_far_graph_target',actual<arb('1.24e-20'))\n    check('original_shape_finite_part_retained',row<arb('1.27e-34'))\n    check('original_scalar_quartic_row_coefficient',quartic>arb('3.3333332'))\n    check('far_row_only_algebraic_quartic_allowance',row/quartic<arb('3.82e-35'))\n    remaining=arb('1e-11')-2174*arb('1.627532e-15')-arb('1.24e-20')\n    check('remaining_near_allowance_is_positive',remaining>arb('6.4617454e-12'))\n    check('far_cost_not_decision_dominant',actual/remaining<arb('2e-9'))\n    aux=arb('1.02e-46')+arb('6.50e-39')*arb('1.627532e-15')\n    check('auxiliary_Mellin_tail_after_actual_mass_bound',aux<arb('1.020000106e-46'))\n    return {'precision_bits':ctx.prec,'complex_actual_polynomial_error':enc(complex_error),\n        'gradient_energy_constant_squared':enc(gradient_squared),'anchor_upper':enc(anchor),\n        'cold_unweighted_coefficient':enc(cold),'cold_weighted_reserve_test':enc(cold_weight),\n        'whole_input_weighted_L1_constant':'900/k for k>=18',\n        'actual_kernel_derivative_coefficients':[enc(v) for v in Aj],\n        'original_cutoff_derivative_guards':[enc(v) for v in hh],\n        'gradient_output_coefficient_per_energy':enc(900*nf(L1)),\n        'original_row_transition_coefficient_per_energy':enc(900*nf(L0)),\n        'complete_far_graph_coefficient_per_energy':enc(Cfar),\n        'actual_linear_far_graph_upper':enc(actual),'original_shape_row_finite_part_upper':enc(row),\n        'far_row_only_quartic_algebraic_allowance':enc(row/quartic),\n        'remaining_near_graph_allowance':enc(remaining),\n        'remaining_allowance_scope':'Sufficient shape graph only; original scalar graph remains independent and unbounded here.',\n        'auxiliary_Mellin_tail_upper':enc(aux),\n        'scope':{'actual_linear_far_graph_bounded':True,'original_shape_finite_part_retained':True,\n          'normal_far_cancels_commutator_exactly':True,'complete_angular_and_thermal_sums':True,\n          'common_regulator_and_actual_domain_retained':True,'actual_near_graph_bounded':False,\n          'actual_kappa_m_computed':False,'independent_phase_columns_bounded':False,\n          'complete_coupled_graph_certified':False,'nonlinear_admission':False,'nonlinear_contraction':False,\n          'exact_compatibility':False,'physical_matching':False,'validity_noise':False,\n          'all_sector_stability':False,'actual_controlled_wormhole':False,\n          'construction_obstruction':False,'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                 'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    message=json.dumps({'mode':mode,'status':run['status'],'checks':len(CHECKS),\n        'result':run.get('result'),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-actual-far-graph-energy-bound-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_execution_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"progress\",\n  \"ordinary_argument\": \"notes/current-actual-far-graph-energy-bound.md\",\n  \"quantitative_role\": \"Bound the distant-input contribution to the ORIGINAL coupled linear graph using the actual solution energy, including its cutoff transition and original shape finite part. This is not the already controlled auxiliary Mellin tail or an independent fast-input bound.\",\n  \"first_unsupported_step_addressed\": \"The previous separated kernel estimate requires an unknown global supremum of the actual solution. Prove a weighted L1 estimate from its actual energy through the bolt, then retain the exact cancellation of the normal far term against its commutator.\",\n  \"hard_continuum_review\": [\n    {\n      \"source\": \"notes/current-global-return-energy-attempt.md\",\n      \"applies\": \"Same full coupled seed solution, positive diagonal energy, original normal localization and complete finite-domain operator. No energy-to-H3 embedding is inferred.\"\n    },\n    {\n      \"source\": \"notes/current-joint-adjoint-residual-attempt.md\",\n      \"applies\": \"The actual shape output obeys ||T/z^2||<17.6 E; fixed York return gives the same physical gradient estimate. These are output bounds, not independent phase or neighborhood bounds.\"\n    },\n    {\n      \"source\": \"notes/current-complete-weak-mass-residual.md\",\n      \"applies\": \"Retain the actual whole-interval bolt polynomial, positive gamma, original source/inverse normalization and certified linear mass. Use the polynomial bounds to control an integrable weighted input, not a cold-source optimization.\"\n    },\n    {\n      \"source\": \"notes/current-separated-quantum-graph-bound.md\",\n      \"applies\": \"Same actual paired Riccati realization, both thermal signs, image rank, exponential bounds and complete counting function. Recheck analytic germ on z<=.1 instead of transferring its .01 guard. Use energy-weighted input instead of an assumed supremum.\"\n    },\n    {\n      \"source\": \"notes/current-global-mass-conversion.md\",\n      \"applies\": \"Retain beta(11,11) cutoff on .05/.1 and original H3(dx). Include fourth cutoff derivative and the original row term (Dchi)z^(4-sigma)f.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-global-return-attempt.md\",\n      \"applies\": \"Exact mass lift vanishes before .2; the distant unknown input is therefore the full solution there. Preserve scalar quartic finite-part row; its algebraic distant forcing conversion is not the actual coefficient.\"\n    }\n  ],\n  \"common_limit\": \"Prove the exact cancellation with matched regulators; all differentiated separated kernels have a positive all-angular/discrete-thermal/input majorant. Smooth split approximations converge on disjoint supports. No new discontinuous physical metric, smooth surrogate double or fixed squared domain is introduced.\",\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"C_far<1.124e-10 per original E\",\n      \"actual linear far H3<1.24e-20\",\n      \"original shape finite part<1.27e-34\",\n      \"remaining near allowance>6.4617454e-12\"\n    ],\n    \"verification\": \"One passing development and matching unchanged-source acceptance; retain every failure and source snapshot.\",\n    \"support_scope\": \"Exact cutoff/derivative identities and outward evaluation of explicit continuum majorants; not a replacement for the separately written domain argument.\"\n  },\n  \"claims_boundary\": {\n    \"closes_if_execution_passes\": [\n      \"actual linear distant-input H3 bound\",\n      \"its original-row finite-part forcing\"\n    ],\n    \"does_not_close\": [\n      \"complete coupled graph\",\n      \"kappa_m\",\n      \"independent phase columns\",\n      \"nonlinear-neighborhood comparisons\",\n      \"nonlinear admission/contraction\",\n      \"compatibility\",\n      \"physical matching\",\n      \"validity/noise\",\n      \"all-sector stability\",\n      \"stable wormhole existence\"\n    ]\n  },\n  \"exploration\": {\n    \"scope\": \"Pre-freeze exploration of the complete distant-input coefficient, not a physical mode truncation or a numerical solve.\",\n    \"files\": {\n      \"s169ed-far-explore.py\": {\n        \"sha256\": \"f029bf0b57bd87cf622a36445138ded295dcaf7bf0a60c321f3e765ddb75ce46\",\n        \"contents\": \"from pathlib import Path\\nimport sys,json,math\\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\\nfrom flint import arb,ctx\\nctx.prec=512\\nsat=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\\ndef p(n):return json.loads((sat/'evidence'/(n+'.json')).read_bytes())['runs'][-1]['result']\\ndef dec(v):\\n d=v['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\\ntr=p('current-reference-clock-adjoint-trial');pa=p('current-global-mass-conversion')['parameters']\\nC=1/dec(pa['u']);etaG=C/dec(tr['B_squared_over_G'])\\nga=dec(p('current-coupled-global-return-attempt')['gamma'])\\npi=arb.pi();a=arb('.05');b=arb('.1');binp=arb('.2');d=arb(5).sqrt()*(binp-b)\\ncM=arb(2).sqrt()*d;cp=arb(10).sqrt()*d\\nAj=[]\\nfor j in range(5):\\n v=arb(2560)*etaG/pi*math.factorial(j)*1000**j*(1+ga*cp)*sum((math.comb(j,k)*math.factorial(j-k+3)*math.factorial(k)/(cM**(j-k+3)*cp**(k+1)) for k in range(j+1)),arb(0))\\n Aj.append(v)\\nhh=[arb(1)]+[arb(math.factorial(21)//math.factorial(21-l))*2**(l-1)/arb(2).log()**l for l in range(1,5)]\\ndef cc(alpha):\\n rows=[[arb(1)]]\\n for m in range(3):\\n  old=rows[-1];rows.append([(alpha+j)*(old[j] if j<len(old) else 0)+(old[j-1] if j else 0) for j in range(m+2)])\\n return rows\\nrows1=cc(arb('.995'));rows0=cc(arb('-.005'))\\nL=[];L0=[];L1=[]\\nfor k in range(4):\\n one=arb(0);zero=arb(0)\\n for l in range(k+1):\\n  for j in range(k-l+1):\\n   one+=math.comb(k,l)*hh[l]*abs(rows1[k-l][j])*b**(arb('.995')+j)*Aj[j+1]/(2*(arb('.995')+j)).sqrt()\\n   power=arb('-.005')+j\\n   maxpow=a**power if j==0 else b**power\\n   zero+=math.comb(k,l)*hh[l+1]*abs(rows0[k-l][j])*maxpow*Aj[j]*arb(2).log().sqrt()\\n L0.append(zero);L1.append(one);L.append(one+zero)\\nnf=lambda v:sum((math.comb(3,k)*v[k]*v[k] for k in range(4)),arb(0)).sqrt()\\nout={'exploratory':True,'Aj':[str(v) for v in Aj],'cutoff_guards':[str(v) for v in hh],\\n 'direct_gradient_coefficient':str(900*nf(L1)),'original_row_transition_coefficient':str(900*nf(L0)),\\n 'complete_actual_far_graph_per_energy':str(900*nf(L)),\\n 'actual_linear_far_graph_upper':str(900*nf(L)*arb('1.1e-10'))}\\nprint(json.dumps(out,indent=2))\\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2))\\n\"\n      },\n      \"s169ed-far-explore.json\": {\n        \"sha256\": \"928ca9ae6f00e9916a6e16cc118f53fc8fbd6681744ddf7a5755cfab3a1b5b2d\",\n        \"contents\": \"{\\r\\n  \\\"exploratory\\\": true,\\r\\n  \\\"Aj\\\": [\\r\\n    \\\"[1.281172578177001377599e-27 +/- 8.14e-49]\\\",\\r\\n    \\\"[1.801754532695625159052e-23 +/- 9.63e-45]\\\",\\r\\n    \\\"[6.14391659119014599572e-19 +/- 2.27e-40]\\\",\\r\\n    \\\"[3.69901777964992584919e-14 +/- 4.45e-35]\\\",\\r\\n    \\\"[3.41983609543525685200e-9 +/- 1.92e-30]\\\"\\r\\n  ],\\r\\n  \\\"cutoff_guards\\\": [\\r\\n    \\\"1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\\\",\\r\\n    \\\"[30.2965958586682315545584183010397348859595650372127046168444375455532936028048866775960590807636332344369478845027034293674551354305355524971339053226931 +/- 4.05e-152]\\\",\\r\\n    \\\"[1748.34994404471055021044854713739279705379961074270806656630908762273129321689381690260946983695402236428187109384778682400620763723264030394392958707678 +/- 2.82e-150]\\\",\\r\\n    \\\"[95848.7601724484217565125756384402120731642024070427666334152191108140941245940290893716811640950186466239878150436062479610652841117487977515379657461629 +/- 9.54e-149]\\\",\\r\\n    \\\"[4978099.11514128923369061977533704839478532583682955021544111099477890579195098480411348795665763267778107657862748060615693549634762736889128169946746113 +/- 5.27e-147]\\\"\\r\\n  ],\\r\\n  \\\"direct_gradient_coefficient\\\": \\\"[1.114960173989561539478e-10 +/- 7.06e-32]\\\",\\r\\n  \\\"original_row_transition_coefficient\\\": \\\"[8.74697194334837354550e-13 +/- 3.29e-34]\\\",\\r\\n  \\\"complete_actual_far_graph_per_energy\\\": \\\"[1.123707145910069508162e-10 +/- 3.98e-32]\\\",\\r\\n  \\\"actual_linear_far_graph_upper\\\": \\\"[1.236077860501076458978e-20 +/- 6.38e-42]\\\"\\r\\n}\"\n      }\n    }\n  },\n  \"local_lean_invocations\": 0,\n  \"scientific_sha256\": {\n    \"notes/current-actual-far-graph-energy-bound.md\": \"e20bb36f949c04bbf9bc380d2591d07a77e5d211c4685371ff849e05ab2b6c27\",\n    \"checks/current_actual_far_graph_energy_bound.py\": \"3481277c61fd1001286a635ad22efbf16aec878c5c4c9917aea73591a35f0636\"\n  },\n  \"post_development_scope_review\": {\n    \"source_version\": 2,\n    \"prior_passing_snapshot_retained\": true,\n    \"clarification\": \"The 2174 conversion and remaining 6.4617454e-12 allowance refer to the original shape graph. The original scalar graph and its mass-basis comparison are not supplied by this calculation. Both distant original-row components are already accounted for: scalar zero and retained shape finite part.\",\n    \"effect_on_computed_distant_bound\": \"none\",\n    \"failed_frozen_runs\": 0,\n    \"prior_source_hashes\": {\n      \"notes/current-actual-far-graph-energy-bound.md\": \"08e1d82f939ff13a59056adc0906ecf5723c1838e12b6d91427754d855759b19\",\n      \"checks/current_actual_far_graph_energy_bound.py\": \"897f521400fd0e64c3250d20bf2f9cc030eb49845bd0c9a29179cc3365628193\",\n      \"evidence/current-actual-far-graph-energy-bound-review.json\": \"cc10ed44aad6a4bc7fb55172ebfec9ff63288eb0e6463986157ee2fca40a023e\",\n      \"notes/current-complete-weak-mass-residual.md\": \"7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc\",\n      \"notes/current-joint-adjoint-residual-attempt.md\": \"bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417\",\n      \"notes/current-separated-quantum-graph-bound.md\": \"eab5d90dc3a2c818b330e0e0866521257d860db467b7076e8cc1e82bb19bbafd\",\n      \"notes/current-global-mass-conversion.md\": \"12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219\",\n      \"notes/current-global-return-energy-attempt.md\": \"c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b\",\n      \"notes/current-coupled-global-return-attempt.md\": \"ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c\",\n      \"notes/current-controlled-solution-audit-closeout.md\": \"3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e\",\n      \"evidence/current-global-mass-conversion.json\": \"ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df\",\n      \"evidence/current-reference-clock-adjoint-trial.json\": \"4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204\",\n      \"evidence/current-coupled-global-return-attempt.json\": \"db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1\",\n      \"evidence/current-complete-weak-mass-residual.json\": \"8a98bd122aafe737c52875536d9cefc53d021c6de02381771f9a56cd5cf00b8b\"\n    }\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "complex_actual_polynomial_error": {
+          "ball": "[0.00576323000182107163292972930679 +/- 9.16e-33]",
+          "decimal_enclosure": {
+            "mid": "5763230001821071632929729306790846002048053010570209608",
+            "rad": "8306866751492363141513217",
+            "exponent": "-57"
+          }
+        },
+        "gradient_energy_constant_squared": {
+          "ball": "[16835.0170331589511934013763585 +/- 2.15e-26]",
+          "decimal_enclosure": {
+            "mid": "1683501703315895119340137635848950175273935202475505915",
+            "rad": "1096143927172544797343745",
+            "exponent": "-50"
+          }
+        },
+        "anchor_upper": {
+          "ball": "[224.171354688512844668219701416836663936815119292412711315136515498058485501450382216745069947615798671260247215351197640500213375804463420007090429423284 +/- 4.33e-151]",
+          "decimal_enclosure": {
+            "mid": "2241713546885128446682197014168366639368151192924127113",
+            "rad": "2",
+            "exponent": "-52"
+          }
+        },
+        "cold_unweighted_coefficient": {
+          "ball": "[1107.19490656294354729753136077562736501635570075273041253394895385946883108814184002664498979286619411804480209251194128439376185193345901555549706676778 +/- 7.50e-151]",
+          "decimal_enclosure": {
+            "mid": "1107194906562943547297531360775627365016355700752730412",
+            "rad": "2",
+            "exponent": "-51"
+          }
+        },
+        "cold_weighted_reserve_test": {
+          "ball": "[1.172818262816413159251660082236118779600088532017921382418473313935898154843670483334364531719729162530095073603033555840806319194563271383052226011880e-513 +/- 5.98e-664]",
+          "decimal_enclosure": {
+            "mid": "1172818262816413159251660082236118779600088532017921382",
+            "rad": "2",
+            "exponent": "-567"
+          }
+        },
+        "whole_input_weighted_L1_constant": "900/k for k>=18",
+        "actual_kernel_derivative_coefficients": [
+          {
+            "ball": "[1.281172578177001377599e-27 +/- 8.14e-49]",
+            "decimal_enclosure": {
+              "mid": "1281172578177001377599467482305857157980955921425860133",
+              "rad": "345945659457359810941071896084481",
+              "exponent": "-81"
+            }
+          },
+          {
+            "ball": "[1.801754532695625159052e-23 +/- 9.63e-45]",
+            "decimal_enclosure": {
+              "mid": "1801754532695625159051524023415270031163001903886548416",
+              "rad": "486514594748436832167031396630529",
+              "exponent": "-77"
+            }
+          },
+          {
+            "ball": "[6.14391659119014599572e-19 +/- 2.27e-40]",
+            "decimal_enclosure": {
+              "mid": "6143916591190145995719394113801353793385798167453926656",
+              "rad": "1658996849266734058596413504225281",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[3.69901777964992584919e-14 +/- 4.45e-35]",
+            "decimal_enclosure": {
+              "mid": "3699017779649925849193446021384562062458250536917738336",
+              "rad": "998818711973903965363995540455425",
+              "exponent": "-68"
+            }
+          },
+          {
+            "ball": "[3.41983609543525685200e-9 +/- 1.92e-30]",
+            "decimal_enclosure": {
+              "mid": "3419836095435256851999013080721375763692036690603427581",
+              "rad": "923433326903599880703844045291521",
+              "exponent": "-63"
+            }
+          }
+        ],
+        "original_cutoff_derivative_guards": [
+          {
+            "ball": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "1000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-54"
+            }
+          },
+          {
+            "ball": "[30.2965958586682315545584183010397348859595650372127046168444375455532936028048866775960590807636332344369478845027034293674551354305355524971339053226931 +/- 4.05e-152]",
+            "decimal_enclosure": {
+              "mid": "3029659585866823155455841830103973488595956503721270461",
+              "rad": "2",
+              "exponent": "-53"
+            }
+          },
+          {
+            "ball": "[1748.34994404471055021044854713739279705379961074270806656630908762273129321689381690260946983695402236428187109384778682400620763723264030394392958707678 +/- 2.82e-150]",
+            "decimal_enclosure": {
+              "mid": "1748349944044710550210448547137392797053799610742708066",
+              "rad": "2",
+              "exponent": "-51"
+            }
+          },
+          {
+            "ball": "[95848.7601724484217565125756384402120731642024070427666334152191108140941245940290893716811640950186466239878150436062479610652841117487977515379657461629 +/- 9.54e-149]",
+            "decimal_enclosure": {
+              "mid": "958487601724484217565125756384402120731642024070427666",
+              "rad": "2",
+              "exponent": "-49"
+            }
+          },
+          {
+            "ball": "[4978099.11514128923369061977533704839478532583682955021544111099477890579195098480411348795665763267778107657862748060615693549634762736889128169946746113 +/- 5.27e-147]",
+            "decimal_enclosure": {
+              "mid": "4978099115141289233690619775337048394785325836829550215",
+              "rad": "2",
+              "exponent": "-48"
+            }
+          }
+        ],
+        "gradient_output_coefficient_per_energy": {
+          "ball": "[1.114960173989561539478e-10 +/- 7.06e-32]",
+          "decimal_enclosure": {
+            "mid": "1114960173989561539477595607841902494973139928388226291",
+            "rad": "301073737670604265675391909232641",
+            "exponent": "-64"
+          }
+        },
+        "original_row_transition_coefficient_per_energy": {
+          "ball": "[8.74697194334837354550e-13 +/- 3.29e-34]",
+          "decimal_enclosure": {
+            "mid": "8746971943348373545499079672635636131343495260160809315",
+            "rad": "2361916989289631149108554515873793",
+            "exponent": "-67"
+          }
+        },
+        "complete_far_graph_coefficient_per_energy": {
+          "ball": "[1.123707145910069508162e-10 +/- 3.98e-32]",
+          "decimal_enclosure": {
+            "mid": "1123707145910069508162093854291529664612570748857294371",
+            "rad": "303435655938937413976778130587649",
+            "exponent": "-64"
+          }
+        },
+        "actual_linear_far_graph_upper": {
+          "ball": "[1.236077860501076458978e-20 +/- 6.38e-42]",
+          "decimal_enclosure": {
+            "mid": "1236077860501076458978303239720682631073827823743023808",
+            "rad": "333779224041352231074811481161729",
+            "exponent": "-74"
+          }
+        },
+        "original_shape_row_finite_part_upper": {
+          "ball": "[1.268360852395231363823e-34 +/- 8.16e-56]",
+          "decimal_enclosure": {
+            "mid": "1268360852395231363823472807482798586401146362211601532",
+            "rad": "342486205794431325397136925786113",
+            "exponent": "-88"
+          }
+        },
+        "far_row_only_quartic_algebraic_allowance": {
+          "ball": "[3.80508260209073293719e-35 +/- 1.35e-56]",
+          "decimal_enclosure": {
+            "mid": "3805082602090732937190319499285343389107368621651116514",
+            "rad": "1027474315889524581958558924406785",
+            "exponent": "-89"
+          }
+        },
+        "remaining_near_graph_allowance": {
+          "ball": "[6.46174541960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-12 +/- 2.13e-165]",
+          "decimal_enclosure": {
+            "mid": "6461745419600000000000000000000000000000000000000000000",
+            "rad": "1",
+            "exponent": "-66"
+          }
+        },
+        "remaining_allowance_scope": "Sufficient shape graph only; original scalar graph remains independent and unbounded here.",
+        "auxiliary_Mellin_tail_upper": {
+          "ball": "[1.02000010578958000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-46 +/- 1.47e-200]",
+          "decimal_enclosure": {
+            "mid": "1020000105789579999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-100"
+          }
+        },
+        "scope": {
+          "actual_linear_far_graph_bounded": true,
+          "original_shape_finite_part_retained": true,
+          "normal_far_cancels_commutator_exactly": true,
+          "complete_angular_and_thermal_sums": true,
+          "common_regulator_and_actual_domain_retained": true,
+          "actual_near_graph_bounded": false,
+          "actual_kappa_m_computed": false,
+          "independent_phase_columns_bounded": false,
+          "complete_coupled_graph_certified": false,
+          "nonlinear_admission": false,
+          "nonlinear_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_wormhole": false,
+          "construction_obstruction": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-actual-far-graph-energy-bound.md": "e20bb36f949c04bbf9bc380d2591d07a77e5d211c4685371ff849e05ab2b6c27",
+        "checks/current_actual_far_graph_energy_bound.py": "3481277c61fd1001286a635ad22efbf16aec878c5c4c9917aea73591a35f0636",
+        "evidence/current-actual-far-graph-energy-bound-review.json": "956d82f72f54a9a06b42bf4e8ff91292c43dc46f285b74f918d27e720ce908b0",
+        "notes/current-complete-weak-mass-residual.md": "7d8e1ee1724db6e7db27f1bd5d89ccd9b20e46c86de716c9bfcd79770696acdc",
+        "notes/current-joint-adjoint-residual-attempt.md": "bb6d0eae1054ff0c0ed5169d6095b8ba02901ad99da2c0c9dba05869c2432417",
+        "notes/current-separated-quantum-graph-bound.md": "eab5d90dc3a2c818b330e0e0866521257d860db467b7076e8cc1e82bb19bbafd",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-reference-clock-adjoint-trial.json": "4ff0b63d9507797fc5038dcb5b0b6b3325948a57fde3a192170af021dc301204",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-complete-weak-mass-residual.json": "8a98bd122aafe737c52875536d9cefc53d021c6de02381771f9a56cd5cf00b8b"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "same_actual_positive_bolt",
+          "passed": true
+        },
+        {
+          "name": "same_original_mass_certificate",
+          "passed": true
+        },
+        {
+          "name": "bolt_coefficients_cover_full_polynomial",
+          "passed": true
+        },
+        {
+          "name": "bolt_polynomial_P_decreasing",
+          "passed": true
+        },
+        {
+          "name": "whole_interval_P_lower",
+          "passed": true
+        },
+        {
+          "name": "whole_interval_P_upper",
+          "passed": true
+        },
+        {
+          "name": "lower_Q_includes_thermal_and_quadratic",
+          "passed": true
+        },
+        {
+          "name": "actual_observation_germ_polynomial_guard",
+          "passed": true
+        },
+        {
+          "name": "observation_disk_stays_in_guard",
+          "passed": true
+        },
+        {
+          "name": "inverse_sqrt_Q_guard",
+          "passed": true
+        },
+        {
+          "name": "inverse_Q_guard",
+          "passed": true
+        },
+        {
+          "name": "riccati_rhs_and_lipschitz",
+          "passed": true
+        },
+        {
+          "name": "riccati_picard_radius",
+          "passed": true
+        },
+        {
+          "name": "denominator_germ_reserve",
+          "passed": true
+        },
+        {
+          "name": "actual_kernel_cauchy_prefactor",
+          "passed": true
+        },
+        {
+          "name": "actual_gradient_energy_conversion",
+          "passed": true
+        },
+        {
+          "name": "anchor_bound",
+          "passed": true
+        },
+        {
+          "name": "middle_value_bound",
+          "passed": true
+        },
+        {
+          "name": "middle_growth_rate",
+          "passed": true
+        },
+        {
+          "name": "middle_L1_coefficient",
+          "passed": true
+        },
+        {
+          "name": "cold_integrable_energy_majorant",
+          "passed": true
+        },
+        {
+          "name": "cold_weight_product_decreases_with_k",
+          "passed": true
+        },
+        {
+          "name": "cold_weight_bound_monotone_in_gamma",
+          "passed": true
+        },
+        {
+          "name": "entire_cold_weighted_integral",
+          "passed": true
+        },
+        {
+          "name": "whole_weighted_return_constant",
+          "passed": true
+        },
+        {
+          "name": "actual_separation_positive",
+          "passed": true
+        },
+        {
+          "name": "original_beta_cutoff_bernstein_identity",
+          "passed": true
+        },
+        {
+          "name": "original_cutoff_endpoints",
+          "passed": true
+        },
+        {
+          "name": "cutoff_endpoint_jets_retained",
+          "passed": true
+        },
+        {
+          "name": "Euler_derivative_identity_1",
+          "passed": true
+        },
+        {
+          "name": "Euler_derivative_identity_2",
+          "passed": true
+        },
+        {
+          "name": "Euler_derivative_identity_3",
+          "passed": true
+        },
+        {
+          "name": "complete_actual_far_graph_per_energy",
+          "passed": true
+        },
+        {
+          "name": "complete_actual_linear_far_graph_target",
+          "passed": true
+        },
+        {
+          "name": "original_shape_finite_part_retained",
+          "passed": true
+        },
+        {
+          "name": "original_scalar_quartic_row_coefficient",
+          "passed": true
+        },
+        {
+          "name": "far_row_only_algebraic_quartic_allowance",
+          "passed": true
+        },
+        {
+          "name": "remaining_near_allowance_is_positive",
+          "passed": true
+        },
+        {
+          "name": "far_cost_not_decision_dominant",
+          "passed": true
+        },
+        {
+          "name": "auxiliary_Mellin_tail_after_actual_mass_bound",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T21:11:22.977089+00:00"
+    }
+  ]
+}
