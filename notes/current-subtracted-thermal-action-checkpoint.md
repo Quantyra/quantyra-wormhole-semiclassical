@@ -1,3 +1,83 @@
+# Active checkpoint: corrected angular/thermal remainder bounded; coupled strong return unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the exact resolvent correction and complete sum argument](current-resolvent-corrected-angular-remainder.md).
+
+OUTCOME: COMPLETE PHYSICAL COUPLED RETURN UNRESOLVED. Retaining two
+exact resolvent corrections repairs the failed auxiliary angular split.
+Its remaining operator and FIRST conormal commutator now have absolutely
+convergent complete angular AND thermal sums. The retained common-regulated
+core and original strong coupled observation remain uncomputed.
+
+Executed: with R=L^-1, S=L_*^-1 and Delta=L_*-L, retain the exact tadpole
+and S+S Delta S+S Delta S Delta S. The exact error is
+-4M^2 S Delta S Delta S Delta R. On the actual paired endpoint realization
+it is bounded by 9.377 M^2/K^7; its first conormal commutator by
+53879 M^2/K^7. The complete discrete thermal sums are bounded by
+2.062/M^4 and 11848/M^4. The entire angular bound sum d_n/M_n^4<4C^2/q
+then closes this remainder's norm sum without any finite mode selection.
+
+The original action, density and near-energy conversion give
+||source_tail||L2(dz)<5.31e-33 E(u), and its first conormal commutator
+<3.052e-29 E(u). Both paired paths, the regular-bolt branch and the
+original cutoff transition occur in the actual global inverses. The
+tadpole and every common contact remain in the retained core. No physical
+source or boundary condition was chosen to cancel the residual.
+
+These are L2 source bounds and one commutator, NOT the original H3 graph,
+the composed C4, kappa_m, or a physical C5 return. Higher commutators and
+the actual coupled strong inverse/phase/bolt observation remain unknown.
+No arbitrary L2-to-original-graph inverse or nonlinear family theorem
+is assumed. The previously controlled far graph entry remains separate
+because its norm differs.
+
+The bounded tail can be subtracted algebraically from the original
+regulated weak form. Its companion keeps the SAME physical composed-square
+regulator and all finite restorations. This provides a legitimate fixed-
+seed weak subtraction; it does not evaluate the companion or assign a
+heat regulator or determinant to the auxiliary scalar L_*.
+
+The full mass/quartic/correlated-slow/fast/interior/bolt system remains
+coupled. The exact mass lift retains both local reference cancellations,
+its complete transition and regular-bolt matching. It is not a global
+fixed-temperature zero mode. Its original-fast cost >.00906808164|m|
+still requires actual |m|<2.20553814952e-9 when both ceilings are imposed.
+Actual m and kappa_m remain UNKNOWN.
+
+IF kappa_m<=5e-5, the remaining budgets are still
+Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069.
+Neither gamma_E nor the other coupled entries is certified. The new L2
+constant is not renamed as the earlier conditional composed C4 allowance.
+The .135973<.1599164 fast screen keeps only its two-fast-input admitted-
+family scope. No nonlinear requirement or actual solution is certified.
+The closed audit and full stable semiclassical wormhole objective remain.
+
+RESEARCH DECISION: retain the construction and replace the failed
+separate auxiliary angular estimate by the two-exact-resolvent-correction
+decomposition. Keep its exact tadpole and corrected core in the original
+common subtraction. The L2 angular tail is controlled; further value
+optimization of that tail is not the next feasibility task.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the common-regulated
+retained core and structured remainder in the ORIGINAL coupled strong
+return T_old(H_s^-1 R_s)^4. Include higher commutators, mass/quartic/slow/
+bolt rows, signed columns and certified common-regulator error, then
+test the actual entries against the unchanged affine/feedback budgets.
+
+Verification: ordinary form/resolvent/complete-sum argument plus
+31 supporting symbolic/512-bit Arb checks on 22
+frozen inputs. One successful development and one exact matching
+acceptance; no failed runs this turn. No Lean, independent review or
+post-acceptance scientific edit. Checkers verify the displayed arithmetic
+and identities, not the missing continuum core or physical coupled solve.
+All 18 inherited paths, closed audits and prior checkpoint are preserved.
+
+Remaining to-do list: complete common-subtracted strong coupled return and signed response; original physical-norm/neighborhood comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: signed auxiliary angular estimator fails; physical coupled return unresolved
 
 2026-10-25 HST, E003/S169.
