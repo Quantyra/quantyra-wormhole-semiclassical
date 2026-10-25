@@ -1,3 +1,80 @@
+# Active checkpoint: global flow implemented; coupled return unresolved
+
+2026-10-24, E003/S169.
+
+See [the global orbit and mass-domain argument](current-global-geodesic-return.md).
+
+OUTCOME: UNRESOLVED COMPLETE COUPLED RETURN. No actual coupled coefficient
+or new feasibility requirement is certified. The full stable-wormhole
+objective, closed audit and original physical norms are preserved.
+
+Executed while building the global comparison operator: derived its exact
+direct-integral representation over ALL crossing and trapped geodesics of
+the actual finite seed. Implemented correlated turning-point and regular-
+bolt quadrature. The original bolt orbit has base period 156.704452149...;
+a trapped orbit at j^2=beta+u^3/6 has period 1529608.55546... . The entire
+trapped Liouville measure divided by the original time period lies between
+1.0993804115e-26 and 1.0993804117e-26. That measure is not an operator bound,
+and the trapped sector is retained. No smooth double or flat surrogate is
+used. Flow Fourier integers are not physical thermal Matsubara modes.
+
+The actual mass cubic gives a nonzero third-derivative jump along crossing
+orbits. Consequently a smooth-periodic H4 tail estimator has an infinite
+norm on the exact mass lift. An exact Bernoulli subtraction supplies its
+whole frequency tail instead, without changing the physical field or its
+norm. At flow frequency Omega=1e6 its complete seam-tail upper bound is
+1.219301126e-9 per unit squared mass coefficient, in comparison-form units
+DIVIDED BY the original time period. This is not kappa_m or a physical
+feedback error. The full-profile derivative allowance and cross terms
+remain necessary. Low-frequency subtraction terms would be large, so
+low-frequency coefficients must be evaluated from the original profile.
+
+The common fourth contact is included once: the complete flow multiplier
+contains Q4geo, so remaining local assembly uses Ha2-Q4geo with its retained
+curvature/seam terms. All local, LLL and original matching rows remain.
+The complete physical thermal/state return is retained in H-H0 with its
+existing <.0022 form bound; no strong bound is inferred from it.
+
+The first unsupported strong step remains the full logarithmic Schur inverse
+and reconstruction. No global comparison matrix, approximate inverse,
+actual mass or strong defect has been computed. Conditional kappa_m=5e-5
+still leaves 5.34235e-12 affine and .0012069 graph-feedback allowance;
+no other entry is shown to fit. The >.00906808164 mass conversion and
+|m|<2.20553814952e-9 comparison requirement remain. The fast screen
+.135973<.1599164 retains only its admitted-family two-fast-input scope.
+Nonlinear admission/contraction, compatibility, physical matching,
+validity/noise and all-sector stability remain unproved. S169.2-S169.5
+remain unchecked; S166 remains the latest completed component.
+
+RESEARCH DECISION: retain the construction and sharpen the global
+comparison implementation using its complete orbit representation and exact
+cubic-jump subtraction. Reject the smooth-periodic H4 estimator on the mass
+lift. This is an estimator/domain repair, not a construction obstruction or
+a certified coupled bound. Do not spend another milestone optimizing the
+orbit or seam-tail constants separately.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete coupled
+comparison return with the full-profile tail and all original local/matching
+rows, then certify its ORIGINAL strong residual including the physical
+comparison remainder. The global inverse, physical maps and all-column
+budgets must be established together; the new form-tail number cannot be
+inserted into kappa_m or the feedback budget without those maps.
+
+Verification: 31 supporting checks at 512-bit precision on
+23 frozen inputs; final development and acceptance agree
+exactly in scientific sources, results and runtime. Both successful
+development snapshots are retained: the final one makes the existing
+Ha2-Q4geo assembly explicit before acceptance. Three successful exploratory
+snapshots/replays retain their sources and output; initial interactive stdout
+was not separately frozen. No failed scientific run, Lean invocation or
+post-acceptance scientific edit occurred. Ordinary arguments establish the
+continuum scope; checker passes do not establish the missing global estimate.
+All 18 inherited files and closed audits remain unchanged.
+
+Remaining to-do list: complete coupled global return and strong residual; actual correction and original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete coupled graph return still unresolved
 
 2026-10-24, E003/S169.
