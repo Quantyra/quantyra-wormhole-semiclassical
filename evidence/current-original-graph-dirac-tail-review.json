@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-25",
+  "story": "S169",
+  "status": "ordinary_argument_and_execution_contract_frozen_before_development",
+  "outcome_scope": "Unresolved complete coupled graph. Certified complete-spectrum original outer H3 and phase-observation remainder, not a signed center or post-elimination mass column.",
+  "quantitative_role": "Replace the invalid weak-to-strong shortcut by actual kernel endpoint identities, sum every angular/thermal derivative contribution and pay the original .05/.1 cutoff cost. Bound direct outer errors for all actual inputs in U3,W4. Interior inverse, Schur products and retained signed centers still need computation.",
+  "domain_review": [
+    "Original paired complementary domains, C2,1 identical-field double, regular bolts and finite-temperature seed remain unchanged.",
+    "Directed transport integrals yield an actual Linfinity kernel contraction and pointwise remainder bound, not point evaluation of an L2 inverse bound.",
+    "Both left and right exact remainder differential equations are used. Four endpoint derivatives leave more than one transport factor, so no omitted jump distribution occurs.",
+    "Cauchy discs extend only the one-sided polynomial coefficient functions. Neither the physical doubled metric nor rough mass/log inputs is replaced by an analytic surrogate.",
+    "Mass perturbations are holomorphic in a scalar parameter with actual global supremum and local three-jet bounds. The outer exponential-mass tadpole keeps its weighted weak fourth input derivative.",
+    "Every angular level and both half-integer thermal signs occur in the analytic summation. N depends on seed spectral labels and is fixed during mass variation.",
+    "The stronger order rule preserves the preceding trace-class common-regulator identity. Absolute differentiated summation gives a strong representative of that same distributional limit.",
+    "Full geometric-to-mass conversion and all local/LLL/boundary restorations stay in the retained signed center at the same regulator; no standalone truncated determinant is asserted.",
+    "The original global cutoff transition, original H3 weights and original scalar-quartic/mass/slow observations are retained. The exact slow root is not rounded to four.",
+    "U3,W4 are auxiliary input norms, not a new admission norm. No numerical physical-X embedding or interior Schur inverse is inferred."
+  ],
+  "theorem_hypotheses": "The new argument uses directed kernel integrals, four finite ordinary endpoint differentiations, scalar Cauchy estimates on a zero-free seed coefficient disc and a bounded mass-parameter disc, absolute infinite spectral majorants and weak-fourth-derivative completion. The note proves their stated hypotheses; no new smooth-boundary elliptic theorem is imported.",
+  "execution_contract": {
+    "precision_bits": 512,
+    "targets": [
+      "complex collar Re Q>.16, abs Q<.18, abs Qprime<.1",
+      "whole-domain kernel ratio <.401",
+      "complete C4 normalized source tail <1.354e-53",
+      "original cutoff product constant <4368755",
+      "original graph U3 coefficient <6.861e-45",
+      "quartic, mass and exact-slow observation coefficients <1.571e-51,1.571e-52,1.896e-51"
+    ],
+    "method": "Exact kernel and whole-domain continuum argument, outward Arb arithmetic, exact original graph/transition identities and noncommuting Schur-error algebra.",
+    "verification": "Freeze before development; preserve all failed runs and source snapshots; matching unchanged-source acceptance after ordinary review. No Lean run."
+  },
+  "first_unsupported_step_after_result": "Quantitative strong interior inverse and original trace/return maps, and the commonly restored signed centers. The complete Schur error contains all four terms in equation (17); direct outer tail digits do not bound them.",
+  "conditional_ceilings": "For a proved subsequent multiplier A and actual input-map norms J,W, require A(6.861e-45 J+1.354e-53 W)+Xi<b_i. The recorded half-split product ceilings use Xi=0 and are not actual constants.",
+  "claims_boundary": [
+    "No signed block center",
+    "No strong interior inverse",
+    "No post-elimination kappa_m",
+    "No nonlinear admission or contraction",
+    "No exact compatibility or matching",
+    "No validity/noise or stability certificate",
+    "No construction obstruction"
+  ],
+  "scientific_sha256": {
+    "notes/current-original-graph-dirac-tail.md": "9ddb4f48ac6e9d45ad36f0e163893b58a79c61e7aafef069f3de2faaaaabd322",
+    "checks/current_original_graph_dirac_tail.py": "5579a37d2aafb8954d6db0caf9611f586c23f8b67782ee456772cc412d9cb80e"
+  },
+  "exploration": {
+    "s169ej-explore.py": {
+      "sha256": "c7c84375c74d730a2b4f4ff27fcbe4d0b8d4f49b9b9619556e2386f038d411b9",
+      "contents": "from pathlib import Path\nimport json,sys,math\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nfrom flint import arb,ctx\nctx.prec=512\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\ndata=json.loads((root/'evidence/current-adaptive-dirac-trace-remainder.json').read_bytes())['runs'][-1]['result']\ndef dec(x):\n d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\nC,B2,gamma=[dec(data['actual_parameters'][x]) for x in ['C','B2','gamma']]\nq=arb('.401');N=128\ntau=20*24*arb(10000)**4*18**8*q**(N-4)/(1-q)*4*C*(1+gamma)/(3*arb.pi()*B2)\na=arb('.1');b=arb('.05');rho=arb('-.005')\nK=[arb(1)]+[arb(math.factorial(21)//math.factorial(21-j))*2**(j-1)/arb(2).log()**j for j in range(1,5)]\ndef weights(t,tr):\n if tr:return ((a**(2*t)-b**(2*t))/(2*t)).sqrt() if not t.is_zero() else (a/b).log().sqrt()\n return a**t/(2*t).sqrt()\ndef rec(initial):\n rows=[initial]\n for i in range(3):\n  new={}\n  for r,x in rows[-1].items():\n   new[r]=new.get(r,arb(0))+(rho+r)*x\n   new[r+1]=new.get(r+1,arb(0))+x\n  rows.append(new)\n return rows\nc,d=rec({0:arb(1)}),rec({1:arb(1)})\nL=[]\nfor ell in range(4):\n val=arb(0)\n for j in range(ell+1):\n  tr=sum((abs(x)*weights(rho+r,True) for r,x in c[ell-j].items()),arb(0))*K[j+1]\n  rest=sum((abs(x)*weights(rho+r,j>=1) for r,x in d[ell-j].items()),arb(0))*K[j]\n  val+=math.comb(ell,j)*(tr+rest)\n L.append(val)\nCchi=sum((arb(math.comb(3,j)).sqrt()*L[j] for j in range(4)),arb(0))\ngraph=116*Cchi*tau\nout={'scope':'Exploration of complete original-collar strong tail, not signed center or acceptance.',\n 'tau_C4':str(tau),'Cchi':str(Cchi),'graph_J3_coefficient':str(graph),'W4_coefficient':str(tau),\n 'mass_column_half_budget_J3_ceiling':str(arb('2.5e-5')/graph),\n 'other_affine_half_budget_J3_ceiling':str(arb('5.34234999994958e-12')/2/graph)}\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\\n')\nprint(json.dumps(out,indent=2))\n",
+      "scope": "Preview before freezing, not acceptance."
+    },
+    "s169ej-explore.json": {
+      "sha256": "8f510f32053e707b794c521c7a7e3b44d1c4d6ae645290d7999a7462864f778d",
+      "contents": "{\r\n  \"scope\": \"Exploration of complete original-collar strong tail, not signed center or acceptance.\",\r\n  \"tau_C4\": \"[1.353744852854077025174e-53 +/- 3.50e-75]\",\r\n  \"Cchi\": \"[4368754.623363134602141511642346030470464670546366064388750773117673052673586105201715350941839830327392621675718422134156025531351065714036476934732638 +/- 4.32e-145]\",\r\n  \"graph_J3_coefficient\": \"[6.86044773832194260214e-45 +/- 3.35e-66]\",\r\n  \"W4_coefficient\": \"[1.353744852854077025174e-53 +/- 3.50e-75]\",\r\n  \"mass_column_half_budget_J3_ceiling\": \"[3.644077027269210043424e+39 +/- 8.66e+17]\",\r\n  \"other_affine_half_budget_J3_ceiling\": \"[3.893586981289585982354e+32 +/- 6.66e+10]\"\r\n}\r\n",
+      "scope": "Preview before freezing, not acceptance."
+    }
+  },
+  "local_lean_invocations": 0
+}

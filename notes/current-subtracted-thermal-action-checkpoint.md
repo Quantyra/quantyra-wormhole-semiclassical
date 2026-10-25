@@ -1,3 +1,109 @@
+# Active checkpoint: original outer graph tail bounded; coupled interior return unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.
+
+See [the ordinary original-graph tail argument](current-original-graph-dirac-tail.md) and frozen evidence.
+
+The COMPLETE coupled graph estimate remains UNRESOLVED. The actual
+transport remainder now has a strong bound in the ORIGINAL .05/.1 outer
+H3 graph, including its full cutoff transition and original quartic,
+mass and exact slow-root observations. Every angular and thermal mode
+and finite-domain propagator return is included. The retained signed
+centers and strong interior Schur return remain uncomputed.
+
+The prior weak L1 error is not promoted by an invalid embedding. Direct
+transport kernel integrals give an all-domain Linfinity contraction
+below .401. Both exact endpoint identities B0 E_N=-V E_(N-1) and
+E_N B0=-E_(N-1)V control four output derivatives. Only the analytic
+one-sided seed coefficients are extended to Cauchy discs. Actual mass/log
+inputs need bounded local three jets and a weighted L2 fourth jet;
+their exponential-mass tadpole is retained.
+
+For every mode choose
+N=128+ceil((8log(M/18)+6log(1+|p|))/log(1/.401)).
+The entire angular and signed half-integer thermal sums yield normalized
+source C4 error <1.354e-53 before the outer mass vertex is differentiated.
+This stronger rule preserves the preceding trace-class/common-regulator
+identity. The full geometric-to-mass conversion and all local, LLL,
+boundary and finite restorations stay in the signed retained center.
+
+For an ACTUAL shape input u, define U3 as the maximum of its global
+supremum norm and its collar z-derivative supremum norms through three.
+Define W4=||chi z^3.995 partial_z^4 u||L2(dz/z). These are auxiliary input
+quantities, not an admission-norm change. The original beta(11,11) cutoff
+has a complete product constant <4368755. The resulting bounds are
+
+    ||g_tail[u]||H3 <6.861e-45 U3(u)+1.354e-53 W4(u),
+    |quartic finite-part tail| <1.571e-51 U3(u),
+    |mass moment tail|         <1.571e-52 U3(u),
+    |exact slow moment tail|   <1.896e-51 U3(u).
+
+The Dchi transition is included. The slow moment subtracts its constant
+before continuation and keeps the exact 4+e_* root. Its correlated input
+must be evaluated using B0 e_* and expm1. The mass-action canonical nu
+row is zero; this does not delete the original physical scalar equation
+or its finite quartic coefficient 20 beta Fstar, about 3.333333294.
+
+The known E(h_lin)<1.1e-10 is not a U3 or W4 bound. Actual input-map
+norms remain to be inserted. Equations above concern complete OUTER
+approximation errors, not the size of the retained physical response.
+No signed center, strong interior inverse or post-elimination kappa_m
+was evaluated. For P=L_II^-1 and tilde P=tilde L_II^-1, when these
+strong maps are justified, the complete Schur error is
+
+ delta Lbar_xy=delta L_xy-delta L_xI P L_Iy
+              -tilde L_xI P delta L_Iy
+              +tilde L_xI P delta L_II tilde P tilde L_Iy.
+
+All four terms and the affine counterpart must be controlled. Their
+missing continuum maps are not supplied by small direct outer errors.
+For a proved subsequent amplifier A, actual input-map norms J,W and
+remaining debit Xi, the conditional error target is
+A(6.861e-45 J+1.354e-53 W)+Xi<b_i. Recorded half-split ceilings are
+conditional products, not assigned actual constants.
+
+The mass lift retains its exact cancellation in both local reference
+rows, its .1/.2 transition and original boundary/regular-bolt matching.
+It is not a global fixed-temperature zero mode. The original conversion
+2133<||d_chi||H3<2174 and LINEAR |m|<1.627532e-15 still debit at most
+3.538254568e-12. With distant shape return <1.24e-20, near SHAPE has
+>6.4617454e-12 available. The scalar and correlated slow pair remain.
+
+kappa_m<=5e-5 is UNKNOWN and is a post-elimination condition. Its
+conditional affine/feedback costs stay 2.14765e-12 and .0024731. All
+other entries must satisfy Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069. No remaining entry
+is shown to fit. The fast screen .135973<.1599164 retains only its
+proved two-fast admitted-family scope. Physical-X comparisons,
+nonlinear admission/contraction, compatibility, matching, validity/noise
+and all-sector stability remain unproved.
+
+RESEARCH DECISION: retain the construction and exact transport method;
+use the new adaptive order for its actual strong OUTER error. Stop
+shrinking this already small tail. The complete feasibility decision
+depends on the strong interior Schur return and signed centers, whose
+estimates are unknown, not proved excessive. No controlled solution or
+construction obstruction is established.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute and certify the
+complete common-restored interior Schur return L_xI L_II^-1 L_Iy and
+its affine counterpart, with the original phase/bolt traces and all
+mass/quartic/correlated-slow/fast columns. Combine it with the retained
+direct signed centers and the complete error identity, then test the
+unchanged budgets. This turn executed the original-outer remainder
+estimate, not that signed coupled solve.
+
+Verification: ordinary argument and execution contract frozen before
+development; matching unchanged-source development/acceptance at 512 bits,
+42 supporting checks on 17 inputs. No failed frozen run. Python and all
+1595 flint/SymPy file hashes match; no Lean run. The checks support the
+ordinary kernel, domain and regulator argument, not replace it. All 18
+inherited paths, closed audits and previous checkpoint state are preserved.
+
+Remaining to-do list: complete signed coupled strong return and actual interior/phase maps; original physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete weak trace tail bounded; strong coupled return unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.
