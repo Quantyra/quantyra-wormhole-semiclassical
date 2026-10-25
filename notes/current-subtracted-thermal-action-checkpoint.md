@@ -1,3 +1,75 @@
+# Active checkpoint: paired conversion identified; complete strong norm unresolved
+
+2026-10-24, E003/S169.
+
+See [the conormal/common-regulator attempt](current-conormal-common-regulator-attempt.md).
+
+OUTCOME: UNRESOLVED COMPLETE STRONG ESTIMATE. The current calculation
+resolves the flattening conversion on the actual paired domain; it does
+not certify eta_seed,remaining, C_rem or an actual controlled solution.
+
+The actual smearing omega=log sqrt(Q_c/beta) has
+omega_ss(0)=1.2215062725869018e-10, with a nonzero cubic cusp. The old
+cubic-smearing shortcut therefore did not apply. The executed complete
+boundary coefficient is nevertheless exactly zero: its second-jet term
+multiplies L_ab=S=0, while the third-jet term cancels by tr chi=0.
+This holds throughout the admitted family and under the seam-preserving
+flow. It is a zero conversion-boundary contribution, not deletion of
+physical reflected kernels or finite-domain returns.
+
+The nonzero bulk conversion is now an explicit difference of the original
+Weyl polynomial, retaining its zero-angular endpoint term and fixed
+couplings. Using the original H8 graph bound and a weighted proper-coordinate
+argument gives three weak conversion variations on the specified
+admitted graph family. No spatial analyticity, smooth physical surrogate,
+finite angular/thermal theory or X-ball admission is assumed.
+
+The four resolvent commutators and their exact heat-Duhamel inventory
+identify the combined commuted distribution, including regulator contacts.
+Their weak limit is not the required strong bound. That remains the first
+unsupported step for the numerical decision: four output derivatives and
+one metric variation of the complete finite part after normal inversion.
+
+The budget is unchanged:
+eta_seed,remaining+1e-11 C_rem<.149009052939.
+Both constants remain UNKNOWN. The sufficient full-symbol test remains
+M_seed+1e-11 M_var<5.26826558956760746e-5, with both seminorms unknown.
+No complete actual upper bound is classified as excessive and no
+construction obstruction is established. Original norm comparisons,
+nonlinear admission/contraction, compatibility, physical matching,
+validity/noise and all-sector stability remain open.
+
+The selected projection screen E_rest<2.123e-42<1.287e-40 is retained,
+without reevaluation or a measured sign. The audit remains closed,
+the full stable-wormhole objective active, and S169.2-S169.5 unchecked.
+
+RESEARCH DECISION: retain the construction and the signed conormal
+method. The boundary check and graph-family conversion argument remove
+representation uncertainties, but do not establish quantitative
+attainability. Continue with the combined strong operator calculation;
+additional local or weak identities are not feasibility milestones.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the COMPLETE
+four-commuted common finite part and its metric variation in H3 after
+the original normal inverse, including the now explicit bulk conversion,
+all contacts, angular/thermal sums and actual finite-domain returns.
+Keep the highest input derivative in L2 and test the unchanged budget.
+The combined weak expression is identified; its numerical strong bound
+has not been executed.
+
+Verification: the ordinary argument and scope were frozen before one
+successful algebra/interval run (16 checks, 1049 unchanged inputs).
+Checks support the nonzero actual boundary jets, original graph constants,
+Weyl-polynomial identity, complete commutator coefficients and unchanged
+budget. They do not provide the missing strong continuum estimate.
+Development and exact sources are retained. No failed acceptance run,
+post-success scientific edit or Lean run occurred. All 18 inherited paths,
+previous evidence and closed audit files remain preserved.
+
+Remaining to-do list: complete strong response and original global norm comparisons; controlled correction and nonlinear admission/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete strong response unresolved after symmetric attempt
 
 2026-10-24, E003/S169.
