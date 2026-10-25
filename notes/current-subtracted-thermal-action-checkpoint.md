@@ -1,3 +1,76 @@
+# Active checkpoint: complete coupled graph return still unresolved
+
+2026-10-24, E003/S169.
+
+See [the attempted global estimate and exact-boundary implementation](current-implicit-phase-graph-domain.md).
+
+OUTCOME: UNRESOLVED COMPLETE COUPLED GRAPH ESTIMATE. This is not completion
+of the requested global-return milestone, and no new feasibility requirement
+is closed. The full stable-wormhole objective and closed audit are preserved.
+
+Executed while attempting a conforming global preconditioner: two numerical
+slow-border candidates fail the ORIGINAL fixed-g0 fast source graph. Binary64
+rounds 4+e_* to 4, with e_* approximately 1.86509701133e-34. The analytic
+leading approximation eta=6/L still has B(4+eta) approximately -1.850453702e-67,
+certifiably nonzero. In the retained actual-seed asymptotic argument, this
+power lies below weight 4.005 and gives infinite fast norm. This rejects
+those candidate representations in that estimator; it is not an obstruction
+to the physical paired domain or the construction. Earlier exact-root
+mathematics is unchanged; no prior solver is alleged to have rounded it.
+
+An implicit-root primitive now evaluates both canonical components of the
+correlated pair and independent slow column through eight derivatives,
+preserving the leading identity exactly. The global cutoff, original
+finite-part row and finite-domain returns are explicitly unevaluated.
+No complete P or global graph defect is implemented or bounded.
+
+The first unsupported global step remains the strong logarithmic Schur
+inverse and reconstruction, including the original phase/bolt rows and
+complete common-restored shape response. The exact cut mass lift retains
+both local cancellations, its transition, original matching and regular
+bolt. It is not a global fixed-temperature zero mode. All angular/thermal
+sums, contacts and returns remain required; none is assigned zero by the
+boundary calculation.
+
+Conditional kappa_m=5e-5 leaves 5.34235e-12 affine and .0012069 graph-feedback
+allowance. No other entry is shown to fit. Independent energy feedback
+and the >.00906808164 mass conversion cost remain; actual m is unknown.
+The .135973<.1599164 fast screen retains only its admitted-family two-fast-
+input scope. Physical norm and nonlinear-neighborhood comparisons are
+unproved. No controlled solution, compatibility, physical matching,
+validity/noise or all-sector stability is established. S169.2-S169.5 remain
+unchecked; S166 remains the latest completed component.
+
+RESEARCH DECISION: retain the construction and sharpen the mixed Schur
+method with exact implicit boundary columns and original matching equations.
+Do not spend another milestone on normal/contact/cold optimization. There
+is no evidence here that warrants changing construction, and no evidence
+that the full residual budgets are attainable.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct and certify the
+complete signed graph defect E=I-H P of a global approximate inverse with
+this exact border, all finite-domain returns and both original rows. Require
+||E||<=1/2 and original output-map bounds M_graph and M_m. Then jointly test
+k_m_trial+2M_graph||E b_m||<=5e-5, total affine<=7.49e-12, total feedback
+<=.00368, and |m_trial|+2M_m epsilon_aff<2.2055381495e-9. The note states
+the full error inequalities; none of their unknown constants is supplied
+by the boundary primitive. That full calculation remains unresolved.
+
+Verification: 27 supporting checks at 512-bit precision on
+20 frozen inputs; one successful development and one matching
+acceptance, with identical scientific sources, results and runtime. Two
+pre-execution exploratory SyntaxErrors and their source snapshots are
+retained with a successful unchanged explorer replay against the final
+module. Initial raw stdout and imported-module hashes were not separately
+frozen, so this replay is not mislabelled as the initial run. No Lean run
+or post-acceptance scientific edit occurred. Checks verify arithmetic and
+identities, not the missing continuum estimate. All 18 inherited files and
+closed audits are preserved.
+
+Remaining to-do list: complete coupled graph inverse and all phase/interior/bolt returns; actual correction and original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: complete coupled graph estimate remains unresolved
 
 2026-10-24, E003/S169.
