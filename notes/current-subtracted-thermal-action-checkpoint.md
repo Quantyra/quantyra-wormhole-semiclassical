@@ -30,7 +30,7 @@ above 3.56034e42 in E0 units. This is an excessive upper bound, not a lower boun
 on the actual operator. A .001 allowance instead requires weighted gluing row
 bound <=1.923076923e25 C, or inflation no greater than about 3.205128205.
 The small actual propagator inflation makes a sharper reconstruction plausible,
-but its complete constrained commutator remains unbounded in the required norms.
+but no bound for its complete constrained commutator in the required norms has been proved.
 
 At the CONDITIONAL mass-column target 5e-5, the fixed-source mass debit is
 2.14765e-12, leaving 5.34235e-12; the rounded graph debit is .0024731, leaving
