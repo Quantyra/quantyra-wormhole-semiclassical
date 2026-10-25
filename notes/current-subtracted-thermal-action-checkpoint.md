@@ -1,3 +1,106 @@
+# Active checkpoint: coupled global return requires an independent interior bound
+
+2026-10-24, E003/S169.
+
+See [the coupled ordinary argument](current-coupled-global-return-attempt.md).
+
+OUTCOME: UNRESOLVED COMPLETE COUPLED GLOBAL RETURN. The specified
+outer-data-only physical inverse estimator is ruled out on the ACTUAL domain;
+no obstruction to the construction is established. All boundary/phase
+coefficients, full quantum sums, common contacts and finite returns remain.
+
+The exact reference mass lift cancels both local reference equations.
+Its cutoff transition is explicitly returned to areal coordinates and
+integrated with the original F_l/G action prefactor. It gives the correct
+outer mass and zero bolt shift at the fixed temperature. The scalar quartic
+and correlated slow profiles also retain their complete reference transition
+and matching terms. Extending the UNCUT mass family would instead give
+relative-temperature sensitivity near -6.51517e65 per unit mass; that is
+not a kappa_m entry or a fixed-temperature zero mode.
+
+The first unsupported global comparison is now explicit. A smooth canonical
+variation supported outside the outer localization and constant near the
+bolt has zero outer graph and zero mass/quartic/slow coefficients, but a
+nonzero physical bolt variation. The exact localization identity cancels
+all nonlocal terms, before common regulator removal. Thus an outer-data-only
+R_X is infinite. This is an actual-domain estimator counterexample, not a
+newly chosen quantum source or a smooth surrogate for the boundary.
+The physical bolt-value conversion is about 1.97714e33 per canonical unit.
+An independent interior equation/norm must enter the complete return.
+
+The original scalar row has the exact quartic coefficient
+20 beta Fstar=3.33333329399556..., which the differentiated shape row loses.
+Its remote finite-part functional is still unknown. Together with the
+exact mass moment and slow residue, it remains in the full coupled system.
+The actual interior inverse, phase trace maps and all quantum Schur products
+have not been bounded; no zero is assigned to these missing entries.
+
+The original and lifted graph data are compared at the SAME existing
+.05/.1 localization, now given an explicit C10/H9 cutoff. The complete
+normal quantum tail is retained. Their mass conversion cost is
+>.00906808164 per unit mass. Retaining BOTH 1e-11 graph ceilings therefore
+requires actual abs(m)<2.205539e-9. The preceding conditional 4.345e-8
+allowance is about 19.70 times too loose to certify that requirement.
+It is not the measured mass and does not show the actual solution fails.
+
+The fixed-source mass allowance is also not a Lipschitz estimate. Keeping
+the energy variable gives, for identical prescribed leading source terms,
+abs(delta m)<=C_E E_phys(delta u)+C_g E_lifted(delta u),
+C_E<390.478 and C_g<49.462. General source variations add further terms.
+At kappa_m=5e-5 the old fixed-source affine debit remains about 2.148e-12
+and the graph debit .00247307522; the additional energy coefficient is
+.019523868. The former remaining .00120692478 cannot absorb arbitrary
+energy/phase/interior changes. For this positive certificate, a separately
+proved restricted-family energy-to-graph ratio <=.0618179 would fit the
+mass alone, with no other loss. Such a ratio is impossible from outer data
+alone on the whole domain and is unknown for a suitable restricted family.
+With equal independently controlled energy and graph inputs, the mass-only
+safe column target is instead 8.3647e-6. Neither column target is measured.
+
+The full signed elimination and all residual budgets are displayed in the
+ordinary argument. S_other+sum(k_j a_j)<=7.49e-12 and
+eta_other+sum(k_j b_j)<=.00368 must include mass, scalar, slow and interior
+entries, together with the difference-energy terms where applicable.
+The remaining entries are UNKNOWN; they are not assumed to fit.
+
+The admitted-family two-fast-input screen remains .135973<.1599164;
+it supplies no independent phase/interior metric-variation constants.
+Original physical norm comparisons, the nonlinear center residual,
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain unproved.
+There is no actual controlled solution, exact complementary compatibility,
+physical matching/causal realization, validity/noise or all-sector stability.
+The closed feasibility audit and earlier projection screen are preserved;
+the signed projection was not reevaluated.
+
+RESEARCH DECISION: retain construction and the exact reference lift;
+replace the outer-only closure by a coupled global graph return with an
+independently controlled interior component and the original phase rows.
+Use signed elimination of the interior and boundary coefficients. Do not
+interpret a fixed-source allowance as nonlinear feedback or relax the
+physical admission target by changing the boundary basis.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): certify the actual
+interior/bolt strong resolvent and its outer/finite-part trace returns,
+applied to the specified source and mass/scalar/slow defects in the full
+coupled system. Determine the signed actual mass and complete return,
+testing the original norm and all joint source/feedback budgets.
+
+Verification: 34 supporting symbolic/interval
+checks on 23 frozen inputs; one successful
+512-bit acceptance run agrees exactly with the final of two development
+runs. Three completed exploratory sources/results are retained. Refinement
+restored the small positive far-energy term and computed the cutoff cost
+at the actual .05/.1 radii. Before acceptance, the ordinary matching argument
+made the fixed F_l/G prefactor explicit; all development snapshots remain.
+No numerical allowance was relaxed, no failed scientific verification occurred, and no
+post-acceptance scientific edit or Lean execution occurred. These checks
+support the ordinary identities and budgets, not the missing global inverse.
+All 18 inherited paths and the closed audit remain unchanged.
+
+Remaining to-do list: actual coupled interior/bolt quantum graph inverse and exact phase returns; actual correction and original physical norm comparisons; nonlinear admission/contraction and compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: exact mass lift improves local feasibility; global map unresolved
 
 2026-10-24, E003/S169.

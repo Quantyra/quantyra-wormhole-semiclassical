@@ -1,0 +1,391 @@
+{
+  "status": "exploration_not_acceptance",
+  "entries": [
+    {
+      "source_name": "s169dc-explore.py",
+      "status": "completed",
+      "scope": "Initial arithmetic; the tiny positive far-energy term in C_E was subsequently restored.",
+      "source_sha256": "e9a3cb09c34288e51d7472fa90771caadd7892d1c93fa1b9f290114f1b05c6e6",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical');sys.path.insert(0,str(root/'checks'))\nfrom flint import arb,ctx\nimport current_physical_york_dual_assembly as york\nctx.prec=512;a=arb\ndef enc(v):\n m,r,e=v.mid_rad_10exp(60)\n return {'ball':v.str(40),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(v):\n p=v['decimal_enclosure'];return a(int(p['mid']),int(p['rad']))*a(10)**int(p['exponent'])\np,h,z,env=york.actual_parameters();v=1+h;be=p['beta'];ga=p['gamma'];u=p['u'];eps=p['eps'];tau=p['tau']\ncoeff=[be,a(0),u,-4*be-2*u-tau,3*be+u+eps,-2*eps,eps]\nqpp=sum((k*(k-1)*coeff[k]*z**(k-2) for k in range(2,7)),a(0))\nDA=z*z*qpp/2+3*ga*z\nthermal=-DA*be/(ga*ga*v)\ncold=-be/(ga*v*h)\nFs=p['Fl']+23*p['g']/(180*a.pi())\nscalar=20*be*Fs\nprior=json.loads((root/'evidence/current-global-boundary-moment-return.json').read_bytes())['runs'][-1]['result']\ne=dec(prior['exact_slow_exponent_offset']);bp=dec(prior['Bprime_at_slow_root'])\nmd=(a(3)/5).sqrt()*a('.05');cf=1/(2*(a('.5')+e)).sqrt();dm=cf*a('6.50e-39')/bp*a('1.02')\nden=a('.999')-md*dm\nce=a(3).sqrt()*a('.05')**a('-1.5')*a('2.518')/den\nma=json.loads((root/'evidence/current-lifted-boundary-graph-attempt.json').read_bytes())['runs'][-1]['result']['lifted_boundary_block']\nm1=dec(ma['mass_slope']);k=a('5e-5');reserve=a('.00368')-k*m1\nout={'h':enc(h),'gamma':enc(ga),'D_A_squared':enc(DA),'reference_mass_relative_temperature_derivative':enc(thermal),'reference_mass_cold_displacement_derivative':enc(cold),'physical_bolt_value_per_canonical_conformal_amplitude':enc(v/h),'canonical_conformal_amplitude_for_cold_2e_minus9':enc(a('2e-9')*h/v),'scalar_quartic_original_row_coefficient':enc(scalar),'mass_energy_coefficient':enc(ce),'mass_graph_coefficient':enc(m1),'mass_target_energy_gain':enc(k*ce),'mass_target_graph_gain':enc(k*m1),'separate_global_feedback_remaining':enc(reserve),'sufficient_energy_to_graph_difference_ratio_if_no_other_loss':enc(reserve/(k*ce))}\nprint(json.dumps(out,indent=2));(Path(__file__).parent/'s169dc-explore.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "result_sha256": "7403e9c86fbda6746fb978851432dd85476b81fb4f24c860926cf0f6181fbb1b",
+      "result": {
+        "h": {
+          "ball": "[5.057799424826589366111e-34 +/- 5.81e-56]",
+          "decimal_enclosure": {
+            "mid": "50577994248265893661111708909496218166269999999999999999999999999",
+            "rad": "4096968652985181920364639289640936858976257",
+            "exponent": "-98"
+          }
+        },
+        "gamma": {
+          "ball": "[5.057799424826589366111e-34 +/- 5.81e-56]",
+          "decimal_enclosure": {
+            "mid": "50577994248265893661111708909496218166278959074862941339176628513",
+            "rad": "4096963533380479405024597558571556247961601",
+            "exponent": "-98"
+          }
+        },
+        "D_A_squared": {
+          "ball": "[1.000000000000000000000000000 +/- 3.00e-29]",
+          "decimal_enclosure": {
+            "mid": "99999999999999999999999999999999848266017253142941109069431279802",
+            "rad": "2991979662745471171475342242900606977",
+            "exponent": "-65"
+          }
+        },
+        "reference_mass_relative_temperature_derivative": {
+          "ball": "[-6.51516687934379337958e+65 +/- 3.88e+44]",
+          "decimal_enclosure": {
+            "mid": "-65151668793437933795828220878742233981433419413293693987640783667",
+            "rad": "10555109711671154683859873064564097187577857",
+            "exponent": "1"
+          }
+        },
+        "reference_mass_cold_displacement_derivative": {
+          "ball": "[-6.51516687934379337958e+65 +/- 3.88e+44]",
+          "decimal_enclosure": {
+            "mid": "-65151668793437933795828220878742233981433419413293693987640783667",
+            "rad": "10555114363969139931065428227888808168783873",
+            "exponent": "1"
+          }
+        },
+        "physical_bolt_value_per_canonical_conformal_amplitude": {
+          "ball": "[1.977144437739908571056e+33 +/- 4.29e+11]",
+          "decimal_enclosure": {
+            "mid": "19771444377399085710557314486090240000000000000000000000000000000",
+            "rad": "1601570518693703052972698798234306086961152",
+            "exponent": "-31"
+          }
+        },
+        "canonical_conformal_amplitude_for_cold_2e_minus9": {
+          "ball": "[1.011559884965317873222e-42 +/- 3.17e-64]",
+          "decimal_enclosure": {
+            "mid": "10115598849653178732222341781898221558603152590785201930581088077",
+            "rad": "819406250782451369102788533513986020212737",
+            "exponent": "-106"
+          }
+        },
+        "scalar_quartic_original_row_coefficient": {
+          "ball": "[3.33333329399556370467361217917 +/- 3.92e-30]",
+          "decimal_enclosure": {
+            "mid": "33333332939955637046736121791717417776181572011114643076511285269",
+            "rad": "21703317915770328229171004291678209",
+            "exponent": "-64"
+          }
+        },
+        "mass_energy_coefficient": {
+          "ball": "[390.4773599900010297049605716377210098131 +/- 3.07e-38]",
+          "decimal_enclosure": {
+            "mid": "39047735999000102970496057163772100981313060395277336131564580592",
+            "rad": "2441",
+            "exponent": "-62"
+          }
+        },
+        "mass_graph_coefficient": {
+          "ball": "[49.461504397196293796937 +/- 1.08e-22]",
+          "decimal_enclosure": {
+            "mid": "49461504397196293796937013498031935596614095717435976938598936844",
+            "rad": "94213464853069010992158095826518349447169",
+            "exponent": "-63"
+          }
+        },
+        "mass_target_energy_gain": {
+          "ball": "[0.01952386799950005148524802858188605049066 +/- 3.48e-42]",
+          "decimal_enclosure": {
+            "mid": "19523867999500051485248028581886050490656530197638668065782290296",
+            "rad": "1221",
+            "exponent": "-66"
+          }
+        },
+        "mass_target_graph_gain": {
+          "ball": "[0.00247307521985981468984685 +/- 5.39e-27]",
+          "decimal_enclosure": {
+            "mid": "24730752198598146898468506749015967798307047858717988469299468422",
+            "rad": "47106732751053059154505774696415195299841",
+            "exponent": "-67"
+          }
+        },
+        "separate_global_feedback_remaining": {
+          "ball": "[0.00120692478014018531015315 +/- 5.39e-27]",
+          "decimal_enclosure": {
+            "mid": "12069247801401853101531493250984032201692952141282011530700531577",
+            "rad": "47106732832182697569112456392204200443905",
+            "exponent": "-67"
+          }
+        },
+        "sufficient_energy_to_graph_difference_ratio_if_no_other_loss": {
+          "ball": "[0.061817913344378843583389 +/- 4.35e-25]",
+          "decimal_enclosure": {
+            "mid": "61817913344378843583389193276832858002438264448156131409007807197",
+            "rad": "241281347994642951240597235296452678254593",
+            "exponent": "-66"
+          }
+        }
+      }
+    },
+    {
+      "source_name": "s169dc-extra.py",
+      "status": "completed",
+      "scope": "Sensitivity using the prior smaller cutoff only; not the final global-localization norm comparison.",
+      "source_sha256": "61f77645f27b18609e09c3c4ac366570f95700c503634f90b450481ef8ea242c",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nfrom flint import arb,ctx\nctx.prec=512;a=arb\ndef dec(v):\n p=v['decimal_enclosure'];return a(int(p['mid']),int(p['rad']))*a(10)**int(p['exponent'])\ndef enc(v):\n m,r,e=v.mid_rad_10exp(60);return {'ball':v.str(40),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ntmp=Path(__file__).parent;r=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\none=json.loads((tmp/'s169dc-explore.json').read_bytes())\nold=json.loads((r/'evidence/current-lifted-boundary-graph-attempt.json').read_bytes())['runs'][-1]['result']\nce=dec(one['mass_energy_coefficient']);cg=dec(one['mass_graph_coefficient'])\nL=dec(old['lift_original_graph_cost']['graph_cost_lower_per_mass']);m=dec(old['lifted_boundary_block']['mass_at_target'])\nout={'necessary_mass_ceiling_if_both_graph_radii_retained':enc(2*a('1e-11')/L),'conditional_mass_allowance_to_ceiling_ratio':enc(m*L/(2*a('1e-11'))),'unit_energy_graph_joint_mass_gain_at_proposed_target':enc(a('5e-5')*(ce+cg)),'unit_energy_graph_mass_only_target_for_global_allowance':enc(a('.00368')/(ce+cg)),'gamma_E_sensitivity':{v:enc(a('5e-5')*(cg+ce*a(v))) for v in ['0','.01','.05','1']}}\nprint(json.dumps(out,indent=2));(tmp/'s169dc-extra.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "result_sha256": "0bb32fa826e25e334bc1947595881a6c9b2bfc6ed03ce16ca3f257309e4a9617",
+      "result": {
+        "necessary_mass_ceiling_if_both_graph_radii_retained": {
+          "ball": "[2.2055381055794311735567934664e-9 +/- 3.00e-38]",
+          "decimal_enclosure": {
+            "mid": "22055381055794311735567934663959018672560836041681474415673570505",
+            "rad": "258512011972828617376173251379593217",
+            "exponent": "-73"
+          }
+        },
+        "conditional_mass_allowance_to_ceiling_ratio": {
+          "ball": "[19.699104056720797985165327 +/- 6.60e-25]",
+          "decimal_enclosure": {
+            "mid": "19699104056720797985165326767608818405791937360470288936517352105",
+            "rad": "427405125882792254087451533942961733633",
+            "exponent": "-63"
+          }
+        },
+        "unit_energy_graph_joint_mass_gain_at_proposed_target": {
+          "ball": "[0.02199694321935986617509488 +/- 5.46e-27]",
+          "decimal_enclosure": {
+            "mid": "21996943219359866175094879256787647270487234983510466912712237138",
+            "rad": "4710673330881932325492671135496460566529",
+            "exponent": "-66"
+          }
+        },
+        "unit_energy_graph_mass_only_target_for_global_allowance": {
+          "ball": "[8.36479860702002532726785e-6 +/- 4.50e-30]",
+          "decimal_enclosure": {
+            "mid": "8364798607020025327267847299981730194448759060139965839711534261",
+            "rad": "1791359587789546223438493907922553143297",
+            "exponent": "-69"
+          }
+        },
+        "gamma_E_sensitivity": {
+          "0": {
+            "ball": "[0.00247307521985981468984685 +/- 5.39e-27]",
+            "decimal_enclosure": {
+              "mid": "24730752198598146898468506749015967798307047858717988469299468421",
+              "rad": "47106733237830889642145864871149226164225",
+              "exponent": "-67"
+            }
+          },
+          ".01": {
+            "ball": "[0.00266831389985481520469933 +/- 5.68e-27]",
+            "decimal_enclosure": {
+              "mid": "26683138998548152046993309607204572847372700878481855275877697451",
+              "rad": "47106733318960528056752546566938231308289",
+              "exponent": "-67"
+            }
+          },
+          ".05": {
+            "ball": "[0.00344926861983481726410925 +/- 6.82e-27]",
+            "decimal_enclosure": {
+              "mid": "34492686198348172641092521039958993043635312957537322502190613569",
+              "rad": "47106733318960528056752546566938231308289",
+              "exponent": "-67"
+            }
+          },
+          "1": {
+            "ball": "[0.02199694321935986617509488 +/- 5.46e-27]",
+            "decimal_enclosure": {
+              "mid": "21996943219359866175094879256787647270487234983510466912712237138",
+              "rad": "4710673330881932325492671135496460566529",
+              "exponent": "-66"
+            }
+          }
+        }
+      }
+    },
+    {
+      "source_name": "s169dc-explore-v2.py",
+      "status": "completed",
+      "scope": "Final exploration includes the far-energy term and full .05/.1 localization; no endpoint or finite-mode replacement.",
+      "source_sha256": "cd375bfa47b3c638471d644015b51ff58e3aaa6405f68a2a5fbad69bc8b59bc7",
+      "source_utf8": "from pathlib import Path\nimport sys,json\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical');sys.path.insert(0,str(root/'checks'))\nfrom flint import arb,ctx\nimport current_physical_york_dual_assembly as york\nctx.prec=512;a=arb\ndef enc(v):\n m,r,e=v.mid_rad_10exp(60)\n return {'ball':v.str(40),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(v):\n p=v['decimal_enclosure'];return a(int(p['mid']),int(p['rad']))*a(10)**int(p['exponent'])\np,h,z,env=york.actual_parameters();v=1+h;be=p['beta'];ga=p['gamma'];u=p['u'];eps=p['eps'];tau=p['tau']\ncoeff=[be,a(0),u,-4*be-2*u-tau,3*be+u+eps,-2*eps,eps]\nqpp=sum((k*(k-1)*coeff[k]*z**(k-2) for k in range(2,7)),a(0))\nDA=z*z*qpp/2+3*ga*z\nthermal=-DA*be/(ga*ga*v)\ncold=-be/(ga*v*h)\nFs=p['Fl']+23*p['g']/(180*a.pi())\nscalar=20*be*Fs\nprior=json.loads((root/'evidence/current-global-boundary-moment-return.json').read_bytes())['runs'][-1]['result']\ne=dec(prior['exact_slow_exponent_offset']);bp=dec(prior['Bprime_at_slow_root'])\nmd=(a(3)/5).sqrt()*a('.05');cf=1/(2*(a('.5')+e)).sqrt();dm=cf*a('6.50e-39')/bp*a('1.02')\nden=a('.999')-md*dm\nfar_energy=a('1.02e-46')/a('1.1e-10')\nce=(a(3).sqrt()*a('.05')**a('-1.5')*a('2.518')+md*cf*far_energy/bp)/den\nma=json.loads((root/'evidence/current-lifted-boundary-graph-attempt.json').read_bytes())['runs'][-1]['result']['lifted_boundary_block']\nm1=dec(ma['mass_slope']);k=a('5e-5');reserve=a('.00368')-k*m1\nout={'h':enc(h),'gamma':enc(ga),'D_A_squared':enc(DA),'reference_mass_relative_temperature_derivative':enc(thermal),'reference_mass_cold_displacement_derivative':enc(cold),'physical_bolt_value_per_canonical_conformal_amplitude':enc(v/h),'canonical_conformal_amplitude_for_cold_2e_minus9':enc(a('2e-9')*h/v),'scalar_quartic_original_row_coefficient':enc(scalar),'mass_energy_coefficient':enc(ce),'mass_graph_coefficient':enc(m1),'mass_target_energy_gain':enc(k*ce),'mass_target_graph_gain':enc(k*m1),'separate_global_feedback_remaining':enc(reserve),'sufficient_energy_to_graph_difference_ratio_if_no_other_loss':enc(reserve/(k*ce))}\n\n\n# Instantiate the previously unspecified localization at its existing .05/.1 radii.\n# The beta(11,11) log cutoff has the same C10/H9 bounds as the prior .02/.04 test.\nold=json.loads((root/'evidence/current-lifted-boundary-graph-attempt.json').read_bytes())['runs'][-1]['result']\ncost=old['lift_original_graph_cost'];wexp=a(5)-a('4.005')\nH9new=2*(a('.1')/a('.04'))**wexp*dec(cost['profile_H9_upper'])\nK=p['g']*be/(15*a.pi());quantum_new=6000*K*H9new\nLnew=dec(cost['classical_leading_raw_jets'])-dec(cost['other_series_raw_jets_upper'])-dec(cost['analytic_tail_upper'])-quantum_new\nmm=dec(old['lifted_boundary_block']['mass_at_target'])\nout.update(global_cutoff_profile_H9_upper=enc(H9new),global_cutoff_complete_normal_quantum_upper=enc(quantum_new),global_cutoff_conversion_lower_per_mass=enc(Lnew),\n necessary_mass_ceiling_if_original_and_lifted_graph_radii_retained=enc(2*a('1e-11')/Lnew),conditional_mass_allowance_to_original_radius_ceiling=enc(mm*Lnew/(2*a('1e-11'))),\n unit_energy_graph_joint_mass_gain_at_proposed_target=enc(k*(ce+m1)),unit_energy_graph_mass_only_target_for_global_allowance=enc(a('.00368')/(ce+m1)),\n refined_energy_far_return_coefficient=enc(far_energy))\nprint(json.dumps(out,indent=2));(Path(__file__).parent/'s169dc-refined.json').write_bytes((json.dumps(out,indent=2)+'\\n').encode())\n",
+      "result_sha256": "f6c94b9719e0b445edf416092b3fe37d91632e74469cabab005db8c713e61ad7",
+      "result": {
+        "h": {
+          "ball": "[5.057799424826589366111e-34 +/- 5.81e-56]",
+          "decimal_enclosure": {
+            "mid": "50577994248265893661111708909496218166269999999999999999999999999",
+            "rad": "4096968652985181920364639289640936858976257",
+            "exponent": "-98"
+          }
+        },
+        "gamma": {
+          "ball": "[5.057799424826589366111e-34 +/- 5.81e-56]",
+          "decimal_enclosure": {
+            "mid": "50577994248265893661111708909496218166278959074862941339176628513",
+            "rad": "4096963533380479405024597558571556247961601",
+            "exponent": "-98"
+          }
+        },
+        "D_A_squared": {
+          "ball": "[1.000000000000000000000000000 +/- 3.00e-29]",
+          "decimal_enclosure": {
+            "mid": "99999999999999999999999999999999848266017253142941109069431279802",
+            "rad": "2991979662745471171475342242900606977",
+            "exponent": "-65"
+          }
+        },
+        "reference_mass_relative_temperature_derivative": {
+          "ball": "[-6.51516687934379337958e+65 +/- 3.88e+44]",
+          "decimal_enclosure": {
+            "mid": "-65151668793437933795828220878742233981433419413293693987640783667",
+            "rad": "10555109711671154683859873064564097187577857",
+            "exponent": "1"
+          }
+        },
+        "reference_mass_cold_displacement_derivative": {
+          "ball": "[-6.51516687934379337958e+65 +/- 3.88e+44]",
+          "decimal_enclosure": {
+            "mid": "-65151668793437933795828220878742233981433419413293693987640783667",
+            "rad": "10555114363969139931065428227888808168783873",
+            "exponent": "1"
+          }
+        },
+        "physical_bolt_value_per_canonical_conformal_amplitude": {
+          "ball": "[1.977144437739908571056e+33 +/- 4.29e+11]",
+          "decimal_enclosure": {
+            "mid": "19771444377399085710557314486090240000000000000000000000000000000",
+            "rad": "1601570518693703052972698798234306086961152",
+            "exponent": "-31"
+          }
+        },
+        "canonical_conformal_amplitude_for_cold_2e_minus9": {
+          "ball": "[1.011559884965317873222e-42 +/- 3.17e-64]",
+          "decimal_enclosure": {
+            "mid": "10115598849653178732222341781898221558603152590785201930581088077",
+            "rad": "819406250782451369102788533513986020212737",
+            "exponent": "-106"
+          }
+        },
+        "scalar_quartic_original_row_coefficient": {
+          "ball": "[3.33333329399556370467361217917 +/- 3.92e-30]",
+          "decimal_enclosure": {
+            "mid": "33333332939955637046736121791717417776181572011114643076511285269",
+            "rad": "21703317915770328229171004291678209",
+            "exponent": "-64"
+          }
+        },
+        "mass_energy_coefficient": {
+          "ball": "[390.4773599900010297049605716377210098132 +/- 1.15e-38]",
+          "decimal_enclosure": {
+            "mid": "39047735999000102970496057163772100981321148935530718709221382380",
+            "rad": "3314",
+            "exponent": "-62"
+          }
+        },
+        "mass_graph_coefficient": {
+          "ball": "[49.461504397196293796937 +/- 1.08e-22]",
+          "decimal_enclosure": {
+            "mid": "49461504397196293796937013498031935596614095717435976938598936844",
+            "rad": "94213464853069010992158095826518349447169",
+            "exponent": "-63"
+          }
+        },
+        "mass_target_energy_gain": {
+          "ball": "[0.01952386799950005148524802858188605049066 +/- 5.75e-43]",
+          "decimal_enclosure": {
+            "mid": "19523867999500051485248028581886050490660574467765359354610691190",
+            "rad": "1658",
+            "exponent": "-66"
+          }
+        },
+        "mass_target_graph_gain": {
+          "ball": "[0.00247307521985981468984685 +/- 5.39e-27]",
+          "decimal_enclosure": {
+            "mid": "24730752198598146898468506749015967798307047858717988469299468422",
+            "rad": "47106732751053059154505774696415195299841",
+            "exponent": "-67"
+          }
+        },
+        "separate_global_feedback_remaining": {
+          "ball": "[0.00120692478014018531015315 +/- 5.39e-27]",
+          "decimal_enclosure": {
+            "mid": "12069247801401853101531493250984032201692952141282011530700531577",
+            "rad": "47106732832182697569112456392204200443905",
+            "exponent": "-67"
+          }
+        },
+        "sufficient_energy_to_graph_difference_ratio_if_no_other_loss": {
+          "ball": "[0.061817913344378843583389 +/- 4.35e-25]",
+          "decimal_enclosure": {
+            "mid": "61817913344378843583389193276832858002438264448156131409007807197",
+            "rad": "241281347994642951240597235296452678254593",
+            "exponent": "-66"
+          }
+        },
+        "global_cutoff_profile_H9_upper": {
+          "ball": "[10901327127628428918614.75391664114130378 +/- 2.73e-18]",
+          "decimal_enclosure": {
+            "mid": "10901327127628428918614753916641141303777270654093717774735298403",
+            "rad": "2",
+            "exponent": "-42"
+          }
+        },
+        "global_cutoff_complete_normal_quantum_upper": {
+          "ball": "[2.25911471170379629520676090731e-10 +/- 5.69e-40]",
+          "decimal_enclosure": {
+            "mid": "22591147117037962952067609073142178305828512703271794899999501557",
+            "rad": "14709310241746024335063836897837057",
+            "exponent": "-74"
+          }
+        },
+        "global_cutoff_conversion_lower_per_mass": {
+          "ball": "[0.009068081640148393354727691207 +/- 5.47e-31]",
+          "decimal_enclosure": {
+            "mid": "9068081640148393354727691207440297208429894153620439706873315480",
+            "rad": "106285730832894629553377262474100737",
+            "exponent": "-66"
+          }
+        },
+        "necessary_mass_ceiling_if_original_and_lifted_graph_radii_retained": {
+          "ball": "[2.2055381494859052454470273633e-9 +/- 4.01e-38]",
+          "decimal_enclosure": {
+            "mid": "22055381494859052454470273633141755958379230039803150657580188795",
+            "rad": "258512023733258990587285862921273345",
+            "exponent": "-73"
+          }
+        },
+        "conditional_mass_allowance_to_original_radius_ceiling": {
+          "ball": "[19.699103664563354819883636 +/- 5.18e-25]",
+          "decimal_enclosure": {
+            "mid": "19699103664563354819883635910218569927939532320920957508488303525",
+            "rad": "427405118276888652718075124962742501377",
+            "exponent": "-63"
+          }
+        },
+        "unit_energy_graph_joint_mass_gain_at_proposed_target": {
+          "ball": "[0.02199694321935986617509488 +/- 5.46e-27]",
+          "decimal_enclosure": {
+            "mid": "21996943219359866175094879256787647270491279253637158201540638032",
+            "rad": "4710673270034703514537659863654706708481",
+            "exponent": "-66"
+          }
+        },
+        "unit_energy_graph_mass_only_target_for_global_allowance": {
+          "ball": "[8.36479860702002532726785e-6 +/- 4.50e-30]",
+          "decimal_enclosure": {
+            "mid": "8364798607020025327267847299981730194448759060139965839711534261",
+            "rad": "1791359572577739020699741089962114678785",
+            "exponent": "-69"
+          }
+        },
+        "refined_energy_far_return_coefficient": {
+          "ball": "[9.272727272727272727272727272727272727273e-37 +/- 2.73e-77]",
+          "decimal_enclosure": {
+            "mid": "9272727272727272727272727272727272727272727272727272727272727272",
+            "rad": "2",
+            "exponent": "-100"
+          }
+        }
+      }
+    }
+  ],
+  "refinement_source_utf8": "from pathlib import Path\ntmp=Path(__file__).parent\ns=(tmp/'s169dc-explore.py').read_text()\ns=s.replace(\"ce=a(3).sqrt()*a('.05')**a('-1.5')*a('2.518')/den\", \"far_energy=a('1.02e-46')/a('1.1e-10')\\nce=(a(3).sqrt()*a('.05')**a('-1.5')*a('2.518')+md*cf*far_energy/bp)/den\")\ns=s.replace(\"print(json.dumps(out,indent=2));(Path(__file__).parent/'s169dc-explore.json').write_bytes((json.dumps(out,indent=2)+'\\\\n').encode())\", \"\")\ns+='''\n# Instantiate the previously unspecified localization at its existing .05/.1 radii.\n# The beta(11,11) log cutoff has the same C10/H9 bounds as the prior .02/.04 test.\nold=json.loads((root/'evidence/current-lifted-boundary-graph-attempt.json').read_bytes())['runs'][-1]['result']\ncost=old['lift_original_graph_cost'];wexp=a(5)-a('4.005')\nH9new=2*(a('.1')/a('.04'))**wexp*dec(cost['profile_H9_upper'])\nK=p['g']*be/(15*a.pi());quantum_new=6000*K*H9new\nLnew=dec(cost['classical_leading_raw_jets'])-dec(cost['other_series_raw_jets_upper'])-dec(cost['analytic_tail_upper'])-quantum_new\nmm=dec(old['lifted_boundary_block']['mass_at_target'])\nout.update(global_cutoff_profile_H9_upper=enc(H9new),global_cutoff_complete_normal_quantum_upper=enc(quantum_new),global_cutoff_conversion_lower_per_mass=enc(Lnew),\n necessary_mass_ceiling_if_original_and_lifted_graph_radii_retained=enc(2*a('1e-11')/Lnew),conditional_mass_allowance_to_original_radius_ceiling=enc(mm*Lnew/(2*a('1e-11'))),\n unit_energy_graph_joint_mass_gain_at_proposed_target=enc(k*(ce+m1)),unit_energy_graph_mass_only_target_for_global_allowance=enc(a('.00368')/(ce+m1)),\n refined_energy_far_return_coefficient=enc(far_energy))\nprint(json.dumps(out,indent=2));(Path(__file__).parent/'s169dc-refined.json').write_bytes((json.dumps(out,indent=2)+'\\\\n').encode())\n'''\n(tmp/'s169dc-explore-v2.py').write_bytes(s.encode())\nprint('Wrote refined source without altering earlier exploration sources/results.')\n",
+  "discarded_or_failed_scientific_runs": 0
+}
