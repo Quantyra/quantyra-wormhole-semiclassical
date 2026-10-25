@@ -1,3 +1,91 @@
+# Active checkpoint: global mixed inverse bounded; logarithmic Schur return open
+
+2026-10-24, E003/S169.
+
+See [the global mixed/Schur argument](current-global-mixed-schur-preconditioner.md).
+
+OUTCOME: the COMPLETE coupled global return remains UNRESOLVED, with an
+actual global mixed-row inverse and its adjoint now quantitatively bounded.
+In dimensionless physical L2, with Cbar=A_radius^2 C_trace,
+
+  norm(W Cbar^-1 W^-1), norm(W (Cbar*)^-1 W^-1)<12.500001,
+  complete preconditioned mixed remainder <1.556e-23.
+
+These are fixed-seed whole-exterior estimates, including the original bolt
+and decaying end. The exact physical measure conversion u->ru and the joint
+gradient bound for omega +/- log r retain a positive second-order gap
+>.03999999995. The massive scalar factor has gap >.99999996536. The complete
+trace-density factorization C=2(1-D Delta4)P+E retains the full anomaly,
+magnetic density and off-shell contact, with common regulator removal.
+No angular/thermal truncation or substitute geometry is used in this row.
+
+Both original equations reduce exactly to
+
+  S T=-Cbar^-1 f+K g,
+  nu=(Cbar*)^-1(Dbar T-g),
+  K=Cbar^-1 Abar(Cbar*)^-1, S=I+K Dbar.
+
+Dbar remains the COMPLETE independent shape-shape operator. The mixed-row
+Ward identity does not evaluate its nonlocal angular/thermal/contact/finite
+returns. No complete mass, scalar, slow or fast return column is certified.
+
+The endpoint check is explicit: the mixed slow normal roots are four and
+six for C and its physical adjoint; the heavy root is above six. Intermediate
+inverses can generate quartic/log data. Their physical L2/ODE domain is an
+auxiliary space, not a replacement for the final paired mass/log phase or
+fixed forced coefficients. Those generated coefficients must be matched in
+the original equations. No fast-graph or nonlinear admission follows from
+the L2 bound, and no separated slow/quartic coefficient is assumed small.
+
+The coupled principal calculation retains the exact cancellation
+1+(3/(2D))(-2D/3)=0. The remaining Schur principal coefficient is
+G/(10piD)=1.05542899627435e-26 multiplying the full logarithm. Thus S-I is
+unbounded on an ordinary same-order Sobolev space; identity-plus-small-error
+Neumann estimation fails. This is not an obstruction to S on its logarithmic
+graph or to the construction. The full quantum principal order must remain.
+
+The first unsupported continuum step is now the ACTUAL logarithmic Schur
+inverse and reconstruction in the original strong graph, with original
+finite-part and phase rows. Numerical bounds for K, S^-1, Dbar S^-1 and
+their phase returns remain unknown. Closed smooth-manifold principal-symbol
+theorems are not applied as paired-domain global inverse theorems.
+
+The exact cut reference mass lift, local cancellation, transition, boundary,
+regular bolt and original norm conversion are unchanged. No kappa_m<=5e-5
+is certified. Conditional residual budgets remain 5.34235e-12 affine and
+.0012069 graph feedback before all other entries and independent energy
+feedback. The two-fast-input screen .135973<.1599164 retains its proved scope.
+Nonlinear admission/contraction, exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability remain unproved.
+The full objective and closed audit are preserved.
+
+RESEARCH DECISION: continue the EXACT MIXED-INVERSE SCHUR method and
+sharpen the remaining logarithmic graph estimate. Retain the construction
+and s=1.4. The mixed inverse is quantitatively attainable; do not optimize
+its already negligible remainder or weaken the original physical targets.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the actual logarithmic
+Schur operator S and reconstruction in the original coupled graph, including
+global finite-part/phase rows and every mass, scalar quartic, correlated slow
+pair and fast return column. Test the resulting affine, feedback and physical
+admission constants against the unchanged requirements. Another mixed-row or
+local-symbol calculation does not execute this remaining inverse.
+
+Verification: 47 supporting symbolic/512-bit interval checks on
+20 frozen inputs. Two successful development snapshots are retained;
+the second adds the exact endpoint normal-factor audit and phase-scope
+clarification. One acceptance run agrees exactly with that final development
+snapshot in results, source hashes and runtime. The successful exploration
+source and unchanged replay output are archived. No failed scientific execution,
+post-acceptance scientific edit or Lean invocation occurred. One patch-context
+miss was corrected before the final development run without partial edits.
+Checks support the ordinary continuum argument, not the missing Schur inverse.
+All 18 inherited paths, historical evidence and closed audits are preserved.
+
+Remaining to-do list: complete logarithmic Schur inverse and global phase returns; actual correction and original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: canonical sign estimate fails; coupled inf-sup remains
 
 2026-10-24, E003/S169.
