@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-24",
+  "status": "ordinary_argument_and_numeric_contract_before_execution",
+  "full_objective": "stable semiclassical wormholes; active and incomplete",
+  "first_unsupported_step": "quantitative actual finite-seed global graph return, including transition commutator and original mass/slow moments",
+  "scope": "current fixed-seed linear response only; no nonlinear neighborhood transfer",
+  "retained_domain": "actual paired mass/log realization, complementary adjoint, composed square, common regulator, complete angular and thermal sums, contacts, finite geometry and regular bolt",
+  "quantitative_contribution": "current energy bounds full auxiliary far tail, exposing transition graph return as remaining missing argument; original mass-subtracted tail still explicitly depends on m",
+  "previous_reference_energy_not_transferred": true,
+  "supporting_verification_is_not_continuum_proof": true,
+  "contracts": {
+    "actual_seed_energy": "<1.1e-10",
+    "unsubtracted_auxiliary_far_norm": "<1.02e-46",
+    "original_Efar": "<=1.02e-46+6.50e-39 abs(m)",
+    "admitted_family_Efar": "<1.084e-42, conditional on original A admission",
+    "energy_only_transition_estimator": "unbounded by compact actual-domain sequence",
+    "joint_global_source": "S<=7.49e-12, k<=1e-14 and eta<=.25 remain unproved",
+    "physical_X_comparisons": "unchanged and unproved"
+  },
+  "sources_inspected": [
+    {
+      "url": "https://web.math.ku.dk/~grubb/CPDE14.pdf",
+      "location": "Theorem 2.3",
+      "hypotheses": "C^tau symbol, abs(s)<tau, N>dimension/2+1; only local order-zero normalized-symbol use retained",
+      "limitation": "no numerical global or nonlinear-family estimate"
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0703878",
+      "location": "Theorem 2.4, index restriction (2.24), Proposition 2.9",
+      "hypotheses": "smooth differential boundary realization with spectral cut; one-sided fixed-seed charts, not smooth reflected cubic",
+      "limitation": "does not identify full renormalized determinant Hessian or prove rough-family metric variation"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.7.E6",
+      "location": "digamma series",
+      "hypotheses": "away from poles; exact residues then absolutely convergent separated generating function"
+    },
+    {
+      "url": "https://dlmf.nist.gov/4.22.E3",
+      "location": "cotangent partial fractions",
+      "hypotheses": "away from integer-pi poles; even pole cancellation retained"
+    }
+  ],
+  "exploration": {
+    "kind": "one pre-freeze arithmetic scratch calculation, supplementary only",
+    "precision_bits": 256,
+    "exact_source": "import sys; sys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb'); from flint import arb,ctx; ctx.prec=256; a=arb; pi=a.pi(); gl=a(2000)**-10; rq=a('1.001')*a(2000)**-8; fl=1-a('1.179e-8'); e=a('5e15')*rq*(16/a('23.99')+22/(a('.99')*fl)).sqrt(); k=gl/(90*pi); c=a('.1'); yy=(a('2.5')+3*c*c/(a('.99')*a(20).sqrt()*a('8e9'))+21*c**3/(a('.99')*a(30).sqrt()))/(a('.99')*fl).sqrt(); ca=120*k/(1-c)**6; iv=c**a('2.5')/a(5).sqrt()*a('2.518')*a('1.1e-10'); print('energy',e); print('K',k); print('York',yy); print('tail amplitude',ca*iv); print('Efar unsub',ca*iv/3); print('Efar mass coeff',ca*c**4/12); print('mass allowance for old Efar', (a('1e-10')-ca*iv/3)/(ca*c**4/12)); print('RXalpha',a('.25')/a('.028913')); print('RXalpha2',a('5e7')/a('1.0706e10'))",
+    "results": {
+      "quantum_energy": "9.3536068304176453e-11",
+      "York_conversion": "2.5164868491229071",
+      "unsubtracted_far_norm": "1.0183006117692472e-46",
+      "mass_far_coefficient": "6.4990907995924305e-39"
+    },
+    "acceptance_recomputes_all_these_quantities": true
+  },
+  "research_decision": "retain construction and conditional quantum method; reject energy-only return and execute a global coupled graph parametrix with original mass moment",
+  "next_calculation_executed": false,
+  "actual_controlled_solution": false,
+  "closed_audit_preserved": true,
+  "lean_executed": false
+}

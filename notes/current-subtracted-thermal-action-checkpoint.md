@@ -1,3 +1,87 @@
+# Active checkpoint: quantum screen retained; global transition return unresolved
+
+2026-10-24, E003/S169.
+
+See [the actual global-return attempt](current-global-return-energy-attempt.md).
+
+OUTCOME: UNRESOLVED ACTUAL GLOBAL GRAPH RETURN.
+The preceding complete nonlocal fast screen remains certified on its
+stated admitted family: eta_seed<.028913, C3<1.0706e10, hence
+.135973<.1599164. Original nonlinear admission has not been established.
+
+Executed current-seed source accounting, with the physical action-form
+inverse, gives E(h_lin)<1.1e-10. This is not a transfer of the older RN
+energy bound, a physical C5 estimate, or a nonlinear residual estimate.
+The entire auxiliary normal far kernel is summed exactly, retaining its
+full odd-residue series. It acts on the ACTUAL finite-seed response;
+the physical operator, paired domain, common regulator, contacts,
+angular and thermal sums, and regular bolt remain unchanged.
+
+The unsubtracted auxiliary far norm is <1.02e-46. The original
+mass-subtracted error obeys Efar<=1.02e-46+6.50e-39 abs(m).
+The weak ceiling abs(m)<=1.5e28 suffices for Efar<=1e-10 but has not
+been established for the actual solution by energy. On the previously
+admitted A<=.001 family, abs(m)<=.001/6 makes Efar<1.084e-42.
+This conditional consequence is not used to assume that admission.
+
+The original mass-subtracted source also obeys the EXACT condition
+Ghat(3)=0. Its known split requires the G_R mass moment to equal
+2.70454106036520082886e-30, with retained enclosure radius below
+3.94e-51. A tolerance cannot replace this equality. The undifferentiated
+shape equation and the full complementary equations remain obligations.
+
+A compact smooth sequence on the actual paired domain proves that the
+energy-only transition-H3 estimator has infinite norm: bounded action
+energy permits growth proportional to K N^5 sqrt(log N). This is a
+failure of that estimator, not a chosen quantum force, an actual-source
+lower bound, or an obstruction to the construction. Equation-based
+derivative recovery remains possible but is not quantitatively proved.
+
+Unknown requirements remain S_coupled<=7.49e-12, k_coupled<=1e-14,
+and total feedback eta<=.25; jointly these imply E_joint<=9.99e-12.
+The complete transition/interior/bolt graph return and actual mass/slow
+coefficients have not been computed. The physical-X comparisons remain
+Ecenter+1e-8 alpha<=1e-11;
+R_X alpha*.028913+Z0_other<=.25;
+R_X alpha^2*1.0706e10+Z2_other<=5e7.
+The remaining A allowance is .00094319. No constant is assumed.
+
+The preserved-ball and contraction tests remain
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1, with unproved
+allocations (5e-9,.25,5e7). Y0 must include the nonlinear center
+residual. There is no actual controlled solution, exact complementary
+compatibility, physical matching/causal realization, validity/noise or
+all-sector stability proof. The closed audit and sufficient projection
+screen retain their previous scopes; no signed projection was reevaluated.
+
+RESEARCH DECISION: retain the construction and conditional quantum
+method; reject an energy-only global return. Use energy for the lower
+remainder and the exactly summed auxiliary tail, and recover the needed
+derivatives from the full coupled finite-seed equation.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct and bound the
+global coupled graph parametrix through the transition and interior,
+including the regular bolt and original mass/slow equations; evaluate
+the joint source and return against the displayed thresholds, preserve
+Ghat(3)=0 exactly, and supply the original physical-X comparisons.
+No further isolated contact, cold/scalar optimization, finite physical
+mode selection, or qualitative elliptic constant substitutes for it.
+
+Verification: two successful development runs and one frozen
+512-bit interval acceptance run; 28 supporting checks on 14 unchanged
+inputs. After the first development pass, the ordinary trace-anomaly
+coefficient ledger was expanded explicitly and its two arithmetic checks
+were added; both source snapshots are retained. No numerical allowance
+changed. The earlier scratch calculation and its exact source are retained
+in the review. No failed scientific execution, post-acceptance scientific
+edit, or Lean execution occurred. The ordinary argument supplies the
+continuum statements; checker passes do not prove the missing graph return.
+All 18 inherited paths and the closed audit remain unchanged.
+
+Remaining to-do list: actual coupled global graph/phase return and original norm comparisons; nonlinear center residual, preservation/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation, and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: conditional strong fast screen passes; global admission open
 
 2026-10-24, E003/S169.
