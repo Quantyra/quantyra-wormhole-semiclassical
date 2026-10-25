@@ -1,0 +1,257 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T18:38:02.500332+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "checks/current_coupled_mass_adjoint.py": "1c70c4ae24d9370536ca81630b3bfcae50087a0e4f7dbd9f01ac665a3b351909",
+        "evidence/current-coupled-mass-adjoint-review.json": "a3ea6bd1002270191e9fcdca3b3b0b09dd0959f53e3a637db0b739cdcbf72bdb",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-coupled-outer-return-test.md": "7916b9ff626d935e5b49d43155c2bded1239a0ebe57e628b78882078d5175242",
+        "notes/current-coupled-input-energy-bound.md": "99cb07232f99e39c6a4b309fe1dcd764a44c8c70b1846b9ad7e21c2b5ed9c422",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-physical-york-dual-assembly.md": "73ba04204e1899a4eb2d433b9b75654caa98acbe667917e82733e875ed6f05a6",
+        "notes/current-seed-boundary-phase-and-trace-defect.md": "bf9817c132eeb04d96c1dbd0ed971677f16a97002b89d9fd2264671e4b6d4194",
+        "notes/recentered-reference-inverse.md": "aa4691b29e9ac1ff5cf121472631789b275afeb643002c06627784900e4470db",
+        "notes/recentered-mass-boundary.md": "7cb5ff6bbf350f0d813ffecc0ac47d886d68e981125c85d10e2c20aefd50d4da",
+        "notes/stationary-weighted-tt-inverse.md": "74f1bb11a67131f766ee2d476c1171185b49bf722b86cdb40d039748030346c8",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-coupled-mass-adjoint.md": "# Current coupled mass adjoint and its quantitative residual target\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen verification.\nPrevious goal turn: NO PROGRESS. Full stable-wormhole objective incomplete;\nthe closed feasibility audit and original physical targets are unchanged.\n\nOUTCOME: the requested actual coupled return is still UNRESOLVED. This\nattempt identifies a current-theory mass certificate that requires weak\nprimal/adjoint residuals, rather than an unknown energy-to-H3 comparison.\nIt establishes the fixed-seed auxiliary domain and the complete mass-flux\nnormalization. It does NOT evaluate the signed pairing or either residual.\nThe numerical targets below are sufficient allowances, not computed errors.\n\n## 1. What is being attempted, and what is not transferred\n\nThe full conversion calculation gives 2133<||d_chi||H3<2174 and\ng_old=g_lifted+m d_chi. A sufficient CONVERSION-ONLY split is\n\n    ||g_lifted||H3<=5e-12, actual |m|<=2.29e-15.             (1)\n\nNeither input is known. The older scalar-TT mass-adjoint certificate is\nfor a different operator and cannot be inserted into the current solve.\nHere use the COMPLETE current H, including both original canonical rows,\nthe c_R=1e22 action, all angular/thermal terms, local contacts, off-shell\nYork/density returns, fixed clock, actual paired mass/log domain and\nregular bolt. The reference mass lift and its separate .1/.2 cutoff are\nunchanged. Its local cancellation is not a global zero-mode assertion.\n\nThe strong common-regulated core is still the missing step for the FULL\ngraph return. For the scalar observable m, first test whether the current\nweak inverse and exact boundary flux avoid that step. They do, with an\nadditional affine source pairing that must actually be evaluated. There\nis no resulting bound for mass on the unrestricted energy space alone.\n\n## 2. The original units and current two-row boundary flux\n\nLet H_c denote the canonical density Hessian, A=z^4 H_c, and beta=x/C.\nUse the physical positive-diagonal energy E of\ncurrent-global-return-energy-attempt.md. The exact conversion in\ncurrent-coupled-input-energy-bound.md, section 2, is\n\n    E(u)^2=(a+l)(u,u)/(|W| beta),\n    h(u,v)=I''(u,v)/(|W| beta)\n          =-beta^-1 integral u^T H_c v dz.                  (2)\n\nIndeed W=-N pi B^2/(G gamma), beta_T=2pi B/(C gamma), and\n|W|/(N 4pi beta_T)=CB/(8piG). Both forms and sources use (2).\nWrite h u=F for the ACTUAL full linear equation, with its original sign.\nThe current coupled saddle inverse satisfies ||h^-1||_(E*->E)<=1.\nThe source calculation gives ||F||E*<1.1e-10; its proof bounds the source\ndual norm before applying the inverse, not just the resulting solution.\n\nKeep the exact full normal matrix from current-coupled-outer-return-test.md:\n\n    A0(s)=[[Jc, Jc a(s)],\n           [a(3-s)Jc, a(3-s)Jc a(s)+4D0 N(s)]],\n    a(s)=(s+3)/(3(s+1)),\n    Jc=-6beta[C_v-D_R lambda s(s-3)](s-4)(s+1),\n    D0=-8pi g beta, g=G lambda,\n    N(s)=d0 q(s)(q(s)+2)H(s)-A_T q(s), q=s(s-3),\n    d0=1/(480pi^2), A_T=Fstar/(48pi g),\n    Fstar=F_lambda+23g/(180pi),\n    H(3)=1-gamma_E+kappa_M,\n    kappa_M=-6/5-log(mu0/sqrt(lambda)).                    (3)\n\nThe outer root-zero column is p=(-1,1), and the original unit mass is\nv_m=(-1/2,1) at weight three. The correct dual identities are\n\n    A0(0)p=0, p^T A0(3)=0, A0(3)v_m=0,\n    p^T A0'(3)v_m=4D0 N'(3).                             (4)\n\nThe scalar and mixed terms cancel in the last identity. A left-null\ntest at weight ZERO would be the wrong test: the adjoint reflection is\ns -> 3-s. This corrects an exploratory test in the preceding goal turn;\nno failed left-null identity is used here.\n\nWith the outward lower-end sign and the minus sign in (2), the positive\nmass flux is\n\n    K_m=4D0 N'(3)/beta\n       =2Fstar-(2g/(5pi))(1-gamma_E+kappa_M)\n       =2 Z_c,\n    Z_c=F_lambda+(g/(5pi))[\n               log(mu0/sqrt(lambda))+gamma_E+151/180].     (5)\n\nThe last expression is EXACTLY the already retained physical boundary\ncharge in recentered-mass-boundary.md, section 5. It is a separate check\nof the complete contact and physical normalization, not a new choice of\ncharge or counterterm. The scalar quartic row 20beta Fstar is still in H;\nit is not removed by taking the differentiated shape equation.\n\n## 3. Auxiliary domain and common-regulated Green limit\n\nTake P(z)=p on the physical canonical disk. It is regular at the bolt:\nnu+b=0 leaves the orbit metric unchanged and the constant sphere variation\nis smooth there. P is NOT in E at the outer end. It is an auxiliary test,\nnot an admitted physical correction or a new free boundary source.\n\nDefine q_P=h P initially against compact physical-half tests, using the\nactual fixed-seed kernel and its retained contacts. The current weighted\nkernel argument applies here at a weight just below zero: the normal\nsymbol is holomorphic there, the paired one-sided coefficients are analytic,\nand the separated kernel weights require -1<delta<4. Choose delta=-1/8.\nP belongs to that auxiliary weighted graph, and A0(0)p=0. The two-power\nactual-minus-normal gain therefore makes z^4 H_c P=O_b(z^2 log^N z).\nAny separated finite-domain moment starts at weight four and is kept.\nThus the physical source represented by q_P is in critical physical L2:\nits outer squared integrand is O(log^(2N)z), which is integrable in dz.\nThe genuine York transpose is bounded at this critical weight, and the\npositive scalar/TT gaps embed this source in E*. At the regular bolt the\nfixed-seed compact/disk kernel argument supplies the same membership.\nThis proves finiteness, not a useful numerical value for ||q_P||E*.\n\nThese are exactly the fixed-seed direct/reflected kernel and complete\ncontact hypotheses of current-seed-full-hessian-realization.md sections\n3 and 5, recentered-reference-inverse.md sections 1-3, and the weighted\nGreen argument in stationary-weighted-tt-inverse.md section 4. No older\ninverse constant, smooth doubled seam, new boundary realization or\nneighborhood regularity estimate is transferred. The normal family is\nthe CURRENT one in (3). The proof uses the already established two-power\ngain, not the unknown numerical higher differentiated core.\n\nFor clarity, do not interpret q_P as a metric derivative of the action on\nan enlarged physical nonlinear ball. Use P_e=chi_e P, where chi_e is zero\nfor z<=e and one for z>=2e. Each P_e is in the original fixed-source form\ncore (after ordinary smoothing), with the original regular bolt and paired\nprojectors. There is no wall at e. At positive common proper-time cutoff\nkeep the full operator and all local restorations; remove that regulator\nfor each fixed e using the existing core identity. Only then take e->0.\nNo unproved simultaneous-regulator rate is used or needed for this identity.\n\nThe actual source F has the retained weight-four finite-log asymptotic\nexpansion. Hence F(P)=lim F(P_e) exists as an ordinary integral of the\nCOMBINED canonical source; it is NOT controlled by ||F||E* alone. The\nweak solution u has\n\n    u=m v_m z^3+O_b(z^4 log^N z),                         (6)\n\nwith its correlated scalar/slow terms and regular bolt. In the cutoff\npairing, the actual-minus-normal commutator contribution tends to zero:\nthe normal mass pairing has weight zero and its coefficient error gains\ntwo powers, giving O(e^2 log^N e); the fast term gains at least one power.\nSeparated tails obey the same weighted bounds used in the retained Green\nargument. Their finite moments are in q_P, not assigned zero.\n\nThe surviving normal commutator is K_m m. One way to compute it is to\napply the complete multiplier A0(D) to chi_e p: integral chi_e' dx=1\nfor x=log z, so its weight-zero pairing is v_m^T A0'(0)p.\nA0(3-s)^T=A0(s) changes this to -p^T A0'(3)v_m; (2) gives (5).\nThe multiplier is holomorphic at the two roots and has polynomial/log\ngrowth; the divided multiplier acting on the smooth compact chi_e'\njustifies this zero-frequency identity without a mode cutoff. Contacts\nare part of the multiplier. Bolt boundary work vanishes by regular-disk\nmatching; no punctured-bolt extension is introduced.\n\nConsequently the actual two-row Green identity is\n\n    K_m m=F(P)-q_P(u).                                   (7)\n\nThe canonical mass/contact distribution has not been discarded against\nthe nonzero trace of P. The cutoff commutator retains it, and (5) matches\nits independently derived open-clock charge. This is why a bare constant\ntest with its boundary term set to zero would give a wrong certificate.\n\n## 4. Current coupled adjoint and computable error formula\n\nSet v=h^-1 q_P in E and Psi=P-v. This is the unique affine-domain\nsolution h Psi=0 with Psi-P in E. It uses the complete current coupled\ninverse, not an uncoupled TT inverse. The auxiliary v can contain a\nforced weight-two term; it is not proposed as a nonlinear metric change.\nEquation (7) and symmetry on E give\n\n    m=F(P-v)/K_m.                                        (8)\n\nTake any bolt-regular approximate forward field u_a and adjoint correction\nv_a in the actual energy/form domain for which the full residuals are\ncertified. Define\n\n    d=h u_a-F, r=h v_a-q_P,\n    I_a=F(P-v_a)+r(u_a)\n       =F(P)-q_P(u_a)+d(v_a).                            (9)\n\nAll pairings in (9) have just been defined: the only non-E input is the\nseparate convergent source moment F(P). Since h is symmetric and its\ncoupled inverse has norm at most one, exactly\n\n    m-I_a/K_m = -r(h^-1 d)/K_m,\n    |m-I_a/K_m|<=||r||E* ||d||E*/K_m.                    (10)\n\nThus a numerical enclosure I_hat with certified absolute error E_I gives\n\n    |m| <= (|I_hat|+E_I+delta_r delta_d)/K_m.             (11)\n\nNo H3 output norm occurs in this mass error. Every scalar, slow, mass,\ninterior and bolt coupling is inside h,d,r. This does not allow their\nomission from assembly or prove any graph output estimate. Finite trial\nrepresentations are permitted only if their errors use the FULL operator,\nnot a finite angular/thermal selection.\n\n## 5. Quantitative test and limits of what was executed\n\nEvaluate (5) with the current enclosed g,F_lambda and complete contact\nrange 39/5<kappa_M<54/5. The conservative lower target for verification is\n\n    K_m>1.9999999764.                                    (12)\n\nFor the sufficient mass half-budget in (1), the following explicit targets\nwould suffice:\n\n    |I_hat|<=3.3e-15, E_I<=1e-16,\n    delta_r<=1e-5, delta_d<=1.1e-10.                     (13)\n\nThe last allowance is already available with u_a=0, because d=-F. The\nother THREE quantities have NOT been evaluated. Their full numerator\nis <=4.5e-15; (11)-(12) then give |m|<2.250000027e-15<2.29e-15.\nWith that mass bound AND the separately unproved lifted graph <=5e-12,\nthe previous upper conversion 2174 gives original graph <1e-11.\n\nMore generally, after reserving 3.4e-15 for |I_hat|+E_I, the allowable\nproduct is K_m*2.29e-15-3.4e-15. With delta_d=1.1e-10, this permits an\nadjoint residual slightly above 1.0727e-5. This is a conditional error\nbudget, not an observed residual, an adjoint norm or a mass estimate.\nIt is less demanding in derivative order than a global H3 certificate;\nattainability of the signed full pairing at absolute error 1e-16 remains\nundecided. No numerical claim of realistic attainability follows from\nthese tolerances alone.\n\nEXECUTED: the current coupled normal/charge consistency, physical energy\nconversion and resulting residual thresholds, supported by exact symbolic\nidentities and outward Arb arithmetic. The ordinary cutoff/domain argument\nabove is required independently of those checks. NOT EXECUTED: the complete\nI_hat, r or common-regulated core application. In particular (13) has not\npassed as an actual feasibility test. The preceding exploratory wrong-\nweight null test is recorded in the review; its corrected version is used.\n\nThe original kappa_m<=5e-5 remains unknown. Its conditional remaining\nbudgets remain Y_other<=5.34234999994958e-12 and\neta_other+(.0195239+4.583e-13)gamma_E<.0012069. The screen\n.028913+1e-11*1.0706e10=.135973<.1599164 still has only its proved\ntwo-fast-input admitted-family scope. Neither (11) nor (13) establishes\nindependent phase derivatives, physical-norm embedding or a nonlinear ball.\n\nRESEARCH DECISION: retain the construction; sharpen the signed admission\nmethod using this CURRENT COUPLED mass adjoint. The first mass decision can\nuse a weak residual certificate without waiting for an energy-to-H3 theorem.\nDo not optimize the already controlled cold/scalar or L2 angular tails.\nThe main coupled graph milestone remains open, not replaced by this method.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the complete restored\ncurrent operator to a bolt-regular adjoint trial v_a, and enclose its\nresidual r together with the SAME signed source pairing F(P-v_a), testing\n(11) against 2.29e-15. The source moment, actual contacts and all finite-\ndomain returns must be assembled with their common regulator. A failed\nupper estimate would not prove the actual mass too large or rule out the\nconstruction; an enclosure excluding the target would reject only this\nsufficient conversion split. The original graph still needs its own bound.\n\nRemaining to-do list: executed coupled signed mass/graph certificate;\noriginal physical-norm/neighborhood comparisons; nonlinear admission and\ncontraction; exact compatibility; physical matching; semiclassical validity\nand noise; all-sector stability; charge/return, opening, transport,\npreparation, separate creation and the full stable-wormhole objective.\n",
+        "checks/current_coupled_mass_adjoint.py": "\"\"\"Current coupled mass-flux algebra and conditional budgets, NOT a solve.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\nimport traceback\n\nif '--arb-path' in sys.argv:\n    sys.path.insert(0, sys.argv[sys.argv.index('--arb-path') + 1])\nfrom flint import arb, ctx\nimport flint\nimport sympy as sp\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-coupled-mass-adjoint'\nOWN = ['notes/'+STEM+'.md', 'checks/current_coupled_mass_adjoint.py',\n       'evidence/'+STEM+'-review.json']\nINPUTS = OWN + [\n    'notes/current-seed-full-hessian-realization.md',\n    'notes/current-coupled-outer-return-test.md',\n    'notes/current-coupled-input-energy-bound.md',\n    'notes/current-global-return-energy-attempt.md',\n    'notes/current-physical-york-dual-assembly.md',\n    'notes/current-seed-boundary-phase-and-trace-defect.md',\n    'notes/recentered-reference-inverse.md',\n    'notes/recentered-mass-boundary.md',\n    'notes/stationary-weighted-tt-inverse.md',\n    'notes/stationary-global-weighted-map.md',\n    'notes/current-global-mass-conversion.md',\n    'notes/current-controlled-solution-audit-closeout.md',\n    'evidence/current-global-mass-conversion.json',\n]\nCHECKS = []\n\ndef check(name, value):\n    CHECKS.append({'name': name, 'passed': bool(value)})\n    if not value:\n        raise AssertionError(name)\n\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(50)\n    return {'ball':v.str(35), 'decimal_enclosure':\n            {'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef zero_matrix(matrix):\n    return all(sp.simplify(v)==0 for v in matrix)\n\ndef execute():\n    ctx.prec=512\n    s,be,Cv,r,D0=sp.symbols('s beta Cv r D0')\n    N=sp.Function('N')\n    aa=lambda t:(t+3)/(3*(t+1))\n    J=-6*be*(Cv-r*s*(s-3))*(s-4)*(s+1)\n    A=sp.Matrix([[J,J*aa(s)],\n                 [aa(3-s)*J,aa(3-s)*J*aa(s)+4*D0*N(s)]])\n    p=sp.Matrix([-1,1]); vm=sp.Matrix([-sp.Rational(1,2),1])\n    check('current_normal_root_zero_column',zero_matrix((A.subs(s,0)*p).subs(N(0),0)))\n    check('current_normal_mass_column',zero_matrix((A.subs(s,3)*vm).subs(N(3),0)))\n    check('correct_reflected_left_null',zero_matrix((p.T*A.subs(s,3)).subs(N(3),0)))\n    check('current_normal_adjoint_reflection',zero_matrix((A.T-A.subs(s,3-s)).subs(N(3-s),N(s))))\n    flux=sp.simplify((p.T*A.diff(s)*vm)[0].subs(s,3))\n    expected=4*D0*sp.Subs(sp.Derivative(N(s),s),s,3)\n    check('complete_scalar_and_mixed_flux_cancellation',sp.simplify(flux-expected)==0)\n    wrong=(p.T*A.subs(s,0)).subs(N(0),0)\n    check('prior_wrong_weight_test_is_not_used',not zero_matrix(wrong))\n\n    g,Fl,eg,km,L=sp.symbols('g Fl EulerGamma kappa log_mu')\n    Fstar=Fl+23*g/(180*sp.pi)\n    h3=1-eg+km\n    d0=1/(480*sp.pi**2); AT=Fstar/(48*sp.pi*g)\n    nd=3*(2*d0*h3-AT)\n    K=sp.simplify(4*(-8*sp.pi*g*be)*nd/be)\n    Zc=Fl+g/(5*sp.pi)*(L+eg+sp.Rational(151,180))\n    check('complete_flux_equals_twice_physical_charge',\n          sp.simplify(K.subs(km,-sp.Rational(6,5)-L)-2*Zc)==0)\n\n    G,C,B,gamma,nh=sp.symbols('G C B gamma nh',positive=True)\n    Wabs=nh*sp.pi*B**2/(G*gamma)\n    betaT=2*sp.pi*B/(C*gamma)\n    check('physical_action_radial_measure',sp.simplify(Wabs/(nh*4*sp.pi*betaT)-C*B/(8*sp.pi*G))==0)\n    lam=C*be/B**2\n    factor=8*sp.pi*G/(lam*B**3)/(nh*4*sp.pi*betaT)\n    check('energy_action_conversion',sp.simplify(factor-1/(Wabs*be))==0)\n\n    # The abstract residual identity is checked algebraically; these symbols\n    # are NOT numerical physical matrix entries or a finite-mode surrogate.\n    Fp,Fva,qUa,hvaUa=sp.symbols('Fp Fva qUa hvaUa')\n    ia1=Fp-Fva+hvaUa-qUa\n    ia2=Fp-qUa+hvaUa-Fva\n    check('two_primal_dual_centers_identical',sp.expand(ia1-ia2)==0)\n\n    receipt=json.loads((ROOT/'evidence/current-global-mass-conversion.json').read_bytes())\n    prev=receipt['runs'][-1]\n    check('parameter_source_was_successful_acceptance',prev['status']=='passed' and prev['mode']=='acceptance')\n    for f in ['notes/current-global-mass-conversion.md']:\n        check('parameter_source_argument_unchanged',sha256((ROOT/f).read_bytes()).hexdigest()==prev['input_sha256_before'][f])\n    pp=prev['result']['parameters']\n    ag=dec(pp['g']); afl=dec(pp['Fl'])\n    # The entire inherited kappa interval is retained, not a fitted contact.\n    ak=arb('9.3','1.5')\n    euler=arb.const_euler()\n    ah=1-euler+ak\n    Knum=2*(afl+23*ag/(180*arb.pi()))-2*ag*ah/(5*arb.pi())\n    Klo=arb('1.9999999764')\n    check('complete_flux_positive_lower',Knum>Klo)\n    check('complete_flux_upper_below_two',Knum<2)\n    alog=-arb(6)/5-ak\n    Znum=afl+ag/(5*arb.pi())*(alog+euler+arb(151)/180)\n    check('numerical_full_contact_charge_agrees',Knum.overlaps(2*Znum))\n    check('physical_charge_guard_preserved',Znum>arb('.9999999882'))\n\n    mass_target=arb('2.29e-15')\n    Ihat_cap=arb('3.3e-15'); eval_cap=arb('1e-16')\n    residual_cap=arb('1e-5'); source_cap=arb('1.1e-10')\n    numerator=Ihat_cap+eval_cap+residual_cap*source_cap\n    mass_cap=numerator/Klo\n    available_product=Klo*mass_target-Ihat_cap-eval_cap\n    residual_threshold=available_product/source_cap\n    graph_cap=arb('5e-12')+arb(2174)*mass_cap\n    check('conditional_residual_product_fits',residual_cap*source_cap<available_product)\n    check('conditional_mass_certificate_fits_split',mass_cap<mass_target)\n    check('conditional_mass_rounded_guard',mass_cap<arb('2.250000027e-15'))\n    check('conditional_graph_conversion_fits_original_radius',graph_cap<arb('1e-11'))\n    check('allowable_adjoint_residual_exceeds_rounded_target',residual_threshold>arb('1.0727e-5'))\n    check('unchanged_fast_screen',arb('.028913')+arb('1e-11')*arb('1.0706e10')<arb('.1599164'))\n    return {'precision_bits':ctx.prec,'normal_mass_flux_symbolic':str(flux),\n            'physical_flux_symbolic':str(K),'physical_flux_equals':'2 Z_c',\n            'complete_mass_flux':enc(Knum),'physical_charge':enc(Znum),\n            'used_mass_flux_lower':enc(Klo),\n            'conditional_flux_center_allowance':enc(Ihat_cap),\n            'conditional_flux_evaluation_error_allowance':enc(eval_cap),\n            'conditional_adjoint_residual_allowance':enc(residual_cap),\n            'known_forward_source_dual_upper':enc(source_cap),\n            'conditional_residual_product_ceiling':enc(available_product),\n            'conditional_adjoint_residual_ceiling':enc(residual_threshold),\n            'conditional_mass_upper':enc(mass_cap),\n            'conditional_original_graph_upper':enc(graph_cap),\n            'scope':{'current_fixed_seed_mass_adjoint_argument':True,\n                     'actual_mass_computed':False,'actual_signed_pairing_computed':False,\n                     'actual_adjoint_residual_computed':False,'actual_kappa_m_computed':False,\n                     'complete_physical_coupled_return':'unresolved',\n                     'physical_feasibility_test_executed':False,\n                     'nonlinear_admission':False,'construction_obstruction':False,\n                     'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n         'input_sha256_before':hashes,\n         'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n         'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                    'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run)\n    output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary={'mode':mode,'status':run['status'],'checks':len(CHECKS),\n             'result':run.get('result'), 'traceback':run.get('traceback')}\n    message=json.dumps(summary,indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-coupled-mass-adjoint-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"no_progress\",\n  \"complete_coupled_milestone\": false,\n  \"ordinary_argument\": \"notes/current-coupled-mass-adjoint.md\",\n  \"quantitative_role\": \"Replace the current energy-plus-graph mass allowance by a signed CURRENT COUPLED weak primal/adjoint certificate. The sufficient mass conversion target remains 2.29e-15; no actual residual or pairing is assigned its allowance.\",\n  \"first_missing_physical_calculation\": \"Evaluate complete F(P-v_a), its common-regulator error and the actual coupled residual h v_a-q_P. Full original H3 graph output remains independently missing.\",\n  \"hypotheses_review\": [\n    {\n      \"source\": \"notes/current-seed-full-hessian-realization.md\",\n      \"scope\": \"Actual current fixed-seed paired Hessian, both rows, critical graph closure and unit saddle inverse. No nonlinear-neighborhood transfer.\"\n    },\n    {\n      \"source\": \"notes/recentered-reference-inverse.md\",\n      \"scope\": \"Auxiliary weighted kernel hypotheses on -1<delta<4; current-seed transfer is checked in the preceding source. Root-zero P is an auxiliary test, not an energy vector or physical clock degree of freedom.\"\n    },\n    {\n      \"source\": \"notes/stationary-weighted-tt-inverse.md\",\n      \"scope\": \"Use the cutoff/normal Green argument, not its older scalar-only constants. Recompute with the full current two-row normal matrix and the original physical energy normalization.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-outer-return-test.md\",\n      \"scope\": \"Current complete matrix, mass column, reflected adjoint and finite contact. All angular and thermal content of the normal family remains.\"\n    },\n    {\n      \"source\": \"notes/recentered-mass-boundary.md\",\n      \"scope\": \"Independent full open-clock charge, fixed boundary representatives and scalar-square completion; equality K_m=2Z_c checks contact allocation.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-input-energy-bound.md\",\n      \"scope\": \"Exact original physical energy/action measure conversion; no inverse embedding inferred.\"\n    },\n    {\n      \"source\": \"notes/current-global-return-energy-attempt.md\",\n      \"scope\": \"Current source dual bound <1.1e-10; not the older source constant. F(P) additionally needs the actual integrable weight-four/log source expansion.\"\n    }\n  ],\n  \"ordinary_argument_checks\": [\n    \"At each positive outer cutoff use the original physical operator/domain, then remove the common heat regulator before the outer-cut limit. No joint rate or independent core subtraction assumed.\",\n    \"Root-zero cancellation and actual-minus-normal two-power gain place q_P in critical physical L2 and hence E*. No numerical q_P norm inferred.\",\n    \"Nonzero auxiliary boundary trace is accounted for by the cutoff commutator and full mass flux, not discarded.\",\n    \"Only auxiliary v may have forced weight-two terms; it is an energy-domain adjoint correction, not an admitted nonlinear metric.\",\n    \"All scalar/quartic/slow/interior/bolt couplings remain inside the actual h. The scalar quartic equation is not differentiated away.\",\n    \"Mass is still unbounded on the unrestricted energy space. The separate F(P) moment is essential.\",\n    \"Exact primal/dual residual identity uses symmetry and the actual coupled inverse norm one.\",\n    \"No computation of actual mass, kappa_m, full H3 return, nonlinear admission or stability is claimed.\"\n  ],\n  \"prior_turn_exploration\": {\n    \"kind\": \"symbolic two-row normal algebra; not a physical solve\",\n    \"incorrect_test\": \"p.T A0(0) was tested for zero and returned (-12 beta Cv,-12 beta Cv).\",\n    \"correction\": \"The correct reflected left null is p.T A0(3)=0; A0(0)p=0 is the right-null identity. Both corrected identities were verified in that exploratory turn.\",\n    \"frozen_prior_artifact\": \"No prior artifact was written; these observations are recorded from the retained conversation, not represented as a prior acceptance run.\"\n  },\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"complete K_m > 1.9999999764\",\n      \"conditional mass cap <2.250000027e-15\",\n      \"conditional conversion fits original 1e-11 radius\"\n    ],\n    \"not_tested\": [\n      \"actual signed source pairing\",\n      \"actual adjoint residual\",\n      \"complete coupled graph or physical feasibility\"\n    ],\n    \"verification\": \"one successful development and matching unchanged-source acceptance; retain any failures\",\n    \"checker_scope\": \"Exact normal identities, physical units and outward arithmetic only; ordinary continuum argument is separate.\"\n  },\n  \"new_external_theorem\": false,\n  \"local_lean_invocations\": 0,\n  \"scientific_sha256\": {\n    \"notes/current-coupled-mass-adjoint.md\": \"0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781\",\n    \"checks/current_coupled_mass_adjoint.py\": \"1c70c4ae24d9370536ca81630b3bfcae50087a0e4f7dbd9f01ac665a3b351909\"\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "normal_mass_flux_symbolic": "4*D0*Subs(Derivative(N(s), s), s, 3)",
+        "physical_flux_symbolic": "(180*pi*Fl - 36*g*(-EulerGamma + kappa + 1) + 23*g)/(90*pi)",
+        "physical_flux_equals": "2 Z_c",
+        "complete_mass_flux": {
+          "ball": "[1.999999976438055098076550711530173 +/- 6.83e-34]",
+          "decimal_enclosure": {
+            "mid": "1999999976438055098076550711530173495913992077186728502",
+            "rad": "186509704970608050177",
+            "exponent": "-54"
+          }
+        },
+        "physical_charge": {
+          "ball": "[0.999999988219027549038275355765087 +/- 3.46e-34]",
+          "decimal_enclosure": {
+            "mid": "9999999882190275490382753557650867479569960171690986199",
+            "rad": "932548512208656531457",
+            "exponent": "-55"
+          }
+        },
+        "used_mass_flux_lower": {
+          "ball": "[1.9999999764000000000000000000000000 +/- 1e-39]",
+          "decimal_enclosure": {
+            "mid": "1999999976400000000000000000000000000000000000000000000",
+            "rad": "1",
+            "exponent": "-54"
+          }
+        },
+        "conditional_flux_center_allowance": {
+          "ball": "[3.3000000000000000000000000000000000e-15 +/- 1e-54]",
+          "decimal_enclosure": {
+            "mid": "3300000000000000000000000000000000000000000000000000000",
+            "rad": "1",
+            "exponent": "-69"
+          }
+        },
+        "conditional_flux_evaluation_error_allowance": {
+          "ball": "[1.0000000000000000000000000000000000e-16 +/- 3e-55]",
+          "decimal_enclosure": {
+            "mid": "999999999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-70"
+          }
+        },
+        "conditional_adjoint_residual_allowance": {
+          "ball": "[1.0000000000000000000000000000000000e-5 +/- 3e-44]",
+          "decimal_enclosure": {
+            "mid": "999999999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-59"
+          }
+        },
+        "known_forward_source_dual_upper": {
+          "ball": "[1.1000000000000000000000000000000000e-10 +/- 3e-49]",
+          "decimal_enclosure": {
+            "mid": "1099999999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-64"
+          }
+        },
+        "conditional_residual_product_ceiling": {
+          "ball": "[1.1799999459560000000000000000000000e-15 +/- 3e-54]",
+          "decimal_enclosure": {
+            "mid": "1179999945955999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-69"
+          }
+        },
+        "conditional_adjoint_residual_ceiling": {
+          "ball": "[1.0727272235963636363636363636363636e-5 +/- 3.64e-40]",
+          "decimal_enclosure": {
+            "mid": "1072727223596363636363636363636363636363636363636363636",
+            "rad": "2",
+            "exponent": "-59"
+          }
+        },
+        "conditional_mass_upper": {
+          "ball": "[2.2500000265500003132900036968220436e-15 +/- 2.26e-50]",
+          "decimal_enclosure": {
+            "mid": "2250000026550000313290003696822043622500114745501353996",
+            "rad": "2",
+            "exponent": "-69"
+          }
+        },
+        "conditional_original_graph_upper": {
+          "ball": "[9.8915000577197006810924680368911228e-12 +/- 3.54e-47]",
+          "decimal_enclosure": {
+            "mid": "989150005771970068109246803689112283531524945671994358",
+            "rad": "2",
+            "exponent": "-65"
+          }
+        },
+        "scope": {
+          "current_fixed_seed_mass_adjoint_argument": true,
+          "actual_mass_computed": false,
+          "actual_signed_pairing_computed": false,
+          "actual_adjoint_residual_computed": false,
+          "actual_kappa_m_computed": false,
+          "complete_physical_coupled_return": "unresolved",
+          "physical_feasibility_test_executed": false,
+          "nonlinear_admission": false,
+          "construction_obstruction": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "checks/current_coupled_mass_adjoint.py": "1c70c4ae24d9370536ca81630b3bfcae50087a0e4f7dbd9f01ac665a3b351909",
+        "evidence/current-coupled-mass-adjoint-review.json": "a3ea6bd1002270191e9fcdca3b3b0b09dd0959f53e3a637db0b739cdcbf72bdb",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-coupled-outer-return-test.md": "7916b9ff626d935e5b49d43155c2bded1239a0ebe57e628b78882078d5175242",
+        "notes/current-coupled-input-energy-bound.md": "99cb07232f99e39c6a4b309fe1dcd764a44c8c70b1846b9ad7e21c2b5ed9c422",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-physical-york-dual-assembly.md": "73ba04204e1899a4eb2d433b9b75654caa98acbe667917e82733e875ed6f05a6",
+        "notes/current-seed-boundary-phase-and-trace-defect.md": "bf9817c132eeb04d96c1dbd0ed971677f16a97002b89d9fd2264671e4b6d4194",
+        "notes/recentered-reference-inverse.md": "aa4691b29e9ac1ff5cf121472631789b275afeb643002c06627784900e4470db",
+        "notes/recentered-mass-boundary.md": "7cb5ff6bbf350f0d813ffecc0ac47d886d68e981125c85d10e2c20aefd50d4da",
+        "notes/stationary-weighted-tt-inverse.md": "74f1bb11a67131f766ee2d476c1171185b49bf722b86cdb40d039748030346c8",
+        "notes/stationary-global-weighted-map.md": "53a8aef86e13f5d17be459ec3e8aac3d9f3dc509b9458f3c39281b77573cd0e6",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "current_normal_root_zero_column",
+          "passed": true
+        },
+        {
+          "name": "current_normal_mass_column",
+          "passed": true
+        },
+        {
+          "name": "correct_reflected_left_null",
+          "passed": true
+        },
+        {
+          "name": "current_normal_adjoint_reflection",
+          "passed": true
+        },
+        {
+          "name": "complete_scalar_and_mixed_flux_cancellation",
+          "passed": true
+        },
+        {
+          "name": "prior_wrong_weight_test_is_not_used",
+          "passed": true
+        },
+        {
+          "name": "complete_flux_equals_twice_physical_charge",
+          "passed": true
+        },
+        {
+          "name": "physical_action_radial_measure",
+          "passed": true
+        },
+        {
+          "name": "energy_action_conversion",
+          "passed": true
+        },
+        {
+          "name": "two_primal_dual_centers_identical",
+          "passed": true
+        },
+        {
+          "name": "parameter_source_was_successful_acceptance",
+          "passed": true
+        },
+        {
+          "name": "parameter_source_argument_unchanged",
+          "passed": true
+        },
+        {
+          "name": "complete_flux_positive_lower",
+          "passed": true
+        },
+        {
+          "name": "complete_flux_upper_below_two",
+          "passed": true
+        },
+        {
+          "name": "numerical_full_contact_charge_agrees",
+          "passed": true
+        },
+        {
+          "name": "physical_charge_guard_preserved",
+          "passed": true
+        },
+        {
+          "name": "conditional_residual_product_fits",
+          "passed": true
+        },
+        {
+          "name": "conditional_mass_certificate_fits_split",
+          "passed": true
+        },
+        {
+          "name": "conditional_mass_rounded_guard",
+          "passed": true
+        },
+        {
+          "name": "conditional_graph_conversion_fits_original_radius",
+          "passed": true
+        },
+        {
+          "name": "allowable_adjoint_residual_exceeds_rounded_target",
+          "passed": true
+        },
+        {
+          "name": "unchanged_fast_screen",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T18:38:02.843042+00:00"
+    }
+  ]
+}

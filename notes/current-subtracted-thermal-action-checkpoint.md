@@ -1,3 +1,77 @@
+# Active checkpoint: current coupled mass adjoint; physical return unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: no progress.
+
+See [the current-theory mass-adjoint argument](current-coupled-mass-adjoint.md) and its frozen evidence.
+
+The actual coupled return remains UNRESOLVED. The current two-row mass
+adjoint now has an ordinary fixed-seed domain/Green argument and a residual
+certificate in the original physical energy norm. Its complete boundary
+flux is K_m=2 Z_c>1.9999999764, including the finite quantum contact.
+The signed pairing, actual adjoint residual and actual mass remain uncomputed.
+
+For full forward/adjoint residuals d,r and a signed flux approximation
+I_hat with error E_I, the actual mass obeys
+
+    |m| <= (|I_hat|+E_I+||r||E* ||d||E*)/K_m.
+
+The explicit targets |I_hat|<=3.3e-15, E_I<=1e-16, ||r||E*<=1e-5
+and ||d||E*<=1.1e-10 would certify |m|<2.250000027e-15. Only the last
+allowance is already available, with zero forward trial. The other three
+are UNKNOWN. These are conditional budgets, not observed residuals or
+an executed physical feasibility test. The signed all-mode integral still
+needs its original common-regulator error enclosure.
+
+The auxiliary root-zero probe is not an energy vector or a new physical
+clock degree of freedom. Compact fixed-source cutoffs, the actual two-power
+kernel gain and the full normal commutator justify the Green limit on the
+paired one-sided domain. Every scalar, slow, interior and bolt coupling is
+inside the current operator. This avoids transferring the older TT-only
+mass theorem. The independent energy-to-H3 estimate remains unavailable.
+
+The previous conversion 2133<||d_chi||H3<2174 and both original graph
+ceilings are preserved. The hypothetical mass bound above, TOGETHER WITH
+the still-unproved lifted graph <=5e-12, would give original graph
+<9.891501e-12. No actual mass or graph gate is closed by this implication.
+The full cutoff transition and fixed-temperature/regular-bolt matching
+remain; the reference mass lift is not a global zero mode.
+
+The first missing numerical mass step is the actual coupled adjoint
+residual and signed source moment. The first missing full-graph step is
+still the differentiated common-regulated core composed with the coupled
+inverse. The kappa_m<=5e-5 target and all other coupled entries remain
+unknown; their residual budgets are unchanged. The .135973<.1599164
+screen remains conditional on the proved two-fast-input admitted family.
+Physical norm/ball comparisons and independent phase variations do not
+follow. No nonlinear solution, physical matching or stability is certified.
+
+RESEARCH DECISION: retain the construction and sharpen the signed
+admission method with the CURRENT COUPLED mass adjoint. The actual mass
+decision can use weak residuals without an assumed energy-to-H3 bound.
+The main coupled graph milestone remains open; it is not replaced by this
+method or by the supporting symbolic/arithmetic checks.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the complete restored
+current operator to a bolt-regular adjoint trial v_a, enclose its full
+residual h v_a-q_P and the SAME signed source pairing F(P-v_a), and test
+the mass certificate against 2.29e-15. Preserve all contacts, angular and
+thermal tails, finite-domain returns and common regulator. The original
+graph then still needs its own certified bound. No cold/scalar or L2-tail
+value optimization is selected. A failed upper bound is not nonexistence.
+
+Verification: 23 supporting checks on 16 frozen inputs, exact SymPy
+identities and 512-bit Arb. One successful development and matching
+unchanged-source acceptance, no failed current runs. The prior wrong-
+weight exploratory null test and its correction are recorded explicitly.
+Dependency fingerprints were retained after the runs. No Lean was invoked.
+The continuum domain argument is ordinary mathematics, not certified by
+these checks. No full physical feasibility test was executed. All 18
+inherited paths, the prior checkpoint and closed audits are preserved.
+
+Remaining to-do list: executed coupled signed mass/graph certificate; original physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: full mass-lift conversion changes the coupled certificate requirement
 
 2026-10-25 HST, E003/S169. Previous goal turn: no progress.
