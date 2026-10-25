@@ -1,0 +1,1075 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T18:12:03.315613+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "checks/current_global_mass_conversion.py": "ad96afac07f54f056934f150e73d761c90abdfb4a09b4594e65078024e5e7047",
+        "evidence/current-global-mass-conversion-review.json": "63267996c7d20dff4abb5173b1f060fa70f24499d466dc32e6fd773ab61bc422",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-lifted-boundary-graph-attempt.md": "53cbc40611e9c74660b0a25d411854c4bbb8ed5ca8373477ae7c2cc23163a298",
+        "notes/current-resolvent-corrected-angular-remainder.md": "d3926bf17ebd2bccaa6d1f422117e17cf162b3d953bc51da7d0908a33c822997",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-lifted-boundary-graph-attempt.json": "6e9e735ff00c5ea42ab5d6398c4db975ead4023056f4b064b04dfd64f9738bee",
+        "evidence/current-global-mass-conversion-exploration.json": "75806ad2b9e9582ee9f66aeaf54085b3948055ed913fcfb31d33184a43899ea6",
+        "checks/current_physical_york_dual_assembly.py": "ad0b63037bcadcc4ecfdaa48148e5ce1f07494cbc8eca55fc0297464fbb51e4d",
+        "checks/current_all_angular_principal_operator.py": "18bc17175855ee53c80e13eb5afb0a3fd2172ca92246b2ae17614e5479f8f0ec",
+        "checks/current_subtracted_thermal_action.py": "d14c90bdc2ac7c475c44a3f22ea4fd13327933c6036cfb6d626028daad052da2",
+        "checks/current_coincident_dirac_action_assembly.py": "40903136c7384d001f5d8a05f308457a45ac3bfb4e575e7796315fa5bab553fb",
+        "checks/current_endpoint_thermal_restoration.py": "5071d56c93bb42e0d54cef36013165029952ebb411f74f19805aadc600fd99cd",
+        "checks/current_seed_radial_green_enclosure.py": "96714512659526c91418cf196aa3a7620d593db0f9333246a2a0f4f4b4fa76e4",
+        "checks/current_seed_separated_quantum_response.py": "68c12a235ddb425f3427aab60936c2d89317adc73f575bde259b2ccb28179243"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-global-mass-conversion.md": "# Full transition cost of the reference mass lift in the original graph\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen verification.\nPrevious goal turn: NO PROGRESS. The full stable semiclassical wormhole\nobjective remains active and incomplete; the feasibility audit stays closed.\n\nOUTCOME: the complete physical coupled return is UNRESOLVED. The current\nattempt to quantify its differentiated core did not produce that bound.\nBefore assigning any improved core estimate to the original admission\nbudget, this calculation evaluates the FULL already specified boundary-basis\nconversion. Its cutoff transition, omitted from the preceding LOWER bound,\nhas a large cost. This is an earlier requirement for the proposed certificate,\nnot a physical source, a new boundary condition, or a construction obstruction.\n\n## 1. Same mass lift, endpoints, cutoff and original norm\n\nKeep the exact reference profiles and actual finite-seed Q:\n\n    J_m(z)=integral_0^z t^3/Q(t)^2 dt,\n    n_m=-2 beta Q J_m/z,\n    b_m=beta z^3/Q+beta Q' J_m.\n\nBoth local reference rows cancel. The independently retained mass cutoff\nchi_m equals one through .1 and zero by .2. Its complete areal return is\n\n    f_cut=2xz chi_m-2F n_m D chi_m,\n    alpha_cut=n_m D chi_m, D=z partial_z.\n\nIt has zero reference bolt displacement and total reference mass -xB per\nunit coefficient. It is NOT a global fixed-temperature zero mode. This\ncalculation changes neither chi_m nor its original matching equations.\n\nThe ORIGINAL graph cutoff chi is the already specified beta(11,11)\nlogarithmic cutoff, one through a=.05, zero from b=.1. Put\n\n    t=log(z/a)/log(2),\n    chi(t)=1-[21!/(10!)^2] sum_(k=0)^10 (-1)^k binom(10,k)t^(11+k)/(11+k)\n\non 0<t<1. It is C10 at the endpoints, sufficient for the H9 quantities\nbelow. No derivative of a sharp indicator is used. Set sigma=4.005 and\n\n    w= z^-sigma chi(b_m-z^3),\n    d_chi=B_sigma w,\n    g_old=g_lifted+m d_chi.                              (1)\n\nThe known-source subtraction and every other phase are the same in (1).\nThis exact equality holds before any physical operator or regulator is\nestimated. Neither graph is silently substituted for the other. The norm\nis the original Fourier H3(dx), x=log z:\n\n    ||v||H3^2=sum_(j=0)^3 binom(3,j) integral |partial_x^j v|^2 dx.\n\n## 2. Complete normal operator, analytic profile and certified tails\n\nUse the SAME complete normal symbol, including its digamma/cotangent\nfinite part and fixed contact. Split it only for estimation:\n\n    B_cl(s)=K L(s-4)s(s-3),\n    K L=2 beta Fstar/3,\n    Fstar=F_l+23G lambda/(180pi),\n    B=B_cl+B_q.\n\nThe existing all-frequency normal-symbol proof and H9 bound for THIS\n.05/.1 cutoff give\n\n    ||B_q,sigma w||H3 <2.260e-10.                       (2)\n\nThis is the complete normal quantum part, not a finite angular or Fourier\nselection. It is not the unknown actual finite-domain quantum return.\n\nWrite q=Q/beta and q^-1=sum a_n z^n. The exact recurrence is\n\n    a_0=1, a_n=-sum_(j=1)^min(6,n) q_j a_(n-j),\n    q^-2 coefficient c_n=sum_(j=0)^n a_j a_(n-j).\n\nThen b_m=z^3 q^-1+q' integral_0^z t^3 q^-2 dt. This gives its coefficients\nwithout numerically integrating a nearly cancelling expression. Retain\nall coefficients through N=80, subtract the exact mass cubic, and call\nthe resulting profile w_N. No physical spectrum is truncated by this\nfinite representation of a known analytic reference profile.\n\nThe preceding complex-disc proof gives |(b_m-z^3)/z^5|<2 on |z|=.2.\nWith R=.2, this implies |b_n|<=2 R^(5-n) for every n>=5. For k<=6,\nthe L2(dx) norm on 0<z<b of the omitted kth x derivative is bounded by\n\n    T_k=2 R^5 b^-sigma (N+1+sigma)^k (b/R)^(N+1)\n          /[sqrt(2(N+1-sigma))(1-r_k)],\n    r_k=(b/R)(1+1/(N+1+sigma))^k<1.                  (3)\n\nThis follows by integrating EACH power on the whole half-line first,\nthen comparing the positive series geometrically. Using n+sigma in the\nnumerator only enlarges |n-sigma|. For the cutoff use B_0=1 and\n\n    B_l=21!/(21-l)! *2^(l-1)/log(2)^l, 1<=l<=6.    (4)\n\nIndeed chi has Bernstein coefficients eleven ones followed by eleven\nzeros. Its lth derivative coefficients are the lth differences of that\nsequence times the falling factorial; their absolute values are at most\n2^(l-1). The Bernstein basis is nonnegative and sums to one. Thus (4)\nbounds every x derivative, including the full transition.\n\nExpand P(D)=(D+sigma-4)(D+sigma)(D+sigma-3)=sum p_r D^r. For j=0,...,3\nthe omitted classical output derivative is at most\n\n    A_j=|K L| sum_(r=0)^3 |p_r| sum_(l=0)^(j+r)\n                              binom(j+r,l) B_l T_(j+r-l).\n\nConsequently E_series=sqrt(sum binom(3,j) A_j^2) bounds the ENTIRE\nomitted classical H3 norm. Add (2) by both triangle inequalities.\nAll bounds use the actual enclosed seed constants, not decimal point\napproximations or changes of normalization.\n\n## 3. Whole-interval enclosure of the retained norm\n\nOn z<a, chi=1. With k_n=n-sigma and\nA_n=K L b_n(n-4)n(n-3), exact integration gives\n\n    I_inner=sum_(n,m=5)^N A_n A_m a^(k_n+k_m)\n                                   (1+k_n k_m)^3/(k_n+k_m).  (5)\n\nAll cross terms retain their signs. On the transition define\nE_k(t)=z^-sigma sum_(n=5)^N b_n(n-sigma)^k z^n. The exact jets are\n\n    g_j=K L sum_(r=0)^3 p_r sum_(l=0)^(j+r)\n                                  binom(j+r,l) (D^l chi) E_(j+r-l).\n\nPartition the ENTIRE interval t in [0,1] into 2048 closed cells. On each\ncell, evaluate z=a exp(log(2)t) and all E_k by outward Arb arithmetic.\nFor each polynomial derivative of chi, Taylor expansion about the exact\ncell midpoint is FINITE and EXACT; use the sum of absolute nonconstant\nterms as a radius. This avoids treating a sampled midpoint as an integral.\nIt encloses chi's derivatives on every point of the cell. Square the\nresulting g_j intervals, using a nonnegative lower endpoint, and integrate\nthe interval enclosures with dx=log(2)dt. Summation encloses I_transition.\nThe outer interval z>b contributes zero. Endpoint regularity creates no\nadditional distribution through the orders in this calculation.\n\nTaking sqrt(I_inner+I_transition) and then subtracting/adding E_series\nand (2) gives a certified lower and upper bound for ||d_chi||H3. The\nexecution contract is to verify a lower bound above 2000 and an upper\nbound below 2400; the actual, narrower interval is retained in the receipt.\nThe previous lower bound .00906808164 remains true but is insufficiently\ninformative because it used only the interval 0<z<.02.\n\n## 4. Consequence for the COMPLETE coupled certificate\n\nLet D_- and D_+ be the certified conversion bounds. Retaining BOTH original\nand lifted graph ceilings r=1e-11 necessarily requires, by (1),\n\n    |m| D_- < 2r.                                    (6)\n\nThis is a necessary condition for these two sufficient graph targets,\nNOT for wormhole existence. Conversely the explicit split\n\n    ||g_lifted||H3<=r/2, |m|<=r/(2D_+)               (7)\n\nis sufficient for the graph conversion alone. Neither input in (7) has\nbeen proved for the actual solution. In particular a lower bound on D\nwas never an upper bound that could establish (7).\n\nTest the SPECIFIED positive estimator that substitutes the existing\nconditional coefficient allowance\n\n    |m|<=m0+49.462 E_lifted, m0=4.2953e-8\n\ninto ||g_old||<=E_lifted+D_+|m|. Even its best possible D consistent with\nD>D_- makes the reported affine conversion allowance exceed D_- m0,\nand its reported graph slope exceed 1+D_-49.462. These are lower bounds\non THAT COMPUTED UPPER-BOUND EXPRESSION. They are not lower bounds on\nthe actual m, actual physical graph, or actual feedback coefficient.\nThey show this independent-positive-bound conversion cannot certify the\ntarget with the available mass allowance, even if a remaining quantum\ncolumn could be made arbitrarily small. Its failure precedes another\noptimization of the controlled cold, scalar or L2 angular remainder.\n\nThe original mass-column target kappa_m<=5e-5 remains UNKNOWN. If proved\nin the intended post-elimination norm, its unchanged debits are\n2.14765e-12 affine, .0024731 graph and .0195239 per unit energy. After\nthe controlled far entry, the other coupled entries must still satisfy\n\n    Y_other<=5.34234999994958e-12,\n    eta_other+(.0195239+4.583e-13)gamma_E<.0012069.\n\nThose inequalities do not themselves establish (6) or (7). Nor is D\nsilently added a second time to a column already certified in the signed\noriginal output. The correct complete output is (1), with its correlations.\nThe scalar quartic's ORIGINAL row coefficient 20 beta Fstar, exact mass\ncompatibility, correlated slow pair and regular-bolt matching all remain\nin the unsolved coupled system. The fast screen .135973<.1599164 keeps\nits two-fast-input admitted-family scope, including the previously proved\nfixed reference-lift background extension. No independent phase bound,\nnonlinear ball comparison, actual signed center or stability follows.\n\nEXECUTED SCOPE: full original-normal-graph coordinate conversion, all\ncutoff-transition derivatives, analytic-series error, complete normal\nquantum allowance, and the resulting certificate thresholds. The actual\ncommon-regulated finite-domain core and coupled solve remain UNEXECUTED.\nTheir first unsupported quantitative step remains the differentiated\nkernel/contact bound with the coupled inverse. This calculation does not\nclaim to have replaced that step or completed the requested milestone.\n\nRESEARCH DECISION: retain the physical construction, but stop using\nindependent positive mass and lifted-graph allowances to support original\nadmission. The measured transition cost makes a direct signed original-\noutput certificate or a much sharper ACTUAL mass enclosure necessary for\nthis route. A different physical embedding could avoid imposing both\ngraph ceilings, but would need a proof at the unchanged physical radius.\nChanging cutoff, basis, units or normalization alone supplies none.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the actual mass and\nthe correlated original graph g_lifted+m d_chi in the SAME coupled solve,\nwith both original equations, scalar/slow/interior/bolt rows and the common\nregulator. Resolve whether the actual mass meets (6), or whether a signed\noriginal-output/physical embedding can certify admission without the\nadditional lifted ceiling. Further unsigned core constants alone cannot\nsettle this now-quantified conversion requirement.\n\nRemaining to-do list: actual coupled return and signed correction; original\nphysical-norm/neighborhood comparisons; nonlinear admission/contraction and\nexact compatibility; physical matching; semiclassical validity/noise;\nall-sector stability; charge/return, opening, transport, preparation,\nseparate creation and the full stable semiclassical wormhole objective.\n",
+        "checks/current_global_mass_conversion.py": "\"\"\"Full original mass-lift graph conversion; no physical coupled solve.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import comb, factorial\nimport json\nimport sys\nimport traceback\n\nif '--arb-path' in sys.argv:\n    sys.path.insert(0, sys.argv[sys.argv.index('--arb-path') + 1])\nfrom flint import arb, ctx\nimport flint\nimport sympy\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-global-mass-conversion'\nOWN = ['notes/'+STEM+'.md', 'checks/current_global_mass_conversion.py',\n       'evidence/'+STEM+'-review.json']\nINPUTS = OWN + [\n    'notes/current-coupled-global-return-attempt.md',\n    'notes/current-lifted-boundary-graph-attempt.md',\n    'notes/current-resolvent-corrected-angular-remainder.md',\n    'notes/current-controlled-solution-audit-closeout.md',\n    'evidence/current-coupled-global-return-attempt.json',\n    'evidence/current-lifted-boundary-graph-attempt.json',\n    'evidence/'+STEM+'-exploration.json',\n    'checks/current_physical_york_dual_assembly.py',\n    'checks/current_all_angular_principal_operator.py',\n    'checks/current_subtracted_thermal_action.py',\n    'checks/current_coincident_dirac_action_assembly.py',\n    'checks/current_endpoint_thermal_restoration.py',\n    'checks/current_seed_radial_green_enclosure.py',\n    'checks/current_seed_separated_quantum_response.py',\n]\nCHECKS = []\n\ndef check(name, value, detail=None):\n    CHECKS.append({'name': name, 'passed': bool(value)})\n    if not value:\n        raise AssertionError(name)\n\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(50)\n    return {'ball':v.str(32), 'decimal_enclosure':\n            {'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\nsys.path.insert(0,str(ROOT/'checks'))\nsaved=sys.argv[:]\nsys.argv=[v for v in sys.argv if v!='--acceptance']\nimport current_physical_york_dual_assembly as york\nsys.argv=saved\nyork.check=check\nyork.prior.check=check\n\ndef poly_mul(p,q):\n    r=[arb(0)]*(len(p)+len(q)-1)\n    for i,a in enumerate(p):\n        for j,b in enumerate(q):r[i+j]+=a*b\n    return r\n\ndef horner(p,x):\n    v=arb(0)\n    for a in reversed(p):v=v*x+a\n    return v\n\ndef interval(lo,hi):\n    return (lo+hi)/2+arb(0,((hi-lo)/2).abs_upper())\n\ndef sqrange(x):\n    lo=arb(0) if x.contains(0) else arb(abs(x).lower())\n    hi=arb(abs(x).upper())\n    return interval(lo*lo,hi*hi)\n\ndef execute():\n    ctx.prec=512\n    p,h,zh,env=york.actual_parameters()\n    N=80; cells=2048; sig=arb('4.005'); a=arb('.05'); b=arb('.1')\n    R=arb('.2'); ln=arb(2).log()\n    be=p['beta'];u=p['u'];ep=p['eps'];ta=p['tau']\n    q=[arb(1),arb(0),u/be,(-4*be-2*u-ta)/be,\n       (3*be+u+ep)/be,-2*ep/be,ep/be]\n    dq=sum((abs(q[j])*R**j for j in range(1,7)),arb(0))\n    dq1=sum((j*abs(q[j])*R**j for j in range(1,7)),arb(0))\n    profile_guard=dq/(1-dq)+dq1/(4*(1-dq)**2)\n    check('zero_free_disc_and_Cauchy_profile_guard',dq<1 and profile_guard<2*R**2)\n    inv=[arb(1)]\n    for n in range(1,N+1):\n        inv.append(-sum((q[j]*inv[n-j] for j in range(1,min(6,n)+1)),arb(0)))\n    isq=[sum((inv[j]*inv[n-j] for j in range(n+1)),arb(0)) for n in range(N+1)]\n    bc={n:inv[n-3]+sum((j*q[j]*isq[n-j-3]/(n-j+1)\n                       for j in range(1,min(6,n-3)+1)),arb(0))\n        for n in range(3,N+1)}\n    bc[3]-=1\n    check('exact_removed_cubic_and_absent_quartic',bc[3].is_zero() and bc[4].is_zero())\n    check('actual_reference_series_leading_terms',abs(bc[5])<arb('1e-9') and\n          bc[6]>arb('.99') and bc[6]<arb('1.01'))\n    KL=2*be*(p['Fl']+23*p['g']/(180*arb.pi()))/3\n    pp=poly_mul(poly_mul([sig-4,arb(1)],[sig,arb(1)]),[sig-3,arb(1)])\n    chi=[arb(1)]+[arb(0)]*21\n    beta_norm=factorial(21)//factorial(10)**2\n    for k in range(11):chi[11+k]=-arb(beta_norm*(-1)**k*comb(10,k))/(11+k)\n    chider=[chi]\n    for j in range(1,22):chider.append([i*v for i,v in enumerate(chider[-1])][1:])\n    check('cutoff_endpoint_values',horner(chi,arb(0))==1 and horner(chi,arb(1)).is_zero())\n    check('cutoff_C10_endpoint_jets',all(horner(chider[j],arb(0)).is_zero()\n          and horner(chider[j],arb(1)).is_zero() for j in range(1,11)))\n    polys=[[arb(0)]*5+[bc[n]*(arb(n)-sig)**k for n in range(5,N+1)] for k in range(7)]\n    cs={n:KL*bc[n]*(n-4)*n*(n-3) for n in range(5,N+1)}\n    inner=sum((cs[n]*cs[m]*a**(n+m-2*sig)*(1+(n-sig)*(m-sig))**3/(n+m-2*sig)\n               for n in range(5,N+1) for m in range(5,N+1)),arb(0))\n    check('inner_exact_integral_positive',inner>0)\n    trans=[arb(0)]*4\n    half=arb(1)/(2*cells)\n    radius_powers=[half**k/factorial(k) for k in range(22)]\n    for i in range(cells):\n        mid=arb(2*i+1)/(2*cells)\n        tt=mid+arb(0,half.abs_upper())\n        zz=a*(ln*tt).exp()\n        vals=[horner(c,mid) for c in chider]\n        cut=[]\n        for l in range(7):\n            rad=sum((abs(vals[l+k])*radius_powers[k] for k in range(1,22-l)),arb(0))\n            cut.append((vals[l]+arb(0,rad.abs_upper()))/ln**l)\n        ek=[zz**(-sig)*horner(c,zz) for c in polys]\n        for j in range(4):\n            gj=KL*sum((pp[r]*sum((comb(j+r,l)*cut[l]*ek[j+r-l]\n                                  for l in range(j+r+1)),arb(0)) for r in range(4)),arb(0))\n            trans[j]+=sqrange(gj)*ln/cells\n    normsq=inner+sum((comb(3,j)*trans[j] for j in range(4)),arb(0))\n    check('whole_classical_norm_square_positive',normsq>0)\n    classical=normsq.sqrt()\n    B=[arb(1)]+[arb(factorial(21)//factorial(21-l)*2**(l-1))/ln**l for l in range(1,7)]\n    ratios=[b/R*(1+1/(N+1+sig))**k for k in range(7)]\n    check('entire_analytic_tail_ratios',all(v<1 for v in ratios))\n    tail=[2*R**5*b**(-sig)*(N+1+sig)**k*(b/R)**(N+1)/\n          ((2*(N+1-sig)).sqrt()*(1-ratios[k])) for k in range(7)]\n    Aj=[]\n    for j in range(4):\n        Aj.append(abs(KL)*sum((abs(pp[r])*sum((comb(j+r,l)*B[l]*tail[j+r-l]\n                                             for l in range(j+r+1)),arb(0)) for r in range(4)),arb(0)))\n    Eseries=sum((comb(3,j)*Aj[j]**2 for j in range(4)),arb(0)).sqrt()\n    previous=json.loads((ROOT/'evidence/current-coupled-global-return-attempt.json').read_bytes())['runs'][-1]['result']\n    Qexact=dec(previous['global_cutoff_complete_normal_quantum_upper'])\n    Qguard=arb('2.260e-10')\n    check('inherited_complete_quantum_bound_applies_to_same_cutoff',Qexact<Qguard)\n    check('complete_analytic_series_error_small',Eseries<arb('1e-8'))\n    result=classical+arb(0,(Eseries+Qguard).abs_upper())\n    check('full_conversion_lower_exceeds_2000',result>2000)\n    check('full_conversion_upper_below_2400',result<2400)\n    Dlo=arb(result.lower());Dhi=arb(result.upper());r=arb('1e-11')\n    mass_needed=2*r/Dlo\n    mass_split=r/(2*Dhi)\n    m0=arb('4.2953e-8');Cg=arb('49.462')\n    oldlower=dec(previous['global_cutoff_conversion_lower_per_mass'])\n    check('conversion_improvement_over_previous_lower_exceeds_five_orders',Dlo/oldlower>arb('2e5'))\n    check('both_graph_ceiling_necessary_mass_below_1e_minus14',mass_needed<arb('1e-14'))\n    check('specified_positive_affine_envelope_fails',Dlo*m0>arb('8e-5'))\n    check('specified_positive_graph_envelope_fails',1+Dlo*Cg>arb('90000'))\n    check('explicit_split_conversion_sufficient',r/2+Dhi*mass_split<=r+arb('1e-150'))\n    check('conditional_mass_column_debits_unchanged',(arb('5e-5')*m0).overlaps(arb('2.14765e-12')))\n    check('conditional_fast_screen_preserved',arb('.028913')+arb('1e-11')*arb('1.0706e10')<arb('.1599164'))\n    return {'N_reference_series':N,'transition_cells':cells,'precision_bits':ctx.prec,\n       'parameters':{k:enc(p[k]) for k in ['beta','u','eps','tau','g','Fl']},\n       'KL':enc(KL),'complex_disc_profile_guard':enc(profile_guard),\n       'profile_coefficients':{str(n):enc(v) for n,v in bc.items()},\n       'classical_inner_squared_H3':enc(inner),\n       'classical_transition_derivative_L2':{str(j):enc(trans[j].sqrt()) for j in range(4)},\n       'classical_total_H3':enc(classical),'analytic_series_H3_error':enc(Eseries),\n       'complete_normal_quantum_H3_error':enc(Qguard),'full_conversion_H3':enc(result),\n       'necessary_actual_mass_for_both_graph_ceilings':enc(mass_needed),\n       'sufficient_actual_mass_with_half_lifted_graph_budget':enc(mass_split),\n       'positive_estimator_affine_envelope_lower':enc(Dlo*m0),\n       'positive_estimator_graph_slope_lower':enc(1+Dlo*Cg),\n       'positive_estimator_affine_envelope_to_radius_lower':enc(Dlo*m0/r),\n       'conditional_mass_allowance_to_necessary_mass_ratio':enc((m0+Cg*r)/mass_needed),\n       'conversion_lower_improvement_factor':enc(Dlo/oldlower),\n       'scope':{'complete_original_normal_graph_conversion':True,\n                'actual_mass_computed':False,'actual_kappa_m_computed':False,\n                'complete_physical_coupled_return':'unresolved',\n                'common_regulated_core_computed':False,'nonlinear_admission':False,\n                'construction_obstruction':False,'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    flint_root=Path(flint.__file__).resolve().parent\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n         'input_sha256_before':hashes,'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n         'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                    'flint_version':flint.__version__,'sympy_version':sympy.__version__,\n                    'flint_file_sha256':{str(f.relative_to(flint_root)):sha256(f.read_bytes()).hexdigest()\n                      for f in sorted(flint_root.rglob('*')) if f.is_file() and f.suffix in ['.py','.pyd','.dll']}}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('all_frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run)\n    output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary={'mode':mode,'status':run['status'],'checks':len(CHECKS),\n             'result':{k:v for k,v in run.get('result',{}).items() if k not in ['profile_coefficients','parameters']},\n             'traceback':run.get('traceback')}\n    message=json.dumps(summary,indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-global-mass-conversion-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"ordinary_argument\": \"notes/current-global-mass-conversion.md\",\n  \"status\": \"ordinary_argument_and_execution_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"no_progress\",\n  \"physical_coupled_milestone_complete\": false,\n  \"first_unsupported_physical_step\": \"Complete differentiated common-regulated core composed with the actual coupled inverse and original matching rows.\",\n  \"quantitative_role\": \"Evaluate the exact original graph basis conversion, including its entire transition. A cost above 2000 forces actual mass below 1e-14 if both 1e-11 graph ceilings are retained; existing .009 lower bound misses this earlier certificate gate.\",\n  \"mathematical_inputs\": [\n    {\n      \"source\": \"notes/current-coupled-global-return-attempt.md\",\n      \"use\": \"Exact original-basis identity and same .05/.1 beta(11,11) cutoff; complete Bq H3 allowance below 2.260e-10.\"\n    },\n    {\n      \"source\": \"notes/current-lifted-boundary-graph-attempt.md\",\n      \"use\": \"Exact mass lift, zero-free complex disc, analytic coefficient bound, complete normal symbol and original H3 convention.\"\n    }\n  ],\n  \"ordinary_argument_review\": [\n    \"Both local reference rows cancel; actual mass cutoff transition and regular-bolt matching are not changed.\",\n    \"The new calculation concerns the known coordinate conversion, not a replacement quantum source or physical boundary.\",\n    \"The classical full-line H3 norm includes exact inner cross terms, every transition cell and zero exterior.\",\n    \"Finite reference-series truncation carries a Cauchy tail, not a physical angular or thermal truncation.\",\n    \"All-frequency normal quantum Bq contributes a proved norm error; actual finite-domain returns remain unknown.\",\n    \"The necessary mass ceiling uses reverse triangle; the sufficient split uses a separately certified upper bound.\",\n    \"Failure is of the specified positive upper-bound expression. No lower bound on actual mass, actual kappa_m or physical feedback is asserted.\",\n    \"No normalization, radius, operator domain, common regulator, or physical coupling changes.\",\n    \"Closed audit, full objective, nonlinear admission, compatibility, matching, validity/noise and all-sector stability remain preserved/unresolved.\"\n  ],\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"reference_degree\": 80,\n    \"whole_transition_cells\": 2048,\n    \"guards\": [\n      \"conversion norm >2000 and <2400\",\n      \"entire analytic-series H3 error <1e-8\",\n      \"necessary actual mass for both graph ceilings <1e-14\"\n    ],\n    \"development_and_acceptance\": \"one unchanged-source successful development followed by matching acceptance; retain every failure\",\n    \"checker_scope\": \"Arithmetic, exact polynomial jets and whole-cell interval integration verify the ordinary norm argument. They do not prove the missing physical coupled estimate.\"\n  },\n  \"external_theorem_needed_for_new_calculation\": false,\n  \"local_lean_invocations\": 0,\n  \"frozen_scientific_sha256\": {\n    \"notes/current-global-mass-conversion.md\": \"12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219\",\n    \"checks/current_global_mass_conversion.py\": \"ad96afac07f54f056934f150e73d761c90abdfb4a09b4594e65078024e5e7047\",\n    \"evidence/current-global-mass-conversion-exploration.json\": \"75806ad2b9e9582ee9f66aeaf54085b3948055ed913fcfb31d33184a43899ea6\"\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0",
+        "flint_file_sha256": {
+          "__init__.py": "51b38d54b85e213a7ae1e801f9d6e9fec6e31aa25d28f57732df12dc0f1d0948",
+          "flint_base\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "flint_base\\flint_base.cp313-win_amd64.pyd": "a02e2ca0719a4832abbbf3685fc667a63030d4744a2ef0c208a5a1fab421a6da",
+          "flint_base\\flint_context.cp313-win_amd64.pyd": "4d44bc6e64c47d47660c6e2f2bf38a3a643405def2b53db5539e25f32f9b7258",
+          "functions\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "functions\\showgood.cp313-win_amd64.pyd": "af53f6cc9a99f381516f86a82a4161a89115052406104ad7aed0623866aa96d0",
+          "pyflint.cp313-win_amd64.pyd": "8c9f45243632706337d5218d5e515ddeeac4836e224aec89b3abef72b0407321",
+          "test\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "test\\__main__.py": "bc5a3d8b710eb54d311ae642f48122791a17cef8e22d409bee9fab8bb7907b63",
+          "test\\helpers.py": "1c51182ad26c6c5215a4570d0371ae218b144c4e500784b03d3fd56b1c050c89",
+          "test\\test_acb.py": "44e6eb84f02624b5abf270a72349d97549d286337ccf0f2a8e10f36124418afe",
+          "test\\test_acb_mat.py": "e99c9f84a03c9dd44c8bf710d70c1958fa3791cb101c49df106e24969ad13c44",
+          "test\\test_acb_poly.py": "8e36bbd3e5d18409c4316b029f80f6578af6ce944ac3167f28e93c647b8a01a2",
+          "test\\test_acb_series.py": "064064ba49576786703ee945b114e2383c0501b792fd3dfc3c45ab221be8c9f2",
+          "test\\test_acb_theta.py": "02a22f96fe78c15c58552c359310f214f6687ffd521867b1f841e3110c834a11",
+          "test\\test_all.py": "d7fd26e67733a7b60e8e7a9a2a99b4451d0454924bde4239ffa12a3cdbb11685",
+          "test\\test_arb.py": "3f8875e760a2188ca6d23a64192467fc92e3470c032a34aab260b57f27238e14",
+          "test\\test_arb_mat.py": "f3dd7e55bd24610c3b238d828ec96f266e461e9b6fdf72cbaa7b7dd474d446df",
+          "test\\test_arb_poly.py": "61ae9101f3cfee2a5af78d1b08cd556e7d221b1d21ce6c41e60ee4ab02d4768b",
+          "test\\test_arb_series.py": "8aacfa7586fb093f6bdcda2b7a52bbee9de514236fbfeb9e288baccc00efb58e",
+          "test\\test_dirichlet.py": "665e4605dd8c2a23c1251c628a70128fd02726d7e21f755bc52c3ec4c96a375f",
+          "test\\test_docstrings.py": "21a51901ebe24c9515d926c6b300ff7eae2704df645b8a701329be319508f4b3",
+          "test\\test_fmpq_vec.py": "4718dc8c6c1a507ee064620888cf9e89778df29f8e3fbc13eec7bdccc0423371",
+          "test\\test_fmpz_vec.py": "c9bdfd1e219097e7e3c946f2108efdfe0480c1d24517b64cd574aaefdc7fd7dd",
+          "types\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "types\\_gr.cp313-win_amd64.pyd": "bba298df24e1a53b3158f101234b2f06518962ac500a0c4fd9c362c11d443721",
+          "types\\acb.cp313-win_amd64.pyd": "efa1b82624c99a1aae85676bfd0620db94f19097ffc1a47f854f5dd209f82282",
+          "types\\acb_mat.cp313-win_amd64.pyd": "1271443367cb475c8eb9005691c4d4ec5de7924699e1ae49c60502558b666b51",
+          "types\\acb_poly.cp313-win_amd64.pyd": "77dd8238df5231e4021850cedaed639e6e646f96b4a8c5a225a727aff082559e",
+          "types\\acb_series.cp313-win_amd64.pyd": "b775d92f3e4b14b2c1e02f28d43080a8d4d4883cba7a8b1e0864001fa990e919",
+          "types\\acb_theta.cp313-win_amd64.pyd": "165ed53c0c3db13ccf8be32add0b8536f0aafdd24f87bebb9f972becb10c24b3",
+          "types\\arb.cp313-win_amd64.pyd": "b1c1f62cf3dfa9432c85a23f5e112d9acf4fcf5cf78bdc23584f5a3e80acb313",
+          "types\\arb_mat.cp313-win_amd64.pyd": "2ac141d830fdfaed97ea863997aa4e36a77b8d1f0305ea586b4dc818554c867a",
+          "types\\arb_poly.cp313-win_amd64.pyd": "4f3959daee8fc46af9cab078a99255e76f8d3afe1cf08121029da39d251b1c0e",
+          "types\\arb_series.cp313-win_amd64.pyd": "a2e0891390172e3f85522d201abbddc1b3e2d26adb4985f091fb12d30e12e5f9",
+          "types\\arf.cp313-win_amd64.pyd": "0c2b159bed43c031aa89ce8fdc5e2e79aed3af200376ae18e4f55e2904aa6c70",
+          "types\\dirichlet.cp313-win_amd64.pyd": "4031d7256877cc56e8f1609118359088076cbc5a6f0b08fb5d38e38b9c1a28db",
+          "types\\fmpq.cp313-win_amd64.pyd": "44ae4709c95f200cb5d92c297120f1e8160864f8476418092651327d2129651a",
+          "types\\fmpq_mat.cp313-win_amd64.pyd": "574b71129d5887fc15480b9b8270d52a0de6f5df9411706826de794d9c00f748",
+          "types\\fmpq_mpoly.cp313-win_amd64.pyd": "0f2bfd0c20eb5fc63dc148e4a3b252ea658b17c657127f1632f650df1919db69",
+          "types\\fmpq_poly.cp313-win_amd64.pyd": "15b903f3ff5fdf835fa0c6a24a65df805b8e0c215a2c375e4441f7c6986313a5",
+          "types\\fmpq_series.cp313-win_amd64.pyd": "62a486a4787ef8db0767bc2f236322bfba17ff543f37e18212f7c10914ddd267",
+          "types\\fmpq_vec.cp313-win_amd64.pyd": "a2394bc893f28e67bfc51d0bb99995444407f4b5de463ec4d7d666ab5db9f663",
+          "types\\fmpz.cp313-win_amd64.pyd": "fbbbf298b9a2a6b36f811d7e5a1a9125bddfae5441358092a0ecdff705df2758",
+          "types\\fmpz_mat.cp313-win_amd64.pyd": "1448f421258c1ca3caef2b7eeb56b08df788a4df04a0d3c380d593ef56355d20",
+          "types\\fmpz_mod.cp313-win_amd64.pyd": "3bcd991774cbe10604aa64db07d7bddaa051b07cf0a55327aaa9b233b8efd194",
+          "types\\fmpz_mod_mat.cp313-win_amd64.pyd": "dd1d4a7f7f3b01dc641d82068ab8c6247e21079951b241639f8489f774cd6801",
+          "types\\fmpz_mod_mpoly.cp313-win_amd64.pyd": "fc480af6c71b9d12dad90ba1d784d8ebd80256e0c0135fa411fc116eea358647",
+          "types\\fmpz_mod_poly.cp313-win_amd64.pyd": "f41d1ff1e4b1e495379d6debb8d921305ad270a8a24ba1638b12f6ad248dc84f",
+          "types\\fmpz_mpoly.cp313-win_amd64.pyd": "56b78e492d2ef3bcae74dfb2902a8d01c8333155360df2c47509f0535fdc16d1",
+          "types\\fmpz_poly.cp313-win_amd64.pyd": "52eb31083e1342c28c33950f518f67b77d454ab1596ac03009c9981cb869d2c5",
+          "types\\fmpz_series.cp313-win_amd64.pyd": "354bd4f69fa1ec215525401c3300632ac64e1156d703d2164623e79c721722b6",
+          "types\\fmpz_vec.cp313-win_amd64.pyd": "9dff3dc753cfe7c3c6b3935df1e1a0fc574c99f24a2ee1dd617520005eb5a4a7",
+          "types\\fq_default.cp313-win_amd64.pyd": "08b0bc90391136a6e14899ec00436781655501f3ba3586d1418dce1f34331e1a",
+          "types\\fq_default_poly.cp313-win_amd64.pyd": "d4d02738f5946769a0e0fdc69ddfa72fb0e12ddd1d12b90d015d408703093faa",
+          "types\\nmod.cp313-win_amd64.pyd": "9c54eee5ff195f370b0d6e566686deb16700c2f30ff8e0452ae6b6393edd7ea5",
+          "types\\nmod_mat.cp313-win_amd64.pyd": "1b952ba75ceb987ab0e2f15261d53df4124797aba8c7552ced5f0c5e3b45add4",
+          "types\\nmod_mpoly.cp313-win_amd64.pyd": "e3d39c8178ad7e436c650074daa37b0c7f1be7178cb7bdaab4b2b611690b6ff5",
+          "types\\nmod_poly.cp313-win_amd64.pyd": "7c91ad8a544e31b566aae8c79f2493ec19bc01d3b0f87ed242ef30daa378e423",
+          "types\\nmod_series.cp313-win_amd64.pyd": "de6748c4a209dc1f7dbdcc16269c4566e6f323aaba0d6dbd5cd495516feae3b8",
+          "typing.py": "a9e5aaaa561599f76931bcc947cfc8cbe3e8da528692482e7db12d98397b81e2",
+          "utils\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "utils\\flint_exceptions.py": "88bd68c2d4b41a2d18c48a5e80906278a96bf47252620b65671bd3c66d466362"
+        }
+      },
+      "result": {
+        "N_reference_series": 80,
+        "transition_cells": 2048,
+        "precision_bits": 512,
+        "parameters": {
+          "beta": {
+            "ball": "[0.166666666663273593687327683704 +/- 1.53e-31]",
+            "decimal_enclosure": {
+              "mid": "1666666666632735936873276837040440174130594371408076791",
+              "rad": "1085165898677670947848193",
+              "exponent": "-55"
+            }
+          },
+          "u": {
+            "ball": "[2.035843787603389779209e-11 +/- 5.21e-33]",
+            "decimal_enclosure": {
+              "mid": "2035843787603389779208589550060983391754878933377336608",
+              "rad": "109938922944921166824813447086081",
+              "exponent": "-65"
+            }
+          },
+          "eps": {
+            "ball": "[-2e-29 +/- 4.31e-30]",
+            "decimal_enclosure": {
+              "mid": "-1634999997896645676239486403159991341709195460205664943",
+              "rad": "65000014767651158713588929823722603529275809294450689",
+              "exponent": "-83"
+            }
+          },
+          "tau": {
+            "ball": "[2.558133502177617821629e-67 +/- 7.69e-89]",
+            "decimal_enclosure": {
+              "mid": "2558133502177617821628646048458919107031409558661253285",
+              "rad": "414432924681275198062012523347969",
+              "exponent": "-121"
+            }
+          },
+          "g": {
+            "ball": "[9.7656250000000000000000000000000e-34 +/- 1.2e-68]",
+            "decimal_enclosure": {
+              "mid": "976562499999999999999999999999999990724434460476511354",
+              "rad": "2",
+              "exponent": "-87"
+            }
+          },
+          "Fl": {
+            "ball": "[0.99999998821902754903827535576509 +/- 2.69e-33]",
+            "decimal_enclosure": {
+              "mid": "9999999882190275490382753557650873127018642961584012106",
+              "rad": "2",
+              "exponent": "-55"
+            }
+          }
+        },
+        "KL": {
+          "ball": "[0.1111111097998521234891204059724 +/- 8.10e-32]",
+          "decimal_enclosure": {
+            "mid": "1111111097998521234891204059723913925872719067037154769",
+            "rad": "723443933952980507688961",
+            "exponent": "-55"
+          }
+        },
+        "complex_disc_profile_guard": {
+          "ball": "[0.069248683801823301043269039090 +/- 3.22e-31]",
+          "decimal_enclosure": {
+            "mid": "692486838018233010432690390902047115048297818773667101",
+            "rad": "1165985799733402350387201",
+            "exponent": "-55"
+          }
+        },
+        "profile_coefficients": {
+          "3": {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          "4": {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          "5": {
+            "ball": "[-6.10753136293450913545e-11 +/- 4.99e-32]",
+            "decimal_enclosure": {
+              "mid": "-610753136293450913545399949520097808219151022697028353",
+              "rad": "98946543092187251769343983222785",
+              "exponent": "-64"
+            }
+          },
+          "6": {
+            "ball": "[1.0000000000610753136293450914 +/- 5.46e-29]",
+            "decimal_enclosure": {
+              "mid": "1000000000061075313629345091354539994951091425860335190",
+              "rad": "9138620335698363004485633",
+              "exponent": "-54"
+            }
+          },
+          "7": {
+            "ball": "[4.9735919e-21 +/- 2.89e-29]",
+            "decimal_enclosure": {
+              "mid": "4973591913230488366745989783305502111523472760247696945",
+              "rad": "15626627650018410800282457606702770897830281217",
+              "exponent": "-75"
+            }
+          },
+          "8": {
+            "ball": "[-2.094010753134009781e-10 +/- 3.14e-29]",
+            "decimal_enclosure": {
+              "mid": "-2094010753134009780862512385441546227508947272348062029",
+              "rad": "176442415280427850899350471680458753",
+              "exponent": "-64"
+            }
+          },
+          "9": {
+            "ball": "[2.2857142860545624616602213196 +/- 9.67e-29]",
+            "decimal_enclosure": {
+              "mid": "2285714286054562461660221319590798979203766410006277167",
+              "rad": "87410884847002158400274433",
+              "exponent": "-54"
+            }
+          },
+          "10": {
+            "ball": "[-1.285714285845161386319465586 +/- 2.45e-28]",
+            "decimal_enclosure": {
+              "mid": "-1285714285845161386319465585938218379125716961650839840",
+              "rad": "182650762146160176760094721",
+              "exponent": "-54"
+            }
+          },
+          "11": {
+            "ball": "[-7.81764014564538832e-10 +/- 3.89e-28]",
+            "decimal_enclosure": {
+              "mid": "-7817640145645388321665796795634437765623851803462996013",
+              "rad": "2221222856209306666461541500889071617",
+              "exponent": "-64"
+            }
+          },
+          "12": {
+            "ball": "[6.400000001821154806539922849 +/- 7.70e-28]",
+            "decimal_enclosure": {
+              "mid": "6400000001821154806539922849127713676008667756409401607",
+              "rad": "641320466003121113592233985",
+              "exponent": "-54"
+            }
+          },
+          "13": {
+            "ball": "[-7.85454545593464031536388789 +/- 2.85e-27]",
+            "decimal_enclosure": {
+              "mid": "-7854545455934640315363887888668101959586736369496165472",
+              "rad": "1511751174361268575038078977",
+              "exponent": "-54"
+            }
+          },
+          "14": {
+            "ball": "[2.45454545188846485182670262 +/- 4.98e-27]",
+            "decimal_enclosure": {
+              "mid": "2454545451888464851826702622830318101438970553817035147",
+              "rad": "2143134353967609251824140289",
+              "exponent": "-54"
+            }
+          },
+          "15": {
+            "ball": "[19.69230770149986258874773730 +/- 9.20e-27]",
+            "decimal_enclosure": {
+              "mid": "1969230770149986258874773729532335776537606102713923162",
+              "rad": "451973947351181514239901697",
+              "exponent": "-53"
+            }
+          },
+          "16": {
+            "ball": "[-37.9780219884791455671126679 +/- 4.16e-26]",
+            "decimal_enclosure": {
+              "mid": "-3797802198847914556711266793073922309339682810374758604",
+              "rad": "1078266517922541871191556097",
+              "exponent": "-53"
+            }
+          },
+          "17": {
+            "ball": "[24.6857142792490275105406375 +/- 5.25e-26]",
+            "decimal_enclosure": {
+              "mid": "2468571427924902751054063746503760726798047557353236420",
+              "rad": "1751789975799364289873051649",
+              "exponent": "-53"
+            }
+          },
+          "18": {
+            "ball": "[58.6000000435021495740426729 +/- 6.59e-26]",
+            "decimal_enclosure": {
+              "mid": "5860000004350214957404267293450423825037569727113670835",
+              "rad": "3133704332293638544567566337",
+              "exponent": "-53"
+            }
+          },
+          "19": {
+            "ball": "[-169.411764773137051248939493 +/- 5.21e-25]",
+            "decimal_enclosure": {
+              "mid": "-1694117647731370512489394934496994284840956631973807354",
+              "rad": "710173076608822567820591105",
+              "exponent": "-52"
+            }
+          },
+          "20": {
+            "ball": "[169.411764710490040980905201 +/- 2.53e-25]",
+            "decimal_enclosure": {
+              "mid": "1694117647104900409809052008748648224629298088219865365",
+              "rad": "1276196105407175971016015873",
+              "exponent": "-52"
+            }
+          },
+          "21": {
+            "ball": "[139.789473874164395228555682 +/- 2.15e-25]",
+            "decimal_enclosure": {
+              "mid": "1397894738741643952285556820027702715782494683677399691",
+              "rad": "2120963691880763658185211905",
+              "exponent": "-52"
+            }
+          },
+          "22": {
+            "ball": "[-714.789474075461281546994237 +/- 5.52e-25]",
+            "decimal_enclosure": {
+              "mid": "-714789474075461281546994237105406119152373501327074459",
+              "rad": "446190893084073569808285697",
+              "exponent": "-51"
+            }
+          },
+          "23": {
+            "ball": "[987.42857164228743505952585 +/- 2.65e-24]",
+            "decimal_enclosure": {
+              "mid": "987428571642287435059525848210140078444806608766213502",
+              "rad": "857104892272685628222603265",
+              "exponent": "-51"
+            }
+          },
+          "24": {
+            "ball": "[71.48052021799502991942498 +/- 5.70e-24]",
+            "decimal_enclosure": {
+              "mid": "714805202179950299194249756969201023976315183993169451",
+              "rad": "13933082282402425193170468865",
+              "exponent": "-52"
+            }
+          },
+          "25": {
+            "ball": "[-2829.34387562129061180016833 +/- 7.42e-24]",
+            "decimal_enclosure": {
+              "mid": "-2829343875621290611800168334691898457224319989596050823",
+              "rad": "2721726597572790758735347713",
+              "exponent": "-51"
+            }
+          },
+          "26": {
+            "ball": "[5227.43478460149380654471310 +/- 9.00e-24]",
+            "decimal_enclosure": {
+              "mid": "5227434784601493806544713103567594596656862468194316627",
+              "rad": "5428373092545788401281925121",
+              "exponent": "-51"
+            }
+          },
+          "27": {
+            "ball": "[-2216.9599977045003091462832 +/- 4.69e-23]",
+            "decimal_enclosure": {
+              "mid": "-2216959997704500309146283162346868282051195705543291669",
+              "rad": "9161005467486087295505793025",
+              "exponent": "-51"
+            }
+          },
+          "28": {
+            "ball": "[-10191.6553951270181349569882 +/- 5.33e-23]",
+            "decimal_enclosure": {
+              "mid": "-1019165539512701813495698823647836389242568678096052876",
+              "rad": "1678027501392341988120985601",
+              "exponent": "-50"
+            }
+          },
+          "29": {
+            "ball": "[25768.6153987196215610146891 +/- 7.44e-23]",
+            "decimal_enclosure": {
+              "mid": "2576861539871962156101468914085491431207160794793716034",
+              "rad": "3349196254307033769872195585",
+              "exponent": "-50"
+            }
+          },
+          "30": {
+            "ball": "[-21276.7142824772318056436024 +/- 9.07e-23]",
+            "decimal_enclosure": {
+              "mid": "-2127671428247723180564360236822420205837642887745255874",
+              "rad": "5892156437350627188930510849",
+              "exponent": "-50"
+            }
+          },
+          "31": {
+            "ball": "[-30848.630590409484567084124 +/- 3.77e-22]",
+            "decimal_enclosure": {
+              "mid": "-3084863059040948456708412372613227254764148664337710509",
+              "rad": "10305225301648600112381820929",
+              "exponent": "-50"
+            }
+          },
+          "32": {
+            "ball": "[119124.744914716986860419577 +/- 5.92e-22]",
+            "decimal_enclosure": {
+              "mid": "1191247449147169868604195766098060281896365360662066436",
+              "rad": "2014185497796719051311939585",
+              "exponent": "-49"
+            }
+          },
+          "33": {
+            "ball": "[-143869.109706285408267238837 +/- 5.89e-22]",
+            "decimal_enclosure": {
+              "mid": "-1438691097062854082672388367787790728601379713200739336",
+              "rad": "3677275411522295384812552193",
+              "exponent": "-49"
+            }
+          },
+          "34": {
+            "ball": "[-56232.29052522290639969221 +/- 5.32e-21]",
+            "decimal_enclosure": {
+              "mid": "-5623229052522290639969220531643758373056083300087583186",
+              "rad": "62774412565484829481824681985",
+              "exponent": "-50"
+            }
+          },
+          "35": {
+            "ball": "[514158.54594508952899805534 +/- 2.78e-21]",
+            "decimal_enclosure": {
+              "mid": "5141585459450895289980553415815019909269637469163713574",
+              "rad": "11894631248004088842768351233",
+              "exponent": "-49"
+            }
+          },
+          "36": {
+            "ball": "[-838755.25171024025184971824 +/- 3.24e-21]",
+            "decimal_enclosure": {
+              "mid": "-838755251710240251849718238997398762392858996133489674",
+              "rad": "2231192953574664050676072449",
+              "exponent": "-48"
+            }
+          },
+          "37": {
+            "ball": "[175180.47658987327770633331 +/- 4.99e-21]",
+            "decimal_enclosure": {
+              "mid": "1751804765898732777063333111671978008969521814150781480",
+              "rad": "38223711307453660659158351873",
+              "exponent": "-49"
+            }
+          },
+          "38": {
+            "ball": "[2034665.23112668193059845147 +/- 7.16e-21]",
+            "decimal_enclosure": {
+              "mid": "2034665231126681930598451470154166632607077722349985623",
+              "rad": "7005542215975913200363241473",
+              "exponent": "-48"
+            }
+          },
+          "39": {
+            "ball": "[-4454081.7326745242133631230 +/- 5.04e-20]",
+            "decimal_enclosure": {
+              "mid": "-4454081732674524213363123037070900497164757353382238366",
+              "rad": "13289960678613790088172142593",
+              "exponent": "-48"
+            }
+          },
+          "40": {
+            "ball": "[2889638.7805987525945936270 +/- 5.90e-20]",
+            "decimal_enclosure": {
+              "mid": "2889638780598752594593626964314903471974558008165054036",
+              "rad": "23268207351186880079035629569",
+              "exponent": "-48"
+            }
+          },
+          "41": {
+            "ball": "[7042388.8058490562808982519 +/- 6.50e-20]",
+            "decimal_enclosure": {
+              "mid": "7042388805849056280898251923551993602967960873305244264",
+              "rad": "41443637746077979737602392065",
+              "exponent": "-48"
+            }
+          },
+          "42": {
+            "ball": "[-21958047.265494439324120572 +/- 1.01e-19]",
+            "decimal_enclosure": {
+              "mid": "-2195804726549443932412057202189342082744620091908275383",
+              "rad": "7824222848173103562597859329",
+              "exponent": "-47"
+            }
+          },
+          "43": {
+            "ball": "[22738827.865155906272130501 +/- 1.53e-19]",
+            "decimal_enclosure": {
+              "mid": "2273882786515590627213050101219609574169316833895537058",
+              "rad": "14002801069099479716249731073",
+              "exponent": "-47"
+            }
+          },
+          "44": {
+            "ball": "[18334275.733835998834517800 +/- 2.50e-19]",
+            "decimal_enclosure": {
+              "mid": "1833427573383599883451779999514927955463086911274837678",
+              "rad": "24451231101323433692001992705",
+              "exponent": "-47"
+            }
+          },
+          "45": {
+            "ball": "[-100819417.256700302314386171 +/- 8.14e-19]",
+            "decimal_enclosure": {
+              "mid": "-1008194172567003023143861706417137710179887397122669153",
+              "rad": "4551591806615733284194222081",
+              "exponent": "-46"
+            }
+          },
+          "46": {
+            "ball": "[144500127.610038187185814878 +/- 8.88e-19]",
+            "decimal_enclosure": {
+              "mid": "1445001276100381871858148780575408700595871760372642812",
+              "rad": "8303089597544924660444954625",
+              "exponent": "-46"
+            }
+          },
+          "47": {
+            "ball": "[6432977.66630069824376646 +/- 3.18e-18]",
+            "decimal_enclosure": {
+              "mid": "6432977666300698243766461740100164770151342646998023962",
+              "rad": "1437745773582501227409660968961",
+              "exponent": "-48"
+            }
+          },
+          "48": {
+            "ball": "[-427090638.52935758271391389 +/- 5.43e-18]",
+            "decimal_enclosure": {
+              "mid": "-4270906385293575827139138927935294669472856332915160433",
+              "rad": "26274512745805131591754711041",
+              "exponent": "-46"
+            }
+          },
+          "49": {
+            "ball": "[817264395.10600404078500153 +/- 8.75e-18]",
+            "decimal_enclosure": {
+              "mid": "817264395106004040785001533888978258613432403350384664",
+              "rad": "4854622973991846071207198721",
+              "exponent": "-45"
+            }
+          },
+          "50": {
+            "ball": "[-372483066.94355920177141864 +/- 9.37e-18]",
+            "decimal_enclosure": {
+              "mid": "-3724830669435592017714186391316675940302952136336604365",
+              "rad": "84984419122469427864689180673",
+              "exponent": "-46"
+            }
+          },
+          "51": {
+            "ball": "[-1621459617.1319727821322187 +/- 3.59e-17]",
+            "decimal_enclosure": {
+              "mid": "-1621459617131972782132218679373224261873533525460993605",
+              "rad": "15247460039765803515972157441",
+              "exponent": "-45"
+            }
+          },
+          "52": {
+            "ball": "[4249592415.7036609104701238 +/- 7.71e-17]",
+            "decimal_enclosure": {
+              "mid": "4249592415703660910470123848812373861798380429645985268",
+              "rad": "28216287641140113155018457089",
+              "exponent": "-45"
+            }
+          },
+          "53": {
+            "ball": "[-3657938923.6788965872652279 +/- 7.76e-17]",
+            "decimal_enclosure": {
+              "mid": "-3657938923678896587265227872524154883770036958088117874",
+              "rad": "50060639553575195685450416129",
+              "exponent": "-45"
+            }
+          },
+          "54": {
+            "ball": "[-5081849354.534094683754590 +/- 1.74e-16]",
+            "decimal_enclosure": {
+              "mid": "-5081849354534094683754589915041568281719063233529871276",
+              "rad": "88438761287652713959622967297",
+              "exponent": "-45"
+            }
+          },
+          "55": {
+            "ball": "[20526393659.527669148835549 +/- 3.11e-16]",
+            "decimal_enclosure": {
+              "mid": "2052639365952766914883554914776783708321193849663224301",
+              "rad": "16268682306330486307878338561",
+              "exponent": "-44"
+            }
+          },
+          "56": {
+            "ball": "[-25605485758.472719567598945 +/- 6.25e-16]",
+            "decimal_enclosure": {
+              "mid": "-2560548575847271956759894533182080881302438211609045235",
+              "rad": "29255714741176722871480745985",
+              "exponent": "-44"
+            }
+          },
+          "57": {
+            "ball": "[-9057688834.75225626293765 +/- 4.93e-15]",
+            "decimal_enclosure": {
+              "mid": "-905768883475225626293765441684710258299537319792187485",
+              "rad": "51210896315320130874462175233",
+              "exponent": "-44"
+            }
+          },
+          "58": {
+            "ball": "[91843842651.11253941411438 +/- 1.76e-15]",
+            "decimal_enclosure": {
+              "mid": "918438426511125394141143791800772677784489389295931357",
+              "rad": "9322480019412739762182684673",
+              "exponent": "-43"
+            }
+          },
+          "59": {
+            "ball": "[-154211982511.88732902342163 +/- 5.76e-15]",
+            "decimal_enclosure": {
+              "mid": "-1542119825118873290234216259404714112867848577382585937",
+              "rad": "16944751067860107758021902337",
+              "exponent": "-43"
+            }
+          },
+          "60": {
+            "ball": "[37069077932.14990361152769 +/- 7.39e-15]",
+            "decimal_enclosure": {
+              "mid": "3706907793214990361152769441377193542684871266149250598",
+              "rad": "297083122995039366622046322689",
+              "exponent": "-44"
+            }
+          },
+          "61": {
+            "ball": "[373994328972.68563089102309 +/- 7.27e-15]",
+            "decimal_enclosure": {
+              "mid": "3739943289726856308910230919234576500864725927258331029",
+              "rad": "53426655535293579769203916801",
+              "exponent": "-43"
+            }
+          },
+          "62": {
+            "ball": "[-842856957959.0808918767424 +/- 4.01e-14]",
+            "decimal_enclosure": {
+              "mid": "-842856957959080891876742369718513298635944355009430911",
+              "rad": "9756570129120846237898113025",
+              "exponent": "-42"
+            }
+          },
+          "63": {
+            "ball": "[572777585117.8693858214893 +/- 6.33e-14]",
+            "decimal_enclosure": {
+              "mid": "572777585117869385821489345967786333824750402685928576",
+              "rad": "17253056353057706879792185345",
+              "exponent": "-42"
+            }
+          },
+          "64": {
+            "ball": "[1319676360746.6881157134529 +/- 4.49e-14]",
+            "decimal_enclosure": {
+              "mid": "1319676360746688115713452914118432971072373345699946291",
+              "rad": "30682806956324157940268269569",
+              "exponent": "-42"
+            }
+          },
+          "65": {
+            "ball": "[-4260480637436.6011960175140 +/- 5.82e-14]",
+            "decimal_enclosure": {
+              "mid": "-4260480637436601196017514002205562071043703239672300898",
+              "rad": "55940978407153022140055289857",
+              "exponent": "-42"
+            }
+          },
+          "66": {
+            "ball": "[4551741234744.273730969015 +/- 4.22e-13]",
+            "decimal_enclosure": {
+              "mid": "4551741234744273730969015321246970267540829225871102919",
+              "rad": "99836396888835034205357342721",
+              "exponent": "-42"
+            }
+          },
+          "67": {
+            "ball": "[3424135926682.240335572852 +/- 2.68e-13]",
+            "decimal_enclosure": {
+              "mid": "3424135926682240335572851908464745698530712428233992462",
+              "rad": "176103272586416733645938098177",
+              "exponent": "-42"
+            }
+          },
+          "68": {
+            "ball": "[-19982686231593.307371420764 +/- 7.38e-13]",
+            "decimal_enclosure": {
+              "mid": "-1998268623159330737142076358211424152850505041578727929",
+              "rad": "31927136431247837139979730945",
+              "exponent": "-41"
+            }
+          },
+          "69": {
+            "ball": "[29398536773188.13252097359 +/- 3.04e-12]",
+            "decimal_enclosure": {
+              "mid": "2939853677318813252097359245648284769288331102048562823",
+              "rad": "57455684540083185146816102401",
+              "exponent": "-41"
+            }
+          },
+          "70": {
+            "ball": "[252297960037.48077637002 +/- 5.96e-12]",
+            "decimal_enclosure": {
+              "mid": "2522979600374807763700249490418197840232165886367814656",
+              "rad": "10100311365375362896113430429697",
+              "exponent": "-43"
+            }
+          },
+          "71": {
+            "ball": "[-86123643654384.84832598447 +/- 4.92e-12]",
+            "decimal_enclosure": {
+              "mid": "-861236436543848483259844730979693221481188997958126252",
+              "rad": "18170046380591794199155703809",
+              "exponent": "-40"
+            }
+          },
+          "72": {
+            "ball": "[169027206856150.69617300010 +/- 3.52e-12]",
+            "decimal_enclosure": {
+              "mid": "1690272068561506961730000997771871963887431015678184371",
+              "rad": "32883512932157185039928393729",
+              "exponent": "-40"
+            }
+          },
+          "73": {
+            "ball": "[-82189311220134.21926841768 +/- 8.74e-12]",
+            "decimal_enclosure": {
+              "mid": "-821893112201342192684176829226458845493748571709170682",
+              "rad": "58105269292699437719995023361",
+              "exponent": "-40"
+            }
+          },
+          "74": {
+            "ball": "[-330854886020122.6041265464 +/- 3.76e-11]",
+            "decimal_enclosure": {
+              "mid": "-3308548860201226041265463727882420898269257704598252908",
+              "rad": "103709933196525977428562018305",
+              "exponent": "-40"
+            }
+          },
+          "75": {
+            "ball": "[892340523560270.0975022193 +/- 5.93e-11]",
+            "decimal_enclosure": {
+              "mid": "892340523560270097502219259543428229946206473092625971",
+              "rad": "18781973894515743872537067521",
+              "exponent": "-39"
+            }
+          },
+          "76": {
+            "ball": "[-794725574756633.7117095188 +/- 7.79e-11]",
+            "decimal_enclosure": {
+              "mid": "-794725574756633711709518755577019708946783489143814030",
+              "rad": "33388166302059296388286513153",
+              "exponent": "-39"
+            }
+          },
+          "77": {
+            "ball": "[-1037242825245173.8278264439 +/- 5.96e-11]",
+            "decimal_enclosure": {
+              "mid": "-1037242825245173827826443899683076532108751585126110480",
+              "rad": "59185596439909299959462100993",
+              "exponent": "-39"
+            }
+          },
+          "78": {
+            "ball": "[4368094098739341.435452477 +/- 5.95e-10]",
+            "decimal_enclosure": {
+              "mid": "4368094098739341435452476512664805349320551628170516604",
+              "rad": "106903150631299460594640355329",
+              "exponent": "-39"
+            }
+          },
+          "79": {
+            "ball": "[-5591174661406940.752105958 +/- 2.53e-10]",
+            "decimal_enclosure": {
+              "mid": "-5591174661406940752105957938605933097691521350586248251",
+              "rad": "191231681158406838973657776129",
+              "exponent": "-39"
+            }
+          },
+          "80": {
+            "ball": "[-1729072094439692.766951665 +/- 7.51e-10]",
+            "decimal_enclosure": {
+              "mid": "-1729072094439692766951664587012083003430470938757425226",
+              "rad": "337585073788342262997262008321",
+              "exponent": "-39"
+            }
+          }
+        },
+        "classical_inner_squared_H3": {
+          "ball": "[0.003268534817152125211867179587 +/- 4.97e-31]",
+          "decimal_enclosure": {
+            "mid": "3268534817152125211867179586602441293843540777331728978",
+            "rad": "98574232791605007871901697",
+            "exponent": "-57"
+          }
+        },
+        "classical_transition_derivative_L2": {
+          "0": {
+            "ball": "[0.17 +/- 5.93e-3]",
+            "decimal_enclosure": {
+              "mid": "1746832189382985234260559082031250000000000000000000000",
+              "rad": "12384842860448030590447151222844581759884558782693376",
+              "exponent": "-55"
+            }
+          },
+          "1": {
+            "ball": "[3.5 +/- 0.0487]",
+            "decimal_enclosure": {
+              "mid": "3520981263369321823120117187500000000000000000000000000",
+              "rad": "27630865620876769306113810866926070503005859407200256",
+              "exponent": "-54"
+            }
+          },
+          "2": {
+            "ball": "[8e+1 +/- 3.22]",
+            "decimal_enclosure": {
+              "mid": "824992709159851074218750000000000000000000000000000000",
+              "rad": "7114564190865385904415186150372542558179178705846272",
+              "exponent": "-52"
+            }
+          },
+          "3": {
+            "ball": "[2.1e+3 +/- 68.8]",
+            "decimal_enclosure": {
+              "mid": "2148613826751708984375000000000000000000000000000000000",
+              "rad": "20183357280797034404402498374315384977303276693225472",
+              "exponent": "-51"
+            }
+          }
+        },
+        "classical_total_H3": {
+          "ball": "[2.2e+3 +/- 66.9]",
+          "decimal_enclosure": {
+            "mid": "2153368755340576171875000000000000000000000000000000000",
+            "rad": "20220695507685915020850864193562153219566185727655936",
+            "exponent": "-51"
+          }
+        },
+        "analytic_series_H3_error": {
+          "ball": "[2.29426323939009603700976933717e-13 +/- 2.58e-43]",
+          "decimal_enclosure": {
+            "mid": "2294263239390096037009769337168917766290847968084430918",
+            "rad": "1493816587491461346361345",
+            "exponent": "-67"
+          }
+        },
+        "complete_normal_quantum_H3_error": {
+          "ball": "[2.2600000000000000000000000000000e-10 +/- 3e-46]",
+          "decimal_enclosure": {
+            "mid": "2259999999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-64"
+          }
+        },
+        "full_conversion_H3": {
+          "ball": "[2.2e+3 +/- 66.9]",
+          "decimal_enclosure": {
+            "mid": "2153368755340576171875000000000000000000000000000000000",
+            "rad": "20220695552287405417912110476633589764862908739616768",
+            "exponent": "-51"
+          }
+        },
+        "necessary_actual_mass_for_both_graph_ceilings": {
+          "ball": "[9.3758142609814655489799781003674e-15 +/- 1.36e-47]",
+          "decimal_enclosure": {
+            "mid": "937581426098146554897997810036738650010666767544144405",
+            "rad": "2",
+            "exponent": "-68"
+          }
+        },
+        "sufficient_actual_mass_with_half_lifted_graph_budget": {
+          "ball": "[2.3003424119526989615315898864756e-15 +/- 3.88e-47]",
+          "decimal_enclosure": {
+            "mid": "2300342411952698961531589886475638714516229028815153018",
+            "rad": "2",
+            "exponent": "-69"
+          }
+        },
+        "positive_estimator_affine_envelope_lower": {
+          "ball": "[9.1625108613240927457809448242187e-5 +/- 5.01e-37]",
+          "decimal_enclosure": {
+            "mid": "916251086132409274578094482421874999999999999999999999",
+            "rad": "2",
+            "exponent": "-58"
+          }
+        },
+        "positive_estimator_graph_slope_lower": {
+          "ball": "[105510.76933457785844802856445313 +/- 5.01e-27]",
+          "decimal_enclosure": {
+            "mid": "1055107693345778584480285644531250000000000000000000000",
+            "rad": "1",
+            "exponent": "-49"
+          }
+        },
+        "positive_estimator_affine_envelope_to_radius_lower": {
+          "ball": "[9162510.8613240927457809448242187 +/- 5.01e-26]",
+          "decimal_enclosure": {
+            "mid": "916251086132409274578094482421874999999999999999999999",
+            "rad": "2",
+            "exponent": "-47"
+          }
+        },
+        "conditional_mass_allowance_to_necessary_mass_ratio": {
+          "ball": "[4634010.3153293353021144866943359 +/- 3.76e-26]",
+          "decimal_enclosure": {
+            "mid": "4634010315329335302114486694335937499999999999999999999",
+            "rad": "2",
+            "exponent": "-48"
+          }
+        },
+        "conversion_lower_improvement_factor": {
+          "ball": "[235236.97122120977920770109176 +/- 3.47e-24]",
+          "decimal_enclosure": {
+            "mid": "2352369712212097792077010917607055401819866762065561318",
+            "rad": "27572221221348986876592129",
+            "exponent": "-49"
+          }
+        },
+        "scope": {
+          "complete_original_normal_graph_conversion": true,
+          "actual_mass_computed": false,
+          "actual_kappa_m_computed": false,
+          "complete_physical_coupled_return": "unresolved",
+          "common_regulated_core_computed": false,
+          "nonlinear_admission": false,
+          "construction_obstruction": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "checks/current_global_mass_conversion.py": "ad96afac07f54f056934f150e73d761c90abdfb4a09b4594e65078024e5e7047",
+        "evidence/current-global-mass-conversion-review.json": "63267996c7d20dff4abb5173b1f060fa70f24499d466dc32e6fd773ab61bc422",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-lifted-boundary-graph-attempt.md": "53cbc40611e9c74660b0a25d411854c4bbb8ed5ca8373477ae7c2cc23163a298",
+        "notes/current-resolvent-corrected-angular-remainder.md": "d3926bf17ebd2bccaa6d1f422117e17cf162b3d953bc51da7d0908a33c822997",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-lifted-boundary-graph-attempt.json": "6e9e735ff00c5ea42ab5d6398c4db975ead4023056f4b064b04dfd64f9738bee",
+        "evidence/current-global-mass-conversion-exploration.json": "75806ad2b9e9582ee9f66aeaf54085b3948055ed913fcfb31d33184a43899ea6",
+        "checks/current_physical_york_dual_assembly.py": "ad0b63037bcadcc4ecfdaa48148e5ce1f07494cbc8eca55fc0297464fbb51e4d",
+        "checks/current_all_angular_principal_operator.py": "18bc17175855ee53c80e13eb5afb0a3fd2172ca92246b2ae17614e5479f8f0ec",
+        "checks/current_subtracted_thermal_action.py": "d14c90bdc2ac7c475c44a3f22ea4fd13327933c6036cfb6d626028daad052da2",
+        "checks/current_coincident_dirac_action_assembly.py": "40903136c7384d001f5d8a05f308457a45ac3bfb4e575e7796315fa5bab553fb",
+        "checks/current_endpoint_thermal_restoration.py": "5071d56c93bb42e0d54cef36013165029952ebb411f74f19805aadc600fd99cd",
+        "checks/current_seed_radial_green_enclosure.py": "96714512659526c91418cf196aa3a7620d593db0f9333246a2a0f4f4b4fa76e4",
+        "checks/current_seed_separated_quantum_response.py": "68c12a235ddb425f3427aab60936c2d89317adc73f575bde259b2ccb28179243"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "exact_seed_parameter_guards",
+          "passed": true
+        },
+        {
+          "name": "global_positive_radial_potential_guard",
+          "passed": true
+        },
+        {
+          "name": "retained_temperature_root_relation",
+          "passed": true
+        },
+        {
+          "name": "positive_exact_bolt_slope",
+          "passed": true
+        },
+        {
+          "name": "physical_normalized_adjoint_source_1",
+          "passed": true
+        },
+        {
+          "name": "physical_normalized_source_radius_1",
+          "passed": true
+        },
+        {
+          "name": "physical_normalized_adjoint_source_2",
+          "passed": true
+        },
+        {
+          "name": "physical_normalized_source_radius_2",
+          "passed": true
+        },
+        {
+          "name": "zero_free_disc_and_Cauchy_profile_guard",
+          "passed": true
+        },
+        {
+          "name": "exact_removed_cubic_and_absent_quartic",
+          "passed": true
+        },
+        {
+          "name": "actual_reference_series_leading_terms",
+          "passed": true
+        },
+        {
+          "name": "cutoff_endpoint_values",
+          "passed": true
+        },
+        {
+          "name": "cutoff_C10_endpoint_jets",
+          "passed": true
+        },
+        {
+          "name": "inner_exact_integral_positive",
+          "passed": true
+        },
+        {
+          "name": "whole_classical_norm_square_positive",
+          "passed": true
+        },
+        {
+          "name": "entire_analytic_tail_ratios",
+          "passed": true
+        },
+        {
+          "name": "inherited_complete_quantum_bound_applies_to_same_cutoff",
+          "passed": true
+        },
+        {
+          "name": "complete_analytic_series_error_small",
+          "passed": true
+        },
+        {
+          "name": "full_conversion_lower_exceeds_2000",
+          "passed": true
+        },
+        {
+          "name": "full_conversion_upper_below_2400",
+          "passed": true
+        },
+        {
+          "name": "conversion_improvement_over_previous_lower_exceeds_five_orders",
+          "passed": true
+        },
+        {
+          "name": "both_graph_ceiling_necessary_mass_below_1e_minus14",
+          "passed": true
+        },
+        {
+          "name": "specified_positive_affine_envelope_fails",
+          "passed": true
+        },
+        {
+          "name": "specified_positive_graph_envelope_fails",
+          "passed": true
+        },
+        {
+          "name": "explicit_split_conversion_sufficient",
+          "passed": true
+        },
+        {
+          "name": "conditional_mass_column_debits_unchanged",
+          "passed": true
+        },
+        {
+          "name": "conditional_fast_screen_preserved",
+          "passed": true
+        },
+        {
+          "name": "all_frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T18:12:04.335435+00:00"
+    }
+  ]
+}

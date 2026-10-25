@@ -1,3 +1,82 @@
+# Active checkpoint: full mass-lift conversion changes the coupled certificate requirement
+
+2026-10-25 HST, E003/S169. Previous goal turn: no progress.
+
+See [the ordinary full-transition argument](current-global-mass-conversion.md) and its frozen evidence.
+
+The complete physical coupled return remains UNRESOLVED. The attempt to
+quantify its differentiated common-regulated core did not close that step.
+An executed earlier norm test now gives
+
+    2133 < ||d_chi||H3 < 2174,
+    g_old = g_lifted + m d_chi,
+    d_chi = B_sigma[z^-sigma chi(b_m-z^3)].
+
+This uses the SAME beta(11,11) graph cutoff, one through .05 and zero by
+.1, the exact reference mass lift and the original H3 norm. The full
+cutoff transition dominates. The former .00906808164 lower bound remains
+valid; it omitted that transition and did not give an upper conversion.
+The complete normal quantum error is <2.260e-10 and the reference-series
+H3 error <2.295e-13. All transition cells are enclosed, not sampled.
+
+Retaining BOTH 1e-11 graph ceilings now necessarily requires the ACTUAL
+|m|<9.375815e-15. As a sufficient conversion-only alternative, a lifted
+graph <=5e-12 and actual |m|<=2.29e-15 fit the original graph radius.
+Neither condition has been established for the actual solution. The
+existing conditional mass allowance at its graph ceiling is over 4.63
+million times the necessary mass ceiling; that allowance is NOT a mass
+measurement or a lower bound on the correction.
+
+The specified independent-positive-bound conversion estimator reports
+an affine allowance above 9.1625e-5 and a graph slope above 105510 when
+it substitutes the existing mass allowance. It cannot certify original
+admission, even if a remaining quantum column could be made arbitrarily
+small. This is failure of that upper-bound estimator, not a physical
+divergence or wormhole nonexistence theorem.
+
+The actual common-regulated core, signed coupled center, post-elimination
+kappa_m and all other global columns remain unknown. The original mass
+cutoff transition, both reference cancellations, fixed-temperature data,
+scalar quartic equation, exact mass compatibility, correlated slow pair
+and regular bolt are unchanged. The mass lift is not a global zero mode.
+The controlled angular/thermal L2 remainder and .135973<.1599164 fast
+screen retain their previous scopes; they do not close this conversion
+or the independent phase/nonlinear-neighborhood estimates.
+
+IF kappa_m<=5e-5 is proved in its intended coupled norm, the unchanged
+remaining requirements are Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069. Their other entries and
+gamma_E remain unknown. Do not add the basis cost twice to a certificate
+already expressed as the signed original output. No controlled solution,
+nonlinear admission or stability requirement is certified.
+
+RESEARCH DECISION: retain the construction and change the admission
+estimator. Stop combining independent positive mass and lifted-graph
+allowances to certify the original graph. Use a direct signed original-
+output certificate or a much sharper enclosure of the actual mass.
+Changing a cutoff, boundary basis or normalization alone is not a repair.
+The full objective and closed feasibility audit remain preserved.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the actual mass and
+the correlated original graph g_lifted+m d_chi in the SAME complete
+coupled solve, with both original equations, scalar/slow/interior/bolt
+rows and common regulator. Determine whether the actual mass meets the
+new ceiling, or prove an original-output/physical embedding that avoids
+the additional lifted ceiling. The differentiated core estimate remains
+required; more unsigned constants alone do not settle this norm gate.
+
+Verification: ordinary full-line norm and cutoff-transition argument,
+supported by 28 checks using 512-bit Arb on 17 frozen inputs. One
+successful development and one matching acceptance, no failed runs.
+The earlier mpmath exploration is retained and explicitly noncertifying.
+No Lean or new physical mode truncation was used. All 18 inherited paths,
+prior checkpoint bytes and closed audits are preserved. The complete
+physical coupled feasibility test was NOT executed by these checks.
+
+Remaining to-do list: actual coupled return and signed correction; original physical-norm/neighborhood comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: corrected angular/thermal remainder bounded; coupled strong return unresolved
 
 2026-10-25 HST, E003/S169.
