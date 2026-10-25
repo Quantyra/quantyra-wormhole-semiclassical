@@ -1,3 +1,87 @@
+# Active checkpoint: restored frozen blocks; joint strong return unresolved
+
+2026-10-24, E003/S169.
+
+See [the restored-frozen response attempt](current-restored-frozen-response.md).
+
+OUTCOME: UNRESOLVED COMPLETE STRONG ESTIMATE. The complete local
+restoration and frozen spectral blocks are now identified. The required
+joint coordinate-conjugation/actual-minus-cap strong bound is not.
+
+The first mismatch found before numerical interpretation was the use of
+the geometric K_g as the mass-chart K_m. The exact finite conversion gives
+K_m=K_g+C p^4/(60 pi). With the same regulator, the corrected soft third
+identity is 2K_g-p K_g_prime, and its fourth coefficient is
+-2 C kappa4/(30 pi). The earlier coefficient C(1-2kappa4)/(30 pi)
+and its interpretation as the physical common finite part are superseded.
+Archived old diagnostic values still evaluate that old comparison.
+The conservative 7 C P^4 log bound covers the corrected kernel, so the
+original C_flat and C_delta allowances survive. The physical action,
+normal, paired domain and selected independent projection do not change.
+
+The entire mass degree-0/2/4 restoration plus the complete conversion
+equals the geometric volume/R^2 block already allocated in the explicit
+local action, with its boundary representatives retained. This identity
+holds through three weak metric variations on the specified admitted
+mass/log graph family. It does not discard propagation-dependent diagonal
+contacts or establish original X-ball admission. On each observation
+annulus identical local coefficients cancel the actual-minus-cap local
+counterterms; the finite return still needs a summed strong bound.
+
+An executed whole-sector angular estimate, Cauchy in a constant mass
+parameter and all-order graph summation give the entire left-frozen
+spectral remainder eta_E<8.424e-10 and its metric variation
+C_E<8.573e-11+1.282e-25 B_cap. The latter overlaps the previous nonlinear
+cap allocation and is not charged twice. The actual beta^(3/2) scale of
+this order-three remainder is retained.
+
+The full original Mellin component, including finite constants, has
+||Q_M B_sigma^-1||<=1 by Re T<L/2, not a sampled-frequency estimate.
+Its actual rho=(Q/beta)^2-1 multiplier costs <.003138. The original
+physical units and norms remain fixed; the exact remaining operator
+is repartitioned correspondingly, not presumed smaller.
+
+The sufficient remaining test is
+eta_dagger+1e-11 C_dagger+8.123e-37 B_cap<.1478262320966.
+All three quantities remain UNKNOWN. B_cap<=1e33 would leave
+eta_dagger+1e-11 C_dagger<.1470139320966; equal allocation requires
+eta_dagger<.0735069660483 and C_dagger<7.35069660483e9.
+No complete upper bound, actual controlled solution or construction
+obstruction is certified. Original norm comparisons, Y0/Z0/Z2, exact
+compatibility, physical matching, validity/noise and all-sector stability
+remain open. The closed audit and full stable-wormhole objective stand.
+
+RESEARCH DECISION: continue the construction with the common-restored
+frozen method. The matching correction, complete local restoration and
+affordable frozen estimates support continuing, but quantitative
+attainability of the complete estimate remains undecided. Do not optimize
+the tiny spectral remainder or revisit the controlled cold/scalar terms.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): obtain the joint strong
+weighted kernel bound for the coordinate-conjugation/actual-minus-cap
+remainder defining eta_dagger and its one metric variation C_dagger,
+retaining every finite-part contact and physical return. Certify B_cap
+on the same paired family and test the remaining inequality and original
+norm comparisons. The restoration identities and frozen spectral bounds
+were executed; this last complete bound was not.
+
+Verification: the ordinary argument and scope were frozen before one
+successful interval/algebra acceptance run (26 checks, 1063 unchanged
+inputs). These support matching identities, actual density return,
+complex-sector constants, full-order tails, graph bounds and the unchanged
+physical target; they do not prove the missing continuum return estimate.
+One development invocation failed from a symbol-name collision in a tail
+check; its exact source and failure are retained, and the correction
+preceded successful development and acceptance. A failed patch match
+before acceptance made no file change. There was no failed acceptance,
+post-success scientific edit or Lean run. All 18 inherited paths, prior
+evidence and closed audit files remain preserved. The selected projection
+screen E_rest<2.123e-42<1.287e-40 is retained without reevaluation.
+
+Remaining to-do list: joint strong remainder and original global norm comparisons; controlled correction and nonlinear admission/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: signed frozen-response bounds; full estimate unresolved
 
 2026-10-24, E003/S169.
