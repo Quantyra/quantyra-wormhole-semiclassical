@@ -1,3 +1,86 @@
+# Active checkpoint: canonical sign estimate fails; coupled inf-sup remains
+
+2026-10-24, E003/S169.
+
+See [the actual two-row argument](current-canonical-weighted-inf-sup-attempt.md).
+
+OUTCOME: complete coupled global return UNRESOLVED. The attempted transfer
+of the original unweighted York-sign coercivity to canonical weighting FAILS
+on an admissible direction in the actual finite throat. The complete mixed
+output on that direction is nonzero. This rejects the specified sign-based
+estimator, not the full coupled inverse or the physical construction.
+
+Executed with the actual Q, h, temperature and paired domain: use a compact
+test supported in exp(-60)<1-z<exp(-20), with zero physical endpoint data.
+The exact scalar and mixed trace-density rows include the curvature square,
+full Dirac anomaly and off-shell density contacts. The canonical determinant's
+conformal independence is used with common restoration; no angular/thermal
+mode selection or smooth surrogate domain is substituted.
+
+At s=1.4, the full scalar signed pairing divided by 6 gamma0 norm(v)^2 is
+less than -1.03510829, gamma0=1/(8piG A_radius^2). The fourth-order upper
+contribution is retained and is <8.743e-8 in those units. The actual complete
+mixed pairing has magnitude greater than .59644887 gamma0 norm(v)^2.
+Thus this direction defeats the positive sign test while still producing
+substantial output in the other ORIGINAL equation. No coupled null vector,
+physical instability, or failure of a full inverse follows.
+
+The same test fails for .961714<=s<=1.4. Lowering s to .95 would lose a
+factor >6.370071e14 of the weight's credited bolt attenuation; reducing just
+below the test ceiling loses >2.622865e14. These are exact weight-ratio
+losses, not measured growth of the correction. No compensating estimate is
+known. Changing the norm target cannot count as an improvement.
+
+As an explicitly limited comparison, the leading classical two-row matrix
+has determinant -4p^2, |p|>=.29 at s=1.4, and inverse allowance <30.677765.
+The scalar diagonal zero cancels in the coupled denominator. A comparison
+defect below .01629 would leave half its inverse margin. This is NOT an
+actual finite quantum inverse or an estimated defect. The full fourth/log
+shape and scalar fourth-order terms must be retained in any preconditioner;
+an Einstein-only perturbation argument fails in the ultraviolet.
+
+The first remaining unsupported continuum step is a quantitative non-diagonal
+inf-sup/preconditioner estimate for the complete canonical weighted operator,
+with original finite-part/phase rows, actual paired mass/log domain, all
+contacts and angular/thermal/finite returns, and original strong norm maps.
+The full independent shape-shape operator was not evaluated by this test.
+
+The exact cut reference mass lift, transition, boundary/bolt matching and
+original norm conversion are unchanged. No kappa_m<=5e-5 or coupled column
+is certified. Remaining conditional affine/graph reserves are 5.34235e-12
+and .0012069 before other entries and independent energy feedback. The
+two-fast-input screen .135973<.1599164 retains only its admitted-family scope.
+Nonlinear admission/contraction, exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability remain unproved.
+The full objective and closed audit remain intact.
+
+RESEARCH DECISION: sharpen the canonical method to a FULL COUPLED INF-SUP
+estimate. Retain the construction and s=1.4 as a candidate weight. Stop
+transferring the unweighted York-sign test unchanged. Do not weaken the
+weight without paying its quantified attenuation loss; do not optimize
+the already sufficient canonical quantum commutator constants again.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct the full canonical
+weighted coupled preconditioner, retaining the quantum/scalar principal
+orders and original global phase rows, and bound its actual operator defect
+in the original coupled graph. It must yield an inf-sup constant and the
+mass, scalar quartic, correlated slow pair and fast return columns. Another
+diagonal or comparison-model test does not execute that calculation.
+
+Verification: 38 supporting symbolic/512-bit interval checks on
+19 frozen inputs. One development and one acceptance run agree
+exactly in results, hashes and runtime. Both successful exploratory source
+snapshots and unchanged replay outputs are archived. No failed scientific
+execution, post-acceptance scientific edit or Lean invocation occurred.
+Windows wildcard-path search errors were corrected with explicit paths/globs;
+they did not mutate scientific files. Checks support the ordinary finite-domain
+two-row argument, not a complete coupled inverse. All 18 inherited paths,
+historical evidence and closed audits are preserved.
+
+Remaining to-do list: full canonical coupled inf-sup/preconditioner and global phase returns; actual correction and original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: TT fixed-phase estimator fails; use canonical weighting
 
 2026-10-24, E003/S169.
