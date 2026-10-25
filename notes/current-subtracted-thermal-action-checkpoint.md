@@ -1,3 +1,75 @@
+# Active checkpoint: signed frozen-response bounds; full estimate unresolved
+
+2026-10-24, E003/S169.
+
+See [the complete frozen-response attempt](current-frozen-response-feasibility.md).
+
+OUTCOME: UNRESOLVED COMPLETE STRONG ESTIMATE. The executed signed
+background-momentum freezing gains one derivative before absolute values.
+The entire Taylor-subtracted cap-minus-frozen seed block, including its
+high-background term, has original weighted H3 allowance <.000142.
+Every angular mass and background insertion is included; the all-order
+tail is bounded analytically. This is not the complete restored response.
+
+For the nonlinear cap difference the executed high-input allowance is
+<521282000, a radius debit <.00521282. Its high-background term is
+<8.123e-26 B_cap, with B_cap an UNKNOWN uniform logarithmic cap seminorm.
+The earlier unweighted background supremum is infinite even for the
+actual quadratic seed. Keeping its log(1/h) cost explicitly repairs
+that estimator; the physical graph norms and target are unchanged.
+
+All common degree-0/2/4 restorations, conversion bulk, boundary contacts,
+angular/thermal tails and actual finite-domain returns stay in the exact
+allocation. Weak identification is at fixed caps; no uniform W3 bound
+of the shrinking quadratic caps is assumed. The known near relative and
+thermal contributions are retained; the additional cap return is unknown.
+
+The remaining sufficient test is
+eta_*+1e-11 C_*+8.123e-37 B_cap<.143654232939.
+Here eta_* and C_* are the EXACT unbounded completed remainders, not
+assigned constants. B_cap<=1e33 would leave
+eta_*+1e-11 C_*<.142841932939; equal allocation requires
+eta_*<.0714209664695 and C_*<7.14209664695e9. None is certified.
+
+The first unsupported step is the quantitative strong bound on that
+combined restored finite part and its metric variation on the actual
+paired mass/log family. A subtracted cap result does not close it.
+Original X admission/return comparisons, Y0/Z0/Z2, exact compatibility,
+physical matching, validity/noise and all-sector stability remain open.
+No controlled solution, excessive COMPLETE bound or construction
+obstruction is established. The full stable-wormhole objective stays
+active and incomplete. The audit and selected projection screen
+E_rest<2.123e-42<1.287e-40 are retained without reevaluation.
+
+RESEARCH DECISION: continue the construction with the signed
+frozen-response method. The executed derivative saving and affordable
+subtracted cap contributions justify testing the completed finite part.
+Further cold/scalar, thermal or affordable-cap optimization is not the
+priority. Quantitative attainability of the full estimate is undecided.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the completed
+frozen remainder defining eta_* and its one metric variation defining
+C_*, combining its full frozen symbol, common local restorations,
+explicit bulk conversion and exact actual-minus-cap returns before
+norms. Certify B_cap on the same actual family and test the remaining
+inequality. The all-order subtracted cap bounds were executed; this
+complete bound and the original X comparisons were not.
+
+Verification: ordinary argument and hypotheses frozen before one
+successful interval acceptance run (19 checks, 1054 unchanged inputs).
+The checks support the loop-series tail, actual coordinate and density
+returns, graph guards and budget; they do not prove the missing full
+continuum estimate. Exploratory sources/results, one failed development
+invocation (unhashable interval cache key), its correction, and the
+superseded background-norm attempt are retained. The final note adds the
+fixed-annulus weak-limit qualification before acceptance. No failed
+acceptance run, post-success scientific edit or Lean run occurred.
+All 18 inherited paths, prior evidence and closed audit files are preserved.
+
+Remaining to-do list: completed strong response and original global norm comparisons; controlled correction and nonlinear admission/contraction; exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: paired conversion identified; complete strong norm unresolved
 
 2026-10-24, E003/S169.
