@@ -1,3 +1,118 @@
+# Active checkpoint: full geometric strong-return attempt remains unfinished
+
+2026-10-25 HST, E003/S169. Current continuation: NO NEW QUANTITATIVE RESULT.
+
+OUTCOME: UNRESOLVED ESTIMATE. This continuation has NO NEW QUANTITATIVE
+RESULT and closes no feasibility requirement. It reviewed the ordinary
+full-geometric argument and attempted to identify an executable strong
+return bound. It did not execute the complete coupled numerical return.
+This is an unfinished attempt, not a new scientific milestone or a
+failure/nonexistence result for the physical construction. The previous
+actual A34 estimator failure and the closed feasibility audit are retained.
+
+The first unsupported quantitative passage is still the differentiated
+combined R_s=H-H_s kernel and its coincidence contacts, followed by the
+original coupled inverse and phase/bolt maps. Section 3, equation (7), of
+current-short-travel-strong-domain.md asserts fixed-seed finite constants
+C_jk and contact seminorms without numerical values. The logarithmic
+weight correction 3/2 -> 13/4 -> 4.005 in
+current-strong-return-weight-repair.md remains required. Neither that
+qualitative argument nor its two-row NORMAL inverse evaluates the actual
+finite-geometry composite M_i,p=||T_i(H_s^-1 R_s)^p||.
+
+The attempted routes were checked at the level of their ordinary formulas:
+
+- The complete geodesic radial representation in
+  current-global-geodesic-return.md and operators/radial_geodesic_return.py
+  identifies all orbit branches and a comparison quadratic form. It has
+  no implemented H_s inverse or complete signed coupled matrix application.
+  Its orbit Fourier index is not the physical thermal index. Its seam tail
+  is a form tail, not the missing strong graph tail.
+- strong-interior-quantum-remainder.md supplies H3 -> L2 with bound 1e48 C,
+  including all physical contributions in its stated interior scope.
+  Its proof extracts undifferentiated degree-two contacts using compact
+  probes. Differentiating that numerical envelope does not give output
+  derivatives or the paired outer estimate. No such extension was made.
+- current-curved-paired-heat-bridge.md supplies a common-regulator C2 action
+  on its admitted family. Its integrated weak trace and finite local
+  parametrix do not give the needed numerical differentiated two-point
+  kernel bounds. The earlier failed holomorphic shortcut for the moving
+  short-travel comparison remains rejected.
+- The boundary-conversion inventory was rechecked: vanishing smearing
+  value and first normal derivative are part of its cancellation, as are
+  L=S=0 and the balanced projector trace. A nonzero second smearing jet
+  is not silently removed. The curvature-divergence/boundary completion
+  stays in the common subtraction. This review found no new earlier
+  boundary obstruction; it is not a new neighborhood-domain theorem.
+
+No smooth doubled metric, finite selection of physical modes, changed
+boundary condition, omitted contact, or independent regulator was used
+to fill these missing bounds. No new theorem or numerical constant is
+claimed. In particular the complete angular/thermal response and its
+finite-domain returns were not numerically applied in this continuation.
+
+The exact reference mass lift remains J_m=int_0^z t^3/Q(t)^2 dt,
+n_m=-2 beta Q J_m/z, b_m=beta z^3/Q+beta Q'J_m. Its uncut reference
+return f=2xz, alpha=0 cancels both local reference rows. The actual cutoff
+still has f_cut=2xz chi_m-2F n_m Dchi_m and alpha_cut=n_m Dchi_m.
+Original fixed-temperature boundary data and regular-bolt matching remain;
+this is not a global zero mode. The cut lift has zero reference bolt shift
+and reference mass -xB per unit coefficient. Scalar quartic, correlated
+slow pair and independent fast/interior columns remain in both equations.
+
+RETAINED bounds, not newly executed results:
+  |m_linear|<1.627532e-15;
+  2133<||d_chi||H3<2174;
+  mass conversion debit <=3.538254568e-12;
+  actual distant shape graph <1.24e-20;
+  sufficient remaining near SHAPE allowance >6.4617454e-12.
+These do not close the scalar graph or independent mass column. The
+old 4.2953e-8 coefficient allowance is not the actual linear coefficient.
+
+At the UNPROVED kappa_m<=5e-5 target, the retained sufficient ledger is
+  affine mass debit 2.14765e-12;
+  graph-feedback mass debit .0024731;
+  Y_other<=5.34234999994958e-12;
+  eta_other+(.0195239+4.583e-13) gamma_E<.0012069.
+Even eta_other=0 requires gamma_E<.061816543. These unknown full-system
+entries have not been shown to fit. No excessive COMPLETE upper bound for
+kappa_m is available; an unknown estimate is not a failed actual coefficient.
+
+The retained fast screen .028913+1e-11(1.0706e10)=.135973<.1599164
+still covers only its two-fast-input admitted-family scope. It does not
+bound independent mass, scalar, slow or interior variations. Required
+original comparisons and nonlinear inequalities remain unproved:
+  E_center+1e-8 alpha_embed<=1e-11;
+  R_X alpha_embed*.028913+Z0_other<=.25;
+  R_X alpha_embed^2*1.0706e10+Z2_other<=5e7;
+  Y0+1e-8 Z0+5e-17 Z2<=1e-8;
+  Z0+1e-8 Z2<1.
+The bare C5-to-fast-graph substitution remains invalid. A change of units
+or boundary basis does not improve these targets.
+
+RESEARCH DECISION: retain the physical construction and full geometric
+H_s method. There is no new evidence to choose a different construction
+or to declare quantitative attainability. Do not extend the ancillary
+estimate chain or count this checkpoint as progress toward admission.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): certify the actual full
+H_s-based bordered graph return, with the combined differentiated
+Dirac-minus-short-geodesic kernel/contact bound included in its residual
+certificate, for the affine source and all mass/quartic/correlated-slow/
+fast/interior columns together. Keep both original rows, finite-part and
+regular-bolt maps; test the original graph and residual budgets above.
+A numerical center without that strong error certificate is insufficient.
+
+Verification here is limited to source/provenance inspection, retained
+receipt/hash consistency, checkpoint preservation and focused Git checks.
+No new arithmetic campaign, physical operator application, or Lean run was
+performed. No actual controlled solution, exact compatibility, physical
+matching, semiclassical validity/noise or all-sector stability is established.
+
+Remaining to-do list: complete coupled strong return and independent phase columns; original scalar graph and physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: global truncated comparison fails; physical coupled return unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.
