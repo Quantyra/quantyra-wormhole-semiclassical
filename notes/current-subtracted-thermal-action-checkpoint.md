@@ -1,3 +1,96 @@
+# Active checkpoint: uniform paired auxiliary return; complete coupled estimate unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the exact scalar response, endpoint argument and coupled ledger](current-paired-quantum-scalar-return.md).
+
+OUTCOME: COMPLETE COUPLED GRAPH RETURN UNRESOLVED. The executed
+ordinary argument derives an exact scalar response for EVERY angular and
+thermal mode on the actual finite seed, including the paired seam and
+regular-bolt endpoint. It retains the full coincident tadpole and bubble.
+No physical domain or admission normalization is changed. This supplies
+an auxiliary inverse, not the physical coupled inverse or renormalized sum.
+
+For M=M_n, W=gamma(j+1/2)/sqrt(Q), t=(1-UV)/(1+UV),
+a=(U+V)/(1+UV), the exact trace response y=delta t solves
+L y=4M v, L=-partial_rho[(Wa)^-1 partial_rho]+4W/a+4Mt/a^2.
+Its seam condition is derived Neumann, with the VALUE free; at the actual
+bolt it has the finite positive-form branch. Globally
+L>=4(M-sqrt(1.05)/2). Thus ||L^-1||L2<.014256564 and
+||y||L2<1.029218||v||L2 for all modes. The original energy conversion for
+the entire near input costs <35.534 E(u); its global auxiliary return
+is <36.573 E(u), or <23.485 E(u) in outer canonical L2. These are not
+original H3 graph or physical C5 bounds and cannot be summed as such.
+
+Executed estimator failure: summing these raw mode upper bounds over
+the complete thermal/angular sets is infinite. At the actual lowest
+thermal mode, v=v0+O(rho^2) gives y=-M v0 rho log(rho)+O(rho).
+Including its tadpole, the raw normalized source has leading
+-4G d_n M_n^2 v0 log(rho)/(pi B^2). Therefore a termwise unregulated
+source sup/C5 estimator fails on admissible interior/bolt directions.
+This is not a singularity theorem for the full renormalized response or
+its composed inverse. Common subtraction must precede strong norms and
+the bolt limit. No finite selection of modes was used to bound the sum.
+
+The first unsupported numerical continuum step remains the complete
+common-subtracted differentiated near/transition response composed with
+the actual coupled inverse and original phase/bolt rows. The existing
+admitted-family C2 identification does not supply this bound. The exact
+scalar identities are per-mode relative identities; a common heat cutoff
+still requires the actual composed-square Duhamel vertices. No guessed
+mode regulator or omitted contact supplies the missing calculation.
+
+The exact cut reference mass lift, its local cancellation, transition,
+original boundary conditions and zero reference bolt shift are retained.
+It is not a global fixed-temperature zero mode. Its >.00906808164|m|
+original-fast conversion still requires actual |m|<2.20553814952e-9 if
+both graph ceilings are imposed. Actual m, kappa_m, all post-elimination
+scalar/slow/fast entries and the physical-norm comparisons remain UNKNOWN.
+
+IF kappa_m<=5e-5, the affine debit is 2.14765e-12, graph debit .0024731
+and independent-energy debit .0195239. Including the prior far guard,
+Y_remaining<=5.34234999994958e-12 and
+eta_remaining+(.0195239+4.583e-13) gamma_E<.0012069 are still required.
+Even with eta_remaining=0, gamma_E must be <.06181654279993595; its
+actual solution-family value is unknown. No finite outer-data-only bound
+exists on the unrestricted domain. The .135973<.1599164 fast screen
+retains only its two-fast-input admitted-family scope. No independent
+phase or nonlinear-neighborhood control is inferred.
+
+No complete signed solve, actual coefficient, original physical X
+comparison or nonlinear solution requirement is closed. Exact
+compatibility, physical matching, validity/noise and all-sector stability
+remain unproved. The closed audit and full objective are preserved.
+
+RESEARCH DECISION: retain the construction and sharpen the method
+using the exact paired scalar resolvent, applying common subtraction
+BEFORE strong norms and bolt limits. The all-mode auxiliary inverse is
+quantitatively conditioned without an inverse-temperature loss. This
+does not decide attainability of the full coupled estimate. The failed
+raw estimator is not an obstruction to the physical construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete common-
+subtracted scalar-resolvent sum and its output commutators after composition
+with the actual coupled inverse, retaining both original equations and
+the quartic/mass/slow/bolt rows. Obtain T_old(H_s^-1 R_s)^4 on all
+columns with actual energy input norms and common-regulator error; insert
+the known far entry and test the signed centers against the unchanged
+residual ledger and actual mass conversion. This full calculation remains
+unexecuted; an auxiliary inverse is not a replacement for it.
+
+Verification: ordinary argument with 59 supporting
+symbolic/512-bit Arb checks on 25 frozen inputs;
+one successful development and one matching acceptance, with all sources,
+runtime identities and outcomes retained. No failed frozen run, no Lean
+execution and no post-acceptance scientific edit. These checks verify
+identities/enclosures; they do not replace the continuum argument or run
+the physical coupled solve. All 18 inherited paths, closed audits and the
+prior checkpoint are preserved.
+
+Remaining to-do list: complete common-subtracted strong coupled return and signed response; original physical-norm/neighborhood comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: actual far graph entry bounded; coupled estimate unresolved
 
 2026-10-25 HST, E003/S169.
