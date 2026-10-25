@@ -1,3 +1,92 @@
+# Active checkpoint: signed auxiliary angular estimator fails; physical coupled return unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the signed all-thermal/angular test and coupled consequence](current-relative-angular-coupled-test.md).
+
+OUTCOME: UNRESOLVED PHYSICAL COUPLED RETURN, WITH VERIFIED FAILURE OF
+THE SEPARATE SIGNED AUXILIARY ANGULAR ESTIMATOR. The complete thermal
+sum of H_M-H_* has the nonzero large-angular-mass limit
+C_aux=-sqrt(Q) Q''/120-23(Q')^2/(1680 sqrt(Q)). On the actual interval
+.02<=z<=.03 it exceeds 2.58e-4. In original canonical source units its
+coefficient is less than -4.8e-47. The angular partial sum grows with
+2qN+2N(N+1) in a nonzero actual-domain pairing. Applying the full coupled
+weak inverse cannot make this separate piece bounded.
+
+This is a signed full-response asymptotic, including tadpole and bubble,
+complete discrete thermal sums, the actual paired/regular-bolt scalar
+inverses and original cutoff transition. Compact test directions are a
+subset of the actual mass/log domain used to disprove a whole-domain
+estimator; no smooth replacement domain or finite mode selection is used.
+The result does NOT show divergence of the commonly subtracted physical
+response or an obstruction to the construction.
+
+The first unsupported step remains common-regulator matching to the
+original short-geodesic/contact allocation. The companion terms and
+contacts must be combined before angular norms. A heat factor on the
+auxiliary scalar inverse is not the physical composed-square regulator.
+The newly computed nonzero coefficient fixes an exact check on this
+matching. The complete signed physical coupled solve remains unexecuted.
+
+Quantified alternative: match through order M^-2 and certify a composed
+M^-4 remainder, including the actual inverse, density and original
+graph/phase/bolt observation. M^-2 alone is not summable. The entire
+angular factor in original units is A4<4.583e-35. IF its UNKNOWN composed
+coefficient C4<=1e33, affine energy <=1.1e-10 costs <=5.0413e-12, leaving
+only >3.0104999994957e-13 for other affine entries. Feedback would require
+eta_other+(.0195239+4.583e-13+A4*C4)gamma_E<.0012069.
+Even when eta_other=0, the conservative C4=1e33 allowance needs
+gamma_E<.01846. Neither C4 nor gamma_E nor the remaining entries is
+certified. These are conditional targets, not measured coefficients.
+
+The original cut mass lift, both local reference cancellations, complete
+transition, original boundary conditions and regular-bolt matching remain
+unchanged. It is not a global fixed-temperature zero mode. Its original
+fast conversion >.00906808164|m| still requires actual |m|<2.20553814952e-9
+if both graph ceilings are imposed. Actual m and kappa_m remain UNKNOWN.
+IF kappa_m<=5e-5, its debits remain 2.14765e-12 affine, .0024731 graph and
+.0195239 independent energy. Scalar quartic, exact correlated slow pair,
+fast and interior/bolt entries remain coupled and unmeasured.
+
+The .135973<.1599164 quantum-fast screen keeps only its two-fast-input
+admitted-family scope. Original physical norm/neighborhood comparisons,
+nonlinear admission/contraction, exact compatibility, physical matching,
+validity/noise and all-sector stability remain unresolved. No actual
+controlled solution is certified. The closed audit and full stable
+semiclassical wormhole objective remain preserved.
+
+RESEARCH DECISION: retain the construction and sharpen the method by
+combining the auxiliary response with the original principal/contact
+allocation BEFORE angular estimation. Park separate angular estimates
+of H-H_*; their signed divergence is now proved, even after the coupled
+weak inverse. This is an estimator failure, not a physical no-go.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute the complete
+common-regulated coupled return with companion terms matched through
+order M^-2, checking cancellation of C_aux, and certify the original
+composed all-column M^-4 remainder and signed retained terms against the
+affine and feedback budgets. Include higher conormal derivatives and
+the original mass/quartic/slow/bolt rows and common-regulator error.
+
+Verification: ordinary signed asymptotic/coupled-inverse argument plus
+37 supporting symbolic/512-bit Arb checks on 21
+frozen inputs; two successful developments and two retained acceptances,
+with the final development and acceptance matching the exact LF sources.
+Two failed development snapshots are retained: rational identities needed
+algebraic cancellation before symbolic equality. During correction review
+the conditional alternative gamma_E guard was tightened from .01847 to
+the sufficient .01846; its exact conservative ceiling is .0184671458014.
+Publication detected required LF conversion before commit. Sources were
+normalized without semantic changes and replayed; earlier snapshots remain.
+No physical bound or prior target changed. No Lean execution, independent
+review or post-acceptance scientific edit is claimed. Checkers do not
+replace the continuum proof or execute a physical coupled solution.
+All 18 inherited paths, closed audits and prior checkpoint are preserved.
+
+Remaining to-do list: complete common-subtracted strong coupled return and signed response; original physical-norm/neighborhood comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete relative thermal sums bounded; coupled estimate unresolved
 
 2026-10-25 HST, E003/S169.
