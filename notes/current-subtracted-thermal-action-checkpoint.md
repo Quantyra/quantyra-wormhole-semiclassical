@@ -10,7 +10,8 @@ original shape-row finite-part forcing is retained and bounded by
 1.27e-34; the distant scalar row is zero by cross-support locality.
 This uses the full solution's proved energy and the actual paired kernel,
 not assumed independent phase amplitudes. The complete coupled graph
-remains UNRESOLVED, with its near-diagonal/transition block unbounded.
+remains UNRESOLVED; its near-diagonal/transition block has no certified
+numerical bound.
 The previous full linear mass bound <1.627532e-15 remains established.
 
 EXECUTED: in the exact localization, split the unknown input at z=.2,
