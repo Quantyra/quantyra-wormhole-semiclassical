@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-25",
+  "story": "S169",
+  "status": "ordinary_argument_and_execution_contract_frozen_before_development",
+  "outcome_scope": "Unresolved complete coupled graph. Certified complete-spectrum mass-action trace remainder in Linfinity to L1, not a strong graph tail or signed center.",
+  "quantitative_role": "Repair the divergent fixed-length raw trace estimator by a full-spectrum index-dependent transport order. This yields a finite common-regulator Hessian error below 9.204e-77 in the original normalized weak norm. The generic weak-to-strong conversion is unbounded; actual differentiated output maps remain necessary.",
+  "domain_review": [
+    "Original paired complementary domains, composed square, C2,1 identical-field double and regular bolts are inherited without a new boundary realization.",
+    "The full diagonal transport kernel yields a Hilbert--Schmidt estimate by integrating its directed triangles against k. No point evaluation of an operator-norm bound is used.",
+    "Actual positive-temperature factorization gives a global length bound. Both infinite angular and thermal sums are bounded analytically; no selected spectrum is treated as a continuum proof.",
+    "Two Hilbert--Schmidt factors give physical trace class, with bounded external k^-1/2 and mass-vertex factors. No unbounded similarity is used to cycle traces.",
+    "The seed-dependent word count is frozen under mass variations. The exponential vertices retain tadpoles and higher coincidence insertions.",
+    "The original common heat regulator remains on the exact force split. Trace-class dominated convergence and holomorphic coercive forms justify removal and differentiated removal for the remainder.",
+    "The full geometric-to-mass conversion, not just a massless cocycle, remains in the retained center at the same regulator, together with every finite local and boundary restoration.",
+    "The physical action still requires the admitted mass/log family. The bounded-multiplier complex tube is an auxiliary domain for the trace remainder, not X-ball admission.",
+    "Compact actual-domain oscillations disprove a generic L1-to-original-H3 forcing comparison. This does not lower-bound the actual remainder or the construction."
+  ],
+  "primary_source_review": {
+    "url": "https://math.mit.edu/~rbm/18.102Sp20/Chapter3.pdf",
+    "sections": "23, Propositions 3.21 and 3.23, especially equation (3.235)",
+    "hypotheses": "Separable Hilbert space, two Hilbert--Schmidt factors and bounded outer factors, verified by the actual directed transport kernels. No smooth-boundary regularity theorem is imported.",
+    "ordinary_proof": "The needed ideal inequalities are also proved by orthonormal-sequence Cauchy--Schwarz in the note; the citation supplies a primary exposition."
+  },
+  "execution_contract": {
+    "precision_bits": 512,
+    "targets": [
+      "actual doubled proper length <394.854",
+      "HS squared per M <.217",
+      "complex heat form relative perturbation <.023",
+      "all-spectrum normalized source tail <9.204e-79",
+      "Hessian Linfinity to L1 tail <9.204e-77",
+      "third action tail <3.682e-74"
+    ],
+    "method": "Exact whole-domain factorization and analytic infinite-sum majorants, verified by outward Arb arithmetic and symbolic identities.",
+    "verification": "Freeze before development, preserve all failed runs and frozen sources, unchanged-source acceptance after ordinary review. No Lean run."
+  },
+  "first_unsupported_step_after_result": "Actual differentiated common-restored source tail and retained signed center, composed with original coupled graph/phase/interior/bolt maps. A generic L1-to-H3 conversion is not finite.",
+  "claims_boundary": [
+    "No strong graph remainder certificate",
+    "No coupled signed solve",
+    "No actual kappa_m",
+    "No original physical-X admission",
+    "No compatibility/matching/validity/noise/stability certificate",
+    "No construction obstruction"
+  ],
+  "scientific_sha256": {
+    "notes/current-adaptive-dirac-trace-remainder.md": "e96ffaaa717dad1d4108f96eef8f5ab89797cc7b8d5ab392e13e7e4687878aef",
+    "checks/current_adaptive_dirac_trace_remainder.py": "3a4cb568797cd6e04936d0e270014f2812bca886911702a7153d7b1a496cf163"
+  },
+  "exploration": {
+    "s169ei-explore.py": {
+      "sha256": "c94c7562411dfe1f94d96e464aff821b858e108f1cd3c5001ae5eb30482e48fe",
+      "contents": "from pathlib import Path\nimport sys,json,math\nsat=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nsys.path.insert(0,str(sat/'checks'))\nimport current_global_far_return_energy_bound as prior\nfrom flint import arb,ctx\nctx.prec=512\np,h,zh,env=prior.york.actual_parameters()\ngamma,C,B2=p['gamma'],p['C'],p['B2']\nL=4/arb('.15').sqrt()*(arb('.15')/(2*gamma)).sqrt().asinh()+2/arb('.15').sqrt()\nhs=arb('.385')*5*arb.pi()/36+L*(arb('.011').exp()-1)**2\nq=arb('.3961'); N=128\nerr=arb('.011').exp()/(1-q)*q**(N-2)*18**4*4*C*(1+gamma)/(3*arb.pi()*B2)\nout={'scope':'Preview of prospective trace-ideal bound, not frozen acceptance or a strong graph error.',\n 'C':str(C),'B2':str(B2),'gamma':str(gamma),'h':str(h),'length_upper_expression':str(L),\n 'HS_squared_over_M_upper_expression':str(hs),'source_128_upper':str(err),\n 'hessian_128_upper':str(100*err),'third_action_variation_upper':str(40000*err),\n 'import_checks':prior.CHECKS}\nprint(json.dumps(out,indent=2))\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\\n')\n",
+      "scope": "Preview before freezing, not acceptance."
+    },
+    "s169ei-explore.json": {
+      "sha256": "edb39c5bb5b20e6c6234d990ee3bda65350d6e562462071d899ec995a7299d79",
+      "contents": "{\r\n  \"scope\": \"Preview of prospective trace-ideal bound, not frozen acceptance or a strong graph error.\",\r\n  \"C\": \"[49119682270.77026011517 +/- 3.20e-12]\",\r\n  \"B2\": \"[8.383092440707457726322e+42 +/- 8.93e+20]\",\r\n  \"gamma\": \"[5.057799424826589366111e-34 +/- 5.81e-56]\",\r\n  \"h\": \"[5.057799424826589366111e-34 +/- 5.81e-56]\",\r\n  \"length_upper_expression\": \"[394.853176634090418262074 +/- 7.11e-22]\",\r\n  \"HS_squared_over_M_upper_expression\": \"[0.216294112690041528840824 +/- 2.03e-25]\",\r\n  \"source_128_upper\": \"[9.20348970206560262806e-79 +/- 5.59e-100]\",\r\n  \"hessian_128_upper\": \"[9.20348970206560262806e-77 +/- 5.59e-98]\",\r\n  \"third_action_variation_upper\": \"[3.681395880826241051222e-74 +/- 5.63e-96]\",\r\n  \"import_checks\": [\r\n    {\r\n      \"name\": \"exact_seed_parameter_guards\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"global_positive_radial_potential_guard\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"retained_temperature_root_relation\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"positive_exact_bolt_slope\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"physical_normalized_adjoint_source_1\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"physical_normalized_source_radius_1\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"physical_normalized_adjoint_source_2\",\r\n      \"passed\": true\r\n    },\r\n    {\r\n      \"name\": \"physical_normalized_source_radius_2\",\r\n      \"passed\": true\r\n    }\r\n  ]\r\n}\r\n",
+      "scope": "Preview before freezing, not acceptance."
+    }
+  },
+  "local_lean_invocations": 0,
+  "development_amendments": [
+    {
+      "utc": "2026-10-25T23:09:24.977410+00:00",
+      "reason": "Arb interval comparison cannot prove equality of independently rounded decimal balls. Replaced only the inherited exactly equal mass-debit guard by an exact SymPy rational identity. No bound, theorem, numerical target or input changed.",
+      "failed_run": "evidence/current-adaptive-dirac-trace-remainder-development.json, runs[0]",
+      "previous_frozen_sha256": {
+        "notes/current-adaptive-dirac-trace-remainder.md": "e96ffaaa717dad1d4108f96eef8f5ab89797cc7b8d5ab392e13e7e4687878aef",
+        "checks/current_adaptive_dirac_trace_remainder.py": "327683187e941527a4f856fab7428937d2b7906a913a80899674fe120b8ff4c6",
+        "evidence/current-adaptive-dirac-trace-remainder-review.json": "8758f4f2b1d96285fdcb8e91b9176eafaa927f974a74810945aa0cca5371f876"
+      }
+    }
+  ]
+}

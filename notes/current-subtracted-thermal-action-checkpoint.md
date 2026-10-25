@@ -1,3 +1,102 @@
+# Active checkpoint: complete weak trace tail bounded; strong coupled return unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.
+
+See [the ordinary adaptive trace-remainder argument](current-adaptive-dirac-trace-remainder.md) and its frozen evidence.
+
+The COMPLETE coupled graph estimate remains UNRESOLVED. The actual
+Dirac transport method now has a complete-spectrum trace-class remainder
+with common-regulator removal and metric variations. Its normalized
+Hessian error is <9.204e-77 in L-infinity -> L1. That is a weak error
+norm, not the original H3 graph. The signed retained center, independent
+phase/interior columns and complete coupled return remain uncomputed.
+
+The first missing trace passage in the previous inverse-series argument
+is addressed by an actual-domain kernel integral. For k=sqrt(M^2+p^2/Q)
+and S_b=k^(1/2)G0 V_b k^(-1/2), the full directed transport triangles
+give ||S_b||HS^2<=integral(alpha^2/k+M^2|exp(b)-1|^2/k)dy.
+The exact nonzero-temperature bolt factorization bounds the doubled proper
+length by 394.854. The full polynomial has at most five monotonicity
+intervals per half, so integral|alpha|<=5pi/2. For the .011 complex
+mass tube this proves ||S_b||HS^2<.217M<M, while ||S_b||<.3961.
+
+Two Hilbert--Schmidt factors, bounded physical outer factors and the
+convergent resolvent series give a trace-norm mass-force tail. Choose
+for EVERY angular mass and signed thermal frequency
+
+    N(M,p)=128+ceil((4log(M/18)+2log(1+|p|))/log(1/.3961)).
+
+Then .3961^(N-2)<=.3961^126(18/M)^4(1+|p|)^-2. The complete sums obey
+sum d_n/M_n^3<2C/3 and gamma sum_(j>=0)(1+p_j)^-2<=1+gamma, with
+both thermal signs retained. No finite physical mode selection is made.
+In the ORIGINAL normalized action, the source L1 tail is <9.204e-79,
+its Hessian L-infinity -> L1 tail <9.204e-77, and the next variation
+<3.682e-74 times both actual input supremum norms. These are bounds on
+the complete discarded inverse-word remainder, not on the full response.
+
+The common heat regulator stays on the original mass force. Trace-class
+domination permits its limit and both infinite spectral sums. The complex
+mass form differs from the original closed form by <.023 in relative
+form norm; its holomorphic contractive heat semigroup and Cauchy integrals
+justify the differentiated limit. The actual paired mass/log domain,
+both regular bolts and the entire finite geometry remain. The exponential
+mass vertices retain tadpoles. The FULL geometric-to-mass conversion,
+not merely a massless Weyl cocycle, and all local/LLL/boundary finite
+restorations stay in the retained center under the same regulator.
+
+The FIRST remaining unsupported step is the ACTUAL differentiated strong
+source remainder and retained signed center composed with the original
+coupled graph, phase, interior and bolt maps. A generic L1-to-H3 forcing
+comparison is UNBOUNDED, not an unknown finite constant: compact
+actual-domain oscillatory shape sources have bounded L1 size but their
+(D-4) forcing has H3 growth proportional to frequency^4. This does not
+assert that the actual remainder has such oscillations or is large.
+The retained mode-dependent low-word center still requires its common
+subtraction and full spectral summation; no center was evaluated here.
+
+The exact mass lift still cancels BOTH uncut local reference rows, while
+its .1/.2 cutoff transition and original boundary/regular-bolt matching
+remain. It is not a global fixed-temperature zero mode. The original
+conversion 2133<||d_chi||H3<2174 and established LINEAR |m|<1.627532e-15
+debit at most 3.538254568e-12; with distant return <1.24e-20, near SHAPE
+retains >6.4617454e-12. The scalar quartic and exact correlated slow pair
+remain in both original equations and need their own complete returns.
+
+kappa_m<=5e-5 is UNKNOWN. Its conditional affine/feedback costs remain
+2.14765e-12 and .0024731. The OTHER entries must satisfy
+Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069. No remaining entry is
+shown to fit. Even eta_other=0 needs gamma_E<.061816543. The fast screen
+.135973<.1599164 retains only its two-fast admitted-family scope.
+The original physical-X comparisons and nonlinear admission/contraction,
+exact compatibility, matching, validity/noise and stability remain open.
+
+RESEARCH DECISION: retain the construction and sharpen the Dirac method
+to the full-spectrum adaptive trace split. Its weak trace error is now
+quantitatively controlled; stop optimizing that small number. The strong
+coupled estimate remains undecided. The generic weak-to-strong shortcut
+fails, not the construction. No controlled solution is established.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute the common-regulated
+signed bordered return block for the affine source and all mass, quartic,
+correlated-slow, fast and interior columns, certifying the ACTUAL
+differentiated remainder and original phase/bolt outputs. Retain both
+equations and all common local restorations, then test the complete
+centers and errors against the unchanged residual budgets.
+
+Verification: ordinary argument and execution contract frozen before
+development; matching unchanged-source development/acceptance at 512 bits,
+30 supporting checks on 17 inputs. One failed interval equality check is
+retained with all frozen sources; its exact rational replacement changes
+no physical bound or target. Python and all 1595 flint/SymPy file hashes
+match; no Lean run. Checks support arithmetic and identities, not the
+continuum proof. All 18 inherited paths, closed audits and previous
+checkpoint contents/semantic state remain preserved.
+
+Remaining to-do list: signed complete coupled strong return and actual phase/interior columns; original scalar graph and physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: global Dirac series bounded; coupled strong trace still unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: NO PROGRESS.
