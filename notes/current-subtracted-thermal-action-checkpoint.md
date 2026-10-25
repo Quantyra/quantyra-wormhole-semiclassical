@@ -1,3 +1,87 @@
+# Active checkpoint: repair strong-return weight endpoint; coupled bound unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary correction and original two-row calculation](current-strong-return-weight-repair.md).
+
+OUTCOME: UNRESOLVED QUANTITATIVE COUPLED RETURN. Attempting the strong
+constant exposed an unsupported endpoint in the previous ordinary argument.
+The h^2(1+|log h|)^N coefficient allowance does not prove an unlogged gain
+of exactly two outer weights. A translated compact packet proves that
+this specified envelope-based estimator is unbounded for N>0. This is
+NOT a proof that the actual R_s endpoint map is unbounded, and is not
+an obstruction to the physical construction. The earlier frozen evidence
+is retained; its exact 3/2-to-7/2 inference is superseded here.
+
+Use the auxiliary proof weights 3/2 ->13/4 ->4.005, leaving a quarter
+power for logarithms in the first step. The exact absorption multiplier is
+B_N,k=sum_l binom(k,l)(5/4)^(k-l)(N)_l m_(N-l), with m_0=10^(-1/4)
+and m_N=(4N)^N exp(1/4-N) for N>=1. The actual kernel log degrees and
+seminorms are still unknown. This repairs the endpoint bookkeeping while
+retaining the mass, scalar quartic and exact slow residues. The original
+physical norms and admission targets do not change. The four/eight power
+counts retain their qualitative scope with this repaired weight path;
+their numerical constants and the global gluing remain uncomputed.
+
+Executed: an entire-frequency bound for BOTH ORIGINAL normal equations
+on Re(s)=13/4. The H^k -> H^(k+4) matrix max-row upper expression is
+2.423561082258391e35 (round upward to 2.424e35). Its scalar coefficient
+is <452707394, and shape coefficient <1.264467e35. The smaller
+1.710e18 row bound requires H^(k+1) inputs: it gains only three
+derivatives. Buying the fourth derivative costs a factor about
+1.417963072371921e17 in these explicit certificates; using the smaller
+number in the four-derivative bootstrap would be invalid.
+
+The original normalized quantum source has coefficient -2GC/B^2 and
+zero canonical trace row. Combining that coefficient with the correct
+shape column gives C_joint=750pi sqrt(5)/(128 beta^2)<1481.797,
+times the UNKNOWN norm of R_s/C in its fixed-area convention. This is
+the same original-scale product, not an improvement from renaming a norm.
+It exposes why the bare 1/K inverse is not the physical quantum loss.
+The finite geometry, contacts, original finite-part moments and interior
+coupling still require the actual composed estimate. The old 1e48 C
+H3->L2 bound supplies neither its differentiated norm nor log degrees.
+
+The complete transfer cost <3.2e-18, q_s and the conditional tail
+allowances remain unchanged. No physical Hessian application or signed
+solve was performed. M_graph,4, M_X,8, kappa_m, actual mass and all
+post-elimination columns remain unknown. In particular no remaining
+coupled entry has been shown to fit the conditional post-mass budgets
+5.34235e-12 affine and .0012069 graph, with additional independent-energy
+cost .0195239. The cut mass lift, transition, bolt matching and original
+conversion >.00906808164|m| are retained. The .135973<.1599164 fast screen
+keeps only its two-fast-input admitted-family scope.
+
+RESEARCH DECISION: retain the physical construction and short-travel
+method, repair the weight path, and bound the ORIGINAL-SCALE COMPOSITION
+before separating large inverse and small quantum coefficients. The
+endpoint estimator fails; no actual coupled coefficient has a certified
+excessive upper bound here. Quantitative feasibility remains undecided.
+This corrects a proof requirement and quantifies a necessary normal factor;
+it does not complete the requested global feasibility milestone.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete H^-1 R_s
+composition and its required strong powers in the repaired spaces, keeping
+the original quantum coefficient attached and paying explicit logarithmic
+absorption costs. Include the common-restored differentiated kernel,
+contacts, original phase/moment rows and finite-domain gluing for ALL
+columns; then evaluate the signed coupled response. Another isolated
+normal-symbol or contact calculation is not that result.
+
+Verification: 25 supporting symbolic/512-bit Arb checks on
+19 frozen inputs. Three successful development snapshots and one
+acceptance run are retained; acceptance matches the final development's
+sources, runtime and result. The ordinary argument precedes checking.
+These checks verify row algebra, all-frequency guards and arithmetic,
+not the full continuum strong return. No failed scientific or startup run,
+no Lean execution and no post-acceptance scientific edit. A rejected
+text patch made no changes before its corrected application. All 18
+inherited paths, closed audits and prior frozen evidence remain unchanged.
+
+Remaining to-do list: numerical complete strong return and coupled signed response; original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: short-travel domain method; quantitative coupled return unresolved
 
 2026-10-25 HST, E003/S169.
