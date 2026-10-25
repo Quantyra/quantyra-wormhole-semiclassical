@@ -1,3 +1,80 @@
+# Active checkpoint: actual far graph entry bounded; coupled estimate unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary complete-far argument and coupled ledger](current-global-far-return-energy-bound.md).
+
+OUTCOME: COMPLETE COUPLED RETURN UNRESOLVED. The entire ACTUAL
+far quantum entry from input z>=.2 to the ORIGINAL output collar z<=.1
+now has a numerical energy-to-graph bound. The regular-bolt sensitivity
+uses every thermal mode, including omega=1/2; both paired paths and all
+angular levels are retained. Original action normalization and the
+localization transition are paid explicitly. The artificial normal far
+tail cancels its commutator before estimation. No physical domain changes.
+
+Executed: ||g_far||H3<4.583e-13 E(u), hence <5.042e-23 for the known
+linear-response energy <1.1e-10. The original quartic, mass and exact slow
+moment bounds per energy are <7.949e-26, <7.949e-27 and <1.141e-22.
+Their signs and original undifferentiated row are retained in the ordinary
+argument. Local contacts vanish only on these separated supports; the
+near/transition contacts remain in the complete problem. No finite mode
+list or smooth replacement of the paired mass/log domain is used.
+
+Attempting the same absolute-kernel estimator at coincidence gives a
+nonintegrable distance^-5 bound. This estimator cannot supply the missing
+near entry. The actual common-subtracted distribution may cancel it;
+this is not a physical divergence or construction obstruction. The
+first missing numerical continuum step remains the complete differentiated
+near/transition kernel/contact composition with the actual coupled H
+inverse, original scalar/mass/slow rows and finite-domain reconstruction.
+Existing finite form estimates and cited symbol theorems do not supply it.
+
+The actual mass, kappa_m, near/transition and post-elimination coupled
+entries remain UNKNOWN, not known excessive bounds. IF kappa_m<=5e-5,
+the remaining affine allowance after this far guard is
+5.34234999994958e-12. The residual feedback is still .0012069 minus
+the unknown remaining entries and (.0195239+4.583e-13) times the actual
+energy-to-graph comparison. Even with no other loss, that comparison
+would need <.06181654279994; its actual value is unknown on the required
+solution family and no finite outer-data-only bound exists globally.
+
+The exact cut reference mass lift and regular-bolt matching are unchanged;
+the lift is not a fixed-temperature zero mode. Original-fast conversion
+>.00906808164|m| still requires actual |m|<2.20553814952e-9 if both graph
+ceilings are imposed. The .135973<.1599164 quantum-fast screen keeps only
+its two-fast-input admitted-family scope. Neither it nor this seed far
+entry establishes independent phase strong control or a nonlinear ball.
+No coupled signed solve, actual coefficient, physical X comparison or
+nonlinear solution requirement is closed. The requested milestone is open.
+The closed audit and full stable-wormhole objective remain intact.
+
+RESEARCH DECISION: retain the physical construction, stop optimizing
+the now negligible far-to-outer entry, and sharpen the COMPLETE common-
+subtracted near/transition composed return. The absolute far estimator
+cannot cross coincidence. Quantitative feasibility of the coupled system
+remains undecided; there is no evidence here to change construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete
+original-output composite T_old(H_s^-1 R_s)^4, assembling the near and
+transition common-subtracted kernel/contact terms with the actual coupled
+inverse and original scalar/mass/slow/bolt rows. Insert the now bounded
+far entry, then test every column and the actual feedback energy map in
+the residual ledger. Signed centers and application errors must use that
+same domain. Another isolated contact or cutoff calculation does not
+execute this task.
+
+Verification: ordinary argument plus 69 supporting
+exact-symbolic/512-bit Arb checks on 29 frozen inputs;
+one successful development and one matching acceptance. No failed frozen
+run, no Lean execution and no post-acceptance scientific edit. The checks
+verify identities and enclosures; they do not replace the continuum proof
+or perform a physical coupled solve. All 18 inherited paths, closed audits
+and the prior checkpoint remain preserved.
+
+Remaining to-do list: complete strong return and signed coupled response; original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: global input-energy bound; strong coupled test open
 
 2026-10-25 HST, E003/S169.
