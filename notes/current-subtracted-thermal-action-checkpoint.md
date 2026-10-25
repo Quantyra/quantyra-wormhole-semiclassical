@@ -1,3 +1,91 @@
+# Active checkpoint: original-cutoff estimator fails; complete coupled graph unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary coupled-estimator argument](current-original-cutoff-coupled-estimator.md) and frozen evidence.
+
+The COMPLETE coupled graph remains UNRESOLVED. The original-cutoff
+independent-positive normal-preconditioned estimator now has a verified
+failure: its known two-fast matrix has spectral radius in
+(360.4185,360.4186). Additional nonnegative quantum/phase/interior bounds
+cannot make this estimator contract. This is an excessive upper-bound
+expression, NOT a lower bound on the actual response or an existence
+obstruction. No new physical admission gate closes.
+
+EXECUTED: retain both original local rows, the actual polynomial Q and
+all previously proved derivative cancellations. Recompute every entry
+at the ORIGINAL beta(11,11) .05/.1 graph cutoff using full Fourier
+bounds and outward integration over all 512 transition cells plus the
+exact left tail. The computed upper-bound matrix is approximately
+[[51.825075,28.790211],[6.150510,359.844705]], with maximum row sum
+365.9952143. The .01/.02 fast estimate cannot be copied to this cutoff.
+Original cutoff commutators, quantum contacts and independent phase
+couplings remain additional unknown terms; no omitted term is set zero
+in the physical equations. The test rules out the stated positive
+completion even before those entries are bounded.
+
+Dominant loss: the cubic and quartic local coefficient matrices. Removing
+only the cubic from this remainder leaves a bound >19.4855. Transferring
+BOTH cubic and quartic matrices into an inverse leaves the SAME-normal-
+comparison remainder <.002555496. This is not yet a finite-geometry or
+post-elimination feedback bound. It costs .002555496 L_fast after a
+PROVED comparison of the new inverse; L_fast and every other defect
+entry are UNKNOWN. With no other loss, L_fast<195.65673 would fit a
+defect allowance 1/2. These are conditional targets, not achieved constants.
+
+The first unsupported continuum step remains the strong near/contact
+operator and inverse in both original rows, with the actual paired mass/log
+domain, common regulator, complete angular/thermal sums, original scalar
+finite part, slow pair and finite-domain returns. Re-inspected theorem
+hypotheses do not supply its numerical symbol/contact seminorms. No smooth
+double, independent squared boundary domain or finite physical mode list
+is substituted. The complete near quantum response was NOT executed here.
+
+The exact reference mass lift still cancels both reference local rows;
+its .1/.2 transition and fixed-temperature bolt matching remain. It is not
+a global zero mode. The original shape conversion costs 2133..2174 per
+unit mass. The full coupled LINEAR mass <1.627532e-15 and actual distant
+shape return <1.24e-20 remain established, leaving >6.4617454e-12 in
+the sufficient NEAR SHAPE allowance only. The scalar graph is independent.
+
+kappa_m<=5e-5 is still CONDITIONAL, not the computed linear mass. Its
+debits remain 2.14765e-12 affine and .0024731 global feedback, leaving
+Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13)gamma_E<.0012069. None of the independent
+remaining entries has been certified to fit. The fast screen
+.135973<.1599164 retains its two-fast-input admitted-family scope only.
+No physical-ball embedding, nonlinear admission/contraction, exact
+compatibility, physical matching, validity/noise or stability follows.
+
+RESEARCH DECISION: retain the construction; abandon the independent-
+positive normal-remainder completion at the original cutoff. Sharpen the
+signed finite-geometry method by solving at least the complete cubic AND
+quartic local matrices inside its inverse, together with the logarithmic
+principal part and original phase/bolt rows. Attainability remains undecided;
+the new inverse and its common-restored strong defect are not certified.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct this conforming
+bordered inverse P and enclose its COMPLETE defect I-H P, including the
+near quantum/contact response, all angular/thermal and finite-domain
+returns, and independent phase columns. Prove delta<=1/2 and the ORIGINAL
+output-map bounds M_i; then test the signed affine/feedback errors
+2 M_i ||(I-H P)b|| against the unchanged budgets. This is one coupled
+operator calculation, not another local/contact improvement.
+
+Verification: ordinary argument and execution contract frozen before
+development; matching unchanged-source development and acceptance with
+35 supporting checks on 16 inputs at 512 bits. All 512 cells are interval
+enclosures, not point quadrature. No failed frozen run; the pre-freeze
+noncertifying SymPy symbol-parsing error and resolution are retained.
+Python and all 1595 flint/SymPy fingerprints match. No Lean invoked.
+Checks support the estimator argument and do not supply the missing
+continuum theorem. All 18 inherited paths, closed audits and exact prior
+checkpoint content are preserved.
+
+Remaining to-do list: complete coupled near/transition inverse and independent phase columns; original scalar graph and physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: actual distant graph return bounded; near coupled graph unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.
