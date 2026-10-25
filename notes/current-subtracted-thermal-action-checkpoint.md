@@ -1,3 +1,100 @@
+# Active checkpoint: regular mass-adjoint trial; unsigned estimator insufficient
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary reference-trial and full source-moment argument](current-reference-clock-adjoint-trial.md) and its frozen evidence.
+
+The actual coupled return remains UNRESOLVED. An explicit current
+reference clock/mass adjoint trial is regular at the bolt and cancels
+BOTH reference equations. Its complete unsigned source-pairing envelope
+is 5.96905633494004e-11, over 18088 times the selected 3.3e-15 allowance.
+This is a verified failure of that estimator, not a lower bound on the
+actual signed pairing or an obstruction to the construction. The complete
+quantum adjoint residual and narrow signed pairing remain uncomputed.
+
+The exact trial combines the reference clock with m_T times the reference
+mass, m_T=gamma^2/(beta z_h D_A), approximately 1.53488010134e-66.
+Its bolt logarithm cancels before evaluation, with an exact pole-removed
+integral on the actual interval. The auxiliary canonical cubic is near
+-6, not m_T. Neither is the actual solution's mass. This auxiliary
+open-clock trial preserves the coordinate period at its regular bolt;
+it does not create a physical fixed-clock zero mode or alter the original
+mass lift, .1/.2 transition or .05/.1 graph cutoff.
+
+For Psi_ref and zero forward trial the complete coupled certificate is
+
+    |m_actual| <= [|F(Psi_ref)|+1.1e-10 ||j Psi_ref||E*]/K_m,
+    K_m=2 Z_c>1.9999999764,
+    F(Psi_ref)=-2[kappa R s_R+G integral rho_rest dr]/(lambda B^3).
+
+Numerical signed-integration error must also be included. This moment is
+the convergent extension from compact tests; it is not an unrestricted
+open-clock derivative with its boundary one-form omitted. The source
+moment retains the complete common-restored Dirac, Weyl, LLL and local
+terms; its massive/Weyl L/t tails are combined before integration.
+The original fixed-clock horizon source allowance remains included.
+
+The executed 512-bit envelope is between 5.96905633494002e-11 and
+5.96905633494004e-11. To fit the same selected center budget by an
+absolute-source estimate, the quantum mass coefficient 8.001e15 would
+have to be replaced by at most 4.4233588024783e11, about 18088.065 times
+smaller. A signed evaluation need not improve that entire absolute norm.
+The local flux allowance is below 2.765e-21 and the bolt allowance below
+1.023e-75, so optimizing either does not repair this estimator.
+
+The full residual is exactly -j Psi_ref, with j the entire J_rest Hessian.
+Its E* membership follows from the actual fixed-seed auxiliary domain,
+but its norm is UNKNOWN. A source spatial derivative is not this metric
+derivative; the fast-input screen and an isolated interior response cannot
+supply it. No source-family analyticity or neighborhood constant is assumed.
+The selected residual target <=1e-5 and signed integration error <=1e-16
+remain unexecuted conditions. Their combined numerator, with a signed
+center <=3.3e-15, would give |m|<2.250000027e-15; that is conditional.
+
+The full original conversion 2133<||d_chi||H3<2174 is unchanged. The
+separate actual lifted graph <=5e-12 is still needed for the sufficient
+mass split |m|<=2.29e-15. kappa_m<=5e-5 is an UNKNOWN post-elimination
+column, not this mass observable or auxiliary m_T. Even if it held,
+the remaining system would still need
+
+    Y_other<=5.34234999994958e-12,
+    eta_other+(.0195239+4.583e-13) gamma_E<.0012069.
+
+The original quartic row, exact correlated slow pair, fast/interior and
+bolt returns are retained, not assigned zero. The first unsupported full
+graph step remains quantitative differentiated common-regulated core
+control composed with the coupled inverse. The .135973<.1599164 screen
+keeps only its two-fast-input admitted-family scope. Physical embeddings,
+independent phase derivatives and nonlinear-neighborhood control do not
+follow. No actual mass, graph, nonlinear solution or stability gate closes.
+
+RESEARCH DECISION: retain the construction and the explicit regular
+coupled adjoint trial; replace the failed unsigned source-moment estimator
+by a signed evaluation with a complete residual certificate. Attainability
+is undecided: no retained signed measurement or residual norm makes the
+needed improvement realistic or unrealistic. The oversized envelope is
+not evidence against existence. The full coupled milestone remains open.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the complete
+common-restored source moment on this trial, keeping the massive/Weyl
+cancellation inside the integral, and in the same operator assembly bound
+the complete adjoint residual j Psi_ref. Test the combined certificate
+against actual |m|<=2.29e-15. The original graph remains an independent
+requirement. No further cold/scalar value optimization is selected.
+
+Verification: 33 supporting checks on 15 frozen inputs, exact reference
+identities and 512-bit Arb; one successful development and matching
+unchanged-source acceptance, no failed current runs. All 1595 recorded
+flint/SymPy files and the Python executable match the prior fingerprint.
+The ordinary paired-domain and complete-source arguments are separate
+from these checks. The unsigned estimator test was executed; a narrow
+signed physical feasibility test was not. No Lean was invoked. All 18
+inherited paths, prior checkpoint content and closed audits are preserved.
+
+Remaining to-do list: certified complete signed mass pairing and coupled adjoint residual; actual original graph return; physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: current coupled mass adjoint; physical return unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: no progress.

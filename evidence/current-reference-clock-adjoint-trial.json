@@ -1,0 +1,302 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T19:06:28.606269+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+        "checks/current_reference_clock_adjoint_trial.py": "3b534449633e378ad288499c944be70720cb8d6d11107b3e09b1291bb96ed09c",
+        "evidence/current-reference-clock-adjoint-trial-review.json": "c74b24979555a0b57c1b346e68a7c5770698a59cde7df65f7e7b893269901ee0",
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-reference-rescaled-source-test.md": "8002dd9f2b574317955d6af6477043c0cd6458d0d567306177e3dde0b69f678f",
+        "notes/fixed-clock-seed-bolt-feasibility.md": "b3cb0fbe5cd91dc36e1c57139541789ddca1eaf4708975195f8d041ddde632e3",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-physical-york-dual-assembly.json": "df2d8ca26c01ef80a6544b5d69a131a911c2b72b995f54709ba741be75d14f6c",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-coupled-mass-adjoint.json": "81857b2af1d8ffe4a3ff4cb857e280f8817fa3a0e165e0887118ec337b04eb1c"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-reference-clock-adjoint-trial.md": "# A regular reference trial for the current mass adjoint\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen verification.\nPrevious goal turn: PROGRESS (current coupled mass-adjoint certificate).\nThe full stable-wormhole objective is incomplete; the audit remains closed.\n\nOUTCOME: the actual coupled estimate remains UNRESOLVED. An explicit\nregular-bolt adjoint trial is constructed, with BOTH reference rows zero.\nIts complete seed-source pairing has an available absolute enclosure, but\nthat specified enclosure is much too wide for the mass certificate. The\nactual signed pairing and the full quantum adjoint residual are unknown.\nThis is failure of the specified unsigned estimator, not a mass lower\nbound, instability, or obstruction to the physical construction.\n\n## 1. Actual reference trial, with its clock and temperature distinguished\n\nKeep the current finite Q, z_h=1/(1+h), Q(z_h)=0, Q'(z_h)=-2gamma,\nbeta=lambda B^2/C and I_ref=F_l I0. Define\n\n    I(z)=integral_0^z dt/Q(t), J(z)=integral_0^z t^3/Q(t)^2 dt,\n    n_c=-Q I/z, b_c=1+Q'I/2,\n    n_m=-2beta QJ/z, b_m=beta z^3/Q+beta Q'J,\n    D_A=z_h^2 Q''(z_h)/2+3gamma z_h,\n    m_T=gamma^2/(beta z_h D_A),\n    Psi_ref=(n_c,b_c)+m_T(n_m,b_m).                    (1)\n\nThese are the actual rational-seed reference profiles, not a product\ngeometry or smoothed seam. The exact areal return is\n\n    f=2F(-D n-b)+(D F)n, alpha=n+2b+D n,\n    F=CQ/z^2, D=z partial_z.\n\nIt gives f_c=0, alpha_c=1, f_m=2(lambda B^2)z, alpha_m=0.\nThus (r f)'=0 and alpha'=0 for Psi_ref: both reference constraint rows\nvanish, and the original joint Ward identity supplies their angular row.\n\nThe unchanged reference temperature derivative per unit mass is\n-D_A beta z_h/gamma^2. With alpha_infinity=1, (1) gives\n\n    delta kappa_coordinate/kappa=1-m_T D_A beta z_h/gamma^2=0.\n\nThe coordinate period and regular bolt therefore match. This is an\nAUXILIARY open-clock adjoint direction. It is not a physical fixed-clock\nzero mode. It introduces no clock or mass degree of freedom in the solve.\nIn particular the original cut mass lift, its .1/.2 transition source,\nand the .05/.1 original graph cutoff remain unchanged. An uncut mass\nprofile is used here only in the correlated auxiliary trial (1).\n\n## 2. Exact cancellation at the bolt before numerical evaluation\n\nLet delta=z_h-z, q2=Q''(z_h), U(z)=Q(z)/(z_h-z), and\n\n    c=z_h^2/(2D_A), A=I+2beta m_T J.\n\nSeparately I and J have logarithmic terms at the bolt. Their combined\nlogarithmic coefficient in A is exactly\n\n    -1/(2gamma)+2beta m_T[\n             3z_h^2/(4gamma^2)+q2 z_h^3/(8gamma^3)]=0.     (2)\n\nThere is a stable analytic representation on the whole actual interval:\n\n    V(z)=[(z_h-z)U(z)+2beta m_T z^3-c U(z)^2]/(z_h-z)^2,\n    A_reg(z)=-c/z_h+integral_0^z V(t)/U(t)^2 dt,\n    A(z)=c/(z_h-z)+A_reg(z).                             (3)\n\nThe numerator defining V has a DOUBLE zero at z_h by (1), so V is a\npolynomial after exact division. U is a polynomial, positive on the\nclosed real interval, with U(z_h)=2gamma>0. No separately rounded Q root\nis divided by at the bolt. Equation (3) is an exact antiderivative\nidentity, not an endpoint extrapolation from sampled values.\n\nThe trial components can be evaluated without subtracting poles:\n\n    n_ref=-U[c+(z_h-z)A_reg]/z,\n    W(z)=[c Q' U/2+beta m_T z^3]/(z_h-z),\n    b_ref=1+Q'A_reg/2+W/U.                              (4)\n\nThe numerator of W has a simple zero at z_h. All functions in (4) are\nanalytic there. In particular n_ref(z_h)=-gamma z_h/D_A, agreeing with\ns_R/R for s_R=-kappa/D_h, D_h A_radius^2=D_A. Analyticity in z_h-z is\nregular rotational-disk smoothness, since z_h-z is a smooth function of\nrho^2 with positive leading coefficient at this fixed nonzero temperature.\n\nAt zero, write Q=beta+u z^2-a z^3+..., a=4beta+2u+tau. Then\n\n    n_ref=-1-2u z^2/(3beta)+[3a/(4beta)-m_T/2]z^3+O(z^4),\n    b_ref= 1+u z^2/beta+[-3a/(2beta)+m_T]z^3+O(z^4).       (5)\n\nThus with P=(-1,1), v_ref=P-Psi_ref is in the ACTUAL critical energy\ndomain: it starts at weight two and is regular at the original bolt.\nThe fixed-seed graph/form argument of current-coupled-mass-adjoint.md\napplies. It is an auxiliary adjoint correction, not a proposed nonlinear\nmetric in the selected mass/fast phase.\n\nThe tiny areal mass parameter m_T must not be called the trial's canonical\ncubic coefficient: that coefficient is m_T-3a/(2beta), near -6. Neither\nquantity is the unknown physical solution's mass. The calculation checks\nthis explicitly to avoid a misleading small-mass claim.\n\n## 3. Apply the full operator: what vanishes and what remains\n\nUse exactly the physical energy normalization h,F,q_P of the current\ncoupled mass-adjoint certificate. With h=h_ref+j, j=J_rest''/(|W|beta),\nand v_ref from (5), its exact residual is\n\n    r_ref=h v_ref-q_P=-h Psi_ref=-j Psi_ref.             (6)\n\nThe reference contribution is zero GLOBALLY, including regular-bolt\nmatching, not merely on a collar. The remaining j contains -I_pot,\nI_sq, the entire renormalized Dirac action, density/York contacts and\nevery angular/thermal and finite-domain return. None is assigned zero.\n\nEquation (6) is well-defined in E*: q_P is in E* by the current auxiliary\ndomain argument, v_ref is in E, and h is a bounded form on E. The first\nunsupported quantitative step is a norm bound for this COMPLETE r_ref.\nThe existing strong interior estimate concerns a different restricted\noutput norm; the fast screen does not cover this independent root-zero\ninput. The source's radial derivative bound Theta'(t) is not a metric\nor temperature derivative and does not bound (6). Likewise the old\ninterior first-Cauchy estimate requires its direction norms, fixed-area\ndensity term and the boundary part before it could bound this residual.\nNo unknown constant, old-theory constant or family analyticity is assumed.\n\nFor zero forward trial the signed center is F(Psi_ref). It can be\nidentified with an ACTUAL complete source moment without evaluating a\nquantum Hessian. Let h1 be the existing original-G first correction,\nI0''h1=-I'(g0). The current reference response is h1/F_l. Its reference\nmass Green constant is 2F_l in the SAME energy units, so\n\n    F(Psi_ref)=2 m(h1)\n      =-2[ kappa R s_R+G integral_R^infinity rho_rest dr ]/(lambda B^3).\n                                                               (7)\n\nHere rho_rest is the full evaluated seed source. This uses both original\nreference equations and fixed-clock horizon matching for h1. Its known\n|s_R|/(Bh)<3.33e-10 is retained. The rescaling F_l cancels exactly in\n(7); it improves neither the physical mass target nor the source error.\nF is the compact-test source extended by the convergent moment of the\npreceding adjoint argument. Replacing (7) by an unrestricted open-clock\nderivative of the whole action would require its additional boundary\none-form. It must not be omitted or counted again in this bulk moment.\n\nThe actual coupled mass certificate consequently reads\n\n    |m_actual| <= [|F(Psi_ref)|+\n                    (1.1e-10)||j Psi_ref||E*]/K_m,\n    K_m=2Z_c>1.9999999764.                            (8)\n\nNumerical quadrature error for (7) must also be added when it is evaluated.\nThis is a specific full coupled trial, with its remaining error explicit.\n\n## 4. Execute the available COMPLETE source-moment enclosure\n\nDo not integrate the massive and Weyl tails separately. The current\nrational-family guards and fixed-scale restoration verified in\nfixed-clock-seed-bolt-feasibility.md and current-global-return-energy-attempt.md\ngive the same complete Dirac, vacuum-subtracted estimate proved by the\nexplicit combination in stationary-centered-exterior-source.md:\n\n    B integral |rho_D-rho_vac| dr <8.001e15 q_flux^2.   (9)\n\nIts required K=1e15, K0=1e11, outer remainder 4e15, |Fang|<100,\nM1>18, rational coefficient bounds and actual paired/state realization\nhold at the current seed. The leading L/t terms cancel BEFORE absolute\nintegration. The bound includes all angular and thermal modes, the actual\nfinite-domain gluing, LLL and Weyl terms. The old reference-subtraction\nmass allowance is not transferred to the new c_R theory.\n\nInstead add the current local gradients directly. With delta I=int E:delta g,\nthe stress has magnitude at most 2|E|. The actual bounds from\ncurrent-global-return-energy-attempt.md, section 2, are\n\n    (G/lambda)|E_pot| < e_p t^-4, e_p=5.5e-23,\n    (G/lambda)|E_sq| <= e_s t^-5,\n    e_s=c_R g[200w0+w0^2+10w2],\n    w0=1.1e-27, w2=4.3e-25, c_R=1e22, g=G lambda.\n\nSphere integration and integration in r give the dimensionless complete\nabsolute source-mass bound\n\n    M_abs=8.001e15 L_q+8pi e_p+4pi e_s,\n    L_q=G q_flux^2/(lambda B^4).                       (10)\n\nThe factors 8pi and 4pi include the stress/action factor two and the\nintegrals int_1^infinity t^-2=1, int_1^infinity t^-3=1/2. The actual\nlower limit v=1+h only decreases these upper bounds. The same vacuum\nand original finite coefficients are retained throughout.\n\nThe unchanged bolt allowance costs at most\n\n    M_bolt=(gamma/beta)(1+h)h(3.33e-10),\n    |F(Psi_ref)| < I_abs=2(M_abs+M_bolt).              (11)\n\nEvaluate (10)-(11) with the existing Arb enclosure of the current seed.\nThe execution contract is I_abs<7e-11 and I_abs/(3.3e-15)>1e4.\nThe actual tighter reported interval is retained. This certifies an\nenclosure about zero using the already available absolute source bound;\nit does not locate the signed value inside that interval.\n\nThe SPECIFIED unsigned estimator (11) therefore cannot certify the\nselected 3.3e-15 center allowance, even if the adjoint residual were zero.\nThis is a known excessive upper bound. The actual signed center is UNKNOWN,\nand the residual norm in (6) is a separate UNKNOWN estimate. Neither is\nproved large. As a quantified alternative, an absolute bound replacing\n8.001e15 in (9) by\n\n    C_mass <= [3.3e-15-2(M_bolt+8pi e_p+4pi e_s)]/(2L_q)       (12)\n\nwould fit the selected center budget. A direct SIGNED evaluation of (7)\ncan do so without improving the entire absolute-source norm. This\ncalculation selects that signed evaluation, not generic source optimization.\nThe already controlled cold value contributes negligibly to (11); no cold\nor scalar refinement is proposed. There is still no estimate for (6).\n\n## 5. Decision and execution boundary\n\nEXECUTED: the full reference adjoint trial, exact cancellation of the\nbolt logarithm, regular auxiliary-domain realization, complete source-\nmoment identity, original-unit absolute envelope and its required\nimprovement. The checks verify those identities and arithmetic only.\nNOT EXECUTED: a narrow signed source-moment enclosure or a certified\nfull quantum adjoint residual. Thus (8) has not certified actual mass,\nand the requested full coupled feasibility milestone remains incomplete.\n\nThe original full conversion 2133<||d_chi||H3<2174, conditional mass\ntarget 2.29e-15, kappa_m<=5e-5 target, residual global budgets and the\n.135973<.1599164 two-fast-input screen retain their exact prior scopes.\nNo original graph, physical-norm embedding, nonlinear neighborhood,\ncompatibility, matching, validity/noise or all-sector stability gate closes.\n\nIn particular kappa_m is the post-elimination column of the FULL coupled\nreturn, not m_T or the scalar mass observable in (8). If that column were\n<=5e-5, its affine cost would be 2.14765e-12 and its direct graph feedback\n.0024731. After the controlled far contribution, the remaining entries\nwould still have to satisfy\n\n    Y_other <=5.34234999994958e-12,\n    eta_other+(.0195239+4.583e-13) gamma_E <.0012069.    (13)\n\nHere gamma_E is the required source-family energy/graph comparison, not\nEuler's constant. Even with eta_other=0 it must be <.06181654. The\nquartic, correlated slow pair and fast/interior couplings in (13) have\nnot been bounded by this mass trial. No remaining entry is set to zero.\nThe scalar original row 20beta Fstar c4 and the exact slow difference\nz^4-z^(4+e_star), e_star about 1.865097e-34, remain in the full system.\n\nThe first unsupported FULL GRAPH step remains numerical control of the\ndifferentiated common-regulated core composed with the coupled inverse,\nincluding its finite-domain and transition returns. The fixed-seed\nweak/graph realization is qualitative. Its energy estimate is not an H3\nestimate. The physical input/output comparisons and uniform nonlinear\nneighborhood estimate are also unknown. In particular a two-fast-slot\nbound does not bound independent mass/quartic/slow phase variations.\nThe actual-original-graph criterion and preserved-ball/contraction\nrequirements in the closed audit are unchanged.\n\nEquation (12) quantifies the required improvement of this one estimator;\nit does not make that improvement plausible by itself. There is no\nretained signed measurement or complete residual estimate from which to\ninfer attainability. Classical cancellation, cold smallness and finite\nenergy alone do not answer it. Conversely, the positive envelope gives\nno lower bound on the source moment, so it supplies no reason to reject\nthe construction. This is the precise feasibility decision still open.\n\nRESEARCH DECISION: retain the construction and this regular coupled\nadjoint trial; sharpen the SIGNED complete mass integral rather than\nsubstitute the available unsigned source envelope. Its excess is an\nestimation failure, not evidence against the physical mass. The full\nresidual in (6) remains mandatory before accepting the mass certificate.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the full common-\nrestored quantum source moment in (7), using this explicit trial and\nretaining the massive/Weyl cancellation inside the integral; in the same\noperator assembly bound (6) against 1e-5. Test their combined error in\n(8) against 2.29e-15. Actual original graph control remains independent.\n\nRemaining to-do list: executed signed mass pairing and coupled adjoint\nresidual; actual original graph return; physical-norm/neighborhood\ncomparisons; nonlinear admission/contraction; exact compatibility;\nphysical matching; semiclassical validity/noise; all-sector stability;\ncharge/return, opening, transport, preparation, separate creation and\nthe full stable semiclassical wormhole objective.\n",
+        "checks/current_reference_clock_adjoint_trial.py": "\"\"\"Actual reference adjoint and complete-source envelope; no full quantum solve.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json, sys, traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nfrom flint import arb,ctx\nimport flint\nimport sympy as sp\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-reference-clock-adjoint-trial'\nOWN=['notes/'+STEM+'.md','checks/current_reference_clock_adjoint_trial.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n    'notes/current-coupled-mass-adjoint.md',\n    'notes/current-coupled-global-return-attempt.md',\n    'notes/current-seed-full-hessian-realization.md',\n    'notes/current-global-return-energy-attempt.md',\n    'notes/current-reference-rescaled-source-test.md',\n    'notes/fixed-clock-seed-bolt-feasibility.md',\n    'notes/stationary-centered-exterior-source.md',\n    'notes/current-controlled-solution-audit-closeout.md',\n    'evidence/current-global-mass-conversion.json',\n    'evidence/current-physical-york-dual-assembly.json',\n    'evidence/current-coupled-global-return-attempt.json',\n    'evidence/current-coupled-mass-adjoint.json',\n]\nCHECKS=[]\n\ndef check(name,value):\n    CHECKS.append({'name':name,'passed':bool(value)})\n    if not value:raise AssertionError(name)\n\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(50)\n    return {'ball':v.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef prior(stem):\n    r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n    check('accepted_input_'+stem,r['status']=='passed')\n    return r\n\ndef execute():\n    ctx.prec=512\n    z=sp.symbols('z',positive=True); be,C=sp.symbols('beta C',positive=True)\n    Q=sp.Function('Q')(z); I=sp.Function('I')(z); J=sp.Function('J')(z)\n    FF=C*Q/z**2\n    nc=-Q*I/z;bc=1+sp.diff(Q,z)*I/2\n    nm=-2*be*Q*J/z;bm=be*z**3/Q+be*sp.diff(Q,z)*J\n    def red(ex):\n        ex=ex.subs(sp.diff(I,z),1/Q).subs(sp.diff(J,z),z**3/Q**2)\n        return sp.cancel(ex)\n    f=lambda n,b:2*FF*(-z*sp.diff(n,z)-b)+z*sp.diff(FF,z)*n\n    al=lambda n,b:n+2*b+z*sp.diff(n,z)\n    check('exact_clock_reference_mass_row',red(f(nc,bc))==0)\n    check('exact_clock_reference_lapse',red(al(nc,bc)-1)==0)\n    check('exact_mass_reference_mass_row',red(f(nm,bm)-2*C*be*z)==0)\n    check('exact_mass_reference_lapse',red(al(nm,bm))==0)\n\n    zh,ga,q2,dd=sp.symbols('zh gamma q2 delta',positive=True)\n    DA=zh**2*q2/2+3*ga*zh\n    mt=ga**2/(be*zh*DA); cc=zh**2/(2*DA)\n    c_log=3*zh**2/(4*ga**2)+q2*zh**3/(8*ga**3)\n    check('exact_bolt_log_cancellation',sp.cancel(-1/(2*ga)+2*be*mt*c_log)==0)\n    check('coordinate_temperature_matching',sp.cancel(1-mt*DA*be*zh/ga**2)==0)\n    e2,e3,e4,e5=sp.symbols('e2 e3 e4 e5')\n    U=2*ga+q2*dd/2+e2*dd**2+e3*dd**3+e4*dd**4+e5*dd**5\n    numerator=dd*U+2*be*mt*(zh-dd)**3-cc*U**2\n    check('regular_primitive_double_zero_value',sp.cancel(numerator.subs(dd,0))==0)\n    check('regular_primitive_double_zero_derivative',sp.cancel(sp.diff(numerator,dd).subs(dd,0))==0)\n    Qprime=-(U+dd*sp.diff(U,dd))\n    bnum=cc*Qprime*U/2+be*mt*(zh-dd)**3\n    check('regular_shape_numerator_zero',sp.cancel(bnum.subs(dd,0))==0)\n    check('reference_bolt_radius_matching',sp.cancel(-2*ga*cc/zh+ga*zh/DA)==0)\n    # Equality of the derivative of the pole-removed primitive, on delta>0.\n    V=numerator/dd**2\n    check('full_primitive_derivative_identity',\n          sp.cancel(cc/dd**2+V/U**2-(dd*U+2*be*mt*(zh-dd)**3)/(dd*U)**2)==0)\n\n    u,a,mt_s=sp.symbols('u a m_T')\n    Qsmall=be+u*z**2-a*z**3\n    Ismall=z/be-u*z**3/(3*be**2)+a*z**4/(4*be**2)\n    ns=sp.series(-Qsmall*Ismall/z-mt_s*z**3/2,z,0,4).removeO().expand()\n    bs=sp.series(1+sp.diff(Qsmall,z)*Ismall/2+mt_s*z**3,z,0,4).removeO().expand()\n    check('auxiliary_weight_two_and_clock_root',sp.simplify(ns+1+2*u*z**2/(3*be)-(3*a/(4*be)-mt_s/2)*z**3)==0)\n    check('canonical_cubic_is_not_m_T',sp.simplify(bs-1-u*z**2/be-(mt_s-3*a/(2*be))*z**3)==0)\n    Fl,m1=sp.symbols('F_l m1')\n    check('current_reference_prefactor_cancels_in_pairing',sp.cancel(2*Fl*(m1/Fl)-2*m1)==0)\n    t=sp.symbols('t',positive=True)\n    check('local_potential_mass_integral',sp.integrate(t**-2,(t,1,sp.oo))==1)\n    check('local_square_mass_integral',sp.integrate(t**-3,(t,1,sp.oo))==sp.Rational(1,2))\n\n    mass=prior('current-global-mass-conversion')['result']\n    yp=prior('current-physical-york-dual-assembly')\n    glob=prior('current-coupled-global-return-attempt')['result']\n    adj=prior('current-coupled-mass-adjoint')['result']\n    pp=mass['parameters']; bea=dec(pp['beta']);ua=dec(pp['u']);ta=dec(pp['tau']);ag=dec(pp['g'])\n    ha=dec(glob['h']);gamma=dec(glob['gamma']);DAa=dec(glob['D_A_squared']);zha=1/(1+ha)\n    oldep=next(v for v in yp['numerics'] if v['kind']=='actual_seed_correlated_endpoint')\n    oldW=next(v for v in yp['numerics'] if v['kind']=='physical_action_and_adjoint_normalization' and v['identical_exteriors']==1)\n    # W=-pi (B^2/G)/gamma for one half. This extracts the same old unit,\n    # retaining correlations as enclosing intervals, not as midpoint equalities.\n    B2G=-dec(oldW['W'])*dec(oldep['gamma'])/arb.pi()\n    check('same_positive_temperature_enclosures',ha.overlaps(dec(oldep['h'])) and gamma.overlaps(dec(oldep['gamma'])))\n    check('current_sphere_scale',B2G>arb('8.38e42') and B2G<arb('8.39e42'))\n    mTa=gamma**2/(bea*zha*DAa)\n    phase=mTa-3*(4*bea+2*ua+ta)/(2*bea)\n    nbolt=-gamma*zha/DAa\n    check('reference_areal_clock_mass_scale',mTa>arb('1e-66') and mTa<arb('2e-66'))\n    check('auxiliary_canonical_mass_cubic_order_one',phase>arb('-6.000001') and phase<arb('-5.999999'))\n    check('bolt_radius_change_sign',nbolt<0)\n    check('reference_mass_parameter_matches_temperature_derivative',\n          (mTa*dec(glob['reference_mass_relative_temperature_derivative'])).overlaps(arb(-1)))\n\n    Lq=arb(2000)**8/(ag*B2G**2)\n    ep=arb('5.5e-23')\n    es=arb('1e22')*ag*(200*arb('1.1e-27')+arb('1.1e-27')**2+10*arb('4.3e-25'))\n    local=8*arb.pi()*ep+4*arb.pi()*es\n    bolt=(gamma/bea)*(1+ha)*ha*arb('3.33e-10')\n    quantum=arb('8.001e15')*Lq\n    Iabs=2*(quantum+local+bolt)\n    target=arb('3.3e-15')\n    Cmass=(target-2*(local+bolt))/(2*Lq)\n    ratio=Iabs/target\n    check('complete_source_envelope_upper',Iabs<arb('7e-11'))\n    check('specified_unsigned_estimator_exceeds_budget',ratio>arb('1e4'))\n    check('required_source_moment_coefficient_positive',Cmass>0)\n    check('cold_value_refinement_cannot_resolve_this_estimator',2*bolt<arb('1e-70'))\n    check('new_local_terms_do_not_dominate_flux_budget',2*local<arb('3e-21'))\n    check('actual_mass_target_not_redefined',dec(adj['conditional_mass_upper'])<arb('2.29e-15'))\n    return {'precision_bits':ctx.prec,'areal_clock_mass_parameter':enc(mTa),\n            'auxiliary_canonical_cubic':enc(phase),'reference_bolt_conformal_value':enc(nbolt),\n            'B_squared_over_G':enc(B2G),'dimensionless_complete_source_mass_factor':enc(Lq),\n            'quantum_absolute_mass_allowance':enc(quantum),'local_absolute_mass_allowance':enc(local),\n            'bolt_absolute_mass_allowance':enc(bolt),'complete_flux_absolute_envelope':enc(Iabs),\n            'specified_flux_envelope_to_target_ratio':enc(ratio),\n            'sufficient_replacement_absolute_quantum_mass_coefficient':enc(Cmass),\n            'required_improvement_of_absolute_quantum_coefficient':enc(arb('8.001e15')/Cmass),\n            'scope':{'regular_reference_adjoint_trial':True,'reference_rows_exactly_zero':True,\n              'full_operator_residual':'-J_rest_second_variation Psi_ref; norm unknown',\n              'complete_source_unsigned_envelope_evaluated':True,'narrow_signed_pairing_computed':False,\n              'actual_adjoint_residual_norm_computed':False,'actual_mass_certified':False,\n              'actual_kappa_m_computed':False,'complete_physical_coupled_return':'unresolved',\n              'construction_obstruction':False,'nonlinear_admission':False,'full_objective_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n        'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary={'mode':mode,'status':run['status'],'checks':len(CHECKS),'result':run.get('result'),'traceback':run.get('traceback')}\n    message=json.dumps(summary,indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-reference-clock-adjoint-trial-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_contract_frozen_before_development\",\n  \"previous_goal_turn\": \"progress\",\n  \"complete_coupled_milestone\": false,\n  \"ordinary_argument\": \"notes/current-reference-clock-adjoint-trial.md\",\n  \"quantitative_role\": \"Construct a regular reference trial for the CURRENT COUPLED mass adjoint, reduce its residual to the complete J_rest Hessian, and test the available full seed-source moment envelope against the 3.3e-15 signed-flux allowance. Original mass and graph targets remain unchanged.\",\n  \"first_missing_physical_calculation\": \"A certified norm of the COMPLETE j Psi_ref and a narrow signed enclosure of the complete source moment. The original differentiated graph core and all coupled columns remain independently uncomputed.\",\n  \"hypotheses_review\": [\n    {\n      \"source\": \"notes/current-coupled-mass-adjoint.md\",\n      \"scope\": \"Current coupled weak adjoint, actual root-zero auxiliary domain, compact-test common-regulator order, full physical flux 2 Z_c and unit coupled inverse. No physical open-clock freedom or nonlinear-domain transfer.\"\n    },\n    {\n      \"source\": \"notes/current-coupled-global-return-attempt.md\",\n      \"scope\": \"Exact current rational reference, both original constraints, original cut mass lift and temperature derivative. Uncut mass alone is not a fixed-temperature zero mode.\"\n    },\n    {\n      \"source\": \"notes/current-seed-full-hessian-realization.md\",\n      \"scope\": \"Actual fixed paired realization, mass/log form domain, critical energy and smooth regular-bolt core; only qualitative graph existence, no numerical strong return or neighborhood theorem.\"\n    },\n    {\n      \"source\": \"notes/current-reference-rescaled-source-test.md\",\n      \"scope\": \"Exact I_ref=F_l I0 identity with consistently repartitioned boundary action; current reference correction h1/F_l and mass Green factor 2 F_l use the same original energy units.\"\n    },\n    {\n      \"source\": \"notes/fixed-clock-seed-bolt-feasibility.md\",\n      \"scope\": \"Current seed guards for original rational-family quantum estimates, including the nonzero mu0 restoration margin; actual fixed-clock reference equations and |s_R|/(B h)<3.33e-10. No source-response derivative is inferred.\"\n    },\n    {\n      \"source\": \"notes/stationary-centered-exterior-source.md\",\n      \"scope\": \"Complete Dirac-minus-vacuum absolute mass integral <8.001e15 q_flux^2/B, with massive/Weyl L/t cancellation BEFORE integration, all angular/thermal modes, finite-domain gluing, LLL and original contacts. Its old reference/c_R mass allowance is not transferred.\"\n    },\n    {\n      \"source\": \"notes/current-global-return-energy-attempt.md\",\n      \"scope\": \"Current local potential and square-gradient pointwise decay, source dual bound <1.1e-10 and fixed current geometry/renormalization. Local terms are re-integrated in original physical mass units.\"\n    }\n  ],\n  \"ordinary_argument_checks\": [\n    \"Clock and mass profiles solve both original reference rows; correlated coefficient fixes coordinate period and regular bolt.\",\n    \"The bolt logarithm cancels exactly. Polynomial division removes the pole before evaluation; no root rounding, sampled fit or artificial seam.\",\n    \"The auxiliary correction P-Psi_ref starts at weight two and is regular on the actual disk; it is not a nonlinear physical boundary phase.\",\n    \"The small auxiliary areal mass m_T is distinguished from its order-one canonical cubic and from the actual physical mass.\",\n    \"The complete residual -j Psi_ref is in E* by the existing actual-domain argument, but its norm is UNKNOWN. No component, contact or finite-domain term is discarded.\",\n    \"The source pairing is the compact-test moment; an unrestricted open-clock derivative of the entire action would also require the retained boundary one-form.\",\n    \"Reference normalization cancels in the moment identity without changing the original mass admission target.\",\n    \"The unsigned envelope's excess is failure of a specified estimator, not a lower bound on the signed moment or an obstruction.\",\n    \"A spatial source derivative is not a metric/temperature derivative. Interior restricted estimates and the two-fast-input screen do not bound this independent adjoint input.\",\n    \"Full kappa_m, other coupled columns, physical embeddings, nonlinear admission and stability remain unresolved.\"\n  ],\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"exact reference constraints and bolt log cancellation\",\n      \"current auxiliary areal mass lies between 1e-66 and 2e-66; canonical cubic near -6\",\n      \"complete unsigned flux envelope <7e-11\",\n      \"specified unsigned envelope / 3.3e-15 >1e4\",\n      \"positive sufficient replacement absolute quantum mass coefficient\",\n      \"bolt allowance <1e-70 and local flux allowance <3e-21\"\n    ],\n    \"not_tested\": [\n      \"narrow actual signed source moment\",\n      \"actual complete quantum adjoint residual norm\",\n      \"actual coupled original graph return or full physical feasibility\"\n    ],\n    \"verification\": \"one successful development and matching unchanged-source acceptance; retain any failures\",\n    \"checker_scope\": \"Exact reference identities and outward arithmetic using accepted seed enclosures. Ordinary domain and all-mode source arguments remain separate.\"\n  },\n  \"new_external_theorem\": false,\n  \"local_lean_invocations\": 0,\n  \"scientific_sha256\": {\n    \"notes/current-reference-clock-adjoint-trial.md\": \"459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59\",\n    \"checks/current_reference_clock_adjoint_trial.py\": \"3b534449633e378ad288499c944be70720cb8d6d11107b3e09b1291bb96ed09c\"\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "areal_clock_mass_parameter": {
+          "ball": "[1.534880101337818454167e-66 +/- 6.83e-88]",
+          "decimal_enclosure": {
+            "mid": "1534880101337818454167434219585230214744827061407367669",
+            "rad": "248663285416175012380980784660481",
+            "exponent": "-120"
+          }
+        },
+        "auxiliary_canonical_cubic": {
+          "ball": "[-6.0000000003664518817760705481 +/- 3.51e-29]",
+          "decimal_enclosure": {
+            "mid": "-6000000000366451881776070548127239969706548555162011140",
+            "rad": "7833103220802133436661761",
+            "exponent": "-54"
+          }
+        },
+        "reference_bolt_conformal_value": {
+          "ball": "[-5.057799424826589366111e-34 +/- 5.81e-56]",
+          "decimal_enclosure": {
+            "mid": "-5057799424826589366111170890949241993918065515536395204",
+            "rad": "409702772111664324829116828221441",
+            "exponent": "-88"
+          }
+        },
+        "B_squared_over_G": {
+          "ball": "[8.38309244070745772632e+42 +/- 4.26e+21]",
+          "decimal_enclosure": {
+            "mid": "838309244070745772632243998877106048283443200000000000",
+            "rad": "181084822621368550150693183291392",
+            "exponent": "-11"
+          }
+        },
+        "dimensionless_complete_source_mass_factor": {
+          "ball": "[3.73019393492286627506e-27 +/- 2.12e-48]",
+          "decimal_enclosure": {
+            "mid": "3730193934922866275059492337483217431584136824334451436",
+            "rad": "1611557623292993761160569995395073",
+            "exponent": "-81"
+          }
+        },
+        "quantum_absolute_mass_allowance": {
+          "ball": "[2.98452816733178530668e-11 +/- 6.19e-32]",
+          "decimal_enclosure": {
+            "mid": "2984528167331785306675099819220322267010467873149994594",
+            "rad": "1289407254974349064916441872990209",
+            "exponent": "-65"
+          }
+        },
+        "local_absolute_mass_allowance": {
+          "ball": "[1.3823007675800637123764625365116473e-21 +/- 2.96e-56]",
+          "decimal_enclosure": {
+            "mid": "1382300767580063712376462536511647329519114971437109370",
+            "rad": "2",
+            "exponent": "-75"
+          }
+        },
+        "bolt_absolute_mass_allowance": {
+          "ball": "[5.11115073745493545238e-76 +/- 3.28e-97]",
+          "decimal_enclosure": {
+            "mid": "5111150737454935452377555951218815152176001371695153633",
+            "rad": "828042792112817823133189112070145",
+            "exponent": "-130"
+          }
+        },
+        "complete_flux_absolute_envelope": {
+          "ball": "[5.96905633494003076687e-11 +/- 6.37e-32]",
+          "decimal_enclosure": {
+            "mid": "596905633494003076686621238091593704132326521220381218",
+            "rad": "257881453594060325154741100216321",
+            "exponent": "-64"
+          }
+        },
+        "specified_flux_envelope_to_target_ratio": {
+          "ball": "[18088.04949981827505111 +/- 8.09e-18]",
+          "decimal_enclosure": {
+            "mid": "1808804949981827505110973448760812337818854874738408455",
+            "rad": "781470879745214551033009181556737",
+            "exponent": "-50"
+          }
+        },
+        "sufficient_replacement_absolute_quantum_mass_coefficient": {
+          "ball": "[442335880247.832592665 +/- 2.81e-10]",
+          "decimal_enclosure": {
+            "mid": "4423358802478325926650892158285225536085150110920949373",
+            "rad": "1911055179498251583211816557215745",
+            "exponent": "-43"
+          }
+        },
+        "required_improvement_of_absolute_quantum_coefficient": {
+          "ball": "[18088.06465240212492123 +/- 9.58e-18]",
+          "decimal_enclosure": {
+            "mid": "1808806465240212492122824315978745497605706334153310987",
+            "rad": "781483457409441821634942824611841",
+            "exponent": "-50"
+          }
+        },
+        "scope": {
+          "regular_reference_adjoint_trial": true,
+          "reference_rows_exactly_zero": true,
+          "full_operator_residual": "-J_rest_second_variation Psi_ref; norm unknown",
+          "complete_source_unsigned_envelope_evaluated": true,
+          "narrow_signed_pairing_computed": false,
+          "actual_adjoint_residual_norm_computed": false,
+          "actual_mass_certified": false,
+          "actual_kappa_m_computed": false,
+          "complete_physical_coupled_return": "unresolved",
+          "construction_obstruction": false,
+          "nonlinear_admission": false,
+          "full_objective_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-reference-clock-adjoint-trial.md": "459db0c04f6cf0b34e2a324322efd4607a234836e9c208b1e913b268c6c5ac59",
+        "checks/current_reference_clock_adjoint_trial.py": "3b534449633e378ad288499c944be70720cb8d6d11107b3e09b1291bb96ed09c",
+        "evidence/current-reference-clock-adjoint-trial-review.json": "c74b24979555a0b57c1b346e68a7c5770698a59cde7df65f7e7b893269901ee0",
+        "notes/current-coupled-mass-adjoint.md": "0a97ddbcf866e7372888bc7c48d9295397c6c8c81fe0fb4e0ead54f800d0b781",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-reference-rescaled-source-test.md": "8002dd9f2b574317955d6af6477043c0cd6458d0d567306177e3dde0b69f678f",
+        "notes/fixed-clock-seed-bolt-feasibility.md": "b3cb0fbe5cd91dc36e1c57139541789ddca1eaf4708975195f8d041ddde632e3",
+        "notes/stationary-centered-exterior-source.md": "b92a87995b216eb6558d25e92aa501aa91094f919d2c096b3cd7b4f4899f4538",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-physical-york-dual-assembly.json": "df2d8ca26c01ef80a6544b5d69a131a911c2b72b995f54709ba741be75d14f6c",
+        "evidence/current-coupled-global-return-attempt.json": "db476f806632995fd6322f4a0db437ed77017651f9ad7280a0fa2eca26d082e1",
+        "evidence/current-coupled-mass-adjoint.json": "81857b2af1d8ffe4a3ff4cb857e280f8817fa3a0e165e0887118ec337b04eb1c"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "exact_clock_reference_mass_row",
+          "passed": true
+        },
+        {
+          "name": "exact_clock_reference_lapse",
+          "passed": true
+        },
+        {
+          "name": "exact_mass_reference_mass_row",
+          "passed": true
+        },
+        {
+          "name": "exact_mass_reference_lapse",
+          "passed": true
+        },
+        {
+          "name": "exact_bolt_log_cancellation",
+          "passed": true
+        },
+        {
+          "name": "coordinate_temperature_matching",
+          "passed": true
+        },
+        {
+          "name": "regular_primitive_double_zero_value",
+          "passed": true
+        },
+        {
+          "name": "regular_primitive_double_zero_derivative",
+          "passed": true
+        },
+        {
+          "name": "regular_shape_numerator_zero",
+          "passed": true
+        },
+        {
+          "name": "reference_bolt_radius_matching",
+          "passed": true
+        },
+        {
+          "name": "full_primitive_derivative_identity",
+          "passed": true
+        },
+        {
+          "name": "auxiliary_weight_two_and_clock_root",
+          "passed": true
+        },
+        {
+          "name": "canonical_cubic_is_not_m_T",
+          "passed": true
+        },
+        {
+          "name": "current_reference_prefactor_cancels_in_pairing",
+          "passed": true
+        },
+        {
+          "name": "local_potential_mass_integral",
+          "passed": true
+        },
+        {
+          "name": "local_square_mass_integral",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-global-mass-conversion",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-physical-york-dual-assembly",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-coupled-global-return-attempt",
+          "passed": true
+        },
+        {
+          "name": "accepted_input_current-coupled-mass-adjoint",
+          "passed": true
+        },
+        {
+          "name": "same_positive_temperature_enclosures",
+          "passed": true
+        },
+        {
+          "name": "current_sphere_scale",
+          "passed": true
+        },
+        {
+          "name": "reference_areal_clock_mass_scale",
+          "passed": true
+        },
+        {
+          "name": "auxiliary_canonical_mass_cubic_order_one",
+          "passed": true
+        },
+        {
+          "name": "bolt_radius_change_sign",
+          "passed": true
+        },
+        {
+          "name": "reference_mass_parameter_matches_temperature_derivative",
+          "passed": true
+        },
+        {
+          "name": "complete_source_envelope_upper",
+          "passed": true
+        },
+        {
+          "name": "specified_unsigned_estimator_exceeds_budget",
+          "passed": true
+        },
+        {
+          "name": "required_source_moment_coefficient_positive",
+          "passed": true
+        },
+        {
+          "name": "cold_value_refinement_cannot_resolve_this_estimator",
+          "passed": true
+        },
+        {
+          "name": "new_local_terms_do_not_dominate_flux_budget",
+          "passed": true
+        },
+        {
+          "name": "actual_mass_target_not_redefined",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T19:06:29.803731+00:00"
+    }
+  ]
+}
