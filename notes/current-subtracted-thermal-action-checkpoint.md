@@ -1,3 +1,92 @@
+# Active checkpoint: conditional strong fast screen passes; global admission open
+
+2026-10-24, E003/S169.
+
+See [the complete strong-response argument](current-complete-strong-response-attempt.md).
+
+OUTCOME: CERTIFIED BOUND ON THE STATED ADMITTED FAST-GRAPH FAMILY.
+The complete remaining nonlocal quantum fast response has allowances
+eta_seed<.028913 and C3<1.0706e10. Thus
+
+    eta_seed+1e-11 C3 < .135973 < .1599164,
+
+with screening reserve .0239434. This closes the CONDITIONAL strong
+screen, not admission of the original global nonlinear ball or existence.
+
+The family has A<=.001, fast background data <=1e-11, bounded actual
+interior/bolt charts, and the retained mass/slow powers with quartic
+logs of fixed degree at most two. An additional unbounded phase or an
+arbitrary A ball is not covered. The physical paired mass/log domain,
+common regulator, complete angular/thermal sums, coincidence contacts,
+density terms, images, and finite-domain/bolt returns are retained.
+
+Executed work closes the logarithmic coordinate finite part, the
+complementary source and metric-input returns, and B_cap<2.062e30 on
+that family. The actual entire far-input metric response is bounded by
+propagating its endpoint variation through the collar, not by
+differentiating a seed estimate. Its initial exploratory source guard
+was enlarged eightfold in the certificate. No smooth surrogate or
+physical mode truncation is used.
+
+The coarser complete positive estimator gives .203048338 and fails to
+certify the target. The sharper complete-frequency subtracted-symbol
+bound gives the passing ledger above. This is an estimator improvement,
+not a normalization change, a physical response lower bound or an
+obstruction to the construction. The dominant eighth-input-derivative
+debit is .073684; the high-background debit is below 1.675e-6. Cold and
+scalar optimization remains parked.
+
+Original nonlinear comparisons are still unproved:
+E_center+1e-8 alpha<=1e-11;
+R_X alpha*.028913+Z0_other<=.25;
+R_X alpha^2*1.0706e10+Z2_other<=5e7.
+Even with zero offsets/other rows their sufficient ceilings are
+alpha<=.001, R_X alpha<=8.6466295438 and
+R_X alpha^2<=.00467027834859. The remaining mass/slow/global A
+allowance is .00094319. These are certificate targets, not necessary
+conditions for existence or assumed operator constants.
+
+A compact high-frequency packet proves that a bare C5 coefficient ball
+has NO finite input comparison to this H3 source graph: its normalized
+graph size grows as K N^3 log N while its C5 norm stays bounded. The
+method must use a graph-strengthened global solver with proved physical
+embeddings. The original audit already required this additional regularity.
+No original nonlinear ball, actual correction, exact compatibility,
+physical matching, validity/noise or all-sector stability is established.
+The closed audit and previous sufficient projection screen retain their
+scope; the signed projection was not re-evaluated.
+
+RESEARCH DECISION: retain this construction and the common-restored
+graph method. The conditional fast estimate is affordable. Prioritize
+global admission and undifferentiated source/matching moments before
+further source optimization; do not use a bare C5-to-graph transfer.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compute the actual
+finite-seed global source-to-graph-and-phase return, with the
+undifferentiated Mellin moments determining the mass and correlated
+quartic/slow pair. Test joint data <=1e-11 and the remaining A allowance
+.00094319, including physical X-return constants satisfying the displayed
+inequalities. Keep the actual bolt and finite geometry. This determines
+whether the conditional strong estimate admits an actual correction.
+
+Verification: the frozen interval acceptance passed 35 supporting
+checks across 1078 unchanged inputs. Development retained three failed
+executions (generated-fragment syntax, integer-to-Arb conversion, and an
+interval ordering at an exact rational equality), then passed. No
+scientific bound was enlarged to repair those failures. One earlier
+exploratory combiner failure and twelve successful exploration replays,
+with exact sources/results, are retained. Acceptance passed twice. The
+second run was required after the commit byte check caught CRLF/LF
+normalization in two files; both receipts and source snapshots are
+preserved. Universal-newline source content and numerical results are
+identical. There were no post-success scientific-content edits or Lean execution. The
+ordinary argument, not the checker count, supplies the continuum claim.
+All 18 inherited paths and the closed audit remain unchanged.
+
+Remaining to-do list: actual global graph/phase source and return; original norm comparisons and nonlinear admission; actual correction, preservation/contraction and exact compatibility; physical matching/causal realization; validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: near return bounded; complete strong estimate unresolved
 
 2026-10-24, E003/S169.
