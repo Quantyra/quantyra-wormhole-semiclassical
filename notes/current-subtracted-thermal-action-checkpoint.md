@@ -1,3 +1,88 @@
+# Active checkpoint: moving-comparison Cauchy test; coupled bound unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary actual-domain test and finite-jet bounds](current-strong-return-cauchy-test.md).
+
+OUTCOME: UNRESOLVED QUANTITATIVE COUPLED RETURN. The complete strong
+composition, actual mass response and all signed coupled columns remain
+uncomputed. No actual controlled solution or new admission gate is certified.
+The closed feasibility audit and full stable-wormhole objective are preserved.
+
+The attempted termwise holomorphic moving-comparison shortcut fails on
+admissible directions of the ACTUAL paired domain. Smooth stationary
+interior probes have support gap 2a; an interior conformal variation leaves
+the seam, mass/log coefficients, fixed period and regular bolt unchanged.
+The short comparison's off-diagonal pairing is zero for small positive
+variation and strictly negative for negative variation, using the COMPLETE
+positive angular weight. It therefore cannot be analytic at zero. Local
+polynomial and coincidence terms vanish between disjoint supports; no
+physical contact or thermal/finite-domain return is removed. This disproves
+the proposed Cauchy shortcut, not the physical Hessian or strong map.
+
+The inherited heat-bridge coordinate argument supplies two metric
+derivatives, not all-order holomorphic dependence on the original mass/log
+fields. No such theorem is transferred from its independent coefficient f.
+Freezing the comparison does not preserve the lower-order remainder
+uniformly: it leaves the varying fourth-log principal symbol unsubtracted.
+
+Executed alternative: exact real finite-jet bounds for the fixed travel
+cutoff. D_j=3^j(j!)^2, Z_0=1,
+Z_j=e^2[D_j+2 sum_(k=1)^j binom(j,k)D_k Z_(j-k)], and
+T_j=sum_(k=1)^j S2(j,k)2^k Z_k. Original travel derivatives cost 128^j Z_j.
+The complete-angular cutoff-only form contribution is <3.2e-18 T_j.
+At orders 4,8,16 these guards are 1.075e-8, 1963, 1.207e28; the
+order-16 ordinary travel derivative bound is <2.777e74. These are
+upper bounds in their stated norms, not actual response coefficients.
+They cannot be compared directly with .0012069 or substituted for M_graph,4.
+
+The first missing numerical argument remains the differentiated common-
+restored physical kernel AND contacts, composed with both original rows,
+phase/moment constraints and finite-domain/bolt inverse. The real finite-jet
+cost is only one term of that ledger. Its calculation does not determine
+whether the complete constants are quantitatively attainable. M_graph,4,
+M_X,8, U_feedback, kappa_m, actual mass and coupled signed centers remain
+UNKNOWN, not computed excessive upper bounds.
+
+The exact cut reference mass lift, local cancellation, cutoff transition,
+original boundary conditions, regular-bolt matching and original fast
+conversion >.00906808164|m| are unchanged. kappa_m<=5e-5 remains conditional:
+it leaves 5.34235e-12 affine and .0012069 graph allowance, and costs .0195239
+in the independent-energy coefficient. No remaining coupled entry has
+been shown to fit. The .135973<.1599164 screen keeps its TWO-fast-input
+admitted-family scope only; independent phases, original physical norms
+and nonlinear-neighborhood transfer remain unproved.
+
+RESEARCH DECISION: retain the physical construction and short-travel
+comparison; use REAL finite-jet kernel/commutator estimates and abandon
+the attempted termwise holomorphic moving-comparison shortcut. This is
+evidence from an incomplete attempt, not completion of the requested
+coupled feasibility milestone or an obstruction to the construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete real
+differentiated H^-1 R_s in the repaired weighted spaces, including both
+original rows, common-restored contacts, complete angular/thermal sums,
+original phase/moment rows and finite-domain/bolt reconstruction; propagate
+it to M_graph,4 and M_X,8 with actual column energy norms. Keep the original
+quantum prefactor attached. The signed coupled solve and its certified
+error remain required; another cutoff/contact-only estimate is not that
+calculation.
+
+Verification: 14 supporting 512-bit Arb/exact-integer checks
+on 11 frozen inputs; two successful development snapshots,
+one retained failed development snapshot and one matching acceptance run.
+The first run incorrectly tested containment between two rounded Arb balls
+for an exact decimal equality. Exact rational checks replace that test;
+the failed run and exact source are retained. No scientific formula changed.
+The ordinary argument precedes verification. These checks verify finite-jet
+arithmetic and conditional budgets, not the continuum support proof or
+complete strong return. No Lean run or post-acceptance scientific edit.
+All 18 inherited paths, closed audits and prior frozen evidence are preserved.
+
+Remaining to-do list: numerical complete strong return and coupled signed response; original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: repair strong-return weight endpoint; coupled bound unresolved
 
 2026-10-25 HST, E003/S169.
