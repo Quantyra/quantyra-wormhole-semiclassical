@@ -1,3 +1,90 @@
+# Active checkpoint: short-travel domain method; quantitative coupled return unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary argument and complete transfer bound](current-short-travel-strong-domain.md).
+
+OUTCOME: UNRESOLVED QUANTITATIVE COUPLED RETURN. This turn bounds an
+exact comparison change and supplies a fixed-seed strong-domain argument;
+it does not compute the numerical composite constants, coupled signed
+centers, actual mass or kappa_m. No nonlinear feasibility gate is closed.
+The full stable-wormhole objective and closed audit remain intact.
+
+The first unsupported step in the previous finite-power method was high
+regularity of its GLOBAL geodesic comparison on the trapped C2,1 double.
+The cited simple-manifold high-regularity theorem does not apply. Keep the
+physical Hessian H and replace only H0 by H_s=H0-D_a, transferring the
+entire long-travel operator, including its diagonal row sum, into
+R_s=R+D_a. The smooth travel cutoff is one through a=1/128 and zero from
+2a=1/64; it is neither a physical boundary nor a finite mode selection.
+Original polynomial/contact restorations, both equations, the paired
+mass/log domain, common regulator, full angular and thermal sums, and
+actual boundary/finite-domain returns are retained.
+
+Executed: the complete angular/time spectral transfer bound is
+72pi a^-4 j0/(.99 Fl), numerically 2.156202783669969564785e-18 in the
+original physical form units. The guard 3.2e-18 includes the coarser input
+enclosures. Thus eta_s=.0022000000000000032 and
+q_s=eta_s/(1-eta_s) are valid energy bounds. This is an upper-bound
+expression, not the measured norm, and not a strong-response coefficient.
+
+The ordinary fixed-seed argument combines R+D_a BEFORE differentiating,
+uses the actual one-sided/resolved crossing geometry and contacts, and
+bootstraps with the actual coupled H inverse. It gives finite strong
+composites: four powers for the original graph/phase/bolt VALUE; eight
+for the original physical C5 return. Four powers alone do not supply the
+twelve disk jets needed for five areal output derivatives. This is a
+limitation of that regularity certificate, not proof the four-power map
+is unbounded. All higher contact/kernel and strong inverse constants are
+still unevaluated. No nonlinear-neighborhood transfer is inferred.
+
+Conditional error formula: error_ij <= M_i,p q_s^(N-p) U_j. At N=64 the
+graph factor is below 4.007e-160 and the physical-C5 factor below
+1.696e-149. The latter costs about 4.2314e10 relative to four powers.
+The earlier conditional affine M_graph,4<=6.0612e157 and feedback product
+M_graph,4 U_feedback<=1.5062e156 remain sufficient for the assigned half
+error budgets. These are allowances, NOT computed coefficients. All U_j
+except affine energy <=1.1e-10, numerical application errors and the
+complete signed centers remain uncomputed. No 64-step solve was run.
+
+The exact cut reference mass lift retains its local cancellation,
+transition, original boundary conditions and regular-bolt matching; it is
+not a global fixed-temperature zero mode. Its >.00906808164 original-fast
+basis conversion still forces |m|<2.20553814952e-9 if both graph ceilings
+are 1e-11. Actual m and kappa_m remain unknown. Conditional kappa_m=5e-5
+leaves 5.34235e-12 affine and .0012069 graph feedback, and also incurs an
+independent-energy coefficient .0195239. No other coupled entry has been
+shown to fit. The .135973<.1599164 quantum-fast screen retains only its
+TWO-fast-input admitted-family scope; it does not control independent
+boundary phases or establish the original physical-norm comparisons.
+
+RESEARCH DECISION: retain the physical construction and use the
+short-travel comparison for the strong return. Its complete extra form
+cost is affordable and it removes an unnecessary global-flow regularity
+obligation. This changes the method, not the admission target. The current
+evidence does not yet decide quantitative attainability of the coupled
+estimate, nor establish an obstruction to the construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): quantitatively bound the
+original-norm composite return constants for the differentiated,
+moment-subtracted R_s kernel with the actual coupled H inverse, using
+four powers for graph/phase/value and eight for physical C5, on all input
+columns. The resulting bounds must be tested with their actual energy
+input norms against the residual budgets; signed centers remain required.
+
+Verification: 32 supporting symbolic/512-bit Arb checks,
+27 frozen inputs, two successful development snapshots and one
+acceptance run matching the final development sources, runtime and result.
+The ordinary argument precedes verification. These checks support the
+transfer bound, identities and conditional arithmetic; they do not prove
+the continuum argument or apply the physical Hessian. No failed scientific
+or startup run, no Lean execution and no post-acceptance scientific edit.
+All 18 inherited files, historical evidence and closed audits are preserved.
+
+Remaining to-do list: numerical complete strong return and coupled signed response; original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: coupled return unresolved; conditional error method tested
 
 2026-10-24, E003/S169.
