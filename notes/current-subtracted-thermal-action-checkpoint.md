@@ -1,3 +1,88 @@
+# Active checkpoint: TT fixed-phase estimator fails; use canonical weighting
+
+2026-10-24, E003/S169.
+
+See [the ordinary phase/graph argument](current-weighted-constraint-phase-obstruction.md).
+
+OUTCOME: verified failure of the UNBORDERED TT-weighted estimator in the
+same fixed-leading-phase fast graph, with a quantified explicit-boundary
+alternative. The COMPLETE coupled global return remains UNRESOLVED. This is
+not an obstruction to the paired physical construction or a controlled solution.
+
+Executed on the actual finite seed: the exact constraint-return difference
+K(Wxi)-WKxi has outer profile I_W Psi4, where
+
+  I_W=integral_0^z_h (W-1)Q'xi/z^4 dz,
+  Psi4_S=Q A4/z, Psi4_T=-(z^4/Q+Q'A4)/2,
+  A4=integral_0^z t^4/Q(t)^2 dt.
+
+The regular bolt and outer endpoint terms are retained. An admissible smooth
+interior TT direction with zero outer phase has I_W> .29038048278 before
+arbitrary small scaling. This is a counterexample in the actual paired domain,
+not a replacement domain, chosen physical stress, or finite mode approximation.
+The complete common-restored normal family has B(4)=-24K0, nonzero. Thus the
+induced pure quartic has INFINITE unchanged fixed-phase fast H3 data norm.
+An explicitly bordered graph can retain the term; that map is not proved
+unbounded by this test. The full quantum functional is not shown ill-defined.
+
+Quantified alternative: converting the exact quartic profile to the old bare
+quartic costs >.03525661258 per unit I_W in the original global localization.
+The entire analytic and full-normal quantum tails are bounded. Keeping BOTH
+1e-11 graph ceilings needs abs(I_W)<5.672695e-10. The actual finite-domain
+weak moment estimate gives only abs(I_W)<1.283779e-9, about 2.26308 times too
+loose. This is a known excessive upper allowance, not a measured actual moment.
+The exact local metric return is f=-C z^2, alpha=0; its explicit cut lift
+retains both original reference rows and transition, and is not a zero mode.
+Its full quantum/global boundary column remains UNKNOWN.
+
+Canonical multiplication W(S,T) leaves all original boundary phases and the
+localized fast graph exactly unchanged because W=1 throughout chi's support.
+This removes the particular artificial phase defect from that estimator.
+It changes neither the physical norm nor the construction. The retained full
+canonical quantum FORM bound applies, but the signed two-equation weighted
+interior/phase inverse and original physical-norm comparisons remain unproved.
+Finite-part rows and nonlocal boundary returns cannot be discarded.
+
+The exact cut mass lift, cutoff source, original boundary and regular bolt
+remain. It is not a global fixed-temperature zero mode. Its conversion cost
+>.00906808164 per mass and necessary two-graph mass ceiling 2.205539e-9 remain.
+No kappa_m<=5e-5, actual mass or complete coupled column is certified. The
+conditional remaining affine/graph reserves are still 5.34235e-12 and .0012069
+before other entries and independent energy feedback. The two-fast-input
+screen .135973<.1599164 retains its admitted-family scope; it supplies no
+independent phase variation or nonlinear neighborhood admission.
+
+Nonlinear admission/contraction, exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability remain unproved.
+The closed audit, original admission targets and full objective are preserved.
+
+RESEARCH DECISION: change the auxiliary weighting method to CANONICAL
+multiplication and retain the construction. Keep the unweighted York
+decomposition for original physical-norm comparisons. Do not spend another
+turn optimizing the already sufficient canonical quantum commutator constants.
+The alternative TT-weighted method would need an explicit phase border and
+an actual moment below 5.672695e-10, as well as its full coupled return.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct and bound the actual
+canonical two-equation weighted interior/phase resolvent, including the original
+finite-part rows and all coupled mass, scalar quartic, correlated slow pair
+and fast columns. Test it against the unchanged affine, feedback and physical
+admission inequalities. The present phase test does not execute that inverse.
+
+Verification: 39 supporting symbolic/512-bit interval checks on
+19 frozen inputs. One development and one acceptance run agree
+exactly in results, source hashes and runtime. The successful exploratory source
+and replay output are archived. No failed scientific execution, post-acceptance
+scientific edit or Lean invocation occurred. One wrong-directory read was
+corrected; one slow read-only PowerShell JSON process was stopped and replaced
+by a successful Python read. Neither changed scientific files. These checks
+support the ordinary argument, not the missing full coupled inverse.
+All 18 inherited paths, historical evidence and closed audits are preserved.
+
+Remaining to-do list: canonical coupled global/phase resolvent; actual correction and original physical norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: canonical quantum commutator bounded; strong constrained return open
 
 2026-10-24, E003/S169.
