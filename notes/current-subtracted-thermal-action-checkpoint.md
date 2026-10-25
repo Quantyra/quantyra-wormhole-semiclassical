@@ -1,3 +1,67 @@
+# Active checkpoint: coupled return unresolved; conditional error method tested
+
+2026-10-24, E003/S169.
+
+See [the full-operator tail attempt](current-coupled-return-tail-attempt.md).
+
+OUTCOME: UNRESOLVED COMPLETE COUPLED RETURN. No physical operator
+application, coupled column, actual mass or new feasibility gate was
+computed. This turn does not complete the requested milestone. The full
+stable-wormhole objective, closed audit and original norms are preserved.
+
+The attempted full-operator error transfer retains H=H0+R on the actual
+paired domain and K=H0^-1 R, with the established energy bound
+||K||<=11/4989. Finite telescoping gives u-u_N=(-K)^N u. A bound
+M_i,4=||T_i K^4|| from energy to each ORIGINAL graph/phase/bolt output
+would give error <=M_i,4 q^(N-4) E(u). Its domain inclusion, finiteness
+and numerical value remain UNPROVED. This is the first missing strong
+step in this proposed error method, not a consequence of the form bound.
+
+Executed: exact rational arithmetic of that conditional error identity.
+At N=64, q^60<4.007e-160. Reserving half the conditional post-mass budgets
+for errors would allow M_graph,4<=6.0612e157 for the affine response and
+M_graph,4 U_feedback<=1.5062e156 for the complete feedback. These are
+UNKNOWN-coefficient allowances, not bounds on the actual operators.
+The field iterations and signed centers were NOT computed. Their errors,
+the other half-budgets, all coupled entries and numerical evaluation
+errors still require proof; increasing N cannot cure an unbounded map.
+
+The conditional kappa_m=5e-5 budgets remain 5.34235e-12 affine and .0012069
+graph feedback after its mass allowance. Independent energy differences
+also cost .0195239. The >.00906808164 mass-basis conversion and original
+matching rows remain; an original-norm kappa certificate must already
+include that conversion. A lifted-norm bound cannot silently replace it.
+The .135973<.1599164 fast screen retains its TWO-fast-input admitted-family
+scope. No physical norm comparison or nonlinear neighborhood is certified.
+
+RESEARCH DECISION: retain the construction and sharpen the error method
+to the finite-power strong return while preserving the signed coupled solve
+in the original norms. A coarse finite constant could suffice, but the
+present evidence does not establish that it is attainable. Do not optimize
+the orbit tail or controlled cold/scalar pieces as a substitute.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate and bound the actual
+composed map T(H0^-1 R)^4 on the paired energy domain, with T collecting
+the original fast, phase and regular-bolt outputs. First prove its domain
+inclusion, then test the quantitative allowances with the full feedback
+energy norm. The complete signed trial centers remain a subsequent required
+test; this turn has not performed the decisive composed-map calculation.
+
+Verification: 15 supporting exact-rational checks on
+14 frozen inputs, with one matching development and acceptance
+run. These verify conditional arithmetic and a finite polynomial identity,
+not a continuum domain theorem or physical operator evaluation. A runtime
+provenance startup failure (attempting to hash a member inside python313.zip
+as a file) was retained with its exact source snapshots before correction;
+no scientific calculation ran in that attempt. One initial interactive
+threshold exploration has conversation output only, disclosed in evidence.
+No Lean run or post-acceptance scientific edit. All 18 inherited files and
+closed audits remain unchanged.
+
+Remaining to-do list: actual finite-power strong return and coupled signed response; original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: global flow implemented; coupled return unresolved
 
 2026-10-24, E003/S169.

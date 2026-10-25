@@ -1,0 +1,274 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-25T09:29:48.411132+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-coupled-return-tail-attempt.md": "d899f81cf5c121009f8946aaaab0506d2d03a85dcc9006267d9edcdfc821811f",
+        "checks/current_coupled_return_tail_attempt.py": "7c7f93844b2a31f0f8333ef44f14abbeab6bd56f4f1eaf8d40c5174027b3e41b",
+        "evidence/current-coupled-return-tail-attempt-startup-failure.json": "63d7ac6038ef0a857ec3f9bf2c1319d60bb887240f2d9dbacf37325f9ef4ade4",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/current-geodesic-flow-multiplier.md": "ede465735c5cf56df6fb0fd44823838926be76e7a5a39ed521a7a49d3ef8eea4",
+        "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+        "notes/current-coupled-schur-graph-attempt.md": "fd90bda65dbab61030787af8927817539fafa952749da64c99916362fb9be6ec",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-implicit-phase-graph-domain.md": "0a0620b6d00fb8076f1faa48240e82cb239caab02eaa78bbfe6acddf07972fbc",
+        "notes/current-complete-strong-response-attempt.md": "75d4880bd5060b162c8ba6e303a7523ef8e850678f342e006ef39a86e6ff5051",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+        "evidence/current-geodesic-flow-multiplier.json": "f8337c3578f4b647dd281685188892a3cf164fb701b3e8e2b8ca5d4b790897f7"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-coupled-return-tail-attempt.md": "# Complete coupled return: finite-power error transfer attempt\n\n2026-10-24, E003/S169. Ordinary argument before frozen verification.\n\nOUTCOME: UNRESOLVED ESTIMATE. The complete signed coupled return has NOT\nbeen executed. This attempt gives an exact full-operator error identity and\nquantifies a different sufficient strong estimate. It does not bound that\nestimate, compute a response column, or close a feasibility requirement.\nThe full stable-wormhole objective and closed audit remain unchanged.\n\n## 1. Retain the actual problem and identify the unsupported step\n\nUse the exact reference lift\n\n    J(z)=integral_0^z t^3/Q(t)^2 dt,\n    n_m=-2 beta QJ/z, b_m=beta z^3/Q+beta Q'J.\n\nSubstitution using J'=z^3/Q^2 gives the areal perturbations f=2xz,\nalpha=0. Thus (rf)'=alpha'=0 and BOTH local reference constraints cancel.\nFor the original chi_m, one through .1 and zero by .2, keep instead\n\n    f_cut=2xz chi_m-2F n_m Dchi_m, alpha_cut=n_m Dchi_m.\n\nThese transition terms, the original outer fields, fixed period and regular\nbolt are retained. The cut lift has zero bolt displacement and reference\nnet mass -xB. It is not a global fixed-temperature quantum zero mode.\nThe original matching equations, with their Fl/G normalization, are\n\n    s_R=[(G/Fl)rho(R)/R-kappa alpha(R)]/[F''(R)/2+kappa/R],\n    delta_mu_infinity=kappa R s_R+(G/Fl)integral_R^infinity rho dr.\n\nThe scalar quartic and the correlated exact slow pair retain their own\ncutoff terms. The undifferentiated scalar matching coefficient is\n20 beta Fstar=3.33333329399556...; its other finite parts remain UNKNOWN.\nThe slow root remains implicit, not rounded to four. Differentiating away\nthat original equation would discard a necessary matching condition.\n\nLet H be BOTH original equations on the actual paired mass/log domain,\nwith the common regulator removed in its established fixed-seed form scope.\nH includes all angular and thermal contributions, coincidence contacts and\nfinite-domain returns. H0 is the established GLOBAL geodesic comparison,\nwith all the same local and LLL rows, original fourth contact, boundary\ncompletion and regular bolt. In a flow-multiplier implementation its local\ncontact is Ha2-Q4geo, since the multiplier already includes Q4geo. No\nsmooth physical double, finite selection of modes or new boundary wall is\nsubstituted. The comparison includes crossing AND trapped trajectories.\n\nThe first unsupported step remains a numerical return from the form inverse\nto the original strong graph, phase and bolt outputs. In particular the\nknown ||H-H0||_(V->V*)<.0022 is not a differentiated-kernel bound. The\ngain-two separated kernel envelope and fixed-seed regularity assertions do\nnot give numerical bounds for the required conormal derivatives, original\nfinite-part rows or independent phase returns. The global H0 solve and\nthe full signed affine source application are also not implemented.\n\nThis turn tried to avoid demanding a small STRONG norm of H-H0. The\nfollowing exact calculation shows what would suffice instead, and exactly\nwhere its application stops. It is not a completed global computation.\n\n## 2. An exact full-operator remainder identity\n\nUse the retained positive-diagonal form space V and its actual fixed-seed\ninverse bound ||H^-1||_(V*->V)<=1. Set R=H-H0 and eta=.0022. The Banach\nperturbation identity, without requiring positive H, gives\n\n    ||H0^-1||<=1/(1-eta), K=H0^-1 R,\n    ||K||_(V->V)<=q=eta/(1-eta)=11/4989<.002205.\n\nFor an actual source f, write u=H^-1 f, w=H0^-1 f and\n\n    u_N=sum_(j=0)^(N-1) (-K)^j w.\n\nSince w=(I+K)u, finite telescoping gives EXACTLY\n\n    u-u_N=(-K)^N u.                                      (1)\n\nThis is an operator identity on the entire coupled form space. It neither\ncommutes R with H0^-1 nor replaces the shape Schur block by its normal\nsymbol. In particular it retains the scalar/shape couplings and every\nglobal return each time K is applied. The series converges in V, because\nq<1. No matrix entries or u_N have been numerically evaluated here.\n\nLet E be the same scaled energy norm used in the established bound\nE(u_aff)<1.1e-10. Multiplying V's norm by its fixed scalar conversion does\nnot change ||K||. It does NOT change an original output norm. Let T_i be\none specified ORIGINAL output: fast graph, mass, scalar quartic, slow\ncoefficient, interior/bolt norm, or physical X return. For a positive\ninteger p, the missing hypothesis is\n\n    K^p(V) subset Dom(T_i),\n    M_i,p=||T_i K^p||_(E->Z_i)<infinity.                 (2)\n\nFor an affine graph output, subtract the SAME prescribed forced profile\nfrom both responses. T_i in (2)-(3) acts linearly on their difference;\nthe known affine subtraction is not treated as a linear operator.\n\nIf (2) has been proved with a numerical constant, (1), for N>=p, implies\n\n    ||T_i(u-u_N)|| <= M_i,p q^(N-p) E(u).               (3)\n\nUnlike a bound on T_i:V->Z_i, (2) is not contradicted by the known\ndiscontinuous mass trace or the energy-to-fast-graph counterexample.\nHowever that observation DOES NOT PROVE (2). Even its finiteness is not\nestablished by this attempt. Choosing p=4 below is a candidate test, not\na proved smoothing order. A gain-two symbol or a finite kernel envelope\nalone cannot justify four strong compositions on this paired domain.\n\nTo establish (2), the complete R must be applied to the actual H0 inverse,\nwith its local contacts and finite parts, and the repeated response must\nbe shown to have the exact mass/quartic/slow expansion plus the original\nweight-4.005 fast remainder and regular-bolt jets. Numerical derivative\nand trace bounds must accompany that statement. The current form-only\nestimates stop before this argument; no smooth-boundary theorem is used\nto fill it. Nor is the small form error differentiated with respect to\nthe metric to infer a nonlinear-neighborhood estimate.\n\n## 3. All columns and the original basis must enter one certificate\n\nApply (1) to the full affine source and all input operators F_j, including\nmass, scalar quartic, correlated and independent slow phase, fast and\ninterior inputs. Let U_j be a PROVED energy norm of H^-1 F_j in its original\ninput units. These U_j are unknown except for the retained affine bound;\nno independent phase or feedback input is normalized to have U_j=1.\nThen the complete error entry is\n\n    e_ij <= M_i,p q^(N-p) U_j.                         (4)\n\nThe computed signed returns T_i u_N must still be combined before taking\ntheir norm, including the original finite-part matching rows. Equation\n(4) neither bounds their centers nor makes the coupled feedback small.\nAny certified errors in evaluating H0^-1, R, the source and T_i must be\nadded to (4); exact-operator truncation is not numerical roundoff control.\n\nThe fast output is the ORIGINAL one. For the existing localization,\n\n    g_old=g_lifted+m d_chi, ||d_chi||H3>.00906808164.\n\nIt must be evaluated as that signed combined output. A lower bound for\n||d_chi|| is not an upper bound permitting a conversion certificate.\nKeeping both 1e-11 graph ceilings requires |m|<2.20553814952e-9.\nThe 4.2953e-8 mass allowance is not the actual mass. The proposed kappa_m\nmust refer to the original, post-elimination output; adding a second\nconversion cost AFTER a certificate already in that norm would double\ncount it. Conversely a small lifted-column bound is not such a certificate.\n\nThe same requirements for the COMPLETE remaining return are\n\n    S_N+e_aff <=7.49e-12,\n    eta_N+e_fb <=.00368.                              (5)\n\nS_N and eta_N denote the appropriate full trial source and feedback bounds,\nincluding all coupled entries in the unchanged input/output norms. Their\nvalues are UNKNOWN. If kappa_m<=5e-5 were certified in this system, its\nexisting fixed-source allowance would spend 2.14765e-12 and its graph\nslope would spend .0024731, leaving 5.34235e-12 and .0012069. Differences\nalso carry 390.478 E_phys, spending .0195239 per unit energy at that kappa.\nEven with every other loss zero, absorbing it by E_phys<=gamma_E E_graph\nrequires gamma_E<.06181654280138. This restricted-family comparison is\nunknown; the outer-data-only version is false. The scalar/slow/interior\nentries and independent phase variations are not covered by these numbers.\n\n## 4. Executed arithmetic; conditional strong thresholds\n\nExact rational arithmetic evaluates (3)-(5), with p=4. For illustration\nreserve HALF the conditional post-mass budgets for the remaining error:\nepsilon_aff=2.671175e-12 and epsilon_fb=.00060345. The other halves must\ncover the actual remaining centers; this is a proposed allocation only.\n\nAt N=64, the exact-operator factor is\n\n    q^60=4.00636832073404...e-160.\n\nThus sufficient rounded-down conditions for THESE error allocations are\n\n    M_graph,4 <=6.0612e157              (affine E<=1.1e-10),\n    M_graph,4 U_feedback <=1.5062e156   (complete feedback).\n\nThese are allowances for UNKNOWN quantities, not measured constants.\nThe feedback energy norm U_feedback and every other output row remain\nnecessary. With N=32 the corresponding allowances are only 5.8978e72 and\n1.4656e71; with N=128 they are 6.4016e327 and 1.5908e326. The exact arithmetic\nand full table are retained in the evidence. These large conditional\nallowances arise from actual repeated application of the same complete\noperator, not a change of units. No iterations have been run on fields.\n\nThe thresholds make a coarse, explicit finite strong bound potentially\nuseful, without requiring a small strong norm. They do not establish its\nattainability: endpoint traces or regularity could fail (2), and a large\ntrial center would still fail (5). In particular increasing N cannot cure\nan unbounded M_i,p, a wrong phase exponent or a nonconforming domain.\n\n## 5. Scope and decision boundary\n\nThe admitted-family TWO-fast-input screen remains\n.028913+1e-11(1.0706e10)=.135973<.1599164, with .0239434 reserve.\nIt is not an independent boundary-phase estimate or a norm comparison.\nStill required in the original physical problem are\n\n    E_center+1e-8 alpha<=1e-11,\n    R_X alpha*.028913+Z0_other<=.25,\n    R_X alpha^2*1.0706e10+Z2_other<=5e7,\n    Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.\n\nNo new requirement here is closed. The only newly executed numerical\ntest is the exact arithmetic of the conditional full-operator tail.\nThe complete strong estimate, all physical coupled columns, signed center\nand actual correction remain uncomputed. This is neither an excessive\nmeasured kappa_m nor an obstruction to the construction. It does not\ncomplete the requested coupled-return milestone.\n\nRESEARCH DECISION: retain the construction; sharpen the error method to\nthe finite-power strong return (2)-(4), while keeping the signed coupled\nsolve in the original norms. This is worth testing because a coarse finite\nbound could suffice; the evidence does not yet justify claiming success.\nDo not spend another milestone on the orbit tail, cold/scalar optimization\nor further arithmetic of this table.\n\nONE DECISIVE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate and bound\nthe actual composed return T K^4, with T collecting the original fast,\nphase and regular-bolt outputs, on the paired energy domain. Retain the\ncomplete common-restored R and actual H0 inverse and test the bounds in\nsection 4 with the full feedback energy norm. This calculation must first\nprove the domain inclusion in (2); if it fails, reject this error method\nbefore running a numerical Neumann solve. A subsequent coupled trial\ncenter still has to pass (5). The present attempt has NOT executed this\ndecisive calculation, so quantitative feasibility remains undecided.\n\nRemaining to-do list: actual finite-power strong return and coupled signed\nresponse; original physical-norm comparisons and nonlinear admission/\ncontraction; exact compatibility; physical matching/causal realization;\nsemiclassical validity/noise; all-sector stability; charge/return, opening,\ntransport, preparation, separate creation and the full stable-wormhole\nobjective.\n",
+        "checks/current_coupled_return_tail_attempt.py": "\"\"\"Exact conditional tail arithmetic. Does NOT apply H, H0, R or T to fields.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom fractions import Fraction as F\nfrom decimal import Decimal, localcontext, ROUND_FLOOR, ROUND_CEILING\nfrom datetime import datetime, timezone\nimport fractions\nimport json\nimport sys\nimport traceback\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-coupled-return-tail-attempt'\nOWN = ['notes/'+STEM+'.md', 'checks/current_coupled_return_tail_attempt.py']\nINPUTS = OWN + [\n    'evidence/current-coupled-return-tail-attempt-startup-failure.json',\n    'notes/current-geodesic-two-sided-remainder.md',\n    'notes/current-geodesic-flow-multiplier.md',\n    'notes/current-global-geodesic-return.md',\n    'notes/current-coupled-schur-graph-attempt.md',\n    'notes/current-coupled-global-return-attempt.md',\n    'notes/current-global-return-energy-attempt.md',\n    'notes/current-implicit-phase-graph-domain.md',\n    'notes/current-complete-strong-response-attempt.md',\n    'notes/current-controlled-solution-audit-closeout.md',\n    'evidence/current-geodesic-two-sided-remainder.json',\n    'evidence/current-geodesic-flow-multiplier.json']\nCHECKS = []\n\n\ndef check(name, condition):\n    CHECKS.append(dict(name=name, passed=bool(condition)))\n    if not condition:\n        raise AssertionError(name)\n\n\ndef enclosure(value):\n    ends = []\n    for rounding in [ROUND_FLOOR, ROUND_CEILING]:\n        with localcontext() as ctx:\n            ctx.prec = 24\n            ctx.rounding = rounding\n            ends.append(str(Decimal(value.numerator)/Decimal(value.denominator)))\n    if not F(ends[0]) <= value <= F(ends[1]):\n        raise ArithmeticError('Outward decimal enclosure failed')\n    return dict(lower=ends[0], upper=ends[1])\n\n\ndef execute():\n    eta = F('.0022')\n    q = eta/(1-eta)\n    check('exact_full_form_ratio', q == F(11, 4989) and q < F('.002205'))\n    # Formal polynomial identity sum (-k)^j(1+k)=1-(-k)^N,\n    # checked coefficientwise, not by a finite scalar/matrix sample.\n    for N in [16, 32, 64, 128, 256]:\n        coeff = [0]*(N+1)\n        for j in range(N):\n            coeff[j] += (-1)**j\n            coeff[j+1] += (-1)**j\n        check('formal_telescoping_'+str(N), coeff == [1]+[0]*(N-1)+[-(-1)**N])\n    km, am, cg, ce = map(F, ['5e-5', '4.2953e-8', '49.462', '390.478'])\n    saff, sfb = F('7.49e-12'), F('.00368')\n    raff, rfb = saff-km*am, sfb-km*cg\n    check('conditional_reserves', raff == F('5.34235e-12') and rfb == F('.0012069'))\n    check('independent_energy_debit', km*ce == F('.0195239'))\n    ratio = rfb/(km*ce)\n    check('restricted_family_ratio', F('.06181654280138') < ratio < F('.06181654280139'))\n    daff, dfb, Uaff = raff/2, rfb/2, F('1.1e-10')\n    rows = {}\n    for N in [16, 32, 64, 128, 256]:\n        tail = q**(N-4)\n        rows[str(N)] = dict(q_N_minus_4=enclosure(tail),\n            affine_M_graph_4_ceiling=enclosure(daff/(Uaff*tail)),\n            feedback_M_graph_4_times_U_feedback_ceiling=enclosure(dfb/tail),\n            exact_operator_affine_energy_tail=enclosure(Uaff*q**N))\n    check('64_step_rounded_down_affine_allowance', F('6.0612e157')*q**60*Uaff < daff)\n    check('64_step_rounded_down_feedback_product', F('1.5062e156')*q**60 < dfb)\n    check('32_step_allowances', F('5.8978e72')*q**28*Uaff < daff and F('1.4656e71')*q**28 < dfb)\n    check('128_step_allowances', F('6.4016e327')*q**124*Uaff < daff and F('1.5908e326')*q**124 < dfb)\n    screen = F('.028913')+F('1e-11')*F('1.0706e10')\n    check('existing_fast_screen_unchanged', screen == F('.135973') and F('.1599164')-screen == F('.0239434'))\n    return dict(outcome='unresolved_complete_coupled_return',\n        arithmetic='exact rational; outward decimal endpoints checked against exact fractions',\n        q=enclosure(q), candidate_power=4,\n        source_budget=enclosure(saff), feedback_budget=enclosure(sfb),\n        conditional_mass_debit=enclosure(km*am), conditional_mass_feedback=enclosure(km*cg),\n        residual_affine_budget=enclosure(raff), residual_feedback_budget=enclosure(rfb),\n        independent_energy_debit=enclosure(km*ce), restricted_energy_ratio=enclosure(ratio),\n        proposed_error_affine_allocation=enclosure(daff), proposed_error_feedback_allocation=enclosure(dfb),\n        conditional_tables=rows,\n        physical_operator_applications_executed=0,\n        strong_power_domain_inclusion_proved=False, M_graph_4=None, U_feedback=None,\n        complete_signed_center=None, kappa_mass=None, other_coupled_columns=None,\n        actual_mass=None, original_physical_norm_comparisons_closed=False,\n        nonlinear_admission=False, exact_compatibility=False, physical_matching=False,\n        validity_noise=False, all_sector_stability=False,\n        new_feasibility_requirement_closed=False, actual_controlled_solution=False,\n        construction_obstruction=False, decisive_next_calculation_executed=False,\n        provenance_limit='One prior interactive exact-rational threshold exploration; its stdout is retained in the conversation, not a separate immutable source artifact. No exploratory scientific failure.')\n\n\nif __name__ == '__main__':\n    mode = 'acceptance' if '--acceptance' in sys.argv else 'development'\n    output = ROOT/'evidence'/(STEM+('' if mode == 'acceptance' else '-development')+'.json')\n    digest = lambda p: sha256(p.read_bytes()).hexdigest()\n    hashes = {p: digest(ROOT/p) for p in INPUTS}\n    module_path = Path(fractions.__file__)\n    # This Python distribution stores its stdlib inside python313.zip.\n    module_artifact = (module_path if module_path.is_file() else\n                       next(p for p in module_path.parents if p.is_file()))\n    run = dict(started_utc=datetime.now(timezone.utc).isoformat(), mode=mode,\n        input_sha256_before=hashes,\n        frozen_sources_utf8={p: (ROOT/p).read_text(encoding='utf-8') for p in OWN},\n        runtime=dict(python=sys.version, python_executable_sha256=digest(Path(sys.executable)),\n                     fractions_artifact=str(module_artifact),\n                     fractions_artifact_sha256=digest(module_artifact)))\n    try:\n        run['result'] = execute()\n        run['input_sha256_after'] = {p: digest(ROOT/p) for p in INPUTS}\n        check('frozen_inputs_unchanged', hashes == run['input_sha256_after'])\n        run['status'] = 'passed'\n    except Exception:\n        run['status'] = 'failed'\n        run['traceback'] = traceback.format_exc()\n    run['checks'] = CHECKS\n    run['finished_utc'] = datetime.now(timezone.utc).isoformat()\n    ledger = json.loads(output.read_bytes()) if output.exists() else {'runs': []}\n    ledger['runs'].append(run)\n    output.write_bytes((json.dumps(ledger, indent=2)+'\\n').encode())\n    log = dict(mode=mode, status=run['status'], checks=len(CHECKS),\n               result=run.get('result'), traceback=run.get('traceback'))\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:\n        f.write((json.dumps(log, indent=2)+'\\n').encode())\n    print(json.dumps(log, indent=2))\n    if run['status'] != 'passed':\n        raise SystemExit(1)\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "python_executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "fractions_artifact": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python313.zip",
+        "fractions_artifact_sha256": "56ac04066d302e9ffe247af4f3333cfe55044fba163e5bcc5ef8698d9c54f9d5"
+      },
+      "result": {
+        "outcome": "unresolved_complete_coupled_return",
+        "arithmetic": "exact rational; outward decimal endpoints checked against exact fractions",
+        "q": {
+          "lower": "0.00220485067147724994988975",
+          "upper": "0.00220485067147724994988976"
+        },
+        "candidate_power": 4,
+        "source_budget": {
+          "lower": "7.49E-12",
+          "upper": "7.49E-12"
+        },
+        "feedback_budget": {
+          "lower": "0.00368",
+          "upper": "0.00368"
+        },
+        "conditional_mass_debit": {
+          "lower": "2.14765E-12",
+          "upper": "2.14765E-12"
+        },
+        "conditional_mass_feedback": {
+          "lower": "0.0024731",
+          "upper": "0.0024731"
+        },
+        "residual_affine_budget": {
+          "lower": "5.34235E-12",
+          "upper": "5.34235E-12"
+        },
+        "residual_feedback_budget": {
+          "lower": "0.0012069",
+          "upper": "0.0012069"
+        },
+        "independent_energy_debit": {
+          "lower": "0.0195239",
+          "upper": "0.0195239"
+        },
+        "restricted_energy_ratio": {
+          "lower": "0.0618165428013870179625996",
+          "upper": "0.0618165428013870179625997"
+        },
+        "proposed_error_affine_allocation": {
+          "lower": "2.671175E-12",
+          "upper": "2.671175E-12"
+        },
+        "proposed_error_feedback_allocation": {
+          "lower": "0.00060345",
+          "upper": "0.00060345"
+        },
+        "conditional_tables": {
+          "16": {
+            "q_N_minus_4": {
+              "lower": "1.31992779594097293927768E-32",
+              "upper": "1.31992779594097293927769E-32"
+            },
+            "affine_M_graph_4_ceiling": {
+              "lower": "1.83975283841927993871606E+30",
+              "upper": "1.83975283841927993871607E+30"
+            },
+            "feedback_M_graph_4_times_U_feedback_ceiling": {
+              "lower": "4.57184098899744841472398E+28",
+              "upper": "4.57184098899744841472399E+28"
+            },
+            "exact_operator_affine_energy_tail": {
+              "lower": "3.43130706651944365540022E-53",
+              "upper": "3.43130706651944365540023E-53"
+            }
+          },
+          "32": {
+            "q_N_minus_4": {
+              "lower": "4.11734324864335880422386E-75",
+              "upper": "4.11734324864335880422387E-75"
+            },
+            "affine_M_graph_4_ceiling": {
+              "lower": "5.89783450746068746339818E+72",
+              "upper": "5.89783450746068746339819E+72"
+            },
+            "feedback_M_graph_4_times_U_feedback_ceiling": {
+              "lower": "1.46562956634434922263288E+71",
+              "upper": "1.46562956634434922263289E+71"
+            },
+            "exact_operator_affine_energy_tail": {
+              "lower": "1.07035165315875179332701E-95",
+              "upper": "1.07035165315875179332702E-95"
+            }
+          },
+          "64": {
+            "q_N_minus_4": {
+              "lower": "4.00636832073404066185283E-160",
+              "upper": "4.00636832073404066185284E-160"
+            },
+            "affine_M_graph_4_ceiling": {
+              "lower": "6.06120235257349527029604E+157",
+              "upper": "6.06120235257349527029605E+157"
+            },
+            "feedback_M_graph_4_times_U_feedback_ceiling": {
+              "lower": "1.50622696589572876840572E+156",
+              "upper": "1.50622696589572876840573E+156"
+            },
+            "exact_operator_affine_energy_tail": {
+              "lower": "1.04150241947242990712160E-180",
+              "upper": "1.04150241947242990712161E-180"
+            }
+          },
+          "128": {
+            "q_N_minus_4": {
+              "lower": "3.79331118122018128965764E-330",
+              "upper": "3.79331118122018128965765E-330"
+            },
+            "affine_M_graph_4_ceiling": {
+              "lower": "6.40163907752433078362806E+327",
+              "upper": "6.40163907752433078362807E+327"
+            },
+            "feedback_M_graph_4_times_U_feedback_ceiling": {
+              "lower": "1.59082651322555173379445E+326",
+              "upper": "1.59082651322555173379446E+326"
+            },
+            "exact_operator_affine_energy_tail": {
+              "lower": "9.86115717969932130339439E-351",
+              "upper": "9.86115717969932130339440E-351"
+            }
+          },
+          "256": {
+            "q_N_minus_4": {
+              "lower": "3.40058525359300945669276E-670",
+              "upper": "3.40058525359300945669277E-670"
+            },
+            "affine_M_graph_4_ceiling": {
+              "lower": "7.14094994832186318957913E+667",
+              "upper": "7.14094994832186318957914E+667"
+            },
+            "feedback_M_graph_4_times_U_feedback_ceiling": {
+              "lower": "1.77454748226765793178158E+666",
+              "upper": "1.77454748226765793178159E+666"
+            },
+            "exact_operator_affine_energy_tail": {
+              "lower": "8.84022008388504296584360E-691",
+              "upper": "8.84022008388504296584361E-691"
+            }
+          }
+        },
+        "physical_operator_applications_executed": 0,
+        "strong_power_domain_inclusion_proved": false,
+        "M_graph_4": null,
+        "U_feedback": null,
+        "complete_signed_center": null,
+        "kappa_mass": null,
+        "other_coupled_columns": null,
+        "actual_mass": null,
+        "original_physical_norm_comparisons_closed": false,
+        "nonlinear_admission": false,
+        "exact_compatibility": false,
+        "physical_matching": false,
+        "validity_noise": false,
+        "all_sector_stability": false,
+        "new_feasibility_requirement_closed": false,
+        "actual_controlled_solution": false,
+        "construction_obstruction": false,
+        "decisive_next_calculation_executed": false,
+        "provenance_limit": "One prior interactive exact-rational threshold exploration; its stdout is retained in the conversation, not a separate immutable source artifact. No exploratory scientific failure."
+      },
+      "input_sha256_after": {
+        "notes/current-coupled-return-tail-attempt.md": "d899f81cf5c121009f8946aaaab0506d2d03a85dcc9006267d9edcdfc821811f",
+        "checks/current_coupled_return_tail_attempt.py": "7c7f93844b2a31f0f8333ef44f14abbeab6bd56f4f1eaf8d40c5174027b3e41b",
+        "evidence/current-coupled-return-tail-attempt-startup-failure.json": "63d7ac6038ef0a857ec3f9bf2c1319d60bb887240f2d9dbacf37325f9ef4ade4",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/current-geodesic-flow-multiplier.md": "ede465735c5cf56df6fb0fd44823838926be76e7a5a39ed521a7a49d3ef8eea4",
+        "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+        "notes/current-coupled-schur-graph-attempt.md": "fd90bda65dbab61030787af8927817539fafa952749da64c99916362fb9be6ec",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/current-global-return-energy-attempt.md": "c08c47ca234c0db12e48d4561213113b24c8fc59684be89e71a4e3f72338204b",
+        "notes/current-implicit-phase-graph-domain.md": "0a0620b6d00fb8076f1faa48240e82cb239caab02eaa78bbfe6acddf07972fbc",
+        "notes/current-complete-strong-response-attempt.md": "75d4880bd5060b162c8ba6e303a7523ef8e850678f342e006ef39a86e6ff5051",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+        "evidence/current-geodesic-flow-multiplier.json": "f8337c3578f4b647dd281685188892a3cf164fb701b3e8e2b8ca5d4b790897f7"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "exact_full_form_ratio",
+          "passed": true
+        },
+        {
+          "name": "formal_telescoping_16",
+          "passed": true
+        },
+        {
+          "name": "formal_telescoping_32",
+          "passed": true
+        },
+        {
+          "name": "formal_telescoping_64",
+          "passed": true
+        },
+        {
+          "name": "formal_telescoping_128",
+          "passed": true
+        },
+        {
+          "name": "formal_telescoping_256",
+          "passed": true
+        },
+        {
+          "name": "conditional_reserves",
+          "passed": true
+        },
+        {
+          "name": "independent_energy_debit",
+          "passed": true
+        },
+        {
+          "name": "restricted_family_ratio",
+          "passed": true
+        },
+        {
+          "name": "64_step_rounded_down_affine_allowance",
+          "passed": true
+        },
+        {
+          "name": "64_step_rounded_down_feedback_product",
+          "passed": true
+        },
+        {
+          "name": "32_step_allowances",
+          "passed": true
+        },
+        {
+          "name": "128_step_allowances",
+          "passed": true
+        },
+        {
+          "name": "existing_fast_screen_unchanged",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-25T09:29:48.431093+00:00"
+    }
+  ]
+}
