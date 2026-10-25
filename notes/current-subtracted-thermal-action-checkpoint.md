@@ -1,3 +1,74 @@
+# Active checkpoint: canonical quantum commutator bounded; strong constrained return open
+
+2026-10-24, E003/S169.
+
+See [the ordinary commutator argument](current-restored-weight-commutator.md).
+
+OUTCOME: the complete coupled global return remains UNRESOLVED. The
+fixed-seed canonical quantum commutator now closes its proposed FORM sub-budget.
+This includes the actual paired mass/log realization, common restoration,
+complete angular sum, thermal and finite-domain returns, LLL and Weyl allocations.
+It is not a strong constrained return or a nonlinear-neighborhood theorem.
+
+The previous blind gluing certificate is replaced by the actual two-buffer
+resolvent calculation. Keeping the second weight difference before summation
+gives K_glue<3.166e21 C, costing <1.647e-7 E0 in the retained conversion.
+The entire angular tail is bounded analytically. The common-restored zero and
+second contacts and gain-two remainder are bounded together, before removing
+the regulator. The full canonical quantum commutator satisfies
+
+  abs(c_W[Gamma_q'';(S,T)]) <=(pi/20000) C J2[T]
+     +1e19 C(J1[S]+J1[T])+4e21 C(J0[S]+J0[T]).
+
+For an unweighted genuine TT tangent returned to this canonical chart, the
+lower-order cost is <2.752e-7 E0. The fourth coefficient fits the proposed
+1/(200pi) reserve even after conversion to localized fourth norms.
+This is a bound on a complete quantum form ingredient, not a numerical
+measurement of the actual correction or a global mass column.
+
+The exact constraint correction is also treated without changing the boundary:
+norm(W b[xi])<=2 norm(Wxi), norm(b[Wxi]-Wb[xi])<=4 norm(Wxi), and
+norm(W eta)<42.427 lambda^(-1/2) norm(Wxi), all in the stated physical L2
+measure. These close weak return bounds. The induced quartic phase tail remains.
+
+The precise remaining gap is K(Wxi)-WKxi. Its delta b and delta J equations,
+regular-bolt conditions and original outer rows are displayed in the ordinary
+argument. Their strong quantum graph/phase norms and cross terms are UNKNOWN.
+They cannot be omitted by identifying canonical multiplication with TT weighting.
+The signed gravitational/scalar/interior resolvent remains to be controlled.
+
+No kappa_m<=5e-5, actual mass, or complete coupled column is certified. The
+conditional affine/graph reserves remain 5.34235e-12 and .0012069 before other
+entries and the independent energy debit. The original mass conversion,
+both original equations and exact cut reference lift are retained. The
+two-fast-input screen .135973<.1599164 keeps its proved scope. Nonlinear
+admission/contraction, exact compatibility, physical matching, validity/noise
+and all-sector stability remain unproved. The full objective and closed audit
+are preserved; no construction obstruction is established.
+
+RESEARCH DECISION: continue the signed weighted method and retain the
+construction. The complete seed canonical quantum commutator is quantitatively
+attainable; do not spend another turn optimizing these sufficient constants.
+
+SINGLE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the full constraint-return
+correction K(Wxi)-WKxi in the ORIGINAL strong quantum graph and phase norms,
+including its cross terms in the bordered interior resolvent. Test the resulting
+actual coupled columns against the unchanged source/feedback and physical-norm
+requirements. Weak L2 bounds or another canonical quantum calculation do not
+substitute for this constrained return.
+
+Verification: 34 supporting symbolic/512-bit interval checks on
+20 frozen inputs; one development and one acceptance run agree
+exactly in results, source hashes and runtime. The successful exploratory source
+and replay output are archived. No failed scientific execution, post-acceptance
+scientific edit or Lean invocation occurred. These checks support the ordinary
+continuum argument; they do not prove the remaining constrained return.
+All 18 inherited paths, historical evidence and closed audits are preserved.
+
+Remaining to-do list: strong constrained global/phase return; actual correction and original physical norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: constrained weighted global return remains unresolved
 
 2026-10-24, E003/S169.
