@@ -1,0 +1,23 @@
+{
+  "description": "Archived unchanged replay of the successful exploratory calculation. Initial invocation printed these values to the session; its raw stdout was not saved separately.",
+  "source_utf8": "from pathlib import Path\nimport sys,json\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nsys.path.insert(0,'C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical/checks')\nimport current_physical_york_dual_assembly as y\nfrom flint import arb as a,ctx\nctx.prec=512\np,h,zh,env=y.actual_parameters()\nbeta=p['beta'];Fl=1-384*a.pi()*a('1e22')*p['g']\ngram=4*(3-a(5).sqrt())\nB2=(16/(a('23.99')*beta)+1225/(a('.99')*Fl*beta))/gram\ncmin=((h+a('.8'))/(h+1-zh))**a('1.4')\ncmax=((h+a('.9'))/(h+1-zh))**a('1.4')\nout=dict(canonical_gram_min=gram.str(45),full_unweighted_L2_inverse_upper=B2.str(45),full_weighted_L2_certificate_lower=(B2*cmin).str(45),full_weighted_L2_certificate_upper=(B2*cmax).str(45),conditional_affine_reserve=(a('7.49e-12')-a('5e-5')*a('4.2953e-8')).str(45),conditional_feedback_reserve=(a('.00368')-a('5e-5')*a('49.462')).str(45),mass_only_energy_ratio_ceiling=((a('.00368')-a('5e-5')*a('49.462'))/(a('5e-5')*a('390.478'))).str(45),original_mass_necessary_ceiling=(2*a('1e-11')/a('.00906808164')).str(45),source_mass_allowance_ratio=(a('4.2953e-8')/(2*a('1e-11')/a('.00906808164'))).str(45))\nprint(json.dumps(out,indent=2))\n",
+  "source_sha256": "ebb0087101186f8d4f0a17c925870c68b811e10c91ffea82f7df49df945fbbf2",
+  "command": [
+    "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+    "C:\\Users\\dfred\\AppData\\Local\\Temp\\s169di-explore.py"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"canonical_gram_min\": \"[3.05572809000084121436330532507489505823752656 +/- 1.56e-45]\",\n  \"full_unweighted_L2_inverse_upper\": \"[2430.92446724139118175108425452 +/- 5.58e-27]\",\n  \"full_weighted_L2_certificate_lower\": \"[2.774017579105905198778e+49 +/- 4.92e+27]\",\n  \"full_weighted_L2_certificate_upper\": \"[3.271317826885241293338e+49 +/- 7.44e+27]\",\n  \"conditional_affine_reserve\": \"[5.34235000000000000000000000000000000000000000e-12 +/- 1e-61]\",\n  \"conditional_feedback_reserve\": \"[0.00120690000000000000000000000000000000000000000 +/- 1e-52]\",\n  \"mass_only_energy_ratio_ceiling\": \"[0.0618165428013870179625996855136524977079374510 +/- 2.16e-47]\",\n  \"original_mass_necessary_ceiling\": \"[2.20553814952199746626895167653122276036323819e-9 +/- 4.23e-54]\",\n  \"source_mass_allowance_ratio\": \"[19.4750655341460000000000000000000000000000000 +/- 3e-48]\"\n}\n",
+  "stderr": "",
+  "result": {
+    "canonical_gram_min": "[3.05572809000084121436330532507489505823752656 +/- 1.56e-45]",
+    "full_unweighted_L2_inverse_upper": "[2430.92446724139118175108425452 +/- 5.58e-27]",
+    "full_weighted_L2_certificate_lower": "[2.774017579105905198778e+49 +/- 4.92e+27]",
+    "full_weighted_L2_certificate_upper": "[3.271317826885241293338e+49 +/- 7.44e+27]",
+    "conditional_affine_reserve": "[5.34235000000000000000000000000000000000000000e-12 +/- 1e-61]",
+    "conditional_feedback_reserve": "[0.00120690000000000000000000000000000000000000000 +/- 1e-52]",
+    "mass_only_energy_ratio_ceiling": "[0.0618165428013870179625996855136524977079374510 +/- 2.16e-47]",
+    "original_mass_necessary_ceiling": "[2.20553814952199746626895167653122276036323819e-9 +/- 4.23e-54]",
+    "source_mass_allowance_ratio": "[19.4750655341460000000000000000000000000000000 +/- 3e-48]"
+  }
+}

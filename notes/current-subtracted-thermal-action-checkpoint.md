@@ -1,3 +1,75 @@
+# Active checkpoint: complete coupled graph estimate remains unresolved
+
+2026-10-24, E003/S169.
+
+See [the executed attempt and exact residual targets](current-coupled-schur-graph-attempt.md).
+
+OUTCOME: UNRESOLVED COMPLETE COUPLED GRAPH ESTIMATE. No new feasibility
+requirement is closed. The attempted full-seed form-to-graph route reaches
+an explicit quantitative weak bound but does not supply the missing strong
+inverse, original phase returns or any actual coupled column.
+
+Executed with the actual full seed Hessian: physical canonical conversion
+of its unit action-form inverse gives ||Hbar^-1||L2->L2<2430.924468,
+Hbar=8piG A_radius^2 H. The original s=1.4 weight gives a valid but loose
+L2 upper certificate <3.272e49. This is neither a lower bound on the
+actual response nor a bound for kappa_m, whose input/output spaces differ.
+It does not justify a construction change. The original mass trace and
+strong graph comparisons cannot be recovered from that L2 estimate.
+
+The first unsupported step remains the actual logarithmic Schur inverse
+and reconstruction in the original mass/log graph, with the common-restored
+shape operator and all original finite-part/bolt rows. The reviewed smooth
+boundary/logarithm and local symbol theorems do not supply those numerical
+constants or a nonlinear-neighborhood transfer. No domain smoothing,
+angular/thermal truncation or independently adjustable stress is used.
+
+The exact cut reference mass lift retains both local cancellations, its
+transition and original bolt matching; it is not a global fixed-temperature
+zero mode. Conditional kappa_m=5e-5 still leaves 5.34235e-12 affine and
+.0012069 graph-feedback budget for every remaining coupled term. Independent
+energy feedback is still required. Using rounded guards consistently gives
+the mass-only energy/graph ratio ceiling .06181654280138; the earlier
+.0618179 used unrounded guards. Neither comparison is proved.
+
+The original mass conversion requires |m|<2.20553814952e-9 to retain both
+graph ceilings; the actual mass remains unknown. The fast-input screen
+.135973<.1599164 keeps its two-fast-input admitted-family scope. No actual
+controlled solution, nonlinear admission/contraction, exact compatibility,
+physical matching, semiclassical validity/noise or all-sector stability
+follows. S169.2-S169.5 remain unchecked; S166 is the latest completed
+component. The full objective and closed feasibility audit are preserved.
+
+RESEARCH DECISION: retain the construction and mixed Schur algebra;
+sharpen the method to a SIGNED BORDERED GRAPH DEFECT certificate. Stop
+transferring weak L2 constants as strong/phase constants. Attainability
+remains undecided, with no evidence of a construction obstruction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct a conforming
+approximate inverse P for the actual global logarithmic Schur/reconstruction
+system and original matching rows. Certify delta=||I-H P||<=1/2 in the
+original source graph AND the original output-map bounds. Then jointly
+enclose affine and all-column feedback defects: their errors are at most
+2||T P|| times the corresponding defect norms. Test the unchanged affine,
+feedback and mass-coefficient budgets. The ordinary note gives the exact
+inequalities. Neither P nor its strong defect has been computed here.
+
+Verification: 23 supporting checks at 512-bit precision on
+20 frozen inputs; successful development and acceptance
+agree exactly in sources, results and runtime. The initial failed development
+snapshot is preserved: interval containment of separately rounded equal
+decimal expressions was too strict. The corrected check uses an exact
+rational identity and zero containment of their difference. No scientific
+bound changed. The successful exploration source and unchanged replay are
+archived; the initial raw stdout was not separately saved. No Lean invocation
+or post-acceptance scientific edit occurred. Checks verify arithmetic and
+identities, not the missing continuum estimate. All 18 inherited files and
+closed audits are preserved.
+
+Remaining to-do list: complete bordered logarithmic graph inverse and joint phase returns; actual correction and original physical-norm comparisons; nonlinear admission/contraction and exact compatibility; physical matching/causal realization; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active checkpoint: global mixed inverse bounded; logarithmic Schur return open
 
 2026-10-24, E003/S169.
