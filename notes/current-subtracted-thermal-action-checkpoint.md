@@ -1,3 +1,86 @@
+# Active checkpoint: joint adjoint attempt; complete coupled estimate unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: progress.
+
+See [the ordinary joint residual attempt](current-joint-adjoint-residual-attempt.md) and its frozen evidence.
+
+The COMPLETE coupled return and adjoint residual remain UNRESOLVED.
+The separate global clock/mass estimate fails a domain test: its two
+shape profiles have opposite bolt logarithms and individually divergent
+energy. Their actual correlated sum remains regular. A fixed-seed
+two-row source-to-energy comparison is established, but no new mass,
+graph or nonlinear-admission gate closes. The complete source-pairing
+allowance remains closed at <9.811394479e-16 in the original units.
+
+The executed attempt gives the conditional whole-residual budget
+
+    R <= c_int U0+c_out B_out+d_den B0+R_loc,
+    c_int about 4.566846776e-9,
+    c_out about 1.237500000051e-30,
+    d_den about 6.064617779e-10.
+
+Here U0 is the actual joint whole-chart/global direction norm, B_out
+the complete restored outer derivative norm, B0 the joint supremum,
+and R_loc the complete local/boundary block. ALL FOUR ARE UNPROVED
+quantitatively for this trial. If U0<=1000, B0<=10, B_out<=1e25 and
+R_loc<=1e-5 were proved, the ledger would fit R<2.69480e-5 against
+the unchanged 3.27169e-5 target. This sensitivity slice is NOT an
+executed full residual or physical feasibility pass.
+
+The first unsupported passage remains the common-restored coincident
+all-mode response of the JOINT trial, including its actual finite-domain
+return. A resolvent operator bound alone gives no coincident trace or
+angular summability. Local clock transport leaves a thermal-period term;
+it does not define a separate regular-bolt family. Complete contacts,
+thermal/angular sums and boundary contributions cannot be assigned zero.
+The exploratory clock-only center jets are retained and explicitly
+noncertified; they establish no whole-chart or joint norm.
+
+The new fixed-seed output comparison is ||T/z^2||2<17.6 E and
+||nu/z^2||2<12.65 E. It is not an energy-to-H3 or nonlinear-input
+embedding. The interior coefficient retains the original gluing
+distance .95/128, reducing the earlier rounded coefficient by over
+7.27 in unchanged units. This does not decide the complete estimate.
+
+The original mass-lift transition and 2133<||d_chi||H3<2174 conversion
+remain. kappa_m<=5e-5 and all other coupled entries are unknown.
+Its conditional affine/direct-feedback costs stay 2.14765e-12 and
+.0024731; the residual budgets stay Y_other<=5.34234999994958e-12 and
+eta_other+(.0195239+4.583e-13) gamma_E<.0012069. The scalar quartic
+and exact correlated slow pair remain in both original equations.
+The .135973<.1599164 screen retains only its two-fast-input scope.
+No actual controlled solution, compatibility, physical matching,
+validity/noise or all-sector stability is established. The full stable
+wormhole objective remains active and the closed audit is preserved.
+
+RESEARCH DECISION: retain the construction and sharpen the JOINT
+actual-domain adjoint method. Reject the separate global clock/mass
+estimate and zero-thermal-response shortcut. Do not optimize source,
+cold or interior values while the complete boundary return is unknown.
+There is no excessive finite full residual bound or construction
+obstruction here: the actual complete estimate is unresolved.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the common-regulated
+paired resolvent derivative to the pole-removed correlated b_ref,
+including its differentiated finite-domain return; assemble both local
+rows and certify the WHOLE E* residual against 3.27169e-5. This tests
+the actual mass certificate. The original coupled graph remains an
+independent requirement; no separate clock/mass domain may replace the
+joint one. Attainability of the complete bound is not yet established.
+
+Verification: the ordinary argument and supporting execution contract
+were frozen before development. There are 26 supporting identity and
+512-bit Arb checks on 19 frozen inputs, one passing development and
+matching unchanged-source acceptance, with no failed frozen runs.
+The retained Python and all 1595 flint/SymPy file fingerprints match.
+These checks do not compute the full residual or replace a continuum
+argument. No Lean was invoked. All 18 inherited paths and closed audits
+remain unchanged; prior checkpoint content is preserved.
+
+Remaining to-do list: complete joint adjoint residual and actual mass; original coupled graph and independent phase columns; original physical-norm/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete source pairing bounded; coupled adjoint residual unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: progress.
