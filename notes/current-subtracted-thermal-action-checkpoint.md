@@ -1,3 +1,142 @@
+# Current complete bolt estimator decision, 2026-10-26
+
+EXECUTED: an actual-domain averaging estimate improves the COMPLETE
+two-row bolt map and closes the complete retained-inverse TRANSPORT-to-bolt
+error slice: <2.644458801e-14 against 8.335e-10. It does not evaluate the
+retained inverse or certify numerical polynomial applications. P32's
+improved bolt upper estimator still exceeds its margin by 5.52898e34.
+Degree 63 passes only the exact bolt-tail slice; higher degree is NOT
+adopted. Source/graph/phase comparisons and the complete coupled estimate
+remain UNKNOWN. No actual controlled solution or physical gate closes.
+The full stable-wormhole objective and closed audit remain unchanged.
+
+The completed two-row calculation retains both original equations,
+the paired mass/log domain and complementary adjoint, common regulator,
+exact ultraviolet logarithm, full angular/thermal sums, coincidence and
+density contacts, cutoff transitions and regular-bolt returns. The new
+ordinary step uses the already established COMPLETE fourth reserve:
+
+ ||T||2<=CL E, ||(QT')'||2<=CD E, Q>=gamma(L-z)/2, QT'(L)=0.
+
+Integrating from the actual bolt gives a Holder bound. Averaging over an
+interval of length r gives CL/sqrt(r)+4CD sqrt(r)/gamma. The admissible
+choice r=CL gamma/(4CD), enclosed near 3.006044148e-50, yields
+ Cnew=4 sqrt(CL CD/gamma)<2.592386349e26,
+replacing 7.477e50. The interval is a proof device, not a new physical
+boundary, cutoff or numerical discretization. Uniform convergence of
+original core approximants proves the bound on the same form closure.
+No normalization, scalar estimate or spectral depth has been changed.
+
+The necessary gain for the specified complete transport-error estimator
+was enclosed near 1.624588054e22; the achieved point-bound gain exceeds
+2.884215157e24. Propagating it through BOTH complete output rows and the
+source/Hessian truncation maps gives the following upper expressions:
+
+| Executed quantity | Upper bound / computed upper expression |
+| --- | ---: |
+| Complete three-residual bolt map Cb3 | 1.837541225e68 |
+| Complete unfiltered coupled energy-to-bolt Knew | 1.960636035e70 |
+| Retained Hessian error in original energy/dual norm | 1.226159988e-74 |
+| Retained source error in energy dual | 4.729850501e-103 |
+| Source transport contribution to bolt error | 9.273515332e-33 |
+| Hessian transport contribution to bolt error | 2.644458801e-14 |
+| Complete transport contribution to bolt error | 2.644458801e-14 |
+
+The last line is below half the bolt allowance by a factor exceeding
+31518.7 and improves the preceding complete upper estimator by more than
+8.4205e62. This closes a stated approximation-error slice. It is a bound
+between defined complete mathematical form inverses, not a computed
+inverse, signed center, strong residual or numerical application error.
+Neither the truncated inverse's original strong mass/log membership nor
+its boundary coefficients follow from a form perturbation estimate.
+
+The exact-polynomial test now gives:
+
+| Degree | Complete bolt-tail upper expression | Full 1.667e-9 margin |
+| --- | ---: | --- |
+| 32 | 9.216793497e25 | fails this estimator by 5.52898e34 |
+| 62 | 6.374717929e-9 | fails this estimator |
+| 63 | 4.632232435e-10 | passes this slice, including half-margin test |
+
+These are upper-bound expressions, not lower bounds on actual errors.
+The two passing slices are NOT added as a certified P63 application:
+the retained solve, polynomial recurrence and finite arithmetic errors
+have not been enclosed. No higher degree is adopted.
+
+Every other output still needs its actual comparison and application
+error. For any degree N, with the original Chebyshev h2_N,h3_N,
+ h3_N Cdef3 IY+e_def<=1/2,
+ (1.1e-10)h3_N Cg3+e_g<=remaining graph budget,
+ (1.1e-10)h3_N CX3+e_X<=remaining physical budget,
+ |c_hat_ij|+e_ij+h2_N Ci3 Ij<=B_ij for EVERY coupled entry.
+The degree change gives only these zero-other-debit conditional ceilings:
+
+| Product/coefficient | P32 ceiling | P63 ceiling | Actual value |
+| --- | ---: | ---: | --- |
+| Cdef3 IY | 1.0965284986e32 | 2.1817723691e67 | UNKNOWN |
+| Cg3, if graph margin 5.34235e-12 remains | 1.0650980044e31 | 2.1192348393e66 | UNKNOWN |
+| CX3, if physical margin 5e-9 remains | 9.9684408960e33 | 1.9834294264e69 | UNKNOWN |
+| Cmass3 Im, if center/application debit zero | 1.4671551310e28 | 2.9192114298e63 | UNKNOWN |
+| Cg3 I_feedback, if other feedback zero | 3.5414190553e29 | 7.0463925494e64 | UNKNOWN |
+
+Actual kappa_m<=5e-5 is UNRESOLVED. Its hypothetical affine/feedback/
+energy costs remain 2.14765e-12, .0024731 and .0195239; mass conversion
+2133--2174 is not removed. The scalar quartic, exact correlated slow pair,
+independent phases, fast remainder and infinite matching quotient retain
+all their coupled entries. Their centers, errors and remaining budgets
+are not supplied by the table. In particular retain
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+The quantum-fast .135973<.1599164 screen keeps only its proved two-fast
+scope, without a claim for independent boundary phases or a neighborhood.
+
+Both huge intermediate constants 10^4000 C and 10^74739.22 are avoided
+in THIS complete low-order bolt map by the exact two-row identity. They
+are not compared with output ceilings or declared removed from higher
+graph estimates. Source IY, graph/physical maps and actual original-space
+defect remain unresolved. The existing transition counterexample still
+excludes a generic energy-to-H3 repair.
+
+The original global residual test, including its actual quartic finite
+part, now reads
+ |bolt error|<=5.687298168e74 Rfast+1.058944834e72 |c4|.
+Its separate zero-other-debit half-margin ceilings are Rfast<=1.465546513e-84
+and |c4|<=7.871042698e-82; the energy-dual ceiling is 4.251171482e-80.
+These are sufficient targets, not attained residuals, values of unknown
+coefficients, or a replacement for the original Y norm. Exact phase/log
+cancellation precedes any finite fast-graph residual. The actual full
+common-restored retained quantum application and c4 remain unevaluated.
+
+RESEARCH DECISION: continue the construction and use the improved
+complete bolt comparisons, retaining P32 until all original-space tests
+are available. Stop optimizing bolt-tail, cold/scalar/contact or transport
+components on this evidence. The dominant known loss in the remaining
+P32 bolt estimator is now the unchanged scalar trace Cs near 9.9165e36;
+the decisive missing information is the full strong source/phase/output
+map and retained coupled response. A larger degree changes neither that
+missing argument nor unknown numerical application errors.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct one explicit
+phase-conforming coupled inverse trial and enclose its COMPLETE original
+two-row residual, including the actual quartic finite part c4, the full
+.1/.2 transition and regular-bolt matching, using the commonly restored
+full quantum operator. This must preserve exact mass/log and slow phases,
+all angular/thermal returns and signed coupled cancellations. Its result
+can distinguish a small original strong residual from estimator loss;
+isolated differentiated rows or finite-mode samples cannot do so.
+
+Verification: ordinary proof and checker frozen before science;
+one passed development run, ordinary actual-domain/normalization/scope
+review, then unchanged 512-bit acceptance. Twenty-eight supporting checks,
+eleven frozen inputs; no failed scientific run. The pre-run change to
+the crossing iteration count is recorded. Python and all 63 flint / 1532
+SymPy reference files match. No Lean or numerical quantum inverse was run.
+Earlier evidence, eighteen inherited paths and all closed audits remain.
+
+Remaining to-do list: actual retained quantum application, complete strong residual/phase maps, every coupled entry and original defect; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current complete-application feasibility decision, 2026-10-26
 
 EXECUTED: the full coupled application error now has an UNCONDITIONAL
