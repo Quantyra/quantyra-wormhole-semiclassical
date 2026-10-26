@@ -1,3 +1,108 @@
+# Active checkpoint: composite domain established at seed; numerical bound unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [complete mixed return and composite phase argument](current-schur-residual-phase-domain.md).
+
+The requested QUANTITATIVE coupled estimate remains UNRESOLVED.
+The fixed-seed twice-residual graph/phase map now has an ordinary domain
+argument retaining its outer moment and exact regular-bolt cancellation.
+Its norm is a finite UNKNOWN, not a certified numerical bound. The full
+affine input conversion is bounded; a conservative N=32 graph target is
+C_g<=1.36e12, conditional on the full remaining trial margin. Actual C_g,
+feedback inputs, signed centers and kappa_m remain uncomputed. No physical
+admission or feedback requirement closes.
+
+The executed complete mixed row uses the exact local generator and the
+common-regulator conformal Ward identity. All quantum anomaly/density
+terms are retained; the independent FULL TT quantum inverse stays in ell.
+After the exact vacuum identity, orders three and four cancel. The
+coefficient outer valuations for (xi, Dxi, D^2xi, b_radial, J) are
+(4,3,3,3,4). These are exact finite-seed identities, including tau.
+
+The two adjoint primitives must be combined before any bolt estimate:
+c_J-Q'c_b=Q d_b with polynomial d_b. Their apparent separate logarithms
+cancel at the ACTUAL simple bolt. The outer adjoint still retains its
+entire pure quartic moment, with no leading quartic log. The physical
+factor rho_a=8piG A_radius^2 is restored in that moment and in all forms.
+The inverse York map is self-adjoint in physical z^-4 dz; its quartic
+resonant forcing vanishes. Using both original rows then gives g0=0 for
+this ERROR source, not for the physical affine source.
+
+With B=b*a^-1b and F=(ell+B)^-1 B, the actual coupled inverse and its
+retained fixed-seed weighted graph argument give four derivatives per F,
+retaining mass, scalar quartic and the exact slow root. Two applications
+give the original graph/phase domain. The exact identity is
+ P E^2=V F^2(I-F)^-3(ell+B)^-1 J_F, E=I-SP,
+with ||F||<=.252615845 and the last correction factor <=2.395346472.
+No smooth reflected mass cubic, finite mode selection or numerical
+inverse application is used. Weighted Sobolev remainders are not silently
+treated as analytic inputs. Physical areal C5 maps and nonlinear-family
+admission remain separate unproved requirements.
+
+The actual affine source conversion is
+ U_aff<=(1+.338)sqrt(|W| beta)1.1e-10<1.951e28
+in the candidate's PHYSICAL action units. For
+C_g=||O_graph V F^2|| from the ORIGINAL E energy to original H3 output,
+the N=32 sufficient affine ceiling is
+ C_g <=5.34235e-12*.662/[1.1e-10*1.338^4*.338^30]
+     =1.361044043744956e12 (approximately).
+Use 1.36e12 as a rounded-down target, only if signed centers leave that
+full conditional margin. This is an allowance for UNKNOWN C_g, not its
+value or an upper bound. The original output norm has not changed.
+Independent feedback/phase source norms have not been assigned U_aff.
+
+This moves the first missing step from the domain of this fixed-seed
+composite to its numerical FULL quantum/strong inverse bound and the
+remaining physical/source comparisons. It does not complete the requested
+feasibility milestone. The earlier unbounded output map for P ALONE remains
+unbounded. No original strong delta<=1/2 or actual mass column is certified.
+
+The exact reference mass still cancels only the uncut reference rows.
+Keep its .1/.2 transition, regular bolt and original .05/.1 graph cost
+2133<||d_chi||H3<2174, with known LINEAR debit <=3.538254568e-12.
+The scalar quartic and exact correlated slow pair stay in the full system.
+Actual post-elimination kappa_m remains UNKNOWN. Conditional kappa_m<=5e-5
+spends 2.14765e-12 affine, .0024731 feedback and .0195239 energy.
+All remaining entries must fit jointly:
+
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+
+No unknown entry is zeroed. The fast screen remains .135973<.1599164
+solely in its two-fast/admitted-family scope. Keep
+E_center+1e-8 alpha<=1e-11,
+R_X alpha*.028913+Z0_other<=.25,
+R_X alpha^2*1.0706e10+Z2_other<=5e7,
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1.
+All remain unproved. No actual controlled solution, exact compatibility,
+physical matching, validity/noise or all-sector stability is established.
+
+RESEARCH DECISION: retain the construction and the twice-residual
+method, keeping its entire boundary moment. The domain calculation removes
+an earlier uncertainty for this seed; it does not establish quantitative
+attainability. Do not optimize weak residuals or controlled cold/scalar terms.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the COMPLETE numerical
+C_g and phase counterparts, including the common-restored full quantum
+inverse, independent feedback inputs and original output conversions.
+Evaluate the actual signed columns with certified errors against the
+unchanged joint budgets. This remains the unfinished strong calculation.
+
+Verification: ordinary argument/module/checker frozen before development.
+Final unchanged 512-bit acceptance agrees after ordinary review. There
+are 24 supporting checks across 16 frozen inputs. One failed structural
+SymPy comparison and all intermediate source snapshots are retained;
+review added the essential combined bolt cancellation and explicit units
+before final replay. Python, 63 flint and 1532 SymPy files match the
+reference. No local Lean invocation. Checks support the ordinary argument,
+not the missing numerical continuum bound. All 18 inherited files and
+the closed audits remain unchanged.
+
+Remaining to-do list: numerical complete coupled graph/phase composite and independent feedback inputs; original source/X comparisons and signed columns; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: original coupled estimate unresolved; form candidate fails output test
 
 2026-10-25 HST, E003/S169.
