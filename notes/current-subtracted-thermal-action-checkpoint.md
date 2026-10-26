@@ -1,3 +1,154 @@
+# Current retained quantum evaluator decision, 2026-10-26
+
+EXECUTED: a retained quantum-evaluator interchange fails on the ACTUAL
+paired regular-bolt domain. The second diagonal-transport word is not
+absolutely summable over the angular tower after separate regulator
+removal, and that reference has no positive mass-decay norm bound.
+A regular-bolt reference gives a seed HIGH-SECTOR matter defect <.354160 and
+a complete-spectrum truncation compatible with the complete two-row
+bolt-error slice. This is not the gravitational P32 defect or a signed
+quantum-center calculation. The full coupled estimate remains UNRESOLVED.
+P32, the closed audit and full stable-wormhole objective remain unchanged.
+
+The previous actual-domain test rejected a global radial H3 source
+comparison and supplied a finite mixed-chart residual test. Preparing
+its retained quantum application exposes a separate interchange issue:
+the complete retained transport terms cannot simply be traced and summed
+after removing their common regulator separately. The current calculation
+tests that operation on the actual finite geometry before interpreting
+any center or physical-output number.
+
+Keep the paired mass/log realization, original temperature, C2,1 seam,
+both regular bolts, every angular and thermal label, exact ultraviolet
+logarithm, coincidence contacts, Weyl/geometric conversion, finite heat
+restoration and original cutoff transitions. There is no smooth domain
+substitute or finite physical mode selection.
+
+For S0=G0 alpha J in the accepted diagonal transport representation,
+the exact fixed-mode trace is
+ Tr S0^2=2 integral_(y<s) alpha(y)alpha(s) exp[-2 integral_y^s k] dy ds.
+On the allowed p=gamma/2 branch, for EVERY angular n>=31 (M>=100),
+the actual bolt Taylor bounds and full central/opposite-bolt returns give
+ Tr S0^2>1.2288424706e-9.
+All possible negative pieces are bounded; this is not just a positive
+local contribution. Hence sum_(n,j) d_n |Tr S0^2| diverges. Moreover an
+actual Xk test function gives ||S0||>=1.2393760883e-5 on the same infinite
+subsequence. No finite constant can give this reference A M^-r for r>0.
+This is an obstruction to those SPECIFIED evaluator operations, not to
+the commonly renormalized action, quantum stress or construction. The
+accepted mode-adaptive remainder remains valid.
+
+The specified alternative includes the regular-bolt Dirac block exactly
+in ACTUAL proper distance, retaining the same principal derivative and
+regular disk branch. A squared partition glues its two local reference
+inverses to the existing whole-interval transport inverse. Every cutoff
+commutator and actual finite-domain return remains in E=I-A P. The flat
+reference is an auxiliary inverse only; the physical operator/domain
+are unchanged. The critical half-thermal branch uses its no-log Bessel
+Green function, not an inapplicable Hardy estimate.
+
+For d=M+|p|>=100, the complete seed matter bounds are
+ ||P||L2->L2<=2/d,
+ ||I-A P||L2->L2<=(pi+.4)/sqrt(d)<=.354159265359.
+These are MATTER spinor estimates, not original metric/source maps and
+not ||I-S P32||. The low sector retains the existing adaptive transport
+with all its labels. No nonlinear-neighborhood or strong graph bound is
+deduced from these seed first-order estimates.
+
+The complete reference Hilbert-Schmidt estimate and its gluing defect give
+ ||P||HS ||I-A P||HS<=58/gamma.
+This supplies the ultraviolet decay needed for the HIGH-order seed
+source/Hessian remainder. With the original trace normalization and ALL
+angular/half-integer thermal sums, its coefficient is
+ Kq=58*4^10(C/3+4C gamma/81)/(pi B^2 gamma)<7.475607146e7,
+ e1(N)=Kq .4^(N-11)/.6,
+ e2(N)=Kq .4^(N-12)[.4/.6+2(N/.6+.4/.6^2)].
+The second expression retains both inverse differentiation and the
+coincident mass vertex. Add the existing full adaptive error bounds for
+the complementary low sector; none are set to zero. Common heat-cutoff
+removal is justified for these trace-class SEED jets only. The retained
+low-order terms still require the original common subtractions and finite
+contacts; this calculation does not evaluate them.
+
+Propagating BOTH errors through the accepted complete original-unit
+two-row comparison gives
+ epsH=e2_total Cnew^2/beta, ef=e1_total Cnew/beta,
+ U(N)=Knew[ef+epsH*1.1e-10]/(1-epsH).
+The first passing high-sector word count is N=349:
+ epsH<2.755591827e-70,
+ source bolt debit<1.192224894e-29,
+ Hessian bolt debit<5.942983897e-10,
+ total U(349)<5.942983897e-10<8.335e-10.
+At N=348 the specified upper estimator is 1.4814598899e-9, excessive by
+1.777396389. The finite count 349 is a quantum inverse word count, NOT
+gravitational polynomial degree. This tests whether the alternative
+representation fits the same complete approximation slice. It is not
+an actual inverse application, quadrature certificate or computed center.
+The earlier transport-to-bolt certificate <2.644458801e-14 still holds;
+this is a method change for the retained ultraviolet structure, not an
+improvement claim for that already controlled tail.
+
+The original complete two-row P32 bolt upper estimator is still
+9.216793497e25 versus 1.667e-9, requiring a factor 5.528970304e34 gain
+for that estimator. Its dominant known loss is the scalar trace Cs near
+9.9165e36. The previously executed degree test gives P63 exact bolt tail
+<4.632232435e-10 and a denominator gain 1.989708769e35. It does not
+certify another output or a numerical polynomial application. At degree
+63 the zero-other-debit CONDITIONAL ceilings are Cdef3 IY<=2.18177e67,
+graph coefficient<=2.11923e66, physical coefficient<=1.98343e69,
+mass product<=2.91921e63 and feedback product<=7.04639e64. Every actual
+coefficient, center and relevant application error remains unknown;
+these ceilings are not substituted for them, and no degree is adopted.
+The current turn does not combine distinct inverse and polynomial error
+bounds without establishing the corresponding operator/application maps.
+
+The original P32 requirement Cdef3 IY<=1.0965284986e32 and the recorded
+graph/physical ceilings retain their margins and conditions. Actual
+kappa_m<=5e-5 is still untested; its 2.14765e-12 affine and .0024731
+feedback debits remain hypothetical. Every remaining signed coupled
+entry, independent boundary-phase return and original physical norm
+comparison stays open. The two-fast quantum screen keeps its proved
+scope only. The giant interior/absorption constants are avoided in this
+bolt slice; their unknown strong composition is not resolved.
+
+What changes feasibility: the failure is now identified for one specific
+unregulated evaluator operation, and a quantitative actual-domain
+ultraviolet reference is available that preserves a complete bolt error
+slice. What does NOT change: no original coupled defect, controlled
+solution, admission/contraction, compatibility, matching, validity/noise
+or stability gate has closed. The decisive unknown remains the signed
+common-restored retained center and its complete source/phase/output map.
+
+RESEARCH DECISION: retain the construction and P32. Reject separately
+unregulated retained-word evaluation. Use the actual regular-bolt block
+as a candidate ultraviolet reference, keeping the common regulator and
+all low-order subtractions. Do not increase gravitational degree or
+optimize scalar/cold/contact/tail components on this evidence. The
+dominant known P32 loss remains the scalar trace; the earlier operational
+obstacle is the missing complete signed quantum application.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): assemble the signed
+common-restored retained quantum source and Hessian application to one
+actual phase-conforming coupled inverse trial, then enclose its COMPLETE
+residual triple (R_o,c4,R_i). Combine all low-order ultraviolet terms,
+local contacts and finite returns before tracing. This tests the missing
+center and original source data together; the executed tail bound alone
+does not perform it.
+
+Verification: ordinary argument and checker frozen before science;
+one development run, ordinary signed-trace/domain/critical-bolt/common-
+regulator review, then unchanged 512-bit acceptance. Thirty-six supporting
+checks and twelve frozen inputs. No failed scientific run, no local Lean,
+no signed quantum center or numerical inverse application. Python and
+63 flint / 1532 SymPy reference files match. Earlier science, eighteen
+inherited paths and closed audits remain unchanged. The checker verifies
+the explicit inequalities; the ordinary arguments establish domain and
+trace statements.
+
+Remaining to-do list: retained quantum center and complete coupled residual; original source/graph/physical comparisons and every coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current source-domain feasibility decision, 2026-10-26
 
 EXECUTED: the proposed comparison from original outer data plus regular-
