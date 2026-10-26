@@ -1,0 +1,421 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T23:07:03.299430+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-admission-bottleneck-estimator-test.md": "28ab3626e1e968cb6a61f11620cbdf99f181177d97f5d52ed2b34f76cf2419b0",
+        "checks/current_admission_bottleneck_estimator_test.py": "01a4872f709ea82372103d63ebcb6a28d49424ffc42738bbd70aed2345969d0b",
+        "evidence/current-admission-bottleneck-estimator-test-sources.json": "5314b6a9ac51eaf85ad58653c4e10dfd37682f189e5c8891d1539dcd6960bdd9",
+        "evidence/current-admission-bottleneck-estimator-test-review.json": "cb1b4d177de035428374754272e8b3252d8b7a00346bf11dc7428a942c547449",
+        "notes/current-interpolated-complete-bolt-test.md": "dda5620ddbf5f3a5f84d855c345bf49ecf42295b64eed6b9679314f2a484c755",
+        "notes/current-complete-bolt-energy-bound.md": "6b86ce1ba8384c56c8b5fdb913ab7d0e3d472c8311083f8fb75323f6fab2466d",
+        "notes/current-structured-york-moment-bound.md": "3a9f1643fd9bbd0e15e2f2e1a82bebd4729f8fe3c3e60becc912b6889c79dff0",
+        "notes/current-original-admission-map-budget-test.md": "0626ecc6857849c076ace6a05606d891b054c8e1b82ae5dd0e2a7d633d34571f",
+        "notes/current-native-output-structured-source-test.md": "a7e18a87ed4b308ecbcf381b1ed18d2b3174646b0c20b7ca10093e7dd629f7a4",
+        "notes/current-adjoint-uniform-estimator-test.md": "8c34d2095a1d092466255efc7c52bed2c35f6ced98c8dd01b90e6b42880bd230",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "notes/finite-cold-admission-and-response.md": "85a54514f9c744cc5fc05ce4ff60d50de2c7c43e6f15ec0c9bfb9e1b25ee0600",
+        "notes/finite-outer-admission-and-response.md": "27d0a0db4894b139dd7271e7c62d5ee3f0cbb7d5951e0e8246374c6dbd24108e",
+        "evidence/current-interpolated-complete-bolt-test.json": "8d1a46d5f281a5a6c02c7e3e2f1766a31b8fcdb8799c7f04edbe74ee8813246b",
+        "evidence/current-complete-bolt-energy-bound.json": "590116b4c5a85c7f824e7d4d8ef7d3749462310c7dc04daa09b73a6a50fce3e7",
+        "evidence/current-structured-york-moment-bound.json": "57e194fa10beffb4a487436eb6a525aa80b1b3bc5e8de1001124ee4741738e8a",
+        "evidence/current-localized-bolt-adjoint-sensitivity.json": "a48e06fec491c8c647d8d141cb811a10f4d0103a751648a139982f39f5cc1548",
+        "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-admission-bottleneck-estimator-test.md": "# Earliest admission comparison and the complete-estimator York sensitivity\n\n2026-10-26 HST, E003/S169. Ordinary argument and test contract BEFORE\nexecution. Preserve the full stable-wormhole objective, closed audit,\naccepted 1ee884b and P32. The preceding weighted-source result is retained.\nNo further York estimate is attempted before its COMPLETE budget role is\ntested here. This does not claim a numerical application of the inverse.\n\n## 1. Specify the spaces needed for the admission calculation\n\nLet C_pair be the retained fixed-gauge real core of stationary spherical\nfields on BOTH physical halves, with identical one-sided mass/log data,\nthe actual first-order projectors and complementary adjoint, fixed clock,\nperiod, spin structure and subtraction scale. At the bolt use smooth even\nrotational disk fields, equal radial/angular metric values and no cone.\nKeep J(0)=0, (Q^2 J'/z^4)(L)=0, L=1/(1+h), h>0. Neither the reflected\nmass cubic nor the common regulator is replaced by a smooth surrogate.\n\nThe input Hilbert space E is the completion in\n ||u||E^2=ell(u,u)/N, N=|W_action| beta,\nof the fixed-seed TT form core, with its actual coupled transports.\nell is the FULL common-restored form, including the UV logarithm,\ncomplete angular and thermal sums, contacts and finite-domain returns.\nWrite Bop=b*a^-1b, T=ell^-1 Bop, F=(I+T)^-1 T,\n0<=T<=q=.338, ||F||E<=f=q/(1+q). The already defined polynomial is\n P32=V pi31(T) ell^-1 J_F:Y_F->X_F,\n J_F=V*K^-1, K=C^-1 A(C*)^-1,\n Y_F=J_F^-1(E*), X_F=V(E),\nwith the original action factors in its transported norms. These spaces\nare NOT the original strong Y or an admission ball.\n\nFor geometric admission, use the following precise LINEAR observation space.\nOn C_pair collect the linearizations of the original fixed-chart geometric\nlogs, radius log, outer mass subtraction, traces and cap extensions into\na record O_ad,lin. Linearize at the unchanged smooth one-sided seed;\ndo not assert differentiability on a whole C5 coefficient ball.\nComplete the image of these compatible records in the product norm\n\n ||O_ad,lin||A=max{P5_40, D_ell, Nout, Rcold, Rmiddle, Router,\n                          J5_bolt(radius), |bolt_gap_linear|}.   (1)\n\nAll components use their ORIGINAL divisors, not new budget weights.\nRcold, Rmiddle and Router are the radius five-jet seminorms in the\noriginal fixed charts, divided by a_x j!100^j, j!100^j, and the original\nouter remainder weights respectively; retain their original low/cap\nentries. The J5 bolt component is the specified auxiliary sufficient\nradius norm, labelled as such, not a new necessary admission requirement.\nTaking the closure of compatible records retains every overlap and\nboundary condition; it does not replace the matching space by three\nphase coefficients. This defines the output observation space needed\nhere. It is not a completed nonlinear source/solution pair X,Y.\n\nThe exact unchanged components and their constraints are:\n* P5_40: actual global/cap values and gradients, unscaled local derivatives\n  of orders zero and one, and divided j!100^j jets for j=2..5; <=.001.\n  The reference .00013 leaves .00087 only at that reference center.\n* D_ell: the full maximum in finite-cold-admission-and-response.md,\n  section 1: both frozen cold charts through five, center derivatives\n  through four, a_x=s[1+log(.01/s)], weighted values/gradients/transvections\n  and the original width-one C2 extension; <=2.5e-10 for its strong\n  direction ball. The separate 5e-7 weak coefficient test is not D_ell.\n* N45=max_(j<=5) sup |v^(j)|/[j!100^j X^(4-j)(1+log(1/X))],\n  Vout=max(N45,(sup_cap|v|+sup_cap|v'|)/100),\n  Nout=max(|p|+Vout,G/1000)<=1.5e-7. Keep the original cubic psi,\n  .4/.5 taper, outer cap and fixed endpoint proper identification.\n  The stated reference bound leaves 4.9e-8, only at that center.\n* Radius contracts in cold/middle/outer charts and all boundary conditions\n  remain independent. Their recorded reference coefficients are not free\n  correction margins. The separate linear bolt-gap allowance is 1.667e-9.\n\nIn the original affine chart the orbit field is exactly T, while the\nradius field is Vrad=log[(exp(nu)-z)/(1-z)]. Its linearization is\nw=nu/(1-z). At the bolt w(L)=ell_b nu(L), ell_b=(1+h)/h.\nThe accepted local J5 multiplier is <1.989220420e33, or <1.193532252e34\nbetween the specified divided maximum norms. For J5(w)<=1e-8 the radius\nremainder is <5.000000051e-17. At the linear bolt allowance its gap\nnonlinearity is <7.027531593e-52. No scaling erases these costs.\nFive regular geometric jets are required; five areal lapse derivatives\nbelong to a stronger estimator. No moving-coordinate C5 differentiability\nor sixth metric derivative is inferred from (1).\n\nThe actual canonical structured map is G=R_S V F^3, with\nR_S T=((C*)^-1 D T,T), initially on the core. The linear admission map\nis O_ad,lin G:E->A. For a finite correction one must ALSO perform the\noriginal endpoint identification and nonlinear radius conversion on its\nopen domain exp(nu)>z; that domain is not asserted for the unit E ball.\nIts fixed-seed regularity supplies\nthe indicated records, but does not give their numerical comparison\nconstants or a uniform nonlinear realization. THIS is the first missing\nimplication for admission. An intermediate source H3 estimate is a\nsufficient route to it, not the definition of admission.\n\nThe original two-row residual space must stay separate: for the exact\nstructured source use the original .05/.1 outer weighted H3(d log z)\nrecords at sigma=4.005, the original regular-atlas H3 records, and its\nundifferentiated finite part c4. It is a source TEST space Z3, not Y.\nThe source-to-A map and Z3-to-original-Y map are still unknown. Neither\nthe weighted L2 result nor a conditional graph ceiling supplies them.\n\n## 2. Execute a necessary original admission row, with no domain shortcut\n\nBoth original equations give the exact identity, n>=1,\n R_S V F^n u=(U F^n u+a^-1b F^n u\n                 +(Cbar*)^-1(V*)^-1 Bbar F^(n-1)u, V F^n u),\n Cbar=rho_a C, Bbar=rho_a Bop, rho_a=8piG A_radius^2.       (2)\nThe complete original source is (-A(Cbar*)^-1 bar S2,0), with\nbar S2=(V*)^-1 Bbar F^2u; its second row and leading quartic finite\npart cancel. A scalar quartic branch alone is not this complete source.\n\nFor the exact bolt observable L_b(nu,T)=ell_b nu(L), the established\ncomplete two-row theorem gives a bounded map E->R on the actual form\nclosure. Its ordinary scalar trace, TT point and mixed/York estimates\njustify that extension; no fifth-derivative point delta is used. This\ncompletes the space/domain specification for the test below even though\nthe full map into (1) still has UNKNOWN numerical bounds, not proved\ninfinite ones. Failure to certify this necessary row is enough to\nreject a proposed complete positive certificate; it is not failure of\nthe actual geometric correction.\n\nUse the strongest accepted point constants, not their superseded versions:\n Cnew<2.592386349e26, Cs<9.916503810e36,\n Kxi=1+4/[3(alpha-2)], alpha=(1+sqrt(21))/2,\n Kb<.409738940, KV=1+c/sqrt(4.5)+c/2, c=2sqrt(17)/9.\nLet s=7/5 and retain the ORIGINAL weighted mixed point factor\n Kret=ell_b (2.5h)^s 3000 h^-s/sqrt(gamma).\nNo h factor disappears: it is multiplied in its original composition.\nThen the three terms of a valid positive bound for ||L_b G|| are\n A_T=ell_b Kxi Cnew f^3/2,\n A_s=ell_b Cs sqrt(q) f^3,\n A_Y=Kret KV Kb sqrt(q) f^2.                            (3)\n\nSubstitution of the available Kb improves only that existing term. The\nnew weighted-source receipt instead implies the alternative bound\nA_Y,new=Kret CS2, CS2<.239804976: z<=1 first gives H_mu control,\nthen W<=h^-s gives the original weighted point map. Compare these two\nVALID complete return bounds in the SAME bolt units before selecting\nthe smaller. A tiny quartic coefficient by itself pays none of (3).\n\nSet p_aff=1.1e-10 h3, h3=(1+q)^3/D29,\nD29=|Ch29(-1-2/q)|. With the whole bolt margin B_b=1.667e-9\ngranted and every other error zero, execute\n d_T=p_aff A_T, d_s=p_aff A_s, d_Y=p_aff min(A_Y,A_Y,new),\n U_b=d_T+d_s+d_Y.                                      (4)\nReport each term, its ratio to B_b, and its fraction of U_b. Also report\nU_b-d_Y: this grants PERFECT removal of the York term. This is a\nprecise sensitivity calculation about a REPORTED UPPER expression,\nnot a lower bound on the actual correction or an assertion that an\nactual cancellation equals the sum of these bounds.\n\nTest whether setting EACH one of the three terms to zero can certify\nthe complete row. If none can, isolated optimization of any one cannot\nrescue this estimator. The direct joint map instead needs the conditional\ntarget ||L_b G|| <=B_b/p_aff, reduced by all actual other debits.\nThe ratio U_b/B_b quantifies the improvement of this specified estimator\nneeded at fixed P32. It is not a necessary cancellation in nature.\n\nApplication errors do not inherit F^3. Here use the DISTINCT coupled\nspace E_tot, ||(s,xi)||E_tot^2=[a(s,s)+ell(xi,xi)]/N, with its\nactual two-row dual E_tot*. The accepted Knew<1.960636035e70 gives\n|L_b H^-1 r|<=Knew||r||E_tot*. Execute the full-margin threshold\n||r||E_tot*<=B_b/Knew as a conditional error target, not an attained error.\nThe original strong source norm and all remaining admission entries\nare still missing; this coupled-dual threshold is not I_Y or an H3 norm.\n\n## 3. Preserve the complete coupled ledger and decide the method\n\nNo conditional ceiling becomes a coefficient. The original defect still\nrequires h3 Cdef3 I_Y+e_def<=.5; graph requires p_aff Cg3 plus other\ndebits <=5.34235e-12. Every column obeys\n|c_hat_ij|+e_ij+h2 C_i3 I_j<=B_ij, h2=(1+q)^2/D29, including\nactual |kappa_hat_m|+e_m+h2 Cmass3 I_m<=5e-5. Independent scalar,\nmass, correlated slow, fast and full matching returns are retained.\nThe physical 5e-9 ceiling is not a defined free margin for (1).\nMass conversion 2133..2174, both original cutoff transitions, the\nconditional residual affine/feedback budgets and all application errors\nremain. The .135973<.1599164 screen is only the proved two-fast screen.\n\nIf (4) fails even after removal of any one term, STOP the separated\nthree-term estimator for this P32 admission certificate, including\nfurther York-only optimization. Retain the construction and P32 as\nunrejected candidates. Bound the JOINT original radius output in (2)\nbefore norms, or certify an actual structured correction, rather than\ntrying to make any one positive component sufficient. The complete\njoint high-norm map remains unknown. Neither 1e4000 C nor 10^74739.22\nenters (4); invoking them again does not repair this failure.\n\nThe single next calculation is the joint radius map\n u -> [ -A^-1 C V F^3u +(C*)^-1(V*)^-1 Bop F^2u ]/(1-z)\nin the ORIGINAL regular-chart/cold/outer admission records, with the\nbolt row included and the actual common-restored response. This is\nPROPOSED, not executed here. Its signed cancellation and source/output\ncomparison are the unresolved argument; another York moment is not it.\n\nNo nonlinear admission/contraction, compatibility, physical matching,\nsemiclassical validity/noise, stability or controlled solution follows.\nThis result distinguishes an excessive specified estimator from unknown\ncomplete maps and from an obstruction to the actual construction.\n\n## 4. Requested QCD relevance check\n\nThe October 26 OpenAI announcement claims constructive QCD/Yang--Mills\nexistence results, building on Balaban's approach. It says the physics\ngroup is withholding the artifacts while preparing its exposition.\nSource: https://openai.com/index/building-scientific-understanding-with-academic-communities/\n\nInference for THIS calculation: no released theorem or constant was\navailable to inspect for the paired curved mass/log boundary, fixed\nthermal state, metric derivatives, common stress/contact restoration or\nour original output norms. Therefore no budget entry changes. Constructive\nregulator control may eventually be useful, but changing the matter theory\nto QCD would change the construction and requires a separate justification.\nThe announcement is not imported as a wormhole existence/stability theorem.\n\nVerification: freeze this argument/checker, use outward 512-bit arithmetic,\nretain all runs, review units/domain/complete-budget logic, then unchanged\nacceptance. No Lean invocation is required. Checkers do not prove the\nunknown strong quantum map. Preserve checkpoint and commit/push rules.\n\nRemaining to-do list: joint original-admission source/output map, original\nY comparison and all coupled entries/application errors; nonlinear control;\ncompatibility, matching, validity/noise, all-sector stability; opening,\ntransport, preparation, separate creation and the full stable-wormhole goal.\n",
+        "checks/current_admission_bottleneck_estimator_test.py": "\"\"\"Original-bolt contribution of every term; no inverse application.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys,traceback\nif '--arb-path' in sys.argv:sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nfrom flint import arb,ctx\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-admission-bottleneck-estimator-test'\nOWN=['notes/'+STEM+'.md','checks/current_admission_bottleneck_estimator_test.py',\n     'evidence/'+STEM+'-sources.json','evidence/'+STEM+'-review.json']\nINPUTS=OWN+['notes/'+n+'.md' for n in ['current-interpolated-complete-bolt-test',\n 'current-complete-bolt-energy-bound','current-structured-york-moment-bound',\n 'current-original-admission-map-budget-test','current-native-output-structured-source-test',\n 'current-adjoint-uniform-estimator-test','current-controlled-solution-audit-closeout',\n 'finite-cold-admission-and-response','finite-outer-admission-and-response']]+[\n 'evidence/'+n+'.json' for n in ['current-interpolated-complete-bolt-test',\n 'current-complete-bolt-energy-bound','current-structured-york-moment-bound',\n 'current-localized-bolt-adjoint-sensitivity','current-coupled-mass-adjoint-runtime']]\nCHECKS=[]\ndef sha(p):return sha256(p.read_bytes()).hexdigest()\ndef check(n,c):\n ok=bool(c);CHECKS.append({'name':n,'passed':ok});print(n+(': passed' if ok else ': FAILED'),flush=True)\n if not ok:raise AssertionError(n)\ndef enc(x):\n m,r,e=x.mid_rad_10exp(50)\n return {'ball':x.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(x):\n if not isinstance(x,dict):return arb(x.strip('[]'))\n d=x['decimal_enclosure'];return arb(d['mid']+' +/- '+d['rad'])*arb(10)**int(d['exponent'])\ndef prior(stem):\n r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n check('accepted_'+stem,r['status']=='passed');return r['result']\ndef execute():\n ctx.prec=512\n rev=json.loads((ROOT/OWN[-1]).read_bytes())\n check('frozen_ordinary_sources',all(sha(ROOT/p)==h for p,h in rev['scientific_sha256'].items()))\n rt=json.loads((ROOT/INPUTS[-1]).read_bytes())\n check('pinned_python',sha(Path(sys.executable))==rt['python_sha256'])\n check('pinned_packages',all(sha(Path(pkg['root'])/p)==h for pkg in rt['packages'].values() for p,h in pkg['files'].items()))\n old=prior('current-complete-bolt-energy-bound')['constants']\n latest=prior('current-interpolated-complete-bolt-test')['constants']\n new=prior('current-structured-york-moment-bound')['constants']\n params=prior('current-localized-bolt-adjoint-sensitivity')['parameters']\n h,gamma=[dec(params[k]) for k in ['h','gamma']]\n q=arb('.338');f=q/(1+q);ellb=(1+h)/h\n Kxi=dec(old['Kxi']);KV=dec(old['KV']);Kb=dec(old['Kb'])\n Cnew=dec(latest['Cnew']);Cs=dec(latest['scalar_point_Cs_unchanged'])\n Kret=ellb*(arb('2.5')*h)**(arb(7)/5)*3000*h**(-arb(7)/5)/gamma.sqrt()\n x=-1-2/q;t0,t1=arb(1),x\n for _ in range(2,30):t0,t1=t1,2*x*t1-t0\n D29=abs(t1);h2=(1+q)**2/D29;h3=(1+q)**3/D29;paff=arb('1.1e-10')*h3\n check('same_P32_and_original_normalization',paff.overlaps(dec(new['p_aff']))\n       and (Kret*KV*q.sqrt()).overlaps(dec(latest['J1_unchanged'])))\n AT=ellb*Kxi*Cnew*f**3/2;As=ellb*Cs*q.sqrt()*f**3\n AYpublished=Kret*KV*q.sqrt()*f**2\n AYold=AYpublished*Kb\n AYnew=Kret*dec(new['complete_bar_S2_weighted_bound'])\n check('full_published_three_term_bound_reproduced',(AT+As+AYpublished).overlaps(dec(latest['complete_Cb3_upper'])))\n check('available_Kb_substitution_is_valid_gain',Kb>0 and Kb<1 and AYold<AYpublished)\n check('weighted_outer_source_bound_does_not_improve_bolt_term',AYold<AYnew)\n AY=AYold;budget=arb('1.667e-9')\n debits={'TT_point':paff*AT,'scalar_trace':paff*As,'complete_mixed_York_return':paff*AY}\n total=sum(debits.values(),arb(0));without={}\n for name,value in debits.items():\n  check(name+'_positive_estimator_exceeds_whole_bolt_budget',value>budget)\n  # Sum the other terms directly, avoiding subtraction of nearly equal balls.\n  without[name]=sum((v for k,v in debits.items() if k!=name),arb(0))\n  check('perfect_removal_of_'+name+'_still_fails',without[name]>budget)\n joint_target=budget/paff\n application_target=budget/dec(latest['complete_unfiltered_Knew'])\n check('finite_positive_joint_and_application_targets',joint_target>0 and application_target>0)\n row={k:{'physical_debit':enc(v),'ratio_to_whole_bolt_budget':enc(v/budget),\n          'fraction_of_complete_positive_estimator':enc(v/total),\n          'complete_debit_after_perfect_removal':enc(without[k]),\n          'remaining_ratio_after_perfect_removal':enc(without[k]/budget)} for k,v in debits.items()}\n return {'precision_bits':512,'original_output':'L_b(nu,T)=(1+h)nu(L)/h',\n  'input':'actual fixed-seed E with ell/N normalization; complete R_S V F^3',\n  'complete_positive_estimator_terms':row,\n  'results':{k:enc(v) for k,v in {'q':q,'f':f,'h2':h2,'h3':h3,'p_aff':paff,\n   'Kret_original_mixed_point_conversion':Kret,'complete_bolt_upper':total,\n   'complete_estimator_required_gain':total/budget,\n   'joint_Cb3_target_if_whole_margin_free':joint_target,\n   'new_weighted_source_bolt_debit':paff*AYnew,\n   'weighted_source_bound_ratio_to_existing_bolt_term':AYnew/AY,\n   'application_Etot_star_target_if_whole_margin_free':application_target,\n   'zero_error_original_defect_product_ceiling':arb('.5')/h3,\n   'full_margin_graph_ceiling':arb('5.34235e-12')/paff,\n   'limited_two_fast_screen':arb('.028913')+arb('1e-11')*arb('1.0706e10')}.items()},\n  'application_source_space':'E_tot* dual to [a(s,s)+ell(xi,xi)]/N; distinct from the TT input E*',\n  'unknowns':{k:None for k in ['joint_original_geometric_output_norm','complete_structured_H3',\n   'source_test_to_original_Y','Cdef3','I_Y','Cg3','actual_kappa_m','independent_phase_columns',\n   'signed_coupled_centers','application_errors','nonlinear_neighborhood']},\n  'method_decision':'Stop separated three-term P32 admission estimator and York-only optimization; retain construction/P32 and target joint original radius map.',\n  'scope':{'specified_estimator_failure_verified':True,'York_complete_budget_contribution_executed':True,\n   'observation_space_and_bolt_domain_specified':True,'complete_nonlinear_XY_pair_constructed':False,\n   'actual_operator_norm_lower_bound':False,'actual_signed_correction_computed':False,\n   'complete_admission_certified':False,'new_physical_gate_closed':False,\n   'construction_obstruction':False,'QCD_theorem_imported':False,'full_goal_complete':False}}\nif __name__=='__main__':\n mode='acceptance' if '--acceptance' in sys.argv else 'development'\n output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n hashes={p:sha(ROOT/p) for p in INPUTS}\n run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,'input_sha256_before':hashes,\n      'frozen_sources_utf8':{p:(ROOT/p).read_text(encoding='utf-8') for p in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha(Path(sys.executable))}}\n try:\n  run['result']=execute();run['input_sha256_after']={p:sha(ROOT/p) for p in INPUTS}\n  check('frozen_inputs_unchanged',hashes==run['input_sha256_after']);run['status']='passed'\n except Exception:run['status']='failed';run['traceback']=traceback.format_exc()\n run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n message=json.dumps({'mode':mode,'status':run['status'],'checks':len(CHECKS),'traceback':run.get('traceback')},indent=2)+'\\n'\n with (ROOT/'evidence'/(STEM+'.log')).open('ab') as stream:stream.write(message.encode())\n print(message,flush=True)\n if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-admission-bottleneck-estimator-test-sources.json": "{\n  \"review_date\": \"2026-10-26\",\n  \"primary_sources\": [\n    {\n      \"url\": \"https://openai.com/index/building-scientific-understanding-with-academic-communities/\",\n      \"title\": \"Working with academic communities to build scientific understanding\",\n      \"publication_date\": \"2026-10-26\",\n      \"inspection\": \"Full official announcement opened with the web tool; release-status and physics sections read.\",\n      \"status\": \"Announcement of claimed QCD and Yang-Mills existence results. The physics group is holding off public release of the AI artifacts while preparing an exposition.\",\n      \"technical_proof_inspected\": false,\n      \"applicable_metric_boundary_or_stress_constants_obtained\": false\n    },\n    {\n      \"url\": \"https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf\",\n      \"title\": \"Quantum Yang-Mills Theory\",\n      \"inspection\": \"Official problem PDF opened from the announcement; not used as a theorem or numerical input.\"\n    }\n  ],\n  \"assessment\": \"No public theorem with checkable hypotheses for the actual curved paired mass/log domain, metric variations and complete stress/contact restoration was available from the announced materials. No coupled budget entry changes. Possible constructive regulator methods remain a future literature lead.\",\n  \"no_outbound_messages_sent\": true,\n  \"no_new_physical_or_stability_claim\": true\n}\n",
+        "evidence/current-admission-bottleneck-estimator-test-review.json": "{\n  \"frozen_utc\": \"2026-10-26T23:05:55.706010+00:00\",\n  \"scientific_sha256\": {\n    \"notes/current-admission-bottleneck-estimator-test.md\": \"28ab3626e1e968cb6a61f11620cbdf99f181177d97f5d52ed2b34f76cf2419b0\",\n    \"checks/current_admission_bottleneck_estimator_test.py\": \"01a4872f709ea82372103d63ebcb6a28d49424ffc42738bbd70aed2345969d0b\",\n    \"evidence/current-admission-bottleneck-estimator-test-sources.json\": \"5314b6a9ac51eaf85ad58653c4e10dfd37682f189e5c8891d1539dcd6960bdd9\"\n  },\n  \"ordinary_review\": [\n    \"The fixed-seed E input and the original bolt output are fully specified, and the accepted complete two-row bound establishes the domain/trace extension used in this test.\",\n    \"The observation-space completion records original regular geometric requirements and labels its extra local radius J5 as auxiliary. It does not invent a completed nonlinear X/Y pair or a free 5e-9 margin.\",\n    \"Finite geometry admission must also check exp(nu)>z and nonlinear radius/endpoint conversions. The unit E ball is not assumed to lie in that nonlinear domain.\",\n    \"All three terms of the complete two-row estimator enter the original physical bolt allowance. The accepted Kb value is substituted, and the new weighted source bound is converted into exactly the same output units before comparison.\",\n    \"Oracle removal of a term tests only sensitivity of the reported positive estimator. It is not an actual output lower bound or proof of a cancellation in the physical correction.\",\n    \"All independent source/phase columns and application errors remain unknown. The residual application threshold uses the retained full two-row E-star norm, not an invented original Y comparison.\",\n    \"The requested QCD check found an official announcement with artifacts withheld; no technical theorem or constant is imported. No messages are sent to its external collaboration.\"\n  ],\n  \"new_physical_gate_closed\": false,\n  \"complete_coupled_bound_certified\": false,\n  \"superseded_development\": {\n    \"status\": \"passed; source-space notation clarified before acceptance\",\n    \"reason\": \"Distinguish TT E from the full two-row E_tot in the application-error threshold; arithmetic unchanged.\",\n    \"snapshot_retained_in\": \"evidence/current-admission-bottleneck-estimator-test-development.json\",\n    \"source_hashes\": {\n      \"notes/current-admission-bottleneck-estimator-test.md\": \"85fcef65e2d0da19bca48453035c93d5e4c3d3a23dcbd589e08f03c11759b847\",\n      \"checks/current_admission_bottleneck_estimator_test.py\": \"f59ae3c548dc2a0724a7976f567bce5ff18dc84247df4fcb25d175432a0f963d\",\n      \"evidence/current-admission-bottleneck-estimator-test-sources.json\": \"5314b6a9ac51eaf85ad58653c4e10dfd37682f189e5c8891d1539dcd6960bdd9\"\n    }\n  }\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca"
+      },
+      "result": {
+        "precision_bits": 512,
+        "original_output": "L_b(nu,T)=(1+h)nu(L)/h",
+        "input": "actual fixed-seed E with ell/N normalization; complete R_S V F^3",
+        "complete_positive_estimator_terms": {
+          "TT_point": {
+            "physical_debit": {
+              "ball": "[5563904472484815.95599 +/- 5.79e-6]",
+              "decimal_enclosure": {
+                "mid": "5563904472484815955985797812019367720472850228543091851",
+                "rad": "1578959296409127891394853672583169",
+                "exponent": "-39"
+              }
+            },
+            "ratio_to_whole_bolt_budget": {
+              "ball": "[3.33767514846119733412e+24 +/- 5.61e+3]",
+              "decimal_enclosure": {
+                "mid": "3337675148461197334124653756460189819335937500000000000",
+                "rad": "947200595746279238103832717164544",
+                "exponent": "-30"
+              }
+            },
+            "fraction_of_complete_positive_estimator": {
+              "ball": "[6.03670297563659059678e-11 +/- 6.02e-32]",
+              "decimal_enclosure": {
+                "mid": "603670297563659059677843020240564728047041927787132056",
+                "rad": "444592747241672422960810401202177",
+                "exponent": "-64"
+              }
+            },
+            "complete_debit_after_perfect_removal": {
+              "ball": "[9.21679349572803383117e+25 +/- 6.89e+4]",
+              "decimal_enclosure": {
+                "mid": "921679349572803383116729092407191892805322308494489679",
+                "rad": "417230682468244173244205465862145",
+                "exponent": "-28"
+              }
+            },
+            "remaining_ratio_after_perfect_removal": {
+              "ball": "[5.52897030337614506969e+34 +/- 6.07e+13]",
+              "decimal_enclosure": {
+                "mid": "5528970303376145069686437266987417600000000000000000000",
+                "rad": "2502921713324459573400895399919616",
+                "exponent": "-20"
+              }
+            }
+          },
+          "scalar_trace": {
+            "physical_debit": {
+              "ball": "[9.21679349572803246030e+25 +/- 7.87e+4]",
+              "decimal_enclosure": {
+                "mid": "921679349572803246029630776589553417890095708283056129",
+                "rad": "417230681259318353629576291155969",
+                "exponent": "-28"
+              }
+            },
+            "ratio_to_whole_bolt_budget": {
+              "ball": "[5.52897030337614424733e+34 +/- 4.19e+13]",
+              "decimal_enclosure": {
+                "mid": "5528970303376144247328318995732889600000000000000000000",
+                "rad": "2502921708488756294942378701094912",
+                "exponent": "-20"
+              }
+            },
+            "fraction_of_complete_positive_estimator": {
+              "ball": "[0.99999999993963282151 +/- 3.49e-21]",
+              "decimal_enclosure": {
+                "mid": "9999999999396328215074186509045998126807066241591254198",
+                "rad": "9053843968713538611485038818099201",
+                "exponent": "-55"
+              }
+            },
+            "complete_debit_after_perfect_removal": {
+              "ball": "[5563918181194647.53775 +/- 1.94e-6]",
+              "decimal_enclosure": {
+                "mid": "5563918181194647537749645303542027741616205251521898139",
+                "rad": "1578969828570868374044223712788481",
+                "exponent": "-39"
+              }
+            },
+            "remaining_ratio_after_perfect_removal": {
+              "ball": "[3.33768337204238004664e+24 +/- 1.41e+3]",
+              "decimal_enclosure": {
+                "mid": "3337683372042380046640459090305328369140625000000000000",
+                "rad": "947206914801538363770528906346496",
+                "exponent": "-30"
+              }
+            }
+          },
+          "complete_mixed_York_return": {
+            "physical_debit": {
+              "ball": "[13708709831.5817638475 +/- 1.91e-11]",
+              "decimal_enclosure": {
+                "mid": "1370870983158176384749152266002114335502297880628777623",
+                "rad": "1053107238951585282383716932386817",
+                "exponent": "-44"
+              }
+            },
+            "ratio_to_whole_bolt_budget": {
+              "ball": "[8223581182712515805.3 +/- 0.0402]",
+              "decimal_enclosure": {
+                "mid": "8223581182712515805333846826644730754196643829345703125",
+                "rad": "6317476382662436876652948890845184",
+                "exponent": "-36"
+              }
+            },
+            "fraction_of_complete_positive_estimator": {
+              "ball": "[1.48736215443127488510e-16 +/- 2.18e-37]",
+              "decimal_enclosure": {
+                "mid": "1487362154431274885099636661054243466647617611279883298",
+                "rad": "1815930793353435145097860712759297",
+                "exponent": "-70"
+              }
+            },
+            "complete_debit_after_perfect_removal": {
+              "ball": "[9.21679349628442290754e+25 +/- 8.97e+4]",
+              "decimal_enclosure": {
+                "mid": "921679349628442290754478936149411396010289385487784631",
+                "rad": "417230682468244173244205465862145",
+                "exponent": "-28"
+              }
+            },
+            "remaining_ratio_after_perfect_removal": {
+              "ball": "[5.52897030370991176217e+34 +/- 6.95e+13]",
+              "decimal_enclosure": {
+                "mid": "5528970303709911762174438729148006400000000000000000000",
+                "rad": "2502921713324459573400895399919616",
+                "exponent": "-20"
+              }
+            }
+          }
+        },
+        "results": {
+          "q": {
+            "ball": "[0.33800000000000000000000000000000000 +/- 1e-40]",
+            "decimal_enclosure": {
+              "mid": "3380000000000000000000000000000000000000000000000000000",
+              "rad": "1",
+              "exponent": "-55"
+            }
+          },
+          "f": {
+            "ball": "[0.25261584454409566517189835575485800 +/- 2.99e-36]",
+            "decimal_enclosure": {
+              "mid": "2526158445440956651718983557548579970104633781763826606",
+              "rad": "2",
+              "exponent": "-55"
+            }
+          },
+          "h2": {
+            "ball": "[3.4079559101169338119897650627624629e-33 +/- 1.32e-68]",
+            "decimal_enclosure": {
+              "mid": "3407955910116933811989765062762462913182680547164226318",
+              "rad": "2",
+              "exponent": "-87"
+            }
+          },
+          "h3": {
+            "ball": "[4.5598450077364574404423056539761754e-33 +/- 2.22e-68]",
+            "decimal_enclosure": {
+              "mid": "4559845007736457440442305653976175377838426572105734813",
+              "rad": "2",
+              "exponent": "-87"
+            }
+          },
+          "p_aff": {
+            "ball": "[5.0158295085101031844865362193737929e-43 +/- 1.57e-78]",
+            "decimal_enclosure": {
+              "mid": "5015829508510103184486536219373792915622269229316308295",
+              "rad": "2",
+              "exponent": "-97"
+            }
+          },
+          "Kret_original_mixed_point_conversion": {
+            "ball": "[9.51250422792976192720e+53 +/- 7.61e+32]",
+            "decimal_enclosure": {
+              "mid": "951250422792976192719709270017098615854529218728689664",
+              "rad": "469879829267738507574072689295360",
+              "exponent": "0"
+            }
+          },
+          "complete_bolt_upper": {
+            "ball": "[9.21679349628442427842e+25 +/- 8.40e+4]",
+            "decimal_enclosure": {
+              "mid": "921679349628442427841577251967049870925515985699218182",
+              "rad": "417230683677169992858834640568321",
+              "exponent": "-28"
+            }
+          },
+          "complete_estimator_required_gain": {
+            "ball": "[5.52897030370991258453e+34 +/- 5.06e+13]",
+            "decimal_enclosure": {
+              "mid": "5528970303709912584532557000395980800000000000000000000",
+              "rad": "2502921718160162851859412098744320",
+              "exponent": "-20"
+            }
+          },
+          "joint_Cb3_target_if_whole_margin_free": {
+            "ball": "[3323478194726686310107802170418436.5 +/- 0.0149]",
+            "decimal_enclosure": {
+              "mid": "3323478194726686310107802170418436485161052142204168156",
+              "rad": "2",
+              "exponent": "-21"
+            }
+          },
+          "new_weighted_source_bolt_debit": {
+            "ball": "[114418386353.981783236 +/- 5.24e-10]",
+            "decimal_enclosure": {
+              "mid": "1144183863539817832364358502799138246832985179061105667",
+              "rad": "878978175946295925869340845408257",
+              "exponent": "-43"
+            }
+          },
+          "weighted_source_bound_ratio_to_existing_bolt_term": {
+            "ball": "[8.3464007743739476492 +/- 3.93e-20]",
+            "decimal_enclosure": {
+              "mid": "834640077437394764922644005802499767298414616330232531",
+              "rad": "1282374877871063064734234010714113",
+              "exponent": "-53"
+            }
+          },
+          "application_Etot_star_target_if_whole_margin_free": {
+            "ball": "[8.50234296592083063276e-80 +/- 6.81e-101]",
+            "decimal_enclosure": {
+              "mid": "850234296592083063275704531432604081050533154605003147",
+              "rad": "384898811901965014858313194536961",
+              "exponent": "-133"
+            }
+          },
+          "zero_error_original_defect_product_ceiling": {
+            "ball": "[109652849856009446344288613901028.20 +/- 1.63e-3]",
+            "decimal_enclosure": {
+              "mid": "1096528498560094463442886139010281983706405925742227046",
+              "rad": "2",
+              "exponent": "-22"
+            }
+          },
+          "full_margin_graph_ceiling": {
+            "ball": "[10650980044150037557771095935893.782 +/- 2.63e-4]",
+            "decimal_enclosure": {
+              "mid": "1065098004415003755777109593589378173755257763161633938",
+              "rad": "2",
+              "exponent": "-23"
+            }
+          },
+          "limited_two_fast_screen": {
+            "ball": "[0.13597300000000000000000000000000000 +/- 3e-40]",
+            "decimal_enclosure": {
+              "mid": "1359729999999999999999999999999999999999999999999999999",
+              "rad": "2",
+              "exponent": "-55"
+            }
+          }
+        },
+        "application_source_space": "E_tot* dual to [a(s,s)+ell(xi,xi)]/N; distinct from the TT input E*",
+        "unknowns": {
+          "joint_original_geometric_output_norm": null,
+          "complete_structured_H3": null,
+          "source_test_to_original_Y": null,
+          "Cdef3": null,
+          "I_Y": null,
+          "Cg3": null,
+          "actual_kappa_m": null,
+          "independent_phase_columns": null,
+          "signed_coupled_centers": null,
+          "application_errors": null,
+          "nonlinear_neighborhood": null
+        },
+        "method_decision": "Stop separated three-term P32 admission estimator and York-only optimization; retain construction/P32 and target joint original radius map.",
+        "scope": {
+          "specified_estimator_failure_verified": true,
+          "York_complete_budget_contribution_executed": true,
+          "observation_space_and_bolt_domain_specified": true,
+          "complete_nonlinear_XY_pair_constructed": false,
+          "actual_operator_norm_lower_bound": false,
+          "actual_signed_correction_computed": false,
+          "complete_admission_certified": false,
+          "new_physical_gate_closed": false,
+          "construction_obstruction": false,
+          "QCD_theorem_imported": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-admission-bottleneck-estimator-test.md": "28ab3626e1e968cb6a61f11620cbdf99f181177d97f5d52ed2b34f76cf2419b0",
+        "checks/current_admission_bottleneck_estimator_test.py": "01a4872f709ea82372103d63ebcb6a28d49424ffc42738bbd70aed2345969d0b",
+        "evidence/current-admission-bottleneck-estimator-test-sources.json": "5314b6a9ac51eaf85ad58653c4e10dfd37682f189e5c8891d1539dcd6960bdd9",
+        "evidence/current-admission-bottleneck-estimator-test-review.json": "cb1b4d177de035428374754272e8b3252d8b7a00346bf11dc7428a942c547449",
+        "notes/current-interpolated-complete-bolt-test.md": "dda5620ddbf5f3a5f84d855c345bf49ecf42295b64eed6b9679314f2a484c755",
+        "notes/current-complete-bolt-energy-bound.md": "6b86ce1ba8384c56c8b5fdb913ab7d0e3d472c8311083f8fb75323f6fab2466d",
+        "notes/current-structured-york-moment-bound.md": "3a9f1643fd9bbd0e15e2f2e1a82bebd4729f8fe3c3e60becc912b6889c79dff0",
+        "notes/current-original-admission-map-budget-test.md": "0626ecc6857849c076ace6a05606d891b054c8e1b82ae5dd0e2a7d633d34571f",
+        "notes/current-native-output-structured-source-test.md": "a7e18a87ed4b308ecbcf381b1ed18d2b3174646b0c20b7ca10093e7dd629f7a4",
+        "notes/current-adjoint-uniform-estimator-test.md": "8c34d2095a1d092466255efc7c52bed2c35f6ced98c8dd01b90e6b42880bd230",
+        "notes/current-controlled-solution-audit-closeout.md": "3dfe40a660a7782947375e75714c3f126fea66923dafeee040f2279d250d921e",
+        "notes/finite-cold-admission-and-response.md": "85a54514f9c744cc5fc05ce4ff60d50de2c7c43e6f15ec0c9bfb9e1b25ee0600",
+        "notes/finite-outer-admission-and-response.md": "27d0a0db4894b139dd7271e7c62d5ee3f0cbb7d5951e0e8246374c6dbd24108e",
+        "evidence/current-interpolated-complete-bolt-test.json": "8d1a46d5f281a5a6c02c7e3e2f1766a31b8fcdb8799c7f04edbe74ee8813246b",
+        "evidence/current-complete-bolt-energy-bound.json": "590116b4c5a85c7f824e7d4d8ef7d3749462310c7dc04daa09b73a6a50fce3e7",
+        "evidence/current-structured-york-moment-bound.json": "57e194fa10beffb4a487436eb6a525aa80b1b3bc5e8de1001124ee4741738e8a",
+        "evidence/current-localized-bolt-adjoint-sensitivity.json": "a48e06fec491c8c647d8d141cb811a10f4d0103a751648a139982f39f5cc1548",
+        "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "frozen_ordinary_sources",
+          "passed": true
+        },
+        {
+          "name": "pinned_python",
+          "passed": true
+        },
+        {
+          "name": "pinned_packages",
+          "passed": true
+        },
+        {
+          "name": "accepted_current-complete-bolt-energy-bound",
+          "passed": true
+        },
+        {
+          "name": "accepted_current-interpolated-complete-bolt-test",
+          "passed": true
+        },
+        {
+          "name": "accepted_current-structured-york-moment-bound",
+          "passed": true
+        },
+        {
+          "name": "accepted_current-localized-bolt-adjoint-sensitivity",
+          "passed": true
+        },
+        {
+          "name": "same_P32_and_original_normalization",
+          "passed": true
+        },
+        {
+          "name": "full_published_three_term_bound_reproduced",
+          "passed": true
+        },
+        {
+          "name": "available_Kb_substitution_is_valid_gain",
+          "passed": true
+        },
+        {
+          "name": "weighted_outer_source_bound_does_not_improve_bolt_term",
+          "passed": true
+        },
+        {
+          "name": "TT_point_positive_estimator_exceeds_whole_bolt_budget",
+          "passed": true
+        },
+        {
+          "name": "perfect_removal_of_TT_point_still_fails",
+          "passed": true
+        },
+        {
+          "name": "scalar_trace_positive_estimator_exceeds_whole_bolt_budget",
+          "passed": true
+        },
+        {
+          "name": "perfect_removal_of_scalar_trace_still_fails",
+          "passed": true
+        },
+        {
+          "name": "complete_mixed_York_return_positive_estimator_exceeds_whole_bolt_budget",
+          "passed": true
+        },
+        {
+          "name": "perfect_removal_of_complete_mixed_York_return_still_fails",
+          "passed": true
+        },
+        {
+          "name": "finite_positive_joint_and_application_targets",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T23:07:03.593966+00:00"
+    }
+  ]
+}

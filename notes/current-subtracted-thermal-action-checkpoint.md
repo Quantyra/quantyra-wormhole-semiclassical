@@ -1,3 +1,96 @@
+# Current original-admission estimator decision, 2026-10-26
+
+EXECUTED: the separated complete two-row P32 admission estimator fails
+its original bolt budget even if any one of its three terms is removed
+perfectly. Further York-only optimization cannot change that decision.
+The actual joint geometric output remains UNKNOWN; this is neither a
+construction obstruction nor a controlled-solution certificate. Preserve
+the closed audit, every accepted result and the active stable-wormhole goal.
+
+The necessary spaces are explicit: normalized TT form input E; compatible
+linear geometric observations with the original regular-chart, cold,
+outer, radius and bolt seminorms; and the original scalar bolt observable
+L_b=(1+h)nu(L)/h. The latter has its proved actual-domain E extension.
+The full application residual instead belongs to E_tot*, dual to
+[a(s,s)+ell(xi,xi)]/N. Neither space is silently renamed original strong Y.
+The nonlinear positivity domain exp(nu)>z, endpoint identification and
+radius remainder are still additional requirements. A completed nonlinear
+X/Y pair and numerical admission embedding are not supplied by this test.
+
+For the complete identity
+ R_S V F^3=(U F^3+a^-1b F^3+(Cbar*)^-1(V*)^-1 Bbar F^2, V F^3),
+the executed ORIGINAL bolt debits of its separated positive estimator are:
+
+| Complete term | P32 physical bolt allowance reported |
+| --- | ---: |
+| TT point/kinematic contribution | 5.563904473e15 |
+| Scalar trace contribution | 9.216793496e25 |
+| Full mixed/York return, with actual Kb substituted | 1.370870984e10 |
+
+The generous WHOLE margin is 1.667e-9, with other errors set to zero.
+The total reported allowance is 9.216793496e25, a factor 5.528970304e34
+too large for this certificate. York is only 1.487362155e-16 of that
+sum. Removing it perfectly leaves the same 5.528970304e34 overrun.
+Removing the dominant scalar term still leaves a factor 3.337683372e24.
+These statements concern the explicit upper-bound expression, not
+actual correction amplitudes or lower bounds on the true map.
+
+The preceding complete weighted-source bound remains valid. Converted
+through the actual mixed point map into the SAME physical bolt units,
+it gives 1.144183864e11, 8.346400775 times the already available York
+term. It is therefore not a bolt-budget improvement. Its small quartic
+coefficient alone was never a complete output or source allowance.
+The outer-weight improvement remains useful in its original scope.
+
+At fixed P32 a JOINT bound would have to meet
+ ||L_b R_S V F^3||_(E->R)<=3.323478195e33
+only if the whole margin remains free. The separate full two-row
+application estimator needs ||r||E_tot*<=8.502342966e-80 under the same
+optimistic assumption. Both are conditional targets, not attained bounds.
+
+FIRST MISSING ADMISSION IMPLICATION: a quantitative bound from the actual
+structured correction into the original geometric observation family,
+with nonlinear radius and endpoint conversion. Joint source H3 is a
+sufficient intermediate route, not admission itself. The source H3 map,
+original-Y conversion, original defect, graph/physical outputs, actual
+mass column, every independent phase/matching input, signed centers and
+application errors remain unknown. The existing quantum-fast screen
+retains only its two-fast scope. No ceiling is used as a coefficient.
+The 1/h radius cost, cutoff transitions and regular-bolt matching remain;
+the 1e4000 C/10^74739.22 generic constants are not used in this test.
+
+The requested QCD relevance check inspected the official October 26
+announcement. The physics artifacts are being withheld while the group
+prepares its exposition; no theorem/constant applicable to our paired
+curved metric variations could be inspected. No budget entry changes,
+no matter-theory change is adopted, and no external message was sent.
+Source: https://openai.com/index/building-scientific-understanding-with-academic-communities/
+
+METHOD DECISION: stop the separated three-term estimator for this P32
+admission certificate, and stop further York-only optimization. Retain
+P32 and the construction as unrejected candidates. Prioritize the JOINT
+original radius map, preserving the signed two-row cancellation before
+norms. No degree change or new component optimization is adopted.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose
+ [-A^-1 C V F^3+(C*)^-1(V*)^-1 Bop F^2]/(1-z)
+in the original regular-chart/cold/outer observation norms, including
+its bolt row and all common-restored quantum/contact/boundary returns.
+This is the earliest missing geometric comparison, not another York
+moment or a conditional ceiling. Actual attainability remains undecided.
+
+Verification: ordinary argument/checker frozen before development;
+successful first snapshot retained, TT versus coupled-dual notation
+clarified and refrozen, second development, ordinary review and unchanged
+512-bit acceptance with 19 supporting checks. Arithmetic validates the
+specified estimator test, not an uncomputed quantum inverse. Pinned
+Python/63 flint/1532 SymPy files retained; no Lean invocation. Prior science,
+closed audits and all 18 inherited worktree paths remain unchanged.
+
+Remaining to-do list: joint original geometric admission/source maps and original-Y comparison; every coupled entry/application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current complete weighted-source and York-moment test, 2026-10-26
 
 UNRESOLVED complete polynomial admission test, with a new executed bound:
