@@ -1,3 +1,118 @@
+# Active checkpoint: actual interior return bounded; complete coupled quotient unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.
+
+See [the ordinary canonical interior argument](current-canonical-interior-schur-bound.md) and frozen evidence.
+
+The COMPLETE coupled graph estimate remains UNRESOLVED. The actual
+canonical interior compression now has an energy inverse bound below 7,
+and its entire return to the original outer H3 graph is below
+3.712e-12 E(v). Its affine contribution is below 4.084e-22. The
+complementary near/transition operator, signed centers, original border
+and physical norm comparisons remain uncomputed. No actual kappa_m or
+controlled nonlinear solution is certified.
+
+The first unsupported shortcut was transferring the full indefinite
+Hessian inverse bound to an interior compression. That inference is
+invalid. The repaired argument restricts the ACTUAL canonical fields to
+zero on (0,.2), retaining their exterior York tail and global kinematic
+constraint. A scalar form extension costs less than .221 of the positive
+TT energy. A bounded signed transformation is coercive, and both
+congruence factors give an inverse below 7 in the ORIGINAL energy norm.
+
+This is an exact weak elimination on the full quotient, including all
+interface data; three phase observations do not replace that quotient.
+The original paired mass/log domain, regular bolt, common-restored action,
+complete angular and thermal sums, contacts and finite returns are kept.
+No new quantum wall, smooth surrogate geometry or finite spectrum is used.
+The auxiliary C1 scalar extension is only an H2 form test. No nonlinear
+action on arbitrary energy fields or regulator/completion interchange is
+asserted. The strong separated kernel extends the existing limiting form.
+
+The executed original-output Schur bounds per actual input energy are
+
+    H3 graph             <3.712e-12 E(v),
+    quartic finite part  <6.437e-25 E(v),
+    mass moment          <6.437e-26 E(v),
+    exact slow moment    <9.240e-22 E(v).
+
+They apply to every actual input column, including independent phases,
+but the input norms and subsequent border maps must still be supplied.
+They are symmetric enclosures, not computed signed centers. The original
+weighted input conversion gives H3 <1.151e-10 N(v). For the actual source,
+E(h_lin)<1.1e-10 gives the entire affine interior H3 term <4.084e-22.
+Energy control does not supply an interior strong graph or bolt value.
+
+The exact reference mass cancellation, .1/.2 cutoff transition and
+regular-bolt matching remain. It is not a global fixed-temperature zero
+mode. Original conversion 2133<||d_chi||H3<2174 and LINEAR mass
+|m|<1.627532e-15 still debit <=3.538254568e-12; near SHAPE retains
+>6.4617454e-12 after the known distant return. The original scalar
+quartic coefficient and exact correlated slow pair remain in the border.
+
+kappa_m<=5e-5 remains UNKNOWN after elimination. If A_o is a PROVED
+remaining amplifier and d_m the direct/other debit, this interior entry
+fits only if d_m+A_o*3.712e-12*E(Phi_m)<5e-5, with the phase-return
+entries also included. For d_m=0 alone, A_o E(Phi_m)<1.3469e7 is a
+sufficient ceiling, not an actual norm. At conditional kappa_m=5e-5,
+the affine/graph/energy debits remain 2.14765e-12, .0024731, .0195239.
+The complete residual ledger requires
+
+ Y_other+A_o*4.084e-22+Y_phase_return <=5.34235e-12,
+ eta_other+.0195239 gamma_E+A_o*3.712e-12 J_E+eta_phase_return <.0012069.
+
+The interior allocation replaces the old far allocation; it is not counted
+twice. Only with A_o=1 and no phase amplification does the affine residual
+become 5.3423499995916e-12. J_E is the feedback INPUT energy map;
+gamma_E is the full solution-family energy/graph comparison. Both are
+unknown and are not interchangeable. With all other losses zero, their
+separate sufficient ceilings are A_o J_E<3.251e8 and gamma_E<.0618165.
+An outer-data-only gamma_E on the full domain is already disproved.
+
+The remaining continuum gap is the commonly restored complementary
+quotient in the ORIGINAL strong graph, with near coincidence, the full
+transition, both equations, scalar finite part, mass/slow relations and
+matching reconstruction. Its input/border norms and signed retained
+centers are unknown. Small Dirac truncation errors do not evaluate them.
+No evidence here shows those actual coefficients violate their targets.
+
+The conditional fast screen .135973<.1599164 retains only its two-fast
+admitted-family scope. E_center+1e-8 alpha_embed<=1e-11,
+R_X alpha_embed*.028913+Z0_other<=.25,
+R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1 remain unclosed.
+Compatibility, physical matching, validity/noise and all-sector stability
+remain unproved. This result is not an obstruction to construction.
+
+RESEARCH DECISION: retain the construction and use the constrained
+energy elimination with the exact Dirac transport method. Stop refining
+the separated interior return. Sharpen the complete common-restored
+complementary quotient and border; their unknown strong maps and signed
+entries decide feasibility. The requested full coupled milestone remains
+open; no controlled solution or construction obstruction is established.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): assemble and certify the
+signed complementary quotient return for the affine source and ALL
+mass/quartic/correlated-slow/fast columns, with original interface and
+phase matching. Insert the whole interior enclosure above, compute the
+input/border map norms, and test the mass and residual budgets together.
+This turn executed the interior inverse and separated Schur estimate,
+not that complete signed solve or its physical bolt/admission estimate.
+
+Verification: ordinary domain/form argument and execution contract
+frozen before development; unchanged-source acceptance matches at 512 bits,
+39 supporting checks on 18 inputs. No failed frozen run. A formatting-only
+refreeze removed one whitespace-only checker line after publication diff
+review; both passing source snapshots and run pairs are preserved. The pre-freeze
+preview and its corrected N+6 tail majorant are retained in review evidence.
+Python and all 1595 flint/SymPy files match the reference runtime; no Lean
+run. Checks support the ordinary argument. All 18 inherited paths, closed
+audits and prior checkpoint semantic state are preserved.
+
+Remaining to-do list: complete signed coupled quotient/border and original physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: original outer graph tail bounded; coupled interior return unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.

@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-25",
+  "story": "S169",
+  "status": "ordinary_argument_and_execution_contract_frozen_before_development",
+  "outcome_scope": "Complete coupled bound unresolved. Actual canonical interior compression inverse and entire separated original outer/phase return bounded; signed complementary quotient and border still unknown.",
+  "quantitative_role": "Close the interior compression and separated Schur product for all input columns in their original energy, including affine debit, without an unjustified compression of the indefinite full inverse. Preserve all remaining actual input, border and physical-norm comparisons as unknown.",
+  "domain_review": [
+    "W_I is the CLOSED kernel of canonical restriction to (0,.2) in the existing full energy domain, with original global York return and regular-bolt completion.",
+    "The complement is the FULL quotient V/W_I, not just finite boundary coefficients. Interface and original two-row matching remain quotient equations.",
+    "The exterior York homogeneous branch is retained. The projected TT subspace keeps its global kinematic moment constraint.",
+    "An explicit scalar H2 form extension pays for the exterior tail. Its C1 junction is an auxiliary form test, not a replacement metric, smooth double or nonlinear correction.",
+    "Bounded extension plus closedness of W_I proves projected TT closedness; the scalar zero-exterior subspace is closed. The signed transformed form is bounded and coercive there.",
+    "Both triangular congruence factors are included in returning the inverse to original energy units. The full inverse bound one is not used for its indefinite compression.",
+    "The original commonly restored limiting Hessian is restricted AFTER its established limit and completion. No regulator/energy-completion interchange or determinant on the interior subspace is asserted.",
+    "Separated output kernel identities agree on the original core and extend by energy-to-L2 continuity. All angular and signed thermal modes, both physical arms and finite-domain returns remain.",
+    "Local contacts vanish only between separated input/output supports; all coincidence and density contacts remain in H_II and complementary blocks.",
+    "Original .05/.1 graph cutoff, exact scalar finite part, mass and slow observations are retained. No arbitrary bolt point evaluation is inferred from energy.",
+    "Actual input norm and border amplification constants, post-elimination mass coefficient, and nonlinear-neighborhood comparisons remain unknown."
+  ],
+  "theorem_hypotheses": [
+    "Lax-Milgram: bounded form and explicitly coercive signed transform on the closed product subspaces, proved in the ordinary note.",
+    "Cauchy coefficient bound: only the analytic one-sided seed ODE is extended on the zero-free |z|<=.4 disc; the Volterra map is a strict contraction.",
+    "Grubb Theorem 2.3 re-inspected: C^tau symbol, |s|<tau and N>dimension/2+1. Retained output-zero seed use does not give strong quotient constants.",
+    "Gaarde-Grubb Theorem 2.4/Proposition 2.9 re-inspected: smooth differential boundary resolvent/reflected logarithm; not applied to an unidentified determinant Hessian or the auxiliary H2 junction.",
+    "McIntosh-Morris Theorem 3.1 re-inspected: unitary group and Lipschitz-domain/commutator hypotheses of the original paired Dirac system are unchanged by restricting metric inputs."
+  ],
+  "source_urls": [
+    "https://web.math.ku.dk/~grubb/CPDE14.pdf",
+    "https://arxiv.org/pdf/math/0703878",
+    "https://arxiv.org/pdf/1201.1818"
+  ],
+  "execution_contract": {
+    "precision_bits": 512,
+    "series_order": 80,
+    "junction_cells": 512,
+    "targets": [
+      "A_up<.000617",
+      "L_low>.00279",
+      "extension ratio<.221",
+      "interior inverse original energy<7",
+      "original H3 Schur coefficient<3.712e-12 per input energy",
+      "quartic/mass/slow coefficients<6.437e-25,6.437e-26,9.240e-22",
+      "entire affine interior H3 debit<4.084e-22"
+    ],
+    "method": "Exact polynomial/Laurent integration, complete analytic Cauchy remainder, outward full-cell junction integration; ordinary signed form proof before arithmetic.",
+    "verification": "Freeze before development; preserve failures and snapshots; unchanged acceptance after ordinary review; no Lean run."
+  },
+  "first_unsupported_step_after_result": "Complete common-restored complementary quotient in original strong graph, interface/phase and physical bolt maps, signed retained centers and actual input/border norms.",
+  "conditional_ceilings": "A_o E(Phi_m)<1.3469e7 and A_o N(Phi_m)<4.344e5 reserve the entire mass target for the interior H3 entry only. Other direct and phase entries reduce these allowances; no actual value is assigned.",
+  "claims_boundary": [
+    "No complete coupled bound",
+    "No signed complementary center or border inverse",
+    "No physical bolt or strong interior inverse",
+    "No actual kappa_m",
+    "No nonlinear admission/contraction",
+    "No exact compatibility, physical matching, validity/noise or stability certificate",
+    "No construction obstruction"
+  ],
+  "scientific_sha256": {
+    "notes/current-canonical-interior-schur-bound.md": "eb88be2c987f6697339e01e33d562dd3ed20a56a29786168919b0846a992974e",
+    "checks/current_canonical_interior_schur_bound.py": "831f954af2be8147524eb1d51bfb73cb8f0688800303bf865e45b9394967c95e"
+  },
+  "exploration": {
+    "s169ek-interior-explore.py": {
+      "sha256": "83c28cbfd9d2211fd64d3de3e8cd97750df000b24481c8f1af6dcbf010eab3a2",
+      "contents": "from pathlib import Path\nimport sys,json,math\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nfrom flint import arb,ctx\nctx.prec=512\nroot=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\ndef dec(x):\n d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\np=json.loads((root/'evidence/current-global-mass-conversion.json').read_bytes())['runs'][-1]['result']['parameters']\nbeta,u,eps,tau,Fl=[dec(p[k]) for k in ['beta','u','eps','tau','Fl']]\nQ={0:beta,2:u,3:-4*beta-2*u-tau,4:3*beta+u+eps,5:-2*eps,6:eps}\nQplus={**Q,3:Q[3]+tau}\ndef add(*args):\n out={}\n for d in args:\n  for j,v in d.items():out[j]=out.get(j,arb(0))+v\n return out\ndef scale(d,v):return {j:x*v for j,x in d.items()}\ndef shift(d,n):return {j+n:x for j,x in d.items()}\ndef mul(a,b):\n out={}\n for j,x in a.items():\n  for k,y in b.items():out[j+k]=out.get(j+k,arb(0))+x*y\n return out\ndef der(a):return {j-1:j*x for j,x in a.items() if j}\ndef ev(a,z):return sum((x*z**j for j,x in a.items()),arb(0))\ndef integral(a,lo,hi):\n total=arb(0)\n for j,x in a.items():\n  total+=x*((hi/lo).log() if j==-1 else (hi**(j+1)-lo**(j+1))/(j+1))\n return total\nN=80;R=arb('.4');c=arb('.2');delta=arb('.0002');end=c+delta\nA={j-2:j*(j-5)*x for j,x in Q.items() if j>=2}\nQlower=beta-sum((abs(x)*R**j for j,x in Q.items() if j),arb(0))\nVmax=arb(2)/3*sum((abs(x)*R**j for j,x in A.items()),arb(0))/Qlower\nalpha=Vmax*R*R/14;Fmax=1/(1-alpha)\ninvQ=[1/beta]\nfor j in range(1,N):invQ.append(-sum((v*invQ[j-k] for k,v in Q.items() if k and k<=j),arb(0))/beta)\nV=[arb(2)/3*sum((v*invQ[j-k] for k,v in A.items() if k<=j),arb(0)) for j in range(N-1)]\nf=[arb(1),arb(0)]\nfor j in range(2,N+1):f.append(sum((V[k]*f[j-2-k] for k in range(j-1)),arb(0))/(j*(j+5)))\ns={j+4:(j+1)*v/4 for j,v in enumerate(f)}\nxi={j+4:-(j+5)*v/2 for j,v in enumerate(f)}\nsp=der(s);spp=der(sp);xip=der(xi);Qp=der(Q)\nrr=arb('2.946e-9');Kup=arb('6.0001');Vup=arb('24.001')\nLS=add(mul(Q,spp),mul(add(Qp,scale(shift(Q,-1),-2)),sp))\nDa=scale(shift(LS,2),1/beta)\nas_int=shift(add(scale(mul(Da,Da),6*rr),scale(shift(mul(Qplus,mul(sp,sp)),2),Kup/beta),scale(mul(s,s),Vup)),-4)\ndxi=add(shift(xip,1),scale(xi,-2))\nlx_int=scale(shift(add(scale(mul(Q,mul(dxi,dxi)),arb('1.5')/beta),mul(xi,xi)),-4),arb('.99')*Fl)\nApoly=integral(as_int,arb(0),c);Lpoly=integral(lx_int,arb(0),c)\nmom=[4,12,52]\nTs=[Fmax/4*(N+5)**(j+1)*mom[j]*(c/R)**(N+1) for j in range(3)]\nTx=[2*x for x in Ts]\nqm=arb('.17');qpm=arb('.3')\nlaperr=(qm*Ts[2]+2*qm*Ts[1]+qpm*c*Ts[1])/beta\nAerr=c**5/5*(6*rr*laperr**2+Kup*qm/beta*Ts[1]**2+Vup*Ts[0]**2)\nLerr=arb('.99')*Fl*c**5/5*(arb('1.5')*qm/beta*(Tx[1]+2*Tx[0])**2+Tx[0]**2)\nAout=(Apoly.sqrt()+Aerr.sqrt())**2;Llo=(Lpoly.sqrt()-Lerr.sqrt())**2\nsc=ev(s,c)+arb(0,(Ts[0]*c**4).abs_upper());spc=ev(sp,c)+arb(0,(Ts[1]*c**3).abs_upper())\namp=spc+sc/c\ndef junction(cells):\n out=arb(0)\n for i in range(cells):\n  tt=arb(2*i+1,1)/(2*cells);z=c+delta*tt\n  P=tt*(1-tt)**2;P1=1-4*tt+3*tt**2;P2=-4+6*tt\n  sv=sc*c/z+amp*delta*P\n  sv1=-sc*c/z**2+amp*P1\n  sv2=2*sc*c/z**3+amp/delta*P2\n  qz=ev(Q,z);qpz=ev(Qp,z);qplus=ev(Qplus,z)\n  lap=z*z/beta*(qz*sv2+(qpz-2*qz/z)*sv1)\n  term=z**-4*(6*rr*lap**2+Kup*qplus/beta*z*z*sv1**2+Vup*sv**2)\n  out+=term*delta/cells\n return out\nAh=junction(512)\nqpcomb={j:(4-j)*v for j,v in Q.items()}\nfar_integrand=shift(add(scale(mul(qpcomb,qpcomb),6*rr/beta**2),scale(Qplus,Kup/beta),{0:Vup}),-6)\nAfar=(sc*c)**2*integral(far_integrand,end,arb(1))\nAup=Aout+Ah+Afar;ratio=Aup/Llo\nmargin=1-ratio-2*(arb('.338')*ratio).sqrt()\nconversion=1+ratio/2+(ratio+ratio*ratio/4).sqrt()\ninverse=conversion/margin\nnormH=arb('1.338').sqrt()\nout={'scope':'Preview of actual canonical interior compression, not frozen certification or signed center.',\n 'analytic_Vmax':str(Vmax),'Volterra_ratio':str(alpha),'analytic_f_bound':str(Fmax),\n 'outer_scalar_energy_upper':str(Aout),'junction_scalar_energy':str(Ah),'far_scalar_energy':str(Afar),\n 'outer_TT_energy_lower':str(Llo),'extension_ratio':str(ratio),'signed_test_margin':str(margin),\n 'interior_inverse_upper_expression':str(inverse),'global_H_norm_upper_expression':str(normH),\n 'outer_Schur_H3_per_input_energy_upper_expression':str(arb('4.583e-13')*inverse*normH),\n 'affine_Schur_H3_upper_expression':str(arb('4.583e-13')*inverse*normH*arb('1.1e-10')),\n 'scalar_series_energy_tail':str(Aerr.sqrt()),'TT_series_energy_tail':str(Lerr.sqrt())}\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\\n')\nprint(json.dumps(out,indent=2))\n",
+      "scope": "Pre-freeze preview only. Its N+5 tail majorant was corrected to N+6 in the frozen ordinary argument and checker to cover the TT n+5 coefficient. Preview is not certification."
+    },
+    "s169ek-interior-explore.json": {
+      "sha256": "57f81b837b66ce1628ee0de8d35e47b91efe96f93128f0fa92ad0a8472c709ed",
+      "contents": "{\r\n  \"scope\": \"Preview of actual canonical interior compression, not frozen certification or signed center.\",\r\n  \"analytic_Vmax\": \"[11.5107913689636383667029664271 +/- 7.57e-29]\",\r\n  \"Volterra_ratio\": \"[0.131551901359584438476605330595 +/- 4.37e-31]\",\r\n  \"analytic_f_bound\": \"[1.151479289972001002563104446282 +/- 8.10e-31]\",\r\n  \"outer_scalar_energy_upper\": \"[0.00049241390206357822885311016907 +/- 3.01e-33]\",\r\n  \"junction_scalar_energy\": \"[1.1e-6 +/- 4.81e-8]\",\r\n  \"far_scalar_energy\": \"[0.0001227478343021577743111 +/- 8.24e-26]\",\r\n  \"outer_TT_energy_lower\": \"[0.00279346511177530438235102546442 +/- 4.71e-33]\",\r\n  \"extension_ratio\": \"[0.22060 +/- 8.85e-6]\",\r\n  \"signed_test_margin\": \"[0.2333 +/- 3.08e-5]\",\r\n  \"interior_inverse_upper_expression\": \"[6.828 +/- 8.63e-4]\",\r\n  \"global_H_norm_upper_expression\": \"[1.15671949927370032210595947327377682256949935320348831369778610898152662903306142479038359685671862974377338208379905777455525547997445451921599108610576 +/- 2.86e-154]\",\r\n  \"outer_Schur_H3_per_input_energy_upper_expression\": \"[3.619e-12 +/- 6.94e-16]\",\r\n  \"affine_Schur_H3_upper_expression\": \"[3.981e-22 +/- 6.63e-26]\",\r\n  \"scalar_series_energy_tail\": \"[2.04341998503453869466454049971e-22 +/- 2.04e-52]\",\r\n  \"TT_series_energy_tail\": \"[2.04863209907864704089881403995e-22 +/- 5.32e-52]\"\r\n}\r\n",
+      "scope": "Pre-freeze preview only. Its N+5 tail majorant was corrected to N+6 in the frozen ordinary argument and checker to cover the TT n+5 coefficient. Preview is not certification."
+    }
+  },
+  "local_lean_invocations": 0,
+  "formatting_refreeze": {
+    "utc": "2026-10-26T00:11:48.615280+00:00",
+    "reason": "Publication git diff --check rejected one whitespace-only line in the checker. No numerical/ordinary-proof change. Initial passing development and acceptance snapshots remain in their run ledgers; rerun both on the final clean source.",
+    "prior_review_sha256": "aabbfcfaffa6cc367b0bef29f14968aa116723807eaabc3a8cb1a0dafdf9e4ad",
+    "prior_checker_sha256": "0dcdf2664978a84abf06e150e4818fbf572ddb44c3cb2f7832b56917303174e3",
+    "prior_runtime": {
+      "scope": "Runtime fingerprints and supporting arithmetic for the ordinary interior-elimination argument; complete coupled feasibility remains unresolved.",
+      "verified_utc": "2026-10-26T00:09:11.271615+00:00",
+      "reference": "evidence/current-coupled-mass-adjoint-runtime.json",
+      "reference_sha256": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863",
+      "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+      "package_file_counts": {
+        "flint": 63,
+        "sympy": 1532
+      },
+      "package_fingerprints_match": true,
+      "unchanged_development_acceptance_match": true,
+      "supporting_checks": 39,
+      "frozen_inputs": 18,
+      "failed_frozen_runs": 0,
+      "ordinary_post_development_review": "Rechecked closed canonical restriction, retained global York constraint, exterior admissible ODE branch, bounded extension and closed TT projection; scalar H2 junction membership with both traces matched and actual regular bolt; exact normalized scalar and TT integrals, positive majorant extension only beyond physical bolt, Cauchy N+6 tails covering both profiles; real-Q upper bound from negative cubic plus quartic domination; signed transformed-form coercivity and both triangular norm factors; full Hessian norm from its squared block matrix; original separated all-spectrum output and phase constants; source dual energy conversion and affine debit. Restriction is of the already limiting form, not interchange of regulator removal and energy completion. No strong interface/bolt map, input norm, border amplifier or signed complementary center is inferred. No source/proof change after development.",
+      "canonical_interior_energy_inverse_certified": true,
+      "original_separated_outer_Schur_bound_certified": true,
+      "full_coupled_estimate_certified": false,
+      "local_lean_invocations": 0
+    },
+    "operational_failures": [
+      "Temporary publication helper had an escaped-newline SyntaxError before writes; corrected.",
+      "Publication stopped at git diff --cached --check before commit due to checker line 121 trailing whitespace.",
+      "Dependent planning preparation refused the nonempty index; no planning writes occurred."
+    ],
+    "prior_scientific_runs": "One passing development and one matching passing acceptance; no failed frozen scientific run."
+  }
+}
