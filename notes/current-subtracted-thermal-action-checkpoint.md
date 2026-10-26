@@ -1,3 +1,127 @@
+# Current source-domain feasibility decision, 2026-10-26
+
+EXECUTED: the proposed comparison from original outer data plus regular-
+disk H3 sources to a GLOBAL H3(d log z) residual has NO finite constant.
+The witness is a smooth family in the ACTUAL complete coupled domain,
+with both original rows retained. This rejects that source-comparison
+route, not the physical operator or the construction. A finite complete
+outer-graph plus regular-interior residual-to-bolt test is now explicit.
+The actual quantum center, trial residual and coupled estimate remain
+UNRESOLVED. P32, the closed audit and full stable-wormhole objective remain.
+
+The previous turn made progress by closing the complete transport-to-bolt
+slice. Preparing its proposed global strong residual exposed an earlier
+regularity issue: D=z partial_z is singular as a regular-disk derivative
+at the bolt. The current global H3(d log z) test was explicitly stronger
+than original Y; a numerical comparison from regular source data had
+not been established. This turn tests that proposed comparison directly.
+
+Keep the actual paired mass/log realization, original temperature,
+common regulator and exact ultraviolet logarithm, every angular/thermal
+mode, coincidence/local contacts, cutoff transitions and regular bolt.
+With w=sqrt(2(z_h-z)/gamma), use actual conformal directions
+ nu_epsilon=a chi(w) psi(w/epsilon) w^(17/2), T_epsilon=0,
+where chi cuts off before w=1/2 and psi removes w<=epsilon. Each field
+is smooth, zero near both endpoints, and bounded uniformly in regular
+H7 and C5. Its outer mass/log/slow and graph data vanish.
+
+The canonical nonlocal determinant has zero nu input by the exact Ward
+identity. Its entire scalar/mixed column is therefore local, with every
+Weyl, R2 and other contact retained. This is the ACTUAL coupled operator,
+not a model or omitted angular/thermal sum. For its original normalized
+source r=z^4 F[v] (not the energy Riesz representative), both rows give
+ r_nu=a A_nu w^(9/2)+O(w^(13/2)), r_T=r_nu/3+O(w^(13/2)),
+ A_nu=6d z_h^4 (17/2)^2(13/2)^2,
+ d=(96 pi*10^22-1/(60 pi)) C/B^2.
+The complete generator verifies the leading rows with higher seed jets
+symbolic. The original coefficients are A_nu=0.0003236593924626... and
+A_T=0.0001078864641542... . Both sources are bounded in regular-disk H3.
+
+But D^3(z^-sigma r_nu) has a nonzero w^(-3/2) term. Exact integration
+over the actual annulus proves
+ liminf_(epsilon->0) sqrt(epsilon) Rfast_global(Hv_epsilon)
+                              >=2.2376478311e80 |a|>0.
+This is an asymptotic coefficient, not a certified finite-cutoff residual.
+The displayed regular-disk/outer input norms stay bounded. Therefore
+NO finite comparison constant exists on this family. Shrinking a fixed
+nonzero amplitude or changing normalization cannot repair the estimate.
+Every member's actual bolt response is zero; the divergence is entirely
+in the stronger source-norm test, not a lower bound on a physical error.
+
+This does not prove IY itself infinite, identify the full original Y
+completion, or invalidate the earlier sufficient test for residuals that
+actually have that extra regularity. It rules out one specific route to
+an original source comparison. At the bolt, three z derivatives can
+require six regular derivatives; the differentiated shape row can demand
+eight. The earlier transition counterexample and this endpoint failure
+are distinct and both remain relevant.
+
+The replacement retains the ORIGINAL cutoff chi_o, one through .05 and
+zero by .1. Split the complete actual residual as r_o=chi_o r and
+r_i=(1-chi_o)r. Define R_o from the two original differentiated outer H3
+rows INCLUDING every cutoff derivative, c4 from the actual original
+undifferentiated finite part, and R_i as the L2(dz) norm of BOTH rows on
+the entire complementary interval. The .1/.2 matching equations and bolt
+are inside R_i, not replaced by finite observations. Here dz is the
+actual stationary area per unchanged thermal period.
+
+The accepted original source pairing, Volterra recovery and physical bolt
+map now give the COMPLETE bound
+ |bolt error|<=5.687298168e74 R_o+1.058944834e72 |c4|
+                                      +9.471490529e74 R_i.
+The new interior coefficient is Knew*(MR/beta)*400: z>=.05 on that
+support, hence ||r_i||L2(z^-4 dz)<=400 R_i. No quantum term, matching
+region or boundary coefficient is set to zero. The separate sufficient
+half-margin targets, each with the other debits zero, are
+ R_o<=1.465546513e-84, |c4|<=7.871042698e-82,
+ R_i<=8.800093264e-85.
+They are not simultaneous allocations or actual residual values. This
+auxiliary full source tuple is not silently renamed original Y, and the
+finite comparison supplies no original graph/C5 output constant.
+
+The previous complete transport-to-bolt error <2.644458801e-14 remains
+valid and already passes its slice. Do not optimize it again. P32's
+bolt upper estimator still needs the previously quantified 5.52898e34
+gain; degree 63 still passes only its exact bolt-tail slice. Numerical
+polynomial applications, original-source defect, Cdef3 IY, graph/physical
+maps, independent phases, actual kappa_m<=5e-5 and EVERY signed coupled
+entry remain uncomputed. Their conditional ceilings are not coefficients.
+The quantum-fast screen retains its limited two-fast scope.
+
+The executed result closes the DOMAIN TEST of a proposed source-norm
+shortcut and supplies a finite replacement for evaluating a complete
+residual. It closes no actual coupled solution, nonlinear, physical or
+stability requirement. The full common-restored quantum center has not
+been applied and a conforming inverse trial has not been constructed.
+
+RESEARCH DECISION: retain the construction and P32; change the residual
+comparison method to the original outer graph plus regular-chart interior
+data. Keep global H3(d log z) only as an optional stronger sufficient
+test with its extra regularity proved. The dominant missing information
+remains the complete original strong/phase/output map and signed retained
+response; the dominant known bolt-estimator loss is still the scalar
+trace. Neither higher degree nor further scalar/cold/contact optimization
+resolves this missing quantum application.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct a phase-conforming
+coupled trial and enclose its complete commonly restored quantum residual
+as the simultaneous triple (R_o,c4,R_i), retaining all angular/thermal
+sums, contacts, cutoff transitions and regular-bolt returns. This is the
+next actual operator application; this turn did not execute that solve.
+
+Verification: ordinary proof and checker frozen before science; one
+passed development run, ordinary domain/full-row/normalization review,
+then unchanged 512-bit acceptance. Forty-eight supporting checks and
+eleven frozen inputs. No failed scientific run, no local Lean and no
+quantum inverse application. Python and 63 flint / 1532 SymPy reference
+files match. Earlier science, eighteen inherited paths and all closed
+audits remain unchanged. The checks verify the algebra and coefficients;
+the ordinary annular argument proves the comparison is unbounded.
+
+Remaining to-do list: full retained quantum application and complete coupled residual; original source/graph/physical maps and every coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current complete bolt estimator decision, 2026-10-26
 
 EXECUTED: an actual-domain averaging estimate improves the COMPLETE
