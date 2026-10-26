@@ -1,3 +1,116 @@
+# Active checkpoint: weighted bolt output factor certified; full source norm unresolved
+
+2026-10-26 HST, E003/S169.
+
+See [weighted bolt source-return proof](current-weighted-bolt-source-return.md).
+
+EXECUTED: an original weighted source-to-bolt comparison for the actual
+mixed inverse, and its reference-row contribution to the COMPLETE F^3 map.
+The physical output factor is <2.31121904e7 from L2(z^-4 dz) with the
+original weight. The reference contribution to the P32 affine bolt tail
+is <5.545984850e-22. The remaining full source map is UNKNOWN.
+No full bolt/graph/defect, nonlinear admission or controlled solution is
+certified. The closed audit and full stable-wormhole objective remain.
+
+Preserve accepted 1ee884b, complete P32 and the actual paired mass/log
+realization, common regulator, exact ultraviolet logarithm, complete
+angular/thermal sums, contacts, cutoff transitions and regular-bolt returns.
+The original reconstruction is
+ G_b=ell_b ev_b (Cbar*)^-1 Dbar V F^3:E->R.
+Here Cbar and Dbar carry the SAME 8piG A_r^2 row factor. Its cancellation
+does not remove ell_b=(1+h)/h or change the admission norm.
+
+The attempted joint transferred-residual norm was NOT evaluated. Separate
+uniform norms reproduce the previous all-trial estimator failure. The
+new direct calculation instead bounds the actual mixed output factor.
+The physical Euclidean orbit is a complete negatively curved disk; its
+geodesic Jacobi equation and exact radial Taylor identity give an explicit
+point bound from physical L2, gradient and Hessian norms. This classical
+orbit argument does not smooth the canonical paired quantum seam.
+
+Keep (Cbar*)^-1=(1/2)LD^-1(I+Rmix*)^-1(Pbar*)^-1 in that order.
+The existing complete weighted Rmix remainder, the adjoint second-order
+equation and a weighted maximum principle give
+ ||W(Cbar*)^-1 f||infinity <=3000/sqrt(gamma)||Wf||H_mu,
+ H_mu=L2(z^-4 dz).
+After the ORIGINAL bolt conversion this is K_out<23112190.400.
+The original weight has s=1.4 and its .1/.2 beta cutoff; no weight or
+boundary condition has changed. All generated intermediate phases remain.
+
+The exact reference shape row is multiplication by
+ Dbar_ref=-4 F_lambda z^4 V_ref,
+ z^4 V_ref=(1-z)[u z^2(1+z)+3beta(1+z+z^2+z^3)
+                              -eps z^4(1-3z)].
+It is bounded by 8.1(1-z) throughout the actual finite interval. The bolt
+value is nonzero. This uses the reference action only as an exact addition
+and subtraction, not as a replacement field theory or a global zero mode.
+Combining the existing ||Vw/z^2||2<17.6 E(w) with ||F||<=.338/1.338 gives
+ M_ref=||W Dbar_ref V F^3|| <4.784040044e13,
+ C_b3_ref <1.105696444e21,
+ p_aff C_b3_ref <5.545984850e-22,
+ p_aff=(1.1e-10)h3.
+This bounds an operator on EVERY energy input. It is not optimization of
+the already controlled cold source. An independent column j has reference
+tail debit <3.768164730e-12 I_j; I_j remains its actual input norm.
+
+The complete remaining map is
+ M_rem=||W(Dbar-Dbar_ref)V F^3||_(E->H_mu).
+Keep all its local, R2, anomaly, LLL, exact angular-logarithmic, thermal,
+coincidence and finite-return terms together with the common regulator.
+Its actual norm has NOT been computed. The complete sufficient bolt budget
+is p_aff K_out(M_ref+M_rem)<=B_remaining. If the ENTIRE 1.667e-9 margin
+remains, the calculated allowance exceeds 1.4379762961e26. A convenient
+rounded-down sufficient target is M_rem<=1.4379762961e26. Its physical
+debit per unit norm is <1.159268067e-35. These are conditional allowances,
+not measured source norms; trial centers and other errors reduce them.
+
+The first missing numerical step for this direct method is the complete
+weighted source map M_rem after the actual three Schur factors. The full
+weighted end and matching-quotient comparisons needed for original Y and
+the other physical outputs are still missing as well. The interior
+10^4000 C and generic 10^74739.22 absorption coefficient are absent from
+this output bound; inserting them later into M_rem would have to be tested
+after this exact conversion. Earlier estimator failures remain preserved.
+
+Original delta<=.5 still requires C_def3 I_Y<=1.0965284986e32. The graph
+and physical ceilings 1.0650980044e31 and 9.9684408960e33 retain their
+remaining-margin hypotheses. Actual kappa_m<=5e-5 is untested, as are all
+other signed coupled entries |c_hat_ij|+e_ij+C_i3 I_j h2. No phase input
+is assigned zero or the affine input bound. The conditional mass debits
+2.14765e-12 and .0024731 leave the unchanged joint tests
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+Retain the 2133--2174 original mass conversion, scalar quartic, correlated
+slow pair and infinite matching quotient. The .135973<.1599164 fast screen
+has only its admitted two-fast scope. No nonlinear-neighborhood extension
+or actual controlled solution follows from the new output comparison.
+
+RESEARCH DECISION: retain the construction and P32; use the direct
+original shape-source composition with the now certified mixed point
+return. Stop refining that return or the reference row: their budget
+contribution is already small. The quantum/source feasibility question
+remains undecided, and no construction obstruction is established.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the complete
+M_rem=||W(Dbar-Dbar_ref)V F^3|| in the actual weighted L2 source norm,
+retaining coupled cancellations before norms, and compare it with the
+actual remaining allowance. Exact two-row identities may avoid the final
+quantum bootstrap, but cannot discard scalar/York or boundary returns.
+
+Verification: ordinary proof and checker frozen before science; 512-bit
+unchanged acceptance after ordinary review. Twenty-nine supporting checks,
+fifteen frozen inputs, two development runs and one retained failed check.
+The failure was loss of the common h correlation in an almost-equality;
+its full source snapshot is preserved. Exact positive factorization fixed
+the check without changing the ordinary inequality or target. Python and
+all 63 flint / 1532 SymPy reference files match. No local Lean. Checks do
+not compute M_rem or replace its missing continuum estimate. Prior accepted
+science, eighteen inherited paths and closed audits remain preserved.
+
+Remaining to-do list: complete M_rem and original graph/physical/source maps; every coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: uniform P32 residual estimator rejected for every trial
 
 2026-10-26 HST, E003/S169.
