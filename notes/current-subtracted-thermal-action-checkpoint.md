@@ -1,3 +1,93 @@
+# Active checkpoint: coupled return unresolved; raw-cutoff strong estimator fails
+
+2026-10-25 HST, E003/S169.
+
+See [ordinary actual-domain test and missing coupled argument](current-common-regulator-strong-limit-test.md).
+
+The COMPLETE coupled return remains UNRESOLVED. The executed test rules
+out approximating the full quantum Hessian by a fixed positive proper-time
+cutoff plus local counterterms in the original normal graph: its error norm
+is >.9999997 for every cutoff. The exact analytic angular-resummed method
+retains the missing UV logarithm and is not refuted. Actual kappa_m, the
+matched strong remainder and all coupled residual budgets remain unknown.
+No physical admission or feedback requirement closes.
+
+The first missing continuum argument is still the combined quantum
+variational-gradient bound in the ORIGINAL near/transition strong source
+norm and phase/interface border, with the necessary nonlinear-family
+comparisons. Weak C2 action control does not supply this bound. This
+attempt derived the exact positive-cutoff spectral weight including both
+metric vertices and the regulator endpoint contact. The full angular and
+thermal spectra, physical-half trace and actual finite-domain returns are
+retained. It then tested a necessary strong-limit condition on compact
+directions INSIDE the actual paired mass/log domain. No boundary/domain
+replacement or finite mode selection is used.
+
+The original-normalized lower-bound enclosure is
+.99999978400001165080773368082638 (+/-3.35e-33). It is a lower bound on
+the SPECIFIED APPROXIMATION ERROR, not a lower bound on the actual quantum
+response or mass column. Pointwise regulator removal and the existing
+admitted-family weak C2 theorem are not contradicted. The qualitative
+raw-cutoff warning was already known; this test quantifies it. It does
+not complete the requested full coupled feasibility calculation.
+
+The exact reference mass lift cancels both uncut reference rows. Its
+original .1/.2 transition, original boundary data and zero reference bolt
+shift remain; it is not a global fixed-temperature zero mode. The separate
+original .05/.1 graph conversion still has 2133<||d_chi||H3<2174 and
+debit <=3.538254568e-12 from the known LINEAR mass bound. The scalar
+quartic, exact correlated slow pair and fast remainder remain coupled.
+
+Actual post-elimination kappa_m is UNKNOWN. At conditional kappa_m<=5e-5,
+the costs are 2.14765e-12 affine, .0024731 feedback and .0195239 energy.
+The remaining entries must still fit JOINTLY:
+
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+
+No independent phase column or unknown operator map is assigned zero.
+With all other debits zero, individual ceilings are A_o<=1.30811704211557e10,
+A_o J_E<3.25134698275862e8 and gamma_E<.061816542801387. These are
+conditional allowances, not actual coefficients or separate reserves.
+The retained quantum-fast screen is .135973<.1599164, reserve .0239434,
+only on its proved two-fast/admitted-family scope. It supplies neither
+independent phase control nor the original nonlinear physical-X map.
+
+Preserve E_center+1e-8 alpha_embed<=1e-11,
+R_X alpha_embed*.028913+Z0_other<=.25,
+R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,
+Y0+1e-8 Z0+5e-17 Z2<=1e-8, and Z0+1e-8 Z2<1.
+The actual constants and comparisons remain unknown. The known LINEAR
+energy upper bound 1.1e-10 is insufficient to certify 1e-11 admission;
+it is not an actual violation or a nonexistence result. Exact compatibility,
+physical matching, validity/noise and all-sector stability remain unproved.
+No actual controlled solution is established.
+
+RESEARCH DECISION: retain the construction and the exact analytic
+angular-resummed method; exclude the tested raw-cutoff approximation as
+a uniform strong certificate. Retain the full UV logarithmic operator
+before bounding the matched remainder. Matching its true coefficient
+removes the demonstrated principal error floor but does not bound the
+remaining operator. Do not optimize controlled cold/scalar allocations.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the complete
+analytic matched coupled residual I-S P and original output maps
+M_i=||T_i P|| for the actual quotient/border. Target delta=||I-S P||<=1/2;
+then each column's row error is <=2M_i||(I-S P)b||. Apply this to the
+mass, quartic, correlated-slow and fast columns together against the
+unchanged budgets. This strong calculation has NOT been executed.
+
+Verification: ordinary argument and supporting sources frozen before
+development; unchanged development/acceptance agree at 512 bits. The
+checks support algebra and interval arithmetic, not the continuum proof.
+The Python binary, 63 flint and 1532 SymPy files match the reference.
+No failed run, local Lean invocation or unrecorded numerical preview.
+All 18 inherited paths and the closed audits remain unchanged.
+
+Remaining to-do list: complete analytic matched coupled strong residual and original output maps; physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete coupled return unresolved
 
 2026-10-25 HST, E003/S169.
