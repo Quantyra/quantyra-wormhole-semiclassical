@@ -1,3 +1,86 @@
+# Current fixed-chart complete-return attempt, 2026-10-26
+
+UNRESOLVED: the complete structured polynomial correction has no certified
+original-source/output bound. The fixed-chart attempt retains both metric
+vertices and the full signed common-cutoff heat response, but does not prove
+its strong common-regulator limit. No new consequential coupled bound or
+physical requirement closes. The requested quantitative milestone is unfinished.
+
+Original admission still requires five REGULAR geometric derivatives,
+independent radius control, cold/outer/cap weights and regular-bolt matching.
+Five AREAL lapse derivatives are an auxiliary stronger test. The accepted
+radius multiplier remains <1.989220420e33 in its stated disk jet algebra;
+the nonlinear remainder and its hypotheses are retained. An unfinished
+global X is not assigned an exact norm or a 5e-9 free margin.
+
+The complete ordered identities remain
+ T3=V_Y F^3u, S2=(V_Y*)^-1 Bop F^2u,
+ nu3=-A^-1 C T3+(C*)^-1 S2,
+ H(nu3,T3)=(-A(C*)^-1 S2,0),
+ Gdef=K(V_Y*)^-1 Bop F^2(I-F).
+The second row and leading quartic SOURCE cancel; finite moments and
+solution phases remain. Qualitative seed smoothing does not bound these
+maps numerically. Arbitrary-source witnesses do not reject them.
+
+For a fixed diagonal chart, D=gamma_Y exp(-a)(partial_Y-a'/2)
++gamma_tau f0 exp(-b) partial_tau. The executed differentiation retains
+both coefficient directions, half-density/connection terms and the complete
+second vertex. The square is handled on its closed form domain. Its signed
+heat Hessian retains the entire angular tower and thermal trace at one
+positive cutoff, then requires the SAME a0/a1/a2 subtraction/restoration,
+coincidence and Weyl/radius contacts and actual finite-domain returns.
+
+FIRST MISSING ARGUMENT: a numerical strong common finite-part estimate with
+three output derivatives on the weighted paired mass/log domain and regular
+atlas. The accepted weak C2 theorem does not give continuity on H^-3 output
+tests, and the interior analytic theorem does not cover the seam or a rough
+nonlinear neighborhood. No full inverse, signed column or application error
+was computed. The missing constant is UNKNOWN; the operator is not proved
+undefined or excessively large.
+
+The new sensitivity calculation grants removal of ALL interior jet-transfer
+costs, hypothetically using the existing base coefficient 1e300 at output H3.
+With the unchanged affine, energy and original P5 factors, this positive
+estimator still overspends the whole .001 margin by 10^2813.39788 and the
+reference .00087 margin by 10^2813.45836. Granting the COMPLETE symmetric
+order gain still gives 10^1192.58140 and 10^1192.64188. For that low term
+alone the reference coefficient targets are B<=.03614368 or Bsym<=69.108082;
+relative to 1e300, gains of 10^301.44197 or 10^298.16047 would be required.
+These are tests of specified positive estimators under favorable unproved
+grants, not new upper/lower bounds on the direct complete map. Full absorption
+at B<=1/8000 is retained as a separate sufficient alternative for that term.
+
+The full original defect still needs h3 Cdef3 I_Y+e_def<=.5. The zero-error
+ceiling 1.09652849856e32 is conditional, as are graph and physical ceilings.
+The actual mass-column target 5e-5, every remaining coupled entry and the
+application errors remain unknown. The .135973<.1599164 screen retains its
+two-fast scope. Closing a bolt-only slice does not close this ledger.
+No new nonlinear admission/contraction, compatibility, matching, validity/
+noise, all-sector stability or actual controlled solution is established.
+
+METHOD DECISION: retain the construction and P32, stop generic jet-factor
+optimization and moving-gauge detours, and prioritize the complete structured
+SEED map. Use the signed geometric response and the exact two-row reduction;
+a broader neighborhood theorem cannot substitute for the missing seed test.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the commonly restored
+F^2-to-source map jointly in the original outer H3 graph and regular interior/
+bolt H3 atlas, keeping all mixed/York moments, and carry its numerical bound
+through the physical reconstruction and complete coupled ledger. The signed
+restored derivatives, not the unsigned off-diagonal envelope, are decisive.
+Attainability is not decided by the present evidence. This is no obstruction
+to the actual construction and no wormhole nonexistence result.
+
+Verification: ordinary proof/checker frozen before one development run,
+ordinary review and unchanged 512-bit acceptance. Fourteen supporting algebra,
+arithmetic and provenance checks; they do not verify the missing continuum
+estimate. Pinned Python and all 63 flint/1532 SymPy files retained. No Lean.
+All inherited paths, prior accepted results and closed-audit hashes preserved.
+
+Remaining to-do list: complete structured original-source/output bound and every coupled entry/application error; uniform nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current proper-gauge neighborhood decision, 2026-10-26
 
 EXECUTED: a moving-proper-coordinate transfer has no uniform first or
