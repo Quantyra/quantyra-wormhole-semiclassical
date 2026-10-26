@@ -1,3 +1,92 @@
+# Active checkpoint: radial energy shortcut rejected; full coupled bound unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [ordinary complete-Schur commutator test](current-bolt-form-commutator-test.md).
+
+The complete original-space coupled bound remains UNRESOLVED.
+Executed result: a stationary energy-only radial-commutator shortcut fails
+on the ACTUAL regular-bolt domain. Ordinary radial differentiation can leave
+the form domain; the regular areal derivative has an INFINITE relative
+commutator form norm for the full positive Schur operator.
+This does not invalidate the three-residual method or obstruct the construction.
+
+The last substantive milestone rejected the two-residual physical output
+map and retained three residual factors with unknown numerical constants.
+Subsequent source inspections supplied no consequential bound. This attempt
+tested a different way to obtain that missing strong output: differentiation
+using only the existing stationary energy inverse.
+
+For a smooth radial field equal to rho^2 near the bolt, partial_rho gives
+2rho, whose squared radial Laplacian integral is 4 log(R/epsilon). It is
+outside H2, hence outside the full quantum form domain. Using partial_s,
+s=rho^2, preserves smooth parity but does not repair the bounded-form
+commutator. For L=ell+b*a^-1b, its full highest logarithm gives relative
+commutator coefficient 2/rho^2. Actual-domain annular packets d=k^(-3/4)
+prove liminf k^(-3/2) Re<v,[partial_s,L]v>/<v,Lv> >=1/2.
+No finite onset frequency is claimed. The complete scalar elimination is
+lower order; common finite contacts and smooth finite-domain returns cannot
+cancel this leading logarithm. No physical angular or thermal modes are cut.
+
+Thus the proposed first bounded-form constant is infinite, rather than
+unknown or merely large. This rejects that SPECIFIC estimator. It is not
+a failure of the actual inverse, an actual correction lower bound, a new
+physical gate, or a proof that the construction is infeasible.
+
+At least two additional disk derivatives are necessary for the tested tame
+areal-commutator alternative; sufficiency at that endpoint is unproved.
+Conormal derivatives preserve the domain but do not control the original
+areal output. A local Cartesian/covariant jet method must justify its jet
+system instead of applying the stationary global inverse outside its sector.
+For the contemplated energy bootstrap H10 source to H14 solution, twelve
+form-commutator orders and their source/domain comparisons would be required.
+These constants are unknown. The original strong-kernel route still needs
+its higher-output estimates; neither route is certified here.
+
+Keep three Schur residual factors and the original physical norm. At N=32,
+the retained affine tail prefactor is 1.55381593475693e-23. Conditional full-
+margin ceilings remain C_g,3<3.43821290572343e11 and C_X,3<3.21788436336390e14
+(the latter assumes a 5e-9 physical tail allowance). Neither is an actual
+coefficient; signed centers, feedback input maps and remaining entries are
+uncomputed. Increasing N cannot make the failed form constant finite.
+
+The full original equations, exact reference mass lift and its transition,
+regular bolt, scalar quartic and correlated slow phase remain. The mass lift
+is not a fixed-temperature zero mode. The original fast conversion remains
+2133<||d_chi||H3<2174. Actual post-elimination kappa_m is unknown.
+If kappa_m<=5e-5, its debits remain 2.14765e-12 affine, .0024731 feedback and
+.0195239 energy; all remaining entries must JOINTLY satisfy
+
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+
+The .135973<.1599164 quantum-fast screen retains its TWO-fast/admitted-family
+scope. All original-norm and neighborhood comparisons, nonlinear admission/
+contraction, exact compatibility, physical matching, semiclassical validity/
+noise and all-sector stability remain unproved. The full objective is active.
+
+RESEARCH DECISION: retain the construction and the three-residual physical
+tail. Reject the stationary energy-only radial-commutator shortcut. Use
+regular disk jet estimates and recover the ORIGINAL physical output norm;
+do not count conormal jets or a changed normalization as admission.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): quantify the complete three-
+residual graph/physical/phase output using regular disk jets, including
+common quantum contacts, finite returns, original source comparisons and
+signed coupled columns. No complete numerical coupled inverse was applied.
+
+Verification: ordinary argument/checker/review frozen before execution;
+unchanged 512-bit acceptance after ordinary review matches development.
+Twenty-one supporting checks, ten frozen inputs, one development run and
+no failed scientific runs. Python and all 63 flint / 1532 SymPy reference
+files match. No local Lean. The checks support the ordinary continuum
+argument; they do not replace the missing full bound. All eighteen
+inherited paths, prior frozen science and closed audits are preserved.
+
+Remaining to-do list: complete coupled graph/physical/phase bound and signed solution; original norm and neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: two-residual physical estimator fails; full bound unresolved
 
 2026-10-25 HST, E003/S169.

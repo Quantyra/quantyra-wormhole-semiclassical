@@ -1,0 +1,192 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T08:02:52.486427+00:00",
+      "mode": "development",
+      "input_sha256_before": {
+        "notes/current-bolt-form-commutator-test.md": "d3662b568adc999f07c68839b1678cf6ad8b412902ebd70759c2892b49c76c42",
+        "checks/current_bolt_form_commutator_test.py": "486cc89c939692f4657b8f93f89ec9deebfb1417e6b62f479f48ae8e9765bf53",
+        "evidence/current-bolt-form-commutator-test-review.json": "ccb7a0d9cff7001362eb0eeec60930d5c15da2ccb0371d5156ba9c6024c2a41f",
+        "notes/current-schur-physical-output-test.md": "59d21052bef7b8fef9e8f6d44031e9b725519882cbc912c7d532e813910f0bb0",
+        "evidence/current-schur-physical-output-test.json": "234c1dd5165d2cd6ecf4fa454e6554c780e2d8af3b5a9d80fbcbd44521dbd3cb",
+        "notes/current-schur-residual-phase-domain.md": "dc251bb7fdd5c6bde4c55ab47a30989adbc69cf8872033ba0915a4c5dab34914",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-schur-form-preconditioner-test.md": "00365f058df419a9232f1185cfa318a7af52c46ac9f4dc7804bfcf7d76eac2a8",
+        "notes/current-strong-return-cauchy-test.md": "8e5395715da4b0e6b3d98a6aa01502be4a2dcba1e2bea89d236dc30e6e5bdeb3",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-bolt-form-commutator-test.md": "# Test of an energy-form shortcut for the complete Schur return\n\n2026-10-25 HST, E003/S169. Ordinary argument and execution contract before\nsupporting computation. Previous goal turn: NO PROGRESS. The full stable\nsemiclassical wormhole objective is active/incomplete; the audit is closed.\n\nOUTCOME: the complete quantitative coupled return remains UNRESOLVED.\nThe alternative tested here is commuting stationary radial derivatives\nthrough the positive FULL Schur form, using only its original energy\nnorm. Its first required commutator constant is INFINITE. This rejects\nthat estimator, not the actual inverse, three-residual regularity, a\nstronger-input estimate, or the construction. No numerical inverse is\napplied and no new physical solution requirement is closed.\n\n## 1. Full operator and the proposed alternative\n\nRetain the current fixed finite seed and the actual paired mass/log\ndomain, complementary Dirac domains, common regulator, fixed clock and\ntemperature, complete angular/thermal sums, coincidence contacts and\nregular disk bolt. The exact original two-row operator and York return are\n\n H=[-A,-C;-C*,D], K=C^-1 A(C*)^-1, S=I+KD,\n (nu,T)=R(s,xi)=(s+Uxi,Vxi), R*HR=[-a,b;b*,ell],\n J(0)=0, (Q^2 J'/z^4)(z_h)=0.\n\nUse B=b*a^-1 b, L=ell+B, Q_T=L^-1 and F=Q_T B. The candidate remains\nP=V ell^-1 J_F, J_F=V* K^-1, with Y_F=J_F^-1(V_ell*) and X_F=V(V_ell)\nin their transported dual/form norms. The retained bound is\n||I-SP||Y_F<=q=.338. This is not the original strong-space certificate.\n\nThe entire quantum operator is in ell. B is the full scalar elimination,\nnot its principal model: solving the first original row supplies s=a^-1\nb xi and leaves L xi in the second. On a smooth bolt chart a has order\nfour, b order two and B order zero. These orders, the exact vacuum\ncancellation and global adjoint moment are the retained full mixed result.\nAll comparisons below are at this fixed seed, never on a nonlinear ball.\n\nThe contemplated alternative to a differentiated strong kernel estimate\nwas an energy difference-quotient bootstrap. For a radial derivative X\nits first hypothesis would be a finite A_1 such that\n\n |Re <v,[X,L]v>| <= A_1 <v,Lv>                        (1)\n\non the actual regular core, together with the domain/difference-quotient\nconditions needed to differentiate L u=f. Higher versions would bound\nad_X^j L between the same form and dual spaces. A finite constant in\n(1) is necessary for that particular bounded-commutator argument. It is\nnot necessary for elliptic regularity or for existence of the solution.\n\n## 2. Ordinary proper-radial differentiation fails the form-domain test\n\nLet rho be proper distance from the bolt. Its physical radial measure is\nmu(rho)d rho=c rho[1+O(rho^2)]d rho, c>0. The full ell form has local\nH2 regularity with its retained logarithmic reserve. Choose a smooth\ncutoff equal to one near the bolt and a radial field v=rho^2 there.\nUse the original York return and any required distant core completion;\nneither changes this local calculation. The field is smooth on the disk.\n\nFor X0=partial_rho, X0 v=2rho near zero, and\n\n Delta_disk(2rho)=2/rho,\n integral_epsilon^R |Delta_disk(2rho)|^2 rho d rho\n                         =4 log(R/epsilon) -> infinity.          (2)\n\nSmooth metric corrections do not cancel the leading 2/rho. Thus X0 v is\nnot even H2 locally, and is outside the quantum form domain. Taking an\nordinary radial derivative as an endomorphism of this stationary form\ndomain is invalid. The bolt is an interior point of a two-dimensional\ndisk, not an interval endpoint with a newly chosen boundary condition.\n\n## 3. The regular areal derivative has an unbounded form commutator\n\nPut s=rho^2 and X1=partial_s=(2rho)^-1 partial_rho. Unlike X0, X1 maps\nsmooth even radial functions to smooth even radial functions at the bolt.\nThis fact alone does not establish (1). The physical areal radius obeys\nr-r_b=c_b s+O(s^2), c_b>0, so replacing X1 by partial_r multiplies its\nleading coefficient by the fixed positive 1/c_b. It does not remove the\nfailure below or improve the physical target by normalization.\n\nKeep the exact full ultraviolet symbol on a smooth interior bolt chart:\n\n ell ~ l4(rho) k^4 log(k/mu0), l4(0)>0,\n L=ell+B has the SAME leading symbol.                           (3)\n\nThe full angular coefficient, local restoration and inverse realization\nin (3) are those used in current-schur-physical-output-test.md. This is a\nlocal symbol of the already commonly restored actual operator. It is not\na heat-cutoff limit in operator norm and not a finite-mode calculation.\nThe rough paired boundary is distant from this regular chart. Its actual\nreturns remain; local elliptic regularity makes their kernel smooth on a\nsmaller bolt disk, as in the retained packet argument. No smooth-double\ntheorem is invoked for the cubic seam.\n\nThe retained source check is unchanged: [Moller, Theorem 1]\n(https://arxiv.org/html/0705.3857v3) assumes a closed smooth spin manifold\nand stable kernel; it is not a theorem about our global paired domain.\n[Grubb, Theorem 2.3](https://web.math.ku.dk/~grubb/CPDE14.pdf) requires\nspecified symbol seminorms and |s|<tau; it supplies no missing numerical\ninverse constant. Both scopes were rechecked for this test. The local\nfull-symbol transfer and smooth interior return argument are the retained\nordinary construction, not a new application of those theorems globally.\n\nFor X=a(rho)partial_rho and p=l4(rho)k^4 log(k/mu0), the leading symbol of\n[X,L] is a partial_rho p-a' k partial_k p. With a=1/(2rho) this is\n\n (l4'/(2rho)) k^4 log(k/mu0)\n       + l4 k^4[4log(k/mu0)+1]/(2rho^2).                       (4)\n\nl4 is smooth radial, so l4'/rho is bounded. The positive leading relative\ncoefficient is 2/rho^2; the logarithmic derivative adds a lower relative\nterm 1/[2rho^2 log(k/mu0)]. This term is retained, not rounded away.\n\nFor a nonzero smooth psi supported in 1<t<2, take actual radial packets\n\n d_k=k^(-alpha), v_k(rho)=psi(rho/d_k) exp(i k rho), alpha=3/4.\n\nEvery packet vanishes near both ends and lies in the original paired\ncore with its exact global return. They are an infinite family of legal\ntest directions, not a replacement quantum mode space. Since k d_k tends\nto infinity, polar/coefficient/envelope symbol errors are relatively\nO((k d_k)^-1), or lower logarithmic order. The lower local contacts lack\nthe fourth logarithm. B and its commutator have lower differential order.\nSmooth finite-domain returns are negligible by integration by parts to\narbitrary fixed order. These retained terms cannot cancel (4).\n\nConsequently the COMPLETE form ratio obeys\n\n Re <v_k,[X1,L]v_k>/<v_k,L v_k>\n   = [2 int_1^2 |psi(t)|^2 dt/t / int_1^2 t|psi(t)|^2 dt]\n                                           d_k^-2 (1+o(1)).     (5)\n\nThe coefficient is between 1/2 and 2. In particular\n\n liminf_(k->infinity) k^(-3/2)\n       Re <v_k,[X1,L]v_k>/<v_k,L v_k> >=1/2.                    (6)\n\nThe harmless fixed physical energy normalization cancels in this ratio.\nUse real and imaginary parts if a real form is preferred. The estimate is\nasymptotic, with NO certified finite onset frequency. It nevertheless\ndisproves every finite A_1 in (1), including any value that could be\ninserted in the coupled error budget. It is not an excessive upper bound.\n\nThe missing cancellation in this estimator would have to remove the\n2/rho^2 coefficient multiplying the highest logarithm. Smooth radial\nl4 contributes only bounded l4'/rho; the scalar Schur correction is order\nzero; finite fourth contacts lack that logarithm. Thus the full retained\noperator does not provide that cancellation. The claim is about this\ncoordinate/form estimator, not an obstruction to regular bolt solutions.\n\n## 4. Quantified alternative and its remaining hypotheses\n\nConormal differentiation Xc=rho partial_rho avoids the singular a'. Its\nprincipal relative commutator is -4-1/log(k/mu0)+O(rho^2). This removes\nthe specific singularity in (4), but supplies conormal rather than\nordinary disk or areal derivatives. It is not the required physical\nembedding. For u_d=psi(rho/d), every fixed number of Xc derivatives has\nthe same leading energy-form scaling d^-1 sqrt(log(1/d)); six s derivatives\nhave size d^-12. Their ratio is proportional to\nd^-11/sqrt(log(1/d)), and is unbounded. This is a scaling test of the\nproposed norm comparison; it is not an actual affine correction.\n\nThe packet test also quantifies the required tame repair of (1). If its\ndenominator is changed to ||v||V ||v||_(H^(2+sigma),sqrt-log), with the\nsame square-root logarithmic form reserve, its high-frequency\nratio has the factor d_k^-2 k^-sigma. For ANY sigma<2 choose\nsigma/2<alpha<1; the ratio diverges. At least TWO extra disk derivatives\nare necessary for this version of an areal commutator estimate. Sufficiency\nat sigma=2 is NOT inferred from that necessary test.\n\nThe specified alternative is local Cartesian/covariant disk jet estimates,\nfollowed by the regular-even-to-areal conversion, with the ORIGINAL outer\nweighted graph and matching equations. Cartesian derivatives leave the\nstationary scalar sector; one must prove the appropriate LOCAL jet-system\nestimate, not silently reuse a global stationary inverse on those fields.\nThis does not change the physical quantum thermal sum or discard modes.\n\nFor a form-commutator bootstrap of that jet system, a source in H10 would\nrequire derivatives through TWELVE into H^-2 to obtain H14 from the energy\ninverse. Thus it would need the actual full form-commutator constants\nthrough order twelve, their domain/localization proof and source maps.\nNone is assigned a value here. Alternatively the original strong-kernel\nroute needs its differentiated estimates through output order ten. The\ncurrent weak metric-family theorem does not supply either collection.\n\nKeep the three Schur factors: form H2 -> H6 -> H10 -> H14. The full Schur\nscalar reconstruction includes the extra log, so use H^(14-epsilon),\nepsilon<1. In two dimensions this embeds into C12; radial evenness gives\nsix s derivatives and then the five original areal lapse derivatives.\nThis is the retained fixed-seed finiteness argument, not a numerical or\nneighborhood bound. Neither the physical norm nor admission radius changes.\n\n## 5. Full coupled consequence and research decision\n\nThe new test rejects the proposed stationary energy-only shortcut. It\ndoes not change the retained q=.338 form bound, establish the original\nstrong delta<=1/2, or compute C_g,3, C_X,3, signed centers or kappa_m.\nAt N=32 the retained full affine coefficient is\n\n (1+q)^5 (1.1e-10) q^29/(1-q)=1.55381593475693...e-23.\n\nONLY if the full margins are available, the corresponding ceilings are\nC_g,3<3.43821290572343e11 and C_X,3<3.21788436336390e14, the second using\na physical tail allowance 5e-9. These are UNKNOWN coefficients with\nconditional allowances. Increasing N cannot make the infinite A_1 in\n(1) finite; changing the estimate or its input regularity is required.\n\nKeep the exact reference mass lift, both original equations, the .1/.2\nmass cutoff and regular-bolt matching. It is not a fixed-temperature zero\nmode. The original .05/.1 conversion cost 2133<||d_chi||H3<2174 and the\nlinear debit <=3.538254568e-12 remain. The scalar quartic and correlated\nimplicit slow root are not discarded. The post-elimination kappa_m<=5e-5\ntarget remains unknown. IF it holds, its debits are 2.14765e-12 affine,\n.0024731 feedback and .0195239 energy; all other entries must jointly fit\n\n Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,\n eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.\n\nThe quantum-fast .135973<.1599164 screen keeps its TWO-fast/admitted-family\nscope. No independent phase, original physical norm or nonlinear-ball\ncomparison follows. All nonlinear conditions remain unproved:\n\n E_center+1e-8 alpha_embed<=1e-11,\n R_X alpha_embed*.028913+Z0_other<=.25,\n R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,\n Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.\n\nDECISION: keep the construction and three-residual physical tail. Reject\nthe energy-only stationary radial-commutator shortcut. Quantify regular\ndisk jets and their original output maps; do not search for a finite A_1\nin (1) or count conormal jets as ordinary areal control.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): a numerical complete\nthree-residual graph/physical/phase output estimate using regular disk\njets, including the common quantum contacts, finite returns, original\nsource comparisons and signed coupled columns. The estimate is still\nmissing; this note supplies a decisive test of an attempted replacement.\n\n## 6. Verification contract and scope\n\nFreeze this ordinary proof, checker and review before execution. Check\nthe exact radial-domain divergence, radial Laplacian commutator, full\nfourth-log symbol differentiation, packet exponents and coefficient\nbounds, and the retained conditional budget arithmetic. These checks\nsupport the ordinary actual-domain argument, not the uncomputed inverse.\nRetain every run and snapshot; perform unchanged acceptance after review.\nNo local Lean and no finite set of physical modes is used as a certificate.\n\nRemaining to-do list: complete coupled graph/physical/phase bound and signed\nsolution; original norm and neighborhood comparisons; nonlinear admission/\ncontraction; exact compatibility; physical matching; semiclassical validity/\nnoise; all-sector stability; opening, transport, preparation, separate creation\nand the full stable semiclassical wormhole objective.\n",
+        "checks/current_bolt_form_commutator_test.py": "\"\"\"Support an ordinary actual-domain estimator failure, not an inverse solve.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json, sys, traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0, sys.argv[sys.argv.index('--arb-path')+1])\nimport sympy as sp\nimport flint\nfrom flint import arb, ctx\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-bolt-form-commutator-test'\nOWN=['notes/'+STEM+'.md', 'checks/current_bolt_form_commutator_test.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-schur-physical-output-test.md',\n 'evidence/current-schur-physical-output-test.json',\n 'notes/current-schur-residual-phase-domain.md',\n 'notes/current-seed-full-hessian-realization.md',\n 'notes/current-schur-form-preconditioner-test.md',\n 'notes/current-strong-return-cauchy-test.md',\n 'notes/strong-interior-quantum-remainder.md']\nCHECKS=[]\n\ndef check(name, ok):\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    print(name+(': passed' if ok else ': FAILED'),flush=True)\n    if not ok: raise AssertionError(name)\n\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(50)\n    return {'ball':x.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef execute():\n    ctx.prec=512\n    review=json.loads((ROOT/OWN[2]).read_bytes())\n    for p,h in review['scientific_sha256'].items():\n        check('frozen_'+p,sha256((ROOT/p).read_bytes()).hexdigest()==h)\n    prior=json.loads((ROOT/INPUTS[4]).read_bytes())['runs'][-1]\n    check('retained_full_operator_packet_result_passed',prior['status']=='passed')\n    rho,k,mu,eps,R=sp.symbols('rho k mu eps R',positive=True)\n    v=rho**2; dr=sp.diff(v,rho)\n    lap=sp.diff(dr,rho,2)+sp.diff(dr,rho)/rho\n    check('radial_derivative_not_H2_leading_laplacian',sp.simplify(lap-2/rho)==0)\n    integral=sp.integrate(lap**2*rho,(rho,eps,R))\n    check('exact_logarithmic_domain_divergence',sp.simplify(integral-4*sp.log(R/eps))==0)\n    check('domain_integral_diverges',sp.limit(integral,eps,0,dir='+')==sp.oo)\n    s=sp.symbols('s',positive=True); f=sp.Function('f')(s)\n    Delta=lambda w:4*(s*sp.diff(w,s,2)+sp.diff(w,s))\n    check('regular_areal_laplacian_commutator',sp.expand(sp.diff(Delta(f),s)-Delta(sp.diff(f,s))-4*sp.diff(f,s,2))==0)\n    comm4=sp.expand(sp.diff(Delta(Delta(f)),s)-Delta(Delta(sp.diff(f,s))))\n    check('full_fourth_radial_commutator',sp.expand(comm4-(32*s*sp.diff(f,s,4)+64*sp.diff(f,s,3)))==0)\n    l=sp.Function('l')(rho); p=l*k**4*sp.log(k/mu)\n    a=1/(2*rho)\n    symbol=sp.expand(a*sp.diff(p,rho)-sp.diff(a,rho)*k*sp.diff(p,k))\n    target=sp.diff(l,rho)*k**4*sp.log(k/mu)/(2*rho)+l*k**4*(4*sp.log(k/mu)+1)/(2*rho**2)\n    check('complete_fourth_log_symbol_commutator',sp.simplify(symbol-target)==0)\n    leading=sp.simplify((symbol-a*sp.diff(p,rho))/p)\n    check('singular_form_ratio_retains_log_derivative',sp.simplify(leading-(2/rho**2+1/(2*rho**2*sp.log(k/mu))))==0)\n    xc=sp.expand(rho*sp.diff(p,rho)-k*sp.diff(p,k))\n    check('conormal_principal_has_no_inverse_radius',sp.simplify((xc-rho*sp.diff(p,rho))/p+4+1/sp.log(k/mu))==0)\n    # On 1<=t<=2, the weighted-average coefficient 2/t^2 is in [1/2,2].\n    t=sp.symbols('t',positive=True)\n    check('whole_packet_interval_coefficient',sp.diff(2/t**2,t)==-4/t**3 and (2/t**2).subs(t,2)==sp.Rational(1,2) and (2/t**2).subs(t,1)==2)\n    alpha=sp.Rational(3,4)\n    check('packet_scale_separation',1-alpha>0)\n    check('unbounded_first_form_commutator_power',2*alpha==sp.Rational(3,2))\n    sigma=sp.symbols('sigma',real=True)\n    alpha_choice=(sigma+2)/4\n    check('tame_derivative_deficit',sp.simplify(2*alpha_choice-sigma-(2-sigma)/2)==0)\n    check('conormal_to_six_areal_derivative_deficit',-12-(-1)==-11)\n    check('Cartesian_form_bootstrap_derivative_count',10+2==12 and 2+12==14)\n    check('three_power_physical_Sobolev_reserve',2+4*3>12+sp.Rational(2,2))\n    q=arb('.338');pref=(1+q)**5*arb('1.1e-10')*q**29/(1-q)\n    cg=arb('5.34235e-12')/pref;cx=arb('5e-9')/pref\n    check('conditional_targets_retain_original_scale',cg>arb('3.43e11') and cx>arb('3.21e14'))\n    check('two_fast_screen_unchanged',arb('.028913')+arb('1e-11')*arb('1.0706e10')<arb('.1599164'))\n    return {'precision_bits':ctx.prec,\n      'ordinary_radial_domain_test':{'laplacian':'2/rho','truncated_H2_integral':'4 log(R/epsilon)','form_domain_preserved':False},\n      'areal_commutator_principal':str(target),\n      'first_areal_form_commutator_constant':'infinite',\n      'actual_packet_bound':'liminf k^(-3/2) Re<v_k,[partial_s,L]v_k>/<v_k,Lv_k> >= 1/2; onset unknown',\n      'packet_coefficient_interval':['1/2','2'],\n      'minimum_extra_disk_derivatives_necessary':2,\n      'Cartesian_form_commutator_orders_required':12,\n      'three_power_affine_tail_prefactor_N32':enc(pref),\n      'conditional_graph_C3_ceiling':enc(cg),\n      'conditional_physical_C3_ceiling_if_5e_minus9_margin':enc(cx),\n      'scope':{'stationary_energy_only_commutator_estimator_rejected':True,\n        'actual_paired_domain_used':True,'common_regulator_and_full_sums_retained':True,\n        'finite_frequency_onset_certified':False,'Cartesian_form_commutators_bounded':False,\n        'three_power_numerical_norm_bounded':False,'original_strong_delta_certified':False,\n        'complete_coupled_return_executed':False,'actual_kappa_m_computed':False,\n        'any_additional_physical_gate_closed':False,'nonlinear_admission_contraction':False,\n        'exact_compatibility':False,'physical_matching':False,'semiclassical_validity_noise':False,\n        'all_sector_stability':False,'actual_controlled_solution':False,\n        'construction_obstruction':False,'full_goal_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{p:(ROOT/p).read_text(encoding='utf-8') for p in OWN},\n      'runtime':{'python':sys.version,'python_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                 'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary=json.dumps({'status':run['status'],'mode':mode,'checks':len(CHECKS),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as out:out.write(summary.encode())\n    print(summary,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-bolt-form-commutator-test-review.json": "{\n  \"status\": \"ordinary_argument_and_contract_frozen_before_execution\",\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"ordinary_review\": [\n    \"The candidate uses the full positive Schur L=ell+b*a^-1b with both original rows and the actual paired mass/log domain.\",\n    \"Ordinary radial differentiation of a smooth rho^2 field leaves H2 at the regular two-dimensional bolt.\",\n    \"The regular areal derivative preserves smooth parity but its full highest-log commutator has relative coefficient 2/rho^2.\",\n    \"The same actual-domain annular packet method as the retained output test controls polar errors by 1/(k d); no finite frequency onset is claimed.\",\n    \"The whole scalar Schur correction is order zero and cannot cancel the fourth-log commutator; all common contacts and finite returns remain.\",\n    \"The lower bound disproves only a stationary energy-only commutator estimate. It does not disprove stronger-input estimates or the three-residual solution method.\",\n    \"Twelve local Cartesian form-commutator orders would be needed for this alternative bootstrap; those constants, domain/localization arguments and original output maps are unknown.\",\n    \"All coupled numerical and physical gates remain open; unchanged conditional ceilings are not actual coefficients.\"\n  ],\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"symbolic_identities\": true,\n    \"no_local_lean\": true,\n    \"unchanged_acceptance_after_ordinary_review\": true\n  },\n  \"scientific_sha256\": {\n    \"notes/current-bolt-form-commutator-test.md\": \"d3662b568adc999f07c68839b1678cf6ad8b412902ebd70759c2892b49c76c42\",\n    \"checks/current_bolt_form_commutator_test.py\": \"486cc89c939692f4657b8f93f89ec9deebfb1417e6b62f479f48ae8e9765bf53\"\n  },\n  \"unfrozen_numerical_previews\": []\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "ordinary_radial_domain_test": {
+          "laplacian": "2/rho",
+          "truncated_H2_integral": "4 log(R/epsilon)",
+          "form_domain_preserved": false
+        },
+        "areal_commutator_principal": "k**4*log(k/mu)*Derivative(l(rho), rho)/(2*rho) + k**4*(4*log(k/mu) + 1)*l(rho)/(2*rho**2)",
+        "first_areal_form_commutator_constant": "infinite",
+        "actual_packet_bound": "liminf k^(-3/2) Re<v_k,[partial_s,L]v_k>/<v_k,Lv_k> >= 1/2; onset unknown",
+        "packet_coefficient_interval": [
+          "1/2",
+          "2"
+        ],
+        "minimum_extra_disk_derivatives_necessary": 2,
+        "Cartesian_form_commutator_orders_required": 12,
+        "three_power_affine_tail_prefactor_N32": {
+          "ball": "[1.5538159347569312100942603825623285e-23 +/- 3.41e-58]",
+          "decimal_enclosure": {
+            "mid": "1553815934756931210094260382562328534051305181968315148",
+            "rad": "2",
+            "exponent": "-77"
+          }
+        },
+        "conditional_graph_C3_ceiling": {
+          "ball": "[343821290572.34325830443305170396093 +/- 8.99e-25]",
+          "decimal_enclosure": {
+            "mid": "3438212905723432583044330517039609308985591466914870351",
+            "rad": "2",
+            "exponent": "-43"
+          }
+        },
+        "conditional_physical_C3_ceiling_if_5e_minus9_margin": {
+          "ball": "[321788436336390.59431189743437247740 +/- 3.11e-21]",
+          "decimal_enclosure": {
+            "mid": "3217884363363905943118974343724774031077701261537404280",
+            "rad": "2",
+            "exponent": "-40"
+          }
+        },
+        "scope": {
+          "stationary_energy_only_commutator_estimator_rejected": true,
+          "actual_paired_domain_used": true,
+          "common_regulator_and_full_sums_retained": true,
+          "finite_frequency_onset_certified": false,
+          "Cartesian_form_commutators_bounded": false,
+          "three_power_numerical_norm_bounded": false,
+          "original_strong_delta_certified": false,
+          "complete_coupled_return_executed": false,
+          "actual_kappa_m_computed": false,
+          "any_additional_physical_gate_closed": false,
+          "nonlinear_admission_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-bolt-form-commutator-test.md": "d3662b568adc999f07c68839b1678cf6ad8b412902ebd70759c2892b49c76c42",
+        "checks/current_bolt_form_commutator_test.py": "486cc89c939692f4657b8f93f89ec9deebfb1417e6b62f479f48ae8e9765bf53",
+        "evidence/current-bolt-form-commutator-test-review.json": "ccb7a0d9cff7001362eb0eeec60930d5c15da2ccb0371d5156ba9c6024c2a41f",
+        "notes/current-schur-physical-output-test.md": "59d21052bef7b8fef9e8f6d44031e9b725519882cbc912c7d532e813910f0bb0",
+        "evidence/current-schur-physical-output-test.json": "234c1dd5165d2cd6ecf4fa454e6554c780e2d8af3b5a9d80fbcbd44521dbd3cb",
+        "notes/current-schur-residual-phase-domain.md": "dc251bb7fdd5c6bde4c55ab47a30989adbc69cf8872033ba0915a4c5dab34914",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-schur-form-preconditioner-test.md": "00365f058df419a9232f1185cfa318a7af52c46ac9f4dc7804bfcf7d76eac2a8",
+        "notes/current-strong-return-cauchy-test.md": "8e5395715da4b0e6b3d98a6aa01502be4a2dcba1e2bea89d236dc30e6e5bdeb3",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "frozen_notes/current-bolt-form-commutator-test.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_checks/current_bolt_form_commutator_test.py",
+          "passed": true
+        },
+        {
+          "name": "retained_full_operator_packet_result_passed",
+          "passed": true
+        },
+        {
+          "name": "radial_derivative_not_H2_leading_laplacian",
+          "passed": true
+        },
+        {
+          "name": "exact_logarithmic_domain_divergence",
+          "passed": true
+        },
+        {
+          "name": "domain_integral_diverges",
+          "passed": true
+        },
+        {
+          "name": "regular_areal_laplacian_commutator",
+          "passed": true
+        },
+        {
+          "name": "full_fourth_radial_commutator",
+          "passed": true
+        },
+        {
+          "name": "complete_fourth_log_symbol_commutator",
+          "passed": true
+        },
+        {
+          "name": "singular_form_ratio_retains_log_derivative",
+          "passed": true
+        },
+        {
+          "name": "conormal_principal_has_no_inverse_radius",
+          "passed": true
+        },
+        {
+          "name": "whole_packet_interval_coefficient",
+          "passed": true
+        },
+        {
+          "name": "packet_scale_separation",
+          "passed": true
+        },
+        {
+          "name": "unbounded_first_form_commutator_power",
+          "passed": true
+        },
+        {
+          "name": "tame_derivative_deficit",
+          "passed": true
+        },
+        {
+          "name": "conormal_to_six_areal_derivative_deficit",
+          "passed": true
+        },
+        {
+          "name": "Cartesian_form_bootstrap_derivative_count",
+          "passed": true
+        },
+        {
+          "name": "three_power_physical_Sobolev_reserve",
+          "passed": true
+        },
+        {
+          "name": "conditional_targets_retain_original_scale",
+          "passed": true
+        },
+        {
+          "name": "two_fast_screen_unchanged",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T08:02:53.047687+00:00"
+    }
+  ]
+}
