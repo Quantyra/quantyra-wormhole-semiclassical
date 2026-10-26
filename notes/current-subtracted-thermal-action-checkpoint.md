@@ -1,3 +1,120 @@
+# Active checkpoint: complete mixed-square correction bounded; joint main output unresolved
+
+2026-10-26 HST, E003/S169.
+
+See [complete square-return proof](current-complete-source-square-factorization.md).
+
+EXECUTED: the exact curvature-square/mixed-inverse composition removes
+two derivatives before norms. The ENTIRE mixed-square correction now has
+a bound without the unknown derivative map A2: its original P32 affine
+bolt debit is <4.676801538e-10. The off-shell density debit is
+<5.070535345e-21. These are upper bounds, not measured corrections.
+The complete joint square/quantum main output and M_rem are still UNKNOWN.
+No original defect, coupled solution, nonlinear admission or stability
+gate closes. The closed audit and full stable-wormhole objective remain.
+
+Preserve accepted 1ee884b, complete P32 and the actual paired mass/log
+realization, common regulator, exact ultraviolet logarithm, full angular
+and thermal sums, contacts, cutoff transitions and regular-bolt returns.
+
+The attempted complete weighted source estimate did not produce M_rem.
+The exact two-row substitution alone leaves uncomputed numerical derivative
+comparisons. The square in the remaining source is a fourth-order local
+operator, so taking its source norm before the mixed return loses an
+available composition cancellation. Its exact affine shape Hessian is
+ Dbar_sq=-(2dc/3)J*J-(dc/3)m,
+ J=Pbar-t0bar, dc=96piG c_R/A_r^2,
+ m=2V0bar wbar-wbar^2.
+The off-shell density term m is retained. dc is not set equal to the
+slightly different trace diffusion d. The actual Pbar* inverse identity
+holds on J V F^3 with its retained end phases and regular bolt.
+
+Writing Z=(I+Rmix*)^-1 gives the COMPLETE square return
+ (Cbar*)^-1 Dbar_sq T=-(dc/3)LD^-1 J T
+  +(dc/3)LD^-1 Z[Rmix*+(Pbar*)^-1 t0bar]J T
+  -(dc/6)LD^-1 Z(Pbar*)^-1 m T.
+No factors are commuted. The first term is order zero, instead of a
+fourth-order source estimated independently before the mixed inverse.
+
+For BOTH weight signs, coercivity with mD>1/2 implies
+ ||W(I-LD^-1)W^-1||<=1.
+The opposite-weight adjoints and the full local Ward/anomaly remainder
+give
+ ||W[Rmix*+(Pbar*)^-1 t0bar]J W^-1||<8.797453861e-16.
+This removes the initially unknown A2 from the WHOLE second term. It
+uses every mixed correction, including density and magnetic contacts;
+it is not a bound for the independent quantum shape operator.
+The explicit original input comparison is A0<1.167745453e46, paying
+the full h^-7/5 weight cost. After all original output conversions:
+ mixed-square affine debit <4.676801538e-10,
+ off-shell density affine debit <5.070535345e-21,
+ reference-row affine debit <5.545984850e-22.
+The mixed debit consumes at most 28.055198185 percent of the full bolt
+allocation. It must be SUBTRACTED before quoting the remaining ceiling.
+
+Define D_Q=Dbar-Dbar_ref-Dbar_sq in the commonly restored FULL Hessian.
+The joint main norm is
+ J_b=||ell_b ev_b[-dc LD^-1 J/3+(Cbar*)^-1 D_Q]V F^3||_(E->R).
+It retains the signed square/quantum sum before the norm. Its value is
+UNKNOWN. The complete sufficient bolt inequality is
+ (5.015829508510104e-43) J_b + the three proved debits <= B_remaining,
+where actual interval endpoints, not printed decimals, define the proof.
+If the entire 1.667e-9 margin is available, the remaining allowance is
+>1.1993198462e-9. A rounded-down sufficient main target is
+ J_b<=2.3910698000e33.
+This is an allowance, not the actual coefficient. Other trial, application
+and output errors reduce it. The earlier M_rem<=1.4379762961e26 screen
+remains unevaluated and has NOT been disproved. No source-estimator
+failure or construction obstruction follows from the missing norm.
+
+The 10^4000 C interior and generic 10^74739.22 absorption constants are
+absent from this composed remainder bound. They have not been replaced
+by assumed small quantum constants. The direct quantitative gain is
+removal of A2 from the complete mixed correction; no numerical bound on
+the combined main return is claimed. The first remaining unsupported
+step is J_b on actual energy inputs, plus original-Y/end and other
+physical output/matching comparisons needed by the full coupled problem.
+
+Original delta<=.5 still needs C_def,3 I_Y<=1.0965284986e32. The graph
+and physical ceilings 1.0650980044e31 and 9.9684408960e33 retain their
+remaining-margin conditions. Actual kappa_m<=5e-5 and every other signed
+entry |c_hat_ij|+e_ij+C_i3 I_j h2 remain uncomputed. Its conditional mass
+costs 2.14765e-12, .0024731 and .0195239 do not certify the residual
+budgets. Retain
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+The original 2133--2174 mass conversion, scalar quartic, exact slow pair
+and infinite matching quotient remain. The .135973<.1599164 screen has
+only its admitted two-fast scope. All nonlinear and physical gates remain.
+
+RESEARCH DECISION: retain the construction and P32; sharpen the direct
+complete OUTPUT composition using the exact square/mixed factorization.
+The complete mixed/off-shell corrections now have usable numerical
+bounds, but quantum/main-output feasibility remains undecided. Keep the
+square and quantum terms together in J_b; do not spend another turn
+refining these corrections, the reference row or already controlled cold
+sources. No actual controlled solution or construction obstruction is proved.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the actual JOINT
+main norm J_b after the three complete Schur factors, preserving all
+common-regulated contacts and finite returns, against its actual remaining
+margin (conditionally 2.3910698000e33). This is the unresolved complete
+output calculation, not an isolated square or contact refinement.
+
+Verification: ordinary argument and checker frozen before each numerical
+revision; unchanged 512-bit acceptance after ordinary review. Twenty-two
+supporting checks and thirteen frozen inputs. All three development source
+snapshots/outcomes remain: initial derivative-dependent interface, complete
+adjoint bound eliminating A2, and clarification of the revised sensitivity
+ceiling. No failed scientific run in this campaign; all earlier failures
+remain preserved. Python and all 63 flint / 1532 SymPy reference files
+match. No local Lean. Checks do not evaluate J_b, M_rem or the quantum
+inverse. Prior science, eighteen inherited paths and closed audits remain.
+
+Remaining to-do list: complete joint output/source maps and every coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: weighted bolt output factor certified; full source norm unresolved
 
 2026-10-26 HST, E003/S169.
