@@ -1,0 +1,406 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T09:47:57.747752+00:00",
+      "mode": "development",
+      "input_sha256_before": {
+        "notes/current-interior-translation-jet-bound.md": "7a428cbe8746111838aeea30cc0fc1894ed8927ee2b1b5b47573046e8c3eea5a",
+        "checks/current_interior_translation_jet_bound.py": "4b18572b380f167413d3dd199be778ae8bbd920ed9f90731b512dc227edaf622",
+        "evidence/current-interior-translation-jet-bound-review.json": "7d692bb65b91b3233f3b02cbd5cf55fd50a1462301d74f8ab7d4ae18d6f1c56a",
+        "notes/current-schur-polynomial-return-test.md": "d755b5c5efdfb867bc24844d78eea7f656c66dfd9a9cf99a9b28e6ed881c9164",
+        "evidence/current-schur-polynomial-return-test.json": "5fd05367788f35cf0beb972511bdaee1015533167a12a18ee46514ad16627b02",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4",
+        "notes/compact-massive-logarithmic-graph.md": "36f23db8903d3d521efe181af341fcd6c0ab6c23985df9f5fb68a58180c50e37",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/finite-middle-source-four.md": "f94cdca31a0ee117804c6404e309935e1716b48854e200fe2ac43f84954a200a",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/current-coupled-schur-graph-attempt.md": "fd90bda65dbab61030787af8927817539fafa952749da64c99916362fb9be6ec",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-bolt-frequency-domain-test.json": "18fdf93a9e875128df80b2d840df8ea5e11de6bc0ab533827473b2ae2d6fc2aa"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-interior-translation-jet-bound.md": "# Finite translation jets for the complete interior quantum response\n\n2026-10-25 HST, E003/S169. Ordinary argument before supporting arithmetic.\nThe full stable semiclassical wormhole objective is active and incomplete;\nthe closed audit and physical norms are unchanged.\n\nThis supplies the differentiated INTERIOR quantum ingredient of the triple-\nresidual calculation. It is not a global coupled inverse, numerical signed\nsolve, boundary-phase estimate, or nonlinear-neighborhood theorem. The\nquantitative contribution is specified below: a loss of 13/4 derivatives,\nstrictly less than the fourth-order inverse gain, through output order ten.\nThe full original-space certificate remains unresolved.\n\n## 1. Actual operator, localization and statement\n\nUse the current finite seed and original paired Dirac domain, complementary\nadjoint, fixed period, angular multiplicities and common renormalization.\nKeep its one-sided mass/log geometry and regular bolt. No smooth reflection\nof the mass cubic is made. On the retained analytic conformal interior\ncharts, center Y>=1/4, use radius 1/32 and gbar=e^(2sigma)|dx|^2. The\nholomorphic seed bound |sigma|<.027 and the zero value/first jet at the\ncenter are those of the retained normal-chart construction. Current finite\nseed guards are inside its polynomial parameter range, as checked in\ncurrent-seed-full-hessian-realization.md, section 3. In particular M_1>18,\nC/q<.0035 and N(E)<=4CE^2 still hold.\n\nH_mass is the full fixed-area massive Hessian in gbar units, WITHOUT the\nfactor 2G/B^2. Its density term is included. Retain the exact frozen symbol\nK of compact-massive-logarithmic-graph.md, including its common fourth\ncoefficient and entire angular tower. Put\n\n P_sigma u(x)=K(e^(-sigma(x))|D|)u(x),\n A=psi (H_mass-P_sigma) chi.\n\nThe LLL and four-dimensional local Weyl/radius entries remain separate\nentries of the original coupled H. They are not set to zero or included\nin the lower-order difference A by calling a fourth-order term a remainder.\n\nchi is one on radius 1/512 and zero from 1/256; psi is one on 1/256 and\nzero from 1/128. Both use the increasing beta(33,33) step for their radial\ntransition, with the appropriate orientation. They have C32 regularity.\nAll norms below are Euclidean H^s(R2), with unitary Fourier transform and\nweight <xi>^s. Input is extended by chi on the actual physical chart; output\nis extended by psi. For identical paired fields include the matching input\non the second copy and its cross return. The same proof works for the\nmatrix of these compactly supported inputs; at most two copies cost a\nfixed factor below sixteen in the bounds below.\n\nThe claim is\n\n ||A u||H^s <= 10^4000 C ||u||H^(s+13/4), 0<=s<=10, s integer. (1)\n\nIt applies to the actual fixed-seed response, including the whole finite-\ndomain return. Auxiliary caps only enter a resolvent identity; their\ndifference from the actual realization is explicitly estimated. No finite\nthermal or angular sample replaces the response. The statement does NOT\ncover an independent mass/log variation at the seam, nor backgrounds with\nonly the admitted nonlinear regularity.\n\n## 2. A quantitative lower-order starting estimate\n\nThe retained fixed-chart proof bounds the actual H_mass-Q_geo by 10^48 C\ntimes three covariant input derivatives. Its coordinate conversion is\nbelow 2*10^60 C. For Q_geo-P_sigma it keeps the full contact allocation:\nthe kernel difference is <=10^12 C/r^5; every remaining local contact has\norder <=3; the ten finite probes bound those coefficients by 10^87 C.\nThe separated tails are bounded, including geodesics that leave and return.\n\nUse the SAME allocation, replacing only the near Taylor remainder bound.\nFor a scalar Fourier variable t,\n\n |exp(it)-sum_(j=0)^3 (it)^j/j!| <=4 |t|^(13/4).\n\nFor |t|<=1 use the fourth-order integral remainder; for |t|>=1 sum the\nfour polynomial terms and the exponential. Translation and Plancherel then\ngive the corresponding L2 Taylor remainder <=4|h|^(13/4)||u||H^(13/4).\nAt separation R0=10^-20 its kernel integral is\n\n 2pi*4*10^12 C int_0^R0 r^(-3/4) dr\n       =32pi*10^12 C R0^(1/4).\n\nThe retained tail/contact budget is below 10^91 C in H3->L2. Thus the\nuncut fixed-chart difference has H^(13/4)->L2 norm below 10^100 C.\nMultiplication by chi is bounded in H^(13/4) by its C4 bounds. Integer\nLeibniz and the fractional difference quotient give a factor <10^80;\npsi has value <=1. We retain the deliberately larger bound\n\n                 ||A||H^(13/4)->L2 <= A0=10^300 C.          (2)\n\nThis is a strong bound for the commonly restored DIFFERENCE, not separate\nH^(13/4) bounds for its fourth/log terms. No contact is differentiated by\ndifferentiating its unsigned coefficient estimate.\n\n## 3. Finite jets, not a holomorphic moving cutoff\n\nUse a plane auxiliary cap c, one through 3/160 and zero by 1/40, with\nthe same beta(33,33) transition; phi_cap=c sigma. It agrees with the actual\nseed on the entire region needed for the localization and gluing below.\n\nThe step is a degree-65 polynomial on its transition. Its normalization\n65!/(32!)^2 is <=65*2^64. On a complex radial neighborhood with scaled\ntransition variable within .001 of [0,1], its coefficient formula bounds\nthe step by 10^32. The radial square-root branch is analytic away from\nthe center; the transition annuli stay away from that center. A complex\nCartesian radius 10^-6 works for c; radius 10^-9 works for chi and psi.\nThe seed Cauchy margin on the cap is at least 1/160. Consequently, for\nevery real unit direction v and 0<=j<=17,\n\n ||partial_v^j phi_cap||infinity <10^150,\n ||partial_v^j chi||infinity, ||partial_v^j psi||infinity <10^201. (3)\n\nMore specifically the cutoff Cj bounds are j!10^32(10^9)^j, and the cap\nones are j!10^32(10^6)^j. These estimates use analytic polynomial branches\nonly on the transition. The matching derivatives through order 32 at the\njoins justify the finite global bounds; no analytic compact cutoff exists\nor is presumed.\n\nFor each of phi_cap, chi and psi, replace its translated family f(x+tv)\nby the finite parameter polynomial\n\n             f_z=sum_(j=0)^12 z^j partial_v^j f/j!.\n\nOn |z|<=rho=10^-250, (3) gives a C5 difference <10^-40. The true real\ntranslations and this polynomial have the SAME twelve parameter jets.\nAll input functions are evaluated at real spatial coordinates. The\ncomplex continuation is only in this finite parameter. This does not\nreuse the disproved holomorphic moving-short-travel construction.\n\n## 4. The capped response in a sufficiently strong input norm\n\nThe complete point-source Born proof in general-interior-dirac-response.md\nis holomorphic under small complex C5 metric perturbations. Here observation\npoints lie within radius 1/128, so the seed is not separately recentered.\nIts zero value/first jet at the chart center and its analytic radius give\nthe following bounds for the locally matched mass potential h at EACH\nsuch observation point, throughout the parameter tube and the source\nvariation circle |w|<=1/(200U):\n\n |h|<=.06, |h|<=10r, |h_1|<=2r, |h_2|<=900r^2,\n |h_3|<=2*10^6 r^3, |h_4|<=10^8 r^4,\n |h-T1h|<=10^4r^2, |h-T2h|<=2*10^6r^3,\n |h-T3h|<=10^10r^4, |h-T4h|<=10^14r^5.           (4)\n\nThese follow from Cauchy within radius 1/64 about the observation point,\nthe real C5 Taylor formula for the perturbation, and division at r=1/128\noutside that disk. For example the outer remainder budgets use, successively,\n12*128, 12*128^2+900*128,\n12*128^3+900*128^2+2*10^6*128, and\n12*128^4+900*128^3+2*10^6*128^2+10^8*128.\nAll fit (4). The mass has Re m>.98M and |m|<1.02M.\n\nEvery one-through-four-Born Taylor remainder is a sum of products with at\nmost four h factors. Inflating the corresponding retained coefficient\nbounds by 100 costs at most 100^4. The five-and-higher-Born tail uses five\nlinear factors and then the unchanged .06 geometric bound; changing 2r to\n10r costs 5^5. Thus 100^5 is a sufficient common inflation of the retained\n10^17 M^-3 remainder and 10^17 C fourth-contact reserves. The full angular\nsum still uses sum d/M^3<2C/3. This proves a common-restored, uniformly\nholomorphic nonconstant scalar-source bound below 10^28 C on this tube.\n\nDo NOT drop the fixed-area density contact. At the real base the retained\nconstant-probe estimate |H_mass 1|<2*10^26 C and the scalar first variation\n|D T_mass[1]|<6*10^22 C bound the source value by <2*10^26 C. The cap/actual\nsource difference is below 7*10^11 sum d M exp(-M/256), and is smaller\nthan 10^21 C. The uniform parameter bound just proved controls the change.\nWith the source circle, first Cauchy and H_mass u=D T_mass[u]+2u T_mass give\nthe conservative point bound\n\n                 |H_cap u(x)| <=10^31 C U.                  (5)\n\nU is the real-coordinate C5 input norm, including global capped low norms.\nThe flat vacuum value is retained in the density term; it is not assigned\nzero. The common a2 restoration and all its variations remain in (5).\nThe uniform M^-3 majorant permits the parameter derivatives and angular\nsum to pass through common regulator removal, uniformly on this input ball.\n\nH8(R2) bounds the raw C5 norm by a constant below 10, directly by Fourier\nCauchy--Schwarz. Multiplication by chi_z costs <10^120 in H8 and <10^90\nin the C5 input estimate. The exact flat multiplier satisfies\n|K(e^-sigma p)|<=10 C(1+p^6) in this complex sector: use the positive\nFeynman remainder bounded by its cubic term and sum d/M^4<4C^2/q, as well\nas the retained common fourth coefficient. Fourier Cauchy--Schwarz with\nH8 bounds the corresponding point action. It is applied at real x.\n\nConsequently the finite parameter family\n\n           psi_z (H_cap[phi_z]-P_sigma_z) chi_z\n\nis holomorphic H8->L2 and bounded by 10^150 C on |z|<=rho. Its twelve\njets coincide with conjugation of the fixed plane operator by translations.\nThe COMPLETE capped twelfth commutator is therefore bounded by\n\n               12! rho^-12 10^150 C <10^3160 C.             (6)\n\nThis is an operator-valued Cauchy estimate justified by the uniform source\nmajorants, not an inference from a real pointwise inequality alone.\n\n## 5. Retain and differentiate the actual finite-domain return\n\nThe actual inverse stays on the original paired domain. Use a fixed gluing\ncutoff equal to one through 1/64 and zero by 3/160, with commutator norm\n<10^5. Actual and cap coefficients agree on its support. The observation\ndisk of radius 1/128, even enlarged by 1/4096, has separation >1/176 from\nthe gluing transition. The retained geometric resolvent identity expresses\nE_M=S_actual-S_cap with two cap endpoint rows and an ACTUAL middle inverse.\nIts operator norm is <=1/M (or <=3/M with retained weighted factors).\nNo differentiation of the middle inverse or global boundary data is made.\n\nThe endpoint row derivatives are bounded by the local homogeneous Dirac\nequation. In the flat conformal frame it is (D_flat+Ma)v=0, a=e^sigma.\nDirect integration by parts gives\n\n ||(D_flat+Ma)w||^2\n =||partial w||^2+M^2||aw||^2-M<w,c(da)w>.\n\nHere |a|>=exp(-.027), |da|<2 and M>=18, so the right side is >=.8 times\nthe flat gradient-plus-M^2 norm. Cauchy on the fixed analytic seed gives\nA1=2, A_j=2j!100^j for j>=2, through the required finite orders. For a\ntarget j<=12, set m=j+3, L=8192m and B0=20000m. On nested balls of initial\nradius R=1/4096 the cutoff energy recurrence is\n\n E0<=1.3 L F0,\n E_k<=1.3[L E_(k-1)+sum_(b=1)^k binom(k,b)A_b E_(k-b)].\n\nThe coefficient ratio is below one through k=j+1. Thus derivatives through\nj+2 are bounded by B0^k F0. The scaled two-dimensional H2 point estimate\non radius R/(2m) gives the following safe endpoint row constants:\n\n c0=10^8,\n c_j=10^14(j+3)[20000(j+3)]^j, 1<=j<=12,\n ||row_j|| <= c_j exp(-M/352).                       (7)\n\nThe original point-row bound supplies F0 uniformly on the initial ball;\nits L2 volume factor cancels the inverse radius in the point estimate.\nAll c_j are <10^90. The same estimate applies to Hilbert-valued rows and\nthe other physical copy. Spin and bundle identifications are unchanged.\nLeibniz, both gluing cutoffs, density/vertex factors and (7) consequently\ngive, for total endpoint order <=12,\n\n |partial_x^a partial_y^b E_M(x,y)|\n       <=10^300 M^-1 exp(-M/200).                   (8)\n\nThis generous bound includes all finite returns, including the cross-copy\nkernel when inputs on the two identical physical pieces are linked.\n\nFor clarity the other factor in the Hessian difference is controlled as\nwell. The complex flat Dirac envelope can be enlarged to\nk_M(r)=.6 exp(-.6Mr)/r. In the n-link convolution, one link is at least\nr/n. Splitting off half of the common exponential, integrating the other\nlinks, and summing the n choices bounds it by\n\n n^2 (.6/r) exp(-.3Mr) [4pi/M]^(n-1).\n\nThe insertion norm is <=.0612M, hence the ratio is <.8. Summing n^2 times\nthis geometric sequence gives\n\n            |S_cap(z;x,y)|<=200 exp(-Mr/4)/r.        (9)\n\nThe endpoint density factors fit a further factor ten. The Bessel integral\nunderlying the envelope is DLMF 10.32.9, with Re m>0 as required:\nhttps://dlmf.nist.gov/10.32.E9 . No theorem on a smooth global double is\nused. Finite parameter Cauchy supplies joint endpoint derivatives through\ntwelve of (9), with factor j!rho^-j; this uses the fixed-cap translation\njets from section 3, not derivatives of an unsigned kernel bound.\n\nAt each finite angular sum the difference H_actual-H_cap consists of the\ntadpole difference -M tr E_M(x,x) times the diagonal delta, and bubble\nterms with S_cap E_M, E_M S_cap and E_M E_M, with the original vertex and\ndensity factors. Local subtraction contacts cancel in this DIFFERENCE\nbecause the coefficients agree on the observation/input region. They\nremain in H_cap. No actual boundary contact is dropped: direct seam\nvariations vanish for these supported inputs, and nonlocal boundary effects\nremain in E_M. Both actual thermal branches are in S_actual.\n\nEquations (8)-(9), product differentiation and Schur integration bound\neach joint derivative through twelve of the bubble by an integrable\nkernel. The cross term has type\n10^3320 M exp(-M/200) exp(-Mr/4)/r before the localization factors.\nIts row integral is <=10^3330 exp(-M/200). The square E_M term and\ntadpole are smaller. Cutoff derivatives cost <10^300, and the complete\nangular estimate sum d exp(-M/200)<=8C*200^2 costs <10^6 C. Rank, paired\ncopy and finite combinatorial factors fit 10^50. Thus the FULL actual\nlocalized twelfth commutator, including (6), obeys\n\n       ||ad_(partial_v)^12 A||H8->L2 <= B12=10^4000 C.       (10)\n\nThe exponential majorants justify all differentiated return sums and the\ncommon-regulator limit. The actual paired domain has not been transported\nby Cartesian differentiation. Only compact interior kernel jets were\ntaken; no global stationary inverse is applied to a nonstationary field.\n\n## 6. The remote-input map, including paired boundary inputs\n\nRestrict observation now to D={|x|<1/1024}. The support of 1-chi has\nproper separation >1/2048. All local coincidence contacts vanish on this\nseparated input, including their derivatives. The nonlocal kernel is still\nthe full actual tadpole/bubble realization; the separated tadpole vanishes.\n\nUse the FAR one-sided resolvent identity from stationary-curved-quantum-\ntt.md, section 4, retaining its adjoint identity for reverse rows. Its\nbaseline commutator row is 9.8304*10^8 exp(-M/530); the actual inverse\nadds 1/M. Shrink its evaluation neighborhoods by 256 and allow the same\nfactor in the gluing gradient. The retained graph/point proof costs at\nmost the fourth power of this factor. The new separation and a cutoff\ngradient <10^5 fit this enlargement. Therefore both separated L2 rows\nare bounded by\n\n                  10^20 M^-1 exp(-M/10^6).                 (13)\n\nThe reverse row only uses the original zeroth-order estimate at its\npossibly rough seam endpoint. No high derivative at that endpoint is\nassumed. For derivatives in the interior observation variable, use the\nhomogeneous local equation on balls of radius 1/65536. Nested cutoffs\nand the same .8 coercivity give L=131072m and B0=10^6m, m=j+3. The\nrow derivative bound\n\n 10^35(j+3)[10^6(j+3)]^j M^-1 exp(-M/10^6), j<=10,\n\nis adequate and is <10^120 M^-1 exp(-M/10^6). For a fixed far endpoint,\napply the local L2 derivative estimate in the observation variable to\nits original reverse L2 row; this gives the same bound. Thus BOTH Schur\nrows of every differentiated bubble kernel are bounded. There is no\nintegration of a large point bound over the whole exterior.\n\nIndeed a jth derivative is a sum of products of two differentiated\nDirac kernels. Cauchy--Schwarz in the integrated endpoint bounds a Schur\nrow by the product of their L2 rows. The two mass vertices cancel the\nM^-2 in (13). Density derivatives through ten, rank/copy factors and\nLeibniz fit 10^50. The entire angular sum obeys\n\n            sum d exp(-2M/10^6)<=2*10^12 C.\n\nSchur's test and the finite H10 derivative sum prove the conservative bound\n\n ||H_mass(1-chi)u||H10(D) <=10^500 C ||u||L2(gbar, whole pair). (14)\n\nThis is an actual remote-input estimate, not the finite-domain return of\nthe localized input alone. The kernel proof extends from the physical\npaired core to this L2 input norm. It does not redefine the domain of\nmetric variations or change the paired boundary conditions.\n\nFor T=Vxi the ORIGINAL energy converts into this global input norm without\nassuming a physical C5 embedding. Retain m0=4(3-sqrt(5))>3, the actual\nYork disk bound ||h_disk(xi)||physical<=35||xi||physical, and\nell>=.99 E_eff>=.99 F_l lambda ||xi||physical^2/(8piG). The physical\nfour-volume is 4pi A_r^2 B^2 z^-4 times gbar area, and z<=1. Thus\n\n ||Vxi||L2(gbar)^2\n <= [2450 N_halves pi/(m0 .99 F_l gamma)] E(xi)^2,\n E(xi)^2=ell(xi,xi)/(|W| beta), |W|=N_halves pi B^2/(G gamma).\n\nWith N_halves<=2, F_l>.99 and gamma>5*10^-34 this gives\n\n                       ||Vxi||L2(gbar)<10^19 E(xi).          (15)\n\nCombining (14)-(15) bounds the remote-input H10 output by 10^519 C E(xi).\nThis does not estimate independent phase-source energies I_j, the original\nsource embedding I_Y, or the nonlinear graph embedding alpha_embed.\n\n## 7. Recover a lower-order strong estimate by finite interpolation\n\nLet U_t be ordinary translations of the ZERO-EXTENDED localized operator\non R2. This is an auxiliary conjugation A_t=U_t A U_t^-1, not a physical\nmoving boundary family. Translations are isometries of every H^s. Hence\n(2) and (10) bound A_t and its twelfth derivative for every real t.\n\nLet Pi_n be orthogonal Fourier annuli <xi> in [2^n,2^(n+1)), n>=0,\nwith the low annulus enlarged to cover <xi><2. For f in that annulus set\ng(t)=A_t f. Then\n\n ||g||infinity <= a_n||f||2, a_n=A0 2^((13/4)(n+1)),\n ||g^(12)||infinity <= b_n||f||2, b_n=B12 2^(8(n+1)).\n\nAt the twelve points kh, k=0,...,11, Taylor through order eleven has\nremainder <=(kh)^12 b_n||f||2/12!. Choose h=(a_n/b_n)^(1/12).\nThe matrix k^j/j! has determinant one. Bounding its inverse by cofactors,\nusing entries <=11^11 and eleven-factor determinants, gives a row bound\n<10^140. The Taylor remainder and twelve sampled values then imply\n\n ||ad_(partial_v)^j A Pi_n||2->2\n <=10^150 A0^(1-j/12) B12^(j/12)\n               2^([13/4+(19/48)j](n+1)), 1<=j<=10.          (11)\n\nNo sharp interpolation theorem or unverified numerical constant is used.\nPolarization handles mixed coordinate directions, at cost below 10^20\nthrough order ten. In differentiating A u, a j-fold commutator is applied\nto an input derivative of order s-j. Relative to H^(s+13/4), the remaining\ndyadic factor is\n\n                       2^(-(29/48)j n).\n\nIts square sum is <2 for j>=1. Cauchy--Schwarz therefore sums ALL input\nfrequencies. The j=0 term is estimated directly by (2), without a dyadic\ntriangle inequality. Leibniz, polarization and the H^s norm conversion\ncost less than 10^50 through s=10. The largest constant exponent in (11)\nis 150+300+(3700)(10/12)<3534. The finite factors fit 10^4000, proving (1).\n\n## 8. Quantitative role and limits in the complete feasibility test\n\nFor the last triple-residual bootstrap the desired local output is H14,\nand the equation source is H10. The new quantum remainder needs only\nH^(53/4)=H13.25 input, leaving an actual 3/4 derivative reserve. The earlier\npoint-source bound alone lost too many derivatives to supply this step.\nThus (1) closes the formerly missing differentiated INTERIOR quantum\nremainder bound, with its local contacts and actual finite return included.\n\nIt does not bound C_g,3, C_X,3 or C_def,3 I_Y. The original physical areal\nconversion, coupled scalar/York maps, outer mass/log weights, independent\nphase inputs, cutoff commutators and global matching are still required.\nFor observation in D, section 6 ALSO controls H_mass(1-chi)u, including\nits global input-norm comparison for u=Vxi. This is distinct from the\nactual finite-domain return of the LOCALIZED input, bounded in section 5.\nThe constant in (1) is not one of those output constants and must not be\ncompared to their ceilings as if their spaces agreed.\n\nFor a quantitative sensitivity of the available reserve, a local principal\ninverse factor 4000/C would multiply (1) into K=4*10^4003. This is an\nEXPLICIT CONTRIBUTION in such a bootstrap, not a completed coupled bound.\nFrequency splitting at L=(2K)^(4/3) gives, for s<=10,\n\n K ||u||H^(s+13/4)\n <=(1/2)||u||H^(s+4)+K L^(s+13/4)||u||L2.          (12)\n\nCompute L and the s=10 low-frequency coefficient in logarithmic units.\nTheir size documents the severe loss of this generic proof. An oversized\ncertificate of this kind is not a lower bound on the actual response.\nNo original output constant is assigned the low-frequency coefficient.\n\nKeep the polynomial candidate of current-schur-polynomial-return-test.md:\nits form defect <7.351e-35 and affine factor <5.016e-43 are unchanged.\nThe original-source and physical output comparisons, actual kappa_m<=5e-5,\nall joint affine/feedback entries and the independent boundary phases\nremain unresolved. The quantum-fast .135973<.1599164 screen remains limited\nto its two-fast admitted-family scope. No nonlinear-ball transfer is made.\n\nDECISION: use finite translation jets and interpolation for the needed\ninterior regularity; retain the construction, three residual factors and\nChebyshev polynomial. The generic constants are coarse. Complete the global\ncomposition before deciding whether this proof can certify its numerical\ntargets; do not mistake the local remainder bound for admission.\n\nONE NEXT CALCULATION (PROPOSED): compose this actual interior estimate with\nthe original coupled mass/log and bolt returns to bound the complete\ntriple-residual output/source map and its independent inputs. The signed\ncoupled columns and original-norm residual have not been computed here.\n\nVerification contract: freeze the ordinary proof and checker before data;\ncheck finite cutoff/jet majorants, source inflations, kernel convolution,\nendpoint recurrence, finite interpolation and absorption arithmetic. Use\n512-bit interval arithmetic, preserve failures and frozen sources, review\nthe ordinary argument, and run unchanged acceptance. These checks do not\nreplace the continuum argument or certify the uncomputed global map.\n\nRemaining to-do list: global coupled output/source and independent phase\ncomparisons, signed solution, nonlinear admission/contraction, exact\ncompatibility, physical matching, semiclassical validity/noise, all-sector\nstability, opening, transport, preparation, separate creation and the full\nstable semiclassical wormhole objective.\n",
+        "checks/current_interior_translation_jet_bound.py": "\"\"\"Support the ordinary localized full-response proof; no global inverse solve.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json,sys,traceback,math\nif '--arb-path' in sys.argv:sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nimport sympy as sp\nimport flint\nfrom flint import arb,ctx\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-interior-translation-jet-bound'\nOWN=['notes/'+STEM+'.md','checks/current_interior_translation_jet_bound.py','evidence/'+STEM+'-review.json']\nINPUTS=OWN+['notes/current-schur-polynomial-return-test.md','evidence/current-schur-polynomial-return-test.json',\n 'notes/current-seed-full-hessian-realization.md','notes/strong-interior-quantum-remainder.md',\n 'notes/compact-massive-logarithmic-graph.md','notes/general-interior-dirac-response.md',\n 'notes/divided-jet-dirac-response.md','notes/finite-middle-source-four.md',\n 'notes/stationary-curved-quantum-tt.md','notes/current-coupled-schur-graph-attempt.md',\n 'evidence/current-global-mass-conversion.json','evidence/current-bolt-frequency-domain-test.json']\nCHECKS=[]\ndef check(name,ok):\n CHECKS.append({'name':name,'passed':bool(ok)});print(name+(': passed' if ok else ': FAILED'),flush=True)\n if not ok:raise AssertionError(name)\ndef enc(x):\n m,r,e=x.mid_rad_10exp(50)\n return {'ball':x.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(x):\n d=x['decimal_enclosure'];return arb(d['mid'],d['rad'])*arb(10)**int(d['exponent'])\ndef execute():\n ctx.prec=512\n rv=json.loads((ROOT/OWN[2]).read_bytes())\n for p,h in rv['scientific_sha256'].items():check('frozen_'+p,sha256((ROOT/p).read_bytes()).hexdigest()==h)\n check('prior_full_polynomial_evidence',json.loads((ROOT/INPUTS[4]).read_bytes())['runs'][-1]['status']=='passed')\n oldp=json.loads((ROOT/INPUTS[-2]).read_bytes())['runs'][-1]\n oldg=json.loads((ROOT/INPUTS[-1]).read_bytes())['runs'][-1]\n check('retained_actual_seed_parameters_passed',oldp['status']==oldg['status']=='passed')\n check('actual_seed_gap_and_conversion_guards',dec(oldp['result']['parameters']['Fl'])>arb('.99') and dec(oldg['result']['numerics']['gamma'])>arb('5e-34') and dec(oldg['result']['numerics']['M1'])>18)\n fac=math.factorial\n nrm=sp.factorial(65)/sp.factorial(32)**2\n check('cutoff_normalization_guard',nrm<=65*2**64)\n check('far_gluing_cutoff_gradient',nrm/4**32<7 and 7*2048<10**5)\n bound=arb(str(nrm))*arb('1.001')**33*arb('2.001')**32/33+1\n check('complex_step_polynomial_guard',bound<arb('1e32'))\n check('finite_cutoff_regularities',32>=17 and 65==2*33-1)\n check('cap_seventeen_jet_guard',all(arb(fac(j))*arb('1e32')*arb('1e6')**j<arb('1e150') for j in range(18)))\n check('localization_seventeen_jet_guard',all(arb(fac(j))*arb('1e32')*arb('1e9')**j<arb('1e201') for j in range(18)))\n rho=arb('1e-250')\n tube=sum(arb('1e201')*rho**j/arb(fac(j)) for j in range(1,13))\n check('finite_parameter_C5_tube',tube<arb('1e-40'))\n budgets=[12*128,12*128**2+900*128,12*128**3+900*128**2+2*10**6*128,12*128**4+900*128**3+2*10**6*128**2+10**8*128]\n check('all_outer_Taylor_divisions',all(a<b for a,b in zip(budgets,[10**4,2*10**6,10**10,10**14])))\n check('complete_Born_inflation',100**4<100**5 and 5**5<100**5)\n check('raw_complex_source_reserve',(arb(2)/3+1)*arb('1e17')*arb(100)**5<arb('1e28'))\n cap_comm=arb(fac(12))*rho**(-12)*arb('1e150')\n check('operator_Cauchy_twelfth_bound',cap_comm<arb('1e3160'))\n check('actual_gluing_separation',sp.Rational(1,64)-sp.Rational(1,128)-sp.Rational(1,4096)>sp.Rational(1,176))\n coerc=arb('-.054').exp()-arb(2)/18\n check('endpoint_coercivity',coerc>arb('.8'))\n worst=arb(0)\n for j in range(1,13):\n  mm=j+3; LL=8192*mm; BB=20000*mm\n  for k in range(1,j+2):\n   ss=sum(arb(math.comb(k,b))*arb(2 if b==1 else 2*fac(b)*100**b)/arb(BB)**b for b in range(1,k+1))\n   ratio=arb('1.3')*(arb(LL)/BB+ss)\n   if ratio>worst:worst=ratio\n  check('endpoint_recurrence_order_'+str(j),all(arb('1.3')*(arb(LL)/BB+sum(arb(math.comb(k,b))*arb(2 if b==1 else 2*fac(b)*100**b)/arb(BB)**b for b in range(1,k+1)))<1 for k in range(1,j+2)))\n check('endpoint_row_constants',all(arb('1e14')*(j+3)*arb(20000*(j+3))**j<arb('1e90') for j in range(1,13)))\n ratio=arb('.0612')*4*arb.pi()\n check('all_Born_kernel_ratio',ratio<arb('.8'))\n env=arb('.6')*(1+arb('.8'))/(1-arb('.8'))**3\n check('whole_kernel_convolution_envelope',env<200)\n check('complete_return_angular_sum_guard',8*200**2<10**6)\n check('full_return_twelfth_budget',3320+10+300+6+50<4000)\n check('full_cap_and_return_fit_twelfth_budget',arb('1e3160')+arb('1e3686')<arb('1e4000'))\n check('remote_input_proper_separation',arb('-.027').exp()/1024>arb(1)/2048)\n check('far_row_rescaling_guard',arb('9.8304e8')*256**4<arb('1e20') and 530*256<10**6)\n check('far_derivative_row_guard',all(arb('1e35')*(j+3)*arb(10**6*(j+3))**j<arb('1e120') for j in range(11)))\n check('far_nested_recurrence_guard',all(arb('1.3')*(arb(131072*(j+3))/(10**6*(j+3))+sum(arb(math.comb(k,b))*arb(2 if b==1 else 2*fac(b)*100**b)/arb(10**6*(j+3))**b for b in range(1,k+1)))<1 for j in range(1,11) for k in range(1,j+2)))\n check('remote_angular_and_H10_budget',8*(10**6//2)**2==2*10**12 and 240+50+13+20<500)\n m0=4*(3-arb(5).sqrt())\n value_embed=(2450*2*arb.pi()/(m0*arb('.99')**2*arb('5e-34'))).sqrt()\n check('original_energy_to_global_value_norm',m0>3 and value_embed<arb('1e19'))\n mat=sp.Matrix([[sp.Rational(k)**j/sp.factorial(j) for j in range(12)] for k in range(12)])\n check('finite_interpolation_determinant',mat.det()==1)\n inv=mat.inv(); rowmax=max(sum(abs(v) for v in inv.row(j)) for j in range(12))\n check('finite_interpolation_inverse_guard',rowmax<10**140)\n check('finite_Taylor_remainder_guard',sp.Rational(11)**12/sp.factorial(12)<10**5)\n check('finite_interpolation_constant',12*10**140*(1+10**5)<10**150)\n gap=sp.Rational(1)-sp.Rational(8-sp.Rational(13,4),12)\n check('strict_derivative_gain',gap==sp.Rational(29,48))\n ds=1/(1-arb(2)**(-arb(29)/24))\n check('infinite_dyadic_square_sum',ds<2)\n check('all_output_orders_fit_declared_constant',150+300+sp.Rational(3700*10,12)+50<4000)\n check('last_fourth_order_bootstrap_reserve',14-sp.Rational(53,4)==sp.Rational(3,4))\n logK=arb(4000).log()/arb(10).log()+4000\n logL=arb(4)/3*(logK+arb(2).log()/arb(10).log())\n loglow=logK+arb(53)/4*logL\n check('absorption_half_exact',sp.Rational(4,3)*sp.Rational(3,4)==1)\n return {'precision_bits':512,'localized_operator':'psi (H_mass-P_sigma) chi; actual paired finite-domain kernel',\n  'base_H13over4_to_L2_bound':'10^300 C','twelfth_commutator_H8_to_L2_bound':'10^4000 C',\n  'strong_remainder_bound':'||A u||H^s <= 10^4000 C ||u||H^(s+13/4), integer 0<=s<=10',\n  'derivative_loss':'13/4','fourth_order_reserve':'3/4','finite_parameter_radius':'1e-250',\n  'maximum_endpoint_recurrence_ratio':enc(worst),'kernel_Neumann_ratio_upper':enc(ratio),\n  'remote_input_H10_bound':'10^500 C times global gbar L2 norm',\n  'original_energy_to_global_gbar_L2_upper':enc(value_embed),\n  'remote_input_H10_from_original_energy_bound':'10^519 C E(xi), input T=V xi',\n  'finite_interpolation_inverse_row_norm_exact':str(rowmax),'dyadic_square_sum_upper':enc(ds),\n  'sensitivity_with_principal_factor_4000_over_C':{'log10_K':enc(logK),'log10_frequency_split_L':enc(logL),'log10_low_frequency_coefficient_s10':enc(loglow),'is_complete_coupled_output_bound':False},\n  'scope':{'actual_paired_domain_retained':True,'common_regulator_full_angular_thermal_sums':True,\n   'density_contacts_retained':True,'localized_input_finite_domain_returns_included':True,\n   'interior_differentiated_massive_response_bounded':True,'global_remote_input_map_bounded':True,\n   'global_coupled_output_constants_bounded':False,'original_strong_delta_certified':False,\n   'physical_inverse_numerically_applied':False,'actual_kappa_m_computed':False,\n   'nonlinear_neighborhood_transfer':False,'nonlinear_admission_contraction':False,\n   'exact_compatibility':False,'physical_matching':False,'semiclassical_validity_noise':False,\n   'all_sector_stability':False,'actual_controlled_solution':False,'construction_obstruction':False,\n   'full_goal_complete':False}}\nif __name__=='__main__':\n mode='acceptance' if '--acceptance' in sys.argv else 'development'\n output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n hashes={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,'input_sha256_before':hashes,\n  'frozen_sources_utf8':{p:(ROOT/p).read_text(encoding='utf-8') for p in OWN},\n  'runtime':{'python':sys.version,'python_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n try:\n  run['result']=execute();run['input_sha256_after']={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n  check('frozen_inputs_unchanged',hashes==run['input_sha256_after']);run['status']='passed'\n except Exception:run['status']='failed';run['traceback']=traceback.format_exc()\n run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]};ledger['runs'].append(run)\n output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n summary=json.dumps({'status':run['status'],'mode':mode,'checks':len(CHECKS),'traceback':run.get('traceback')},indent=2)+'\\n'\n with (ROOT/'evidence'/(STEM+'.log')).open('ab') as out:out.write(summary.encode())\n print(summary,flush=True)\n if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-interior-translation-jet-bound-review.json": "{\n  \"frozen_utc\": \"2026-10-26T09:47:47.600244+00:00\",\n  \"ordinary_argument_reviewed_before_science\": true,\n  \"scientific_sha256\": {\n    \"notes/current-interior-translation-jet-bound.md\": \"7a428cbe8746111838aeea30cc0fc1894ed8927ee2b1b5b47573046e8c3eea5a\",\n    \"checks/current_interior_translation_jet_bound.py\": \"4b18572b380f167413d3dd199be778ae8bbd920ed9f90731b512dc227edaf622\",\n    \"notes/current-schur-polynomial-return-test.md\": \"d755b5c5efdfb867bc24844d78eea7f656c66dfd9a9cf99a9b28e6ed881c9164\",\n    \"evidence/current-schur-polynomial-return-test.json\": \"5fd05367788f35cf0beb972511bdaee1015533167a12a18ee46514ad16627b02\",\n    \"notes/current-seed-full-hessian-realization.md\": \"632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7\",\n    \"notes/strong-interior-quantum-remainder.md\": \"642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4\",\n    \"notes/compact-massive-logarithmic-graph.md\": \"36f23db8903d3d521efe181af341fcd6c0ab6c23985df9f5fb68a58180c50e37\",\n    \"notes/general-interior-dirac-response.md\": \"5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5\",\n    \"notes/divided-jet-dirac-response.md\": \"b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8\",\n    \"notes/finite-middle-source-four.md\": \"f94cdca31a0ee117804c6404e309935e1716b48854e200fe2ac43f84954a200a\",\n    \"notes/stationary-curved-quantum-tt.md\": \"90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f\",\n    \"notes/current-coupled-schur-graph-attempt.md\": \"fd90bda65dbab61030787af8927817539fafa952749da64c99916362fb9be6ec\",\n    \"evidence/current-global-mass-conversion.json\": \"ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df\",\n    \"evidence/current-bolt-frequency-domain-test.json\": \"18fdf93a9e875128df80b2d840df8ea5e11de6bc0ab533827473b2ae2d6fc2aa\"\n  },\n  \"scope\": \"Complete localized massive-response derivative estimate and separated remote-input estimate; not a global coupled inverse or nonlinear solution.\",\n  \"findings\": [\n    \"Finite translation polynomial matches twelve jets in C5; compact cutoff is not claimed analytic.\",\n    \"Actual operator remains on paired mass/log domain; cap difference, cross-copy returns and common contacts retained.\",\n    \"Complex source theorem extended by explicit finite Taylor/Born inflation, including density contact and flat vacuum value.\",\n    \"Endpoint derivatives differentiate local homogeneous equations, keeping actual middle inverse fixed; reverse separated rows require only zeroth regularity at seam.\",\n    \"Finite interpolation lowers input derivative loss to 13/4; dyadic frequency sum is infinite and convergent.\",\n    \"Remote-input map uses Schur row products, not the integral of a pointwise constant over the exterior.\",\n    \"Original energy-to-global-gbar-L2 comparison derived with physical measure and period factors.\",\n    \"No global C_g3,C_X3,Cdef3*IY,kappa_m, signed center or nonlinear neighborhood coefficient assigned a value.\"\n  ],\n  \"theorem_scope\": [\n    \"DLMF 10.32.9 checked with Re m>0.\",\n    \"No smooth global determinant-Hessian theorem invoked.\",\n    \"Dirac coercive identity derived directly; Walpuski PDF fetch timed out, no new theorem reliance.\"\n  ]\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "localized_operator": "psi (H_mass-P_sigma) chi; actual paired finite-domain kernel",
+        "base_H13over4_to_L2_bound": "10^300 C",
+        "twelfth_commutator_H8_to_L2_bound": "10^4000 C",
+        "strong_remainder_bound": "||A u||H^s <= 10^4000 C ||u||H^(s+13/4), integer 0<=s<=10",
+        "derivative_loss": "13/4",
+        "fourth_order_reserve": "3/4",
+        "finite_parameter_radius": "1e-250",
+        "maximum_endpoint_recurrence_ratio": {
+          "ball": "[0.53263789913024945385803017051661934 +/- 3.58e-36]",
+          "decimal_enclosure": {
+            "mid": "5326378991302494538580301705166193364283737235177564395",
+            "rad": "2",
+            "exponent": "-55"
+          }
+        },
+        "kernel_Neumann_ratio_upper": {
+          "ball": "[0.76906188159878138477565510022682231 +/- 3.95e-36]",
+          "decimal_enclosure": {
+            "mid": "7690618815987813847756551002268223060514670689670259049",
+            "rad": "2",
+            "exponent": "-55"
+          }
+        },
+        "remote_input_H10_bound": "10^500 C times global gbar L2 norm",
+        "original_energy_to_global_gbar_L2_upper": {
+          "ball": "[3206235558759356527.2659283334714189 +/- 4.23e-17]",
+          "decimal_enclosure": {
+            "mid": "3206235558759356527265928333471418942227899049187457675",
+            "rad": "2",
+            "exponent": "-36"
+          }
+        },
+        "remote_input_H10_from_original_energy_bound": "10^519 C E(xi), input T=V xi",
+        "finite_interpolation_inverse_row_norm_exact": "887168/15",
+        "dyadic_square_sum_upper": {
+          "ball": "[1.7629479551793910533865386557079548 +/- 2.62e-37]",
+          "decimal_enclosure": {
+            "mid": "1762947955179391053386538655707954799740192300310681137",
+            "rad": "2",
+            "exponent": "-54"
+          }
+        },
+        "sensitivity_with_principal_factor_4000_over_C": {
+          "log10_K": {
+            "ball": "[4003.6020599913279623904274777894490 +/- 1.40e-32]",
+            "decimal_enclosure": {
+              "mid": "4003602059991327962390427477789448986053536379762924217",
+              "rad": "2",
+              "exponent": "-51"
+            }
+          },
+          "log10_frequency_split_L": {
+            "ball": "[5338.5374533159892581141882889122313 +/- 5.45e-33]",
+            "decimal_enclosure": {
+              "mid": "5338537453315989258114188288912231305440406092859181767",
+              "rad": "2",
+              "exponent": "-51"
+            }
+          },
+          "log10_low_frequency_coefficient_s10": {
+            "ball": "[74739.223316428185632403422305876514 +/- 2.18e-31]",
+            "decimal_enclosure": {
+              "mid": "747392233164281856324034223058765137831389171101470826",
+              "rad": "2",
+              "exponent": "-49"
+            }
+          },
+          "is_complete_coupled_output_bound": false
+        },
+        "scope": {
+          "actual_paired_domain_retained": true,
+          "common_regulator_full_angular_thermal_sums": true,
+          "density_contacts_retained": true,
+          "localized_input_finite_domain_returns_included": true,
+          "interior_differentiated_massive_response_bounded": true,
+          "global_remote_input_map_bounded": true,
+          "global_coupled_output_constants_bounded": false,
+          "original_strong_delta_certified": false,
+          "physical_inverse_numerically_applied": false,
+          "actual_kappa_m_computed": false,
+          "nonlinear_neighborhood_transfer": false,
+          "nonlinear_admission_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-interior-translation-jet-bound.md": "7a428cbe8746111838aeea30cc0fc1894ed8927ee2b1b5b47573046e8c3eea5a",
+        "checks/current_interior_translation_jet_bound.py": "4b18572b380f167413d3dd199be778ae8bbd920ed9f90731b512dc227edaf622",
+        "evidence/current-interior-translation-jet-bound-review.json": "7d692bb65b91b3233f3b02cbd5cf55fd50a1462301d74f8ab7d4ae18d6f1c56a",
+        "notes/current-schur-polynomial-return-test.md": "d755b5c5efdfb867bc24844d78eea7f656c66dfd9a9cf99a9b28e6ed881c9164",
+        "evidence/current-schur-polynomial-return-test.json": "5fd05367788f35cf0beb972511bdaee1015533167a12a18ee46514ad16627b02",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4",
+        "notes/compact-massive-logarithmic-graph.md": "36f23db8903d3d521efe181af341fcd6c0ab6c23985df9f5fb68a58180c50e37",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5",
+        "notes/divided-jet-dirac-response.md": "b796047e8d92ee0e800b06030ecd0443dc2f985f5fb3f2566a8e93eb8c9794c8",
+        "notes/finite-middle-source-four.md": "f94cdca31a0ee117804c6404e309935e1716b48854e200fe2ac43f84954a200a",
+        "notes/stationary-curved-quantum-tt.md": "90ce9a9ecf3bd55618ab56cd306d113c5ecdfcdd797e0ddf2ee25cfef2bc395f",
+        "notes/current-coupled-schur-graph-attempt.md": "fd90bda65dbab61030787af8927817539fafa952749da64c99916362fb9be6ec",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-bolt-frequency-domain-test.json": "18fdf93a9e875128df80b2d840df8ea5e11de6bc0ab533827473b2ae2d6fc2aa"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "frozen_notes/current-interior-translation-jet-bound.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_checks/current_interior_translation_jet_bound.py",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/current-schur-polynomial-return-test.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_evidence/current-schur-polynomial-return-test.json",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/current-seed-full-hessian-realization.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/strong-interior-quantum-remainder.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/compact-massive-logarithmic-graph.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/general-interior-dirac-response.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/divided-jet-dirac-response.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/finite-middle-source-four.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/stationary-curved-quantum-tt.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_notes/current-coupled-schur-graph-attempt.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_evidence/current-global-mass-conversion.json",
+          "passed": true
+        },
+        {
+          "name": "frozen_evidence/current-bolt-frequency-domain-test.json",
+          "passed": true
+        },
+        {
+          "name": "prior_full_polynomial_evidence",
+          "passed": true
+        },
+        {
+          "name": "retained_actual_seed_parameters_passed",
+          "passed": true
+        },
+        {
+          "name": "actual_seed_gap_and_conversion_guards",
+          "passed": true
+        },
+        {
+          "name": "cutoff_normalization_guard",
+          "passed": true
+        },
+        {
+          "name": "far_gluing_cutoff_gradient",
+          "passed": true
+        },
+        {
+          "name": "complex_step_polynomial_guard",
+          "passed": true
+        },
+        {
+          "name": "finite_cutoff_regularities",
+          "passed": true
+        },
+        {
+          "name": "cap_seventeen_jet_guard",
+          "passed": true
+        },
+        {
+          "name": "localization_seventeen_jet_guard",
+          "passed": true
+        },
+        {
+          "name": "finite_parameter_C5_tube",
+          "passed": true
+        },
+        {
+          "name": "all_outer_Taylor_divisions",
+          "passed": true
+        },
+        {
+          "name": "complete_Born_inflation",
+          "passed": true
+        },
+        {
+          "name": "raw_complex_source_reserve",
+          "passed": true
+        },
+        {
+          "name": "operator_Cauchy_twelfth_bound",
+          "passed": true
+        },
+        {
+          "name": "actual_gluing_separation",
+          "passed": true
+        },
+        {
+          "name": "endpoint_coercivity",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_1",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_2",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_3",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_4",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_5",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_6",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_7",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_8",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_9",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_10",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_11",
+          "passed": true
+        },
+        {
+          "name": "endpoint_recurrence_order_12",
+          "passed": true
+        },
+        {
+          "name": "endpoint_row_constants",
+          "passed": true
+        },
+        {
+          "name": "all_Born_kernel_ratio",
+          "passed": true
+        },
+        {
+          "name": "whole_kernel_convolution_envelope",
+          "passed": true
+        },
+        {
+          "name": "complete_return_angular_sum_guard",
+          "passed": true
+        },
+        {
+          "name": "full_return_twelfth_budget",
+          "passed": true
+        },
+        {
+          "name": "full_cap_and_return_fit_twelfth_budget",
+          "passed": true
+        },
+        {
+          "name": "remote_input_proper_separation",
+          "passed": true
+        },
+        {
+          "name": "far_row_rescaling_guard",
+          "passed": true
+        },
+        {
+          "name": "far_derivative_row_guard",
+          "passed": true
+        },
+        {
+          "name": "far_nested_recurrence_guard",
+          "passed": true
+        },
+        {
+          "name": "remote_angular_and_H10_budget",
+          "passed": true
+        },
+        {
+          "name": "original_energy_to_global_value_norm",
+          "passed": true
+        },
+        {
+          "name": "finite_interpolation_determinant",
+          "passed": true
+        },
+        {
+          "name": "finite_interpolation_inverse_guard",
+          "passed": true
+        },
+        {
+          "name": "finite_Taylor_remainder_guard",
+          "passed": true
+        },
+        {
+          "name": "finite_interpolation_constant",
+          "passed": true
+        },
+        {
+          "name": "strict_derivative_gain",
+          "passed": true
+        },
+        {
+          "name": "infinite_dyadic_square_sum",
+          "passed": true
+        },
+        {
+          "name": "all_output_orders_fit_declared_constant",
+          "passed": true
+        },
+        {
+          "name": "last_fourth_order_bootstrap_reserve",
+          "passed": true
+        },
+        {
+          "name": "absorption_half_exact",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T09:47:57.895785+00:00"
+    }
+  ]
+}

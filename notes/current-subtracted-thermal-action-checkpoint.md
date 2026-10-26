@@ -1,3 +1,109 @@
+# Active checkpoint: interior response jets bounded; global coupled certificate unresolved
+
+2026-10-26 HST, E003/S169.
+
+See [ordinary interior response argument](current-interior-translation-jet-bound.md).
+
+The ORIGINAL-SPACE coupled estimate remains UNRESOLVED.
+Executed: the actual localized massive response now has output derivatives
+through order ten, losing 13/4 input derivatives, with bound 10^4000 C.
+The proof retains density contacts, common regulator, full angular/thermal
+sums and actual paired finite returns. A separate remote-input estimate
+and an original energy-to-global-value comparison are also quantified.
+No numerical signed solution or full original output constant is certified.
+
+The preceding polynomial milestone improved the complete residual allowance
+but left the strong output comparison unknown. This attempt addresses its
+interior quantum regularity step, including the actual finite return.
+
+For A=psi(H_mass-P_sigma)chi, with the exact all-angular frozen multiplier
+P_sigma and the specified fixed disk cutoffs, the executed ordinary bound is
+ ||A u||H^s <=10^4000 C ||u||H^(s+13/4), integer 0<=s<=10.
+Here M1^2=(q+1)/C, q=2000^4 and the checked M1>18 imply C<5e10.
+Thus the numerical coefficient is <5e4010 in these retained units.
+Thus the last fourth-order bootstrap uses H13.25 input to control the H10
+remainder, leaving a genuine 3/4 derivative reserve toward H14 output.
+This is an estimate of the complete localized massive response, not a
+single contact, a finite-mode model, or a derivative of an unsigned bound.
+LLL, local Weyl/radius terms and classical coupling remain original entries.
+
+The proof starts with the common-restored H13/4-to-L2 difference. Finite
+translation polynomials match twelve real translation jets; a complex
+parameter circle is used without complex spatial evaluation of rough
+inputs or an analytic compact cutoff. The full point-source Born argument
+is applied with explicit enlarged Taylor bounds, keeping the density and
+vacuum contacts. Actual-minus-cap endpoint rows are differentiated through
+local homogeneous Dirac equations while the original middle inverse and
+paired domain remain fixed. A finite interpolation argument then sums all
+Fourier annuli with dyadic gap 29j/48. The mass/log seam is not smoothed,
+and a stationary inverse is not applied to nonstationary Cartesian fields.
+
+The separated input from outside the disk obeys
+ ||H_mass(1-chi)u||H10(D) <=10^500 C ||u||L2(gbar, whole pair).
+Both Schur rows are retained, including the reverse row at the rough seam;
+only its undifferentiated endpoint estimate is used. For the actual York
+shape T=Vxi the original physical measure and energy normalization give
+ ||Vxi||L2(gbar) <3.207e18 E(xi)<10^19 E(xi).
+This closes the remote-input comparison in original energy units, yielding
+an H10 bound 10^519 C E(xi), with coefficient <5e529 after substituting C.
+It is NOT an energy-to-physical-C5 embedding or a bound for independent
+phase-source energies I_j or alpha_embed.
+
+The constants are extremely coarse. With a local principal factor 4000/C,
+the remainder contribution has K=4*10^4003. Absorbing half the fourth-order
+term by frequency splitting gives log10 L=5338.5374533 and, at output order
+ten, a low-frequency coefficient with log10=74739.2233164. This quantifies
+the loss of that generic absorption step. It is not C_g,3 or a lower bound
+on the actual inverse, so it cannot be compared directly with the complete
+output ceilings or called an obstruction to the construction.
+
+The first remaining global quantitative step is composition with the
+original coupled scalar/York maps, outer mass/log weights, matching rows,
+independent phase inputs, cutoff transitions and physical bolt conversion.
+No complete C_g,3, C_X,3 or C_def,3 I_Y has been obtained. The retained
+Chebyshev candidate keeps form defect <7.351e-35 and affine factor <5.016e-43;
+its conditional graph ceiling is 1.0650980044e31, physical ceiling
+9.9684408960e33 only if the full 5e-9 allowance is available, and original-
+source defect product ceiling approximately 1.0965284986e32. All actual
+coefficients and signed coupled columns remain unknown.
+
+The original mass lift and its cutoff transition are unchanged; it is not
+a fixed-temperature zero mode. The original fast conversion remains
+2133<||d_chi||H3<2174. Actual kappa_m is still unknown. If kappa_m<=5e-5,
+its conditional debits remain 2.14765e-12 affine, .0024731 feedback and
+.0195239 energy; all other entries must jointly satisfy
+ Y_other+4.084e-22 A_o+Y_phase <=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase <.0012069.
+No quartic, correlated slow, fast, independent boundary or matching entry
+is set to zero. The .135973<.1599164 screen retains its two-fast/admitted-
+family scope. All original nonlinear conditions, exact compatibility,
+physical matching, validity/noise and all-sector stability remain unproved.
+
+RESEARCH DECISION: retain the construction, triple residual factors and
+Chebyshev polynomial. Use finite translation jets and interpolation for
+interior regularity. Complete the global coupled comparison before treating
+these large generic constants as a numerical feasibility certificate.
+The present outcome is an unresolved GLOBAL estimate with an executed
+interior and remote-input bound, not an actual controlled solution.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): compose the actual interior
+estimate with the original coupled mass/log and bolt returns to enclose
+the complete triple-residual output/source map and independent inputs,
+then evaluate the coupled budgets. No global signed solve was run here.
+
+Verification: ordinary proof/checker/review frozen before science on
+2026-10-25 HST; publication checkpoint closed on 2026-10-26 HST;
+unchanged 512-bit acceptance after ordinary review matches development.
+Sixty-four supporting checks, fifteen frozen inputs, one development run,
+zero failed scientific runs. Python and all 63 flint / 1532 SymPy reference
+files match. No local Lean. Checks support the ordinary continuum argument;
+they do not certify the missing global estimate. All eighteen inherited
+paths, prior frozen science and closed audits remain preserved.
+
+Remaining to-do list: complete coupled original graph/physical/phase bound and signed solution; original source and neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: sharper complete polynomial; original-space certificate unresolved
 
 2026-10-25 HST, E003/S169.
