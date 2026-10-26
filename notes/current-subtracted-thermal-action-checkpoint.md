@@ -1,3 +1,87 @@
+# Active checkpoint: generic product rejected; direct coupled norms unresolved
+
+2026-10-26 HST, E003/S169.
+
+See [direct three-residual attempt](current-direct-triple-return-attempt.md).
+
+The complete ORIGINAL-NORM output/source estimate remains UNRESOLVED.
+Executed: a quantified rejection of the specified generic positive
+absorption/pair-norm budget and exact direct two-row composition identities.
+The source-defect and graph rows can avoid the last H14 quantum bootstrap.
+No direct composite norm, actual mass column or signed solution was computed.
+No additional controlled-solution requirement is closed.
+
+The accepted interior result 1ee884b and complete P32 remain unchanged.
+The first missing global comparison is the weighted paired end/interface
+and original source norm; the interior theorem alone does not supply it.
+Ordinary normal translation is not an admitted mass/log family across
+the seam. No smooth-double high-order theorem is substituted.
+
+The tested positive estimator grants its missing principal comparisons
+only to test its budget. Its last half-absorption term becomes
+A_gen=2 M10*10^19*[.338/1.338]^3 per original energy, with
+log10 A_gen=74756.73172818. A regular bolt bump bounds the original
+physical bolt conversion from below by 10^-177. After the actual affine
+prefactor and bolt allowance are included, the reported budget expression
+exceeds 1.667e-9 by more than 10^74546. This is a lower bound on THAT
+reported upper-bound expression, not on any actual operator or correction.
+The intermediate constants were not compared directly with physical caps.
+
+The direct complete identities are
+ G_def=K(V*)^-1 B F^2(I-F),
+ nu3=-A^-1 C V F^3 u+(C*)^-1(V*)^-1 B F^2 u,
+ T3=V F^3 u.
+They retain both original equations, the common-restored full quantum
+operator and all boundary moments. No factors are commuted illegally.
+Thus C_g3<=f M_g2, f=.252615844544..., and C_def3<=M_d2 when the
+original-Y extension exists. The direct conditional graph target is
+M_g2<=4.21627553227e31; M_d2 I_Y<=1.09652849856e32.
+Those are allowances, not bounded actual coefficients.
+
+The original graph/physical ceilings remain 1.0650980044e31 and
+9.9684408960e33 only with their full recorded margins. The separately
+normalized bolt ceiling is C_b3<=3.32347819473e33 if all 1.667e-9 remains.
+Its exact direct adjoint is a_b=N ell^-1 V*D C^-1(ell_b delta_b),
+C_b3=||F^3 a_b||E. An attempted variational argument did not enclose
+this norm. No numerical inverse or finite-frequency witness was run.
+Higher derivative-delta sources require the complete transposed composite
+or proved distribution-space extensions before individual energy solves.
+
+Actual kappa_m<=5e-5 and every other coupled entry remain untested.
+If the mass target holds, its debits are 2.14765e-12 affine, .0024731
+feedback and .0195239 per unit energy. The remaining JOINT requirements are
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+All phase/input factors and signed trial debits stay unknown. The exact
+mass lift, cutoff transition and 2133--2174 original conversion stay;
+it is not a fixed-temperature zero mode. The scalar quartic, correlated
+slow pair and infinite matching quotient remain in the coupled operator.
+The .135973<.1599164 quantum-fast screen keeps its limited two-fast scope.
+
+RESEARCH DECISION: preserve the construction and P32 algebra; stop the
+specified generic absorption/pair-norm product route. Use the exact signed
+direct compositions before taking norms. Their complete quantitative
+feasibility remains unresolved; no construction obstruction is inferred.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): certify the complete
+bolt-adjoint norm ||F^3 a_b||E against its original 3.32347819473e33
+conditional ceiling, retaining scalar/York sources, the actual common-
+restored quantum core and all finite returns. This necessary row can
+decide whether the uniform P32 output estimator must change. Passing it
+would still leave every other global source/output and coupled entry.
+
+Verification: proof/checker/review frozen before arithmetic; unchanged
+512-bit acceptance after ordinary review matches development. Fifteen
+supporting checks, eleven frozen inputs, one development run, no failed
+scientific runs. Python and all 63 flint / 1532 SymPy reference files
+match. No local Lean. These checks do not evaluate the direct adjoint or
+certify the missing continuum estimate. Accepted science, eighteen
+inherited paths and the closed audits remain preserved.
+
+Remaining to-do list: complete original output/source maps and signed coupled solution; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: interior response jets bounded; global coupled certificate unresolved
 
 2026-10-26 HST, E003/S169.
