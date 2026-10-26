@@ -1,3 +1,119 @@
+# Current proper-gauge neighborhood decision, 2026-10-26
+
+EXECUTED: a moving-proper-coordinate transfer has no uniform first or
+second C5 comparison on the original five-jet admitted family. Actual-
+domain finite witnesses have admitted orbit AND radius outputs while
+their normalized transfer derivatives exceed 1e154 and 1e342. This
+quantifies an already identified reason for using fixed endpoint charts;
+it does not reject that original theorem, the smoother F3 maps, or
+geometric admission. The complete polynomial return remains UNRESOLVED.
+
+The direct return attempt reached the canonical-to-physical neighborhood
+comparison before any full quantum inverse was applied. The original
+canonical response proof explicitly fixes each endpoint identification
+before interpolation: it already warns that differentiating a moving
+normalizer of a C5 field can require a sixth derivative. This turn tests
+that shortcut quantitatively and checks its relevance to both original
+metric outputs. It is not a new smoothness theorem for the quantum action.
+
+In actual seed proper coordinates, gbar0=dY^2+f0^-2 dtau^2, with f0 the
+INVERSE warping. For gbar_T=e^(2T)gbar0, the exact proper identification is
+ X_T(Y)=integral_0^Y exp(T),
+ B[T](X)=-T(Y_T(X))+log f0(Y_T(X))-log f0(X).
+The physical clock is unchanged. For a direction supported before the
+observation patch, J=integral v, J2=integral v^2, W=log f0-T and
+L_T=exp(-T)partial_Y give exactly
+ partial_X^5 DB[T]v=-J L_T^6 W,
+ partial_X^5 D2B[T][v,v]=J^2 L_T^7 W-J2 L_T^6 W.
+The second-order J2 term is retained. Five proper-coordinate output jets
+therefore expose sixth and seventh background jets in this method.
+
+The test uses compact real collar fields a N^-5 chi cos(N(Y-Y*)) and
+the corresponding sine field, a=1e-20, N=1e200, on the ACTUAL finite
+seed. z*=1/40 gives .06<Y*<.063 by its polynomial bounds. Both paired
+halves retain identical fields; the mass/log phases, all original graph
+and mass transitions, cold data and regular bolts are unchanged. nu=0
+in the canonical chart, but the physical radius is pulled back by the
+same identification rather than assigned zero. Its log ratio is
+ log[(1-z(Y_T))/z(Y_T)]-log[(1-z(X))/z(X)].
+
+Whole-interval polynomial jet bounds and actual-seed analytic jet guards,
+with all nonlinear coordinate products, give
+ canonical packet five-jet norm <6.667e-34,
+ direction norm <.000620424,
+ actual proper orbit admission <1.172e-14<1.5e-7,
+ pulled-back radius outer five-jet norm <3.907e-95.
+Nevertheless the ORIGINAL weighted proper-output first and second
+derivative lower bounds are >1.240e151 and >3.079e336. After the explicit
+canonical input normalization they exceed 1e154 and 1e342. The entire
+family diverges as N and N squared. The input norm is explicitly stated;
+it is not silently identified with the unfinished global X or form energy.
+Every original fixed-chart seminorm is uniformly bounded on this compact
+support, but no numerical global atlas factor is invented.
+
+The fields are domain witnesses, not physical corrections or examples
+of semiclassical validity at those frequencies. Their full equation
+sources H(0,T_N) remain unevaluated. No finite angular/thermal sample,
+smooth surrogate seam or altered quantum state is used. The full common
+regulator, UV logarithm, contacts and finite returns remain in the
+unevaluated physical operator. This is a kinematic comparison failure,
+not an obstruction to that operator or the construction.
+
+The restricted polynomial maps remain eligible. F squared already has
+ten local derivatives and the actual weighted phases at the fixed seed.
+That is sufficient qualitative reserve for the comparison; its numerical
+sixth/seventh-jet maps and the nonlinear neighborhood remain UNKNOWN.
+Output VALUE admission still requires the original five geometric jets;
+the moving-gauge method's extra jets are not promoted to physical gates.
+An explicit local sufficient repair is H^(8,log), with multiplier
+<xi>^8 log(e+|xi|^2): its C7 tensor embedding constant is <=1/sqrt(pi)
+<.564190. That finite embedding does not supply the global weights,
+quantum variations, action-coordinate contacts or a completed X.
+
+Budget consequence: any chain inserting a UNIFORM C5-only first/second
+moving-gauge constant has an infinite estimator coefficient. No amount
+of degree or bolt-tail improvement repairs that implication. This does
+not assign infinity to the actual strong-space alpha_embed or C3; those
+comparisons remain unknown. The exact structured c4=0, proved radius
+multiplier/remainder, form defect and limited .135973<.1599164 two-fast
+screen are unchanged. Original-space defect, full graph/physical outputs,
+actual mass column, independent phase inputs and application errors remain
+uncertified. The previous finite conditional ceilings remain conditions.
+
+The separate horizon-sector check confirms the existing plan: the fixed
+regular bolt prepares a stationary bridge; opening requires the separate
+drive already listed in S075-S076. This is scope verification, not new
+evidence against the prepared construction. No existence, matching,
+semiclassical validity/noise or all-sector stability requirement closes.
+
+RESEARCH DECISION: retain P32, the construction and the original fixed-
+endpoint/fixed-coordinate method. Reject the moving-proper-gauge C5-only
+shortcut. A completed seed output estimate still needs its uniform strong
+neighborhood bridge before it can certify nonlinear admission/contraction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): derive the complete outer
+strong quantum response for BOTH metric coefficients on one fixed chart,
+with the actual paired mass/log domain and common contacts, and connect
+it to the original graph neighborhood. Alternatively a moving-gauge
+implementation must first bound its higher-jet maps. The fixed-chart
+calculation is selected because it follows the original ordinary proof
+without adding a derivative-losing coordinate transfer. Its numerical
+constant and the full polynomial quantum application remain uncomputed.
+
+Verification: frozen ordinary argument/checker, three retained development
+runs, ordinary review and unchanged 512-bit acceptance. The initial run
+failed because the loose Q>.15 guard did not imply Y*<.063; the actual
+polynomial lower enclosure above .1575 resolves it. A later reviewed
+revision explicitly bounds the pulled-back radius. Both superseded source
+snapshots are preserved. Thirty-three accepted supporting checks; no Lean.
+Pinned Python, 63 flint and 1532 SymPy files verified. All inherited paths,
+previous evidence and closed audits retained. The checks support the
+coordinate/domain argument; they are not a quantum or coupled solver.
+
+Remaining to-do list: fixed-chart strong quantum/neighborhood bridge; complete structured original-output/source maps and every coupled entry/application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current original geometric admission decision, 2026-10-26
 
 EXECUTED: original geometric admission uses regular-chart orbit/radius
