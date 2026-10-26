@@ -1,0 +1,629 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T01:42:43.498036+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-angular-resummed-quantum-operator.md": "89a771b7c44e9facca5b2251797160f7296566f85c5ce74f91ff9ea2d901bccb",
+        "checks/current_angular_resummed_quantum_operator.py": "e36d5db97d31da572b7976036f87c687ba67e97ee4d4e0e41750cce0b76db615",
+        "evidence/current-angular-resummed-quantum-operator-review.json": "9de2c8b8352775899d4c53a62d6e07be7dc8aa5175a7c8cafe644c940ee50756",
+        "operators/angular_resummed_response.py": "f2f6ca154f5c998b37eadc0fb8b4f60c7f0c89708b84dabbd7cfd356e4683c8b",
+        "notes/current-canonical-heat-restoration-assembly.md": "f2a2b9d0c6c06ed49541f76b79e0b8fdd3a21885a25d89c044b99039aca4beed",
+        "notes/current-curved-paired-heat-bridge.md": "62a9cab72eb98adce09669c4f37d84bb851a6c793acb52e0ba6d1204d44523e6",
+        "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+        "notes/current-third-metric-conversion.md": "7d10223c82413f4a71aa4777bc4c606f2fd03bd7688e07ee2fa05de47a35ee70",
+        "notes/current-strong-quotient-reconstruction-test.md": "25fe3e858bb8373b55077c9dab01c6d85e4dc8954147cb9d2ed0c69f0e3cffd7",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "evidence/current-adaptive-dirac-trace-remainder.json": "41e29487d32c5a4a3f358c5baabb1a3045133dfe88aa6c2cf911d3af6436948f"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-angular-resummed-quantum-operator.md": "# Angular-resummed actual quantum operator: strong coupled solve still unresolved\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen execution.\nThe full stable-wormhole objective stays active; the feasibility audit is closed.\n\nThis is an attempt to assemble the missing signed operator, not a completed\ncoupled feasibility milestone. It gives an exact all-angular representation\nof the massive canonical action on the ACTUAL paired orbit operator, and an\ninterval implementation of its angular resolvent/bubble weights. The complete\nthermal/spatial operator application and original strong quotient solve are\nNOT executed. No kappa_m, physical correction or nonlinear gate is certified.\n\n## 1. Actual operator and the first unsupported assembly step\n\nLet L_u be the nonnegative geometric orbit Dirac square with the original\ncomplementary composed domains, paired mass/log phase and regular disk bolt.\nUse its physical-half heat trace K_u(t), the original thermal period and\nall thermal labels. Keep the fixed-Hilbert-space metric vertices L_i,L_ij\nof current-canonical-heat-restoration-assembly.md, including the second\nvertex. They are interpreted through the established domain/form argument;\nthe square's operator domain is not frozen by fiat.\n\nSet q=2000^4, M_n^2=n(n+q)/C, d_n=2(q+2n), n>=1,\nTheta(t)=sum d_n exp(-t M_n^2), ell=log(mu0 B),\nmu_orbit=exp(ell)/sqrt(C). The exact massive canonical zeta function is\n\n Z(s,u)=mu_orbit^(2s)/Gamma(s) int_0^infinity\n                                  t^(s-1) Theta(t) K_u(t) dt,\n Gamma_mass(u)=Z'(0,u)/2.                               (1)\n\nEquation (1) is the SAME common regulator, not separate finite parts of\ntwo divergent sums. The orbit spectrum below always includes all thermal\nfrequencies, the paired boundary and finite-domain returns. No product\ngeometry, smooth even double or finite mode selection replaces L_u.\n\nThe first unsupported passage in the proposed strong solve is from the\nadmitted-family WEAK metric Hessian to a bounded operator into the ORIGINAL\ntwo-row strong source space, including transition equations and border.\nThe weak C2 theorem does not supply this map or its norm. A usable\nall-angular operator application is needed to attempt it; summing\nmodewise positive bounds does not produce it. The angular resolvent\ncan be summed exactly, but inserting its finite part into an unregulated\norbit trace would still be unsupported. Sections 2-3 separate those issues.\n\n## 2. Complete angular resolvent and two-variable bubble\n\nFor a scalar spectral argument lambda>=0, define\n\n R_s(lambda)=mu_orbit^(2s) sum_n d_n (lambda+M_n^2)^(-1-s).\n\nIts pole at s=0 has residue 2C, independent of lambda. Write\na+b=q, ab=C lambda, choosing either ordering of the two roots. Then\n\n R(lambda):=FP_(s=0) R_s(lambda)\n          =2C[2ell-psi(1+a)-psi(1+b)].                    (2)\n\nProof: at lambda=0 the retained angular zeta identity gives\nR(0)=C[4 EulerGamma-2H_q+4ell]. Subtract that value BEFORE summing.\nThe difference is absolutely convergent, and partial fractions give\n2C sum[1/(n+a)+1/(n+b)-1/n-1/(n+q)]. The convergent digamma identity\n[DLMF 5.7.6](https://dlmf.nist.gov/5.7.E6) proves (2). Differentiation\nis uniformly absolutely convergent on compact nonnegative lambda intervals.\nFor lambda beyond q^2/(4C), the roots are conjugate with real part q/2;\nthe symmetric sum is real. No pole crosses the physical spectrum.\n\nThe complete angular bubble weight is\n\n B(lambda,mu)=sum_n d_n/[(lambda+M_n^2)(mu+M_n^2)]\n            =[R(lambda)-R(mu)]/(mu-lambda),\n B(lambda,lambda)=-R'(lambda).                          (3)\n\nIt is positive, symmetric and decreasing in each nonnegative argument.\nAt coincident arguments and at the root coalescence the values are\ncontinuous; neither apparent divided difference is a physical singularity.\nThe same convergent series proves the WHOLE-spectrum bound\n\n 0<B(lambda,mu)<=B(0,0)\n   = (2C^2/q)[pi^2/6-psi'(q+1)].                       (4)\n\nThe telescoping identity behind (4) is\n(q+2n)/[n^2(n+q)^2]=(1/q)[1/n^2-1/(n+q)^2].\nThe trigamma series is [DLMF 5.15.1](https://dlmf.nist.gov/5.15.E1).\nThis is an exact complete angular sum, not a finite-N estimate.\n\nThe implementation retains interval parameters. Away from coalescence it\nuses the stable small root a=2C lambda/[q+sqrt(q^2-4C lambda)] and b=q-a.\nNear coalescence, put r=1+q/2, d=q^2-4C lambda. The convergent formulas are\n\n R=4C[ell-psi(r)+sum_(k>=1)(d/4)^k zeta(2k+1,r)],\n B(lambda,lambda)=4C^2 sum_(k>=1)k(d/4)^(k-1)zeta(2k+1,r). (5)\n\nFor t=|d|/(4r^2)<1 and truncation after k=N, the omitted absolute\nerrors in (5) are at most\n\n 4C t^(N+1)/(1-t)[1/r+1/(2(N+1))],\n (4C^2/r^2)t^N{[(N+1)-Nt]/[r(1-t)^2]+1/[2(1-t)]}.       (6)\n\nThese follow from the decreasing-integral bound\nzeta(2k+1,r)<=r^(-2k-1)+r^(-2k)/(2k). They bound the entire remainder,\nincluding interval balls crossing d=0. No spectral branch is rounded away.\n\n## 3. Common regulator preserved: do not stop at the scalar finite part\n\nEquations (2)-(4) alone do NOT authorize an ordinary orbit trace of\nR(L)L_ij or the bubble with differential metric vertices. R(lambda)\ngrows logarithmically, and the vertices have order two. The scalar bound\n(4) is not a strong quantum-response or trace bound. A separate angular\nfinite part followed by an arbitrary orbit cutoff can lose finite terms.\n\nHere is an exact common-regulator regrouping that avoids that step. The\ncomplete angular heat expansion, with the massive LLL-excluded convention,\nis\n\n Theta(t)=2C/t+theta0+theta1 t+O_(q,C)(t^2),\n theta0=-q-1/3, theta1=(q^2/6-1/30)/C.                  (7)\n\nFor completeness apply [Euler--Maclaurin, DLMF 2.10.1](https://dlmf.nist.gov/2.10.E1) to\nf(x)=2(q+2x)exp[-t x(x+q)/C], x>=0. Its integral is 2C/t;\nthe endpoint is -q; -f'(0)/12 contributes -1/3+q^2 t/(6C),\nand f'''(0)/720 contributes -t/(30C)+O(t^2).\nThe next endpoint term is O(t^2). The remainder with six derivatives\nis O(t^2): after scaling x by sqrt(t), its derivative L1 norm is\nO(t^2) for fixed finite q,C. Gaussian decay controls infinity. This\nestablishes (7); it does not assign a small numerical remainder constant.\n\nUse the fixed auxiliary shift 1, independent of u, and put\n\n A_u=L_u+1, b0=2C, b1=2C+theta0, b2=C+theta0+theta1,\n W_theta(t)=exp(t)Theta(t)-b0/t-b1-b2 t.\n\nSince M_1^2>324, this shift introduces no infrared issue. For initially\nRe s>2, absolute convergence and ordinary Fubini give EXACTLY\n\n Z(s,u)=mu_orbit^(2s){\n   b0 zeta_Au(s-1)/(s-1)+b1 zeta_Au(s)+b2 s zeta_Au(s+1)\n   +[1/Gamma(s)] int_0^infinity t^(s-1) W_theta(t)Tr exp(-t A_u)dt}. (8)\n\nThe original admitted-family paired heat argument gives K_u(t)=O(t^-1)\nand the same bound for its first two metric variations. W_theta=O(t^2)\nat zero, so the last integral and those variations converge there at\ns=0. At infinity the shift gives exponential decay, including the\nsubtracted polynomials. Thus the remainder is holomorphic near s=0.\nThe established weak heat expansion supplies the meromorphic continuation\nof the three zeta_A terms: K=a0/t+a1+a2 t+O(t^(3/2)), with two metric\nvariations, suffices. Multiplication by exp(-t) preserves that expansion.\nThe zeros of 1/Gamma(s) cancel its ordinary heat poles at s=0,-1;\nzeta_A is regular there and has only a simple pole at s=1. No t log t\ncoefficient is silently removed. The actual seam's later fractional/log\nterms remain in the remainder. No smooth-seam heat theorem is substituted.\n\nWith ell_A=ell-(log C)/2, (8) yields the complete massive action\n\n 2 Gamma_mass =\n -b0[zeta_A'(-1)+(1+2ell_A)zeta_A(-1)]\n +b1[zeta_A'(0)+2ell_A zeta_A(0)]\n +b2[FP zeta_A(1)+2ell_A Res zeta_A(1)]\n +int_0^infinity W_theta(t)Tr exp(-t A)dt/t.             (9)\n\nIn particular the pole/residue term in the third line is retained.\nBoth metric derivatives of every term in (9), including the tadpole\nand boundary contributions, are required. For compact smooth tangents\nthis follows by the common positive-regulator identity; the established\nuniform admitted-family weak bounds pass it to the actual mass/log phase.\nThis gives a C2 identity on those ADMITTED families, not a strong\noperator estimate or an embedding of an unknown nonlinear X ball.\n\nSpecifically, the hypotheses used here are the original fixed first-order\npaired domain, positive ellipticity, bounded W1,infinity coefficients,\nthe cubic plus fixed-finite-log weighted C5 phase, and the bounded C5\ninterior/regular-disk atlas. The proper-coordinate map is C2 into\nW3,infinity, not spatially analytic. The weak collar proof includes the\ndistributional completed coefficient and the entire thermal image sum;\nthe finite-atlas proof retains its differentiated gluing defect. Those\narguments provide a qualitative family-dependent constant. They do not\nbound it in the requested strong norm. No third geometric neighborhood\nvariation or physical-X embedding is imported from them.\n\nAn explicit positive-time recipe retains both Hessian vertices. On the\noriginal common closed form, write A_i=D_i A and A_ij=D_ij A. Then\n\n D_ij Tr exp(-t A)\n   =t^2 int_0^1 Tr[exp(-(1-a)t A) A_i exp(-a t A) A_j] da\n                         -t Tr[exp(-t A) A_ij].          (10)\n\nProducts in (10) mean their closed-form Duhamel limits, including the\nactual composed boundary realization, not a newly imposed common square\ndomain. At positive regulator the identity follows by differentiating\nthe heat evolution and cyclic trace; the stated uniform weak bounds\njustify its integrated C2 limit. Apply (10) to the last term of (9) and\ndifferentiate ALL three zeta terms in the SAME identity. The second term\nis the coincidence vertex; dropping it is not a permissible bubble\nestimate. The finite disk heat kernel contains the entire thermal sum\nand finite-domain returns. No numerical value for (10) is assigned here.\n\nEquation (9) replaces the ENTIRE previous canonical massive allocation.\nDo not add its old a0/a2 restorations a second time. Einstein, Maxwell,\nthe specified R2 action, four-dimensional Weyl conversion and the separate\nLLL action are still included once in the full coupled operator. The\nphysical factor W=-N pi B^2/(G gamma), its sign and beta in energy/dual\nnorms remain unchanged. The auxiliary shift changes no physical mass,\nstate, boundary condition, temperature or renormalization scale.\n\n## 4. Executed scope and remaining quantitative obstacle\n\nThe ordinary identities above evaluate the COMPLETE angular resolvent\nand bubble for every nonnegative orbit spectral argument, and preserve\nthe common regulator for the full action. The supporting implementation\nencloses their scalar values, coalescent limits and (4), using the actual\nparameters and fixed ell. The external spectral arguments in its checks\nare function evaluations, not selected physical thermal or angular modes.\n\nNO full operator norm follows by inserting (4) between the differential\nmetric vertices: those vertices are unbounded, and the separate orbit\ntraces are not trace class. The first remaining unsupported numerical\nstep is evaluation and strong control of the combined metric derivatives\nof (9) on the full near/transition quotient, with its original border.\nThis requires the actual orbit heat/resolvent kernels or conforming spectral\nfunctional calculus, not an ordinary trace of (2) alone. Neither the\nuncomputed zeta_A terms nor the last integral is assigned zero. Their\nseparate coefficients are NOT physical response bounds.\n\nThe former exact transport error remains available in its proved energy\nand outer scopes. No further refinement is made. This new representation\ndoes not shrink that error by renormalization, and no error is charged twice.\nThe previous energy-only reconstruction failure remains: the annular\nequations cannot be replaced by the outer graph and three phase values.\n\nThe reference mass lift is J_m=int_0^z t^3/Q^2,\nn_m=-2 beta Q J_m/z, b_m=beta z^3/Q+beta Q'J_m. Its uncut areal\nvariation f=2xz, alpha=0 gives (r f)'=alpha'=0, so both reference\nequations cancel. The ORIGINAL chi_m is one through .1 and zero by .2:\nf_cut=2xz chi_m-2F n_m Dchi_m, alpha_cut=n_m Dchi_m. These transition\nterms stay in both equations. At the regular bolt the cut lift is zero,\nso its reference bolt shift is zero; integrating the full transition\ngives reference mass -xB per unit coefficient. It is not a global\nfixed-temperature zero mode or an adjustable physical quantum source.\n\nThe ORIGINAL conversion g_old=g_lifted+m d_chi has\n2133<||d_chi||H3<2174. Together with the known LINEAR\n|m|<1.627532e-15, its debit <=3.538254568e-12 is preserved, leaving\nnear-shape allowance >6.4617454e-12. No derivative constant of the\nseparate mass cutoff is invented. The undifferentiated scalar quartic\nand B0(z^4-z^(4+e_*))+Delta z^(4+e_*), with the exact unrounded e_*,\nremain coupled to the fast remainder. No actual post-elimination kappa_m\nhas been computed.\n\nAt CONDITIONAL kappa_m<=5e-5, the residual requirements still are\n\n Y_other+4.084e-22 A_o+Y_phase_return<=5.34235e-12,\n eta_other+.0195239 gamma_E+3.712e-12 A_o J_E\n                                      +eta_phase_return<.0012069.\n\nThese unknown entries have not been shown to fit. The conditional fast\nscreen .135973<.1599164 keeps its two-fast/admitted-family scope; it is\nnot control of independent mass/quartic/slow phases or original physical X.\nThe angular identities give zero SYMBOLIC angular truncation error; their\ninterval evaluations enclose only scalar function roundoff. They assign\nNO error or center to the unevaluated orbit application, so neither budget\nis reduced. This is the quantitative limitation of the supporting work.\nThe original nonlinear requirements remain, with unknown comparisons,\n\n E_center+1e-8 alpha_embed <= 1e-11,\n R_X alpha_embed*.028913+Z0_other <= .25,\n R_X alpha_embed^2*1.0706e10+Z2_other <= 5e7,\n Y0+1e-8 Z0+5e-17 Z2 <= 1e-8, Z0+1e-8 Z2 < 1.\n\nAll nonlinear admission/contraction, compatibility, matching,\nsemiclassical validity/noise and all-sector stability gates remain open.\n\nRESEARCH DECISION: retain the construction. Use the exact angular-resummed\nGEOMETRIC operator, with (8)-(9)'s common regulator, to assemble the signed\nquantum part of the full strong solve. This removes the need to approximate\nthe angular tower by a finite physical selection; it does not certify the\ncoupled return. Do not use the digamma finite part as an unregulated orbit\ntrace, or optimize the already controlled cold/scalar/transport components.\n\nONE NEXT CALCULATION, PROPOSED NOT EXECUTED: apply the combined metric\nHessian of (9), alongside both local original equations, to a conforming\nfull quotient parametrix and certify its strong residual and original\nrow maps. Retain every thermal contribution, interface/phase equation\nand finite-domain return, then test all coupled columns and the unchanged\nmass/residual budgets together. The complete signed solve is still missing;\nthis turn establishes its angular operator representation, not a solution.\n\nRemaining to-do list: complete signed strong quotient/border operator\napplication and residual; original physical-X/neighborhood comparisons;\nnonlinear admission/contraction; exact compatibility; physical matching;\nvalidity/noise and all-sector stability; charge/return, opening, transport,\npreparation, separate creation and the full stable-wormhole objective.\n",
+        "checks/current_angular_resummed_quantum_operator.py": "\"\"\"Supporting arithmetic for exact all-angular quantum operator assembly.\n\nNo retained signed center, physical correction or mass-column certificate.\n\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import comb,factorial\nimport sys,json,traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nimport flint\nfrom flint import arb,ctx\nimport sympy as S\nROOT=Path(__file__).resolve().parents[1];STEM='current-angular-resummed-quantum-operator'\nOWN=['notes/'+STEM+'.md','checks/current_angular_resummed_quantum_operator.py','evidence/'+STEM+'-review.json',\n 'operators/angular_resummed_response.py']\nINPUTS=OWN+[\n 'notes/current-canonical-heat-restoration-assembly.md',\n 'notes/current-curved-paired-heat-bridge.md',\n 'notes/current-rough-paired-variation.md',\n 'notes/current-third-metric-conversion.md',\n 'notes/current-strong-quotient-reconstruction-test.md',\n 'notes/current-global-mass-conversion.md',\n 'notes/current-coupled-global-return-attempt.md',\n 'evidence/current-adaptive-dirac-trace-remainder.json']\nsys.path.insert(0,str(ROOT))\nfrom operators.angular_resummed_response import AngularResponse\nfrom flint import acb\nCHECKS=[]\ndef check(name,ok):\n    assert name not in {x['name'] for x in CHECKS}\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    if not ok:raise AssertionError(name)\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(55)\n    return {'ball':str(x),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(x):\n    d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef prior(stem):\n    r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n    assert r['status']=='passed';return r['result']\ndef execute():\n    ctx.prec=512\n    review=json.loads((ROOT/OWN[2]).read_bytes())\n    for p,h in review['scientific_sha256'].items():\n        check('frozen_'+p,sha256((ROOT/p).read_bytes()).hexdigest()==h)\n    pp=prior('current-adaptive-dirac-trace-remainder')['actual_parameters']\n    C,B2=[dec(pp[k]) for k in ['C','B2']]\n    k=arb(2000);q=k**4\n    b02=k**10*((1+12*arb.pi()*k**6).sqrt()-1)/6\n    ell=(B2/b02).log()/2\n    ar=AngularResponse(C,q,ell)\n    check('fixed_physical_scale_preserved',ell>arb('2.94524e-9') and ell<arb('3e-9'))\n    R0,B0=ar.resolvent_and_diagonal(0)\n    Hq=(q+1).digamma()+arb.const_euler()\n    expected=C*(4*arb.const_euler()-2*Hq+4*ell)\n    check('common_angular_finite_part_at_zero',R0.overlaps(expected))\n    upper=ar.global_bubble_upper()\n    check('entire_angular_zero_argument_bubble',B0.overlaps(upper))\n    check('whole_spectrum_bubble_upper',upper>arb('4.9e8') and upper<arb('5e8'))\n    crit=q*q/(4*C);rr=1+q/2\n    Rc,Bc=ar.resolvent_and_diagonal(crit)\n    check('coalescent_resolvent_limit',Rc.overlaps(4*C*(ell-rr.digamma())))\n    check('coalescent_bubble_limit',Bc.overlaps(-2*C*C*acb(rr).polygamma(2).real))\n    args=[('zero',arb(0)),('one',arb(1)),('324',arb(324)),('1e6',arb('1e6')),\n          ('half_coalescence',crit/2),('coalescence',crit),('twice_coalescence',2*crit),('1e24',arb('1e24'))]\n    vals=[]\n    for tag,lam in args:\n        r,b=ar.resolvent_and_diagonal(lam)\n        check('positive_complete_bubble_'+tag,b>0)\n        check('whole_spectrum_guard_'+tag,b<arb('5e8'))\n        vals.append({'argument_label':tag,'argument':enc(lam),'finite_part_resolvent':enc(r),'diagonal_bubble':enc(b)})\n    mixed=[]\n    for a,b in [(arb(0),arb(1)),(arb(324),arb('1e6')),(crit/2,crit*2)]:\n        v=ar.bubble(a,b);rev=ar.bubble(b,a)\n        check('symmetric_bubble_'+str(len(mixed)),v.overlaps(rev) and v>0 and v<arb('5e8'))\n        mixed.append({'lambda':enc(a),'mu':enc(b),'complete_angular_bubble':enc(v)})\n    ball=arb(1,'1e-20');vb=ar.bubble(ball,arb(1))\n    check('overlapping_argument_enclosure',vb.contains(ar.resolvent_and_diagonal(1)[1]))\n    n,qs,cs,lam=S.symbols('n q C lambda',positive=True)\n    check('exact_angular_telescoping',S.simplify((qs+2*n)/(n*n*(n+qs)**2)-(1/n**2-1/(n+qs)**2)/qs)==0)\n    x,t=S.symbols('x t',positive=True)\n    f=2*(qs+2*x)*S.exp(-t*x*(x+qs)/cs)\n    em=-f.subs(x,0)/2-S.diff(f,x).subs(x,0)/12+S.diff(f,x,3).subs(x,0)/720\n    poly=S.series(em,t,0,2).removeO()\n    check('angular_heat_coefficients',S.simplify(poly-(-qs-S.Rational(1,3)+(qs**2/S.Integer(6)-S.Rational(1,30))*t/cs))==0)\n    check('next_endpoint_starts_at_t_squared',S.series(S.diff(f,x,5).subs(x,0),t,0,2).removeO()==0)\n    ss=S.symbols('s');z0,z1=S.symbols('z0 z1');la=S.symbols('ellA')\n    # Taylor coefficients of the three original common Mellin factors.\n    check('shifted_Mellin_first_factor',S.diff(S.exp(2*la*ss)*(z0+ss*z1)/(ss-1),ss).subs(ss,0)==-2*la*z0-z0-z1)\n    check('shifted_Mellin_second_factor',S.diff(S.exp(2*la*ss)*(z0+ss*z1),ss).subs(ss,0)==2*la*z0+z1)\n    res,fp=S.symbols('res fp')\n    check('shifted_Mellin_pole_contact',S.diff(S.exp(2*la*ss)*(res+ss*fp),ss).subs(ss,0)==2*la*res+fp)\n    check('conditional_fast_screen_unchanged',arb('.028913')+arb('1e-11')*arb('1.0706e10')<arb('.1599164'))\n    coeff=ar.common_heat_regrouping()\n    return {'precision_bits':ctx.prec,'actual_parameters':{'C':enc(C),'B2':enc(B2),'q':enc(q),'log_mu_B':enc(ell)},\n     'entire_angular_resolvent_finite_part_at_zero':enc(R0),'entire_angular_bubble_uniform_upper_expression':enc(upper),\n     'common_heat_regrouping_coefficients':{k:enc(v) for k,v in coeff.items()},\n     'spectral_function_evaluations':vals,'two_argument_evaluations':mixed,\n     'scope':{'complete_angular_identities_executed':True,'common_regulator_action_regrouping_proved':True,\n      'actual_paired_domain_preserved':True,'all_thermal_modes_retained_in_actual_orbit_operator':True,\n      'orbit_operator_application_executed':False,'strong_quantum_response_bound_certified':False,\n      'complete_signed_coupled_solve_executed':False,'actual_kappa_m_computed':False,\n      'physical_X_comparisons':False,'nonlinear_admission':False,'nonlinear_contraction':False,\n      'exact_compatibility':False,'physical_matching':False,'semiclassical_validity_noise':False,\n      'all_sector_stability':False,'actual_controlled_solution':False,'construction_obstruction':False,\n      'full_goal_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,'input_sha256_before':hashes,\n      'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                 'flint_version':flint.__version__,'sympy_version':S.__version__}}\n    try:\n        run['result']=execute();run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after']);run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    message=json.dumps({'mode':mode,'status':run['status'],'supporting_checks':len(CHECKS),\n       'angular_bubble_upper':run.get('result',{}).get('entire_angular_bubble_uniform_upper_expression'),\n       'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-angular-resummed-quantum-operator-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_execution_contract_frozen_before_development\",\n  \"outcome\": \"Unresolved complete signed coupled bound. Exact all-angular scalar weights and common-regulator geometric action regrouping; actual thermal/spatial strong application is not executed.\",\n  \"quantitative_role\": \"The first missing strong operator application cannot be supplied by finite angular selection or an ordinary orbit trace of an angular finite part. Exact angular summation removes angular truncation from that proposed application; scalar interval roundoff is bounded. It does NOT assign any center or error to the uncomputed orbit application or reduce a physical budget.\",\n  \"domain_review\": [\n    \"Actual first-order paired domain and complementary adjoint; composed square domains, physical half, original thermal period, regular disk bolt, mass/log weighted C5 phase.\",\n    \"Use only the proved admitted-family weak C2 heat bounds, with positive ellipticity, bounded W1,infinity and interior/disk C5 atlas. Do not infer an original X ball or strong response from them.\",\n    \"Re-read the rough multiplication/adjoint argument, proper-coordinate C2-to-W3,infinity map, weak collar heat argument, completed boundary coefficient and full finite-atlas gluing defect.\",\n    \"L>=0 and A=L+1>=1 on the original domains. Angular masses and all thermal eigenvalues remain in the actual orbit operator. The shift is auxiliary and changes no physical data.\",\n    \"The massive angular resolvent finite part is fixed at lambda=0 by the existing common scale. Differences converge absolutely; the symmetric digamma identity extends across root coalescence and above it.\",\n    \"Complete positive bubble is a convergent scalar spectral weight. Its uniform upper expression is not a trace or physical operator norm between unbounded metric vertices.\",\n    \"Taylor series about the coalescent root has a full Hurwitz-zeta integral-test tail; no small discriminant is rounded to zero.\",\n    \"Euler--Maclaurin applies to a smooth Gaussian angular summand with integrable sixth derivative. Gaussian scaling gives an O(t squared) remainder for fixed q,C; no small numerical heat remainder constant is claimed.\",\n    \"Common Mellin factorization begins at Re s>2 before analytic continuation. The original heat expansion through t plus O(t^1.5) ensures zeta_A regular at zero and minus one and simple pole at one.\",\n    \"Keep the FP and residue at zeta_A(1), both vertices, every metric derivative of all three zeta terms and the full remainder. This replaces the entire canonical massive allocation; do not add old a0/a2 twice.\",\n    \"Positive-time Hessian products mean common closed-form Duhamel limits. The square operator domain is not falsely frozen. The common weak limit does not prove original strong source mapping.\",\n    \"Both local reference mass rows cancel before cutoff. Original .1/.2 mass transition, .05/.1 graph cutoff, fixed-temperature bolt matching, conversion cost, scalar quartic and exact correlated slow pair all remain.\",\n    \"All residual allowances, the two-fast screen and physical-X/nonlinear requirements preserve their original scope. No independent boundary-phase coefficient is inferred.\"\n  ],\n  \"primary_source_review\": [\n    {\n      \"url\": \"https://dlmf.nist.gov/5.7.E6\",\n      \"inspected\": \"DLMF 5.7.6, including exclusion of nonpositive integer poles.\",\n      \"application\": \"Absolutely convergent digamma difference for symmetric roots with nonnegative real part.\"\n    },\n    {\n      \"url\": \"https://dlmf.nist.gov/5.15.E1\",\n      \"inspected\": \"DLMF 5.15.1 and its domain restriction.\",\n      \"application\": \"Trigamma series and complete angular bubble at zero.\"\n    },\n    {\n      \"url\": \"https://dlmf.nist.gov/2.10.E1\",\n      \"inspected\": \"DLMF 2.10.1 and absolute integrability of the even derivative.\",\n      \"application\": \"Finite Euler--Maclaurin remainder on the actual angular heat summand, followed by Gaussian scaling.\"\n    }\n  ],\n  \"theorem_hypotheses\": \"Only elementary spectral calculus and common Mellin identities on the retained admitted-family weak heat domain; external special-function identities are checked on their stated pole-free domains. No smooth seam theorem, finite physical spectrum, or strong regularity theorem is imported.\",\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"Fixed physical log(mu0 B) between 2.94524e-9 and 3e-9\",\n      \"Complete angular bubble B(0,0) between 4.9e8 and 5e8\",\n      \"Continuous coalescent and overlapping-argument enclosures\",\n      \"Exact symbolic angular heat and common Mellin coefficients\",\n      \"Original conditional fast screen unchanged\"\n    ],\n    \"verification\": \"Freeze before development; retain any failed snapshots including the operator. Unchanged-source acceptance after ordinary review. No Lean.\"\n  },\n  \"first_unsupported_step\": \"Strong control of the combined metric Hessian in the original two-row near/transition source space and original border, followed by a conforming full signed quotient solve. Actual orbit kernel/zeta application and norm comparisons are uncomputed.\",\n  \"claims_boundary\": [\n    \"No complete coupled solve or actual mass/quartic/slow/fast column\",\n    \"No actual kappa_m or remaining-budget pass\",\n    \"No physical-X neighborhood or nonlinear contraction\",\n    \"No compatibility, physical matching, validity/noise or all-sector stability\",\n    \"No controlled solution or construction obstruction\"\n  ],\n  \"scientific_sha256\": {\n    \"notes/current-angular-resummed-quantum-operator.md\": \"89a771b7c44e9facca5b2251797160f7296566f85c5ce74f91ff9ea2d901bccb\",\n    \"operators/angular_resummed_response.py\": \"f2f6ca154f5c998b37eadc0fb8b4f60c7f0c89708b84dabbd7cfd356e4683c8b\",\n    \"checks/current_angular_resummed_quantum_operator.py\": \"e36d5db97d31da572b7976036f87c687ba67e97ee4d4e0e41750cce0b76db615\"\n  },\n  \"unfrozen_numerical_previews\": [],\n  \"non_scientific_API_inspection\": \"Read installed acb.polygamma/acb.zeta/arb.contains docstrings before freezing; no numerical preview.\",\n  \"local_lean_invocations\": 0\n}\n",
+        "operators/angular_resummed_response.py": "\"\"\"Exact complete angular weights, not an unregulated orbit-trace evaluator.\n\nThe common-regulator action identity and original domains are specified in\nnotes/current-angular-resummed-quantum-operator.md. No thermal/spatial\noperator application or strong coupled certificate is supplied here.\n\"\"\"\nfrom flint import arb, acb\n\n\nclass AngularResponse:\n    def __init__(self, C, q, log_mu_B):\n        self.C, self.q, self.ell = map(arb, (C, q, log_mu_B))\n        if not (self.C > 0 and self.q > 0):\n            raise ValueError('Positive original C and q required')\n\n    def _coalescent(self, lam, N=12):\n        C, q = self.C, self.q\n        r = 1+q/2\n        d = q*q-4*C*lam\n        t = (abs(d)/(4*r*r)).abs_upper()\n        if not t < arb('0.01'):\n            raise ValueError('Coalescent series used outside certified disk')\n        rs = self.ell-r.digamma()\n        bs = arb(0)\n        for k in range(1, N+1):\n            hz = acb(2*k+1).zeta(acb(r)).real\n            rs += (d/4)**k*hz\n            bs += k*(d/4)**(k-1)*hz\n        re = 4*C*t**(N+1)/(1-t)*(1/r+arb(1)/(2*(N+1)))\n        be = 4*C*C/r**2*t**N*((N+1-N*t)/(r*(1-t)**2)+arb(1)/(2*(1-t)))\n        return (4*C*rs+arb(0,re.abs_upper()),\n                4*C*C*bs+arb(0,be.abs_upper()))\n\n    def resolvent_and_diagonal(self, lam):\n        \"\"\"Enclose FP R_s(lambda) and the entire sum d/(lambda+M^2)^2.\n\n        lambda is a spectral argument; no orbit spectrum is selected here.\n        \"\"\"\n        lam = arb(lam)\n        if not lam >= 0:\n            raise ValueError('Nonnegative orbit spectral argument required')\n        C, q = self.C, self.q\n        disc = q*q-4*C*lam\n        r = 1+q/2\n        if (abs(disc)/(4*r*r)).abs_upper() < arb('0.01'):\n            return self._coalescent(lam)\n        root = acb(disc).sqrt()\n        a = 2*C*lam/(q+root)\n        b = q-a\n        R = 2*C*(2*self.ell-(1+a).digamma()-(1+b).digamma())\n        B = 2*C*C*((1+a).polygamma(1)-(1+b).polygamma(1))/root\n        # The symmetric functions are real on the entire nonnegative axis.\n        if not (R.imag.contains(0) and B.imag.contains(0)):\n            raise ArithmeticError('Conjugation symmetry was not enclosed')\n        return R.real, B.real\n\n    def bubble(self, lam, mu):\n        \"\"\"Entire angular divided difference, including overlapping inputs.\"\"\"\n        lam, mu = arb(lam), arb(mu)\n        if not (lam >= 0 and mu >= 0):\n            raise ValueError('Nonnegative orbit spectral arguments required')\n        if lam == mu:\n            return self.resolvent_and_diagonal(lam)[1]\n        if not (mu-lam).contains(0):\n            Rl = self.resolvent_and_diagonal(lam)[0]\n            Rm = self.resolvent_and_diagonal(mu)[0]\n            return (Rl-Rm)/(mu-lam)\n        # Monotonicity of the complete positive series provides an enclosure\n        # without division by an interval containing zero.\n        lo = min(lam.lower(),mu.lower())\n        hi = max(lam.upper(),mu.upper())\n        lower = self.resolvent_and_diagonal(hi)[1].lower()\n        upper = self.resolvent_and_diagonal(lo)[1].upper()\n        return arb((lower+upper)/2,(upper-lower)/2)\n\n    def global_bubble_upper(self):\n        H2 = arb.pi()**2/6-acb(self.q+1).polygamma(1).real\n        return 2*self.C**2*H2/self.q\n\n    def common_heat_regrouping(self):\n        \"\"\"Coefficients of the exact shifted COMMON Mellin identity.\n\n        These are coefficients, not independently renormalized contacts or\n        physical operator norms. The three zeta terms AND integral are needed.\n        \"\"\"\n        C,q = self.C,self.q\n        theta0 = -q-arb(1)/3\n        theta1 = (q*q/6-arb(1)/30)/C\n        return {'angular_residue':2*C,'theta0':theta0,'theta1':theta1,\n                'b0':2*C,'b1':2*C+theta0,'b2':C+theta0+theta1,\n                'log_mu_orbit':self.ell-C.log()/2}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "actual_parameters": {
+          "C": {
+            "ball": "[49119682270.77026011517 +/- 3.20e-12]",
+            "decimal_enclosure": {
+              "mid": "491196822707702601151705468084281147600478334425133652985094",
+              "rad": "26525844162143483700278578564644732929",
+              "exponent": "-49"
+            }
+          },
+          "B2": {
+            "ball": "[8.383092440707457726322e+42 +/- 8.93e+20]",
+            "decimal_enclosure": {
+              "mid": "83830924407074577263224399887754585293455359999999999999999",
+              "rad": "4527146570162070793918943199676596225",
+              "exponent": "-16"
+            }
+          },
+          "q": {
+            "ball": "16000000000000.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "160000000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-46"
+            }
+          },
+          "log_mu_B": {
+            "ball": "[2.9452431301493e-9 +/- 3.29e-23]",
+            "decimal_enclosure": {
+              "mid": "294524313014930583307692499673206789801980169689202420807771",
+              "rad": "2700206253356006457135494195462700968607481857",
+              "exponent": "-68"
+            }
+          }
+        },
+        "entire_angular_resolvent_finite_part_at_zero": {
+          "ball": "[-2930126009568.562358969 +/- 2.04e-10]",
+          "decimal_enclosure": {
+            "mid": "-293012600956856235896895955898430518697841428462062389296701",
+            "rad": "16353938902905305514507395803759247361",
+            "exponent": "-47"
+          }
+        },
+        "entire_angular_bubble_uniform_upper_expression": {
+          "ball": "[496100432.729323804146 +/- 3.13e-13]",
+          "decimal_enclosure": {
+            "mid": "496100432729323804146259175590609047902610173607383790353600",
+            "rad": "53581303316910982447046306096765468673",
+            "exponent": "-51"
+          }
+        },
+        "common_heat_regrouping_coefficients": {
+          "angular_residue": {
+            "ball": "[98239364541.54052023034 +/- 6.40e-12]",
+            "decimal_enclosure": {
+              "mid": "98239364541540520230341093616856229520095666885026730597018",
+              "rad": "5305168849264681274336887451557036033",
+              "exponent": "-48"
+            }
+          },
+          "theta0": {
+            "ball": "[-16000000000000.3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 +/- 3.43e-140]",
+            "decimal_enclosure": {
+              "mid": "-160000000000003333333333333333333333333333333333333333333333",
+              "rad": "2",
+              "exponent": "-46"
+            }
+          },
+          "theta1": {
+            "ball": "[868626682710779.6391290 +/- 4.88e-8]",
+            "decimal_enclosure": {
+              "mid": "86862668271077963912899820734742073469192291668150573968887",
+              "rad": "4690870671729209604940682746080002049",
+              "exponent": "-44"
+            }
+          },
+          "b0": {
+            "ball": "[98239364541.54052023034 +/- 6.40e-12]",
+            "decimal_enclosure": {
+              "mid": "98239364541540520230341093616856229520095666885026730597018",
+              "rad": "5305168849264681274336887451557036033",
+              "exponent": "-48"
+            }
+          },
+          "b1": {
+            "ball": "[-15901760635458.79281310299 +/- 7.55e-12]",
+            "decimal_enclosure": {
+              "mid": "-159017606354587928131029922397164771038132376664483066027363",
+              "rad": "53051688579302615493345493758509057",
+              "exponent": "-46"
+            }
+          },
+          "b2": {
+            "ball": "[852675802393050.0760558 +/- 6.69e-8]",
+            "decimal_enclosure": {
+              "mid": "85267580239305007605578004456089582947334963118161491972083",
+              "rad": "4691135942472587833367509230015217665",
+              "exponent": "-44"
+            }
+          },
+          "log_mu_orbit": {
+            "ball": "[-12.3087628232224736632402 +/- 9.11e-23]",
+            "decimal_enclosure": {
+              "mid": "-123087628232224736632402370030846225995780183342120613367509",
+              "rad": "540033003913475190944040724543307777",
+              "exponent": "-58"
+            }
+          }
+        },
+        "spectral_function_evaluations": [
+          {
+            "argument_label": "zero",
+            "argument": {
+              "ball": "0",
+              "decimal_enclosure": {
+                "mid": "0",
+                "rad": "0",
+                "exponent": "0"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-2930126009568.562358969 +/- 2.04e-10]",
+              "decimal_enclosure": {
+                "mid": "-293012600956856235896895955898430518697841428462062389296701",
+                "rad": "16353938902905305514507395803759247361",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[496100432.729323804146 +/- 3.13e-13]",
+              "decimal_enclosure": {
+                "mid": "496100432729323804146259175590609047902610173607383790353600",
+                "rad": "53581303237682819932781968503221518337",
+                "exponent": "-51"
+              }
+            }
+          },
+          {
+            "argument_label": "one",
+            "argument": {
+              "ball": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "100000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-59"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-2930621000103.211234993 +/- 3.83e-10]",
+              "decimal_enclosure": {
+                "mid": "-293062100010321123499321844038226199686218401893201489598004",
+                "rad": "16437226597624556985362726555794538497",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[493883694.9983635633597 +/- 5.99e-14]",
+              "decimal_enclosure": {
+                "mid": "493883694998363563359706434865223588493148704214874555873393",
+                "rad": "53461918914823500829793837550009319425",
+                "exponent": "-51"
+              }
+            }
+          },
+          {
+            "argument_label": "324",
+            "argument": {
+              "ball": "324.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "324000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-57"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-3028027337981.841278695 +/- 3.56e-10]",
+              "decimal_enclosure": {
+                "mid": "-302802733798184127869501576599641248609649349042679151850410",
+                "rad": "33981014164011328093246471796015759361",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[195158828.7195060610428 +/- 6.44e-14]",
+              "decimal_enclosure": {
+                "mid": "195158828719506061042836716868046126105223567193114320161839",
+                "rad": "27668218280680289417132487749994020865",
+                "exponent": "-51"
+              }
+            }
+          },
+          {
+            "argument_label": "1e6",
+            "argument": {
+              "ball": "1000000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "100000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-53"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-3775653053254.555656082 +/- 6.64e-10]",
+              "decimal_enclosure": {
+                "mid": "-377565305325455565608244891505290245274697791762327990982756",
+                "rad": "21450432889064519048925019202759163905",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[98223.3662787938484529 +/- 2.48e-17]",
+              "decimal_enclosure": {
+                "mid": "98223366278793848452908886735993276294743036273701686234005",
+                "rad": "15912376584764556081797297305351618561",
+                "exponent": "-54"
+              }
+            }
+          },
+          {
+            "argument_label": "half_coalescence",
+            "argument": {
+              "ball": "[651470012033084.7293467 +/- 8.39e-8]",
+              "decimal_enclosure": {
+                "mid": "65147001203308472934674865601950566329492176009807735681533",
+                "rad": "3518153028555707989413117557542486017",
+                "exponent": "-44"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-5769379604306.611101999 +/- 7.62e-10]",
+              "decimal_enclosure": {
+                "mid": "-576937960430661110199943005289087895986042893811241915276002",
+                "rad": "33187177844635667308214434179718316033",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[0.0001507964491488011894593 +/- 5.26e-26]",
+              "decimal_enclosure": {
+                "mid": "150796449148801189459303735327383717873025142362102819408844",
+                "rad": "48861846232829797983628074766034796545",
+                "exponent": "-63"
+              }
+            }
+          },
+          {
+            "argument_label": "coalescence",
+            "argument": {
+              "ball": "[1302940024066169.4586935 +/- 7.31e-8]",
+              "decimal_enclosure": {
+                "mid": "130294002406616945869349731203901132658984352019615471363067",
+                "rad": "7036306057111415978826235115084972033",
+                "exponent": "-44"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-5837473942858.568297907 +/- 7.53e-10]",
+              "decimal_enclosure": {
+                "mid": "-583747394285856829790742140949843517712513716809728167144255",
+                "rad": "33115379461517503137407400000412975105",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[7.53982245744100195077e-5 +/- 4.00e-26]",
+              "decimal_enclosure": {
+                "mid": "75398224574410019507723667934434327550862596475188905826762",
+                "rad": "16286825716791503622436124642729000961",
+                "exponent": "-63"
+              }
+            }
+          },
+          {
+            "argument_label": "twice_coalescence",
+            "argument": {
+              "ball": "[2605880048132338.917387 +/- 1.47e-7]",
+              "decimal_enclosure": {
+                "mid": "260588004813233891738699462407802265317968704039230942726135",
+                "rad": "14072612153836913214784639026941919233",
+                "exponent": "-44"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-5905568281410.531633776 +/- 6.65e-10]",
+              "decimal_enclosure": {
+                "mid": "-590556828141053163377569661136514009760044678656218636974689",
+                "rad": "36135734725329779181382517706301898753",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[3.76991122872073659484e-5 +/- 4.28e-26]",
+              "decimal_enclosure": {
+                "mid": "376991122872073659483797843194755072291598641815297111055372",
+                "rad": "224886558360117257584213055741009854465",
+                "exponent": "-64"
+              }
+            }
+          },
+          {
+            "argument_label": "1e24",
+            "argument": {
+              "ball": "1000000000000000000000000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "100000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-35"
+              }
+            },
+            "finite_part_resolvent": {
+              "ball": "[-7847317988217.244921794 +/- 8.75e-10]",
+              "decimal_enclosure": {
+                "mid": "-784731798821724492179442931468909787201106970812081313898363",
+                "rad": "44499551686066980010689979402017570817",
+                "exponent": "-47"
+              }
+            },
+            "diagonal_bubble": {
+              "ball": "[9.82393645415405202303e-14 +/- 4.64e-35]",
+              "decimal_enclosure": {
+                "mid": "98239364541540520230325093616826502306796921872166741605252",
+                "rad": "21221086115853199043673634738066685953",
+                "exponent": "-72"
+              }
+            }
+          }
+        ],
+        "two_argument_evaluations": [
+          {
+            "lambda": {
+              "ball": "0",
+              "decimal_enclosure": {
+                "mid": "0",
+                "rad": "0",
+                "exponent": "0"
+              }
+            },
+            "mu": {
+              "ball": "1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "100000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-59"
+              }
+            },
+            "complete_angular_bubble": {
+              "ball": "[494990534.648876024 +/- 5.87e-10]",
+              "decimal_enclosure": {
+                "mid": "494990534648876024258881397956809883769734311391003013027460",
+                "rad": "327911655076287058611482070079353238061057",
+                "exponent": "-51"
+              }
+            }
+          },
+          {
+            "lambda": {
+              "ball": "324.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "324000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-57"
+              }
+            },
+            "mu": {
+              "ball": "1000000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "decimal_enclosure": {
+                "mid": "100000000000000000000000000000000000000000000000000000000000",
+                "rad": "0",
+                "exponent": "-53"
+              }
+            },
+            "complete_angular_bubble": {
+              "ball": "[747868.024512656478086 +/- 8.88e-16]",
+              "decimal_enclosure": {
+                "mid": "74786802451265647808633312098768997820342233603336320100058",
+                "rad": "55449412910435744237628540618497064961",
+                "exponent": "-53"
+              }
+            }
+          },
+          {
+            "lambda": {
+              "ball": "[651470012033084.7293467 +/- 8.39e-8]",
+              "decimal_enclosure": {
+                "mid": "65147001203308472934674865601950566329492176009807735681533",
+                "rad": "3518153028555707989413117557542486017",
+                "exponent": "-44"
+              }
+            },
+            "mu": {
+              "ball": "[2605880048132338.917387 +/- 1.47e-7]",
+              "decimal_enclosure": {
+                "mid": "260588004813233891738699462407802265317968704039230942726135",
+                "rad": "14072612153836913214784639026941919233",
+                "exponent": "-44"
+              }
+            },
+            "complete_angular_bubble": {
+              "ball": "[6.9682755710636468732e-5 +/- 5.56e-25]",
+              "decimal_enclosure": {
+                "mid": "69682755710636468732194190822829699805658930766063244090223",
+                "rad": "360977283340235702130977601656197218305",
+                "exponent": "-63"
+              }
+            }
+          }
+        ],
+        "scope": {
+          "complete_angular_identities_executed": true,
+          "common_regulator_action_regrouping_proved": true,
+          "actual_paired_domain_preserved": true,
+          "all_thermal_modes_retained_in_actual_orbit_operator": true,
+          "orbit_operator_application_executed": false,
+          "strong_quantum_response_bound_certified": false,
+          "complete_signed_coupled_solve_executed": false,
+          "actual_kappa_m_computed": false,
+          "physical_X_comparisons": false,
+          "nonlinear_admission": false,
+          "nonlinear_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-angular-resummed-quantum-operator.md": "89a771b7c44e9facca5b2251797160f7296566f85c5ce74f91ff9ea2d901bccb",
+        "checks/current_angular_resummed_quantum_operator.py": "e36d5db97d31da572b7976036f87c687ba67e97ee4d4e0e41750cce0b76db615",
+        "evidence/current-angular-resummed-quantum-operator-review.json": "9de2c8b8352775899d4c53a62d6e07be7dc8aa5175a7c8cafe644c940ee50756",
+        "operators/angular_resummed_response.py": "f2f6ca154f5c998b37eadc0fb8b4f60c7f0c89708b84dabbd7cfd356e4683c8b",
+        "notes/current-canonical-heat-restoration-assembly.md": "f2a2b9d0c6c06ed49541f76b79e0b8fdd3a21885a25d89c044b99039aca4beed",
+        "notes/current-curved-paired-heat-bridge.md": "62a9cab72eb98adce09669c4f37d84bb851a6c793acb52e0ba6d1204d44523e6",
+        "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+        "notes/current-third-metric-conversion.md": "7d10223c82413f4a71aa4777bc4c606f2fd03bd7688e07ee2fa05de47a35ee70",
+        "notes/current-strong-quotient-reconstruction-test.md": "25fe3e858bb8373b55077c9dab01c6d85e4dc8954147cb9d2ed0c69f0e3cffd7",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "evidence/current-adaptive-dirac-trace-remainder.json": "41e29487d32c5a4a3f358c5baabb1a3045133dfe88aa6c2cf911d3af6436948f"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "frozen_notes/current-angular-resummed-quantum-operator.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_operators/angular_resummed_response.py",
+          "passed": true
+        },
+        {
+          "name": "frozen_checks/current_angular_resummed_quantum_operator.py",
+          "passed": true
+        },
+        {
+          "name": "fixed_physical_scale_preserved",
+          "passed": true
+        },
+        {
+          "name": "common_angular_finite_part_at_zero",
+          "passed": true
+        },
+        {
+          "name": "entire_angular_zero_argument_bubble",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_bubble_upper",
+          "passed": true
+        },
+        {
+          "name": "coalescent_resolvent_limit",
+          "passed": true
+        },
+        {
+          "name": "coalescent_bubble_limit",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_zero",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_zero",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_one",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_one",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_324",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_324",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_1e6",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_1e6",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_half_coalescence",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_half_coalescence",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_coalescence",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_coalescence",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_twice_coalescence",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_twice_coalescence",
+          "passed": true
+        },
+        {
+          "name": "positive_complete_bubble_1e24",
+          "passed": true
+        },
+        {
+          "name": "whole_spectrum_guard_1e24",
+          "passed": true
+        },
+        {
+          "name": "symmetric_bubble_0",
+          "passed": true
+        },
+        {
+          "name": "symmetric_bubble_1",
+          "passed": true
+        },
+        {
+          "name": "symmetric_bubble_2",
+          "passed": true
+        },
+        {
+          "name": "overlapping_argument_enclosure",
+          "passed": true
+        },
+        {
+          "name": "exact_angular_telescoping",
+          "passed": true
+        },
+        {
+          "name": "angular_heat_coefficients",
+          "passed": true
+        },
+        {
+          "name": "next_endpoint_starts_at_t_squared",
+          "passed": true
+        },
+        {
+          "name": "shifted_Mellin_first_factor",
+          "passed": true
+        },
+        {
+          "name": "shifted_Mellin_second_factor",
+          "passed": true
+        },
+        {
+          "name": "shifted_Mellin_pole_contact",
+          "passed": true
+        },
+        {
+          "name": "conditional_fast_screen_unchanged",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T01:42:43.874809+00:00"
+    }
+  ]
+}

@@ -1,3 +1,128 @@
+# Active checkpoint: exact angular representation; full coupled return unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary common-regulator operator argument](current-angular-resummed-quantum-operator.md) and its frozen evidence.
+
+The COMPLETE signed coupled return remains UNRESOLVED. This attempt
+derived and evaluated exact all-angular resolvent/bubble weights and proved
+their common-regulator action regrouping on the admitted paired mass/log
+domain. The full thermal/spatial operator application, strong quotient
+solve and actual post-elimination kappa_m were NOT executed. No original
+admission or coupled-feedback requirement closes from these scalar weights.
+
+The first unsupported passage remains conversion of the admitted-family
+WEAK C2 Hessian into the ORIGINAL two-row strong source space, including
+transition equations and the boundary border. The previous energy-only
+reconstruction failure remains. This turn addresses an assembly issue in
+attempting that passage: an angular finite part cannot simply be inserted
+into an ordinary orbit trace with unbounded differential metric vertices.
+
+For the ACTUAL paired nonnegative orbit square L, q=2000^4 and
+M_n^2=n(n+q)/C, d_n=2(q+2n), the complete angular weights are
+
+ R(lambda)=2C[2 log(mu0 B)-psi(1+a)-psi(1+b)],
+ a+b=q, ab=C lambda,
+ B(lambda,mu)=[R(lambda)-R(mu)]/(mu-lambda),
+ 0<B(lambda,mu)<=B(0,0)=(2C^2/q)[pi^2/6-psi'(q+1)].
+
+The frozen interval execution gives
+B(0,0)=496100432.729323804146, displayed radius <3.13e-13;
+R(0)=-2930126009568.562358969, displayed radius <2.04e-10.
+The full coalescent-root series has a certified Hurwitz-zeta remainder.
+Conjugate roots, diagonal and overlapping arguments are covered. These
+are spectral FUNCTION evaluations, not selected physical modes. B(0,0)
+is NOT a physical quantum-response, graph-return or trace-norm bound.
+
+The common regulator is preserved before analytic continuation. With
+A=L+1, the exact complete angular heat expansion has theta0=-q-1/3,
+theta1=(q^2/6-1/30)/C. Put b0=2C, b1=2C+theta0,
+b2=C+theta0+theta1 and
+W_theta(t)=exp(t)Theta(t)-b0/t-b1-b2 t. Then the SAME massive
+zeta function is mu_orbit^(2s) times
+
+ b0 zeta_A(s-1)/(s-1)+b1 zeta_A(s)+b2 s zeta_A(s+1)
+ +[1/Gamma(s)] int t^(s-1) W_theta(t)Tr exp(-tA)dt.
+
+The admitted-family original weak heat expansion through t with O(t^1.5)
+remainder and two variations justifies this identity and its C2 limit.
+It includes the finite pole/residue term at zeta_A(1). Every first and
+second metric variation, including the coincidence vertex, is retained.
+The three zeta functionals and remainder still require their ACTUAL orbit
+evaluation. This is a replacement of the whole canonical massive
+allocation; adding the older a0/a2 restoration again would double count.
+All other local actions, Weyl conversion and separate LLL stay once.
+
+The original complementary domains, composed square, mass/log regularity,
+regular disk bolt, complete thermal sum and finite-domain returns are
+unchanged. No smooth physical surrogate, fixed square domain, new scale,
+temperature, action coefficient or normalization is introduced. The
+angular resummation has zero SYMBOLIC truncation error; its interval
+roundoff does not bound the still uncomputed orbit application. This
+is useful assembly evidence, not a completed feasibility milestone.
+
+Both uncut reference mass equations still cancel: f=2xz, alpha=0.
+For the original chi_m=1 through .1 and zero by .2, retain
+f_cut=2xz chi_m-2F n_m Dchi_m and alpha_cut=n_m Dchi_m.
+The complete transition has zero reference bolt shift and total reference
+mass -xB per unit coefficient. The lift is not a fixed-temperature zero
+mode. The original conversion 2133<||d_chi||H3<2174 and actual LINEAR
+|m|<1.627532e-15 still cost <=3.538254568e-12, leaving near shape
+>6.4617454e-12. Scalar quartic and the exact correlated slow pair remain.
+
+kappa_m<=5e-5 is UNKNOWN after the full coupled elimination. Its
+CONDITIONAL affine, graph and energy debits remain
+2.14765e-12, .0024731 and .0195239. All remaining entries still require
+
+ Y_other+4.084e-22 A_o+Y_phase_return <= 5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E
+                                  +eta_phase_return < .0012069.
+
+No actual value for the unknown maps or remaining columns is supplied.
+The original conditional fast screen .135973<.1599164 keeps only its
+two-fast/admitted-family scope. Independent phase variations and physical
+X comparisons remain outside it. The unchanged nonlinear requirements are
+
+ E_center+1e-8 alpha_embed <= 1e-11,
+ R_X alpha_embed*.028913+Z0_other <= .25,
+ R_X alpha_embed^2*1.0706e10+Z2_other <= 5e7,
+ Y0+1e-8 Z0+5e-17 Z2 <= 1e-8, Z0+1e-8 Z2 < 1.
+
+These gates, exact compatibility, physical matching, validity/noise and
+all-sector stability are unproved. The result is an UNRESOLVED estimate,
+not an excessive physical upper bound and not a construction obstruction.
+
+RESEARCH DECISION: retain the construction and sharpen the method at
+the combined GEOMETRIC strong operator application. Use the exact
+all-angular representation with its common regulator; do not use an
+unregulated orbit trace of the digamma finite part. No new cold, scalar
+or transport-tail optimization is justified. The requested complete
+coupled feasibility milestone remains open.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the combined metric
+Hessian of the common-regulator action to a conforming FULL quotient
+parametrix P, alongside BOTH original local equations and the actual
+phase/interface border. Certify delta=||I-S P||<1 (proposed sufficient
+target <=1/2) and original row maps M_i=||T_i P|| in that SAME strong
+source space. Then each actual affine/mass/quartic/correlated-slow/fast
+column b has error at most M_i||(I-S P)b||/(1-delta), with existing
+transport errors charged once through proved maps. Every thermal term,
+contact and finite-domain return must enter this one calculation. Test
+kappa_m and both remaining budgets together. The angular representation
+was executed here; that strong application and coupled solve were not.
+
+Verification: ordinary argument, implementation and execution contract
+frozen before development; unchanged-source acceptance matches at 512 bits
+on 12 inputs. The 37 checks support scalar arithmetic and algebra; they
+do not replace the domain argument or establish a strong operator bound.
+No failed frozen run or Lean invocation. Python and all 1595 flint/SymPy
+files match the reference. All 18 inherited paths, closed audits and the
+previous checkpoint semantic state remain preserved.
+
+Remaining to-do list: complete signed strong quotient/border operator application and coupled residual; original physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: strong quotient reconstruction unresolved
 
 2026-10-25 HST, E003/S169.
