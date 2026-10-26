@@ -1,3 +1,127 @@
+# Current complete-output feasibility decision, 2026-10-26
+
+EXECUTED: the COMPLETE two-row three-residual bolt output now has a
+finite original-norm upper bound, C_b3<3.199370630e82. The specified P32
+positive upper estimator exceeds the full bolt allowance by 9.62658e48.
+Degree 76 closes the exact-polynomial bolt-tail slice, conditionally on
+the stated remaining margin, but application errors and the complete
+coupled estimate remain UNRESOLVED. Higher degree is not adopted.
+No actual correction, original defect, mass column or physical gate closes.
+The closed feasibility audit and full stable-wormhole objective remain.
+
+Preserve accepted 1ee884b and P32 on the ACTUAL paired mass/log domain,
+complementary adjoint, fixed clock and temperature, original York endpoints
+and regular bolt. The exact ultraviolet logarithm, common regulator,
+complete angular and thermal sums, coincidence/density contacts, cutoff
+transitions and finite-domain returns remain in the full form ell and F.
+
+The first unsupported implication for the attempted two-row output bound
+was quantitative endpoint continuity and a bound on the complete mixed
+adjoint. The ordinary proof now supplies both. The auxiliary inverse-York
+Poisson profile has an integrable positive endpoint kernel on the actual
+domain; it does not change the physical boundary conditions. Two integrations
+by parts in the complete finite-seed Ward row retain anomaly, magnetic,
+off-shell density and gauge returns. The full scalar-energy-to-L2 adjoint
+upper expression is 0.409738939055<1. No quantum shape row is discarded.
+
+With E^2=ell/N, F=(ell+B)^-1 B, f=.338/1.338, both original equations give
+ nu_n=U F^n+A^-1b F^n+(Cbar*)^-1(V*)^-1 Bbar F^(n-1), n>=1.
+The physical bolt output ell_b nu_n has the complete bounds
+ C_b3<=J0 f^3+J1 f^2<3.199370630e82,
+ C_b1<=J0 f+J1<5.013527252e83,
+ J0<1.984644812e84, J1<1.045262586e54.
+All original action, weight and ell_b>1e33 conversions are paid.
+The dominant J0 is the global energy-to-bolt estimate, especially its
+positive-temperature 1/gamma loss. The full-source quantum/bootstrap
+constants 10^4000 C and 10^74739.22 are AVOIDED in this composed bolt
+bound; no replacement is claimed for the still-missing other output maps.
+The earlier square/reference debits are already included and are not added
+again. A finite whole-map bound is new evidence, not a signed evaluation.
+
+Executed P32 test: its complete affine bolt upper expression is
+1.604749762e40 against the FULL margin 1.667e-9, an excess factor
+9.626573253e48. This rejects the specified positive upper CERTIFICATE.
+It is not a lower bound on the actual map, correction or wormhole existence.
+
+Executed higher-degree sensitivity uses the SAME exact full-operator
+polynomial family and original norms. N=76 is the first degree passing
+both the full and half bolt-tail slices with this bound; N=75 fails the
+full slice. Its exact-polynomial bolt-tail upper is 1.270280475e-10.
+This closes that tail allowance ONLY if the corresponding actual margin
+remains. It does not compute the polynomial, a signed center, or a solution.
+The denominator gain relative to P32 is 1.263303494e50.
+
+All remaining consequences were tested as inequalities, not filled with
+assumed coefficients. Each entry still requires
+ |c_hat_ij|+e_ij,application+h2_N C_i3 I_j<=B_ij,
+and original delta<=.5 requires h3_N C_def,3 I_Y+e_def,application<=.5.
+The following are CONDITIONAL ceilings with all their stated margins and
+zero other/application debits, NOT actual coefficients:
+
+| Required quantity | P32 ceiling | P76 ceiling | Actual bound |
+| --- | ---: | ---: | --- |
+| C_def,3 I_Y | 1.09653e32 | 1.38525e82 | UNKNOWN |
+| graph C_g,3 | 1.06510e31 | 1.34554e81 | UNKNOWN |
+| physical C_X,3 | 9.96844e33 | 1.25932e84 | UNKNOWN |
+| mass C_mass,3 I_m | 1.46716e28 | 1.85346e78 | UNKNOWN |
+| feedback C_g,3 I_fb | 3.54142e29 | 4.47389e79 | UNKNOWN |
+
+The graph and physical margins are 5.34235e-12 and 5e-9 only when still
+available. Original-source boundedness, independent boundary phases,
+infinite matching quotient and every signed center remain uncomputed.
+Actual kappa_m<=5e-5 has NOT been certified. Its conditional costs remain
+2.14765e-12 affine, .0024731 feedback and .0195239 energy; no residual
+budget is assumed to fit. Retain the joint affine/feedback conditions
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+The mass conversion 2133--2174, scalar quartic and correlated slow pair
+remain. The quantum-fast .135973<.1599164 screen retains only its two-fast
+.01/.02 scope, with no phase or nonlinear-neighborhood transfer.
+
+APPLICATION-ERROR TEST: an arbitrary last polynomial error has no F^3
+factor. The new C_b1 bound only applies if the error is known to pass
+through ONE F. Even granting this favorable condition, half the bolt
+margin requires energy error <=1.6625021829e-93. The existing complete
+transport energy-error upper 1.020e-25, on an input 1.1e-10, gives the
+inverse perturbation upper expression 1.122000001e-35. Propagating that
+expression through C_b1 yields 5.625177577e48: it misses half the margin
+by 6.748863319e57. This is another specified excessive UPPER estimator,
+not a measured error or an obstruction. Unfiltered application errors
+still lack a numerical bolt comparison; graph/physical errors lack theirs.
+The retained quantum center and full inverse have not been evaluated.
+Increasing degree alone addresses none of these errors.
+
+RESEARCH DECISION: keep the construction. Do not adopt P76 on a bolt-tail
+pass. Change the error-certification method from generic energy-to-output
+propagation to a complete original-norm residual estimate preserving the
+coupled returns. P32 remains the recorded candidate. Feasibility of an
+actual controlled solution is unresolved; no construction obstruction is
+proved. Stop optimizing the local square, scalar, cold or transport-tail
+components while the source/output and application maps are unknown.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct and enclose the
+complete original-source-to-output APPLICATION residual map of one actual
+coupled inverse step, retaining its scalar, mass/log, graph/phase and
+regular-bolt returns. Its source and output spaces must be the original
+Y and physical/graph spaces, and its residual must include the common-
+regulated full quantum action. This will test whether coupled cancellations
+avoid the excessive energy-to-output propagation and whether any higher-
+degree polynomial can be applied with certified errors. Conditional ceilings
+or another transport-tail refinement are not execution of this calculation.
+
+Verification: ordinary argument/checker frozen before execution; one passed
+development run, ordinary domain/unit review, then unchanged 512-bit
+acceptance. The 103 supporting checks include nine complete finite-seed
+sectional derivative envelopes and the full budget/degree calculations;
+they do not replace the continuum proof or apply the quantum inverse.
+Sixteen frozen inputs; Python and all 63 flint / 1532 SymPy reference files
+match. No failed scientific run in this campaign and no local Lean; all
+earlier failures, science, eighteen inherited paths and closed audits remain.
+
+Remaining to-do list: complete original-source/graph/physical and application maps and every signed coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete mixed-square correction bounded; joint main output unresolved
 
 2026-10-26 HST, E003/S169.
