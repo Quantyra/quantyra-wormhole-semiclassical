@@ -1,3 +1,147 @@
+# Current complete residual admission decision, 2026-10-26
+
+EXECUTED: the complete L2 interior residual tuple can pass the bolt
+allowance while failing to control five metric derivatives. An explicit
+actual-domain coupled source passes the bolt upper test at <3.65084e-10
+while its inverse response has a fifth proper derivative >.01617.
+An actual-domain family proves NO finite general C5 comparison from
+that tuple. This does not invalidate the bolt estimate or the structured
+F3 output maps, and is not a construction obstruction. The full quantum
+application and complete coupled admission estimate remain UNRESOLVED.
+P32, the closed audit and full stable-wormhole objective remain unchanged.
+
+The previous turn made progress by testing a retained-word quantum
+interchange and bounding a high-sector matter reference. This turn
+attempted the proposed complete residual route before using those weak
+error bounds for physical admission. The first missing comparison is
+from the mixed-chart tuple (R_o,c4,R_i), with R_i only L2(dz), through
+the full coupled inverse to C5 metric control. The earlier note explicitly
+did not claim that comparison. The new calculation decides whether it
+can be supplied by a finite constant for arbitrary application residuals.
+
+Keep the actual paired mass/log realization, original temperature,
+regular bolt, full angular/thermal sums, common regulator and exact
+ultraviolet logarithm, all local/density contacts, cutoff transitions
+and finite-domain returns. Use the compact actual-domain conformal field
+ nu_e=a e^(7/2) chi(z) exp[-(z-.5)^2/(2e^2)], T_e=0,
+where chi is C10, supported on [.49,.51] and one on [.495,.505]. The
+cutoff is only a test-field profile. No physical endpoint or original
+mass/graph cutoff changes. Smooth approximants converge in every norm
+used. Both original outer residual observations are exactly R_o=c4=0.
+
+The canonical determinant has no nu input by its exact Ward identity.
+Thus this direction's complete scalar AND mixed shape source rows are
+local, with every Einstein, Maxwell, R2 and Weyl/density contact retained.
+No quantum spectrum is truncated. The original source r=z^4 F[v] has
+ r_a=sum_(k=0)^4 A_ak(z) partial_z^k nu,
+ (A_nu,4,A_T,4)=(6d,2d) z^4 Q^2,
+ d=(96pi*10^22-1/(60pi))C/B^2.
+The executable derives ALL coefficients from the complete action,
+substituting the exact vacuum identity before interval bounds. It pays
+every cutoff derivative using Bernstein differences, and every Gaussian
+derivative norm by its exact Gamma integral. The actual finite seed Q,
+including temperature and parameter uncertainties, is retained.
+
+At e=1e-50 and a=1e-75, the EXECUTED finite-width bounds are
+ scalar-row L2 <=3.656750272e-85,
+ shape-row L2 <=1.218916758e-85,
+ full R_i <=3.854553232e-85 <8.800093264e-85,
+ complete bolt upper debit <=3.650836442e-10 <8.335e-10,
+ actual |partial_rho^5 nu(.5+e)| >.0161736350675.
+Here rho is the original canonical proper coordinate; no physical norm
+is silently redefined. The source is the original equation row, not a
+Riesz representative. The full form inverse recovers this test field
+from that source. Its ACTUAL bolt response is zero; the displayed bolt
+number is a conservative complete-source upper bound.
+
+This field is not claimed to be the physical correction or to satisfy
+semiclassical validity. Its role is a domain/output-map test. The original
+physical X norm still needs its explicit comparisons; the derivative
+number is not assigned as an X value. Nevertheless any fixed admission
+norm controlling this local C5 component inherits the following failure.
+
+For the whole family as e tends to zero,
+ R_i/a ->A=3.12786098586e-10,
+ liminf e^(3/2)||partial_rho^5 nu_e||infinity/a
+                      >=B=.0161736350675,
+ so output/source ratio grows at least
+ (B/A)e^(-3/2), B/A=5.17082924742e7.
+NO finite generic C5 comparison from (R_o,c4,R_i) exists. Decreasing
+amplitude or changing normalization cannot repair it. This is an actual
+unbounded estimator, not an unknown finite constant or an excessive
+upper bound. It does not prove original IY infinite, fail the structured
+F3 maps, or show that the actual coupled correction has high-frequency
+content of this kind.
+
+Localized scaling also rules out source H^s with s<3/2 on a middle
+one-dimensional band; a Fourier superposition rules out the endpoint
+s=3/2. The full conformal column has no quantum ultraviolet log that
+could supply a missing derivative gain. H2 is a plausible interior
+regularity level only away from the bolt. For the complete regular-disk
+atlas use H3 source data as a conservative proposed replacement, retaining
+the original outer graph and actual finite part. The corresponding global
+coupled inverse constant, phase matching and original X/Y comparisons
+remain UNKNOWN. This does not revive global H3(d log z) at the bolt.
+
+The prior matter-reference and transport error estimates remain valid in
+their weak/bolt scopes. They do not bound these additional source jets.
+The auxiliary Lipschitz partition in the matter reference was adequate
+for its stated first-order estimate; a strong source implementation must
+prove cancellation of artificial derivative jumps or use sufficiently
+regular auxiliary cutoffs and retain their full defects. The shared
+vacuum-area coefficient already cancels by the exact product identity,
+so another isolated computation of that constant would not help.
+
+The P32 complete bolt upper estimator still needs its recorded factor
+5.528970304e34 improvement; the dominant known loss there is the scalar
+trace near 9.9165e36. Degree 63 still passes only the exact bolt tail.
+Increasing degree or shrinking weak truncation errors does not repair
+the new generic admission-map failure. Original-source defect, graph/
+physical outputs, numerical polynomial errors, independent phases,
+actual kappa_m<=5e-5 and all signed coupled entries remain uncomputed.
+Conditional ceilings are not coefficients; the two-fast quantum screen
+retains its limited scope. The giant generic interior/absorption constants
+are neither compared directly to physical ceilings nor treated as actual
+correction sizes.
+
+What changed feasibility: a possible extension of the bolt-only residual
+test to admission is now ruled out quantitatively on the actual coupled
+domain. The alternative must supply stronger source regularity OR prove
+a comparison on a specifically structured residual class, such as the
+F3 smoothing image; the present counterexample does not exclude that.
+No actual quantum center, original defect or controlled solution was
+computed. Compatibility, matching, validity/noise and stability stay open.
+
+RESEARCH DECISION: retain the construction, P32 and the finite bolt
+certificate. Treat the L2 residual triple as a bolt-only certificate.
+For an admission test, require both original residual rows in regular-
+atlas H3 on the whole interior/bolt complement, or a separately proved
+comparison on the actual structured error class. Do not replace this
+requirement by another coefficient ceiling, higher degree or component
+optimization. The earlier operational obstacle is source regularity;
+the dominant known P32 tail loss remains the scalar trace.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the commonly
+restored full quantum residual of an actual phase-conforming coupled
+trial in this stronger mixed atlas, keeping the outer graph, actual c4
+and three regular interior source derivatives together, with the original
+output comparison. This is the retained quantum application still needed;
+the executed counterexample does not substitute for it.
+
+Verification: ordinary proof and checker frozen before science; one
+development run, ordinary full-column/finite-width/normalization review,
+then unchanged 512-bit acceptance. Twenty-seven supporting checks and
+eleven frozen inputs. No failed scientific run, no local Lean and no
+signed quantum-center or numerical coupled inverse application. Python,
+63 flint and 1532 SymPy reference files match. All prior science, eighteen
+inherited paths and closed audits remain unchanged. Checks verify the
+explicit source algebra and bounds; the ordinary scaling/Fourier argument
+proves the lack of a finite comparison.
+
+Remaining to-do list: full retained quantum application and strong coupled residual; original source/graph/physical comparisons and every coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current retained quantum evaluator decision, 2026-10-26
 
 EXECUTED: a retained quantum-evaluator interchange fails on the ACTUAL
