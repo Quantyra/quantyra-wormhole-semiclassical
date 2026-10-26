@@ -103,7 +103,9 @@ Verification: ordinary domain/form argument and execution contract
 frozen before development; unchanged-source acceptance matches at 512 bits,
 39 supporting checks on 18 inputs. No failed frozen run. A formatting-only
 refreeze removed one whitespace-only checker line after publication diff
-review; both passing source snapshots and run pairs are preserved. The pre-freeze
+review. Final review corrected the excluded York branch: scalar s~-z^-1
+excludes it, while leading xi cancels. All numerical results are unchanged;
+three passing source/run pairs and prior proof are preserved. The pre-freeze
 preview and its corrected N+6 tail majorant are retained in review evidence.
 Python and all 1595 flint/SymPy files match the reference runtime; no Lean
 run. Checks support the ordinary argument. All 18 inherited paths, closed

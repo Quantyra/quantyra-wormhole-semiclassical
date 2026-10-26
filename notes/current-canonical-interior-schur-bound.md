@@ -69,8 +69,9 @@ branch is y=lambda_tail z^3 f(z), with
     p_s=(z^4 f+z^5 f')/4, p_xi=-(5z^4 f+z^5 f')/2,
     s=lambda_tail p_s, xi=lambda_tail p_xi.                  (4)
 
-The other indicial branch y~z^-2 gives xi~z^-1 and is excluded by
-the original energy, not by a new boundary condition. Distributional
+The other indicial branch y~z^-2 gives s~-z^-1 (the leading xi term
+cancels) and is excluded by the original scalar energy, not by a new
+boundary condition. Distributional
 equation (3) and local elliptic regularity on (0,c) give the same branch
 for energy limits. No analyticity of an arbitrary mass/log input is used.
 
