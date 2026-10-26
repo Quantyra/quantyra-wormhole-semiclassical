@@ -1,3 +1,88 @@
+# Current joint-radius composition decision, 2026-10-26
+
+EXECUTED: the actual joint scalar/mixed composition improves the complete
+P32 positive bolt estimator by 3.606046222e9. Its attained upper allowance
+is still 2.555927720e16 against 1.667e-9, an overrun of 1.533249982e25.
+This is a verified failure of the sharpened estimator, not a lower bound
+on the actual correction or an obstruction to the construction. The
+closed audit, all accepted results and full stable-wormhole goal remain.
+
+The exact map is
+ G_rad=[-A^-1 C V F^3+(C*)^-1(V*)^-1 B F^2]/(1-z).
+Both original equations and the full common-restored quantum operator
+are retained. On the actual paired mass/log realization, the accepted
+fixed-seed graph/phase theorem gives fourteen local derivatives and the
+retained outer phases for F^3. These define the original linear geometric
+observation records. Their full numerical norm, nonlinear positivity,
+endpoint conversion and neighborhood realization are still unproved.
+
+The new gain is an actual composition cancellation:
+ Abar=6 LDv L4+Qbar, Cbar=2 LD0 Pbar+Ebar,
+ u0=L4^-1 Pbar T/3,
+ Abar^-1 Cbar T=u0+Abar^-1[Ebar T-2(Cv-1)Pbar T-Qbar u0].
+The LDv versus LD0 difference, nonconstant-curvature return, complete
+anomaly and magnetic density all remain. No fourth-order factor is
+bounded independently before cancellation. A positive Green argument
+on the actual finite geometry bounds the composed bolt return; no
+product inverse or smooth reflected seam replaces the paired domain.
+The original radius 1/h cost remains in the final output.
+
+The COMPLETE joint estimator, in original physical bolt units, is:
+
+| Term after composition | P32 upper debit |
+| --- | ---: |
+| Composed L4 inverse / P return | 2.555926349e16 |
+| Entire composition residual, including its inverse and point costs | 163.767297640 |
+| Complete correlated mixed/York return | 1.370870984e10 |
+
+The resulting operator upper is 5.095722882e58. Its full-margin target
+is only conditionally 3.323478195e33. No positive bolt margin is certified.
+The improvement replaces the old COMPLETE 9.216793496e25 expression;
+it does not replace its unknown actual amplitude by either upper bound.
+The dominant remaining loss is the positive estimate of the composed
+return through the global form-to-shape bound. Perfect removal of that
+whole return still leaves 8.223581183e18 times the bolt margin; perfect
+mixed-return removal leaves 1.533249160e25 times the margin. Even the
+subdominant composition-residual debit exceeds the physical margin.
+Thus further isolated optimization is not a sufficient next milestone.
+
+No original-Y comparison, higher original C5/cold/outer output constant,
+graph coefficient, mass column, other independent phase/matching column,
+signed center or application error is supplied. Their unchanged tests
+remain h3 Cdef3 I_Y+e_def<=.5, p_aff Cg3+other<=5.34235e-12,
+and |c_hat_ij|+e_ij+h2 Ci3 I_j<=B_ij for every coupled entry, including
+actual kappa_m<=5e-5. Conditional ceilings are not coefficients. General
+application errors do not inherit the structured F^3 cancellation.
+The .135973<.1599164 quantum screen retains only its two-fast scope.
+No nonlinear admission/contraction, compatibility, matching, validity/
+noise, stability or controlled solution is established.
+
+METHOD DECISION: retain the exact joint composition and its quantitative
+gain, but reject its remaining positive two-term P32 bolt certificate.
+Retain the construction and P32 as unrejected candidates. Require a
+signed complete return estimate; do not optimize another isolated term
+or change degree on this bolt-only evidence.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the exact adjoint
+transfer F R_E(s1)+F^2 R_E(s2)+F^3 R_E(s3) as ONE vector for the original
+bolt functional, preserving full quantum/contact/boundary terms. The
+already rejected uniform .0022 positive residual estimator cannot replace
+that calculation. This is a necessary-row decision; even a bolt pass
+would leave higher geometric/source maps and the coupled ledger open.
+
+Verification: ordinary argument/checker frozen before execution;
+initial receipt-format parsing failure retained, compatible parser
+refrozen, successful development, ordinary domain/Green/composition/budget
+review and unchanged 512-bit acceptance with 21 supporting checks.
+Arithmetic supports the ordinary argument; no signed quantum inverse was
+numerically applied. Pinned Python/63 flint/1532 SymPy files retained;
+no Lean invocation. Prior science, closed audits and all 18 inherited
+worktree paths remain unchanged.
+
+Remaining to-do list: signed joint response and higher original admission/source maps; every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current original-admission estimator decision, 2026-10-26
 
 EXECUTED: the separated complete two-row P32 admission estimator fails
