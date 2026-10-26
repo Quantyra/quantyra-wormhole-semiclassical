@@ -1,3 +1,102 @@
+# Active checkpoint: sharper complete polynomial; original-space certificate unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [ordinary polynomial return test](current-schur-polynomial-return-test.md).
+
+The ORIGINAL-SPACE coupled estimate remains UNRESOLVED.
+Executed: a degree-32 residual polynomial for the COMPLETE operator has
+form-space defect below 7.351e-35 while preserving the three residual factors
+needed by the physical tail. Its affine output-error prefactor is below
+5.016e-43, about 3.098e19 better than the recorded geometric-series allowance.
+No actual quantum inverse, signed column, or original physical output
+constant has been numerically evaluated. No physical solution gate closes.
+
+The first unsupported quantitative step remains the full original-space
+output/source comparison on the actual paired mass/log domain. The attempted
+regular-disk jet bootstrap did not establish it. Existing C5 point-source
+and H3-to-L2 response bounds do not supply higher output derivatives or
+their common-regulator limit. The cited smooth-manifold and nonsmooth-symbol
+theorems do not fill this gap without their missing hypotheses/constants.
+
+The new calculation instead exploits a proved property of the COMPLETE
+Schur operator: T=ell^-1(b*a^-1b) is positive self-adjoint in the ell form
+norm, with spectrum in [0,.338]. With Ch_29 the Chebyshev polynomial, set
+
+ r(t)=-t^3 Ch_29(2t/.338-1)/Ch_29(-1-2/.338),
+ pi_31(t)=(1-r(t))/(1+t), P_32=V pi_31(T) ell^-1 J_F.
+
+r(-1)=1 makes pi_31 an exact polynomial. The whole spectral interval proof
+uses the full closed operator, not selected modes. Its exact UV logarithm,
+common contacts, complete angular/thermal sums, finite returns, original
+mass cutoff and regular bolt remain. This is polynomial cancellation, not
+a norm or basis change. The original two equations fix the error return.
+
+The prior general-power formula omitted (-1)^p. The new ordinary argument
+records the sign erratum; prior p=2 and absolute norm bounds are unchanged.
+Frozen earlier artifacts are preserved. No signed numerical solve relied
+on the missing odd-power sign.
+
+Let C_i,3 be the actual ORIGINAL graph/physical/phase output norm of the
+three-residual map, and I_j the original energy norm of ell^-1 J_F y_j.
+For every independent column, including the infinite matching quotient,
+
+ |c_ij| <= |c_hat_ij|+e_ij+(3.4079559102e-33) C_i,3 I_j.
+
+The complete affine conversion gives error_i <=(5.0158295086e-43) C_i,3.
+Actual C_i,3, independent I_j, signed trial values and application errors
+are UNKNOWN, not zero. With the full margins available, the graph ceiling
+is C_g,3<1.0650980044e31; the illustrative 5e-9 physical allowance gives
+C_X,3<9.9684408960e33. Those allowances are not measured coefficients.
+
+The ORIGINAL strong defect still requires
+ C_def,3 I_Y * (4.5598450078e-33) <=1/2,
+where C_def,3=||J_F^-1 ell F^3||E->Y and I_Y=||ell^-1 J_F||Y->E.
+The product's exact conditional ceiling is approximately 1.0965284986e32;
+bounded extension and its numerical comparison remain unproved.
+
+For the actual mass column require
+ |kappa_hat_m|+e_m+(3.4079559102e-33) C_mass,3 I_m <=5e-5.
+It is uncomputed. IF certified, its debits remain 2.14765e-12 affine,
+.0024731 feedback and .0195239 energy. Every other entry must jointly fit
+ Y_other+4.084e-22 A_o+Y_phase <=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase <.0012069.
+No entry is assumed to fit. The mass lift is not a fixed-temperature zero
+mode; original conversion 2133<||d_chi||H3<2174 remains. The scalar quartic
+and exact correlated slow pair are retained. The .135973<.1599164 screen
+still covers only two fast inputs in its admitted family.
+
+This improves a complete estimator allowance, not the actual correction.
+The three-factor constants are not made known by the larger ceilings.
+The original-space target remains unresolved rather than a demonstrated
+obstruction. Failed two-factor physical and radial energy-only estimators
+remain rejected. All nonlinear, compatibility, matching, validity/noise
+and stability requirements remain unproved.
+
+RESEARCH DECISION: retain the construction and three-residual physical
+tail; replace the geometric residual polynomial by the explicit Chebyshev
+polynomial above. Continue only toward the missing full output/source
+comparison and actual signed application. The form certificate alone
+does not establish that the original-space targets are attainable.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): certify the complete triple-
+residual graph/physical/phase and original-source defect map, including
+independent boundary/matching input comparisons, against the stated ceilings
+and joint budgets. Finite disk translation jets are only a possible proof
+tool; their actual-return/common-regulator argument is still required.
+
+Verification: ordinary proof/checker/review frozen before science;
+unchanged 512-bit acceptance after ordinary review matches development.
+Thirty-one supporting checks, ten frozen inputs, one development run,
+zero failed scientific runs. Python and all 63 flint / 1532 SymPy reference
+files match. No local Lean. Checks support the ordinary operator argument;
+they do not replace the unproved output estimate. All eighteen inherited
+paths, prior frozen science and closed audits are preserved.
+
+Remaining to-do list: complete coupled original graph/physical/phase bound and signed solution; original source and neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: radial energy shortcut rejected; full coupled bound unresolved
 
 2026-10-25 HST, E003/S169.
