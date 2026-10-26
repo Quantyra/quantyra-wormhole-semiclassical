@@ -1,3 +1,101 @@
+# Current complete weighted-source and York-moment test, 2026-10-26
+
+UNRESOLVED complete polynomial admission test, with a new executed bound:
+the complete structured mixed/York source now has a quantitative weighted
+L2 estimate and its full quartic moment is bounded on the actual domain.
+This closes a lower-order source/return comparison. It does not close a
+physical admission, graph H3, original-source defect or application gate.
+The full stable semiclassical wormhole objective remains active/incomplete.
+
+The exact composition remains T3=V F^3u,
+S2=(V*)^-1 Bop F^2u, nu3=-A^-1 C T3+(C*)^-1 S2, and
+H(nu3,T3)=(-A(C*)^-1 S2,0). Both original rows, all physical scale factors,
+the actual paired mass/log realization, common-restored full quantum
+operator, contacts, cutoff transitions and regular-bolt returns remain.
+
+Set rho_a=8piG A_radius^2, bar S2=rho_a S2, and
+||T||_- = ||T/z||_L2((0,L),z^-4 dz). For E(u)<=1 the executed result is
+ ||bar S2||_- < .239804976,
+ |[z^4]bar S2| < 12.264300961.
+The complete mixed-adjoint constant in this stronger source norm is
+Kminus<4.097797769 per scalar energy. Testing the actual inverse York
+equation by y/z^2 cancels the forcing zeroth terms and gives the COMPLETE
+return constant 1+1/sqrt(3). No strong quantum inverse is numerically applied.
+
+The quartic moment includes the original finite-domain York return.
+Its singular auxiliary adjoint profile psi=z^-2 v is NOT an admissible
+TT form input. The retained Green identity instead gives
+ S4=-2 T4/3-(1/2) integral A_Y*psi T,
+ A_Y*psi=-(2/3)z^-4 v'.
+The outer endpoint term cannot be dropped. A positive Q^(2/3)
+supersolution, the global weighted energy and an outer ODE estimate give
+||v'/z||2<242.010389. This supplies the correct dual weight; the weaker
+z^2 energy alone would not prove continuity. The separately singular
+bolt primitives are never bounded independently: the complete accepted
+mixed estimate and its exact c_J-Q'c_b=Q d_b cancellation remain.
+
+The mixed boundary moment itself is below a coefficient guard 3.273e-28
+before its scalar-energy factor; the global York moment is not set to
+zero. The complete conservative quartic bound is dominated by the latter.
+The classical reconstruction branch (bar C*)^-1 bar S2 has quartic
+coefficient <3.679290332. Multiplying by the unchanged P32 affine factor
+5.015829508510103e-43 gives <1.845470e-42 in THAT coefficient, and a
+weighted source contribution <1.202821e-43. These are not the full nu3
+quartic, a physical output norm, or payment of an H3/graph allowance.
+
+The original admission family still needs five regular geometric jets,
+cold/outer/cap/radius constraints and regular-bolt matching. Five areal
+lapse derivatives remain a stronger auxiliary target. The original
+disk radius multiplier <1.989220420e33 and its nonlinear hypotheses
+are unchanged. No coordinate change removes that cost. A completed
+global X/Y and their quantitative comparisons are not supplied here.
+
+FIRST REMAINING UNSUPPORTED COMPLETE STEP: bound this SAME structured
+source with three derivatives in the original outer graph and regular
+interior/bolt atlas, including its cutoff and finite-return terms, then
+establish the original source/output comparisons. Fixed-seed qualitative
+regularity is not a numerical constant. The new L2/moment bounds avoid
+1e4000 C and the generic absorption coefficient only in their stated
+norms. The known excessive native generic absorption estimator remains
+excessive; the direct high-norm map remains UNKNOWN, not disproved.
+
+The unchanged full ledger still requires h3 Cdef3 I_Y+e_def<=.5;
+p_aff Cg3 plus other graph debits <=5.34235e-12; and every coupled
+|c_hat_ij|+e_ij+h2 C_i3 I_j<=B_ij. The actual mass coefficient must
+satisfy |kappa_hat_m|+e_m+h2 Cmass3 I_m<=5e-5. No signed center,
+independent phase column or application error has been evaluated.
+Conditional ceilings 1.09652849856e32 and 1.065098004415e31 retain
+their zero-error/full-margin hypotheses. The historical physical
+ceiling is not reused without its original X and free margin. The
+mass conversion 2133..2174 and residual graph/feedback budgets remain.
+The .135973<.1599164 quantum-fast screen retains only its two-fast scope.
+No existing or proposed degree change closes this complete ledger.
+
+METHOD DECISION: retain the construction, P32 and the direct two-row
+source method. The finite-domain moment is quantitatively continuous;
+there is no evidence here of a domain obstruction or nonexistence.
+Do not spend another step optimizing this now-bounded low source.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): certify the derivative
+part of the complete F^2-to-source map jointly in the original outer H3
+graph and regular-atlas H3, with the bounded moments restored through
+the original cutoffs, and propagate it to original-source and physical
+outputs. This requires the complete commonly restored signed response;
+no finite mode selection or separate contact estimate supplies it.
+Its attainable constant remains undecided. No physical gate closes yet.
+
+Verification: frozen ordinary argument and checker, one retained parser
+failure before coefficient evaluation, refrozen symbol-binding correction,
+successful development, ordinary endpoint/dual-weight review and unchanged
+512-bit acceptance with 25 supporting checks. The failed sources and log
+remain in the evidence. Checks support the ordinary proof, not the missing
+quantum inverse. Pinned Python, 63 flint and 1532 SymPy files; no Lean.
+All 18 inherited paths, prior accepted science and closed audits preserved.
+
+Remaining to-do list: complete structured H3 source and original output/Y comparisons, every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current fixed-chart complete-return attempt, 2026-10-26
 
 UNRESOLVED: the complete structured polynomial correction has no certified

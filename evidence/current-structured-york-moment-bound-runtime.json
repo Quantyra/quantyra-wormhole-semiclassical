@@ -1,0 +1,32 @@
+{
+  "observed_utc": "2026-10-26T22:33:27.349077+00:00",
+  "dependency_manifest": "evidence/current-coupled-mass-adjoint-runtime.json",
+  "dependency_manifest_sha256": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863",
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "verified_package_file_counts": {
+    "flint": 63,
+    "sympy": 1532
+  },
+  "ordinary_post_development_review": {
+    "ordinary_post_development_review_utc": "2026-10-26T22:31:11.264577+00:00",
+    "development_sha256": "cbbd719dfaaffe2dd71dda3738b5cb3f3220b1575b25e2b2deb9cc5d1772acb8",
+    "review": [
+      "The first development failure occurred while parsing beta as a SymPy function, before coefficient evaluation. Its complete frozen sources and traceback are preserved. Explicit symbolic binding was refrozen before the successful run; the ordinary argument is unchanged.",
+      "Re-derived the complete differential adjoint p0,p1,p2 from (3-D)^j. On (0,a) its scalar derivative bounds follow from Delta_bar=Q D^2+(D Q-3Q)D. On [a,L] the accepted combined mixed bound retains the cancellation at the true bolt; separately divergent primitives are never estimated there.",
+      "The mixed moment Cmu bounds the entire finite interval by the polynomial coefficient sum and the actual scalar L2 energy. The R_b contribution integrates z^7 after squaring the weighted point bound, giving a^4/sqrt(88). The two R_J integrals give a^(3/2)/sqrt(3) and a^(7/2)/sqrt(7).",
+      "The inverse York weighted energy is obtained on Dirichlet exhaustions by testing y/z^2. Its forcing zeroth terms cancel exactly. The potential >=5/z^2 leaves the positive coefficients one and two; Cauchy-Schwarz gives KVm=1+1/sqrt(3). Exhaustion limits agree with the retained unique auxiliary realization.",
+      "The singular positive adjoint profile is an auxiliary Green profile, not a form-admitted physical variation. Local Frobenius expansion plus positive Dirichlet exhaustion fixes its z^-2 leading coefficient and the original zero value at the bolt. The Q^(2/3) supersolution is positive and has nonnegative L_Y image, establishing v<=M.",
+      "The bolt-regular homogeneous solution vanishes linearly; the inverse-Q potential multiplied by that solution has finite limit. At zero v prime is O(z), allowing a higher z^5 log term. Consequently all z^2 energy boundary terms vanish.",
+      "Green Wronskian is minus five y3 at the outer end, hence integral psi A_Y T=5y3. Integration by parts contributes minus two thirds T4, and S4=-two thirds T4 minus one half the full adjoint integral. A pure quartic having zero local forcing does not remove its global moment.",
+      "The dual norm for that integral is sqrt(integral z^-2 vprime^2). It is not the z^2 energy norm. Selection of a point b in [a,2a] and integration of (vprime/z^4)prime=V0 v/z^4 supplies the missing outer weight, with the displayed Dv<242.010389.",
+      "Numerical bounds: Kminus<4.097797769, CS2<.239804976, C4S2<12.264300961. The physical rho_a factor is retained. The complete mixed moment is extremely small but the York moment is not set to zero; its conservative bound dominates the quartic estimate.",
+      "The classical reconstruction branch quartic is bounded by C4S2/cstar4<3.679290332. Its affine P32 debit is below 1.845470e-42 in coefficient units. It is not the total nu3 quartic, an outer/cold/physical norm, or a graph/H3 bound.",
+      "The new complete low-source continuity and both moment bounds bypass the large interior estimate only in their stated norm. The original strong defect, H3 maps, all phase columns, original physical/radius atlas maps and application errors remain unknown. No nonlinear or physical gate is claimed closed."
+    ],
+    "accepted_for_unchanged_acceptance": true,
+    "complete_coupled_bound_certified": false
+  },
+  "development_acceptance_identical": true,
+  "complete_low_source_bound_proved": true,
+  "complete_quantum_application_executed": false
+}
