@@ -1,3 +1,108 @@
+# Active checkpoint: original coupled estimate unresolved; form candidate fails output test
+
+2026-10-25 HST, E003/S169.
+
+See [explicit candidate and executed output-map test](current-schur-form-preconditioner-test.md).
+
+The requested ORIGINAL-SPACE coupled estimate remains UNRESOLVED.
+An explicit full Schur candidate has defect <=.338 in its declared FORM
+source norm, but its original fast-graph output map on that space is
+unbounded. This rejects that certificate even with the full UV logarithm
+retained. It does not certify the original delta<=1/2, actual kappa_m or
+any admission/feedback requirement. No numerical application of the full
+quantum inverse or signed coupled solve was executed.
+
+The candidate is P=V ell^-1 J_F, where V is the original fixed York shape
+return, ell the COMPLETE positive TT form, and J_F=V* K^-1 the original
+Schur source transform. Noncommuting block algebra gives
+J_F S V=ell+b* a^-1 b. The existing actual mixed-form bound .338 therefore
+controls I-SP on the transported form data space. ell^-1 is well defined
+by the retained seed realization, but remains a full unevaluated nonlocal
+inverse. This is an analytic operator test, not a numerical P implementation.
+
+The first missing step for an original-space certificate is its strong
+range/phase and output comparison. The executed test disproves the form
+shortcut: actual-domain compact TT packets give an original graph/form
+ratio growing at least as 1e-50 k^6 sqrt(log k). The conservative coefficient
+expression is 1.19460396110786758e-50. No finite-frequency onset is claimed.
+If a generated boundary phase already misses the original source graph,
+the certificate fails earlier; no form-to-phase identification is assumed.
+When original phase extraction makes the graph finite, its compact-interior
+lower bound still diverges. This is not an unknown finite constant or just
+an excessive upper bound. It is not an obstruction to the construction.
+
+The full paired mass/log domain, original clock, complementary adjoint and
+regular bolt are retained. All angular/thermal sums, common regulator,
+coincidence contacts and finite returns remain in ell. The seed form and
+local interior logarithmic symbol are used within their retained scope;
+no smooth-double or nonlinear-neighborhood theorem is imported.
+
+The bottleneck reset identifies the needed gain: six radial derivatives
+and half a logarithm beyond these form data, plus independent phase and
+physical bolt maps. A specified alternative is P_N=P sum_(j<N)(I-SP)^j.
+Two residual powers have local order -8/log^2, enough for that interior
+deficit. This local cancellation does NOT prove the global mass/log or
+regular-bolt composite. Its domain argument and constants remain UNKNOWN.
+
+For N=32, the conditional error formula is
+ error_i <= M_i,2*.338^30 U/.662,
+ M_i,2=||O_i P(I-SP)^2||, U=||actual input||Y_F.
+If signed centers leave the full remaining budgets, the product ceilings
+are M_graph,2 U_aff<=479.8321220866167 and
+M_graph,2 U_fb<1.083997469552421e11. Positive trial debits reduce them.
+Neither product, either input norm nor a signed center was computed.
+An original strong defect additionally needs its source-graph composite
+and input embedding. No normalization alone supplies these bounds.
+
+The exact reference mass cancels both uncut reference rows. Its original
+cutoff transitions and regular-bolt matching remain; it is not a global
+fixed-temperature zero mode. Original mass conversion is still
+2133<||d_chi||H3<2174, with LINEAR debit <=3.538254568e-12.
+The scalar quartic and exact correlated slow pair stay independent inputs.
+
+Actual post-elimination kappa_m is UNKNOWN. Conditional kappa_m<=5e-5
+spends 2.14765e-12 affine, .0024731 feedback and .0195239 energy.
+All other entries must fit JOINTLY:
+
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+
+No unknown phase, interface, quartic, slow or fast entry is assigned zero.
+The quantum-fast screen remains .135973<.1599164 only on its proved
+two-fast/admitted-family scope. It does not control independent phases.
+Preserve all original nonlinear conditions:
+
+ E_center+1e-8 alpha_embed<=1e-11,
+ R_X alpha_embed*.028913+Z0_other<=.25,
+ R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,
+ Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.
+
+No actual controlled solution, nonlinear admission/contraction, exact
+compatibility, physical matching, validity/noise or all-sector stability
+is established. The requested full feasibility milestone is NOT complete.
+
+RESEARCH DECISION: retain the construction; reject this form-to-graph
+certificate and stop treating further weak residual improvements as
+feasibility progress. Sharpen the method to the full twice-residual
+composite, keeping the exact UV operator and original boundary phases.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the COMPLETE
+O_graph/phase P(I-SP)^2 on the actual paired domain, including restored
+contacts, mass/quartic/slow rows and finite-bolt returns. Evaluate its
+actual input products against the N=32 ceilings above. Its global domain
+and numerical estimate, unlike the local gain test, remain unproved.
+
+Verification: ordinary argument, checker and review frozen before
+512-bit development; unchanged acceptance agrees after ordinary review.
+18 supporting checks across 13 frozen inputs verify algebra and arithmetic,
+not the missing global continuum estimate. Python, 63 flint and 1532 SymPy
+files match the reference. No failed scientific run or local Lean invocation.
+All 18 inherited paths and the closed audits remain unchanged.
+
+Remaining to-do list: full original-space coupled residual and output/phase comparisons; signed columns and joint budgets; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: coupled return unresolved; raw-cutoff strong estimator fails
 
 2026-10-25 HST, E003/S169.
