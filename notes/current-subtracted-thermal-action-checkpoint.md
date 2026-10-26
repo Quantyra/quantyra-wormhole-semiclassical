@@ -1,3 +1,157 @@
+# Current original geometric admission decision, 2026-10-26
+
+EXECUTED: original geometric admission uses regular-chart orbit/radius
+jets; the later areal-lapse C5 requirement was a stronger auxiliary test.
+Its counterexamples remain valid without rejecting geometric admission.
+The complete exact polynomial-error source has second row zero and c4=0.
+The native radius conversion retains its ~1.99e33 five-jet cost. A specified
+generic absorption estimator fails even the whole original interior
+margin by 10^37346.73 after the actual input/output factors are included.
+The direct complete structured-map estimate remains UNRESOLVED. No actual
+polynomial correction, original-norm defect or controlled solution is certified.
+
+The norm provenance is resolved in the two ordinary proofs below. The
+original P5_40 has unscaled value/gradient and divided second-through-fifth
+jets on fixed regular charts. Its admission is .001; the reference bound
+.00013 leaves .00087 only for that center. D_ell additionally retains both
+cold chart systems, center jets, weighted values/gradients and the fixed C2
+cap, with strong direction radius 2.5e-10. Outer N=max(|p|+Vout,G/1000)
+keeps the proper-coordinate mass cubic, weighted fourth-order logs and
+actual global metric logs; its 1.5e-7 admission leaves 4.9e-8 at the stated
+reference. Radius contracts and boundary conditions remain independent.
+The closed audit never completed one global X/Y with all matching and
+embedding constants. The proof states the exact retained norm family;
+it does not invent a scalar global norm or silently weaken admission.
+
+In the unchanged affine action coordinates, the original orbit output is
+T and the radius output is Vrad=log[(exp(nu)-z)/(1-z)]. Its linearization
+is nu/(1-z). On the actual regular bolt disk, J5((1-z)^-1)<1.989220420e33.
+The divided local maximum costs 1.193532252e34, explicitly distinct from
+P5_40's unscaled gradient convention. For local J5(nu/(1-z))<=1e-8 the
+nonlinear remainder is <5.000000051e-17, first derivative <1.000000011,
+and second derivative <1.000000021. At the original bolt target 1.667e-9
+the nonlinear gap debit is <7.027531593e-52. Unknown cold/atlas/proper
+identification maps are not assigned these local constants. The old
+actual-domain packet has tiny native geometric jets but an enormous
+areal fifth derivative, confirming that the latter is a stronger test.
+
+With T3=V_Y F^3 u and S2=(V_Y*)^-1 Bop F^2 u, BOTH original equations give
+ nu3=-A^-1 C T3+(C*)^-1 S2,
+ H(nu3,T3)=(-A(C*)^-1 S2,0).
+The complete Schur-source identity is separately
+ Gdef=K(V_Y*)^-1 Bop F^2(I-F).
+The accepted paired-domain finite moment has no leading quartic log;
+the mixed inverse is nonresonant at four and the scalar root cancels the
+quartic SOURCE. Thus r_T=0, r_nu=O(z^5 log^m z), c4=0. The solution's
+quartic and actual affine or numerical-error finite parts need not vanish.
+The normal Mellin composition has norm <=3 on weight 4.005; its complete
+finite-geometry correction is unknown. Full angular/thermal sums, exact
+UV logarithm, common-restored coincidence/density contacts, original
+mass/log projectors, cutoff transitions and regular-bolt returns remain.
+
+Fixed-seed F^2 supplies the qualitative local/phase regularity for the
+native outputs and structured H3 source. It does not supply a numerical
+map norm or a uniform neighborhood theorem. The first unsupported strong
+step is the FULL energy-to-weighted-source/radius comparison, including
+the original Schur-Y conversion, finite end moment and all cap/atlas
+outputs. H^(7,log), not bare H7, is the appropriate local quantum input
+for H3 source; no globally smooth reflected mass domain is substituted.
+
+Executed sensitivity: at native source order three the accepted 10^4000 C
+remainder and GRANTED principal factor 4000/C produce
+ log10 M3=37369.4611432163,
+compared with 74739.2233164282 for the stronger auxiliary H14 bootstrap.
+Multiply 2M3 by the original 10^19 f^3 energy-to-L2 comparison, the
+proved local H7-to-P5 constant 1/sqrt(24pi), and p_aff=5.01582950851e-43.
+The reported P5 affine debit is 10^37343.73121718. It exceeds the whole
+.001 admission by 10^37346.73121718, or the reference .00087 margin by
+10^37346.79169793. This tests an explicit positive estimator, favorably
+granting unproved principal/coupled steps; it is NOT a lower bound on
+the actual correction. Intermediate constants were not compared directly
+with physical-output ceilings.
+
+For that low-term estimator, a complete H6.25-to-H3 coefficient B C
+would need B<=.03668702071 for the whole P5 margin, <=.03614367969 at the
+reference margin. A COMPLETE order-9/4 alternative would instead need
+Bsym<=71.55648857 or <=69.10808104, respectively. These are coefficient
+allowances, not measured physical constants, and leave no allowance for
+the other terms at equality. Merely retaining 10^4000 while improving
+the order still misses the whole P5 target by 10^15992.58140392.
+
+The shared-pair bolt estimator retains the exact (1+h)/h=1.977144438e33
+point conversion and misses by 10^37385.80531998. Its small-coefficient
+sensitivity needed a review correction: for K<=1/2 the whole remainder
+absorbs directly, since the inhomogeneous Fourier frequency is >=1.
+Thus B<=1/8000 removes this low-frequency energy debit for either order;
+an improvement by 10^4003.90309 over the available 10^4000 coefficient.
+It does NOT remove forcing, boundary, radius or application debits.
+The subunit-split thresholds in the receipt apply only to the specified
+positive expression and are not necessary targets for an optimized method.
+The first development sources and receipt are preserved with this correction.
+
+The specified symmetric alternative was tested against the actual domain.
+The accepted all-order odd-insertion cancellation gives an off-diagonal
+d^-3 radial envelope, but its second moment is log(r/epsilon), divergent
+before common local restoration. The complete restored moment is UNKNOWN,
+not proved divergent. The actual cubic seam has fourth derivative 12 delta;
+a cutoff reflected cubic is H^s only for s<7/2. One-sided mass/log weighted
+spaces remain valid, whereas a global smooth H5.25 theorem does not apply.
+The complete midpoint derivatives, common contacts, thermal terms and
+weighted finite returns still need a simultaneous bound. An isolated
+kernel estimate cannot certify the proposed order gain.
+
+Complete ledger: h2=3.40795591012e-33, h3=4.55984500774e-33 and the form
+defect <7.351e-35 remain accepted. In ORIGINAL Y the requirement is
+ h3 Cdef,3 I_Y+e_def<=.5;
+1.0965284986e32 is only the full-margin, zero-application-error product
+ceiling. The graph ceiling 1.0650980044e31 likewise needs its entire
+5.34235e-12 residual margin. The old physical ceiling 9.9684408960e33
+cannot certify an unfinished X or a differently defined output. Every
+entry retains |c_hat_ij|+e_ij+h2 C_i,3 I_j, with each unknown left unknown.
+The actual mass-column test remains |kappa_hat_m|+e_m+h2 C_mass,3 I_m<=5e-5;
+its hypothetical affine/feedback costs do not establish the other rows.
+The complete budgets and original nonlinear inequalities are in the proof.
+
+What closes: the local radius conversion/nonlinear map on its stated ball;
+the exact structured source's c4 debit, 1.058944834e72*0=0; and the rejection
+of the specified generic absorption estimator. What does NOT close:
+the actual Ro/R3i source sizes, original-source defect, full graph/physical
+outputs, actual mass column, independent phases, signed centers or certified
+application errors. The .135973<.1599164 quantum screen remains only the
+two-fast admitted-family screen. The earlier transport-to-bolt slice is
+closed; P32's exact bolt-tail estimator remains excessive by 5.528970304e34;
+P63 passes only its tail. No degree/tail/component optimization is adopted.
+No controlled solution, nonlinear neighborhood/contraction, exact compatibility,
+physical matching, validity/noise or all-sector stability follows.
+
+RESEARCH DECISION: retain the construction, accepted seed results and P32;
+change the estimation method away from generic high-norm absorption and
+shared-pair radius extraction. Estimate the full structured source and
+the original orbit and weighted radius outputs together, before norms.
+The excessive upper estimator is not an obstruction to the construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete coupled
+Green return for (T3,nu3/(1-z),H(nu3,T3)) from the original energy space,
+using the exact two-row identities, with the weighted paired-end finite
+moment and regular-bolt return kept together. Measure the radius row
+directly and include the original source, cap and graph comparisons.
+The actual numerical norm of this map and the signed polynomial application
+have not been computed. This is the decisive outstanding calculation.
+
+Verification: ordinary proofs/checkers frozen before science; native test
+development, ordinary review and unchanged 512-bit acceptance; budget test
+two retained development versions, ordinary review and unchanged acceptance.
+The initial budget version and review are preserved explicitly. Eighty-four
+supporting checks in the two accepted receipts, no failed arithmetic run,
+no local Lean. Pinned Python, 63 flint and 1532 SymPy files verified. All
+eighteen inherited paths, earlier scientific snapshots and closed audits
+preserved. Arithmetic verifies the ordinary calculation; it does not
+replace the missing continuum or quantum application arguments.
+
+Remaining to-do list: complete structured original-output/source maps and every coupled entry/application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current physical residual regularity decision, 2026-10-26
 
 EXECUTED: the original physical areal output rejects both the L2 residual
