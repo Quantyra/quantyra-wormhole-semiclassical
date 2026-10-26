@@ -1,3 +1,90 @@
+# Active checkpoint: complete residual stability proved; physical norm unresolved
+
+2026-10-26 HST, E003/S169.
+
+See [direct three-residual attempt](current-coupled-adjoint-residual-audit.md).
+
+The complete original-norm output/source estimate remains UNRESOLVED.
+The attempted cold row-moment refinement supplied no complete bound:
+its constant contact still includes an uncomputed finite-domain return.
+Executed ordinary proof: the full three-residual propagation operator has
+inverse norm at most one in the accepted seed energy space. This gives
+an explicit certificate for the complete physical bolt norm in terms of
+full adjoint/Riesz residuals, which have NOT been computed. No original
+admission, defect or mass-column requirement is closed.
+
+Retain accepted 1ee884b, complete P32 and the closed audit. The previous
+specified generic positive estimate still fails by more than 10^74546
+after actual physical conversion; that is not an actual-operator lower
+bound. The exact source/graph compositions still avoid its last bootstrap.
+
+On the accepted E form space put T=ell^-1 B, 0<=T<=.338, F=T/(1+T).
+The three-equation operator A3 has diagonal I+T and subdiagonal -T.
+Its real quadratic form is at least the E^3 norm squared, and triangular
+substitution proves surjectivity. Therefore both inverse norms are <=1.
+This uses every physical mode; three counts equations, not a truncation.
+The actual paired mass/log realization, common regulator, ultraviolet log,
+full angular/thermal sums, contacts, cutoff transitions and bolt stay.
+
+For physical bolt source a_b=Riesz_E(g), solve A3* p=(0,0,a_b).
+Then C_b3=||T p1||E. For an admissible adjoint triple p_tilde and Riesz
+trial a_tilde let sigma be its complete E* triple residual and tau the
+E* residual of a_tilde=T p_tilde1. The exact norm enclosure is
+ max(0,||a_tilde||E-tau-.338 sigma) <= C_b3
+                         <= ||a_tilde||E+tau+.338 sigma.
+The physical debit is (1.1e-10)h3*(tau+.338 sigma). Thus no enormous
+generic absorption coefficient is required for residual propagation.
+Its replacement is an actual dual residual, not an assumed small number.
+
+With the full 1.667e-9 bolt margin, Cstar=3.323478194726686e33.
+One sufficient allocation is trial norm <=1.66173909736e33,
+tau<=8.30869548681e32 and sigma<=2.45819393101e33.
+These are conditional targets; no trial or quantum residual was executed.
+The first numerical gap is the contact-complete physical adjoint source
+and full dual residual norms on the actual paired domain. Higher physical
+derivative sources are not automatically in the energy dual.
+
+The smaller cold cap contact omits the actual-to-cap constant gluing
+allowance 3.3e24 C. Row subtraction does not remove that contact. A
+second-distance-moment improvement, itself unproved here, would leave
+its complete correlated contribution to the adjoint residual unknown.
+No intermediate kernel coefficient is compared directly with a physical
+ceiling. This attempt proves no cold/contact improvement.
+
+C_def3 I_Y<=1.0965284986e32 and graph/physical ceilings 1.0650980044e31
+and 9.9684408960e33 keep their stated remaining-margin conditions.
+Original-Y transport and all actual coupled entries remain unknown.
+Actual kappa_m<=5e-5 is untested. If it passes, the joint residual budgets
+remain Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12 and
+eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+The scalar quartic, correlated slow pair, original mass conversion and
+cutoffs, fast remainder and infinite matching quotient remain in scope.
+The .135973<.1599164 quantum-fast screen retains its limited scope.
+
+RESEARCH DECISION: keep the construction and P32, but use the complete
+adjoint residual certificate. Stop the proposed isolated row-moment
+optimization: it cannot alone close the physical certificate. This is
+an unresolved-estimate outcome, not a new controlled-solution milestone
+or an obstruction to the construction.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct and enclose an
+actual-domain adjoint triple and Riesz trial, including the full physical
+source, and evaluate both sides of the complete C_b3 enclosure against
+the remaining bolt ceiling. No partial mode solve or uncertified quantum
+residual counts as execution of that calculation.
+
+Verification: ordinary argument and checker frozen before arithmetic;
+unchanged 512-bit acceptance after ordinary review matches development.
+Nine supporting checks, eight frozen inputs, one development run, no
+failed scientific runs. Python and all 63 flint / 1532 SymPy reference
+files match. No local Lean. These checks do not calculate the physical
+adjoint norm or replace its missing residual certificate. Prior accepted
+science, eighteen inherited paths and closed audits remain preserved.
+
+Remaining to-do list: complete original output/source maps and signed coupled solution; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: generic product rejected; direct coupled norms unresolved
 
 2026-10-26 HST, E003/S169.
