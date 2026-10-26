@@ -1,3 +1,119 @@
+# Active checkpoint: uniform P32 residual estimator rejected for every trial
+
+2026-10-26 HST, E003/S169.
+
+See [all-trial estimator proof](current-adjoint-uniform-estimator-test.md).
+
+EXECUTED: the specified positive complete P32 residual estimator fails
+for EVERY adjoint trial with the available uniform comparison .0022.
+Even after retaining the exact source cancellation and improving the
+third-residual transfer from .338 to f^3, its reported physical bolt
+allowance is greater than 4.2504693986, against the full 1.667e-9 margin.
+The ratio exceeds 2.5497716848e9. This is a lower bound on a particular
+UPPER-bound expression, not on the actual output norm or correction.
+No controlled-solution requirement closes; the construction remains open.
+
+Preserve accepted 1ee884b, complete P32 and the closed audit. The actual
+paired mass/log domain, original clock/temperature, common regulator,
+exact UV logarithm, full angular/thermal sums, coincidence contacts,
+cutoff transitions and finite-domain/regular-bolt returns are unchanged.
+All statements here concern the accepted seed form space E, not a
+nonlinear neighborhood or a new original strong-source completion.
+
+The physical bolt source has the exact identity g=L chi_N+j, where
+L=(ell+B)/N, chi_N=N V^-1 C^-1(ell_b delta_b), and j is the retained
+effective bolt functional after scalar elimination. The mixed Green
+return is in E with its actual end phase; its bolt singularity is allowed
+in the form domain. For every trial, v=p3-chi_N belongs to E and
+s3=j-Lv=(j-L0v)-Rop v. Thus the common quantum action is cancelled
+BEFORE applying any norm. No fifth-derivative delta or smooth seam
+surrogate is used. The existing comparison bounds ||Rop||<=eta=.0022
+and ||L0||<=M=1+.338+eta on this actual domain.
+
+For d0>=||j-L0v|| and V0>=||v||, the chosen report D3=d0+eta V0
+satisfies D3>=eta ||j||/M for every trial. The accepted genuine TT
+test, including its complete scalar return and quantum energy, gives
+||j||E*>=Jstar=3.2022799778274054e47. The original physical-dual
+conversion sqrt(|W| beta) agrees for one and two folded exteriors.
+This does NOT turn the old effective source into g or bound actual C_b3
+from below.
+
+The exact three-residual error is F R_E s1+F^2 R_E s2+F^3 R_E s3,
+with f=||F|| upper=.338/1.338. Even the improved positive estimate
+U_b=||a_trial||+tau+f D1+f^2 D2+f^3 D3 has floor f^3 eta Jstar/M.
+Multiplication by the unchanged P32 affine prefactor
+(1.1e-10)h3=5.015829508510103e-43 gives the physical 4.25046939866
+floor. The known q/f^3 improvement is 20.96693456; it is already included.
+The older positive q*sigma report has physical floor 89.11931373576.
+Even a hypothetical uniform eta=1e-10 would report at least
+1.93520827818e-7, still above the bolt margin.
+
+A new uniform comparison would necessarily require
+eta_new <= Cstar(1+q)/(f^3 Jstar-Cstar)<8.6140598853e-13,
+Cstar=3.323478194726686e33, granting all other costs zero. That is
+more than a 2.5539641345e9 improvement over .0022 and is NOT sufficient.
+The actual operator error is unknown; it is not proved to saturate .0022.
+The sharper alternative must bound the JOINT transferred residual itself,
+especially F^3 R_E(Rop v), retaining its actual spectral/coupled cancellation.
+The best possible report under the rejected estimator exceeds the full
+budget by at least 2.5497716848e9; no such directional gain is proved.
+
+The interior 10^4000 C and generic 10^74739.22 coefficient are avoided
+in this test. The previous specified generic composition remains rejected:
+after its actual output conversion and affine prefactor, its reported
+bolt debit exceeds the margin by >10^74546.2101. Neither intermediate
+constant is compared directly with a physical ceiling. Reusing that
+bootstrap to bound dual residuals would reintroduce its losses.
+
+The original defect still requires C_def3 I_Y<=1.0965284986e32.
+The graph/physical ceilings 1.0650980044e31 and 9.9684408960e33 require
+the entire stated 5.34235e-12 and 5e-9 margins. All three comparisons
+remain unknown. The first missing original-Y argument is quantitative
+weighted end control, scalar/York interfaces and the infinite matching
+quotient. The interior theorem does not provide that global extension.
+
+Every coupled entry still requires |c_hat_ij|+e_ij+C_i3 I_j h2.
+Actual |kappa_hat_m|+e_m+C_mass3 I_m h2<=5e-5 remains UNTESTED.
+Its conditional debits are 2.14765e-12 affine and .0024731 feedback;
+they are not measured coefficients. Mass, scalar quartic, correlated
+slow pair, fast remainder and all boundary/matching inputs keep their
+unknown signed centers, errors and norm comparisons. If the mass target
+passes, they must jointly fit
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+The original 2133--2174 mass conversion and cutoff/bolt return remain.
+The .135973<.1599164 quantum-fast screen keeps only its two-fast scope.
+The rejected complete certificate fails on its bolt row even granting
+all other debits zero; no actual coupled coefficient is declared zero.
+
+RESEARCH DECISION: retain the construction and P32, but stop trial
+refinement under the positive uniform residual estimator. Its all-trial
+floor rules out closing the budget by better trials alone. Use the exact
+joint transferred-residual method; merely renormalizing the source or
+changing the boundary basis cannot remove the loss. No evidence here
+justifies changing construction or claiming nonexistence.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct a full actual-domain
+adjoint/Riesz trial and enclose
+ ||F R_E s1+F^2 R_E s2+F^3 R_E s3||E
+with the common-regulator quantum action retained, against
+Cstar-||a_trial||E-tau using the ACTUAL remaining bolt margin.
+This must measure or bound the directional/coupled gain; another uniform
+form estimate or isolated contact refinement does not execute it.
+
+Verification: ordinary proof and checker frozen before computation;
+512-bit unchanged acceptance after ordinary review matches development.
+Sixteen supporting checks, twelve frozen inputs, one development run,
+zero failed scientific runs. Python and all 63 flint / 1532 SymPy reference
+files match. No local Lean. The proof and accepted actual-domain TT test,
+not the checker count, justify the estimator rejection. No quantum inverse
+or actual output norm was evaluated. Prior science, eighteen inherited
+paths and closed audits are preserved.
+
+Remaining to-do list: actual complete transferred residual and original output/source maps; every signed coupled entry; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: complete residual stability proved; physical norm unresolved
 
 2026-10-26 HST, E003/S169.

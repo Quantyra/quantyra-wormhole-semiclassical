@@ -1,0 +1,407 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T13:30:01.902325+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-adjoint-uniform-estimator-test.md": "8c34d2095a1d092466255efc7c52bed2c35f6ced98c8dd01b90e6b42880bd230",
+        "checks/current_adjoint_uniform_estimator_test.py": "11a55bdb8b3dfc1e9eca66fd6a34c773b5e1e9b2371215623a566392a2acb740",
+        "evidence/current-adjoint-uniform-estimator-test-review.json": "e6211d2b7c763bfc0dc95c05336741f1440f4caf44988577d2d2d1a62466b02b",
+        "notes/current-localized-bolt-adjoint-sensitivity.md": "d418f94f18129432c23509793cdfbb158748083d971d2e479ef8d7f83190f1de",
+        "checks/current_localized_bolt_adjoint_sensitivity.py": "20cb4bf24eda4fa36d4739d4916af22bc800743638af205910c65b103c67766b",
+        "evidence/current-localized-bolt-adjoint-sensitivity.json": "a48e06fec491c8c647d8d141cb811a10f4d0103a751648a139982f39f5cc1548",
+        "notes/current-coupled-adjoint-residual-audit.md": "fc94f8b28dcb279c4da1aae54fb5657e41046bf7fdb5ad463aa8c47fea25f7cd",
+        "evidence/current-coupled-adjoint-residual-audit.json": "e0a9acb6b0c83e279259c3f4a7fa8c4d866fb70e784de36013bed2ea414b0731",
+        "notes/current-direct-triple-return-attempt.md": "5636243416c57bc3b8105db58a152b2436330e078f78fad451ff36cf2431daea",
+        "notes/current-schur-polynomial-return-test.md": "d755b5c5efdfb867bc24844d78eea7f656c66dfd9a9cf99a9b28e6ed881c9164",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-adjoint-uniform-estimator-test.md": "# All-trial test of the complete P32 adjoint residual estimator\n\n2026-10-26 HST, E003/S169. Ordinary argument frozen before numerical\nexecution. Previous goal turn: NO PROGRESS. Retain the stable semiclassical\nwormhole objective, accepted 1ee884b, complete P32 and the closed audit.\n\nOUTCOME CONTRACT: test a SPECIFIED positive residual estimator for every\ntrial. Its failure would not imply a lower bound on the actual C_b,3,\nresidual, correction or quantum operator error. The physical norm and\nsigned coupled columns remain uncomputed. This is not another contact\ncalculation: the lower bound below applies to the COMPLETE reported\nP32 physical bolt-tail allowance, with every other debit set to zero.\n\n## 1. Actual operators, domain and normalization\n\nUse the unchanged physical blocks and fixed York return\n\n H=[-A,-C;-C*,D], R(s,xi)=(s+Uxi,Vxi),\n R*HR=[-A,b;b*,ell], B=b*A^-1b,\n N=|W| beta, e=ell/N, T=ell^-1B, 0<=T<=q=.338,\n F=(I+T)^-1T, f=q/(1+q).\n\nThe original Schur operator and polynomial are unchanged:\nK=C^-1 A(C*)^-1, S=I+KD, J_F=V*K^-1,\nP32=V pi31(T) ell^-1 J_F:Y_F->X_F,\nY_F=J_F^-1(V_ell*), X_F=V(V_ell),\nr(t)=-t^3 Ch29(2t/q-1)/Ch29(-1-2/q), pi31(t)=(1-r(t))/(1+t).\nThe factor (1+t) divides exactly. These transported form spaces are not\nthe original strong Y and physical X. With the ORIGINAL reconstruction\nR_S w=((C*)^-1 D w,w), the complete maps are\nG_i=O_i R_S V F^3:E->Z_i and G_def=J_F^-1 ell F^3:E->Y.\nTheir outer returns, inputs I_j=E(ell^-1 J_F y_j), and numerical original\nnorm comparisons remain unknown. Only the affine input bound\nI_aff<=(1+q)1.1e-10 and the seed form spectral interval are known.\n\nE is the actual fixed-seed form space with inner product e. Its dual is\nE*, not the original strong source Y. Let L=(ell+B)/N, viewed as E->E*,\nand let L0=(ell0+B)/N be the complete geodesic comparison. Their difference\nRop=(ell-ell0)/N obeys ||Rop||_(E->E*)<=eta=.0022. The actual scalar and\nmixed blocks are identical in the two operators. Thus\n\n ||L0||_(E->E*)<=M=1+q+eta.                         (1)\n\nAll forms have the original paired first-order matter realization,\ncomplementary adjoint, common regulator and mass/log end data. The exact\nUV logarithm, all angular/thermal modes, coincidence and density contacts,\ncutoff transitions and regular-bolt returns are retained. L0 contains the\ncomplete geodesic-flow form; it is not a flat scalar spectral surrogate.\nIn particular J(0)=0 and (Q^2 J'/z^4)(z_h)=0, with the original fixed\nclock, temperature and scale. The reflected mass cubic remains C2,1.\nThe three residual equations index three inverse applications, not physical\nmodes. None of these fixed-seed statements supplies a nonlinear neighborhood.\n\nFor the physical bolt row define\n\n g(v)=ell_b[(C*)^-1 D Vv](z_h), ell_b=(1+h)/h,\n chi=V^-1 C^-1(ell_b delta_b), chi_N=N chi,\n j(v)=ell_b[U v+A^-1 b v](z_h)\n     =ell_b[v(z_h)/2+(A^-1 b v)(z_h)].                (2)\n\nAll inverses and deltas in (2) have their original physical action\nnormalization and boundary conditions. The low-order bolt functionals\nare in E* by the retained form-domain argument. The mixed Green return\nis distributional at the bolt and keeps its end phase and finite moment.\nIt is not a smooth homogeneous adjoint. We initially use the common core\nand the accepted fixed-seed closures; no fifth-derivative delta is put in E*.\n\nIn particular chi belongs to E, not necessarily to the strong operator\ndomain. The existing mixed Green realization has rho^2 log(rho) leading\nbehavior at the smooth disk center. Its local order-two logarithmic form\nenergy is finite (the high-frequency squared form integrand is of order\n|k|^-4 log|k| in two dimensions). Its finite end/bolt returns use the\naccepted paired closure. Thus v in (4) is in E, and the already proved\nform comparison extends to it by core density. This does not extend that\ncomparison to fifth-derivative delta sources or move the mass/log seam.\n\nThe identities b=-AU-CV and\nell+B=V*(D+C*A^-1C)V give the EXACT correlated source relation\n\n                         g=L chi_N+j.               (3)\n\nIndeed L chi_N=V*D C^-1(ell_b delta_b)+V*C*A^-1(ell_b delta_b).\nThe first term is g. The second pairs with a test w as\nell_b[A^-1 C Vw](z_h)=-ell_b[Uw+A^-1 bw](z_h)=-j(w).\nThe N in chi_N cancels the N in L; no action normalization is dropped.\n\nIn particular j is the effective physical bolt functional of the existing\nscalar Schur calculation. It is NOT g, and its lower bound is NOT a lower\nbound for C_b,3. Equation (3) is the reason it can be used in this\nestimator test without making that invalid transfer.\n\n## 2. Retain the cancellation before testing the uniform estimate\n\nFor any adjoint trial p3 put v=p3-chi_N. Its third residual is\n\n s3=g-L p3=j-L v=s30-Rop v, s30=j-L0 v.             (4)\n\nThis already cancels the common quantum action on chi_N and p3 before\nnorms. Bounding their norms separately would be worse. Suppose the\nchosen implementation uses the available UNIFORM form comparison to\nreport the positive bound\n\n D3=d0+eta V0,\n d0>=||s30||E*, V0>=||v||E.                         (5)\n\nThis is the estimator being tested, not a claim that the actual residual\nequals its upper bound. Even granting exact evaluation of d0 and V0,\nthe triangle inequality and (1) imply\n\n ||j||E*<=d0+M V0,\n D3>= (eta/M)||j||E*, since eta<M.                  (6)\n\nThe latter follows directly from\nd0+eta V0 >= (eta/M)(d0+M V0). It holds for EVERY trial, including\np3=chi_N, which eliminates Rop v but leaves s30=j. Thus changing a trial\ncannot evade (6) while retaining estimator (5). Additional certified\nquadrature, contact or source errors only increase its positive report.\n\nThe first missing numerical step of the DIRECT method remains a bound\non the actual correlated residual, or its transferred version below.\nThe uniform form theorem DOES apply to (4) on E, so (5) is well-defined.\nIts numerical feasibility can therefore be tested without postulating a\nnew rough-boundary strong estimate or computing an inverse. This is a\ndifferent outcome from an undefined operator or a merely unknown constant.\n\n## 3. Original-unit source lower bound from an accepted actual-domain test\n\nUse the genuine localized TT field of\n[the accepted sensitivity calculation](current-localized-bolt-adjoint-sensitivity.md).\nIt has J=psi/h, psi=(1-t/a)^8 on 0<=t<=a=1e-4, zero outside, with the\nexact correlated K term in xi. It satisfies both York endpoint conditions,\nis C6 at the join and regular at the bolt, and vanishes near the mass/log\nend. Its full scalar return was bounded using the ACTUAL global scalar\ninverse. Its energy bound includes all quantum terms and finite returns.\nNo model field or finite physical-mode subset replaces that test.\n\nThe frozen receipt and ordinary proof establish\n\n |j(xi_test)|>=ell_b b_low,\n ell(xi_test,xi_test)/|W|<=L_c,\n b_low=0.997806941653159481462...,\n L_c=6.325574662940601861460...e-30.                  (7)\n\nUse the retained outward intervals, not these printed midpoints. Since\nE(xi_test)^2<=L_c/beta, the original E-dual lower bound is\n\n Jstar=ell_b b_low sqrt(beta/L_c) <= ||j||E*.         (8)\n\nThe physical |W| cancels in this RATIO because E=ell^(1/2)/sqrt(N).\nThis is an explicit norm conversion, not a new physical normalization.\nIt agrees with multiplying the prior physical ell-dual lower bound by\nsqrt(|W| beta), for either one or two folded exteriors. Both conversions\nwill be checked. No lower bound on the actual affine source is used.\n\n## 4. Test the complete residual-to-output estimator\n\nThe accepted direct adjoint system has A3 diagonal I+T and upper/lower\nshift as appropriate. For residuals s1,s2,s3, with Riesz_E denoted R_E,\nits EXACT error transfer is\n\n T(p1-p1_trial)=F R_E(s1)+F^2 R_E(s2)+F^3 R_E(s3).  (9)\n\nThis follows by triangular substitution, without commuting T through an\nunrelated operator. With Riesz trial a_trial and its residual tau, it gives\n\n C_b,3 <= ||a_trial||E+tau\n              +||F R_E(s1)+F^2 R_E(s2)+F^3 R_E(s3)||E. (10)\n\nThe older .338*sigma bound is valid but loses the powers in (9). Even the\nSTRONGER positive uniform estimate\n\n U_b=||a_trial||E+tau+f D1+f^2 D2+f^3 D3            (11)\n\nhas, by (6)-(8), the all-trial lower bound on its REPORTED value\n\n                    U_b >= f^3 eta Jstar/M.         (12)\n\nHere D1,D2 are any nonnegative certified residual allowances. This is not\na lower bound on (10)'s signed norm, nor on C_b,3. The only asserted lower\nbound is on the particular positive expression (11) using (5).\n\nUse complete P32's unchanged p_aff=(1.1e-10)h3, with\nh3=(1+q)^3/|Ch29(-1-2/q)|. The physical bolt allowance reported by (11)\nis at least p_aff f^3 eta Jstar/M. Compare THIS to 1.667e-9, granting\nthe entire bolt margin and zero other debits. No intermediate constant\nis compared directly with a physical ceiling.\n\nFreeze the decision test: this physical lower bound on the reported\nUPPER expression exceeds the entire margin. Compute its ratio, and also\nthe less sharp q*sigma version. If it exceeds the margin, every trial\nusing (11),(5) fails this sufficient P32 certificate. This does not\nreject P32 with different residual estimates or the actual construction.\n\n## 5. Quantify a sharper alternative against the same obstacle\n\nFor a new UNIFORM comparison coefficient eta_new, even the most favorable\nversion of (11) necessarily requires\n\n eta_new <= Cstar(1+q)/(f^3 Jstar-Cstar),\n Cstar=1.667e-9/p_aff,                               (13)\n\nprovided the denominator is positive. This is only a necessary threshold\nfor that estimator: it grants all other terms zero and uses a LOWER bound\non ||j||. It is not a sufficient estimate, not the actual eta, and not a\nnecessary condition for wormhole existence. Evaluate also the weaker\nq*sigma threshold and the hypothetical report with eta_new=1e-10.\n\nThe specified sharper METHOD is (10): bound the COMPLETE transferred\nresidual before taking norms. In particular its third quantum contribution\nis F^3 R_E(Rop v), not f^3 eta ||v||. For an actual trial the precise\nremaining allowance is Cstar-||a_trial||E-tau minus the other certified\ntransferred residual debits, and must be positive. The all-trial ratio\nfrom (12) quantifies the minimum gain a successful estimate would have\nto make over the best possible positive report, even with other costs zero.\n\nThe known replacement q -> f^3 is included in this test; it is not enough\nif (12) still fails. Further gains must come from actual spectral placement\nand coupled cancellation, not a boundary-basis or normalization change.\nNo such numerical gain is certified here. F is small at high frequency,\nbut its uniform norm and the existing form comparison alone supply no\nadditional directional reduction. An isolated cold/contact optimization\ncannot be credited without its contribution to (10).\n\nONE NEXT CALCULATION (PROPOSED): construct a complete actual-domain\nadjoint/Riesz trial and enclose the JOINT transferred residual in (10),\nincluding its commonly restored quantum term, against the actual remaining\nbolt margin. No such trial or signed quantum inverse application is\nclaimed executed in this test. This is the decisive calculation for\nwhether the direct method can evade the verified estimator loss.\n\n## 6. Scope, full coupled budget and decision boundary\n\nThe interior 10^4000 C bound and generic 10^74739.22 absorption coefficient\nare not used in (12); the new test can fail even after those losses are\navoided. The former generic-expression failure remains unchanged.\nFor clarity its actual composition was K0=4e4003,\nL0_generic=(2K0)^(4/3), M10=K0 L0_generic^(53/4), and\nA_generic=2 M10 1e19 f^3. Only AFTER multiplying by the original bolt\nconversion d_b>1e-177 and p_aff did its reported allowance exceed the\nbolt margin by >10^74546.2101. Those losses do not represent an actual\noperator lower bound. The new residual method avoids this bootstrap;\nusing it again to bound the dual residuals would reintroduce its losses.\n\nOriginal delta<=.5, the bounded original-Y extension and I_Y remain\nunproved. C_def,3 I_Y<=1.0965284986e32, C_g,3<=1.0650980044e31 and\nC_X,3<=9.9684408960e33 remain conditional ceilings with their original\nremaining-margin hypotheses. Every coupled entry still requires\n|c_hat_ij|+e_ij+C_i,3 I_j h2. No independent input or phase entry is zero.\nActual kappa_m<=5e-5 remains untested. If it passes, other entries must\njointly satisfy\n Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,\n eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.\nRetain the exact mass lift and cutoff transitions, original 2133--2174\nconversion, scalar quartic, correlated slow pair and infinite matching\nquotient. The .135973<.1599164 quantum-fast screen keeps its limited\ntwo-fast admitted-family scope. Nothing transfers to the nonlinear ball.\n\nThe original mass test is |kappa_hat_m|+e_m+C_mass,3 I_m h2<=5e-5;\nits conditional debits are 2.14765e-12 affine and .0024731 feedback,\nnot measured debits. The scalar-quartic row, correlated slow pair,\nfast remainder and infinite-dimensional boundary/matching column all\nretain unknown signed centers, residual errors, input norms and output\nnorms. None fits a remaining budget merely because the mass target fits.\nThe specified complete positive certificate fails if its bolt row fails,\neven granting every other entry and error zero. That logical test does\nnot compute those entries or prove that their actual contributions fail.\n\nThe first missing global original-Y/strong-output argument is still the\nquantitative weighted end-kernel estimate and scalar/York interface and\ninfinite matching-quotient returns. The accepted 1ee884b interior theorem\ndoes not cover it. The sharper bolt calculation instead first needs the\nfull correlated E* residual or its transferred norm. Both gaps remain\nexplicit; no smooth symbol theorem supplies either on the actual seam.\n\nDECISION CONTRACT: if (12) exceeds the bolt budget, stop estimator (11)\nwith the available uniform comparison. Use the signed transferred-residual\nmethod (10), or supply a new comparison meeting at least (13) before trial\nrefinement under a uniform bound. Preserve the construction and P32 for\nnow; this is an estimator failure, not nonexistence or an actual output\nlower bound. No original controlled-solution requirement is declared closed.\n\nVerification contract: freeze this ordinary proof/checker before execution,\nvalidate the retained source/energy receipt against its unchanged ordinary\nargument, compute with outward 512-bit arithmetic, preserve all failures,\nreview and run unchanged acceptance. Supporting checks do not replace\nthe actual-domain proof behind (7), or calculate the quantum inverse.\n\nRemaining to-do list: actual complete transferred residual and original\noutput/source maps; every coupled entry; nonlinear admission/contraction;\nexact compatibility; physical matching; semiclassical validity/noise;\nall-sector stability; opening, transport, preparation, separate creation\nand the full stable semiclassical wormhole objective.\n",
+        "checks/current_adjoint_uniform_estimator_test.py": "\"\"\"Support the all-trial estimator proof; never evaluate a quantum inverse.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json, sys, traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0, sys.argv[sys.argv.index('--arb-path')+1])\nimport sympy as sp\nimport flint\nfrom flint import arb, ctx\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-adjoint-uniform-estimator-test'\nOWN=['notes/'+STEM+'.md','checks/current_adjoint_uniform_estimator_test.py',\n     'evidence/'+STEM+'-review.json']\nSOURCE='current-localized-bolt-adjoint-sensitivity'\nINPUTS=OWN+['notes/'+SOURCE+'.md','checks/current_localized_bolt_adjoint_sensitivity.py',\n 'evidence/'+SOURCE+'.json','notes/current-coupled-adjoint-residual-audit.md',\n 'evidence/current-coupled-adjoint-residual-audit.json',\n 'notes/current-direct-triple-return-attempt.md',\n 'notes/current-schur-polynomial-return-test.md',\n 'notes/current-geodesic-two-sided-remainder.md',\n 'notes/current-seed-full-hessian-realization.md']\nCHECKS=[]\ndef sh(p):return sha256(p.read_bytes()).hexdigest()\ndef check(name,ok):\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    print(name+(': passed' if ok else ': FAILED'),flush=True)\n    if not ok:raise AssertionError(name)\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(50)\n    return {'ball':x.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(s):return arb(s.strip('[]'))\ndef execute():\n    ctx.prec=512\n    review=json.loads((ROOT/OWN[2]).read_bytes())\n    check('frozen_argument_and_checker',all(sh(ROOT/p)==h for p,h in review['scientific_sha256'].items()))\n    src=json.loads((ROOT/('evidence/'+SOURCE+'.json')).read_bytes())['runs'][-1]\n    check('accepted_actual_domain_source_test',src['status']=='passed')\n    check('source_ordinary_proof_and_checker_unchanged',all(sh(ROOT/p)==src['input_sha256_before'][p]\n      for p in ['notes/'+SOURCE+'.md','checks/current_localized_bolt_adjoint_sensitivity.py']))\n    prior=json.loads((ROOT/'evidence/current-coupled-adjoint-residual-audit.json').read_bytes())['runs'][-1]\n    check('accepted_complete_residual_propagation',prior['status']=='passed' and prior['result']['complete_triple_residual_inverse_upper']==1)\n    # Noncommutative block algebra. Adjoint signs/normalization are in the ordinary proof.\n    A,Ai,C,Cs,D,U,V,Vs=sp.symbols('A Ai C Cs D U V Vs',commutative=False)\n    b=-A*U-C*V\n    expr=sp.expand(-Ai*b-U-Ai*C*V).subs(Ai*A,sp.Integer(1))\n    check('effective_source_minus_sign',sp.expand(expr)==0)\n    # Equation-index recursion only; t represents the full self-adjoint T.\n    t=sp.symbols('t',nonnegative=True)\n    chain=sp.Matrix([[1+t,-t,0],[0,1+t,-t],[0,0,1+t]])\n    row=t*chain.inv()[0,:]\n    check('exact_joint_residual_transfer',all(sp.cancel(row[j]-(t/(1+t))**(j+1))==0 for j in range(3)))\n    d,V0,eta,M=sp.symbols('d V0 eta M',positive=True)\n    check('all_trial_minimum_identity',sp.expand(d+eta*V0-eta/M*(d+M*V0)-(1-eta/M)*d)==0)\n    r=src['result'];pars=r['parameters']\n    h,beta=dec(pars['h']),dec(pars['beta'])\n    b_low=dec(r['effective_point_lower']);Lc=dec(r['cold_energy_upper_over_action'])\n    ell_b=(1+h)/h;Jstar=ell_b*b_low*(beta/Lc).sqrt()\n    check('actual_test_positive_and_finite',h>0 and beta>0 and b_low>0 and Lc>0 and Jstar.is_finite())\n    normchecks=[]\n    for entry in r['norms']:\n        converted=dec(entry['effective_functional_dual_lower'])*(dec(entry['W_abs'])*beta).sqrt()\n        normchecks.append({'folded_halves':entry['N'],'converted_E_dual_lower':enc(converted)})\n        check('unchanged_original_units_N'+str(entry['N']),converted.overlaps(Jstar))\n    q=arb(169)/500;f=q/(1+q);eta=arb('0.0022');M=1+q+eta\n    x0=1+2/q;c0,c1=arb(1),x0\n    for j in range(1,29):c0,c1=c1,2*x0*c1-c0\n    D29=c1;h2=(1+q)**2/D29;h3=(1+q)**3/D29\n    pref=arb('1.1e-10')*h3;budget=arb('1.667e-9');star=budget/pref\n    d3floor=eta*Jstar/M\n    sharpfloor=f**3*d3floor;oldfloor=q*d3floor\n    physical=pref*sharpfloor;oldphysical=pref*oldfloor\n    ratio=physical/budget;oldratio=oldphysical/budget\n    check('stronger_uniform_estimator_fails_complete_bolt_margin',physical>budget)\n    check('older_positive_estimator_also_fails',oldphysical>physical)\n    threshold=star*(1+q)/(f**3*Jstar-star)\n    oldthreshold=star*(1+q)/(q*Jstar-star)\n    check('necessary_threshold_denominators_positive',f**3*Jstar>star and q*Jstar>star)\n    check('threshold_substitution', (pref*f**3*threshold*Jstar/(1+q+threshold)).overlaps(budget))\n    hypo=arb('1e-10');hypophysical=pref*f**3*hypo*Jstar/(1+q+hypo)\n    check('hypothetical_1e_minus10_still_fails_estimator',hypophysical>budget)\n    conditional={'Cdef3_times_IY':enc(arb('0.5')/h3),\n      'Cg3_full_graph_margin':enc(arb('5.34235e-12')/pref),\n      'CX3_full_physical_margin':enc(arb('5e-9')/pref),\n      'Cb3_full_bolt_margin':enc(star),\n      'Cmass3_times_Im_zero_center_and_error':enc(arb('5e-5')/h2),\n      'Cg3_times_Ifb_zero_other_debits':enc(arb('0.0012069')/h2)}\n    result={'precision_bits':512,'q':enc(q),'f':enc(f),'eta_available_upper':enc(eta),\n      'L0_operator_upper':enc(M),'ell_b_original_bolt_factor':enc(ell_b),\n      'accepted_source_test':{'b_low':enc(b_low),'Lc':enc(Lc),'Jstar_E_dual_lower':enc(Jstar),\n                              'independent_normalization_checks':normchecks},\n      'D29':enc(D29),'h2':enc(h2),'h3':enc(h3),'affine_prefactor':enc(pref),\n      'all_trial_uniform_estimator':{'D3_report_floor':enc(d3floor),\n       'improved_complete_Cb3_report_floor':enc(sharpfloor),\n       'improved_physical_bolt_report_floor':enc(physical),\n       'improved_ratio_to_full_bolt_margin':enc(ratio),\n       'older_q_positive_physical_report_floor':enc(oldphysical),\n       'older_ratio_to_full_bolt_margin':enc(oldratio),\n       'known_power_gain_q_over_f3':enc(q/f**3),\n       'necessary_new_uniform_eta_ceiling':enc(threshold),\n       'necessary_old_uniform_eta_ceiling':enc(oldthreshold),\n       'required_uniform_eta_improvement':enc(eta/threshold),\n       'hypothetical_eta_1e_minus10_physical_report_floor':enc(hypophysical)},\n      'conditional_original_space_ceilings':conditional,\n      'complete_entries':{k:'unknown signed center, certified error, input norm and original output norm'\n        for k in ['mass','scalar_quartic','correlated_slow_pair','fast_remainder','infinite_matching_and_boundary_phase']},\n      'scope':{'specified_complete_positive_estimator_rejected_for_every_trial':True,\n       'actual_Cb3_lower_bound_proved':False,'actual_quantum_error_lower_bound_proved':False,\n       'actual_trial_constructed':False,'joint_quantum_residual_evaluated':False,\n       'direct_composite_norms_enclosed':False,'original_strong_delta_certified':False,\n       'actual_kappa_m_computed':False,'signed_coupled_columns_computed':False,\n       'new_controlled_solution_requirement_closed':False,'actual_controlled_solution':False,\n       'construction_obstruction':False,'nonlinear_admission_contraction':False,\n       'exact_compatibility':False,'physical_matching':False,'semiclassical_validity_noise':False,\n       'all_sector_stability':False,'full_goal_complete':False}}\n    return result\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={p:sh(ROOT/p) for p in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n      'input_sha256_before':hashes,'frozen_sources_utf8':{p:(ROOT/p).read_text(encoding='utf-8') for p in OWN},\n      'runtime':{'python':sys.version,'python_sha256':sh(Path(sys.executable)),\n                 'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={p:sh(ROOT/p) for p in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after']);run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary=json.dumps({'status':run['status'],'mode':mode,'checks':len(CHECKS),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as out:out.write(summary.encode())\n    print(summary,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-adjoint-uniform-estimator-test-review.json": "{\n  \"frozen_utc\": \"2026-10-26T13:27:57.249902+00:00\",\n  \"ordinary_review\": [\n    \"The actual fixed-seed form comparison acts on the mixed bolt Green return chi in E; its local rho^2 log rho singularity has finite order-two logarithmic form energy. The original paired mass/log closure and finite returns are retained. No high-derivative delta or translated seam is admitted.\",\n    \"The block identity gives L chi_N=g-j with the original N, scalar and York inverses. Thus s3=j-L(p3-chi_N) retains the common quantum-source cancellation before any norm.\",\n    \"For every admissible trial, ||j||<=d0+(1+q+eta)V0, so the specified positive report d0+eta V0 is at least eta ||j||/(1+q+eta). This is not a lower bound on the actual residual or operator difference.\",\n    \"The accepted localized TT test and full energy envelope give Jstar in the unchanged E dual; the old physical dual converts by sqrt(|W| beta). Both fold counts will be checked.\",\n    \"Exact adjoint triangular substitution transfers the three weak residuals as F R_E s1+F^2 R_E s2+F^3 R_E s3. No unrelated operators commute. The tested positive bound already includes this power improvement.\",\n    \"Multiplication by the unchanged P32 affine prefactor produces the complete original bolt report. Failure even with all other costs zero rejects this specified sufficient estimator, not P32 or the construction.\",\n    \"A necessary new uniform eta threshold and the required gain of a signed transferred-residual method will be evaluated. No actual adjoint trial, quantum inverse, signed coupled column or original norm is computed.\"\n  ],\n  \"scientific_sha256\": {\n    \"notes/current-adjoint-uniform-estimator-test.md\": \"8c34d2095a1d092466255efc7c52bed2c35f6ced98c8dd01b90e6b42880bd230\",\n    \"checks/current_adjoint_uniform_estimator_test.py\": \"11a55bdb8b3dfc1e9eca66fd6a34c773b5e1e9b2371215623a566392a2acb740\"\n  },\n  \"no_physical_gate_closed\": true\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "q": {
+          "ball": "[0.33800000000000000000000000000000000 +/- 3e-40]",
+          "decimal_enclosure": {
+            "mid": "3379999999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-55"
+          }
+        },
+        "f": {
+          "ball": "[0.25261584454409566517189835575485800 +/- 2.99e-36]",
+          "decimal_enclosure": {
+            "mid": "2526158445440956651718983557548579970104633781763826606",
+            "rad": "2",
+            "exponent": "-55"
+          }
+        },
+        "eta_available_upper": {
+          "ball": "[0.0022000000000000000000000000000000000 +/- 1e-42]",
+          "decimal_enclosure": {
+            "mid": "2200000000000000000000000000000000000000000000000000000",
+            "rad": "1",
+            "exponent": "-57"
+          }
+        },
+        "L0_operator_upper": {
+          "ball": "[1.3402000000000000000000000000000000 +/- 3e-39]",
+          "decimal_enclosure": {
+            "mid": "1340199999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-54"
+          }
+        },
+        "ell_b_original_bolt_factor": {
+          "ball": "[1.977144437739908571056e+33 +/- 4.29e+11]",
+          "decimal_enclosure": {
+            "mid": "1977144437739908571055798251592192000000000000000000000",
+            "rad": "227122185770470096186979752345600",
+            "exponent": "-21"
+          }
+        },
+        "accepted_source_test": {
+          "b_low": {
+            "ball": "[0.997806941653159481462 +/- 4.74e-22]",
+            "decimal_enclosure": {
+              "mid": "9978069416531594814620000000000000000000000000000000000",
+              "rad": "4730000032186657537444947400065024",
+              "exponent": "-55"
+            }
+          },
+          "Lc": {
+            "ball": "[6.325574662940601861460e-30 +/- 8.80e-52]",
+            "decimal_enclosure": {
+              "mid": "632557466294060186146000000000000000000000000000000000",
+              "rad": "87900000642651507193932039585792",
+              "exponent": "-83"
+            }
+          },
+          "Jstar_E_dual_lower": {
+            "ball": "[3.20227997782740541290e+47 +/- 5.83e+26]",
+            "decimal_enclosure": {
+              "mid": "3202279977827405412903274434863485038361537624059986678",
+              "rad": "2547412492534593390971806365515777",
+              "exponent": "-7"
+            }
+          },
+          "independent_normalization_checks": [
+            {
+              "folded_halves": 1,
+              "converted_E_dual_lower": {
+                "ball": "[3.20227997782740541290e+47 +/- 8.24e+26]",
+                "decimal_enclosure": {
+                  "mid": "3202279977827405412904264741011628863513714103511892885",
+                  "rad": "3969612781258821711165309512056833",
+                  "exponent": "-7"
+                }
+              }
+            },
+            {
+              "folded_halves": 2,
+              "converted_E_dual_lower": {
+                "ball": "[3.20227997782740541290e+47 +/- 3.91e+26]",
+                "decimal_enclosure": {
+                  "mid": "3202279977827405412900027814858198256728753735015231127",
+                  "rad": "3875645656279792851433649600462849",
+                  "exponent": "-7"
+                }
+              }
+            }
+          ]
+        },
+        "D29": {
+          "ball": "[525313134094675870598930057315196.10 +/- 4.28e-3]",
+          "decimal_enclosure": {
+            "mid": "5253131340946758705989300573151961042792601836053075073",
+            "rad": "2",
+            "exponent": "-22"
+          }
+        },
+        "h2": {
+          "ball": "[3.4079559101169338119897650627624629e-33 +/- 1.32e-68]",
+          "decimal_enclosure": {
+            "mid": "3407955910116933811989765062762462913182680547164226318",
+            "rad": "2",
+            "exponent": "-87"
+          }
+        },
+        "h3": {
+          "ball": "[4.5598450077364574404423056539761754e-33 +/- 2.22e-68]",
+          "decimal_enclosure": {
+            "mid": "4559845007736457440442305653976175377838426572105734813",
+            "rad": "2",
+            "exponent": "-87"
+          }
+        },
+        "affine_prefactor": {
+          "ball": "[5.0158295085101031844865362193737929e-43 +/- 1.57e-78]",
+          "decimal_enclosure": {
+            "mid": "5015829508510103184486536219373792915622269229316308295",
+            "rad": "2",
+            "exponent": "-97"
+          }
+        },
+        "all_trial_uniform_estimator": {
+          "D3_report_floor": {
+            "ball": "[5.25669000986441718280e+44 +/- 5.20e+23]",
+            "decimal_enclosure": {
+              "mid": "5256690009864417182798988029167483193697239040000000000",
+              "rad": "4181758744712178631839890286837760",
+              "exponent": "-10"
+            }
+          },
+          "improved_complete_Cb3_report_floor": {
+            "ball": "[8.4741105961638630581e+42 +/- 2.35e+22]",
+            "decimal_enclosure": {
+              "mid": "847411059616386305811673013291844834601833806810503361",
+              "rad": "674125470952394563894352826859521",
+              "exponent": "-11"
+            }
+          },
+          "improved_physical_bolt_report_floor": {
+            "ball": "[4.25046939866168467310 +/- 6.66e-21]",
+            "decimal_enclosure": {
+              "mid": "4250469398661684673096730037286340079977856570424825438",
+              "rad": "3381298446257645582026561573355521",
+              "exponent": "-54"
+            }
+          },
+          "improved_ratio_to_full_bolt_margin": {
+            "ball": "[2549771684.86003879610 +/- 3.22e-12]",
+            "decimal_enclosure": {
+              "mid": "2549771684860038796098818258719758680572176068324097286",
+              "rad": "2028404351525391237986203367112705",
+              "exponent": "-45"
+            }
+          },
+          "older_q_positive_physical_report_floor": {
+            "ball": "[89.119313735760546753 +/- 3.25e-19]",
+            "decimal_enclosure": {
+              "mid": "891193137357605467532537867157160390424631190617373792",
+              "rad": "708954633486898587334671155068929",
+              "exponent": "-52"
+            }
+          },
+          "older_ratio_to_full_bolt_margin": {
+            "ball": "[53460896062.2438792761 +/- 4.55e-11]",
+            "decimal_enclosure": {
+              "mid": "5346089606224387927609705261884978644282284676592098549",
+              "rad": "4252942139374037090341452181929985",
+              "exponent": "-44"
+            }
+          },
+          "known_power_gain_q_over_f3": {
+            "ball": "[20.966934561114806904520149854696964 +/- 3.93e-34]",
+            "decimal_enclosure": {
+              "mid": "2096693456111480690452014985469696439200308112461048282",
+              "rad": "2",
+              "exponent": "-53"
+            }
+          },
+          "necessary_new_uniform_eta_ceiling": {
+            "ball": "[8.6140598852817950171e-13 +/- 3.22e-33]",
+            "decimal_enclosure": {
+              "mid": "8614059885281795017125323888458792548561196238504114126",
+              "rad": "6852585974549328909607661903806465",
+              "exponent": "-67"
+            }
+          },
+          "necessary_old_uniform_eta_ceiling": {
+            "ball": "[4.10840214155678953346e-14 +/- 7.23e-35]",
+            "decimal_enclosure": {
+              "mid": "4108402141556789533456039637302078966331346899760219568",
+              "rad": "3268282248124729339637956253581313",
+              "exponent": "-68"
+            }
+          },
+          "required_uniform_eta_improvement": {
+            "ball": "[2553964134.56444244733 +/- 5.10e-12]",
+            "decimal_enclosure": {
+              "mid": "2553964134564442447333061457653710863216489634908157313",
+              "rad": "2031739531240840798494866066636801",
+              "exponent": "-45"
+            }
+          },
+          "hypothetical_eta_1e_minus10_physical_report_floor": {
+            "ball": "[1.93520827818339583425e-7 +/- 6.44e-28]",
+            "decimal_enclosure": {
+              "mid": "1935208278183395834245104807867978904564512445484198415",
+              "rad": "1539480950925170413932559357444097",
+              "exponent": "-61"
+            }
+          }
+        },
+        "conditional_original_space_ceilings": {
+          "Cdef3_times_IY": {
+            "ball": "[109652849856009446344288613901028.20 +/- 1.63e-3]",
+            "decimal_enclosure": {
+              "mid": "1096528498560094463442886139010281983706405925742227046",
+              "rad": "2",
+              "exponent": "-22"
+            }
+          },
+          "Cg3_full_graph_margin": {
+            "ball": "[10650980044150037557771095935893.782 +/- 2.63e-4]",
+            "decimal_enclosure": {
+              "mid": "1065098004415003755777109593589378173755257763161633938",
+              "rad": "2",
+              "exponent": "-23"
+            }
+          },
+          "CX3_full_physical_margin": {
+            "ball": "[9968440896000858758571692172820745.3 +/- 6.44e-3]",
+            "decimal_enclosure": {
+              "mid": "996844089600085875857169217282074530642187205220206405",
+              "rad": "2",
+              "exponent": "-20"
+            }
+          },
+          "Cb3_full_bolt_margin": {
+            "ball": "[3323478194726686310107802170418436.5 +/- 0.0149]",
+            "decimal_enclosure": {
+              "mid": "3323478194726686310107802170418436485161052142204168156",
+              "rad": "2",
+              "exponent": "-21"
+            }
+          },
+          "Cmass3_times_Im_zero_center_and_error": {
+            "ball": "[14671551310734063920865816539.957573 +/- 5.81e-8]",
+            "decimal_enclosure": {
+              "mid": "1467155131073406392086581653995757294199171128643099787",
+              "rad": "2",
+              "exponent": "-26"
+            }
+          },
+          "Cg3_times_Ifb_zero_other_debits": {
+            "ball": "[354141905538498834921859079641.49590 +/- 4.33e-6]",
+            "decimal_enclosure": {
+              "mid": "3541419055384988349218590796414958956737959270318714267",
+              "rad": "2",
+              "exponent": "-25"
+            }
+          }
+        },
+        "complete_entries": {
+          "mass": "unknown signed center, certified error, input norm and original output norm",
+          "scalar_quartic": "unknown signed center, certified error, input norm and original output norm",
+          "correlated_slow_pair": "unknown signed center, certified error, input norm and original output norm",
+          "fast_remainder": "unknown signed center, certified error, input norm and original output norm",
+          "infinite_matching_and_boundary_phase": "unknown signed center, certified error, input norm and original output norm"
+        },
+        "scope": {
+          "specified_complete_positive_estimator_rejected_for_every_trial": true,
+          "actual_Cb3_lower_bound_proved": false,
+          "actual_quantum_error_lower_bound_proved": false,
+          "actual_trial_constructed": false,
+          "joint_quantum_residual_evaluated": false,
+          "direct_composite_norms_enclosed": false,
+          "original_strong_delta_certified": false,
+          "actual_kappa_m_computed": false,
+          "signed_coupled_columns_computed": false,
+          "new_controlled_solution_requirement_closed": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "nonlinear_admission_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-adjoint-uniform-estimator-test.md": "8c34d2095a1d092466255efc7c52bed2c35f6ced98c8dd01b90e6b42880bd230",
+        "checks/current_adjoint_uniform_estimator_test.py": "11a55bdb8b3dfc1e9eca66fd6a34c773b5e1e9b2371215623a566392a2acb740",
+        "evidence/current-adjoint-uniform-estimator-test-review.json": "e6211d2b7c763bfc0dc95c05336741f1440f4caf44988577d2d2d1a62466b02b",
+        "notes/current-localized-bolt-adjoint-sensitivity.md": "d418f94f18129432c23509793cdfbb158748083d971d2e479ef8d7f83190f1de",
+        "checks/current_localized_bolt_adjoint_sensitivity.py": "20cb4bf24eda4fa36d4739d4916af22bc800743638af205910c65b103c67766b",
+        "evidence/current-localized-bolt-adjoint-sensitivity.json": "a48e06fec491c8c647d8d141cb811a10f4d0103a751648a139982f39f5cc1548",
+        "notes/current-coupled-adjoint-residual-audit.md": "fc94f8b28dcb279c4da1aae54fb5657e41046bf7fdb5ad463aa8c47fea25f7cd",
+        "evidence/current-coupled-adjoint-residual-audit.json": "e0a9acb6b0c83e279259c3f4a7fa8c4d866fb70e784de36013bed2ea414b0731",
+        "notes/current-direct-triple-return-attempt.md": "5636243416c57bc3b8105db58a152b2436330e078f78fad451ff36cf2431daea",
+        "notes/current-schur-polynomial-return-test.md": "d755b5c5efdfb867bc24844d78eea7f656c66dfd9a9cf99a9b28e6ed881c9164",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "frozen_argument_and_checker",
+          "passed": true
+        },
+        {
+          "name": "accepted_actual_domain_source_test",
+          "passed": true
+        },
+        {
+          "name": "source_ordinary_proof_and_checker_unchanged",
+          "passed": true
+        },
+        {
+          "name": "accepted_complete_residual_propagation",
+          "passed": true
+        },
+        {
+          "name": "effective_source_minus_sign",
+          "passed": true
+        },
+        {
+          "name": "exact_joint_residual_transfer",
+          "passed": true
+        },
+        {
+          "name": "all_trial_minimum_identity",
+          "passed": true
+        },
+        {
+          "name": "actual_test_positive_and_finite",
+          "passed": true
+        },
+        {
+          "name": "unchanged_original_units_N1",
+          "passed": true
+        },
+        {
+          "name": "unchanged_original_units_N2",
+          "passed": true
+        },
+        {
+          "name": "stronger_uniform_estimator_fails_complete_bolt_margin",
+          "passed": true
+        },
+        {
+          "name": "older_positive_estimator_also_fails",
+          "passed": true
+        },
+        {
+          "name": "necessary_threshold_denominators_positive",
+          "passed": true
+        },
+        {
+          "name": "threshold_substitution",
+          "passed": true
+        },
+        {
+          "name": "hypothetical_1e_minus10_still_fails_estimator",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T13:30:01.997204+00:00"
+    }
+  ]
+}
