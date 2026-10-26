@@ -1,3 +1,143 @@
+# Current physical residual regularity decision, 2026-10-26
+
+EXECUTED: the original physical areal output rejects both the L2 residual
+test and the proposed regular-disk H3 repair for arbitrary sources. A full
+two-row finite example passes the bolt allowance at <3.65084e-10 while
+its fifth physical areal lapse derivative exceeds 2.32879e65. A regular-
+bolt family has output/H3-source ratio asymptotic to 4.31430e96 times
+width^-6. The complete quantum logarithm also rules out bare H14-to-H10
+source control. These are estimator/domain failures, not a failed energy
+inverse or a construction obstruction. Structured F3 maps remain eligible.
+The closed audit, P32 and full stable-wormhole objective are unchanged.
+
+The exact residual under test is R0=Ro+|c4|+Ri: the original outer
+two-row H3(dlog z) graph, actual quartic finite part, and both complete
+interior rows in L2(dz). The retained physical lapse is alpha=nu+2T+Dnu,
+r_phys=B/z. The tested physical component is max_(j<=5) sup |partial_r^j
+alpha| in the original G=1 units. The closed audit does not specify a
+completed global Banach X or all its weights; that is explicitly still a
+definition/comparison gap. No numerical value of X has been invented.
+Any retained X comparison controlling this areal C5 component inherits
+the following failure. Canonical proper derivatives are not silently
+identified with areal lapse derivatives.
+
+The finite middle test uses the original compact conformal field, with
+width 1e-100, amplitude 1e-75 and both C10 cutoff transitions. Both original
+rows include all local and density contacts; the nonlocal determinant
+column is zero by the exact Ward identity before common regulator removal.
+Thus all angular/thermal sums, exact ultraviolet logarithm, original paired
+mass/log domain and boundary/regular-bolt returns are preserved. No smooth
+surrogate domain or finite mode matrix is used. The full form inverse
+recovers this field from its actual two-row source. The result is
+ Ri<3.854553232e-85;
+ full bolt upper debit<3.650836442e-10<8.335e-10;
+ |partial_r_phys^5 alpha|>2.328799780e65;
+ physical-output/Ri ratio>6.041685354e149.
+The ACTUAL bolt value is zero. This is an operator-domain witness, not
+the unknown physical correction or a semiclassical-validity example.
+The entire family gives unbounded ratio proportional to width^-5/2,
+with the explicit B^-5 physical conversion included.
+
+The next executed test addresses the proposed H3 repair. In the actual
+regular disk z=L-gamma*w^2/2 set nu=a*width^6*p(w^2/width^2), T=0,
+where p(v)=(v-1)^16(4-v)^16 on 1<v<4 and zero elsewhere. Every field
+vanishes near the tip and outer boundary and preserves their exact
+conditions. Smooth approximants converge through all required orders.
+The complete rescaled two-row source tends to
+ 16d L^4 (6,2) [v^2 p''''+4v p'''+2p''],
+with all lower coefficients retained before taking the limit. The exact
+radial third-derivative tensor integral gives
+ R3/a ->A3=6.6509288005718e7.
+The fifth AREAL lapse derivative requires six areal nu derivatives, or
+twelve regular-disk derivatives at the tip. Its exact limit is
+ width^6 |partial_r_phys^5 alpha|/a ->Bbolt=2.8694124526855e104.
+Consequently output/R3 ~4.3143033683338e96*width^-6. This is a proved
+unbounded comparison, not an unknown finite constant or an oversized
+upper estimator. It corrects the proposed H3 repair's PHYSICAL scope;
+the previous canonical C5 and bolt-value results remain unchanged.
+
+The same disk scaling rejects every source H^s with s<9 for this areal
+output. The endpoint s=9 is not decided. Regular-atlas H10 is a conservative
+replacement candidate, retaining the original outer graph and c4. Local
+fourth-order gain would give H14 and hence twelve regular derivatives;
+the actual areal conversion still costs powers through gamma^-6. This
+is not a proved numerical global inverse or original Y identification.
+
+The complete commonly restored quantum source was also tested at its
+first regularity implication. On an actual compact seed patch, the
+H14-normalized shape packet N^-14 chi cos(Nz) has quantum H10 output
+growing as log N. The exact physical logarithmic coefficient at z=.5
+has magnitude 1.6324995349592e-36 and is strictly nonzero. The accepted
+full interior remainder is lower order; all finite contacts, complete
+angular/thermal sums and actual finite returns are retained. They cannot
+cancel this leading logarithm. Thus H14 alone does not supply a bounded
+H10 source map. H^(14,log), with one logarithmic Fourier weight, repairs
+the principal local mapping; H^(14+epsilon) is also sufficient locally.
+No complete actual trial source or nonlinear family bound was evaluated.
+
+The accepted 10^4000 C interior remainder is compatible with this stronger
+local input: it needs only H13.25 for H10 output. After ONLY its known
+physical factor 2/B^2 its coefficient has log10=3968.06888128942.
+It still multiplies an input Sobolev norm and needs all source-chart,
+outer phase and inverse/output comparisons. It is not compared to physical
+ceilings. The 10^74739.22 absorption coefficient is not used in this forward
+regularity test. A seed theorem is not transferred to a nonlinear ball.
+The weak matter parametrix's Lipschitz joins cannot support ten source
+derivatives without a proved cancellation or a fully accounted replacement.
+
+The actual paired-domain theorem hypotheses were checked again: Moller's
+closed smooth manifold theorem supports only the previously transferred
+local symbol here; Grubb's mapping theorem requires symbol seminorms and
+|s|<tau and does not cover H10 across the C2,1 reflected mass cubic.
+The first missing full argument remains the commonly restored structured
+source map in the mixed weighted/regular atlas and its original physical
+output/boundary comparison. These are not supplied by weak action C2.
+
+Budget consequences: no new admission or complete coupled requirement
+closes. The complete bolt transport slice <2.644458801e-14 remains valid.
+The P32 bolt-tail upper estimator still misses by 5.528970304e34; P63
+passes only that exact tail. No finite degree or weak-tail improvement
+repairs an infinite general residual comparison. Cdef,3 IY<=1.0965284986e32,
+Cg,3<=1.0650980044e31 and CX,3<=9.9684408960e33 retain unknown left sides
+and conditional remaining margins. Actual kappa_m<=5e-5 and every other
+coupled entry remain unknown. Conditional mass debits and the limited
+two-fast .135973<.1599164 screen are not promoted to full coefficients.
+The original radius 1e-8 preservation/contraction inequalities, exact
+compatibility, physical matching, validity/noise and all-sector stability
+remain unresolved. There is no controlled-solution or nonexistence claim.
+
+RESEARCH DECISION: retain the construction and P32; change the generic
+residual admission method. Preserve the valid bolt certificate and use
+the complete structured F3 source/output map, keeping its smoothing and
+coupled cancellations. The arbitrary-source counterexamples do not
+invalidate that restricted map. Require a separately proved strong class
+for numerical application errors. No further degree, tail, cold/scalar
+or contact optimization is selected. The dominant obstacle is the missing
+structured source/boundary/output comparison, preceding the known scalar
+trace loss in the bolt-tail estimator.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): bound the complete commonly
+restored two-row source of R_S V F^3 in the mixed original outer graph plus
+regular-atlas H10 norm, including its H^(14,log) shape input and original
+areal output conversion. Preserve all independent phases, cutoff and
+regular-bolt returns. This tests whether the actual structured residual
+avoids the arbitrary-source failure without generic absorption. No full
+source norm, signed quantum center or numerical inverse application was
+computed in this milestone.
+
+Verification: ordinary proof and checker frozen before science; one
+development run, ordinary physical-conversion, bolt-scaling, quantum-log
+and scope review, then unchanged 512-bit acceptance. Forty-eight supporting
+checks and fifteen frozen inputs. No failed scientific run and no local
+Lean. Python, 63 flint and 1532 SymPy files match their pinned reference.
+Prior scientific snapshots, all eighteen inherited paths and closed audits
+are preserved. Algebra/arithmetic checks support the ordinary continuum
+arguments; they do not replace them.
+
+Remaining to-do list: complete structured quantum source and original physical output comparison; every coupled entry and certified application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current complete residual admission decision, 2026-10-26
 
 EXECUTED: the complete L2 interior residual tuple can pass the bolt
