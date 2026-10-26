@@ -1,3 +1,104 @@
+# Active checkpoint: strong quotient reconstruction unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the ordinary actual-domain quotient test](current-strong-quotient-reconstruction-test.md) and its frozen evidence.
+
+The COMPLETE signed coupled estimate remains UNRESOLVED. The retained
+quotient has an energy inverse bound, but energy and the recorded outer
+observations cannot reconstruct its transition source graph. An actual
+infinite-dimensional scalar subspace survives exact interior elimination;
+its graph/energy ratio grows as K^5 with coefficient >1.5e-7. This rules
+out that energy-only estimator. No signed mass/quartic/slow/fast column,
+actual kappa_m, strong quotient solve or controlled solution was computed.
+
+The actual quotient V/W_I, W_I=ker[(nu,T)|_(0,.2)], is represented
+isometrically by U=W_I^perp in the ORIGINAL energy. Exact block algebra
+gives S^-1=pi H^-1 j and ||S^-1||<=1. The existing depth-256 complete
+transport error gives ||S-tilde S||<9e-24 and an energy difference
+<1.123e-35 between the exact and defined retained linear solutions.
+These are not computed signed centers or original strong/physical bounds.
+
+The first unsupported quantitative passage remains strong reconstruction
+of the complete complementary quotient and original matching maps.
+The EXECUTED actual-domain test takes canonical (nu,T)=(s,0) with
+s compactly supported in (.14,.16). Its York components are (s,0).
+The complete canonical determinant has no nu slot; both remaining local
+rows, including Weyl/anomaly and off-shell contacts, have disjoint support
+from W_I. Hence H(v,W_I)=0 and exact interior elimination leaves v intact.
+The original outer graphs, localized equation moments, boundary phase
+coefficients and bolt traces vanish. Arbitrary global adjoint pairings
+are not asserted zero. No physical mode, contact or return was dropped.
+
+For s_K=K^-2 psi cos(Kz), the original scalar row has fourth coefficient
+rho Q^2, rho=6 D_R C/B^2=1.06028752060814...e-7. The actual whole-annulus
+bound Q>.16393599999649 gives, conservatively,
+
+ G_J(s_K)/E(s_K,0)=K^5(c_psi+o(1)), c_psi>1.57523e-7.
+
+This is an ordinary continuum asymptotic proof, not a finite-K numerical
+test. Compact-amplitude integration by parts proves the oscillatory limits.
+There is NO finite uniform energy-to-transition-source constant on these
+actual Schur-harmonic fields. The result does not refute a strong-source
+inverse or imply that the actual correction has high-frequency content.
+It makes precise the previously retained need for independent annular
+equations; it does not invalidate the earlier outer error certificates.
+
+The exact reference mass cancellation in both reference equations, its
+.1/.2 cutoff transition and fixed-temperature regular-bolt matching remain.
+It is not a global zero mode. Original conversion 2133<||d_chi||H3<2174
+and LINEAR |m|<1.627532e-15 still cost <=3.538254568e-12, leaving near
+shape >6.4617454e-12. Scalar quartic and the unrounded correlated slow
+pair remain. No unknown cutoff derivative or boundary-map norm is set to one.
+
+kappa_m<=5e-5 is UNKNOWN after full elimination. Its CONDITIONAL
+affine/feedback/energy debits remain 2.14765e-12,.0024731,.0195239.
+All remaining entries still require
+
+ Y_other+A_o*4.084e-22+Y_phase_return<=5.34235e-12,
+ eta_other+.0195239 gamma_E+A_o*3.712e-12 J_E+eta_phase_return<.0012069.
+
+Setting every other nonnegative debit to zero gives only conditional
+ceilings A_o<=1.30811704211558e10, A_o J_E<3.25134698275863e8 and
+gamma_E<.061816542801388. These are allowances, not actual coefficients.
+No remaining signed entry has been shown to fit. The new counterexample
+does not assert that these differently defined maps are infinite.
+
+The fast screen .135973<.1599164 retains its two-fast/admitted-family
+scope. The physical-X embeddings, independent phase variations and
+nonlinear ball remain unproved. All original admission/Y0/Z0/Z2 and
+contraction inequalities remain in the ordinary note. Exact compatibility,
+physical matching, semiclassical validity/noise and all-sector stability
+remain unresolved. An estimator failure is not a construction obstruction.
+
+RESEARCH DECISION: retain the construction and exact common-regulated
+transport method; change the attempted reconstruction to a conforming
+strong solve of the FULL near/transition quotient and original border.
+Energy-to-source conversion and outer phase data alone cannot close it.
+Do not optimize the already controlled transport, cold or scalar sources.
+The requested quantitative coupled feasibility milestone remains open.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): construct and evaluate a
+conforming signed quotient parametrix P including both .1/.2 equations,
+interface traces, original phase border and common-restored quantum block.
+Certify delta=||I-S P||<1 and M_i=||T_i P|| in the SAME strong source
+space, then bound every actual affine/mass/quartic/correlated-slow/fast
+column by M_i||(I-S P)b||/(1-delta), adding the known transport error
+through proved maps once. Delta<=1/2 is a sufficient proposed target.
+This turn executed the energy identity and reconstruction test, NOT that
+full signed solve. No actual controlled solution or obstruction is proved.
+
+Verification: ordinary argument and execution contract frozen before
+development; unchanged-source acceptance matches at 512 bits on 11 inputs.
+The 16 checks support the coefficient/algebra calculations, not the domain
+proof. No failed frozen run or Lean invocation. Python and all 1595 flint/
+SymPy files match the reference. All 18 inherited paths, closed audits
+and the previous checkpoint semantic state remain preserved.
+
+Remaining to-do list: complete signed strong quotient/border solve and original physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: coupled transport error certified; signed center unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.

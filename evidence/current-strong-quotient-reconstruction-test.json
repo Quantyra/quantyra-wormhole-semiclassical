@@ -1,0 +1,253 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T00:58:06.043731+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-strong-quotient-reconstruction-test.md": "25fe3e858bb8373b55077c9dab01c6d85e4dc8954147cb9d2ed0c69f0e3cffd7",
+        "checks/current_strong_quotient_reconstruction_test.py": "1a4f5bf56cff5313d9ac9cda76591b55f225f4faff91cf3c6837fb0816171498",
+        "evidence/current-strong-quotient-reconstruction-test-review.json": "cfc349fad624b4b169eeddccc33271196f1826fcd018c007b3088b10a432e894",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+        "notes/current-canonical-interior-schur-bound.md": "f242ef1ef6155aa0363d65d22bef328751f2a02c8048b92f25ee1de36fe443eb",
+        "notes/current-coupled-truncation-energy-error.md": "6f1b3893c9e3a819b22915784c06b11ff0f7046af39bdbdcf018d8b35858a1d1",
+        "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+        "notes/current-global-far-return-energy-bound.md": "a0d54bf4ab914ebd121c106c160792d3fb4961caf0fbb031e2f742b8572c0a82",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-adaptive-dirac-trace-remainder.json": "41e29487d32c5a4a3f358c5baabb1a3045133dfe88aa6c2cf911d3af6436948f"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-strong-quotient-reconstruction-test.md": "# Actual coupled quotient: energy inverse and failure of energy-only strong reconstruction\n\n2026-10-25 HST, E003/S169. Ordinary argument frozen before verification.\nThe stable semiclassical wormhole objective remains ACTIVE/INCOMPLETE.\nThe closed feasibility audit, construction and original targets are unchanged.\n\nOUTCOME: UNRESOLVED complete coupled estimate. Attempting to use the\nretained signed operator exposes a precise distinction: its full quotient\ninverse is bounded in energy, but neither energy nor the recorded outer\nobservations controls its transition equations. The latter failure is\nproved on an infinite-dimensional subspace of the ACTUAL coupled domain.\nNo signed mass/quartic/slow/fast column has been evaluated this turn.\nThis is an incomplete attempt at the requested milestone, not its completion.\n\n## 1. What is known about the actual retained operator\n\nKeep the closed full finite-seed form H on V, its original energy E,\nand W_I=ker[(nu,T)|_(0,.2)]. Use the ACTUAL paired mass/log realization,\nregular bolt and common limiting action. The accepted bounds are\n\n    ||H|| <= h=sqrt(1.338), ||H^-1|| <= 1,\n    ||P_I||=||(H|_(W_I x W_I))^-1|| <= 7.\n\nTake the V-orthogonal complement U=W_I^perp only to represent the quotient\nV/W_I isometrically. This is not a new physical metric norm, Dirac wall,\nor replacement of matching data. Let j:U->V and pi:V->U be inclusion and\northogonal projection. Bounded block elimination gives\n\n    S=H_UU-H_UI P_I H_IU,\n    S^-1=pi H^-1 j, ||S^-1|| <= 1.                    (1)\n\nHere V is identified with its dual by the SAME original positive energy\nform. To prove (1), solve Hx=j f, eliminate its W_I equation, and project\nthe U equation. Conversely the eliminated solution reconstructs x. Both\ninverses exist on their stated closed spaces by the preceding proofs;\nthere is no inference from an arbitrary indefinite compression.\n\nApply the same argument to the complete retained transport operator\ntilde H=H-delta H. The retained part includes ALL low words for EVERY\nangular and signed thermal label, LLL, Weyl/geometric conversion,\ncoincidence contacts, common finite restorations and finite-domain returns.\nIt is not an independently renormalized truncated determinant. Reuse\nepsilon=||delta H||<1.020e-25 and e_f=||delta f||<1.365e-78 from\ncurrent-coupled-truncation-energy-error.md. Thus\n\n    ||tilde S^-1|| <= 1/(1-epsilon),\n    ||S-tilde S|| <= epsilon [1+7h+(h+epsilon)K_t(1+7h)],\n    K_t=7/(1-7epsilon).                               (2)\n\nThe second line includes the perturbed output block, inverse AND input\nblock, in addition to the direct U-U error. It follows from the exact\nnoncommuting product identity in the preceding note. The supporting\narithmetic evaluates (2); it is an ENERGY error only.\n\nFor the exact linear solution x=H^-1 f with E(x)<1.1e-10 and the\nmathematically defined tilde x=tilde H^-1 tilde f,\n\n    E(x-tilde x) <= (e_f+epsilon*1.1e-10)/(1-epsilon).  (3)\n\nEquation (3) is an error between two defined solutions, not an executed\napplication of tilde S^-1, a computed signed center, or a physical-X bound.\n\n## 2. First unsupported strong step: an exact surviving transition subspace\n\nThe first missing quantitative implication is a strong reconstruction of\nthe signed quotient solution, with the independent .1/.2 equations and\noriginal interface/phase maps. It cannot be supplied by a finite constant\nconverting energy to the transition source graph. We now test that\nspecific possible closure directly, instead of assigning it a constant.\n\nLet J=(.14,.16). For any real nonzero s in C_c^infinity(J), use the\ncanonical direction v=(nu,T)=(s,0). Its frozen York coordinates are\n(s,xi)=(s,0). It is a genuine direction on the original paired domain:\nthe two copies agree, all outer mass/log coefficients vanish, the\noriginal boundary conditions hold, and the variation is zero near the\nregular bolt. Compactly supported test directions are a SUBSPACE of the\nactual domain, not a smooth surrogate for that domain.\n\nIn the fixed affine chart the full action is local in nu; the remaining\ncanonical determinant Gamma_hat depends on T only. Consequently every\nnonlocal quantum entry with an input nu vanishes identically. All Weyl,\nanomaly and other local contacts are still present in the nu column.\nThis is the already derived full scalar/mixed identity of\ncurrent-finite-local-action-assembly.md, not a truncation of a mode sum.\nThe common limiting identity is used; no raw cutoff trace is silently\nreplaced by a renormalized separate mode. Both original equations remain:\nthe mixed shape output of v is generally nonzero on J.\n\nFor every w_I in W_I, its canonical components vanish on (0,.2).\nLocality and disjoint supports give H(v,w_I)=0, including both rows.\nHence the EXACT interior elimination leaves v unchanged:\n\n    P_I(Hv)|_W_I=0, v-P_I(Hv)|_W_I=v.                 (4)\n\nThe same statement holds for tilde H, since the removed mass-determinant\ntail also has no nu slot. No approximate propagation argument is needed.\nIn particular these classes are nonzero in V/W_I. Their outer .05/.1\nscalar and shape graph observations and their asymptotic mass, quartic\nand correlated-slow coefficients all vanish. The localized equation\nmoments in the existing outer return also vanish. Physical bolt traces\nvanish. This does NOT assert that an arbitrary global adjoint pairing\nvanishes; such a pairing would be additional information.\n\nThus those recorded outer observations do not identify the full quotient.\nThis was already retained as a caution in the preceding work; (4) makes\nit an exact infinite-dimensional kernel statement for the actual Schur\nproblem. It does not invalidate the previous outer error certificates.\n\n## 3. Quantitative test in the original scalar equation\n\nWrite Q for the actual finite polynomial, beta for its constant term,\nD_R=96pi*10^22-1/(60pi), and\n\n    rho=6 D_R C/B^2 > 0, P s=(Q s')'-2Q s'/z.\n\nThe COMPLETE normalized scalar form from equation (6) of the local\nassembly is int[rho(Ps)^2+k(z)(s')^2+v(z)s^2] dz. On J its coefficients\nare smooth and bounded. Its scalar differential row A_nu has principal\ncoefficient rho Q^2 partial_z^4; E(s,0)^2 is this form divided by beta.\nThe full retained row has the same principal coefficient. This derives\nfrom the exact action, including the anomaly contribution in D_R.\nThe ordinary metric f(R) equations and their trace in\n[De Felice--Tsujikawa, equations (2.4) and (2.7)](https://arxiv.org/html/1002.4928v2#S2.SS1)\ngive an independent structural check, not a theorem about the paired\ndeterminant or its strong inverse.\n\nChoose any fixed nonzero real psi in C_c^infinity(J), and set\ns_K=K^-2 psi(z) cos(Kz), K tending to infinity. Define the annular\nscalar source graph in the ORIGINAL row and log derivative by\n\n    G_J(s)=||z^(4-sigma) A_nu s||_H3(J,dz/z), sigma=4.005,\n    ||g||_H3^2=sum_(r=0)^3 binom(3,r)||D^r g||_2^2, D=z partial_z.\n\nThere is no new localization transition because psi is compact in J.\nDirect differentiation, keeping all lower terms, gives\n\n    E(s_K,0)^2 -> rho/(2beta) int_J Q^2 psi^2 dz,\n    K^-10 G_J(s_K)^2 -> rho^2/2 int_J Q^4 z^(13-2sigma) psi^2 dz,\n    G_J(s_K)/E(s_K,0) = K^5 (c_psi+o(1)),\n    c_psi^2=rho beta [int Q^4 z^(13-2sigma) psi^2 / int Q^2 psi^2]. (5)\n\nThese limits use no elliptic regularity theorem: each lower differentiated\nterm is one or more powers of K smaller in L2 on a fixed compact interval.\nFor every smooth compact amplitude a, integrate exp(2iKz)a once by parts\nto bound its oscillatory integral by ||a'||_1/(2K); hence cos^2 and sin^2\nhave mean 1/2. This proves the limits and accounts for all lower contacts.\nThe checker verifies the leading derivative and the numerical coefficient,\nnot the continuum limit on behalf of this ordinary argument.\n\nThe actual polynomial obeys on ALL of J\n\n    Q >= beta-(4beta+2u+tau)(.16)^3-2|eps|(.16)^5 > .16.\n\nIts omitted u z^2 and (3beta+u+eps)z^4+eps z^6 terms have nonnegative\ncombined contribution for the retained parameter enclosures. Therefore\n\n    c_psi >= sqrt(rho beta)*.16*(.14)^((13-2sigma)/2) > 1.5e-7. (6)\n\nThis is a bound on the ASYMPTOTIC coefficient, not a certified finite-K\nerror or a physical perturbation frequency claim. Equations (4)-(6)\nprove that NO finite constant M satisfies G_J(v)<=M E(v) on the actual\nSchur-harmonic quotient fields. Adding the recorded outer observations\ndoes not repair that inequality, since they are zero for these fields.\nScaling each s_K further to meet any finite smooth coefficient cap\npreserves the ratio; no nonlinear-neighborhood admission is inferred.\n\nThis failure concerns a proposed ENERGY-ONLY estimator. It is not a\nfailure of a strong-source-to-strong-solution inverse, of the actual\nmass-column target, or of the construction. Nor does it prove the actual\naffine correction contains these oscillations. The exact scalar trace\nidentity lets us settle the estimator without optimizing scalar sources\nor selecting angular/thermal modes. The mixed equation is retained, but\ncannot cancel the separate required scalar output in a two-row norm.\n\n## 4. Full feasibility ledger: what still has not been calculated\n\nThe exact reference mass lift remains\nJ_m=int_0^z t^3/Q^2, n_m=-2beta QJ_m/z,\nb_m=beta z^3/Q+beta Q'J_m. Its f=2xz, alpha=0 cancels BOTH local\nreference equations before cutting off. The original chi_m equals one\nthrough .1 and zero by .2; its retained transition is\nf_cut=2xz chi_m-2F n_m Dchi_m, alpha_cut=n_m Dchi_m.\nNeither this transition nor regular-bolt matching is discarded. It is\nnot a global fixed-temperature zero mode. No previously unspecified\ncutoff derivative constant is assigned a value here.\n\nThe original basis conversion 2133<||d_chi||H3<2174, together with\nthe actual LINEAR |m|<1.627532e-15, retains the debit <=3.538254568e-12.\nNear shape still has >6.4617454e-12. The undifferentiated scalar quartic\nrow and B0(z^4-z^(4+e_*))+Delta z^(4+e_*) remain exact, with the\nunrounded e_*. These are not replaced by independent absolute slow terms.\n\nPost-elimination kappa_m<=5e-5 remains UNKNOWN. If established, it would\nspend 2.14765e-12 affine, .0024731 feedback and .0195239 energy allowance.\nAll remaining entries must simultaneously satisfy\n\n    Y_other+A_o*4.084e-22+Y_phase_return <= 5.34235e-12,\n    eta_other+.0195239 gamma_E+A_o*3.712e-12 J_E\n                                      +eta_phase_return < .0012069. (7)\n\nActual A_o,J_E,gamma_E,phase returns and signed centers are uncomputed.\nFor orientation ONLY, setting the other nonnegative budget debits to zero\nin (7) gives necessary ceilings for this sufficient certificate:\nA_o<=5.34235e-12/4.084e-22, A_o J_E<.0012069/3.712e-12 and\ngamma_E<.0012069/.0195239. These are NOT values of the unknown maps.\nThe counterexample forbids filling a transition-energy comparison by any\nfinite constant; it does not say these differently defined maps diverge.\n\nThe existing fast screen remains .028913+1e-11*1.0706e10=.135973\n<.1599164, reserve .0239434, only for its proved two-fast/admitted-family\nscope. Independent phase columns and original physical-X comparisons\nremain outside it. Original nonlinear requirements remain\n\n    E_center+1e-8 alpha_embed <= 1e-11,\n    R_X alpha_embed*.028913+Z0_other <= .25,\n    R_X alpha_embed^2*1.0706e10+Z2_other <= 5e7,\n    Y0+1e-8 Z0+5e-17 Z2 <= 1e-8, Z0+1e-8 Z2 < 1.\n\nNo such gate closes. Exact compatibility, physical matching,\nsemiclassical validity/noise and all-sector stability remain unproved.\n\n## 5. Decision and single next calculation\n\nRESEARCH DECISION: retain the construction and exact common-regulated\ntransport representation. Change the attempted reconstruction to a\nconforming STRONG solve of the full near/transition quotient and border;\ndo not try to complete it by energy-to-source conversion or outer phase\ndata alone. No additional transport-tail refinement is justified now.\nThe scalar subspace test is an actual-domain reason for this method\ndecision, not evidence for changing the physical construction.\n\nONE NEXT CALCULATION, PROPOSED NOT EXECUTED: construct and evaluate a\nconforming parametrix P for the FULL signed complementary quotient,\nincluding both .1/.2 equations, interface traces and original border.\nEvaluate the common-restored quantum block on that domain with every\nmode/contact/return retained, and certify its strong defect and original\nrow maps. With delta=||I-S P||<1 and M_i=||T_i P|| on that SAME source\nspace, the ordinary Neumann identity requires\n\n    ||T_i S^-1 b-T_i P b|| <= M_i ||(I-S P)b||/(1-delta). (8)\n\nEach actual affine and mass/quartic/correlated-slow/fast column must use\n(8), add the already certified transport errors through proved maps ONCE,\nand satisfy (7) and kappa_m<=5e-5 together. Delta<=1/2 is a convenient\nsufficient target, not a computed defect. Conformity includes the actual\nmass/log, interface and regular-bolt conditions; no finite matrix can\nreplace the infinite strong residual check.\n\nEXECUTED: exact quotient energy inverse/error identities, actual-domain\nsurviving transition subspace, quantitative K^5 failure of the specified\nenergy-only strong estimator, and the residual budget ceilings.\nNOT EXECUTED: the complete retained signed center, strong P/defect/maps,\nany actual kappa_m, or an actual controlled solution. The requested\nquantitative attainability decision therefore remains UNRESOLVED.\n\nRemaining to-do list: complete signed strong quotient/border solve and\noriginal physical-X/neighborhood comparisons; nonlinear admission and\ncontraction; exact compatibility; physical matching; validity/noise;\nall-sector stability; charge/return, opening, transport, preparation,\nseparate creation and the full stable semiclassical wormhole objective.\n",
+        "checks/current_strong_quotient_reconstruction_test.py": "\"\"\"Supporting arithmetic for the actual strong quotient reconstruction test.\n\nNo retained signed center, physical correction or mass-column certificate.\n\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import comb,factorial\nimport sys,json,traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nimport flint\nfrom flint import arb,ctx\nimport sympy as S\nROOT=Path(__file__).resolve().parents[1];STEM='current-strong-quotient-reconstruction-test'\nOWN=['notes/'+STEM+'.md','checks/current_strong_quotient_reconstruction_test.py','evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-seed-full-hessian-realization.md',\n 'notes/current-finite-local-action-assembly.md',\n 'notes/current-canonical-interior-schur-bound.md',\n 'notes/current-coupled-truncation-energy-error.md',\n 'evidence/current-coupled-truncation-energy-error.json',\n 'notes/current-global-far-return-energy-bound.md',\n 'evidence/current-global-mass-conversion.json',\n 'evidence/current-adaptive-dirac-trace-remainder.json']\nCHECKS=[]\ndef check(name,ok):\n    assert name not in {x['name'] for x in CHECKS}\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    if not ok:raise AssertionError(name)\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(55)\n    return {'ball':str(x),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(x):\n    d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef prior(stem):\n    r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n    assert r['status']=='passed';return r['result']\ndef execute():\n    ctx.prec=512\n    review=json.loads((ROOT/OWN[2]).read_bytes())\n    check('ordinary_argument_frozen',sha256((ROOT/OWN[0]).read_bytes()).hexdigest()==review['scientific_sha256'][OWN[0]])\n    p=prior('current-global-mass-conversion')['parameters']\n    pp=prior('current-adaptive-dirac-trace-remainder')['actual_parameters']\n    beta,u,eps,tau=[dec(p[k]) for k in ['beta','u','eps','tau']]\n    C,B2=[dec(pp[k]) for k in ['C','B2']]\n    DR=96*arb.pi()*arb('1e22')-1/(60*arb.pi())\n    rho=6*DR*C/B2;sig=arb('4.005');lo=arb('.14');hi=arb('.16')\n    qlo=beta-(4*beta+2*u+tau)*hi**3-2*abs(eps)*hi**5\n    check('actual_positive_parameters',beta>0 and C>0 and B2>0 and u>0 and tau>0)\n    check('discarded_polynomial_group_nonnegative',3*beta+u+eps-abs(eps)*hi**2>0)\n    check('whole_annulus_Q_lower',qlo>arb('.16'))\n    check('complete_scalar_fourth_coefficient',rho>arb('1e-7') and rho<arb('1.1e-7'))\n    cp=(rho*beta).sqrt()*arb('.16')*lo**((13-2*sig)/2)\n    check('uniform_asymptotic_ratio_coefficient',cp>arb('1.5e-7'))\n    z=S.symbols('z',positive=True);sigma=S.symbols('sigma',real=True)\n    rs,cr,cs,b2=S.symbols('rho c_R C B2',positive=True)\n    q=S.Function('Q')(z);s=S.Function('s')(z)\n    row=z**(4-sigma)*rs*q**2*S.diff(s,z,4)\n    for _ in range(3):row=S.expand(z*S.diff(row,z))\n    check('original_log_graph_highest_derivative',S.simplify(row.coeff(S.diff(s,z,7))-rs*q**2*z**(7-sigma))==0)\n    ar=8*S.pi*cr/(cs*b2)\n    check('local_action_complete_scalar_principal',S.simplify(72*ar*cs**2-cs/(10*S.pi*b2)-6*(96*S.pi*cr-1/(60*S.pi))*cs/b2)==0)\n    er=prior('current-coupled-truncation-energy-error')\n    e=dec(er['complete_energy_defect']);ef=dec(er['complete_source_dual_error'])\n    h=arb('1.338').sqrt();Kt=7/(1-7*e)\n    se=e*(1+7*h+(h+e)*Kt*(1+7*h))\n    xe=(ef+e*arb('1.1e-10'))/(1-e)\n    check('quotient_energy_error',se<arb('9e-24'))\n    check('defined_linear_solutions_energy_error',xe<arb('1.123e-35'))\n    check('approximate_quotient_inverse_upper',1/(1-e)<arb('1.0000001'))\n    ca=arb('5.34235e-12')/arb('4.084e-22')\n    cf=arb('.0012069')/arb('3.712e-12')\n    cg=arb('.0012069')/arb('.0195239')\n    check('conditional_affine_amplifier_ceiling',ca>arb('1.30e10') and ca<arb('1.31e10'))\n    check('conditional_feedback_product_ceiling',cf>arb('3.25e8') and cf<arb('3.26e8'))\n    check('conditional_energy_comparison_ceiling',cg>arb('.0618') and cg<arb('.06182'))\n    fast=arb('.028913')+arb('1e-11')*arb('1.0706e10')\n    check('conditional_two_fast_screen',fast<arb('.1599164'))\n    return {'precision_bits':ctx.prec,'actual_parameters':{'beta':enc(beta),'C':enc(C),'B2':enc(B2)},\n     'complete_scalar_fourth_coefficient_rho':enc(rho),'whole_annulus_Q_lower':enc(qlo),\n     'asymptotic_graph_to_energy_ratio_coefficient_lower':enc(cp),\n     'ratio_scope':'G_J/E = K^5 (c_psi+o(1)); this is not a finite-K interval test.',\n     'exact_quotient_energy_inverse_upper':1,'approximate_quotient_energy_inverse_upper':enc(1/(1-e)),\n     'quotient_energy_error_upper_expression':enc(se),'defined_linear_solutions_energy_error_upper_expression':enc(xe),\n     'conditional_ceilings':{'affine_A_o':enc(ca),'feedback_A_o_times_J_E':enc(cf),'gamma_E':enc(cg)},\n     'two_fast_conditional_screen':enc(fast),'two_fast_screen_reserve':enc(arb('.1599164')-fast),\n     'scope':{'ordinary_actual_domain_transition_counterexample':True,\n       'energy_only_transition_source_estimator_has_no_finite_constant':True,\n       'actual_paired_mass_log_domain_preserved':True,'common_regulator_complete_spectrum_preserved':True,\n       'signed_center_computed':False,'strong_quotient_parametrix_computed':False,'actual_kappa_m_computed':False,\n       'complete_coupled_bound_certified':False,'nonlinear_admission':False,'nonlinear_contraction':False,\n       'exact_compatibility':False,'physical_matching':False,'semiclassical_validity_noise':False,\n       'all_sector_stability':False,'actual_controlled_solution':False,'construction_obstruction':False,\n       'full_goal_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,'input_sha256_before':hashes,\n      'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                 'flint_version':flint.__version__,'sympy_version':S.__version__}}\n    try:\n        run['result']=execute();run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after']);run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    message=json.dumps({'mode':mode,'status':run['status'],'supporting_checks':len(CHECKS),\n       'result':run.get('result'),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-strong-quotient-reconstruction-test-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_execution_contract_frozen_before_development\",\n  \"outcome\": \"Unresolved complete coupled signed bound; exact quotient energy identities and a verified actual-domain failure of energy-only transition-source reconstruction.\",\n  \"quantitative_role\": \"Tests the first missing strong reconstruction in the complete coupled Schur problem. Exact conformal annular fields survive interior elimination, have zero recorded outer/phase observations, and exhibit a source-graph/energy ratio growing as K^5. Thus no larger finite energy conversion constant can close that missing step. No further tail optimization is commissioned.\",\n  \"domain_review\": [\n    \"Use original full limiting Hessian, canonical affine chart and frozen York congruence. V/W_I is the full quotient, not a finite border.\",\n    \"Orthogonal U only represents the original energy quotient; no physical norm is changed. Both full and restricted inverse hypotheses are already established.\",\n    \"The exact bounded block identity gives S inverse as compression of the FULL inverse, after interior invertibility was proved. It does not infer interior invertibility from an indefinite compression.\",\n    \"All retained angular and thermal words, coincidence/local contacts, common finite restorations and finite-domain returns remain in H and tilde H. Their actual signed evaluation is missing.\",\n    \"Compact conformal variations in (.14,.16) are actual allowed paired directions, not a replacement domain. They preserve original boundary jets, bolt and period.\",\n    \"The canonical determinant has no nu input. Its zero here follows from the previously derived common-limit identity, not cancellation of individually unregulated traces. Weyl/anomaly and off-shell local contacts remain.\",\n    \"Both local original equations vanish outside the test support and pair to zero with W_I. The mixed row on the support is retained and generally nonzero.\",\n    \"The original localized outer equation moments vanish; no claim is made that arbitrary global adjoint pairings vanish.\",\n    \"The scalar fourth coefficient includes R2 and anomaly. The complete source row, original action factor beta, and D=z d/dz H3 weights determine K^5 and its coefficient.\",\n    \"Oscillatory limits follow by finite differentiation and one integration by parts for compact smooth amplitudes. No smooth-boundary elliptic theorem is used.\",\n    \"The asymptotic coefficient lower bound is not a certified finite-frequency numerical experiment. It proves an unbounded operator ratio on the actual domain.\",\n    \"Failure of energy-to-source control does not imply failure of a strong-source inverse, actual mass return, actual correction, or construction.\",\n    \"Original mass lift/cutoff transition, conversion debit, scalar quartic, exact correlated slow pair, physical norms and conditional budgets remain unchanged.\"\n  ],\n  \"primary_source_review\": {\n    \"url\": \"https://arxiv.org/html/1002.4928v2#S2.SS1\",\n    \"version\": \"1002.4928v2\",\n    \"inspected\": \"Section 2.1, equations 2.4 and 2.7, via web open/find during this turn.\",\n    \"application\": \"Metric f(R) variation and trace as structural check only; no determinant-domain or strong-inverse theorem transferred.\"\n  },\n  \"theorem_hypotheses\": \"Bounded Hilbert-space block algebra on previously proved closed domains; ordinary differentiation of the complete local scalar form; elementary integration by parts on an actual compactly supported tangent subspace. No new external regularity theorem is invoked.\",\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"targets\": [\n      \"rho between1e-7 and1.1e-7\",\n      \"Q>.16 throughout(.14,.16)\",\n      \"asymptotic graph/energy coefficient>1.5e-7\",\n      \"quotient energy approximation error<9e-24\",\n      \"defined linear-solution energy error<1.123e-35\",\n      \"conditional allowance ceilings and retained fast screen\"\n    ],\n    \"verification\": \"Freeze before development. Retain failed snapshots. Unchanged-source acceptance after ordinary review. No Lean.\"\n  },\n  \"first_unsupported_step\": \"Quantitative strong quotient reconstruction of the actual retained signed center, including annular equations/interface traces and independent phase maps.\",\n  \"claims_boundary\": [\n    \"Complete coupled calculation not executed\",\n    \"No actual mass/quartic/slow/fast column certified\",\n    \"No physical-X/neighborhood admission or nonlinear contraction\",\n    \"No compatibility, matching, validity/noise or all-sector stability\",\n    \"No construction obstruction or controlled solution\"\n  ],\n  \"scientific_sha256\": {\n    \"notes/current-strong-quotient-reconstruction-test.md\": \"25fe3e858bb8373b55077c9dab01c6d85e4dc8954147cb9d2ed0c69f0e3cffd7\",\n    \"checks/current_strong_quotient_reconstruction_test.py\": \"1a4f5bf56cff5313d9ac9cda76591b55f225f4faff91cf3c6837fb0816171498\"\n  },\n  \"unfrozen_numerical_previews\": [],\n  \"local_lean_invocations\": 0\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "actual_parameters": {
+          "beta": {
+            "ball": "[0.166666666663273593687327683704 +/- 1.53e-31]",
+            "decimal_enclosure": {
+              "mid": "166666666663273593687327683704044017413059437140807679099999",
+              "rad": "108516590969635794015794233345",
+              "exponent": "-60"
+            }
+          },
+          "C": {
+            "ball": "[49119682270.77026011517 +/- 3.20e-12]",
+            "decimal_enclosure": {
+              "mid": "491196822707702601151705468084281147600478334425133652985094",
+              "rad": "26525844162143483700278578564644732929",
+              "exponent": "-49"
+            }
+          },
+          "B2": {
+            "ball": "[8.383092440707457726322e+42 +/- 8.93e+20]",
+            "decimal_enclosure": {
+              "mid": "83830924407074577263224399887754585293455359999999999999999",
+              "rad": "4527146570162070793918943199676596225",
+              "exponent": "-16"
+            }
+          }
+        },
+        "complete_scalar_fourth_coefficient_rho": {
+          "ball": "[1.060287520608141015600e-7 +/- 2.92e-29]",
+          "decimal_enclosure": {
+            "mid": "106028752060814101560017698998623334424477700730406800584115",
+            "rad": "11451892397423341173010239101224353793",
+            "exponent": "-66"
+          }
+        },
+        "whole_annulus_Q_lower": {
+          "ball": "[0.163935999996495742805274037244 +/- 5.90e-31]",
+          "decimal_enclosure": {
+            "mid": "163935999996495742805274037243520763732307286616966909412013",
+            "rad": "110439848506760751867278393345",
+            "exponent": "-60"
+          }
+        },
+        "asymptotic_graph_to_energy_ratio_coefficient_lower": {
+          "ball": "[1.575236010607910946821e-7 +/- 5.43e-29]",
+          "decimal_enclosure": {
+            "mid": "157523601060791094682054287103637177334653485941938415178503",
+            "rad": "8506989252189338685449830443419435009",
+            "exponent": "-66"
+          }
+        },
+        "ratio_scope": "G_J/E = K^5 (c_psi+o(1)); this is not a finite-K interval test.",
+        "exact_quotient_energy_inverse_upper": 1,
+        "approximate_quotient_energy_inverse_upper": {
+          "ball": "[1.0000000000000000000000001019745491609029405348 +/- 4.17e-47]",
+          "decimal_enclosure": {
+            "mid": "100000000000000000000000010197454916090294053481411727308535",
+            "rad": "2753649340417",
+            "exponent": "-59"
+          }
+        },
+        "quotient_energy_error_upper_expression": {
+          "ball": "[8.43901323346487534189e-24 +/- 3.90e-45]",
+          "decimal_enclosure": {
+            "mid": "84390132334648753418883880045053232756819503265632177424357",
+            "rad": "22787772739496620390297678853938610177",
+            "exponent": "-82"
+          }
+        },
+        "defined_linear_solutions_energy_error_upper_expression": {
+          "ball": "[1.121720040769932345883e-35 +/- 3.48e-57]",
+          "decimal_enclosure": {
+            "mid": "112172004076993234588295529000328325376122535632197109200356",
+            "rad": "30290143077638662790915601080810209281",
+            "exponent": "-94"
+          }
+        },
+        "conditional_ceilings": {
+          "affine_A_o": {
+            "ball": "[13081170421.1557296767874632713026444662095984329089128305582761998041136141038197845249755142017629774730656219392752203721841332027424094025465230166503 +/- 4.38e-143]",
+            "decimal_enclosure": {
+              "mid": "130811704211557296767874632713026444662095984329089128305582",
+              "rad": "2",
+              "exponent": "-49"
+            }
+          },
+          "feedback_A_o_times_J_E": {
+            "ball": "[325134698.275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586206896551724137931034482759 +/- 5.11e-145]",
+            "decimal_enclosure": {
+              "mid": "325134698275862068965517241379310344827586206896551724137931",
+              "rad": "2",
+              "exponent": "-51"
+            }
+          },
+          "gamma_E": {
+            "ball": "[0.0618165428013870179625996855136524977079374510215684366340741347783998074155266109742418266842178048443190141313979276681400744728256137349607404258370510 +/- 1.49e-155]",
+            "decimal_enclosure": {
+              "mid": "618165428013870179625996855136524977079374510215684366340741",
+              "rad": "2",
+              "exponent": "-61"
+            }
+          }
+        },
+        "two_fast_conditional_screen": {
+          "ball": "[0.135973000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.57e-155]",
+          "decimal_enclosure": {
+            "mid": "135972999999999999999999999999999999999999999999999999999999",
+            "rad": "2",
+            "exponent": "-60"
+          }
+        },
+        "two_fast_screen_reserve": {
+          "ball": "[0.0239434000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.88e-155]",
+          "decimal_enclosure": {
+            "mid": "239434000000000000000000000000000000000000000000000000000000",
+            "rad": "1",
+            "exponent": "-61"
+          }
+        },
+        "scope": {
+          "ordinary_actual_domain_transition_counterexample": true,
+          "energy_only_transition_source_estimator_has_no_finite_constant": true,
+          "actual_paired_mass_log_domain_preserved": true,
+          "common_regulator_complete_spectrum_preserved": true,
+          "signed_center_computed": false,
+          "strong_quotient_parametrix_computed": false,
+          "actual_kappa_m_computed": false,
+          "complete_coupled_bound_certified": false,
+          "nonlinear_admission": false,
+          "nonlinear_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-strong-quotient-reconstruction-test.md": "25fe3e858bb8373b55077c9dab01c6d85e4dc8954147cb9d2ed0c69f0e3cffd7",
+        "checks/current_strong_quotient_reconstruction_test.py": "1a4f5bf56cff5313d9ac9cda76591b55f225f4faff91cf3c6837fb0816171498",
+        "evidence/current-strong-quotient-reconstruction-test-review.json": "cfc349fad624b4b169eeddccc33271196f1826fcd018c007b3088b10a432e894",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+        "notes/current-canonical-interior-schur-bound.md": "f242ef1ef6155aa0363d65d22bef328751f2a02c8048b92f25ee1de36fe443eb",
+        "notes/current-coupled-truncation-energy-error.md": "6f1b3893c9e3a819b22915784c06b11ff0f7046af39bdbdcf018d8b35858a1d1",
+        "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+        "notes/current-global-far-return-energy-bound.md": "a0d54bf4ab914ebd121c106c160792d3fb4961caf0fbb031e2f742b8572c0a82",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "evidence/current-adaptive-dirac-trace-remainder.json": "41e29487d32c5a4a3f358c5baabb1a3045133dfe88aa6c2cf911d3af6436948f"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "ordinary_argument_frozen",
+          "passed": true
+        },
+        {
+          "name": "actual_positive_parameters",
+          "passed": true
+        },
+        {
+          "name": "discarded_polynomial_group_nonnegative",
+          "passed": true
+        },
+        {
+          "name": "whole_annulus_Q_lower",
+          "passed": true
+        },
+        {
+          "name": "complete_scalar_fourth_coefficient",
+          "passed": true
+        },
+        {
+          "name": "uniform_asymptotic_ratio_coefficient",
+          "passed": true
+        },
+        {
+          "name": "original_log_graph_highest_derivative",
+          "passed": true
+        },
+        {
+          "name": "local_action_complete_scalar_principal",
+          "passed": true
+        },
+        {
+          "name": "quotient_energy_error",
+          "passed": true
+        },
+        {
+          "name": "defined_linear_solutions_energy_error",
+          "passed": true
+        },
+        {
+          "name": "approximate_quotient_inverse_upper",
+          "passed": true
+        },
+        {
+          "name": "conditional_affine_amplifier_ceiling",
+          "passed": true
+        },
+        {
+          "name": "conditional_feedback_product_ceiling",
+          "passed": true
+        },
+        {
+          "name": "conditional_energy_comparison_ceiling",
+          "passed": true
+        },
+        {
+          "name": "conditional_two_fast_screen",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T00:58:06.456872+00:00"
+    }
+  ]
+}
