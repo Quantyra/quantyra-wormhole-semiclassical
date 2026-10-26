@@ -1,3 +1,143 @@
+# Current complete-application feasibility decision, 2026-10-26
+
+EXECUTED: the full coupled application error now has an UNCONDITIONAL
+physical bolt comparison, with both forcing rows retained and no assumed
+F factor. The available complete retained-operator error certificate is
+excessive by 2.67160e58 against half the bolt allowance. The original
+strong application residual, graph/phase comparisons and coupled solve
+remain UNRESOLVED. Degree 76 is not adopted. No physical gate closes;
+the full stable-wormhole objective and closed audit remain unchanged.
+
+The previous turn was PROGRESS: it supplied a finite complete bolt map
+and tested polynomial degree/application consequences. This turn attempted
+the selected complete original-source-to-output application residual.
+It did NOT execute a quantum inverse or obtain the full strong residual.
+It closes the earlier unfiltered bolt comparison and identifies exactly
+which original-row data the remaining calculation must retain.
+
+Preserve the actual paired mass/log domain, complementary adjoint, fixed
+temperature, exact ultraviolet logarithm, common regulator, complete angular
+and thermal sums, coincidence/density contacts, cutoff transitions and
+regular-bolt returns. For H=[-A,-C;-C*,D] and H e=(r_nu,r_T), BOTH equations
+give
+ e_nu=-A^-1 C e_T-A^-1 r_nu=(C*)^-1(D e_T-r_T).
+The inhomogeneous -r_T term cannot be omitted by applying the homogeneous
+R_S reconstruction to an arbitrary application error. In York coordinates
+the full error is R(s,xi), without any assumed F or F^3 factor.
+
+The accepted scalar fourth-order and actual inverse-York endpoint estimates
+give the numerical complete energy-to-bolt bound
+ |L_b e|<=Kapp E(e), Kapp<1.984644812e84.
+The full saddle inverse therefore gives
+ |L_b(H^-1 f-u_trial)|<=Kapp ||f-Hu_trial||E*.
+This is a true backward-error comparison on the original form realization.
+It is not a bound for the homogeneous R_S V map, nor a graph/C5 estimate.
+It avoids 10^4000 C and 10^74739.22 for THIS low-order output only.
+
+The original normalized source rows also have an exact recovery. With
+r=z^4 F, sigma=4.005, delta=.005 and
+ G=(D-4)r_T-(D-6)r_nu/3=z^sigma g, r_nu=z^sigma f,
+the whole undifferentiated row is
+ r_T=c4 z^4+z^sigma[f/3+K_delta(g-2f/3)],
+ K_delta h(x)=int_(-infinity)^x exp[-delta(x-y)]h(y)dy.
+c4 is the ACTUAL original finite part, not a new freely variable source.
+The exact whole-frequency bounds are ||K_delta||<=200 and
+||(I-2K_delta)/3||<=133. Including both rows gives Krow<240.185984.
+The physical source-to-energy conversion has MR/beta<120.770638.
+Consequently, if Rfast is the global H3 norm of the two original residual
+rows after their exact prescribed phase cancellation,
+ |bolt error|<=5.756941420e88 Rfast+1.071912039e86 |c4|.
+Full interval coefficients and receipt bounds, rather than rounded printed
+values, define the certificate. The original cutoff/transition equations
+remain inside these rows. This stronger GLOBAL residual test is not silently
+identified with original Y or its outer observations. I_Y remains unknown.
+
+The source r=(0,z^4) demonstrates the missing information: both differentiated
+fast rows vanish but c4=1 and the original source has nonzero physical norm.
+This tests the original two-row residual, not a physical construction or
+the actual quantum-tail value. Any unmatched residual power below sigma
+also fails the original fast graph regardless of its small coefficient.
+The exact implicit slow root and prescribed source logarithms must therefore
+be retained BEFORE interpreting numerical fast residuals.
+
+EXECUTED FULL APPLICATION TEST: let H_tilde and f_tilde be the already
+defined commonly restored retained transport operator/source, with every
+mode and finite return. Its actual FORM errors obey epsilon<=1.020e-25,
+e_f<=1.365e-78 and E(H^-1 f)<=1.1e-10. Both equations give
+ E(H^-1 f-H_tilde^-1 f_tilde)<=(e_f+epsilon*1.1e-10)/(1-epsilon).
+Propagating this COMPLETE error through Kapp gives
+
+| Upper-certificate contribution | Physical bolt debit | Ratio to half allowance |
+| --- | ---: | ---: |
+| Full source plus Hessian error | 2.226771479e49 | 2.671591456e58 |
+| Source error alone | 2.709040168e6 | 3.250198162e15 |
+| Hessian error alone | 2.226771479e49 | 2.671591456e58 |
+
+These are computed UPPER expressions, not lower bounds on actual errors.
+They verify failure of this estimator; they do not prove infeasibility of
+the construction. The last turn's favorable F-filtered diagnostic is now
+superseded, for this complete coupled response, by an unconditional test.
+
+For half the bolt margin 8.335e-10, the computed sufficient residual targets
+are <=4.1997439300e-94 in energy dual; or, on the separate zero-other-debit
+slices, Rfast<=1.4478174071e-98 and |c4|<=7.7758246004e-96.
+For the approximation split, source-exact requires
+epsilon<=3.8179490272e-84; Hessian-exact requires e_f<=4.1997439300e-94.
+These are NOT simultaneous allocations or attained errors. No source,
+boundary or graph coefficient has been set equal to its ceiling.
+
+The remaining first strong step is precise: H_tilde^-1 exists on the
+accepted form domain, but its original strong mass/log graph membership
+and numerical phase/output comparisons have not been certified. A numerical
+trial can instead retain that phase exactly and be tested against BOTH
+original equations. The current code does not yet evaluate the retained
+common-regulated full quantum center, such a conforming inverse trial,
+its global H3 residual or c4. The earlier transition counterexample also
+rules out repairing these omissions by a generic energy-to-H3 constant.
+
+P76 still closes only its conditional exact-polynomial bolt tail
+(<1.270280475e-10). Increasing degree does not reduce the application
+error above. The original P32 defect still needs
+C_def,3 I_Y<=1.0965284986e32, with graph/physical ceilings 1.0650980044e31
+and 9.9684408960e33 only when their margins remain. Every coupled entry
+still needs its signed center, input comparison and application error.
+Actual kappa_m<=5e-5 remains UNKNOWN; its hypothetical costs 2.14765e-12,
+.0024731 and .0195239 do not prove the remaining budgets fit. Preserve
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+The mass conversion 2133--2174, scalar quartic, exact correlated slow pair
+and infinite matching quotient remain. The quantum-fast .135973<.1599164
+screen retains only its two-fast admitted-family scope. All nonlinear
+admission/contraction, compatibility, matching, validity/noise and stability
+requirements stay unresolved wherever unproved.
+
+RESEARCH DECISION: keep the construction and recorded P32. Do not adopt
+P76 or optimize cold/scalar/local/transport components on this evidence.
+Use a conforming original-domain trial and complete original-row backward
+error, preserving coupled cancellations, instead of generic energy-error
+propagation. Its dominant known loss is the energy-to-bolt comparison;
+the dominant missing argument is the full strong residual/phase map.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate and enclose the
+complete original-row residual of an explicit phase-conforming coupled
+inverse trial, including the quartic finite part c4 and the full .1/.2
+transition equations. Apply the same common-restored full quantum operator
+and retain all angular/thermal and finite returns. This will distinguish
+a small signed strong residual from the excessive generic propagation
+bound; reporting only its differentiated rows would not execute the test.
+
+Verification: ordinary proof and checker frozen before each run; two passed
+development runs retained (the second clarifies the form/strong-domain
+distinction), ordinary review, then unchanged 512-bit acceptance. Nineteen
+supporting checks, thirteen frozen inputs. Python and all 63 flint / 1532
+SymPy reference files match. No failed scientific run in this campaign,
+no local Lean and no numerical inverse application. Earlier science/failures,
+eighteen inherited paths and closed audits remain unchanged.
+
+Remaining to-do list: execute the complete original strong application residual and signed coupled solve; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current complete-output feasibility decision, 2026-10-26
 
 EXECUTED: the COMPLETE two-row three-residual bolt output now has a
