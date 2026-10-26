@@ -1,3 +1,107 @@
+# Active checkpoint: two-residual physical estimator fails; full bound unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [ordinary full-tail output test](current-schur-physical-output-test.md).
+
+The complete original-space coupled estimate remains UNRESOLVED.
+Executed result: the two-residual Schur tail has an UNBOUNDED
+form-to-physical-areal-C5 output map. Actual-domain bolt packets and
+the full mixed/quantum principal symbols establish this estimator
+failure. It does not invalidate the bounded graph/phase domain, reject
+a stronger-source certificate, or obstruct the construction.
+
+The previous milestone supplied a fixed-seed graph/phase domain and
+full affine input conversion, not a numerical complete strong bound.
+This milestone tests the physical output required by that approach.
+
+The exact COMPLETE mixed coefficient factors as c2=Q p2. Interval
+evaluation over .99<=z<=1, containing the actual bolt, proves p2 is
+strictly negative (the retained enclosure is approximately
+-3.4641e-8 +/-7.016e-10). No independently rounded Q is divided out.
+The physical second-order coefficient is p2/(8piG), also nonzero.
+
+For regular radial packets with radius d_k=k^(-3/4), the energy
+normalization uses the actual two-dimensional disk measure. The full
+Schur scalar reconstruction retains the extra quantum log:
+nu=(C*)^-1 D T has principal ratio -1/3+[G/(30pi D_R)]log k.
+Five physical areal lapse derivatives require six areal scalar
+derivatives. The resulting two-residual norm ratio grows at least as
+c k^(5/4)/(log k)^(3/2), with c>0, for sufficiently large k.
+There is no numerical onset claim. All packets lie in the actual
+paired core; the complete UV coefficient is retained. Common contacts,
+thermal/angular sums and finite returns are not dropped; the local
+elliptic symbol and smoothing distant returns show they cannot cancel
+this leading oscillatory contribution. This is a continuum necessary
+test of the complete output map, not a selected-mode solver.
+
+Three residual factors supply four additional disk derivatives: H14
+with the remaining logarithmic reserve supports twelve disk point jets,
+hence the required five areal output derivatives at the fixed positive
+bolt gap. This is a finite UNKNOWN constant at the seed, not a numerical
+bound or a nonlinear-neighborhood theorem. The original strong input
+embedding is still required. Two factors remain eligible for graph/phase
+outputs; they cannot supply the stated form-to-physical C5 comparison.
+
+For a single three-power composite at N=32, the complete affine tail is
+bounded conditionally by C_i,3 times 1.553815934756932e-23. Compared with
+the two-power coefficient, this costs a factor 3.958579881656805.
+If the FULL remaining graph margin is available, its ceiling is
+C_g,3<=3.43821290572343e11; use 3.43e11 as a conservative target.
+If a physical tail allowance 5e-9 is actually available, its ceiling
+is C_X,3<=3.21788436336390e14; use 3.21e14 conservatively.
+These are allowances for UNKNOWN constants. Signed centers and all
+other debits must be subtracted first. Neither margin is newly proved.
+
+No original strong delta<=1/2, signed coupled column, actual kappa_m,
+admission or feedback requirement closes. The conditional mass target
+kappa_m<=5e-5 still spends 2.14765e-12 affine, .0024731 feedback and
+.0195239 energy. Every remaining entry must jointly fit
+
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+
+All those unknown entries remain unknown. Keep the exact reference mass
+lift, its .1/.2 cutoff, both original equations, regular-bolt matching,
+scalar quartic and exact correlated slow phase. Its original .05/.1
+graph conversion 2133<||d_chi||H3<2174 and known LINEAR debit
+<=3.538254568e-12 are retained, not promoted to a nonlinear bound.
+The fast screen .135973<.1599164 keeps only its two-fast/admitted-family
+scope; it is not a bound for independent boundary-phase inputs.
+
+Still unproved are E_center+1e-8 alpha_embed<=1e-11,
+R_X alpha_embed*.028913+Z0_other<=.25,
+R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,
+Y0+1e-8 Z0+5e-17 Z2<=1e-8 and Z0+1e-8 Z2<1.
+No actual controlled solution, exact compatibility, physical matching,
+semiclassical validity/noise or all-sector stability is established.
+
+RESEARCH DECISION: keep the construction; change the physical tail
+estimator to at least three residual factors. Stop attempting a finite
+form-to-C5 constant for P E^2. The graph-only two-power estimate remains
+numerically unresolved. The physical norm and admission radius are unchanged.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): quantify the COMPLETE
+three-residual graph/physical/phase return and original source comparisons,
+then enclose the signed coupled columns. The first missing numerical
+argument is the higher-output bound for the commonly restored quantum
+kernel and contacts on the actual finite geometry. Existing interior
+H3-to-L2 bounds and metric-parameter Cauchy estimates do not supply
+spatial derivatives. No complete coupled numerical inverse was applied.
+
+Verification: ordinary argument and checker frozen before execution;
+unchanged 512-bit acceptance after ordinary review agrees with development.
+One initial SymPy beta-name parsing failure and its source snapshot are
+preserved. Eighteen supporting checks, thirteen frozen inputs; Python,
+63 flint and 1532 SymPy files match the retained reference. No local Lean.
+Checks support the ordinary packet/regularity argument and do not replace
+the unexecuted full numerical bound. All eighteen inherited paths and
+closed audits remain unchanged.
+
+Remaining to-do list: numerical complete coupled graph/physical/phase return and signed solution; original input comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: composite domain established at seed; numerical bound unresolved
 
 2026-10-25 HST, E003/S169.

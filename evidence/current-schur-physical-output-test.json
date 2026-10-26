@@ -1,0 +1,203 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T06:08:21.277051+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-schur-physical-output-test.md": "59d21052bef7b8fef9e8f6d44031e9b725519882cbc912c7d532e813910f0bb0",
+        "checks/current_schur_physical_output_test.py": "7695d09698583d6eac3a88cf8adb87af00a8414128616c25119f51e25f1cdc93",
+        "evidence/current-schur-physical-output-test-review.json": "9af3eb965ae4a74ee204496b56fb505a2aef8f5c8ee595652e4171cd421d3591",
+        "evidence/current-schur-residual-phase-domain.json": "b66511101309b0f01d69b899077a1a29c2a9a5bdb6291a0079c3313f36a02b2b",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "notes/current-schur-residual-phase-domain.md": "dc251bb7fdd5c6bde4c55ab47a30989adbc69cf8872033ba0915a4c5dab34914",
+        "notes/current-schur-form-preconditioner-test.md": "00365f058df419a9232f1185cfa318a7af52c46ac9f4dc7804bfcf7d76eac2a8",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-global-mixed-schur-preconditioner.md": "13b56d26995fb9364228b254910915e3d7c5cbc89cfc8d115b3f766681a4edfc",
+        "notes/current-short-travel-strong-domain.md": "3f292f320acd20cba17292a1d8aa087c5e6dd4c956ecff672f4da4fed840f9ea",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-schur-physical-output-test.md": "# Bolt concentration tests the physical output of the complete Schur tail\n\n2026-10-25 HST, E003/S169. Ordinary argument and execution contract,\nfrozen before calculation. Previous turn: PROGRESS (fixed-seed composite\ndomain and affine conversion). The full stable semiclassical wormhole\nobjective remains active; the closed audit is unchanged.\n\nThis is a necessary output-map test for the COMPLETE candidate. It is not\na numerical application of the quantum inverse, a computed coupled return,\nor another certificate of its unknown strong defect. In particular, a\nfailure on the form source space does not prove failure on a stronger\nsource space with its own, still required, physical input comparisons.\n\n## 1. Candidate, domain and the point at which the quantitative proof stops\n\nKeep H=[-A,-C;-C*,D], K=C^-1 A(C*)^-1, S=I+KD and the original York\nreturn R(s,xi)=(s+Uxi,Vxi). On the actual finite seed,\nR*HR=[-a,b;b*,ell], B=b*a^-1b, q=.338, and\n\n P=V ell^-1 J_F, J_F=V* K^-1,\n Y_F=J_F^-1(V_ell*), X_F=V(V_ell), E=I-SP.\n\nThe norms are the transported full ell dual/form norms. They are NOT the\noriginal strong source and physical solution norms. ell includes the exact\nUV logarithm, all angular and thermal modes, common-restored coincidence\ncontacts, density/return terms and the actual finite boundary realization.\nRetain the paired first-order Dirac domain and complementary adjoint,\none-sided mass/log fields, fixed clock, and regular rotational bolt.\nThe reflected mass cubic is not replaced by a smooth double. The original\nYork endpoint conditions are J(0)=0 and (Q^2 J'/z^4)(z_h)=0.\n\nThe earlier ordinary argument establishes ||E||Y_F<=q, not the requested\ndelta<=1/2 in the ORIGINAL strong norm. With Q_T=(ell+B)^-1 and F=Q_T B,\n\n P E^p=V F^p (I-F)^(-p-1) Q_T J_F.                 (1)\n\nAll factors are the full operators, with this order. Q_T J_F and\n(I-F)^(-p-1) are bounded isomorphisms between the indicated form spaces.\nThe prior argument puts V F^2 in the original graph/phase domain, with\nfinite UNKNOWN C_g. It deliberately left the physical areal C5 output\nunproved. That is the output comparison tested here, before assigning it\na finite numerical constant. The first numerical strong-kernel estimate\nis still missing, independently of the result of this test.\n\nThe published theorem check remains limited: Grubb Theorem 2.3 requires\nidentified symbol seminorms, |s|<tau and N>dimension/2+1; it does not give\nthese seminorms or a global inverse. Gaarde--Grubb Theorem 2.4 assumes a\nsmooth parameter-elliptic differential boundary realization; Proposition\n2.9 describes a singular reflected logarithm. Neither identifies our\nfull Hessian or permits a smooth mass-cubic double. Here the local symbol\nis the previously derived full interior symbol, and the regular bolt is\nan interior point of its smooth disk. The earlier one-sided weighted\nargument, not these citations alone, treats the distant paired boundary.\nSources rechecked: https://web.math.ku.dk/~grubb/CPDE14.pdf (Theorem 2.3),\nhttps://arxiv.org/pdf/math/0703878 (section 2, Theorem 2.4, Proposition 2.9).\n\n## 2. Check that the actual mixed principal coefficient does not vanish\n\nUse the COMPLETE coefficient c2 of D_z^2 xi in b_hat from the frozen\ncurrent-schur-residual-phase-domain result, not its Einstein term alone.\nHere b=b_hat/(8piG A_radius^2). Test the exact polynomial division\n\n                 c2(z)=Q(z) p2(z).                          (2)\n\nThe finite Q includes eps and tau. In physical proper radius,\nD_z has principal part A_radius/sqrt(Q) times a radial derivative (up to\norientation), so the principal second-order coefficient of b is\np2/(8piG). This cancellation must precede any interval division by Q.\nBound p2 on the WHOLE interval .99<=z<=1, which contains the exact bolt.\nUse the existing parameter enclosures, B^2=C beta/g in the retained G=1\nunits, c_R=1e22, and exact polynomial arithmetic followed by Arb. The\npredeclared nonvanishing test is -1e-6<p2<-1e-10 throughout that interval.\nIf this test fails, retain the failure and do not infer the argument below\nfrom it. A small coefficient alone does not imply vanishing.\n\n## 3. Actual-domain packet test of the complete physical tail\n\nLet rho be physical proper distance from the regular bolt, whose radius\nis r_b>0. At the fixed positive temperature,\nr-r_b=c_b rho^2+O(rho^4), c_b>0. Fix a nonzero smooth radial envelope\npsi supported in 1<t<2. For k tending to infinity set\n\n d_k=k^(-a), xi_k(rho)=psi(rho/d_k) exp(i k rho), a=3/4.  (3)\n\nEvery packet is smooth, zero on a neighborhood of the bolt and the outer\nboundary, and belongs to the actual paired form core. No finite set of\nphysical modes replaces the operator. Real and imaginary parts suffice.\nTheir annuli approach the bolt but k d_k tends to infinity. Local radial\nsymbol errors are consequently o(1), with the polar/packet derivative\nratio (k d_k)^-1; the underlying disk coefficients are smooth at rho=0.\n\nThe full local quantum symbol supplies ell~l4 k^4 log k with l4>0;\na~a4 k^4 with a4>0; b~b2 k^2 with nonzero b2 by (2). The original York\nmap has V~-3/2 on these radial packets. Hence\n\n F~f4 k^-4/(log k), f4=|b2|^2/(a4 l4)>0,\n ||xi_k||E asymptotic to c_E k^2 d_k sqrt(log k), c_E>0. (4)\n\nE here is the ORIGINAL action energy ell^(1/2)/sqrt(|W| beta). The\npositive fixed factors change c_E, not the powers or boundedness result.\nThe d_k factor is the L2 norm of the envelope in the two-dimensional\nrotational disk measure rho d rho. This is not a one-dimensional flat\nmeasure substituted at a polar origin.\n\nThese are local asymptotics of the FULL inverse Q_T, obtained by composing\nthe elliptic principal inverse with B. After subtracting a local\nparametrix, the actual finite-domain inverse has a smooth kernel on a\nsmaller bolt disk. Integrating the oscillatory packets by parts makes\nthat contribution smaller than any chosen power of (k d_k)^-1. The same\napplies to distant boundary/thermal returns. All local contacts are\nretained; finite fourth contacts lack the leading logarithm and lower\ncontacts cannot cancel it. Thus their retention does not set any global\nmoment to zero, but cannot cancel the nonzero leading packet symbol.\nThere is no interchange of a raw heat cutoff with an operator norm:\nthe principal symbol is that of the already commonly restored operator.\n\nFor physical Schur ERROR reconstruction, the source is held fixed and\nboth original equations give\n\n T=V F^p xi, nu=(C*)^-1 D T,\n alpha=nu+2T-r partial_r nu.                          (5)\n\nThe fixed source contribution in the reconstruction cancels in the\nerror. It must not be replaced by the homogeneous TT relation nu=-T/3.\nIndeed the retained unscaled principal symbols are\n\n C~2D_R k^4,\n D~-(2/3)D_R k^4+G k^4 log(k/mu0)/(15pi),\n (C*)^-1 D~-1/3+[G/(30pi D_R)]log(k/mu0).             (6)\n\nThe nonzero log coefficient is one third of the previously enclosed\nSchur log coefficient 1.05542899627435...e-26. It is not discarded\nbecause it is small. At sufficiently high frequency (6) supplies one\nextra log in nu. No finite onset frequency is claimed by this argument.\n\nFive areal derivatives of alpha contain -r partial_r^6 nu. On (3),\npartial_r has principal multiplier i k/(2c_b rho). Lower derivatives\nand coefficient derivatives lose a factor (k d_k)^-1. In the interior\nof the packet the leading sixth derivative is nonzero. Combining\n(4)-(6), for some fixed c>0 and all sufficiently large k,\n\n ||alpha[V F^p xi_k]||C5_areal / ||xi_k||E\n       >=c k^(4-4p+7a)/(log k)^(p-1/2).              (7)\n\nThe physical C5 norm here includes a nonzero, finite weight on the\nfifth areal lapse derivative at the bolt, as in the retained admission\ncomparison. If a different norm omits that requirement, it is a different\noutput comparison and must be justified separately. No such change is\nmade. Smooth long-range contributions do not cancel the localized\noscillatory leading derivative. Finite phase subtraction likewise\ncannot cancel that frequency packet.\n\nFor p=2 and a=3/4, (7) grows as k^(5/4)/(log k)^(3/2). Thus the\nform-to-physical-C5 norm of the TWO-residual Schur error map is INFINITE,\nprovided the nonvanishing check (2) passes. Equation (1) transfers the\nsame failure to P E^2 with the original Schur reconstruction. This is\nan executed continuum estimator test, supported by exact coefficient\narithmetic. It is not a lower bound on the actual affine correction,\na failure of the bounded original graph/phase output, or an obstruction\nto a wormhole. The prior note did not claim this C5 comparison.\n\n## 4. A specified alternative and its quantitative price\n\nUse THREE residual factors for the physical tail. Each F supplies four\ndisk derivatives with its full logarithm. Form H2 therefore reaches H14;\nthe logarithm in (6) may consume an arbitrarily small Sobolev reserve.\nH^(14-epsilon) embeds into C12 for epsilon<1 in two dimensions. Radial\nevenness gives six derivatives in rho^2, hence the five areal lapse\nderivatives in (5). Fixed-seed outer phases follow the retained repeated\nweighted argument. This proves finiteness at the seed, with UNKNOWN\nnumerical constants; it is not nonlinear-neighborhood admission. The\nsame packet exponent is negative for p=3 and all a<1. Three is the first\ninteger residual depth passing both this test and the stated embedding.\n\nKeep two powers for the graph if useful. If a single three-power\ncomposite is used for both outputs, let C_i,3=||O_i R_S V F^3||E->Z_i,\nwhere R_S T=((C*)^-1 D T,T) and O_i is an ORIGINAL output. With N=32,\nthe retained full affine conversion gives the sufficient tail bound\n\n error_i <= C_i,3 (1+q)^5 (1.1e-10) q^29/(1-q).       (8)\n\nThis follows from (1), the same bounded spectral factors and the source\nconversion; it is not a new normalization. For a full remaining graph\nmargin 5.34235e-12, compute its conditional C_g,3 ceiling. For illustration\nalso compute the ceiling for a physical tail allowance 5e-9 (half the\n1e-8 ball). That allowance is NOT proved available: signed centers,\nother errors and all input comparisons must be subtracted first.\nRelative to the earlier two-power graph ceiling, the three-power ceiling\nis multiplied by q/(1+q). The extra regularity costs a factor (1+q)/q\nin this particular N=32 tail coefficient. Actual constants remain unknown.\n\n## 5. Complete budget and decision boundary\n\nThe original strong delta, C_g, C_X, independent phase/feedback inputs\nand every signed coupled center remain uncomputed. In particular the\npost-elimination mass column kappa_m<=5e-5 has NOT been established.\nIts conditional debits remain 2.14765e-12 affine, .0024731 feedback,\n.0195239 energy. The remaining entries must jointly obey\n\n Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,\n eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.\n\nNo entry is set to zero. Keep the reference mass cutoff .1/.2, both\nuncut local cancellations, original bolt matching, and the original\n.05/.1 conversion 2133<||d_chi||H3<2174. The known LINEAR mass debit\n<=3.538254568e-12 is neither the actual kappa_m nor a nonlinear bound.\nKeep the scalar quartic original row and exact slow root. The two-fast\nscreen .028913+1e-11*1.0706e10=.135973<.1599164 remains restricted to\nits admitted family; it does not bound independent boundary-phase inputs.\n\nPhysical and nonlinear requirements remain\n E_center+1e-8 alpha_embed<=1e-11,\n R_X alpha_embed*.028913+Z0_other<=.25,\n R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,\n Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.\nNo new admission, contraction, compatibility, matching, validity/noise\nor all-sector stability requirement is closed. In particular the bare\nphysical C5-to-strong-input embedding remains invalid; strengthening\nthat input graph requires an explicit original-norm comparison.\n\nDECISION if (2) passes: retain the construction; change the physical\ntail estimator to at least three residual factors. Do not spend work\ntrying to assign a finite C5 constant to P E^2. The graph-only two-power\nmethod remains eligible, numerically unresolved. This is a verified\nfailure of a specified output estimator with a quantified regularity\nalternative, not a passed complete coupled feasibility certificate.\n\nONE NEXT CALCULATION (PROPOSED): bound the complete three-residual\noriginal graph/physical/phase return, including differentiated commonly\nrestored quantum kernels and original source comparisons, and evaluate\nthe signed coupled columns against (8) and the joint budgets. The first\nmissing numerical argument is the higher-output kernel/contact bound\non the actual finite geometry; the current 1e48 C interior bound is only\nH3-to-L2. The metric-parameter Cauchy estimate in general-interior-dirac-\nresponse.md does not bound spatial derivatives. Neither another weak\ntail optimization nor qualitative finiteness supplies this calculation.\n\nVerification contract: freeze this proof and checker; retain all runs\nand failures; exact division of the retained complete mixed coefficient,\nwhole-interval nonvanishing, scaling/derivative accounting and the\nconditional ceilings at 512 bits; unchanged acceptance after ordinary\nreview. Supporting checks do not prove the continuum packet argument.\n\nRemaining to-do list: numerical full coupled graph/physical/phase return\nand signed solution; original input comparisons; nonlinear admission and\ncontraction; exact compatibility; physical matching; semiclassical\nvalidity/noise; all-sector stability; opening, transport, preparation,\nseparate creation and the full stable semiclassical wormhole objective.\n",
+        "checks/current_schur_physical_output_test.py": "\"\"\"Support the ordinary full-tail output test; no numerical inverse solve.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json, sys, traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nimport sympy as sp\nimport flint\nfrom flint import arb, ctx\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-schur-physical-output-test'\nOWN=['notes/'+STEM+'.md','checks/current_schur_physical_output_test.py',\n     'evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'evidence/current-schur-residual-phase-domain.json',\n 'evidence/current-global-mass-conversion.json',\n 'notes/current-schur-residual-phase-domain.md',\n 'notes/current-schur-form-preconditioner-test.md',\n 'notes/current-seed-full-hessian-realization.md',\n 'notes/current-global-mixed-schur-preconditioner.md',\n 'notes/current-short-travel-strong-domain.md',\n 'notes/current-coupled-global-return-attempt.md',\n 'notes/strong-interior-quantum-remainder.md',\n 'notes/general-interior-dirac-response.md']\nCHECKS=[]\ndef check(name,ok):\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    print(name+(': passed' if ok else ': FAILED'),flush=True)\n    if not ok:raise AssertionError(name)\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(50)\n    return {'ball':x.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(x):\n    d=x['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef ev(x,env):\n    if x in env:return env[x]\n    if x==sp.pi:return arb.pi()\n    if x.is_Rational:return arb(int(x.p))/int(x.q)\n    if x.is_Add:return sum((ev(v,env) for v in x.args),arb(0))\n    if x.is_Mul:\n        out=arb(1)\n        for v in x.args:out*=ev(v,env)\n        return out\n    if x.is_Pow and x.exp.is_Integer:return ev(x.base,env)**int(x.exp)\n    raise ValueError(str(x))\ndef execute():\n    ctx.prec=512\n    review=json.loads((ROOT/OWN[-1]).read_bytes())\n    for p,h in review['scientific_sha256'].items():\n        check('frozen_'+p,sha256((ROOT/p).read_bytes()).hexdigest()==h)\n    prior=json.loads((ROOT/INPUTS[3]).read_bytes())['runs'][-1]\n    check('retained_full_mixed_receipt_passed',prior['status']=='passed')\n    names=['z','C','B2','beta','eps','tau','cR']\n    c2=sp.sympify(prior['result']['complete_mixed_coefficients']['xi2'],\n                  locals={n:sp.Symbol(n) for n in names})\n    sy={str(v):v for v in c2.free_symbols}\n    z,C,B2,be,ep,ta,cR=[sy[v] for v in ['z','C','B2','beta','eps','tau','cR']]\n    Q=be+z*z/C-(4*be+2/C+ta)*z**3+(3*be+1/C+ep)*z**4-2*ep*z**5+ep*z**6\n    p2=sp.cancel(c2/Q)\n    check('complete_c2_exact_Q_division',not sp.denom(p2).has(z))\n    check('whole_polynomial_identity',sp.cancel(c2-Q*p2)==0)\n    pp=json.loads((ROOT/INPUTS[4]).read_bytes())['runs'][-1]\n    check('parameter_receipt_passed',pp['status']=='passed')\n    p={k:dec(v) for k,v in pp['result']['parameters'].items()}\n    env={C:1/p['u'], B2:p['beta']/(p['u']*p['g']),\n         be:p['beta'],ep:p['eps'],ta:p['tau'],cR:arb('1e22')}\n    # Entire .99..1 interval, not endpoint sampling or a rounded bolt.\n    zhull=arb('.995','.005')\n    val=arb(0)\n    for coef in sp.Poly(p2,z).all_coeffs():val=val*zhull+ev(coef,env)\n    check('nonzero_actual_mixed_principal_whole_bolt_collar',val>arb('-1e-6') and val<arb('-1e-10'))\n    # Exact symbolic exponent bookkeeping, not a finite-frequency experiment.\n    a=sp.Rational(3,4);pwr=sp.symbols('p',integer=True,positive=True)\n    energy=2-a\n    lapse_fifth=-4*pwr+6+6*a\n    ratio=sp.expand(lapse_fifth-energy)\n    check('full_Schur_physical_power',ratio==4-4*pwr+7*a)\n    check('two_residual_positive_power',ratio.subs(pwr,2)==sp.Rational(5,4))\n    check('two_residual_log_denominator',sp.Rational(2)-sp.Rational(1,2)==sp.Rational(3,2))\n    check('three_residual_negative_power',ratio.subs(pwr,3)==-sp.Rational(11,4))\n    check('three_residual_H14_sufficient',2+4*3>12+sp.Rational(2,2))\n    check('two_residual_H10_insufficient',2+4*2<12+sp.Rational(2,2))\n    t=sp.symbols('t');f=t/(1+t)\n    check('full_three_power_identity',sp.cancel(f**3*(1-f)**-4/(1+t)-t**3)==0)\n    q=arb('.338');pref=(1+q)**5*arb('1.1e-10')*q**29/(1-q)\n    cg=arb('5.34235e-12')/pref\n    cx=arb('5e-9')/pref\n    old=arb('5.34235e-12')*(1-q)/(arb('1.1e-10')*(1+q)**4*q**30)\n    check('same_norm_relative_price', (cg-old*q/(1+q)).contains(0))\n    check('conditional_ceilings_positive',cg>0 and cx>0)\n    check('fast_screen_scope_unchanged',arb('.028913')+arb('1e-11')*arb('1.0706e10')<arb('.1599164'))\n    return {'precision_bits':ctx.prec,'p2_exact':str(sp.factor(p2)),\n      'p2_whole_bolt_collar':enc(val),'p2_over_8piG_G1':enc(val/(8*arb.pi())),\n      'packet_a':'3/4','two_residual_ratio':'c*k^(5/4)/(log k)^(3/2), c>0; asymptotic, onset unknown',\n      'three_residual_ratio_power':'-11/4','physical_derivatives':{'required_disk_point_jets':12,'two_power_Sobolev':10,'three_power_Sobolev':14},\n      'three_power_affine_tail_prefactor_N32':enc(pref),\n      'conditional_graph_C3_ceiling':enc(cg),'conditional_physical_C3_ceiling_if_5e_minus9_margin':enc(cx),\n      'extra_prefactor_price':enc((1+q)/q),\n      'scope':{'ordinary_actual_domain_two_residual_physical_estimator_failure':True,\n       'full_mixed_nonvanishing_executed':True,'three_power_fixed_seed_finiteness':True,\n       'three_power_numerical_norm_bounded':False,'original_strong_delta_certified':False,\n       'complete_coupled_return_executed':False,'actual_kappa_m_computed':False,\n       'any_additional_admission_feedback_requirement_closed':False,\n       'nonlinear_admission_contraction':False,'exact_compatibility':False,\n       'physical_matching':False,'semiclassical_validity_noise':False,\n       'all_sector_stability':False,'actual_controlled_solution':False,\n       'construction_obstruction':False,'full_goal_complete':False}}\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,\n         'input_sha256_before':hashes,'frozen_sources_utf8':{p:(ROOT/p).read_text(encoding='utf-8') for p in OWN},\n         'runtime':{'python':sys.version,'python_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                    'flint_version':flint.__version__,'sympy_version':sp.__version__}}\n    try:\n        run['result']=execute()\n        run['input_sha256_after']={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after'])\n        run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    summary=json.dumps({'status':run['status'],'mode':mode,'checks':len(CHECKS),'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as stream:stream.write(summary.encode())\n    print(summary,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-schur-physical-output-test-review.json": "{\n  \"status\": \"ordinary_argument_and_contract_frozen_before_execution\",\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"ordinary_review\": [\n    \"Test the complete Schur error output in the unchanged physical areal C5 norm, not an isolated contact.\",\n    \"Exact division of the full mixed c2 by actual Q must pass before claiming a nonzero proper-distance principal coefficient.\",\n    \"Use actual radial packets supported away from both endpoints, with the two-dimensional disk measure; their supports approach the regular bolt and k times their radius tends to infinity.\",\n    \"Retain both original error equations: scalar reconstruction includes the nonzero full quantum log, rather than the homogeneous TT relation.\",\n    \"Local ellipticity and smoothing finite returns justify a necessary high-frequency test only; no numerical global inverse bound or finite onset is inferred.\",\n    \"Three residual factors provide the additional four disk derivatives; their numerical norms and original source comparisons remain unknown.\",\n    \"Conditional ceilings subtract no unknown signed trial outputs and allocate no actual mass or feedback entry.\"\n  ],\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"whole_interval\": \".99<=z<=1\",\n    \"nonvanishing_target\": \"-1e-6<p2<-1e-10\",\n    \"no_local_lean\": true,\n    \"unchanged_acceptance_after_ordinary_review\": true\n  },\n  \"scientific_sha256\": {\n    \"notes/current-schur-physical-output-test.md\": \"59d21052bef7b8fef9e8f6d44031e9b725519882cbc912c7d532e813910f0bb0\",\n    \"checks/current_schur_physical_output_test.py\": \"7695d09698583d6eac3a88cf8adb87af00a8414128616c25119f51e25f1cdc93\"\n  },\n  \"unfrozen_numerical_previews\": [],\n  \"retained_failure\": \"Run 1 failed before coefficient evaluation: SymPy parsed beta as its special function. Explicit symbol locals correct the reader; failed run and frozen source snapshot are retained.\"\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "p2_exact": "-z**3*(207360*pi**2*C*beta*cR*z - 228*C*beta*z + 84*C*beta + 311040*pi**2*C*cR*eps*z**3 - 345600*pi**2*C*cR*eps*z**2 + 69120*pi**2*C*cR*eps*z - 258*C*eps*z**3 + 310*C*eps*z**2 - 76*C*eps*z + 21*C*tau + 69120*pi**2*cR*z - 76*z + 42)/(180*pi*B2)",
+        "p2_whole_bolt_collar": {
+          "ball": "[-3e-8 +/- 5.35e-9]",
+          "decimal_enclosure": {
+            "mid": "-3464134279547153738356610427227014492285085524519973702",
+            "rad": "70157457174813302483588640121057455365906220443500545",
+            "exponent": "-62"
+          }
+        },
+        "p2_over_8piG_G1": {
+          "ball": "[-1.4e-9 +/- 4.96e-11]",
+          "decimal_enclosure": {
+            "mid": "-1378335236744410163822749382234178483486175537109375000",
+            "rad": "27914770342196568668999207598539786632984166456623104",
+            "exponent": "-63"
+          }
+        },
+        "packet_a": "3/4",
+        "two_residual_ratio": "c*k^(5/4)/(log k)^(3/2), c>0; asymptotic, onset unknown",
+        "three_residual_ratio_power": "-11/4",
+        "physical_derivatives": {
+          "required_disk_point_jets": 12,
+          "two_power_Sobolev": 10,
+          "three_power_Sobolev": 14
+        },
+        "three_power_affine_tail_prefactor_N32": {
+          "ball": "[1.5538159347569312100942603825623285e-23 +/- 3.41e-58]",
+          "decimal_enclosure": {
+            "mid": "1553815934756931210094260382562328534051305181968315148",
+            "rad": "2",
+            "exponent": "-77"
+          }
+        },
+        "conditional_graph_C3_ceiling": {
+          "ball": "[343821290572.34325830443305170396093 +/- 8.99e-25]",
+          "decimal_enclosure": {
+            "mid": "3438212905723432583044330517039609308985591466914870351",
+            "rad": "2",
+            "exponent": "-43"
+          }
+        },
+        "conditional_physical_C3_ceiling_if_5e_minus9_margin": {
+          "ball": "[321788436336390.59431189743437247740 +/- 3.11e-21]",
+          "decimal_enclosure": {
+            "mid": "3217884363363905943118974343724774031077701261537404280",
+            "rad": "2",
+            "exponent": "-40"
+          }
+        },
+        "extra_prefactor_price": {
+          "ball": "[3.9585798816568047337278106508875740 +/- 3.56e-35]",
+          "decimal_enclosure": {
+            "mid": "3958579881656804733727810650887573964497041420118343195",
+            "rad": "2",
+            "exponent": "-54"
+          }
+        },
+        "scope": {
+          "ordinary_actual_domain_two_residual_physical_estimator_failure": true,
+          "full_mixed_nonvanishing_executed": true,
+          "three_power_fixed_seed_finiteness": true,
+          "three_power_numerical_norm_bounded": false,
+          "original_strong_delta_certified": false,
+          "complete_coupled_return_executed": false,
+          "actual_kappa_m_computed": false,
+          "any_additional_admission_feedback_requirement_closed": false,
+          "nonlinear_admission_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-schur-physical-output-test.md": "59d21052bef7b8fef9e8f6d44031e9b725519882cbc912c7d532e813910f0bb0",
+        "checks/current_schur_physical_output_test.py": "7695d09698583d6eac3a88cf8adb87af00a8414128616c25119f51e25f1cdc93",
+        "evidence/current-schur-physical-output-test-review.json": "9af3eb965ae4a74ee204496b56fb505a2aef8f5c8ee595652e4171cd421d3591",
+        "evidence/current-schur-residual-phase-domain.json": "b66511101309b0f01d69b899077a1a29c2a9a5bdb6291a0079c3313f36a02b2b",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "notes/current-schur-residual-phase-domain.md": "dc251bb7fdd5c6bde4c55ab47a30989adbc69cf8872033ba0915a4c5dab34914",
+        "notes/current-schur-form-preconditioner-test.md": "00365f058df419a9232f1185cfa318a7af52c46ac9f4dc7804bfcf7d76eac2a8",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-global-mixed-schur-preconditioner.md": "13b56d26995fb9364228b254910915e3d7c5cbc89cfc8d115b3f766681a4edfc",
+        "notes/current-short-travel-strong-domain.md": "3f292f320acd20cba17292a1d8aa087c5e6dd4c956ecff672f4da4fed840f9ea",
+        "notes/current-coupled-global-return-attempt.md": "ea8991b327368c5adb0b3c2104731f0aef887e0f16f1e0733fb8b835e3f72b2c",
+        "notes/strong-interior-quantum-remainder.md": "642a4cf209a1aa6442e8c4efe5fc38f58629eaeb5558738375070d3b5223baf4",
+        "notes/general-interior-dirac-response.md": "5477ea11abe6e1642373134df38fa8fa1b173274e8cf8df8722a867ee3f5d0c5"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "frozen_notes/current-schur-physical-output-test.md",
+          "passed": true
+        },
+        {
+          "name": "frozen_checks/current_schur_physical_output_test.py",
+          "passed": true
+        },
+        {
+          "name": "retained_full_mixed_receipt_passed",
+          "passed": true
+        },
+        {
+          "name": "complete_c2_exact_Q_division",
+          "passed": true
+        },
+        {
+          "name": "whole_polynomial_identity",
+          "passed": true
+        },
+        {
+          "name": "parameter_receipt_passed",
+          "passed": true
+        },
+        {
+          "name": "nonzero_actual_mixed_principal_whole_bolt_collar",
+          "passed": true
+        },
+        {
+          "name": "full_Schur_physical_power",
+          "passed": true
+        },
+        {
+          "name": "two_residual_positive_power",
+          "passed": true
+        },
+        {
+          "name": "two_residual_log_denominator",
+          "passed": true
+        },
+        {
+          "name": "three_residual_negative_power",
+          "passed": true
+        },
+        {
+          "name": "three_residual_H14_sufficient",
+          "passed": true
+        },
+        {
+          "name": "two_residual_H10_insufficient",
+          "passed": true
+        },
+        {
+          "name": "full_three_power_identity",
+          "passed": true
+        },
+        {
+          "name": "same_norm_relative_price",
+          "passed": true
+        },
+        {
+          "name": "conditional_ceilings_positive",
+          "passed": true
+        },
+        {
+          "name": "fast_screen_scope_unchanged",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T06:08:21.638491+00:00"
+    }
+  ]
+}
