@@ -1,3 +1,93 @@
+# Active checkpoint: complete coupled return unresolved
+
+2026-10-25 HST, E003/S169.
+
+See [the executed local reduction and unresolved strong step](current-signed-strong-local-core.md).
+
+The complete coupled return remains UNRESOLVED. This attempt executed
+the exact local differential operator in both original rows and verified
+the reference mass cancellation and nonzero cutoff commutators. It did
+NOT execute the strong quantum application or a coupled numerical solve.
+No additional physical admission or feedback requirement closes. The
+requested quantitative feasibility milestone remains open.
+
+The first unsupported continuum passage is still convergence and boundedness
+of the combined common-regulated quantum Hessian in the ORIGINAL strong
+near/transition source norm and phase/interface border. The actual paired
+mass/log weak C2 theorem bounds a scalar functional with two admitted
+inputs; it does not bound the spatial variational gradient in that source
+norm. The complete angular scalar bubble bound does not repair this gap.
+Both vertices, all angular/thermal sums, completed contacts and finite-disk
+returns remain required. No smooth surrogate or finite mode selection is used.
+
+Executing the exact local scalar reduction leaves
+S_T=H_TT,local+Gamma_hat''-H_Tnu H_nunu^-1 H_nuT.
+Thus even the weak scalar inverse cannot remove the unresolved quantum
+shape operator. The implementation retains arbitrary direction/seed jets,
+the original dz measure, z^4 conversion, physical action normalization,
+boundary first variations and the Weyl endpoint representative. Its zero
+symbolic local truncation error is not a bound on the full residual.
+
+The exact mass lift cancels both REFERENCE rows before its original .1/.2
+cutoff. Both nonzero transition commutators remain. The cut lift vanishes
+near the regular bolt and has total reference mass -xB; it is not a global
+fixed-temperature zero mode. Unspecified cutoff derivative constants remain
+unknown. The original fast conversion debit <=3.538254568e-12 is unchanged.
+Scalar quartic, exact correlated slow pair and fast remainder stay coupled.
+
+Actual post-elimination kappa_m is UNKNOWN. At the conditional target
+kappa_m<=5e-5, its affine and feedback costs remain 2.14765e-12 and .0024731.
+The remaining entries must still satisfy
+
+ Y_other+4.084e-22 A_o+Y_phase<=5.34235e-12,
+ eta_other+.0195239 gamma_E+3.712e-12 A_o J_E+eta_phase<.0012069.
+
+No unknown map or phase column has been shown to fit. Conditional individual
+ceilings with every other debit zero are A_o<=1.30811704211557e10,
+A_o J_E<3.25134698275862e8 and gamma_E<.061816542801387; they are NOT actual
+coefficients or independently spendable budgets. The conditional two-fast
+screen .135973<.1599164 retains only its admitted-family scope. It supplies
+neither independent boundary-phase control nor the original physical-X map.
+
+The known LINEAR energy upper bound 1.1e-10 does not certify the required
+E_center<=1e-11, even before a radius debit; that is an insufficient known
+upper bound, not evidence that the actual center violates admission. Keep
+
+ E_center+1e-8 alpha_embed<=1e-11,
+ R_X alpha_embed*.028913+Z0_other<=.25,
+ R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,
+ Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.
+
+The comparisons and all nonlinear/physical/stability gates remain unproved.
+This outcome is an UNRESOLVED estimate, not a certified excessive actual
+coupled upper bound and not an obstruction to the construction.
+
+RESEARCH DECISION: retain the construction and sharpen the combined
+quantum strong application with the signed local core now explicit. Do not
+extend the estimate chain or optimize controlled cold/scalar components.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): apply the full regulated
+geometric Hessian to a conforming full coupled parametrix P, with both
+original equations and the original phase/interface border. Establish
+regulator convergence in the original strong source norm and certify
+delta=||I-S P||<1 (sufficient target <=1/2) and M_i=||T_i P||. Only then
+the column error M_i||(I-S P)b||/(1-delta) tests the mass, quartic,
+correlated-slow and fast columns together against the unchanged budgets.
+The local differential application was executed; this decisive quantum
+application and coupled return were not.
+
+Verification: ordinary argument and scientific sources frozen before
+execution; unchanged-source development and acceptance agree. The checks
+support exact local algebra and bookkeeping, not the missing continuum
+argument. One failed interval-endpoint equality assertion and its original
+sources are retained; the correction used exact rational equality and changed
+no physical bound. Python and all reference flint/SymPy files match. No Lean.
+All 18 inherited paths and the closed audits remain unchanged.
+
+Remaining to-do list: complete strong quantum application and coupled return; original physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: exact angular representation; full coupled return unresolved
 
 2026-10-25 HST, E003/S169.
