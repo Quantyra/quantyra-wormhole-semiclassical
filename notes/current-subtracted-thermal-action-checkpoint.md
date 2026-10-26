@@ -1,3 +1,117 @@
+# Active checkpoint: coupled transport error certified; signed center unresolved
+
+2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.
+
+See [the ordinary complete coupled-error argument](current-coupled-truncation-energy-error.md) and frozen evidence.
+
+The COMPLETE signed coupled estimate remains UNRESOLVED. Its transport
+approximation error is now bounded in the original energy norm and through
+every interior Schur product. The required shape-supremum conversion costs
+<7.477e50. After paying it, base depth 256 gives energy error <1.020e-25
+and original affine outer graph error <2.914e-46. Retained signed centers,
+transition/interface equations and physical matching maps remain uncomputed.
+No actual mass-column or controlled nonlinear solution is certified.
+
+The first missing implication was converting the weak Linfinity-to-L1
+trace error into a perturbation of the actual full/interior energy inverse.
+The joint positive fourth reserve, with all contacts and mode sums already
+paid, bounds the global canonical Laplacian. Exact finite-temperature Q
+factorization and regular-bolt flux then prove
+
+ ||T||infinity <= C_infinity E, C_infinity<7.477e50.
+
+The proof uses the actual paired form-core completion, not a smooth
+surrogate domain or a new bolt wall. Its 1/gamma cost and original action,
+period and beta factors are retained. It is a shape-value comparison,
+not the original physical bolt-radius or C5 admission norm.
+
+At base depth 128, the resulting energy error UPPER-BOUND EXPRESSION is
+about 3.08654e26. This estimator cannot certify a small perturbation at
+that depth. It does not show the actual error is large. Base 199 first
+certifies an energy error below .01; the executed rule uses
+
+ N(M,p)=256+ceil((8log(M/18)+6log(1+|p|))/log(1/.401))
+
+for EVERY angular and signed thermal label. All common local and boundary
+restorations remain in the retained part. This change is motivated by a
+quantitative conversion loss, not a normalization improvement or a finite
+selection of modes. It gives
+
+ ||H-tilde H||_(V->V*)<1.020e-25,
+ ||f-tilde f||V*<1.365e-78,
+ ||tilde H^-1||<=1/(1-epsilon),
+ ||tilde L_II^-1||<=7/(1-7epsilon)<7.000001.
+
+Both inverse hypotheses are now checked on their actual closed spaces.
+For the complete original Schur error and every actual input v,
+
+ graph H3 <1.094e-95 U3(T_v)+2.159e-104 W4(T_v)+2.977e-36 E(v),
+ quartic  <2.505e-102 U3(T_v)+5.314e-49 E(v),
+ mass     <2.505e-103 U3(T_v)+5.314e-50 E(v),
+ slow     <3.023e-102 U3(T_v)+7.410e-46 E(v).
+
+All perturbed input/output/inverse terms are included, not just the direct
+outer tail. The affine errors in these four rows are respectively
+<2.914e-46,5.221e-59,5.221e-60,7.255e-56. These are approximation
+errors, not signed centers or a P_rest value in another normalization.
+Actual U3,W4,E input norms and the remaining original border/physical
+output amplifiers must still be inserted. The original outer scalar
+error vanishes by locality and the mass-tail nu identity; the complete
+retained scalar equation is not discarded.
+
+The exact reference mass cancellation, .1/.2 cutoff and regular-bolt
+matching remain; it is not a global fixed-temperature zero mode.
+Original conversion 2133<||d_chi||H3<2174 and LINEAR mass
+|m|<1.627532e-15 retain the <=3.538254568e-12 conversion cost.
+Near SHAPE still has >6.4617454e-12 after the known distant return.
+The scalar quartic and exact correlated slow pair remain in the border.
+
+kappa_m<=5e-5 remains UNKNOWN. Its conditional affine/feedback/energy
+costs remain 2.14765e-12,.0024731,.0195239. The remaining ledger is
+
+ Y_other+A_o*4.084e-22+Y_phase_return<=5.34235e-12,
+ eta_other+.0195239 gamma_E+A_o*3.712e-12 J_E+eta_phase_return<.0012069.
+
+When inserting computed retained centers, add the above errors through
+the SAME proved remaining maps, once. None of those centers is computed
+here. The complementary quotient includes independent .1/.2 equations
+and matching data; it cannot be replaced by the outer graph and three
+phase coefficients. This is the remaining unsupported strong step.
+
+The conditional fast screen .135973<.1599164 retains its two-fast
+admitted-family scope. The new coarse supremum comparison combined with
+E(h_lin)<1.1e-10 only gives <8.225e40, so it cannot certify admission.
+This failure of an upper certificate is not evidence of a large actual
+correction. Physical-X/neighborhood comparisons and all original nonlinear
+inequalities remain open, as do exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability.
+
+RESEARCH DECISION: retain the construction and exact transport method,
+using base depth 256 for the complete coupled approximation error. The
+old generic energy certificate is excessive; the new executed certificate
+closes that error requirement. Stop refining it. Feasibility now depends
+on the signed complementary center and original matching/physical maps,
+which are unknown. No actual controlled solution or obstruction is proved.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete
+commonly restored signed complementary quotient/border for the affine
+source and all mass/quartic/correlated-slow/fast columns, including the
+independent transition equations. Combine its actual input/output maps
+with the certified full errors and test the original mass and residual
+budgets simultaneously. This turn executed the coupled error certificate,
+not that retained center or its strong physical reconstruction.
+
+Verification: ordinary form/domain and error argument frozen before
+development; unchanged-source acceptance matches at 512 bits, 37 supporting
+checks on 17 inputs. No failed frozen run or Lean invocation. Python and
+all 1595 flint/SymPy files match the reference runtime. The checks support
+the ordinary argument, not replace it. All 18 inherited paths, closed
+audits and previous checkpoint semantic state are preserved.
+
+Remaining to-do list: signed complete coupled quotient/border and original physical-X/neighborhood comparisons; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; charge/return, opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Active checkpoint: actual interior return bounded; complete coupled quotient unresolved
 
 2026-10-25 HST, E003/S169. Previous goal turn: PROGRESS.

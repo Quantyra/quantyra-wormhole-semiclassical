@@ -1,0 +1,504 @@
+{
+  "runs": [
+    {
+      "started_utc": "2026-10-26T00:40:00.412255+00:00",
+      "mode": "acceptance",
+      "input_sha256_before": {
+        "notes/current-coupled-truncation-energy-error.md": "6f1b3893c9e3a819b22915784c06b11ff0f7046af39bdbdcf018d8b35858a1d1",
+        "checks/current_coupled_truncation_energy_error.py": "0f5403aa72250da80d7761939e3274187d0a5195b962fd8a9b12a540914389a1",
+        "evidence/current-coupled-truncation-energy-error-review.json": "b1563da44d803f9a2d0308fda5d8dad2b068842b4ab65a3d26ee5a7da4269dec",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/current-global-far-return-energy-bound.md": "a0d54bf4ab914ebd121c106c160792d3fb4961caf0fbb031e2f742b8572c0a82",
+        "notes/current-coincident-dirac-action-assembly.md": "32d654397879f90d9bd66bfadfadfbd3219ab97b0e70f3b6f8eb11689a24155b",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "notes/current-adaptive-dirac-trace-remainder.md": "e96ffaaa717dad1d4108f96eef8f5ab89797cc7b8d5ab392e13e7e4687878aef",
+        "evidence/current-adaptive-dirac-trace-remainder.json": "41e29487d32c5a4a3f358c5baabb1a3045133dfe88aa6c2cf911d3af6436948f",
+        "notes/current-original-graph-dirac-tail.md": "9ddb4f48ac6e9d45ad36f0e163893b58a79c61e7aafef069f3de2faaaaabd322",
+        "evidence/current-original-graph-dirac-tail.json": "221ed4b8d6479c479b4041dd86a70e0b79d37f20b223a2174bf41f75cfbec8df",
+        "notes/current-canonical-interior-schur-bound.md": "f242ef1ef6155aa0363d65d22bef328751f2a02c8048b92f25ee1de36fe443eb",
+        "evidence/current-canonical-interior-schur-bound.json": "23a536e96d455e1f0dcf8dd45baaafb9a16a0d683c7339be282c5c22d9c19caa",
+        "notes/current-coupled-input-energy-bound.md": "99cb07232f99e39c6a4b309fe1dcd764a44c8c70b1846b9ad7e21c2b5ed9c422",
+        "notes/current-mass-response-regulator-audit.md": "83aff13073f2e50700e020231545d00883a9831a8a85812567d4c484a9033a71"
+      },
+      "frozen_sources_utf8": {
+        "notes/current-coupled-truncation-energy-error.md": "# Complete coupled transport error in original energy and outer observations\n\n2026-10-25 HST, E003/S169. Ordinary argument before frozen execution.\nPrevious goal turn: PROGRESS. Full stable-wormhole objective incomplete;\nclosed feasibility audit and original physical targets unchanged.\n\nOUTCOME: the signed coupled estimate remains UNRESOLVED. This calculation\ncertifies its transport approximation error, including the perturbed\ninterior inverse and EVERY Schur product. It does not evaluate the retained\nsigned center or solve the complementary transition/interface equations.\n\n## 1. First missing implication and why the truncation depth matters\n\nThe previous original-outer tail has input norms U3,W4; the global weak\ntail is Linfinity -> L1. Neither by itself bounds a perturbation of the\nfull coupled energy operator or its interior inverse. Assigning the\nconditional inverse/error constants one would be unjustified. We supply\nthe missing global shape-supremum comparison on the actual form domain.\nIt has a large finite-temperature cost, which is paid explicitly below.\n\nKeep H, the original closed positive-diagonal space V, its canonical\nreturn (nu,T), and the original energy E^2=(a+l)/(|W_action| beta),\n|W_action|=N_halves pi B^2/(G gamma). The corresponding normalized dual\nnorm uses this SAME action factor. G=1 in the retained units.\nKeep the canonical interior subspace W_I (zero on 0<z<.2) and the FULL\nquotient V/W_I of current-canonical-interior-schur-bound.md. In particular\nthe annular equations on .1/.2 and their matching data are not replaced\nby the original outer graph and three phase observations.\n\n## 2. Global shape-supremum bound, including the regular bolt\n\nUse the joint lower bound already retained in\ncurrent-geodesic-two-sided-remainder.md, equations (5)-(7):\n\n    l>=.99 F_l E0+C S2/(100pi),\n    S2=sum_(j=o,i) J2[chi_j T],\n    J2[T]<=2S2+2(500)^4 J0,outer[T].                         (1)\n\nThese are the ACTUAL commonly restored forms, not only the local a2\ncontact. The positive fourth reserve is left after the full angular,\nthermal, curved, reflected, off-shell and chart/contact costs. The\noriginal York reconstruction and the same paired domain are used.\nThe current finite-seed transfer of (1) is explicit in that source; no\nRN-to-neighborhood constant is imported. The original partition in (1)\nis used only for this norm comparison, not to replace the output cutoff.\n\nFor stationary fields J2=N_halves(2pi/gamma) int |Delta T|^2 dz,\nDelta T=(QT')', and similarly for J0. The prior energy-to-L2 result is\n\n    ||T||2<=C_L E, C_L=sqrt(500/(.99 F_l)).\n\nDivide (1) by its actual action/period factors and conservatively use\nJ0,outer<=J0. This gives\n\n    ||Delta T||2<=C_D E,\n    C_D^2=100pi B^2 beta/(G C)+2(500)^4 C_L^2.                (2)\n\nNo term is dropped from the fourth reserve or counted twice.\n\nAn elementary radial estimate avoids an unspecified Sobolev-chart\nconstant. Write L=z_h, v=1+h, t=1/z, gamma=hK(v). The exact finite-bolt\nfactorization of current-coincident-dirac-action-assembly.md is\n\n    Q=(t-v)[2gamma v+(t-v)H1(t,v)]/t^3, H1>=.15t.\n\nFor z>=.5 it implies Q>=2gamma v^2 z^2(L-z)>=gamma(L-z)/2.\nFor z<=.5 the actual polynomial gives Q>=beta/4-|eps|-tau>.04,\nwhich is larger than gamma(L-z)/2. The factored Q(.99)>0, Q(1)=-tau<0\nand Q'<0 on [.5,1] retain the actual root .99<L<1. For the latter sign,\nthe leading derivative is -12beta z^2(1-z), the u term is nonpositive,\nand the eps term is dominated by 4|eps|z^2(1-z); tau contributes\n-3tau z^2. Hence on the WHOLE\nphysical interval\n\n    Q(z)>=gamma(L-z)/2.                                    (3)\n\nFor an original smooth regular-bolt core field, QT'(L)=0. With d=Delta T,\n\n    QT'(z)=-int_z^L d(t)dt,\n    |T'(z)|<=2||d||2/[gamma sqrt(L-z)].                      (4)\n\nThere exists z0 with |T(z0)|<=||T||2/sqrt(L). Integrating (4) yields\n\n    ||T||infinity <= ||T||2/sqrt(L)+4sqrt(L)||d||2/gamma\n                  <=C_infinity E,\n    C_infinity=C_L/sqrt(.99)+4C_D/gamma <7.477e50.            (5)\n\nThe large 1/gamma cost has not been renormalized away. Inequalities\n(1)-(2) apply to differences of the original form-core approximants.\nEquations (4)-(5) then give uniform convergence to a continuous T and\nconvergence of QT'=-int_z^L d. The distributional limit is the original\nYork return. Thus (5) holds on the actual energy completion with the\nregular-bolt flux; no puncture condition or new scalar boundary is used.\nIt concerns T, not the physical bolt radius s+xi/2 or an entire C5 norm.\n\n## 3. An entire-spectrum depth that controls the coupled energy operator\n\nRetain the exact Dirac transport and the full commonly regulated low-word\npart, all geometric-to-mass conversion terms, LLL/Weyl/local contacts and\nboundary representatives. Only the trace-class transport tail is removed\nto define tilde H. For EVERY angular/thermal label choose\n\n    N(M,p)=256+ceil{[8log(M/18)+6log(1+|p|)]/log(1/.401)}.    (6)\n\nThere is no omitted physical mode. N depends only on seed spectral labels\nand is held fixed in variations. Compared with the earlier strong rule\nit increases every order by 128. It exceeds the earlier weak rule by\nat least 128. Consequently set\n\n    r_w=.3961^128, r_s=.401^128,\n    e1=9.204e-79 r_w, e2=9.204e-77 r_w.                     (7)\n\nThe old trace-ideal/common-regulator proof supplies the ENTIRE normalized\nsource L1 bound e1 and Hessian Linfinity -> L1 bound e2. Higher retained\nword sums are still to be evaluated; no independently renormalized\nlow-word determinant is asserted. The tail is the second derivative of\nits absolutely convergent action series, so its Hessian is symmetric.\n\nFor delta H=H-tilde H and delta f=f-tilde f, (5) restores the original\nenergy/dual units:\n\n    ||delta H||_(V->V*)<=epsilon=e2 C_infinity^2/beta<1.020e-25,\n    ||delta f||V*<=e_f=e1 C_infinity/beta<1.365e-78.          (8)\n\nThe beta divisor is essential: normalization alone is not an improvement.\nAt the old base depth 128, this SAME valid upper-bound expression is\nbetween 3.0865e26 and 3.0866e26. It cannot certify a small energy defect.\nThat is an excessive upper certificate, NOT a lower bound on the true\nerror. With this estimator, 199 is the first integer base depth giving\nepsilon<.01; (6) gives the stated much smaller complete error.\nThus increasing the depth is justified by a quantitative sensitivity\ntest, not by optimizing an already useful error in its old norm.\n\nThe perturbation is bounded on the existing form space; no assertion\nabout a nonlinear action on arbitrary energy fields is needed. The\noriginal mass/log core identity extends by (5) and (8). Regulator removal\noccurs first in the established common construction. We do not interchange\nit with an unsupported strong convergence of the raw heat cutoff.\n\n## 4. Both exact and approximate interior inverses are controlled\n\nThe full fixed-seed operator obeys ||H^-1||<=1 and\n||H||<=h_H=sqrt(1.338) in these energy units. Its actual restriction has\n||P_I||<=K=7. Since epsilon<1 and K epsilon<1, the convergent Neumann\nidentities on these Hilbert spaces give\n\n    ||tilde H^-1||<=1/(1-epsilon),\n    ||tilde P_I||<=K_t=7/(1-7epsilon)<7.000001.              (9)\n\nFor example tilde H=H(I-H^-1 delta H); every factor is a bounded map\nbetween the stated spaces. The same calculation is valid on the CLOSED\nW_I, where the inverse was proved by its constrained signed form. This\ndoes not infer an interior inverse from a compression of an indefinite\nfull inverse. Original interface matching remains in the quotient.\n\n## 5. Every interior Schur-error term, in the original output rows\n\nLet i be one of the four ORIGINAL observations. For an interior field w\nin W_I, its local outer jets vanish, so U3(T_w)=||T_w||infinity and\nW4(T_w)=0. Use the earlier outer-tail coefficients a_i and actual far\nreturn coefficients c_i:\n\n| i | a_i before multiplying r_s | c_i per energy |\n| --- | ---: | ---: |\n| Original H3 graph | 6.861e-45 | 4.583e-13 |\n| Quartic finite part | 1.571e-51 | 7.949e-26 |\n| Mass moment | 1.571e-52 | 7.949e-27 |\n| Exact slow moment | 1.896e-51 | 1.141e-22 |\n\nWrite A_i=a_i r_s, d_i=A_i C_infinity. Then\n\n    ||delta H_iI||<=d_i, ||tilde H_iI||<=c_i+d_i.             (10)\n\nThis is the actual differentiated kernel bound, with full original\n.05/.1 transition, both paired paths and the exact slow-root subtraction.\nLocal contacts vanish only across these separated supports. They remain\nunchanged in both complete centers. The bare mass-tail nu row is zero,\nbut neither original coupled gravitational equation is removed.\n\nFor B=H_iI, A=H_Iy and their tilde versions, the exact identity is\n\n    BPA-tilde B tilde P tilde A\n      =delta B P A+tilde B(P-tilde P)A+tilde B tilde P delta A,\n    P-tilde P=-P delta H_II tilde P.                         (11)\n\nUsing (8)-(10) and ||H_Iy v||<=h_H E(v) gives the COMPLETE interior\nproduct error, for EVERY actual column v,\n\n    |delta(interior product)_i[v]|<=b_i E(v),\n    b_i=d_i K h_H+(c_i+d_i)K_t epsilon(1+K h_H).             (12)\n\nThe last term includes both the perturbed input block and the perturbed\ninterior inverse. No direct-error-only approximation is used. Combining\n(12) with the direct outer tail gives\n\n    ||delta S_graph[v]||H3\n      <1.094e-95 U3(T_v)+2.159e-104 W4(T_v)+2.977e-36 E(v),\n    |delta S_4[v]|<2.505e-102 U3(T_v)+5.314e-49 E(v),\n    |delta S_m[v]|<2.505e-103 U3(T_v)+5.314e-50 E(v),\n    |delta S_slow[v]|<3.023e-102 U3(T_v)+7.410e-46 E(v).     (13)\n\nS here is the actual Schur return BEFORE solving the remaining original\nquotient/border system. All mass/quartic/correlated-slow/fast columns use\nthe same bounds. Their U3,W4,E values are NOT assigned one. For a bare\ncanonical scalar input T=0, the direct quantum-tail terms vanish, while\nthe interior mixing term in (13) remains.\n\nFor the affine right-hand side, ||f||V*<=h_H(1.1e-10)=F from the known\nactual full linear response. The source has the preceding C4 kernel\nbound without a differentiated mass vertex, so the conservative A_i\nalso bounds its direct output error. Substitution in (11) with f gives\n\n    affine_error_i <= A_i+d_i K F\n                         +(c_i+d_i)K_t(e_f+K epsilon F).     (14)\n\nExecuted full affine-error bounds in the graph, quartic, mass and exact\nslow rows are respectively\n\n    2.914e-46, 5.221e-59, 5.221e-60, 7.255e-56.              (15)\n\nThese are approximation errors, not values of the physical source or\nsigned solution. In particular (15) is not a measurement of P_rest in\nits different projected units. Subsequent original phase-to-graph and\nphysical maps still need their actual norms.\n\n## 6. Decision and unchanged feasibility requirements\n\nThe first previously missing numerical comparison for a complete\ntransport-error/inverse calculation is now supplied by (5)-(15).\nThe remaining unsupported step is the signed retained complementary\noperator in the ORIGINAL strong quotient, including coincidence\nrestorations, the .1/.2 transition equations and exact phase/interface\nmatching. It has not been evaluated, nor has its strong inverse/border\namplifier. These are unknown estimates, not demonstrated violations.\n\nThe exact mass lift keeps its local cancellation in BOTH reference\nequations, its original cutoff transition and fixed-temperature regular\nbolt matching. It is not a global zero mode. The conversion\n2133<||d_chi||H3<2174 and LINEAR |m|<1.627532e-15 still cost at most\n3.538254568e-12, leaving near SHAPE >6.4617454e-12 after the known\ndistant return. Scalar quartic and correlated exact slow terms remain.\n\nkappa_m<=5e-5 remains UNKNOWN. If certified, its original conditional\naffine/feedback/energy debits remain 2.14765e-12, .0024731 and .0195239.\nThe residual ledger of the preceding interior result still requires\n\n    Y_other+A_o 4.084e-22+Y_phase_return<=5.34235e-12,\n    eta_other+.0195239 gamma_E+A_o 3.712e-12 J_E\n                                      +eta_phase_return<.0012069.\n\nWhen replacing exact entries by computed retained centers, add (13)-(15)\nthrough the SAME proved remaining maps, without counting them twice.\nFor example the raw graph error for a mass lift must be included with\nits actual U3,W4,E before comparison with 5e-5. No retained center is\nknown here, so no original mass or complete feedback target closes.\n\nThe conditional fast screen .135973<.1599164 retains its two-fast\nadmitted-family scope. Original nonlinear requirements remain\n\n    E_center+1e-8 alpha_embed<=1e-11,\n    R_X alpha_embed*.028913+Z0_other<=.25,\n    R_X alpha_embed^2*1.0706e10+Z2_other<=5e7,\n    Y0+1e-8 Z0+5e-17 Z2<=1e-8, Z0+1e-8 Z2<1.\n\nEquation (5) is a seed energy-to-shape-value comparison, not any of\nthese missing embeddings or a nonlinear-neighborhood theorem. Exact\nenergy E(h_lin)<1.1e-10 inserted in this deliberately coarse comparison\nonly certifies ||T_lin||infinity<8.225e40. It cannot certify the admitted\n.001 value margin; using this comparison alone would require the much\nstronger sufficient E<.001/(7.477e50). This is failure of that admission\nupper certificate, not evidence that the actual correction is large.\nThe original physical-X comparisons or direct correction bounds remain\nessential. Exact\ncompatibility, physical matching, validity/noise and all-sector stability\nremain unresolved. No actual controlled wormhole or obstruction is proved.\n\nRESEARCH DECISION: retain the construction and exact transport method,\nusing base depth 256 for the complete coupled error. The old depth's\ngeneric energy certificate is excessive after its actual bolt conversion;\nthe stronger executed certificate closes that error requirement. Stop\nrefining it. The signed complementary center and original matching maps\nnow decide whether the sufficient global budgets are attainable.\n\nONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): evaluate the complete\ncommonly restored signed complementary quotient/border for the affine\nsource and all coupled columns, including the independent transition\nequations. Combine its actual input/output maps with (13)-(15), then\ntest the original mass and residual budgets simultaneously. This turn\nexecutes a full coupled approximation-error certificate, not that center.\n\nRemaining to-do list: signed complete coupled quotient/border and original\nphysical-X/neighborhood comparisons; nonlinear admission/contraction;\nexact compatibility; physical matching; semiclassical validity/noise;\nall-sector stability; charge/return, opening, transport, preparation,\nseparate creation and the full stable semiclassical wormhole objective.\n",
+        "checks/current_coupled_truncation_energy_error.py": "\"\"\"Supporting arithmetic for complete coupled transport error.\n\nNo retained signed center, physical correction or mass-column certificate.\n\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import comb,factorial\nimport sys,json,traceback\nif '--arb-path' in sys.argv:\n    sys.path.insert(0,sys.argv[sys.argv.index('--arb-path')+1])\nimport flint\nfrom flint import arb,ctx\nimport sympy as S\nROOT=Path(__file__).resolve().parents[1];STEM='current-coupled-truncation-energy-error'\nOWN=['notes/'+STEM+'.md','checks/current_coupled_truncation_energy_error.py','evidence/'+STEM+'-review.json']\nINPUTS=OWN+[\n 'notes/current-seed-full-hessian-realization.md',\n 'notes/current-geodesic-two-sided-remainder.md',\n 'notes/current-global-far-return-energy-bound.md',\n 'notes/current-coincident-dirac-action-assembly.md',\n 'notes/current-global-mass-conversion.md','evidence/current-global-mass-conversion.json',\n 'notes/current-adaptive-dirac-trace-remainder.md','evidence/current-adaptive-dirac-trace-remainder.json',\n 'notes/current-original-graph-dirac-tail.md','evidence/current-original-graph-dirac-tail.json',\n 'notes/current-canonical-interior-schur-bound.md','evidence/current-canonical-interior-schur-bound.json',\n 'notes/current-coupled-input-energy-bound.md','notes/current-mass-response-regulator-audit.md']\nCHECKS=[]\ndef check(name,ok):\n    assert name not in {x['name'] for x in CHECKS}\n    CHECKS.append({'name':name,'passed':bool(ok)})\n    if not ok:raise AssertionError(name)\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(55)\n    return {'ball':str(x),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\ndef dec(x):\n    d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef prior(stem):\n    r=json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())['runs'][-1]\n    assert r['status']=='passed';return r['result']\ndef execute():\n    ctx.prec=512\n    review=json.loads((ROOT/OWN[2]).read_bytes())\n    check('ordinary_argument_frozen',sha256((ROOT/OWN[0]).read_bytes()).hexdigest()==review['scientific_sha256'][OWN[0]])\n    p=prior('current-global-mass-conversion')['parameters']\n    par=prior('current-adaptive-dirac-trace-remainder')['actual_parameters']\n    beta,Fl,u,eps,tau=[dec(p[k]) for k in ['beta','Fl','u','eps','tau']]\n    C,B2,gamma=[dec(par[k]) for k in ['C','B2','gamma']]\n    check('actual_parameter_signs',beta>arb('.1666') and u>0 and tau>0 and abs(eps)<arb('2e-29') and gamma>0 and gamma<arb('1e-30'))\n    z=arb('.99')\n    Q99=(1-z)**2*(beta*(1+2*z+3*z*z)+u*z*z+eps*z**4)-tau*z**3\n    check('actual_root_lower_endpoint',Q99>0)\n    check('actual_root_upper_endpoint',-tau<0)\n    check('Q_monotone_on_final_half',12*beta>4*abs(eps))\n    check('outer_half_Q_lower',beta/4-abs(eps)-tau>arb('.04'))\n    check('inner_factored_H1_lower',beta-32*abs(eps)>arb('.15') and 3*beta+u+eps>0)\n    check('outer_half_dominates_bolt_linear_lower',arb('.04')>gamma/2)\n    CL=(500/(arb('.99')*Fl)).sqrt()\n    CD=(100*arb.pi()*B2*beta/C+2*arb(500)**4*CL**2).sqrt()\n    CI=CL/arb('.99').sqrt()+4*CD/gamma\n    check('global_shape_L2_upper',CL<arb('22.474'))\n    check('global_shape_Laplacian_upper',CD<arb('9.454e16'))\n    check('actual_global_shape_supremum_upper',CI<arb('7.477e50'))\n    q,s=arb('.3961'),arb('.401');rw=q**128;rs=s**128\n    ep0=arb('9.204e-77')*CI**2/beta\n    epsilon=ep0*rw;source=arb('9.204e-79')*rw*CI/beta\n    check('old_energy_upper_certificate_excessive',ep0>arb('3.0865e26') and ep0<arb('3.0866e26'))\n    check('new_rule_dominates_weak_rule',8/(1/s).log()>4/(1/q).log() and 6/(1/s).log()>2/(1/q).log())\n    check('base_198_not_certified_by_this_upper',ep0*q**70>arb('.01'))\n    check('base_199_certified_by_this_upper',ep0*q**71<arb('.01'))\n    check('complete_energy_defect',epsilon<arb('1.020e-25'))\n    check('complete_source_dual_error',source<arb('1.365e-78'))\n    K=arb(7);Kt=K/(1-K*epsilon);H=arb('1.338').sqrt();F=H*arb('1.1e-10')\n    check('full_Neumann_inverse_admissible',epsilon<1)\n    check('interior_Neumann_inverse_admissible',K*epsilon<1 and Kt<arb('7.000001'))\n    W4=arb('1.354e-53')*rs\n    check('direct_graph_fourth_jet_error',W4<arb('2.159e-104'))\n    rows=[('H3','6.861e-45','4.583e-13','1.094e-95','2.977e-36','2.914e-46'),\n     ('quartic','1.571e-51','7.949e-26','2.505e-102','5.314e-49','5.221e-59'),\n     ('mass','1.571e-52','7.949e-27','2.505e-103','5.314e-50','5.221e-60'),\n     ('slow','1.896e-51','1.141e-22','3.023e-102','7.410e-46','7.255e-56')]\n    outputs={}\n    for tag,a,c,at,bt,ft in rows:\n        aa=arb(a)*rs;cc=arb(c);dd=aa*CI\n        error=dd*K*H+(cc+dd)*Kt*epsilon*(1+K*H)\n        affine=aa+dd*K*F+(cc+dd)*Kt*(source+K*epsilon*F)\n        check(tag+'_direct_original_output_error',aa<arb(at))\n        check(tag+'_complete_interior_product_error',error<arb(bt))\n        check(tag+'_complete_affine_error',affine<arb(ft))\n        outputs[tag]={'direct_U3':enc(aa),'interior_product_per_energy':enc(error),'affine_total':enc(affine),'interior_tail_per_energy':enc(dd)}\n    # Exact algebra supports, rather than replaces, the ordinary form proof.\n    zS,v,ga,hh=S.symbols('z v gamma H1',positive=True)\n    tt=1/zS;LL=1/v\n    Qfact=(tt-v)*(2*ga*v+(tt-v)*hh)/tt**3\n    check('exact_bolt_linear_term',S.simplify(Qfact-2*ga*v*v*zS*zS*(LL-zS)-(tt-v)**2*hh/tt**3)==0)\n    r=S.symbols('r',positive=True)\n    check('integrable_regular_bolt_derivative',S.integrate(2/(ga*S.sqrt(r)),(r,0,LL))==4*S.sqrt(LL)/ga)\n    B,A,P,Pt,dB,dA,dD=S.symbols('B A P Pt dB dA dD',commutative=False)\n    raw=B*P*A-(B-dB)*Pt*(A-dA)\n    expected=dB*P*A+(B-dB)*(P-Pt)*A+(B-dB)*Pt*dA\n    check('complete_noncommuting_Schur_difference',S.expand(raw-expected)==0)\n    check('retained_fast_screen',arb('.028913')+arb('1e-11')*arb('1.0706e10')<arb('.1599164'))\n    return {'precision_bits':ctx.prec,'parameters':{'beta':enc(beta),'C':enc(C),'B2':enc(B2),'gamma':enc(gamma),'Fl':enc(Fl)},\n     'global_shape_L2_constant':enc(CL),'global_shape_Laplacian_constant':enc(CD),'global_shape_supremum_constant':enc(CI),\n     'old_base_128_energy_upper_expression':enc(ep0),'minimum_base_for_point01_upper_certificate':199,\n     'new_spectral_order_rule':'256+ceil((8log(M/18)+6log(1+abs(p)))/log(1/.401))',\n     'complete_energy_defect':enc(epsilon),'complete_source_dual_error':enc(source),\n     'approximate_full_energy_inverse_upper':enc(1/(1-epsilon)),'approximate_interior_energy_inverse_upper':enc(Kt),\n     'strong_tail_factor':enc(rs),'weak_tail_factor':enc(rw),'direct_graph_W4_coefficient':enc(W4),'outputs':outputs,\n     'scope':{'actual_paired_mass_log_domain':True,'common_regulator_and_complete_spectrum_preserved':True,\n      'original_energy_to_shape_supremum_proved':True,'complete_coupled_energy_approximation_error_certified':True,\n      'all_interior_Schur_error_terms_certified':True,'original_outer_and_phase_error_bounds_certified':True,\n      'signed_retained_center_computed':False,'strong_complementary_quotient_inverse_computed':False,\n      'actual_input_or_border_map_norms_computed':False,'actual_kappa_m_computed':False,\n      'complete_coupled_feasibility_bound_certified':False,'nonlinear_admission':False,'nonlinear_contraction':False,\n      'exact_compatibility':False,'physical_matching':False,'semiclassical_validity_noise':False,\n      'all_sector_stability':False,'actual_controlled_solution':False,'construction_obstruction':False,'full_goal_complete':False}}\n\nif __name__=='__main__':\n    mode='acceptance' if '--acceptance' in sys.argv else 'development'\n    output=ROOT/'evidence'/(STEM+('' if mode=='acceptance' else '-development')+'.json')\n    hashes={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n    run={'started_utc':datetime.now(timezone.utc).isoformat(),'mode':mode,'input_sha256_before':hashes,\n      'frozen_sources_utf8':{f:(ROOT/f).read_text(encoding='utf-8') for f in OWN},\n      'runtime':{'python':sys.version,'executable_sha256':sha256(Path(sys.executable).read_bytes()).hexdigest(),\n                 'flint_version':flint.__version__,'sympy_version':S.__version__}}\n    try:\n        run['result']=execute();run['input_sha256_after']={f:sha256((ROOT/f).read_bytes()).hexdigest() for f in INPUTS}\n        check('frozen_inputs_unchanged',hashes==run['input_sha256_after']);run['status']='passed'\n    except Exception:\n        run['status']='failed';run['traceback']=traceback.format_exc()\n    run['checks']=CHECKS;run['finished_utc']=datetime.now(timezone.utc).isoformat()\n    ledger=json.loads(output.read_bytes()) if output.exists() else {'runs':[]}\n    ledger['runs'].append(run);output.write_bytes((json.dumps(ledger,indent=2)+'\\n').encode())\n    message=json.dumps({'mode':mode,'status':run['status'],'checks':len(CHECKS),\n       'energy_error':run.get('result',{}).get('complete_energy_defect'),\n       'graph_error':run.get('result',{}).get('outputs',{}).get('H3'),\n       'traceback':run.get('traceback')},indent=2)+'\\n'\n    with (ROOT/'evidence'/(STEM+'.log')).open('ab') as f:f.write(message.encode())\n    print(message,flush=True)\n    if run['status']!='passed':raise SystemExit(1)\n",
+        "evidence/current-coupled-truncation-energy-error-review.json": "{\n  \"date\": \"2026-10-25\",\n  \"story\": \"S169\",\n  \"status\": \"ordinary_argument_and_execution_contract_frozen_before_development\",\n  \"outcome_scope\": \"Complete signed coupled feasibility unresolved. Entire transport approximation error now converted to original energy, approximate inverses and all original outer/phase Schur-error terms.\",\n  \"quantitative_role\": \"The missing energy-to-supremum conversion costs 7.477e50. Old depth-128 upper certificate exceeds 3e26 in energy; depth 256 makes the complete energy defect below 1.020e-25. This explicitly motivates the added transport terms and certifies all inverse/input/output products, not just the direct tail.\",\n  \"domain_review\": [\n    \"Use the actual full limiting Hessian and its retained joint positive TT second/fourth reserve after all quantum/contact costs, not a standalone heat contact.\",\n    \"Restore N_halves, time period, physical action normalization and beta exactly in the radial L2/Laplacian bounds and tail dual norms.\",\n    \"The finite-temperature Q lower bound follows from the actual polynomial and factored physical root. No double-root surrogate or rounded-bolt denominator is used.\",\n    \"Original regular-bolt core flux QTprime=0 yields an integrable derivative bound. Uniform convergence of core differences extends the shape-supremum comparison to the actual energy completion.\",\n    \"This linear T bound is not a full physical C5 or bolt-radius bound, nor an assertion of nonlinear action on arbitrary energy fields.\",\n    \"Every angular and signed thermal index is retained; the new adaptive order increases each existing strong order by 128 and dominates the weak rule.\",\n    \"The entire commonly regulated low-word part, mass-to-geometric conversion, LLL/Weyl/local and boundary completions remain in the retained center. No separately renormalized finite-mode determinant is used.\",\n    \"The weak tail is an actual action derivative and symmetric bounded energy perturbation. The limiting form is extended after the established regulator identity, without interchanging a raw heat cutoff and strong completion.\",\n    \"Neumann inverse hypotheses epsilon<1 and 7epsilon<1 are proved for the full operator and the already justified closed canonical interior compression.\",\n    \"All three noncommuting interior-product error terms, direct output error and affine source error are retained. U3/W4 vanish locally for canonical interior inputs, but their global supremum is paid by the new energy bound.\",\n    \"The original cutoff transition, finite scalar quartic, mass and exact slow moments are retained. The complementary quotient still contains independent .1/.2 equations and matching data.\",\n    \"Actual input and phase/border map norms, signed retained centers, kappa_m and physical admission remain uncomputed.\"\n  ],\n  \"theorem_hypotheses\": \"New ingredients are explicit radial integration on the actual regular disk, completion of an existing closed form-core inequality, elementary bounded-operator Neumann series and exact noncommuting Schur algebra. The earlier trace-ideal/Cauchy/common-regulator construction is reused at a larger order with the same hypotheses. No new smooth-boundary or nonlinear-neighborhood theorem is invoked.\",\n  \"execution_contract\": {\n    \"precision_bits\": 512,\n    \"base_depth\": 256,\n    \"targets\": [\n      \"shape supremum constant<7.477e50\",\n      \"old energy upper expression between3.0865e26 and3.0866e26\",\n      \"first sufficient base depth for .01 energy defect is199\",\n      \"complete energy error<1.020e-25\",\n      \"source dual error<1.365e-78\",\n      \"approximate interior inverse<7.000001\",\n      \"all original Schur errors and affine counterparts in ordinary equations13-15\"\n    ],\n    \"verification\": \"Freeze before development; retain failed snapshots; matching unchanged acceptance after ordinary review. No Lean run.\"\n  },\n  \"first_unsupported_step_after_result\": \"The signed common-restored complementary quotient/border center and its strong input/interface/phase/physical map norms.\",\n  \"claims_boundary\": [\n    \"No retained signed center\",\n    \"No actual kappa_m or complete coupled feasibility decision\",\n    \"No nonlinear admission/contraction\",\n    \"No exact compatibility, matching, validity/noise or all-sector stability\",\n    \"No actual controlled solution or construction obstruction\"\n  ],\n  \"scientific_sha256\": {\n    \"notes/current-coupled-truncation-energy-error.md\": \"6f1b3893c9e3a819b22915784c06b11ff0f7046af39bdbdcf018d8b35858a1d1\",\n    \"checks/current_coupled_truncation_energy_error.py\": \"0f5403aa72250da80d7761939e3274187d0a5195b962fd8a9b12a540914389a1\"\n  },\n  \"exploration\": {\n    \"s169el-explore.py\": {\n      \"sha256\": \"356edeece68ec092a75a2b601c27b4cca6ef70492d1f7ea7dac5486f27ad7502\",\n      \"contents\": \"from pathlib import Path\\nimport json,sys\\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\\nfrom flint import arb,ctx\\nctx.prec=512\\nr=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\\ndef prior(st):return json.loads((r/'evidence'/(st+'.json')).read_bytes())['runs'][-1]['result']\\ndef dec(x):\\n d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\\np=prior('current-global-mass-conversion')['parameters'];par=prior('current-adaptive-dirac-trace-remainder')['actual_parameters']\\nbeta,Fl=[dec(p[k]) for k in ['beta','Fl']]\\nC,B2,gamma=[dec(par[k]) for k in ['C','B2','gamma']]\\nCL=(500/(arb('.99')*Fl)).sqrt()\\nCD=(100*arb.pi()*B2*beta/C+2*arb(500)**4*CL**2).sqrt()\\nCI=CL/arb('.99').sqrt()+4*CD/gamma\\nq=arb('.3961');s=arb('.401');rw=q**128;rs=s**128\\neps0=arb('9.204e-77')*CI**2/beta\\nepsilon=eps0*rw;source=arb('9.204e-79')*rw*CI/beta\\nK=arb(7);Kt=K/(1-K*epsilon);H=arb('1.338').sqrt();F=H*arb('1.1e-10')\\noutputs={}\\nfor tag,a,c in [('H3','6.861e-45','4.583e-13'),('quartic','1.571e-51','7.949e-26'),('mass','1.571e-52','7.949e-27'),('slow','1.896e-51','1.141e-22')]:\\n aa=arb(a)*rs;cc=arb(c);dd=aa*CI\\n error=dd*K*H+(cc+dd)*Kt*epsilon*(1+K*H)\\n affine=aa+dd*K*F+(cc+dd)*Kt*(source+K*epsilon*F)\\n outputs[tag]={'direct_U3':str(aa),'interior_product_per_energy':str(error),'affine_total':str(affine),'interior_tail_per_energy':str(dd)}\\nminN=128\\nwhile not eps0*q**(minN-128)<arb('0.01'):minN+=1\\nout={'scope':'Unfrozen preview of whole coupled truncation error, not signed retained centers.',\\n 'CL2':str(CL),'CDelta':str(CD),'Csup':str(CI),'N128_energy_upper_expression':str(eps0),'minimum_base_depth_for_point01':minN,\\n 'new_energy_defect_upper':str(epsilon),'new_source_dual_upper':str(source),'interior_approx_inverse_upper':str(Kt),\\n 'strong_scale':str(rs),'weak_scale':str(rw),'W4_direct':str(arb('1.354e-53')*rs),'outputs':outputs}\\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\\\\n');print(json.dumps(out,indent=2))\\n\",\n      \"scope\": \"Unfrozen preview, not certification.\"\n    },\n    \"s169el-explore.json\": {\n      \"sha256\": \"0616a59e18182ca163248ddb4a81f7f20cb995058b469ccb2788e53658bfa4a8\",\n      \"contents\": \"{\\r\\n  \\\"scope\\\": \\\"Unfrozen preview of whole coupled truncation error, not signed retained centers.\\\",\\r\\n  \\\"CL2\\\": \\\"[22.47332888115357081324055601903732258779227971967905037 +/- 5.02e-54]\\\",\\r\\n  \\\"CDelta\\\": \\\"[94530872046369687.23694 +/- 5.46e-6]\\\",\\r\\n  \\\"Csup\\\": \\\"[7.47604751444731342490e+50 +/- 3.89e+29]\\\",\\r\\n  \\\"N128_energy_upper_expression\\\": \\\"[3.086540402330072400903e+26 +/- 9.23e+4]\\\",\\r\\n  \\\"minimum_base_depth_for_point01\\\": 199,\\r\\n  \\\"new_energy_defect_upper\\\": \\\"[1.019745491609029405348e-25 +/- 4.17e-47]\\\",\\r\\n  \\\"new_source_dual_upper\\\": \\\"[1.364016868055468460284e-78 +/- 5.14e-100]\\\",\\r\\n  \\\"interior_approx_inverse_upper\\\": \\\"[7.00000000000000000000000499675290888424408621 +/- 5.46e-45]\\\",\\r\\n  \\\"strong_scale\\\": \\\"[1.59396835599595953221538972748097627236059468158722858040514738856792449894461703100490421944184501028910882202721192887583162541126795806806286561563697e-51 +/- 3.61e-204]\\\",\\r\\n  \\\"weak_scale\\\": \\\"[3.30384624429088733224826057281690139025569488933262802919328537320260465451693335591260704119538934441387765029995129821137445260491469921862198580815671e-52 +/- 7.47e-205]\\\",\\r\\n  \\\"W4_direct\\\": \\\"[2.15823315401852920661963769100924187277624519886910749786856956412096977157101145998064031312425814393145334502484495169787602080685681522415712004357246e-104 +/- 2.27e-257]\\\",\\r\\n  \\\"outputs\\\": {\\r\\n    \\\"H3\\\": {\\r\\n      \\\"direct_U3\\\": \\\"[1.09362168904882783505297889202469782046660401103699752901597162329645299872590174497246478495904986155935756279287010440170807819467094603049793209888853e-95 +/- 2.98e-248]\\\",\\r\\n      \\\"interior_product_per_energy\\\": \\\"[2.97604598724464601431e-36 +/- 5.46e-57]\\\",\\r\\n      \\\"affine_total\\\": \\\"[2.913791579689708619853e-46 +/- 9.65e-68]\\\",\\r\\n      \\\"interior_tail_per_energy\\\": \\\"[8.17596771015916202413e-45 +/- 3.14e-66]\\\"\\r\\n    },\\r\\n    \\\"quartic\\\": {\\r\\n      \\\"direct_U3\\\": \\\"[2.50412428726965242511037726187261372387849424477353609981648654744020938784199335570870452874313851116418995940474994026393148352110196212492676188216568e-102 +/- 5.63e-255]\\\",\\r\\n      \\\"interior_product_per_energy\\\": \\\"[5.31339724314529182782e-49 +/- 3.01e-70]\\\",\\r\\n      \\\"affine_total\\\": \\\"[5.22057828517420755538e-59 +/- 5.48e-80]\\\",\\r\\n      \\\"interior_tail_per_energy\\\": \\\"[1.872095215370943527170e-51 +/- 5.37e-73]\\\"\\r\\n    },\\r\\n    \\\"mass\\\": {\\r\\n      \\\"direct_U3\\\": \\\"[2.50412428726965242511037726187261372387849424477353609981648654744020938784199335570870452874313851116418995940474994026393148352110196212492676188216568e-103 +/- 5.67e-256]\\\",\\r\\n      \\\"interior_product_per_energy\\\": \\\"[5.31339724314529182782e-50 +/- 3.01e-71]\\\",\\r\\n      \\\"affine_total\\\": \\\"[5.22057828517420755538e-60 +/- 5.48e-81]\\\",\\r\\n      \\\"interior_tail_per_energy\\\": \\\"[1.872095215370943527170e-52 +/- 5.37e-74]\\\"\\r\\n    },\\r\\n    \\\"slow\\\": {\\r\\n      \\\"direct_U3\\\": \\\"[3.02216400296833927308037892330393101239568751628938538844815944872478484999899389078529840006173813950815032656359381714857676177976404849704719320724770e-102 +/- 2.37e-255]\\\",\\r\\n      \\\"interior_product_per_energy\\\": \\\"[7.40945284477680220961e-46 +/- 6.38e-67]\\\",\\r\\n      \\\"affine_total\\\": \\\"[7.25448033269153746592e-56 +/- 2.86e-77]\\\",\\r\\n      \\\"interior_tail_per_energy\\\": \\\"[2.259384168264359597399e-51 +/- 3.35e-73]\\\"\\r\\n    }\\r\\n  }\\r\\n}\\r\\n\",\n      \"scope\": \"Unfrozen preview, not certification.\"\n    }\n  },\n  \"local_lean_invocations\": 0\n}\n"
+      },
+      "runtime": {
+        "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+        "executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+        "flint_version": "0.9.0",
+        "sympy_version": "1.14.0"
+      },
+      "result": {
+        "precision_bits": 512,
+        "parameters": {
+          "beta": {
+            "ball": "[0.166666666663273593687327683704 +/- 1.53e-31]",
+            "decimal_enclosure": {
+              "mid": "166666666663273593687327683704044017413059437140807679099999",
+              "rad": "108516590969635794015794233345",
+              "exponent": "-60"
+            }
+          },
+          "C": {
+            "ball": "[49119682270.77026011517 +/- 3.20e-12]",
+            "decimal_enclosure": {
+              "mid": "491196822707702601151705468084281147600478334425133652985094",
+              "rad": "26525844162143483700278578564644732929",
+              "exponent": "-49"
+            }
+          },
+          "B2": {
+            "ball": "[8.383092440707457726322e+42 +/- 8.93e+20]",
+            "decimal_enclosure": {
+              "mid": "83830924407074577263224399887754585293455359999999999999999",
+              "rad": "4527146570162070793918943199676596225",
+              "exponent": "-16"
+            }
+          },
+          "gamma": {
+            "ball": "[5.057799424826589366111e-34 +/- 5.81e-56]",
+            "decimal_enclosure": {
+              "mid": "505779942482658936611117089094962181662789590748629413391765",
+              "rad": "40971096074845924943892252368998236161",
+              "exponent": "-93"
+            }
+          },
+          "Fl": {
+            "ball": "[0.999999988219027549038275355765087312701864296158401211 +/- 6.01e-55]",
+            "decimal_enclosure": {
+              "mid": "999999988219027549038275355765087312701864296158401210599999",
+              "rad": "200002",
+              "exponent": "-60"
+            }
+          }
+        },
+        "global_shape_L2_constant": {
+          "ball": "[22.47332888115357081324055601903732258779227971967905037 +/- 5.02e-54]",
+          "decimal_enclosure": {
+            "mid": "224733288811535708132405560190373225877922797196790503672332",
+            "rad": "22476",
+            "exponent": "-58"
+          }
+        },
+        "global_shape_Laplacian_constant": {
+          "ball": "[94530872046369687.23694 +/- 5.46e-6]",
+          "decimal_enclosure": {
+            "mid": "94530872046369687236940344986180662090191617608070373535156",
+            "rad": "5105095956123232556361871851968790529",
+            "exponent": "-42"
+          }
+        },
+        "global_shape_supremum_constant": {
+          "ball": "[7.47604751444731342490e+50 +/- 3.89e+29]",
+          "decimal_enclosure": {
+            "mid": "747604751444731342489712349795562117817370392133654586545360",
+            "rad": "100935891673693699335187988088285560833",
+            "exponent": "-9"
+          }
+        },
+        "old_base_128_energy_upper_expression": {
+          "ball": "[3.086540402330072400903e+26 +/- 9.23e+4]",
+          "decimal_enclosure": {
+            "mid": "308654040233007240090291049726562500000000000000000000000000",
+            "rad": "83345502121923078572497804694862692352",
+            "exponent": "-33"
+          }
+        },
+        "minimum_base_for_point01_upper_certificate": 199,
+        "new_spectral_order_rule": "256+ceil((8log(M/18)+6log(1+abs(p)))/log(1/.401))",
+        "complete_energy_defect": {
+          "ball": "[1.019745491609029405348e-25 +/- 4.17e-47]",
+          "decimal_enclosure": {
+            "mid": "101974549160902940534814106874296625049402688177711663936627",
+            "rad": "27536072677684797757288164672701202433",
+            "exponent": "-84"
+          }
+        },
+        "complete_source_dual_error": {
+          "ball": "[1.364016868055468460284e-78 +/- 5.14e-100]",
+          "decimal_enclosure": {
+            "mid": "136401686805546846028432976657978913842035884726426904187993",
+            "rad": "18416196851179743893003512596771373057",
+            "exponent": "-137"
+          }
+        },
+        "approximate_full_energy_inverse_upper": {
+          "ball": "[1.0000000000000000000000001019745491609029405348 +/- 4.17e-47]",
+          "decimal_enclosure": {
+            "mid": "100000000000000000000000010197454916090294053481411727308535",
+            "rad": "2753649307649",
+            "exponent": "-59"
+          }
+        },
+        "approximate_interior_energy_inverse_upper": {
+          "ball": "[7.00000000000000000000000499675290888424408621 +/- 5.46e-45]",
+          "decimal_enclosure": {
+            "mid": "700000000000000000000000499675290888424408620589480363159529",
+            "rad": "134928816275457",
+            "exponent": "-59"
+          }
+        },
+        "strong_tail_factor": {
+          "ball": "[1.59396835599595953221538972748097627236059468158722858040514738856792449894461703100490421944184501028910882202721192887583162541126795806806286561563697e-51 +/- 3.61e-204]",
+          "decimal_enclosure": {
+            "mid": "159396835599595953221538972748097627236059468158722858040514",
+            "rad": "2",
+            "exponent": "-110"
+          }
+        },
+        "weak_tail_factor": {
+          "ball": "[3.30384624429088733224826057281690139025569488933262802919328537320260465451693335591260704119538934441387765029995129821137445260491469921862198580815671e-52 +/- 7.47e-205]",
+          "decimal_enclosure": {
+            "mid": "330384624429088733224826057281690139025569488933262802919328",
+            "rad": "2",
+            "exponent": "-111"
+          }
+        },
+        "direct_graph_W4_coefficient": {
+          "ball": "[2.15823315401852920661963769100924187277624519886910749786856956412096977157101145998064031312425814393145334502484495169787602080685681522415712004357246e-104 +/- 2.27e-257]",
+          "decimal_enclosure": {
+            "mid": "215823315401852920661963769100924187277624519886910749786856",
+            "rad": "2",
+            "exponent": "-163"
+          }
+        },
+        "outputs": {
+          "H3": {
+            "direct_U3": {
+              "ball": "[1.09362168904882783505297889202469782046660401103699752901597162329645299872590174497246478495904986155935756279287010440170807819467094603049793209888853e-95 +/- 2.98e-248]",
+              "decimal_enclosure": {
+                "mid": "109362168904882783505297889202469782046660401103699752901597",
+                "rad": "2",
+                "exponent": "-154"
+              }
+            },
+            "interior_product_per_energy": {
+              "ball": "[2.97604598724464601431e-36 +/- 5.46e-57]",
+              "decimal_enclosure": {
+                "mid": "297604598724464601430535346283962494590079970446811297797578",
+                "rad": "80361835281010770458125142166687711233",
+                "exponent": "-95"
+              }
+            },
+            "affine_total": {
+              "ball": "[2.913791579689708619853e-46 +/- 9.65e-68]",
+              "decimal_enclosure": {
+                "mid": "291379157968970861985317770235858742975709720004824516739508",
+                "rad": "78680786865221337396232119027633225729",
+                "exponent": "-105"
+              }
+            },
+            "interior_tail_per_energy": {
+              "ball": "[8.17596771015916202413e-45 +/- 3.14e-66]",
+              "decimal_enclosure": {
+                "mid": "81759677101591620241320331012193908549906916463532055701465",
+                "rad": "11038568125403991378485290374717767681",
+                "exponent": "-103"
+              }
+            }
+          },
+          "quartic": {
+            "direct_U3": {
+              "ball": "[2.50412428726965242511037726187261372387849424477353609981648654744020938784199335570870452874313851116418995940474994026393148352110196212492676188216568e-102 +/- 5.63e-255]",
+              "decimal_enclosure": {
+                "mid": "250412428726965242511037726187261372387849424477353609981648",
+                "rad": "2",
+                "exponent": "-161"
+              }
+            },
+            "interior_product_per_energy": {
+              "ball": "[5.31339724314529182782e-49 +/- 3.01e-70]",
+              "decimal_enclosure": {
+                "mid": "531339724314529182782158603477586191928522660351762319295412",
+                "rad": "141430432014807737088006163060435714049",
+                "exponent": "-108"
+              }
+            },
+            "affine_total": {
+              "ball": "[5.22057828517420755538e-59 +/- 5.48e-80]",
+              "decimal_enclosure": {
+                "mid": "522057828517420755538409142964686586362666836029953188767837",
+                "rad": "138719389598019662616350235639542710273",
+                "exponent": "-118"
+              }
+            },
+            "interior_tail_per_energy": {
+              "ball": "[1.872095215370943527170e-51 +/- 5.37e-73]",
+              "decimal_enclosure": {
+                "mid": "187209521537094352716971636817018846133076469558677830501388",
+                "rad": "25275601930309619773227448006984335361",
+                "exponent": "-110"
+              }
+            }
+          },
+          "mass": {
+            "direct_U3": {
+              "ball": "[2.50412428726965242511037726187261372387849424477353609981648654744020938784199335570870452874313851116418995940474994026393148352110196212492676188216568e-103 +/- 5.67e-256]",
+              "decimal_enclosure": {
+                "mid": "250412428726965242511037726187261372387849424477353609981648",
+                "rad": "2",
+                "exponent": "-162"
+              }
+            },
+            "interior_product_per_energy": {
+              "ball": "[5.31339724314529182782e-50 +/- 3.01e-71]",
+              "decimal_enclosure": {
+                "mid": "531339724314529182782158603477586191928522660351762319295412",
+                "rad": "141430432173264062116534838247523614721",
+                "exponent": "-109"
+              }
+            },
+            "affine_total": {
+              "ball": "[5.22057828517420755538e-60 +/- 5.48e-81]",
+              "decimal_enclosure": {
+                "mid": "522057828517420755538409142964686586362666836029953188767837",
+                "rad": "138719390231844962730464936387894312961",
+                "exponent": "-119"
+              }
+            },
+            "interior_tail_per_energy": {
+              "ball": "[1.872095215370943527170e-52 +/- 5.37e-74]",
+              "decimal_enclosure": {
+                "mid": "187209521537094352716971636817018846133076469558677830501388",
+                "rad": "25275602049151863544623954397300260865",
+                "exponent": "-111"
+              }
+            }
+          },
+          "slow": {
+            "direct_U3": {
+              "ball": "[3.02216400296833927308037892330393101239568751628938538844815944872478484999899389078529840006173813950815032656359381714857676177976404849704719320724770e-102 +/- 2.37e-255]",
+              "decimal_enclosure": {
+                "mid": "302216400296833927308037892330393101239568751628938538844815",
+                "rad": "2",
+                "exponent": "-161"
+              }
+            },
+            "interior_product_per_energy": {
+              "ball": "[7.40945284477680220961e-46 +/- 6.38e-67]",
+              "decimal_enclosure": {
+                "mid": "74094528447768022096143787974415489671261568497399952971577",
+                "rad": "20007415425572553877760924482407497729",
+                "exponent": "-104"
+              }
+            },
+            "affine_total": {
+              "ball": "[7.25448033269153746592e-56 +/- 2.86e-77]",
+              "decimal_enclosure": {
+                "mid": "725448033269153746591909973887676150148175659654761795566032",
+                "rad": "195889203631793837526618850270770102273",
+                "exponent": "-115"
+              }
+            },
+            "interior_tail_per_energy": {
+              "ball": "[2.259384168264359597399e-51 +/- 3.35e-73]",
+              "decimal_enclosure": {
+                "mid": "225938416826435959739897023173181242691478667271326013132165",
+                "rad": "30504482194815002673980919271412203521",
+                "exponent": "-110"
+              }
+            }
+          }
+        },
+        "scope": {
+          "actual_paired_mass_log_domain": true,
+          "common_regulator_and_complete_spectrum_preserved": true,
+          "original_energy_to_shape_supremum_proved": true,
+          "complete_coupled_energy_approximation_error_certified": true,
+          "all_interior_Schur_error_terms_certified": true,
+          "original_outer_and_phase_error_bounds_certified": true,
+          "signed_retained_center_computed": false,
+          "strong_complementary_quotient_inverse_computed": false,
+          "actual_input_or_border_map_norms_computed": false,
+          "actual_kappa_m_computed": false,
+          "complete_coupled_feasibility_bound_certified": false,
+          "nonlinear_admission": false,
+          "nonlinear_contraction": false,
+          "exact_compatibility": false,
+          "physical_matching": false,
+          "semiclassical_validity_noise": false,
+          "all_sector_stability": false,
+          "actual_controlled_solution": false,
+          "construction_obstruction": false,
+          "full_goal_complete": false
+        }
+      },
+      "input_sha256_after": {
+        "notes/current-coupled-truncation-energy-error.md": "6f1b3893c9e3a819b22915784c06b11ff0f7046af39bdbdcf018d8b35858a1d1",
+        "checks/current_coupled_truncation_energy_error.py": "0f5403aa72250da80d7761939e3274187d0a5195b962fd8a9b12a540914389a1",
+        "evidence/current-coupled-truncation-energy-error-review.json": "b1563da44d803f9a2d0308fda5d8dad2b068842b4ab65a3d26ee5a7da4269dec",
+        "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+        "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+        "notes/current-global-far-return-energy-bound.md": "a0d54bf4ab914ebd121c106c160792d3fb4961caf0fbb031e2f742b8572c0a82",
+        "notes/current-coincident-dirac-action-assembly.md": "32d654397879f90d9bd66bfadfadfbd3219ab97b0e70f3b6f8eb11689a24155b",
+        "notes/current-global-mass-conversion.md": "12276adf8fda25e55bcdb830bb9b2be7608dacc0226579401d4aa5bca727e219",
+        "evidence/current-global-mass-conversion.json": "ffa04427aa4b6dbfdad6f3d75b30fa00428459fb8275172bf512f9bdcb7fc5df",
+        "notes/current-adaptive-dirac-trace-remainder.md": "e96ffaaa717dad1d4108f96eef8f5ab89797cc7b8d5ab392e13e7e4687878aef",
+        "evidence/current-adaptive-dirac-trace-remainder.json": "41e29487d32c5a4a3f358c5baabb1a3045133dfe88aa6c2cf911d3af6436948f",
+        "notes/current-original-graph-dirac-tail.md": "9ddb4f48ac6e9d45ad36f0e163893b58a79c61e7aafef069f3de2faaaaabd322",
+        "evidence/current-original-graph-dirac-tail.json": "221ed4b8d6479c479b4041dd86a70e0b79d37f20b223a2174bf41f75cfbec8df",
+        "notes/current-canonical-interior-schur-bound.md": "f242ef1ef6155aa0363d65d22bef328751f2a02c8048b92f25ee1de36fe443eb",
+        "evidence/current-canonical-interior-schur-bound.json": "23a536e96d455e1f0dcf8dd45baaafb9a16a0d683c7339be282c5c22d9c19caa",
+        "notes/current-coupled-input-energy-bound.md": "99cb07232f99e39c6a4b309fe1dcd764a44c8c70b1846b9ad7e21c2b5ed9c422",
+        "notes/current-mass-response-regulator-audit.md": "83aff13073f2e50700e020231545d00883a9831a8a85812567d4c484a9033a71"
+      },
+      "status": "passed",
+      "checks": [
+        {
+          "name": "ordinary_argument_frozen",
+          "passed": true
+        },
+        {
+          "name": "actual_parameter_signs",
+          "passed": true
+        },
+        {
+          "name": "actual_root_lower_endpoint",
+          "passed": true
+        },
+        {
+          "name": "actual_root_upper_endpoint",
+          "passed": true
+        },
+        {
+          "name": "Q_monotone_on_final_half",
+          "passed": true
+        },
+        {
+          "name": "outer_half_Q_lower",
+          "passed": true
+        },
+        {
+          "name": "inner_factored_H1_lower",
+          "passed": true
+        },
+        {
+          "name": "outer_half_dominates_bolt_linear_lower",
+          "passed": true
+        },
+        {
+          "name": "global_shape_L2_upper",
+          "passed": true
+        },
+        {
+          "name": "global_shape_Laplacian_upper",
+          "passed": true
+        },
+        {
+          "name": "actual_global_shape_supremum_upper",
+          "passed": true
+        },
+        {
+          "name": "old_energy_upper_certificate_excessive",
+          "passed": true
+        },
+        {
+          "name": "new_rule_dominates_weak_rule",
+          "passed": true
+        },
+        {
+          "name": "base_198_not_certified_by_this_upper",
+          "passed": true
+        },
+        {
+          "name": "base_199_certified_by_this_upper",
+          "passed": true
+        },
+        {
+          "name": "complete_energy_defect",
+          "passed": true
+        },
+        {
+          "name": "complete_source_dual_error",
+          "passed": true
+        },
+        {
+          "name": "full_Neumann_inverse_admissible",
+          "passed": true
+        },
+        {
+          "name": "interior_Neumann_inverse_admissible",
+          "passed": true
+        },
+        {
+          "name": "direct_graph_fourth_jet_error",
+          "passed": true
+        },
+        {
+          "name": "H3_direct_original_output_error",
+          "passed": true
+        },
+        {
+          "name": "H3_complete_interior_product_error",
+          "passed": true
+        },
+        {
+          "name": "H3_complete_affine_error",
+          "passed": true
+        },
+        {
+          "name": "quartic_direct_original_output_error",
+          "passed": true
+        },
+        {
+          "name": "quartic_complete_interior_product_error",
+          "passed": true
+        },
+        {
+          "name": "quartic_complete_affine_error",
+          "passed": true
+        },
+        {
+          "name": "mass_direct_original_output_error",
+          "passed": true
+        },
+        {
+          "name": "mass_complete_interior_product_error",
+          "passed": true
+        },
+        {
+          "name": "mass_complete_affine_error",
+          "passed": true
+        },
+        {
+          "name": "slow_direct_original_output_error",
+          "passed": true
+        },
+        {
+          "name": "slow_complete_interior_product_error",
+          "passed": true
+        },
+        {
+          "name": "slow_complete_affine_error",
+          "passed": true
+        },
+        {
+          "name": "exact_bolt_linear_term",
+          "passed": true
+        },
+        {
+          "name": "integrable_regular_bolt_derivative",
+          "passed": true
+        },
+        {
+          "name": "complete_noncommuting_Schur_difference",
+          "passed": true
+        },
+        {
+          "name": "retained_fast_screen",
+          "passed": true
+        },
+        {
+          "name": "frozen_inputs_unchanged",
+          "passed": true
+        }
+      ],
+      "finished_utc": "2026-10-26T00:40:00.652235+00:00"
+    }
+  ]
+}

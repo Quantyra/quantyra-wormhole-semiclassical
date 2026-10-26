@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-25",
+  "story": "S169",
+  "status": "ordinary_argument_and_execution_contract_frozen_before_development",
+  "outcome_scope": "Complete signed coupled feasibility unresolved. Entire transport approximation error now converted to original energy, approximate inverses and all original outer/phase Schur-error terms.",
+  "quantitative_role": "The missing energy-to-supremum conversion costs 7.477e50. Old depth-128 upper certificate exceeds 3e26 in energy; depth 256 makes the complete energy defect below 1.020e-25. This explicitly motivates the added transport terms and certifies all inverse/input/output products, not just the direct tail.",
+  "domain_review": [
+    "Use the actual full limiting Hessian and its retained joint positive TT second/fourth reserve after all quantum/contact costs, not a standalone heat contact.",
+    "Restore N_halves, time period, physical action normalization and beta exactly in the radial L2/Laplacian bounds and tail dual norms.",
+    "The finite-temperature Q lower bound follows from the actual polynomial and factored physical root. No double-root surrogate or rounded-bolt denominator is used.",
+    "Original regular-bolt core flux QTprime=0 yields an integrable derivative bound. Uniform convergence of core differences extends the shape-supremum comparison to the actual energy completion.",
+    "This linear T bound is not a full physical C5 or bolt-radius bound, nor an assertion of nonlinear action on arbitrary energy fields.",
+    "Every angular and signed thermal index is retained; the new adaptive order increases each existing strong order by 128 and dominates the weak rule.",
+    "The entire commonly regulated low-word part, mass-to-geometric conversion, LLL/Weyl/local and boundary completions remain in the retained center. No separately renormalized finite-mode determinant is used.",
+    "The weak tail is an actual action derivative and symmetric bounded energy perturbation. The limiting form is extended after the established regulator identity, without interchanging a raw heat cutoff and strong completion.",
+    "Neumann inverse hypotheses epsilon<1 and 7epsilon<1 are proved for the full operator and the already justified closed canonical interior compression.",
+    "All three noncommuting interior-product error terms, direct output error and affine source error are retained. U3/W4 vanish locally for canonical interior inputs, but their global supremum is paid by the new energy bound.",
+    "The original cutoff transition, finite scalar quartic, mass and exact slow moments are retained. The complementary quotient still contains independent .1/.2 equations and matching data.",
+    "Actual input and phase/border map norms, signed retained centers, kappa_m and physical admission remain uncomputed."
+  ],
+  "theorem_hypotheses": "New ingredients are explicit radial integration on the actual regular disk, completion of an existing closed form-core inequality, elementary bounded-operator Neumann series and exact noncommuting Schur algebra. The earlier trace-ideal/Cauchy/common-regulator construction is reused at a larger order with the same hypotheses. No new smooth-boundary or nonlinear-neighborhood theorem is invoked.",
+  "execution_contract": {
+    "precision_bits": 512,
+    "base_depth": 256,
+    "targets": [
+      "shape supremum constant<7.477e50",
+      "old energy upper expression between3.0865e26 and3.0866e26",
+      "first sufficient base depth for .01 energy defect is199",
+      "complete energy error<1.020e-25",
+      "source dual error<1.365e-78",
+      "approximate interior inverse<7.000001",
+      "all original Schur errors and affine counterparts in ordinary equations13-15"
+    ],
+    "verification": "Freeze before development; retain failed snapshots; matching unchanged acceptance after ordinary review. No Lean run."
+  },
+  "first_unsupported_step_after_result": "The signed common-restored complementary quotient/border center and its strong input/interface/phase/physical map norms.",
+  "claims_boundary": [
+    "No retained signed center",
+    "No actual kappa_m or complete coupled feasibility decision",
+    "No nonlinear admission/contraction",
+    "No exact compatibility, matching, validity/noise or all-sector stability",
+    "No actual controlled solution or construction obstruction"
+  ],
+  "scientific_sha256": {
+    "notes/current-coupled-truncation-energy-error.md": "6f1b3893c9e3a819b22915784c06b11ff0f7046af39bdbdcf018d8b35858a1d1",
+    "checks/current_coupled_truncation_energy_error.py": "0f5403aa72250da80d7761939e3274187d0a5195b962fd8a9b12a540914389a1"
+  },
+  "exploration": {
+    "s169el-explore.py": {
+      "sha256": "356edeece68ec092a75a2b601c27b4cca6ef70492d1f7ea7dac5486f27ad7502",
+      "contents": "from pathlib import Path\nimport json,sys\nsys.path.insert(0,'C:/Users/dfred/AppData/Local/Temp/s169af-arb')\nfrom flint import arb,ctx\nctx.prec=512\nr=Path('C:/Users/dfred/Desktop/Projects/IGH/quantyra-wormhole-semiclassical')\ndef prior(st):return json.loads((r/'evidence'/(st+'.json')).read_bytes())['runs'][-1]['result']\ndef dec(x):\n d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\np=prior('current-global-mass-conversion')['parameters'];par=prior('current-adaptive-dirac-trace-remainder')['actual_parameters']\nbeta,Fl=[dec(p[k]) for k in ['beta','Fl']]\nC,B2,gamma=[dec(par[k]) for k in ['C','B2','gamma']]\nCL=(500/(arb('.99')*Fl)).sqrt()\nCD=(100*arb.pi()*B2*beta/C+2*arb(500)**4*CL**2).sqrt()\nCI=CL/arb('.99').sqrt()+4*CD/gamma\nq=arb('.3961');s=arb('.401');rw=q**128;rs=s**128\neps0=arb('9.204e-77')*CI**2/beta\nepsilon=eps0*rw;source=arb('9.204e-79')*rw*CI/beta\nK=arb(7);Kt=K/(1-K*epsilon);H=arb('1.338').sqrt();F=H*arb('1.1e-10')\noutputs={}\nfor tag,a,c in [('H3','6.861e-45','4.583e-13'),('quartic','1.571e-51','7.949e-26'),('mass','1.571e-52','7.949e-27'),('slow','1.896e-51','1.141e-22')]:\n aa=arb(a)*rs;cc=arb(c);dd=aa*CI\n error=dd*K*H+(cc+dd)*Kt*epsilon*(1+K*H)\n affine=aa+dd*K*F+(cc+dd)*Kt*(source+K*epsilon*F)\n outputs[tag]={'direct_U3':str(aa),'interior_product_per_energy':str(error),'affine_total':str(affine),'interior_tail_per_energy':str(dd)}\nminN=128\nwhile not eps0*q**(minN-128)<arb('0.01'):minN+=1\nout={'scope':'Unfrozen preview of whole coupled truncation error, not signed retained centers.',\n 'CL2':str(CL),'CDelta':str(CD),'Csup':str(CI),'N128_energy_upper_expression':str(eps0),'minimum_base_depth_for_point01':minN,\n 'new_energy_defect_upper':str(epsilon),'new_source_dual_upper':str(source),'interior_approx_inverse_upper':str(Kt),\n 'strong_scale':str(rs),'weak_scale':str(rw),'W4_direct':str(arb('1.354e-53')*rs),'outputs':outputs}\nPath(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\\n');print(json.dumps(out,indent=2))\n",
+      "scope": "Unfrozen preview, not certification."
+    },
+    "s169el-explore.json": {
+      "sha256": "0616a59e18182ca163248ddb4a81f7f20cb995058b469ccb2788e53658bfa4a8",
+      "contents": "{\r\n  \"scope\": \"Unfrozen preview of whole coupled truncation error, not signed retained centers.\",\r\n  \"CL2\": \"[22.47332888115357081324055601903732258779227971967905037 +/- 5.02e-54]\",\r\n  \"CDelta\": \"[94530872046369687.23694 +/- 5.46e-6]\",\r\n  \"Csup\": \"[7.47604751444731342490e+50 +/- 3.89e+29]\",\r\n  \"N128_energy_upper_expression\": \"[3.086540402330072400903e+26 +/- 9.23e+4]\",\r\n  \"minimum_base_depth_for_point01\": 199,\r\n  \"new_energy_defect_upper\": \"[1.019745491609029405348e-25 +/- 4.17e-47]\",\r\n  \"new_source_dual_upper\": \"[1.364016868055468460284e-78 +/- 5.14e-100]\",\r\n  \"interior_approx_inverse_upper\": \"[7.00000000000000000000000499675290888424408621 +/- 5.46e-45]\",\r\n  \"strong_scale\": \"[1.59396835599595953221538972748097627236059468158722858040514738856792449894461703100490421944184501028910882202721192887583162541126795806806286561563697e-51 +/- 3.61e-204]\",\r\n  \"weak_scale\": \"[3.30384624429088733224826057281690139025569488933262802919328537320260465451693335591260704119538934441387765029995129821137445260491469921862198580815671e-52 +/- 7.47e-205]\",\r\n  \"W4_direct\": \"[2.15823315401852920661963769100924187277624519886910749786856956412096977157101145998064031312425814393145334502484495169787602080685681522415712004357246e-104 +/- 2.27e-257]\",\r\n  \"outputs\": {\r\n    \"H3\": {\r\n      \"direct_U3\": \"[1.09362168904882783505297889202469782046660401103699752901597162329645299872590174497246478495904986155935756279287010440170807819467094603049793209888853e-95 +/- 2.98e-248]\",\r\n      \"interior_product_per_energy\": \"[2.97604598724464601431e-36 +/- 5.46e-57]\",\r\n      \"affine_total\": \"[2.913791579689708619853e-46 +/- 9.65e-68]\",\r\n      \"interior_tail_per_energy\": \"[8.17596771015916202413e-45 +/- 3.14e-66]\"\r\n    },\r\n    \"quartic\": {\r\n      \"direct_U3\": \"[2.50412428726965242511037726187261372387849424477353609981648654744020938784199335570870452874313851116418995940474994026393148352110196212492676188216568e-102 +/- 5.63e-255]\",\r\n      \"interior_product_per_energy\": \"[5.31339724314529182782e-49 +/- 3.01e-70]\",\r\n      \"affine_total\": \"[5.22057828517420755538e-59 +/- 5.48e-80]\",\r\n      \"interior_tail_per_energy\": \"[1.872095215370943527170e-51 +/- 5.37e-73]\"\r\n    },\r\n    \"mass\": {\r\n      \"direct_U3\": \"[2.50412428726965242511037726187261372387849424477353609981648654744020938784199335570870452874313851116418995940474994026393148352110196212492676188216568e-103 +/- 5.67e-256]\",\r\n      \"interior_product_per_energy\": \"[5.31339724314529182782e-50 +/- 3.01e-71]\",\r\n      \"affine_total\": \"[5.22057828517420755538e-60 +/- 5.48e-81]\",\r\n      \"interior_tail_per_energy\": \"[1.872095215370943527170e-52 +/- 5.37e-74]\"\r\n    },\r\n    \"slow\": {\r\n      \"direct_U3\": \"[3.02216400296833927308037892330393101239568751628938538844815944872478484999899389078529840006173813950815032656359381714857676177976404849704719320724770e-102 +/- 2.37e-255]\",\r\n      \"interior_product_per_energy\": \"[7.40945284477680220961e-46 +/- 6.38e-67]\",\r\n      \"affine_total\": \"[7.25448033269153746592e-56 +/- 2.86e-77]\",\r\n      \"interior_tail_per_energy\": \"[2.259384168264359597399e-51 +/- 3.35e-73]\"\r\n    }\r\n  }\r\n}\r\n",
+      "scope": "Unfrozen preview, not certification."
+    }
+  },
+  "local_lean_invocations": 0
+}
