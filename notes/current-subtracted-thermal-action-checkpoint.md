@@ -1,3 +1,55 @@
+# Checkpoint recovery and full-action revalidation, 2026-10-27
+
+The full stable semiclassical wormhole objective remains INCOMPLETE. This
+entry records operational recovery and an unresolved research attempt;
+it is not a signed certificate or a completed feasibility milestone.
+
+A disk-full write had truncated this working copy to zero bytes. It was
+restored from commit 6c56d680803add646550826f0c3110e12b03ba67 and verified
+byte for byte: 800970 bytes, Git blob
+37909ce8db111750b628fe43e4e4e0e8295dd383. All 21 protected inherited-work
+and closed-audit paths match the retained execution baseline. The older
+checkpoint below is preserved verbatim. Storage recovery is not evidence
+about quantum-response feasibility.
+
+The attempted boundary/range recheck used the actual paired mass/log
+realization in current-schur-residual-phase-domain.md. Its accepted mixed
+coefficients vanish to at least third order at the outer end after the
+vacuum cancellation; c_J-Q'c_b=Q d_b retains the regular-bolt adjoint
+cancellation. These facts neither supply a quantitative global range tail
+nor prove a finite-rank obstruction for F_t. No new such bound was obtained.
+
+For the conforming Ritz candidate, with N=|W_action| beta, the first
+unexecuted numerical implication remains a bound on the COMPLETE functional
+
+    r_n(u)[v] = B[u,v]/N - (ell_t+B)[F_n u,v]/N,
+    sup_{||u||E_t=1} ||r_n(u)||E_t*.
+
+The fixed-seed form defines this expression. Its full quantum application,
+infinite-dimensional complement and numerical errors remain UNKNOWN.
+The accepted common-regulator formula must retain the exact ultraviolet
+logarithm, all angular/thermal sums, coincidence and density contacts,
+cutoff transitions and finite/regular-bolt returns. Testing finitely many
+v, or citing the outer gain above, does not enclose that dual norm. There
+is no new signed G_t value, available admission margin or neighborhood
+transfer. P32, original physical norms and the closed audit are unchanged.
+
+Decision: retain the construction and composed range-residual/direct
+joint-adjoint approach; no evidence here selects a new construction or
+certifies the numerical method. A complete actual-domain action/remainder
+estimate is still required. One decisive next calculation, PROPOSED and
+NOT EXECUTED: enclose the displayed full residual for an explicit admissible
+trial, with complete application errors, then propagate it through the
+proved original-output maps to the signed G_t certificate.
+
+Remaining to-do list: complete signed action, range residual and G_t with
+actual errors; every original coupled/admission and mass/phase budget;
+nonlinear existence/contraction, exact compatibility, physical matching,
+semiclassical validity/noise and all-sector stability; transport,
+preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Resumed goal blocked at complete signed evaluation
 
 2026-10-27 HST, E003/S169. The goal tool reports BLOCKED with the full
