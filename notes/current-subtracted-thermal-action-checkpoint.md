@@ -1,3 +1,47 @@
+# Resumed goal: finite-rank estimator rejected, signed action still missing
+
+2026-10-27 HST, E003/S169. The new attached goal is ACTIVE and incomplete.
+The historical BLOCKED entries below belong to earlier goals. Preserve
+the full objective, closed audit, accepted results, P32 and original norms.
+
+The [executed domain/estimator test](current-galerkin-range-audit.md)
+proves that every finite-rank approximation to L_t^-1 on the whole E_t
+space has error >=.7473841554; the geodesic preconditioner inverse has
+the analogous lower bound .7461572899. This excludes a particular solver
+design, not approximation of the filtered F_t or the scalar output G_t.
+The preceding spatial/Neumann conditional method did not require this
+design and remains accepted.
+
+For the specified separated product-norm estimator, its F error upper
+expression cannot fall below .2526158445. With the recorded output
+weights its physical error expression overruns the ENTIRE bolt allowance
+by at least 1.073274658e26. This is a proved failure of that estimator,
+NOT a lower bound on the actual correction or physical error.
+
+A conforming Ritz approximation of the composed map avoids this
+particular obstruction. Its full residual T_t-L_t F_n, or equivalently
+a quantified tail of the actual range, must still be enclosed on the
+entire E_t space. The proved range comparison is 1.156719500; the tail
+needed for a proposed 1e-30 application bound is <8.64514e-31 and is
+UNKNOWN. No finite matrix, signed action, or application error was
+certified by this attempt. It closes NO physical requirement or margin.
+
+Decision: retain the construction; reject separate uniform finite-rank
+inverse certification and use a complete range residual or direct joint
+adjoint certificate. The single next calculation is the full residual
+enclosure for an explicit actual-domain trial, retaining all quantum
+terms and the infinite-dimensional complement. It remains proposed.
+The requested signed milestone has NOT been completed. The emailed
+photon-pair sensing paper supplies no continuum/operator estimate for it.
+
+Remaining to-do list: complete signed action, full range residual and G_t;
+all numerical errors and original coupled/source/graph/physical budgets;
+nonlinear admission/contraction, compatibility, matching/opening,
+semiclassical validity/noise and all-sector stability; transport,
+preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Full-action application impasse, 2026-10-27
 
 The goal tool reports BLOCKED; the unchanged full stable semiclassical

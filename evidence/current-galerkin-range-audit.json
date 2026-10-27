@@ -1,0 +1,93 @@
+{
+  "started_utc": "2026-10-27T20:13:19.004423+00:00",
+  "input_sha256_before": {
+    "notes/current-galerkin-range-audit.md": "c6b06bb30fae2efcfce33f9611c80c0253bfe3865be684cb68f027d477fb77a5",
+    "checks/current_galerkin_range_audit.py": "8ff31f95da428d1c131c04aab7ef0a4be49a2e24a74c98ca7a44ff7adb642ca7",
+    "notes/current-spatial-inverse-output-test.md": "347462546bed60ce6b9ca85e2218e4140b040de0e1714d1781d1afcd3a0a1813",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Finite-rank inverse test on the actual energy domain\n\n2026-10-27 HST, E003/S169. The resumed goal is ACTIVE and incomplete.\nPreserve the full stable semiclassical wormhole objective, closed audit,\naccepted results, P32, original norms and the sufficient transport depth.\nThis is a test of a specified numerical estimator, NOT an evaluation of G_t.\n\nThe previous response supplied a requested goal statement and no research\nevidence. This attempt identifies a genuine failure of one possible\nimplementation: approximating a bounded inverse uniformly on the whole\nenergy space by a finite-rank matrix before composing with its source.\nThe preceding spatial/Neumann argument did not require that implementation;\nits accepted conditional bounds are not contradicted or replaced.\n\n## Actual spaces and complete operators\n\nUse the accepted paired first-order realization, its complementary adjoint\nand composed squares. Keep the mass cubic and finite logarithmic phase,\nfixed period, clock, spin and renormalization scale, original mass-lift\ncutoff transitions, and regular-disk bolt. York has J(0)=0 and\n(Q^2 J'/z^4)(L)=0. Let E_t be the actual retained positive TT form\ncompletion, with e_t=ell_t/N and N=|W_action| beta. Here and below all\noperators written as E_t -> E_t use THIS Riesz identification.\n\n    T_t=ell_t^-1 B,  0<=T_t<=q_t=.338/(1-epsilon),\n    L_t=I+T_t,      F_t=L_t^-1 T_t,\n    G_t=J0 F_t^3+J1 F_t^2 : E_t -> R.\n\nBoth original equations give J0,J1 as in current-spatial-inverse-output-\ntest.md (1). Their output is the original bolt radius observation, including\nell_b=(1+h)/h. The full common-renormalized ell_t contains the exact fourth\nultraviolet logarithm, all angular and thermal sums, coincidence/density\ncontacts, cutoff transitions and finite/regular-bolt returns. They are not\nreplaced by a matrix or discarded in the arguments below.\n\nE_t is infinite-dimensional. For example the accepted genuine TT core\ncontains infinitely many independent interior-supported directions. In the\nYork construction choose compactly supported J with its one return moment\nzero; xi=(QJ)'-z^4 integral_0^z (Q'/z^4)'J then has compact support as well.\nThe scalar/shape reconstruction has zero exterior phases and is regular at\nthe actual bolt. An infinite-dimensional test subspace inside the actual\ndomain does not replace the domain or its nonzero mass/log sectors.\n\nThe seed form realization and 0<=T_t<=q_t justify boundedness and inversion\nof L_t. This proof invokes no smooth-double theorem, quantitative graph\nembedding, or unproved extension to a nonlinear neighborhood.\n\n## A uniform inverse approximation is the wrong intermediate target\n\nLet R_n:E_t->E_t be ANY bounded finite-rank linear map. This includes a\nfinite Galerkin inverse followed by finite-basis reconstruction, when its\ninput functionals are bounded. If they are not bounded, an operator-norm\ncertificate is not defined in the first place. There is a unit vector v\nin ker R_n. For any bounded invertible L on this space,\n\n    ||(L^-1-R_n)v||=||L^-1 v|| >= 1/||L||.\n\nConsequently the ACTUAL retained operator obeys, for every n,\n\n    ||L_t^-1-R_n|| >= 1/(1+q_t).                       (1)\n\nThe complete geodesic preconditioner in the accepted spatial method obeys\n||L0||<=1+q_t+e0, e0=(.0022+epsilon)/(1-epsilon), so also\n\n    ||L0^-1-R_n|| >= 1/(1+q_t+e0).                    (2)\n\nThese bounds are approximately .747384 and .746157, respectively. No\nincrease of matrix rank or floating-point precision makes either error\nsmall in this topology. This is an ordinary infinite-dimensional proof;\narithmetic only encloses its constants. It is not a measured condition\nnumber or a lower bound on the error of F_t, G_t, or an affine correction.\nIn particular a restricted composed map may be approximable even though\nthe inverse on the whole energy space is not. Qualitative smoothing alone\nstill supplies no effective approximation constant for that composed map.\n\nFor a quantitative comparison test this SPECIFIED separated estimator:\n\n    F_hat=R_n T_t,\n    a_sep=q_t alpha_n, alpha_n>=||L_t^-1-R_n||.\n\nIt estimates ||F_t-F_hat|| by multiplying separate norm bounds. Equation\n(1) forces a_sep>=f_t=q_t/(1+q_t), about .252616. Thus this expression\ncannot certify the previously proposed 1e-30 scale for a uniform F\napplication: it misses by at least 2.52616e29. That scale remains a\nsufficient target, not an attained error or a necessary existence test.\n\nUse the accepted physical weights W0,W1, including the original radius\nconversion and pref_t, from current-spatial-inverse-output-test.md. Its\ntelescoping error expression is\n\n    Gamma(z)=W0(3z+3z^2+z^3)+W1(2z+z^2).\n\nFor the separated estimator z=a_sep/f_t>=1, so its reported physical\nupper expression is at least Gamma(1)=7W0+3W1. Compare that expression\nwith the ENTIRE 1.667e-9 bolt allowance, granting every other cost zero.\nThis is a floor on an EXCESSIVE UPPER ESTIMATOR, not on the physical error.\nNo claim is made that the retained Neumann implementation must use this\nseparation. Equations (1)-(2) do not reject analytic infinite-dimensional\npreconditioners, finite-rank corrections to them, or range-restricted solves.\n\n## Test a specified alternative against the same obstacle\n\nUse conforming Ritz approximation of the COMPOSED map, not a uniform\napproximation of L_t^-1. Choose a finite-dimensional V_n contained in the\nactual paired form domain, with the original phase lifts retained when\nneeded. For each u in E_t define F_n u in V_n by\n\n    <L_t F_n u,v>_t=<T_t u,v>_t for every v in V_n.     (3)\n\nL_t>=I proves (3) is uniquely defined. It is a finite-rank map, but its\ncomplete residual is\n\n    R_full,n=T_t-L_t F_n,\n    F_t-F_n=L_t^-1 R_full,n,\n    ||F_t-F_n|| <= ||R_full,n||.                       (4)\n\nIt is the FULL residual on E_t, not the finite residual in V_n. Galerkin\northogonality sets the latter to zero without controlling the former.\nWriting P_n for the orthogonal E_t projection gives\nR_full,n=(I-P_n)(T_t-L_t F_n). Thus a norm enclosure of this omitted\ncomponent, with quadrature/application errors, is the first unsupported\nquantitative implication in this alternative.\n\nThere is also an exact range approximation interpretation. If Q_n is the\nL_t-orthogonal Ritz projection, F_n=Q_n F_t. For any E_t-orthogonal P_n\nonto V_n, coercivity, orthogonality and boundedness give\n\n    ||F_t-F_n|| <= sqrt(1+q_t) ||(I-P_n)F_t||.         (5)\n\nProof: for each u, Ritz minimizes the L_t energy error over V_n; compare\nit with P_n F_t u, then use ||w||_t<=||w||_L and\n||w||_L<=sqrt(1+q_t)||w||_t. No graph constant is silently assumed.\n\nThe lower bound (1) does NOT apply to (4)-(5): their input has already\npassed through T_t, and they do not approximate the identity component of\nthe inverse on arbitrary inputs. This addresses the specific topology\nobstacle. To reach 1e-30 by (5) would require the actual range tail below\n1e-30/sqrt(1+q_t), approximately 8.64512e-31. That is UNKNOWN. The\ncoefficient sqrt(1+q_t) is proved; the tail is not a conditional ceiling\nrenamed as a known constant. No theorem inspected here provides its\nnumerical value on the actual mass/log domain.\n\nImplementation stops BEFORE assembly of a claimed certified matrix:\nthe full ell_t action and the complement in (4) have not been enclosed.\nThe existing evaluator still covers compact directions and only two\nangular levels. Finite trial residuals, the known .0022 comparison, and\nthe accepted small spatial/Neumann errors do not fill this missing map.\nThe alternative was tested analytically against the finite-rank obstruction;\nits complete signed numerical application was NOT executed.\n\n## Outcome and decision\n\nExecuted: a quantified failure of the separated finite-rank inverse\nestimator, valid on the actual infinite-dimensional energy space, and a\nproof that range-restricted Ritz certification avoids that particular\nobstacle. This rules out a solver design; it closes NO physical allowance\nand supplies NO new signed value of G_t. The full requested milestone\nremains unresolved. No new claim about construction feasibility follows.\n\nDecision: retain the construction and original P32, reject separate uniform\nfinite-rank inverse certification, and require complete range-residual or\ndirect joint-adjoint certification before treating numerical output as\nevidence. The next single calculation is an enclosure of R_full,n in (4)\nfor an explicit actual-domain Ritz trial, including the complete signed\nquantum action and its full complement. It is proposed, not executed.\nIf that enclosure is unavailable, publishing more matrix precision or\nconditional error budgets would not advance the signed certificate.\n\nEvery original defect, graph, physical, mass-column and independent-phase\nentry remains unknown where previously unknown. No remaining margin is\ndeclared available. Preserve the limited two-fast quantum screen, all\nnonlinear admission/contraction, exact compatibility, matching/opening,\nsemiclassical validity/noise, all-sector stability, and the full objective.\n\nRemaining to-do list: complete signed action and range residual; actual G_t\nand all application errors; every original coupled/admission budget;\nnonlinear existence and compatibility; matching, validity/noise and stability;\ntransport, preparation and separate creation.\n",
+  "arithmetic_source_utf8": "\"\"\"Enclose the finite-rank estimator floor, not a signed quantum evaluation.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-galerkin-range-audit'\nruntime = json.loads((ROOT / 'evidence/current-coupled-mass-adjoint-runtime.json').read_bytes())\nsys.path.insert(0, str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb, ctx\n\nINPUTS = [\n    'notes/' + STEM + '.md', 'checks/current_galerkin_range_audit.py',\n    'notes/current-spatial-inverse-output-test.md',\n    'evidence/current-spatial-inverse-output-test.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json',\n]\n\ndef digest(path):\n    return sha256(path.read_bytes()).hexdigest()\n\ndef dec(value):\n    d = value['decimal_enclosure']\n    return arb(int(d['mid']), int(d['rad'])) * arb(10) ** int(d['exponent'])\n\ndef enc(value):\n    m, r, e = value.mid_rad_10exp(60)\n    return {'ball': value.str(35), 'decimal_enclosure':\n            {'mid': str(m), 'rad': str(r), 'exponent': str(e)}}\n\ndef execute():\n    ctx.prec = 512\n    assert digest(Path(sys.executable)) == runtime['python_sha256']\n    for pkg in runtime['packages'].values():\n        for name, expected in pkg['files'].items():\n            assert digest(Path(pkg['root']) / name) == expected\n    prior = json.loads((ROOT / INPUTS[3]).read_bytes())\n    assert prior['status'] == 'error_estimator_test_passed_signed_action_unresolved'\n    c = prior['result']['constants']\n    eps = dec(c['epsilon'])\n    qt = arb('.338') / (1 - eps)\n    ft = qt / (1 + qt)\n    e0 = (arb('.0022') + eps) / (1 - eps)\n    inverse_floor = 1 / (1 + qt)\n    preconditioner_floor = 1 / (1 + qt + e0)\n    product_floor = qt * inverse_floor\n    W0 = dec(c['W0_complete_scalar_physical_upper'])\n    W1 = dec(c['W1_complete_mixed_physical_upper'])\n    estimator_floor = 7 * W0 + 3 * W1\n    budget = arb('1.667e-9')\n    target = arb('1e-30')\n    factor = (1 + qt).sqrt()\n    assert inverse_floor > arb('.747')\n    assert preconditioner_floor > arb('.746')\n    assert product_floor.overlaps(ft)\n    assert product_floor / target > arb('2.5e29')\n    assert estimator_floor / budget > arb('1e26')\n    assert factor > 1\n    return {'constants': {k: enc(v) for k, v in {\n        'retained_inverse_finite_rank_error_lower': inverse_floor,\n        'geodesic_inverse_finite_rank_error_lower': preconditioner_floor,\n        'separated_F_error_estimator_floor_NOT_actual_error': product_floor,\n        'separated_F_estimator_floor_over_proposed_target': product_floor / target,\n        'physical_upper_estimator_floor_NOT_actual_error': estimator_floor,\n        'physical_upper_estimator_floor_over_whole_allowance': estimator_floor / budget,\n        'Ritz_range_comparison_PROVED': factor,\n        'required_range_tail_NOT_attained': target / factor,\n    }.items()}, 'signed_G_evaluated': False, 'range_tail_evaluated': False,\n        'physical_requirements_closed': [],\n        'claim': 'specified separated estimator fails; complete signed certificate unresolved'}\n\nif __name__ == '__main__':\n    output = ROOT / 'evidence' / (STEM + '.json')\n    if output.exists():\n        raise SystemExit('Immutable receipt exists; refusing overwrite.')\n    before = {p: digest(ROOT / p) for p in INPUTS}\n    receipt = {'started_utc': datetime.now(timezone.utc).isoformat(),\n               'input_sha256_before': before,\n               'ordinary_argument_utf8': (ROOT / INPUTS[0]).read_text(encoding='utf-8'),\n               'arithmetic_source_utf8': Path(__file__).read_text(encoding='utf-8')}\n    try:\n        receipt['result'] = execute()\n        receipt['status'] = 'estimator_failure_enclosed_signed_evaluation_unresolved'\n    except BaseException as exc:\n        receipt['status'] = 'failed'\n        receipt['failure'] = type(exc).__name__\n        raise\n    finally:\n        receipt['input_sha256_after'] = {p: digest(ROOT / p) for p in INPUTS}\n        receipt['finished_utc'] = datetime.now(timezone.utc).isoformat()\n        output.write_bytes((json.dumps(receipt, indent=2) + '\\n').encode('utf-8'))\n    assert before == receipt['input_sha256_after']\n    print(json.dumps({'status': receipt['status'], 'constants': {\n        k: v['ball'] for k, v in receipt['result']['constants'].items()}}, indent=2))\n",
+  "result": {
+    "constants": {
+      "retained_inverse_finite_rank_error_lower": {
+        "ball": "[0.74738415545590433482810164424514200 +/- 2.99e-36]",
+        "decimal_enclosure": {
+          "mid": "74738415545590433482810164424514200298953662182361733931240657698",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "geodesic_inverse_finite_rank_error_lower": {
+        "ball": "[0.74615728995672287718251007312341442 +/- 4.25e-36]",
+        "decimal_enclosure": {
+          "mid": "74615728995672287718251007312341441575884196388598716609461274436",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "separated_F_error_estimator_floor_NOT_actual_error": {
+        "ball": "[0.25261584454409566517189835575485800 +/- 2.99e-36]",
+        "decimal_enclosure": {
+          "mid": "25261584454409566517189835575485799701046337817638266068759342301",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "separated_F_estimator_floor_over_proposed_target": {
+        "ball": "[252615844544095665171898355754.85800 +/- 2.99e-6]",
+        "decimal_enclosure": {
+          "mid": "25261584454409566517189835575485799701046337817638266068759342301",
+          "rad": "2",
+          "exponent": "-35"
+        }
+      },
+      "physical_upper_estimator_floor_NOT_actual_error": {
+        "ball": "[178914885538059225.2276 +/- 6.44e-5]",
+        "decimal_enclosure": {
+          "mid": "17891488553805922522761360531871556106358299442771198073387495242",
+          "rad": "5077437140690634745895282970023567984427009",
+          "exponent": "-47"
+        }
+      },
+      "physical_upper_estimator_floor_over_whole_allowance": {
+        "ball": "[1.073274658296696012163e+26 +/- 5.54e+4]",
+        "decimal_enclosure": {
+          "mid": "10732746582966960121632489821154785156250000000000000000000000000",
+          "rad": "3045899601434577658508859086363538803916800",
+          "exponent": "-38"
+        }
+      },
+      "Ritz_range_comparison_PROVED": {
+        "ball": "[1.1567194992737003221059594732737768 +/- 2.26e-35]",
+        "decimal_enclosure": {
+          "mid": "11567194992737003221059594732737768225694993532034883136977861089",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "required_range_tail_NOT_attained": {
+        "ball": "[8.6451382606405106285946148974123828e-31 +/- 2.94e-66]",
+        "decimal_enclosure": {
+          "mid": "8645138260640510628594614897412382829368455554585114452150867780",
+          "rad": "2",
+          "exponent": "-94"
+        }
+      }
+    },
+    "signed_G_evaluated": false,
+    "range_tail_evaluated": false,
+    "physical_requirements_closed": [],
+    "claim": "specified separated estimator fails; complete signed certificate unresolved"
+  },
+  "status": "estimator_failure_enclosed_signed_evaluation_unresolved",
+  "input_sha256_after": {
+    "notes/current-galerkin-range-audit.md": "c6b06bb30fae2efcfce33f9611c80c0253bfe3865be684cb68f027d477fb77a5",
+    "checks/current_galerkin_range_audit.py": "8ff31f95da428d1c131c04aab7ef0a4be49a2e24a74c98ca7a44ff7adb642ca7",
+    "notes/current-spatial-inverse-output-test.md": "347462546bed60ce6b9ca85e2218e4140b040de0e1714d1781d1afcd3a0a1813",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "finished_utc": "2026-10-27T20:13:22.540300+00:00"
+}
