@@ -1,3 +1,57 @@
+# Continuum/regulator research impasse, 2026-10-26
+
+The user-selected continuum/regulator goal is BLOCKED, not complete.
+The same missing complete energy-dual estimate persisted through three
+goal turns: the direct-estimator norm-conversion test, the unsuccessful
+asymmetric weak-trace attempt, and this authoritative source/evaluator
+recheck. The latter two supplied no consequential feasibility evidence.
+This status update is not a completed research milestone.
+
+For phi=chi_N,r-alpha*z^4 the required commonly subtracted heat response
+still has no certified B or positive epsilon_heat in
+ ||H_phi(tau)||E_t* <= B tau^epsilon_heat.
+The complete signed transfer Zr, positive-time evaluation error and
+large-time error also remain unenclosed. All original physical/source
+comparisons and coupled budgets retain their existing unresolved status.
+
+The failed direct estimator is scoped to its smooth-norm conversion;
+it does not prove the actual response unbounded. The sharper attempt
+keeps the energy test as a smearing, but does not yet control the complete
+differentiated diagonal remainder uniformly over that test ball. The
+cubic seam measures, quartic logarithms, coincident metric vertices and
+finite-domain returns must be combined before an integrable majorant is
+claimed. The actual paired domain, both partner squares, exact UV log,
+common angular/thermal regulator and regular bolt remain unchanged.
+
+The rechecked angular implementation evaluates complete scalar weights
+and regrouping coefficients, not the missing orbit metric-response trace.
+The existing admitted-family heat theorem and massive resolvent bounds
+remain accepted within their scopes; neither supplies the missing
+numerical energy-dual estimate. The frozen estimator-test inputs and
+receipt are unchanged, with B, epsilon_heat and Zr explicitly unknown.
+There is no pending complete-response computation to await.
+
+The agent cannot presently derive or implement the complete estimate
+from the available arguments and evaluator. Resumption requires a new
+quantitative weak-trace argument or a validated full-action evaluator
+with a usable energy-dual error. Another component estimate, formal
+identity or checker pass would not satisfy that requirement. This is
+an impasse of the present attempt, not a construction obstruction.
+
+The single decisive calculation remains the complete mixed-regularity
+remainder and signed transfer on the actual structured input, with all
+errors returned to the original certificate. It is NOT completed.
+Retain the construction, P32, closed audit and all accepted results;
+no admission, existence, compatibility, matching, validity/noise or
+stability requirement is promoted by this checkpoint.
+
+[Accepted estimator test and precise missing argument](current-continuum-energy-dual-estimator-test.md).
+[Unchanged scoped receipt](../evidence/current-continuum-energy-dual-estimator-test.json).
+
+Remaining to-do list: complete signed massive response and original output/source maps; every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Active continuum/regulator attempt, 2026-10-26
 
 The new user-selected continuum/regulator goal is ACTIVE. The complete
