@@ -1,3 +1,70 @@
+# Signed response still unresolved: observation-domain support, 2026-10-26
+
+The retained SIGNED response remains UNRESOLVED and its requested
+milestone is NOT complete. Supporting execution now bounds replacement
+of the point observation for the COMPLETE two-row P32 bolt map. This
+does not evaluate the quantum action, close a bolt allowance or establish
+an actual controlled solution. The closed audit and all accepted results
+remain unchanged.
+
+On the actual paired form domain, the complete retained output has
+||Delta_bar nu||H_mu <= 5.079654852e14 ||v||E_t. Both original equations,
+the scalar composition residual and the full mixed/York return are paid.
+The original regular-bolt flux then proves
+ ||G3_t-G3_t,r||E_t->R <= 7.942751772e81 sqrt(r).
+The original radius multiplier ell_b=(1+h)/h is retained.
+
+For the preselected smooth averaging width r=1e-110 in z, the complete
+P32 physical observation-error debit is <3.983948872e-16, a fraction
+<2.389891345e-7 of the whole 1.667e-9 bolt allowance. The sufficient
+estimator allows r<1.750828821e-101 for a proposed ONE PERCENT allocation;
+that allocation is not established to be free. At the selected r the
+actual canonical proper support width is approximately 6.288313665e-39.
+This is a quadrature scale, not a physical cutoff or a necessary scale.
+Use z=L-r*t with exact correlated root/temperature identities; independently
+rounded endpoint intervals would not resolve this support.
+
+The same fixed trial can use the averaged third functional, with original
+certificate
+ pref_t(c_a+c_tau+Zr_hat+e_Zr)+E32+Ereg+e_other <=1.667e-9.
+E32 is unchanged and charged once. Ereg is now bounded; Zr, full common
+UV restoration/quadrature, Riesz/inverse, discretization/arithmetic errors
+and e_other remain UNKNOWN. The known partial debit becomes
+6.447981645e-11. Only if ALL other bolt debits vanish is the remaining
+Zr-plus-error ceiling 3.194925547e33; it is not an available margin.
+
+This removes the need for a numerical singular-point Green pairing if
+the averaged certificate is used. It does NOT justify raw heat-cutoff
+strong convergence or evaluate the smooth mixed Green solve. The exact
+UV logarithm, common regulator, all angular/thermal modes, coincidence
+contacts and actual paired/regular-bolt returns must still be evaluated
+in the full weak action. Higher original outputs, source defect, actual
+mass column and every other coupled entry remain unknown.
+
+METHOD DECISION: retain P32 and the uniform ORIGINAL bolt certificate;
+use the proved averaging replacement as a permitted evaluation device,
+with its error charged back. Do not optimize its already adequate error.
+Direct resolved mollification has the quantified fine-scale cost above;
+retaining the singular Green part analytically avoids that cost but still
+requires its common-restored weak pairing. Neither method has supplied a
+signed numerical response. No evidence supports changing construction.
+
+ONE NEXT CALCULATION (NOT EXECUTED): evaluate the complete commonly
+restored weak action on chi_N,r-alpha*z^4 and its correlated transfer Zr,
+where chi_N,r uses the actual mixed inverse of the fixed smooth observation
+density. Include all quantum and solve errors in the same certificate.
+No further transport, degree or isolated-component optimization is selected.
+
+Provenance: ordinary complete-map proof and fixed width frozen before
+512-bit execution; ordinary review and identical unchanged replay. Both
+receipts explicitly report UNRESOLVED with signed-response evaluation and
+requested milestone completion false. Pinned runtime, closed audits,
+accepted science and all 18 inherited paths preserved. No Lean invoked.
+
+Remaining to-do list: retained signed transfer; original source/admission maps and all coupled entries; nonlinear existence/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current signed-response attempt: unresolved, 2026-10-26
 
 OUTCOME 3: UNRESOLVED. An explicit admissible adjoint trial was
