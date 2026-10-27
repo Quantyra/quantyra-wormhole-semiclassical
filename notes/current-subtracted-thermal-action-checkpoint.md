@@ -1,3 +1,74 @@
+# New-lead execution: relative-trace hypothesis fails on the complete tower
+
+2026-10-27 HST. First turn of the newly activated research goal; full stable
+semiclassical wormhole objective ACTIVE and incomplete. The prior advice
+was preparatory source discovery, not a completed regulator calculation.
+This is a new execution, not a continuation of the historical blocked count.
+Closed audit, accepted results, P32, action/state and original norms remain.
+
+The [ordinary actual-domain test](current-relative-trace-lead-test.md)
+executes the first missing hypothesis in the new 2026 relative-perturbation
+lead. The actual fixed metric input produces a noncompact relative
+perturbation, so the paper's trace theorem does not apply directly. An exact
+auxiliary mass-potential congruence preserves the paired first-order domain
+and repairs compactness within a single angular level, but the complete
+angular direct sum is again noncompact. A domain-resolvent proof gives
+
+    ||K_eta||Sp^p >= (c/2)^p [2C/(p eta)+o(eta^-1)], c>0,
+    2C = 98239364541.54052023034 within the recorded interval.
+
+The actual fixed input supplies c>0; it is not assigned a numerical value
+or used as a physical budget constant. Every mode and return remains in
+the operator. This is a VERIFIED FAILURE of these direct theorem transfers,
+not a divergence of the commonly renormalized Hessian or a construction
+obstruction. Local action subtractions do not by themselves change that
+operator hypothesis. An order-three determinant remainder has zero seed
+Hessian; its subtracted contact/quadratic terms still contain our target.
+
+The specified alternative is the complete signed second variation after
+its local distributions are matched, with the exact UV logarithm retained.
+The full angular sum is integrable under a per-mass remainder envelope
+m^(-2-2alpha), alpha>0; m^-2 remains borderline divergent. The equivalent
+short-time target is ||sigma_tau[phi,.]||E_t* <= A_phi tau^(1+alpha).
+No such exponent or A_phi is certified in this turn.
+
+The [frozen arithmetic](../evidence/current-relative-trace-lead-test.json)
+loads accepted intervals and composes this hypothetical estimate through
+the ORIGINAL K3 and G/(B^2 beta), including all angular levels. For
+tau_*=.001 the physical UV error coefficient per A_phi is enclosed by:
+
+| Candidate alpha, NOT established | Original bolt coefficient upper |
+| --- | --- |
+| 1/4 | 8.102285563e-76 |
+| 1/2 | 7.204063795e-77 |
+| 1 | 1.139062501e-78 |
+
+For alpha=1/4, assigning all allowance after the known partial debit to
+this UV error would require A_phi approximately <=1.977861890e66. That
+ceiling assumes zero debit for ALL still-unknown terms: it is not a free
+margin, an attained constant, or a complete certificate. Signed Zr, the
+positive-time contribution and inverse/Riesz/application errors are still
+unknown. The previous finite excessive positive-time estimator remains.
+No original coupled budget improves; no scientific milestone is completed
+merely by the arithmetic receipt or this checkpoint.
+
+DECISION: reject generic relative-Schatten certification for this full
+metric response. Retain the construction and fixed-Hilbert signed kernel;
+use the new calculus only if it bounds the explicitly subtracted quadratic
+combination. The next decisive calculation is the actual-input mixed weak
+remainder at candidate alpha=1/4, including the paired boundary and bolt
+returns. The AdS2 determinant and radial heat-coefficient sources do not
+supply that theorem on our hypotheses. This next calculation is PROPOSED,
+not claimed executed. The present executed result changes method selection.
+
+Remaining to-do list: matched regulator estimate and complete signed Zr;
+all original coupled/source/graph/physical budgets; nonlinear admission
+and contraction; exact compatibility; physical matching and opening;
+semiclassical validity/noise; all-sector stability; transport, preparation,
+separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Research-plan execution audit: matched response remains at an impasse
 
 2026-10-27 HST, third goal turn of the fresh R1-R8 execution. Full objective
