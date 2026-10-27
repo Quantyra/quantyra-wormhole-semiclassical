@@ -1,3 +1,83 @@
+# Resumed evaluation goal: repeated full-action impasse
+
+2026-10-27 HST, E003/S169. The goal tool reports BLOCKED for the attached
+evaluation goal. The attachment was read again; its complete objective
+remains certified F_t and signed G_t evaluation, preserving the full
+stable semiclassical wormhole objective and every original requirement.
+Reading the attachment, rejecting an estimator, or updating this record
+does not complete that objective.
+
+The same missing full-action estimate has persisted through three
+consecutive research turns in this resumed run:
+
+1. The finite-rank audit at 61dd508 ruled out one separated uniform
+   inverse estimator. This changed a solver-design decision, but supplied
+   no signed value or complete range-residual enclosure.
+2. The following attempt traced the common-regulator formula and the
+   available thermal-action implementation. It produced no new bound,
+   no edits and no executed complete residual. This was NO PROGRESS.
+3. The current revalidation finds the same code scope and no new complete
+   evaluator or quantitative domain approximation result. This is again
+   NO PROGRESS toward the signed certificate, not a verified wait.
+
+The first turn had a legitimate limited estimator result; this is not a
+claim of three consecutive turns without any progress. The underlying
+complete signed-action blocker nevertheless persisted in all three.
+No task-owned numerical process was launched or remains to be awaited.
+
+The exact missing bound for the selected range-restricted alternative is
+
+    ||R_full,n||_(E_t->E_t),
+    R_full,n=T_t-(I+T_t)F_n,
+
+with F_n an actual-domain conforming Ritz map. Its finite tested residual
+is zero by Galerkin orthogonality; that does not control the full omitted
+component. The common-renormalized ell_t and the energy-dual functionals
+are defined at the fixed seed. Their numerical full action, all-angular
+evaluation and complementary-space error are UNKNOWN. The code in
+current_subtracted_thermal_action.py still fixes angular levels n=1,2,
+checks M<26, uses compact middle-band directions, and explicitly records
+full_angular_sum_included=False and physical_restorations_complete=False.
+Extending those outputs by assertion would not evaluate the actual trial.
+
+The attached goal also requires G_t=J0 F_t^3+J1 F_t^2 with complete
+discretization, spectral-tail, quadrature, inverse and arithmetic errors
+in the original physical budget. All these combined certification
+requirements remain incomplete. The known spatial/Neumann contract,
+P32 transport result and conditional range-tail target are preserved;
+none supplies the missing signed center or an available physical margin.
+
+The finite-rank obstruction does not apply to a range-restricted solve
+or direct joint-adjoint certificate. Those alternatives avoid that
+specific topology error, but the current attempt cannot obtain their
+complete quantum action/error estimate either. This is a limit of this
+research execution, not an impossibility theorem for either method.
+
+Decision: preserve the construction, closed audit, accepted results and
+original physical norms; stop the repeated unexecuted-plan loop. Resumption
+needs new mathematical or computational input: an ordinary quantitative
+approximation/remainder argument for the actual paired action, or a
+validated evaluator that supplies it. A new constant target, finite-mode
+diagnostic, unrelated sensing advantage or checker run is not that input.
+
+One decisive next calculation, NOT EXECUTED: enclose the complete signed
+range residual above for an explicit admissible trial, retaining the
+common regulator, exact UV logarithm, all angular/thermal modes,
+coincidence contacts, cutoff transitions and regular-bolt returns. It
+must then support G_t and its original-output error, not merely a small
+projected matrix residual. No admission or stability gate closes here.
+
+Verification this turn is checkpoint/provenance verification only; no new
+numerical acceptance calculation or Lean run is claimed.
+
+Remaining to-do list: full signed action, range residual and G_t with actual
+errors; every original coupled/source/graph/physical budget and mass/phase
+column; nonlinear admission/contraction and exact compatibility; physical
+matching/opening, semiclassical validity/noise and all-sector stability;
+transport, preparation, separate creation and the full objective.
+
+---
+
 # Current full-action application impasse, 2026-10-27
 
 E003/S169. The goal tool now reports BLOCKED with its unchanged objective:

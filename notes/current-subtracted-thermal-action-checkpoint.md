@@ -1,3 +1,35 @@
+# Resumed goal blocked at complete signed evaluation
+
+2026-10-27 HST, E003/S169. The goal tool reports BLOCKED with the full
+attached objective unchanged. The [impasse audit](current-signed-response-research-impasse.md)
+records the same missing complete action/range residual through three
+consecutive research turns. The finite-rank estimator result is preserved;
+the following two attempts supplied no new signed bound. This status
+checkpoint is not scientific progress or completion of the milestone.
+
+The precise gap is a certified full E_t norm of
+R_full,n=T_t-(I+T_t)F_n, including its component outside the trial space,
+or an equally complete direct joint-adjoint certificate. The actual paired
+seed form defines these maps. Available code and ordinary estimates do
+not supply their signed quantum applications or numerical error bounds.
+The complete G_t, its original physical budget and every unproved
+existence/physical/stability requirement remain open. No task computation
+is awaiting completion.
+
+Decision: retain the construction and P32; record the execution impasse.
+Resumption needs a quantitative actual-domain approximation argument or
+validated full-action evaluator. The single next calculation is the full
+signed range-residual enclosure for an explicit admissible trial. It
+remains unexecuted. The prior conditional targets are not attained bounds
+or free margins, and the estimator failure is not a construction obstacle.
+
+Remaining to-do list: full signed action, range residual and G_t; every
+application error and original coupled/admission budget; nonlinear
+existence/contraction, compatibility, matching, validity/noise and all-sector
+stability; transport, preparation, separate creation and the full objective.
+
+---
+
 # Resumed goal: finite-rank estimator rejected, signed action still missing
 
 2026-10-27 HST, E003/S169. The new attached goal is ACTIVE and incomplete.
