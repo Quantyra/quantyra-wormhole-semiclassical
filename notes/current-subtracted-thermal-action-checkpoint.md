@@ -1,3 +1,61 @@
+# Research-plan execution: positive-time bound; matched regulator estimate open
+
+2026-10-27 HST. The user activated execution of the approved R1-R8 plan.
+The full stable-wormhole objective is ACTIVE and incomplete. This is the
+first goal turn after the reset, not continuation of an old blocked count.
+Closed audit, accepted results, P32 and original physical norms preserved.
+
+The [ordinary weak-response attempt](current-structured-weak-response-attempt.md)
+derives a complete spectral heat Hessian on the actual paired realization,
+including the second vertex. Its absolute kernel is bounded by 32 times
+the sum of two half-time heat weights. This gives a positive-time energy
+extension using the accepted original supremum comparison, without the
+invalid W3,infinity/C5-to-energy conversion. Every thermal/angular mode,
+paired contact and finite-domain/regular-bolt return stays in the operator.
+
+EXECUTED: for heat times tau>=.001 the complete massive subtracted remainder
+has normalized energy-dual upper bound B_positive*||phi||E_t, with
+B_positive<2.362e79. Its error composition through the actual K3 is
+<1.910e35*||phi||E_t in the original bolt output. The unit-input upper
+expression is about 1.1454e44 times the entire bolt allowance. The actual
+phi norm is not enclosed here; the resulting 8.7305e-45 input ceiling is
+conditional and is not assigned to phi or treated as free budget.
+
+VERIFIED ESTIMATOR FAILURE: taking absolute spectral and subtraction
+terms before combining them gives a whole-action small-time majorant
+asymptotic to D_L/tau^2, with D_L=L*8.0058370615e71, .99<L<1, from its
+first positive term alone. Its regulator integral grows as D_L/(2 eta^2).
+This is divergence of the specified upper estimator, not of the actual
+commonly renormalized response. A smaller finite constant cannot fix it.
+
+The supporting immutable [arithmetic receipt](../evidence/current-structured-weak-response-attempt.json)
+evaluates these composed quantities and checks scalar guards. It does not
+verify the continuum argument or compute the signed response. No new
+admission margin, complete signed certificate or solution is established.
+
+DECISION: retain the construction and weak spectral representation; reject
+the absolute spectral-term estimator for regulator removal. The next single
+calculation is the matched kernel (complete heat Hessian minus its completed
+area/curvature terms), uniformly on the actual fixed-phi E_t test ball,
+with all boundary returns. A sufficient target is an orbit remainder
+A_phi*tau^(1+alpha), alpha>0, giving more than two powers of improvement
+in the fully angular-summed majorant. A_phi and alpha remain unknown.
+This next estimate and the signed Zr are PROPOSED, not executed.
+
+The boundary log-determinant alternative faces the same differentiated
+matched remainder in this norm; its formal representation or an unfiltered
+trace-class claim supplies no remedy. No further cold/scalar, York-only,
+degree or transport optimization is selected. Full physical matching,
+nonlinear admission, exact compatibility and stability remain open.
+
+Remaining to-do list: matched regulator-uniform remainder and signed Zr;
+all original coupled/source/graph/physical budgets; nonlinear admission
+and contraction; exact compatibility; physical matching and opening;
+semiclassical validity/noise; all-sector stability; transport, preparation,
+separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Resumed full objective: research impasse, 2026-10-26
 
 The full stable-wormhole goal is BLOCKED, not complete. The fresh attempt
