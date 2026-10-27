@@ -1,6 +1,30 @@
 # Bounded holographic comparison, 2026-10-26
 
-The user-selected bounded holographic comparison is ACTIVE and incomplete.
+The user-selected bounded holographic comparison is BLOCKED at a research
+impasse, not complete. Its full objective and all accepted results remain.
+The missing complete signed-action enclosure persisted through the reference
+comparison, the following no-progress evaluation attempt, and this current
+state recheck. This status update supplies NO new feasibility bound.
+
+The precise missing input is a certified global E_t* enclosure of the
+commonly restored massive weak action on chi_N,r-alpha*z^4 and its
+correlated three-residual transfer. The fixed-direction heat theorem
+provides qualitative convergence on its stated families, not this uniform
+dual-norm error. The 10^4000 C estimate is for localized analytic interior
+charts and nonnegative Sobolev orders; it does not supply the missing
+global boundary/Green-input comparison. The angular-resummed code contains
+scalar weights, not a complete paired orbit action evaluator. No unknown
+comparison or application error is set to zero.
+
+A reference retaining the full four-dimensional logarithmic principal
+symbol and contacts is the specified alternative to massless subtraction.
+It still requires a quantitative bound for its actual curved/boundary
+remainder. Neither that alternative nor the direct filtered action has
+been certified. The agent cannot currently advance this estimate without
+a new continuum argument or a certified full-action evaluator. This is
+an impasse of the present work, not an obstruction to the construction.
+
+The executed reference comparison remains exactly as previously recorded.
 The massless reference is exactly the existing LLL cocycle on the actual
 paired domain. Constant boundary angle dependence of a finite strip does
 not transfer to the retained identical HH disks: global unitary equivalence
