@@ -1,3 +1,44 @@
+# Resumed full objective: research impasse, 2026-10-26
+
+The full stable-wormhole goal is BLOCKED, not complete. The fresh attempt
+after the latest goal reset has encountered the same missing complete
+energy-dual estimate for three consecutive turns: the closed-form check,
+the evaluator inventory, and the present evidence revalidation. None
+produced a signed-response bound or improved an original coupled budget.
+This checkpoint records an impasse, not a scientific feasibility result.
+
+The accepted seed form defines a bounded functional. It does not supply
+a certified regulator-removal error or its signed evaluation. For the
+actual structured phi=chi_N,r-alpha*z^4, the receipt still has B,
+epsilon_heat and signed_transfer_Zr explicitly unknown. Its ten frozen
+inputs were rehashed and are unchanged. The arithmetic checker evaluates
+only the physical error-conversion factor, not the complete response.
+
+The existing subtracted-action evaluator handles compact test directions
+and the first two angular levels, with complete thermal sums. It is not
+an evaluator for this structured phi, the whole angular tower and an
+E_t* error. Extending its cutoffs alone does not establish that certificate.
+No complete-response tool session is pending in this attempt.
+
+I cannot presently derive the missing uniform mixed-regularity bound or
+implement an equivalent validated full-action evaluator from the available
+arguments. A new quantitative argument or usable evaluator is needed to
+resume consequential work. The first missing implication remains common-
+regulator convergence with a numerical integrable energy-dual majorant,
+retaining the exact UV logarithm, contacts and all boundary/bolt returns.
+The signed value and all other error contributions must then be enclosed.
+
+Retain the construction, original physical norms, P32, accepted results
+and closed audit. The earlier estimator failures do not establish that
+the actual response is unbounded or that the construction is impossible.
+The stationary bolt check did not supply an earlier obstruction: the
+roadmap already requires separate physical opening. No existence,
+compatibility, matching, validity/noise or stability gate is closed.
+
+Remaining to-do list: signed response and original coupled budgets; nonlinear admission/contraction; exact compatibility; physical matching and opening; semiclassical validity/noise; all-sector stability; transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Full objective active; continuum lead assessment, 2026-10-26
 
 The resumed full stable-wormhole objective is ACTIVE and incomplete.
