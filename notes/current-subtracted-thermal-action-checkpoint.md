@@ -1,3 +1,47 @@
+# Bounded holographic comparison, 2026-10-26
+
+The user-selected bounded holographic comparison is ACTIVE and incomplete.
+The massless reference is exactly the existing LLL cocycle on the actual
+paired domain. Constant boundary angle dependence of a finite strip does
+not transfer to the retained identical HH disks: global unitary equivalence
+makes the angle derivative zero in this family. This is not a claim for
+unequal or driven domains, or the final connected physical geometry.
+
+An executed complete structured bolt comparison gives an LLL reference
+contribution upper bound 7.362200796e-5 in original P32 units. Its ratio
+to the existing complete upper expression is <2.880441704e-21. The complete
+remainder triangle estimator is <2.555927720e16, exceeding the entire
+1.667e-9 bolt allowance by approximately 1.533249982e25. This is a finite
+excessive estimator, not an actual correction or construction obstruction.
+Subtracting this reference removes none of the fourth-order UV logarithm.
+Full original-A phase/norm and source comparisons remain UNKNOWN; a bolt
+bound is not a full admission bound. No available margin is created.
+
+The newly supplied noise-entanglement paper offers a later symmetry or
+controller-design lead. Its Gaussian damping envelope is monotone; the
+protected singlet is dark even without noise. Ideal OU boundary phase
+noise fails the existing differentiable source-action hypotheses. With
+physical noise bandwidth Omega_c its derivative cost is exactly
+Gamma*gamma^2/pi*(Omega_c-gamma*atan(Omega_c/gamma)), diverging linearly
+as that bandwidth is removed. This is not the common matter UV regulator,
+a rejection of smooth control, or a bound on gravitational noise/stability.
+
+Decision: keep the massless holographic reference as a benchmark and
+change the subtraction method: a useful reference must retain the full
+four-dimensional principal/contact block, or the actual filtered action
+must be enclosed directly. Do not add ideal stochastic boundary driving
+to the static construction. The complete signed massive weak action and
+its correlated three-residual physical transfer remain the single decisive
+next calculation, UNEXECUTED. All original physical gates remain open.
+The closed audit, P32 transport control and accepted results are preserved.
+
+[Ordinary comparison](current-holographic-reference-comparison.md).
+[Noise-paper transfer test](current-noise-entanglement-lead-review.md).
+
+Remaining to-do list: signed massive remainder and complete original output/source maps; every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Resumed research impasse, 2026-10-26
 
 The resumed full goal is BLOCKED, not complete. The same missing
