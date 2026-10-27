@@ -1,3 +1,89 @@
+# Research-plan execution audit: matched response remains at an impasse
+
+2026-10-27 HST, third goal turn of the fresh R1-R8 execution. Full objective
+BLOCKED at the complete matched energy-dual estimate, not complete. The
+closed audit, accepted results, original physical norms and P32 remain.
+This audit records an impasse; it is not scientific feasibility progress.
+
+The preceding turn was PROGRESS in method selection: the actual-domain
+coordinate-transfer test rejected a specific separated estimator. The
+first turn established the positive-time extension. Neither supplies the
+complete regulator error or signed value. The direct fixed-Hilbert attempt
+in this third turn produces NO new quantitative bound or admission margin.
+
+The exact unresolved object can be written without a coordinate transfer.
+For u=Vphi and w=Vv, let q_tau(a_j,a_k) be the full actual paired spectral
+coefficient in current-structured-weak-response-attempt.md. Retain
+
+    sigma_tau[phi,v]
+      = gamma/(2pi) sum_(j,k) q_tau(a_j,a_k) u_jk w_kj
+        -2/(pi tau) integral u w dz
+        +tau/(480pi) integral [4R^2 u w+8R(u Delta w+w Delta u)
+                                             +8 Delta u Delta w]dz.
+
+The series has the proved positive-time interpretation. The local terms
+are the completed paired subtraction, including the original boundary
+representative. This formula is bookkeeping for the existing target,
+not a new enclosure. The exact nonlocal ultraviolet logarithm and finite
+restorations remain in the action; no independent modewise finite part
+or physical cutoff is introduced. Both partner domains, all angular and
+thermal modes, cutoff transitions and regular-bolt returns are unchanged.
+
+The first unsupported implication is an evaluated majorant, uniform over
+the ACTUAL E_t unit test ball and common core/regulator limits, for
+||sigma_tau[phi,.]||E_t*. A sufficient power-law version is
+A_phi tau^(1+alpha), alpha>0; the entire angular integral then uses the
+original G Theta(tau)/(B^2 beta tau) weight. A_phi, alpha, the usable norm
+of the actual phi, positive-time signed evaluation and all remaining
+Riesz/application errors remain unknown. The complete signed Zr is not
+enclosed. No conditional output ceiling is substituted for a constant.
+
+Attempted here: retain the spectral coefficient and local forms together
+and seek a quantitative weak norm of their difference. The available
+spectral row estimate controls the separate heat term, not its diagonal
+difference from the local distributions. Applying that estimate after
+triangle inequalities gives the already documented quadratic ultraviolet
+divergence. The admitted-family heat theorem still requires stronger test
+norms; the separated proper-coordinate repair fails by the previous
+actual-domain test. I cannot currently derive a replacement bound for
+this difference or implement a validated full-action evaluator from the
+available arguments. No complete-response computation was started here.
+
+The alternative was checked against its actual source hypotheses.
+[Gaarde-Grubb, section 2](https://arxiv.org/pdf/math/0703878) starts with
+a smooth manifold/bundle and a parameter-elliptic boundary system in the
+classical boundary calculus. Its boundary logarithm representation does
+not provide the required differentiated mass/log energy-dual remainder.
+[Smith, Theorem 1.1](https://arxiv.org/pdf/1809.05614) concerns bounded
+compactly supported potentials on fixed geometry; it does not establish
+this paired principal-metric variation estimate. Neither source is
+promoted into a theorem on our hypotheses or supplies numerical constants.
+Another finite set of heat coefficients or another checker pass would
+not repair the missing uniform implication.
+
+Blocked audit: the same complete-estimate gap persisted in all three
+fresh execution turns (positive-time bound, separated-coordinate failure,
+direct signed-difference attempt). The first two yielded scoped results;
+the third is an impasse for the available method, not merely a slow live
+computation. No next numerical refinement is justified without the new
+uniform argument or an equivalent validated evaluator. Other unproved
+R1-R8 gates are not declared satisfied or replaced with easier targets.
+
+DECISION: retain the construction and accepted fixed-Hilbert representation,
+but park certificate execution at this missing argument. The single next
+decisive calculation remains the numerical integrable bound on sigma_tau
+for actual phi, together with the original boundary/contact realization.
+It is a RESUMPTION REQUIREMENT, not a calculation claimed completed here.
+No evidence establishes a wormhole, nonexistence or a physical instability.
+
+Remaining to-do list: matched regulator estimate and complete signed Zr;
+all original coupled/source/graph/physical budgets; nonlinear admission
+and contraction; exact compatibility; physical matching and opening;
+semiclassical validity/noise; all-sector stability; transport, preparation,
+separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Research-plan execution: separated coordinate transfer fails
 
 2026-10-27 HST, second goal turn. Previous turn: PROGRESS on the
