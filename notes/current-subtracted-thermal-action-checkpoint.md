@@ -1,3 +1,72 @@
+# Signed remainder attempt: interpolation fails; source comparison defined
+
+2026-10-27 HST, second goal turn. Previous turn: PROGRESS in method
+selection. Full stable semiclassical wormhole objective ACTIVE/incomplete.
+Closed audit, accepted results, P32 and original physical norms remain.
+
+The [ordinary weak-source calculation](current-signed-weak-source-transfer.md)
+tests the proposed tau^(5/4) remainder using the actual fixed phi and the
+full energy test ball. Taking the best of the existing positive-time and
+admitted-C5 estimates still has a nonintegrable upper expression. Admissible
+TT test fields with frequency n~tau^-1/2 give a lower bound on that reported
+estimator of c/sqrt(log(1/tau)); its common angular integral grows at least
+as c'/(eta sqrt(log(1/eta))). Even an optimistic complete C3/tau^2 estimate,
+not currently proved, gives a borderline logarithmically divergent report.
+This is VERIFIED FAILURE of that estimator, not of the signed response.
+The generic exponent thresholds in the note are necessary tests from the
+raw heat portion of the lower envelope. Passing such a threshold would
+not, by itself, control separately bounded contact terms.
+
+A different complete source map is defined without a C5 test embedding.
+Let S=(I-Delta)^-1 be the auxiliary scalar Friedrichs resolvent on
+L2((0,L),dz), with zero outer trace and the original regular-bolt flux.
+It is not a new matter domain. For u=Vphi set
+
+    <H_tau[u],f>=h_tau[u,Sf],
+    a_tau=-2u/(pi tau)+tau(4R^2u+8R Delta u)/(480pi),
+    b_tau=tau(Ru+Delta u)/(60pi),
+    g_tau=H_tau[u]+S a_tau+(S-I)b_tau.
+
+The full actual paired spectral Hessian h_tau includes the second vertex,
+all thermal modes and finite returns. At each positive tau, this g_tau is
+an L2 vector by the proved heat estimate and scalar resolvent bounds.
+For every ORIGINAL energy test, the complete common subtraction obeys
+
+    sigma_tau[phi,v]=<g_tau,(I-Delta)Vv>,
+    ||sigma_tau[phi,.]||E_t* <= C_E ||g_tau||2,
+    C_E <9.453087204636972e16.
+
+This is an established norm arrow for the entire signed source, with the
+original action/energy normalization. It does not replace the unknown
+physical/strong-source/graph comparisons or admit a nonlinear family.
+The [frozen interval arithmetic](../evidence/current-signed-weak-source-transfer.json)
+composes the proposed ||g_tau||2<=B_phi tau^(5/4), tau<=.001, to
+
+    e_bolt,UV <=7.659161198e-59 B_phi.
+
+The approximately 2.092292018e49 ceiling on B_phi assigns every allowance
+after the known partial debit to this UV error and assigns zero to ALL
+unknown debits. It is CONDITIONAL, not an attained constant or free margin.
+B_phi, the decay exponent, signed Zr and all missing application/positive-
+time errors remain unknown. No coupled budget or admission requirement
+closes. This is NOT a completed regulator or signed-response milestone.
+
+DECISION: reject the best-of-existing-bounds interpolation estimator.
+Retain the construction and directly enclose the complete three-term
+source g_tau in L2, before norms. The first unsupported implication is
+its proposed decay and numerical B_phi, including the actual boundary and
+bolt returns. The single next calculation is that L2 enclosure on the
+actual mixed-Green input. It is PROPOSED, not claimed executed; the
+executed results are the estimator failure and explicit norm comparison.
+
+Remaining to-do list: complete signed regulator estimate and Zr; every
+original coupled/source/graph/physical budget; nonlinear admission and
+contraction; exact compatibility; physical matching/opening; semiclassical
+validity/noise; all-sector stability; transport, preparation, separate
+creation and the full stable semiclassical wormhole objective.
+
+---
+
 # New-lead execution: relative-trace hypothesis fails on the complete tower
 
 2026-10-27 HST. First turn of the newly activated research goal; full stable
