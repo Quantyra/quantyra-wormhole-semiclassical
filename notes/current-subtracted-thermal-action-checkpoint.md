@@ -1,3 +1,107 @@
+# Complete inverse/output test: signed action still unresolved
+
+2026-10-27 HST. Previous goal turn: PROGRESS on the spatial remainder.
+Full stable semiclassical wormhole objective ACTIVE and incomplete.
+Closed audit, accepted results, original physical norms and P32 preserved.
+
+The [direct spatial attempt](current-spatial-inverse-output-test.md) did
+NOT evaluate the complete signed action. It confirmed that the available
+thermal implementation covers compact directions and two angular levels,
+not the actual bolt-reaching mixed-Green input or complete tower. The
+algebraic elimination of ell_t chi from the transferred residual leaves
+full inverse applications; it does not supply their signed values.
+
+The attempt exposed a consequential missing numerical implication for a
+spatial implementation: its cutoff also perturbs the inverses used inside
+the physical output. The earlier three-functional cutoff error assumed
+exact retained inverses. Preserve that valid result in its stated scope.
+
+On the SAME E_t paired form domain, Q_delta=Riesz_t(D_delta/N) is bounded
+and symmetric, with ||Q_delta||<=eta_delta. For eta_delta<1,
+
+    F_delta=(I+T_t-Q_delta)^-1 T_t
+
+is well defined. The complete output is G_delta=J0 F_delta^3+J1 F_delta^2,
+using both original scalar/mixed rows and their physical radius cost.
+The retained principal logarithm, contacts, angular/thermal sums and
+finite/bolt returns are unchanged. No nonlinear domain theorem follows.
+
+The [executed interval arithmetic](../evidence/current-spatial-inverse-output-test.json)
+gives physical sensitivity S=3W0+2W1 approximately 7.667781788e16.
+Propagating the OLD delta=1e-22 through the complete inverse/output
+upper expression gives 2021.049681213, exceeding the WHOLE 1.667e-9
+bolt allowance by 1.212387332e12. This is verified failure of THAT
+estimator to certify its implementation. It is not a lower bound on
+the actual cutoff error, signed response or controlled correction.
+
+Even granting all other debits zero, this upper expression necessarily
+requires eta_delta<=2.174031612e-26 and delta<=8.248189125e-35.
+Those ceilings are NOT computed operator values or available margins.
+The single frozen alternative delta=1e-38 gives cutoff-output upper
+2.021049682e-13. This tests its complete contribution; no isolated
+contact or P32 transport bound was optimized.
+
+A specified internal inverse algorithm uses the COMPLETE geodesic form
+L0 and the ordered Neumann series for L_delta. Its norm contraction is
+<.002204850672 after the original E/E_t conversions. Twelve terms give
+cutoff-plus-Neumann output error <2.031170600e-13 with EXACT operator
+applications. This is an algebraic truncation theorem, not execution of
+the geodesic inverse, a finite matter-mode approximation or a change to
+P32. The first term counts giving whole/one-percent allowance under
+exact applications are 10/11; the frozen test uses 12.
+
+If a future implementation has UNIFORM E_t operator application error
+<=1e-30, the combined upper becomes <5.066523272e-13, approximately
+.0303931 percent of the whole bolt allowance. The actual error is
+UNKNOWN. This target includes parameter enclosure, kernel/contact,
+angular/thermal-tail, inverse/discretization and arithmetic effects.
+512-bit arithmetic alone does not certify it. There is no attained
+positive remaining margin, because the signed center, output evaluation
+error and all other debits remain unknown.
+
+For clarity the direct certificate being tested is
+
+    pref_t (||G_hat||+e_output_numeric)
+                       +e_total+E32+e_other <=1.667e-9.
+
+This evaluates the SAME complete uniform bolt map directly. It does not
+also add the old trial's c_a,c_tau or mollification error; the earlier
+trial certificate remains an alternative with all its original debits.
+No unknown source, graph, boundary or physical comparison is replaced
+by a conditional ceiling. Every non-bolt coupled entry, original-source
+defect, actual kappa_m and the scoped quantum-fast conditions remain
+unresolved wherever previously unproved.
+
+OUTCOME: the signed milestone is UNRESOLVED, with a quantified failure
+of the old cutoff-to-inverse-to-output estimator and a quantified
+alternative accuracy contract. No new signed quantum value, physical
+admission margin or existence/stability result is claimed. The execution
+changes the required implementation accuracy; it does not finish the
+requested complete response calculation.
+
+DECISION: retain the construction and provisionally use the contact-
+complete spatial/geodesic inverse method. Unlike the alternative direct
+heat-source route, its cutoff and inverse truncation now have explicit
+complete-output error contracts; the heat route still lacks its mixed
+decay bound. Both need the actual paired kernel/contacts. The SINGLE
+NEXT CALCULATION is a validated full spatial-operator/geodesic-inverse
+application within the specified Neumann construction that encloses
+G_hat and its uniform application error. It remains PROPOSED. Do not
+substitute more cutoff arithmetic or scalar-weight checks for it.
+
+Verification: 512-bit frozen-input arithmetic passed. The ordinary
+bounded-form/resolvent/telescoping argument supplies the domain and
+inverse claims. No new external theorem, Lean run or signed kernel
+evaluation was used. No physical obstruction follows.
+
+Remaining to-do list: complete signed response and actual application
+errors; all original coupled/source/graph/physical budgets; nonlinear
+admission/contraction and exact compatibility; physical matching/opening;
+semiclassical validity/noise; all-sector stability; transport, preparation,
+separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Spatial cutoff result and regulator research decision
 
 2026-10-27 HST. Full stable semiclassical wormhole objective ACTIVE and
