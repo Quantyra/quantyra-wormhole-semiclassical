@@ -1,3 +1,49 @@
+# Research-plan execution: separated coordinate transfer fails
+
+2026-10-27 HST, second goal turn. Previous turn: PROGRESS on the
+positive-time domain implication. Full R1-R8 objective ACTIVE and incomplete;
+closed audit, accepted results, P32 and original norms unchanged.
+
+The [actual-input coordinate-transfer test](current-weak-coordinate-transfer-test.md)
+attempted to transfer an asymmetric H3 x H2 collar remainder through the
+actual metric/proper-coordinate map. Its mixed variation has
+partial_x^2 D_uw f_b = f I_u w''' + terms of test order at most two.
+For the actual nonzero u=Vphi, f I_u is nonzero on a compact physical
+interval. The original TT moment-corrected compact fields then give
+||D_uw f_b||H2/||v||E_t >=c n/sqrt(log n), tending to infinity.
+
+EXECUTED RESULT: no finite constant controls this separated coordinate
+factor on the actual energy ball. Taking its norm before combining it
+with the other coordinate, measure and cutoff terms cannot supply the
+complete regulator certificate. The exact coefficient is symbolically
+checked in the [scoped receipt](../evidence/current-weak-coordinate-transfer-test.json);
+the ordinary domain and oscillatory argument establishes the failure.
+This is neither a finite excessive bound nor an unknown value for that
+specific factor. It is NOT divergence of the quantum functional or a
+construction obstruction. The earlier positive-time estimate is unchanged.
+
+DECISION: reject this separated proper-coordinate transfer; retain the
+fixed-Hilbert spectral representation, or an equivalent fixed-coordinate
+resolvent representation, for the matched remainder. A repair in proper
+coordinates would have to recover at least one test derivative by an
+explicit cancellation before norms. The boundary determinant alternative
+avoids this coordinate factor but still lacks the complete differentiated
+trace/UV estimate on the same domain and energy ball.
+
+The single next calculation is the complete fixed-Hilbert spectral heat
+Hessian minus its completed local terms on the actual phi, with a numerical
+integrable E_t* majorant and all returns. A_phi, alpha and signed Zr remain
+unknown. The calculation above changes method selection but gains no
+admission margin and does NOT complete the signed feasibility milestone.
+
+Remaining to-do list: matched regulator estimate and signed response;
+all original coupled/source/graph/physical budgets; nonlinear admission
+and contraction; exact compatibility; physical matching and opening;
+semiclassical validity/noise; all-sector stability; transport, preparation,
+separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Research-plan execution: positive-time bound; matched regulator estimate open
 
 2026-10-27 HST. The user activated execution of the approved R1-R8 plan.
