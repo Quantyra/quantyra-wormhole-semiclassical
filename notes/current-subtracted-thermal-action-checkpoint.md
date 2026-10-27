@@ -1,3 +1,94 @@
+# Current complete P32 weak-transfer decision, 2026-10-26
+
+EXECUTED: on the actual paired form domain, the complete P32 bolt
+transport-model error is <6.131257147e-36, including both physical rows,
+all inverse factors, the degree-32 polynomial and the affine source.
+The existing transport depth suffices. This is NOT a signed quantum
+evaluation or a bolt admission certificate. The accepted joint positive
+estimator remains 1.533249982e25 times the bolt allowance.
+
+The complete commonly restored bilinear tail extends by density to
+the actual form domain, including the singular bolt adjoint. A form
+argument need not be an admissible C5 nonlinear metric path. This does
+not extend the nonlinear metric-family theorem to rough adjoints.
+The paired mass/log realization, UV logarithm, common regulator, full
+angular/thermal sums, contacts, cutoff transitions and regular-bolt
+returns remain. No surrogate domain or selected physical modes are used.
+
+The exact and retained maps obey G3=J0 F^3+J1 F^2 and the corresponding
+tilded identity, using BOTH original equations and the unchanged complete
+scalar/mixed composition. The radius 1/h cost remains in J0,J1. Ordered
+operator products give the following executed bounds:
+
+| Complete-map quantity | Certified upper bound |
+| --- | ---: |
+| Original-energy Hessian tail epsilon | 1.226159988e-74 |
+| Complete G3 minus retained G3, E to original bolt | 1.874451116e-15 |
+| P32 debit from the reconstruction-map change | 9.401927218e-58 |
+| P32 debit from the complete polynomial change | 6.131257147e-36 |
+| P32 debit from the full affine-response change | 3.133976300e-58 |
+| Sum, including all three contributions | 6.131257147e-36 |
+
+The polynomial difference uses all exact rational coefficients and a
+noncommuting telescoping bound; D_Q<5.788114622e22. The sum consumes
+<3.678018684e-27 of the original 1.667e-9 bolt allowance. Conditional
+on all OTHER debits being zero, the retained signed correction must
+satisfy |b_tilde|<1.667e-9-E32. This is a remaining allowance, not a
+computed center. The earlier full-inverse transport error must not be
+added again for the same tail difference.
+
+What remains missing is an enclosure of the retained signed weak
+quantum/contact action and its full transferred residual, with certified
+solve and quadrature errors. No retained center was evaluated in this
+test. The previous positive upper 2.555927720e16 remains unchanged, so
+the required gain remains 1.533249982e25. The new error bound removes
+transport accuracy as an obstacle for this complete P32 bolt evaluation;
+it supplies no cancellation gain in the retained response.
+
+The exact structured range retains its accepted fixed-seed geometric
+membership; its full numerical original admission norm is unknown.
+The approximate form response here has a continuous bolt observation;
+no higher geometric or strong matching realization is asserted for it.
+Original-Y defect <=1/2, graph/physical outputs, actual kappa_m<=5e-5,
+every other coupled entry and numerical application errors remain
+UNKNOWN. Conditional ceilings are not coefficients or free margins.
+The .135973<.1599164 screen remains limited to its proved two-fast scope.
+No nonlinear admission, compatibility, physical matching, validity/noise
+or all-sector stability requirement closes.
+
+METHOD DECISION: retain P32 and the actual-domain signed weak-form
+method; stop transport-tail refinement. This is an unresolved complete
+estimate with a certified full-polynomial approximation error, not a
+construction obstruction. The already failed uniform .0022 positive
+residual estimator is not reused.
+
+The specified alternative is to enclose the actual affine scalar output
+b_tilde directly below 1.667e-9-E32-other_errors, instead of a uniform
+G3 norm below its conditional 3.323478195e33 ceiling. It can exploit
+cancellation with the affine input, but requires the same unevaluated
+complete weak quantum action and a certified forward solve. It does
+not solve that obstacle; the adjoint route can additionally cover all
+E inputs. No method is credited with an uncomputed signed gain.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the complete
+commonly restored signed adjoint transfer
+F R_E(s1)+F^2 R_E(s2)+F^3 R_E(s3), including finite-domain returns,
+against the remaining original bolt target. This calculation must
+produce a signed response/residual bound, not another approximation
+comparison. A bolt pass would still leave complete admission open.
+
+Verification: ordinary form/product argument frozen before development;
+ordinary review checked the shape-only Ward allocation, P32 source
+conversion, both physical rows and noncommuting perturbation estimates;
+unchanged 512-bit acceptance matched development. Supporting arithmetic
+does not replace the missing quantum evaluation. Pinned Python and all
+1595 package files retained; no Lean invocation. Closed audits, accepted
+science and all 18 inherited worktree paths remain unchanged.
+
+Remaining to-do list: retained signed response and higher original admission/source maps; every coupled entry and numerical application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current joint-radius composition decision, 2026-10-26
 
 EXECUTED: the actual joint scalar/mixed composition improves the complete
