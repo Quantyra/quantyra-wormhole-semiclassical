@@ -1,3 +1,135 @@
+# Spatial cutoff result and regulator research decision
+
+2026-10-27 HST. Full stable semiclassical wormhole objective ACTIVE and
+incomplete. Preserve the closed audit, accepted results, P32 and original
+physical norms. This is progress on one regulator error, not completion
+of the retained signed-response milestone.
+
+The [ordinary spatial-remainder calculation](current-spatial-remainder-regulator-test.md)
+extracts the near-diagonal part of the ACCEPTED actual-minus-geodesic
+kernel argument. Keep the complete logarithmic principal flow form,
+matched local contacts and finite returns. Cut only the second-moment-
+subtracted singular remainder at proper separation delta. Unitary flow
+means the flow on the actual doubled metric; physical-half norms mean
+half the corresponding doubled integrals, as in the accepted source.
+There is no new isolated-half boundary condition or smooth surrogate.
+
+The complete original-energy comparison, with all measure/radius factors,
+is
+
+    ||D_delta/N||_(E_t -> E_t*) <= eta_delta,
+    eta_delta <= (2.6357683840e8) delta
+                 +(1.8505508253e15) delta^2.
+
+For the frozen delta=1e-22, the [512-bit interval receipt](../evidence/current-spatial-remainder-regulator-test.json)
+encloses eta_delta below 2.6357683840e-14. The ordinary proof uses the
+existing KC/|s|^3 kernel envelope, K=1e13, and the geodesic increment
+remainder through X^2. It therefore needs only derivatives controlled by
+the original energy. The common-regulator kernel identity and its fixed
+zero/second/fourth contacts are inputs from the accepted seed argument.
+This does not establish the previous heat-source tau^(5/4) rate, remove
+the uncut principal logarithm, or extend seed control to a nonlinear ball.
+
+All THREE weak residual functional errors are transferred. Their total
+bolt contribution has the sufficient bound
+
+    e_bolt,delta <=1.272426580e-24
+                         +2.134972392e-58 ||phi||E_t.
+
+The actual phi norm, retained signed center, local contact values and
+numerical inverse/Riesz errors remain unknown. The approximately
+7.506046403e48 ceiling on ||phi|| assumes every other unknown debit is
+zero. It is not an attained bound or an available margin. The old
+positive all-trial estimator still overruns its bolt allowance by
+approximately 2.549771685e9. eta_delta/.0022 is only 1.198076539e-11:
+further cutoff refinement cannot repair that signed-center estimator.
+No original-source defect, mass-column, graph/physical output, quantum-fast
+neighborhood, nonlinear admission or compatibility requirement closes.
+
+## Where to seek the missing mathematics
+
+The scoped primary-source review below was executed on 2026-10-27. These
+are method leads, not imported theorems or evidence that new physical
+fields/interactions are necessary. No literature theorem is substituted
+for the ordinary seed result above. The numerical bound is from that
+result and its original-energy conversion, not from these papers.
+
+1. **Position-space renormalization and subtracted Green kernels.**
+   [Dang, arXiv:1901.10542v4](https://arxiv.org/pdf/1901.10542v4), introduction
+   and determinant/position-space construction, relates renormalized
+   determinants to local counterterms and renormalized Feynman amplitudes.
+   His stated setting is a smooth closed compact manifold with smooth
+   order-zero perturbations of a fixed invertible elliptic operator.
+   Our paired mass/log metric variations do not satisfy that theorem as
+   stated. Use the subtraction architecture to seek the SIGNED retained
+   spatial kernel and fixed contacts; do not transfer its hypotheses or
+   change finite counterterms. This is the first execution route because
+   the near-diagonal error now has an explicit bound.
+2. **Nonsmooth boundary resolvents and transmission estimates.**
+   [Abels--Grubb--Wood, arXiv:1008.3281v2](https://arxiv.org/pdf/1008.3281v2),
+   sections 2.4 and 6, treat strongly elliptic second-order realizations,
+   boundary operators and Krein formulas with Sobolev coefficients and
+   Besov boundary regularity. They are a specific lead for controlling
+   the actual composed squares and their boundary variations. A proof
+   must identify the paired adjoint traces, check the relevant ellipticity
+   and function-space ranges, then bound parameter dependence uniformly
+   over masses and the original metric neighborhood. The paper does not
+   itself supply these constants or our quantum Hessian.
+   [Gilkey--Kirsten--Vassilevich, hep-th/0101105v1](https://arxiv.org/pdf/hep-th/0101105v1),
+   section 2 and the transmittal coefficients, helps identify interface
+   contacts. Its metric is smooth on each side of the interface. That
+   condition is not a theorem for arbitrary one-sided quartic-log fields,
+   and heat coefficients alone do not bound the mixed remainder.
+3. **Conservation identities for the complete metric response.**
+   [Hollands--Wald, gr-qc/0404074v2](https://arxiv.org/pdf/gr-qc/0404074v2),
+   sections 4.3 and 5, gives a precise metric-variation/conservation
+   framework. It motivates combining the response and its coincidence
+   terms before norms. Its curved-spacetime scalar-field results are not
+   a numerical theorem for our Euclidean paired Dirac realization.
+   Conservation does not imply a small transverse response. A useful
+   adaptation must produce an explicit kernel identity and norm gain,
+   with all boundary terms retained.
+4. **Scattering representations for signed boundary returns.**
+   [Rahi et al., arXiv:0908.2649](https://arxiv.org/pdf/0908.2649) expresses
+   electromagnetic Casimir interactions through scattering and translation
+   operators, including temperature. It is a concrete alternative
+   representation if direct spatial evaluation is impractical. The
+   analogue here must retain the paired first-order resolvent, every
+   angular/thermal tail, local self/contact terms and bolt returns. An
+   interaction-only determinant omits part of our target; the previous
+   complete-tower relative-Schatten failure is not bypassed by notation.
+
+DECISION: retain the physical construction; change evaluation to the
+contact-complete spatial representation, using the accepted regulator
+error. Prioritize position-space renormalization and actual-domain
+boundary analysis over a broad search for new matter. New physics would
+require a specified change of theory/state, an explicit compatibility
+test and a new feasibility audit; present estimator failures do not
+establish that need. No claim of a new physical discovery is made.
+
+The SINGLE NEXT CALCULATION is a certified signed enclosure of the complete
+three-residual action on p1,p2,phi in this representation. It includes the
+full geodesic principal flow, matched contacts, finite boundary/bolt
+returns and actual inverse/Riesz applications, with the error above
+charged once. The first unsupported quantitative implication is the
+evaluation of that retained combination on the actual structured input,
+including its usable norm and application errors. This evaluation is
+PROPOSED, not executed. Neither another absolute remainder bound nor
+smaller delta resolves it.
+
+Verification: the arithmetic receipt passed; its 14 frozen input hashes
+and before/after identities were checked against the current files.
+The 21 protected inherited/closed-audit paths remained unchanged. No Lean
+run or complete signed-kernel numerical evaluation was performed.
+
+Remaining to-do list: complete signed action and all regulator/application
+errors; original coupled/source/graph/physical budgets; nonlinear admission
+and contraction; exact compatibility; physical matching/opening;
+semiclassical validity/noise; all-sector stability; transport, preparation,
+separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Signed remainder attempt: interpolation fails; source comparison defined
 
 2026-10-27 HST, second goal turn. Previous turn: PROGRESS in method
