@@ -1,3 +1,35 @@
+# Resumed signed-action attempt, 2026-10-26
+
+The user has reactivated the full goal. The signed-response certificate
+remains UNRESOLVED; no numerical weak-action enclosure or physical-output
+improvement was obtained. The closed audit and all accepted results remain.
+
+An ordinary actual-domain oscillatory-field test rejects ONE proposed
+PSI-inspired transfer: the entire energy-normalized quantum response
+cannot be a trace-class operator multiplied by bounded weights. Its
+distance from every compact operator is at least 1 in E units (at least
+1-epsilon for the retained action, epsilon<1.227e-74). This is NOT a
+physical error, original-source defect or quantum-fast-screen value.
+
+The test does not reject the structured F_t^3 map or actual affine
+correction. It supplies zero improvement to the physical budgets and
+does not complete the signed-response milestone. Conditional ceilings
+remain conditional; all other coupled entries and admission gates remain.
+
+Method decision: reject direct whole-action trace-class factorization.
+Retain P32 and the signed weak method. An alternative must keep the full
+noncompact principal/contact operator explicitly and bound the global
+remainder or the already filtered source on the actual paired domain.
+The first missing estimate remains an explicit E_t* enclosure of
+L_t[chi_N,r-alpha*z^4,.] and the correlated transfer Zr. This calculation
+is NOT executed. No tail, degree or component optimization is selected.
+
+[Ordinary factorization test](current-psi-signed-action-factorization-test.md).
+
+Remaining to-do list: signed-response certificate; complete original source/admission maps and every coupled entry; nonlinear admission and contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Research impasse: full objective blocked, not completed, 2026-10-26
 
 RESEARCH IMPASSE. The goal tool reports BLOCKED, with the unchanged
