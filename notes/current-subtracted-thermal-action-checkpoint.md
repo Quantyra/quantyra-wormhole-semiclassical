@@ -1,3 +1,82 @@
+# Current signed-response attempt: unresolved, 2026-10-26
+
+OUTCOME 3: UNRESOLVED. An explicit admissible adjoint trial was
+constructed, but the retained signed quantum response was not numerically
+evaluated or enclosed. This attempt supplies NO consequential new signed
+feasibility evidence and does NOT complete the requested milestone.
+The closed audit, accepted results and full stable-wormhole goal remain.
+
+The selected certificate is the uniform joint bolt-output norm on
+the actual paired form domain. The retained form E_t is explicitly
+compared to the original E; no physical norm or radius cost is changed.
+Set psi=z^4, J=0, nu=psi/2, T_shape=-psi, alpha=(1+h)/h,
+f=.338/1.338, and use
+ p1=alpha f^2 psi, p2=alpha f psi, p3=alpha psi,
+ a=alpha .338 f^2 psi.
+These are actual paired-domain fields with the original quartic phase
+and regular bolt. The trial amplitude is not a nonlinear metric change.
+The parameter .338 is not asserted to be the field's actual eigenvalue.
+
+The complete certificate retains
+ Z=||F_t s1+F_t^2 s2+F_t^3 s3||E_t,
+ pref_t(c_a+c_tau+Z_hat+e_Z)+E32+e_other<=1.667e-9,
+ pref_t=h3(1+dQ)(1.1e-10+dw)sqrt(1+epsilon).
+e_Z includes all retained quantum quadrature, Riesz/solve, discretization
+and arithmetic errors. They are UNKNOWN. The accepted E32 is unchanged
+and charged once. All other bolt debits remain UNKNOWN as well.
+
+The known trial and Riesz upper debits are each 3.223970903e-11; their
+sum with the already accepted E32 is 6.447941806e-11. This is only a
+partial ledger, not a signed residual or a closed bolt allowance.
+If EVERY other bolt debit were zero, the conditional remaining bound
+would be Z_hat+e_Z<3.194926342e33, corresponding to 1.602520582e-9
+in physical bolt units. No such remaining margin is established.
+
+The attempted quantum insertion stops at the third full weak residual:
+ s3(v)=j(v)+L_t[chi_N-alpha z^4,v],
+ chi_N=N V^-1 C^-1(ell_b delta_b), L_t=(ell_t+B)/N.
+The singular mixed Green return must be retained. Core density defines
+this form; it does not supply a numerical core-limit modulus or a dual
+norm enclosure. The available angular code evaluates complete scalar
+weights and common regrouping coefficients, but does not evaluate the
+paired orbit heat/resolvent action with both metric vertices and all
+restorations. No finite-mode, unregulated-word or raw-cutoff surrogate
+was substituted. Thus Z and its errors were NOT computed.
+
+Reusing the already known positive full-map bound still gives the same
+1.533249982e25 overrun. That fallback is not a signed lower bound, a
+new estimator improvement or an obstruction to the construction.
+Original-Y defect, full physical/graph comparisons, actual kappa_m,
+every coupled entry and all nonlinear/physical gates remain unproved.
+
+METHOD DECISION: retain the signed weak-form method as untested;
+do not tune this trial, transport depth or polynomial degree on the
+partial ledger. There is no evidence for changing construction.
+
+The specified alternative is a direct bound on the actual affine
+correction, allowing input-specific cancellation. It still requires
+the same retained quantum evaluation. Using the known complete
+unfiltered physical comparison would require an E_tot* residual below
+8.502342966e-80 if the WHOLE bolt allowance were free. This is a
+sufficient conditional threshold, not a necessary condition or an
+attained error, and it supplies no reason to prefer that estimator now.
+
+ONE NEXT CALCULATION (PROPOSED, NOT EXECUTED): enclose the complete
+correlated signed transfer Z for this trial, including the common-
+restored quantum action on chi_N-alpha z^4 and all finite returns,
+with its actual evaluation error. No further preparatory result is
+to be labelled completion of the signed-response milestone.
+
+Provenance: trial/certificate argument frozen before its partial
+arithmetic, ordinary review, unchanged replay. Both runs explicitly
+report UNRESOLVED, with signed evaluation and milestone completion
+false. These are not feasibility checker passes. Pinned runtime,
+accepted science, closed audits and all 18 inherited paths preserved.
+
+Remaining to-do list: actual signed residual enclosure; original admission/source maps; every coupled entry and application error; nonlinear existence/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable semiclassical wormhole objective.
+
+---
+
 # Current complete P32 weak-transfer decision, 2026-10-26
 
 EXECUTED: on the actual paired form domain, the complete P32 bolt
