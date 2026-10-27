@@ -1,3 +1,28 @@
+# Full objective active; continuum lead assessment, 2026-10-26
+
+The resumed full stable-wormhole objective is ACTIVE and incomplete.
+The previously blocked continuum attempt remains unresolved; no signed
+certificate or admission margin is gained by this literature follow-up.
+The closed audit, accepted results, original norms and P32 are preserved.
+
+The [updated lead assessment](current-continuum-regulator-leads.md)
+prioritizes a combined weak trace estimate over another boundary inverse.
+Grubb's nonsmooth singular Green calculus is a further possible ingredient,
+with its transfer hypotheses explicitly unproved. A trace allowance
+summable in one reduced sector need not survive the full dimensional sum.
+The complete commonly subtracted energy-dual remainder still has no
+certified B or positive heat exponent. The signed transfer remains unknown.
+
+The single next calculation is the uniform weak remainder for the actual
+structured phi, with contacts and all boundary/bolt returns combined.
+The direct determinant-parametrix alternative faces the same unproved
+mass/log metric-variation control. This assessment supplies no reason to
+change construction and is not a completed feasibility milestone.
+
+Remaining to-do list: complete signed massive response and original output/source maps; every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Continuum/regulator research impasse, 2026-10-26
 
 The user-selected continuum/regulator goal is BLOCKED, not complete.

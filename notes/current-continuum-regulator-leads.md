@@ -171,6 +171,78 @@ the controlled continuum error in the signed certificate. If unavailable,
 the blocked checkpoint remains; do not substitute more coefficient,
 transport-degree or contraction-planner optimization.
 
+## Follow-up after the energy-dual estimator test
+
+The full objective is active again; the continuum certificate remains
+unresolved. This follow-up is a literature/hypothesis assessment, not a
+completed feasibility calculation. The later
+[actual-domain test](current-continuum-energy-dual-estimator-test.md)
+changes the operational priority of the list above: the paired inverse
+already has quantitative bounds. The first missing implication is a
+regulator-uniform weak trace estimate, not another undifferentiated
+boundary inverse. The W3,infinity estimate loses at least one derivative
+against E_t, and the C5 estimate loses three, up to logarithmic weights.
+
+The first-choice method is therefore asymmetric weak heat/resolvent
+estimation: keep phi fixed, combine both metric vertices, restored local
+terms and boundary returns, and move the excess derivatives off the
+energy test. Smith's finite-regularity method is a possible ingredient;
+its fixed smooth metric and potential-variation hypotheses do not prove
+this metric-variation extension. Test on the actual admissible core and
+require estimates uniform in its E_t norm before completing that core.
+Do not replace it by a bounded smooth-coefficient test ball.
+
+A further boundary-specific lead is Grubb's
+[Spectral asymptotics for nonsmooth singular Green operators, v3](https://arxiv.org/abs/1205.0094v3).
+Here singular Green means the boundary correction in an elliptic inverse.
+Theorem 4.4 concerns nonnegative self-adjoint operators of that class;
+section 5.2 treats a specific Dirichlet/Neumann-type resolvent difference
+with nonsmooth coefficients. Neither is a theorem about our differentiated
+paired response. Establishing its class, parameter-uniform estimates and
+energy-dual metric variations remains necessary.
+
+An elementary summability test explains the relevant limitation. In the
+class treated there, an order -t boundary term has singular values with
+power j^(-t/(d-1)). A per-sector d=2 order -2 allowance is summable;
+the corresponding full d=4 power is j^(-2/3), whose sum diverges. An
+absolute trace estimator based only on that power therefore cannot
+certify the full theory. A power allowance j^(-t/3) is summable for t>3;
+from t=2 this requires more than one order of gain (two for integer
+orders). At t=3 an additional sufficiently decaying logarithm could also
+change summability. This is a test of proposed allowances, not an
+asymptotic or lower bound for the actual signed quantum response. No
+claim is made that our differentiated boundary remainder already has
+any of these orders. It is also not a necessary trace-class condition
+for defining a renormalized functional.
+
+The mathematical target is a common-regulator cancellation with a
+uniform weak remainder, rather than absolute summation of the original
+boundary inverse. Angular and thermal sums, coincidence terms and local
+restorations must be assembled before that remainder is classified.
+The accepted adaptive transport remainder already treats its own complete
+sum; this review does not improve or reopen that controlled error.
+
+The alternative is a direct log-determinant boundary parametrix:
+retain the ultraviolet symbol and boundary logarithm analytically, and
+enclose only a correctly subtracted remainder. Okikiolu's
+[Hessian calculus](https://arxiv.org/abs/math/0211100) and Gaarde--Grubb's
+[boundary logarithm calculus](https://arxiv.org/abs/math/0703878) are
+already used within their scoped roles in the project. They are not new
+solutions: a closed smooth manifold theorem and the classical boundary
+calculus do not supply the missing uniform mass/log energy-dual constants.
+The alternative faces that same regularity issue in symbol/trace norms.
+It is a fallback representation, not evidence for changing construction.
+
+Executed: source-hypothesis review and the summability test above.
+Not executed: a new complete signed response, B, positive heat exponent,
+or original-norm output improvement. No admission budget changes. Retain
+the weak combined method for the next mathematical attempt; do not add
+another bare-inverse or smooth-norm conversion estimate. The single
+decisive calculation remains (1), for the complete structured action on
+the actual paired realization, followed by its signed evaluation. All
+existence, compatibility, matching, validity/noise and stability gates
+retain their unresolved status.
+
 ## Provenance
 
 Read the primary sources above and the current impasse, paired-regulator,
@@ -182,5 +254,6 @@ Downloaded public PDFs are retained outside Git; SHA-256 identifiers:
 - Abels-Grubb-Wood v2: `4d6de512a8e6a19676fb802f5734bc55ffa3cdb1165807e506e4cff9fff2c777`
 - Smith author PDF: `a3afc11e46cfd382f23f1e3311302b454869628e1963460dec471de80de99af3`
 - Transfer-boundary v1: `1b3135d3ba64f86a3d98ecb700bf604688260c3728b8c967e6fad0d5c7d534d9`
+- Grubb nonsmooth singular Green v3: `0472c579e77d7887e568ebd0ae24a2a0f7599038718bc7d4b873f278bfeb535c`
 
 Remaining to-do list: complete signed massive response and original output/source maps; every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable-wormhole objective.
