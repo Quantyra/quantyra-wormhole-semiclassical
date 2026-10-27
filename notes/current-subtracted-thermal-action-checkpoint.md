@@ -1,3 +1,47 @@
+# Active continuum/regulator attempt, 2026-10-26
+
+The new user-selected continuum/regulator goal is ACTIVE. The complete
+signed response remains UNRESOLVED; neither B nor a positive heat exponent
+has been certified. The full stable-wormhole objective, closed audit,
+accepted results, P32 and original physical norms remain unchanged.
+
+EXECUTED: an ordinary actual-domain test rejects direct conversion of the
+admitted-family heat upper bound into an energy-dual bound. For normalized
+admissible oscillatory TT fields, the W3,infinity comparison grows at least
+as n/sqrt(log n), and the C5 comparison as n^3/sqrt(log n). The resulting
+estimator supremum is infinite at every fixed positive heat time. This
+is a failure of that norm conversion, not an unboundedness result for the
+actual structured response, a failure of geometric admission or an
+obstruction to the construction.
+
+The existing actual-domain massive resolvent and metric-variation bounds
+already include boundary/bolt returns. Repeating an undifferentiated
+boundary-inverse bound does not supply the missing renormalized trace
+estimate. The next attempted estimate must keep the structured input
+fixed and move derivatives off the arbitrary energy test while retaining
+the common principal/contact expression and all boundary terms.
+
+Supporting outward arithmetic gives the third-functional error conversion
+ e_bolt,L <= 8.085828517e-45 e_L,
+where e_L is measured in the original retained E_t* normalization. This
+is a multiplier, not an attained error or an available budget. The failed
+estimator supplies no finite e_L. All other residuals and application
+errors remain required; no admission margin improved.
+
+ONE NEXT CALCULATION, PROPOSED: a complete mixed-regularity Duhamel/resolvent
+remainder bound for phi=chi_N,r-alpha*z^4, including the cubic seam measure,
+quartic logarithms, full angular/thermal sum, coincidence vertices and
+regular-bolt/finite-domain returns, with an integrable E_t* majorant and
+explicit constant. This bound has NOT been executed. The older blocked
+holographic comparison is not declared solved by this estimator test.
+
+[Ordinary argument and method decision](current-continuum-energy-dual-estimator-test.md).
+[Scoped arithmetic receipt](../evidence/current-continuum-energy-dual-estimator-test.json).
+
+Remaining to-do list: complete signed massive response and original output/source maps; every coupled entry and application error; nonlinear admission/contraction; exact compatibility; physical matching; semiclassical validity/noise; all-sector stability; opening, transport, preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Bounded holographic comparison, 2026-10-26
 
 The user-selected bounded holographic comparison is BLOCKED at a research
