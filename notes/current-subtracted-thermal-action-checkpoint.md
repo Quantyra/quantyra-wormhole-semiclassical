@@ -1,3 +1,50 @@
+# Decision-plan execution blocked; leading-phase report corrected
+
+2026-10-28 HST, E003/S169. Goal tool status: BLOCKED, not complete,
+for the NEW goal "execute the plan". The
+[fresh audit and correction](current-response-route-blocked-audit.md)
+counts three turns of this run only: 3db5eab's limited residual-estimator
+progress, 24cf38d's unresolved regulator attempt, and the current source/
+implementation revalidation. The same complete quantum/global-return
+estimate remains missing. No computation is running or awaiting completion.
+
+CORRECTION: the recent claim that actual h1's shape-log coefficient is
+unknown was incorrect. The accepted complete-source result at 98ec98e
+already gives b_L=[-9.89461874745152374760e-29 +/- 3.09e-50], including
+the nonmagnetic source. It also gives the forced squared-log response
+for h1/F_lambda. The accepted coupled endpoint result at c020021 already
+proves the cancellation returning that source to the admitted metric phase.
+These results are retained; the recent omission is superseded, with frozen
+records preserved. Neither result bounds the full finite-domain return.
+
+The actual slow-mode mismatch Delta, global strong remainder, numerical
+applications and original physical-output comparisons are still unknown.
+The reference scalar trace, selected older projection screen and P32
+transport bounds remain accepted in their limited scopes. No new signed
+G_t, full inverse, complete admission entry or physical margin was obtained.
+The latest normalization reconciliation and provenance checks are not
+scientific feasibility progress.
+
+Decision: retain the construction, P32, original norms and closed audit;
+block execution pending a substantive quantitative paired global remainder/
+inverse argument or validated complete evaluator. The agent cannot presently
+derive that estimate from the available arguments. Repeating known endpoint
+cancellations or optimizing scalar, tail, degree or checker components does
+not resolve it. No construction obstruction or need for new physics follows.
+
+One decisive calculation remains PROPOSED: certify the original-row global
+response fixing Delta together with its strong remainder and application
+errors, preserving the common regulator, complete spectra, contacts, cutoff
+transitions, remote kernel moment and regular bolt. Its comparison to the
+original geometric admission observations is part of that requirement.
+
+Remaining to-do list: complete signed/strong global certificate and every
+coupled admission entry; nonlinear existence/contraction, exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Actual affine regulator attempt remains unresolved
 
 2026-10-28 HST, E003/S169. Second turn of the NEW "execute the plan"
