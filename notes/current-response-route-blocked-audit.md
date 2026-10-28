@@ -1,3 +1,117 @@
+# Mixed-regularity attempt: complete estimate remains unresolved
+
+2026-10-28 HST, E003/S169. This entry closes the CURRENT resumed run;
+the earlier audit below is historical. Preserve the full stable semiclassical
+wormhole objective, P32, accepted results, closed audit and original norms.
+Outcome: UNRESOLVED, with no new consequential feasibility bound.
+
+## What was attempted and where the argument stops
+
+Re-read current-curved-paired-heat-bridge.md, sections 2-7,
+current-continuum-energy-dual-estimator-test.md, and the actual first-order
+realization in current-rough-paired-variation.md. The paired operator is
+defined on the stated admitted family. The missing implication is its
+complete, commonly subtracted mixed remainder as a quantitative functional
+on the entire required energy test space, followed by original outputs.
+It is not a missing choice of self-adjoint extension.
+
+The collar Taylor argument has total spatial derivative count six. Its
+existing bound permits three derivatives on each variation. Transferring
+one derivative off the arbitrary test can put four on the fixed input.
+On the exact even double a mass/log input locally has
+
+    u(y)=m |y|^3 + b y^4 log|y| + smoother terms,
+    u''''=12m delta_0 + b(24 log|y|+50) + remainder.
+
+Here b is the transformed, already known logarithmic coefficient. Neither
+it nor the accepted leading quantum/Weyl cancellation is newly unknown.
+The seam measure must be kept inside the combined response. Every admitted
+core test has the prescribed vanishing boundary jets; in particular its
+second jet vanishes. Thus a separated formal delta times that jet is NOT
+by itself a counterexample. A uniform estimate after the common smoothing
+and the energy supremum is still needed before exchanging those limits.
+
+The off-coincident Gaussian part suggests a possible gain but does not
+complete it. For the bridge covariance in the accepted formula, put
+v=|s-r|(1-|s-r|). For distinct s,r in (0,1), the difference has variance 2v.
+For a finite measure mu and g in L2, Gaussian convolution gives
+
+    |E int g(x+sqrt(tau)(xi_s-xi_r)) dmu(x)|
+       <= TV(mu) (8 pi tau v)^(-1/4) ||g||_2.
+
+Indeed the difference density is the centered Gaussian with variance
+2 tau v, whose L2 norm is (8 pi tau v)^(-1/4); apply Cauchy--Schwarz to
+its convolution with g and integrate against the total variation of mu.
+
+The time-pair singularity v^(-1/4) is integrable. This tests only the
+Gaussian convolution; it does NOT bound the full path-dependent factors,
+coincident vertices, proper-coordinate mixed chain term, cutoff variation,
+or global return. A tau^2 remainder would retain an integrable tau^(7/4)
+power if every term admitted that reduction with numerical constants.
+That hypothesis was NOT established. No value of K or positive alpha for
+
+    ||R_tau[h1,.]||_(E_t*) <= K tau^(1+alpha)
+
+has been obtained for the complete response. Nor has the required analogous
+statement been proved for all structured inputs in G_t. This calculation
+is evidence about a possible proof step, not a new complete regulator bound.
+
+## Compare the specified alternative against the same obstacle
+
+The locally frequency-weighted resolvent method at 67b3eb2 encloses the
+quartic column, including its original energy-dual error. Its ordinary
+argument explicitly uses the fixed-quartic heat result to justify common
+regulator removal and the omitted angular tail. It therefore cannot be
+extended merely by inserting the actual mass/log input. The existing
+current-affine-regulator-attempt.md shows that its separated sixth-order
+coefficient for the nonzero quartic logarithm behaves as z^-2 and is not
+L2(dz). This rejects that coefficient estimate, not the full response.
+
+A direct fixed-domain mixed resolvent calculation could preserve the
+contact cancellation without the proper-coordinate chain rule. It still
+needs a bound on the complete subtracted trace, uniform in angular mass
+and thermal frequency. The accepted operator bound 1.32/M^2 is not a
+trace bound and cannot supply that sum. No quantitative advantage for
+the complete actual input has been demonstrated by either representation.
+
+## Budget consequence and current-run decision
+
+No signed center, complete application error, source/graph/physical
+comparison, actual mass-column bound or nonlinear admission entry changes.
+The conditional short-time debit 4 C K epsilon^alpha/alpha is still missing
+both K and its downstream output factors. It is not an available margin.
+The quantum-fast screen keeps its existing restricted scope. An excessive
+separated coefficient is not an obstruction to the construction.
+
+This resumed run has three consecutive turns with the same blocker:
+
+1. 33d4ed2: asymmetric weighted attempt, no complete mixed/output bound.
+2. The following plan/checkpoint reply: no new feasibility evidence.
+3. This attempt: checked the derivative transfer and the resolvent
+   alternative; the complete common-regulator/energy-dual estimate and
+   original-output implication remain unproved.
+
+Earlier blocked runs are not counted. No task-owned research computation
+is running. The agent cannot currently derive or implement the missing
+complete estimate from the available arguments. Further automatic work
+would repeat the same unproved implication. Mark the execution goal
+BLOCKED, not complete; this is a research impasse, not a permission gate.
+
+Decision: retain the construction and accepted mathematics. Do not select
+more component optimization or claim that either representation now wins.
+The one decisive next calculation remains PROPOSED: bound the complete
+fixed-domain mixed response, with common contacts and all finite returns,
+in the original energy dual and propagate it to the original outputs.
+Resumption needs a substantive argument or validated evaluator for that
+calculation. No requirement for new physics or construction change follows.
+
+Remaining to-do list: complete signed quantum and original-output certificate;
+every coupled budget; nonlinear admission/contraction, exact compatibility,
+physical matching/opening, semiclassical validity/noise, all-sector stability
+and the full stable semiclassical wormhole objective.
+
+---
+
 # Response-route audit and correction of the recent phase report
 
 2026-10-28 HST, E003/S169. Third consecutive turn of the NEW goal
