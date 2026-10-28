@@ -1,3 +1,52 @@
+# Resumed plan: physical logarithmic reference rejected quantitatively
+
+2026-10-28 HST, E003/S169. The newly selected goal to execute the proposed
+plan is ACTIVE and incomplete. Earlier blocked entries below are historical.
+The [ordinary domain and whole-defect test](current-physical-log-preconditioner-test.md)
+provides new evidence: an explicit physical-Laplacian logarithmic reference
+has original-dual defect >2.14555152945470, even with exact applications.
+It therefore fails the proposed sufficient .5 gate.
+
+The reference retains the exact outer logarithm and acts on the actual
+physical exterior, with the original mass/log completion and regular bolt.
+The admissible psi=z^4, J=0 witness uses both equations: the full scalar
+variational lower bound and complete quantum-energy comparisons. Common
+regulator, angular/thermal sums, contacts, transitions and finite returns
+are retained. The reference energy is <.800000000011634 while the complete
+A_Q energy is >2.516441223600354. The positive-reference energy would need
+an addition >.87762748238860 on this trial alone to permit defect <=.5.
+This is a necessary correction, not a sufficient full-space certificate.
+
+The [512-bit receipt](../evidence/current-physical-log-preconditioner-test.json)
+supports the ordinary argument and verifies the accepted input identities
+and all 21 protected paths. No numerical inverse, source residual, signed
+G_t or physical margin was obtained. An H inverse bound <5.34 is specific
+to this rejected reference; it is not a physical output comparison.
+No arbitrary-source conclusion is imposed on the structured B_i range,
+and no obstruction to the coupled inverse or construction is claimed.
+
+Decision: retain the construction and change this preconditioner. Keep the
+complete finite-geometry local/York terms in the already accepted compensated
+scalar-log form A_sc. Its established whole-form difference makes it a
+quantified alternative, but its inverse is still unimplemented. The single
+next calculation is an explicit full-range solver for A_sc, with an analytic
+logarithmic complement and finite correction, and a complete original-dual
+defect <=.49 including all application errors. Accepted comparisons would
+then transfer the defect to <.490978 for A_Q. This is PROPOSED, not attained.
+
+The source screen remains 4.9887427328e-32 and all actual S/K errors remain
+unknown. Further correction counts or precision cannot repair the rejected
+reference's noncontractive exact defect. Preserve P32, the closed audit,
+original physical norms and every accepted result.
+
+Remaining to-do list: full-range implemented inverse and complete weak
+source certificate; S/K application errors, signed G_t, original graph,
+physical/radius/mass/phase and coupled budgets; nonlinear admission and
+contraction, exact compatibility, physical matching, semiclassical
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Explicit full-range solver goal: fresh blocked audit
 
 2026-10-28 HST, E003/S169. The user cleared the previous goal and selected

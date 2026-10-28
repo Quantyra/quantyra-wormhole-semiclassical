@@ -1,0 +1,166 @@
+{
+  "started_utc": "2026-10-28T16:26:40.541882+00:00",
+  "input_sha256_before": {
+    "notes/current-physical-log-preconditioner-test.md": "c261ee3cd547e1e390a29f944b18e2a5af0005a19ed7e3cc558da894770346f4",
+    "checks/current_physical_log_preconditioner_test.py": "5d3accc0fbd927b9d0fd6f89213e9a91f8e32d7db2f88ba202ec20326114681f",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "notes/recentered-reference-inverse.md": "aa4691b29e9ac1ff5cf121472631789b275afeb643002c06627784900e4470db",
+    "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+    "notes/stationary-weighted-tt-inverse.md": "74f1bb11a67131f766ee2d476c1171185b49bf722b86cdb40d039748030346c8",
+    "notes/current-quartic-ritz-rank-test.md": "03faee79d37ba56677370cfc8308ef6b4b26883ddea6840d5ba126ae3cbd7db1",
+    "notes/current-global-scalar-log-comparison.md": "61fdcbc196ef3336f5859acdec742df4cb28ccbde6235355a261e3cc42d14875",
+    "notes/current-structured-source-graph-test.md": "12fed5fdc62b1c69d4f0ecdf6dbc18408c69d4e687499a051246b78045726b14",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-finite-local-action-assembly.json": "68b04583b213b56a262f747a2b3a79e31515439d59a1d29780e1dd1946a808b0",
+    "evidence/current-global-scalar-log-comparison-accepted.json": "821ed3008d18898f58cd72f5e9665192db5d98a6295f8983ea2c9f35a6e023b5",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# A physical logarithmic preconditioner fails the coarse uniform defect test\n\n2026-10-28 HST, E003/S169. Ordinary argument followed by outward arithmetic.\nThe newly resumed goal is ACTIVE and incomplete. Preserve the full stable\nsemiclassical wormhole objective, P32, closed audit and original norms.\nThis tests one explicit infinite-range reference before implementing its\ninverse to extreme precision. It is a uniform-preconditioner rejection,\nnot a lower bound on the actual structured correction or physical error.\n\n## 1. Complete operator and the proposed reference\n\nUse H=L2((0,z_h),z^-4 dz), E_t with squared norm ell_t/N,\nN=|W_action| beta, and the complete weak operator\n\n    A_Q=(ell_Q+B)/N : E_t -> E_t*, B=b* a^-1 b.\n\nThe scalar inverse and mixed rows are those of BOTH original equations.\nThe accepted quadrature comparison has |ell_Q-ell_t|/N <= e_Q R_t,\ne_Q<.0022. Nothing here discards its quantum action. Keep the paired\nfirst-order domains Pi_- psi=0 for D and Pi_+ phi=0 for Ddagger,\nPi_+=(1+tau_3 gamma_n)/2. The square has Pi_- psi=0 and\nPi_+(nabla_n+K/2)psi=0, with exchanged partner projectors. The regular\nthermal bolt has no wall. The common regulator, exact ultraviolet log,\nall angular/thermal modes, coincidence contacts, cutoff transitions and\nfinite returns are inherited from the accepted COMPLETE form comparisons.\n\nDefine the comparison scalar Laplacian on the ACTUAL physical exterior:\n\n    L=-Delta_4/lambda\n     =-z^2/beta [Q d_z^2+(Q'-2Q/z)d_z].\n\nIt acts in H, with its complete-end Friedrichs realization and smooth\nrotational disk behavior at the bolt. It is not the canonical-double\nLaplacian and not a replacement quantum field or state. Put g=G lambda,\nFstar=F_lambda+23g/(180pi), kappa=-6/5-log(mu0/sqrt(lambda)), and\n\n    H_M(s)=psi(s-1)+(pi/2)cot(pi s/2)+kappa,\n    s(R)=3/2+sqrt(9/4-R),\n    f(R)=(3/2)Fstar R+(3g/(20pi))R(R-2)H_M(s(R)),\n    P_phys=f(L)^-1.                                      (1)\n\nFor R>9/4 choose the positive imaginary square root. Reflection makes\nthe value real and branch-independent; remove the pole at R=2 in the\nPRODUCT. The accepted scalar-coordinate TT normal family is\n9 lambda^2 N_T(s). Its H normalization multiplies it by 8piG/lambda,\ngiving exactly (1) when s(s-3)=-R. Thus (1) retains the full outer\nnormal logarithm and its finite constant, not just its leading growth.\nThe actual finite-geometry difference A_Q-f(L) remains in the defect.\nSpectral notation specifies an exact comparison, NOT an implemented solve.\n\n## 2. Domain before numerical interpretation\n\nThe physical seed satisfies F''>=lambda, F'>0 and F(r_h)=0. Integrating\n2F'F''>=2lambda F' gives F'^2>=2lambda F+F'(r_h)^2. In proper radius,\nthe radial volume density m is proportional to sqrt(F) r^2, and\n\n    (log m)'=F'/(2sqrt(F))+2sqrt(F)/r >= sqrt(lambda/2).\n\nIntegration of (m u^2)' for a compact-outer, bolt-regular scalar gives\nsqrt(lambda/2)||u||^2 <= 2||u||||grad u||. The bolt term vanishes\nbecause m=O(rho); no Dirichlet condition is imposed there. Closure gives\n\n    L>=1/8.                                               (2)\n\nFor 1/8<=R<=9/4 the accepted whole-strip bound is\n|(q+2)H_M|<400, q=-R. For R>=9/4 set t=sqrt(R-9/4). Then\n\n    H_M=Re psi(1/2+it)-(pi/2)sech(pi t)+kappa>0.\n\nThe digamma series [DLMF 5.7.6](https://dlmf.nist.gov/5.7.E6), valid\nsince 1/2+it avoids its poles, gives\nRe psi(1/2+it)-psi(1/2)\n=sum_(n>=0) t^2/[(n+1/2)((n+1/2)^2+t^2)] <=7 zeta(3)t^2<9t^2.\nUse 39/5<kappa<54/5, psi(1/2)=-EulerGamma-2log2, and\nzeta(3)<1+1/8+integral_2^infinity x^-3 dx=5/4. Positivity follows\nfrom monotonicity of both displayed t-dependent terms and their value\nat zero. Consequently, for every R>=1/8,\n\n    a R <= f(R)\n       <=(3/2)Fstar R+(3g/(20pi))(400R+14R^3),\n    a=(3/2)(1-1.179e-8)-60(1e-33)/pi>0.                  (3)\n\nIn particular P_phys:H->H is defined and has norm <=8/a<5.34.\nThis is not an original physical-output comparison.\n\nHere is the additional space identification needed for a WEAK defect.\nThe actual physical exterior is smooth in disk charts; its compactified\nmass/log boundary is at infinity, not replaced by a smooth canonical\ndouble. On rescaled end charts L is uniformly elliptic in log z after\nthe critical H conjugation. Its coefficients and all conormal derivatives\nare bounded; in the middle and regular disk charts the scalar elliptic\nestimates apply. Integer graph norms of L are the corresponding patched\nphysical Sobolev norms. Applying the spectral dyadic decomposition to\nthese graph norms supplies the logarithmically weighted norms: f(R)\nhas positive growth comparable to R+g R^2 log(2+R), so\n\n    Dom(f(L))=W_(3/2)=z^(3/2) H_b^(4,log)\n\nwith the original regular disk charts. Constants are finite, not numerical.\nThe fixed-seed full-Hessian argument, section 5, identifies the same\noperator domain for the actual TT block. Its genuine-TT core includes\nthe outer tail compensator and the mass cubic; it is not the punctured-\nbolt core. Closed graph gives equivalence of the two graph norms.\nInterpolation between H and these positive graph domains identifies\ntheir square-root domains. The retained transport/quadrature form\ncomparisons then identify this common form space with E_t. Thus f(L)\nis a bounded positive coercive map E_t->E_t*, and its inverse maps\nE_t*->E_t. This supplies qualitative domain membership only. No\nnumerical E_t inverse norm, physical radius return, boundary coefficient\nnorm or nonlinear-neighborhood comparison is inferred.\n\nNo theorem about smooth metric variations of the canonical double is\nused. The finite seed realization and its accepted complete comparisons\nare inputs, not a new regulator-removal theorem on a neighborhood.\n\n## 3. An admissible whole-operator test\n\nUse psi=z^4, J=0, Upsi=z^4/2, Vpsi=-z^4. It solves the exact York\nequation -(Q^2 J'/z^4)'=Q(4psi/z-psi')/z^4 with J(0)=0 and zero\nbolt flux. It is smooth in the actual regular disk and has zero mass\ncoefficient, an allowed member of the paired mass/log domain. The\naccepted TT-preserving cutoff/compensator argument includes its outer\ntransitions and returns. No cutoff error is dropped by treating a\nfinite interval as the original end.\n\nThe accepted full-form quartic receipt provides a known diagonal k,\na positive complete geodesic remainder, and a scalar variational lower\nbound b. Restricting the scalar maximization to z^4,z^5 LOWER-bounds\nthe full B, rather than replacing its inverse by a matrix. Therefore\n\n    A_Q[psi,psi] >= (1-.0022)(1-eps)/(1+.0022) k+b,\n    eps<1.227e-74,\n    k=2.26666663457616857965...,\n    b=0.259726029048268612....                            (4)\n\nThe first .0022 allows the actual ell_Q comparison, the denominator\nallows the complete geodesic-to-actual form comparison. This deliberately\nconservative combination includes all retained quantum error. Positivity\nof the whole geodesic remainder is used only in this lower bound.\n\nFrom (3), compute WITHOUT spectral truncation\n\n    m1=<psi,Lpsi>H=beta^-1 integral Q z^-2 (psi')^2 dz,\n    m3=<psi,L^3psi>H=beta^-1 integral Q z^-2 ((Lpsi)')^2 dz,\n    <psi,f(L)psi>H\n      <=(3/2)(1+1e-30)m1+(3e-33/(20pi))(400m1+14m3).   (5)\n\nBoth moments are finite polynomial integrals on the exact correlated\ngeometry. The endpoint identity Q(z_h)=0 is retained exactly; subtracting\nuncorrelated tiny endpoint intervals is not the bolt proof. The massless\ntrial and its L image are in the scalar form domain, so (5) is legitimate.\n\nFor the defect D=I-A_Q P_phys on E_t*, let C and M be the f(L) and A_Q\nRiesz representatives in E_t. They are bounded positive and invertible\nby section 2 and accepted coercivity. The defect is similar to\nI-C^-1/2 M C^-1/2. Its spectral radius, hence its norm in the ORIGINAL\ndual, is at least any generalized Rayleigh quotient minus one. Thus\n\n    ||D||_(E_t*->E_t*)\n      >= A_Q[psi,psi]/<psi,f(L)psi>H-1.                 (6)\n\nUnknown numerical norm-equivalence constants do not weaken this spectral\nlower bound. They still matter for any upper bound or output certificate.\n\n## 4. Executed result and quantified repair requirement\n\nThe accompanying 512-bit outward calculation, with frozen accepted\ninputs and runtime, gives\n\n    m1 = 0.5333333333410889287...,\n    m3 = 9.42492801360908014...,\n    A_Q[psi,psi] >2.516441223600354,\n    <psi,f(L)psi>H <0.800000000011634,\n    ||I-A_Q P_phys|| >2.14555152945470.                 (7)\n\nThe exact reference therefore fails the sufficient .5 test. Application\nerrors are set to ZERO for this rejection; no numerical solve is claimed.\nThis is a whole-operator witness using both equations and the complete\nquantum comparison, not a selected-mode approximation to that operator.\n\nFor a positive corrected reference f(L)+Delta to have defect <=.5, its\nquadratic value on this same trial must be at least (2/3)A_Q[psi,psi].\nConsequently its increase must exceed .87762748238860 in these unchanged\nenergy units, a factor >2.09703435296980 over the old reference value.\nThis is NECESSARY on this one trial, not sufficient on the whole space.\nMerely increasing correction count cannot validate a Neumann expansion\nwhose exact defect already has spectral radius >2.1455. Rescaling is\nnot a physical-norm improvement and is not certified by this test.\n\nNo weak-source allowance, complete F residual, signed G_t or physical\nadmission margin closes. The sufficient source screen remains\n4.9887427328e-32; the actual implemented S/K errors are UNKNOWN.\nThe failed uniform reference does not refute the restricted map on B_i,\nnor the coupled inverse, P32, or existence of the construction.\n\n## 5. Method decision and single next calculation\n\nRetain the construction; change this preconditioner. The test says the\nfinite-geometry local/York energy must be retained before high accuracy\nis pursued. Compare the already accepted COMPLETE compensated scalar-log\nform A_sc: it keeps those terms and B and has complete relative difference\ne_SQ<.000654 from A_Q and coercivity >=(1-.002784)R_t. Its EXACT inverse\nwould have defect <.000656, but that inverse is still unimplemented.\nThese established form comparisons are evidence for this choice, not a\nclaim of an implemented solver or attained application error.\n\nThe single next calculation is a coarse certified full-range solve for\nA_sc: construct an explicit analytic logarithmic complement plus a\nfinite correction retaining the complete local/York rows, and bound\n||I-A_sc P0|| in the original dual INCLUDING complement, interface,\nboundary and numerical errors. Target .49 leaves room for transfer to\nA_Q: e_SQ<.000654 and coercivity >.997216 imply\n||I-A_Q P0|| <=.49+.000654*(1+.49)/.997216 <.491 <.5.\nThis calculation is PROPOSED. Neither f(L)^-1 nor A_sc^-1 is a ready\nnumerical implementation. A fixed finite output alone is already rejected;\nthe analytic complement is an essential part of the proposed solver.\n\nOnly after that gate may ordered corrections be budgeted toward the\nsource screen, with separately certified applications and output maps.\nThe closed audit and original physical norms remain unchanged.\n\nRemaining to-do list: full-range implemented inverse and complete weak\nsource certificate; S/K application errors and signed G_t; original graph,\nphysical, radius, mass, phase and coupled budgets; nonlinear admission and\ncontraction, exact compatibility, physical matching, semiclassical\nvalidity/noise and all-sector stability; the full stable-wormhole objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Outward arithmetic supporting the physical-log whole-defect rejection.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport argparse\nimport json\nimport sys\nsys.path.insert(0, str(Path(__file__).resolve().parent))\nimport current_quartic_ritz_rank_test as h\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-physical-log-preconditioner-test'\nBASELINE = Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\nINPUTS = [\n    'notes/'+STEM+'.md', 'checks/current_physical_log_preconditioner_test.py',\n    'checks/current_quartic_ritz_rank_test.py',\n    'notes/recentered-reference-inverse.md',\n    'notes/current-seed-full-hessian-realization.md',\n    'notes/stationary-weighted-tt-inverse.md',\n    'notes/current-quartic-ritz-rank-test.md',\n    'notes/current-global-scalar-log-comparison.md',\n    'notes/current-structured-source-graph-test.md',\n    'evidence/current-quartic-ritz-rank-test-final.json',\n    'evidence/current-finite-local-action-assembly.json',\n    'evidence/current-global-scalar-log-comparison-accepted.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json',\n]\n\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\n\ndef execute():\n    h.ctx.prec = 512\n    a = h.arb\n    assert digest(Path(sys.executable)) == h.runtime['python_sha256']\n    for pkg in h.runtime['packages'].values():\n        for name, expected in pkg['files'].items():\n            assert digest(Path(pkg['root'])/name) == expected\n    accepted = json.loads((ROOT/'evidence/current-quartic-ritz-rank-test-final.json').read_bytes())\n    assert accepted['status'] == 'passed'\n    for path, expected in accepted['input_sha256_before'].items():\n        assert digest(ROOT/path) == expected\n    assert accepted['input_sha256_before'] == accepted['input_sha256_after']\n    scalar_log = json.loads((ROOT/'evidence/current-global-scalar-log-comparison-accepted.json').read_bytes())\n    for path, expected in scalar_log['input_sha256_before'].items():\n        assert digest(ROOT/path) == expected\n\n    local = h.receipt('current-finite-local-action-assembly')\n    ep = h.pick(local, 'actual_seed_correlated_endpoint')\n    assert ep['exact_Q_bolt'] == '0'\n    end = h.dec(ep['z_h'])\n    Q = [a(0)]*7\n    for k, v in zip([0, 2, 3, 4, 5, 6], ep['Q_coefficients']):\n        Q[k] = h.dec(v)\n    beta = Q[0]\n    psi = [a(0)]*4+[a(1)]\n    # Exact York source vanishes for psi=z^4, J=0.\n    assert all(c.is_zero() for c in h.add(h.scale(psi, 4), h.scale(h.shift(h.diff(psi), 1), -1)))\n    Lpsi = h.scale(h.add(\n        h.shift(h.mul(Q, h.diff(h.diff(psi))), 2),\n        h.shift(h.mul(h.diff(Q), h.diff(psi)), 2),\n        h.scale(h.shift(h.mul(Q, h.diff(psi)), 1), -2)), -1/beta)\n    m1 = h.primitive_at(h.shift(h.mul(Q, h.mul(h.diff(psi), h.diff(psi))), -2), end)/beta\n    m3 = h.primitive_at(h.shift(h.mul(Q, h.mul(h.diff(Lpsi), h.diff(Lpsi))), -2), end)/beta\n    # Independent moment identity <psi,Lpsi>, with exact zero bolt flux.\n    m1_pairing = h.primitive_at(h.shift(h.mul(psi, Lpsi), -4), end)\n    assert m1.overlaps(m1_pairing) and m1 > 0 and m3 > 0\n    r = accepted['result']\n    known = h.dec(r['full_quantum_energy_upper_rows'][1]['known_energy_diagonal'])\n    b = h.dec(r['variational_B_lower_matrix'][1][1])\n    full_lower = (1-a('.0022'))*(1-a('1.227e-74'))/(1+a('.0022'))*known+b\n    quantum_upper = 3*a('1e-33')/(20*a.pi())*(400*m1+14*m3)\n    ref_upper = a('1.5')*(1+a('1e-30'))*m1+quantum_upper\n    ratio = full_lower/ref_upper\n    defect_lower = ratio-1\n    correction_lower = full_lower*a(2)/3-ref_upper\n    required_factor_lower = full_lower*a(2)/(3*ref_upper)\n    gap = a('1.5')*(1-a('1.179e-8'))-60*a('1e-33')/a.pi()\n    H_inverse_upper = 8/gap\n    alternative_transfer = a('.49')+a('.000654')*a('1.49')/a('.997216')\n    assert H_inverse_upper < a('5.34')\n    assert full_lower > a('2.516441223600354')\n    assert ref_upper < a('0.800000000011634')\n    assert defect_lower > a('2.14555152945470')\n    assert correction_lower > a('.87762748238860')\n    assert required_factor_lower > a('2.09703435296980')\n    assert alternative_transfer < a('.491')\n    values = dict(m1=m1, m3=m3, known_complete_local_energy=known,\n        full_scalar_variational_lower=b, complete_A_Q_energy_lower=full_lower,\n        reference_quantum_energy_upper=quantum_upper, reference_energy_upper=ref_upper,\n        generalized_Rayleigh_lower=ratio, original_dual_defect_lower=defect_lower,\n        necessary_reference_energy_addition=correction_lower,\n        necessary_reference_energy_factor=required_factor_lower,\n        reference_H_inverse_upper=H_inverse_upper,\n        conditional_alternative_transferred_defect=alternative_transfer)\n    return {'precision_bits': h.ctx.prec, 'constants': {k:h.enc(v) for k,v in values.items()},\n        'scope': {'uniform_exact_reference_rejected': True, 'both_original_equations': True,\n                  'complete_quantum_comparison': True, 'finite_mode_replacement': False,\n                  'implemented_inverse': False, 'actual_structured_source_error_computed': False,\n                  'physical_margin_closed': False, 'construction_obstruction': False,\n                  'goal_complete': False},\n        'unknown': {'implemented_P0_error': None, 'S_application_error': None,\n                    'K_application_error': None, 'signed_G_t': None,\n                    'physical_and_graph_output_comparisons': None}}\n\n\ndef main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--output', default='evidence/'+STEM+'.json')\n    args = parser.parse_args()\n    output = ROOT/args.output\n    assert not output.exists(), 'Receipts are immutable; choose a fresh path.'\n    protected = json.loads(BASELINE.read_bytes())\n    verify = lambda: all(digest(Path(p)) == v for p,v in protected.items())\n    assert verify()\n    before = {p:digest(ROOT/p) for p in INPUTS}\n    data = {'started_utc': datetime.now(timezone.utc).isoformat(),\n        'input_sha256_before': before, 'ordinary_argument_utf8': (ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n        'arithmetic_source_utf8': Path(__file__).read_text(encoding='utf-8')}\n    try:\n        data['result'] = execute()\n        data['status'] = 'specified_uniform_estimator_rejected_full_goal_unresolved'\n    except Exception as exc:\n        data['status'] = 'failed'\n        data['error'] = repr(exc)\n        raise\n    finally:\n        data['input_sha256_after'] = {p:digest(ROOT/p) for p in INPUTS}\n        data['protected_paths_unchanged'] = verify()\n        data['protected_path_count'] = len(protected)\n        data['finished_utc'] = datetime.now(timezone.utc).isoformat()\n        output.write_text(json.dumps(data, indent=2)+'\\n', encoding='utf-8', newline='\\n')\n    assert before == data['input_sha256_after'] and data['protected_paths_unchanged']\n    for k,v in data['result']['constants'].items():\n        print(k+': '+v['ball'])\n    print('Receipt: '+str(output))\n\n\nif __name__ == '__main__':\n    main()\n",
+  "result": {
+    "precision_bits": 512,
+    "constants": {
+      "m1": {
+        "ball": "[0.5333333333410889287148374719 +/- 5.12e-29]",
+        "decimal_enclosure": {
+          "mid": "53333333334108892871483747191486591561456425473062129769497658944",
+          "rad": "3625190924793059695041259481587515393",
+          "exponent": "-65"
+        }
+      },
+      "m3": {
+        "ball": "[9.42492801360908014458456 +/- 9.17e-24]",
+        "decimal_enclosure": {
+          "mid": "9424928013609080144584559059601630199949393490652968367912346186",
+          "rad": "8222973247967746400887115591579724677121",
+          "exponent": "-63"
+        }
+      },
+      "known_complete_local_energy": {
+        "ball": "[2.26666663457616857965 +/- 3.83e-21]",
+        "decimal_enclosure": {
+          "mid": "22666666345761685796526475746282469721894070596853940080528388988",
+          "rad": "11810141789574195264395443945071469670694913",
+          "exponent": "-64"
+        }
+      },
+      "full_scalar_variational_lower": {
+        "ball": "[0.259726029048268612 +/- 7.99e-19]",
+        "decimal_enclosure": {
+          "mid": "25972602904826861159871798126381815049359592256252027286933525828",
+          "rad": "39701543114481083681839898848939080383071256577",
+          "exponent": "-65"
+        }
+      },
+      "complete_A_Q_energy_lower": {
+        "ball": "[2.516441223600355030 +/- 6.54e-19]",
+        "decimal_enclosure": {
+          "mid": "25164412236003550302550857221978281573291480719878706432895334755",
+          "rad": "3981912607002937109343196649350774258764087297",
+          "exponent": "-64"
+        }
+      },
+      "reference_quantum_energy_upper": {
+        "ball": "[1.648601666096430830642721e-32 +/- 7.86e-57]",
+        "decimal_enclosure": {
+          "mid": "16486016660964308306427207644971086741887390568829774410482000449",
+          "rad": "5497345130552542501425150370399079366657",
+          "exponent": "-96"
+        }
+      },
+      "reference_energy_upper": {
+        "ball": "[0.8000000000116333930722562079 +/- 8.13e-29]",
+        "decimal_enclosure": {
+          "mid": "80000000001163339307225620787311535943851897979731062995798215412",
+          "rad": "5437786439183071192547860768144490497",
+          "exponent": "-65"
+        }
+      },
+      "generalized_Rayleigh_lower": {
+        "ball": "[3.145551529454701991 +/- 6.03e-19]",
+        "decimal_enclosure": {
+          "mid": "31455515294547019911048780911247125893427897575134466467972060854",
+          "rad": "4977466737425910452470290993300033447951073281",
+          "exponent": "-64"
+        }
+      },
+      "original_dual_defect_lower": {
+        "ball": "[2.145551529454701991 +/- 6.03e-19]",
+        "decimal_enclosure": {
+          "mid": "21455515294547019911048780911247125893427897575134466467972060854",
+          "rad": "4977466737425910452470290993300033447951073281",
+          "exponent": "-64"
+        }
+      },
+      "necessary_reference_energy_addition": {
+        "ball": "[0.877627482388603294 +/- 5.01e-19]",
+        "decimal_enclosure": {
+          "mid": "87762748238860329376446760692543674544757973486126979890170682956",
+          "rad": "26546084273541158676246953304588233346272722945",
+          "exponent": "-65"
+        }
+      },
+      "necessary_reference_energy_factor": {
+        "ball": "[2.097034352969801327 +/- 7.36e-19]",
+        "decimal_enclosure": {
+          "mid": "20970343529698013274032520602112793482643157791812243972984219908",
+          "rad": "3318311172462372256685963306507297608291057665",
+          "exponent": "-64"
+        }
+      },
+      "reference_H_inverse_upper": {
+        "ball": "[5.333333396213334074688542073911312290858 +/- 4.42e-40]",
+        "decimal_enclosure": {
+          "mid": "53333333962133340746885420739113122908575583975890435959622203454",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "conditional_alternative_transferred_defect": {
+        "ball": "[0.4909771804704296762185925616917498315310 +/- 1.78e-41]",
+        "decimal_enclosure": {
+          "mid": "49097718047042967621859256169174983153098225459679748419600166864",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      }
+    },
+    "scope": {
+      "uniform_exact_reference_rejected": true,
+      "both_original_equations": true,
+      "complete_quantum_comparison": true,
+      "finite_mode_replacement": false,
+      "implemented_inverse": false,
+      "actual_structured_source_error_computed": false,
+      "physical_margin_closed": false,
+      "construction_obstruction": false,
+      "goal_complete": false
+    },
+    "unknown": {
+      "implemented_P0_error": null,
+      "S_application_error": null,
+      "K_application_error": null,
+      "signed_G_t": null,
+      "physical_and_graph_output_comparisons": null
+    }
+  },
+  "status": "specified_uniform_estimator_rejected_full_goal_unresolved",
+  "input_sha256_after": {
+    "notes/current-physical-log-preconditioner-test.md": "c261ee3cd547e1e390a29f944b18e2a5af0005a19ed7e3cc558da894770346f4",
+    "checks/current_physical_log_preconditioner_test.py": "5d3accc0fbd927b9d0fd6f89213e9a91f8e32d7db2f88ba202ec20326114681f",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "notes/recentered-reference-inverse.md": "aa4691b29e9ac1ff5cf121472631789b275afeb643002c06627784900e4470db",
+    "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+    "notes/stationary-weighted-tt-inverse.md": "74f1bb11a67131f766ee2d476c1171185b49bf722b86cdb40d039748030346c8",
+    "notes/current-quartic-ritz-rank-test.md": "03faee79d37ba56677370cfc8308ef6b4b26883ddea6840d5ba126ae3cbd7db1",
+    "notes/current-global-scalar-log-comparison.md": "61fdcbc196ef3336f5859acdec742df4cb28ccbde6235355a261e3cc42d14875",
+    "notes/current-structured-source-graph-test.md": "12fed5fdc62b1c69d4f0ecdf6dbc18408c69d4e687499a051246b78045726b14",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-finite-local-action-assembly.json": "68b04583b213b56a262f747a2b3a79e31515439d59a1d29780e1dd1946a808b0",
+    "evidence/current-global-scalar-log-comparison-accepted.json": "821ed3008d18898f58cd72f5e9665192db5d98a6295f8983ea2c9f35a6e023b5",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "protected_paths_unchanged": true,
+  "protected_path_count": 21,
+  "finished_utc": "2026-10-28T16:27:21.746466+00:00"
+}
