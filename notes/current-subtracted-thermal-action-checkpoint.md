@@ -1,3 +1,36 @@
+# Actual affine regulator attempt remains unresolved
+
+2026-10-28 HST, E003/S169. Second turn of the NEW "execute the plan"
+goal: ACTIVE and INCOMPLETE. The previous turn made limited progress
+rejecting two specified residual shortcuts. This continuation supplies
+no new complete signed quantum, source, output or feasibility bound.
+
+The [attempt](current-affine-regulator-attempt.md) inspected the actual
+source evaluators and the accepted quartic proof. Transferring its
+separated sixth-order heat coefficient to a z^4 log z shape term produces
+a z^-2 coefficient, outside L2(dz). The actual h1 shape-log coefficient
+is UNKNOWN; its trace relation alone does not determine it. This is a
+failed transfer hypothesis, not an actual-source or construction failure.
+The original paired boundary layer must be kept jointly. A reviewed
+mixed-boundary singular-weight heat-trace theorem supplies coefficients,
+not our differentiated numerical regulator remainder in the strong norm.
+
+The same missing implication remains: complete commonly renormalized
+quantum action on actual h1, with numerical phase-aware H3 remainder,
+all finite returns/application errors and original physical-output maps.
+No allowance changes. Retain the joint method and construction; do not
+reuse the polynomial certificate or start component optimization. The
+single next calculation is the complete actual paired boundary-layer
+remainder in that norm, with explicit constants. It remains proposed.
+No computation is running. Earlier blocked runs are not counted.
+
+Remaining to-do list: complete quantum/source/output certificate and all
+coupled budgets; nonlinear admission/contraction, exact compatibility,
+physical matching/opening, semiclassical validity/noise, all-sector
+stability and the full stable semiclassical wormhole objective.
+
+---
+
 # New decision-plan execution: actual affine residual test
 
 2026-10-28 HST, E003/S169. The NEW goal "execute the plan" is ACTIVE
