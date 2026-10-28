@@ -1,3 +1,60 @@
+# Global scalar-log comparison bounded; numerical application still open
+
+2026-10-27 HST, E003/S169. Full goal ACTIVE/INCOMPLETE. The preceding
+turn made provisional mathematical progress while the drive was full.
+Writable space returned; the retained in-memory execution and final
+frozen file execution now preserve that result. The
+[ordinary full-domain comparison](current-global-scalar-log-comparison.md)
+gives scalar/geodesic form error <.000628318531 and total actual-reference
+relative error <.002783056744, including the existing quantum and flow
+quadrature allowances. The reference inverse has Et*->Et norm <1.002790824
+and its comparison correction has norm <.000655500031.
+
+The proof uses the actual paired first-order and complementary domains,
+the C2,1 mass seam, physical mass/log completion and regular bolts. Heat
+barriers, stopped-diffusion returns and explicit quadratic probes bound
+the FULL form difference, including the finite contacts and all angular
+and thermal sums. It keeps the common regulator, ultraviolet logarithm,
+original York conditions, cutoff transitions and global returns. No
+smooth surrogate or selected matter spectrum replaces that domain.
+
+This closes the fixed-seed reference comparison, not its numerical
+inverse, actual signed action or any physical margin. One exact reference
+application has upper residual expression <.000221559011, 4.44118e27
+times its sufficient weak-source screen. Ten EXACT ordered corrections
+give truncation <4.950441e-33; no actual application errors are assigned
+zero. The three inverse/difference/source error contracts remain UNKNOWN.
+Their conditional 1e-32 example is recorded only as budget accounting.
+The existing K-application error and complete residual remain unknown.
+
+The executed implementation test rejects a fixed finite-output Galerkin
+routine as a UNIFORM Et* inverse: its error is >=.7458328138 for every
+finite rank, exceeding the 1e-32 contract by >7.458328e31. Its dual
+defect is >=1. This does not reject a solver on the actual B source
+range, P32, the coupled inverse or the construction. More rank cannot
+fix the uniform-inverse requirement. The generic structured spectral-tail
+comparison would need cutoff >=8.187008e62 for a sufficient 5e-32 output
+screen; no such projector is implemented, and bounded spectral intervals
+are not assumed finite-rank on the actual physical end.
+
+Decision: retain the scalar-logarithmic reference and construction;
+certify the complete STRUCTURED return directly, with an analytic
+principal/complementary action where needed. One next calculation,
+PROPOSED: enclose ||B_i-A_Q S_hat||_(Et->Et*) for an explicit solver
+against 4.9887427328e-32, including all quantum, boundary and numerical
+errors. This remains unexecuted. The initial and final 512-bit receipts
+preserve all sources and all 21 protected paths. No separate formal
+continuum verification is claimed. The closed audit, accepted results,
+original physical norms and limited fast-input quantum screen remain.
+
+Remaining to-do list: complete structured S/K applications and errors;
+full residual and signed G_t; original coupled/admission, graph, physical,
+mass and independent-phase budgets; nonlinear existence/contraction,
+exact compatibility, physical matching, semiclassical validity/noise,
+all-sector stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Direct flow-inverse preconditioner rejected on the actual domain
 
 2026-10-27 HST, E003/S169. Full goal ACTIVE/INCOMPLETE. The preceding
