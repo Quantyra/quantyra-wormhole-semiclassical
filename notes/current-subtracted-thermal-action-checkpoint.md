@@ -1,3 +1,54 @@
+# Structured weak residual goal blocked at the complete application gap
+
+2026-10-28 HST, E003/S169. The goal tool now reports BLOCKED, not complete,
+for "complete the structured weak residual calculation including all quantum
+and numerical errors." No new residual bound, signed value or physical margin
+was obtained. This is a research-impasse checkpoint, not scientific progress.
+
+The same missing complete application persisted through three consecutive
+turns of the current run: the BPP/BQP comparison, the shifted-resolvent
+attempt recorded at 6129f02, and this current source revalidation. All three
+were NO PROGRESS toward the complete certificate. No live computation or
+verification job is awaiting completion. Earlier blocked goals are not used
+to satisfy this fresh audit.
+
+The revalidation inspected the actual scalar-reference calculation body,
+its accepted input identities, the complete-complement construction and the
+ordinary parametrix argument. The code assigns conditional application-error
+targets to arithmetic expressions; it does not implement C_sc, D, B_i or K
+on the complete range. The joined alternative still has a finite but
+uncalibrated end-error coefficient C in C h^2(1+|log h|)^N. It gives no
+numerical cutoff, joined defect or full application enclosure. Neither
+source changes the first unsupported constructive implication.
+
+The accepted seed form remains defined. What is missing is an explicit
+domain-preserving full-range action and an enclosed original weak residual,
+including every quantum, boundary, complement and numerical error:
+
+    ||B_i-A_Q S_hat||_(E_t -> E_t*) <4.9887427328e-32.
+
+This sufficient screen remains unexecuted, and passing it alone would not
+close the separate K application, full residual or original admission.
+No actual error lower bound or obstruction to the construction follows.
+All 16 accepted comparison inputs, 10 weak-rank inputs and 21 protected
+paths match their retained identities. This is provenance verification only.
+
+Decision: retain the construction, paired mass/log realization, common
+regulator, exact UV logarithm, complete sums/contacts/returns, P32, original
+norms, closed audit and accepted results. Stop repeating unexecuted solver
+proposals as milestones. Resumption needs a substantive quantitative solver
+construction or a validated complete evaluator; none is supplied by the
+inspected materials. One decisive next calculation remains PROPOSED:
+construct and certify the full-range action against the displayed screen.
+
+Remaining to-do list: complete S/K and the full weak residual with all errors;
+signed G_t and original source/graph/physical/mass/phase/admission budgets;
+nonlinear existence/contraction, exact compatibility, physical matching,
+semiclassical validity/noise, all-sector stability and the full stable
+semiclassical wormhole objective.
+
+---
+
 # Structured weak residual: resolvent transfer remains unproved
 
 2026-10-28 HST, E003/S169. The newly active goal is to complete the
