@@ -1,3 +1,53 @@
+# Explicit full-range solver goal: fresh blocked audit
+
+2026-10-28 HST, E003/S169. The user cleared the previous goal and selected
+"execute the decisive next calculation (an explicit full-range solver with
+a certified complete weak residual)." The goal tool now reports BLOCKED,
+not complete, after three consecutive turns of this NEW run. The earlier
+blocked goal is not used in this count.
+
+The physical-coordinate/classical-Green attempt, its structured regularity
+follow-up, and this current revalidation all supplied NO NEW CERTIFIED BOUND.
+No explicit full-range solver, numerical residual or running computation
+resulted. Writing S_hat_G=G_cl B_i was an ansatz, not an implemented solver
+or a completed specification of an admissible Green action. Its necessary
+range estimate into E_t and the complete residual
+
+    ||B_i-A_Q G_cl B_i||_(E_t -> E_t*) <4.9887427328e-32
+
+remain unproved. The known B:H->H and B:E_t->H estimates do not supply
+the required logarithmic range comparison. The ordinary fixed-seed graph
+realization retains finite, uncalibrated constants; substituting those for
+numerical application errors would assume the missing result. The separate
+K application and full residual also remain unresolved.
+
+The current code and retained sources are unchanged from 3a19ae4. Their
+comparison arithmetic is not a complete operator application. The existing
+unrestricted second-order-preconditioner failure is NOT a counterexample
+to this structured range. No excessive actual correction, newly undefined
+seed form, or construction obstruction was established in this run.
+
+Decision: retain the construction and all accepted mathematics; park the
+unconstructed Green route pending a substantive quantitative mapping/action
+argument or a validated full-range evaluator. Repeating the same ansatz,
+conditional ceiling or provenance check cannot advance this goal. The next
+decisive calculation is still PROPOSED: for a fully specified actual-domain
+Green action, establish the complete structured logarithmic mapping and
+weak residual with explicit constants and all numerical errors. No ready
+implementation or supported bound is claimed.
+
+Preserve the actual paired mass/log realization, common regulator, exact
+UV logarithm, all angular/thermal sums, contacts, cutoff transitions and
+regular-bolt returns; P32, original norms and the closed audit are unchanged.
+
+Remaining to-do list: explicit full-range solver and certified complete
+weak residual; S/K errors, signed G_t and all original coupled/admission
+budgets; nonlinear existence/contraction, exact compatibility, physical
+matching, semiclassical validity/noise and all-sector stability; the full
+stable semiclassical wormhole objective.
+
+---
+
 # Structured weak residual goal blocked at the complete application gap
 
 2026-10-28 HST, E003/S169. The goal tool now reports BLOCKED, not complete,
