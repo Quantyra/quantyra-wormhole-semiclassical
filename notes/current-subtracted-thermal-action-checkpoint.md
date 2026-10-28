@@ -1,3 +1,60 @@
+# New decision-plan execution: actual affine residual test
+
+2026-10-28 HST, E003/S169. The NEW goal "execute the plan" is ACTIVE
+and INCOMPLETE. This is its first turn; previous blocked runs are not
+counted. The full stable semiclassical wormhole objective, original norms,
+P32, closed audit and accepted results remain unchanged.
+
+The [executed dependency and domain test](current-affine-certificate-domain-test.md)
+shows that a direct actual-source certificate can replace only affine
+output obligations. It cannot replace uniform nonlinear feedback,
+independent boundary columns or the unfinished physical-space comparisons.
+The existing reference h1 is an admissible field specified by actual-source
+quadratures, not a newly validated numerical trial.
+
+For that ACTUAL trial, the corrected original normalized trace residual
+has nonzero quartic coefficient
+[-3.885618682132213909969e-37 +/- 8.71e-59]. Its fast-only H3 residual
+norm with weight 4.005 is infinite. This rejects using that comparison
+without carrying the forced phase. It does not reject the full weak
+inverse, geometric phase or the different P32 structured residual.
+
+Carrying the quartic explicitly and using the specified separated
+full two-row energy-to-bolt estimator gives a known term
+[4.114655828449286758886e35 +/- 5.76e13]. Even granting every other debit
+zero, that expression exceeds the entire 1.667e-9 allowance by
+[2.468299837102151625007e44 +/- 7.47e22]. This is a verified failure
+of that upper-bound certificate, NOT a lower bound on the actual error.
+The remainder can cancel in the joint inverse/output pairing.
+
+No new signed shape response, complete residual, physical margin or
+admission bound was obtained. The source-specific route still needs
+its phase-aware common-regulator H3 remainder and quantitative original
+outputs. The compensated full-range alternative still has an unknown
+complementary estimate. No evidence establishes that either is presently
+quantitatively feasible; no construction obstruction follows.
+
+Decision: retain the construction and joint response method; reject the
+fast-only and separated-energy residual shortcuts. Do not optimize the
+already controlled scalar trace. One next calculation, PROPOSED: enclose
+the complete commonly renormalized shape action on actual h1, including
+its end polynomial, global finite part, regular-atlas H3 remainder and
+all application errors, preserving the two-row original-output pairing.
+
+The 512-bit receipt is evidence/current-affine-certificate-domain-test.json,
+SHA256 6992196d838bb58f9b1b6783f53fa89f98c84509c0c33016b0424731a84e0601.
+All 21 protected paths were unchanged. The failed development assertion
+and corrected rational identity are retained; this arithmetic supports
+the ordinary domain argument and does not certify the missing continuum
+quantum action. No research computation remains running.
+
+Remaining to-do list: complete signed quantum/source or inverse certificate;
+all original physical, graph, source and coupled entries; nonlinear
+admission/contraction, exact compatibility, physical matching/opening,
+semiclassical validity/noise and all-sector stability; the full objective.
+
+---
+
 # Resumed execution plan blocked at the full complementary action
 
 2026-10-28 HST, E003/S169. Goal tool status: BLOCKED, not complete, for
