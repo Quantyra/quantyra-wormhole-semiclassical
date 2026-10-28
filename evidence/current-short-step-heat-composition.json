@@ -1,0 +1,302 @@
+{
+  "started_utc": "2026-10-28T02:33:35.352644+00:00",
+  "input_sha256_before": {
+    "notes/current-short-step-heat-composition.md": "6b40a8da836c907fde539c4d4894164e34938a076c1611c7635f6c8e82aca737",
+    "checks/current_short_step_heat_composition.py": "9269690bfc073ee95272e3022b04e89926a38cbccd32474e9d02a86310a1b76d",
+    "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+    "notes/current-disk-heat-propagation.md": "f11709526e22bbe5742465573bd27c95b5eee37d6f8f49cdd322fad88c6a3df1",
+    "checks/current_disk_heat_propagation.py": "c436a1a07dc622acbe6ba03e3193372b1ed88b2ffc3e4782d1ddc3e863f841ae",
+    "evidence/current-disk-heat-propagation.json": "c05e4139f94b8265e6f8b71dcf9337ce7bcf18bd9a026046df2af70177a5d858",
+    "evidence/current-quartic-positive-time-window.json": "c05d3be9323f2a359d661145ef4e5eaf369a6f66a0a46c719e66cc18f6bb5c2d",
+    "evidence/current-quartic-column-energy-dual-assembly.json": "3f369da3fbb8d2df3582e02bf9b3c5d2c2cb8b1971d92ebcf7082f44175ecfb4",
+    "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "python": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+  "ordinary_argument_utf8": "# Short-step composition in the required diagonal norm\n\n2026-10-27, E003/S169. Previous turn: progress, rejecting the one-step\npositive estimator. This argument bounds the analytic bias of a complete\nshort-step parametrix composition. Its signed kernel is NOT numerically\nevaluated here. The full T_t-(I+T_t)F_n goal remains active/incomplete.\n\n## 1. Actual operator, domain and output\n\nUse the original fixed seed spinor Hilbert space H, including both paired\ncopies, the fixed thermal period/spin structure, outer projector and regular\ndisk bolt. With the accepted intertwiner, A=i Dsharp is self-adjoint and\nA^2=L is the original paired positive square. This does not make the\nunpaired Euclidean Dirac self-adjoint. Put V=Dom(A), with its graph norm.\nThe original mass/log realization and complementary adjoint remain intact.\n\nFor the fixed smooth direction v=-z^4, the accepted actual-geometry bounds\nare |v|<=1 and |grad v|<=1/2. Scalar multiplication E_s=exp(-s v/2)\npreserves V and the complementary domain, by the distributional product\nrule and commutation with the boundary projector. The regular bolt remains\na disk. Define A_s=E_s A E_s and L_s through its closed form on V, rather\nthan freezing the square's composed operator domain. For real s this is\nthe original metric family. Only this fixed-direction family is used;\nno nonlinear neighborhood or independent phase variation is admitted.\n\nLet K_s(t)=exp(-t L_s). Let P_s(h) be the COMPLETE boundary-compatible\nparametrix in current-disk-heat-propagation.md, including its exact capped\nkernel, cutoff transitions and regular-bolt transport. It maps into the\nactual boundary realization; its full remainder was already proved for\n0<h<=.001. P is not P32 and no polynomial degree is changed.\n\nFor fixed integer N and t in [.001,.05], define K_N(t)=P_0(t/N)^N.\nAll products integrate over the actual full domain. The target kernel\njets are (1,partial_s,D_t,partial_s D_t), at s=0, D_t=t partial_t.\nFor the heat-Hessian density, take -2 D_t partial_s of the diagonal spin\ntrace and retain the completed a0/a2 contacts. The same contacts cancel\nin the kernel approximation error. The exact UV logarithm, common\nregulator, full thermal spectrum, angular weight and local restorations\nremain as in current-quartic-positive-time-window.md.\n\n## 2. A quantitative bound for exact evolution between errors\n\nThis step is needed before replacing repeated coarse Schur bounds by\nexact evolution. Let C_v=[A,v], ||C_v||<=g=1/2. Then\n\n    A_s=exp(-s v)(A-s C_v/2).\n\nUse the analytic form q_s(u,w)=<A_conj(s) u,A_s w> on V. For |s|<=r,\nwith d=exp(2r)-1, its quadratic difference satisfies\n\n    |q_s(u,u)-||Au||^2|\n      <=d||Au||^2+r exp(2r)g||Au||||u||\n                         +r^2 exp(2r)g^2||u||^2/4.          (1)\n\nTake r=.1, sigma=.25, theta=.1, and complex time zeta with\n|zeta/t-1|<=sigma. Young's inequality gives\n\n    Re[(zeta/t)q_s(u,u)] >= c||Au||^2-omega||u||^2,\n    c=1-sigma-(1+sigma)d-theta >.37324,\n    a=(1+sigma)r exp(2r)g,\n    omega=a^2/(4theta)+(1+sigma)r^2 exp(2r)g^2/4 <.015523.   (2)\n\nThe form bounds give closedness and sectoriality on the common dense V;\nthe shifted real part is equivalent to the graph norm. Coefficients are\nholomorphic in s. These verify the hypotheses of\n[Vogt--Voigt, Theorems 0.1 and 3.1](https://arxiv.org/html/1707.00923),\nnot a smooth-boundary heat theorem. Lax--Milgram gives the shifted\nm-accretive realization. Its energy inequality implies\n||K_s(zeta)||_(H->H)<=exp(omega t). The argument also holds on slightly\nlarger parameter disks, by the strict c>0 margin. Cauchy's inequalities\ntherefore apply to the four jets on the displayed disks.\n\nFor ANY operator norm define the weighted jet norm\n\n    J(B)=||B||+r||partial_s B||+sigma||D_t B||\n                                      +r sigma||partial_s D_t B||.\n\nLeibniz gives J(BC)<=J(B)J(C). For every exact evolution interval\n0<t<=T=.05, the preceding bounds give\n\n    J_(2->2)(K(t)) <= C=4 exp(omega T) <4.003106.            (3)\n\nThis bound is for the actual infinite-dimensional operator. It does NOT\nassert a complex-parameter pointwise heat-kernel estimate.\n\n## 3. Recover the diagonal norm, rather than infer it from (3)\n\nFrom the accepted complete P and F tables, reconstruct each P jet's\npointwise constant A_j/h and both Schur constants B_j. For E=P-K the\naccepted pointwise constants are e_j h^3. Its Schur constants are\nd_j h^4: the first convolution uses B_P B_F/4, with the same six mixed\nLeibniz terms as the accepted pointwise argument. Add the entire higher\nVolterra allowance, bounded by the positive jet sum times x/(1-x),\nx=.001^4 bbar/140. For the Schur convolution this is conservative because\nits first extra beta factor is 1/280, smaller than the used 1/140.\n\nFor weights w=(1,r,sigma,r sigma), kernel Cauchy--Schwarz gives\n\n    e(h)=J_(2->2)(E)<=e0 h^4, e0=sum w_j d_j,\n    d(h)=max(J_(2->infty)(E),J_(1->2)(E))<=d0 h^(7/2),\n    d0=sum w_j sqrt(e_j d_j),\n    B(h)=B0 h^(-1/2)+d0 h^(7/2),\n    B0=sum w_j sqrt(A_j B_j).                              (4)\n\nB(h) bounds both smoothing norms of K(h), by P-E. For an exact run\nK(kh), k>=1, split off K(h) and apply (3) to the remaining run, including\nthe differentiated factors; its smoothing norm is <=B(h)C. At a base\ntime t, the split fractions are fixed when taking D_t. The identity\noperator is used for an empty run, with jet norm one.\n\nExpand (K(h)+E(h))^N-K(Nh) into all words containing errors. Group the\nexact K factors between errors BEFORE taking norms. With z=1+C e(h),\nthe resulting kernel sup-norm jet bound is\n\n    U_N(h)=B(h)^2 C(z^N-1)\n           +2 d(h)B(h)C z^(N-1)+d(h)^2 C z^(N-2).         (5)\n\nThe three terms bound words with no end error, one end error, and two\nend errors; binomial summation overcounts some words, conservatively.\nFor example a word with m errors and two nonempty end runs is bounded\nby B(h)^2 C^(m+1)e(h)^m. An end error uses its smoothing norm d(h).\nThus (5) is a kernel estimate, not an inference from operator norm.\nThe continuous positive-time kernel representatives supplied by the\nparametrix and its convolutions permit restriction to the diagonal.\n\nRank two and the selected factor two give the ORIGINAL density bias\n\n    rho_N <=4 U_N(T/N)/(r sigma).                          (6)\n\nThis holds uniformly on the whole time window: expanding z^N-1 shows\nevery power of h in (5) is nonnegative after B(h)'s h^(-1/2) factors.\nThe physical z interval has length <1, so the same guard bounds its L2\nnorm. No new derivative requirement on energy test fields is introduced.\n\n## 4. Numerical consequence and the still missing application\n\nInterval arithmetic gives e0<131.451, d0<37.115, B0<1.426561. At N=50,\nthe density-bias report is about .034363; at N=200 it is .00214449.\nAt N=500 it is <.000343016, below the earlier CONDITIONAL .002 allocation.\nUnlike the rejected one-step extension, every local bound here is used\ninside its proved interval. This certifies an analytic approximation bias\nfor the complete composed map, not a numerical quantum evaluation.\n\nCharge it to the original column as\n\n    d_bias=alpha CLt p W60 rho_500, p=1/(B^2 beta),          (7)\n\nusing the accepted coefficient envelope, angular/time weight, CLt and\ntail debits. Alpha is only the exact one-dimensional Ritz envelope.\nThe complete multicolumn coefficient/source/solve errors remain unknown.\n\nFor an explicit numerical accuracy test, suppose each numerical step\nhas weighted jet errors <=eta_inf in kernel sup norm and <=eta_row in\nBOTH Schur norms. These include its kernel, internal quadrature,\ninterpolation and roundoff errors; they are not established here.\nThe N-fold numerical product may use different step approximations.\nLet h_min=.001/N, h_max=.05/N and\n\n    Z=1+C e(h_max), C_P=C Z^N,\n    B_max=B0/sqrt(h_min)+d0 h_max^(7/2),\n    D_P=C[B_max Z^N+d(h_max) Z^(N-1)],\n    eta_d=sqrt(eta_inf eta_row), Z_num=1+C_P eta_row.\n\nApplying the same word argument with exact P runs bounds additional\nnumerical kernel-jet error by\n\n    U_num=(D_P^2/C_P)(Z_num^N-1)\n           +2 eta_d D_P Z_num^(N-1)+eta_d^2 C_P Z_num^(N-2).\n\nThe additional density error is 4 U_num/(r sigma). Execute this test for\neta_inf=1e-11, eta_row=1e-16, N=500, then include the separate weighted\ntime/spatial integration error 9e-32 through the existing full-window\nformula. Passing this CONDITIONAL test is not evidence that any of these\nnumerical errors has been attained.\n\nAttempted implementation: the available code still evaluates only the\ntransport MAJORANTS and capped-kernel path bounds. No routine returns\nthe signed P_s(h) and its four jets with the required errors. The exact\ncapped Brownian expectation is a defined continuum object, not numerical\ndata; substituting its majorant would be a different kernel. Consequently\nno signed center, actual eta bounds, numerical product or F_n was obtained.\nThe complete quantum-application certificate remains unresolved.\n\nDecision: retain short-step composition; its analytic bias is quantitatively\naffordable in the original norm. The first missing numerical implication\nis now explicit: enclose that actual paired kernel and its four jets in\nboth pointwise and Schur norms, rather than only sampled scalar pairings.\nThe single next calculation is that signed step evaluation and its\npropagation into Z_window. No further step-count optimization is selected.\n\nNo coupled admission, nonlinear existence, exact compatibility, physical\nmatching, validity/noise or stability claim follows. P32, original physical\nnorms, the closed audit and all accepted results remain unchanged.\n\nRemaining to-do list: signed kernel/application and complete residual;\nall source/solve/coefficient errors, G_t and coupled/admission budgets;\nnonlinear existence, compatibility, matching, semiclassical validity/noise,\nall-sector stability and the full stable semiclassical wormhole objective.\n",
+  "source_utf8": "\"\"\"Certify analytic composition bias; numerical kernel errors remain unknown.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-short-step-heat-composition'\nruntime=json.loads((ROOT/'evidence/current-coupled-mass-adjoint-runtime.json').read_bytes())\nsys.path.insert(0,str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb,ctx\n\nINPUTS=['notes/'+STEM+'.md','checks/current_short_step_heat_composition.py',\n    'notes/current-rough-paired-variation.md','notes/current-disk-heat-propagation.md',\n    'checks/current_disk_heat_propagation.py','evidence/current-disk-heat-propagation.json',\n    'evidence/current-quartic-positive-time-window.json',\n    'evidence/current-quartic-column-energy-dual-assembly.json',\n    'evidence/current-coupled-truncation-energy-error.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json']\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\ndef dec(x):\n    d=x['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(60)\n    return {'ball':x.str(40),'decimal_enclosure':\n            {'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef execute():\n    ctx.prec=512\n    assert digest(Path(sys.executable))==runtime['python_sha256']\n    for package in runtime['packages'].values():\n        for name,h in package['files'].items():\n            assert digest(Path(package['root'])/name)==h\n    old=json.loads((ROOT/'evidence/current-disk-heat-propagation.json').read_bytes())['runs'][-1]\n    assert old['status']=='passed' and old['complete_actual_domain_remainder_bounded']\n    rows={a['kind']:a for a in old['numerics'] if 'kind' in a}\n    assert next(a for a in old['checks'] if a['name']=='real_geodesic_metric_gradient_guard')['passed']\n    keys=['base','metric','time','mixed']\n    r,sigma,g,theta=arb('.1'),arb('.25'),arb('.5'),arb('.1')\n    weights=[arb(1),r,sigma,r*sigma]\n    uncut=rows['full_uncut_transport_norms']['tables']\n    cap=rows['conditional_complete_cap_kernel_table']['table']\n    budget=rows['complete_actual_domain_propagation_budget']\n    comm=rows['complete_commutator_and_thermal_tails']\n    P,F={},{}\n    for k in keys:\n        P[k],F[k]={},{}\n        for typ in ['inf','row']:\n            cut=dec(budget['cutoff_jet_norm'][typ])\n            co=dec(comm['commutator'][typ])\n            thermal=dec(comm['full_thermal_image_guard'])\n            F[k][typ]=dec(uncut['F'][k][typ])+cut+co+thermal\n            cp=dec(cap[k][typ])+thermal\n            interior=dec(uncut['P'][k][typ])+cut*arb('.001')**3\n            P[k][typ]=(arb(max((2*cp).upper(),interior.upper()))\n                        if typ=='inf' else cp+interior)\n    b,mt,tm,mx=keys\n    bbar=2*F[b]['row']+2*F[mt]['row']+F[tm]['row']+F[mx]['row']\n    ratio=arb('.001')**4*bbar/140\n    assert ratio<arb('1e-9')\n    cv=lambda i,j:P[i]['row']*F[j]['row']/4\n    row_first=[cv(b,b),cv(mt,b)+cv(b,mt),\n        cv(b,b)+cv(tm,b)+cv(b,tm),\n        cv(mt,b)+cv(b,mt)+cv(mx,b)+cv(tm,mt)+cv(mt,tm)+cv(b,mx)]\n    row_higher=sum(row_first,arb(0))*ratio/(1-ratio)\n    row=[x+row_higher for x in row_first]\n    point=[dec(budget['first_actual'][k])+dec(budget['higher_Volterra']) for k in keys]\n    B0=sum((w*(P[k]['inf']*P[k]['row']).sqrt() for w,k in zip(weights,keys)),arb(0))\n    d0=sum((w*(a*b).sqrt() for w,a,b in zip(weights,point,row)),arb(0))\n    e0=sum((w*a for w,a in zip(weights,row)),arb(0))\n    f0=sum((w*a for w,a in zip(weights,point)),arb(0))\n    difference=(2*r).exp()-1\n    cross=(1+sigma)*r*(2*r).exp()*g\n    omega=cross**2/(4*theta)+(1+sigma)*r**2*(2*r).exp()*g**2/4\n    coercivity=1-sigma-(1+sigma)*difference-theta\n    T=arb('.05');C=4*(omega*T).exp()\n    assert coercivity>arb('.37324') and omega<arb('.015523')\n    assert e0<arb('131.451') and d0<arb('37.115') and B0<arb('1.426561')\n\n    def bias(N):\n        h=T/N\n        B=B0/h.sqrt()+d0*h**arb('3.5')\n        e=e0*h**4;d=d0*h**arb('3.5');z=1+C*e\n        U=B**2*C*(z**N-1)+2*d*B*C*z**(N-1)+d*d*C*z**(N-2)\n        return 4*U/(r*sigma)\n\n    trials={str(N):bias(N) for N in [50,100,200,500]}\n    N=500;rho=bias(N)\n    assert rho<arb('.000343016') and trials['200']>arb('.002')\n    hmin=arb('.001')/N;hmax=T/N\n    Z=1+C*e0*hmax**4;CP=C*Z**N\n    Bmax=B0/hmin.sqrt()+d0*hmax**arb('3.5')\n    DP=C*(Bmax*Z**N+d0*hmax**arb('3.5')*Z**(N-1))\n    eta_inf,eta_row=arb('1e-11'),arb('1e-16')\n    eta_d=(eta_inf*eta_row).sqrt();Znum=1+CP*eta_row\n    Unum=DP**2/CP*(Znum**N-1)+2*eta_d*DP*Znum**(N-1)+eta_d**2*CP*Znum**(N-2)\n    rho_num=4*Unum/(r*sigma)\n    window=json.loads((ROOT/'evidence/current-quartic-positive-time-window.json').read_bytes())\n    assert window['status']=='tail_contract_passed_signed_window_and_full_residual_unresolved'\n    win=window['result']['constants']\n    assembly=json.loads((ROOT/'evidence/current-quartic-column-energy-dual-assembly.json').read_bytes())\n    assert assembly['status']=='column_bound_arithmetic_passed_full_residual_unresolved'\n    col=assembly['result']['constants']\n    previous=json.loads((ROOT/'evidence/current-coupled-truncation-energy-error.json').read_bytes())['runs'][-1]\n    assert previous['status']=='passed'\n    pars=previous['result']['parameters']\n    pref=1/(dec(pars['B2'])*dec(pars['beta']))\n    alpha=dec(col['sharper_exact_one_dimensional_coefficient_envelope'])\n    CL=dec(col['CLt']);W=dec(win['truncated_time_weight_upper_expression'])\n    tails=dec(win['cap_transport_time_and_angular_debit'])\n    weighted_other=arb('9e-32');target=arb('1e-30')\n    bias_charge=alpha*CL*pref*W*rho\n    conditional=tails+alpha*CL*(pref*W*(rho+rho_num)+weighted_other)\n    assert conditional<target and rho+rho_num<arb('.002')\n    constants={'coercivity':coercivity,'complex_semigroup_growth':omega,\n        'exact_evolution_weighted_jet_bound':C,'weighted_short_step_smoothing_constant':B0,\n        'weighted_short_step_error_smoothing_constant':d0,\n        'weighted_short_step_error_Schur_constant':e0,\n        'weighted_short_step_error_pointwise_constant':f0,\n        'uniform_analytic_density_bias':rho,\n        'analytic_bias_original_one_column_residual_charge':bias_charge,\n        'tails_plus_analytic_bias_one_column_debit':tails+bias_charge,\n        'conditional_step_pointwise_error':eta_inf,'conditional_step_Schur_error':eta_row,\n        'conditional_propagated_numerical_density_error':rho_num,\n        'conditional_total_density_error':rho+rho_num,\n        'conditional_other_weighted_error':weighted_other,\n        'conditional_one_column_residual_upper':conditional,\n        'conditional_one_column_screen_slack':target-conditional}\n    return {'N':N,'h_min':enc(hmin),'h_max':enc(hmax),\n        'constants':{k:enc(v) for k,v in constants.items()},\n        'bias_trials':{k:enc(v) for k,v in trials.items()},\n        'short_step_error_pointwise_constants':{k:enc(v) for k,v in zip(keys,point)},\n        'short_step_error_Schur_constants':{k:enc(v) for k,v in zip(keys,row)},\n        'full_thermal_and_angular_scope_preserved':True,\n        'analytic_composition_bias_certified':True,\n        'actual_signed_kernel':None,'actual_step_pointwise_error':None,\n        'actual_step_Schur_error':None,'actual_other_weighted_error':None,\n        'actual_signed_window':None,'full_residual_bound':None,\n        'coupled_admission_or_existence_certified':False}\n\nif __name__=='__main__':\n    path=ROOT/'evidence'/(STEM+'.json')\n    assert not path.exists(),'Preserve immutable attempts.'\n    before={p:digest(ROOT/p) for p in INPUTS}\n    receipt={'started_utc':datetime.now(timezone.utc).isoformat(),\n        'input_sha256_before':before,'python':sys.executable,\n        'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n        'source_utf8':Path(__file__).read_text(encoding='utf-8'),\n        'primary_theorem_source':'https://arxiv.org/html/1707.00923',\n        'theorem_hypotheses_checked':'Theorems 0.1 and 3.1; dense common domain, closed sectorial forms, holomorphic coefficients, uniform semigroup growth.'}\n    try:\n        receipt['result']=execute()\n        receipt['status']='analytic_composition_bias_passed_numerical_application_and_full_residual_unresolved'\n    except BaseException as exc:\n        receipt['status']='failed';receipt['failure']=repr(exc)\n        raise\n    finally:\n        receipt['input_sha256_after']={p:digest(ROOT/p) for p in INPUTS}\n        receipt['finished_utc']=datetime.now(timezone.utc).isoformat()\n        path.write_text(json.dumps(receipt,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n    assert before==receipt['input_sha256_after']\n    print(json.dumps({'status':receipt['status'],'constants':{\n        k:v['ball'] for k,v in receipt['result']['constants'].items()}},indent=2))\n",
+  "primary_theorem_source": "https://arxiv.org/html/1707.00923",
+  "theorem_hypotheses_checked": "Theorems 0.1 and 3.1; dense common domain, closed sectorial forms, holomorphic coefficients, uniform semigroup growth.",
+  "result": {
+    "N": 500,
+    "h_min": {
+      "ball": "[2.000000000000000000000000000000000000000e-6 +/- 3e-50]",
+      "decimal_enclosure": {
+        "mid": "19999999999999999999999999999999999999999999999999999999999999999",
+        "rad": "2",
+        "exponent": "-70"
+      }
+    },
+    "h_max": {
+      "ball": "[0.0001000000000000000000000000000000000000000 +/- 3e-48]",
+      "decimal_enclosure": {
+        "mid": "9999999999999999999999999999999999999999999999999999999999999999",
+        "rad": "2",
+        "exponent": "-68"
+      }
+    },
+    "constants": {
+      "coercivity": {
+        "ball": "[0.3732465522997877075986600067004072871155 +/- 2.39e-41]",
+        "decimal_enclosure": {
+          "mid": "37324655229978770759866000670040728711552382309937044840821862675",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "complex_semigroup_growth": {
+        "ball": "[0.01552282146771566313025916711336324427996 +/- 1.45e-43]",
+        "decimal_enclosure": {
+          "mid": "15522821467715663130259167113363244279959855949795562235327218339",
+          "rad": "2",
+          "exponent": "-66"
+        }
+      },
+      "exact_evolution_weighted_jet_bound": {
+        "ball": "[4.003105769395230865072825991049822861877 +/- 3.50e-41]",
+        "decimal_enclosure": {
+          "mid": "40031057693952308650728259910498228618770349129124131793317528123",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "weighted_short_step_smoothing_constant": {
+        "ball": "[1.42656069211971720129849827878264460053 +/- 1.46e-39]",
+        "decimal_enclosure": {
+          "mid": "14265606921197172012984982787826446005294522557446988331272175747",
+          "rad": "9071536841348076214943745",
+          "exponent": "-64"
+        }
+      },
+      "weighted_short_step_error_smoothing_constant": {
+        "ball": "[37.1140603904808090725098717952966478905 +/- 9.40e-38]",
+        "decimal_enclosure": {
+          "mid": "37114060390480809072509871795296647890525561790214496639108793990",
+          "rad": "68402818817093393690132481",
+          "exponent": "-63"
+        }
+      },
+      "weighted_short_step_error_Schur_constant": {
+        "ball": "[131.450788659257214815456604405763493837 +/- 7.25e-37]",
+        "decimal_enclosure": {
+          "mid": "13145078865925721481545660440576349383741596349114054529421557989",
+          "rad": "30891728417882129901289473",
+          "exponent": "-62"
+        }
+      },
+      "weighted_short_step_error_pointwise_constant": {
+        "ball": "[10.4905857953459719586855544863009534684 +/- 6.36e-38]",
+        "decimal_enclosure": {
+          "mid": "10490585795345971958685554486300953468350457320464124999999999999",
+          "rad": "14000000283949982518607873",
+          "exponent": "-63"
+        }
+      },
+      "uniform_analytic_density_bias": {
+        "ball": "[0.00034301546362135037962876611609118210766 +/- 3.42e-42]",
+        "decimal_enclosure": {
+          "mid": "34301546362135037962876611609118210765782898129469929899861605818",
+          "rad": "124230410774057723185070081",
+          "exponent": "-68"
+        }
+      },
+      "analytic_bias_original_one_column_residual_charge": {
+        "ball": "[7.47538751053978708722e-32 +/- 3.48e-53]",
+        "decimal_enclosure": {
+          "mid": "74753875105397870872225052891912557083822199435936291412983115266",
+          "rad": "9689198225710745301978871786911504216883201",
+          "exponent": "-96"
+        }
+      },
+      "tails_plus_analytic_bias_one_column_debit": {
+        "ball": "[1.56370323862083947858e-31 +/- 2.76e-52]",
+        "decimal_enclosure": {
+          "mid": "15637032386208394785781714258830878868278294829041651574620186561",
+          "rad": "9241338851327098046577233065904075767283713",
+          "exponent": "-95"
+        }
+      },
+      "conditional_step_pointwise_error": {
+        "ball": "[1.000000000000000000000000000000000000000e-11 +/- 1e-55]",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-75"
+        }
+      },
+      "conditional_step_Schur_error": {
+        "ball": "[1.000000000000000000000000000000000000000e-16 +/- 3e-60]",
+        "decimal_enclosure": {
+          "mid": "9999999999999999999999999999999999999999999999999999999999999999",
+          "rad": "2",
+          "exponent": "-80"
+        }
+      },
+      "conditional_propagated_numerical_density_error": {
+        "ball": "[0.000130488022107433603679226692567248575143 +/- 5.19e-43]",
+        "decimal_enclosure": {
+          "mid": "13048802210743360367922669256724857514264695554911919381104748026",
+          "rad": "16593697060300148984250369",
+          "exponent": "-68"
+        }
+      },
+      "conditional_total_density_error": {
+        "ball": "[0.00047350348572878398330799280865843068280 +/- 1.89e-42]",
+        "decimal_enclosure": {
+          "mid": "47350348572878398330799280865843068280047593684381849280966353844",
+          "rad": "140824107924429864716730369",
+          "exponent": "-68"
+        }
+      },
+      "conditional_other_weighted_error": {
+        "ball": "[9.000000000000000000000000000000000000000e-32 +/- 3e-76]",
+        "decimal_enclosure": {
+          "mid": "90000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-96"
+        }
+      },
+      "conditional_one_column_residual_upper": {
+        "ball": "[6.38888210944683986121e-31 +/- 2.82e-52]",
+        "decimal_enclosure": {
+          "mid": "63888821094468398612081446958363209170448174115808153151536143887",
+          "rad": "9609929932258579902361013651152531695337473",
+          "exponent": "-95"
+        }
+      },
+      "conditional_one_column_screen_slack": {
+        "ball": "[3.61111789055316013879e-31 +/- 2.82e-52]",
+        "decimal_enclosure": {
+          "mid": "36111178905531601387918553041636790829551825884191846848463856112",
+          "rad": "9609929953027767336500324165274517012217857",
+          "exponent": "-95"
+        }
+      }
+    },
+    "bias_trials": {
+      "50": {
+        "ball": "[0.034362587334583459461915999818806755561 +/- 2.71e-40]",
+        "decimal_enclosure": {
+          "mid": "34362587334583459461915999818806755560854000077415906559366318109",
+          "rad": "124381730424500679167967233",
+          "exponent": "-66"
+        }
+      },
+      "100": {
+        "ball": "[0.0085821688852375062383868086312247588169 +/- 3.24e-41]",
+        "decimal_enclosure": {
+          "mid": "8582168885237506238386808631224758816898693580435895249810598755",
+          "rad": "31074415567672127350898689",
+          "exponent": "-66"
+        }
+      },
+      "200": {
+        "ball": "[0.00214448248686982749106832250159844369611 +/- 9.30e-42]",
+        "decimal_enclosure": {
+          "mid": "21444824868698274910683225015984436961084709208556753322705670979",
+          "rad": "77659768467790745271533569",
+          "exponent": "-67"
+        }
+      },
+      "500": {
+        "ball": "[0.00034301546362135037962876611609118210766 +/- 3.42e-42]",
+        "decimal_enclosure": {
+          "mid": "34301546362135037962876611609118210765782898129469929899861605818",
+          "rad": "124230410774057723185070081",
+          "exponent": "-68"
+        }
+      }
+    },
+    "short_step_error_pointwise_constants": {
+      "base": {
+        "ball": "[1.63023372104568717221252561402661125156 +/- 4.52e-39]",
+        "decimal_enclosure": {
+          "mid": "16302337210456871722125256140266112515625144148829999999999999999",
+          "rad": "20000000312997354120675329",
+          "exponent": "-64"
+        }
+      },
+      "metric": {
+        "ball": "[26.5916510387441575502498692012745026600 +/- 6.35e-38]",
+        "decimal_enclosure": {
+          "mid": "26591651038744157550249869201274502659956514414882999999999999999",
+          "rad": "20000000240939760082747393",
+          "exponent": "-63"
+        }
+      },
+      "time": {
+        "ball": "[8.9695988021741431244536700854458591547 +/- 3.66e-38]",
+        "decimal_enclosure": {
+          "mid": "8969598802174143124453670085445859154716514414882999999999999999",
+          "rad": "20000000240939760082747393",
+          "exponent": "-63"
+        }
+      },
+      "mixed": {
+        "ball": "[158.351490795293330013384977231417086485 +/- 6.74e-37]",
+        "decimal_enclosure": {
+          "mid": "15835149079529333001338497723141708648452651441488299999999999999",
+          "rad": "20000000385054948158603265",
+          "exponent": "-62"
+        }
+      }
+    },
+    "short_step_error_Schur_constants": {
+      "base": {
+        "ball": "[18.1904373107720376654288865702633788476 +/- 8.59e-38]",
+        "decimal_enclosure": {
+          "mid": "18190437310772037665428886570263378847641566758832984897737863971",
+          "rad": "44287483315886799827501057",
+          "exponent": "-63"
+        }
+      },
+      "metric": {
+        "ball": "[321.178579005134126052795882159273730454 +/- 7.89e-37]",
+        "decimal_enclosure": {
+          "mid": "32117857900513412605279588215927373045384288137108335187262823547",
+          "rad": "63175032803594347950899201",
+          "exponent": "-62"
+        }
+      },
+      "time": {
+        "ball": "[110.960414260730408795102960719263902855 +/- 7.56e-37]",
+        "decimal_enclosure": {
+          "mid": "11096041426073040879510296071926390285544472194800828704642138957",
+          "rad": "31066781678073358208466945",
+          "exponent": "-62"
+        }
+      },
+      "mixed": {
+        "ball": "[2136.09559531156649383889557759027064922 +/- 6.11e-36]",
+        "decimal_enclosure": {
+          "mid": "21360955953115664938388955775902706492211571243278861379043817991",
+          "rad": "49515124637737017407438849",
+          "exponent": "-61"
+        }
+      }
+    },
+    "full_thermal_and_angular_scope_preserved": true,
+    "analytic_composition_bias_certified": true,
+    "actual_signed_kernel": null,
+    "actual_step_pointwise_error": null,
+    "actual_step_Schur_error": null,
+    "actual_other_weighted_error": null,
+    "actual_signed_window": null,
+    "full_residual_bound": null,
+    "coupled_admission_or_existence_certified": false
+  },
+  "status": "analytic_composition_bias_passed_numerical_application_and_full_residual_unresolved",
+  "input_sha256_after": {
+    "notes/current-short-step-heat-composition.md": "6b40a8da836c907fde539c4d4894164e34938a076c1611c7635f6c8e82aca737",
+    "checks/current_short_step_heat_composition.py": "9269690bfc073ee95272e3022b04e89926a38cbccd32474e9d02a86310a1b76d",
+    "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+    "notes/current-disk-heat-propagation.md": "f11709526e22bbe5742465573bd27c95b5eee37d6f8f49cdd322fad88c6a3df1",
+    "checks/current_disk_heat_propagation.py": "c436a1a07dc622acbe6ba03e3193372b1ed88b2ffc3e4782d1ddc3e863f841ae",
+    "evidence/current-disk-heat-propagation.json": "c05e4139f94b8265e6f8b71dcf9337ce7bcf18bd9a026046df2af70177a5d858",
+    "evidence/current-quartic-positive-time-window.json": "c05d3be9323f2a359d661145ef4e5eaf369a6f66a0a46c719e66cc18f6bb5c2d",
+    "evidence/current-quartic-column-energy-dual-assembly.json": "3f369da3fbb8d2df3582e02bf9b3c5d2c2cb8b1971d92ebcf7082f44175ecfb4",
+    "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "finished_utc": "2026-10-28T02:33:39.420483+00:00"
+}

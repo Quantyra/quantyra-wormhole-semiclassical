@@ -1,3 +1,47 @@
+# Short-step diagonal bias certified; signed numerical application open
+
+2026-10-27, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
+The [ordinary composition argument](current-short-step-heat-composition.md)
+and [512-bit receipt](../evidence/current-short-step-heat-composition.json)
+bound the analytic bias of P(t/500)^500 on the COMPLETE actual paired
+domain. This P is the existing heat parametrix, not P32. No signed
+numerical kernel or full residual has been evaluated.
+
+The domain step uses the common first-order graph domain for the fixed
+v=-z^4 family, and verifies closed-sectorial-form/holomorphic-semigroup
+hypotheses. Exact evolution between errors has weighted operator-jet
+bound <4.003106. Pointwise and both Schur estimates, including endpoint
+error factors, supply the missing diagonal comparison; an operator norm
+alone is not used as a diagonal bound. All local steps stay <=.001.
+
+Executed: 500-step analytic density bias <.000343016 uniformly on
+.001<=t<=.05. Its original one-column residual charge is <7.476e-32;
+the accepted tails plus this bias cost <1.564e-31. These are proved
+analytic approximation contributions, not complete application errors.
+
+Conditional numerical test: per-step weighted pointwise error <=1e-11
+and BOTH Schur errors <=1e-16, plus weighted time/spatial error <=9e-32,
+would give the specified one-column residual contribution <6.389e-31.
+Those actual numerical errors are UNKNOWN. The conditional slack is not
+an available coupled margin. No multicolumn/source/solve coefficient,
+physical-output, graph, defect, mass-column or independent-phase budget
+is established by this result.
+
+Decision: retain short-step composition without further step-count
+optimization. Its analytic bias is affordable; the first missing numerical
+step is the signed actual paired kernel and its four jets with both norm
+enclosures. The exact capped kernel in the present formula is still not
+evaluated data. The next calculation is that signed step evaluation and
+its complete propagation/integration into Z_window; it remains proposed.
+
+Preserve P32, the closed audit, original norms and all accepted results.
+Remaining to-do list: actual signed kernel/application and full residual;
+all source/solve/coefficient/application errors, G_t and coupled/admission
+budgets; nonlinear existence, compatibility, matching, semiclassical
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # One-step positive estimator rejected; signed application still unexecuted
 
 2026-10-27, E003/S169. The complete residual goal stays ACTIVE/INCOMPLETE.
