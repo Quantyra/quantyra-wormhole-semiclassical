@@ -1,3 +1,51 @@
+# Compensated solver attempt: internal norm transfer, complete defect still open
+
+2026-10-28 HST, E003/S169. Goal ACTIVE and incomplete. The preceding
+physical-log rejection was progress; this continuation obtained NO COMPLETE
+SOLVER BOUND. No implemented inverse or quantum application is running.
+
+The [ordinary attempt](current-scalar-log-solver-attempt.md) establishes
+an internal energy-to-original-dual norm factor <1.159631. A solver defect
+measured in the compensated A_sc dual energy must be <=.42254825263115...
+to ensure the original-dual .49 target. This is a proved internal norm
+comparison, not a physical-output bound or an attained defect.
+
+A full-range reference plus one quartic finite correction was tested on
+the actual mass-bearing and quartic fields, with complete form enclosures.
+Its necessary correction window is nonempty: 66.7925<gamma<90.2951.
+This neither rejects nor certifies that candidate. The separated upper
+envelope exceeds 1.69183 on a direction untouched by the finite correction,
+above the necessary 1.49 endpoint; the lower envelope is only 1.30246.
+Thus an excessive known upper estimate is distinguished from an actual
+violation. The scalar upper allowance on this one direction would need a
+factor >1.898 improvement, but that would leave the complete complementary
+map unknown. No isolated scalar refinement is selected.
+
+The first unsupported constructive step remains a numerical bound on the
+full complementary remainder and its finite-part coupling, including the
+joint logarithm, cutoff commutators, original boundary/bolt returns and
+application errors. The A_sc-A_Q comparison does not bound A_sc-f(L),
+and qualitative graph equivalence supplies no numerical constant for it.
+The [accepted arithmetic](../evidence/current-scalar-log-solver-attempt-accepted.json)
+supports the limited ordinary statements and verifies the accepted inputs
+and 21 protected paths; an initial overstrong 1.72 assertion failed and is
+retained separately. Neither receipt certifies the missing continuum bound.
+
+Decision: retain the complete compensated method and construction. Do not
+accept a finite matrix or exact inverse formula as the implementation.
+The next calculation is still the implemented full-range complementary
+action and complete original-dual defect. It remains PROPOSED. The source
+screen, signed G_t, actual S/K errors and all physical margins are unchanged
+and unresolved. Preserve P32, the closed audit and every accepted result.
+
+Remaining to-do list: implemented full-range solver and complete source/
+application certificate; signed G_t and original graph, physical/radius,
+mass/phase and coupled budgets; nonlinear admission/contraction, exact
+compatibility, physical matching, semiclassical validity/noise, all-sector
+stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Resumed plan: physical logarithmic reference rejected quantitatively
 
 2026-10-28 HST, E003/S169. The newly selected goal to execute the proposed
