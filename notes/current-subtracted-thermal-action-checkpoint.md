@@ -1,3 +1,78 @@
+# Structured weak residual: resolvent transfer remains unproved
+
+2026-10-28 HST, E003/S169. The newly active goal is to complete the
+structured weak residual calculation including all quantum and numerical
+errors. Status: ACTIVE/INCOMPLETE. The older blocked audits below are
+historical. The preceding BPP/BQP discussion and this continuation supplied
+NO NEW RESIDUAL BOUND; neither is a verified wait. No computation is running.
+This entry records an unsuccessful construction attempt, not a milestone.
+
+Revalidated starting evidence: accepted scalar-log comparison at 4f9ae98
+and actual-structured-range weak-rank rejection at 7c3b12f. The current
+code still contains comparison arithmetic, not complete C_sc, D, B_i or K
+application routines. The fixed-seed forms remain defined. Their original
+paired mass/log completion, complementary Dirac/adjoint conditions, York
+return and regular bolt are unchanged. Preserve the exact UV logarithm,
+common regulator, all angular/thermal sums, contacts and cutoff returns.
+
+The attempted route was to evaluate the global scalar-log reference by
+shifted scalar resolvents, then retain the local and coupled terms in the
+solve. The first missing implication is still a constructed map into E_t
+with a bound on the COMPLETE original-dual residual, not a scalar multiplier
+error. The auxiliary L has a larger domain than X=V E_t. A scalar functional
+calculus does not by itself impose that physical space or invert the sum
+with the variable local contacts, Weyl term, York return and B=b* a^-1 b.
+No invariance, commutation, domain transfer or spatial approximation constant
+was established for this attempted construction. This is an UNKNOWN
+constructive estimate, not a new failure to define the accepted seed form.
+
+Primary-source hypothesis check:
+
+- [Bonito-Pasciak, Theorem 4.3 and Corollary 4.4](https://arxiv.org/html/1307.0888v2#S4):
+  the complete finite-element error requires their regularity and norm
+  equivalence hypotheses in addition to resolvent quadrature. Those results
+  concern inverse fractional powers and L2 error, not our compensated
+  coupled form and original E_t dual. No quantitative transfer was obtained.
+- [Hale-Higham-Trefethen, Theorem 2.1](https://eprints.maths.manchester.ac.uk/834/1/hale_higham_trefethen.pdf):
+  the stated convergence theorem assumes a matrix with spectrum in a finite
+  positive interval. It does not supply the complete continuum complement,
+  shifted-solve errors or an explicit original-norm constant for this problem.
+  Its asymptotic rate is not an application certificate.
+
+The accepted numbers remain <.002783056744 for the complete reference
+comparison and <4.950441e-33 for ten EXACT ordered corrections. Actual
+inverse, difference, source and K application errors remain UNKNOWN. Thus
+the sufficient inner screen
+
+    ||B_i-A_Q S_hat||_(E_t -> E_t*) <4.9887427328e-32
+
+is still unexecuted, as is the complete T_t-(I+T_t)F_n certificate. No new
+remaining physical margin can be calculated from this attempt. The previous
+rank lower bounds remain estimator failures, not construction obstructions.
+
+Method decision: retain the construction and the complete compensated
+reference; do not substitute scalar functional calculus for its inverse.
+The specified alternative is a joined outer Mellin/interior Green action
+with an analytic full-range complement. It faces the same original-domain
+obligation and additionally needs numerical cutoff-commutator, cross-region
+quantum and boundary/bolt-return bounds. Its existing qualitative end
+remainder constant is uncalibrated. Neither approach acquired a new
+quantitative advantage in this continuation.
+
+One next calculation, still PROPOSED: construct that full-range action and
+enclose B_i-A_Q S_hat in the original dual, including every source, quantum,
+boundary, complement and arithmetic error. This is the missing calculation,
+not a claim that a ready implementation or a supported error bound exists.
+No further component, degree, tail or checker optimization is selected.
+
+Remaining to-do list: complete S/K applications and full weak residual;
+signed G_t and all original source/graph/physical/mass/phase/admission
+budgets; nonlinear existence/contraction, exact compatibility, physical
+matching, semiclassical validity/noise, all-sector stability and the full
+stable semiclassical wormhole objective. Preserve P32 and the closed audit.
+
+---
+
 # Resumed full-range application reaches a research impasse
 
 2026-10-27 HST, E003/S169. Goal tool status: BLOCKED, not complete.
