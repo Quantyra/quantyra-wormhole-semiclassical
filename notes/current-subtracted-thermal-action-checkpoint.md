@@ -1,3 +1,49 @@
+# Fresh weighted-boundary attempt: active, complete bound still unresolved
+
+2026-10-28 HST, E003/S169. The user explicitly resumed the goal. This is
+the FIRST turn of the fresh run; no earlier blocked count carries over.
+The preceding planning reply supplied no new feasibility evidence.
+
+The attempted route starts from the exact curved paired heat representation
+in current-curved-paired-heat-bridge.md. Its W3,infinity/weighted-C5 weak
+remainder cannot be converted directly to the energy dual; the earlier
+current-continuum-energy-dual-estimator-test.md already rejects that step.
+The attempt instead keeps h1 fixed and transfers derivatives off the energy
+test. Seam distributions, logarithmic terms and coincident-vertex terms
+must remain combined. A numerical bound for that combination was NOT
+derived. This is not a new counterexample to the actual response.
+
+For the time-reduced mixed remainder R_tau[h1,.], a sufficient heat route
+would bound its E_t* norm by K tau^(1+alpha), alpha>0, uniformly near zero,
+before applying the full angular weight <=4C/tau and dtau/tau. Neither K
+nor alpha is established here. The known spatial-cutoff approximation error
+remains accepted; it does not evaluate the retained signed action.
+
+[Hart Smith, arXiv:1809.05614](https://arxiv.org/pdf/1809.05614), sections
+1-3 and Theorem 3.2, was checked as a possible Sobolev remainder method.
+Its fixed bounded compactly supported potential result can inform an
+auxiliary capped frequency problem. It does not give the required uniform
+mixed metric estimate for the p-dependent potentials p^2 f^2 +/- p f',
+complete thermal/angular sums, common contacts and actual bolt return.
+No constant or theorem conclusion is transferred to the full operator.
+
+Outcome: no consequential new quantitative feasibility evidence. The
+signed center, global phase, strong/output comparisons and numerical
+applications remain unknown; no admission budget changes. Retain the
+joint weighted method as unproved. The next calculation is the complete
+mixed-regularity remainder above, together with its original-output
+implication, not an isolated heat coefficient or a smaller regulator.
+The goal remains ACTIVE. No research job remains running. No new checker
+or component optimization was commissioned. This checkpoint is status
+and provenance, not completion of the requested milestone.
+
+Remaining to-do list: complete signed quantum and original-output
+certificate, every coupled budget, nonlinear admission/contraction, exact
+compatibility, physical matching/opening, semiclassical validity/noise,
+all-sector stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Resumed execution blocked at the paired weighted remainder
 
 2026-10-28 HST, E003/S169. Goal status: BLOCKED, not complete, after
