@@ -1,0 +1,655 @@
+{
+  "started_utc": "2026-10-28T03:11:48.732856+00:00",
+  "input_sha256_before": {
+    "notes/current-quartic-resolvent-dual-test.md": "b01b3ee79e5ea8c2aec3b08a20697c7d34bbfb7e9e195e3546613b53c68abf02",
+    "checks/current_quartic_resolvent_dual_test.py": "fafceb982b74bd31457a32d6c4c025a63e7540f330c82258c8c1b711dc736f1b",
+    "notes/current-signed-resolvent-projection.md": "c5f43e44d197e4b597e8a6e7f9cc72d56a0e4eda3df297dffad968a2d2a75a7e",
+    "checks/current_signed_resolvent_projection.py": "39521b43b70dd1f40e1f9554166872e49735d7d57cd36b833b242ee4be4e9856",
+    "checks/current_signed_resolvent_certificate.py": "5f9daf04e4c67129454d4fff3f8b658ec8243c5850b2ad21394f43a7eda74b68",
+    "evidence/current-signed-resolvent-projection.json": "652f390dcfd8dde0b17a083906bdd820ed0af608cb1afcb465d1464cc7f4255a",
+    "notes/current-geometric-mass-conversion.md": "dadb1db0d235f26718d9c97e8df5a821d9861eb83729245c2a979b975f8a784b",
+    "notes/current-quartic-column-energy-dual.md": "c1c7a3ed190bd4ddf5827a440697593cab080b2148c57ee3e1d51e58f462dbc8",
+    "checks/current_quartic_column_energy_dual.py": "a6f79ca35bcfe64cbd990d8cffd5713d06588f087af0bd3dcb02c6287698b9be",
+    "evidence/current-quartic-column-energy-dual-assembly.json": "3f369da3fbb8d2df3582e02bf9b3c5d2c2cb8b1971d92ebcf7082f44175ecfb4",
+    "notes/current-short-step-heat-composition.md": "6b40a8da836c907fde539c4d4894164e34938a076c1611c7635f6c8e82aca737",
+    "evidence/current-short-step-heat-composition.json": "25e4f442a064e3a53fec3263374eb4413fed49c62fb7cb66b048dda3d4615ce1",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Complete quartic-column resolvent test in the original energy dual\n\n2026-10-27, E003/S169. The preceding email recheck supplied no new bound\ntoward the active full residual goal. This is an attempted complete column\napplication certificate, not a replacement of that goal by one column.\nPreserve P32, all accepted results, the closed audit and physical norms.\n\n## Domain, map, and first missing implication\n\nUse the same paired first-order Dirac domain, complementary adjoint,\nphysical-half rank-two trace, thermal period and regular disk bolt as\ncurrent-geometric-mass-conversion.md. For psi=z^4 the exact York map is\nU psi=psi/2, V psi=v=-z^4. Test against h=Vw for EVERY w in E_t; the\naccepted comparison is ||h||L2(dz)<=CLt ||w||E_t. No independent boundary\nphase or rough base-metric family is varied. On the original mass/log\ncore h has the original outer jets; the final L2 density bound extends\nthe pairing by continuity to the energy completion.\n\nThe old signed-resolvent certificate tests a particular gravitational\nobservation bounded in proper-distance measure. It is NOT an energy-dual\ncertificate. The missing implication is a bound on its complete density\nin dz, including the 1/f conversion, f=sqrt(Q), d rho=-dz/f. Replacing\nthe frequency profile by its global maximum before that conversion loses\nthe factor f. This calculation retains the local profile through both\ndirected resolvent equations before integrating the thermal frequencies.\n\nThe finite-M mass-to-geometric identity is used before summation. Its\nmass contact cancels the flat determinant contact; curvature and a2\nterms cancel the same retained geometric allocations, not new couplings.\nFor each finite angular sum the exact paired Green identity and its\nvariation apply on the core. Its differentiated source is linear in h\nwithout differentiating h. The prior fixed-column energy-dual heat proof\njustifies the common-regulator limit and bounds the omitted angular tail.\nThus this is not a new smooth-reflection theorem or an exchange of\nuncontrolled infinite sums. The exact UV logarithm, local restorations,\ncoincidence vertices, cutoff geometry and original boundary remain.\n\nUse angular levels 1..80 with their COMPLETE half-integer thermal sums.\nThe omitted angular levels are bounded below, not discarded. Observe the\nresolvent bulk through zc=1-2^-80 and start its regular-branch enclosure\nat zL=1-2^-87. Both lie strictly outside the actual bolt. Extend the\nexisting joint Laurent/Bernstein coefficient cover to that positive\nendpoint; keep all negative powers and the exact finite tau term. This\nis an observation/implementation split, not a replacement boundary.\n\n## Local frequency-weighted propagation\n\nReuse the exact X,Y Riccati equations and finite N=9 expansion, together\nwith its varied coefficients. The actual global bounds |X|<=1 and\n|Xv|<=2.5 follow from the regular U equation: its sensitivity has damping\n2(M+WU)>=2M and forcing <=2M|v|, with regular limiting sensitivity zero.\nHence |Uv|<=1. Rotation has derivative factors <=2 and |delta theta/2|\n<=1/4, yielding 2.5. No zero sensitivity is imposed at a finite cut.\nThe seven-dyadic-band buffer gives the same |X|<.008, |Xv|<.02 on the\nobserved bulk as the accepted argument, after checking its geometry.\n\nPut l(z,p)=[1+(p/(M f(z)))^2]^-1 and e=(N+2)/2. The coefficient cover\ngives the ACTUAL pointwise residual bounds R l^((N+1)/2)/M^N and Rv\ntimes the same profile, before replacing f by a supremum. Set A=1.01,\nc0=A/4, cv0=(.5+A)/4, J=sup|X_N|, and\n\n    eta=c0 max(1+J,2J)/(2M1),\n    dN=2(1-eta)-(N+2)A/M1,\n    Ca=[2+(cv0(1+J)+5c0)/M1]/dN.\n\nSince |(log l)'|<=2A, differentiation of the profile costs at most\n(N+2)A. For dN>0, comparison in BOTH propagation directions bounds the\nforced errors by E=R l^e/(dN M^(N+1)), Ev=Rv l^e/(dN M^(N+1)); the\nleft errors are E,Ca E+Ev and the right ones 2E,2Ca E+Ev. The separately\nretained seam and true inner-data transients are not included in E.\nThe exact signed source's Lipschitz estimate then gives\n\n    |delta F-delta F_N| <= Kerr l^e/M^N,\n    Kerr=[(9Ca+9+36*.02)R+6Rv]/dN.\n\nFor Je=sqrt(pi)Gamma(e-.5)/(2Gamma(e)), the complete monotone midpoint\nsum obeys gamma sum_j l^e <= M f Je+gamma/2. Consequently its canonical\nbulk density is bounded by\n\n    Kerr [Je sum d_n/M_n^(N-1)\n                    +gamma/(2 fmin) sum d_n/M_n^N],             (1)\n\nwhere fmin is an actual bulk lower bound. The continuum frequency term\nhas canceled f BEFORE norms. Only the tiny discrete correction uses\nfmin. The normalization is 1/(pi B^2 beta), followed by CLt. Interval\nwidth and coefficient-enclosure errors are included in R,Rv and Kerr.\n\n## Complete rational, contact, and thermal accounting\n\nRetain the old exact positive rational-series majorant Ktail; it bounds\nall orders beyond the retained u^2,u^4,u^6 coefficients, not finitely\nmany terms. Its bulk density allowance is\n\n    Ktail[(16/315) sum d_n/M_n^6\n                        +gamma/fmin sum d_n/M_n^7].             (2)\n\nThe first two continuous coefficients cancel the curvature conversion\nand a2 allocation. The third gives a signed polynomial center. In the\noriginal normalized action-Hessian convention it is\n\n    Z6(z)=-[sum_(n=1)^80 d_n/M_n^4] O6[v](z)/(4pi B^2 beta).     (3)\n\nThe retained energy operator has the opposite action-row sign. State\nthat sign explicitly when assembling ell_t; the error norm is unchanged.\nO6 is the canonical, NOT product-centered polynomial from the accepted\nquartic heat proof. The common local/LLL/classical terms remain separate\nknown parts of the column. Their presence is not inferred from (3).\n\nThe implemented center uses each coefficient interval's numerical\nmidpoint. Charge CLt sum_j radius_j/sqrt(2j+1) to its E_t* error, by\nthe L2 norms of monomials on [0,1]. Thus parameter and arithmetic\nuncertainty are not hidden in an exact but unevaluated polynomial center.\nAll other error expressions are interval-enclosed upper bounds; their\nupper endpoints include arithmetic error. There is no sampled-frequency\nor spatial quadrature error to assume zero: the polynomial integrals\nand frequency-profile integrals are evaluated analytically with enclosures.\n\nEach retained local frequency polynomial has degree <=12. The same\nMarkov/total-variation proof as the accepted resolvent certificate gives\nthe full thermal discrepancy, in the units of (1), bounded by\n\n    gamma/fmin [145 sum_(k=1)^3 Hmajor_(2k) sum d_n/M_n^(2k-1)\n                                             +3 sum d_n M_n].  (4)\n\nThis retains the flat thermal difference after its common subtraction.\nIt does not set temperature to zero or independently regularize contacts.\n\n## Paired seam and true regular-bolt return\n\nUse the exact physical-side seam jets and all odd coefficients of the\nfinite expansion. Let f0=sqrt(beta), K0=M/sqrt(l0),\nl0=[1+(p/(M*.409))^2]^-1, b0=2(1-eta), and D0=2b0-A/M1>0.\nThe old boundary source error is a sum of M exp(-I) times mismatch\ncoefficients, distance monomials and the varied polynomial Qb,P, with\nI>=b0 K0 d. The only extra distance conversion needed is\n\n    ||d^k exp(-b0 K0 d)/f||L2(dz)\n       <= beta^(-1/4) sqrt((2k)!)/(D0 K0)^(k+1/2).             (5)\n\nIndeed f(d)>=f0 exp(-Ad) by |(log f)'|<=A, and dz=f dd. Extending\nthe resulting positive distance integral to infinity bounds the actual\nbulk. For d^4 I exp(-I), use (1+b0 K0 d)exp(-b0 K0 d). Minkowski and\nthe complete thermal-profile integral bound every term before summing\nangular levels. No reflected condition is silently omitted.\n\nRetain inner data |X|<=1, |Xv|<=2.5 at zL. The existing exponentially\ndamped buffer calculation bounds their transmitted source by Tinner\ntimes lmax^6, including its derivative and both directed returns. In\nthis term only, use 1/fmin after integration. Its numerical size is\nreported; it is not replaced by zero or a wall datum.\n\n## Cold observation and all omitted angular levels\n\nThe cold set z>zc has measure <yc=2^-80 in the ORIGINAL dz measure.\nIt is an observation set; its characteristic is not a metric variation.\nFor all t>=t0=.001, split the exact heat kernel into two endpoint runs\nof length delta=.00025 and an exact middle run. At each base t hold\nthe split fractions fixed when differentiating. The accepted weighted\njet norm and smoothing bounds give the full density bound\n\n    Hcold(t) <= H0 exp(omega t),\n    H0=16 B(delta)^2/(r sigma), r=.1, sigma=.25.               (6)\n\nThis uses kernel smoothing to control the diagonal, not operator norm\nalone. All thermal modes and true finite-domain returns remain in the\nexact kernel. The completed local densities have sup bounds\n2/(pi t) and ||P4[v]||infinity t/(480pi). With Theta(t)<=4C/t0\nexp[-a(t-t0)], a=(q+1)/C>324, the cold positive-time density L2 bound is\n\n    sqrt(yc) 4C/t0 [H0 exp(omega t0)/(t0(a-omega))\n                +2/(pi a t0^2)+||P4||infinity/(480pi a)],     (7)\n\ntimes 1/(B^2 beta). The small-time cold remainder uses the accepted\nglobal pointwise bound |O6|t^2/(4pi)+Cb t^(5/2)+953t^3. Its integrated\nL2 bound is sqrt(yc)4C[||O6||infinity t0/(4pi)\n+(2/3)Cb t0^(3/2)+953t0^2/2], with the same normalization. This is a\nbound on the complete commonly subtracted response; no bolt wall or\nmissing contact is introduced. Moving split (3) to a whole-domain center\nalso charges ||Z6|| on the cold set.\n\nFor n>80, bound the entire 0<t<=t0 part by the accepted ALL-angular\ncanonical energy-dual cap, and its t>=t0 part by the complete angular\ntail formula. These two errors may overcount positive allowances but\nnot remove any sector. No late-time truncation is needed for n<=80.\n\n## Decision test and limitations\n\nSum (1),(2),(4), seam, inner, cold, high-angular and all interval errors.\nThis attempts a complete E_t* error around the signed center (3). Also\nreport the norm of the center and the zero-centered total enclosure.\nCharge the result using ONLY the proved exact one-dimensional coefficient\nenvelope alpha; add the accepted transport error. Compare with the\nsufficient 1e-30 one-column screen. This is not a multicolumn coefficient\nbound, full residual estimate, or available physical margin.\n\nIf an implication above is not justified, keep it unknown and do not\npromote the arithmetic test to a certified application. The complete\nF_n coefficients, B source application, scalar solves, infinite-dimensional\ncomplement, original output comparisons and coupled budgets remain open.\nNonlinear existence, compatibility, physical matching, semiclassical\nvalidity/noise and all-sector stability remain unproved.\n\nRemaining to-do list: execute this complete column test and resolve any\nfailed hypothesis; full-domain residual and actual application errors;\nall original physical requirements and the full stable-wormhole objective.\n",
+  "source_utf8": "\"\"\"Complete quartic energy-dual application test; not the full F_n residual.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom math import factorial\nimport json, sys, traceback\n\nACCEPTANCE='--acceptance' in sys.argv\nif ACCEPTANCE:sys.argv.remove('--acceptance')\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-quartic-resolvent-dual-test'\nruntime=json.loads((ROOT/'evidence/current-coupled-mass-adjoint-runtime.json').read_bytes())\nsys.path.insert(0,str(Path(runtime['packages']['flint']['root']).parent))\nsys.path.insert(0,str(ROOT/'checks'))\nfrom flint import arb,ctx\nimport current_signed_resolvent_projection as old\nimport current_quartic_column_energy_dual as heat\n\nINPUTS=['notes/'+STEM+'.md','checks/current_quartic_resolvent_dual_test.py',\n 'notes/current-signed-resolvent-projection.md','checks/current_signed_resolvent_projection.py',\n 'checks/current_signed_resolvent_certificate.py','evidence/current-signed-resolvent-projection.json',\n 'notes/current-geometric-mass-conversion.md','notes/current-quartic-column-energy-dual.md',\n 'checks/current_quartic_column_energy_dual.py','evidence/current-quartic-column-energy-dual-assembly.json',\n 'notes/current-short-step-heat-composition.md','evidence/current-short-step-heat-composition.json',\n 'evidence/current-coupled-mass-adjoint-runtime.json']\n\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\ndef dec(x):\n d=x['decimal_enclosure'];return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef enc(x):\n m,r,e=x.mid_rad_10exp(60)\n return {'ball':x.str(35),'decimal_enclosure':{'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef extend_cover(p,N,joint,previous):\n \"\"\"Rebound complete coefficients on the added genuine finite-geometry interval.\"\"\"\n T,P,V,op=joint\n lo,hi=arb(2)**-87,arb(2)**-56\n geo=old.geometry_numerators(p,N+1)\n AJ,VJ,F=old.rational_geometry_jets(geo,lo,hi)\n assert F>arb('.99')\n def bound(poly,weight):\n  total=arb(0)\n  for factor,bs,neg in old.t_control_polynomials(poly):\n   # Old positive polynomial controls cover [0,2^-12], including this interval.\n   pr=old.positive_y_tree(bs)[-1]\n   power=lambda k:arb(max((lo**k).upper(),(hi**k).upper()))\n   value=pr*power(factor)\n   for k,c in neg.items():value+=abs(c)*power(k)\n   total=arb(max(total,value.upper()))\n  return total/arb(F.lower())**weight\n PB=[arb(0)]+[arb(max(dec(previous['P'][j]).upper(),bound(P[j],j).upper())) for j in range(1,N+1)]\n VB=[arb(0)]+[arb(max(dec(previous['V'][j]).upper(),bound(V[j],j).upper())) for j in range(1,N+1)]\n RB=arb(max(dec(previous['D_P_N']).upper(),bound(op(P[N],N),N+1).upper()))\n RVB=arb(max(dec(previous['D_V_N']).upper(),bound(op(V[N],N),N+1).upper()))\n amax=arb(max(dec(previous['a_jets'][0]).upper(),abs(AJ[0]).upper()))\n vmax=arb(max(dec(previous['v_jets'][1]).upper(),abs(VJ[1]).upper()))\n assert amax<arb('1.01') and vmax<arb('.5') and F<arb('1.01')\n return PB,VB,RB,RVB,F,amax,vmax\n\ndef execute():\n ctx.prec=512\n assert digest(Path(sys.executable))==runtime['python_sha256']\n for pkg in runtime['packages'].values():\n  for name,h in pkg['files'].items():assert digest(Path(pkg['root'])/name)==h\n prior=json.loads((ROOT/'evidence/current-signed-resolvent-projection.json').read_bytes())['runs'][-1]\n assert prior['status']=='passed'\n rows=prior['numerics'];par=next(x for x in rows if x['kind']=='retained_exact_product_parameter_correlations')\n p={k:dec(v) for k,v in par['correlated_parameters'].items()};p['q']=arb(2000)**4\n N=9\n prev=next(x for x in rows if x['kind']=='complete_joint_radial_coefficient_bounds' and x['N']==N)\n cert=next(x for x in rows if x['kind']=='whole_signed_projection_certificate' and x['N']==N)\n joint=old.joint_coefficients(p,N)\n PB,VB,R,RV,Fext,Aactual,Vactual=extend_cover(p,N,joint,prev)\n M1=((p['q']+1)/p['C']).sqrt();A=arb('1.01');cc=A/4;cv=arb('1.51')/4\n J=sum((PB[j]/M1**j for j in range(1,N+1)),arb(0))/2\n JV=sum((VB[j]/M1**j for j in range(1,N+1)),arb(0))/2\n for i in range(1,N+1):\n  for j in range(1,N+1):\n   if i+j>=N:\n    R+=Aactual*PB[i]*PB[j]/(2*M1**(i+j-N))\n    RV+=((Vactual+Aactual)*PB[i]*PB[j]+Aactual*(VB[i]*PB[j]+PB[i]*VB[j]))/(2*M1**(i+j-N))\n assert J<arb('.1') and JV<arb('.1')\n eta=cc*max(1+J,2*J)/(2*M1);b0=2*(1-eta);dN=b0-(N+2)*A/M1\n assert dN>0\n Ca=(2+(cv*(1+J)+5*cc)/M1)/dN\n Kerr=((9*Ca+arb('9.72'))*R+6*RV)/dN\n fm=arb('.409');yc=arb(2)**-80\n # All accepted bulk cover cells have F>.4; extension has F>.99.\n assert all(dec(c['F'])>arb('.4') for c in prev['cells'])\n fmin=arb('.4')*yc\n assert p['beta']+p['u']/16<fm**2 and p['eps']<0 and p['tau']>0\n # Actual near-root deficit is far below the observation/start cuts.\n assert p['gamma']<arb(2)**-100 and p['tau']/((arb(2)**-87)**2)<arb('1e-12')\n masses=[(arb(n)*(n+p['q'])/p['C']).sqrt() for n in range(1,81)]\n ds=[2*(p['q']+2*n) for n in range(1,81)]\n sm=lambda k:sum((d/M**k for d,M in zip(ds,masses)),arb(0))\n je=lambda e:arb.pi().sqrt()*(e-arb('.5')).gamma()/(2*e.gamma())\n profile=lambda power,e:fm*je(e)*sm(power-1)+p['gamma']*sm(power)/2\n ec=json.loads((ROOT/'evidence/current-quartic-column-energy-dual-assembly.json').read_bytes())['result']['constants']\n CL=dec(ec['CLt']);alpha=dec(ec['sharper_exact_one_dimensional_coefficient_envelope'])\n norm=CL/(arb.pi()*p['B2']*p['beta']);pref=1/(p['B2']*p['beta'])\n Erad=norm*Kerr*(je(arb(N+2)/2)*sm(N-1)+p['gamma']*sm(N)/(2*fmin))\n\n # Whole rational majorant with the newly extended coefficient bounds.\n lim=6\n def mul(x,y):return [sum((x[j]*y[k-j] for j in range(k+1)),arb(0)) for k in range(lim+1)]\n plus=lambda x,y:[a+b for a,b in zip(x,y)]\n scale=lambda x,b:[a*b for a in x]\n one=[arb(1)]+[arb(0)]*lim\n qa=mul(PB[:7],PB[:7]);qva=scale(mul(PB[:7],VB[:7]),2)\n for j in [1,3,5]:qa[j]=qva[j]=arb(0)\n sa=[2*PB[j] if j%2==0 else arb(0) for j in range(7)]\n sva=[2*VB[j] if j%2==0 else arb(0) for j in range(7)]\n na=plus(scale(qa,4),scale(sa,2))\n nva=plus(plus(scale(qva,4),scale(qa,8)),plus(scale(sva,2),scale(sa,2)))\n q=scale(qa,arb(1)/4);qv=scale(qva,arb(1)/4);qq=mul(q,q);qqq=mul(qq,q)\n inv=plus(plus(plus(one,q),qq),qqq)\n inv2=plus(plus(plus(one,scale(q,2)),scale(qq,3)),scale(qqq,4))\n hm=plus(mul(nva,inv),mul(mul(na,qv),inv2))\n qval=sum((PB[i]*PB[j]/M1**(i+j) for i in range(1,N+1) for j in range(1,N+1) if (i+j)%2==0),arb(0))\n qvval=sum((2*PB[i]*VB[j]/M1**(i+j) for i in range(1,N+1) for j in range(1,N+1) if (i+j)%2==0),arb(0))\n sval=2*sum((PB[j]/M1**j for j in range(2,N+1,2)),arb(0))\n svval=2*sum((VB[j]/M1**j for j in range(2,N+1,2)),arb(0))\n qn=qval/4;assert qn<arb('.01')\n hval=(4*qvval+8*qval+2*svval+2*sval)/(1-qn)+(4*qval+2*sval)*qvval/4/(1-qn)**2\n Ktail=M1**8*(hval-sum((hm[j]/M1**j for j in [2,4,6]),arb(0)))\n assert Ktail>0\n Eapp=norm*Ktail*(arb(16)/315*sm(6)+p['gamma']/fmin*sm(7))\n Etherm=norm*p['gamma']/fmin*(sum((145*hm[2*k]*sm(2*k-1) for k in [1,2,3]),arb(0))+3*sm(-1))\n\n # Both true directed regular-branch returns.\n buffer=7*arb(2).log()/A;half=buffer/2\n xe=cc/(2*M1-cc);xb=xe+(1+xe)*(-(2*M1-cc)*half).exp()\n ve=(arb('.008')+cv*(1+arb('.008')**2)/(2*M1))/(1-cc*arb('.008')/M1)\n vb=ve+(arb('2.5')+ve)*(-(2*M1-2*cc*arb('.008'))*half).exp()\n assert xb<arb('.008') and vb<arb('.02')\n amin=b0*M1*buffer;assert amin>13\n Ca_old=(1+(cv*(1+J)+5*cc)/(2*M1))/(1-eta)\n ti=(3*(arb('2.5')+JV)+(3*Ca_old*amin+arb('3.24'))*(1+J))*(-amin).exp()\n Einner=4*norm/fmin*ti*profile(arb(-1),arb(6))\n\n # Convert ALL actual seam terms directly to L2(dz).\n D0=2*b0-A/M1;assert D0>0\n distance_rows=[(3*(arb('.008')+J)/4,4,0),(3*(arb('.008')+J)*A/20,5,0),\n  (3*cc,5,0),(6*cc,4,1),(12*cc,3,2),(18*cc,2,3),(18*cc,1,4),\n  (arb(33),4,0),(arb(48),3,1),(arb(72),2,2),(arb(72),1,3),(arb(36),0,4)]\n boundary=arb(0);brows=[]\n for row in cert['seam_terms']:\n  j=row['j'];SB,SD=dec(row['P']),dec(row['V'])\n  def mom(k,m=0,extra=0):\n   power=arb(j+m+k-extra)-arb('.5')\n   exponent=arb(j+k-extra)/2+arb('.75')\n   return arb(factorial(2*k)).sqrt()/D0**(arb(k)+arb('.5'))*b0**extra*profile(power,exponent)\n  term=6*SD*mom(0)\n  val=3/(1-eta)*(mom(4)+mom(5,extra=1))\n  val+=sum((coef*mom(k,m) for coef,k,m in distance_rows),arb(0))\n  term+=2*SB*fm**4*val\n  term*=norm/p['beta']**arb('.25');boundary+=term\n  brows.append({'j':j,'energy_dual_bound':enc(term)})\n\n # Original canonical polynomial center and pointwise contact guards.\n beta,u,ep,tau=[p[k] for k in ['beta','u','eps','tau']]\n Q=[beta,arb(0),u,-4*beta-2*u-tau,3*beta+u+ep,-2*ep,ep]\n RR=heat.scale(heat.derivative(heat.derivative(Q)),-1);v=[arb(0)]*4+[arb(-1)]\n D=lambda x:heat.derivative(heat.mul(Q,heat.derivative(x)))\n HH=lambda x:heat.padd(D(x),heat.mul(RR,x))\n O6=heat.padd(heat.scale(heat.padd(HH(D(HH(v))),heat.mul(D(RR),HH(v)),D(heat.mul(v,D(RR)))),-arb(1)/105),\n  heat.scale(heat.padd(heat.scale(heat.mul(heat.mul(heat.mul(RR,RR),RR),v),16),\n  heat.scale(heat.mul(heat.mul(RR,RR),D(v)),24),heat.scale(D(heat.mul(heat.mul(RR,RR),v)),24),\n  heat.scale(D(heat.mul(RR,D(v))),24)),-arb(1)/1008))\n P4=heat.padd(heat.scale(heat.mul(heat.mul(RR,RR),v),4),heat.scale(heat.mul(RR,D(v)),8),\n  heat.scale(D(heat.mul(RR,v)),8),heat.scale(D(D(v)),8))\n osup=sum((abs(x) for x in O6),arb(0));p4sup=sum((abs(x) for x in P4),arb(0))\n center_coeff=heat.scale(O6,-pref*sm(4)/(4*arb.pi()))\n center_mid=[arb(x.mid()) for x in center_coeff]\n # A numerical polynomial center, with ALL coefficient/parameter radii charged.\n center_round=CL*sum((arb(x.rad())/arb(2*j+1).sqrt() for j,x in enumerate(center_coeff)),arb(0))\n center_norm=CL*heat.l2(center_mid)\n coldcenter=CL*pref*sm(4)*osup/(4*arb.pi())*yc.sqrt()\n hs=json.loads((ROOT/'evidence/current-short-step-heat-composition.json').read_bytes())['result']['constants']\n B0=dec(hs['weighted_short_step_smoothing_constant']);d0=dec(hs['weighted_short_step_error_smoothing_constant'])\n omega=dec(hs['complex_semigroup_growth']);delta=arb('.00025');t0=arb('.001')\n Bh=B0/delta.sqrt()+d0*delta**arb('3.5')\n H0=16*Bh**2/arb('.025');a=(p['q']+1)/p['C']\n assert a>324 and a>omega\n coldpos=CL*pref*yc.sqrt()*4*p['C']/t0*(H0*(omega*t0).exp()/(t0*(a-omega))+\n  2/(arb.pi()*a*t0**2)+p4sup/(480*arb.pi()*a))\n Cb=dec(ec['boundary_Linfinity_collar_constant'])+dec(ec['boundary_Linfinity_exit_constant'])+arb('1e-100')\n colduv=CL*pref*yc.sqrt()*4*p['C']*(osup*t0/(4*arb.pi())+arb(2)/3*Cb*t0**arb('1.5')+arb(953)/2*t0**2)\n # n>80: common heat cap and complete positive-time angular tail.\n x=(-a*t0).exp();n=80\n ageom=(2*p['q']+4*(n+1))/(1-x)+4*x/(1-x)**2\n Mheat=dec(ec['heat_diagonal_bound_M']);P4norm=dec(ec['P4_L2'])\n CH,C0,C2=64*Mheat*CL/3,2*CL/(3*arb.pi()),CL*P4norm/(480*arb.pi())\n tailpos=pref*ageom*x**(n+1)/(a*(n+1))*(CH/t0+C0/t0**2+C2)\n tailuv=dec(ec['canonical_cap_at_001'])\n errors={'bulk_forced_resolvent':Erad,'entire_rational_tail':Eapp,\n  'complete_thermal_difference':Etherm,'paired_seam':boundary,'true_bolt_data_return':Einner,\n  'cold_positive_time':coldpos,'cold_common_UV':colduv,'cold_center_extension':coldcenter,\n  'higher_angular_common_UV':tailuv,'higher_angular_positive_time':tailpos,\n  'numerical_center_coefficient_and_parameter_error':center_round}\n total=sum(errors.values(),arb(0));zero=center_norm+total\n transport=dec(ec['retained_transport_column_error'])\n debit=alpha*(zero+transport);target=arb('1e-30')\n return {'N':N,'angular_cut':80,'observation_y':'2^-80','true_inner_data_y':'2^-87',\n  'constants':{k:enc(x) for k,x in {'dN':dN,'Ca':Ca,'Kerr':Kerr,'Ktail':Ktail,'fmin':fmin,\n   'R':R,'Rv':RV,'J':J,'Jv':JV,'extended_F':Fext,'Hcold0':H0,'O6_sup':osup,'P4_sup':p4sup,\n   'CLt':CL,'alpha_one_dimensional':alpha,'signed_center_energy_dual_norm':center_norm,\n   'complete_error_energy_dual':total,'zero_centered_massive_column_bound':zero,\n   'one_column_residual_debit':debit,'one_column_sufficient_target':target,\n   'one_column_slack':target-debit,'improvement_over_old_column_report':dec(ec['canonical_complete_massive_column_bound'])/zero}.items()},\n  'error_contributions':{k:enc(x) for k,x in errors.items()},'seam_contributions':brows,\n  'canonical_action_Hessian_center_coefficients':[enc(x) for x in center_mid],\n  'canonical_action_Hessian_exact_coefficient_enclosures':[enc(x) for x in center_coeff],\n  'energy_operator_center_sign':'negative of canonical action-Hessian center',\n  'one_column_screen_passes':bool(debit<target),'actual_F_n':None,'full_residual_bound':None,\n  'scope':{'complete_quartic_massive_column_test':True,'finite_thermal_mode_substitution':False,\n   'complete_coupled_or_physical_admission':False,'rough_neighborhood_theorem':False,\n   'existence_matching_validity_noise_stability':False}}\n\nif __name__=='__main__':\n suffix='-acceptance' if ACCEPTANCE else ''\n out=ROOT/'evidence'/(STEM+suffix+'.json');assert not out.exists(),'Preserve immutable attempts.'\n before={p:digest(ROOT/p) for p in INPUTS}\n receipt={'started_utc':datetime.now(timezone.utc).isoformat(),'input_sha256_before':before,\n  'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),'source_utf8':Path(__file__).read_text(encoding='utf-8')}\n try:\n  receipt['result']=execute();receipt['status']='complete_column_arithmetic_executed_requires_argument_audit'\n except BaseException:\n  receipt['status']='failed';receipt['exception']=traceback.format_exc();raise\n finally:\n  receipt['finished_utc']=datetime.now(timezone.utc).isoformat()\n  receipt['input_sha256_after']={p:digest(ROOT/p) for p in INPUTS}\n  out.write_text(json.dumps(receipt,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n assert before==receipt['input_sha256_after']\n print(json.dumps({'status':receipt['status'],'constants':{k:v['ball'] for k,v in receipt['result']['constants'].items()},\n  'errors':{k:v['ball'] for k,v in receipt['result']['error_contributions'].items()}},indent=2))\n",
+  "result": {
+    "N": 9,
+    "angular_cut": 80,
+    "observation_y": "2^-80",
+    "true_inner_data_y": "2^-87",
+    "constants": {
+      "dN": {
+        "ball": "[1.3703306136433301298185 +/- 5.89e-23]",
+        "decimal_enclosure": {
+          "mid": "13703306136433301298185418248356247911317128780005183602478343258",
+          "rad": "170050616011217853854709843575771632762881",
+          "exponent": "-64"
+        }
+      },
+      "Ca": {
+        "ball": "[1.5259250496812824438403 +/- 3.34e-23]",
+        "decimal_enclosure": {
+          "mid": "15259250496812824438403125915324453603665823627096668124039440493",
+          "rad": "207329760637811903336565595306399845318657",
+          "exponent": "-64"
+        }
+      },
+      "Kerr": {
+        "ball": "[100764.36284585343520143 +/- 3.73e-18]",
+        "decimal_enclosure": {
+          "mid": "10076436284585343520142802445629018357178036973377196518220078047",
+          "rad": "174697750094979969694583231316575419105281",
+          "exponent": "-59"
+        }
+      },
+      "Ktail": {
+        "ball": "[1247.7107929439125 +/- 5.55e-14]",
+        "decimal_enclosure": {
+          "mid": "12477107929439125402881433972870803298307637335103252695320232417",
+          "rad": "152092180175035720233225963197632704070920699905",
+          "exponent": "-61"
+        }
+      },
+      "fmin": {
+        "ball": "[3.3087224502121106994856347682798514e-25 +/- 1.43e-60]",
+        "decimal_enclosure": {
+          "mid": "33087224502121106994856347682798514142632484436035156250000000000",
+          "rad": "1",
+          "exponent": "-89"
+        }
+      },
+      "R": {
+        "ball": "[3584.934428933308061303617 +/- 2.48e-22]",
+        "decimal_enclosure": {
+          "mid": "35849344289333080613036170371052433096674969292987680351285344205",
+          "rad": "2101642468307530341802641602390345646081",
+          "exponent": "-61"
+        }
+      },
+      "Rv": {
+        "ball": "[9000.30955058966275886884 +/- 1.31e-21]",
+        "decimal_enclosure": {
+          "mid": "9000309550589662758868840217938584629954993004112010948241432054",
+          "rad": "1088284648558513930944789704129105625089",
+          "exponent": "-60"
+        }
+      },
+      "J": {
+        "ball": "[0.007346962566501928016753 +/- 6.04e-25]",
+        "decimal_enclosure": {
+          "mid": "73469625665019280167533927938533790602824817578979562988979021455",
+          "rad": "2108223108962482814986850336852650852614145",
+          "exponent": "-67"
+        }
+      },
+      "Jv": {
+        "ball": "[0.014466544314793151155984 +/- 6.39e-25]",
+        "decimal_enclosure": {
+          "mid": "14466544314793151155983770270589309510724420054820572933591110821",
+          "rad": "408300393943037135024874074858052143546369",
+          "exponent": "-66"
+        }
+      },
+      "extended_F": {
+        "ball": "[1.0000000000000 +/- 3.08e-15]",
+        "decimal_enclosure": {
+          "mid": "99999999999999846399587313642521257082973473728770841262303292751",
+          "rad": "153602758825760728010340805885813577253177582944257",
+          "exponent": "-65"
+        }
+      },
+      "Hcold0": {
+        "ball": "[5209793.0452518405311371385487954929 +/- 4.49e-29]",
+        "decimal_enclosure": {
+          "mid": "52097930452518405311371385487954929448235414488578822686393517757",
+          "rad": "66260445809829331129597953",
+          "exponent": "-58"
+        }
+      },
+      "O6_sup": {
+        "ball": "[267.2507936836194667663944450887 +/- 6.94e-29]",
+        "decimal_enclosure": {
+          "mid": "26725079368361946676639444508865868937146780337526830707082657775",
+          "rad": "2803754750539832562467373079068673",
+          "exponent": "-62"
+        }
+      },
+      "P4_sup": {
+        "ball": "[6586.666667217375983516830849247 +/- 3.92e-28]",
+        "decimal_enclosure": {
+          "mid": "65866666672173759835168308492467848082244466785752361553876526148",
+          "rad": "1761603153998711835980450051915777",
+          "exponent": "-61"
+        }
+      },
+      "CLt": {
+        "ball": "[22.473328881153570813240556019037323 +/- 4.13e-34]",
+        "decimal_enclosure": {
+          "mid": "22473328881153570813240556019037322587792279719679050367233199994",
+          "rad": "2247634357",
+          "exponent": "-63"
+        }
+      },
+      "alpha_one_dimensional": {
+        "ball": "[0.22450337507362558655633542232314505 +/- 4.79e-36]",
+        "decimal_enclosure": {
+          "mid": "22450337507362558655633542232314504521338791149547247295308046060",
+          "rad": "124514933021868032001",
+          "exponent": "-65"
+        }
+      },
+      "signed_center_energy_dual_norm": {
+        "ball": "[3.6180586227937056807518417745929759e-35 +/- 1.82e-70]",
+        "decimal_enclosure": {
+          "mid": "36180586227937056807518417745929758818933836723863032458553711642",
+          "rad": "3618543997",
+          "exponent": "-99"
+        }
+      },
+      "complete_error_energy_dual": {
+        "ball": "[5.855537278141735707e-32 +/- 5.65e-51]",
+        "decimal_enclosure": {
+          "mid": "58555372781417357068767034906392755514304741482205332300468937619",
+          "rad": "4411175048500016918120491653044355143579992065",
+          "exponent": "-96"
+        }
+      },
+      "zero_centered_massive_column_bound": {
+        "ball": "[5.859155336764529413e-32 +/- 8.84e-51]",
+        "decimal_enclosure": {
+          "mid": "58591553367645294125574553324138685273123675318929195332927491331",
+          "rad": "4411175059133840884399818636274811625822748673",
+          "exponent": "-96"
+        }
+      },
+      "one_column_residual_debit": {
+        "ball": "[1.315400148184282182e-32 +/- 3.00e-51]",
+        "decimal_enclosure": {
+          "mid": "13154001481842821817998875842882423902833034129118431564521201444",
+          "rad": "990323696684011450477254364491672589820755969",
+          "exponent": "-96"
+        }
+      },
+      "one_column_sufficient_target": {
+        "ball": "[1.0000000000000000000000000000000000e-30 +/- 3e-69]",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-94"
+        }
+      },
+      "one_column_slack": {
+        "ball": "[9.8684599851815717818e-31 +/- 3.00e-51]",
+        "decimal_enclosure": {
+          "mid": "9868459985181571781820011241571175760971669658708815684354787985",
+          "rad": "9903236987193918190229067948756271508750337",
+          "exponent": "-94"
+        }
+      },
+      "improvement_over_old_column_report": {
+        "ball": "[2638844841.057471465 +/- 4.24e-10]",
+        "decimal_enclosure": {
+          "mid": "26388448410574714647757250921174254632006750398431904613971710205",
+          "rad": "1989584425896210883987996526061770629669978113",
+          "exponent": "-55"
+        }
+      }
+    },
+    "error_contributions": {
+      "bulk_forced_resolvent": {
+        "ball": "[6.44940837600838638368e-34 +/- 4.61e-55]",
+        "decimal_enclosure": {
+          "mid": "64494083760083863836827469272099322639090354691062464061718468292",
+          "rad": "18532511457137169427916534536353356862980097",
+          "exponent": "-98"
+        }
+      },
+      "entire_rational_tail": {
+        "ball": "[3.6111183242253330e-34 +/- 9.35e-51]",
+        "decimal_enclosure": {
+          "mid": "36111183242253329505421280860045693872894821193861591246389589043",
+          "rad": "440192230305518208500853523532820014722921267201",
+          "exponent": "-98"
+        }
+      },
+      "complete_thermal_difference": {
+        "ball": "[6.65941302152439930283e-33 +/- 3.87e-54]",
+        "decimal_enclosure": {
+          "mid": "6659413021524399302832785625552457202013909410993832055338409388",
+          "rad": "1078891924940242979622398396817808811884545",
+          "exponent": "-96"
+        }
+      },
+      "paired_seam": {
+        "ball": "[7.23100880191053587240e-36 +/- 5.19e-57]",
+        "decimal_enclosure": {
+          "mid": "7231008801910535872396284848033449807073735460709047628236014872",
+          "rad": "1468895321579355986740026011719474983469057",
+          "exponent": "-99"
+        }
+      },
+      "true_bolt_data_return": {
+        "ball": "[3.0740409862711400635e-70 +/- 5.38e-90]",
+        "decimal_enclosure": {
+          "mid": "30740409862711400634611038094181631686467037885563864342720281123",
+          "rad": "148127674462617760523417051370409374582308865",
+          "exponent": "-134"
+        }
+      },
+      "cold_positive_time": {
+        "ball": "[4.59797552895583447718e-32 +/- 5.06e-53]",
+        "decimal_enclosure": {
+          "mid": "45979755289558344771756898075259266597287747534075053393307995668",
+          "rad": "7449142156915041496614144966823088723329025",
+          "exponent": "-96"
+        }
+      },
+      "cold_common_UV": {
+        "ball": "[1.075142590460631262288e-43 +/- 2.81e-65]",
+        "decimal_enclosure": {
+          "mid": "10751425904606312622881643345470635450860372658363311523677563211",
+          "rad": "1161180637186431961622290450392196449304577",
+          "exponent": "-107"
+        }
+      },
+      "cold_center_extension": {
+        "ball": "[1.531796854280329222555e-43 +/- 4.74e-65]",
+        "decimal_enclosure": {
+          "mid": "15317968542803292225547746855115069882741391102643142693364701651",
+          "rad": "2481675246770557698338013129682252445253633",
+          "exponent": "-107"
+        }
+      },
+      "higher_angular_common_UV": {
+        "ball": "[4.899052043540515125637e-33 +/- 9.04e-55]",
+        "decimal_enclosure": {
+          "mid": "48990520435405151256373720512452107885453040297113127846455988296",
+          "rad": "5317423824187087279318365891858023833403393",
+          "exponent": "-97"
+        }
+      },
+      "higher_angular_positive_time": {
+        "ball": "[3.86874770812145476427e-36 +/- 8.66e-57]",
+        "decimal_enclosure": {
+          "mid": "38687477081214547642674494040480550948696854176109199582732979869",
+          "rad": "61068948776026670223204906095515413724004353",
+          "exponent": "-100"
+        }
+      },
+      "numerical_center_coefficient_and_parameter_error": {
+        "ball": "[6.7318702779953541227241757344419026e-54 +/- 4.69e-89]",
+        "decimal_enclosure": {
+          "mid": "6731870277995354122724175734441902553168924253413549316117270059",
+          "rad": "673277339",
+          "exponent": "-117"
+        }
+      }
+    },
+    "seam_contributions": [
+      {
+        "j": 1,
+        "energy_dual_bound": {
+          "ball": "0",
+          "decimal_enclosure": {
+            "mid": "0",
+            "rad": "0",
+            "exponent": "0"
+          }
+        }
+      },
+      {
+        "j": 3,
+        "energy_dual_bound": {
+          "ball": "[2.029085909213929717134e-36 +/- 5.57e-58]",
+          "decimal_enclosure": {
+            "mid": "20290859092139297171338572572172774825344629399402837701315605305",
+            "rad": "4139146817480072344318443159501887797985281",
+            "exponent": "-100"
+          }
+        }
+      },
+      {
+        "j": 5,
+        "energy_dual_bound": {
+          "ball": "[4.61196052723371043927e-49 +/- 5.69e-70]",
+          "decimal_enclosure": {
+            "mid": "46119605272337104392655090584449321953833081838528028943653927686",
+            "rad": "11901095814413210561725796530564021648097281",
+            "exponent": "-113"
+          }
+        }
+      },
+      {
+        "j": 7,
+        "energy_dual_bound": {
+          "ball": "[5.20192232564288716440e-36 +/- 1.69e-57]",
+          "decimal_enclosure": {
+            "mid": "52019223256428871644006310252043488688055829707173281387302944248",
+            "rad": "10549804233125697514058695860475892751925249",
+            "exponent": "-100"
+          }
+        }
+      },
+      {
+        "j": 9,
+        "energy_dual_bound": {
+          "ball": "[5.67053257794809073195e-43 +/- 6.40e-64]",
+          "decimal_enclosure": {
+            "mid": "56705325779480907319456789690482784505683189738855577463716936851",
+            "rad": "20759830582893231808506405136543364316921857",
+            "exponent": "-107"
+          }
+        }
+      }
+    ],
+    "canonical_action_Hessian_center_coefficients": [
+      {
+        "ball": "[-6.1620810046380882710171517974325030e-47 +/- 4.23e-82]",
+        "decimal_enclosure": {
+          "mid": "-61620810046380882710171517974325029577411408957215764100089368140",
+          "rad": "2",
+          "exponent": "-111"
+        }
+      },
+      {
+        "ball": "[7.4779631562644859392584435287392228e-36 +/- 9.22e-72]",
+        "decimal_enclosure": {
+          "mid": "7477963156264485939258443528739222809206837453746800757595422331",
+          "rad": "2",
+          "exponent": "-99"
+        }
+      },
+      {
+        "ball": "[-7.4779631561122462909851598514255865e-36 +/- 4.96e-71]",
+        "decimal_enclosure": {
+          "mid": "-7477963156112246290985159851425586549512628734130392681157393783",
+          "rad": "2",
+          "exponent": "-99"
+        }
+      },
+      {
+        "ball": "[9.1053808732919244267479823888668494e-45 +/- 2.10e-80]",
+        "decimal_enclosure": {
+          "mid": "9105380873291924426747982388866849420894540459648821190726298671",
+          "rad": "2",
+          "exponent": "-108"
+        }
+      },
+      {
+        "ball": "[-2.4784106463028492164245033655078771e-34 +/- 4.85e-69]",
+        "decimal_enclosure": {
+          "mid": "-24784106463028492164245033655078771484307820383615113701170664677",
+          "rad": "2",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[4.1876593676786205321628612927003534e-34 +/- 4.85e-69]",
+        "decimal_enclosure": {
+          "mid": "41876593676786205321628612927003533515332059174099166498293203673",
+          "rad": "2",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[-1.7947111582797538419708503296818271e-34 +/- 3.44e-69]",
+        "decimal_enclosure": {
+          "mid": "-17947111582797538419708503296818271343260340629035792339698801317",
+          "rad": "2",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[1.1167091649232875982433391710155067e-33 +/- 4.03e-68]",
+        "decimal_enclosure": {
+          "mid": "11167091649232875982433391710155066597619574790081952549648248480",
+          "rad": "2",
+          "exponent": "-97"
+        }
+      },
+      {
+        "ball": "[-2.7048861019890174649725299013618992e-33 +/- 3.89e-68]",
+        "decimal_enclosure": {
+          "mid": "-27048861019890174649725299013618991611409906388828258461952849563",
+          "rad": "2",
+          "exponent": "-97"
+        }
+      },
+      {
+        "ball": "[2.2059991312776661371487308000378159e-33 +/- 2.28e-68]",
+        "decimal_enclosure": {
+          "mid": "22059991312776661371487308000378159227893003151609197953952510806",
+          "rad": "2",
+          "exponent": "-97"
+        }
+      },
+      {
+        "ball": "[-6.0571501569441759563196787504741439e-34 +/- 4.96e-69]",
+        "decimal_enclosure": {
+          "mid": "-60571501569441759563196787504741438504309104298042987659918052013",
+          "rad": "2",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[2.1077041913376958666849045262446779e-61 +/- 2.40e-96]",
+        "decimal_enclosure": {
+          "mid": "21077041913376958666849045262446779239379467233098057981137993132",
+          "rad": "2",
+          "exponent": "-125"
+        }
+      },
+      {
+        "ball": "[-1.0689146757455926880414586452360206e-61 +/- 2.46e-96]",
+        "decimal_enclosure": {
+          "mid": "-10689146757455926880414586452360206245176032046526471362832025890",
+          "rad": "2",
+          "exponent": "-125"
+        }
+      },
+      {
+        "ball": "[-3.3743720442970143820648201025832546e-89 +/- 2.45e-124]",
+        "decimal_enclosure": {
+          "mid": "-33743720442970143820648201025832546244984729024407643304835698898",
+          "rad": "2",
+          "exponent": "-153"
+        }
+      },
+      {
+        "ball": "[1.0466689193007913949417589603504336e-89 +/- 2.26e-124]",
+        "decimal_enclosure": {
+          "mid": "10466689193007913949417589603504336225099077762668920161620249573",
+          "rad": "2",
+          "exponent": "-153"
+        }
+      },
+      {
+        "ball": "[8.4180373971407182147937673057804606e-118 +/- 8.88e-154]",
+        "decimal_enclosure": {
+          "mid": "8418037397140718214793767305780460591143345085568005693329298521",
+          "rad": "2",
+          "exponent": "-181"
+        }
+      },
+      {
+        "ball": "[-2.0843870088330606397851935095688471e-118 +/- 4.34e-153]",
+        "decimal_enclosure": {
+          "mid": "-20843870088330606397851935095688471433677228252784322251854508803",
+          "rad": "2",
+          "exponent": "-182"
+        }
+      }
+    ],
+    "canonical_action_Hessian_exact_coefficient_enclosures": [
+      {
+        "ball": "[-6.16208100463808827102e-47 +/- 4.54e-68]",
+        "decimal_enclosure": {
+          "mid": "-61620810046380882710171517974325029577411408957215764100089368140",
+          "rad": "16834226029086125535150662795766251126784001",
+          "exponent": "-111"
+        }
+      },
+      {
+        "ball": "[7.47796315626448593926e-36 +/- 2.77e-57]",
+        "decimal_enclosure": {
+          "mid": "7477963156264485939258443528739222809206837453746800757595422331",
+          "rad": "1211510249529024299254348981673721885360129",
+          "exponent": "-99"
+        }
+      },
+      {
+        "ball": "[-7.47796315611224629099e-36 +/- 6.06e-57]",
+        "decimal_enclosure": {
+          "mid": "-7477963156112246290985159851425586549512628734130392681157393783",
+          "rad": "1211510249529024299254348981673721885360129",
+          "exponent": "-99"
+        }
+      },
+      {
+        "ball": "[9.10538087329192442675e-45 +/- 4.99e-66]",
+        "decimal_enclosure": {
+          "mid": "9105380873291924426747982388866849420894540459648821190726298671",
+          "rad": "2969077528839889479557492380687670100099073",
+          "exponent": "-108"
+        }
+      },
+      {
+        "ball": "[-2.478410646302849216425e-34 +/- 8.99e-56]",
+        "decimal_enclosure": {
+          "mid": "-24784106463028492164245033655078771484307820383615113701170664677",
+          "rad": "4015291102636875209518177232402228237565953",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[4.187659367678620532163e-34 +/- 8.18e-56]",
+        "decimal_enclosure": {
+          "mid": "41876593676786205321628612927003533515332059174099166498293203673",
+          "rad": "6784457377631808013392009308956956506980353",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[-1.794711158279753841971e-34 +/- 4.41e-56]",
+        "decimal_enclosure": {
+          "mid": "-17947111582797538419708503296818271343260340629035792339698801317",
+          "rad": "2907624592638902087968644401780336929800193",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[1.116709164923287598243e-33 +/- 5.21e-55]",
+        "decimal_enclosure": {
+          "mid": "11167091649232875982433391710155066597619574790081952549648248480",
+          "rad": "1809188639054369100154869189968001520107521",
+          "exponent": "-97"
+        }
+      },
+      {
+        "ball": "[-2.704886101989017464973e-33 +/- 9.09e-55]",
+        "decimal_enclosure": {
+          "mid": "-27048861019890174649725299013618991611409906388828258461952849563",
+          "rad": "4382205642835704754808981605690942288822273",
+          "exponent": "-97"
+        }
+      },
+      {
+        "ball": "[2.205999131277666137149e-33 +/- 6.27e-55]",
+        "decimal_enclosure": {
+          "mid": "22059991312776661371487308000378159227893003151609197953952510806",
+          "rad": "3573955236564947657922126913433897990619137",
+          "exponent": "-97"
+        }
+      },
+      {
+        "ball": "[-6.05715015694417595632e-34 +/- 1.31e-55]",
+        "decimal_enclosure": {
+          "mid": "-60571501569441759563196787504741438504309104298042987659918052013",
+          "rad": "9813233007295702727379562845238069590753281",
+          "exponent": "-98"
+        }
+      },
+      {
+        "ball": "[2.1077041913376958667e-61 +/- 3.18e-81]",
+        "decimal_enclosure": {
+          "mid": "21077041913376958666849045262446779239379467233098057981137993132",
+          "rad": "166444051765336120465115275234880336749920257",
+          "exponent": "-125"
+        }
+      },
+      {
+        "ball": "[-1.06891467574559268804e-61 +/- 6.67e-82]",
+        "decimal_enclosure": {
+          "mid": "-10689146757455926880414586452360206245176032046526471362832025890",
+          "rad": "52039399154722566002016774125104448617316353",
+          "exponent": "-125"
+        }
+      },
+      {
+        "ball": "[-3.3743720442970143821e-89 +/- 5.82e-109]",
+        "decimal_enclosure": {
+          "mid": "-33743720442970143820648201025832546244984729024407643304835698898",
+          "rad": "229858093026768322194464532292205938812649473",
+          "exponent": "-153"
+        }
+      },
+      {
+        "ball": "[1.04666891930079139494e-89 +/- 7.74e-110]",
+        "decimal_enclosure": {
+          "mid": "10466689193007913949417589603504336225099077762668920161620249573",
+          "rad": "59715353704930024218747994670157774941323265",
+          "exponent": "-153"
+        }
+      },
+      {
+        "ball": "[8.4180373971407182148e-118 +/- 7.81e-138]",
+        "decimal_enclosure": {
+          "mid": "8418037397140718214793767305780460591143345085568005693329298521",
+          "rad": "71825132333155485540398260842054039426301953",
+          "exponent": "-181"
+        }
+      },
+      {
+        "ball": "[-2.0843870088330606398e-118 +/- 3.08e-138]",
+        "decimal_enclosure": {
+          "mid": "-20843870088330606397851935095688471433677228252784322251854508803",
+          "rad": "159927077190752947676942889802899000863490049",
+          "exponent": "-182"
+        }
+      }
+    ],
+    "energy_operator_center_sign": "negative of canonical action-Hessian center",
+    "one_column_screen_passes": true,
+    "actual_F_n": null,
+    "full_residual_bound": null,
+    "scope": {
+      "complete_quartic_massive_column_test": true,
+      "finite_thermal_mode_substitution": false,
+      "complete_coupled_or_physical_admission": false,
+      "rough_neighborhood_theorem": false,
+      "existence_matching_validity_noise_stability": false
+    }
+  },
+  "status": "complete_column_arithmetic_executed_requires_argument_audit",
+  "finished_utc": "2026-10-28T03:12:41.805724+00:00",
+  "input_sha256_after": {
+    "notes/current-quartic-resolvent-dual-test.md": "b01b3ee79e5ea8c2aec3b08a20697c7d34bbfb7e9e195e3546613b53c68abf02",
+    "checks/current_quartic_resolvent_dual_test.py": "fafceb982b74bd31457a32d6c4c025a63e7540f330c82258c8c1b711dc736f1b",
+    "notes/current-signed-resolvent-projection.md": "c5f43e44d197e4b597e8a6e7f9cc72d56a0e4eda3df297dffad968a2d2a75a7e",
+    "checks/current_signed_resolvent_projection.py": "39521b43b70dd1f40e1f9554166872e49735d7d57cd36b833b242ee4be4e9856",
+    "checks/current_signed_resolvent_certificate.py": "5f9daf04e4c67129454d4fff3f8b658ec8243c5850b2ad21394f43a7eda74b68",
+    "evidence/current-signed-resolvent-projection.json": "652f390dcfd8dde0b17a083906bdd820ed0af608cb1afcb465d1464cc7f4255a",
+    "notes/current-geometric-mass-conversion.md": "dadb1db0d235f26718d9c97e8df5a821d9861eb83729245c2a979b975f8a784b",
+    "notes/current-quartic-column-energy-dual.md": "c1c7a3ed190bd4ddf5827a440697593cab080b2148c57ee3e1d51e58f462dbc8",
+    "checks/current_quartic_column_energy_dual.py": "a6f79ca35bcfe64cbd990d8cffd5713d06588f087af0bd3dcb02c6287698b9be",
+    "evidence/current-quartic-column-energy-dual-assembly.json": "3f369da3fbb8d2df3582e02bf9b3c5d2c2cb8b1971d92ebcf7082f44175ecfb4",
+    "notes/current-short-step-heat-composition.md": "6b40a8da836c907fde539c4d4894164e34938a076c1611c7635f6c8e82aca737",
+    "evidence/current-short-step-heat-composition.json": "25e4f442a064e3a53fec3263374eb4413fed49c62fb7cb66b048dda3d4615ce1",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  }
+}

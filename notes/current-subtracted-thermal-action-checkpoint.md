@@ -1,3 +1,54 @@
+# Complete quartic energy-dual application enclosed; full residual open
+
+2026-10-27, E003/S169. Full residual goal ACTIVE/INCOMPLETE. The preceding
+email review supplied no new bound. The
+[executed weighted resolvent argument](current-quartic-resolvent-dual-test.md)
+now encloses the COMPLETE canonical massive quartic column against every
+E_t test, including its common regulator, all thermal/angular modes,
+paired seam, true bolt return, contacts and numerical coefficient errors.
+
+The local frequency profile survives both directed propagations. Its
+thermal integral cancels the proper-distance 1/sqrt(Q) conversion before
+taking the original dz norm; the paid propagation reserve is dN>1.37033.
+The exact geometry cover is extended to 1-z=2^-87. The actual bolt is
+retained beyond this computational point, with its full return enclosed.
+No normalization, boundary condition or physical target is changed.
+
+Executed: numerical polynomial center norm <3.618059e-35, complete error
+<5.855538e-32, and zero-centered massive-column bound <5.859156e-32 in
+E_t*. Its one-dimensional Ritz application debit, including retained
+transport discrepancy, is <1.315401e-32 against the sufficient 1e-30
+screen, leaving >9.868459e-31 in THAT screen only. This improves the old
+unsampled upper report by about 2.63884e9. The interval includes zero;
+the actual sign is not determined. The scalar center is a returned
+polynomial density, not an unevaluated kernel with conditional errors.
+
+Accepted scope: fixed psi=z^4 and its full energy-dual quantum application.
+It is not a multicolumn coefficient bound, numerical F_n, full residual,
+coupled budget, physical margin or neighborhood theorem. Additional caller
+input/moment-integration errors still belong in a numerical F_n. The known
+local/classical/LLL terms remain in the complete column assembly.
+
+Decision: use the locally frequency-weighted resolvent method for this
+column and retain the heat method for its tail/control estimates. Do not
+optimize the now affordable cold/transport terms. Next calculate the full
+residual of F_1 u=psi B[u,psi]/(ell_t+B)[psi,psi], including the B source,
+scalar solve, coefficient errors and ENTIRE E_t complement. This remains
+proposed; a vanishing scalar Galerkin residual is insufficient.
+
+The [acceptance receipt](../evidence/current-quartic-resolvent-dual-test-acceptance.json)
+and [verification](../evidence/current-quartic-resolvent-dual-test-verification.json)
+preserve both numerical attempts and the launcher rejection. All 21
+protected work/audit paths are unchanged; no Lean/formal proof is claimed.
+Preserve P32, the closed audit, original norms and all accepted results.
+
+Remaining to-do list: complete implemented F_n and full residual; all
+source/solve/coefficient/caller errors, G_t and original coupled/admission
+budgets; nonlinear existence, compatibility, matching, semiclassical
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Short-step diagonal bias certified; signed numerical application open
 
 2026-10-27, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
