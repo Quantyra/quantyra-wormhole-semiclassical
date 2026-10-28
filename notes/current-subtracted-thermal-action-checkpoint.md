@@ -1,3 +1,61 @@
+# Complete outer-input omission bounded; global inverse remains missing
+
+2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.
+The preceding complement attempt was no progress. The
+[executed structured-source localization](current-outer-input-source-test.md)
+now bounds the ENTIRE outer-input coupling, including its global York
+return, as one error contribution to the proposed full S_Q implementation.
+This is partial progress, not a numerical complement inverse or the full
+requested residual certificate.
+
+Fix alpha=1e-9 and any smooth 0<=chi<=1 equal to one below alpha/2 and
+zero above alpha. Using both original equations and the actual paired
+domain, the complete source map has
+||B_N M_chi||_(Et->Et*)<6.103621e-36. The induced error of
+S_inner=S_Q M_(1-chi) is <6.116646e-36 in Et->Et. The known 12-term
+conversion charges <8.202157e-36 to the full residual. No numerical
+inverse is assumed in this operator-error proof.
+
+The global return is retained explicitly:
+sqrt(lambda)eta=-sqrt(beta Q)/z int_0^z (b_rad+xi)/Q.
+Its weighted norm is <=1.603568 alpha^(5/2)||xi||H. The complete trace
+has |T0|/lambda<1.217898e-27 z^4, by its exact common vacuum relation
+and full polynomial coefficients. This controls the nonzero interior
+return from an outer input; a local support argument alone would not.
+The resulting return contribution to the mixed bound is <2.523391e-50.
+The main mixed term, <2.458167e-36, dominates this omission error.
+
+The [final 512-bit receipt](../evidence/current-outer-input-source-test-final.json)
+preserves the initial execution, exact proof/source hashes and all 21
+protected paths. It checks that ||S_inner||<.338721267 still fits the
+existing .338745240 caller bound, so the separate K-error allocation is
+not silently enlarged. Complete angular/thermal sums, UV logarithm,
+common regulator, contacts, cutoff transitions and the regular bolt remain.
+
+This spends less than .012234 percent of the sufficient 5e-32 S-error
+allocation. The remaining inner-application ceiling is 4.9993883354e-32;
+that is NOT an attained inner error or a physical admission margin.
+The K error, full numerical residual, signed G_t and output comparisons
+remain UNKNOWN. Input localization does not localize B_H's output or the
+inverse solution and does not authorize a wall at alpha. The original
+mass/log output and independent-phase requirements remain.
+
+Decision: permit this input split at its certified cost and stop refining
+it. Retain the original energy-dual method and full geodesic principal
+operator. The next decisive calculation is the complete S_inner numerical
+application, with global paired output and a certified complementary
+action, against the remaining allowance. That solve remains PROPOSED;
+the .4 complement defect from the preceding attempt is still conditional.
+Preserve P32, all accepted results, physical norms and the closed audit.
+
+Remaining to-do list: full S_inner/K applications and errors; complete
+T_t-(I+T_t)F_n and signed G_t; every coupled/admission, mass and phase
+budget; nonlinear existence/contraction, exact compatibility, physical
+matching, semiclassical validity/noise, all-sector stability and the full
+stable semiclassical wormhole objective.
+
+---
+
 # Original-dual complement attempt remains unresolved
 
 2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.
