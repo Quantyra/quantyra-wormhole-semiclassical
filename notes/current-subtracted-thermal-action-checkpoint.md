@@ -1,3 +1,43 @@
+# Mixed Green residual now has a complete filtered output comparison
+
+2026-10-28 HST, E003/S169. The preceding planning reply supplied no new
+bound. The full stable semiclassical wormhole goal remains ACTIVE and
+incomplete. The [executed filtered-input argument](current-filtered-mixed-green-residual.md)
+avoids the unsupported numerical H_mu-to-E_t comparison by retaining
+F_t^3(I+T_t)=F_t^2 T_t before taking the mixed-input norm. Both physical
+rows and the factor 1/beta from the original action measure remain.
+
+The preconditioned mixed L2 residual has original bolt-output multiplier
+<2.162e-42. An explicit approximation using the two original second-order
+resolvents has input debit <7.415e-12, about 0.445 percent of the WHOLE
+bolt allowance, with exact applications. Keeping the point-source Green
+singularity analytically instead of resolving the width 1e-110 costs
+<1.6e-23 in that same debit. No new puncture boundary is introduced.
+
+The application-error contract e_D+e_P<=4e30 in the specified H_mu norms
+would put this COMPLETE input contribution below 1.607e-11, within a
+proposed one-percent allocation. Actual e_D,e_P are UNKNOWN, and the
+allocation is not a proved free margin. Neither global Green function,
+the quantum inverse applications nor Z_r has been numerically enclosed.
+This is a supporting bound, not completion of the signed milestone.
+
+Decision: retain the spatial signed weak-form method, use the proved
+filtered residual comparison, and preserve the Green singularity in its
+original operator realization. Do not require an unproved unfiltered
+energy comparison or apply a C5 heat theorem to the point approximation.
+The actual averaged input's accepted C5 result and all earlier results
+are unchanged. The next calculation is the complete signed response with
+validated global Green and quantum inverse applications and all errors;
+it remains PROPOSED. No further Neumann or polynomial-tail optimization
+is selected. No task-owned computation remains running.
+
+Remaining to-do list: signed certificate and all coupled budgets;
+nonlinear admission/contraction; exact compatibility; physical matching/
+opening; semiclassical validity/noise; all-sector stability; the full
+stable semiclassical wormhole objective. The closed audit is unchanged.
+
+---
+
 # New execution: actual mixed-Green input distinguished; signed bound open
 
 2026-10-28 HST, E003/S169. The user cleared the previous goal and created
