@@ -1,3 +1,55 @@
+# Direct flow-inverse preconditioner rejected on the actual domain
+
+2026-10-27 HST, E003/S169. Full goal ACTIVE/INCOMPLETE. The preceding
+email review was no progress toward the residual. The
+[executed inverse-compression test](current-flow-inverse-compression-test.md)
+now resolves one proposed complementary-inverse step negatively: averaging
+the inverse flow multiplier does not have a bounded map from the ORIGINAL
+energy dual to the energy space, even with exact applications.
+
+The proof uses the complete actual geodesic generator, exact orbit averages
+and localized source densities with two vanishing moments. The full mass/log
+test domain, original York conditions, finite crossing periods, common
+restoration, logarithm and all coupled terms stay. At width h=1e-16,
+the candidate quadratic response is >2.7132441279e-20 while the complete
+source dual norm squared is <1.5424981260e-29. Its putative uniform defect
+is >1.7552478997e9, against .4. The underlying norm lower bound grows as
+h^-3, so no bounded extension or bounded coarse/endpoint repair exists.
+
+This is a verified failure of that UNIFORM preconditioner, not a test
+disproving its restriction to B's structured source range, the actual
+coupled inverse, or the construction. No full numerical residual or
+physical margin is supplied. The frozen-principal alternative, which
+inverts AFTER angular compression, removes this witness's three-power
+loss: its complete Fourier response is <4.7374670160e-31. That comparison
+is explicitly a model mechanism test, NOT an actual-domain inverse bound.
+The required response suppression at this scale exceeds 1.2537485005e9;
+the model comparison exceeds 5.7272042611e10, without certifying the
+remaining variable-coefficient/global-return operator.
+
+The initial, alternative and final 512-bit receipts preserve the ordinary
+argument, exact arithmetic sources and all 21 protected paths. The prior
+outer-input error <6.116646e-36 and full residual debit <8.202157e-36
+remain accepted. Remaining S_inner ceiling 4.9993883354e-32 is conditional;
+actual S/K errors, complete residual, signed G_t and output comparisons
+remain UNKNOWN. The fast-input quantum screen keeps its limited scope.
+
+Decision: reject inverse-then-compress as the uniform preconditioner;
+retain the original energy-dual method and construction, and pursue an
+angular-compressed logarithmic parametrix. One next calculation, PROPOSED:
+certify its complete weak defect against .4, including the actual paired
+reconstruction, non-principal quantum terms, finite returns and numerical
+errors. Matching its principal symbol is insufficient. P32, original
+physical norms, the closed audit and all accepted results are preserved.
+
+Remaining to-do list: complete inverse and S/K application errors; full
+residual and signed G_t; original coupled/admission, mass/phase and output
+budgets; nonlinear existence/contraction, exact compatibility, physical
+matching, semiclassical validity/noise, all-sector stability and the full
+stable semiclassical wormhole objective.
+
+---
+
 # Complete outer-input omission bounded; global inverse remains missing
 
 2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.

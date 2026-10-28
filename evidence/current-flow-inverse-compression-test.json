@@ -1,0 +1,265 @@
+{
+  "started_utc": "2026-10-28T06:15:58.937525+00:00",
+  "input_sha256_before": {
+    "notes/current-flow-inverse-compression-test.md": "8a95e308934d74cbbba151f339735233061710e522f0e3dd638f3e3145f031ae",
+    "checks/current_flow_inverse_compression_test.py": "7cded7639b48a91a2dcbff72fec7e79d7d002fecda5ca4a237f48be30321c195",
+    "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+    "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+    "notes/current-geodesic-flow-multiplier.md": "ede465735c5cf56df6fb0fd44823838926be76e7a5a39ed521a7a49d3ef8eea4",
+    "notes/current-schur-form-preconditioner-test.md": "00365f058df419a9232f1185cfa318a7af52c46ac9f4dc7804bfcf7d76eac2a8",
+    "notes/current-local-reference-range-test.md": "2f6a9347ea5a6a8021194e8e675c5caabd8a09763c05ef5651c125ec60d0a043",
+    "notes/current-weak-complement-inverse-attempt.md": "359c7323be47157c3555dfa2877b70e99ce6a6b7b10eed34d97c310acdcf3561",
+    "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-outer-input-source-test-final.json": "7fe51e86a3a65b7c6181d65f4b860341cb99778d5d422c8994e00cafe5715321",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "precision_bits": 512,
+  "frozen_sources_utf8": {
+    "notes/current-flow-inverse-compression-test.md": "# Test the direct flow-inverse preconditioner in the original energy norm\n\n2026-10-27 HST, E003/S169. Ordinary argument before interval execution.\nThe preceding email review supplied no new goal bound. Preserve the full\nT_t-(I+T_t)F_n objective, P32, original physical norms, closed audit and\nall accepted results. This tests the missing complementary inverse, not\nthe already affordable outer-input omission or transport error.\n\n## Candidate, spaces, and the first domain implication\n\nUse the ACTUAL paired mass/log form domain E_t with norm ell_t/N,\nN=|W_action| beta, beta=lambda B_radius^2/C. Its frozen York shape map is\n\n    V xi=-xi-(Q J)'/2,\n    -(Q^2 J'/z^4)'=Q(4xi/z-xi')/z^4,\n    J(0)=0, (Q^2 J'/z^4)(z_h)=0.\n\nLet X=V E_t have the transported norm, on the fixed-gauge range and its\nform completion, as in current-schur-form-preconditioner-test.md. Its\ndual uses the density pairing integral f T dz. This is not the original\ngeometric admission norm and does not include a new output comparison.\nBoth original rows remain in B=b* a^-1 b. In these transported coordinates\nthe complete reference A_X=(ell_Q+B)/N satisfies A_X>=a R_X,\na=1-e_Q, where R_X is the ANALYSIS Riesz map of X. R_X^-1 is not used as\na numerical subroutine. The actual-minus-reference comparison and the\nseparate K application retain their existing scopes.\n\nWrite V0 T=(2pi)^(-1/2)T for the normalized base lift to the ACTUAL unit\ntangent bundle. P=iX_flow is the complete generator on its C2,1 paired\ndouble. In particular it is not the scalar radial Laplacian. Keep the\ncomplete positive multiplier\n\n    A_flow(w)=C w^4 chi(w)/(90pi^2),\n    a_flow(w)=4pi G A_flow(w)/(B_radius^2 beta),\n    r(w)=1/(1+a_flow(w)),\n    C_flow=V0* r(P) V0.                                  (1)\n\nHere chi is the full-tower multiplier, with the exact common fourth\ncontact and UV logarithm. chi(0)=-F_eff>0, r(0)=1 and 0<r<=1. The factors\nin (1) keep the original action normalization: the quantum shape form\nis (2G/(B_radius^2 beta)) times the unnormalized angular compression.\nThere is no changed temperature, scale or norm. P includes every\ncrossing/trapped trajectory and regular-bolt return. Flow frequency zero\nis not a thermal zero mode or an omitted matter sector.\n\nThis gives a bounded positive map on H0=L2(dz). The proposed inverse\nstep is to use it as a map X* -> X, optionally localized as chi_I C_flow\nchi_I and combined with bounded coarse/endpoint corrections. Here chi_I\nis smooth, equals one on [.49,.51], and vanishes outside (.48,.52).\nIts transitions are part of the candidate. The first unsupported\nimplication is precisely that dual-to-energy boundedness, before any\nclaim about an implemented complete inverse or original physical output.\n\nThe test below rules out ANY bounded extension agreeing with this\ncandidate on compact sources. If an output is outside X, it fails the\ndomain requirement already. If outputs belong to X, their operator norm\nis unbounded. Adding a fixed energy-bounded correction cannot repair\nunboundedness. No global inverse for A_X is assumed in this argument.\n\n## Actual-domain localized sources and their full dual norm\n\nTake z0=1/2, 0<h<=1e-3, phi(x)=(1-x^2)^8 on [-1,1], zero outside, and\n\n    f_h(z)=h^(-1/2) phi''((z-z0)/h),\n    Phi2=integral_(-1)^1 phi(x)^2 dx.                    (2)\n\nThese are ordinary compact source densities in the actual domain's\ndual, not prescribed quantum stresses or replacements of B's range.\nTheir two vanishing moments are exact. For every actual shape T,\nintegration by parts on this compact support gives\n\n    |integral f_h T dz| <= h^2 sqrt(Phi2) ||T''||L2(I),\n    I=[.49,.51].                                        (3)\n\nThe original joint coercivity retains its fourth reserve on I, where\nthe original inner partition equals one. With eps the accepted retained-\ntransport error, the physical period/action conversion gives\n\n    k2=(1-eps) G C/(50pi B_radius^2 beta),\n    ||Delta T||L2(I) <= k2^(-1/2)||T||X,\n    integral Q |T'|^2 dz <= g1 ||T||X^2,\n    g1=1e5 beta/[(1-eps) .99 F_lambda].                 (4)\n\nEquation (4) uses C S2/(100pi) and C J1/E0<=2e5 GC/B_radius^2\nfrom current-geodesic-two-sided-remainder.md. The conversion of either\ncanonical integral divided by N is 2G/(B_radius^2 beta); original period\nand number of identical halves cancel explicitly, not by changing norms.\nThe complete actual form and its comparison, rather than a local quantum\nmodel, give (4). Since Delta T=Q T''+Q'T', put\n\n    D2=[k2^(-1/2)+q1max sqrt(g1/qmin)]/qmin,\n    ||f_h||X*^2 <= h^4 Phi2 D2^2.                       (5)\n\nHere qmin<=inf_I Q and q1max>=sup_I |Q'|. This argument extends from\nthe actual core by (4) and weak differentiation. No smooth-even H4\nassumption or nonlinear-neighborhood theorem enters. The compact source\nannihilates endpoint boundary terms; the test functions still range over\nthe ENTIRE mass/log domain with its original York and bolt returns.\n\n## Exact constant-flow contribution, with finite returns retained\n\nLet Pi0 be the orthogonal projection onto ker P. Spectral positivity\nin the COMPLETE formula (1) gives r(P)>=Pi0. This is a lower-bound\ntest of the proposed inverse, not a replacement of the quantum action\nby a selected set of modes. The established actual orbit decomposition\ngives, on crossing orbits with outer turning point b,\n\n    j^2=Q(b),\n    T_per(b)=2 integral_0^b dz/sqrt(Q(z)-Q(b)),\n    (f_h)_(j,0)=2/T_per(b) integral_0^b\n                         f_h(z)/sqrt(Q(z)-Q(b)) dz,\n    <f_h,C_flow f_h> >= (1/(2pi)) integral\n                              2T_per(j)|(f_h)_(j,0)|^2 dj. (6)\n\nBoth physical halves/directions have the original orbit normalization.\nFor the lower bound restrict ONLY the positive integral in (6) to\nb=z0+h y with -1/2<=y<=-2/5. Such trajectories cross the actual seam,\nhave j^2<beta and turn before the bolt. Other returns and all trapped\norbits remain in C_flow; dropping their nonnegative contributions is\nvalid for this lower bound alone.\n\nOn -1<=x<=-2/5, phi''(x)=16(1-x^2)^6(15x^2-1)>=0. On\n-3/4<=x<=-3/5 it is at least Lphi=16(7/16)^6(22/5).\nAlso 0<y-x<=7/20 there. Thus, defining\n\n    Aphi=(3/20)Lphi/sqrt(7/20),\n\nthe exact source integral in (6) is >= Aphi/sqrt(q1max).\nNo oscillatory asymptotic or unknown onset frequency is needed.\nThe whole-interval mean-value theorem bounds Q(z)-Q(b) from above\nby q1max(b-z) on this support.\n\nFor all b in I, certify -Q'(b)>=q1min>0 and Q(b)<=qmax. To upper-bound\nthe FULL period, use Q(z)-Q(b)>=(b-z) Dmin for 0<=z<=b, obtained by\nfactoring the actual polynomial before estimates. Writing Q=sum c_n z^n,\nc3=-a3<0 and c4=b4>0, one sufficient coefficient bound is\n\n    Dmin=(a3-(4/3)b4*.51)*.49^2-2|c2|*.51\n                     -sum_(n=5,6) n|c_n|*.51^(n-1).\n\nThis uses (z^3+z^2 b+zb^2+b^3)/(z^2+zb+b^2)<=4b/3\nfor 0<=z<=b. The small initial increase of Q above beta is retained\nin the c2 debit. Execute Dmin>0 and set Tmax=4 sqrt(.51/Dmin).\nThere is no wall at z=0, artificial short return, or sampled period.\n\nThe Jacobian dj/db=-Q'(b)/(2sqrt(Q(b))) then gives\n\n    <f_h,C_flow f_h> >= L0 h,\n    L0=Aphi^2 q1min/(5pi q1max sqrt(qmax) Tmax)>0.        (7)\n\nThe same bound holds for chi_I C_flow chi_I since chi_I f_h=f_h.\nCombining (5),(7), EVERY bounded X*->X extension would have to satisfy\n\n    ||C_flow|| >= R(h)=L0/(Phi2 D2^2 h^3).              (8)\n\nThe right side diverges as h->0. This proves nonexistence of the\nrequired bounded extension, on the actual paired domain. Any bounded\ncoarse/endpoint correction C_reg of norm M changes the lower expression\nby at most M. No finite M or scalar normalization removes divergence.\n\nFor the unmodified candidate, a hypothetical finite full preconditioner\ndefect would satisfy\n\n    ||I-A_X C_flow||_(X*->X*) >= (1-e_Q) R(h)-1.        (9)\n\nThis follows from A_X>= (1-e_Q) R_X and the triangle inequality; B is\nthe FULL scalar Schur term. It is not obtained by omitting a coupled row.\nExecute (5)-(9) at h=1e-16, after freezing the displayed inequalities.\nNo numerical application of r(P) is needed to prove this lower bound:\nits exact invariant subspace and a positive finite-domain integral suffice.\n\n## Quantitative role and one specified alternative\n\nThis test addresses the proposed UNIFORM complementary preconditioner,\nwhose conditional defect target was .4. It does not give a counterexample\non the structured B range. In particular, (8) must NOT be read as a lower\nbound on ||S_Q-S_hat||_(Et->Et), the full residual, or physical output.\nThe outer-input omission remains <6.116646e-36, its full residual debit\n<8.202157e-36, and the remaining sufficient S_inner application ceiling\n4.9993883354e-32 remains an UNKNOWN actual error, not a physical margin.\nThe K error, signed G_t, mass/phase/graph/output budgets remain unknown.\n\nThe calculated loss is at least three powers of localization scale:\nthe inverse-compressed flow has quadratic response >=L0 h while the\noriginal source dual norm squared is <=Phi2 D2^2 h^4. An acceptable\nuniform inverse must suppress that response by at least R(h)/M for\nits intended norm M. A finite coarse correction cannot supply this\nregularity gain. This is stronger evidence than merely noting that\ncompression and inversion do not commute.\n\nThe specified alternative is to construct an inverse AFTER angular\ncompression, retaining its elliptic logarithmic principal part and\nthe global boundary reconstruction. On compact interior fields its\ntransported shape symbol has the already fixed leading expression\n\n    a_shape(z,p) = G C Q(z)^2 p^4/(15pi B_radius^2 beta)\n          *[log(|p| z sqrt(C Q(z)))-log(mu0 B_radius)-6/5]. (10)\n\nTo obtain (10), angular-average the full A_flow UV expansion, THEN\nadd the original Weyl coefficient log z-1/6. The angular finite part\nis -31/30, so the total is -6/5. The scalar/R2 fourth part cancels on\nthe exact York principal relation nu=-T/3; B has order zero. All finite\ncontacts and lower terms still have to be assembled. Equation (10)\nis a principal-symbol specification, not a scalar-Laplacian substitution\nor a certified global inverse. It has inverse order p^-4/log|p|;\nthus it addresses the three-derivative loss in (8). Its quantitative\nremainder, transitions, paired mass/log endpoints, bolt return and\nnumerical application errors are NOT supplied by symbol matching.\n\nCompute the exact interior coefficient and finite part at z=1/2 as\nan implementation target, retaining the current mu0. Do not compare\nthis intermediate coefficient directly with a physical output ceiling.\nThe decisive next calculation is the full weak defect of such an\nangular-compressed parametrix, including its global reconstruction,\nagainst the existing .4 complement screen. That calculation remains\nPROPOSED. No component/degree/tail optimization is selected.\n\nRemaining to-do list: executed complete inverse and S/K application errors;\nfull residual and signed G_t; original admission, mass, independent-phase\nand output budgets; nonlinear existence/contraction, exact compatibility,\nphysical matching, semiclassical validity/noise and all-sector stability;\nthe full stable semiclassical wormhole objective.\n",
+    "checks/current_flow_inverse_compression_test.py": "\"\"\"Actual orbit-invariant lower bound for the direct flow inverse candidate.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom fractions import Fraction\nfrom math import comb\nimport argparse\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-flow-inverse-compression-test'\nRUNTIME = ROOT/'evidence/current-coupled-mass-adjoint-runtime.json'\nruntime = json.loads(RUNTIME.read_bytes())\nsys.path.insert(0, str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb, ctx\n\nINPUTS = [\n    'notes/'+STEM+'.md', 'checks/current_flow_inverse_compression_test.py',\n    'notes/current-geodesic-two-sided-remainder.md',\n    'notes/current-global-geodesic-return.md',\n    'notes/current-geodesic-flow-multiplier.md',\n    'notes/current-schur-form-preconditioner-test.md',\n    'notes/current-local-reference-range-test.md',\n    'notes/current-weak-complement-inverse-attempt.md',\n    'evidence/current-geodesic-two-sided-remainder.json',\n    'evidence/current-structured-source-graph-test.json',\n    'evidence/current-quartic-ritz-rank-test-final.json',\n    'evidence/current-outer-input-source-test-final.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json',\n]\nBASELINE = Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\n\n\ndef digest(path):\n    return sha256(path.read_bytes()).hexdigest()\n\n\ndef dec(value):\n    d = value['decimal_enclosure']\n    return arb(int(d['mid']), int(d['rad'])) * arb(10)**int(d['exponent'])\n\n\ndef enc(value):\n    m, r, e = value.mid_rad_10exp(60)\n    return {'ball': value.str(40), 'decimal_enclosure':\n            {'mid': str(m), 'rad': str(r), 'exponent': str(e)}}\n\n\ndef polyeval(p, x):\n    return sum((v*x**k for k, v in p.items()), arb(0))\n\n\ndef execute():\n    ctx.prec = 512\n    assert digest(Path(sys.executable)) == runtime['python_sha256']\n    for pkg in runtime['packages'].values():\n        for name, want in pkg['files'].items():\n            assert digest(Path(pkg['root'])/name) == want\n    geo = json.loads((ROOT/INPUTS[8]).read_bytes())['runs'][-1]\n    source = json.loads((ROOT/INPUTS[9]).read_bytes())\n    rank = json.loads((ROOT/INPUTS[10]).read_bytes())\n    outer = json.loads((ROOT/INPUTS[11]).read_bytes())\n    assert geo['status'] == rank['status'] == 'passed'\n    assert source['status'] == 'source_graph_bound_checked_complete_application_unresolved'\n    ep = next(x for x in geo['numerics'] if x['kind'] == 'actual_seed_correlated_endpoint')\n    gp = next(x for x in geo['numerics'] if x['kind'] == 'actual_finite_seed_two_sided_parameters')\n    Q = {k: dec(v) for k, v in zip([0, 2, 3, 4, 5, 6], ep['Q_coefficients'])}\n    Qp = {k-1: k*v for k, v in Q.items() if k}\n    beta, C, B2 = Q[0], dec(gp['C']), dec(gp['B2'])\n    eps = dec(rank['result']['constants']['epsilon'])\n    eq = dec(source['constants']['actual_reference_comparison'])\n    fl = dec(gp['F_lambda'])\n    assert dec(ep['h']) > 0 and ep['exact_Q_bolt'] == '0'\n    assert dec(gp['F_eff']) < 0\n\n    # Outward bounds over the entire fixed interval, never point samples.\n    qmin, qmax, q1min, q1max = map(arb, ['.112', '.118', '.244', '.256'])\n    left, right = arb('.49'), arb('.51')\n    cells = 256\n    for i in range(cells):\n        lo = left+(right-left)*i/cells\n        hi = left+(right-left)*(i+1)/cells\n        cell = lo.union(hi)\n        qv, qp = polyeval(Q, cell), polyeval(Qp, cell)\n        assert qv > qmin and qv < qmax\n        assert -qp > q1min and -qp < q1max\n    assert qmax < beta\n    assert -Q[3] > 0 and Q[4] > 0\n    dmin = (-Q[3]-arb(4)/3*Q[4]*right)*left**2\n    dmin -= 2*Q[2].abs_upper()*right\n    dmin -= sum((k*Q[k].abs_upper()*right**(k-1) for k in [5, 6]), arb(0))\n    assert dmin > arb('.078')\n    tmax = 4*(right/dmin).sqrt()\n\n    phi2_exact = sum((Fraction(2*(-1)**j*comb(16, j), 2*j+1)\n                      for j in range(17)), Fraction(0))\n    assert phi2_exact > 0\n    phi2 = arb(phi2_exact.numerator)/phi2_exact.denominator\n    lphi = 16*(arb(7)/16)**6*(arb(22)/5)\n    aphi = arb(3)/20*lphi/(arb(7)/20).sqrt()\n    l0 = aphi**2*q1min/(5*arb.pi()*q1max*qmax.sqrt()*tmax)\n    k2 = (1-eps)*C/(50*arb.pi()*B2*beta)\n    g1 = 100000*beta/((1-eps)*arb('.99')*fl)\n    d2 = (1/k2.sqrt()+q1max*(g1/qmin).sqrt())/qmin\n    dual_coefficient = phi2*d2**2\n    h = arb('1e-16')\n    assert arb('.5')-h > left and arb('.5')+h < right\n    quadratic_lower = l0*h\n    dual_squared_upper = dual_coefficient*h**4\n    inverse_norm_lower = quadratic_lower/dual_squared_upper\n    full_defect_lower = (1-eq)*inverse_norm_lower-1\n    desired_complement_defect = arb('.4')\n    inverse_norm_ceiling = (1+desired_complement_defect)/(1-eq)\n    required_response_suppression = inverse_norm_lower/inverse_norm_ceiling\n    assert l0 > 0 and inverse_norm_lower > 1 and full_defect_lower > desired_complement_defect\n\n    # Current output/source allowances are inputs, not improved errors.\n    out_constants = outer['result']['constants']\n    # The exact current schema is checked below rather than supplying defaults.\n    assert isinstance(out_constants, dict)\n\n    z = arb(1)/2\n    qhalf = polyeval(Q, z)\n    leading_coefficient = C*qhalf**2/(15*arb.pi()*B2*beta)\n    finite_part = (z*(C*qhalf).sqrt()).log()-dec(gp['Lscale'])-arb(6)/5\n    assert leading_coefficient > 0\n    vals = dict(\n        original_beta=beta, qmin=qmin, qmax=qmax, q1min=q1min, q1max=q1max,\n        period_difference_lower=dmin, full_crossing_period_upper=tmax,\n        Phi2=phi2, phi_second_derivative_lower=lphi, Abel_integral_lower=aphi,\n        orbit_invariant_quadratic_coefficient_lower=l0,\n        original_energy_fourth_reserve=k2, original_energy_gradient_bound=g1,\n        original_energy_to_interior_second_derivative=d2,\n        source_dual_squared_coefficient_upper=dual_coefficient,\n        h=h, candidate_quadratic_lower=quadratic_lower,\n        actual_source_dual_squared_upper=dual_squared_upper,\n        candidate_norm_lower=inverse_norm_lower,\n        complete_reference_defect_lower=full_defect_lower,\n        desired_complement_defect=desired_complement_defect,\n        necessary_inverse_norm_ceiling=inverse_norm_ceiling,\n        required_response_suppression=required_response_suppression,\n        actual_reference_comparison=eq,\n        compress_first_interior_log_coefficient=leading_coefficient,\n        compress_first_interior_finite_part=finite_part,\n    )\n    return dict(constants={k: enc(v) for k, v in vals.items()},\n                exact_Phi2=str(phi2_exact), whole_interval_cells=cells,\n                full_flow_inverse_has_no_bounded_energy_dual_extension=True,\n                bounded_coarse_or_endpoint_repairs_cannot_cure_divergence=True,\n                physical_or_structured_source_counterexample=False,\n                complete_structured_application_error_computed=False,\n                actual_full_residual_computed=False,\n                physical_margin_closed=False,\n                construction_obstruction=False,\n                inverse_after_compression_certified=False,\n                goal_complete=False)\n\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--output', default='evidence/'+STEM+'.json')\n    args = parser.parse_args()\n    out = ROOT/args.output\n    if out.exists():\n        raise SystemExit('Refusing to replace an immutable receipt.')\n    before = {p: digest(ROOT/p) for p in INPUTS}\n    protected = json.loads(BASELINE.read_bytes())\n    run = dict(started_utc=datetime.now(timezone.utc).isoformat(),\n               input_sha256_before=before, precision_bits=512,\n               frozen_sources_utf8={p: (ROOT/p).read_text(encoding='utf-8') for p in INPUTS[:2]},\n               previous_goal_turn='no progress: requested email review supplied no bound')\n    try:\n        for p, want in protected.items():\n            assert digest(Path(p)) == want, p\n        run['result'] = execute()\n        run['input_sha256_after'] = {p: digest(ROOT/p) for p in INPUTS}\n        assert before == run['input_sha256_after']\n        assert all(digest(Path(p)) == want for p, want in protected.items())\n        run['protected_paths_unchanged'] = len(protected)\n        run['status'] = 'candidate_rejected_no_bounded_energy_dual_extension'\n    except Exception as exc:\n        run['status'] = 'failed'\n        run['exception'] = type(exc).__name__+': '+str(exc)\n    run['finished_utc'] = datetime.now(timezone.utc).isoformat()\n    out.write_text(json.dumps(run, indent=2)+'\\n', encoding='utf-8')\n    print(json.dumps({'status': run['status'], 'receipt': str(out),\n                      'exception': run.get('exception'),\n                      'constants': run.get('result', {}).get('constants', {})}, indent=2))\n    if run['status'] == 'failed':\n        raise SystemExit(1)\n"
+  },
+  "previous_goal_turn": "no progress: requested email review supplied no bound",
+  "result": {
+    "constants": {
+      "original_beta": {
+        "ball": "[0.166666666663273593687327683704 +/- 1.53e-31]",
+        "decimal_enclosure": {
+          "mid": "16666666666327359368732768370404401741299999999999999999999999999",
+          "rad": "10851659112627669025258036508229633",
+          "exponent": "-65"
+        }
+      },
+      "qmin": {
+        "ball": "[0.1120000000000000000000000000000000000000 +/- 3e-45]",
+        "decimal_enclosure": {
+          "mid": "11199999999999999999999999999999999999999999999999999999999999999",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "qmax": {
+        "ball": "[0.1180000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "11800000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "q1min": {
+        "ball": "[0.2440000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "24400000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "q1max": {
+        "ball": "[0.2560000000000000000000000000000000000000 +/- 3e-45]",
+        "decimal_enclosure": {
+          "mid": "25599999999999999999999999999999999999999999999999999999999999999",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "period_difference_lower": {
+        "ball": "[0.078432666650756533894254258175 +/- 4.15e-31]",
+        "decimal_enclosure": {
+          "mid": "7843266665075653389425425817515026308130066820350602352176883168",
+          "rad": "26420284833016433549287029831892993",
+          "exponent": "-65"
+        }
+      },
+      "full_crossing_period_upper": {
+        "ball": "[10.1999158520758727104993996284 +/- 2.00e-29]",
+        "decimal_enclosure": {
+          "mid": "10199915852075872710499399628402757538219913006659801752838476797",
+          "rad": "17179889557782630455695301272403969",
+          "exponent": "-63"
+        }
+      },
+      "Phi2": {
+        "ball": "[0.4330552993792132237490602949838776846875 +/- 2.85e-41]",
+        "decimal_enclosure": {
+          "mid": "43305529937921322374906029498387768468747154476695578510595300612",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "phi_second_derivative_lower": {
+        "ball": "[0.4936748504638671875000000000000000000000 +/- 3e-45]",
+        "decimal_enclosure": {
+          "mid": "49367485046386718749999999999999999999999999999999999999999999999",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "Abel_integral_lower": {
+        "ball": "[0.1251694200966004617807449286528439035484 +/- 2.14e-41]",
+        "decimal_enclosure": {
+          "mid": "12516942009660046178074492865284390354842139675661833830334098052",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "orbit_invariant_quadratic_coefficient_lower": {
+        "ball": "[0.000271324412799654083817010765754 +/- 6.89e-34]",
+        "decimal_enclosure": {
+          "mid": "27132441279965408381701076575423125231388721176398103625698034449",
+          "rad": "45700324483338417281606261040742401",
+          "exponent": "-68"
+        }
+      },
+      "original_energy_fourth_reserve": {
+        "ball": "[2.238116387320907266110e-34 +/- 4.55e-56]",
+        "decimal_enclosure": {
+          "mid": "22381163873209072661102125229361284780194333284122435731571237127",
+          "rad": "2417239572273849111611231478771365309317121",
+          "exponent": "-98"
+        }
+      },
+      "original_energy_gradient_bound": {
+        "ball": "[16835.0170330069722497838732877 +/- 4.81e-26]",
+        "decimal_enclosure": {
+          "mid": "16835017033006972249783873287662929870774109573626531619231556079",
+          "rad": "10961439325826486726691022119632897",
+          "exponent": "-60"
+        }
+      },
+      "original_energy_to_interior_second_derivative": {
+        "ball": "[596816255852374568.6536 +/- 6.17e-5]",
+        "decimal_enclosure": {
+          "mid": "5968162558523745686536294059882266083150170743465423583984375000",
+          "rad": "322305387747370627221064274688265143975936",
+          "exponent": "-46"
+        }
+      },
+      "source_dual_squared_coefficient_upper": {
+        "ball": "[1.542498125932510454526e+35 +/- 5.38e+13]",
+        "decimal_enclosure": {
+          "mid": "15424981259325104545263711323565920724617737614113142734130479933",
+          "rad": "1666025204785359164970842313557502662279169",
+          "exponent": "-29"
+        }
+      },
+      "h": {
+        "ball": "[1.000000000000000000000000000000000000000e-16 +/- 3e-60]",
+        "decimal_enclosure": {
+          "mid": "9999999999999999999999999999999999999999999999999999999999999999",
+          "rad": "2",
+          "exponent": "-80"
+        }
+      },
+      "candidate_quadratic_lower": {
+        "ball": "[2.71324412799654083817010765754e-20 +/- 6.89e-50]",
+        "decimal_enclosure": {
+          "mid": "27132441279965408381701076575423125231388721176398103625698034449",
+          "rad": "45700324870194679558287596946718721",
+          "exponent": "-84"
+        }
+      },
+      "actual_source_dual_squared_upper": {
+        "ball": "[1.542498125932510454526e-29 +/- 5.38e-51]",
+        "decimal_enclosure": {
+          "mid": "15424981259325104545263711323565920724617737614113142734130479933",
+          "rad": "1666025212573804452773083756353247156109313",
+          "exponent": "-93"
+        }
+      },
+      "candidate_norm_lower": {
+        "ball": "[1758993468.051224399231 +/- 6.27e-13]",
+        "decimal_enclosure": {
+          "mid": "17589934680512243992314366762507289948871957996345827268669381737",
+          "rad": "1899887070484374591327793547513499473674241",
+          "exponent": "-55"
+        }
+      },
+      "complete_reference_defect_lower": {
+        "ball": "[1755247899.769806477110 +/- 4.11e-13]",
+        "decimal_enclosure": {
+          "mid": "17552478997698064771097787334526665002943422587400778147874685709",
+          "rad": "1895841497579344038915851639829083965095937",
+          "exponent": "-55"
+        }
+      },
+      "desired_complement_defect": {
+        "ball": "[0.4000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "40000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "necessary_inverse_norm_ceiling": {
+        "ball": "[1.402987494924041953291874633688217676946 +/- 3.92e-40]",
+        "decimal_enclosure": {
+          "mid": "14029874949240419532918746336882176769456110624709114304989538988",
+          "rad": "28401691917111598776321",
+          "exponent": "-64"
+        }
+      },
+      "required_response_suppression": {
+        "ball": "[1253748500.549861769364 +/- 2.64e-13]",
+        "decimal_enclosure": {
+          "mid": "12537485005498617693641276667514837170596536664035625108226668089",
+          "rad": "1354193163983335343449200410434057151709185",
+          "exponent": "-55"
+        }
+      },
+      "actual_reference_comparison": {
+        "ball": "[0.00212938100649549760514822956375986229265 +/- 5.96e-42]",
+        "decimal_enclosure": {
+          "mid": "21293810064954976051482295637598622926460699999979488383380482046",
+          "rad": "20200309219466920884961281",
+          "exponent": "-67"
+        }
+      },
+      "compress_first_interior_log_coefficient": {
+        "ball": "[9.79499720995434311060e-36 +/- 5.53e-57]",
+        "decimal_enclosure": {
+          "mid": "9794997209954343110604464466035380396618908078357131936391078295",
+          "rad": "1057892077506608547193120386997247318949889",
+          "exponent": "-99"
+        }
+      },
+      "compress_first_interior_finite_part": {
+        "ball": "[9.332389183323168588914 +/- 2.08e-22]",
+        "decimal_enclosure": {
+          "mid": "9332389183323168588914153727007327255788417502788406960796143132",
+          "rad": "54001651979527363446650726930539886936065",
+          "exponent": "-63"
+        }
+      }
+    },
+    "exact_Phi2": "4294967296/9917826435",
+    "whole_interval_cells": 256,
+    "full_flow_inverse_has_no_bounded_energy_dual_extension": true,
+    "bounded_coarse_or_endpoint_repairs_cannot_cure_divergence": true,
+    "physical_or_structured_source_counterexample": false,
+    "complete_structured_application_error_computed": false,
+    "actual_full_residual_computed": false,
+    "physical_margin_closed": false,
+    "construction_obstruction": false,
+    "inverse_after_compression_certified": false,
+    "goal_complete": false
+  },
+  "input_sha256_after": {
+    "notes/current-flow-inverse-compression-test.md": "8a95e308934d74cbbba151f339735233061710e522f0e3dd638f3e3145f031ae",
+    "checks/current_flow_inverse_compression_test.py": "7cded7639b48a91a2dcbff72fec7e79d7d002fecda5ca4a237f48be30321c195",
+    "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+    "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+    "notes/current-geodesic-flow-multiplier.md": "ede465735c5cf56df6fb0fd44823838926be76e7a5a39ed521a7a49d3ef8eea4",
+    "notes/current-schur-form-preconditioner-test.md": "00365f058df419a9232f1185cfa318a7af52c46ac9f4dc7804bfcf7d76eac2a8",
+    "notes/current-local-reference-range-test.md": "2f6a9347ea5a6a8021194e8e675c5caabd8a09763c05ef5651c125ec60d0a043",
+    "notes/current-weak-complement-inverse-attempt.md": "359c7323be47157c3555dfa2877b70e99ce6a6b7b10eed34d97c310acdcf3561",
+    "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-outer-input-source-test-final.json": "7fe51e86a3a65b7c6181d65f4b860341cb99778d5d422c8994e00cafe5715321",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "protected_paths_unchanged": 21,
+  "status": "candidate_rejected_no_bounded_energy_dual_extension",
+  "finished_utc": "2026-10-28T06:16:00.554246+00:00"
+}
