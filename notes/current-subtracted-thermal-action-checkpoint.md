@@ -1,3 +1,69 @@
+# Quartic quantum column: regulator gate closed, full residual open
+
+2026-10-27, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
+The [ordinary column argument](current-quartic-column-energy-dual.md) and
+[assembly receipt](../evidence/current-quartic-column-energy-dual-assembly.json)
+extend the actual paired seed heat response for psi=z^4, J=0, v=-z^4 to
+ALL E_t tests. They retain the common regulator, exact UV allocation,
+full angular/thermal sums, contacts and actual regular-bolt returns.
+The mass/log test field remains a smearing; no smooth double or rough-base
+neighborhood theorem is assumed. P32 and the closed audit are unchanged.
+
+Executed in original energy units:
+
+- Canonical massive-column heat cap, 0<t<=.001: <4.900e-33 in E_t*.
+- Entire canonical massive remainder column: <1.547e-22 in E_t*.
+- Complete quartic energy norm: between 1.5055452947607284059142 and
+  1.5055452947607284059152, including known local terms and the remainder.
+- Full retained-transport column transfer: <1.847e-74.
+- Exact ONE-dimensional Ritz coefficient envelope: <.224504. This is
+  not a coefficient bound for the unassembled multicolumn F_n.
+
+The first product-centered receipt is preserved separately. The assembly
+receipt explicitly matches the canonical remainder to the original local
+allocation; the product contact is neither dropped nor counted twice.
+Weighted spectral Cauchy-Schwarz uses the proved heat diagonal <734 and
+the original L2 comparison, avoiding the old global-supremum loss. The
+boundary L2 estimate includes all crossing paths and cap excursions.
+Supporting interval arithmetic verifies this ordinary argument.
+
+In the exact one-dimensional sensitivity test, cap plus transport cost
+<1.100e-33. Treating the entire unevaluated massive remainder as a zero-
+centered error gives <3.472e-23: its upper expression is 3.47114e7 times
+the previous sufficient 1e-30 application target. This is estimator failure,
+not a lower bound on actual error or a construction obstruction. The
+signed positive-time ENCLOSURE ERROR would need to be <=4.449e-30 in E_t*
+(or <=1.979e-31 for its original normalized L2 density) for that sensitivity
+test, after the cap debit and assuming every other error zero. The actual
+quantum response need not be small. No complete budget margin is assigned.
+
+With the original radius/output weights, the corresponding best-case
+bolt upper expression is about 1.05361e-5, 6320.41 times the ENTIRE bolt
+allowance. The cutoff-only diagnostic is <3.339e-16. Neither establishes
+an available margin when the remaining residual is unknown.
+
+What changed: regulator removal and a finite all-time massive response
+bound are now quantitative for this actual trial against the full energy
+dual. What did not: no numerical F_n, signed center, complete source or
+infinite-complement residual has been evaluated. Other columns, actual
+source/solve/application errors and all coupled budgets remain unknown.
+
+Decision: retain the paired geometric method, using L2 dual estimates
+instead of separate global supremum estimates. Do not refine P32, cold
+or scalar components. The SINGLE next calculation is a certified signed
+L2 enclosure of the complete positive-time quantum-response density for
+v=-z^4, with all contacts/tails, as a column of the full Ritz residual.
+That evaluation is PROPOSED, not executed. Passing it alone would not
+complete the full residual, original admission or the stable solution.
+
+Remaining to-do list: full residual and actual numerical application
+errors; signed G_t and every original physical/graph/defect/mass/phase
+budget; nonlinear admission/contraction, exact compatibility, physical
+matching, semiclassical validity/noise and all-sector stability; transport,
+preparation, separate creation and the full stable-wormhole objective.
+
+---
+
 # Full residual goal resumed: reference test, 2026-10-27
 
 The new goal to certify T_t-(I+T_t)F_n on the actual full domain is ACTIVE
