@@ -1,3 +1,51 @@
+# Quartic-only full residual fails; retain the complete principal range
+
+2026-10-27 HST, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
+The previous email review supplied no bound. The
+[executed ordinary argument](current-quartic-ritz-rank-test.md) now proves
+that ANY fixed one-dimensional output range has full E_t residual
+||T_t-(I+T_t)F_n|| >1.62995026264e-4. Its actual map error exceeds
+1.21819900048e-4, over 1.218e26 times the earlier 1e-30 application screen.
+The ideal exact quartic Ritz residual also has upper bound <.341589;
+its coefficient has not been numerically implemented.
+
+This uses two admissible geometric fields, complete scalar/mixed rows,
+and a full quantum-energy upper comparison. The C2,1 paired mass/log
+domain and third weak flow derivatives are justified before arithmetic.
+All angular/thermal terms, UV logarithm, common contacts, outer cutoff
+returns and the regular bolt remain. No finite quantum spectrum replaces
+the operator. Coefficient precision cannot fix the missing output range.
+The accepted quartic quantum column remains valid and sufficiently accurate.
+
+The original residual-to-bolt upper estimator consequently reports at
+least 4.95066e13, over 2.9698e22 times the whole allowance. This is NOT a
+lower bound on signed physical output or an obstruction to the construction.
+No coupled/admission budget closes; all other entries remain unknown.
+
+Decision: change the uniform estimator to retain the complete geodesic
+principal range. For the existing 12-term ordered Neumann alternative,
+the full residual is <8.953511e-31 with EXACT applications. Numerical
+errors a_S,a_K are UNKNOWN. If each were <=5e-32, the complete residual
+ceiling would be <9.851613e-31 and its conditional bolt-error expression
+<2.234912e-13. Neither is an attained numerical certificate or available
+physical margin. Preserve P32, the closed audit and all accepted results.
+
+Next calculation: certify S=L0^-1 T_t on the whole E_t domain, including
+the infinite-dimensional complement and every application error, against
+a_S<=5e-32. This would debit <6.705e-32 of the chosen residual screen;
+the separate K application and every physical center/debit would remain.
+This calculation is PROPOSED. The [final interval receipt](../evidence/current-quartic-ritz-rank-test-final.json)
+preserves the earlier status-format rejection and first scientific run.
+No numerical full correction, nonlinear-neighborhood theorem or formal
+Lean proof is claimed.
+
+Remaining to-do list: implemented full-domain correction/application errors;
+signed G_t and every original coupled/admission, mass and phase budget;
+nonlinear existence, compatibility, matching, semiclassical validity/noise
+and all-sector stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Complete quartic energy-dual application enclosed; full residual open
 
 2026-10-27, E003/S169. Full residual goal ACTIVE/INCOMPLETE. The preceding
