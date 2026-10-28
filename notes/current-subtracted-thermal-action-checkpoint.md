@@ -1,3 +1,122 @@
+# Complete quantum application attempt remains unresolved
+
+2026-10-28 HST, E003/S169. The preceding turn supplied a plan, not a
+new bound. This turn attempted the full retained response through the
+all-angular resolvent representation and checked a hyperbolic-kernel
+alternative. NO complete signed application, energy-dual residual bound
+or consequential new feasibility evidence was obtained. This is an
+unresolved attempt, not completion of the signed milestone. The full
+stable semiclassical wormhole objective remains ACTIVE and incomplete.
+Preserve the closed audit, P32, physical norms and all accepted results.
+
+## Attempt and exact unsupported implication
+
+Start from the explicit global Green input at 0459e57, with its complete
+original bolt-input debit <7.432e-12. Keep the normalized paired form
+e_t=ell_t/N on E_t, N=|W_action| beta, and B/N. The filtered extension
+at ace5736 defines the computational H_mu input through its B source;
+it does not require applying an unproved C5 heat theorem to the point
+Green field. Keep the actual mass/log realization, complementary adjoint,
+composed square domains, fixed clock/period/spin/scale, original cutoff
+transitions and regular disk bolt. No seed estimate is transferred to
+a nonlinear metric neighborhood.
+
+The attempted certificate is still
+
+    Z_r=||F_t^2 T_t chi_r+F_t^3 j_r^#-alpha f^2 T_t psi||E_t,
+    pref_t(c_a+c_tau+Zr_hat+e_Zr)+E32+Ereg+e_other<=1.667e-9.
+
+The first missing numerical implication is a full energy-dual enclosure
+of the residual in each required ell_t or ell_t+B solve. An E_t Riesz
+bound must cover every energy test; a finite matrix residual is not that
+bound. The accepted spatial-cutoff estimate controls its omitted part
+but does not supply values for the retained kernel, matched local probes
+or global returns. Code inspection confirms that the angular weights
+are implemented, while current_subtracted_thermal_action.py explicitly
+sets full_thermal_angular_sum_evaluated and complete_renormalized_operator
+to false. Its compact direction basis is not this Green input.
+
+Here is the attempted resolvent reduction, retaining the second metric
+vertex. On the original admissible core let A=iJD, lambda_j=a_j^2,
+and use the complete positive-time Hessian of
+current-structured-weak-response-attempt.md. For Re(s)>2, its summable
+majorant permits the common heat integral and both full spectral sums:
+
+    D_uv Z(s)=-s sum_(j,k) (a_j+a_k)^2 D_s(lambda_j,lambda_k)
+                                      u_jk v_kj,
+    D_s(lambda,mu)=[lambda R_s(lambda)-mu R_s(mu)]/(lambda-mu).
+
+R_s is the complete angular resolvent with the SAME regulator and scale
+as current-angular-resummed-quantum-operator.md. Coincident arguments use
+the derivative. Integrating the fixed-mass heat factor uses
+Gamma(s+1)/Gamma(s)=s; at s=0 its scalar quotient is exactly
+
+    [lambda/(lambda+M^2)-mu/(mu+M^2)]/(lambda-mu)
+                    =M^2/[(lambda+M^2)(mu+M^2)].
+
+Exact symbolic reduction checked this identity and its coincident limit
+M^2/(lambda+M^2)^2. This is ONLY an algebraic verification, not a quantum
+evaluation. The actual paired orbit indices retain the entire thermal
+spectrum and finite-domain returns; the second vertex has not been dropped.
+
+The proposed next step, inserting the known scalar finite part into an
+ordinary orbit trace, is unsupported. R_s has residue 2C, so D_s has the
+same pole. Its orbit coefficient involves
+
+    sum_(j,k) (a_j+a_k)^2 u_jk v_kj
+                       =Tr[(Au+uA)(Av+vA)],
+
+which is not an ordinary trace-class expression. In particular a nonzero
+smooth compact interior multiplication u gives a first-order differential
+anticommutator, not a Hilbert-Schmidt operator. This tests the proposed
+trace operation, not the actual structured correction. Taking its scalar
+finite part first would not justify the common coincident and boundary
+finite parts. The existing common Mellin regrouping retains those terms;
+their differentiated numerical orbit traces remain unevaluated. No claim
+that the renormalized action diverges follows.
+
+## Alternative and quantitative consequence
+
+The primary formulas of [Camporesi and Higuchi](https://arxiv.org/pdf/gr-qc/9505009)
+and [Muck](https://arxiv.org/pdf/hep-th/9912059) provide Dirac heat/Green
+functions on maximally symmetric spaces. Their hypotheses do not identify
+our variable-curvature finite paired realization with hyperbolic space.
+They could define a local comparison only after a quantitative gluing,
+contact and actual-boundary return argument. No such complete comparison
+was derived here, and no model kernel was substituted into the certificate.
+
+For perspective, the ALREADY RECORDED uniform inverse/output estimator
+needs eta<=2.174031611874894304235e-26 even granting every other debit zero.
+The known .0022 form comparison is about 1.011944807e23 times that
+conditional ceiling. This ratio was recalculated; it is not a new response
+bound or an actual error lower bound. A new model formula by itself cannot
+meet this requirement. The input-specific joint residual may avoid this
+separated loss, but its full numerical norm remains UNKNOWN.
+
+The known partial subtotal <7.192e-11 is unchanged and is not a remaining
+margin. Zr, e_Zr, e_other, original-source defect, other physical/graph
+outputs, actual kappa_m and independent boundary-phase comparisons remain
+unknown. The quantum-fast screen retains its restricted scope. No
+nonlinear admission, compatibility or physical requirement closes.
+
+Decision: retain the spatial signed weak-form method and construction;
+do not substitute angular scalar weights or a homogeneous model for the
+complete application. This attempt supplies no consequential bound and
+does not justify more degree, Green-input, cold, scalar or tail optimization.
+One next calculation remains PROPOSED: a complete paired weak residual
+enclosure for the coupled inverse applications entering Z_r, with retained
+kernel, common contacts, returns and all numerical errors. The prior
+planning turn and this attempt are two consecutive no-progress turns
+after the accepted global-input result; historical blocked runs are not
+counted. No task-owned research calculation remains running.
+
+Remaining to-do list: complete signed quantum certificate and all coupled
+budgets; nonlinear admission/contraction; exact compatibility; physical
+matching/opening; semiclassical validity/noise; all-sector stability;
+the full stable semiclassical wormhole objective.
+
+---
+
 # Explicit global Green input passes its residual contract
 
 2026-10-28 HST, E003/S169. The preceding filtered-output comparison was
