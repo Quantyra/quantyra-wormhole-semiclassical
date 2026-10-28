@@ -1,3 +1,38 @@
+# Resumed conormal-response attempt: complete certificate still missing
+
+2026-10-28 HST, E003/S169. The current goal is ACTIVE and incomplete.
+The preceding planning reply supplied no new bound. The
+[actual-domain derivative attempt](current-conormal-response-attempt.md)
+tests a possible route from the existing weak kernel comparison to the
+required differentiated boundary remainder. The real boundary-preserving
+flow preserves the mass/log phases, but its pullbacks are not a bounded
+holomorphic family on the weighted H3 space. An explicit admissible packet
+test rejects a Cauchy estimate based on those pullbacks alone. This is not
+a counterexample to the actual affine/P32 maps or the coupled inverse.
+
+The accepted interior proof uses finite coefficient jets and avoids this
+shortcut. Applying that method at the actual paired end still requires
+numerical simultaneous derivatives of the complete common finite part,
+contacts and global return. Those estimates were NOT obtained. The retained
+signed kernel, actual global Delta and original physical-output comparisons
+remain unknown. No complete G_t, admission entry or physical margin closes.
+The domain test supplies no new quantitative feasibility bound.
+
+Decision: retain the construction, P32, original norms, accepted endpoint
+cancellation and closed audit. Reject the pullback-Cauchy shortcut; attempt
+finite coefficient jets with the joint common restoration. The next complete
+actual-source/phase/remainder and original-output calculation remains proposed.
+Do not substitute transport, degree, scalar or isolated-contact optimization.
+No research computation remains running. Earlier blocked audits below are
+historical; the goal has been resumed.
+
+Remaining to-do list: complete signed/strong quantum and original-output
+certificate, all coupled budgets, nonlinear admission/contraction, exact
+compatibility, physical matching/opening, semiclassical validity/noise,
+all-sector stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Decision-plan execution blocked; leading-phase report corrected
 
 2026-10-28 HST, E003/S169. Goal tool status: BLOCKED, not complete,
