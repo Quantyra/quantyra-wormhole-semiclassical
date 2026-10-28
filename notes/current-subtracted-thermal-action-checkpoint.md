@@ -1,3 +1,43 @@
+# Complete structured application remains a research impasse
+
+2026-10-27 HST, E003/S169. Goal tool status: BLOCKED, not complete.
+The unchanged objective is a certified full-domain T_t-(I+T_t)F_n bound,
+including quantum-application errors. The [implementation audit](current-structured-implementation-impasse.md)
+records this turn's unsuccessful structured-solver attempt. No new bound,
+signed value or physical margin was obtained; this is not a feasibility
+milestone. No numerical job is awaiting completion.
+
+The accepted scalar-log comparison at 4f9ae98 is preserved. Its exact
+inverse and ten-step truncation estimates do not implement the complete
+S/K applications. Inspecting the actual implementation confirms that
+their errors remain UNKNOWN. Restricting a Galerkin solve to the actual
+structured source avoids the proved uniform-inverse obstruction, but
+neither its complete action nor its complementary residual is enclosed.
+The source-graph theorem supplies no missing projector or spatial rate.
+
+The same application gap persisted through the reference-comparison
+turn, the intervening BPP/BQP discussion and this revalidation. The
+comparison was progress; the last two turns supplied no new goal bound.
+The blocked audit therefore closes the repeated unexecuted-plan loop.
+Resumption requires a substantive quantitative approximation/remainder
+construction or validated complete evaluator. This is an implementation
+and mathematical impasse, not an obstruction to the construction.
+
+Decision: retain the scalar-log reference, actual paired realization,
+P32, original norms, accepted results and closed audit. Next calculation,
+PROPOSED: certify an explicit complete structured solver through
+||B_i-A_Q S_hat||_(Et->Et*) <4.9887427328e-32, including all quantum,
+boundary, complement and arithmetic errors. This is a sufficient screen,
+not an attained error or a physical margin; K and the full residual remain.
+
+Remaining to-do list: implemented S/K and complete residual with all
+errors; signed G_t and original coupled/admission/output/mass/phase
+budgets; nonlinear existence/contraction, exact compatibility, physical
+matching, semiclassical validity/noise and all-sector stability; the full
+stable semiclassical wormhole objective.
+
+---
+
 # Global scalar-log comparison bounded; numerical application still open
 
 2026-10-27 HST, E003/S169. Full goal ACTIVE/INCOMPLETE. The preceding
