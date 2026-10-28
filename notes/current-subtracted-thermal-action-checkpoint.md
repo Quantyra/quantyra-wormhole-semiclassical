@@ -1,3 +1,41 @@
+# New execution: actual mixed-Green input distinguished; signed bound open
+
+2026-10-28 HST, E003/S169. The user cleared the previous goal and created
+a NEW active "execute the plan" goal. This is its first turn; no earlier
+blocked count carries over. The preceding planning reply supplied no bound.
+
+The [executed input and budget test](current-mixed-green-input-domain.md)
+selects the original uniform joint bolt certificate. Its remaining quantum
+argument is the mixed-Green field, not the affine h1 shape. The complete
+local mixed row has an exact indicial root 4 after the physical curvature
+and anomaly cancellation. The actual normalizable input has a quartic
+analytic branch and a branch with exponent in (18427.85,18427.86), no
+forced quartic logarithm, and finite C5 regularity at the paired seam.
+The actual global coefficients and numerical jet bounds remain UNKNOWN.
+This does not alter h1's known logarithm or smooth the physical domain.
+
+Using the accepted full quartic quantum column, its occurrences in ALL
+three residuals cost <2.811e-42 in the ORIGINAL bolt output. The complete
+input-approximation sensitivity is <1.082e-44 times an established E_t
+input error; that error is not yet available. Neither result closes the
+bolt or another admission budget. The original radius cost is retained.
+
+The accepted spatial regulator already supplies seed-energy convergence;
+a new heat exponent is not a prerequisite for that representation. Keep
+it and attempt the complete signed action on the actual mixed-Green
+input, including a validated global input enclosure and all inverse/
+application errors. This next calculation is PROPOSED. The input-domain
+test is not completion of the signed-response milestone. No research
+computation remains running. P32, the closed audit and all accepted
+results remain intact; the full objective is ACTIVE and incomplete.
+
+Remaining to-do list: complete signed quantum/output certificate and every
+coupled budget; nonlinear admission/contraction, exact compatibility,
+physical matching/opening, semiclassical validity/noise, all-sector
+stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Mixed-response execution blocked: no new feasibility bound
 
 2026-10-28 HST, E003/S169. The CURRENT resumed run has reached the same
