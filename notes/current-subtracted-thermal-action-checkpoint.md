@@ -1,3 +1,45 @@
+# Explicit global Green input passes its residual contract
+
+2026-10-28 HST, E003/S169. The preceding filtered-output comparison was
+progress. The full stable semiclassical wormhole objective remains ACTIVE
+and incomplete. The [executed global input calculation](current-global-green-trial-enclosure.md)
+constructs an explicit two-resolvent trial and bounds its errors with the
+ORIGINAL finite-geometry operators. The source flux, cancellation of the
+two logarithmic singularities, both cutoff transitions and the global
+inverse return are accounted for. The quadratic reference defines a
+trial, not a replacement physical domain or boundary condition.
+
+Executed original H_mu error bounds: e_D<7.074e25, e_P<7.844e27 and
+e_D+e_P<7.914e27, below the proposed 4e30 input contract. The complete
+input debit, including the previously paid mixed remainder and point
+replacement, is <7.432e-12 in the ORIGINAL bolt-output units. Numerical
+values of the analytic trial and its finite bolt limit are enclosed by a
+positive Legendre integral with its entire integration tail. The global
+error proof is not inferred from that finite table of values.
+
+This closes the input contract for the explicit analytic trial. Later
+quantum quadrature and inverse applications still need their own errors.
+The known partial certificate subtotal including this input is <7.192e-11;
+it is not a remaining margin. Z_r, e_Zr, e_other and all other coupled
+comparisons remain UNKNOWN. No complete signed response or bolt pass was
+obtained. The quantum-fast screen retains its original restricted scope.
+
+Decision: use this explicit input in the spatial signed method and stop
+Green-input, degree and tail optimization. The next calculation is the
+complete paired quantum inverse application and signed three-residual
+transfer, with the full spectra, UV logarithm, common contacts, finite
+returns and certified application errors. This remains PROPOSED. The
+selected-mode evaluator and accepted quartic column do not implement it.
+No task-owned computation remains running. Preserve P32, original norms,
+all accepted results and the closed audit.
+
+Remaining to-do list: complete signed quantum certificate and all coupled
+budgets; nonlinear admission/contraction; exact compatibility; physical
+matching/opening; semiclassical validity/noise; all-sector stability; the
+full stable semiclassical wormhole objective.
+
+---
+
 # Mixed Green residual now has a complete filtered output comparison
 
 2026-10-28 HST, E003/S169. The preceding planning reply supplied no new
