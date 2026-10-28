@@ -1,0 +1,104 @@
+{
+  "started_utc": "2026-10-28T00:22:54.955821+00:00",
+  "input_sha256_before": {
+    "notes/current-local-reference-range-test.md": "2f6a9347ea5a6a8021194e8e675c5caabd8a09763c05ef5651c125ec60d0a043",
+    "checks/current_local_reference_range_test.py": "5eb0c4ef891157ea42f5e03e5e9ce0acc91c282284d3085a23e96b66a1574a84",
+    "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+    "notes/current-schur-residual-phase-domain.md": "dc251bb7fdd5c6bde4c55ab47a30989adbc69cf8872033ba0915a4c5dab34914",
+    "notes/recentered-quantum-tt-form.md": "baadafe873c2971b13dd167128da0d8c1390f747908f387881ef6480ca9702c7",
+    "notes/current-spatial-inverse-output-test.md": "347462546bed60ce6b9ca85e2218e4140b040de0e1714d1781d1afcd3a0a1813",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Full-range residual attempt: reject a positive local reference\n\n2026-10-27 HST, E003/S169. First turn of the newly active goal to calculate\nthe full-domain bound on T_t-(I+T_t)F_n, including application errors.\nThe full stable-wormhole objective, closed audit, accepted results, P32,\nphysical norms and all unresolved requirements remain unchanged.\n\nOUTCOME: the requested numerical residual certificate is UNRESOLVED.\nThis attempt tests one proposed way to avoid the missing quantum solve:\nuse the complete local coupled Hessian as a positive reference. That\nmethod fails its coercivity hypothesis on the actual domain. The complete\ngeodesic reference avoids this particular failure, but its remaining\nsigned action and numerical application errors have not been evaluated.\nThis is not a completed feasibility result or a construction obstruction.\n\n## 1. Actual spaces and the numerical implication still missing\n\nUse E_t, norm squared ell_t/N, N=|W_action| beta, with the retained paired\nfirst-order domain, complementary adjoint and both composed squares.\nKeep the one-sided mass cubic and fixed finite logarithmic phase, original\ncutoff transitions, clock/period/spin/scale and smooth regular-disk bolt.\nYork has J(0)=0 and (Q^2 J'/z^4)(L)=0. No smooth reflected surrogate,\ninner wall, selected angular/thermal modes or nonlinear-ball extension\nis introduced. The exact fixed-seed form defines\n\n    T_t=ell_t^-1 B, B=b* a^-1 b, 0<=T_t<=q_t,\n    q_t=.338/(1-epsilon), F_t=(I+T_t)^-1 T_t.\n\nFor a conforming finite trial space V_n in this domain, exact Ritz assembly\nwould give (ell_t+B)[F_n u,v]=B[u,v] for v in V_n. Its complete residual is\n\n    r_n(u)[v]=B[u,v]/N-(ell_t+B)[F_n u,v]/N,\n    ||R_n||=sup_{||u||E_t=1} ||r_n(u)||E_t*.\n\nThe first unexecuted numerical implication is an enclosure of the full\nfunctionals (ell_t+B)[psi_j,.]/N, including the complementary test space,\nand of their numerical source/solve applications. The available action\ncode still covers compact directions and two angular levels. It supplies\nneither these columns nor their full-domain errors. No finite trial matrix,\napplication error or omitted-space constant is declared computed here.\n\n## 2. Test the proposed local positive reference before using it\n\nDefine ell_loc to retain the exact local TT Hessian, all fixed local\nrestorations and the same York return, while omitting the positive\nnonlocal geodesic remainder and the actual-minus-geodesic remainder.\nThe intended positive-reference solve would use ell_loc+B. This is a\ntest of a computational reference; ell_t in the target remains complete.\n\nThe exact local generator in current-finite-local-action-assembly.md is\nin the fixed affine chart. Put phi0=-log z and d=Delta T. At highest\nderivative order the exact York return has Delta nu=-d/3. The fourth-order\npart of its normalized Weyl Hessian is obtained from\n\n    phi L^2/60+L M/30-M^2/10,\n    delta L=-2d, delta M=-d/3.\n\nIts second variation is (2/15)(phi0+1/6)d^2. Multiplication by the\noriginal negative action factor, and division by N, give\n\n    -G C/(15 pi B^2 beta) (phi0+1/6)d^2.\n\nThe R2 fourth term cancels since -2d-6(-d/3)=0. Einstein, Maxwell,\nLLL and the other contacts have lower derivative order on this TT\nprincipal direction. The accepted common fourth restoration is exactly\nG C kappa4/(15 pi B^2 beta) times d^2, where\n\n    kappa4=H_q/2-EulerGamma-log(mu0 B), q=2000^4.\n\nConsequently the complete local TT fourth coefficient is\n\n    p4(z)=G C/(15 pi B^2 beta) a4(z),\n    a4(z)=kappa4+log z-1/6.                         (1)\n\nThe 1/6 in (1) is the exact principal coefficient, not the 19/60 from a\nlater lower-bound estimate that also spends a fourth-order reserve.\nThe exact finite angular restoration uses the harmonic number H_q;\nit is not a selection of physical angular modes. Keep the actual scale\nenclosure |log(mu0 B)|<1e-8, rather than resetting that scale.\n\nThe interval calculation gives, on I=[1e-10,2e-10],\n\n    a4(z)<-7.58, p4(z)<-5.65e-33.                  (2)\n\nThe second bound uses the original E_t normalization and inherited G=1\nunits. It is a coefficient of integral (Delta T)^2 dz, not a physical\noutput constant or an available admission margin.\n\n## 3. Admissible full-domain test, including both equations\n\nHere is an explicit ordinary test of positivity. Choose a nonzero smooth\nbump chi supported inside I, for example the usual exponential bump,\nand put m=(Q'/z^4)', rho=m chi^2. The actual nonconstant polynomial Q\nmakes integral m rho=integral m^2 chi^2 positive. Set\n\n    c_k=integral m chi sin(kz) / integral m rho,\n    J_k=(chi sin(kz)-c_k rho)/k,\n    xi_k=(Q J_k)'-z^4 integral_0^z m(t)J_k(t)dt,\n    nu_k=xi_k/2+Q J_k/z, T_k=-xi_k-(Q J_k)'/2.       (3)\n\nThe zero moment in (3) makes xi_k compactly supported along with J_k.\nDifferentiation verifies the exact York equation\n\n    -(Q^2 J_k'/z^4)'=Q(4xi_k/z-xi_k')/z^4.\n\nAll fields vanish near the paired seam, original cutoffs and regular bolt;\ntheir mass/log coefficients and endpoint returns are zero. They belong to\nthe actual core; this test does not replace the domain or truncate matter\nmodes. Integration by parts gives c_k=O(k^-m) for every fixed m.\nOn I, xi_k=Q chi cos(kz)+O(k^-1), T_k=-3xi_k/2+O(k^-1), and\nnu_k+T_k/3=O(k^-1), with the corresponding differentiated asymptotics.\nThus integral (Delta T_k)^2 is a positive constant times k^4 to leading\norder. Equation (2) makes ell_loc[xi_k,xi_k] tend to minus infinity.\nThe remaining terms have lower derivative order on this fixed compact\ninterval and cannot cancel that leading coefficient.\n\nBoth original equations give the exact Schur form ell_loc+B. The retained\nmixed-row identity has order at most two, a has order four, and B=b*a^-1b\nhas local order zero. Its complete finite-domain returns are smooth on I.\nTherefore its contribution to (3) is lower order as well. It cannot make\nell_loc+B positive. This disproves the positive/coercive reference\nhypothesis before any numerical inverse or quantum error is assigned.\n\nNo finite change of the local fourth contact repairs this on the whole\ndomain, because log z is unbounded below. The actual nonlocal logarithm\nis essential to the accepted positive full form. This argument does NOT\nprove that every indefinite local inverse fails, or that the composed\nresidual on the structured B range is unbounded. Those stronger claims\nwould require separate arguments and are not made.\n\n## 4. Quantify the complete-reference alternative without hiding errors\n\nRetain instead the complete geodesic comparison ell0, including its full\nlogarithm, common restoration and actual domain. All actual angular,\nthermal, coincidence and finite-return differences remain in the accepted\nbound ||Q0||<=e0, Q0=ell_t^-1(ell0-ell_t), with\n\n    e0=(.0022+epsilon)/(1-epsilon),\n    F0=(ell0+B)^-1 B, f_t=q_t/(1+q_t).\n\nThis is an analytic reference operator, not an implemented numerical F_n.\nWriting L=I+T_t gives (L+Q0)F0=T_t, hence EXACTLY\n\n    R0=T_t-L F0=Q0 F0,\n    ||R0||<=e0 f_t/(1-e0)<5.569803e-4.              (4)\n\nNo commutation is used: F0=(I+L^-1 Q0)^-1 F_t. The original domain\nand coercivity used here are the accepted geodesic comparison, not the\nrejected local reference. For a numerical approximation with a proved\na_app=||F_n-F0||, the complete bound would be\n\n    ||R_n||<=e0 f_t/(1-e0)+(1+q_t)a_app.             (5)\n\nThe actual a_app is UNKNOWN. Equation (5) is not an attained numerical\ncertificate. In particular (4) cannot be relabelled as the bound for F_n.\n\nThe accepted original-output weights give the exact-reference error\nestimator Gamma(e0/(1-e0)), with\n\n    Gamma(z)=W0(3z+3z^2+z^3)+W1(2z+z^2).\n\nIts upper expression is about 1.69436e14, or 1.01642e23 times the ENTIRE\n1.667e-9 bolt allowance, even granting every other debit zero. That is\na quantified failure of this separated reference-only estimator; it is\nnot a lower bound on the actual error or a nonexistence theorem. No\nconditional margin is treated as available. The already accepted internal\nNeumann and P32 transport bounds are not refined or replaced.\n\n## 5. Decision and remaining calculation\n\nReject the proposed positive local-only reference. Retain the complete\ngeodesic principal operator and the composed Ritz/direct-adjoint route.\nThe executed result is an actual-domain failure of that specific reference\nand the quantitative comparison (4)-(5). It supplies NO implemented F_n,\nsigned G_t value, complete numerical residual or admission improvement.\n\nThe single next calculation remains a certified full quantum-action\ncolumn on an explicit admissible trial, as an E_t* functional over ALL\ntest fields, followed by the full range residual and application errors.\nIt must include the signed actual-minus-geodesic kernel and its matched\ncontacts; the .0022 envelope cannot substitute for those values. This\ncalculation is PROPOSED, not executed. The goal remains active/incomplete.\n\nRemaining to-do list: full-domain residual with actual quantum/source/\nsolve/arithmetic errors; signed G_t; every original coupled admission and\nmass/phase budget; nonlinear existence/contraction, exact compatibility,\nphysical matching, semiclassical validity/noise and all-sector stability;\ntransport, preparation, separate creation and the full objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Support the local-reference rejection; do not certify a numerical F_n.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom fractions import Fraction as F\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-local-reference-range-test'\nruntime = json.loads((ROOT/'evidence/current-coupled-mass-adjoint-runtime.json').read_bytes())\nsys.path.insert(0, str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb, ctx\n\nINPUTS = [\n    'notes/'+STEM+'.md', 'checks/current_local_reference_range_test.py',\n    'notes/current-finite-local-action-assembly.md',\n    'notes/current-schur-residual-phase-domain.md',\n    'notes/recentered-quantum-tt-form.md',\n    'notes/current-spatial-inverse-output-test.md',\n    'evidence/current-spatial-inverse-output-test.json',\n    'evidence/current-coupled-truncation-energy-error.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json',\n]\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(60)\n    return {'ball':v.str(40),'decimal_enclosure':\n            {'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef execute():\n    ctx.prec=512\n    assert digest(Path(sys.executable))==runtime['python_sha256']\n    for pkg in runtime['packages'].values():\n        for name,expected in pkg['files'].items():\n            assert digest(Path(pkg['root'])/name)==expected\n    # Exact highest-jet algebra from the original local action, not a fit.\n    L1,M1=F(-2),F(-1,3)\n    phi_coefficient=F(2,60)*L1**2\n    constant=F(2,30)*L1*M1-F(2,10)*M1**2\n    assert phi_coefficient==F(2,15) and constant==F(1,45)\n    assert -2-6*M1==0\n    q=arb(2000)**4\n    kappa=(q+1).digamma()/2-arb.const_euler()/2+arb(0,'1e-8')\n    left=kappa+arb('1e-10').log()-arb(1)/6\n    right=kappa+arb('2e-10').log()-arb(1)/6\n    assert right<arb('-7.58')\n    prior=json.loads((ROOT/'evidence/current-spatial-inverse-output-test.json').read_bytes())\n    c=prior['result']['constants']\n    eps=dec(c['epsilon']);qt=arb('.338')/(1-eps);ft=qt/(1+qt)\n    e0=dec(c['geodesic_Et_comparison_error'])\n    assert 0<e0<1\n    residual=e0*ft/(1-e0)\n    assert residual<arb('5.569803e-4')\n    W0=dec(c['W0_complete_scalar_physical_upper'])\n    W1=dec(c['W1_complete_mixed_physical_upper'])\n    zeta=e0/(1-e0)\n    debit=W0*(3*zeta+3*zeta**2+zeta**3)+W1*(2*zeta+zeta**2)\n    ratio=debit/arb('1.667e-9')\n    assert arb('1.0164e23')<ratio<arb('1.0165e23')\n    p=json.loads((ROOT/'evidence/current-coupled-truncation-energy-error.json').read_bytes())['runs'][-1]\n    assert p['status']=='passed'\n    beta,C,B2=[dec(p['result']['parameters'][k]) for k in ['beta','C','B2']]\n    pref=C/(15*arb.pi()*B2*beta)\n    assert pref*right<arb('-5.65e-33')\n    return {\n        'constants':{k:enc(v) for k,v in {\n            'kappa4_complete_angular':kappa,\n            'a4_at_left':left,'a4_at_right':right,\n            'p4_at_right_original_energy_units':pref*right,\n            'reference_only_residual_upper_exact_applications':residual,\n            'numerical_application_error_multiplier':1+qt,\n            'reference_only_output_error_upper_expression':debit,\n            'reference_only_estimator_over_entire_bolt_allowance':ratio,\n        }.items()},\n        'numerical_Fn_application_error':None,\n        'complete_numerical_residual_bound':None,\n        'full_signed_G_evaluated':False,\n        'local_positive_reference_rejected':True,\n        'physical_requirements_closed':[],\n        'construction_obstruction_proved':False,\n        'scope':'ordinary actual-domain reference test; requested numerical residual unresolved',\n    }\n\nif __name__=='__main__':\n    out=ROOT/'evidence'/(STEM+'.json')\n    if out.exists(): raise SystemExit('Immutable receipt exists; refusing overwrite.')\n    before={p:digest(ROOT/p) for p in INPUTS}\n    receipt={'started_utc':datetime.now(timezone.utc).isoformat(),\n             'input_sha256_before':before,\n             'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n             'arithmetic_source_utf8':Path(__file__).read_text(encoding='utf-8')}\n    try:\n        receipt['result']=execute()\n        receipt['status']='local_positive_reference_rejected_complete_residual_unresolved'\n    except BaseException as exc:\n        receipt['status']='failed';receipt['failure']=repr(exc)\n        raise\n    finally:\n        receipt['input_sha256_after']={p:digest(ROOT/p) for p in INPUTS}\n        receipt['finished_utc']=datetime.now(timezone.utc).isoformat()\n        with out.open('xb') as f:\n            f.write((json.dumps(receipt,indent=2)+'\\n').encode('utf-8'))\n    assert before==receipt['input_sha256_after']\n    print(json.dumps({'status':receipt['status'],'constants':{\n        k:v['ball'] for k,v in receipt['result']['constants'].items()}},indent=2))\n",
+  "result": {
+    "constants": {
+      "kappa4_complete_angular": {
+        "ball": "[14.9131971 +/- 2.34e-8]",
+        "decimal_enclosure": {
+          "mid": "14913197086633413917639156925818576749569862865856519898435355428",
+          "rad": "10000000054771935633101389359643081078922872256871792641",
+          "exponent": "-63"
+        }
+      },
+      "a4_at_left": {
+        "ball": "[-8.2793205 +/- 2.00e-8]",
+        "decimal_enclosure": {
+          "mid": "-8279320509973709589207424287691731993107818687097876528564590247",
+          "rad": "10000000100443861799692105553508232101306716621119684609",
+          "exponent": "-63"
+        }
+      },
+      "a4_at_right": {
+        "ball": "[-7.5861733 +/- 3.95e-8]",
+        "decimal_enclosure": {
+          "mid": "-75861733294137642797901921662335554250323185527376212744439102384",
+          "rad": "100000001164290359579988562213610349591410621486064467969",
+          "exponent": "-64"
+        }
+      },
+      "p4_at_right_original_energy_units": {
+        "ball": "[-5.6595796e-33 +/- 2.27e-41]",
+        "decimal_enclosure": {
+          "mid": "-56595796152059176937780205963298225213032858768826128522955766810",
+          "rad": "74603880813050963249155289605371010462820212775103496193",
+          "exponent": "-97"
+        }
+      },
+      "reference_only_residual_upper_exact_applications": {
+        "ball": "[0.0005569802144688419155924798383049585021277 +/- 3.74e-46]",
+        "decimal_enclosure": {
+          "mid": "55698021446884191559247983830495850212770037280821993737493037747",
+          "rad": "4",
+          "exponent": "-68"
+        }
+      },
+      "numerical_application_error_multiplier": {
+        "ball": "[1.338000000000000000000000000000000000000 +/- 1e-44]",
+        "decimal_enclosure": {
+          "mid": "13380000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-64"
+        }
+      },
+      "reference_only_output_error_upper_expression": {
+        "ball": "[169436171105831.7596654 +/- 7.40e-8]",
+        "decimal_enclosure": {
+          "mid": "16943617110583175966537417348809779323721572916515676743253858764",
+          "rad": "4808441146568516715859876450502722751299585",
+          "exponent": "-50"
+        }
+      },
+      "reference_only_estimator_over_entire_bolt_allowance": {
+        "ball": "[1.016413743886213315329e+23 +/- 46.8]",
+        "decimal_enclosure": {
+          "mid": "10164137438862133153291792050874233245849609375000000000000000000",
+          "rad": "2884531816014490432346961619642656248299520",
+          "exponent": "-41"
+        }
+      }
+    },
+    "numerical_Fn_application_error": null,
+    "complete_numerical_residual_bound": null,
+    "full_signed_G_evaluated": false,
+    "local_positive_reference_rejected": true,
+    "physical_requirements_closed": [],
+    "construction_obstruction_proved": false,
+    "scope": "ordinary actual-domain reference test; requested numerical residual unresolved"
+  },
+  "status": "local_positive_reference_rejected_complete_residual_unresolved",
+  "input_sha256_after": {
+    "notes/current-local-reference-range-test.md": "2f6a9347ea5a6a8021194e8e675c5caabd8a09763c05ef5651c125ec60d0a043",
+    "checks/current_local_reference_range_test.py": "5eb0c4ef891157ea42f5e03e5e9ce0acc91c282284d3085a23e96b66a1574a84",
+    "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+    "notes/current-schur-residual-phase-domain.md": "dc251bb7fdd5c6bde4c55ab47a30989adbc69cf8872033ba0915a4c5dab34914",
+    "notes/recentered-quantum-tt-form.md": "baadafe873c2971b13dd167128da0d8c1390f747908f387881ef6480ca9702c7",
+    "notes/current-spatial-inverse-output-test.md": "347462546bed60ce6b9ca85e2218e4140b040de0e1714d1781d1afcd3a0a1813",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "finished_utc": "2026-10-28T00:22:55.336335+00:00"
+}

@@ -1,3 +1,44 @@
+# Full residual goal resumed: reference test, 2026-10-27
+
+The new goal to certify T_t-(I+T_t)F_n on the actual full domain is ACTIVE
+and INCOMPLETE. Preserve the full stable semiclassical wormhole objective,
+closed audit, accepted results, P32 and original physical norms.
+
+The executed attempt in current-local-reference-range-test.md rejects a
+positive local-only reference before inverse estimation: its complete TT
+fourth coefficient kappa4+log(z)-1/6 is below -7.58 on
+1e-10<=z<=2e-10. The exact admissible York fields retain both original rows
+and every boundary condition; B=b*a^-1b cannot cancel that principal loss.
+This is a failure of the proposed positive reference, not a failure of the
+actual quantum inverse, a structured-range impossibility or nonexistence.
+
+The complete geodesic reference has an analytic residual bound
+
+    ||T_t-(I+T_t)F0|| < 5.569803e-4,
+    F0=(ell0+B)^-1 B,
+
+for EXACT reference applications. For a numerical F_n it becomes this
+bound plus (1+q_t)||F_n-F0||. The latter application error is UNKNOWN;
+no bound for an implemented F_n is claimed. Its reference-only separated
+physical error expression exceeds the entire bolt allowance by about
+1.0164e23. This is an excessive upper estimator, not an actual-error lower
+bound. No physical margin or admission requirement closes.
+
+Decision: reject the local positive-reference shortcut; retain the complete
+geodesic principal logarithm and the composed Ritz/direct-adjoint route.
+The single next calculation is the complete quantum-action/range residual
+on an explicit actual-domain trial, including the full dual test space and
+all application errors. It remains PROPOSED, not executed. No new cutoff,
+transport-degree or independent contact optimization is selected.
+
+Remaining to-do list: certified full residual with quantum/source/solve/
+arithmetic errors; signed G_t; every original coupled/admission and mass/
+phase budget; nonlinear existence/contraction, exact compatibility, physical
+matching, semiclassical validity/noise and all-sector stability; transport,
+preparation, separate creation and the full objective.
+
+---
+
 # Checkpoint recovery and full-action revalidation, 2026-10-27
 
 The full stable semiclassical wormhole objective remains INCOMPLETE. This
