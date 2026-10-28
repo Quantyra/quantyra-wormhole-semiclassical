@@ -1,3 +1,38 @@
+# Complete source application remains unresolved
+
+2026-10-27 HST, E003/S169. The full goal is ACTIVE/INCOMPLETE. The
+preceding rank-one test was progress. This first follow-up supplies NO new
+complete numerical source/residual bound and is not a completed milestone.
+The [attempt and accounting](current-preconditioned-source-attempt.md)
+identify S=(ell_0+B)^-1 B on the actual paired form domain, so a separate
+physical Riesz-inverse application cancels from its definition.
+
+Executed budget check: the existing contact-corrected multiplier reference
+has total E_t comparison error <.002129382 and already fits the .0022 guard.
+Use it consistently in S and K; do not launch unnecessary quadrature
+refinement. The sufficient complete source residual target is <=4.989e-32
+for a_S<=5e-32. Neither is attained. All quantum, scalar-solve, coefficient,
+caller and complementary-space errors still require enclosure.
+
+The global orbit implementation has no complete inverse/residual evaluator.
+Its mass-subtracted fourth-flow-derivative estimate has no proved uniform
+constant on V S applied to the whole E_t ball. Qualitative regularity,
+small trapped measure and a finite matrix do not fill this gap. This is
+an unknown numerical approximation estimate, not an undefined seed operator
+or obstruction to the construction. Keep the accepted quartic/rank-one
+results, original norms, P32 and closed audit unchanged.
+
+Next calculation remains the complete S application residual with actual
+global flow and a proved complement bound; it is PROPOSED. K and signed
+G_t remain open. No physical allowance changes.
+
+Remaining to-do list: full numerical correction and residual/application
+errors; signed G_t and all coupled/admission, mass and phase budgets;
+nonlinear existence, compatibility, matching, validity/noise, all-sector
+stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Quartic-only full residual fails; retain the complete principal range
 
 2026-10-27 HST, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.

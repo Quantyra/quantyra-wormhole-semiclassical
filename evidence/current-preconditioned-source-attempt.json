@@ -1,0 +1,107 @@
+{
+  "started_utc": "2026-10-28T04:07:04.721140+00:00",
+  "finished_utc": "2026-10-28T04:07:04.782681+00:00",
+  "status": "accounting_checked_complete_source_application_unresolved",
+  "input_sha256_before": {
+    "notes/current-preconditioned-source-attempt.md": "611d2d52bd37d9df8891e8d89be56757e27f8ffe0544debe2d6f7f3d59483487",
+    "checks/current_preconditioned_source_attempt.py": "1057117025748c293df92df53808c4e915ffdca8112cd2a36973d7d8e1f52bab",
+    "notes/current-geodesic-flow-multiplier.md": "ede465735c5cf56df6fb0fd44823838926be76e7a5a39ed521a7a49d3ef8eea4",
+    "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+    "checks/current_geodesic_flow_multiplier.py": "cb05477c877ccbbdb1bebc318368d166d497c4cbe40db4e77bf5473a24cffb78",
+    "checks/current_global_geodesic_return.py": "ba3d2bfb221f8469071c7535983d22423f8ff0d6881209d8d3086c8c66539754",
+    "evidence/current-geodesic-flow-multiplier.json": "f8337c3578f4b647dd281685188892a3cf164fb701b3e8e2b8ca5d4b790897f7",
+    "evidence/current-global-geodesic-return.json": "a58db4188d368ec79903562bd5abd9b59c26dbc5ddd5c91973663ce5b46c2d5c",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "input_sha256_after": {
+    "notes/current-preconditioned-source-attempt.md": "611d2d52bd37d9df8891e8d89be56757e27f8ffe0544debe2d6f7f3d59483487",
+    "checks/current_preconditioned_source_attempt.py": "1057117025748c293df92df53808c4e915ffdca8112cd2a36973d7d8e1f52bab",
+    "notes/current-geodesic-flow-multiplier.md": "ede465735c5cf56df6fb0fd44823838926be76e7a5a39ed521a7a49d3ef8eea4",
+    "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+    "checks/current_geodesic_flow_multiplier.py": "cb05477c877ccbbdb1bebc318368d166d497c4cbe40db4e77bf5473a24cffb78",
+    "checks/current_global_geodesic_return.py": "ba3d2bfb221f8469071c7535983d22423f8ff0d6881209d8d3086c8c66539754",
+    "evidence/current-geodesic-flow-multiplier.json": "f8337c3578f4b647dd281685188892a3cf164fb701b3e8e2b8ca5d4b790897f7",
+    "evidence/current-global-geodesic-return.json": "a58db4188d368ec79903562bd5abd9b59c26dbc5ddd5c91973663ce5b46c2d5c",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "protected_paths_unchanged": 21,
+  "ordinary_argument_utf8": "# Complete preconditioned source attempt: global application still unresolved\n\n2026-10-27 HST, E003/S169. The previous goal turn was PROGRESS: its\nfull-operator lower bound rejected a one-dimensional correction range.\nThis follow-up does NOT obtain a new complete application or residual bound.\nIt audits the first attempted implementation of S and rejects unnecessary\nspectral-quadrature refinement. The active goal, closed audit, original\nphysical norms, P32 and all accepted results remain intact.\n\n## 1. Actual composition and its domain\n\nUse the same E_t form closure, norm squared ell_t/N, N=|W_action| beta,\npaired first-order realization, complementary adjoint and both squares.\nRetain the outer mass/log phase, original cutoff transitions, fixed\nclock/temperature/spin/scale and regular disk bolt. York still obeys\nJ(0)=0 and (Q^2 J'/z^4)(z_h)=0. Both original equations give\nB=b* a^-1 b, with the complete scalar and mixed forms.\n\nDistinguish the Riesz maps from the weak forms. If R_t:E_t->E_t* is\nell_t/N, write\n\n    B_N=B/N, L0_form=(ell_0+B)/N,\n    T_t=R_t^-1 B_N, L0_Riesz=R_t^-1 L0_form.\n\nThen exactly\n\n    S=L0_Riesz^-1 T_t=L0_form^-1 B_N=(ell_0+B)^-1 B.       (1)\n\nThus implementing S does not require a separate numerical application of\nthe physical ell_t inverse. This is an operator identity, not a computed\nsolution. B_N:E_t->E_t* is bounded by the accepted mixed estimate;\nL0_form is coercive by the complete geodesic comparison. Lax--Milgram\ndefines the inverse on this actual form space. The common regulator,\ncomplete angular/thermal state and coincidence/boundary contacts remain\nin the physical forms and their comparison. No new domain theorem is\ninferred from the formal identity.\n\nFor any proposed numerical S_hat the COMPLETE source residual is\n\n    r_S(u)[v]=B[u,v]/N-(ell_0+B)[S_hat u,v]/N,\n    rho_S=sup_(||u||Et=||v||Et=1) |r_S(u)[v]|.\n\nIf ||ell_t^-1(ell_0-ell_t)||<=e0<1, then\n\n    ||S_hat-S||_(Et->Et)<=rho_S/(1-e0).                   (2)\n\nThe supremum in rho_S includes all inputs and tests, including the entire\ncomplement of a numerical trial space. No finite Ritz matrix supplies it.\nThe first unsupported implication in this attempt is a computable bound\non rho_S for an actual implementation. The underlying form operator is\ndefined; its numerical application constant is unknown.\n\n## 2. Test the apparent multiplier-accuracy bottleneck\n\nThe existing current-geodesic-flow-multiplier.md constructs a positive\ncontact-corrected quadrature of the complete flow multiplier A(P), where\nP=iX generates the actual C2,1 doubled geodesic flow and the base lift is\nretained. It is not the flat angular-averaged multiplier K(P). The weights\nand common node shift use exact formulas, preserving both the zero-frequency\nfourth contact and the ultraviolet logarithm's finite constant. The full\nangular tower is resummed before this quadrature. Actual thermal/state\nand global return differences remain in the comparison remainder.\n\nThe retained receipt gives\n\n    eta_quad <2.535721e-5,\n    eta_actual_to_exact_reference <=.0021040238,\n    eta_actual_to_quadrature_reference <.002129381007<.0022.\n\nThis permits defining ell_Q as the quadrature comparison form and using\nit CONSISTENTLY in both parts of the algorithm:\n\n    S_Q=(ell_Q+B)^-1 B,\n    L_Q=ell_t^-1(ell_Q+B),\n    K_Q=L_Q^-1(I+T_t-Q_delta-L_Q),\n    F_delta,12,Q=sum_(k=0)^11 (-K_Q)^k S_Q.                (3)\n\nThe exact inverse identity and ordered Neumann remainder hold for any\nsuch comparison. The target ell_t, source B, physical output and admission\nallowance do not change. This is a consistent change of computational\nreference, not an improved physical constant by normalization.\n\nIf instead one insists on approximating the FIXED exact-reference S by\nS_Q while leaving the rest of the algorithm fixed, the generic bound\n(with e_quad=eta_quad/(1-epsilon) in E_t)\n\n    ||S_Q-S|| <= e_quad f_t/[(1-e0)(1-e0-e_quad)]\n\nreports about 6.434074e-6, over 1.28681e26 times the proposed 5e-32\napplication target. This is an excessive upper estimator, not a measured\nerror or an obstruction. Refining the multiplier to remove that number\nis unnecessary when (3) is used. The same already accepted .0022 guard\nstill proves the <8.953511e-31 EXACT-APPLICATION residual bound. Using\nthe tighter recorded comparison would only change it to <8.939032e-31;\nthis does not resolve the numerical application problem.\n\nAccordingly no higher-order quadrature campaign is launched. Arithmetic\nrounding of weights, spectral evaluation and actual geodesic propagation\nstill belong in the numerical errors of S_hat_Q and K_hat_Q. Exact\nquadrature formulas are not declared to be a full numerical inverse.\n\n## 3. Attempted global realization and the precise missing estimate\n\nInspection of current_global_geodesic_return.py and its ordinary argument\nshows orbit geometry, trapped trajectories and a cubic-seam Fourier-tail\nformula, but no implemented global inverse or complete source residual.\nIts result explicitly leaves full_profile_J4_certified and\ncomplete_global_operator_evaluated false. The multiplier implementation\nlikewise leaves geodesic_flow_matrix_evaluated false. These statements\nagree with the inspected function bodies; they are not just status flags.\n\nThe orbit-tail estimator requires a quantitative bound on the regular\nfourth flow derivative after subtracting the explicit mass-cubic jump,\ntogether with the mass coefficient, for the actual correction range.\nNo uniform bound for V S_Q applied to the whole unit E_t ball is supplied.\nThe earlier failure of an unmodified periodic-H4 test on a mass lift does\nnot prove failure on this structured range. Conversely, qualitative graph\nregularity does not supply the missing constant or the uniform dual source\nresidual. This auxiliary fourth-flow-derivative estimate is not silently\nmade into an original geometric admission requirement.\n\nSmall trapped-orbit measure cannot bound arbitrary localized unit inputs.\nA finite set of periods or matrix entries also does not bound the omitted\ntest space. The common contacts and exact UV logarithm prevent replacing\nthe global flow by a smooth periodic surrogate or a finite matter spectrum.\nThese are precisely the hypotheses a complete rho_S calculation must cover.\nNo applicable quantified approximation theorem closing that step has been\nestablished in this attempt. The first unsupported step is an UNKNOWN\nuniform approximation/residual estimate, not an undefined seed operator.\n\nThe executed numerical contract for (2), with the actual quadrature\nreference and retained transport comparison, is\n\n    e_Q <.002129381007,\n    rho_S <=(1-e_Q)*5e-32,\n    (1-e_Q)*5e-32 =4.98935309496752...e-32.\n\nThis is a sufficient required residual accuracy, not an attained rho_S.\nNo actual S_hat_Q, K_hat_Q, coefficient error or full numerical residual\nwas obtained. There is NO new consequential bound toward the requested\ncomplete certificate in this follow-up. The arithmetic prevents an\nunnecessary component optimization; it is not a completed research milestone.\n\n## 4. Decision and one next calculation\n\nRetain the complete geodesic preconditioner, using its existing quadrature\nconsistently in S and K; do not refine that already affordable component.\nThe specific next calculation remains a conforming implementation of S_Q\nwith a full input-to-dual residual bound rho_S, including the complete\ngeodesic return and a proved complementary-space error. Test\nrho_S<=4.989e-32, which safely implies a_S<=5e-32. A numerical matrix\nwithout its complement is insufficient. This calculation is PROPOSED,\nnot executed. The separate K application and signed G_t remain open.\n\nThis is the first no-new-bound continuation after the rank-one progress\nturn. The goal stays ACTIVE/INCOMPLETE; neither completion nor an actual\nconstruction obstruction is established. No physical budget changes.\n\nRemaining to-do list: complete source and quantum applications and full\nresidual; signed G_t and every original coupled/admission, mass and boundary\nphase entry; nonlinear existence, compatibility, physical matching,\nsemiclassical validity/noise and all-sector stability; the full objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Audit reference/error accounting; does not evaluate the complete source map.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-preconditioned-source-attempt'\nINPUTS = ['notes/'+STEM+'.md', 'checks/current_preconditioned_source_attempt.py',\n          'notes/current-geodesic-flow-multiplier.md',\n          'notes/current-global-geodesic-return.md',\n          'checks/current_geodesic_flow_multiplier.py',\n          'checks/current_global_geodesic_return.py',\n          'evidence/current-geodesic-flow-multiplier.json',\n          'evidence/current-global-geodesic-return.json',\n          'evidence/current-quartic-ritz-rank-test-final.json',\n          'evidence/current-coupled-mass-adjoint-runtime.json']\nruntime = json.loads((ROOT/INPUTS[-1]).read_bytes())\nsys.path.insert(0, str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb, ctx\n\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\n\ndef dec(x):\n    a=x['decimal_enclosure']\n    return arb(int(a['mid']), int(a['rad']))*arb(10)**int(a['exponent'])\n\n\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(60)\n    return {'ball':x.str(40),'decimal_enclosure':\n            {'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\n\ndef main():\n    ctx.prec=512\n    out=ROOT/'evidence'/(STEM+'.json')\n    assert not out.exists(), 'Preserve immutable execution evidence.'\n    assert digest(Path(sys.executable))==runtime['python_sha256']\n    for package in runtime['packages'].values():\n        for name,h in package['files'].items():\n            assert digest(Path(package['root'])/name)==h\n    protected=json.loads(Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json').read_bytes())\n    assert all(digest(Path(p))==h for p,h in protected.items())\n    before={p:digest(ROOT/p) for p in INPUTS}\n    started=datetime.now(timezone.utc).isoformat()\n    flow=json.loads((ROOT/'evidence/current-geodesic-flow-multiplier.json').read_bytes())['runs'][-1]\n    rank=json.loads((ROOT/'evidence/current-quartic-ritz-rank-test-final.json').read_bytes())\n    assert flow['status']=='passed' and rank['status']=='passed'\n    assert not flow['geodesic_flow_matrix_evaluated']\n    f=next(x for x in flow['numerics'] if x['kind']=='actual_flow_quadrature_form_budget')\n    c=rank['result']['constants']\n    eps,qt,ft,ed=[dec(c[k]) for k in ['epsilon','q_t','f_t','alternative_cutoff_eta']]\n    eq=(dec(f['previous_eta_upper'])+dec(f['eta_quad'])+eps)/(1-eps)\n    equad=dec(f['eta_quad'])/(1-eps)\n    e0=(arb('.0022')+eps)/(1-eps)\n    external=equad*ft/((1-e0)*(1-e0-equad))\n    contraction=(eq+ed)/(1-eq)\n    residual=(1+qt)*ft*(ed+contraction**12)/(1-ed)\n    target=arb('5e-32')\n    rho=(1-eq)*target\n    assert eq<arb('.0022') and rho>arb('4.989e-32')\n    assert external/target>arb('1e26')\n    values=dict(combined_Et_reference_error=eq,\n                slack_in_existing_point_0022_guard=arb('.0022')-eq,\n                external_fixed_reference_upper_error=external,\n                external_upper_report_over_application_target=external/target,\n                sufficient_source_residual_threshold_NOT_attained=rho,\n                safe_rounded_source_residual_target_NOT_attained=arb('4.989e-32'),\n                exact_application_residual_with_recorded_comparison=residual,\n                unchanged_rounded_guard_exact_application_residual=dec(c['alternative_exact_application_residual_upper']))\n    after={p:digest(ROOT/p) for p in INPUTS}\n    assert before==after and all(digest(Path(p))==h for p,h in protected.items())\n    data={'started_utc':started,'finished_utc':datetime.now(timezone.utc).isoformat(),\n          'status':'accounting_checked_complete_source_application_unresolved',\n          'input_sha256_before':before,'input_sha256_after':after,\n          'python_sha256':runtime['python_sha256'],'protected_paths_unchanged':len(protected),\n          'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n          'arithmetic_source_utf8':Path(__file__).read_text(encoding='utf-8'),\n          'constants':{k:enc(v) for k,v in values.items()},\n          'actual_source_residual':None,'actual_source_application_error':None,\n          'actual_K_application_error':None,'complete_numerical_residual':None,\n          'new_consequential_complete_bound':False,'physical_margin_closed':False,\n          'goal_complete':False,'formal_verification':False}\n    out.write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n    for k,v in values.items():print(k+': '+v.str(30))\n    print('Complete S application remains unresolved; no new complete bound.')\n\n\nif __name__=='__main__':\n    main()\n",
+  "constants": {
+    "combined_Et_reference_error": {
+      "ball": "[0.00212938100649549760514822956375986229265 +/- 5.96e-42]",
+      "decimal_enclosure": {
+        "mid": "21293810064954976051482295637598622926460699999979488383380482048",
+        "rad": "20200308751092559638429697",
+        "exponent": "-67"
+      }
+    },
+    "slack_in_existing_point_0022_guard": {
+      "ball": "[7.061899350450239485177043624013770735e-5 +/- 5.96e-42]",
+      "decimal_enclosure": {
+        "mid": "7061899350450239485177043624013770735393000000205116166195179514",
+        "rad": "202003087727098378498080769",
+        "exponent": "-68"
+      }
+    },
+    "external_fixed_reference_upper_error": {
+      "ball": "[6.43407370874623046429015477721448985257e-6 +/- 8.37e-45]",
+      "decimal_enclosure": {
+        "mid": "64340737087462304642901547772144898525667078853230235365694481879",
+        "rad": "50750335986792772124278785",
+        "exponent": "-70"
+      }
+    },
+    "external_upper_report_over_application_target": {
+      "ball": "[128681474174924609285803095.544289797051 +/- 4.36e-13]",
+      "decimal_enclosure": {
+        "mid": "12868147417492460928580309554428979705133415770625911276735936494",
+        "rad": "10150222135597254777503745",
+        "exponent": "-38"
+      }
+    },
+    "sufficient_source_residual_threshold_NOT_attained": {
+      "ball": "[4.989353094967522511974258852181200688537e-32 +/- 2.41e-72]",
+      "decimal_enclosure": {
+        "mid": "49893530949675225119742588521812006885367696500000102558083097589",
+        "rad": "101001544577369730187265",
+        "exponent": "-96"
+      }
+    },
+    "safe_rounded_source_residual_target_NOT_attained": {
+      "ball": "[4.989000000000000000000000000000000000000e-32 +/- 3e-76]",
+      "decimal_enclosure": {
+        "mid": "49889999999999999999999999999999999999999999999999999999999999999",
+        "rad": "2",
+        "exponent": "-96"
+      }
+    },
+    "exact_application_residual_with_recorded_comparison": {
+      "ball": "[8.93903180409457553684e-31 +/- 3.19e-52]",
+      "decimal_enclosure": {
+        "mid": "8939031804094575536838502136579342833051105449097605315654998737",
+        "rad": "1683945179029791361974325917114431304630273",
+        "exponent": "-94"
+      }
+    },
+    "unchanged_rounded_guard_exact_application_residual": {
+      "ball": "[8.95351069741864595562e-31 +/- 3.05e-52]",
+      "decimal_enclosure": {
+        "mid": "8953510697418645955621365897272908971736338395621253719663097856",
+        "rad": "1683945189414385079043981174175423963070465",
+        "exponent": "-94"
+      }
+    }
+  },
+  "actual_source_residual": null,
+  "actual_source_application_error": null,
+  "actual_K_application_error": null,
+  "complete_numerical_residual": null,
+  "new_consequential_complete_bound": false,
+  "physical_margin_closed": false,
+  "goal_complete": false,
+  "formal_verification": false
+}
