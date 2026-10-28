@@ -1,3 +1,78 @@
+# Original weak residual rejects finite structured output ranges
+
+2026-10-27 HST, E003/S169. The user resumed the unchanged full residual
+goal; status ACTIVE/INCOMPLETE. The previous turn was no progress. The
+[ordinary coupled rank test](current-structured-weak-rank-cancellation.md)
+and its [512-bit execution](../evidence/current-structured-weak-rank-cancellation.json)
+now give a consequential ORIGINAL energy-norm lower bound, rather than
+another conditional inverse ledger. No complete numerical solver is claimed.
+
+For every correction whose output lies in a fixed space of dimension n,
+the executed full-domain residual lower bounds are:
+
+| Maximum n | Lower bound on ||T_t-(I+T_t)F_n|| | Ratio to sufficient 1e-30 screen |
+| --- | --- | --- |
+| 1,000,000 | >1.2458826164e-27 | >1245.88 |
+| 10,000,000 | >1.2459049256e-29 | >12.459 |
+| 100,000,000 | >1.1980327272e-31 | >.11980; inconclusive for this screen |
+
+The SAME witnesses lower-bound the complete structured source residual
+||B_i-A_Q S_hat||_(Et->Et*). At n=100,000,000 the bound exceeds its
+sufficient 4.9887427328e-32 inner screen by >2.40147. A lower bound below
+a screen is not a success certificate. The targets are sufficient screens,
+not physical margins or necessary conditions for wormhole existence.
+
+The fields obey the original York equation and have compact admissible
+support, with zero outer/bolt traces and every transition retained. They
+are inside the actual paired mass/log domain, not arbitrary sources.
+Both original rows enter B=b* a^-1 b. The complete quantum energy includes
+the common regulator/logarithm, full angular and thermal sums, contacts
+and global returns through the accepted full-form comparison. No selected
+matter spectrum or smooth surrogate supplies the bound.
+
+The decisive gain is quantitative. Retaining the exact combination
+d1=-2 Delta T-6 Delta nu+12Q nu'/z cancels its artificial high derivatives
+on these returned fields. The full affine R2 second-vertex/density terms
+remain. At n=10,000,000 this reduces the COMPLETE energy upper expression
+from 3.430715e26 to 2.365503e18, a factor >1.45031e8. With the same sharper
+source lower bound, the original residual lower expression rises from
+8.59060e-38 to >1.24590e-29, changing the estimator decision. The complete
+structured B lower bound there is >2.9471906067e-11 in H units. The current
+energy upper ledger is dominated by the Einstein term, not the canceled
+R2 loss. These are bounds on the test space, not actual correction sizes.
+
+The rejection grants exact coefficients and quantum applications; adding
+precision cannot repair a solver confined to the same output range. It
+does not apply to P32 or an inverse with an analytic infinite-dimensional
+principal action. For a ten-million-dimensional correction plus an extra
+map L, meeting the complete screen requires ||L||Et->Et >8.56431e-30 by
+this test. That is a necessary size, not an upper error bound or proof
+that an analytic complement works. No source/application constant is
+replaced by a conditional ceiling.
+
+Decision: do not implement the structured solve as a fixed finite-output
+matrix at these ranks. Retain the construction and scalar-log reference,
+with an analytic principal/complementary action plus finite correction.
+One next calculation, PROPOSED: construct that complementary action and
+enclose its complete original weak residual, including its action on the
+same admissible high-frequency family and all numerical/quantum errors,
+against the unchanged inner screen. The finite correction cannot simply
+stand in for that action. The actual S/K errors and full upper residual
+certificate remain unknown; no signed G_t or admission gate closes.
+
+All 21 protected paths and the accepted strong-test sources match. The
+arithmetic supports the ordinary argument; it is not formal continuum
+verification. Original physical norms, P32, accepted results, closed audit
+and the limited fast-input screen remain unchanged.
+
+Remaining to-do list: full-range implemented S/K and complete residual
+with all application errors; signed G_t and every original source, graph,
+physical, mass/phase and admission budget; nonlinear existence/contraction,
+exact compatibility, physical matching, semiclassical validity/noise and
+all-sector stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Complete structured application remains a research impasse
 
 2026-10-27 HST, E003/S169. Goal tool status: BLOCKED, not complete.

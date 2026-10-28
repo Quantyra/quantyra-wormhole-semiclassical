@@ -1,0 +1,479 @@
+{
+  "started_utc": "2026-10-28T09:07:13.091794+00:00",
+  "input_sha256_before": {
+    "notes/current-structured-weak-rank-cancellation.md": "e36a1b7bb698cb672f2e4e559f4fcca511b4137e7f25ac2be7f334454d0b14b0",
+    "checks/current_structured_weak_rank_cancellation.py": "19eab280e61b71aa322a0a3a8ee29b2ca44f3b2325d811da00f17dbaf966cd30",
+    "notes/current-strong-residual-rank-test.md": "8e9e539b9d133a160da099cc1ab3f4b3e0b7400b3523c9b5d6310439d691aef3",
+    "checks/current_strong_residual_rank_test.py": "cbb5b5cf159f152debb2af94ab9398af7b52ad54b8052af8b55f2dd604e7bafd",
+    "evidence/current-strong-residual-rank-test-final.json": "c5ca24c11a95f5df584cb77953d6b5edfdd4f65789022a3b53774eba09d75986",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+    "evidence/current-canonical-heat-restoration-assembly.json": "bdb5aeb6007e8ced9ec1c85b0d3ffcff7f7e587438759d4d5bcd53e318432424",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Complete structured residual: retain the curvature cancellation before norms\n\n2026-10-27 HST, E003/S169. Ordinary argument before arithmetic. The user\nresumed the unchanged full-domain residual goal. The preceding turn was\nNO PROGRESS and recorded an implementation impasse. This calculation tests\nthe proposed finite-output implementation on the ACTUAL structured range,\nin the ORIGINAL energy residual norm, not the stronger H residual norm.\nThe full stable-wormhole objective, closed audit and accepted results stay.\n\n## Certificate under test and its domain\n\nKeep E_t with norm ell_t/N, N=|W_action| beta, R_t=ell_t/N and\nT_t=R_t^-1 B_N, B_N=b* a^-1 b/N. The positive self-adjoint T_t has\nnorm <=q_t=.338/(1-epsilon). The target remains a full implemented\nR_n=T_t-(I+T_t)F_n with all quantum/application errors; 1e-30 is the\nrecorded sufficient residual screen, not a necessary existence condition.\n\nTest fixed output ranks n=10^6,10^7,10^8. These are implementation classes,\nnot a finite selection of physical modes. All coefficients and quantum\nactions are granted exactness in the LOWER-bound test. A rejection would\ntherefore also apply to numerical implementations in the same range.\nThis does not test P32, which is a polynomial in a full operator and need\nnot have finite-dimensional range.\n\nUse exactly the paired mass/log completion and core of the accepted\nstrong-residual rank test. Pi_- psi=0 for D, Pi_+ phi=0 for its adjoint,\nthe complementary Robin square, original thermal spin structure, common\nregulator, exact ultraviolet logarithm, all angular/thermal sums and\ncoincidence contacts remain. York has J(0)=0 and (Q^2 J'/z^4)(z_h)=0;\nthe bolt is regular, not a finite wall. No nonlinear neighborhood or\nindependent phase control is asserted.\n\nFor M=n+1 cells in I=[.4,.6], h=.2/M, let phi_j=(1-x_j^2)^8 inside\nits cell and zero outside, x_j=2(z-center_j)/h. Set\n\n    m=(Q'/z^4)', K=Q(m phi'+2m' phi), w=z^4 m^2 phi,\n    J=K/Q, xi=K'-w, nu=xi/2+K/z, T=-xi-K'/2.           (1)\n\nThe accepted exact York and zero-moment identities apply. These fields\nare compact admissible directions INSIDE the full paired domain. They\nretain every cell transition and vanish at both physical ends, so their\noriginal boundary Hessians vanish by evaluation, not operator deletion.\nThere is no arbitrary-source surrogate. The full scalar inverse remains\nin B_N. The disjoint xi_j span an M-dimensional subspace U_M of E_t.\n\n## First loss: bound the actual source without a global coefficient ratio\n\nUse f_k=||partial_x^k (1-x^2)^8||L2(-1,1), k=0,...,5, from exact\npolynomial integration. Write xi=sum_(i=0)^2 a_i phi^(i), with a2=Qm>0,\nand put omega=2/h. On a coefficient interval [l,r] containing an entire\ncell, define\n\n    N_k(c)=sum_i sum_(j=0)^k binom(k,j)\n                 ||partial^j c_i||inf omega^(i+k-j) f_(i+k-j),\n    D0=(inf a2) omega^2 f2-||a1||inf omega f1-||a0||inf f0,\n    D1=(inf a2) omega^3 f3\n                 -sum_(i=0)^2 ||(xi')_i||inf omega^i f_i.\n\nExecute D0,D1>0. The leading coefficient of xi' is again a2. Exact\ntriangle inequalities, with no sampling, give\n\n    ||field^(k)||L2(dz)/||xi||H <= r^2 N_k(c)/D0=:L_field,k,\n    ||gradbar xi||H^2/||xi||H^2\n      >= (inf Q) l^4/(beta r^2) (D1/N0(xi))^2=:g_j,\n    ||gradbar xi||H/||xi||H <= sqrt(sup Q)/(sqrt(beta) l) L_xi,1,\n    ||Deltabar xi||H/||xi||H\n      <= [(sup Q)L_xi,2+||Q'-2Q/z||inf L_xi,1]/beta.    (2)\n\nHere H=L2(z^-4 dz). In the last inequality the z^2 in Deltabar cancels\nthe H weight BEFORE taking a norm. This uses both original normalizations.\nCover cell centers by 128 macro intervals, expand each by h/2 and clip\nto I. Every cell is contained in at least one resulting coefficient\ninterval. Whole-interval Laurent evaluation supplies all extrema; it does\nnot enumerate a million cells or substitute representative sample fields.\n\nLet A_j=6d L2_j^2+6.01 L1_j^2+24.01, d=D_R lambda. The complete scalar\nenergy obeys a(xi_j,xi_j)/N<=A_j||xi_j||H^2. Keep the exact main mixed\nidentity and its full known remainder K_rest:\n\n    b_main(xi_j,xi_j)/N >= p_j||xi_j||H^2,\n    p_j=4[C_v inf(tau/lambda)+d inf(tau/lambda) g_j\n                          -(d/2)||Deltabar(tau/lambda)||inf],\n    |b_rest(s,u)|/N<=K_rest ||s||A ||u||H.              (3)\n\nThe complete scalar row is local; different compact cells have zero\nscalar cross energy. For u=sum u_j, take the scalar trial\ns=sum (p_j/A_j)u_j. Its a energy is at most\nsum (p_j^2/A_j)||u_j||H^2 and its main mixed pairing is at least the\nsame sum. Thus the full dual main-source norm is >=sqrt(b0)||u||H,\nwhere b0=min_j p_j^2/A_j. Triangle inequality for the COMPLETE remainder\ngives, provided sqrt(b0)>K_rest,\n\n    B_N[u,u] >= b_* ||u||H^2,\n    b_*=(sqrt(b0)-K_rest)^2.                           (4)\n\nThis retains the full a^-1 and all global mixed/York returns. It is a\nvariational LOWER bound on the actual coupled source, not a scalar solve\napproximation. Use the minimum over the whole macro cover in (4).\n\n## Second loss: an exact two-row curvature cancellation\n\nThe previous independent-jet estimator bounded the full R2 Hessian using\nnu'',T'' separately. On (1) their combination has lower order. Put\n\n    d1=-2 Delta T-6 Delta nu+12Q nu'/z,\n    Dseed=-Q''+6Q'/z-12Q/z^2, Delta=(Q partial_z)'.\n\nSince T+3nu=-w/2+3K/z and xi'=K''-w', direct differentiation gives\n\n    d1=Q w''+(Q'-6Q/z)w'\n                +(24Q/z^2-6Q'/z)(K'-K/z).             (5)\n\nThe K'' terms cancel exactly. All terms in (5) are at most second\nderivatives of phi. This is an identity on the actual fields, including\ntheir cutoff transitions. No integration by parts, coordinate change,\nnew chart, altered domain or discarded off-shell acceleration is used.\n\nThe COMPLETE affine R2 diagonal from the accepted local generator is\n\n    alpha_R {16 T^2+4C d2+C^2[\n        4T^2 Dseed^2-8Dseed T d1+2d1^2+2Dseed d2]},\n    alpha_R=8pi c_R/(C B_radius^2), d2=-12Q(nu')^2.     (6)\n\nUse (5) to enclose ||d1||L2/||xi||H from its three coefficient functions\nbefore bounding (6). In particular, with Z=||Dseed||inf, Ld the new\nd1 norm ratio, and L_T,0,L_nu,1 from (2), the safe full R2 upper bound\nper H norm squared is\n\n    alpha_R/beta * [16 L_T,0^2\n      +(4C+2C^2 Z)12(sup Q)L_nu,1^2\n      +C^2(4Z^2 L_T,0^2+8Z L_T,0 Ld+2Ld^2)].          (7)\n\nThe original action sign is handled by this absolute upper bound.\nAll terms in (6), including the density/second-vertex term d2, stay.\nThe disappearance of the artificial fourth-derivative loss is algebraic,\nbut its quantitative consequence is tested in the COMPLETE energy below.\n\n## Complete quantum energy and the original residual consequence\n\nReuse the accepted whole-I coefficient matrices for Einstein, magnetic\nand Weyl terms; combine them with the sharper cell norm ratios (2).\nUse (7) for R2. Add the SAME a2, LLL and shared vacuum allowances and the\ncomplete positive geodesic logarithmic bound of the strong-rank proof:\n\n    Egeo=2(4C^2/q)/(525pi B_radius^2 beta) (sup Q)\n            [5A^2/8+3AD/2+D^2],\n    A=(sup Q)L_T,3, D=(3/2)||Q'||inf L_T,2\n                                      +(1/2)||Q''||inf L_T,1.\n\nThis bounds ALL angular levels and full geodesic/thermal returns, not a\nselected spectral set. The actual-to-geodesic error and retained transport\ngive\n\n    ||u||Et^2 <= E_* ||u||H^2,\n    E_*=(1+epsilon)/(1-.0022)\n          max_j(E_local,j+E_a2,j+E_LLL,j+E_vac,j+Egeo,j). (8)\n\nAll derivative-square bounds sum over disjoint supports. The nonlocal\nenergy is bounded by its full local third-flow-derivative majorant, so\ncross-cell quantum pairings are retained in (8). Source/core approximation\nis exactly that of the accepted strong-rank proof; no new smooth-seam\ntheorem is needed. The common regulator and contacts stay in its comparison.\n\nFor any F_n with fixed output dimension <=M-1, choose a nonzero\nu in U_M E_t-orthogonal to (I+T_t) range(F_n). Equations (4),(8) give\n\n    ||T_t-(I+T_t)F_n||Et->Et >= mu_M=b_*/E_*.          (9)\n\nFor S_hat with fixed output dimension <=M-1, impose instead the at most\nM-1 conditions <A_Q range(S_hat),u>=0. All inputs have chi_outer u=0,\nso B_i u=B_N u. The ORIGINAL weak structured residual satisfies\n\n    ||B_i-A_Q S_hat||Et->Et* >= mu_M.                 (10)\n\nThis is not the previous stronger H-residual rejection or the arbitrary-\nsource uniform-inverse obstruction. Execute (9) against 1e-30 and (10)\nagainst 4.9887427328e-32 at all three preselected ranks. A lower bound\nbelow a screen proves neither success nor attainability.\n\nIf a routine has additional output L outside its fixed range, (9) weakens\nby at most (1+q_t)||L||Et->Et. Thus an analytic complementary action must\nhave norm at least (mu_M-1e-30)/(1+q_t) when that expression is positive.\nThis is a necessary size, not an upper error certificate. Increasing\nprecision or correcting entries inside the same range cannot repair (9).\n\nDecision rule: if the test rejects practical finite ranges, retain the\nfull logarithmic principal action and require a constructed analytic\ncomplement with its complete weak defect. Do not infer that the inverse,\nP32 or the physical construction fails. If inconclusive, report that\nwithout treating a conditional cutoff or margin as an attained bound.\n\nThe proposed alternative remains a solver with analytic principal range\nand finite correction. It must pass the same original weak residual test;\nno implementation or quantum-application error is supplied by this rank\nargument. The complete signed residual goal is not reduced to this test.\n\nRemaining to-do list: implemented full-range S/K, their complete residual\nand all application errors; signed G_t and original physical/source/graph/\nmass/phase/admission budgets; nonlinear existence, exact compatibility,\nphysical matching, semiclassical validity/noise and all-sector stability;\nthe full stable semiclassical wormhole objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Full structured weak residual lower bounds; not an inverse implementation.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom fractions import Fraction\nfrom math import comb\nimport argparse\nimport importlib.util\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-structured-weak-rank-cancellation'\nBASELINE = Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\nINPUTS = ['notes/'+STEM+'.md', 'checks/current_structured_weak_rank_cancellation.py',\n          'notes/current-strong-residual-rank-test.md',\n          'checks/current_strong_residual_rank_test.py',\n          'evidence/current-strong-residual-rank-test-final.json',\n          'evidence/current-structured-source-graph-test.json',\n          'evidence/current-geodesic-two-sided-remainder.json',\n          'evidence/current-canonical-heat-restoration-assembly.json',\n          'evidence/current-spatial-inverse-output-test.json',\n          'evidence/current-coupled-mass-adjoint-runtime.json']\n\n\ndef sha(p):\n    return sha256(Path(p).read_bytes()).hexdigest()\n\n\ndef execute():\n    # The imported file only defines helpers after loading its pinned runtime;\n    # its scientific execution is guarded by __main__ and is not invoked.\n    spec = importlib.util.spec_from_file_location(\n        'accepted_rank_helpers', ROOT/'checks/current_strong_residual_rank_test.py')\n    old = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(old)\n    arb, ctx, dec, enc = old.arb, old.ctx, old.dec, old.enc\n    ctx.prec = 512\n    assert sha(sys.executable) == old.runtime['python_sha256']\n    for pkg in old.runtime['packages'].values():\n        for name, expected in pkg['files'].items():\n            assert sha(Path(pkg['root'])/name) == expected\n    accepted = json.loads((ROOT/INPUTS[4]).read_bytes())\n    assert accepted['status'] == 'finite_output_estimator_test_executed_full_application_unresolved'\n    assert all(sha(ROOT/p) == h for p, h in accepted['input_sha256_after'].items())\n    geo = old.receipt('current-geodesic-two-sided-remainder')\n    ep = old.pick(geo, 'actual_seed_correlated_endpoint')\n    gp = old.pick(geo, 'actual_finite_seed_two_sided_parameters')\n    rc = old.pick(old.receipt('current-canonical-heat-restoration-assembly'),\n                  'common_restoration_coefficients')\n    sc = old.receipt('current-structured-source-graph-test',\n                    'source_graph_bound_checked_complete_application_unresolved')['constants']\n    sp = old.receipt('current-spatial-inverse-output-test',\n                    'error_estimator_test_passed_signed_action_unresolved')['result']['constants']\n    add, mul, diff, shift, scale = old.add, old.mul, old.diff, old.shift, old.scale\n    fa, fm, fd, fs = old.fadd, old.fmul, old.fdiff, old.fscale\n    Q = {k: dec(v) for k, v in zip([0, 2, 3, 4, 5, 6], ep['Q_coefficients'])}\n    C, B2, lam, q = (dec(gp[k]) for k in ['C', 'B2', 'lambda_value', 'q'])\n    beta, eps = Q[0], dec(sp['epsilon'])\n    assert beta.overlaps(lam*B2/C)\n    d, Cv, Krest = (dec(sc[k]) for k in ['d', 'C_v', 'mixed_remainders_total'])\n    qt = arb('.338')/(1-eps)\n    ds, xx = Q[6]*C, lam*B2\n    tau = {4: (1+3*xx+ds)/xx, 5: -5*ds/xx, 6: arb(9)/2*ds/xx}\n    drift = add(diff(Q), scale(shift(Q, -1), -2))\n    dtau = scale(shift(add(mul(Q, diff(diff(tau))), mul(drift, diff(tau))), 2), 1/beta)\n    m = diff(shift(diff(Q), -4))\n    J = [scale(diff(m), 2), m]\n    K = fm(J, Q)\n    wfield = [shift(mul(m, m), 4)]\n    xi = fa(fd(K), fs(wfield, -1))\n    nu = fa(fs(xi, arb(1)/2), [shift(p, -1) for p in K])\n    T = fa(fs(xi, -1), fs(fd(K), -arb(1)/2))\n    coefficient = add(scale(shift(Q, -2), 24), scale(shift(diff(Q), -1), -6))\n    dfield = fa(fm(fd(fd(wfield)), Q),\n                fm(fd(wfield), add(diff(Q), scale(shift(Q, -1), -6))),\n                fm(fa(fd(K), fs([shift(p, -1) for p in K], -1)), coefficient))\n    assert len(dfield) == 3\n    # Ordinary argument (5) proves the exact identity; this supports its algebra.\n    sumfield = fa(T, fs(nu, 3))\n    direct = fa(fs(fa(fm(fd(fd(sumfield)), Q), fm(fd(sumfield), diff(Q))), -2),\n                fm(fd(nu), scale(shift(Q, -1), 12)))\n    difference = fa(direct, fs(dfield, -1))\n    assert all(v.contains(0) for p in difference for v in p.values())\n    Dseed = add(scale(diff(diff(Q)), -1), scale(shift(diff(Q), -1), 6),\n                scale(shift(Q, -2), -12))\n    f = []\n    for rational in accepted['result']['exact_bump_derivative_squared_norms']:\n        v = Fraction(rational)\n        f.append((arb(v.numerator)/v.denominator).sqrt())\n    matrices = {name: [[dec(v) for v in row] for row in mat]\n                for name, mat in accepted['result']['local_coefficient_absolute_matrices'].items()}\n    fields = {'xi': xi, 'nu': nu, 'T': T, 'dfield': dfield}\n    derivatives = {}\n    for name, co in fields.items():\n        derivatives[name] = []\n        for p in co:\n            row = [p]\n            for j in range(3):\n                row.append(diff(row[-1]))\n            derivatives[name].append(row)\n    xiprime = fd(xi)\n    alphaR = 8*arb.pi()*arb('1e22')/(C*B2)\n    s2 = 4*C*C/q\n    assert 2*C*C*(q+2)/(q+1)**2+2*C*C/(q+1) < s2\n    ranks = [1000000, 10000000, 100000000]\n    results = []\n    for rank in ranks:\n        M = rank+1\n        a, b = arb('.4'), arb('.6')\n        h = (b-a)/M\n        omega = 2/h\n        b0s, energy, oldenergy, ledgers = [], [], [], []\n        for j in range(128):\n            # Expand a cover of cell centers to cover each entire physical cell.\n            lo = a if j == 0 else a+(b-a)*j/128-h/2\n            hi = b if j == 127 else a+(b-a)*(j+1)/128+h/2\n            interval = lo.union(hi)\n            sup = lambda p: old.value(p, interval).abs_upper()\n            inf = lambda p: old.value(p, interval).lower()\n            cb = {name: [[sup(p) for p in row] for row in rows]\n                  for name, rows in derivatives.items()}\n            def nk(name, k):\n                return sum((comb(k, jj)*cb[name][i][jj]*omega**(i+k-jj)*f[i+k-jj]\n                            for i in range(3) for jj in range(k+1)), arb(0))\n            D0 = inf(xi[2])*omega**2*f[2]-sup(xi[1])*omega*f[1]-sup(xi[0])*f[0]\n            D1 = inf(xi[2])*omega**3*f[3]-sum(\n                (sup(xiprime[i])*omega**i*f[i] for i in range(3)), arb(0))\n            assert D0 > 0 and D1 > 0\n            jets = {name: [hi**2*nk(name, k)/D0 for k in range(4)]\n                    for name in ['xi', 'nu', 'T']}\n            qmax, qmin, q1, q2 = sup(Q), inf(Q), sup(diff(Q)), sup(diff(diff(Q)))\n            L1 = qmax.sqrt()*jets['xi'][1]/(beta.sqrt()*lo)\n            L2 = (qmax*jets['xi'][2]+sup(drift)*jets['xi'][1])/beta\n            glow = qmin*lo**4/(beta*hi**2)*(D1/nk('xi', 0))**2\n            Aup = 6*d*L2**2+arb('6.01')*L1**2+arb('24.01')\n            pm = 4*(Cv*inf(tau)+d*inf(tau)*glow-d*sup(dtau)/2)\n            assert pm > 0\n            b0s.append((pm**2/Aup).lower())\n            v = jets['nu'][:3]+jets['T'][:3]\n            local = {name: sum((mat[ii][jj]*v[ii]*v[jj] for ii in range(6)\n                               for jj in range(6)), arb(0))/beta\n                     for name, mat in matrices.items()}\n            lt0, lt1, lt2, lt3 = jets['T']\n            ld = hi**2*nk('dfield', 0)/D0\n            zz = sup(Dseed)\n            newR2 = alphaR/beta*(16*lt0**2+(4*C+2*C*C*zz)*12*qmax*jets['nu'][1]**2\n                +C*C*(4*zz**2*lt0**2+8*zz*lt0*ld+2*ld**2))\n            lap = qmax*lt2+q1*lt1\n            ea2 = dec(rc['beta2']).abs_upper()*(4*q2*q2*lt0**2+16*q2*lt0*lap+8*lap*lap)/beta\n            elll = dec(rc['LLL_Hessian_coefficient']).abs_upper()*qmax*lt1**2/beta\n            evac = dec(rc['vacuum_coefficient_upper'])*lt0**2/beta\n            aa, dd = qmax*lt3, arb('1.5')*q1*lt2+q2*lt1/2\n            egeo = 2*s2/(525*arb.pi()*B2*beta)*qmax*(arb(5)/8*aa*aa+arb('1.5')*aa*dd+dd*dd)\n            rest = local['Einstein']+local['magnetic']+local['Weyl']+ea2+elll+evac+egeo\n            pref = (1+eps)/(1-arb('.0022'))\n            energy.append((pref*(rest+newR2)).upper())\n            oldenergy.append((pref*(rest+local['R2'])).upper())\n            ledgers.append({'D0_lower': D0.lower(), 'D1_lower': D1.lower(),\n                            'R2_before': local['R2'].upper(), 'R2_after': newR2.upper(),\n                            'local_Einstein': local['Einstein'].upper(),\n                            'complete_nonlocal': egeo.upper(), 'complete_other':\n                            (local['magnetic']+local['Weyl']+ea2+elll+evac).upper()})\n        b0 = min(b0s)\n        assert b0.sqrt() > Krest\n        bstar = (b0.sqrt()-Krest)**2\n        eup, oldup = max(energy), max(oldenergy)\n        mu = bstar/eup\n        fullscreen, innerscreen = arb('1e-30'), arb('4.9887427328e-32')\n        vals = {'rank': arb(rank), 'cell_width': h, 'main_B_lower': b0,\n                'complete_B_lower': bstar, 'complete_Et_energy_upper': eup,\n                'independent_curvature_jet_energy_upper_same_new_source': oldup,\n                'energy_upper_expression_improvement': oldup/eup,\n                'complete_original_residual_lower': mu,\n                'complete_original_residual_lower_before_curvature_cancellation': bstar/oldup,\n                'ratio_to_full_sufficient_screen': mu/fullscreen,\n                'ratio_to_inner_sufficient_screen': mu/innerscreen,\n                'complement_norm_necessary_if_positive': (mu-fullscreen)/(1+qt)}\n        vals.update({'maximum_'+key: max(row[key] for row in ledgers) for key in\n                     ['R2_before', 'R2_after', 'local_Einstein', 'complete_nonlocal', 'complete_other']})\n        result = {'fixed_output_dimension': rank, 'cover_intervals': 128,\n                  'constants': {k: enc(v) for k, v in vals.items()},\n                  'full_original_residual_screen_rejected': bool(mu > fullscreen),\n                  'structured_inner_weak_screen_rejected': bool(mu > innerscreen)}\n        results.append(result)\n        print(json.dumps({'rank': rank, 'mu_lower': mu.str(18),\n                          'full_screen_rejected': result['full_original_residual_screen_rejected'],\n                          'inner_screen_rejected': result['structured_inner_weak_screen_rejected']}), flush=True)\n    return {'precision_bits': 512, 'rank_tests': results,\n            'complete_quantum_energy_retained': True,\n            'actual_domain_original_weak_residual_test': True,\n            'numerical_S_K_implemented': False, 'actual_upper_residual_certificate': None,\n            'physical_gate_closed': False, 'goal_complete': False,\n            'construction_obstruction': False}\n\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--output', default='evidence/'+STEM+'.json')\n    args = parser.parse_args()\n    output = ROOT/args.output\n    if output.exists():\n        raise SystemExit('Refusing to replace an immutable receipt.')\n    protected = json.loads(BASELINE.read_bytes())\n    before = {p: sha(ROOT/p) for p in INPUTS}\n    receipt = {'started_utc': datetime.now(timezone.utc).isoformat(),\n               'input_sha256_before': before,\n               'ordinary_argument_utf8': (ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n               'arithmetic_source_utf8': Path(__file__).read_text(encoding='utf-8'),\n               'previous_turn': 'no progress; resumed after implementation impasse'}\n    try:\n        assert all(sha(p) == h for p, h in protected.items())\n        receipt['result'] = execute()\n        receipt['status'] = 'original_weak_rank_test_executed_full_solver_unresolved'\n    except Exception as exc:\n        receipt['status'] = 'failed'\n        receipt['error'] = repr(exc)\n        raise\n    finally:\n        receipt['input_sha256_after'] = {p: sha(ROOT/p) for p in INPUTS}\n        receipt['inputs_unchanged'] = before == receipt['input_sha256_after']\n        receipt['protected_paths_unchanged'] = all(sha(p) == h for p, h in protected.items())\n        receipt['protected_path_count'] = len(protected)\n        receipt['finished_utc'] = datetime.now(timezone.utc).isoformat()\n        output.write_text(json.dumps(receipt, indent=2)+'\\n', encoding='utf-8', newline='\\n')\n    assert receipt['inputs_unchanged'] and receipt['protected_paths_unchanged']\n",
+  "previous_turn": "no progress; resumed after implementation impasse",
+  "result": {
+    "precision_bits": 512,
+    "rank_tests": [
+      {
+        "fixed_output_dimension": 1000000,
+        "cover_intervals": 128,
+        "constants": {
+          "rank": {
+            "ball": "1000000.000000000000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-58"
+            }
+          },
+          "cell_width": {
+            "ball": "[1.999998000001999998000001999998000002000e-7 +/- 2.02e-49]",
+            "decimal_enclosure": {
+              "mid": "19999980000019999980000019999980000019999980000019999980000019999",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          "main_B_lower": {
+            "ball": "[2.947146628983401799007541994916259000744e-11 +/- 3.69e-52]",
+            "decimal_enclosure": {
+              "mid": "29471466289834017990075419949162590007439632095925002530941969454",
+              "rad": "2",
+              "exponent": "-75"
+            }
+          },
+          "complete_B_lower": {
+            "ball": "[2.947146628983401799005714372302868982723e-11 +/- 2.04e-51]",
+            "decimal_enclosure": {
+              "mid": "29471466289834017990057143723028689827227964516177397081852277096",
+              "rad": "94758831422546378753",
+              "exponent": "-75"
+            }
+          },
+          "complete_Et_energy_upper": {
+            "ball": "[23655090696535595.67407471602156498423772 +/- 1.43e-24]",
+            "decimal_enclosure": {
+              "mid": "23655090696535595674074716021564984237718580180726121148292756626",
+              "rad": "2",
+              "exponent": "-48"
+            }
+          },
+          "independent_curvature_jet_energy_upper_same_new_source": {
+            "ball": "[34307479785305274948184.39754706745195498 +/- 1.17e-18]",
+            "decimal_enclosure": {
+              "mid": "34307479785305274948184397547067451954978838594369763723110259817",
+              "rad": "2",
+              "exponent": "-42"
+            }
+          },
+          "energy_upper_expression_improvement": {
+            "ball": "[1450321.210999616840427192557013052083155 +/- 4.50e-34]",
+            "decimal_enclosure": {
+              "mid": "14503212109996168404271925570130520831545507240799009233287085684",
+              "rad": "2",
+              "exponent": "-58"
+            }
+          },
+          "complete_original_residual_lower": {
+            "ball": "[1.245882616469961753989418889869848258028e-27 +/- 1.50e-67]",
+            "decimal_enclosure": {
+              "mid": "12458826164699617539894188898698482580278503270332386583553718205",
+              "rad": "40058536546699051009",
+              "exponent": "-91"
+            }
+          },
+          "complete_original_residual_lower_before_curvature_cancellation": {
+            "ball": "[8.590390921823806264673077200600380185861e-34 +/- 2.09e-74]",
+            "decimal_enclosure": {
+              "mid": "8590390921823806264673077200600380185861208318066729992012646805",
+              "rad": "27620458351523004417",
+              "exponent": "-97"
+            }
+          },
+          "ratio_to_full_sufficient_screen": {
+            "ball": "[1245.882616469961753989418889869848258028 +/- 1.50e-37]",
+            "decimal_enclosure": {
+              "mid": "12458826164699617539894188898698482580278503270332386563123688295",
+              "rad": "40059148081322524673",
+              "exponent": "-61"
+            }
+          },
+          "ratio_to_inner_sufficient_screen": {
+            "ball": "[24973.87985711368038395990484598452970014 +/- 2.84e-36]",
+            "decimal_enclosure": {
+              "mid": "24973879857113680383959904845984529700137162523700597913385670904",
+              "rad": "80299085698504327169",
+              "exponent": "-60"
+            }
+          },
+          "complement_norm_necessary_if_positive": {
+            "ball": "[9.304055429521388295885044019954022855216e-28 +/- 3.78e-68]",
+            "decimal_enclosure": {
+              "mid": "9304055429521388295885044019954022855215622773043637167452446232",
+              "rad": "29939572603522908161",
+              "exponent": "-91"
+            }
+          },
+          "maximum_R2_before": {
+            "ball": "[34231979726728120662430.76349111670650766 +/- 4.63e-18]",
+            "decimal_enclosure": {
+              "mid": "34231979726728120662430763491116706507655376157117643742822110652",
+              "rad": "1",
+              "exponent": "-42"
+            }
+          },
+          "maximum_R2_after": {
+            "ball": "[14322349.73521040444926469138838953172641 +/- 7.18e-34]",
+            "decimal_enclosure": {
+              "mid": "14322349735210404449264691388389531726410717615350408612308255082",
+              "rad": "2",
+              "exponent": "-57"
+            }
+          },
+          "maximum_local_Einstein": {
+            "ball": "[23603049473247700.52233470662669198776866 +/- 1.27e-24]",
+            "decimal_enclosure": {
+              "mid": "23603049473247700522334706626691987768658734732937602707192326079",
+              "rad": "2",
+              "exponent": "-48"
+            }
+          },
+          "maximum_complete_nonlocal": {
+            "ball": "[10221359.94487067436789388783182159208435 +/- 4.74e-33]",
+            "decimal_enclosure": {
+              "mid": "10221359944870674367893887831821592084354734919030628079930402900",
+              "rad": "2",
+              "exponent": "-57"
+            }
+          },
+          "maximum_complete_other": {
+            "ball": "[3.728969630456014196214090242022082062233 +/- 4.04e-40]",
+            "decimal_enclosure": {
+              "mid": "37289696304560141962140902420220820622334036050128441757224837976",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          }
+        },
+        "full_original_residual_screen_rejected": true,
+        "structured_inner_weak_screen_rejected": true
+      },
+      {
+        "fixed_output_dimension": 10000000,
+        "cover_intervals": 128,
+        "constants": {
+          "rank": {
+            "ball": "10000000.00000000000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-57"
+            }
+          },
+          "cell_width": {
+            "ball": "[1.999999800000019999998000000199999980000e-8 +/- 2.01e-50]",
+            "decimal_enclosure": {
+              "mid": "19999998000000199999980000001999999800000019999998000000199999980",
+              "rad": "1",
+              "exponent": "-72"
+            }
+          },
+          "main_B_lower": {
+            "ball": "[2.947190606701132496088239425669958601246e-11 +/- 3.66e-52]",
+            "decimal_enclosure": {
+              "mid": "29471906067011324960882394256699586012459634658689104961220592520",
+              "rad": "2",
+              "exponent": "-75"
+            }
+          },
+          "complete_B_lower": {
+            "ball": "[2.947190606701132496086411789420604430424e-11 +/- 2.86e-51]",
+            "decimal_enclosure": {
+              "mid": "29471906067011324960864117894206044304237146771775103994303315901",
+              "rad": "94759538408523038721",
+              "exponent": "-75"
+            }
+          },
+          "complete_Et_energy_upper": {
+            "ball": "[2365502010591854930.145261243761174707628 +/- 1.28e-22]",
+            "decimal_enclosure": {
+              "mid": "23655020105918549301452612437611747076278722121261290208905637588",
+              "rad": "2",
+              "exponent": "-46"
+            }
+          },
+          "independent_curvature_jet_energy_upper_same_new_source": {
+            "ball": "[343071479239025922558098119.8273845911460 +/- 1.85e-14]",
+            "decimal_enclosure": {
+              "mid": "34307147923902592255809811982738459114598151951190995933796322166",
+              "rad": "2",
+              "exponent": "-38"
+            }
+          },
+          "energy_upper_expression_improvement": {
+            "ball": "[145031150.9788945479807889278773109924956 +/- 1.59e-32]",
+            "decimal_enclosure": {
+              "mid": "14503115097889454798078892787731099249561583899926578347730542457",
+              "rad": "2",
+              "exponent": "-56"
+            }
+          },
+          "complete_original_residual_lower": {
+            "ball": "[1.245904925679491400360610771627370677848e-29 +/- 1.66e-70]",
+            "decimal_enclosure": {
+              "mid": "12459049256794914003606107716273706778480165084561516839635359913",
+              "rad": "40058954979592896513",
+              "exponent": "-93"
+            }
+          },
+          "complete_original_residual_lower_before_curvature_cancellation": {
+            "ball": "[8.590602206975520335324797634786268646361e-38 +/- 3.35e-78]",
+            "decimal_enclosure": {
+              "mid": "85906022069755203353247976347862686463606650428089091324150439179",
+              "rad": "276209316569190236161",
+              "exponent": "-102"
+            }
+          },
+          "ratio_to_full_sufficient_screen": {
+            "ball": "[12.45904925679491400360610771627370677848 +/- 1.66e-40]",
+            "decimal_enclosure": {
+              "mid": "12459049256794914003606107716273706778480165084561516767090145325",
+              "rad": "40059566582935846913",
+              "exponent": "-63"
+            }
+          },
+          "ratio_to_inner_sufficient_screen": {
+            "ball": "[249.7432704813403442459855627268658735210 +/- 3.94e-38]",
+            "decimal_enclosure": {
+              "mid": "24974327048134034424598556272686587352096067351171299869433729451",
+              "rad": "80299924625876320257",
+              "exponent": "-62"
+            }
+          },
+          "complement_norm_necessary_if_positive": {
+            "ball": "[8.564311851117275040064355542805460970464e-30 +/- 4.99e-70]",
+            "decimal_enclosure": {
+              "mid": "8564311851117275040064355542805460970463501557968248698610080412",
+              "rad": "29939885380221272065",
+              "exponent": "-93"
+            }
+          },
+          "maximum_R2_before": {
+            "ball": "[342316719624402160792141032.6513365756286 +/- 4.76e-14]",
+            "decimal_enclosure": {
+              "mid": "34231671962440216079214103265133657562864755163900554180145263671",
+              "rad": "1",
+              "exponent": "-38"
+            }
+          },
+          "maximum_R2_after": {
+            "ball": "[1432223577.986513899609446412995030630693 +/- 4.73e-31]",
+            "decimal_enclosure": {
+              "mid": "14322235779865138996094464129950306306934726818286736721695726628",
+              "rad": "2",
+              "exponent": "-55"
+            }
+          },
+          "maximum_local_Einstein": {
+            "ball": "[2360288471697128608.383004758207596367283 +/- 4.89e-23]",
+            "decimal_enclosure": {
+              "mid": "23602884716971286083830047582075963672829511767747856509913617628",
+              "rad": "2",
+              "exponent": "-46"
+            }
+          },
+          "maximum_complete_nonlocal": {
+            "ball": "[10221193098105.50302379055942500313029348 +/- 7.87e-28]",
+            "decimal_enclosure": {
+              "mid": "10221193098105503023790559425003130293480786897448540732720369511",
+              "rad": "2",
+              "exponent": "-51"
+            }
+          },
+          "maximum_complete_other": {
+            "ball": "[10.63977645568756857190011603262160570354 +/- 2.80e-39]",
+            "decimal_enclosure": {
+              "mid": "10639776455687568571900116032621605703537204722861611705278907447",
+              "rad": "2",
+              "exponent": "-63"
+            }
+          }
+        },
+        "full_original_residual_screen_rejected": true,
+        "structured_inner_weak_screen_rejected": true
+      },
+      {
+        "fixed_output_dimension": 100000000,
+        "cover_intervals": 128,
+        "constants": {
+          "rank": {
+            "ball": "100000000.0000000000000000000000000000000",
+            "decimal_enclosure": {
+              "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+              "rad": "0",
+              "exponent": "-56"
+            }
+          },
+          "cell_width": {
+            "ball": "[1.999999980000000199999998000000020000000e-9 +/- 2.01e-49]",
+            "decimal_enclosure": {
+              "mid": "19999999800000001999999980000000199999998000000019999999800000001",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          "main_B_lower": {
+            "ball": "[2.947195402423729621469774072720840413150e-11 +/- 1.35e-51]",
+            "decimal_enclosure": {
+              "mid": "29471954024237296214697740727208404131498655566207991315454862412",
+              "rad": "2",
+              "exponent": "-75"
+            }
+          },
+          "complete_B_lower": {
+            "ball": "[2.947195402423729621467946434984505238308e-11 +/- 2.14e-51]",
+            "decimal_enclosure": {
+              "mid": "29471954024237296214679464349845052383077866107487433781177788196",
+              "rad": "94759615649214889985",
+              "exponent": "-75"
+            }
+          },
+          "complete_Et_energy_upper": {
+            "ball": "[246002912565732814645.3591876964735970137 +/- 4.92e-20]",
+            "decimal_enclosure": {
+              "mid": "24600291256573281464535918769647359701365088360275118574441651087",
+              "rad": "2",
+              "exponent": "-44"
+            }
+          },
+          "independent_curvature_jet_energy_upper_same_new_source": {
+            "ball": "[3430711640094946718798183157990.808393663 +/- 2.61e-11]",
+            "decimal_enclosure": {
+              "mid": "34307116400949467187981831579908083936630260672217431086361292907",
+              "rad": "2",
+              "exponent": "-34"
+            }
+          },
+          "energy_upper_expression_improvement": {
+            "ball": "[13945817162.54375201421497684177017160556 +/- 4.62e-30]",
+            "decimal_enclosure": {
+              "mid": "13945817162543752014214976841770171605564615770347932944575206377",
+              "rad": "2",
+              "exponent": "-54"
+            }
+          },
+          "complete_original_residual_lower": {
+            "ball": "[1.198032727208556520444124542088519824238e-31 +/- 3.41e-71]",
+            "decimal_enclosure": {
+              "mid": "11980327272085565204441245420885198242376597400692119717473156565",
+              "rad": "38519712917741371393",
+              "exponent": "-95"
+            }
+          },
+          "complete_original_residual_lower_before_curvature_cancellation": {
+            "ball": "[8.590624079213385781945080610599812037329e-42 +/- 2.64e-82]",
+            "decimal_enclosure": {
+              "mid": "8590624079213385781945080610599812037328737058127921827790844789",
+              "rad": "27620979485674831873",
+              "exponent": "-105"
+            }
+          },
+          "ratio_to_full_sufficient_screen": {
+            "ball": "[0.1198032727208556520444124542088519824238 +/- 3.41e-41]",
+            "decimal_enclosure": {
+              "mid": "11980327272085565204441245420885198242376597400692119679379378279",
+              "rad": "38520301019023278081",
+              "exponent": "-65"
+            }
+          },
+          "ratio_to_inner_sufficient_screen": {
+            "ball": "[2.401472257392083011613511885462044053549 +/- 1.15e-40]",
+            "decimal_enclosure": {
+              "mid": "24014722573920830116135118854620440535491141774622240234062955547",
+              "rad": "77214446508708986881",
+              "exponent": "-64"
+            }
+          },
+          "complement_norm_necessary_if_positive": {
+            "ball": "[-6.578450876525742510878830686032496394441e-31 +/- 2.11e-71]",
+            "decimal_enclosure": {
+              "mid": "-65784508765257425108788306860324963944412109565999910474599335156",
+              "rad": "28789462618867761153",
+              "exponent": "-95"
+            }
+          },
+          "maximum_R2_before": {
+            "ball": "[3423164074241276130001961194415.200456873 +/- 4.18e-10]",
+            "decimal_enclosure": {
+              "mid": "34231640742412761300019611944152004568725824356079101562500000000",
+              "rad": "0",
+              "exponent": "-34"
+            }
+          },
+          "maximum_R2_after": {
+            "ball": "[143222241825.1112391848939821670310076760 +/- 2.98e-29]",
+            "decimal_enclosure": {
+              "mid": "14322224182511123918489398216703100767602975739815609758358812322",
+              "rad": "2",
+              "exponent": "-53"
+            }
+          },
+          "maximum_local_Einstein": {
+            "ball": "[236028679354647338371.2975596704631788918 +/- 4.56e-21]",
+            "decimal_enclosure": {
+              "mid": "23602867935464733837129755967046317889179544990962966721781413070",
+              "rad": "2",
+              "exponent": "-44"
+            }
+          },
+          "maximum_complete_nonlocal": {
+            "ball": "[10221176175002805151.43166696916121129654 +/- 2.82e-21]",
+            "decimal_enclosure": {
+              "mid": "10221176175002805151431666969161211296542810468600401598896852320",
+              "rad": "2",
+              "exponent": "-45"
+            }
+          },
+          "maximum_complete_other": {
+            "ball": "[69118.82746583438339652470975409573015606 +/- 1.26e-36]",
+            "decimal_enclosure": {
+              "mid": "6911882746583438339652470975409573015605874718332455177572059610",
+              "rad": "2",
+              "exponent": "-59"
+            }
+          }
+        },
+        "full_original_residual_screen_rejected": false,
+        "structured_inner_weak_screen_rejected": true
+      }
+    ],
+    "complete_quantum_energy_retained": true,
+    "actual_domain_original_weak_residual_test": true,
+    "numerical_S_K_implemented": false,
+    "actual_upper_residual_certificate": null,
+    "physical_gate_closed": false,
+    "goal_complete": false,
+    "construction_obstruction": false
+  },
+  "status": "original_weak_rank_test_executed_full_solver_unresolved",
+  "input_sha256_after": {
+    "notes/current-structured-weak-rank-cancellation.md": "e36a1b7bb698cb672f2e4e559f4fcca511b4137e7f25ac2be7f334454d0b14b0",
+    "checks/current_structured_weak_rank_cancellation.py": "19eab280e61b71aa322a0a3a8ee29b2ca44f3b2325d811da00f17dbaf966cd30",
+    "notes/current-strong-residual-rank-test.md": "8e9e539b9d133a160da099cc1ab3f4b3e0b7400b3523c9b5d6310439d691aef3",
+    "checks/current_strong_residual_rank_test.py": "cbb5b5cf159f152debb2af94ab9398af7b52ad54b8052af8b55f2dd604e7bafd",
+    "evidence/current-strong-residual-rank-test-final.json": "c5ca24c11a95f5df584cb77953d6b5edfdd4f65789022a3b53774eba09d75986",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+    "evidence/current-canonical-heat-restoration-assembly.json": "bdb5aeb6007e8ced9ec1c85b0d3ffcff7f7e587438759d4d5bcd53e318432424",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "inputs_unchanged": true,
+  "protected_paths_unchanged": true,
+  "protected_path_count": 21,
+  "finished_utc": "2026-10-28T09:07:49.380647+00:00"
+}
