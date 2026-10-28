@@ -1,3 +1,49 @@
+# Positive-time window reduced; signed application still unexecuted
+
+2026-10-27, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
+The [finite-window argument](current-quartic-positive-time-window.md) and
+[receipt](../evidence/current-quartic-positive-time-window.json) establish
+complete omitted tails for the SAME quartic column and original E_t*:
+
+- Heat time t>=.05: <3.552e-31.
+- Angular levels n>60 on t>=.001: <3.468e-33.
+- In the specified exact one-dimensional coefficient test, these tails
+  plus the accepted cap/transport cost total <8.162e-32.
+
+The remaining application is the signed geometric heat-Hessian density
+on .001<=t<=.05 with n=1,...,60. The omitted modes are bounded, not erased;
+the retained kernel must still include the FULL thermal spectrum, paired
+mass/log domain, contacts and actual finite/regular-bolt returns. Its
+original normalized L2 error must be <=1.820e-31 for that one-column
+sensitivity test. No complete multicolumn margin is inferred.
+
+A proved scalar weight makes uniform unnormalized kernel error <=.002
+and additional weighted numerical L2 error <=9e-32 sufficient for a
+conditional one-column residual contribution <9.716e-31. BOTH numerical
+errors are UNKNOWN. This is an accuracy contract, not an application
+certificate. The previously attained all-time envelope is unchanged.
+
+No signed window evaluation was run: the existing thermal ODE assumes
+compact directions and zero inner sensitivities, covers only n=1,2,
+and lacks the geometric action conversion for this trial. The heat
+parametrix code supplies majorants, not signed values of its exact capped
+kernel. Neither can be relabelled as the required evaluator. There is
+no new complete residual bound or admission result this turn.
+
+Decision: retain the direct paired geometric method. The next single
+calculation remains the actual signed window density with a certified
+L2 enclosure and all numerical errors. The tail reduction is executed;
+that evaluation is proposed. Preserve P32, original norms, the closed
+audit, all accepted results and the full stable-wormhole objective.
+
+Remaining to-do list: retained-window application and complete residual;
+every source/solve/application error, signed G_t and original coupled/
+admission budget; nonlinear existence, exact compatibility, matching,
+semiclassical validity/noise and all-sector stability; transport,
+preparation, separate creation and the full objective.
+
+---
+
 # Quartic quantum column: regulator gate closed, full residual open
 
 2026-10-27, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
