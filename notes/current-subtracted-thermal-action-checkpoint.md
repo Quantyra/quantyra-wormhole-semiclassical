@@ -1,3 +1,64 @@
+# Strong-residual finite-output implementation rejected
+
+2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.
+The preceding requested email review was no progress toward the full
+residual. The [executed actual-source rank test](current-strong-residual-rank-test.md)
+now rejects the proposed stronger-norm implementation class before a large
+matrix is assembled. This is a method decision, not a full certificate.
+
+For EVERY linear S_hat whose fixed output space has dimension at most
+one million and lies in Dom(A_Q), the complete strong residual satisfies
+beta_H=||B_H-A_Q S_hat||_(Et->H)>1.0286858190e-29. This exceeds the
+sufficient 4.964e-32 target by over 207.22. Even exact coefficients and
+exact quantum applications cannot fix that specified estimator at this
+rank. Its converted source debit alone exceeds 1.3893307489e-29, more
+than 13.89 times the ENTIRE sufficient 1e-30 full-residual screen.
+No reallocation of that screen rescues this strong-norm certificate.
+
+The ordinary argument constructs 1000001 independent compact admissible
+geometric directions with exact York moment cancellation, uses the FULL
+scalar inverse variationally, and upper-bounds their COMPLETE energy.
+The original paired mass/log domain, both equations, common regulator,
+UV logarithm, full angular/thermal sums, local contacts, cutoff transitions
+and regular bolt remain. The exact local action is differentiated in its
+original affine chart, without a stationarity or chart-reserve assumption.
+The [final 512-bit receipt](../evidence/current-strong-residual-rank-test-final.json)
+retains source hashes, exact polynomial integrals and whole-interval
+coefficient bounds. The initial receipt is preserved. All 21 protected
+paths are unchanged. This is ordinary analysis supported by arithmetic,
+not a million-column numerical solve or a Lean certificate.
+
+The failure concerns a strong auxiliary residual and a specified fixed
+output class. It is NOT a lower bound on the actual weak application error,
+signed output, or construction viability. On the same test space the
+original energy-dual lower bound is only 9.3888298768e-42, about 1.882e-10
+of its 4.989e-32 sufficient screen. This does not certify or prove the
+attainability of the weak estimate. The actual a_S, a_K, complete numerical
+residual and signed G_t remain UNKNOWN. No physical allowance closes.
+
+Decision: change the certification method to the original energy-dual
+residual with an analytic principal action retained on the infinite
+complement; do not assemble a finite-output strong-residual solver at
+this rank. Enlarging the matrix beyond one million dimensions has not
+been certified or recommended. Keep the full geodesic principal operator,
+accepted source/graph bound, controlled quartic column, P32 and closed audit.
+
+One next calculation, still PROPOSED: construct an approximation retaining
+that analytic complementary action and enclose its complete weak residual
+B-(ell_Q+B) S_hat, including scalar, quantum, return and arithmetic errors,
+against rho_S<=4.989e-32. The existing coercivity would convert this to
+a_S<5e-32 and source debit <6.705e-32. These remain conditional targets;
+the missing complementary-space upper estimate is not supplied by this test.
+The separate K application is still required for the full requested bound.
+
+Remaining to-do list: complete S/K implementation and application errors;
+full T_t-(I+T_t)F_n and signed G_t; all original coupled/admission, mass and
+independent-phase budgets; nonlinear admission/contraction and existence,
+exact compatibility, physical matching, semiclassical validity/noise,
+all-sector stability and the full stable semiclassical wormhole objective.
+
+---
+
 # Complete strong source bounded; numerical application still unresolved
 
 2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.

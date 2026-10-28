@@ -1,0 +1,1633 @@
+{
+  "started_utc": "2026-10-28T05:03:09.069620+00:00",
+  "previous_goal_turn": "No progress: requested email recheck supplied no new bound.",
+  "input_sha256_before": {
+    "notes/current-strong-residual-rank-test.md": "729b5740773ec0c504d9b50f32c43b57b3503af65b6c1a8c51015b145fa67df7",
+    "checks/current_strong_residual_rank_test.py": "270772eda62c8f7115527cc6d2eb158f6b58457f6921dab95812ef691334ceb2",
+    "notes/current-structured-source-graph-test.md": "12fed5fdc62b1c69d4f0ecdf6dbc18408c69d4e687499a051246b78045726b14",
+    "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+    "notes/current-canonical-heat-restoration-assembly.md": "f2a2b9d0c6c06ed49541f76b79e0b8fdd3a21885a25d89c044b99039aca4beed",
+    "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+    "notes/current-quartic-ritz-rank-test.md": "03faee79d37ba56677370cfc8308ef6b4b26883ddea6840d5ba126ae3cbd7db1",
+    "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+    "evidence/current-canonical-heat-restoration-assembly.json": "bdb5aeb6007e8ced9ec1c85b0d3ffcff7f7e587438759d4d5bcd53e318432424",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Test a finite-output implementation in the complete strong residual norm\n\n2026-10-27 HST, E003/S169. Ordinary argument frozen before execution.\nThe previous turn bounded the complete source and associated operator\ngraph, but did not implement S_Q. Test the proposed implementation class\nbefore assembling a large matrix: any linear map S_hat with output in a\nfixed space of dimension at most one million, certified through\n\n    beta_H=||B_H-A_Q S_hat||_(Et->H),\n    H=L2(z^-4 dz), A_Q=(ell_Q+B)/N in its H realization.       (1)\n\nThe safe sufficient target is beta_H<=4.964e-32. A coefficient or action\nrounding error cannot improve a lower bound valid for EVERY such output\nmap, even with exact coefficients. If its outputs are not in Dom(A_Q),\n(1) is unavailable already. An adaptive method with input-dependent\noutput spaces, or an analytic infinite-rank solver, is outside this test.\nThis is not a test of the full physical inverse's existence.\n\n## 1. Actual-domain fields, not arbitrary prescribed quantum sources\n\nKeep the actual paired mass/log closure E_t, original period/scale,\ncomplementary Dirac domains, common regulator, full angular/thermal sums,\ncontacts, cutoff transitions and regular bolt. Work on I=[.4,.6], where\nall relevant coefficients are smooth. No operator or boundary is replaced.\nSet M=1000001 and divide I into M disjoint cells of width h=.2/M.\nOn cell j let phi_j(z)=(1-x_j^2)^8 for |x_j|<1 and zero otherwise,\nwhere x_j=2(z-center_j)/h. Let Q be the actual full seed polynomial and\n\n    m=(Q'/z^4)', J=m phi'+2m' phi,\n    xi=(QJ)'-z^4 m^2 phi,\n    nu=xi/2+QJ/z, T=-xi-(QJ)'/2.                         (2)\n\nSince mJ=(m^2 phi)', the full York moment is zero. Direct differentiation\ngives the original York equation. J,xi,nu,T vanish outside their cell,\nincluding every endpoint trace needed here. In particular the original\nouter and bolt conditions hold, with zero mass/log coefficients on these\ntest directions. These compact directions lie INSIDE the actual domain;\nthey do not replace its nonzero phases or truncate physical matter modes.\nThe fields are C5 and have more than the required weak derivatives. Smooth\ncore approximation preserves the strict inequalities below. All cell\ntransitions are part of the fields and their derivative bounds.\n\nWrite xi=sum_(i=0)^2 a_i phi^(i). Exactly,\n\n    a2=Qm, a1=Q'm+3Qm', a0=2(Qm')'-z^4m^2.              (3)\n\nThe corresponding nu and T coefficient arrays follow from (2), without\nsolving a new boundary problem. Qm has a positive minimum on I. Thus\nthe nonzero disjoint fields xi_j span an M-dimensional real space U_M.\n\n## 2. Uniform bounds on this entire space\n\nLet f_k be the EXACT L2(-1,1) norms of the derivatives of (1-x^2)^8,\nk=0,...,5, computed by polynomial integration. Put w=2/h and\n\n    D0=(inf_I a2) w^2 f2 - ||a1||inf w f1 - ||a0||inf f0.\n\nFor each cell, ||xi||_L2(dz)>=sqrt(h/2) D0; execute D0>0.\nFor any of the three coefficient arrays c_i for xi,nu,T and k<=3,\n\n    N_k(c)=sum_i sum_(j=0)^k binom(k,j)\n                  ||c_i^(j)||inf w^(i+k-j) f_(i+k-j),\n    ||field^(k)||_L2(dz)/||xi||_H <= .6^2 N_k(c)/D0.       (4)\n\nThe same inequalities hold for every linear combination in U_M, since\nsupports are disjoint. For H derivative norms multiply (4) by .4^-2.\nFor xi itself use its exact H norm, not the loose k=0 bound.\nAll coefficient bounds are whole-interval enclosures, not samples.\n\nThe physical scalar Laplacian and gradient are exactly\n\n    Deltabar xi=(z^2/beta)[Q xi''+(Q'-2Q/z)xi'],\n    ||gradbar xi||_H^2=(1/beta) int Q z^-2 |xi'|^2 dz.\n\nUsing (4) gives upper constants L2,L1 for these two quantities per\nunit H norm. Cell Dirichlet Poincare gives the LOWER constant\n\n    ||gradbar xi||_H^2 >= g_low ||xi||_H^2,\n    g_low=(inf_I Q)*.4^4*pi^2/(beta*.6^2*h^2).            (5)\n\nNo estimate on an arbitrary-source correction is used. The scalar test\nin the original first equation is s=xi. The complete scalar energy obeys\n\n    a(xi,xi)/N <= A_up ||xi||_H^2,\n    A_up=6d L2^2+6.01 L1^2+24.01, d=D_R lambda.          (6)\n\nThe coefficients follow from the current exact scalar row and its fixed\ncurvature/coupling guards: ||K||<6.01 and\n|2R4+48lambda0|/lambda<24.01. This is a global physical scalar test\nwith compact support, not a replacement of a^-1 by a scalar matrix.\n\nLet tau_bar=tau/lambda, tau_min=inf_I tau_bar>0, and\nt2=||Deltabar tau_bar||inf. Integrate the main mixed row ONCE:\n\n    b_main(xi,xi)/N\n      =4 int [C_v tau_bar xi^2+d tau_bar |gradbar xi|^2\n                                    -(d/2)(Deltabar tau_bar)xi^2] dmu_H.\n\nThe COMPLETE nonleading mixed bound from the previous turn is\nK_rest<1.683278e-27 in A x H. It includes all curvature, magnetic,\noff-shell and nonlocal York-return terms, including their cross-cell\ncouplings. Consequently\n\n    b(xi,xi)/N >= b_low ||xi||_H^2,\n    b_low=4(C_v tau_min+d tau_min g_low-d t2/2)\n                                                    -K_rest sqrt(A_up).\n\nExecute b_low>0. Maximizing 2b(s,xi)/N-a(s,s)/N over the SINGLE scalar\ndirection s=c xi then proves the full coupled variational lower bound\n\n    (B_H xi,xi)_H >= b_low^2/A_up ||xi||_H^2=:B_low||xi||_H^2. (7)\n\nThe exact full scalar inverse remains in B_H. Restricting its variational\nmaximization supplies a lower bound, not an approximate scalar solve.\n\n## 3. Upper-bound the COMPLETE quantum energy before using dimension\n\nA local classical energy alone cannot upper-bound E_t. Use the accepted\ncomplete geodesic comparison ell_0 with |ell-ell_0|<=.0022 ell.\nIts physical quantum logarithm, full common local restoration and all\nstate/thermal/boundary differences stay in the comparison and its error.\n\nEvaluate ALL FOUR exact affine local densities (2)-(3) of\ncurrent-finite-local-action-assembly.md: Einstein/cosmological, magnetic,\nadditional R2 and Weyl. Use the six ORDINARY independent jets\n(nu,nu',nu'',T,T',T''). This retains the off-shell density terms directly;\nno unquantified chart-conversion reserve or stationarity assumption enters.\nFor each allocation alpha, interval differentiation of its displayed\ndensity gives its symmetric Hessian matrix H_alpha(z). If C_alpha,ij\nbounds |H_alpha,ij| on I, (4) gives\n\n    E_local <= (1/beta) sum_alpha sum_ij\n                            C_alpha,ij Ljet_i Ljet_j.    (8)\n\nHere the off-diagonal terms are counted twice, exactly as in the quadratic\nform v^t H v. The interval operation computes the second derivative, not\nthe Taylor coefficient divided by two. The negative physical action\nfactor is harmless for this absolute upper bound; beta is the ORIGINAL\nconversion from I/W to ell/N. This deliberately conservative local bound\nmay discard beneficial cancellations only after retaining the full\ntwo-row returned fields. Its looseness weakens, never strengthens, the\nresidual lower bound (11).\n\nAdd canonical a2, LLL and the shared bounded vacuum coefficient exactly\nonce, using (5)-(6) of current-canonical-heat-restoration-assembly.md.\nWith R=-Q'', Delta T=QT''+Q'T', their absolute quadratic bounds are\n|beta2|[4Rmax^2 LT0^2+16Rmax LT0 LDelta+8LDelta^2],\n|Gq/(6pi B_radius^2)| Qmax LT1^2, and U0 LT0^2,\nrespectively, all divided by beta. Set LDelta=Qmax LT2+Q1 LT1.\nThe vacuum value remains one bounded shared coefficient; it is not zero.\n\nThe fixed log z and F_eff retain their actual values; no scale is reset.\nThe original boundary Hessians vanish on (2), rather than being omitted\nfrom the operator. This assembly is only an upper energy bound for the\ntest space, not a signed evaluation of the full residual.\n\nThe remaining positive geodesic form has the already proved complete\nall-angular bound P_M[T]<=||X^3 T||^2/(525pi^2 M^4),\nsum d_n/M_n^4<4C^2/q. The actual full flow retains trapped trajectories\nand regular-bolt returns; the generator argument applies because these\ncompact C5 fields lie in Dom(X^3). With Qmax=||Q||inf, Q1,Q2 its\nfirst two derivative bounds, and the T-jet constants from (4), set\n\n    A=Qmax LT3, D=1.5 Q1 LT2+.5 Q2 LT1,\n    E_geo=2(4C^2/q)/(525pi B_radius^2 beta)\n                           *Qmax*(5A^2/8+1.5 A D+D^2).   (9)\n\nThis follows by angular integration of the exact third-flow derivative;\nit bounds the ENTIRE positive logarithmic form, not selected frequencies.\nCombining all terms and the actual retained-transport comparison gives\n\n    ||xi||_Et^2 <= E_up ||xi||_H^2,\n    E_up=(1+epsilon)/(1-.0022)\n                       *(E_local+E_a2+E_LLL+E_vacuum+E_geo). (10)\n\nDisjoint-support derivative norms bound every cross-cell quantum pairing\nthrough (9), so (10) is uniform on U_M, not only its individual basis fields.\n\n## 4. The actual finite-output residual lower bound\n\nFor a fixed output space of dimension at most M-1, choose nonzero\nu in U_M orthogonal in H to its A_Q image. Then\n\n    (u,(B_H-A_Q S_hat)u)_H=(u,B_H u)_H>=B_low||u||_H^2.\n\nCauchy--Schwarz and (10) prove\n\n    beta_H >= B_low/sqrt(E_up).                          (11)\n\nThis uses the actual structured source B_H and both original equations.\nIt is not an arbitrary-source counterexample and does not assert failure\nof the actual coupled inverse. The analogous full energy-dual test yields\nonly rho_S>=B_low/E_up. Compute BOTH bounds, their ratios to the actual\nsufficient screens, and the resulting floor of the proposed strong-norm\nupper estimator's complete source debit. Do not call that estimator floor\na lower bound on the physical output or on the full weak residual.\n\nIf (11) exceeds 4.964e-32, this rejects the SPECIFIED strong-residual\nfinite-output implementation at this rank, even with perfect arithmetic.\nA weak lower bound below its screen is NOT a weak certificate or proof\nof attainability. No degree, transport-depth or tail optimization is\nauthorized by that inconclusive comparison.\n\n## 5. Execution and decision boundary\n\nExecute the complete inequalities once with exact polynomial norm\nintegrals and 512-bit outward intervals, preserving every outcome.\nThe supporting arithmetic verifies this ordinary full-domain argument;\nit neither implements a million-column solver nor evaluates the signed\nquantum correction. The next method choice must use the resulting bounds.\n\nThe source regularity bound, P32, all accepted results and closed audit\nremain unchanged. No mass-column, original geometric admission, nonlinear\nexistence/contraction, compatibility, matching, semiclassical validity/noise\nor all-sector stability requirement is closed by a finite-output estimator\nfailure. An infinite-rank structured inverse and the original energy-dual\ncertificate remain distinct alternatives with their own unproved errors.\n\nRemaining to-do list: actual full-domain implementation and numerical\nquantum/source/solve/complement errors; complete residual and signed G_t;\nall original coupled/admission and physical/stability requirements.\n",
+  "arithmetic_source_utf8": "\"\"\"Full-source finite-output strong-residual test; not an inverse implementation.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nfrom fractions import Fraction\nfrom math import comb\nimport argparse\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-strong-residual-rank-test'\nRUNTIME = ROOT / 'evidence/current-coupled-mass-adjoint-runtime.json'\nruntime = json.loads(RUNTIME.read_bytes())\nsys.path.insert(0, str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb, ctx\n\nINPUTS = [\n    'notes/'+STEM+'.md', 'checks/current_strong_residual_rank_test.py',\n    'notes/current-structured-source-graph-test.md',\n    'notes/current-finite-local-action-assembly.md',\n    'notes/current-canonical-heat-restoration-assembly.md',\n    'notes/current-seed-full-hessian-realization.md',\n    'notes/current-quartic-ritz-rank-test.md',\n    'notes/current-geodesic-two-sided-remainder.md',\n    'evidence/current-structured-source-graph-test.json',\n    'evidence/current-geodesic-two-sided-remainder.json',\n    'evidence/current-canonical-heat-restoration-assembly.json',\n    'evidence/current-spatial-inverse-output-test.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json',\n]\nBASELINE = Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\n\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\n\ndef dec(v):\n    d = v['decimal_enclosure']\n    return arb(int(d['mid']), int(d['rad']))*arb(10)**int(d['exponent'])\n\n\ndef enc(v):\n    m, r, e = v.mid_rad_10exp(60)\n    return {'ball': v.str(40), 'decimal_enclosure':\n            {'mid': str(m), 'rad': str(r), 'exponent': str(e)}}\n\n\ndef receipt(stem, status='passed'):\n    obj = json.loads((ROOT/'evidence'/(stem+'.json')).read_bytes())\n    run = obj.get('runs', [obj])[-1]\n    assert run['status'] == status\n    return run\n\n\ndef pick(run, kind):\n    return next(x for x in run['numerics'] if x['kind'] == kind)\n\n\ndef add(*ps):\n    out = {}\n    for p in ps:\n        for k, v in p.items():\n            out[k] = out.get(k, arb(0))+v\n    return {k: v for k, v in out.items() if not v.is_zero()}\n\n\ndef scale(p, x):\n    return {k: v*x for k, v in p.items()}\n\n\ndef mul(p, q):\n    out = {}\n    for i, a in p.items():\n        for j, b in q.items():\n            out[i+j] = out.get(i+j, arb(0))+a*b\n    return out\n\n\ndef diff(p):\n    return {k-1: k*v for k, v in p.items() if k}\n\n\ndef shift(p, n):\n    return {k+n: v for k, v in p.items()}\n\n\ndef value(p, z):\n    return sum((v*z**k for k, v in p.items()), arb(0))\n\n\ndef fadd(*cs):\n    return [add(*(c[i] for c in cs if i < len(c))) for i in range(max(map(len, cs)))]\n\n\ndef fscale(c, x):\n    return [scale(p, x) for p in c]\n\n\ndef fmul(c, p):\n    return [mul(q, p) for q in c]\n\n\ndef fdiff(c):\n    return fadd([diff(p) for p in c], [{}]+c)\n\n\nclass Jet:\n    \"\"\"Value, two directional derivatives, mixed derivative: outward Arb.\"\"\"\n    def __init__(self, v=0, i=0, j=0, ij=0):\n        self.v, self.i, self.j, self.ij = map(arb, [v, i, j, ij])\n\n    @staticmethod\n    def lift(x):\n        return x if isinstance(x, Jet) else Jet(x)\n\n    def __add__(self, x):\n        x = Jet.lift(x)\n        return Jet(self.v+x.v, self.i+x.i, self.j+x.j, self.ij+x.ij)\n    __radd__ = __add__\n\n    def __neg__(self):\n        return Jet(-self.v, -self.i, -self.j, -self.ij)\n\n    def __sub__(self, x):\n        return self+-Jet.lift(x)\n\n    def __rsub__(self, x):\n        return Jet.lift(x)+-self\n\n    def __mul__(self, x):\n        x = Jet.lift(x)\n        return Jet(self.v*x.v, self.i*x.v+self.v*x.i,\n                   self.j*x.v+self.v*x.j,\n                   self.ij*x.v+self.i*x.j+self.j*x.i+self.v*x.ij)\n    __rmul__ = __mul__\n\n    def __truediv__(self, x):\n        return self*(1/arb(x))\n\n    def __pow__(self, n):\n        assert isinstance(n, int) and n >= 0\n        out = Jet(1)\n        for _ in range(n):\n            out = out*self\n        return out\n\n    def exp(self):\n        ev = self.v.exp()\n        return Jet(ev, ev*self.i, ev*self.j, ev*(self.ij+self.i*self.j))\n\n\ndef local_hessian(i, j, z, Q, Q1, Q2, C, B2, q):\n    v = [Jet(0, int(i == k), int(j == k)) for k in range(6)]\n    n, n1, n2, t, t1, t2 = v\n    phi, phi1, phi2 = -z.log()+n, -1/z+n1, 1/z**2+n2\n    L = -Q2-2*(Q*t2+Q1*t1)\n    M = Q*phi2+Q1*phi1\n    P = Q*phi1**2\n    D = L-6*M-6*P\n    en2, en4, et2, etm2 = (2*n).exp(), (4*n).exp(), (2*t).exp(), (-2*t).exp()\n    LE = en2*D/(2*z**2)+en2*et2/(C*z**2)+3*arb(2000)**-10*B2/C*en4*et2/z**4\n    LEM = -arb.pi()*q**2*arb(2000)**8/(C*B2)*et2\n    LR = 8*arb.pi()*arb('1e22')/(C*B2)*(4*et2+4*C*D+C*C*etm2*D**2)\n    bracket = phi*L**2/60+L*M/30-M**2/10+L*P/30-7*M*P/90-7*P**2/180\n    LW = (C*C*etm2*bracket-C*phi*L/18+(arb(1)/15-q*q/3)*phi*et2-C*P/18)/(2*arb.pi()*C*B2)\n    return dict(Einstein=LE.ij, magnetic=LEM.ij, R2=LR.ij, Weyl=LW.ij)\n\n\ndef execute():\n    ctx.prec = 512\n    assert digest(Path(sys.executable)) == runtime['python_sha256']\n    for pkg in runtime['packages'].values():\n        for name, expected in pkg['files'].items():\n            assert digest(Path(pkg['root'])/name) == expected\n    geo = receipt('current-geodesic-two-sided-remainder')\n    ep = pick(geo, 'actual_seed_correlated_endpoint')\n    gp = pick(geo, 'actual_finite_seed_two_sided_parameters')\n    rc = pick(receipt('current-canonical-heat-restoration-assembly'), 'common_restoration_coefficients')\n    sc = receipt('current-structured-source-graph-test',\n                 'source_graph_bound_checked_complete_application_unresolved')['constants']\n    sp = receipt('current-spatial-inverse-output-test',\n                 'error_estimator_test_passed_signed_action_unresolved')['result']['constants']\n    Q = {k: dec(v) for k, v in zip([0, 2, 3, 4, 5, 6], ep['Q_coefficients'])}\n    C, B2, lam = dec(gp['C']), dec(gp['B2']), dec(gp['lambda_value'])\n    beta, q = Q[0], dec(gp['q'])\n    epsilon = dec(sp['epsilon'])\n    d, Cv, Krest = dec(sc['d']), dec(sc['C_v']), dec(sc['mixed_remainders_total'])\n    assert beta.overlaps(lam*B2/C) and arb('.99') < dec(ep['z_h'])\n    assert 0 < epsilon < arb('1.227e-74')\n    ds, x = Q[6]*C, lam*B2\n    assert abs(ds) < arb('8.6e-19')\n    m = diff(shift(diff(Q), -4))\n    J = [scale(diff(m), 2), m]\n    QJ = fmul(J, Q)\n    Ap = fdiff(QJ)\n    xi = fadd(Ap, [scale(shift(mul(m, m), 4), -1)])\n    nu = fadd(fscale(xi, arb(1)/2), [shift(p, -1) for p in QJ])\n    T = fadd(fscale(xi, -1), fscale(Ap, -arb(1)/2))\n    # The original York differential equation as a Laurent/jet identity.\n    qqjp = fmul(fdiff(J), mul(Q, Q))\n    rhs = fmul(fadd([shift(scale(p, 4), -1) for p in xi], fscale(fdiff(xi), -1)), Q)\n    york = fadd(fscale(fdiff(qqjp), -1), [shift(scale(p, 4), -1) for p in qqjp], fscale(rhs, -1))\n    assert all(v.contains(0) for p in york for v in p.values())\n    moment = fadd(fmul(J, m), fscale(fdiff([mul(m, m)]), -1))\n    assert all(v.contains(0) for p in moment for v in p.values())\n\n    # Exact polynomial integration for each bump-derivative norm.\n    p = {2*i: Fraction((-1)**i*comb(8, i)) for i in range(9)}\n    f, exact = [], []\n    for k in range(6):\n        moment2 = sum((a*b*Fraction(2, i+j+1) for i, a in p.items()\n                       for j, b in p.items() if (i+j) % 2 == 0), Fraction(0))\n        assert moment2 > 0\n        exact.append(str(moment2))\n        f.append((arb(moment2.numerator)/moment2.denominator).sqrt())\n        p = {i-1: i*a for i, a in p.items() if i}\n\n    a, b, cells = arb('.4'), arb('.6'), 128\n    # The rational endpoints .4+j/(640) are represented by interval arithmetic.\n    intervals = []\n    for j in range(cells):\n        lo, hi = a+(b-a)*j/cells, a+(b-a)*(j+1)/cells\n        intervals.append(lo.union(hi))\n    def sup(p):\n        return max(value(p, z).abs_upper() for z in intervals)\n    def inf(p):\n        return min(value(p, z).lower() for z in intervals)\n    bounds = {}\n    for name, c in [('xi', xi), ('nu', nu), ('T', T)]:\n        bounds[name] = []\n        for ci in c:\n            row, cur = [], ci\n            for j in range(4):\n                row.append(sup(cur))\n                cur = diff(cur)\n            bounds[name].append(row)\n    Mdim = 1000001\n    h = (b-a)/Mdim\n    w = 2/h\n    a2low = inf(xi[2])\n    D0 = a2low*w*w*f[2]-bounds['xi'][1][0]*w*f[1]-bounds['xi'][0][0]*f[0]\n    assert a2low > 0 and D0 > 0\n    dz = {}\n    for name, cs in bounds.items():\n        dz[name] = []\n        for k in range(4):\n            nk = sum((comb(k, j)*cs[i][j]*w**(i+k-j)*f[i+k-j]\n                      for i in range(3) for j in range(k+1)), arb(0))\n            dz[name].append(b*b*nk/D0)\n    RH1, RH2 = dz['xi'][1]/a**2, dz['xi'][2]/a**2\n    Qmax, Qmin, Q1max, Q2max = sup(Q), inf(Q), sup(diff(Q)), sup(diff(diff(Q)))\n    drift = add(diff(Q), scale(shift(Q, -1), -2))\n    L1 = Qmax.sqrt()*b/beta.sqrt()*RH1\n    L2 = b*b/beta*(Qmax*RH2+sup(drift)*RH1)\n    glow = Qmin*a**4*arb.pi()**2/(beta*b*b*h*h)\n    tau = {4: (1+3*x+ds)/x, 5: -5*ds/x, 6: arb(9)/2*ds/x}\n    taulow = inf(tau)\n    Dt = scale(shift(add(mul(Q, diff(diff(tau))), mul(drift, diff(tau))), 2), 1/beta)\n    t2 = sup(Dt)\n    # Check the scalar coefficient guards used in the ordinary upper bound.\n    Rbar = {0: arb(-12), 5: 4*ds/x, 6: -6*ds/x}\n    ee = lam/(60*arb.pi())\n    Kupper = 6+(2*d+11*ee/6)*sup(Rbar)+(22*ee/3)*7\n    Vupper = sup(add(scale(Rbar, 2), {0: 48*arb(2000)**-10/lam}))\n    assert Kupper < arb('6.01') and Vupper < arb('24.01')\n    Aup = 6*d*L2**2+arb('6.01')*L1**2+arb('24.01')\n    blow = 4*(Cv*taulow+d*taulow*glow-d*t2/2)-Krest*Aup.sqrt()\n    assert Qmin > 0 and taulow > 0 and blow > 0\n    Blow = blow**2/Aup\n\n    # Complete affine local Hessians on an interval cover; no point sampling.\n    labels = ['Einstein', 'magnetic', 'R2', 'Weyl']\n    matrices = {name: [[arb(0) for _ in range(6)] for _ in range(6)] for name in labels}\n    for z in intervals:\n        q0, q1, q2 = value(Q,z), value(diff(Q),z), value(diff(diff(Q)),z)\n        for i in range(6):\n            for j in range(i,6):\n                co = local_hessian(i,j,z,q0,q1,q2,C,B2,q)\n                for name in labels:\n                    bound = co[name].abs_upper()\n                    matrices[name][i][j] = max(matrices[name][i][j],bound)\n                    matrices[name][j][i] = matrices[name][i][j]\n    jets = dz['nu'][:3]+dz['T'][:3]\n    local = {name: sum((mat[i][j]*jets[i]*jets[j] for i in range(6) for j in range(6)),arb(0))/beta\n             for name,mat in matrices.items()}\n    lt0, lt1, lt2, lt3 = dz['T']\n    ld = Qmax*lt2+Q1max*lt1\n    ea2 = dec(rc['beta2']).abs_upper()*(4*Q2max**2*lt0**2+16*Q2max*lt0*ld+8*ld**2)/beta\n    elll = dec(rc['LLL_Hessian_coefficient']).abs_upper()*Qmax*lt1**2/beta\n    evac = dec(rc['vacuum_coefficient_upper'])*lt0**2/beta\n    A, D = Qmax*lt3, arb('1.5')*Q1max*lt2+Q2max*lt1/2\n    s2 = 4*C*C/q\n    integraltest = 2*C*C*(q+2)/(q+1)**2+2*C*C/(q+1)\n    assert integraltest < s2\n    egeo = 2*s2/(525*arb.pi()*B2*beta)*Qmax*(arb(5)/8*A*A+arb('1.5')*A*D+D*D)\n    Eup = (1+epsilon)/(1-arb('.0022'))*(sum(local.values(),arb(0))+ea2+elll+evac+egeo)\n    stronglower, weaklower = Blow/Eup.sqrt(), Blow/Eup\n    strongscreen, weakscreen = arb('4.964e-32'), arb('4.989e-32')\n    multiplier = dec(sc['strong_residual_to_COMPLETE_residual_multiplier'])\n    constants = dict(M=arb(Mdim), h=h, D0=D0, a2_lower=a2low, Q_lower=Qmin,\n                     tau_lower=taulow, scalar_K_upper=Kupper, scalar_V_upper=Vupper,\n                     scalar_L1_upper=L1, scalar_L2_upper=L2, gradient_squared_lower=glow,\n                     scalar_energy_upper=Aup, mixed_main_lower=blow+Krest*Aup.sqrt(),\n                     mixed_remainder_debit=Krest*Aup.sqrt(), complete_mixed_lower=blow,\n                     complete_B_lower=Blow, canonical_a2_upper=ea2,\n                     canonical_LLL_upper=elll, shared_vacuum_upper=evac,\n                     full_angular_sum_upper=s2, complete_nonlocal_energy_upper=egeo,\n                     complete_Et_energy_upper=Eup,\n                     strong_residual_lower_bound=stronglower,\n                     energy_dual_residual_lower_bound=weaklower,\n                     strong_ratio_to_sufficient_screen=stronglower/strongscreen,\n                     weak_ratio_to_sufficient_screen=weaklower/weakscreen,\n                     strong_estimator_complete_source_debit_floor=multiplier*stronglower,\n                     conditional_complete_source_allocation=multiplier*strongscreen)\n    constants.update({'local_'+k+'_energy_upper':v for k,v in local.items()})\n    return dict(constants={k:enc(v) for k,v in constants.items()},\n                exact_bump_derivative_squared_norms=exact,\n                ordinary_jet_norm_comparisons={k:[enc(x) for x in v] for k,v in dz.items()},\n                local_coefficient_absolute_matrices={k:[[enc(x) for x in row] for row in mat] for k,mat in matrices.items()},\n                interval_cover_cells=cells, maximum_fixed_output_dimension=Mdim-1,\n                original_York_identity_checked=True, compact_York_moment_checked=True,\n                strong_finite_output_screen_rejected=bool(stronglower > strongscreen),\n                weak_test_rejects_screen=bool(weaklower > weakscreen),\n                actual_S_application_error=None, actual_K_application_error=None,\n                actual_complete_numerical_residual=None,\n                certifies_inverse_or_wormhole_nonexistence=False)\n\n\ndef main():\n    parser=argparse.ArgumentParser()\n    parser.add_argument('--output', default='evidence/'+STEM+'.json')\n    args=parser.parse_args()\n    output=ROOT/args.output\n    if output.exists():\n        raise RuntimeError('Receipts are immutable; choose a fresh output path.')\n    protected=json.loads(BASELINE.read_bytes())\n    verify=lambda: all(digest(Path(p))==h for p,h in protected.items())\n    assert verify()\n    before={p:digest(ROOT/p) for p in INPUTS}\n    data={'started_utc':datetime.now(timezone.utc).isoformat(),\n          'previous_goal_turn':'No progress: requested email recheck supplied no new bound.',\n          'input_sha256_before':before,\n          'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n          'arithmetic_source_utf8':Path(__file__).read_text(encoding='utf-8')}\n    try:\n        data['result']=execute()\n        data['status']='finite_output_estimator_test_executed_full_application_unresolved'\n    except Exception as exc:\n        data['status']='failed'\n        data['error']=repr(exc)\n        raise\n    finally:\n        data['input_sha256_after']={p:digest(ROOT/p) for p in INPUTS}\n        data['inputs_unchanged']=before==data['input_sha256_after']\n        data['protected_paths_unchanged']=verify()\n        data['protected_path_count']=len(protected)\n        data['finished_utc']=datetime.now(timezone.utc).isoformat()\n        output.write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n    assert data['inputs_unchanged'] and data['protected_paths_unchanged']\n    for k,v in data['result']['constants'].items():\n        print(k+': '+v['ball'])\n    print('Receipt: '+str(output))\n\n\nif __name__=='__main__':\n    main()\n",
+  "result": {
+    "constants": {
+      "M": {
+        "ball": "1000001.000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000010000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-58"
+        }
+      },
+      "h": {
+        "ball": "[1.999998000001999998000001999998000002000e-7 +/- 2.02e-49]",
+        "decimal_enclosure": {
+          "mid": "19999980000019999980000019999980000019999980000019999980000019999",
+          "rad": "2",
+          "exponent": "-71"
+        }
+      },
+      "D0": {
+        "ball": "[1097701877907891.437235845391783420424355 +/- 2.48e-25]",
+        "decimal_enclosure": {
+          "mid": "10977018779078914372358453917834204243552477478961767675402734270",
+          "rad": "2",
+          "exponent": "-49"
+        }
+      },
+      "a2_lower": {
+        "ball": "[1.123745768304666398368276326596647414794 +/- 3.50e-40]",
+        "decimal_enclosure": {
+          "mid": "11237457683046663983682763265966474147943496367126464932345216709",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "Q_lower": {
+        "ball": "[0.08679298386171730488251794480406011544096 +/- 3.15e-42]",
+        "decimal_enclosure": {
+          "mid": "8679298386171730488251794480406011544096314303343088184295212809",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "tau_lower": {
+        "ball": "[0.07679647061415560028830913468832517028261 +/- 4.82e-42]",
+        "decimal_enclosure": {
+          "mid": "7679647061415560028830913468832517028260518764703437468361956730",
+          "rad": "2",
+          "exponent": "-65"
+        }
+      },
+      "scalar_K_upper": {
+        "ball": "[6.000000070685834705770347865409476379410 +/- 2.49e-40]",
+        "decimal_enclosure": {
+          "mid": "60000000706858347057703478654094763794102488528136457938992539627",
+          "rad": "1447645957209456641",
+          "exponent": "-64"
+        }
+      },
+      "scalar_V_upper": {
+        "ball": "[23.99999999999999999999999999999930000896 +/- 2.80e-39]",
+        "decimal_enclosure": {
+          "mid": "23999999999999999999999999999999300008957204772257948946994421934",
+          "rad": "2",
+          "exponent": "-63"
+        }
+      },
+      "scalar_L1_upper": {
+        "ball": "[469968239.735951231843427230201 +/- 1.60e-22]",
+        "decimal_enclosure": {
+          "mid": "46996823973595123184342723020099322710829817410422358994981317146",
+          "rad": "15300272622369594183322411340922881",
+          "exponent": "-56"
+        }
+      },
+      "scalar_L2_upper": {
+        "ball": "[18524190177513465.3070639893520 +/- 2.26e-14]",
+        "decimal_enclosure": {
+          "mid": "18524190177513465307063989352010521496245562303793674286440803764",
+          "rad": "12061276031612042377336741739626497",
+          "exponent": "-48"
+        }
+      },
+      "gradient_squared_lower": {
+        "ball": "[9137217373316.3705317728597788 +/- 3.01e-17]",
+        "decimal_enclosure": {
+          "mid": "9137217373316370531772859778775906758847964244339961287222351415",
+          "rad": "5949329108199475492841523035242497",
+          "exponent": "-51"
+        }
+      },
+      "scalar_energy_upper": {
+        "ball": "[6063885001880945746943607.61579 +/- 8.02e-6]",
+        "decimal_enclosure": {
+          "mid": "60638850018809457469436076157898822807689478881923528479636683836",
+          "rad": "78965054065278478449376379264827393",
+          "exponent": "-40"
+        }
+      },
+      "mixed_main_lower": {
+        "ball": "[8267.08677664550371987104024376 +/- 8.13e-27]",
+        "decimal_enclosure": {
+          "mid": "8267086776645503719871040243757254217979687841306210379515495900",
+          "rad": "5382578890791609742436262534447105",
+          "exponent": "-60"
+        }
+      },
+      "mixed_remainder_debit": {
+        "ball": "[4.1450629811345240857618e-15 +/- 6.66e-38]",
+        "decimal_enclosure": {
+          "mid": "41450629811345240857618450998472289375975485930550315860022310866",
+          "rad": "214913828034742711527954029536343310204929",
+          "exponent": "-79"
+        }
+      },
+      "complete_mixed_lower": {
+        "ball": "[8267.08677664550371572597726262 +/- 8.12e-27]",
+        "decimal_enclosure": {
+          "mid": "8267086776645503715725977262622730132217842741458981441917947307",
+          "rad": "5382578881120203185519229136797697",
+          "exponent": "-60"
+        }
+      },
+      "complete_B_lower": {
+        "ball": "[1.12707816443397616943658891369e-17 +/- 3.93e-47]",
+        "decimal_enclosure": {
+          "mid": "11270781644339761694365889136890139430207289725139551630522964224",
+          "rad": "29353953629375504845685764384620545",
+          "exponent": "-81"
+        }
+      },
+      "canonical_a2_upper": {
+        "ball": "[0.0471330518973676425157880040110 +/- 5.99e-32]",
+        "decimal_enclosure": {
+          "mid": "47133051897367642515788004011029192877776990434924461888000460960",
+          "rad": "30688777254644185096322776687443969",
+          "exponent": "-66"
+        }
+      },
+      "canonical_LLL_upper": {
+        "ball": "[3.57825763009303160658760919945e-15 +/- 3.66e-45]",
+        "decimal_enclosure": {
+          "mid": "35782576300930316065876091994486781528438110124577192416882108248",
+          "rad": "23298374951654879783623401630859265",
+          "exponent": "-79"
+        }
+      },
+      "shared_vacuum_upper": {
+        "ball": "[1.559729091075269466708e-23 +/- 3.42e-45]",
+        "decimal_enclosure": {
+          "mid": "15597290910752694667078270318292828302673334964176886208866817685",
+          "rad": "1684584641541701077205745218920352734773249",
+          "exponent": "-87"
+        }
+      },
+      "full_angular_sum_upper": {
+        "ball": "[603185796.595355554286 +/- 4.29e-13]",
+        "decimal_enclosure": {
+          "mid": "6031857965953555542863637582072637328012981727809460608114022761",
+          "rad": "651460572933348145350721436335453010657281",
+          "exponent": "-55"
+        }
+      },
+      "complete_nonlocal_energy_upper": {
+        "ball": "[1220773613.687618717617 +/- 5.36e-13]",
+        "decimal_enclosure": {
+          "mid": "12207736136876187176173380777396268451911707246733820822752586003",
+          "rad": "1977733863633282052650961260761925080317953",
+          "exponent": "-55"
+        }
+      },
+      "complete_Et_energy_upper": {
+        "ball": "[1200445826811001516655418.14173 +/- 3.43e-6]",
+        "decimal_enclosure": {
+          "mid": "12004458268110015166554181417273551525258545671600076316425334949",
+          "rad": "7816218724040179429105974684680193",
+          "exponent": "-40"
+        }
+      },
+      "strong_residual_lower_bound": {
+        "ball": "[1.02868581908265157166329164448e-29 +/- 7.37e-59]",
+        "decimal_enclosure": {
+          "mid": "10286858190826515716632916444843558155566921050696744038106246554",
+          "rad": "30140842091365749007117338672103425",
+          "exponent": "-93"
+        }
+      },
+      "energy_dual_residual_lower_bound": {
+        "ball": "[9.3888298768805968796762864379e-42 +/- 5.64e-71]",
+        "decimal_enclosure": {
+          "mid": "9388829876880596879676286437925811128406426644519908329537425946",
+          "rad": "30566167804590738267083408364535809",
+          "exponent": "-105"
+        }
+      },
+      "strong_ratio_to_sufficient_screen": {
+        "ball": "[207.229214158471307748447148365 +/- 7.08e-28]",
+        "decimal_enclosure": {
+          "mid": "20722921415847130774844714836509988226251974119659458628886574247",
+          "rad": "60719786984586961505363049622536193",
+          "exponent": "-62"
+        }
+      },
+      "weak_ratio_to_sufficient_screen": {
+        "ball": "[1.8819061689478045459363171854e-10 +/- 1.31e-39]",
+        "decimal_enclosure": {
+          "mid": "18819061689478045459363171853930268848196742633753776425708422036",
+          "rad": "61268058325957316030649389931298817",
+          "exponent": "-74"
+        }
+      },
+      "strong_estimator_complete_source_debit_floor": {
+        "ball": "[1.38933074891954471693932369764e-29 +/- 5.64e-59]",
+        "decimal_enclosure": {
+          "mid": "13893307489195447169393236976415624080965306537936385768165705476",
+          "rad": "40707860664277061740230412987269121",
+          "exponent": "-93"
+        }
+      },
+      "conditional_complete_source_allocation": {
+        "ball": "[6.70431895696473820658518000295476590992e-32 +/- 2.15e-71]",
+        "decimal_enclosure": {
+          "mid": "67043189569647382065851800029547659099214619554507048799146391034",
+          "rad": "6840244447789236665450497",
+          "exponent": "-96"
+        }
+      },
+      "local_Einstein_energy_upper": {
+        "ball": "[825889345829847255.373871286269 +/- 5.89e-13]",
+        "decimal_enclosure": {
+          "mid": "8258893458298472553738712862690509122256117243224271540213976550",
+          "rad": "5377443886494434314304880774217729",
+          "exponent": "-46"
+        }
+      },
+      "local_magnetic_energy_upper": {
+        "ball": "[130.455417270627109712275952204 +/- 2.27e-28]",
+        "decimal_enclosure": {
+          "mid": "13045541727062710971227595220385851140010142967482721410652142034",
+          "rad": "8494075984583812885673077716811777",
+          "exponent": "-62"
+        }
+      },
+      "local_R2_energy_upper": {
+        "ball": "[1197804020102670262697776.653299 +/- 8.32e-7]",
+        "decimal_enclosure": {
+          "mid": "11978040201026702626977766532990520324188921108543581794947385787",
+          "rad": "7799015583898778016028471630757889",
+          "exponent": "-40"
+        }
+      },
+      "local_Weyl_energy_upper": {
+        "ball": "[0.00447617652790148256163342972970 +/- 5.29e-33]",
+        "decimal_enclosure": {
+          "mid": "44761765279014825616334297297023693646308508658023929740409034095",
+          "rad": "29144810004180941185815466204987393",
+          "exponent": "-67"
+        }
+      }
+    },
+    "exact_bump_derivative_squared_norms": [
+      "4294967296/9917826435",
+      "17179869184/4508102925",
+      "60129542144/630164925",
+      "60129542144/15935205",
+      "210453397504/1062347",
+      "13529146982400/1062347"
+    ],
+    "ordinary_jet_norm_comparisons": {
+      "xi": [
+        {
+          "ball": "[2.198108773006650972675292090263870971265 +/- 3.90e-41]",
+          "decimal_enclosure": {
+            "mid": "21981087730066509726752920902638709712650389890494186177613732150",
+            "rad": "2",
+            "exponent": "-64"
+          }
+        },
+        {
+          "ball": "[138228603.3030110183433572773985760063367 +/- 2.79e-32]",
+          "decimal_enclosure": {
+            "mid": "13822860330301101834335727739857600633667216113389087386157681983",
+            "rad": "2",
+            "exponent": "-56"
+          }
+        },
+        {
+          "ball": "[10015624426436537.54682066972835758093695 +/- 7.26e-25]",
+          "decimal_enclosure": {
+            "mid": "10015624426436537546820669728357580936949274966877893679591627656",
+            "rad": "2",
+            "exponent": "-48"
+          }
+        },
+        {
+          "ball": "[803037317351105730251034.2968815868998896 +/- 2.56e-17]",
+          "decimal_enclosure": {
+            "mid": "8030373173511057302510342968815868998896255588272610812383722612",
+            "rad": "2",
+            "exponent": "-40"
+          }
+        }
+      ],
+      "nu": [
+        {
+          "ball": "[1.099054276470500475620748131279679623330 +/- 1.72e-40]",
+          "decimal_enclosure": {
+            "mid": "10990542764705004756207481312796796233298289447852748062556702732",
+            "rad": "2",
+            "exponent": "-64"
+          }
+        },
+        {
+          "ball": "[69114296.14562825431270894315335816405852 +/- 6.62e-34]",
+          "decimal_enclosure": {
+            "mid": "6911429614562825431270894315335816405851934060524191003871800024",
+            "rad": "2",
+            "exponent": "-56"
+          }
+        },
+        {
+          "ball": "[5007811866979832.040375764253440761228020 +/- 3.46e-25]",
+          "decimal_enclosure": {
+            "mid": "50078118669798320403757642534407612280196547685156028481641561010",
+            "rad": "2",
+            "exponent": "-49"
+          }
+        },
+        {
+          "ball": "[401518633588167588250394.2717894832222565 +/- 4.68e-17]",
+          "decimal_enclosure": {
+            "mid": "40151863358816758825039427178948322225645323470152171698157746899",
+            "rad": "2",
+            "exponent": "-41"
+          }
+        }
+      ],
+      "T": [
+        {
+          "ball": "[3.297163159472688622830096328934058670445 +/- 1.72e-40]",
+          "decimal_enclosure": {
+            "mid": "32971631594726886228300963289340586704448282146905203362080657883",
+            "rad": "2",
+            "exponent": "-64"
+          }
+        },
+        {
+          "ball": "[207342904.9521714477239121018291268948670 +/- 9.47e-33]",
+          "decimal_enclosure": {
+            "mid": "20734290495217144772391210182912689486699053295350638652951043028",
+            "rad": "2",
+            "exponent": "-56"
+          }
+        },
+        {
+          "ball": "[15023436639484884.49980896387643474773127 +/- 3.64e-24]",
+          "decimal_enclosure": {
+            "mid": "15023436639484884499808963876434747731266366054191952568615221348",
+            "rad": "2",
+            "exponent": "-48"
+          }
+        },
+        {
+          "ball": "[1204555976013034355187274.298203866234398 +/- 2.89e-16]",
+          "decimal_enclosure": {
+            "mid": "12045559760130343551872742982038662343982882085458079272389479461",
+            "rad": "2",
+            "exponent": "-40"
+          }
+        }
+      ]
+    },
+    "local_coefficient_absolute_matrices": {
+      "Einstein": [
+        [
+          {
+            "ball": "[159.4413540615709847311981481777050949159 +/- 4.16e-39]",
+            "decimal_enclosure": {
+              "mid": "15944135406157098473119814817770509491589584352377847389588031537",
+              "rad": "2",
+              "exponent": "-62"
+            }
+          },
+          {
+            "ball": "[32.98219881801676994305100883810491679502 +/- 2.28e-39]",
+            "decimal_enclosure": {
+              "mid": "32982198818016769943051008838104916795022275242466305326294259979",
+              "rad": "2",
+              "exponent": "-63"
+            }
+          },
+          {
+            "ball": "[5.137619968080217594039895109723489693155 +/- 2.76e-40]",
+            "decimal_enclosure": {
+              "mid": "51376199680802175940398951097234896931552755011874066864125236473",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "[156.2571814126848620426756807643301201817 +/- 3.88e-38]",
+            "decimal_enclosure": {
+              "mid": "15625718141268486204267568076433012018173878213090564566932003199",
+              "rad": "2",
+              "exponent": "-62"
+            }
+          },
+          {
+            "ball": "[2.431366287187399472850121744529037954803 +/- 1.61e-40]",
+            "decimal_enclosure": {
+              "mid": "24313662871873994728501217445290379548031601934678511814985039162",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "[1.712539989345520616118264851434522606052 +/- 2.42e-40]",
+            "decimal_enclosure": {
+              "mid": "17125399893455206161182648514345226060517585003958022288041745491",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[32.98219881801676994305100883810491679502 +/- 2.28e-39]",
+            "decimal_enclosure": {
+              "mid": "32982198818016769943051008838104916795022275242466305326294259979",
+              "rad": "2",
+              "exponent": "-63"
+            }
+          },
+          {
+            "ball": "[5.137619968080217594039895109723489693155 +/- 2.76e-40]",
+            "decimal_enclosure": {
+              "mid": "51376199680802175940398951097234896931552755011874066864125236473",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[5.137619968080217594039895109723489693155 +/- 2.76e-40]",
+            "decimal_enclosure": {
+              "mid": "51376199680802175940398951097234896931552755011874066864125236473",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[156.2571814126848620426756807643301201817 +/- 3.88e-38]",
+            "decimal_enclosure": {
+              "mid": "15625718141268486204267568076433012018173878213090564566932003199",
+              "rad": "2",
+              "exponent": "-62"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[78.12859070659592419570590944517222955221 +/- 2.83e-39]",
+            "decimal_enclosure": {
+              "mid": "7812859070659592419570590944517222955221282849869562068622251599",
+              "rad": "2",
+              "exponent": "-62"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[2.431366287187399472850121744529037954803 +/- 1.61e-40]",
+            "decimal_enclosure": {
+              "mid": "24313662871873994728501217445290379548031601934678511814985039162",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[1.712539989345520616118264851434522606052 +/- 2.42e-40]",
+            "decimal_enclosure": {
+              "mid": "17125399893455206161182648514345226060517585003958022288041745491",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ]
+      ],
+      "magnetic": [
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[1.999999976478771973349150122221773775016 +/- 1.86e-40]",
+            "decimal_enclosure": {
+              "mid": "19999999764787719733491501222217737750161851147765560203722976645",
+              "rad": "2",
+              "exponent": "-64"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ]
+      ],
+      "R2": [
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[1.428366853338307383129369302952676579644e-7 +/- 3.28e-47]",
+            "decimal_enclosure": {
+              "mid": "14283668533383073831293693029526765796436730183883442644006171590",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          {
+            "ball": "[1.277603421013830292047344552974551545376e-8 +/- 8.27e-49]",
+            "decimal_enclosure": {
+              "mid": "12776034210138302920473445529745515453759173766198775636148159783",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          },
+          {
+            "ball": "[3.904348370223404000691059583783020109840e-7 +/- 4.33e-47]",
+            "decimal_enclosure": {
+              "mid": "39043483702234040006910595837830201098395675767083285784668328584",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          {
+            "ball": "[6.379492345540092590698083856378992841986e-9 +/- 4.80e-49]",
+            "decimal_enclosure": {
+              "mid": "63794923455400925906980838563789928419864790227713901514519964380",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[4.258678069937680756242598066514426537833e-9 +/- 2.70e-49]",
+            "decimal_enclosure": {
+              "mid": "42586780699376807562425980665144265378327304175903470870493865943",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[1.277603421013830292047344552974551545376e-8 +/- 8.27e-49]",
+            "decimal_enclosure": {
+              "mid": "12776034210138302920473445529745515453759173766198775636148159783",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          },
+          {
+            "ball": "[1.990116208694519482939101121401261447274e-9 +/- 1.10e-49]",
+            "decimal_enclosure": {
+              "mid": "19901162086945194829391011214012614472741098969902144434383892921",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[6.081783164187712757130818720818530572702e-8 +/- 2.45e-49]",
+            "decimal_enclosure": {
+              "mid": "6081783164187712757130818720818530572702024394472977197366268913",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          {
+            "ball": "[1.029224347647455454672613181921531510761e-9 +/- 2.34e-49]",
+            "decimal_enclosure": {
+              "mid": "10292243476474554546726131819215315107612336401624025859314728964",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[6.633720695693573366983899756087848690950e-10 +/- 5.28e-51]",
+            "decimal_enclosure": {
+              "mid": "66337206956935733669838997560878486909499472279434556968779643070",
+              "rad": "2",
+              "exponent": "-74"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[3.904348370223404000691059583783020109840e-7 +/- 4.33e-47]",
+            "decimal_enclosure": {
+              "mid": "39043483702234040006910595837830201098395675767083285784668328584",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          {
+            "ball": "[6.081783164187712757130818720818530572702e-8 +/- 2.45e-49]",
+            "decimal_enclosure": {
+              "mid": "6081783164187712757130818720818530572702024394472977197366268913",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          {
+            "ball": "[9.292946386022840441298462240988652762083e-7 +/- 5.13e-49]",
+            "decimal_enclosure": {
+              "mid": "92929463860228404412984622409886527620830051131211410960048803271",
+              "rad": "2",
+              "exponent": "-71"
+            }
+          },
+          {
+            "ball": "[2.878189248041181915864998362003995164827e-8 +/- 1.62e-48]",
+            "decimal_enclosure": {
+              "mid": "28781892480411819158649983620039951648268387588857392404777307311",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          },
+          {
+            "ball": "[2.027261054743693614676746299392942894912e-8 +/- 2.75e-48]",
+            "decimal_enclosure": {
+              "mid": "20272610547436936146767462993929428949122740209766694824554229710",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[6.379492345540092590698083856378992841986e-9 +/- 4.80e-49]",
+            "decimal_enclosure": {
+              "mid": "63794923455400925906980838563789928419864790227713901514519964380",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[1.029224347647455454672613181921531510761e-9 +/- 2.34e-49]",
+            "decimal_enclosure": {
+              "mid": "10292243476474554546726131819215315107612336401624025859314728964",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[2.878189248041181915864998362003995164827e-8 +/- 1.62e-48]",
+            "decimal_enclosure": {
+              "mid": "28781892480411819158649983620039951648268387588857392404777307311",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          },
+          {
+            "ball": "[1.000167226447829772474683538095337597819e-9 +/- 2.67e-49]",
+            "decimal_enclosure": {
+              "mid": "10001672264478297724746835380953375978187336491672082671425543797",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[3.430747825355992910681355885487506769095e-10 +/- 3.70e-50]",
+            "decimal_enclosure": {
+              "mid": "34307478253559929106813558854875067690953694199464526301882429881",
+              "rad": "2",
+              "exponent": "-74"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[4.258678069937680756242598066514426537833e-9 +/- 2.70e-49]",
+            "decimal_enclosure": {
+              "mid": "42586780699376807562425980665144265378327304175903470870493865943",
+              "rad": "2",
+              "exponent": "-73"
+            }
+          },
+          {
+            "ball": "[6.633720695693573366983899756087848690950e-10 +/- 5.28e-51]",
+            "decimal_enclosure": {
+              "mid": "66337206956935733669838997560878486909499472279434556968779643070",
+              "rad": "2",
+              "exponent": "-74"
+            }
+          },
+          {
+            "ball": "[2.027261054743693614676746299392942894912e-8 +/- 2.75e-48]",
+            "decimal_enclosure": {
+              "mid": "20272610547436936146767462993929428949122740209766694824554229710",
+              "rad": "2",
+              "exponent": "-72"
+            }
+          },
+          {
+            "ball": "[3.430747825355992910681355885487506769095e-10 +/- 3.70e-50]",
+            "decimal_enclosure": {
+              "mid": "34307478253559929106813558854875067690953694199464526301882429881",
+              "rad": "2",
+              "exponent": "-74"
+            }
+          },
+          {
+            "ball": "[2.211240231886564016364575914175038596974e-10 +/- 2.54e-50]",
+            "decimal_enclosure": {
+              "mid": "22112402318865640163645759141750385969742538498204666776051547690",
+              "rad": "2",
+              "exponent": "-74"
+            }
+          }
+        ]
+      ],
+      "Weyl": [
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[6.596432447394975777568127420431407923232e-29 +/- 1.70e-69]",
+            "decimal_enclosure": {
+              "mid": "6596432447394975777568127420431407923231830740567770363361829110",
+              "rad": "2",
+              "exponent": "-92"
+            }
+          },
+          {
+            "ball": "[8.298389038956132378651196786242694011307e-36 +/- 9.99e-77]",
+            "decimal_enclosure": {
+              "mid": "8298389038956132378651196786242694011306900308639108969296943402",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[5.504438682424246180442231794210839221312e-36 +/- 1.40e-76]",
+            "decimal_enclosure": {
+              "mid": "55044386824242461804422317942108392213118603107965476092543493469",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[9.875895324841062366166532155894881814853e-35 +/- 4.17e-76]",
+            "decimal_enclosure": {
+              "mid": "9875895324841062366166532155894881814853041538909500322719681825",
+              "rad": "2",
+              "exponent": "-98"
+            }
+          },
+          {
+            "ball": "[1.177704587188060506836750989860267911121e-35 +/- 1.87e-76]",
+            "decimal_enclosure": {
+              "mid": "11777045871880605068367509898602679111210186375710149289961659016",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[3.058843829174648127729193281153039730571e-34 +/- 4.16e-74]",
+            "decimal_enclosure": {
+              "mid": "30588438291746481277291932811530397305705845985495065940015867459",
+              "rad": "2",
+              "exponent": "-98"
+            }
+          },
+          {
+            "ball": "[1.122183533874754906346567042493673391765e-35 +/- 2.79e-75]",
+            "decimal_enclosure": {
+              "mid": "11221835338747549063465670424936733917647215392679096986100249690",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[7.491220535271163728153889244081301356579e-36 +/- 5.33e-77]",
+            "decimal_enclosure": {
+              "mid": "7491220535271163728153889244081301356578946905740182907300224638",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "0",
+            "decimal_enclosure": {
+              "mid": "0",
+              "rad": "0",
+              "exponent": "0"
+            }
+          },
+          {
+            "ball": "[1.177704587188060506836750989860267911121e-35 +/- 1.87e-76]",
+            "decimal_enclosure": {
+              "mid": "11777045871880605068367509898602679111210186375710149289961659016",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[3.500710587764030639450009733844402494245e-36 +/- 2.81e-76]",
+            "decimal_enclosure": {
+              "mid": "35007105877640306394500097338444024942452800211938538909176298342",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[8.026797704347282079358780909781421973131e-35 +/- 3.84e-75]",
+            "decimal_enclosure": {
+              "mid": "80267977043472820793587809097814219731306162469159732741383814700",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[1.810455367239783033080568541234807823575e-36 +/- 3.52e-77]",
+            "decimal_enclosure": {
+              "mid": "18104553672397830330805685412348078235749648879629642867807553351",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[1.166903529276572168321745178014650772821e-36 +/- 3.36e-76]",
+            "decimal_enclosure": {
+              "mid": "11669035292765721683217451780146507728206649466158720564810305036",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[6.596432447394975777568127420431407923232e-29 +/- 1.70e-69]",
+            "decimal_enclosure": {
+              "mid": "6596432447394975777568127420431407923231830740567770363361829110",
+              "rad": "2",
+              "exponent": "-92"
+            }
+          },
+          {
+            "ball": "[3.058843829174648127729193281153039730571e-34 +/- 4.16e-74]",
+            "decimal_enclosure": {
+              "mid": "30588438291746481277291932811530397305705845985495065940015867459",
+              "rad": "2",
+              "exponent": "-98"
+            }
+          },
+          {
+            "ball": "[8.026797704347282079358780909781421973131e-35 +/- 3.84e-75]",
+            "decimal_enclosure": {
+              "mid": "80267977043472820793587809097814219731306162469159732741383814700",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[1.208858941009896021773737204122832203171e-28 +/- 1.83e-68]",
+            "decimal_enclosure": {
+              "mid": "12088589410098960217737372041228322031711822328898138140712639179",
+              "rad": "2",
+              "exponent": "-92"
+            }
+          },
+          {
+            "ball": "[6.749960676487472142397689412430651087540e-35 +/- 3.08e-75]",
+            "decimal_enclosure": {
+              "mid": "67499606764874721423976894124306510875403075557749757406296254480",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[4.754354637525538279059505420408749792650e-35 +/- 2.42e-75]",
+            "decimal_enclosure": {
+              "mid": "47543546375255382790595054204087497926502415164641368868195413559",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[8.298389038956132378651196786242694011307e-36 +/- 9.99e-77]",
+            "decimal_enclosure": {
+              "mid": "8298389038956132378651196786242694011306900308639108969296943402",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[1.122183533874754906346567042493673391765e-35 +/- 2.79e-75]",
+            "decimal_enclosure": {
+              "mid": "11221835338747549063465670424936733917647215392679096986100249690",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[1.810455367239783033080568541234807823575e-36 +/- 3.52e-77]",
+            "decimal_enclosure": {
+              "mid": "18104553672397830330805685412348078235749648879629642867807553351",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[6.749960676487472142397689412430651087540e-35 +/- 3.08e-75]",
+            "decimal_enclosure": {
+              "mid": "67499606764874721423976894124306510875403075557749757406296254480",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[5.654468669102922446046305039235880528650e-36 +/- 1.09e-77]",
+            "decimal_enclosure": {
+              "mid": "56544686691029224460463050392358805286500108762773541873655151536",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[3.036042963302792238683554679039441426904e-36 +/- 3.13e-76]",
+            "decimal_enclosure": {
+              "mid": "30360429633027922386835546790394414269043128523950521994846480756",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          }
+        ],
+        [
+          {
+            "ball": "[5.504438682424246180442231794210839221312e-36 +/- 1.40e-76]",
+            "decimal_enclosure": {
+              "mid": "55044386824242461804422317942108392213118603107965476092543493469",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[7.491220535271163728153889244081301356579e-36 +/- 5.33e-77]",
+            "decimal_enclosure": {
+              "mid": "7491220535271163728153889244081301356578946905740182907300224638",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[1.166903529276572168321745178014650772821e-36 +/- 3.36e-76]",
+            "decimal_enclosure": {
+              "mid": "11669035292765721683217451780146507728206649466158720564810305036",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[4.754354637525538279059505420408749792650e-35 +/- 2.42e-75]",
+            "decimal_enclosure": {
+              "mid": "47543546375255382790595054204087497926502415164641368868195413559",
+              "rad": "2",
+              "exponent": "-99"
+            }
+          },
+          {
+            "ball": "[3.036042963302792238683554679039441426904e-36 +/- 3.13e-76]",
+            "decimal_enclosure": {
+              "mid": "30360429633027922386835546790394414269043128523950521994846480756",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          },
+          {
+            "ball": "[2.138445782901922930612851300788377812874e-36 +/- 4.37e-77]",
+            "decimal_enclosure": {
+              "mid": "21384457829019229306128513007883778128740436596260289047683290029",
+              "rad": "2",
+              "exponent": "-100"
+            }
+          }
+        ]
+      ]
+    },
+    "interval_cover_cells": 128,
+    "maximum_fixed_output_dimension": 1000000,
+    "original_York_identity_checked": true,
+    "compact_York_moment_checked": true,
+    "strong_finite_output_screen_rejected": true,
+    "weak_test_rejects_screen": false,
+    "actual_S_application_error": null,
+    "actual_K_application_error": null,
+    "actual_complete_numerical_residual": null,
+    "certifies_inverse_or_wormhole_nonexistence": false
+  },
+  "status": "finite_output_estimator_test_executed_full_application_unresolved",
+  "input_sha256_after": {
+    "notes/current-strong-residual-rank-test.md": "729b5740773ec0c504d9b50f32c43b57b3503af65b6c1a8c51015b145fa67df7",
+    "checks/current_strong_residual_rank_test.py": "270772eda62c8f7115527cc6d2eb158f6b58457f6921dab95812ef691334ceb2",
+    "notes/current-structured-source-graph-test.md": "12fed5fdc62b1c69d4f0ecdf6dbc18408c69d4e687499a051246b78045726b14",
+    "notes/current-finite-local-action-assembly.md": "73c07a2153ad8f5309c1744f1eab88b5a88029cc02ef4c18e3191aff491ce645",
+    "notes/current-canonical-heat-restoration-assembly.md": "f2a2b9d0c6c06ed49541f76b79e0b8fdd3a21885a25d89c044b99039aca4beed",
+    "notes/current-seed-full-hessian-realization.md": "632c9221d8e3f63694d9faae87f900c5f32728d1fd48a1e89ccc96f1f327a8b7",
+    "notes/current-quartic-ritz-rank-test.md": "03faee79d37ba56677370cfc8308ef6b4b26883ddea6840d5ba126ae3cbd7db1",
+    "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-geodesic-two-sided-remainder.json": "8345e444ba383a7e77b1f9ec018390da8226ab84f3ef0501b1002b1f951d12f2",
+    "evidence/current-canonical-heat-restoration-assembly.json": "bdb5aeb6007e8ced9ec1c85b0d3ffcff7f7e587438759d4d5bcd53e318432424",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "inputs_unchanged": true,
+  "protected_paths_unchanged": true,
+  "protected_path_count": 21,
+  "finished_utc": "2026-10-28T05:03:13.530379+00:00"
+}
