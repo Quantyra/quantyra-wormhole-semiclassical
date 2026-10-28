@@ -1,3 +1,42 @@
+# Original-dual complement attempt remains unresolved
+
+2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.
+The preceding rank test was progress. This first follow-up obtains NO
+new consequential application or residual bound and is not a completed
+feasibility milestone. The [attempted block construction](current-weak-complement-inverse-attempt.md)
+retains all source/complement couplings on the actual paired domain.
+
+Its first unsupported constructive step is an implemented complement
+preconditioner in weak coordinates with a uniform full-domain defect.
+The complete flow multiplier does not invert its York-returned compression.
+Using an identity inverse in energy coordinates would hide the unresolved
+R_t^-1 quantum solve. The seed operator and its inverse remain defined;
+their approximation/error is unknown, not proved impossible.
+
+Conditional accounting only: IF the complete complement defect were <=.4,
+the joint block inverse defect would be <.489579. With exact applications,
+101 ordered corrections would give source residual <1.588581e-32. The
+complete numerical map error would then need to be <=2.53738e-32 to meet
+the sufficient 4.989e-32 source screen. None of these hypotheses or actual
+application errors is attained. The [receipt](../evidence/current-weak-complement-inverse-attempt.json)
+records this limited scope and unchanged protected paths; it is not
+progress on the missing complement estimate or a physical allowance.
+
+Retain the original-dual method conditionally, the full geodesic operator,
+all accepted results, P32 and closed audit. Next construct the complement
+map and certify its complete defect against .4, including the compressed
+quantum action and actual boundary returns. This remains PROPOSED. No
+component, degree or tail optimization is selected. The actual S/K errors,
+full residual and signed G_t remain unknown.
+
+Remaining to-do list: complete complement/S/K applications and errors;
+full residual and signed G_t; all original coupled/admission, mass and
+phase budgets; nonlinear existence/contraction, exact compatibility,
+physical matching, semiclassical validity/noise, all-sector stability and
+the full stable semiclassical wormhole objective.
+
+---
+
 # Strong-residual finite-output implementation rejected
 
 2026-10-27 HST, E003/S169. The full goal remains ACTIVE/INCOMPLETE.

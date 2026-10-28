@@ -1,0 +1,100 @@
+{
+  "started_utc": "2026-10-28T05:24:13.956590+00:00",
+  "input_sha256_before": {
+    "notes/current-weak-complement-inverse-attempt.md": "359c7323be47157c3555dfa2877b70e99ce6a6b7b10eed34d97c310acdcf3561",
+    "checks/current_weak_complement_inverse_attempt.py": "9622a5b3860882d8027e87bfcfc1338fe36fed0343555dbc5b8b8a4ef0b21f54",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "checks/current_geodesic_flow_multiplier.py": "cb05477c877ccbbdb1bebc318368d166d497c4cbe40db4e77bf5473a24cffb78",
+    "checks/current_global_geodesic_return.py": "ba3d2bfb221f8469071c7535983d22423f8ff0d6881209d8d3086c8c66539754",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Original-dual complement attempt: no application certificate obtained\n\n2026-10-27 HST, E003/S169. The preceding strong-residual rank test was\nprogress. This is the first follow-up without a new consequential bound.\nThe full T_t-(I+T_t)F_n goal remains ACTIVE/INCOMPLETE. The calculation\nbelow is conditional accounting for an attempted block construction, not\nan implementation or a completed feasibility milestone.\n\n## Actual spaces and the attempted construction\n\nKeep the paired mass/log E_t form domain, ||u||_Et^2=ell_t[u,u]/N,\nN=|W_action| beta, with the original York return, both equations, boundary\nphases and regular bolt. Keep the exact UV logarithm, common regulator,\nall angular/thermal modes, contacts, cutoff transitions and global returns.\nThe complete scalar elimination is B=b* a^-1 b. Define the ANALYSIS\nRiesz map R_t=ell_t/N and the bounded operator\n\n    A=R_t^-1 (ell_Q+B)/N=I+T_t+Q,\n    ||Q||<=e_Q, ||T_t||<=q_t, A>=a I, a=1-e_Q.\n\nThis A is the energy-normalized form operator, not the H-associated\nunbounded A_Q of the previous test. They cannot be interchanged. The\naccepted comparison and source inequalities justify these analysis maps;\nR_t^-1 is not thereby a numerical routine.\n\nTake an E_t-orthogonal projection Pi onto a conforming finite space\n(the existing quartic direction z^4 is one admissible choice). Write\nA in blocks A00,A01,A10,D on Pi E_t plus its full complement. All cross\nblocks stay. The coercivity gives D>=a I and ||A01||,||A10||<=b=q_t+e_Q.\nThis uses no finite replacement of the quantum spectrum.\n\nFor an ACTUAL complement approximation C, suppose its full defect were\n\n    d_C=||I-D C||<=d, C:E_c->E_c, E_c=(I-Pi)E_t.       (1)\n\nIn weak coordinates the required map is from the complement energy dual\nto the complement energy space; its Riesz identification must be explicit.\nThe exact inverse D^-1 exists, but assigning C=D^-1 simply restates the\nmissing solve. No such implemented C or bound (1) is available here.\n\nThe attempted joint block inverse would be\n\n    H_C=A00-A01 C A10,\n    P_C = [ H_C^-1,             -H_C^-1 A01 C;\n           -C A10 H_C^-1, C+C A10 H_C^-1 A01 C ].       (2)\n\nIf h=a-b^2*d/a>0, the exact Schur complement is >=a I and\n||H_C^-1||<=1/h, ||C||<=c=(1+d)/a. Direct multiplication, without\ncommuting any blocks, gives\n\n    I-A P_C = [0,0;\n              -(I-D C) A10 H_C^-1,\n               (I-D C)(I+A10 H_C^-1 A01 C)],\n\nso its complete energy-norm defect obeys\n\n    delta<=d sqrt[(b/h)^2+(1+b^2*c/h)^2].               (3)\n\nThe quartic block alone does not bound (1). Equation (3) retains the\nsource/complement couplings; it does not make an unknown defect small.\nThe coefficient, projection and finite Schur inversions would also need\ntheir numerical errors, not exactness inferred from their definitions.\n\n## First unsupported implication and evidence from the attempt\n\nThe first missing constructive implication is a NONCIRCULAR complement\nmap C on the actual domain with a certified full defect (1). The current\ngeodesic multiplier code evaluates scalar spectral functions and their\ncontact-corrected quadrature. Inspection of its functions and of the\nglobal-return implementation finds orbit geometry and seam-tail bounds,\nbut no inverse for the compressed, York-returned coupled operator.\nIts existing flags agree with the implementation bodies: the global\noperator/forward-adjoint solve and full-profile regularity are unevaluated.\n\nIn particular, if V lifts a radial shape field to the unit tangent bundle,\nthe known form V* A_flow(P) V is a COMPRESSION. Inverting the scalar\nfunction A_flow does not invert that compression or the sum with the\nother local and B terms. Preservation of the physical boundary domain,\nthe complement output map, and a bound on the resulting joint defect\nare still required. No commutation or domain theorem supplies them here.\n\nA tempting shortcut would set C=I in energy coordinates, since\n||D-I||<=q_t+e_Q. But the identity inverse in those coordinates represents\nthe full complement R_t^-1 in weak coordinates. Applying it would require\nthe unresolved quantum Riesz solve. The small analysis norm is valid;\ncalling it an implemented preconditioner would be circular.\n\nThe previous strong-source graph constant does not supply C: it bounds\nA_Q S_Q, not an approximation to S_Q or to D^-1. Neither a fourth-flow\njet nor an actual signed application error follows from it. The prior\nrank rejection is also retained; it is not used as an arbitrary-source\ncounterexample to this proposed infinite-dimensional approximation.\n\nThus the missing quantity is an UNKNOWN constructive approximation/defect\nestimate. The actual seed operator is defined. No excessive actual error,\nfailed weak complement map, or construction obstruction is proved by\nthis follow-up. No new consequential evidence toward the complete\nnumerical bound was obtained.\n\n## Conditional quantitative test, explicitly not an attained constant\n\nExecute (3) at the trial requirement d=.4 using the accepted e_Q and q_t.\nThis checks whether an attainable modest complement defect WOULD suffice\nas a starting point. It is not a measurement of d_C. If delta<1, the\nordered correction\n\n    P_N=P_C sum_(j=0)^(N-1) (I-A P_C)^j,\n    S_N=P_N T_t,\n\nwould satisfy rho_S<=q_t delta^N with EXACT applications. The factors are\nordered as written; no source or block commutation is assumed. For an\nimplemented S_hat_N with complete map error epsilon_app,\n\n    rho_S,implemented<=q_t delta^N+(1+q_t+e_Q)epsilon_app. (4)\n\nSelect the first integer N making the first term <= half the sufficient\n4.989e-32 source-residual screen, then compute the remaining epsilon_app\nceiling in (4). All scalar, quantum, projection, solve, caller, return and\nrounding errors belong in epsilon_app. The separate outer K application\nand the full F_n/G_t estimates still remain. No conditional ceiling is an\navailable geometric allowance, nor an original physical-norm comparison.\n\nThe accompanying receipt executes only this requirement arithmetic and\nchecks source identities. It does not constitute progress on the missing\ncomplement estimate. No new checker campaign or component optimization\nis selected, and the full goal is not marked complete or blocked here.\n\nDecision: retain the original-dual method conditionally, with the complete\nprincipal operator and all couplings. One decisive next calculation is\nto construct a domain-preserving complement preconditioner in weak\ncoordinates and bound its full defect against (1), including the actual\ncompressed quantum action. This remains PROPOSED, not executed. The\nmethod cannot be called numerically viable until that implication is proved.\n\nRemaining to-do list: actual complement and S/K applications with errors;\nfull residual and signed G_t; every original coupled/admission, mass and\nphase budget; nonlinear existence/contraction, exact compatibility,\nphysical matching, semiclassical validity/noise and all-sector stability;\nthe full stable semiclassical wormhole objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Conditional block accounting only; no complement operator implemented.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-weak-complement-inverse-attempt'\nRUNTIME=ROOT/'evidence/current-coupled-mass-adjoint-runtime.json'\nruntime=json.loads(RUNTIME.read_bytes())\nsys.path.insert(0,str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb,ctx\n\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\ndef dec(v):\n    d=v['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\ndef enc(v):\n    m,r,e=v.mid_rad_10exp(60)\n    return dict(ball=v.str(40),decimal_enclosure=dict(mid=str(m),rad=str(r),exponent=str(e)))\n\ninputs=['notes/'+STEM+'.md','checks/current_weak_complement_inverse_attempt.py',\n        'evidence/current-structured-source-graph-test.json',\n        'evidence/current-quartic-ritz-rank-test-final.json',\n        'checks/current_geodesic_flow_multiplier.py',\n        'checks/current_global_geodesic_return.py',\n        'evidence/current-coupled-mass-adjoint-runtime.json']\nout=ROOT/'evidence'/(STEM+'.json')\nassert not out.exists(),'Receipts are immutable.'\nprotected=json.loads(Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json').read_bytes())\nverify=lambda:all(digest(Path(p))==h for p,h in protected.items())\nassert verify()\nbefore={p:digest(ROOT/p) for p in inputs}\ndata=dict(started_utc=datetime.now(timezone.utc).isoformat(),input_sha256_before=before,\n          ordinary_argument_utf8=(ROOT/inputs[0]).read_text(encoding='utf-8'),\n          arithmetic_source_utf8=Path(__file__).read_text(encoding='utf-8'))\ntry:\n    ctx.prec=512\n    assert digest(Path(sys.executable))==runtime['python_sha256']\n    for pkg in runtime['packages'].values():\n        for p,h in pkg['files'].items():assert digest(Path(pkg['root'])/p)==h\n    source=json.loads((ROOT/inputs[2]).read_bytes())\n    assert source['status']=='source_graph_bound_checked_complete_application_unresolved'\n    rank=json.loads((ROOT/inputs[3]).read_bytes())\n    assert rank['status']=='passed'\n    e=dec(source['constants']['actual_reference_comparison'])\n    q=dec(rank['result']['constants']['q_t'])\n    a,b,d=1-e,q+e,arb('.4')\n    c=(1+d)/a\n    h=a-b*b*d/a\n    assert h>0\n    delta=d*((b/h)**2+(1+b*b*c/h)**2).sqrt()\n    assert 0<delta<arb('.5')\n    target=arb('4.989e-32')\n    n=1\n    while not q*delta**n<target/2:n+=1\n    trunc=q*delta**n\n    ceiling=(target-trunc)/(1+q+e)\n    constants=dict(e_Q=e,q_t=q,conditional_complement_defect=d,\n                   conditional_complement_norm=c,conditional_Schur_inverse_norm=1/h,\n                   conditional_full_block_defect=delta,\n                   conditional_exact_application_residual=trunc,\n                   conditional_complete_application_error_ceiling=ceiling)\n    data.update(status='conditional_accounting_only_complete_application_unresolved',\n                constants={k:enc(v) for k,v in constants.items()},\n                conditional_iteration_count=n,actual_complement_operator=None,\n                actual_complement_defect=None,actual_application_error=None,\n                actual_full_residual=None,new_consequential_bound=False)\nexcept Exception as error:\n    data.update(status='failed',error=repr(error))\n    raise\nfinally:\n    data['input_sha256_after']={p:digest(ROOT/p) for p in inputs}\n    data['inputs_unchanged']=before==data['input_sha256_after']\n    data['protected_paths_unchanged']=verify()\n    data['protected_path_count']=len(protected)\n    data['finished_utc']=datetime.now(timezone.utc).isoformat()\n    out.write_text(json.dumps(data,indent=2)+'\\n',encoding='utf-8',newline='\\n')\nassert data['inputs_unchanged'] and data['protected_paths_unchanged']\nprint('CONDITIONAL ONLY; no complement constructed or error bound attained.')\nprint('Conditional iterations:',n)\nfor k,v in data['constants'].items():print(k+': '+v['ball'])\n",
+  "status": "conditional_accounting_only_complete_application_unresolved",
+  "constants": {
+    "e_Q": {
+      "ball": "[0.00212938100649549760514822956375986229265 +/- 5.96e-42]",
+      "decimal_enclosure": {
+        "mid": "21293810064954976051482295637598622926460699999979488383380482046",
+        "rad": "20200309219466920884961281",
+        "exponent": "-67"
+      }
+    },
+    "q_t": {
+      "ball": "[0.3380000000000000000000000000000000000000 +/- 3e-45]",
+      "decimal_enclosure": {
+        "mid": "33799999999999999999999999999999999999999999999999999999999999999",
+        "rad": "3",
+        "exponent": "-65"
+      }
+    },
+    "conditional_complement_defect": {
+      "ball": "[0.4000000000000000000000000000000000000000 +/- 1e-45]",
+      "decimal_enclosure": {
+        "mid": "40000000000000000000000000000000000000000000000000000000000000000",
+        "rad": "1",
+        "exponent": "-65"
+      }
+    },
+    "conditional_complement_norm": {
+      "ball": "[1.402987494924041953291874633688217676946 +/- 3.92e-40]",
+      "decimal_enclosure": {
+        "mid": "14029874949240419532918746336882176769456110624709114304989538988",
+        "rad": "28401691917111598776321",
+        "exponent": "-64"
+      }
+    },
+    "conditional_Schur_inverse_norm": {
+      "ball": "[1.050975824214010642412082670395229641967 +/- 1.20e-40]",
+      "decimal_enclosure": {
+        "mid": "10509758242140106424120826703952296419668837479407315989620261789",
+        "rad": "29433927155172822220801",
+        "exponent": "-64"
+      }
+    },
+    "conditional_full_block_defect": {
+      "ball": "[0.4895789058800868672677919610462347192878 +/- 4.49e-41]",
+      "decimal_enclosure": {
+        "mid": "48957890588008686726779196104623471928775659561382475708993951910",
+        "rad": "145502239199453247438849",
+        "exponent": "-65"
+      }
+    },
+    "conditional_exact_application_residual": {
+      "ball": "[1.588580179547932238069943390705482322684e-32 +/- 9.30e-72]",
+      "decimal_enclosure": {
+        "mid": "15885801795479322380699433907054823226835476571656605017737340321",
+        "rad": "4768453047339225771409409",
+        "exponent": "-96"
+      }
+    },
+    "conditional_complete_application_error_ceiling": {
+      "ball": "[2.537381739887087965363601845736026270398e-32 +/- 6.98e-72]",
+      "decimal_enclosure": {
+        "mid": "25373817398870879653636018457360262703983378468976171934874333451",
+        "rad": "3596505388048609892630529",
+        "exponent": "-96"
+      }
+    }
+  },
+  "conditional_iteration_count": 101,
+  "actual_complement_operator": null,
+  "actual_complement_defect": null,
+  "actual_application_error": null,
+  "actual_full_residual": null,
+  "new_consequential_bound": false,
+  "input_sha256_after": {
+    "notes/current-weak-complement-inverse-attempt.md": "359c7323be47157c3555dfa2877b70e99ce6a6b7b10eed34d97c310acdcf3561",
+    "checks/current_weak_complement_inverse_attempt.py": "9622a5b3860882d8027e87bfcfc1338fe36fed0343555dbc5b8b8a4ef0b21f54",
+    "evidence/current-structured-source-graph-test.json": "2bc2c68685f96772d2ceb18719dcce978fdc5c6baf3c97ab0d8b635aaa0c8d55",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "checks/current_geodesic_flow_multiplier.py": "cb05477c877ccbbdb1bebc318368d166d497c4cbe40db4e77bf5473a24cffb78",
+    "checks/current_global_geodesic_return.py": "ba3d2bfb221f8469071c7535983d22423f8ff0d6881209d8d3086c8c66539754",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "inputs_unchanged": true,
+  "protected_paths_unchanged": true,
+  "protected_path_count": 21,
+  "finished_utc": "2026-10-28T05:24:15.639281+00:00"
+}
