@@ -1,0 +1,160 @@
+{
+  "started_utc": "2026-10-28T02:10:51.186281+00:00",
+  "input_sha256_before": {
+    "notes/current-heat-window-extension-test.md": "7ba0a99238621e125f1f6c158582842da96c2763872aa576a4a079766dbefeb0",
+    "checks/current_heat_window_extension_test.py": "47dbe834f03b3ed4c225cd73a220503c6b4157b45462acc957908e8cc5bfac6d",
+    "checks/current_disk_heat_propagation.py": "c436a1a07dc622acbe6ba03e3193372b1ed88b2ffc3e4782d1ddc3e863f841ae",
+    "notes/current-disk-heat-propagation.md": "f11709526e22bbe5742465573bd27c95b5eee37d6f8f49cdd322fad88c6a3df1",
+    "notes/current-quartic-positive-time-window.md": "fcc40dcd2f07579faa124f9dae8b81899c7aeb7999ebc021588df67ddc2613d6",
+    "evidence/current-quartic-column-energy-dual-assembly.json": "3f369da3fbb8d2df3582e02bf9b3c5d2c2cb8b1971d92ebcf7082f44175ecfb4",
+    "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "python": "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\python\\python.exe",
+  "ordinary_argument_utf8": "# Retained-window test of the existing propagation estimator\n\n2026-10-27, E003/S169. The preceding finite-window calculation established\ncomplete omitted tails but no signed value. The intervening email review\nsupplied no continuum constant. The full-domain residual goal remains\nactive/incomplete. This calculation rejects a particular extension of the\nexisting estimator; it does not evaluate the retained window or complete\nthe requested signed milestone.\n\n## Actual map and first unsupported implication\n\nKeep E_t, its original dual, psi=z^4, v=-z^4, both original rows, and the\nactual paired mass/log realization exactly as in\ncurrent-quartic-column-energy-dual.md. Its fixed-column regulator result\nis retained. The signed target is Z_window of\ncurrent-quartic-positive-time-window.md, on .001<=t<=.05 with the full\nthermal kernel. The finite angular part retains its certified infinite\ntail. No contact, boundary, cutoff or bolt return is removed.\n\nThe existing parametrix P contains an exact paired capped kernel, not\nnumerically evaluated data. Its proven derivative and propagation constants\napply only at t<=.001. Thus substituting t=.05 into that proof does NOT\nproduce a certified kernel. The following is a necessary-precondition\ntest of its positive algebraic majorant recipe, even if every missing\nlarger-time geometric estimate could be supplied. No operator bound is\nasserted outside the accepted time interval.\n\n## Ordinary calculation: an unavoidable term in this recipe\n\nIn current_disk_heat_propagation.py, W0=(1-b)^(-1/2) has constant\ncoefficient one. All subsequent majorant coefficients are nonnegative.\nThe j=0, derivative-order-zero, n=0 term in cutoff_norm therefore gives\n\n    c_cut(t) >= 1.14e8 t^(-6) exp[-1/(16t)].\n\nThis is a LOWER bound on the reported positive UPPER estimator, not on\nthe true cutoff defect. The exponential is the exact Gamma(1,1/(16t))\nterm for the existing cutoff at distance .5. Each of the four defect\njets receives this same allowance. Hence bbar>=6 c_cut and the geometric\nVolterra ratio used by the code necessarily has\n\n    x(t)=t^4 bbar/140 >= x_floor(t)\n         =(6*1.14e8/140)t^(-2)exp[-1/(16t)].                 (1)\n\nThe required x<1 fails already above the first root near .00226603.\nOn [.002,.003], log(x_floor)'=-2/t+1/(16t^2)>0, so interval bisection\ncertifies that root. The floor at .05 exceeds 5.59912e8. Merely changing\nthe cutoff distance, keeping this recipe, would need distance >2.06849\nfor x<1 at .05, outside the existing .625 support and .75 analytic ball.\nThis is not a proof that a different cutoff argument cannot work.\n\nStopping the retained evaluation at the root does not rescue the existing\ntail estimator. Substitution into the already proved all-positive-time\ntail formula gives a one-dimensional coefficient-weighted error report\nabout 1.001215e-23: over 1.0012e7 times the sufficient 1e-30 application\nscreen, even with all other errors zero. This is an excessive upper\nreport; the actual tail may be much smaller. The coefficient is only\nthe established exact one-dimensional envelope, not a multicolumn map.\n\n## Execute one sharper alternative against the same loss\n\nThe geometric summation itself is avoidable. If z=t^4 bbar, retain the\nexact convolution coefficients instead:\n\n    Phi(z)=sum_(m>=0) 6^(m+1) z^m/(4m+3)!\n          =3(sinh(y)-sin(y))/y^3, y=(6z)^(1/4).             (2)\n\nIndeed, convolving t^3 with another t^3 multiplies by B(4,4), and the\nsuccessive beta factors telescope to the displayed factorial. The four\npositive jet sum uses precisely bbar of the accepted argument. Thus the\nhigher correction is bounded by sum(E1_jets)t^3[Phi(z)-1]. This retains\nthe entire series and is finite for every z>=0.\n\nBut its estimator is still excessive. At t=.05, using ONLY the floor\nz=140*x_floor gives log10(Phi)>351.075. The first convolution's base\nterm has positive coefficient at least c_cut/(128*pi), since the\nparametrix diagonal coefficient is at least 1/(4*pi). The implemented\nmixed-jet bound sums all first-convolution jets before multiplying by\nthe higher-series factor. Including rank two and the selected factor\ntwo, its reported uniform pointwise-to-L2 error guard therefore exceeds\n\n    4 t^3 c_cut/(128*pi) [Phi(140*x_floor)-1].              (3)\n\nThe log10 of (3) exceeds 360.489. Relative to the previous CONDITIONAL\nuniform-kernel error guard .002, the excess exceeds 10^363.188. That\nguard was one sufficient allocation in the full-window error formula,\nnot an attained constant or remaining physical margin. No intermediate\nkernel constant is compared directly to a physical-output ceiling.\n\nEquations (1)-(3) test the specified majorant extension, not a different\nsigned estimator or the actual residual. Since all other terms in this\nrecipe are positive, omitting them makes this rejection conservative.\n\n## Decision, consequence, and remaining calculation\n\nReject one-step extension of these positive cutoff/propagation majorants\nto .05. Exact factorial summation fixes their geometric convergence test\nbut not their quantitative usefulness. This is a verified estimator\nfailure, not a construction obstruction. No new signed value, implemented\nF_n, numerical application error, or full residual bound was obtained.\nNo coupled or physical budget closes; all unknown comparisons stay unknown.\n\nRetain the actual paired geometric method and its accepted t<=.001 proof.\nThe specified alternative for further execution is signed short-step\nsemigroup propagation: .05 can be reached in 50 steps of .001, inside\nthe existing time range. This observation is NOT a bound on the composed\nmetric/time jets or numerical quadratures. It also does not supply the\nmissing capped-kernel center. No cost or accuracy is certified for it.\n\nThe single next calculation is a signed, boundary-compatible short-step\nkernel with joint base/metric/time/mixed error enclosures, composed to\nproduce the complete Z_window L2 enclosure. This is still proposed.\nIts errors must enter the original complete residual through the actual\ncoefficient maps, not through conditional one-column ceilings. Preserve\nP32, the original physical norms, closed audit and accepted results.\n\nRemaining to-do list: actual signed application and complete residual;\nsource/solve/coefficient/application errors, G_t and every coupled budget;\nnonlinear admission/contraction, exact compatibility, physical matching,\nsemiclassical validity/noise and all-sector stability; the full stable\nsemiclassical wormhole objective.\n",
+  "source_utf8": "\"\"\"Test a positive estimator's extension; do not claim a signed evaluation.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-heat-window-extension-test'\nruntime = json.loads((ROOT/'evidence/current-coupled-mass-adjoint-runtime.json').read_bytes())\nsys.path.insert(0, str(Path(runtime['packages']['flint']['root']).parent))\nfrom flint import arb, ctx\n\nINPUTS = ['notes/'+STEM+'.md', 'checks/current_heat_window_extension_test.py',\n    'checks/current_disk_heat_propagation.py', 'notes/current-disk-heat-propagation.md',\n    'notes/current-quartic-positive-time-window.md',\n    'evidence/current-quartic-column-energy-dual-assembly.json',\n    'evidence/current-coupled-truncation-energy-error.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json']\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\ndef dec(x):\n    d=x['decimal_enclosure']\n    return arb(int(d['mid']),int(d['rad']))*arb(10)**int(d['exponent'])\n\ndef enc(x):\n    m,r,e=x.mid_rad_10exp(60)\n    return {'ball':x.str(40),'decimal_enclosure':\n            {'mid':str(m),'rad':str(r),'exponent':str(e)}}\n\ndef execute():\n    ctx.prec=512\n    assert digest(Path(sys.executable))==runtime['python_sha256']\n    for package in runtime['packages'].values():\n        for name,h in package['files'].items():\n            assert digest(Path(package['root'])/name)==h\n    def cut(t):\n        return arb('1.14e8')/t**6*(-1/(16*t)).exp()\n    def floor(t):\n        return 6*cut(t)*t**4/140\n    lo,hi=arb('.002'),arb('.003')\n    assert floor(lo)<1 and floor(hi)>1 and hi<arb(1)/32\n    for _ in range(100):\n        mid=(lo+hi)/2\n        if floor(mid)<1:\n            lo=mid\n        elif floor(mid)>1:\n            hi=mid\n        else:\n            raise AssertionError('Ambiguous interval bisection')\n    old=json.loads((ROOT/'evidence/current-quartic-column-energy-dual-assembly.json').read_bytes())\n    assert old['status']=='column_bound_arithmetic_passed_full_residual_unresolved'\n    c=old['result']['constants']\n    prior=json.loads((ROOT/'evidence/current-coupled-truncation-energy-error.json').read_bytes())['runs'][-1]\n    assert prior['status']=='passed'\n    p=prior['result']['parameters']\n    C,B2,beta=[dec(p[k]) for k in ['C','B2','beta']]\n    CL,M,P4=[dec(c[k]) for k in ['CLt','heat_diagonal_bound_M','P4_L2']]\n    CH,C0,C2=64*M*CL/3,2*CL/(3*arb.pi()),CL*P4/(480*arb.pi())\n    a=(arb(2000)**4+1)/C\n    alpha=dec(c['sharper_exact_one_dimensional_coefficient_envelope'])\n    T=arb('.05')\n    tail=4*C/arb('.001')*(-a*(hi-arb('.001'))).exp()/a*(CH/hi+C0/hi**2+C2)/(B2*beta)\n    y=(840*floor(T)).root(4)\n    phi=3*(y.sinh()-y.sin())/y**3\n    rho=4*T**3*cut(T)/(128*arb.pi())*(phi-1)\n    log10=lambda x:x.log()/arb(10).log()\n    radius=(4*T*(arb(6)*arb('1.14e8')/140/T**2).log()).sqrt()\n    assert floor(T)>arb('5.59912e8')\n    assert alpha*tail/arb('1e-30')>arb('1.0012e7')\n    assert log10(phi)>351 and log10(rho/arb('.002'))>363\n    assert radius>arb('2.06849')\n    values={'critical_time_lower':lo,'critical_time_upper':hi,\n        'ratio_floor_at_T':floor(T),'required_cutoff_distance_at_T':radius,\n        'tail_upper_report_at_critical_time':tail,\n        'one_dimensional_tail_report':alpha*tail,\n        'one_dimensional_tail_report_over_screen':alpha*tail/arb('1e-30'),\n        'log10_entire_series_factor_floor':log10(phi),\n        'log10_uniform_kernel_error_report_floor':log10(rho),\n        'log10_report_over_conditional_kernel_allocation':log10(rho/arb('.002'))}\n    return {'constants':{k:enc(x) for k,x in values.items()},\n        'ratio_floors':{t:enc(floor(arb(t))) for t in ['.001','.002','.0025','.01','.05']},\n        'scope':'Necessary-precondition failure of the specified larger-time positive estimator recipe; no larger-time operator bound asserted.',\n        'actual_signed_window':None,'actual_application_error':None,\n        'full_residual_bound':None,'coupled_budget_closed':False,\n        'construction_obstruction_proved':False}\n\nif __name__=='__main__':\n    path=ROOT/'evidence'/(STEM+'.json')\n    assert not path.exists(), 'Preserve immutable attempts.'\n    before={p:digest(ROOT/p) for p in INPUTS}\n    receipt={'started_utc':datetime.now(timezone.utc).isoformat(),\n        'input_sha256_before':before,'python':sys.executable,\n        'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n        'source_utf8':Path(__file__).read_text(encoding='utf-8')}\n    try:\n        receipt['result']=execute()\n        receipt['status']='specified_estimator_rejected_signed_window_and_full_residual_unresolved'\n    except BaseException as exc:\n        receipt['status']='failed';receipt['failure']=repr(exc)\n        raise\n    finally:\n        receipt['input_sha256_after']={p:digest(ROOT/p) for p in INPUTS}\n        receipt['finished_utc']=datetime.now(timezone.utc).isoformat()\n        path.write_text(json.dumps(receipt,indent=2)+'\\n',encoding='utf-8',newline='\\n')\n    assert before==receipt['input_sha256_after']\n    print(json.dumps({'status':receipt['status'],'constants':{\n        k:x['ball'] for k,x in receipt['result']['constants'].items()}},indent=2))\n",
+  "result": {
+    "constants": {
+      "critical_time_lower": {
+        "ball": "[0.002266029884673628551725384702582098738861 +/- 4.48e-44]",
+        "decimal_enclosure": {
+          "mid": "22660298846736285517253847025820987388609552619843858322474204614",
+          "rad": "2",
+          "exponent": "-67"
+        }
+      },
+      "critical_time_upper": {
+        "ball": "[0.002266029884673628551725384702582887599766 +/- 1.77e-43]",
+        "decimal_enclosure": {
+          "mid": "22660298846736285517253847025828875997661762737897975608127032476",
+          "rad": "2",
+          "exponent": "-67"
+        }
+      },
+      "ratio_floor_at_T": {
+        "ball": "[559912231.5782000817777760909346312008872 +/- 1.40e-32]",
+        "decimal_enclosure": {
+          "mid": "5599122315782000817777760909346312008871861198643534748812955213",
+          "rad": "2",
+          "exponent": "-55"
+        }
+      },
+      "required_cutoff_distance_at_T": {
+        "ball": "[2.068491750048111855126336759933237166186 +/- 3.73e-40]",
+        "decimal_enclosure": {
+          "mid": "20684917500481118551263367599332371661863724824665655335933109097",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "tail_upper_report_at_critical_time": {
+        "ball": "[4.459688041168729771771e-23 +/- 8.49e-45]",
+        "decimal_enclosure": {
+          "mid": "44596880411687297717709737174439221810143897620421743938833842395",
+          "rad": "8218542292324152038084322211700972789432321",
+          "exponent": "-87"
+        }
+      },
+      "one_dimensional_tail_report": {
+        "ball": "[1.001215017017865926115e-23 +/- 2.99e-45]",
+        "decimal_enclosure": {
+          "mid": "10012150170178659261148856107378258450957415200226717108340538927",
+          "rad": "1845090495298677804911651366189592096014337",
+          "exponent": "-87"
+        }
+      },
+      "one_dimensional_tail_report_over_screen": {
+        "ball": "[10012150.17017865926115 +/- 2.99e-15]",
+        "decimal_enclosure": {
+          "mid": "10012150170178659261148856107377539098845760714984187700338225113",
+          "rad": "1845118668701432214886363772662674444255233",
+          "exponent": "-57"
+        }
+      },
+      "log10_entire_series_factor_floor": {
+        "ball": "[351.0751514854433303344018031619040491642 +/- 3.69e-38]",
+        "decimal_enclosure": {
+          "mid": "35107515148544333033440180316190404916423682021293798530360992433",
+          "rad": "2",
+          "exponent": "-62"
+        }
+      },
+      "log10_uniform_kernel_error_report_floor": {
+        "ball": "[360.4899783703786418991042462092549455381 +/- 2.15e-40]",
+        "decimal_enclosure": {
+          "mid": "36048997837037864189910424620925494553810021395142604457225906065",
+          "rad": "2",
+          "exponent": "-62"
+        }
+      },
+      "log10_report_over_conditional_kernel_allocation": {
+        "ball": "[363.1889483747146607038905073145304525113 +/- 3.21e-38]",
+        "decimal_enclosure": {
+          "mid": "36318894837471466070389050731453045251133202406996393603094863319",
+          "rad": "2",
+          "exponent": "-62"
+        }
+      }
+    },
+    "ratio_floors": {
+      ".001": {
+        "ball": "[3.511744792512654436769919996177155746373e-15 +/- 1.22e-55]",
+        "decimal_enclosure": {
+          "mid": "35117447925126544367699199961771557463728782980911153481027394762",
+          "rad": "2",
+          "exponent": "-79"
+        }
+      },
+      ".002": {
+        "ball": "[0.03274654724219202507060595020734230295719 +/- 4.51e-42]",
+        "decimal_enclosure": {
+          "mid": "32746547242192025070605950207342302957185498564165812501994622974",
+          "rad": "2",
+          "exponent": "-66"
+        }
+      },
+      ".0025": {
+        "ball": "[10.85640411844044581342702445979818300196 +/- 1.79e-39]",
+        "decimal_enclosure": {
+          "mid": "10856404118440445813427024459798183001958212685783152021881937340",
+          "rad": "2",
+          "exponent": "-63"
+        }
+      },
+      ".01": {
+        "ball": "[94316473.51283950869100301366750719901517 +/- 2.79e-33]",
+        "decimal_enclosure": {
+          "mid": "9431647351283950869100301366750719901517278691161472350050135394",
+          "rad": "2",
+          "exponent": "-56"
+        }
+      },
+      ".05": {
+        "ball": "[559912231.5782000817777760909346312008872 +/- 1.40e-32]",
+        "decimal_enclosure": {
+          "mid": "5599122315782000817777760909346312008871861198643534748812955213",
+          "rad": "2",
+          "exponent": "-55"
+        }
+      }
+    },
+    "scope": "Necessary-precondition failure of the specified larger-time positive estimator recipe; no larger-time operator bound asserted.",
+    "actual_signed_window": null,
+    "actual_application_error": null,
+    "full_residual_bound": null,
+    "coupled_budget_closed": false,
+    "construction_obstruction_proved": false
+  },
+  "status": "specified_estimator_rejected_signed_window_and_full_residual_unresolved",
+  "input_sha256_after": {
+    "notes/current-heat-window-extension-test.md": "7ba0a99238621e125f1f6c158582842da96c2763872aa576a4a079766dbefeb0",
+    "checks/current_heat_window_extension_test.py": "47dbe834f03b3ed4c225cd73a220503c6b4157b45462acc957908e8cc5bfac6d",
+    "checks/current_disk_heat_propagation.py": "c436a1a07dc622acbe6ba03e3193372b1ed88b2ffc3e4782d1ddc3e863f841ae",
+    "notes/current-disk-heat-propagation.md": "f11709526e22bbe5742465573bd27c95b5eee37d6f8f49cdd322fad88c6a3df1",
+    "notes/current-quartic-positive-time-window.md": "fcc40dcd2f07579faa124f9dae8b81899c7aeb7999ebc021588df67ddc2613d6",
+    "evidence/current-quartic-column-energy-dual-assembly.json": "3f369da3fbb8d2df3582e02bf9b3c5d2c2cb8b1971d92ebcf7082f44175ecfb4",
+    "evidence/current-coupled-truncation-energy-error.json": "84869ed6854f8932c3694edc83e1e4dbe1c8bef4a23538c320ff91c705fda934",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "finished_utc": "2026-10-28T02:10:51.944411+00:00"
+}

@@ -1,3 +1,39 @@
+# One-step positive estimator rejected; signed application still unexecuted
+
+2026-10-27, E003/S169. The complete residual goal stays ACTIVE/INCOMPLETE.
+The [ordinary estimator test](current-heat-window-extension-test.md) and
+[512-bit receipt](../evidence/current-heat-window-extension-test.json)
+reject extending the existing cutoff/Volterra majorant recipe directly
+to t=.05. Its cutoff term alone forces x>=5.59912e8; x=1 is reached
+near .00226603. Stopping there leaves a coefficient-weighted tail upper
+report about 1.001215e-23, over 1.0012e7 times the sufficient one-column
+1e-30 application screen. Neither number lower-bounds the true error.
+
+Executed sharper alternative: retain the exact factorial Volterra series,
+Phi(z)=3(sinh(y)-sin(y))/y^3, y=(6z)^(1/4). It is finite for all z,
+but the same positive recipe's uniform-kernel error report at .05 exceeds
+the previous CONDITIONAL .002 kernel allocation by over 10^363.188.
+No larger-time geometric estimate is presumed valid by this calculation;
+it is a necessary-precondition test of the specified extension recipe.
+No signed value, actual application error or full residual was obtained.
+
+Decision: reject that one-step positive extension and retain the accepted
+short-time geometric proof. The next calculation is a signed paired
+short-step kernel with certified base/metric/time/mixed errors, composed
+to enclose the complete retained density in L2. Fifty .001 steps would
+cover .05, but their numerical center, error propagation and actual-domain
+output comparison remain UNPROVED. This alternative is proposed, not
+an executed evaluator. The exact capped kernel inside the old parametrix
+is still unevaluated. No physical or coupled budget closes.
+
+Preserve all accepted results, P32, original norms and the closed audit.
+Remaining to-do list: complete signed application and full-domain residual;
+all source/solve/coefficient/application errors, G_t and coupled/admission
+budgets; nonlinear existence, compatibility, matching, semiclassical
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Positive-time window reduced; signed application still unexecuted
 
 2026-10-27, E003/S169. The full residual goal remains ACTIVE/INCOMPLETE.
