@@ -1,0 +1,446 @@
+{
+  "status": "complete_local_return_reviewed_fractional_response_unresolved",
+  "finished_utc": "2026-10-29T07:43:12.513972+00:00",
+  "receipt_sha256": "f3744152455b1a680ca0df6c69353f0b839cbb73e9d7701756e315b60bf3c68b",
+  "receipt_path": "evidence\\current-source-adapted-local-return-attempt4.json",
+  "review_source_sha256": "fd00ce77e7a5895ab6dc3962ef168ae730c95614360c00ace5216a8b28fed815",
+  "review_source_utf8": "\"\"\"Author ordinary-argument, independent action-row and provenance review.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nimport current_source_adapted_local_return as m\narb,ctx,dec,enc,J=m.arb,m.ctx,m.dec,m.enc,m.J\nROOT=m.ROOT;STEM=m.STEM\n\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\n\nclass B:\n \"\"\"Two independent variations; coefficients are spatial Taylor jets.\"\"\"\n def __init__(self,v=0,i=0,j=0,ij=0):self.v,self.i,self.j,self.ij=[J.cast(x,10) for x in [v,i,j,ij]]\n @staticmethod\n def lift(v):return v if isinstance(v,B) else B(v)\n def __add__(self,o):\n  o=B.lift(o);return B(self.v+o.v,self.i+o.i,self.j+o.j,self.ij+o.ij)\n __radd__=__add__\n def __neg__(self):return B(-self.v,-self.i,-self.j,-self.ij)\n def __sub__(self,o):return self+-B.lift(o)\n def __rsub__(self,o):return B.lift(o)+-self\n def __mul__(self,o):\n  o=B.lift(o);return B(self.v*o.v,self.i*o.v+self.v*o.i,self.j*o.v+self.v*o.j,\n   self.ij*o.v+self.i*o.j+self.j*o.i+self.v*o.ij)\n __rmul__=__mul__\n def __truediv__(self,o):return self*B.lift(o).v.inv()\n def __pow__(self,n):\n  out=B(1)\n  for _ in range(n):out=out*self\n  return out\n\ndef independent_rows(p,c,bs,x,initial):\n L,a,ga,beta,C,B2=[p[k] for k in ['L','a','gamma','beta','C','B2']]\n z=L-ga*x;q2=2*x+a*x*x\n rq=1+sum((bs[j]*ga**(j-2)*x**(j-1)/(2+a*x) for j in range(3,7)),0)\n q=q2*rq;D=z*q.d().d().d()+3*ga*q.d().d()\n # Local formal jets satisfy the defining ODEs, with independent initial data.\n coeff=[[arb(v)] for v in initial]\n for n in range(6):\n  r,hr,f,hf,g,hg,k,W=[J(v) for v in coeff]\n  rhs=[hr/q2,c['muY']*r-f,hf/q2,-g,hg/q2,-k,J([arb(0)]*(n+1)),D*r]\n  for i in range(8):coeff[i].append(rhs[i].c[n]/(n+1))\n r,hr,f,hf,g,hg,k,W=[J(v) for v in coeff]\n MM=z*q.d().d()+4*ga*q.d()\n nu=z**4/(3*L**5)*(-z*rq*f+(z*rq*c['muY']-MM)*r-(7*ga*rq-z*rq.d())*hr+W)\n u=z**4/L**5*(z*rq*f+(2*MM/3-z*rq*c['muY'])*r+(5*ga*rq-z*rq.d())*hr-2*W/3)\n def H(v):return q2*v.d()\n def Delta(v):return q*v.d().d()+q.d()*v.d()\n ni,ui=nu,u;dni,dui=Delta(nu),Delta(u);hni=H(nu)\n ld=[]\n for j in range(5):\n  nj,uj,dnj,duj,hnj=[int(i==j) for i in range(5)]\n  phi=B(-z.log(),ni,nj)\n  LL=B(-q.d().d(),-2*dui,-2*duj)\n  MM=B(ga*q.d()/z+ga**2*q/z**2,dni,dnj)\n  NN=B(ga**2*q/z**2,2*ga*rq/z*hni,2*ga*rq/z*hnj,2*rq/q2*hni*hnj)\n  DD=LL-6*MM-6*NN\n  def expjet(i,j,k):return B(1,k*i,k*j,k*k*i*j)\n  en2,en4,eu2,eum2=expjet(ni,nj,2),expjet(ni,nj,4),expjet(ui,uj,2),expjet(ui,uj,-2)\n  le=en2*DD/(2*z**2)+en2*eu2/(C*z**2)+3*arb(2000)**-10*B2/C*en4*eu2/z**4\n  lm=-arb.pi()*arb(2000)**16/(C*B2)*eu2\n  lr=8*arb.pi()*arb('1e22')/(C*B2)*(4*eu2+4*C*DD+C*C*eum2*DD**2)\n  wb=phi*LL**2/60+LL*MM/30-MM**2/10+LL*NN/30-7*MM*NN/90-7*NN**2/180\n  lw=(C*C*eum2*wb-C*phi*LL/18+(arb(1)/15-arb(2000)**8/3)*phi*eu2-C*NN/18)/(2*arb.pi()*C*B2)\n  ld.append(((le+lm+lr).ij,lw.ij))\n out=[]\n for allocation in [0,1]:\n  d=[row[allocation] for row in ld]\n  fn=d[0]+Delta(d[2])-H(d[4])-q2.d()*d[4]\n  fu=d[1]+Delta(d[3])\n  fn=-fn/beta;fu=-fu/beta\n  if allocation==0:\n   fn=fn-c['fn_r']*r-c['fn_f']*f-c['fn_g']*g\n   fu=fu-c['fu_r']*r-c['fu_f']*f-c['fu_g']*g\n  else:\n   R=-q.d().d();du=Delta(u)\n   U0=2*(604*arb(2000)**8+(1+2*arb('1e-8'))*(arb(2000)**8/6-arb(1)/30))/(arb.pi()*C*B2)\n   a2=arb(0,100)*C/(480*arb.pi()*B2)\n   p4=4*R**2*u+8*R*du+8*Delta(R*u)+8*Delta(du)\n   fu=fu-arb(0,m.up(U0))/beta*u-a2/beta*p4+arb(2000)**4/(6*arb.pi()*B2*beta)*du\n  out.extend([fn.c[0]*z.c[0]**2,fu.c[0]*z.c[0]**2])\n return out\n\ndef main():\n ctx.prec=512\n path=ROOT/'evidence'/(STEM+'-verification.json');assert not path.exists()\n source=ROOT/'evidence'/(STEM+'-attempt4.json');d=json.loads(source.read_bytes())\n assert d['status']=='complete_local_return_enclosed_fractional_entry_unknown'\n assert d['input_sha256_before']==d['input_sha256_after']\n for p,h in d['input_sha256_before'].items():assert digest(ROOT/p)==h,p\n assert d['ordinary_argument_utf8']==(ROOT/'notes'/(STEM+'.md')).read_text(encoding='utf-8')\n assert d['arithmetic_source_utf8']==(ROOT/'checks/current_source_adapted_local_return.py').read_text(encoding='utf-8')\n assert digest(Path(sys.executable))==d['python_sha256']\n baseline=json.loads(m.BASELINE.read_bytes());assert all(digest(Path(p))==h for p,h in baseline.items())\n r=d['result'];v={k:dec(t) for k,t in r['constants'].items()}\n assert v['complete_local_return']<arb('4.394648e29')\n assert v['complete_classical_two_row_difference']<arb('4.394062e29')\n assert v['complete_local_quantum_rows']<arb('5.732109e25')\n assert v['complete_adjoint_York_return']<arb('1.246910e24')\n assert v['local_return_over_remaining_account']<arb('.001018931')\n assert v['account_after_local_NOT_physical_margin']>arb('4.308605e32')\n assert v['local_original_bolt_estimator_debit']<arb('1.406657e-14')\n assert r['cell_count']==152 and len(r['cells'])==152\n assert dec(r['cells'][0]['s0']).is_zero()\n for previous,current in zip(r['cells'],r['cells'][1:]):assert previous['s1']==current['s0']\n for key in ['actual_fractional_flow_norm','actual_application_error','complete_first_reference_residual']:\n  assert r[key] is None\n p={k:dec(t) for k,t in m.result('current-global-green-trial-enclosure')['trial_parameters'].items()}\n c=m.constants('current-source-adapted-geodesic-first-attempt');m.model_rows(p,c)\n mp={k:dec(t) for k,t in m.result('current-global-mass-conversion')['parameters'].items()}\n L,a,ga,beta=[p[k] for k in ['L','a','gamma','beta']]\n u,e,t=[mp[k] for k in ['u','eps','tau']]\n Q=[beta,arb(0),u,-4*beta-2*u-t,3*beta+u+e,-2*e,e]\n bs=[sum((Q[j]*m.comb(j,i)*L**(j-i)*(-1)**i for j in range(i,7)),arb(0)) for i in range(7)]\n bs[:3]=[arb(0),2*ga,a]\n assert dec(r['cells'][-1]['s1']).overlaps(L-arb('.01'))\n assert (1+4*arb('1.75')/arb('1.001')).sqrt()>arb('2.8')\n fixtures=[]\n for xp in [arb('.3'),arb(3),arb('1e20')]:\n  x=J([xp,arb(1)]+[arb(0)]*8);rr=m.rows(p,c,bs,x)\n  for i in range(8):\n   initial=[int(k==i) for k in range(8)]\n   alt=independent_rows(p,c,bs,x,initial)\n   for j in range(4):assert rr[j][i].overlaps(alt[j]),(str(xp),i,j,str(rr[j][i]),str(alt[j]))\n   fixtures.append(dict(x=enc(xp),basis_index=i,all_four_rows_overlap=True))\n  print('Independent action rows checked at x='+xp.str(8),flush=True)\n failed=[]\n for i in [1,2,3]:\n  f=ROOT/'evidence'/(STEM+'-attempt'+str(i)+'.json');a0=json.loads(f.read_bytes())\n  assert a0['status']=='failed'\n  failed.append(dict(path=str(f.relative_to(ROOT)),sha256=digest(f),reason=a0['traceback'].splitlines()[-1]))\n reviews=dict(\n  domain='The actual analytic profile is reconstructed by both exact finite-Q York rows. Its rho^4 log term has fourth strong derivatives in L2; local integration-by-parts fluxes vanish at the regular bolt and on the original outer mass/log phase. No H5 source assertion or new boundary wall.',\n  row_comparison='The transformed Dirichlet equation has Pxi>=4.5/z^2 and QPxi>=1 by the stated polynomial guards. Testing it gives CU,CV in the original z^-4 L2 norm, not C5 physical admission.',\n  adjoint='The original-endpoint trial Y=z^2 Q2 rf_z/2 gives identity (4) after one exact adjoint transfer; the h-prime terms cancel using both rows. All three residual terms and the global Volterra return are charged.',\n  profile='Near-coincident masses are enclosed on a single radius-.25 contour; positive Q integrals dominate complex degrees by degree .9, with the retained flux factor two. All other poles, including the large-mass Cv-1 term, remain. Spectral norm caps are auxiliary-profile bounds only.',\n  full_domain='All 152 whole real cells and all 64 complex outer coefficient arcs are included. Weighted coefficients are holomorphic through zero after extracting the sole linear log; original log-square integration and one-sided boundary fields are unchanged.',\n  local_quantum='Complete Weyl, LLL, shared bounded a0 and actual a2 restorations retained. The exact nonlocal ultraviolet logarithm remains a separate UNKNOWN numerical flow-norm entry, not a discarded contact or a finite mode approximation.',\n  independent_rows='96 coefficient comparisons from separate two-direction differentiation of the accepted action check the strong-row implementation, including the second gradient contact. These fixtures support the ordinary generator/adjoint argument; they are not a continuum proof.',\n  arithmetic='Integer constants are converted to Arb before division; broad outer cells are subdivided without dropping regions. Three failed development receipts are retained; the fourth is the completed frozen enclosure.',\n  decision='The complete local return fits 0.101894% of the remaining first-stage account. Stop optimizing it; next quantify the actual fractional geodesic norm together with application errors. No first inverse or original admission certificate.',\n  scope='Fixed seed and phase only. No independent boundary-phase, nonlinear neighborhood, original P32 defect/mass/graph/physical output, existence, compatibility, matching, validity/noise or stability result. Author review, not independent or Lean certification.')\n output=dict(status='complete_local_return_reviewed_fractional_response_unresolved',\n  finished_utc=datetime.now(timezone.utc).isoformat(),receipt_sha256=digest(source),receipt_path=str(source.relative_to(ROOT)),\n  review_source_sha256=digest(Path(__file__)),review_source_utf8=Path(__file__).read_text(encoding='utf-8'),\n  checked_inputs=len(d['input_sha256_before']),protected_paths_unchanged=len(baseline),\n  failed_development_receipts=failed,independent_action_fixtures=fixtures,review=reviews,\n  constants={k:enc(t) for k,t in v.items()},\n  complete_first_reference_inverse=False,complete_original_admission=False,goal_complete=False)\n path.write_bytes((json.dumps(output,indent=2)+'\\n').encode('utf-8'))\n print(json.dumps(dict(status=output['status'],checked_inputs=output['checked_inputs'],\n  independent_row_comparisons=len(fixtures)*4,local_return=v['complete_local_return'].str(12)),indent=2))\n\nif __name__=='__main__':main()\n",
+  "checked_inputs": 15,
+  "protected_paths_unchanged": 21,
+  "failed_development_receipts": [
+    {
+      "path": "evidence\\current-source-adapted-local-return-attempt1.json",
+      "sha256": "0beafa0951afa36e030b9d8a7b1c3d8776a3c9b283b06aa0cf6b39ecd772c9b6",
+      "reason": "AssertionError"
+    },
+    {
+      "path": "evidence\\current-source-adapted-local-return-attempt2.json",
+      "sha256": "1686dbc440fb02f2144697e6db38a1c526a04fa18662c2497fd9be185ac0da7f",
+      "reason": "AssertionError: (110, [nan, nan, [1.5510154739883069007766e-9 +/- 1.99e-32], [2.2875021735021180227739e-6 +/- 8.32e-29]])"
+    },
+    {
+      "path": "evidence\\current-source-adapted-local-return-attempt3.json",
+      "sha256": "f9496f5fe1cc75dab4c72fe2ff0a2d6e01ecf8726572573cb5e879e83eefe87b",
+      "reason": "AssertionError: Binary floats are not certified coefficients"
+    }
+  ],
+  "independent_action_fixtures": [
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 0,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 1,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 2,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 3,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 4,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 5,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 6,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "basis_index": 7,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 0,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 1,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 2,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 3,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 4,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 5,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 6,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "3.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "basis_index": 7,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 0,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 1,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 2,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 3,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 4,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 5,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 6,
+      "all_four_rows_overlap": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "basis_index": 7,
+      "all_four_rows_overlap": true
+    }
+  ],
+  "review": {
+    "domain": "The actual analytic profile is reconstructed by both exact finite-Q York rows. Its rho^4 log term has fourth strong derivatives in L2; local integration-by-parts fluxes vanish at the regular bolt and on the original outer mass/log phase. No H5 source assertion or new boundary wall.",
+    "row_comparison": "The transformed Dirichlet equation has Pxi>=4.5/z^2 and QPxi>=1 by the stated polynomial guards. Testing it gives CU,CV in the original z^-4 L2 norm, not C5 physical admission.",
+    "adjoint": "The original-endpoint trial Y=z^2 Q2 rf_z/2 gives identity (4) after one exact adjoint transfer; the h-prime terms cancel using both rows. All three residual terms and the global Volterra return are charged.",
+    "profile": "Near-coincident masses are enclosed on a single radius-.25 contour; positive Q integrals dominate complex degrees by degree .9, with the retained flux factor two. All other poles, including the large-mass Cv-1 term, remain. Spectral norm caps are auxiliary-profile bounds only.",
+    "full_domain": "All 152 whole real cells and all 64 complex outer coefficient arcs are included. Weighted coefficients are holomorphic through zero after extracting the sole linear log; original log-square integration and one-sided boundary fields are unchanged.",
+    "local_quantum": "Complete Weyl, LLL, shared bounded a0 and actual a2 restorations retained. The exact nonlocal ultraviolet logarithm remains a separate UNKNOWN numerical flow-norm entry, not a discarded contact or a finite mode approximation.",
+    "independent_rows": "96 coefficient comparisons from separate two-direction differentiation of the accepted action check the strong-row implementation, including the second gradient contact. These fixtures support the ordinary generator/adjoint argument; they are not a continuum proof.",
+    "arithmetic": "Integer constants are converted to Arb before division; broad outer cells are subdivided without dropping regions. Three failed development receipts are retained; the fourth is the completed frozen enclosure.",
+    "decision": "The complete local return fits 0.101894% of the remaining first-stage account. Stop optimizing it; next quantify the actual fractional geodesic norm together with application errors. No first inverse or original admission certificate.",
+    "scope": "Fixed seed and phase only. No independent boundary-phase, nonlinear neighborhood, original P32 defect/mass/graph/physical output, existence, compatibility, matching, validity/noise or stability result. Author review, not independent or Lean certification."
+  },
+  "constants": {
+    "CU": {
+      "ball": "[1.430007454887830888652124092706153908674 +/- 1.18e-41]",
+      "decimal_enclosure": {
+        "mid": "14300074548878308886521240927061539086740117535991280735250377339",
+        "rad": "4",
+        "exponent": "-64"
+      }
+    },
+    "CV": {
+      "ball": "[2.916126020886772888415359296523418928459 +/- 1.35e-40]",
+      "decimal_enclosure": {
+        "mid": "29161260208867728884153592965234189284591346183093672581611865790",
+        "rad": "4",
+        "exponent": "-64"
+      }
+    },
+    "Pxi_positive_guard": {
+      "ball": "[0.2499999999032974200888389852 +/- 4.85e-29]",
+      "decimal_enclosure": {
+        "mid": "24999999990329742008883898516467949678751576783434468604047822110",
+        "rad": "1316772552449268887100669589536636929",
+        "exponent": "-65"
+      }
+    },
+    "QPxi_guard": {
+      "ball": "[1.9999999995521143667272542483 +/- 3.46e-29]",
+      "decimal_enclosure": {
+        "mid": "19999999995521143667272542482798102993651874320908190820881875045",
+        "rad": "143241903141684446735314340894736385",
+        "exponent": "-64"
+      }
+    },
+    "Dmax": {
+      "ball": "[14.00000000057003626052894913873806664846 +/- 4.41e-39]",
+      "decimal_enclosure": {
+        "mid": "14000000000570036260528949138738066648464400355048791742233819229",
+        "rad": "4",
+        "exponent": "-63"
+      }
+    },
+    "complete_classical_two_row_difference": {
+      "ball": "[439406195121032378522687886969.347 +/- 3.68e-4]",
+      "decimal_enclosure": {
+        "mid": "43940619512103237852268788696934692467022112095410788782823921103",
+        "rad": "29225614819641621616738533638145",
+        "exponent": "-35"
+      }
+    },
+    "complete_local_quantum_rows": {
+      "ball": "[57321082362199752879255967.51338801939482 +/- 3.16e-16]",
+      "decimal_enclosure": {
+        "mid": "57321082362199752879255967513388019394819684392884271363671873323",
+        "rad": "24304291073",
+        "exponent": "-39"
+      }
+    },
+    "complete_adjoint_York_return": {
+      "ball": "[1.246909135385165307650812e+24 +/- 0.438]",
+      "decimal_enclosure": {
+        "mid": "12469091353851653076508121865594144355839248588927920571790161995",
+        "rad": "2513588371380208398056351476575631310849",
+        "exponent": "-40"
+      }
+    },
+    "complete_local_return": {
+      "ball": "[4.39464763112529963440874793749e+29 +/- 0.299]",
+      "decimal_enclosure": {
+        "mid": "43946476311252996344087479374904687210405152456335966489166006192",
+        "rad": "25165109534848476339842488960286721",
+        "exponent": "-35"
+      }
+    },
+    "local_return_over_remaining_account": {
+      "ball": "[0.001018930589178135783540168777531 +/- 7.54e-34]",
+      "decimal_enclosure": {
+        "mid": "10189305891781357835401687775308297521540726282479936584550430370",
+        "rad": "5834711228426668220551932997009409",
+        "exponent": "-67"
+      }
+    },
+    "account_after_local_NOT_physical_margin": {
+      "ball": "[4.30860535236887470036559125206251e+32 +/- 0.299]",
+      "decimal_enclosure": {
+        "mid": "43086053523688747003655912520625095312789594847543664033510833992",
+        "rad": "25165109533337319065324202491905",
+        "exponent": "-32"
+      }
+    },
+    "first_stage_known_subtotal": {
+      "ball": "[5.645e+32 +/- 8.48e+28]",
+      "decimal_enclosure": {
+        "mid": "56447989417244211757379729369982276499932545612864181976082185420",
+        "rad": "6460125666431896483710400213329754707121137958231324254797825",
+        "exponent": "-32"
+      }
+    },
+    "local_original_bolt_estimator_debit": {
+      "ball": "[1.40665630858999201469505444664e-14 +/- 5.09e-44]",
+      "decimal_enclosure": {
+        "mid": "14066563085899920146950544466357200572818395767040570768595195632",
+        "rad": "8054948468189424364105124290756609",
+        "exponent": "-78"
+      }
+    },
+    "conditional_actual_flow_norm_ceiling_APPLICATION_ZERO": {
+      "ball": "[2.771001978536555559253e+64 +/- 7.98e+42]",
+      "decimal_enclosure": {
+        "mid": "27710019785365555592525390493304006128854058180068696942241120256",
+        "rad": "3367047632702551945820058449083141200019456",
+        "exponent": "0"
+      }
+    }
+  },
+  "complete_first_reference_inverse": false,
+  "complete_original_admission": false,
+  "goal_complete": false
+}

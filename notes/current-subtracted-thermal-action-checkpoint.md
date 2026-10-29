@@ -1,3 +1,111 @@
+# Complete local return enclosed; fractional quantum response still unresolved
+
+2026-10-28 HST, E003/S169. Previous goal turn: NO PROGRESS, a status and
+plan restatement. This turn executes the full local two-row return of the
+accepted source-adapted trial. Outcome: UNRESOLVED COMPLETE INVERSE, with
+the formerly unknown local/finite-domain return now bounded. Preserve
+8dc41ff, all earlier accepted results, P32, the closed audit, original
+physical norms and the full stable semiclassical wormhole objective.
+
+The [ordinary argument](current-source-adapted-local-return.md),
+[completed frozen run](../evidence/current-source-adapted-local-return-attempt4.json)
+and [author review](../evidence/current-source-adapted-local-return-verification.json)
+give, in the ORIGINAL E_t dual,
+
+    complete classical two-row difference <4.394062e29,
+    complete local quantum rows            <5.732109e25,
+    complete adjoint York return           <1.246910e24,
+    TOTAL Ereturn                         <4.394648e29.
+
+This is the entire local entry for this actual reference trial, not an
+isolated contact or selected-mode calculation. Both original equations
+are retained before taking norms. The classical comparison is subtracted
+as a signed row expression. The remaining global York difference is the
+exact adjoint residual of Y=z^2 Q2 rf_z/2 with the original endpoint
+conditions. Its full residual and the Volterra return W are included.
+The Weyl, LLL, common bounded a0 and a2 contacts are all charged; no
+finite common contact is assigned zero. The exact nonlocal UV logarithm
+and later actual-minus-reference quantum action remain separate entries.
+
+The actual paired mass/log domain, finite Q, cutoff/scalar-source data
+and regular bolt are unchanged. The trial's rho^4 log(rho) term has four
+weak derivatives in L2, so the local strong-row integration by parts is
+valid on the original core and extends by the proved dual bound. It
+does NOT have an H5 source bound. This uses no smooth surrogate, new
+inner wall, independent boundary-phase estimate or nonlinear transfer.
+
+The transformed exact York equation gives actual row comparisons
+
+    ||U xi||L2(z^-4 dz) <=CU ||xi||Et, CU<1.430008,
+    ||V xi||L2(z^-4 dz) <=CV ||xi||Et, CV<2.916127.
+
+These fixed-seed L2 comparisons are not the final C5 physical admission
+map. The original radius conversion and all physical-output requirements
+are preserved. Auxiliary profile poles near 2 are kept on one contour,
+so tiny pole separations do not create spurious coefficients. All other
+profiles, including the retained Cv-1 large-mass term, are included.
+There are 152 whole interval cells and 64 complete outer coefficient
+arcs; the outer logarithm is integrated explicitly. These cells bound
+continuous functions, not samples or a finite matter spectrum.
+
+Quantitative consequence in the COMPLETE first-stage accounting:
+
+    Esource+Emodel+Ereturn+Kgeo*N_9/2(V x_hat)+Eapplication <9.955e32.
+
+The new local return uses <0.101894% of the conservative 4.313e32 account
+left after the accepted source/model terms. Consequently the sufficient
+remaining test can now be written
+
+    Kgeo*N_9/2(V x_hat)+Eapplication <4.308605e32,
+    Kgeo <1.554891e-32.
+
+This is a residual account before TWO UNKNOWN entries, not an available
+physical margin. The local return's original first-output error estimator
+debit is <1.406657e-14. It neither closes the whole bolt allowance nor
+certifies a first inverse, original P32 defect, mass column, graph output,
+physical output or nonlinear admission. The conditional actual flow-norm
+ceiling near 2.771002e64 assumes Eapplication=0 and is NOT a proved norm
+or an implemented error allowance. The old Cflow ceiling is not adopted
+as a constant. Full quantum sums and regulator removal remain required
+in the retained nonlocal response and later actual quantum applications.
+
+The first remaining unsupported NUMERICAL implication is the actual
+fractional-flow norm, not the now executed local return or a domain
+substitution. The accepted model norm does not bound that quantity without
+the missing comparison. The local bound makes this distinction concrete:
+even eliminating the local entry entirely would improve the remaining
+account by only about 0.102%. Further local/York optimization is unjustified
+before computing the nonlocal entry and application errors.
+
+Decision: RETAIN the source-adapted correction and fractional strong
+method. The ONE next calculation is a complete quantitative enclosure of
+the actual N_9/2 term and its application error in the last displayed test.
+Use the known bolt rho^4 log coefficient in an explicit local subtraction,
+bound the retained fractional singular part and the regular remainder on
+the ACTUAL complete flow, and charge the subtraction cutoff and paired
+returns. The suggested remainder/flow derivative bounds have NOT been
+executed; qualitative regularity and a model norm cannot replace them.
+This is a proposal, not a newly attained quantum certificate.
+
+Author review checks 15 frozen inputs and all 21 protected paths. Separate
+two-direction differentiation of the accepted full local action agrees
+with the implemented strong rows in 96 coefficient fixtures, including
+the second gradient contact. These support the ordinary action/adjoint
+argument, not its continuum hypotheses. Three failed arithmetic runs and
+one failed review development run are preserved. They exposed an excessive
+coefficient guard, uncertified Python division and interval/jet-order
+issues; none is interpreted as a mathematical estimator failure. No
+independent-review or Lean certification is claimed.
+
+Remaining to-do list: actual fractional quantum norm and application
+errors, complete first inverse and later quantum applications; signed
+G_t/Z_r and every original coupled/source/graph/physical/boundary/mass
+budget; nonlinear admission/contraction and existence; exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Source-adapted first solve: source bounded, actual return still unresolved
 
 2026-10-28 HST, E003/S169. Previous turn: PROGRESS, the actual-source
