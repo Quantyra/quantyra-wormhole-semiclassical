@@ -1,3 +1,83 @@
+# Boundary density estimator rejected; retain its explicit layer in the full response
+
+2026-10-28 HST, E003/S169. Preserve the full stable semiclassical wormhole
+objective, closed audit, P32, actual paired mass/log realization, original
+physical norms and all accepted results. The full quantum-feasibility
+milestone remains UNRESOLVED. This is an executed failure of one specified
+estimator and a quantified change of estimation method, not a construction
+obstruction or a complete signed quantum certificate.
+
+The [actual-trial boundary test](current-localized-boundary-layer-test.md)
+finds a nonzero fifth proper-distance jet, c5 near -8.803551974e-102.
+The complete paired tangent multiplier and the actual finite-geometry
+parabolic limit yield an L2(dz) remainder of order t^(7/4), with
+
+    liminf t^(-7/4) ||r_v(t)-t^2 O6[v]/(4pi)||2 >3.676885e-103.
+
+Consequently NO finite B_v,D_v can establish the previously proposed
+UNSPLIT density estimate B_v t^(11/4)+D_v t^3 for every 0<t<=.001.
+Increasing constants or polynomial degree cannot repair these powers.
+The ordinary argument retains both original trial equations, actual
+boundary data and regular bolt. Its local limit includes the coincidence
+vertex and full thermal images; distant returns remain in the exact
+remainder. No finite-time bound on that remainder is inferred from this
+asymptotic limit. The actual common angular factor is retained.
+
+This rejects ONLY that L2-density estimator. It does not reject the weak
+E_t* alternative, the actual inverse, geometric admission or construction.
+The physical-half H8 bound remains accepted. The even extension contains
+c5 |y|^5 and is not H6 across the seam; smooth-double regularity was never
+an original geometric admission requirement.
+
+The specified alternative keeps the SAME trial and adds/subtracts its
+explicit complete-profile layer c5 t^(3/2) Phi(y/sqrt(t)) within the same
+common regulator. This is no new physical counterterm or boundary change.
+The complete Fourier profile obeys ||Phi||L2(halfline)<.136291. Its original
+L2(dz) coefficient is <1.199842e-102. With the entire angular sum included,
+the layer's short-time E_t* column is <2.843104e-134 and its relative
+column bound is <2.722623e-116. Its omitted regulator cap tends to zero
+with the explicit power cap^(3/4).
+
+In the existing EXACT one-dimensional coefficient ENVELOPE, that layer
+would cost <7.996751e-111 in original first-error units. This is a bound
+for the explicit layer only, not an actual Ritz coefficient, full trial
+residual or implemented numerical application. Its fraction of the
+conditional column screen is <2.498579e-100. No physical margin is credited.
+
+If instead the whole boundary remainder is estimated at power t^(7/4),
+the same coefficient costs 2333.333... times as much at t0=.001. Its
+conditional relative-coefficient ceiling becomes about 2.0462483763e14,
+with ALL OTHER unknown terms zero. Under the selected explicit-layer
+split the old approximately 4.7745795447e17 ceiling applies ONLY to a
+NEW t^(11/4) remainder, after charging the layer. Neither coefficient
+is known or an available margin. That power for the new remainder also
+requires proof; this test does not establish it.
+
+Decision: change to the explicit boundary-layer decomposition, retain
+the construction and accepted trial, and stop optimizing this negligible
+but compulsory term. The ONE next calculation is the complete actual-
+minus-layer quantum remainder in E_t*, including the varied kernel,
+coincident observation, full angular/thermal sums, contacts, cutoff
+transitions, regular-bolt returns and numerical errors. Compare its
+combined column charge with the conditional 1.0896685958e-16 screen only
+within the proved first-solve scope. An actual coefficient, complementary
+residual and later applications remain separate obligations before G_t.
+
+The estimator failure and explicit-layer bound are EXECUTED. The complete
+remainder and signed quantum response are PROPOSED/UNKNOWN. The known
+partial physical subtotal <9.142532e-11 and every full coupled/admission
+budget are unchanged. Unknown source, boundary, graph and mass comparisons
+remain unknown. The verification is author review of the ordinary argument
+and frozen numerical/provenance evidence, not independent or Lean review.
+
+Remaining to-do list: complete signed quantum column/first residual and
+later applications; G_t/Z_r and every coupled/source/graph/physical/boundary/
+mass requirement; nonlinear admission/contraction and existence; exact
+compatibility; physical matching/opening; semiclassical validity/noise;
+all-sector stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Weighted paired propagation corrected; complete quantum remainder unresolved
 
 2026-10-28 HST, E003/S169. Preserve the closed audit, P32, accepted source,
