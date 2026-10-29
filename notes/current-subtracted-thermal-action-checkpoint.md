@@ -1,3 +1,81 @@
+# Actual scalar source now has an affordable complete residual
+
+2026-10-28 HST, E003/S169. Second turn of the NEW execution goal. The
+full stable semiclassical wormhole objective remains ACTIVE and incomplete.
+Preserve P32, original physical norms, closed audit and accepted results.
+
+The [executed ordinary argument](current-scalar-green-source-residual.md)
+constructs an explicit analytic scalar approximation for the accepted Green
+input. The scalar and mixed rows share Cv-d Delta_bar; retaining that factor
+before norms yields a finite Legendre-resolvent combination. The trial's
+logarithms cancel to const+c1 s+O(s^2 log s), which belongs to the actual
+scalar form domain at the regular disk bolt. It vanishes at the outer end.
+This establishes a SOURCE trial in E_s, not a C5 physical metric correction.
+
+The full original-domain residual includes the actual inverse York return,
+finite-geometry difference, both computational cutoff transitions, input
+replacement, complete scalar remainder and all mixed anomaly/magnetic/
+off-shell contacts. The fixed-domain Ward identity is reused; this does
+not evaluate or truncate the independent quantum shape determinant.
+
+Executed 512-bit bounds:
+
+- ||rho_s||E_s* <1.048438e33, hence the scalar-source solution error in
+  E_s is below that value.
+- Its original bolt debit is <1.951034e-11, or 1.170387% of the WHOLE
+  1.667e-9 allowance. The exact physical transfer is unchanged.
+- The core/geometry/cutoff debit is <3.909471e-13; the full mixed remainder
+  costs <1.911939e-11. Input replacement costs <1.387e-21 and the scalar
+  form remainder <2.576e-23.
+- Keeping the accepted proof's explicit tensor sums before its successive
+  power-of-ten roundings improves that curvature estimator by >146192.
+  The OLD rounded estimate, tested in this same complete residual, costs
+  about 2.795108e-6, over 1676 times the whole allowance. That excessive
+  report does not lower-bound any actual physical error.
+
+The known partial certificate subtotal is now <9.142212e-11. The arithmetic
+remainder 1.5755778845e-9 still has to pay the unknown signed center, subsequent
+quantum applications and other errors; it is NOT a certified free margin.
+No full bolt, original-source defect, graph/other physical output, actual
+mass-column or boundary-phase gate closes. The two-fast quantum screen
+keeps its restricted scope, and no estimate is transferred to a nonlinear
+neighborhood.
+
+What changed: the previously unevaluated scalar source now has an explicit
+analytic approximation and a complete error affordable in the original
+output accounting. This is a consequential prerequisite, not the missing
+signed quantum certificate. There is no complete quantum trial/residual or
+Z_r value in this result. Subsequent numerical evaluation of b(y_hat,.) and
+the quantum operator still needs certified errors.
+
+Decision: retain the construction and the method that keeps the two-row
+cancellation. Freeze this now affordable source bound; further scalar or
+tensor refinement could recover at most 1.952e-11 of this upper budget and
+cannot settle the unknown quantum response. The decisive NEXT calculation
+is the complete signed first-quantum residual
+
+    r_t(v)=b(y_hat,v)/N-e_t(x_hat,v), for EVERY v in E_t,
+
+using an explicit trial from the retained full geodesic principal inverse,
+and enclosing the entire actual paired kernel, common contacts, angular/
+thermal sums, finite returns and numerical applications before taking the
+norm. This remains PROPOSED. A test ||r_t||E_t*<=1e33 would charge at most
+3.201e-11 to the original first-error budget; it is a sufficient research
+screen, not an available allocation or a guarantee for the complete Z_r.
+
+The arithmetic supports the ordinary form-domain and residual argument;
+it is neither an independent review nor a Lean proof. Immutable evidence
+and author verification record exact sources and runtime. All 21 protected
+inputs remain unchanged. No task-owned research calculation remains running.
+
+Remaining to-do list: complete signed quantum residual, later applications
+and Z_r; every coupled/source/graph/physical/boundary/mass requirement;
+nonlinear admission/contraction and existence; exact compatibility;
+physical matching/opening; semiclassical validity/noise; all-sector stability;
+the full stable semiclassical wormhole objective.
+
+---
+
 # First inverse test rejects taking the source norm separately
 
 2026-10-28 HST, E003/S169. This is the first turn of the NEW execution
