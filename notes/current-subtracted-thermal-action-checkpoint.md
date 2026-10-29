@@ -1,3 +1,119 @@
+# Structured integrability removes the excessive zero-order mass entry
+
+2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 4947843 bounded
+the actual filtered mass functional and rejected the global L2 product.
+The full stable semiclassical wormhole objective remains ACTIVE/INCOMPLETE.
+Preserve the closed audit, P32, all accepted results and original norms.
+The COMPLETE signed-response milestone remains OPEN. This calculation
+closes a consequential budget entry, not the complete mass response.
+
+The [ordinary actual-range argument](current-mass-pairing-integrable-return.md),
+[executed enclosure](../evidence/current-mass-pairing-integrable-return.json)
+and [author review](../evidence/current-mass-pairing-integrable-return-verification.json)
+test the SAME averaged f0,f1 and their full finite-Q reconstruction.
+The first new implication is an L1(dz) comparison for the structured
+shapes, rather than another bound on the global kernel coefficient.
+The auxiliary Friedrichs resolvents are positive L1 contractions.
+Factoring the complete rational functions and retaining their infinite
+Neumann series gives the comparison on the entire auxiliary spectrum.
+This does not replace the physical paired realization or its quantum modes.
+
+Both original York rows, the finite-domain Volterra return, actual bolt
+and original dz=gamma dx conversion remain. The actual muY is not
+canceled against a nominal pole. The original .1/.2 mass-cutoff endpoints
+are retained; its previously unspecified transition is now the normalized
+smooth bump. The bounds below hold for every transition with 0<=chi<=1.
+The original .05/.1 graph cutoff and mass conversion cost 2133<cost<2174
+are unchanged. This specifies an auxiliary decomposition, not a different
+physical correction or a free zero mode.
+
+Executed:
+
+    complete auxiliary Fref L1 norm             <.250000003,
+    original finite-Q L1 reconstruction          <41.183334,
+    ||Vv0||L1(dz)                               <9.047267e33,
+    ||Vv1||L1(dz)                               <2.261817e33,
+    complete gluing mass block                  <2.408488e25,
+    complete constant-contact mass block        <1.378288e26,
+    combined zero-order mass block Ezero        <1.619136e26,
+    fraction of conditional 1.49e34 account      <1.086669e-8,
+    ORIGINAL bolt charge                        <8.121310e-17.
+
+The full gluing proof supplies both ABSOLUTE Schur rows, not merely an
+L2 operator norm. Its row-subtracted L-infinity action pairs with the
+actual L1 trial. The cubic mass shape also bounds the complete constant
+contact, including its 1/Y factor. Local row subtraction is retained
+exactly once. The common regulator, full angular/thermal sums, contacts,
+overlap, cutoff transitions and global boundary/bolt returns remain in
+these two complete blocks. The bound does not cover the derivative blocks.
+
+The previous rejected upper-estimator entry was >4.7327721482e41.
+It exceeds the NEW combined upper bound by >2.9230234955e15. This is a
+comparison of estimator expressions, not a measured reduction or a lower
+bound on the actual quantum response. The old loss is overcome by a
+proved integrability property of the unchanged structured range, with
+no change to physical normalization, averaging radius, degree or transport.
+
+The same prescribed averaging also supplies the actual order-one source
+regularity needed by a transposed principal pairing. The paired mass cubic
+is C2, with bounded one-sided fourth jets, so the existing seam argument
+gives Dom(|P|^(13/4)). It is not H^(9/2). With the complete ultraviolet
+multiplier retained, the executed source and reconstruction coefficients give
+
+    Egeo <= A_geo M_h, A_geo<1.051933e23,
+    M_h=||P Vh_m||SM+|| |P|^(13/4)Vh_m||SM.
+
+The useful numerical M_h is UNKNOWN. The optimistic requirement
+M_h<1.4164406633e11 grants EVERY other remaining debit zero; it is neither
+an established constant nor a physical margin. The finite source factor
+and well-defined principal pairing do not evaluate this block.
+
+The complete comparison is still
+
+    Ebridge+sqrt(1+epsilon)[Ezero+Eremaining_mass
+                             +Efast+Erest+Eapplication]<=1.49e34.
+
+Ebridge<6.669e13 remains paid. After it and Ezero, the conditional full-E
+account is approximately 1.48999998380864e34. The other terms are UNKNOWN,
+not zero and not assigned this account. In particular the actual scalar
+return k_m=a^-1(b h_m-a s_m), its observed bolt average, the derivative
+quantum blocks, complete local rows and mass-free contribution remain.
+No sign or numerical center for a0,a1, L_mass, Dj, Gt or Zr was obtained.
+
+Decision: RETAIN the construction and the weak coupled method with this
+proved L1 pairing. Do not further optimize the now affordable zero-order
+block. The ONE next calculation is the complete remaining two-row mass
+residual of ordinary equation (8), keeping the derivative quantum action
+and actual k_m return together, with application errors and the mass-free
+account explicit. This is PROPOSED. Unknown entries cannot yet be ranked
+by numerical size; the removed global-L2 loss is no longer decisive.
+
+No complete bolt allowance, original P32 defect, actual kappa_m, full
+source/graph/physical/boundary comparison, nonlinear admission/contraction
+or existence closes. Exact compatibility, physical matching/opening,
+semiclassical validity/noise and all-sector stability remain unproved.
+The quantum-fast screen retains its limited input scope; no neighborhood
+or independent boundary-phase control is inferred. No obstruction to
+the construction or need for new physics has been established.
+
+Author review checks the frozen inputs, exact whole-spectrum identities,
+complete first-derivative reconstruction, pinned Python/Arb/SymPy runtime
+and 21 protected paths. This supports the ordinary argument; it is not
+independent specialist or Lean certification. An initial review incorrectly
+required overlapping thin upper endpoints after decimal re-enclosure of
+their inputs. The failure and source are preserved; the accepted original
+derivative bound and new arithmetic are unchanged. The two reassembled
+upper estimates differ relatively by less than 1e-55. This consistency
+check is not the source of the derivative bound. The executed result is
+a quantitative improvement in the open certificate, not its completion.
+
+Remaining to-do list: complete signed mass and mass-free response with
+application errors; all original coupled/admission budgets; nonlinear
+existence, compatibility, matching, validity/noise and all-sector stability;
+the full stable semiclassical wormhole objective.
+
+---
+
 # Filtered mass functional bounded; global kernel-product estimator rejected
 
 2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a plan review.
