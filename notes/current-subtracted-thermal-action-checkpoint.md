@@ -1,3 +1,109 @@
+# Implemented first filter passes its original-energy error allowance
+
+2026-10-29 HST, E003/S169. The full stable semiclassical wormhole objective
+remains ACTIVE/INCOMPLETE. Preserve P32, the closed audit, original norms
+and all accepted results. This records the completed numerical calculation;
+the following research plan is not another executed scientific result.
+
+The [ordinary argument](current-filter-numerical-representation.md),
+[complete execution](../evidence/current-filter-numerical-representation-attempt3.json)
+and [author review](../evidence/current-filter-numerical-representation-attempt3-verification.json)
+close the numerical representation requirement left by 1fb110e. The SAME
+analytic filtered trial now has an explicit finite resolvent-product
+representation with exact rational coefficients and outward evaluation.
+It preserves the endpoint moment cancellations within each product.
+It is a represented function, not a sampled interpolant or a finite
+selection of quantum angular/thermal modes.
+
+The actual paired mass/log domains, complementary adjoint and composed
+squares, fixed clock/period/spin/scale, both equations and original Et
+norm remain. Exact finite-Q reconstruction retains J(0)=0, its regular
+bolt condition and the entire Volterra return. The original quantum
+comparison includes the exact ultraviolet logarithm, common regulator,
+full angular/thermal sums, coincidence contacts and boundary returns.
+The outer coefficient proof factors its vanishing z^2 before bounding
+log(z); no unsupported pointwise trace or smooth surrogate is used.
+
+The generic complete X-to-Et comparison is <159534. Applied to the
+actual parameter uncertainty, it reports <3.492917e34, about 2054.7
+times the selected 1.70e31 allowance. This is a failure to certify with
+that upper estimator, not a lower bound on the actual error. More contour
+nodes cannot fix it: parameter uncertainty dominates that report.
+
+The specified alternative bounds the COMPLETE structured parameter-error
+output directly, retaining its correlated numerator and both original
+rows before taking norms. It improves the full report by >9.85e6.
+Its effective parameter-error comparison is <.016185, versus the needed
+approximately 77.64. This is input-specific, not a new uniform operator
+constant. The physical geometry, normalization and admission targets
+were not changed. All nonlocal/contact/return entries remain charged.
+
+Executed complete numerical error and its original-output consequence:
+
+| Entry | Attained bound |
+| --- | ---: |
+| Structured parameter error in Et | <3.544e27 |
+| Contour quadrature error in X | <8.069e8 |
+| Node/coefficient error in X | <2.766e-63 |
+| COMPLETE numerical representation error in Et | <3.544e27 |
+| Selected numerical representation allowance | 1.70e31 |
+| Additional original bolt-error debit | <4.490e-16 |
+| Analytic filter plus numerical representation error in Et | <2.356e32 |
+| Same stage's combined error screen | 2.52615844544095665e32 |
+| Remaining account within that stage | >1.70e31 |
+
+The numerical representation error is approximately 4797 times below
+its allowance. The known cumulative error subtotal is <1.4902e-10;
+this is NOT the complete bolt output or free physical margin. The
+signed center, remaining filter and other application/coupled errors
+still prevent a bolt pass. Point and endpoint evaluations enclose this
+same represented function, including the entire regular-bolt return.
+Later integrations/applications must propagate their actual evaluation
+intervals. No arbitrary interpolant or other numerical caller is certified.
+
+Two failed development receipts are preserved. The first exposed an
+arithmetic type error; the second retained the excessive generic estimate
+and exposed an indeterminate large-argument special-function evaluation.
+The same standard Legendre Q function is now evaluated through its full
+validated hypergeometric representation. The successful author review
+checks 60 frozen inputs, 21 protected paths, whole-domain coefficient
+and spectral cells, product moment identities and return primitives.
+This is author review, not independent specialist or Lean verification.
+
+Decision: RETAIN the coupled structured-output method. It has now closed
+both the analytic and implemented first-filter error requirements on this
+fixed input. Stop refining its sufficient transport, degree and contour
+errors. The ONE next calculation is the COMPLETE last coupled filter
+
+    (ell_t+B) z = B y_num,       B=b* a^-1 b,
+
+including both scalar/TT residuals, the full quantum action, all numerical
+application errors and the inherited input error above. Its bolt-error
+multiplier is 5.01582950851010318e-43. Giving this stage the SAME selected
+physical error amount as the first-solve allocation produces the
+CONDITIONAL screen ft^2*1e33=6.38147649147267076e31 in Et. This arithmetic
+has been evaluated; the last-filter residual has NOT. The screen is a
+proposed allocation, not a known error or available physical margin.
+
+After that calculation, assemble the correlated j_r contribution and
+quartic subtraction into complete signed G_t/Z_r, then assess every
+original coupled/source/graph/physical/boundary/mass entry together.
+Preserve the limited scope of the quantum-fast screen. Original P32
+defect, actual kappa_m, physical C5/radius conversion and nonlinear
+neighborhood comparisons are still unknown. Conditional ceilings remain
+conditional. Nonlinear admission/contraction/existence, exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability remain unproved. Neither an obstruction to the construction nor
+a need for new physics follows from these calculations.
+
+Remaining to-do list: complete last filter and other application errors;
+signed G_t/Z_r and every original coupled/source/graph/physical/boundary/
+mass budget; nonlinear admission/contraction/existence; exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Complete coupled analytic filter passes; numerical caller remains open
 
 2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS (status/plan
