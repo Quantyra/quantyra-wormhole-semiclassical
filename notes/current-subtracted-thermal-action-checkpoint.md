@@ -1,3 +1,91 @@
+# Complete localized return map bounded; actual quantum source still unresolved
+
+2026-10-28 HST, E003/S169. Previous turn: progress, an invalid density
+estimator was rejected on the actual trial. Preserve that result, the
+explicit fifth-jet layer, P32, original physical norms, closed audit and
+full stable semiclassical wormhole objective. This turn attempted the
+complete remaining response and obtained a quantitative kernel return
+map. It did NOT bound the actual varied source kernels or the full quantum
+column. Outcome: UNRESOLVED estimate with an executed propagation bound.
+
+The [ordinary argument and numerical test](current-localized-kernel-return-attempt.md)
+retain the actual paired mass/log realization, both trial equations,
+physical cutoffs, common regulator, complete thermal/angular sums and
+regular-bolt returns. The parametrix P has boundary-cap endpoints within
+Y<=4 and interior support at distance <=.625; its complete defect F has
+the same radial support bounds. Therefore conjugating these KERNELS by
+W=[gamma/(gamma+L-z)]^3 costs <162755 in pointwise and BOTH Schur norms.
+The trivial weight condition number is about 7.729e99 in those same
+norms. This improvement follows from physical kernel support, not a new
+normalization or a frozen square domain. Earlier Hspin propagation bounds
+alone did not supply this kernel-to-diagonal comparison.
+
+The entire differentiated Volterra series has unvaried ratio
+<3.863067e-8. Its complete mixed diagonal return is linear in eight
+actual weighted metric/time-varied P,F kernel constants k_i. Their
+precise pointwise/Schur norms and time powers are specified in (2) of
+the argument. Those actual k_i are UNKNOWN. The source-specific H8
+bound and old quartic metric table do not establish their values.
+
+Executed: after the original dz volume and full angular/common-regulator
+integration, the propagation charge is sum c_i k_i in relative E_t* units.
+In input order (A_delta,B_delta,A_deltaD,B_deltaD,
+a_delta,b_delta,a_deltaD,b_deltaD), outward coefficient reports are
+
+    (4.145574e-29, 2.202493e-29, 1.028871e-29, 6.515478e-30,
+     1.943047e-29, 1.621912e-31, 6.327730e-30, 5.674485e-32).
+
+Their unrounded sum is <1.062620e-28. Thus k_i<=K would give a propagation
+charge <1.062620e-28 K. The exact original first-error multiplier is
+enclosed near 293714.9643433; the receipt gives every corresponding
+physical coefficient. Radius/action conversion is retained. The omitted
+regulator cap for this return map decreases as cap^2.
+
+The COMPLETE column still requires
+
+    tau6+tau5+sum c_i k_i+tau_cap+tau_boundary+tau_num <=tau_req,
+
+where tau6<4.133457e-31, tau5<2.722623e-116 and the conditional first-column
+screen tau_req is about 1.0896685958e-16. The actual cap comparison,
+boundary response AFTER the explicit layer, and numerical application
+errors are UNKNOWN. The cap/boundary terms together mean the ENTIRE
+diagonal P remainder after the retained local terms and explicit layer,
+including varied partition factors and any layer outside that partition;
+no transition or profile tail is dropped. Setting every other unknown contribution to zero
+gives a simultaneous kernel ceiling about 1.0254548748e12. This is a
+conditional allowance, not an attained source bound or physical margin.
+No new full quantum or coupled/admission requirement closes.
+
+The first unsupported quantitative step is now the actual weighted
+metric-varied transport/cap/cutoff source bounds (2), together with the
+cap and remaining boundary density in the SAME budget. The fixed-seed
+smooth trial defines these kernels; an undefined operator has not been
+found. No excessive ACTUAL source upper bound has been established either.
+Qualitative regularity does not decide whether the numerical ceiling fits.
+Independent boundary-phase and nonlinear-neighborhood variations remain
+outside the proved scope, as does the existing quantum-fast screen.
+
+Decision: retain the boundary-aware localized method; the executed return
+cost does not itself force failure. Do not refine its support factor.
+The specified localized first-order resolvent alternative still uses a
+new-trial short-time column bound to control its cold observation and
+omitted angular levels, so its old quartic implementation does not remove
+this obstacle. The ONE next calculation is the actual source-kernel and
+cap/boundary remainder enclosure entering the displayed complete inequality.
+It is PROPOSED. No actual Ritz coefficient, complementary residual or
+signed G_t was produced. The partial physical subtotal <9.142532e-11 and
+all full coupled/admission budgets remain unchanged.
+
+Verification is author review of the ordinary convolution/domain argument
+and frozen arithmetic/provenance, not independent or Lean verification.
+Remaining to-do list: complete signed first correction and application
+errors; later applications and G_t/Z_r; every original coupled/source/
+graph/physical/boundary/mass budget; nonlinear admission/contraction and
+existence; exact compatibility; physical matching/opening; semiclassical
+validity/noise; all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Boundary density estimator rejected; retain its explicit layer in the full response
 
 2026-10-28 HST, E003/S169. Preserve the full stable semiclassical wormhole
