@@ -1,3 +1,127 @@
+# Joint reference certificate rejected; actual filtered j response remains open
+
+2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 654b343 certified
+the complete implemented last filter. This turn tests the COMPLETE proposed
+correlated reference center on the original domain, rather than refining
+those sufficient filters. The full stable semiclassical wormhole objective
+remains ACTIVE/INCOMPLETE. Preserve P32, the closed audit, original norms
+and every accepted result. No accepted filter bound is withdrawn.
+
+The [ordinary argument and actual-domain trial](current-correlated-signed-trial-test.md),
+[point-reference execution](../evidence/current-correlated-signed-trial-test.json),
+[prescribed-average execution](../evidence/current-correlated-signed-trial-test-attempt3.json)
+and [author review](../evidence/current-correlated-signed-trial-test-attempt3-verification.json)
+reject one SPECIFIED sufficient estimator. They do not evaluate the actual
+remaining quantum/Riesz response or prove a construction obstruction.
+
+The complete target is still
+
+ Zvec=Ft^2 Tt chi_r+Ft^3 j_r^#-alpha f^2 Tt psi,
+ Z_r=||Zvec||Et, j_r(v)=alpha A_r[Uv+a^-1 b v], psi=z^4.
+
+The actual averaged j_r is well-defined in Et*: its smooth compact density,
+the proved U-to-Hmu comparison, scalar Riesz solve and mixed bound supply
+that domain statement. Its numerical quantum application is UNKNOWN.
+The first unsupported implementation step was to use the second-order
+reference inverse for the point version of that Riesz vector. Its p^-1
+tail has divergent second-order reference energy and does not satisfy
+the accepted order-9/2 reconstruction input hypothesis. This is failure
+of the point shortcut, not of the actual paired form or its averaged
+source. The smooth averaged reference has finite norms whose useful
+unfiltered sizes have not been established.
+
+Forming the FULL reference combination after all filters instead gives
+an admissible p^-4 profile. The calculation retains its exact signed
+polynomial numerator, large mass, scalar/mixed coefficients and all
+poles before norms. Actual finite-Q reconstruction puts this whole trial
+in the original Et, with both York equations, paired mass/log boundary,
+physical cutoffs and complete Volterra/regular-bolt return. Exact rational
+resolvent products preserve its endpoint moments under rounding.
+
+The lower comparison ||xi||Hmu<=1.01||xi||Et is the accepted FULL quantum
+form result: exact UV logarithm, common regulator, full angular/thermal
+sums, contacts and boundary returns are retained. Evaluating xi over a
+WHOLE physical interval, retaining dz=gamma dx, gives a norm lower bound;
+a point sample is not used as an integral. Complete spectral contour
+and arithmetic errors cost <4.951e10 in Et and are subtracted.
+
+The same prescribed averaged observation is included explicitly. Its
+auxiliary regular spectral solution satisfies |phi_p|<=1 and
+|phi_p'|<=p/2 by its exact flux/energy ODE. Thus |m_r(p)-1|<=p r/(2gamma),
+r=1e-110. Integrating the ENTIRE filtered rational spectrum and applying
+the proved actual X-to-Et comparison gives reference averaging error
+<4.034e-24. This does NOT bound the actual-minus-reference quantum action.
+The full actual quartic term is retained through its norm upper, <6.428e31.
+
+Executed complete-trial conclusions:
+
+| Quantity | Attained result |
+| --- | ---: |
+| Joint reference center, after full quartic allowance, in Et | >3.364e34 |
+| Same lower bound in ORIGINAL bolt units | >1.6877e-8 |
+| ENTIRE bolt allowance, granting every other debit zero | 1.667e-9 |
+| Reference certificate overrun | >10.124 times |
+| Minimum required change in this center's Et norm | >3.032e34 |
+
+Consequently a certificate using this center plus a nonnegative error
+cannot pass, even if every remaining application error were zero. This
+is stronger than an excessive upper estimate FOR THIS TRIAL, but is not
+a lower bound on the actual Z_r. Its actual quantum/Riesz discrepancy
+has not been enclosed and could change the center. The known cumulative
+error subtotal <1.802e-10 stays accepted; the conditional signed allowance
+of about 2.9642e33 still assumes other unknown debits zero and is not a
+proved margin. No full bolt or admission requirement closes.
+
+The actual remaining discrepancy to determine is
+
+ Dj=||Ft^3 j_r^# - T[m_r(H) Fref(H)^3 fj_nom]||Et,
+
+with the SAME averaged density and the explicitly stored nominal trial.
+After conservatively charging the existing first-contribution errors,
+the executed gap is >2.996e34. A COMPLETE Dj error certificate <=1.49e34,
+including any remaining source/application comparison errors, would be
+sufficient to distinguish an actual failure of this signed-trial screen
+from a reference artifact. This is a NEW CONDITIONAL research target,
+not an attained Dj bound. No unknown error has been assigned zero.
+
+Decision: CHANGE the second-order reference used for the remaining Riesz
+source; RETAIN the actual construction, coupled method and certified
+filters. The specified alternative retains the complete fourth-order
+ultraviolet logarithmic principal operator in that Riesz solve on Et.
+Its point-source energy integrand is O(1/(p^2 log p)), so it avoids the
+point reference's domain failure. This gives neither the stronger
+order-9/2 input norm nor a numerical inverse/remainder constant. Inverting
+a scalar flow symbol and compressing it is not an implemented full
+inverse. The paired realization, local action, common contacts and all
+returns must enter the actual solve.
+
+The ONE decisive next calculation is the complete Dj comparison above,
+using that admissible UV-complete Riesz reference or an equivalent direct
+filtered argument, against the executed 1.49e34 contract. It remains
+PROPOSED. Further degree, contour, cold/contact or sufficient-filter
+optimization cannot remove this rejected trial center and is not selected.
+
+Author review verifies 75 frozen inputs, 21 protected paths, the exact
+signed rational identity, whole-cell lower bound, complete averaged-source
+error and original budget. The first receipt and a failed serialization
+consistency check are retained. No independent specialist or Lean review
+is claimed. The ordinary argument supports the rejection.
+
+Actual G_t/Z_r, original P32 defect, actual kappa_m, graph/physical/boundary
+comparisons, radius conversion and nonlinear-neighborhood admission/
+contraction remain unproved. Keep the quantum-fast screen's limited
+scope. Exact compatibility, physical matching/opening, semiclassical
+validity/noise, nonlinear existence and all-sector stability remain open.
+No nonexistence theorem or need for new physics has been established.
+
+Remaining to-do list: actual complete filtered j_r comparison and signed
+response; every original coupled/source/graph/physical/boundary/mass budget;
+nonlinear admission/contraction/existence; exact compatibility, matching/
+opening, semiclassical validity/noise and all-sector stability; the full
+stable semiclassical wormhole objective.
+
+---
+
 # Complete implemented last filter passes; correlated signed output is next
 
 2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 83b8144 closed
