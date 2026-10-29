@@ -1,0 +1,129 @@
+{
+  "status": "diagnostic_target_and_remaining_unknowns_explicit",
+  "executed_utc": "2026-10-29T21:05:30.920918+00:00",
+  "input_sha256_before": {
+    "checks/current_mass_pairing_diagnostic_ledger.py": "ec162ebbd2adf56d8fac16cbec91786888b18c276bf014bcf19a462a5f9ba896",
+    "evidence/current-mass-pairing-derivative-return.json": "58da4270f9e8e1bcf1714d33a6a34d8028de03bb3353ec4c167f98f39506c85e",
+    "evidence/current-mass-pairing-derivative-return-verification.json": "ecafd9e3caddaa0e36f027ccdc3cc7b5f1370a0910e77786ae3cbcb9ad074a27",
+    "evidence/current-correlated-signed-trial-test-attempt3.json": "e1f6973fa090e92b1c6ab74a2eb25ae69587f2b599f2e383fafeecdf191e9515",
+    "notes/current-correlated-signed-trial-test.md": "94b32cced233b4cf0ca7baca8a38f94de88860b8ac522889000bb0299d8ed05b",
+    "notes/current-filtered-j-regularity-test.md": "4710699afa0c46751f69ed35c447d49460e2beb76714924136bc68b55e6b815e",
+    "evidence/current-filtered-mass-adjoint-bound-attempt2.json": "83820b0500c9229abd507a022ce54f994d64d0cce6dc40691d79477a31dffa8f",
+    "evidence/current-filtered-mixed-green-residual.json": "1bc12444d10af59fe43a75b99b157a4e9f73d28901150a6f4d41ff021a0ab750"
+  },
+  "input_sha256_after": {
+    "checks/current_mass_pairing_diagnostic_ledger.py": "ec162ebbd2adf56d8fac16cbec91786888b18c276bf014bcf19a462a5f9ba896",
+    "evidence/current-mass-pairing-derivative-return.json": "58da4270f9e8e1bcf1714d33a6a34d8028de03bb3353ec4c167f98f39506c85e",
+    "evidence/current-mass-pairing-derivative-return-verification.json": "ecafd9e3caddaa0e36f027ccdc3cc7b5f1370a0910e77786ae3cbcb9ad074a27",
+    "evidence/current-correlated-signed-trial-test-attempt3.json": "e1f6973fa090e92b1c6ab74a2eb25ae69587f2b599f2e383fafeecdf191e9515",
+    "notes/current-correlated-signed-trial-test.md": "94b32cced233b4cf0ca7baca8a38f94de88860b8ac522889000bb0299d8ed05b",
+    "notes/current-filtered-j-regularity-test.md": "4710699afa0c46751f69ed35c447d49460e2beb76714924136bc68b55e6b815e",
+    "evidence/current-filtered-mass-adjoint-bound-attempt2.json": "83820b0500c9229abd507a022ce54f994d64d0cce6dc40691d79477a31dffa8f",
+    "evidence/current-filtered-mixed-green-residual.json": "1bc12444d10af59fe43a75b99b157a4e9f73d28901150a6f4d41ff021a0ab750"
+  },
+  "ordinary_argument_and_source_utf8": "\"\"\"Ordinary interpretation and conditional ledger, frozen before arithmetic.\n\nThe 440f2e0 certificate has an ACTUAL paired-norm lower bound R for its\nspecified averaged REFERENCE vector, after the whole quartic subtraction.\nIts already bounded first-contribution approximation costs at most K/pref\nin energy; using the entire known subtotal K is conservative. Therefore\nthe actual residual Zr satisfies\n\n    Zr >= R-K/pref-Dj.\n\nThis is not a lower bound on the original output operator, since Zr enters\nthe specified adjoint-trial UPPER estimator for that operator. A complete\nDj<=1.49e34 would make pref*Zr exceed 1.667e-9 and reject that particular\nsigned-trial certificate. It would not certify admission or obstruct the\nphysical construction. Dj and Zr themselves remain uncomputed here.\n\nThe present full-to-retained discrepancy account is\n\n    Ebridge+conversion*(Eshape+E_local_scalar+E_fast+E_rest+E_app)<=1.49e34.\n\nOnly Ebridge, conversion and the entire massive/LLL shape block Eshape\nhave bounds in this record. Their remaining conditional account must NOT\nbe assigned to unknown terms. In the complete scalar/local identities,\nthe isolated observed k_m term has coefficient at most q*K_g*alpha_radius;\nso, granting all other unknown terms zero, |A_r k_m| must be bounded by\nremaining/(q*K_g*alpha_radius) to make this additive estimator sufficient.\nThis is a diagnostic requirement, not an attained value or physical margin.\n\nAll formulae use unchanged original normalization, actual paired domain,\ncomplete action and prescribed averaged source. No new PDE theorem or\nnumerical operator application is asserted by this arithmetic ledger.\n\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json\nimport sys\n\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nimport current_mass_pairing_derivative_return as m\nROOT=m.ROOT;arb,ctx,dec,enc=m.arb,m.ctx,m.dec,m.enc\ndigest=lambda p:sha256(p.read_bytes()).hexdigest()\nstem='current-mass-pairing-diagnostic-ledger'\npaths=['checks/current_mass_pairing_diagnostic_ledger.py',\n    'evidence/current-mass-pairing-derivative-return.json',\n    'evidence/current-mass-pairing-derivative-return-verification.json',\n    'evidence/current-correlated-signed-trial-test-attempt3.json',\n    'notes/current-correlated-signed-trial-test.md',\n    'notes/current-filtered-j-regularity-test.md',\n    'evidence/current-filtered-mass-adjoint-bound-attempt2.json',\n    'evidence/current-filtered-mixed-green-residual.json']\nbefore={p:digest(ROOT/p) for p in paths}\nout=ROOT/'evidence'/(stem+'.json');assert not out.exists()\nctx.prec=768\nc=m.m.constants('current-mass-pairing-derivative-return')\nref=m.m.constants('current-correlated-signed-trial-test-attempt3')\nadj=m.m.constants('current-filtered-mass-adjoint-bound-attempt2')\ngreen=m.m.constants('current-filtered-mixed-green-residual')\ntarget=arb('1.49e34');pref=green['pref_t']\nR=ref['complete_trial_energy_lower'];K=ref['known_error_subtotal_NOT_margin']\nbolt=ref['whole_bolt_allowance']\nassert bolt.overlaps(arb('1.667e-9'))\nknown_gap=R-K/pref-bolt/pref\nassert known_gap.overlaps(ref['decisive_remaining_j_comparison_threshold'])\nconditional_Z_lower=R-K/pref-target\nconditional_physical_lower=pref*conditional_Z_lower\nassert conditional_physical_lower>bolt\nremaining=c['conditional_full_E_account_after_bridge_and_shape']\ncoefficient=arb('.338')*adj['actual_filtered_mass_functional_norm_upper']*green['alpha_original_radius_cost']\nscalar_ceiling=remaining/coefficient\nassert remaining>0 and scalar_ceiling>0\nafter={p:digest(ROOT/p) for p in paths};assert before==after\nprotected=json.loads(m.BASELINE.read_bytes())\nassert all(digest(Path(p))==h for p,h in protected.items())\nrec=dict(status='diagnostic_target_and_remaining_unknowns_explicit',\n    executed_utc=datetime.now(timezone.utc).isoformat(),input_sha256_before=before,input_sha256_after=after,\n    ordinary_argument_and_source_utf8=Path(__file__).read_text(encoding='utf-8'),\n    protected_paths_unchanged=len(protected),\n    constants={k:enc(v) for k,v in dict(\n        accepted_reference_center_energy_lower=R,unchanged_known_subtotal_NOT_margin=K,\n        accepted_diagnostic_gap=known_gap,conditional_Dj_target=target,\n        conditional_Zr_energy_lower_IF_complete_Dj_target_passes=conditional_Z_lower,\n        conditional_original_bolt_estimator_lower_IF_complete_Dj_target_passes=conditional_physical_lower,\n        conditional_estimator_overrun_IF_complete_Dj_target_passes=conditional_physical_lower/bolt,\n        attained_massive_LLL_discrepancy_upper=c['complete_massive_and_LLL_mass_pairing_upper'],\n        remaining_unknown_discrepancy_account_CONDITIONAL=remaining,\n        actual_scalar_observation_coefficient=coefficient,\n        scalar_observation_ceiling_ALL_other_unknown_errors_zero=scalar_ceiling).items()},\n    actual_Dj=None,actual_Zr=None,actual_scalar_observation=None,\n    complete_signed_trial_screen_rejected=False,complete_physical_output_certified=False,\n    original_admission=False,nonlinear_existence=False,exact_compatibility=False,\n    physical_matching=False,semiclassical_validity_noise=False,all_sector_stability=False,\n    construction_obstruction=False,full_goal_complete=False)\nout.write_bytes((json.dumps(rec,indent=2)+'\\n').encode('utf-8'))\nprint(json.dumps(dict(status=rec['status'],constants={k:v['ball'] for k,v in rec['constants'].items()}),indent=2))\n",
+  "protected_paths_unchanged": 21,
+  "constants": {
+    "accepted_reference_center_energy_lower": {
+      "ball": "[33648851847823522736881028663121451.62650 +/- 2.99e-7]",
+      "decimal_enclosure": {
+        "mid": "33648851847823522736881028663121451626500298178195181141055213282",
+        "rad": "4",
+        "exponent": "-30"
+      }
+    },
+    "unchanged_known_subtotal_NOT_margin": {
+      "ball": "[1.8019e-10 +/- 7.84e-15]",
+      "decimal_enclosure": {
+        "mid": "18018625687495670287879884151266152365209119764690431802047437186",
+        "rad": "409597085694175052179263787588787389701747350576980784316417",
+        "exponent": "-74"
+      }
+    },
+    "accepted_diagnostic_gap": {
+      "ball": "[2.99661e+34 +/- 4.67e+28]",
+      "decimal_enclosure": {
+        "mid": "29966138442865225017880980531097895141339246035991013781109615184",
+        "rad": "8167805107411405447123039727974088527338231977282151383041",
+        "exponent": "-30"
+      }
+    },
+    "conditional_Dj_target": {
+      "ball": "14900000000000000000000000000000000.00000",
+      "decimal_enclosure": {
+        "mid": "14900000000000000000000000000000000000000000000000000000000000000",
+        "rad": "0",
+        "exponent": "-30"
+      }
+    },
+    "conditional_Zr_energy_lower_IF_complete_Dj_target_passes": {
+      "ball": "[1.83896e+34 +/- 2.49e+28]",
+      "decimal_enclosure": {
+        "mid": "18389616637591911327988782701516331626500298178195181141055213282",
+        "rad": "8167805107411405447123039727974088527338231977282151383041",
+        "exponent": "-30"
+      }
+    },
+    "conditional_original_bolt_estimator_lower_IF_complete_Dj_target_passes": {
+      "ball": "[9.22392e-9 +/- 5.92e-15]",
+      "decimal_enclosure": {
+        "mid": "9223918178102185290936782518290568911108563566188324382532902480",
+        "rad": "4096831809784442246757972181266019493514351296614735282177",
+        "exponent": "-72"
+      }
+    },
+    "conditional_estimator_overrun_IF_complete_Dj_target_passes": {
+      "ball": "[5.53324 +/- 6.74e-6]",
+      "decimal_enclosure": {
+        "mid": "55332442522048950195312500000000000000000000000000000000000000000",
+        "rad": "24810433415484816865990654390651164301703855656552915533824",
+        "exponent": "-64"
+      }
+    },
+    "attained_massive_LLL_discrepancy_upper": {
+      "ball": "[2.063277180927694294053e+33 +/- 6.59e+11]",
+      "decimal_enclosure": {
+        "mid": "20632771809276942940533507000100921628425385060653708878462880033",
+        "rad": "3081257881313063210696038033454919657193473",
+        "exponent": "-31"
+      }
+    },
+    "remaining_unknown_discrepancy_account_CONDITIONAL": {
+      "ball": "[1.2836722819072305705880e+34 +/- 3.46e+11]",
+      "decimal_enclosure": {
+        "mid": "12836722819072305705879962365183559328211059996349552144842132785",
+        "rad": "308125786768328395704211550856236679299073",
+        "exponent": "-30"
+      }
+    },
+    "actual_scalar_observation_coefficient": {
+      "ball": "[4.793905067818146718240e+32 +/- 7.07e+10]",
+      "decimal_enclosure": {
+        "mid": "47939050678181467182401555978178963797744203293440271347849990855",
+        "rad": "5506943344906793814356975973900072794456065",
+        "exponent": "-32"
+      }
+    },
+    "scalar_observation_ceiling_ALL_other_unknown_errors_zero": {
+      "ball": "[26.77717359329080772548 +/- 3.82e-21]",
+      "decimal_enclosure": {
+        "mid": "26777173593290807725480099574840556594420983014267290876720892245",
+        "rad": "3718798667040169258526916788849445821218817",
+        "exponent": "-63"
+      }
+    }
+  },
+  "actual_Dj": null,
+  "actual_Zr": null,
+  "actual_scalar_observation": null,
+  "complete_signed_trial_screen_rejected": false,
+  "complete_physical_output_certified": false,
+  "original_admission": false,
+  "nonlinear_existence": false,
+  "exact_compatibility": false,
+  "physical_matching": false,
+  "semiclassical_validity_noise": false,
+  "all_sector_stability": false,
+  "construction_obstruction": false,
+  "full_goal_complete": false
+}

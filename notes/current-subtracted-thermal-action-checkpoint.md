@@ -1,3 +1,130 @@
+# Massive/LLL mass pairing bounded; complete diagnostic remains open
+
+2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 50f9bbc bounded
+the complete zero-order mass entry. The full stable semiclassical wormhole
+objective remains ACTIVE/INCOMPLETE. Preserve the closed audit, P32,
+all accepted results and original physical norms. This is an UNRESOLVED
+complete two-row mass calculation with a new attained quantum bound.
+
+First keep the purpose of the target explicit. The accepted 440f2e0
+reference trial is already rejected. Dj<=1.49e34 is a DIAGNOSTIC
+comparison target: a COMPLETE pass would reject the current signed-trial
+bolt certificate for the actual response, rather than leave its failure
+attributable to the reference. It is NOT an admission target or available
+physical margin. The [executed ledger](../evidence/current-mass-pairing-diagnostic-ledger.json)
+checks that implication against the original reference lower bound and
+already paid first-contribution errors. IF the complete target passed,
+the specified estimator's bolt lower report would exceed 9.2239e-9,
+over 5.533 times its 1.667e-9 ceiling. That antecedent is still UNPROVED.
+This would reject an estimator, not the output operator or construction.
+
+The [ordinary paired-domain calculation](current-mass-pairing-derivative-return.md),
+[executed intervals](../evidence/current-mass-pairing-derivative-return.json)
+and [author review](../evidence/current-mass-pairing-derivative-return-verification.json)
+enclose the MASSIVE and LLL shape action in BOTH mass residuals a0,a1.
+The fields, averaging r=1e-110, .1/.2 cutoff, original York conditions,
+paired cubic, regular bolt and mass conversion cost are unchanged.
+The common regulator, exact UV logarithm, full angular/thermal spectra,
+coincidence contacts and finite returns are retained in their actual forms.
+
+The first missing derivative implication is resolved on these fixed inputs.
+Whole-cell integration bounds the actual cutoff and original mass primitive;
+physical geodesic identities retain all transition derivatives. The actual
+C2 paired mass cubic and one-sided fourth jets give a finite 13/4 flow
+norm by the accepted seam-crossing argument. It is not made H^(9/2).
+The prescribed averaged sources have a finite second flow norm. Core
+approximation in the stated complementary norms identifies the pairings
+with the common-regulator extension; no neighborhood theorem is inferred.
+
+Executed ORIGINAL reduced unit-tangent norms and mass-block debits:
+
+    ||P Vh_m||SM                               <.014152368,
+    ||P^2 Vh_m||SM                             <.295519035,
+    || |P|^(13/4)Vh_m||SM                      <1375.696369,
+    principal massive mass block               <1.351075e23,
+    COMPLETE gain-two/contact/return block     <2.063278e33,
+    LLL mass block                            <1.048169e19,
+    accepted zero-order block                  <1.619136e26,
+    total massive/LLL mass-pairing Eshape       <2.063278e33,
+    fraction of conditional Dj diagnostic      <.138475,
+    same discrepancy bound in bolt units       <1.034905e-9.
+
+The principal and gain-two terms retain the complete physical operator.
+The gain-two bound is the PRODUCT of combined norms, including the
+second/curvature contacts and long geodesic returns. Its epsilon=1e-120
+has actual gradient coefficient <2.968972e15; its large source second
+derivative contributes less than 2.492e-52 of that combined source norm.
+These choices change the estimate, not transport depth, P32 or units.
+
+For the crucial first derivative, only A grad(f) needs an H1 input;
+the other reconstruction terms use their actual resolvent gain and the
+full finite Volterra return. The original rational f0/f1 bounds also
+precede norms. This lowers the SPECIFIED gain-two estimator from
+2.210005e36 (over 148 times the entire diagnostic target) to the bound
+above, a factor >1071.11. It is an estimator comparison, not a measured
+change or lower bound on the physical response. The large derivative
+norms and original radius/source normalization are fully charged.
+
+The complete discrepancy account remains
+
+    Ebridge+sqrt(1+epsilon_form)[Eshape+Elocal_scalar
+                                  +Efast+Erest+Eapplication]<=1.49e34.
+
+After the unchanged Ebridge<6.669e13 and Eshape, the CONDITIONAL full-E
+account for ALL remaining terms is approximately 1.28367228190723e34.
+Those entries are UNKNOWN. This is not a remaining physical bolt margin.
+The newly controlled gain-two term is the dominant KNOWN debit; the
+unknown terms cannot yet be ranked by size.
+
+The precise unresolved two-row terms are still
+
+    f_m=b h_m-a s_m, k_m=a^-1 f_m,
+    a0=alpha_radius A_r k_m-h(Yv0,Phi_m)+b(s_m,v0),
+    a1=b(s_m,v0)+b(k_m,v0-v1)-h(Yv1,Phi_m).
+
+Only the massive/LLL part of the h pairings has been enclosed here. The
+complete local canonical rows (including Weyl/anomaly), actual scalar
+source/return and mixed pairings remain. The previously solved scalar
+source is different. Es membership and qualitative elliptic regularity
+do not provide the quantitative observed/mixed return for this f_m.
+The coefficient of the isolated |A_r k_m| term is <4.793906e32; granting
+EVERY other unknown error zero would require |A_r k_m|<26.77717.
+That is a conditional screening requirement, not an attained value and
+not evidence that the other entries fit.
+
+Decision: RETAIN this coupled weak comparison for the decisive diagnostic;
+stop refining its now bounded massive/LLL block. The ONE next calculation
+is the complete local/scalar return in these same TWO equations, using
+the actual finite-geometry scalar Green operator on the compact source
+f_m, with its off-shell/anomaly remainder and global York return retained.
+It must bound the bolt observation AND mixed pairings together, not only
+a point value. That calculation remains PROPOSED. If the full Dj test
+eventually passes, change the rejected signed-adjoint certificate rather
+than optimize it as though it could then prove admission. No construction
+change is currently justified by these estimator results.
+
+No complete mass vector, Dj, Zr or Gt is enclosed. The mass-free quantum
+response and remaining application errors are still required. No full
+bolt allowance, original P32 defect, actual kappa_m, source/graph/physical/
+boundary comparison, nonlinear admission/contraction/existence, exact
+compatibility, physical matching/opening, semiclassical validity/noise or
+all-sector stability closes. The limited quantum-fast screen is unchanged.
+No need for new physics or obstruction to the construction is established.
+
+Author review checks 110 frozen inputs, 1536 whole mass-support cells,
+21 protected paths, exact cutoff/geodesic identities, spectral products,
+all norm conversions and the original diagnostic ledger. The pinned
+Python/Arb/SymPy arithmetic supports the ordinary proof; no independent
+specialist or Lean verification is claimed. This is consequential progress
+inside the still OPEN full signed-response milestone.
+
+Remaining to-do list: complete local/scalar and mass-free signed residuals
+with application errors; decide the full diagnostic; original coupled/
+admission budgets and nonlinear existence; compatibility, matching,
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Structured integrability removes the excessive zero-order mass entry
 
 2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 4947843 bounded
