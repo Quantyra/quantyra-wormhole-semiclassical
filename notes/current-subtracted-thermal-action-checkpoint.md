@@ -1,3 +1,128 @@
+# Complete quantum comparison bounded; exact first actual residual passes
+
+2026-10-29 HST, E003/S169. Previous turn: PROGRESS, 0452b11 tested the
+complete estimator and bounded its global returns. This turn closes the
+COMPLETE FIRST ACTUAL LINEAR RESIDUAL screen for the same exact analytic
+trial and accepted scalar source. The full stable semiclassical wormhole
+objective remains ACTIVE/INCOMPLETE. Preserve P32, the closed audit, every
+accepted result and all original physical norms.
+
+The [ordinary argument](current-source-adapted-signed-response-enclosure.md),
+[accepted execution](../evidence/current-source-adapted-signed-response-enclosure-attempt3.json)
+and [author review](../evidence/current-source-adapted-signed-response-enclosure-verification.json)
+bound the complete actual-minus-reference quantum action on x_hat against
+ALL original Et tests. This is a zero-centered signed-functional enclosure;
+no nonzero signed center or full G_t value is inferred.
+
+The proposed t^(5/4) mixed heat theorem remains UNPROVED. The attempt
+identified its missing differentiated-kernel implication, then tested a
+quantitatively sufficient alternative using the accepted common-regulator
+form argument. No spatially analytic theorem is transferred to the trial's
+rho^4 log(rho) bolt term. The paired form closure already defines the
+functional on that input; no H5 source norm or smooth surrogate is assumed.
+
+The calculation retains BOTH York equations and their exact cancellations
+before norms. Complete rational profiles, the Volterra return, physical
+dz=gamma dx, fixed mass/log phase, cutoff data and regular-bolt matching
+are unchanged. Whole-domain interval integration now proves
+
+    ||V x_hat||L2(dz) <2.837410e48,
+    ||grad_actual V x_hat||L2(dz) <1.638180e48,
+    ||V x_hat outside the verified cold region||2 <7.478143e21.
+
+The reconstruction errors relative to the complete auxiliary input have
+L2 bound <6.623091e20 and gradient bound <2.537480e22. The radius factor
+is retained. The L2 and gradient comparisons improve their prior uniform
+reports by factors >1869 and >16173 respectively. These are actual
+comparisons for this fixed structured input, not conditional ceilings.
+
+The existing cold-cap constant-contact bound is REUSED on its verified
+region. The complete outside tail receives the existing larger cap bound.
+No cold coefficient is optimized and no tail is dropped. The separated
+kernel's known 1e8 coefficient supplies a conservative 1e10 kernel reserve;
+the full 1e13 finite second contact remains separately charged. The annulus
+between the subtraction anchor and local-pair radius is also charged.
+The original UV logarithm, common finite restoration, full angular/thermal
+sums, coincidence contacts and all global boundary/bolt returns remain.
+
+Complete attained quantum-comparison ledger in original Et* units:
+
+| Entry | Upper expression |
+| --- | ---: |
+| Local gain-two kernel | 6.379905e31 |
+| Full local annular kernel | 4.279863e28 |
+| Finite second contact | 1.494517e32 |
+| Row-subtracted global gluing | 3.395889e31 |
+| Cold-cap constant contact | 1.296311e31 |
+| Entire outside-cap contribution | 2.354475e14 |
+| Constant-contact global gluing | 4.210238e31 |
+| Known curvature polynomial | 2.895534e19 |
+| Shared vacuum uncertainty | 9.289310e27 |
+| Retained energy comparison | 1.127628e-25 |
+
+The jointly enclosed sum is
+
+    ||(ell_actual-ell_0)[x_hat,.]/N||Et* <3.023272e32.
+
+Adding the accepted complete reference residual, with its actual source,
+model and local/nonlocal errors, gives
+
+    ||g_hat-e_t(x_hat,.)||Et* <8.668724e32 <1e33.
+
+This closes the sufficient screen for the FIRST ACTUAL auxiliary linear
+solve, beyond the prior reference-only result. Since Et uses the actual
+retained form, the same bound controls ||x_actual-x_hat||Et directly.
+The earlier scalar replacement error remains separately charged. This
+does not certify an original C5 geometric correction or nonlinear solution.
+
+The response spends <70.1684% of the conditional remaining residual
+allocation 4.308597e32. Against the recorded common stage output allocation,
+the remaining account for an UNEXECUTED numerical caller error is
+>1.309227e32. It is a threshold, not an attained application error or a
+free physical margin. All parameter/bound-arithmetic errors are enclosed
+for the exact analytic field; later numerical evaluation errors are UNKNOWN.
+The existing first-output comparison gives an error component
+<2.774720e-11 in bolt units, after the two remaining exact filter norm
+factors. Later filter errors and the other correlated terms remain open;
+this component is not a complete bolt or coupled admission certificate.
+
+Decision: RETAIN the actual-domain weak-form method with structured-input
+comparisons. The full source distribution and kernel/contact separation
+resolve this first-solve decision without requiring the unproved heat-rate
+theorem. Stop optimizing the now sufficient first response. The ONE next
+calculation is the complete first remaining filter on this input:
+
+    (ell_t+B) y = B x_hat,  B=b* a^-1 b,  y=F_t x_hat.
+
+It must include the actual scalar solve in B, both mixed rows, the full
+quantum action on its new trial, complementary energy residual and every
+caller/application error. The first-solve error propagates with the
+already proved filter norm; that does not evaluate the filter. This next
+application is PROPOSED, not executed. A further filter, the correlated
+j_r term and quartic subtraction still enter the complete signed G_t/Z_r.
+
+Author review checks 30 frozen inputs, 21 protected paths, all 601 cells,
+both split-touching cells and 20 independently differentiated reconstruction
+fixtures. Two development receipts are preserved; acceptance includes the
+explicit annulus and conservative tail-cell classification. The ordinary
+domain, kernel and spectral arguments carry the continuum claim. No
+independent specialist or Lean review is claimed.
+
+No original P32 defect, actual mass-column target, graph/physical/boundary
+comparison, nonlinear admission/contraction or geometric radius requirement
+is closed. The quantum-fast screen keeps its limited scope. No independent
+phase or nonlinear-neighborhood control, compatibility, physical matching,
+semiclassical validity/noise or all-sector stability is inferred.
+
+Remaining to-do list: complete filter applications and actual caller
+errors; signed G_t/Z_r and every original coupled/source/graph/physical/
+boundary/mass budget; nonlinear admission/contraction and existence;
+exact compatibility, physical matching/opening, semiclassical validity/
+noise and all-sector stability; the full stable semiclassical wormhole
+objective.
+
+---
+
 # Complete actual-response upper estimator tested; signed evaluation remains open
 
 2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a plan/status
