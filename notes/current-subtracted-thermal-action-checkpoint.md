@@ -1,3 +1,119 @@
+# Sequential j estimator rejected; actual filtered response remains open
+
+2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a plan review.
+The full stable semiclassical wormhole objective remains ACTIVE/INCOMPLETE.
+Preserve 440f2e0, the closed audit, P32, all accepted filters and the original
+physical norms. This turn executes a test of a COMPLETE proposed Dj error
+estimator on the prescribed averaged structured range. It does not enclose
+the actual signed quantum response or complete the feasibility milestone.
+
+The [ordinary argument](current-filtered-j-regularity-test.md),
+[executed calculation](../evidence/current-filtered-j-regularity-test-attempt2.json)
+and [author review](../evidence/current-filtered-j-regularity-test-attempt2-verification.json)
+retain the same r=1e-110 observation, exact rational reference parameters,
+both original equations, finite-Q York reconstruction, paired mass/log
+domain, original measure dz=gamma dx and regular bolt. All quantum modes,
+the common regulator, exact ultraviolet logarithm, local contacts, cutoff
+transitions and finite-domain returns stay in the actual residuals.
+
+The exact target remains
+
+    Dj=||Ft^3 j_r^#-R[m_r(H)Fref(H)^3 fj_nom]||Et <=1.49e34.
+
+It is a CONDITIONAL diagnostic target from the prior rejected-center gap,
+not an attained bound or physical margin. Define v_k=R[m_r Fref^k fj_nom],
+r0=j_r-e_t(v0,.), rk=b0(v_(k-1),.)-(e_t+b0)(vk,.), and C=(I+Tt)^-1.
+The complete original-norm error pairs EXACTLY as
+
+    r0(Ft^3 w)+r1(C Ft^2 w)+r2(C Ft w)+r3(C w).
+
+No physical quantum/reference commutation is assumed. Scalar-solve and
+numerical application errors retain their separate propagated charges.
+
+The averaged v_k are in the accepted reconstruction domain: their smooth
+compact source has all auxiliary spectral moments. This is different
+from the singular point shortcut. However, the established strong quantum
+column theorem requires the 4.5-derivative input norm X. On the ACTUAL
+averaged reference range, the full spectral flux bound |m_r-1|<=pr/(2gamma)
+gives quantitative lower bounds for X over [gamma/(2r),gamma/r]. This is
+a lower test of the estimator's input norm, not a finite physical-mode sum.
+
+Executed lower bounds on the separated UPPER-ESTIMATE EXPRESSION:
+
+| Mandatory geodesic charge in the sequential estimator | Lower bound | Ratio to complete Dj target |
+| --- | ---: | ---: |
+| ft^3 Kgeo Cflow X(m_r fj_nom) | >2.683e157 | >1.801e123 |
+| ft^2 Kgeo Cflow X(m_r Fref fj_nom) | >3.536e72 | >2.373e38 |
+
+Either charge rejects that additive estimator, even granting every other
+charge zero. These are NOT lower bounds on actual residuals, Dj, Zr or
+physical error. All local/source/contact comparisons remain unknown; they
+were not assigned zero in a claimed certificate. The accepted earlier
+filter results are unchanged. The known subtotal <1.802e-10 remains a
+subtotal, not a margin. No bolt or admission requirement closes.
+
+The specified alternative keeps the filters inside the weak pairing and
+transposes the complete geodesic action onto the filtered test. It would
+need an actual-domain bound
+
+    N_9/2(V C Ft^2 w)<=Ktest ||w||Et.
+
+The existing zero-derivative reconstruction bound and full-spectrum
+rational integrals give the conditional geodesic subtotal
+
+    Egeo <= Atest Ktest+Btest,
+    Atest = 1.541247708461...e20,
+    Btest < 2.971e26.
+
+The full discrepancy would require Atest Ktest+Btest+Erest<=1.49e34.
+Even granting Erest=0, its optimistic Ktest ceiling is only
+9.667491877613...e13. Erest includes all other original local, source,
+actual-minus-geodesic, scalar, contact and application errors; BOTH it
+and Ktest remain unknown. This is a quantified research contract, not a
+bound on the alternative or an available physical allowance.
+
+The first unsupported implication is the DOMAIN of that unweighted test
+norm on the actual filtered range. The accepted reconstruction theorem
+has outer shape z^4 and does not cover arbitrary C Ft^2 w. The actual
+mass-extended graph space permits mass cubic and quartic-log phases.
+A nonzero reflected |Y|^3 term fails H^(7/2), and Y^4 log|Y| fails H^(9/2),
+as their critical half-derivative seminorms show directly. Whether these
+coefficients vanish on this ACTUAL filtered range is uncomputed. This
+is not an arbitrary-source counterexample to that range, nor proof that
+Ktest is infinite there. Qualitative graph regularity does not settle it.
+
+Decision: CHANGE the remaining j estimator from separate strong source
+norms to a weak composition retaining the boundary phases and filters.
+Retain the construction and all sufficient filters. A UV-complete Riesz
+reference alone does not supply this missing test-space implication.
+The ONE next calculation is the mass/log trace of V C Ft^2 on the actual
+paired Et range. It decides whether the proposed Ktest can be finite;
+if nonzero, those explicit lifts and their common-regulated contacts must
+remain in the paired residual before a numerical regularity estimate.
+This calculation is PROPOSED, not executed. No further degree, contour,
+cold/contact or already sufficient filter optimization is selected.
+
+Author review checks 79 frozen inputs, 21 protected paths, equality with
+the previously accepted final averaged profile, whole-spectrum norm
+integrals, the exact four-row residual identity and the original budget.
+The first receipt is preserved; the second additionally checks the
+conservative transposed-normalization guard CL_t>1 and documents the
+boundary-regularity issue. No independent specialist or Lean review is
+claimed. Actual Dj and Gt/Zr are still unbounded.
+
+All original coupled/source/graph/physical/boundary/mass comparisons,
+P32 defect, nonlinear admission/contraction/existence, exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability remain unresolved. The quantum-fast screen keeps its limited
+scope. No construction obstruction or need for new physics is established.
+
+Remaining to-do list: actual filtered-range boundary/regularity comparison
+and complete signed j response; every original coupled/admission budget;
+nonlinear existence, compatibility, matching, validity/noise and stability;
+the full stable semiclassical wormhole objective.
+
+---
+
 # Joint reference certificate rejected; actual filtered j response remains open
 
 2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 654b343 certified
