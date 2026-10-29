@@ -1,3 +1,122 @@
+# Full-response bridge passes; the filtered mass trace must be retained
+
+2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 5126761 rejected
+the sequential strong-source estimator. The full stable semiclassical
+wormhole objective remains ACTIVE/INCOMPLETE. Preserve the closed audit,
+P32, 440f2e0, all accepted filters and original physical norms.
+
+The [ordinary actual-range argument](current-filtered-test-mass-trace.md),
+[execution](../evidence/current-filtered-test-mass-trace-attempt2.json) and
+[author review](../evidence/current-filtered-test-mass-trace-attempt2-verification.json)
+resolve two implications needed by the next estimator. They do NOT
+evaluate the actual signed j response or complete geometric admission.
+
+First, the boundary theorem is for FULL ell and F; the retained ell_t
+had only an energy comparison. Small energy error does not transfer
+mass traces. Instead keep the SAME averaged source and pay an explicit
+full-to-retained j RESPONSE error. Its source includes both U and the
+complete scalar return, with original r=1e-110 and radius factor alpha.
+The normalized bump has integral w^2<=2 exp(4/3). The original row,
+scalar coercivity and mixed bounds then give ||j_r||E*<8.435e88.
+
+Use the already accepted epsilon=1.226159987010...e-74, without changing
+transport depth or P32. Ordered perturbation of the THREE filters AND
+the source Riesz map gives
+
+    ||Ft^3 j_t^#-F^3 j^#||Et
+       <=sqrt(1+epsilon) f^3[(1-epsilon)^-4-1] ||j_r||E*.
+
+Executed complete response-transfer results:
+
+    energy error Ebridge                 <6.669e13,
+    Ebridge / conditional Dj target      <4.476e-21,
+    ORIGINAL bolt contribution           <3.345e-29.
+
+Consequently |Dj-||F^3 j^#-v3||Et|<=Ebridge for the exact SAME averaged
+nominal trial v3. This closes this source-specific transfer requirement;
+it is not a boundary-trace transfer or a signed center. Charge it once
+if using the full-operator method. The prior E32 and known subtotal are
+not erased or reoptimized. Other numerical application errors stay open.
+
+Second, the proposed unweighted flow bound on the FULL filtered range
+
+    N_9/2[V (I+T)^-1 F^2 w] <= Kfull ||w||E
+
+has NO finite Kfull. This conclusion is for an actual restricted range,
+not an arbitrary-source counterexample. The ordinary proof proceeds as
+follows. The full positive critical inverse and its accepted mass-extended
+weighted graph theorem define the nonzero mass functional
+mu(g)=m(ell^-1 g). Its physical weighted adjoint chi has a nonzero constant
+boundary term: otherwise it would lie in the positive energy kernel.
+Normalize that constant to one. The exact WHOLE mixed row then has
+
+    b_hat chi=c04 z^4+o(z^4),
+    c04=4(3beta+epsilon_seed+1/C_geom)Fstar
+                                -qflux^2/(2pi B^2 C_geom),
+    c04 = 1.99999997647877197334893411546... >1.99.
+
+All other mixed terms start later on this adjoint. Original outer cutoffs
+converge after b, including the entire York return. Scalar positivity gives
+mu(B chi_n) -> a0 ||a^-1/2 b chi||^2 !=0. Thus m(T .) has a nonzero Riesz
+vector d orthogonal to ker T. The vector g=T(I+T)^-3 d is nonzero and
+
+    m[(I+T)^-1 F^2 w]=<g,w>E.
+
+Taking w=g/||g|| supplies an actual energy input with nonzero output mass.
+The original York map has mass multiplier -3/2. Its even paired cubic
+has a divergent critical half-derivative flow norm, so no numerical
+improvement of a finite Kfull can fix this estimator. No numerical norm
+of d or g is claimed. The exact coefficient enclosure supports the ordinary
+domain/adjoint argument; a checker pass is not its substitute.
+
+The full two-row phase theorem already excludes a forced quartic SHAPE
+log for this range; its scalar quartic and exact slow power remain.
+No phase coefficient is set to zero without that argument. The retained
+Ft trace still has not been proved, and energy closeness does not transfer
+the above obstruction to it. The small response bridge permits using the
+full action instead, with its proved phase realization.
+
+Decision: retain the construction and sufficient filters; change the
+remaining weak estimate to keep an EXPLICIT mass lift. Use the original
+cut reference lift, its .1/.2 transition, regular-bolt matching and original
+mass conversion. It is not a global fixed-temperature zero mode. Let h_m
+be its TT component with its mass normalization tracked, and let g be the
+Riesz vector of the filtered mass functional above. The first two residual
+mass contributions combine, BEFORE norms, to
+
+    ||(r0(h_m) T+r1(h_m) I)g||E.
+
+The ONE next calculation is this COMPLETE signed mass term on the actual
+averaged structured source, retaining both equations, common regulator,
+all angular/thermal sums, contacts, cutoff terms and finite-domain returns.
+The exact budget is Ebridge+sqrt(1+epsilon) times the sum of this mass
+term, the mass-free residual and all other full-E errors, within the
+conditional 1.49e34 Dj target. This is PROPOSED. No
+separate mass margin, norm of g, actual kappa_m or signed pairing is known.
+The previous 9.67e13 unweighted ceiling is not an attained or reusable
+bound for this different phase-separated estimate.
+
+Author review verifies 91 frozen inputs, 21 protected paths, pinned
+Python/Arb/SymPy, the exact complete mixed coefficient, physical units,
+all four inverse perturbations and the full-E-to-Et output comparison.
+The first receipt and review remain preserved. No independent specialist or Lean review
+is claimed. No cold, scalar, degree, contour or sufficient-filter refinement
+was performed. The full quantum action and physical domain remain fixed.
+
+Actual Dj and Gt/Zr, original P32 defect, all coupled/source/graph/physical/
+boundary/mass comparisons, nonlinear admission/contraction/existence,
+exact compatibility, physical matching/opening, semiclassical validity/
+noise and all-sector stability remain unresolved. The quantum-fast screen
+keeps its limited scope. This is an obstruction to the stated unweighted
+estimator, not to the coupled inverse or the wormhole construction.
+
+Remaining to-do list: complete signed mass and mass-free response with
+all application errors; every original coupled/admission budget; nonlinear
+existence, compatibility, matching, validity/noise and stability; the full
+stable semiclassical wormhole objective.
+
+---
+
 # Sequential j estimator rejected; actual filtered response remains open
 
 2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a plan review.

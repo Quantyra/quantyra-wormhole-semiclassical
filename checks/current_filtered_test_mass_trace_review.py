@@ -1,0 +1,104 @@
+"""Author review of the actual-range argument and full j transfer arithmetic."""
+from pathlib import Path
+from hashlib import sha256
+from datetime import datetime, timezone
+import argparse
+import json
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import current_filtered_test_mass_trace as m
+arb, ctx, dec = m.arb, m.ctx, m.dec
+ROOT = m.ROOT
+digest = lambda p: sha256(p.read_bytes()).hexdigest()
+
+ap = argparse.ArgumentParser()
+ap.add_argument('--receipt', default=m.STEM+'-attempt2')
+args = ap.parse_args()
+source = ROOT/'evidence'/(args.receipt+'.json')
+raw = json.loads(source.read_bytes())
+assert raw['status'] == 'full_response_bridge_passes_unweighted_full_range_estimator_rejected'
+assert raw['input_sha256_before'] == raw['input_sha256_after']
+assert all(digest(ROOT/p) == h for p, h in raw['input_sha256_after'].items())
+assert raw['ordinary_argument_utf8'] == (ROOT/'notes'/(m.STEM+'.md')).read_text(encoding='utf-8')
+assert raw['arithmetic_source_utf8'] == (ROOT/'checks/current_filtered_test_mass_trace.py').read_text(encoding='utf-8')
+protected = json.loads(m.BASELINE.read_bytes())
+assert all(digest(Path(p)) == h for p, h in protected.items())
+assert digest(Path(sys.executable)) == m.runtime['python_sha256']
+for pkg in m.runtime['packages'].values():
+    assert all(digest(Path(pkg['root'])/p) == h for p, h in pkg['files'].items())
+
+ctx.prec = 768
+r = raw['result']
+c = {k: dec(v) for k, v in r['constants'].items()}
+ep = c['retained_full_form_error']
+q = arb('.338')
+f = q/(1+q)
+assert c['normalized_density_supremum_upper'].overlaps(2*(arb(4)/3).exp())
+# Independent assembly charges the Riesz change and three ordered filters
+# separately; omitting the former would give the wrong third power.
+riesz_change = f**3/(1-ep)**3*ep/(1-ep)
+filter_change = f**3*ep*(3-3*ep+ep**2)/(1-ep)**3
+bridge = (1+ep).sqrt()*(riesz_change+filter_change)*c['complete_source_Edual_upper']
+assert bridge.overlaps(c['full_to_retained_j_energy_error'])
+assert bridge < arb('1e14')
+assert c['bridge_over_complete_Dj_target'] < arb('1e-20')
+assert c['conditional_full_response_error_ceiling'].overlaps(arb('1.49e34')-bridge)
+assert c['full_E_to_retained_Et_norm_comparison'].overlaps((1+ep).sqrt())
+assert (bridge+c['full_E_to_retained_Et_norm_comparison']*c['conditional_full_E_error_ceiling']).overlaps(arb('1.49e34'))
+pref = m.constants('current-filtered-mixed-green-residual')['pref_t']
+assert (pref*bridge).overlaps(c['bridge_original_bolt_charge'])
+
+phase = m.result('current-schur-residual-phase-domain')
+assert r['complete_mixed_valuations'] == phase['whole_mixed_outer_valuations']
+assert r['complete_mixed_valuations']['xi0'] == 4
+assert r['complete_mixed_valuations']['J_Y'] == 4
+assert c['complete_mixed_c04'] > arb('1.99')
+assert c['physical_mixed_adjoint_leading_coefficient'] > 0
+assert r['exact_coefficient_identity']
+
+for key in ['actual_Dj', 'actual_signed_Zr', 'numerical_mass_trace_norm', 'complete_signed_mass_pairing']:
+    assert r[key] is None
+for key in ['retained_filtered_boundary_trace_proved', 'actual_Dj_or_Zr_bounded',
+            'complete_mass_phase_budget_closed', 'original_admission', 'nonlinear_existence',
+            'exact_compatibility', 'physical_matching', 'validity_noise', 'all_sector_stability',
+            'construction_obstruction', 'goal_complete']:
+    assert r['scope'][key] is False
+
+# These are the author-reviewed ordinary implications. The arithmetic
+# above does not purport to machine-prove the weighted-domain argument.
+ordinary_review = [
+    'Use the FULL ell realization only. Its positive critical inverse plus the finite-strip improvement through the simple root 3 gives the mass-extended inverse at weight 7/2; no retained strong-domain theorem is assumed.',
+    'The mass coefficient of ell^-1 is a nonzero continuous functional on Y_(7/2): a cut mass lift with its complete ell residual gives a witness. Its weighted dual is an actual distributional adjoint, not a nonlinear metric variation.',
+    'Maximal-adjoint regularity gives the dual weight -1/2 expansion. If its constant coefficient vanished, two-power improvement through the stated normal strip would put it in the positive energy kernel. Thus its leading constant is nonzero.',
+    'For the adjoint normalized to leading constant one, the exact mixed table and original York return leave only c04 at order four. Complete c04 is positive at the frozen seed; b chi is nonzero in Es*.',
+    'Outer cutoffs converge after b, including the global J return. Symmetry and scalar positivity make mu(B chi_n) tend to a nonzero multiple of ||a^-1/2 b chi||^2. Hence the mass functional on T E is nonzero.',
+    'The full F phase theorem makes m(T .) bounded. Its Riesz vector d is nonzero and orthogonal to ker T. Therefore g=T(I+T)^-3 d is nonzero, and w=g/||g|| is an ACTUAL input whose C F^2 output has nonzero mass.',
+    'The physical York multiplier at the mass exponent is -3/2. The even cubic has divergent critical half-derivative norm on a transverse flow cone. This rejects a finite unweighted Kfull, not the actual inverse or geometric phase.',
+    'The source-specific energy transfer includes both the changed Riesz map and all three filters. It does not transfer any boundary trace, and it changes neither P32 nor the transport depth.',
+    'Future residuals measured in full E must be multiplied by sqrt(1+epsilon) before adding Ebridge in the Et target. The conditional full-E ceiling records this comparison; it is not a proved response or margin.',
+    'The signed mass term and mass-free remainder remain unknown. Original mass-lift transition, matching, normalization and physical admission costs must be retained in the next complete pairing.'
+]
+out = ROOT/'evidence'/(args.receipt+'-verification.json')
+assert not out.exists()
+history = []
+for path in sorted((ROOT/'evidence').glob(m.STEM+'*.json')):
+    if path == source or 'verification' in path.name:
+        continue
+    data = json.loads(path.read_bytes())
+    history.append(dict(path=str(path.relative_to(ROOT)), sha256=digest(path), status=data['status']))
+old_review = json.loads((ROOT/'evidence/current-filtered-test-mass-trace-verification.json').read_bytes())
+old_source = ROOT/'evidence/current-filtered-test-mass-trace-initial-review-source.txt'
+assert digest(old_source) == old_review['review_source_sha256']
+record = dict(status='full_response_bridge_and_actual_mass_range_argument_reviewed',
+    reviewed_utc=datetime.now(timezone.utc).isoformat(), receipt_sha256=digest(source),
+    review_source_sha256=digest(Path(__file__)), frozen_inputs_checked=len(raw['input_sha256_after']),
+    protected_paths_checked=len(protected), review_type='author ordinary argument plus exact symbolic and interval arithmetic',
+    ordinary_review=ordinary_review, independent_specialist_review=False, lean_verification=False,
+    full_j_response_transfer_certified=True, full_unweighted_range_estimator_rejected=True,
+    retained_trace_not_transferred=True, actual_Dj_bounded=False,
+    construction_obstruction=False, goal_complete=False, preserved_receipts=history,
+    review_source_utf8=Path(__file__).read_text(encoding='utf-8'),
+    preserved_initial_review_source=dict(path=str(old_source.relative_to(ROOT)), sha256=digest(old_source)))
+out.write_bytes((json.dumps(record, indent=2)+'\n').encode('utf-8'))
+print(json.dumps({k: v for k, v in record.items() if k not in ['ordinary_review', 'review_source_utf8']}, indent=2))
