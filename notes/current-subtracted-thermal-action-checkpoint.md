@@ -1,3 +1,123 @@
+# Filtered mass functional bounded; global kernel-product estimator rejected
+
+2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a plan review.
+The full stable semiclassical wormhole objective remains ACTIVE/INCOMPLETE.
+Preserve the closed audit, P32, e7abfb5, all accepted results and original
+physical norms. This is an UNRESOLVED complete signed-mass calculation,
+with an attained operator factor and a verified failure of one estimator.
+
+The [ordinary coupled-adjoint argument](current-filtered-mass-adjoint-bound.md),
+[executed intervals](../evidence/current-filtered-mass-adjoint-bound-attempt2.json)
+and [author review and sensitivity](../evidence/current-filtered-mass-adjoint-bound-attempt2-verification.json)
+address the first missing implication in reusing the earlier mass adjoint.
+That earlier result controls a particular linear correction, not the
+filtered mass functional. Its complete residual is nevertheless reusable
+after a NEW scalar-coordinate estimate and the exact coupled-source map.
+
+The auxiliary reference adjoint remains outside the full energy space.
+On its actual affine paired domain, a weighted York/Hardy estimate gives
+||xi_ref||L2(dz)<=8.000008. Both reference equations and their COMPLETE
+mixed row give a positive scalar equation with no remaining TT derivative
+or York return. Its solution has actual scalar energy <19.606149.
+Retaining the full quantum adjoint residual <2.1e-5, the same regular bolt
+and physical mass flux K_m>1.9999999764 gives the exact source identity
+
+    h u=(-b w,0), xi_u=-F w,
+    m_xi(Fw)=-2 b(s_Psi,w)/(3K_m).
+
+The original canonical-to-TT mass factor -3/2 has been included. The
+entire quantum action, common regulator, full angular/thermal sums,
+contacts and finite returns remain in the inherited FULL residual and
+coupled inverse. No boundary trace is transferred to retained Ft.
+
+Executed bounds for the ACTUAL filtered mass functional of e7abfb5:
+
+    ||d_F||E                                  <3.799530,
+    g=C_op F d_F, ||g||E                       <.717356,
+    ||g-C_op F d_F,ref||E                     <7.683532e-7.
+
+These close the previously unknown numerical norm of g and the stated
+reference-adjoint error factor. They are not numerical applications or
+signed centers for g. The original lift h_m retains its .1/.2 transition,
+regular bolt, mass normalization and physical conversion cost. Both
+
+    a0=j_r(h_m)-ell(v0,h_m),
+    a1=B(v0,h_m)-(ell+B)(v1,h_m)
+
+remain UNKNOWN signed pairings on the same averaged structured trials.
+The complete mass term is ||(a0 T+a1 I)g||E, not either a0 or a1 alone.
+Its sufficient bound is K_g(q|a0|+|a1|), or the signed spectral multiplier
+bound in the ordinary note. No conditional coefficient ceiling is assigned
+to those actual pairings; the complete signed mass allowance is NOT closed.
+
+Attempting those pairings with the existing global row-subtracted gluing
+bound 6e24 C exposes a quantitative failure. The fixed inner portion of
+the ORIGINAL lift forces ||Vh_m||L2>=1.5777017643e-4, independent of the
+unspecified transition profile. The complete same-source profile bounds
+then force this positive entry of the SPECIFIED additive upper estimator:
+
+    gluing upper-estimator expression          >4.7327721482e41,
+    entire conditional Dj comparison target     1.49e34,
+    estimator expression / target              >3.1763571464e7,
+    corresponding original bolt error entry    >.2373877819.
+
+These are LOWER bounds on the UPPER-ESTIMATE EXPRESSION. They do not
+lower-bound the actual kernel pairing, mass response, Dj or physical error.
+Every other additive error was granted zero in this rejection test.
+Even the optimistic replacement for 6e24 would need to be below
+1.8889563495e17, before the actual lift norm and other debits are charged.
+That is a required improvement, not an attained kernel coefficient.
+
+The sensitivity test also rules out spending this milestone refining the
+reference scalar norm: even granting it ZERO and retaining only the
+already certified adjoint-residual debit leaves an estimator entry
+>5.0692315973e35, or >34.02168 times the complete target. This statement
+also concerns that estimator, not an actual residual lower bound.
+
+Decision: retain the construction and the coupled weak adjoint; CHANGE
+the global-L2 kernel-product estimate to a spatially weighted evaluation
+of the TWO COMPLETE signed pairings a0,a1. The mass shape is supported
+in z<=.2, whereas the trial is sourced at the bolt. However the trial
+extends into the mass support: disjoint-support exponential suppression
+cannot be assumed. The overlap region, diagonal row subtraction and
+local contacts must be bounded along with the far response. The existing
+fixed-buffer e^-M/270 and e^-M/530 estimates do not by themselves provide
+this new weighted kernel constant. The required gain >3.176e7 is now
+explicit; its attainability on the complete map remains UNDECIDED.
+
+ONE next calculation, PROPOSED: enclose a0,a1 with their actual overlap,
+spatially weighted paired resolvent, complete local/contact/scalar terms,
+cutoff transitions and all application errors, then bound their signed
+polynomial acting on g. Do not substitute an isolated far-kernel pass or
+an improved adjoint norm for these complete pairings.
+
+The complete comparison remains
+
+    Ebridge+sqrt(1+epsilon)[||L_mass||+Efast+Erest+Eapplication]<=1.49e34.
+
+Only Ebridge<6.669e13 and the new mass-functional factors are known here;
+the bracketed terms are not set to zero. No signed Dj/Gt/Zr, bolt pass,
+original P32 defect, actual kappa_m, full original source/graph/physical/
+boundary comparisons or nonlinear admission/contraction/existence follows.
+Exact compatibility, physical matching/opening, semiclassical validity/noise
+and all-sector stability remain open. The quantum-fast screen keeps its
+limited scope. No construction obstruction or new-physics claim is made.
+
+Author verification checks 102 frozen inputs, 21 protected paths and the
+pinned Python/Arb/SymPy runtime. The initial failed decimal-guard assertion
+and its source are preserved; the exact declared guard was unchanged.
+The arithmetic supports the ordinary argument, not independent specialist
+or Lean verification. No cold, scalar-solver, degree or transport refinement
+was performed. This advances the estimate but does not complete the
+requested signed-response feasibility milestone.
+
+Remaining to-do list: complete signed mass and mass-free response with
+application errors; all original coupled/admission budgets; nonlinear
+existence, compatibility, matching, validity/noise and all-sector stability;
+the full stable semiclassical wormhole objective.
+
+---
+
 # Full-response bridge passes; the filtered mass trace must be retained
 
 2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 5126761 rejected
