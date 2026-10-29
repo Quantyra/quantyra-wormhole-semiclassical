@@ -1,3 +1,123 @@
+# Source-adapted first solve: source bounded, actual return still unresolved
+
+2026-10-28 HST, E003/S169. Previous turn: PROGRESS, the actual-source
+range test rejected every coefficient in the old one-dimensional family.
+This turn attempts a source-adapted first reference correction. Outcome:
+UNRESOLVED COMPLETE INVERSE, with a new complete actual-source bound and
+an executed regularity test that changes the estimation method. Preserve
+42679b1, d86adb2, P32, the closed audit, original norms and the full stable
+semiclassical wormhole objective. The goal remains ACTIVE/INCOMPLETE.
+
+The [ordinary argument and execution](current-source-adapted-geodesic-first-attempt.md)
+construct an explicit analytic profile from the actual accepted scalar
+source and then reconstruct its field using the EXACT finite Q and both
+York equations. Its outer mass/log data, original boundary conditions and
+regular-bolt matching are retained. Auxiliary quadratic resolvents define
+the trial; they do not replace the physical domain or supply the actual
+finite-domain response. All four scalar profiles and their complete tails
+remain. No selected quantum modes are used.
+
+The first-reference form e_0 contains all local affine terms, LLL, common
+a0/a2 contacts, the full geodesic nonlocal term and the original York
+pullback. A0 is its E_t Riesz operator. This corrects the prior checkpoint's
+shortened equality A0=J* A(iX)J: that compression describes the nonlocal
+contribution only. The local terms and Riesz identification cannot be
+omitted. No preceding numerical result depended on the shortened equality.
+
+EXECUTED actual-source result, in the original E_t dual:
+
+    ||g_hat-j_ref||E_t* <5.640405e32.
+
+The previous uniform norm would have made the complete mixed remainder
+alone cost >2.55e33, exceeding the first-reference 9.955e32 screen by a
+factor >2.56. Exact full-profile Gram moments now give the existing
+scalar trial's ACTUAL Es norm <3.488669e48, improving that particular
+input norm bound by a factor >4.5242. This reduces the entire mixed
+remainder to <5.637664e32. Original source cutoff and finite-geometry
+errors add <2.741172e29. All mixed anomaly, density and gauge-return
+contacts are retained. The scalar solution itself is unchanged.
+
+This norm calculation was necessary because its earlier report failed
+the COMPLETE first-stage budget; it is not an optimization of an already
+affordable isolated scalar contribution. The attained source debit uses
+<56.6591% of that residual screen. It closes the complete source-
+approximation part of this candidate, not the inverse or admission.
+
+Composing the source with both model York rows before taking norms cancels
+the large auxiliary mass pole near 5.6588424e7. The retained Cv-1 term is
+not zeroed. The full comparison profile has the executed bound
+
+    ||(1+H)^(9/4)(v0/At)||L2(dx) <1.224745,
+
+with original scale At*sqrt(gamma) retained. This is a MODEL profile norm,
+not the actual geodesic-flow norm. The complete classical comparison
+symbol has positive coefficients A near 8.999999894 and B near
+17.999999718; its entire rational remainder is charged, <6.47e28 in the
+first-stage residual accounting. No finite seed term is silently set zero.
+
+The actual reconstructed shape has a nonzero regular-bolt term
+
+    c4 rho^4 log(rho), c4 near -2.2622107487e63.
+
+Its fifth derivative is not square integrable on the two-dimensional
+disk. Therefore an H5 or C5-SOURCE theorem cannot certify this auxiliary
+trial. This is an actual-domain failure of that stronger estimator, not
+failure of the energy-domain inverse or original geometric admission.
+The final physical C5 requirements remain unchanged and unproved.
+
+The argument establishes membership in Dom(|iX|^(9/2)) on the ACTUAL
+paired C2,1 flow, including the bolt logarithm and outer seam. For that
+domain the complete spectral/Bessel integral and full angular sum give
+
+    ||Qgeo,nl[x,.]||E_t* <=Kgeo N_9/2(Vx),
+    Kgeo <1.554891e-32,
+
+where N_9/2 uses original dz and averaged unit-direction measure. This
+bounds the exact retained ultraviolet logarithm and all geodesic returns;
+it does not replace them with a finite spectrum. The common local
+restorations remain separate. It is a strong coefficient for the reference
+nonlocal part, not a new actual-minus-reference quantum bound, and it
+does NOT supply the numerical N_9/2 of the new field.
+
+The complete first-reference test is still
+
+    Esource+Emodel+Kgeo*N_9/2(Vx_hat)+Ereturn+Enum <9.955e32.
+
+The known subtotal is <5.642e32. The ACTUAL fractional norm, complete
+local/finite-domain York return Ereturn and subsequent application errors
+Enum remain UNKNOWN. Their sum must fit a conservative 4.313e32 residual
+account. This is not an available physical/admission margin. If one writes
+N_9/2<=Cflow*At*sqrt(gamma)*Nmodel, its known coefficient is <1.395154e17
+per unit Cflow. The ceiling near 3.0921e15 holds ONLY with Ereturn=Enum=0;
+it is not a proved Cflow or permission to assume the other terms fit.
+
+Decision: retain the source-adapted correction and use the fractional
+strong geodesic method; reject a fifth-derivative source proof. The source
+cancellation and original-dual bound make a direct return calculation
+worth pursuing, but do not settle attainability of the full correction.
+The ONE next calculation is the complete actual-domain return of this
+explicit trial: enclose Kgeo*N_9/2(Vx_hat)+Ereturn+Enum jointly below
+4.313e32, retaining both local rows, the exact logarithmic response and
+all returns before norms. This calculation is PROPOSED. Do not substitute
+the model norm for the missing comparison, or optimize degree, tails or
+the now bounded source instead of computing this remaining map.
+
+No full first inverse, later actual-minus-reference applications, signed
+G_t/Z_r, original P32 defect, mass target, graph/physical output or nonlinear
+admission/contraction is certified. The quantum-fast screen retains its
+two-fast scope. The full physical and stability requirements remain open.
+Author review checks 18 frozen inputs, the ordinary domain/spectral/source
+arguments and all 21 protected paths. No independent or Lean review is
+claimed; arithmetic supports rather than replaces those arguments.
+
+Remaining to-do list: complete actual first-reference return and residual;
+later quantum applications and G_t/Z_r; every original coupled/source/
+graph/physical/boundary/mass and nonlinear admission/contraction budget;
+existence, exact compatibility, physical matching/opening, semiclassical
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Actual-source first residual rejects the one-dimensional correction range
 
 2026-10-28 HST, E003/S169. Previous goal turn: NO PROGRESS, a planning
