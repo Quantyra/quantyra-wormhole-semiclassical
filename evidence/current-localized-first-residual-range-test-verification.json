@@ -1,0 +1,100 @@
+{
+  "status": "actual_source_fixed_range_failure_verified_full_inverse_open",
+  "finished_utc": "2026-10-29T05:24:36.806643+00:00",
+  "receipt_sha256": "93679072c19ea98ae914b9d8cc5bba8db5498c9652612dbeadc5bf78e5ed8252",
+  "review_source_sha256": "8b42e3e467342f450eb78f1c5011f356c23b4a2ac6513a3179d4d0bbb5a846a7",
+  "review_source_utf8": "\"\"\"Author verification of the ordinary range test and frozen outward evidence.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nfrom current_quartic_ritz_rank_test import arb,ctx,dec,enc\n\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-localized-first-residual-range-test'\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\ndef read(n):\n d=json.loads((ROOT/'evidence'/(n+'.json')).read_bytes())\n return d.get('runs',[d])[-1]\ndef up(x):return arb(x.upper())\ndef lo(x):return arb(x.lower())\ndef mag(x):return up(abs(x))\n\nctx.prec=512\npath=ROOT/'evidence'/(STEM+'-verification.json')\nassert not path.exists(),'Preserve immutable verification.'\nd=read(STEM);assert d['status']=='actual_source_one_column_residual_screen_rejected'\nassert d['input_sha256_before']==d['input_sha256_after']\nfor p,h in d['input_sha256_before'].items():assert digest(ROOT/p)==h,p\nassert digest(Path(sys.executable))==d['python_sha256']\nbaseline=json.loads(Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json').read_bytes())\nassert all(digest(Path(p))==h for p,h in baseline.items())\nassert d['ordinary_argument_utf8']==(ROOT/'notes'/(STEM+'.md')).read_text(encoding='utf-8')\nassert d['arithmetic_source_utf8']==(ROOT/'checks/current_localized_first_residual_range_test.py').read_text(encoding='utf-8')\nfor i in [1,2]:assert read(STEM+'-attempt'+str(i))['status']=='failed'\nr=d['result'];cs={k:dec(v) for k,v in r['constants'].items()}\nts=[{k:dec(v) for k,v in t.items() if isinstance(v,dict) and 'decimal_enclosure' in v} for t in r['tests']]\nG1,D1,E1=[ts[0][k] for k in ['source_signed','response_signed','test_energy_upper']]\nG2,D2,E2=[ts[1][k] for k in ['source_signed','response_signed','test_energy_upper']]\nAt,ga=cs['source_amplitude'],cs['physical_measure_gamma']\ndet=D2*G1-D1*G2\nassert det<arb('-4.8') and det>arb('-12.504')\nlower=lo(lo(abs(det))*lo(At)*lo(ga)/up(mag(D2)*up(E1)+mag(D1)*up(E2)))\nassert lower>arb('1.95e42')\nassert cs['complete_first_residual_lower'].overlaps(lower) or cs['complete_first_residual_lower']>lower\nallowances=[]\nfor G,D,E in [(G1,D1,E1),(G2,D2,E2)]:\n assert D>0\n tol=arb('1e33')*up(E)/(At*ga)\n allowed=(G+arb(0,mag(tol)))/D\n allowances.append(allowed)\nassert up(allowances[0])<lo(allowances[1])\nfs={k:dec(v) for k,v in read('current-first-inverse-source-screen')['result']['constants'].items()}\nfirst={k:dec(v) for k,v in read('current-first-quantum-solve-attempt')['result']['constants'].items()}\nK=fs['first_residual_to_original_bolt_multiplier']\nassert K*lower>arb('.0624')\nassert K*lower/arb('1.667e-9')>arb('3.74e7')\nlam=cs['explicit_trial_coefficient_over_At']\nexplicit_second=G2-lam*D2\nassert explicit_second>0\nexplicit_lower=lo(lo(At)*lo(ga)*lo(explicit_second)/up(E2))\nexplicit_upper=up(first['proved_source_dual_upper']+mag(lam*At)*up(cs['psi_full_energy_upper']))\nnext_residual=lo((1-first['complete_geodesic_form_error'])*first['conditional_common_stage_output_error_ceiling'])\nassert first['exact_application_first_residual_error']<arb('2.431e19')\nassert next_residual>arb('9.955e32')\n# Coarse comparison ledger: ordinary termwise product estimates, not a\n# substitute for the actual-domain argument or a new quantum mode cutoff.\nledger={'Einstein':arb('1e4'),'magnetic':arb('1e3'),'R2':arb('1e6'),\n        'Weyl':arb('2e7'),'canonical_local':arb('1e5')}\nassert sum(ledger.values(),arb(0))<arb('1e8')\nreview=dict(\n first_domain_step='Both York identities and endpoint data follow from exact I_b derivative; cutoff fields are C6 and bolt-analytic. Scalar y_hat is used only in its proved Es domain.',\n energy_comparison='Original dz and z weights retained. Full geodesic logarithm uses Dom(X^3), complete angular sum, and the accepted .0022 reference comparison; no physical C5 inference.',\n complete_source='Exact polynomial moments on the actual compact test support; full mixed remainder bounded by the accepted adjoint. Near-integer coefficient and all large-degree endpoint errors retained.',\n complete_quantum='Accepted fixed-psi short-time column plus positive-time operator, shared vacuum, a2, LLL, contact reallocation and transport error all charged. No independent phase or neighborhood extension.',\n cancellation='Exact response cancels in h=D2*xi1-D1*xi2; full interval determinant stays negative. This is an actual-source lower test valid for every scalar c.',\n coefficient_scope='Explicit c=At times the recorded exact binary-rational center. No claim that this is the Ritz coefficient. Lower bound covers all coefficient errors staying in span{psi}.',\n mathematical_decision='Change the one-dimensional correction range. Retain the accepted localized quantum evaluator and use a complete source-adapted principal inverse; its applications remain unexecuted.',\n claims_boundary='No lower bound on actual bolt error, no complete Gt or admission margin, no inverse/construction obstruction, no existence or stability result.',\n verification_scope='Author ordinary-argument review and frozen outward-arithmetic/provenance verification; no independent or Lean verification.')\nout=dict(status='actual_source_fixed_range_failure_verified_full_inverse_open',\n finished_utc=datetime.now(timezone.utc).isoformat(),receipt_sha256=digest(ROOT/'evidence'/(STEM+'.json')),\n review_source_sha256=digest(Path(__file__)),review_source_utf8=Path(__file__).read_text(encoding='utf-8'),\n checked_input_count=len(d['input_sha256_before']),protected_paths_unchanged=len(baseline),\n preserved_failed_attempts=2,review=review,constants={k:enc(v) for k,v in dict(\n  first_allowed_coefficient_interval=allowances[0],second_allowed_coefficient_interval=allowances[1],\n  coefficient_gap_lower=lo(allowances[1])-up(allowances[0]),\n  verified_universal_first_residual_lower=lower,\n  explicit_trial_first_residual_lower=explicit_lower,explicit_trial_complete_residual_upper=explicit_upper,\n  verified_original_first_estimator_floor=K*lower,\n  next_geodesic_application_residual_target=next_residual,\n  alternative_exact_application_analytic_error=first['exact_application_first_residual_error']).items()},\n complete_first_inverse_certified=False,complete_Gt_certified=False,original_admission_closed=False,\n nonlinear_existence_compatibility_matching_validity_noise_stability_closed=False,goal_complete=False)\npath.write_bytes((json.dumps(out,indent=2)+'\\n').encode('utf-8'))\nprint(json.dumps(dict(status=out['status'],checked_inputs=out['checked_input_count'],\n constants={k:v['ball'] for k,v in out['constants'].items()}),indent=2))\n",
+  "checked_input_count": 22,
+  "protected_paths_unchanged": 21,
+  "preserved_failed_attempts": 2,
+  "review": {
+    "first_domain_step": "Both York identities and endpoint data follow from exact I_b derivative; cutoff fields are C6 and bolt-analytic. Scalar y_hat is used only in its proved Es domain.",
+    "energy_comparison": "Original dz and z weights retained. Full geodesic logarithm uses Dom(X^3), complete angular sum, and the accepted .0022 reference comparison; no physical C5 inference.",
+    "complete_source": "Exact polynomial moments on the actual compact test support; full mixed remainder bounded by the accepted adjoint. Near-integer coefficient and all large-degree endpoint errors retained.",
+    "complete_quantum": "Accepted fixed-psi short-time column plus positive-time operator, shared vacuum, a2, LLL, contact reallocation and transport error all charged. No independent phase or neighborhood extension.",
+    "cancellation": "Exact response cancels in h=D2*xi1-D1*xi2; full interval determinant stays negative. This is an actual-source lower test valid for every scalar c.",
+    "coefficient_scope": "Explicit c=At times the recorded exact binary-rational center. No claim that this is the Ritz coefficient. Lower bound covers all coefficient errors staying in span{psi}.",
+    "mathematical_decision": "Change the one-dimensional correction range. Retain the accepted localized quantum evaluator and use a complete source-adapted principal inverse; its applications remain unexecuted.",
+    "claims_boundary": "No lower bound on actual bolt error, no complete Gt or admission margin, no inverse/construction obstruction, no existence or stability result.",
+    "verification_scope": "Author ordinary-argument review and frozen outward-arithmetic/provenance verification; no independent or Lean verification."
+  },
+  "constants": {
+    "first_allowed_coefficient_interval": {
+      "ball": "[0.002 +/- 6.72e-4]",
+      "decimal_enclosure": {
+        "mid": "19776122626353753730654716491699218750000000000000000000000000000",
+        "rad": "6494995040898003227349117653955504110852581948234169392421666816",
+        "exponent": "-67"
+      }
+    },
+    "second_allowed_coefficient_interval": {
+      "ball": "[0.008 +/- 8.29e-4]",
+      "decimal_enclosure": {
+        "mid": "75887596176471561193466186523437500000000000000000000000000000000",
+        "rad": "4170101391199352825848566982260226391748594931401650336719437824",
+        "exponent": "-67"
+      }
+    },
+    "coefficient_gap_lower": {
+      "ball": "0.004544637713479460217058658599853515625000",
+      "decimal_enclosure": {
+        "mid": "45446377134794602170586585998535156250000000000000000000000000000",
+        "rad": "0",
+        "exponent": "-67"
+      }
+    },
+    "verified_universal_first_residual_lower": {
+      "ball": "[1.958064141754548680628666446687052217000e+42 +/- 3.30e+2]",
+      "decimal_enclosure": {
+        "mid": "19580641417545486806286664466870522169996702344920696519697528589",
+        "rad": "2",
+        "exponent": "-22"
+      }
+    },
+    "explicit_trial_first_residual_lower": {
+      "ball": "[1.530498685720083374628504456689661182218e+43 +/- 2.35e+3]",
+      "decimal_enclosure": {
+        "mid": "15304986857200833746285044566896611822182347102900594439335571037",
+        "rad": "2",
+        "exponent": "-21"
+      }
+    },
+    "explicit_trial_complete_residual_upper": {
+      "ball": "[1.533716675408026907342720484537611560587e+51 +/- 7.36e+10]",
+      "decimal_enclosure": {
+        "mid": "15337166754080269073427204845376115605870735534964873901773955990",
+        "rad": "2",
+        "exponent": "-13"
+      }
+    },
+    "verified_original_first_estimator_floor": {
+      "ball": "[0.06267449654245904618149066272009274769214 +/- 4.68e-42]",
+      "decimal_enclosure": {
+        "mid": "6267449654245904618149066272009274769214467448700964253279170570",
+        "rad": "4998136489",
+        "exponent": "-65"
+      }
+    },
+    "next_geodesic_application_residual_target": {
+      "ball": "[995599999999975799536803989825377.9241934 +/- 4.04e-8]",
+      "decimal_enclosure": {
+        "mid": "9955999999999757995368039898253779241933596903923898935317993163",
+        "rad": "2",
+        "exponent": "-31"
+      }
+    },
+    "alternative_exact_application_analytic_error": {
+      "ball": "[24307415825643001204.7 +/- 0.0496]",
+      "decimal_enclosure": {
+        "mid": "24307415825643001204732537436651384451546504998531225802505972202",
+        "rad": "16983977208167440537760284439251185133682689",
+        "exponent": "-45"
+      }
+    }
+  },
+  "complete_first_inverse_certified": false,
+  "complete_Gt_certified": false,
+  "original_admission_closed": false,
+  "nonlinear_existence_compatibility_matching_validity_noise_stability_closed": false,
+  "goal_complete": false
+}

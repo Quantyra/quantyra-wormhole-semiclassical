@@ -1,3 +1,104 @@
+# Actual-source first residual rejects the one-dimensional correction range
+
+2026-10-28 HST, E003/S169. Previous goal turn: NO PROGRESS, a planning
+restatement. This turn executes the actual-source signed range test in
+[the ordinary argument](current-localized-first-residual-range-test.md)
+and its immutable arithmetic and author-verification receipts. Preserve
+d86adb2, the closed audit, P32, original physical norms and the full stable
+semiclassical wormhole objective. The full goal remains ACTIVE/INCOMPLETE.
+
+The result is a VERIFIED FAILURE OF THIS SPECIFIED ESTIMATOR. For the
+actual accepted scalar source g_hat=b(y_hat,.)/N and the unchanged
+localized trial psi, EVERY coefficient c satisfies
+
+    ||g_hat-e_t(c psi,.)||E_t* >1.95e42.
+
+That is more than 1.95e9 times the sufficient first-residual screen 1e33.
+The response range is therefore inadequate even with an exact coefficient
+and exact evaluation. Improving the now affordable quantum column cannot
+repair this. It does not reject the actual coupled inverse, a larger or
+source-adapted correction range, or the wormhole construction.
+
+This is not an arbitrary-source counterexample. Two explicit compact
+geometric tests use the actual finite Q, both York equations, the original
+paired mass/log data, cutoff transitions and regular disk bolt. The first
+domain implication is proved: the tests are at least C6 across their
+cutoffs and analytic at the bolt; y_hat is used in its established scalar
+form domain, not assumed to satisfy geometric C5 admission. The complete
+energy upper comparisons retain dz, the z weights and the full logarithmic
+geodesic form on its actual C2,1 realization. No smooth surrogate or finite
+selection of physical matter modes is used.
+
+All four scalar profiles are retained. Exact polynomial-Legendre moments
+enclose the signed source, including its logarithmic endpoint. The full
+mixed remainder, local affine Hessian, LLL, common a0/a2 contacts and
+positive-time contact reallocation are charged. The accepted short-time
+column, complete positive-time operator and transport errors bound the
+remaining response. Full angular/thermal sums, coincidence contacts and
+finite-domain/boundary/bolt returns remain in these bounds. The quantum
+error is not set to zero and no neighborhood or independent-phase claim
+is made.
+
+In units G_i=g_hat(xi_i)/(At gamma), D_i=e_t(psi,xi_i)/gamma, the executed
+source enclosures are near .045375112904474 and .438764317659820. The
+complete response intervals lie within [17.27186247,34.16510553] and
+[54.80601280,61.17953747]. Their determinant is contained in
+[-12.503601,-4.802248]. The exact response cancels in
+h=D_2 xi_1-D_1 xi_2 before norms are taken; its source does not.
+The two necessary coefficient intervals for meeting the screen have a
+gap >.0045446 in c/At. This is an actual-source mismatch, not just a
+large upper estimate or an unknown quantum constant.
+
+The explicit tested correction is c=At times the recorded exact rational
+center near .0019776122571784. Its complete residual has lower bound
+>1.53e43 and a conservative full-space upper bound <1.534e51. It is not
+claimed to be the Ritz coefficient; the stronger all-coefficient rejection
+also covers that choice and numerical coefficient errors in this range.
+
+In ORIGINAL output units, the universal residual lower bound forces the
+existing K_first*||r|| upper-error ESTIMATOR to report more than .0624,
+over 3.74e7 times the ENTIRE 1.667e-9 bolt allowance, even granting every
+other debit zero. This is NOT a lower bound on the actual bolt error.
+No physical allowance, full bolt condition, original P32 defect, mass
+column, graph/physical output or nonlinear admission/contraction closes.
+All unknown source, boundary and graph comparisons remain unknown.
+
+Decision: CHANGE THE CORRECTION RANGE, retaining the accepted localized
+quantum evaluator and construction. Use the complete source-adapted
+geodesic-preconditioned first solve, whose leading range is unrestricted.
+The frozen m=12/delta=1e-38 argument has analytic residual <2.431e19
+with EXACT applications, so this particular range failure does not apply.
+Its numerical applications are UNKNOWN; the analytic number is not an
+implemented certificate. Do not optimize degree, tails, the scalar source
+or the already affordable quantum column.
+
+The ONE next calculation is an explicit approximation x0 to A0^-1 g_hat,
+where A0 is the complete ell0/N Riesz operator on E_t, together with its
+ENTIRE E_t* residual. The sufficient residual target <9.955e32 would
+give a first-stage energy application error within the frozen conditional
+stage allowance. Include source, inverse, coefficient and caller errors.
+A0=J* A(iX)J must be inverted as that compressed operator; pointwise
+inversion of A followed by compression is not its inverse. This calculation
+is PROPOSED, not executed. Later stages and all original output budgets
+remain separate obligations; the first inverse is ell_t^-1, not the later
+(ell_t+B)^-1 filter.
+
+Verification checks 22 frozen inputs, both preserved failed development
+attempts, the complete determinant/energy/output accounting and all 21
+protected paths. The first development failure was an integer-to-Arb
+conversion; the second a nonfinite large-degree special-function result.
+The latter is replaced by a complete positive-integral endpoint bound,
+without dropping that profile. Verification is author ordinary-argument
+and outward-arithmetic/provenance review, not independent or Lean review.
+
+Remaining to-do list: complete implemented first correction and residual;
+later applications and signed G_t/Z_r; every original coupled/source/
+graph/physical/boundary/mass and nonlinear admission/contraction budget;
+existence, exact compatibility, physical matching/opening, semiclassical
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Actual localized quantum column bounded; complete first residual remains open
 
 2026-10-28 HST, E003/S169. Previous turn: progress, the localized return
