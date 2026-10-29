@@ -1,3 +1,133 @@
+# Complete mass contribution bounded; mass-free diagnostic remains open
+
+2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a status/plan
+review. The full stable semiclassical wormhole objective remains ACTIVE
+and INCOMPLETE. Preserve the closed audit, P32, all accepted results and
+original physical norms. This is an attained bound for the COMPLETE MASS
+contribution to the remaining response diagnostic, not a completed Dj or
+signed Gt certificate and not geometric admission.
+
+The [ordinary actual-domain argument](current-mass-pairing-scalar-return.md),
+[executed complete estimate](../evidence/current-mass-pairing-scalar-return-attempt2.json)
+and [author review](../evidence/current-mass-pairing-scalar-return-verification.json)
+complete the local/scalar terms in BOTH mass residuals. The source is the
+actual f_m=b h_m-a s_m and k_m=a^-1 f_m. The mass lift, .1/.2 transition,
+original York boundary conditions, regular bolt and 2133--2174 graph
+conversion cost remain. The accepted complete massive/LLL block is reused
+unchanged, retaining the exact UV logarithm, common regulator, complete
+angular/thermal sums, coincidence contacts and finite returns.
+
+The first new implication is a quantitative weighted scalar inverse on
+the ORIGINAL scalar form domain. Factor its actual row as 6DP+Arem,
+including d=96pi cR C/B2-epsbar and the full off-shell/anomaly remainder.
+With W=[(L+4gamma)/(L-z+4gamma)]^(3/4), conjugated real forms give
+
+    scalar second-order gap                    >.10360416665,
+    weighted remainder inverse ratio           <5.915e-28,
+    ||W Fnu||Hmu                               <.311954,
+    ||W FT||Hmu                                <.247925,
+    |A_r k_m|                                  <9.735101e-8.
+
+Both signs of the weight preserve the fixed-seed form/graph closure and
+original endpoint conditions. The regular-flux argument converts the
+weighted Laplacian bound to the stated actual bolt average. The original
+alpha_radius is charged afterward, producing a mass-vector debit below
+4.666915e25. This is not a nonlinear-neighborhood theorem or a new physical
+normalization. The complete local canonical rows are evaluated together
+over the whole mass support, including every cutoff derivative and log.
+
+Attempt1 is REJECTED despite its numerical pass: it used auxiliary
+profile norms without the full physical TT reconstruction. Its immutable
+receipt and explicit rejection remain. Attempt2 retains BOTH original
+York rows and the entire finite Volterra return. Their TT comparison
+costs are <256.464 in the weighted estimate and <55.168 unweighted.
+Neither is silently set to one. The corrected global-return/domain
+comparison is part of the accepted calculation, not a conditional ceiling.
+
+That correction exposes a real estimator loss. The complete GENERIC
+energy-based mass upper expression is 6.6261718522e34, over 4.44709 times
+the entire Dj target. Its mixed-remainder portion would require about
+5.00127-fold reduction even granting all other unknown terms zero. This
+is an excessive upper estimator, NOT a lower bound on the actual response.
+
+The executed sharper alternative substitutes the actual scalar Laplacian
+and York-equation bounds into the COMPLETE accepted mixed tensor estimate
+before using energy coercivity. It avoids the generic d^(-1/2) Hessian
+loss, retains all five mixed contacts/returns, and lowers the specified
+mixed-remainder expression by >433.10. No weighted quantum-remainder
+theorem, new truncation, degree change or changed physical norm is assumed.
+
+Executed contributions in the ORIGINAL full-E account:
+
+    scalar observation                          <4.666915e25,
+    mass-scalar mixed main term                  <3.836634e28,
+    mass-scalar COMPLETE mixed remainder         <3.453063e31,
+    scalar-return mixed main term                <3.113967e29,
+    scalar-return COMPLETE mixed remainder       <1.136971e32,
+    complete local canonical two-row pairing     <1.463224e28,
+    complete local/scalar mass contribution      <1.485922e32,
+    unchanged complete massive/LLL contribution  <2.063278e33,
+    COMPLETE mass-vector norm bound Emass        <2.211870e33,
+    fraction of conditional Dj target            <.148448,
+    same discrepancy bound in bolt units         <1.109436e-9.
+
+The formerly unknown complete local/scalar mass contribution is now
+bounded. The massive gain-two/contact term remains the largest KNOWN
+debit; unknown remaining terms cannot yet be ranked. The complete account
+is still
+
+    Ebridge+sqrt(1+epsilon)[Emass+Eremaining+Eapplication]<=1.49e34.
+
+The CONDITIONAL full-E account after the unchanged bridge and Emass is
+approximately 1.268813066979615e34. Eremaining and Eapplication are UNKNOWN.
+This is not an available physical bolt margin. The original 1.667e-9
+bolt allowance and all other output budgets have NOT passed.
+
+For the ONE next calculation, retain the full four-residual identity.
+Let r0(w)=j_r(w)-ell(v0,w),
+rk(w)=B(v_(k-1),w)-(ell+B)(vk,w), k=1,2,3, in normalized full forms.
+On the first TWO actual filtered ranges only, put Pi_m u=u-m(u)h_m.
+No bounded mass trace on arbitrary E is asserted. The remaining JOINT
+functional is
+
+    Rremaining(w)=r0(Pi_m F^3 w)+r1(Pi_m C_op F^2 w)
+                                  +r2(C_op F w)+r3(C_op w).
+
+Bound its E-dual norm AND all remaining application errors against the
+conditional account above, using the actual paired quantum action. Mass
+subtraction alone does not provide a numerical regularity gain or an
+H^(9/2) comparison. The first still-missing implication is quantitative
+control of this filtered mass-free range in the norm required by the
+commonly renormalized weak response. That entire calculation is PROPOSED,
+not executed here. Preserve cancellations before norms; do not replace it
+by another isolated scalar, mass, tail or transport optimization.
+
+Decision: RETAIN the equation-based weighted weak comparison for this
+decisive diagnostic, replacing its excessive generic energy estimator.
+Stop optimizing the now controlled mass contribution. If the COMPLETE Dj
+target passes, the accepted diagnostic ledger would reject the current
+signed-trial bolt certificate (its lower report would exceed 9.2239e-9,
+over 5.533 times its ceiling). It would NOT establish admission or obstruct
+the construction. That antecedent remains unproved; no construction
+change or need for new physics follows from this result.
+
+Author review checks 115 frozen inputs, 1536 whole support cells, 21
+protected paths, the independent York/Euler identities, exact original
+normalization and the complete mass ledger. Pinned interval arithmetic
+supports the ordinary proof; no independent specialist or Lean verification
+is claimed. The retained signed Gt, complete Dj, original P32 defect,
+actual kappa_m, complete source/graph/physical/boundary comparisons,
+nonlinear admission/contraction/existence, exact compatibility, physical
+matching/opening, semiclassical validity/noise and all-sector stability
+remain unresolved. The limited quantum-fast screen keeps its proved scope.
+
+Remaining to-do list: complete joint mass-free residual and application
+errors; decide the full diagnostic and signed certificate; every original
+coupled/admission budget and nonlinear existence; compatibility, matching,
+validity/noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Massive/LLL mass pairing bounded; complete diagnostic remains open
 
 2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 50f9bbc bounded
