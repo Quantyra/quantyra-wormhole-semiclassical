@@ -1,0 +1,207 @@
+{
+  "status": "actual_fractional_comparison_and_exact_reference_residual_reviewed_actual_action_open",
+  "finished_utc": "2026-10-29T08:24:58.739198+00:00",
+  "receipt_sha256": "b1672c38fcf9449c9b622f926555ce34a6908dc1efe9e304a5e54706180dd741",
+  "review_source_sha256": "8454b8c9a7fa8ee917f7ff25122806a89d598e311688bd545855f255eb35c441",
+  "review_source_utf8": "\"\"\"Author review of the actual-domain endpoint/interpolation comparison.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nimport current_source_adapted_fractional_return as f\narb,ctx,dec,enc,J=f.arb,f.ctx,f.dec,f.enc,f.J\nROOT=f.ROOT;STEM=f.STEM\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\n\nctx.prec=512\nout=ROOT/'evidence'/(STEM+'-verification.json');assert not out.exists()\nraw=ROOT/'evidence'/(STEM+'.json');d=json.loads(raw.read_bytes())\nassert d['status']=='fractional_map_enclosed_exact_trial_screen_passes_numerical_applications_open'\nassert d['input_sha256_before']==d['input_sha256_after']\nfor p,h in d['input_sha256_before'].items():assert digest(ROOT/p)==h,p\nassert d['ordinary_argument_utf8']==(ROOT/'notes'/(STEM+'.md')).read_text(encoding='utf-8')\nassert d['arithmetic_source_utf8']==(ROOT/'checks/current_source_adapted_fractional_return.py').read_text(encoding='utf-8')\nassert digest(Path(sys.executable))==d['python_sha256']\nbaseline=json.loads(f.lr.BASELINE.read_bytes());assert all(digest(Path(p))==h for p,h in baseline.items())\nr=d['result'];c={k:dec(v) for k,v in r['constants'].items()}\nassert c['C4']<arb('5.528986e8') and c['C5']<arb('5.219650e10')\nassert c['actual_reconstruction_fractional_comparison']<arb('5.372092e9')\nassert c['actual_fractional_flow_norm_upper']<arb('4.820204e58')\nassert c['complete_reference_nonlocal_response']<arb('7.494891e26')\nassert c['quantum_debit_over_remaining_account']<arb('1.739517e-6')\nassert c['complete_exact_analytic_first_reference_residual']<arb('5.645453e32')\nassert c['complete_exact_analytic_first_reference_residual']<arb('9.955e32')\nassert c['reference_inverse_energy_error']<arb('5.658e32')\nassert c['remaining_for_UNEXECUTED_residual_application_errors']>arb('4.308597e32')\nassert c['known_coarse_actual_minus_reference_upper']>arb('2.02e46')\nassert c['coarse_actual_difference_upper_over_complete_first_screen']>arb('2.02e13')\nassert r['implemented_caller_application_error'] is None and r['signed_Gt'] is None\nassert r['later_actual_minus_reference_application_error'] is None\nassert dec(r['exact_analytic_trial_additional_application_error']).is_zero()\nassert not r['scope']['actual_trial_H5_assumed']\n\np,old,bs=f.load();cells=r['cells']\nassert dec(cells[0]['s0']).is_zero() and dec(cells[-1]['s1']).overlaps(p['L'])\nfor a,b in zip(cells,cells[1:]):assert a['s1']==b['s0']\nsc={n:[dec(v) for v in row] for n,row in r['scalar_coefficient_derivative_bounds'].items()}\ndc=[dec(v) for v in r['connection_tensor_derivative_bounds']]\nfor row in cells:\n for n in sc:\n  for upper,cell in zip(sc[n],row['scalar_bounds'][n]):assert dec(cell).upper()<=upper.upper()\n for upper,cell in zip(dc,row['connection_bounds']):assert dec(cell).upper()<=upper.upper()\n\n# Expanded connection-transfer polynomials independently check recurrence (5).\nS=[dec(v) for v in r['derivative_accounting']['reconstructed_reference_derivative_constants']]\nD0,D1,D2,D3=dc\nT4=S[4]+6*D0*S[3]+(4*D1+11*D0**2)*S[2]+(D2+7*D0*D1+6*D0**3)*S[1]\nT5=S[5]+10*D0*S[4]+(10*D1+35*D0**2)*S[3]+(5*D2+45*D0*D1+50*D0**3)*S[2]\nT5+=(D3+11*D0*D2+7*D1**2+46*D0**2*D1+24*D0**4)*S[1]\nassert c['C4'].overlaps(100*T4)\nassert c['C5'].overlaps(arb(10)**(arb(5)/2)*T5)\nassert c['actual_reconstruction_fractional_comparison'].overlaps((c['C4']*c['C5']).sqrt())\n\n# Independently recover the connection from metric compatibility and torsion.\nfixtures=[]\nfor value in [arb('.3'),arb(2),arb('1e20')]:\n x=J([value,arb(1)]+[arb(0)]*9)\n z,q2,R,q=f.geometry_jets(p,bs,x)\n radial=f.sqrtjet(q2);Rprime=radial*R.d();A2=q2.d()/(2*radial)\n b=Rprime/(2*R);cc=(1-R**2)*A2-R*Rprime/2\n checks=[radial*(1/R).d()+2*b/R,\n         Rprime-2*R*b,\n         A2*(1/R-R)-R*b-cc/R]\n assert all(t.c[0].contains(0) for t in checks)\n # Hessian x=(1+a*x)g2 and all smooth-core bolt identities are ordinary formulas.\n assert (q2.d()/2-(1+p['a']*x)).c[0].contains(0)\n fixtures.append(dict(x=enc(value),metric_compatibility=True,torsion_free=True,reference_Hessian_identity=True))\n\n# Whole-reference residual and its coercivity conversion, without dropping unknowns.\nfirst=f.lr.constants('current-first-quantum-solve-attempt')\ne0=f.up(first['complete_geodesic_form_error'])\nassert c['reference_inverse_energy_error'].overlaps(c['complete_exact_analytic_first_reference_residual']/(1-e0))\nassert c['reference_inverse_energy_error']<first['conditional_common_stage_output_error_ceiling']\nassert c['remaining_for_UNEXECUTED_caller_Et_errors']>arb('4.32e32')\ntrial_upper=(f.up(first['proved_source_dual_upper'])+c['complete_exact_analytic_first_reference_residual'])/(1-e0)\nassert c['actual_trial_Et_upper'].overlaps(trial_upper)\nassert c['known_coarse_actual_minus_reference_upper'].overlaps(e0*trial_upper)\nreviews=dict(\n spaces='Auxiliary H Sobolev endpoint inputs define a linear actual finite-Q York reconstruction. Physical output is the original dz/averaged-direction norm of the complete paired flow generator P. No physical-mode truncation or normalization change.',\n endpoint_domain='Smooth auxiliary core inputs and their regular resolvents reconstruct smooth bolt fields. Their outer z^4 vanishing yields matching fourth flow jets on the C2,1 paired seam; the fifth weak flow derivative has no delta. Closure, not a smooth surrogate theorem, defines the endpoint maps.',\n model_derivatives='On curvature -a, parallel curvature gives commutator norm <=a sum(1+6j)<=4k^2 a. Scalar invariant differential contractions are polynomials in H; integration by parts and spectral calculus give the stated explicit derivative constants through order six.',\n actual_geometry='The metric ratio remains .1<R<2 and volume is unchanged. The exact connection components and all three reference covariant derivatives are bounded on whole cells; h^3 factoring retains the regular-bolt cancellation. Coordinate-free tensor norms and 10^(n/2) restore actual units.',\n field='All four terms of the exact two-row shape reconstruction are retained, including the whole Volterra return. Resolvent gain supplies the one extra derivative of r in the gradient term. Multinomial and Bell bounds apply to full covariant derivative tensors, not sampled radial derivatives.',\n interpolation='The same linear map is bounded at orders four and five. Spectral three-lines interpolation gives order 9/2, with Cflow=sqrt(C4 C5). It never asserts that the actual rho^4 log input is H5; the accepted H^(9/2) model-profile norm is used only after the actual output comparison is proved.',\n full_quantum_scope='The accepted Kgeo then encloses the complete reference nonlocal column, exact UV logarithm and all angular/thermal/flow returns, with common local contacts already charged. No actual sign is claimed. Actual-minus-reference quantum applications are not covered by this new number.',\n application_scope='All interval coefficient and bound-arithmetic errors are included for the exact analytic trial. Its additional numerical application is exactly absent by definition. Errors of a numerical realization/caller and later ordered operator applications remain UNKNOWN and nonzero unless separately certified.',\n norm_and_budget='The complete reference Et* residual is converted to an Et inverse error with 1/(1-e0). Original bolt coefficient products additionally retain that factor and the known repeated-source amplification. They are components, not full physical-output or admission bounds.',\n coarse_actual_estimator='The known general-form estimate for (I-A0)x_hat is >2.02e46 as an upper expression, >2.02e13 times the complete first-residual screen. This is an excessive fallback report, not a lower bound on the actual response or an obstruction. Its next signed evaluation must distinguish amplitude from numerical error.',\n decision='Retain the reconstruction/interpolation method and stop refining this now affordable quantum reference term. Next enclose the actual-minus-reference quantum action on the certified analytic trial, with full common-regulator source hypotheses and application errors.',\n limits='No complete actual inverse, Gt, original P32 defect, mass column, graph/physical output, nonlinear admission/existence, exact compatibility, physical matching, validity/noise or all-sector stability certificate. Author ordinary-argument and arithmetic/provenance review only.')\nans=dict(status='actual_fractional_comparison_and_exact_reference_residual_reviewed_actual_action_open',\n finished_utc=datetime.now(timezone.utc).isoformat(),receipt_sha256=digest(raw),\n review_source_sha256=digest(Path(__file__)),review_source_utf8=Path(__file__).read_text(encoding='utf-8'),\n checked_inputs=len(d['input_sha256_before']),protected_paths_unchanged=len(baseline),\n cell_count=len(cells),metric_identity_fixtures=fixtures,review=reviews,\n constants={k:enc(v) for k,v in c.items()},\n exact_analytic_first_reference_screen=True,implemented_first_actual_inverse=False,\n complete_original_admission=False,goal_complete=False)\nout.write_bytes((json.dumps(ans,indent=2)+'\\n').encode('utf-8'))\nprint(json.dumps(dict(status=ans['status'],checked_inputs=ans['checked_inputs'],cells=len(cells),\n reference_residual=c['complete_exact_analytic_first_reference_residual'].str(12),\n reference_energy_error=c['reference_inverse_energy_error'].str(12)),indent=2))\n",
+  "checked_inputs": 20,
+  "protected_paths_unchanged": 21,
+  "cell_count": 602,
+  "metric_identity_fixtures": [
+    {
+      "x": {
+        "ball": "[0.3000000000000000000000000000000000000000 +/- 1e-45]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "1",
+          "exponent": "-65"
+        }
+      },
+      "metric_compatibility": true,
+      "torsion_free": true,
+      "reference_Hessian_identity": true
+    },
+    {
+      "x": {
+        "ball": "2.000000000000000000000000000000000000000",
+        "decimal_enclosure": {
+          "mid": "20000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-64"
+        }
+      },
+      "metric_compatibility": true,
+      "torsion_free": true,
+      "reference_Hessian_identity": true
+    },
+    {
+      "x": {
+        "ball": "100000000000000000000.0000000000000000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-44"
+        }
+      },
+      "metric_compatibility": true,
+      "torsion_free": true,
+      "reference_Hessian_identity": true
+    }
+  ],
+  "review": {
+    "spaces": "Auxiliary H Sobolev endpoint inputs define a linear actual finite-Q York reconstruction. Physical output is the original dz/averaged-direction norm of the complete paired flow generator P. No physical-mode truncation or normalization change.",
+    "endpoint_domain": "Smooth auxiliary core inputs and their regular resolvents reconstruct smooth bolt fields. Their outer z^4 vanishing yields matching fourth flow jets on the C2,1 paired seam; the fifth weak flow derivative has no delta. Closure, not a smooth surrogate theorem, defines the endpoint maps.",
+    "model_derivatives": "On curvature -a, parallel curvature gives commutator norm <=a sum(1+6j)<=4k^2 a. Scalar invariant differential contractions are polynomials in H; integration by parts and spectral calculus give the stated explicit derivative constants through order six.",
+    "actual_geometry": "The metric ratio remains .1<R<2 and volume is unchanged. The exact connection components and all three reference covariant derivatives are bounded on whole cells; h^3 factoring retains the regular-bolt cancellation. Coordinate-free tensor norms and 10^(n/2) restore actual units.",
+    "field": "All four terms of the exact two-row shape reconstruction are retained, including the whole Volterra return. Resolvent gain supplies the one extra derivative of r in the gradient term. Multinomial and Bell bounds apply to full covariant derivative tensors, not sampled radial derivatives.",
+    "interpolation": "The same linear map is bounded at orders four and five. Spectral three-lines interpolation gives order 9/2, with Cflow=sqrt(C4 C5). It never asserts that the actual rho^4 log input is H5; the accepted H^(9/2) model-profile norm is used only after the actual output comparison is proved.",
+    "full_quantum_scope": "The accepted Kgeo then encloses the complete reference nonlocal column, exact UV logarithm and all angular/thermal/flow returns, with common local contacts already charged. No actual sign is claimed. Actual-minus-reference quantum applications are not covered by this new number.",
+    "application_scope": "All interval coefficient and bound-arithmetic errors are included for the exact analytic trial. Its additional numerical application is exactly absent by definition. Errors of a numerical realization/caller and later ordered operator applications remain UNKNOWN and nonzero unless separately certified.",
+    "norm_and_budget": "The complete reference Et* residual is converted to an Et inverse error with 1/(1-e0). Original bolt coefficient products additionally retain that factor and the known repeated-source amplification. They are components, not full physical-output or admission bounds.",
+    "coarse_actual_estimator": "The known general-form estimate for (I-A0)x_hat is >2.02e46 as an upper expression, >2.02e13 times the complete first-residual screen. This is an excessive fallback report, not a lower bound on the actual response or an obstruction. Its next signed evaluation must distinguish amplitude from numerical error.",
+    "decision": "Retain the reconstruction/interpolation method and stop refining this now affordable quantum reference term. Next enclose the actual-minus-reference quantum action on the certified analytic trial, with full common-regulator source hypotheses and application errors.",
+    "limits": "No complete actual inverse, Gt, original P32 defect, mass column, graph/physical output, nonlinear admission/existence, exact compatibility, physical matching, validity/noise or all-sector stability certificate. Author ordinary-argument and arithmetic/provenance review only."
+  },
+  "constants": {
+    "C4": {
+      "ball": "[552898561.2645470324545338093760114899897 +/- 2.27e-32]",
+      "decimal_enclosure": {
+        "mid": "5528985612645470324545338093760114899897226136423870288474256480",
+        "rad": "4",
+        "exponent": "-55"
+      }
+    },
+    "C5": {
+      "ball": "[52196494971.52988572874748696571995483997 +/- 4.37e-30]",
+      "decimal_enclosure": {
+        "mid": "52196494971529885728747486965719954839965633500128903191558241952",
+        "rad": "4",
+        "exponent": "-54"
+      }
+    },
+    "actual_reconstruction_fractional_comparison": {
+      "ball": "[5372091489.616594163497590517075624034697 +/- 2.34e-31]",
+      "decimal_enclosure": {
+        "mid": "53720914896165941634975905170756240346967661930572861760939745208",
+        "rad": "4",
+        "exponent": "-55"
+      }
+    },
+    "actual_fractional_flow_norm_upper": {
+      "ball": "[4.82020362400375814750e+58 +/- 2.18e+37]",
+      "decimal_enclosure": {
+        "mid": "48202036240037581474989654771977849740196865881387639968063611047",
+        "rad": "11394181945170360897917963523105142362603521",
+        "exponent": "-6"
+      }
+    },
+    "complete_reference_nonlocal_response": {
+      "ball": "[7.49489004149278679157e+26 +/- 6.65e+5]",
+      "decimal_enclosure": {
+        "mid": "7494890041492786791573962426023323256543192923569671090039931786",
+        "rad": "2682361853324657233494372821505795889823745",
+        "exponent": "-37"
+      }
+    },
+    "quantum_debit_over_remaining_account": {
+      "ball": "[1.739516628118100125580e-6 +/- 7.75e-28]",
+      "decimal_enclosure": {
+        "mid": "17395166281181001255798483328184698426853222617458948058687050187",
+        "rad": "6225592407939230531602779959976764547006465",
+        "exponent": "-70"
+      }
+    },
+    "complete_exact_analytic_first_reference_residual": {
+      "ball": "[5.64545244916643348950872778e+32 +/- 6.46e+5]",
+      "decimal_enclosure": {
+        "mid": "56454524491664334895087277762304161898274540553241064767519648319",
+        "rad": "26823618734562164157188839466749394945",
+        "exponent": "-32"
+      }
+    },
+    "first_residual_over_sufficient_screen": {
+      "ball": "[0.567097182236708537369033428 +/- 3.19e-28]",
+      "decimal_enclosure": {
+        "mid": "56709718223670853736903342804926330385007072378946323222018732616",
+        "rad": "26944870663282350756274894234730889217",
+        "exponent": "-65"
+      }
+    },
+    "remaining_for_UNEXECUTED_residual_application_errors": {
+      "ball": "[4.30859750510995850721320843e+32 +/- 6.65e+5]",
+      "decimal_enclosure": {
+        "mid": "43085975051099585072132084260375739766767434568070764303289099599",
+        "rad": "26823618655334001642924501873205444609",
+        "exponent": "-32"
+      }
+    },
+    "reference_inverse_energy_error": {
+      "ball": "[5.65789982878977098567721766e+32 +/- 7.62e+5]",
+      "decimal_enclosure": {
+        "mid": "56578998287897709856772176550715736425781249999999999999999999999",
+        "rad": "26883171216741311060655727525371052033",
+        "exponent": "-32"
+      }
+    },
+    "analytic_energy_error_over_conditional_common_stage_allowance": {
+      "ball": "[0.567040221892986210914919000 +/- 3.92e-28]",
+      "decimal_enclosure": {
+        "mid": "56704022189298621091491899987817331135293137838363436633780768415",
+        "rad": "26942987885228361778556321256295104513",
+        "exponent": "-65"
+      }
+    },
+    "remaining_for_UNEXECUTED_caller_Et_errors": {
+      "ball": "[4.32005166449521397660784939e+32 +/- 3.38e+5]",
+      "decimal_enclosure": {
+        "mid": "43200516644952139766078493906828655346404132433235645294189453118",
+        "rad": "26883172959760886374471154583337959425",
+        "exponent": "-32"
+      }
+    },
+    "reference_energy_error_bolt_coefficient_product_NOT_complete_output": {
+      "ball": "[1.81100310094701402815313608e-11 +/- 2.04e-38]",
+      "decimal_enclosure": {
+        "mid": "18110031009470140281531360788257666860372635086496301604951057280",
+        "rad": "8604872497656252332539234650687537153",
+        "exponent": "-75"
+      }
+    },
+    "repeated_source_error_component_with_known_stage_amplification_NOT_complete_output": {
+      "ball": "[1.81500491575424929418561589e-11 +/- 1.50e-38]",
+      "decimal_enclosure": {
+        "mid": "18150049157542492941856158893703395746856844810331517188845554070",
+        "rad": "8623886900132944459372166027820400641",
+        "exponent": "-75"
+      }
+    },
+    "actual_trial_Et_upper": {
+      "ball": "[9.196416550340148772108264055745327817281e+48 +/- 3.64e+7]",
+      "decimal_enclosure": {
+        "mid": "9196416550340148772108264055745327817281036069852526367187499999",
+        "rad": "268831710919679541249",
+        "exponent": "-15"
+      }
+    },
+    "known_coarse_actual_minus_reference_upper": {
+      "ball": "[2.023211641074832729863818092263972119802e+46 +/- 1.73e+6]",
+      "decimal_enclosure": {
+        "mid": "20232116410748327298638180922639721198018279353675558007812500000",
+        "rad": "591429771884803129345",
+        "exponent": "-18"
+      }
+    },
+    "coarse_actual_difference_upper_over_complete_first_screen": {
+      "ball": "[20232116410748.32729863818092263972119802 +/- 1.73e-27]",
+      "decimal_enclosure": {
+        "mid": "20232116410748327298638180922639721198018279353675558007812500000",
+        "rad": "591429771884803129345",
+        "exponent": "-51"
+      }
+    }
+  },
+  "exact_analytic_first_reference_screen": true,
+  "implemented_first_actual_inverse": false,
+  "complete_original_admission": false,
+  "goal_complete": false
+}

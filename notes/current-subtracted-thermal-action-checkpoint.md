@@ -1,3 +1,131 @@
+# Actual fractional map bounded; exact first-reference trial passes its screen
+
+2026-10-28 HST, E003/S169. Previous turn: PROGRESS, 1b04eae bounded the
+complete local return. This turn executes the missing actual-domain
+fractional comparison and closes the COMPLETE exact analytic trial's
+FIRST-REFERENCE residual screen. It does NOT certify an implemented
+actual inverse, signed G_t or geometric admission. Preserve the closed
+audit, P32, every accepted result, original norms and the full stable
+semiclassical wormhole objective. The goal remains ACTIVE/INCOMPLETE.
+
+The [ordinary argument](current-source-adapted-fractional-return.md),
+[full arithmetic](../evidence/current-source-adapted-fractional-return.json)
+and [author review](../evidence/current-source-adapted-fractional-return-verification.json)
+bound the SAME exact finite-Q two-row reconstruction T f=V x_hat. Its
+auxiliary profile input is f=v0. The output uses the ACTUAL complete
+paired C2,1 flow generator P and original dz/averaged-direction norm.
+The auxiliary hyperbolic operator defines profiles and input norms only;
+it does not replace the physical boundary realization or quantum theory.
+
+The first missing comparison is resolved by bounding the LINEAR map T
+at derivative orders four and five on smooth auxiliary inputs, then
+interpolating the map. The actual trial still has its nonzero rho^4 log
+bolt term and is NOT assumed to have five square-integrable derivatives.
+On the endpoint core its outer z^4 behavior gives matching fourth flow
+jets across the paired seam, with no fifth-derivative delta. Regular
+bolt matching, both York rows and the whole finite Volterra return remain.
+
+All connection derivatives are bounded in actual finite geometry, with
+the polar cancellation factored before norms. Covariant derivative
+products retain the radius scale and original volume. The whole-domain
+602-cell enclosure gives
+
+    C4 <5.528986e8, C5 <5.219650e10,
+    Cflow=sqrt(C4*C5) <5.372092e9,
+    N_9/2(V x_hat) <4.820204e58.
+
+This is an attained comparison, not the old conditional Cflow ceiling.
+It is a quantum-source flow norm on this fixed seed/phase, not the
+original physical C5 admission norm, an independent boundary-phase
+estimate or a nonlinear-neighborhood transfer.
+
+The accepted full Kgeo theorem now applies quantitatively:
+
+    ||Qgeo,nl[x_hat,.]||Et* <7.494891e26.
+
+It retains the exact ultraviolet logarithm, common-regulated reference
+form, complete angular/thermal sums and all flow returns. All common
+local, Weyl and LLL contacts were charged separately in 1b04eae. This is
+a norm enclosure for the full nonlocal REFERENCE column; no actual sign
+is claimed, and the actual-minus-reference field-theory response remains.
+
+Combining EVERY first-reference entry actually executed so far gives
+
+    ||g_hat-e_0(x_hat,.)||Et*
+      <=Esource+Emodel+Ereturn+Egeo
+      <5.645453e32 <9.955e32.
+
+Here g_hat is the accepted scalar trial's actual mixed source; its prior
+replacement error relative to the original scalar solve is still charged
+separately. The new quantum debit consumes <1.739517e-6 of the account
+remaining after the local return. More reference quantum/local optimization
+cannot resolve the next unknown actual application.
+
+APPLICATION SCOPE: this certificate is for the explicitly specified exact
+analytic field. All parameter-enclosure and bound-arithmetic errors are
+included. There is no additional numerical evaluation in that definition.
+A numerical realization/caller and later ordered operator applications
+remain UNEXECUTED, with UNKNOWN errors; they are not assigned zero.
+The conservative remaining account for additional RESIDUAL errors is
+>4.308597e32. This is not a free physical margin.
+
+The original-norm inverse comparison is also explicit. The accepted
+||A0-I||<=e0 near .0022 gives
+
+    ||A0^-1 g_hat-x_hat||Et <5.657900e32.
+
+This uses <56.7041% of the conditional common stage OUTPUT allowance
+9.977951493e32. A numerical caller would need its extra Et error below
+the remaining >4.320051e32 to retain that sufficient stage allocation;
+this is a threshold, not an established caller error. Applying the old
+K_first directly to an Et* residual is only a coefficient product. With
+the reference coercivity factor and known repeated-source amplification,
+this application's component product is <1.815005e-11 in bolt units.
+It is NOT the complete bolt error or an original admission certificate.
+
+The gap to the ACTUAL first equation remains quantitatively important.
+The known general-form estimate alone reports
+
+    ||(I-A0)x_hat||Et <=e0 ||x_hat||Et
+                         <= an upper expression near 2.023212e46.
+
+That upper expression is over 2.02e13 times the complete first-residual
+screen 1e33. It fails to certify treating the reference trial as the
+actual first solution. This is NOT a lower bound on the actual response,
+not proof that its signed action is that large, and not an obstruction
+to the construction. The ordered correction is designed to evaluate and
+cancel the difference; its amplitude need not fit its numerical error
+allowance. The frozen degree, spatial cutoff and iteration depth remain.
+
+Decision: RETAIN the reconstruction/interpolation method and stop
+optimizing the now affordable reference column. The ONE next calculation
+is the complete actual-minus-reference quantum action on this analytic
+trial, against ALL Et tests, with a certified error and the actual common
+regulator, contacts, full sums and paired returns. First verify the
+evaluator's source hypotheses on this mass/log/bolt field; the earlier
+smooth localized-column theorem cannot simply be transferred to it.
+Its signed enclosure will decide whether a direct first residual passes
+or the retained ordered correction must be applied. This calculation is
+PROPOSED, not executed. G_t and the full coupled estimate remain open.
+
+Author review checks 20 frozen inputs, all 21 protected paths, whole-cell
+coverage, independent expanded connection-transfer polynomials and metric
+compatibility identities. The ordinary domain, covariant commutator and
+spectral interpolation arguments carry the continuum claim; arithmetic
+supports them. The development enclosure is preserved. No independent
+review or Lean verification is claimed. No original P32 defect, actual
+mass target, graph/physical output or nonlinear admission closes; the
+quantum-fast screen remains limited to its proved scope.
+
+Remaining to-do list: actual-minus-reference quantum action and all
+numerical applications; complete actual first inverse and later filters;
+signed G_t/Z_r, every coupled/source/graph/physical/boundary/mass budget;
+nonlinear admission/contraction and existence; exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Complete local return enclosed; fractional quantum response still unresolved
 
 2026-10-28 HST, E003/S169. Previous goal turn: NO PROGRESS, a status and
