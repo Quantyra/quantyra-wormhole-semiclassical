@@ -1,3 +1,67 @@
+# First inverse test rejects taking the source norm separately
+
+2026-10-28 HST, E003/S169. This is the first turn of the NEW execution
+goal. The full stable semiclassical wormhole objective is ACTIVE and
+incomplete; earlier blocked runs remain historical. Preserve the closed
+audit, P32, original physical norms and all accepted results.
+
+The [executed source and first-residual test](current-first-inverse-source-screen.md)
+uses the actual analytic Green input and the complete paired form. Its
+whole-interval H_mu norm is between 3.39682444517628e48 and
+3.39682444517629e48, retaining the cutoff and z^-4 measure. A Legendre
+Wronskian identity evaluates the full comparison integral, with the entire
+cutoff tail bounded. This tests the residual estimator; it does not refine
+or alter the already accepted input-accuracy contract.
+
+For the admissible nonzero trial x_hat=alpha q z^4, the complete residual
+upper report is <9.177e48 in E_t*. It uses the full quantum quartic energy
+and the complete scalar/mixed source map. The original first-error
+multiplier pref_t f_t^2 is about 3.2008398094e-44, so this report costs
+about 2.93715e5 against the whole 1.667e-9 bolt allowance: an improvement
+of more than 1.7619e14 would be required. This is an UPPER REPORT, not a
+lower bound for the actual residual or physical correction.
+
+More decisively, an actual quartic test and the complete scalar variational
+lower bound prove that ANY uniform H_mu-to-E_t* source constant is >.3853.
+The separated report would need <1.5332e-14 even granting all other debits
+zero. Its best possible uniform-constant report is therefore >4.1895e4,
+over 2.5132e13 times the whole bolt allowance. No uniform constant or trial
+coefficient optimization can close this estimator. This does not bound
+the source on the special Green input from below, or reject its correlated
+signed residual. The zero trial is the no-data baseline; the selected
+nonzero trial does not improve this separated upper expression.
+
+The first source g also requires a previously unevaluated scalar inverse:
+e_s(y,w)=<t_hat,(V*)^-1 bbar* w>H_mu/beta, followed by g=b(y,.)/N.
+This uses the known full local scalar/mixed rows; the independent quantum
+shape determinant is not required for this source construction. For a
+certified scalar residual rho_s, its original first-source error is at most
+1.8608968038e-44 ||rho_s||E_s*. The optimistic whole-allowance ceiling
+is approximately 8.95805e34 in E_s*, with all other debits zero. No
+scalar trial meeting it, numerical source center or free allocation exists.
+
+Decision: change the ESTIMATION method by computing the actual coupled
+source and signed residual before their norms. Retain the construction.
+The next calculation is the complete scalar-source solve with a certified
+rho_s on the original domain, followed by its contribution to Z_r. It is
+PROPOSED. The independent quantum applications, j_r correlation, later
+inverse errors and complete signed Z_r remain uncomputed. No source,
+graph, other physical output, mass-column or nonlinear gate closes.
+
+The 512-bit calculation records a finite excessive estimator and a proved
+limitation of that estimator class. Its ordinary argument, immutable
+receipt and author verification distinguish these from the unknown actual
+response. The launch import failure is retained separately. All 21
+protected inputs remain unchanged. No task-owned calculation is running.
+
+Remaining to-do list: actual scalar source and signed quantum applications;
+every coupled/source/graph/physical/boundary/mass requirement; nonlinear
+admission/contraction; exact compatibility; physical matching/opening;
+semiclassical validity/noise; all-sector stability; the full stable
+semiclassical wormhole objective.
+
+---
+
 # Complete signed response execution is blocked
 
 2026-10-28 HST, E003/S169. The full stable semiclassical wormhole objective

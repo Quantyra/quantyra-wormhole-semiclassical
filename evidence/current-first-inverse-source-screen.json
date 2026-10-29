@@ -1,0 +1,306 @@
+{
+  "started_utc": "2026-10-29T00:40:42.153370+00:00",
+  "input_sha256_before": {
+    "notes/current-first-inverse-source-screen.md": "f8e52f5ce49c3f5013ccdbc62af98bc9e9cd37b5c32c15fc8f6e1d7150ebd83f",
+    "checks/current_first_inverse_source_screen.py": "f8243272680e05c02e092061e64c554e20f784f51da6943519d640144c4fe70c",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "notes/current-filtered-mixed-green-residual.md": "c0522cb8ade2af4ac600488aaf11eb584894cc9baae434df8ea5faf09783c307",
+    "notes/current-complete-bolt-energy-bound.md": "6b86ce1ba8384c56c8b5fdb913ab7d0e3d472c8311083f8fb75323f6fab2466d",
+    "notes/current-global-green-trial-enclosure.md": "e80c95263a198cf85db6e3e9054c84707e3837c2ce0f2242a38ae89767d84230",
+    "notes/current-signed-adjoint-trial-attempt.md": "d493b904db6a95368e6ab21c0b5564dafa7d8d7dac4785220dc0287e1878a993",
+    "notes/current-quartic-ritz-rank-test.md": "03faee79d37ba56677370cfc8308ef6b4b26883ddea6840d5ba126ae3cbd7db1",
+    "evidence/current-global-green-trial-enclosure.json": "193c1dd9d8fed29de5c1859271c0ca2bf68d319d8d63d70c69f1c58675a25e43",
+    "evidence/current-global-green-trial-enclosure-verification.json": "437fad154a3239883dad7567f253d46ef682c035a6b808d9ca5242eea652b00c",
+    "evidence/current-filtered-mixed-green-residual.json": "1bc12444d10af59fe43a75b99b157a4e9f73d28901150a6f4d41ff021a0ab750",
+    "evidence/current-signed-adjoint-trial-attempt.json": "06dd87ec2dbd98f5eb41046a112f7adf2e5e851fa2fa8065d22335b2e7f1f36f",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-quartic-ritz-rank-test-verification.json": "20990396bbfc479d84adddc0ead1ba5c263edca139397ba13fa21560da90c0de",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "ordinary_argument_utf8": "# First inverse residual and the uniform source estimator\n\n2026-10-28 HST, E003/S169. First turn of the NEW execution goal. The\npreceding plan supplied no bound; earlier blocked runs are historical.\nPreserve the full stable semiclassical wormhole objective, P32, closed\naudit, original physical norms and all accepted results.\n\nThis tests one complete first-inverse residual estimator. It does not\nevaluate the full signed Z_r. A finite excessive upper report and a\nlower limit on this CLASS OF UPPER REPORTS reject taking the source norm\nseparately. They do not lower-bound the actual residual or correction.\n\n## Actual source, trial, and full-space residual\n\nUse H_mu=L2((0,L),z^-4 dz), e_t=ell_t/N on the original paired E_t,\nN=|W_action| beta, and e_s=a/N on the scalar energy E_s. The fixed\nmass/log phase, complementary first-order adjoint and composed squares,\nclock/period/spin/scale, original cutoff transitions and regular disk bolt\nare unchanged. York retains J(0)=0 and (Q^2 J'/z^4)(L)=0.\n\nLet t_hat be the analytic Green trial accepted at 0459e57. The complete\nadjoint estimates of current-complete-bolt-energy-bound.md imply\n\n    g_s(t)(w)=<t,(V*)^-1 bbar* w>H_mu/beta,\n    ||g_s(t)||E_s* <= K_s ||t||H_mu, K_s=K_V K_b/beta.\n\nThese are the complete local mixed rows, including the Ward/anomaly and\nreturn terms; the canonical nonlocal determinant has zero scalar/mixed\nrow in the fixed chart. No independent quantum stress is chosen. Let y\nbe the scalar Riesz solution e_s(y,w)=g_s(t)(w). Its induced first source is\n\n    g(t)(v)=b(y,v)/N\n          =<t,(V*)^-1 Bbar v>H_mu/beta,\n    ||g(t)||E_t* <= K_g ||t||H_mu,\n    K_g=K_s sqrt(q)/sqrt(1-epsilon), q=.338.                 (1)\n\nThe identities follow first on the original form core and extend by the\nquoted bounds. In particular they do not require V^-1 t to be a C5\nmetric path, or an unproved unfiltered H_mu-to-E_t embedding. The source\nexists, but neither y nor its full numerical source functional has been\ncomputed on this t_hat. That is an earlier implementation gap than the\nindependent quantum inverse application.\n\nThe first inverse is e_t(x,v)=g(t_hat)(v), namely the filtered extension\nof T_t V^-1 t_hat. Choose the explicit nonzero trial\n\n    x_hat=c psi, c=alpha q, psi=z^4, alpha=(1+h)/h.\n\nFor psi, J=0, Upsi=psi/2 and Vpsi=-psi. This is the actual admissible\nquartic with the original outer and bolt data. The retained full-energy\nbound vcap>=||psi||E_t from current-signed-adjoint-trial-attempt.md includes\nthe entire commonly renormalized quantum form, exact UV logarithm,\ncomplete angular/thermal towers, contacts and finite-domain returns.\nIt is not a local-only energy. Do not transfer its separate quartic\nquantum-action certificate to the Green input.\n\nThe COMPLETE signed residual is r(v)=g(t_hat)(v)-e_t(x_hat,v), for all\nv in E_t. The fallback being tested takes its two terms separately:\n\n    ||r||E_t* <= R_upper=K_g ||t_hat||H_mu+|c| vcap.          (2)\n\nThis upper bound needs no unevaluated quantum matrix element set to zero:\nthe second functional's exact dual norm is ||x_hat||E_t. It supplies no\nsigned center. Parameter/rounding errors enter the interval expressions;\nthe trial and input are analytic functions, not sampled interpolants.\nUnknown application errors for any later implemented solver remain unknown.\n\nFor F_t=(I+T_t)^-1 T_t and f_t=q_t/(1+q_t), q_t=q/(1-epsilon), coercivity\nand the two remaining filters put (2) in ORIGINAL bolt-output units:\n\n    E_first <= K_first R_upper, K_first=pref_t f_t^2.        (3)\n\nThe previously accepted input replacement debit <7.432e-12 is charged\nonce in the complete certificate; it is not included again in (2).\nThe correlated j_r term, quartic subtraction, later inverse errors and\nall other outputs are still required. No available margin is assumed.\n\n## Whole-interval norm of the actual computational input\n\nWrite s=L-z, SP=1e-16 and\n\n    t_hat(s)=chi_SP(s) At [Q_l(1+a s/gamma)-Q_n(1+a s/gamma)],\n\nwith exactly the accepted correlated parameters l>=1, n>l and At>0.\nThe existing cutoff is one through SP and zero beyond 2SP, with values\nin [0,1]. Standard real Q is used, not Olver's differently normalized Q.\nThe physical interval and its cutoff remain unchanged.\n\nThe [Legendre equation](https://dlmf.nist.gov/14.2.E1) gives\n\n    [(w^2-1)(Q_n' Q_l-Q_l' Q_n)]'\n                        =[n(n+1)-l(l+1)] Q_n Q_l.\n\nAt w=1 the standard Q expansion has common leading -log(w-1)/2 and\nconstant log(2)/2-EulerGamma-digamma(k+1); see\n[DLMF 14.8.9](https://dlmf.nist.gov/14.8.E9) with the normalization in\n[14.3.10](https://dlmf.nist.gov/14.3.E10). At infinity the boundary term\nvanishes for these positive degrees. Integrating and taking the coincident\ndegree limit therefore proves\n\n    I(n,l)=int_1^infinity Q_n Q_l dw\n          =[digamma(n+1)-digamma(l+1)]/[n(n+1)-l(l+1)],\n    I(k,k)=trigamma(k+1)/(2k+1),\n    J=int_1^infinity (Q_l-Q_n)^2 dw=I(l,l)+I(n,n)-2I(n,l). (4)\n\nThe coincident limit is justified by the positive integral representation\nand its logarithmic endpoint/integrable infinity bounds on a compact\ndegree interval. No matter mode is being selected in (4).\n\nFor x>=1, Q_1(1+x)<=1/(3x^2), by its positive inverse-power series.\nMonotonicity in degree of the same positive integral gives\n0<=Q_l-Q_n<=Q_1. With x0=a SP/gamma>1,\n\n    tail=int_(x0)^infinity (Q_l(1+x)-Q_n(1+x))^2 dx\n                          <=1/(27 x0^3).\n\nSince the cutoff is one before SP and at most one afterwards, and the\nORIGINAL measure has L^-4<=z^-4<=(L-2SP)^-4 on its support,\n\n    At L^-2 sqrt((gamma/a)(J-1/(27x0^3)))\n      <= ||t_hat||H_mu\n      <= At (L-2SP)^-2 sqrt((gamma/a)J).                     (5)\n\nThe infinite comparison integral is only a bound for the computational\nprofile; it does not extend the physical geometry. Equation (5) covers\nthe whole input, including its cutoff transition and regular bolt limit.\nIts purpose is to test (2), not to optimize the closed input contract.\n\n## Why sharpening the uniform constant cannot rescue this estimator\n\nLet C_g be ANY valid norm bound for the map g:H_mu->E_t*. Test it on\nt=Vpsi=-z^4, an actual admissible field. The existing two-scalar-test\nvariational lower matrix in current-quartic-ritz-rank-test.md gives\nB[psi,psi]/N>=B_low,22>0. Its finite matrix is a LOWER variational bound\nfor the full scalar inverse, not a replacement for that inverse. Then\n\n    C_g >= ||g(Vpsi)||E_t*/||Vpsi||H_mu\n        >= B_low,22/(vcap sqrt(L^5/5)) = C_floor.           (6)\n\nBoth the numerator and complete quantum energy in the denominator retain\ntheir actual domains. This tests a UNIFORM source-map constant. It does\nnot lower-bound g(t_hat) on the special Green input.\n\nEvery separated report of the form C_g||t_hat||+||x_hat||, even with an\nexact best uniform constant and arbitrary trial coefficient, is therefore\nat least C_floor times the LOWER endpoint of (5). Its original-output\nreport is at least K_first C_floor H_lower. If this exceeds 1.667e-9,\nno better uniform constant or quartic coefficient can certify that report.\nThe zero trial is the no-data baseline for (2); nonzero c only adds to\nthis particular upper expression. A signed or input-specific calculation\ncan escape this estimator limitation.\n\n## Quantitative alternative and execution decision\n\nCompute the scalar source y before estimating its norm. For an admissible\ny_hat define its complete normalized scalar residual\n\n    rho_s(w)=g_s(t_hat)(w)-e_s(y_hat,w),\n    ||y-y_hat||E_s<=||rho_s||E_s*.\n\nThe original coupling bound gives\n\n    ||g(t_hat)-b(y_hat,.)/N||E_t*\n                       <=sqrt(q)/sqrt(1-epsilon) ||rho_s||E_s*,\n    E_source <= K_scalar ||rho_s||E_s*,\n    K_scalar=K_first sqrt(q)/sqrt(1-epsilon).               (7)\n\nThis step contains the full known scalar and mixed operators and actual\nboundary returns; it does not need evaluation of the independent quantum\nshape determinant. A scalar approximation and its residual are NOT yet\navailable. The subsequent quantum residual must retain\nb(y_hat,v)/N-e_t(x_hat,v) before taking norms. Formula (7) is its explicit\nbudget role, not a claim that completing the scalar solve closes Z_r.\n\nExecute (4)-(7) with 512-bit outward intervals. Test the current report\nand the best-uniform-constant report against the WHOLE bolt allowance,\ngranting all other debits zero only to reject this estimator. Record the\nconditional scalar-residual ceiling 1.667e-9/K_scalar, not an available\nallocation. Preserve every uncertainty and no numerical application error\nis silently zeroed.\n\nDecision at this test: if those report floors fail, abandon the separated\nuniform-source estimator, retain the construction, and compute the actual\ncoupled scalar source followed by its signed quantum residual. Do not\noptimize the quartic column, Green input, tails, polynomial degree or the\nuniform coefficient. The next calculation is the complete scalar-source\nsolve with a certified rho_s on the actual domain, charged through (7).\nThe actual signed Z_r and full coupled certificate remain unresolved.\n\nRemaining to-do list: actual source and signed quantum residual applications;\nall coupled admission/source/graph/physical/boundary/mass requirements;\nnonlinear admission/contraction; exact compatibility; physical matching/\nopening; semiclassical validity/noise; all-sector stability; the full\nstable semiclassical wormhole objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Full first-inverse residual estimator; no signed quantum solve is claimed.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nsys.path.insert(0, str(Path(__file__).resolve().parent))\nfrom current_quartic_ritz_rank_test import arb, ctx, dec, enc\nfrom flint import acb\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-first-inverse-source-screen'\nBASELINE = Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\nINPUTS = [\n    'notes/'+STEM+'.md', 'checks/current_first_inverse_source_screen.py',\n    'checks/current_quartic_ritz_rank_test.py',\n    'notes/current-filtered-mixed-green-residual.md',\n    'notes/current-complete-bolt-energy-bound.md',\n    'notes/current-global-green-trial-enclosure.md',\n    'notes/current-signed-adjoint-trial-attempt.md',\n    'notes/current-quartic-ritz-rank-test.md',\n    'evidence/current-global-green-trial-enclosure.json',\n    'evidence/current-global-green-trial-enclosure-verification.json',\n    'evidence/current-filtered-mixed-green-residual.json',\n    'evidence/current-signed-adjoint-trial-attempt.json',\n    'evidence/current-quartic-ritz-rank-test-final.json',\n    'evidence/current-quartic-ritz-rank-test-verification.json',\n    'evidence/current-coupled-mass-adjoint-runtime.json',\n]\n\n\ndef digest(path):\n    return sha256(path.read_bytes()).hexdigest()\n\n\ndef result(name, status):\n    data = json.loads((ROOT/'evidence'/(name+'.json')).read_bytes())\n    run = data.get('runs', [data])[-1]\n    assert run['status'] == status\n    return run['result']\n\n\ndef execute():\n    ctx.prec = 512\n    green = result('current-global-green-trial-enclosure',\n                   'explicit_global_input_enclosed_signed_quantum_response_unresolved')\n    p = {k: dec(v) for k, v in green['trial_parameters'].items()}\n    f = result('current-filtered-mixed-green-residual',\n               'filtered_input_bound_passed_complete_signed_response_unresolved')['constants']\n    f = {k: dec(v) for k, v in f.items()}\n    trial = result('current-signed-adjoint-trial-attempt', 'unresolved')\n    rank = result('current-quartic-ritz-rank-test-final', 'passed')\n    ell, nu, L = p['ell'], p['nu'], p['L']\n    At = dec(green['constants']['A_t'])\n    SP = arb('1e-16')\n    assert nu > ell >= 1 and L > 2*SP and At > 0\n    psi = lambda x: acb(x).digamma().real\n    trigamma = lambda x: acb(x).polygamma(1).real\n    cross = (psi(nu+1)-psi(ell+1))/(nu*(nu+1)-ell*(ell+1))\n    J = trigamma(ell+1)/(2*ell+1)+trigamma(nu+1)/(2*nu+1)-2*cross\n    x0 = p['a']*SP/p['gamma']\n    tail = 1/(27*x0**3)\n    assert x0 > 1 and J > tail > 0\n    Hlower = At*(p['gamma']/p['a']*(J-tail)).sqrt()/L**2\n    Hupper = At*(p['gamma']/p['a']*J).sqrt()/(L-2*SP)**2\n    assert Hupper/Hlower-1 < arb('1e-14')\n    q, epsilon = arb('.338'), f['epsilon']\n    qt = q/(1-epsilon)\n    ft = qt/(1+qt)\n    Ks = f['K_V']*f['K_b_complete']/p['beta']\n    Kg = Ks*q.sqrt()/(1-epsilon).sqrt()\n    g_upper = Kg*Hupper\n    vcap = dec(trial['known_complete_certificate_debits']['psi_retained_energy_upper'])\n    coefficient = p['alpha']*q\n    trial_norm = coefficient*vcap\n    residual_upper = g_upper+trial_norm\n    Kfirst = f['pref_t']*ft**2\n    Kscalar = Kfirst*q.sqrt()/(1-epsilon).sqrt()\n    B_lower = dec(rank['variational_B_lower_matrix'][1][1])\n    psi_Hmu = (L**5/5).sqrt()\n    Cfloor = B_lower/(vcap*psi_Hmu)\n    report_floor = Kfirst*Cfloor*Hlower\n    bolt = arb('1.667e-9')\n    current_report = Kfirst*residual_upper\n    baseline_report = Kfirst*g_upper\n    conditional_C_ceiling = bolt/(Kfirst*Hlower)\n    assert Cfloor > arb('.3853')\n    assert Hlower > arb('3.3968e48') and Hupper < arb('3.3969e48')\n    assert report_floor > bolt and current_report > bolt\n    assert Cfloor > conditional_C_ceiling\n    assert report_floor/bolt > arb('2e13')\n    assert current_report/bolt > arb('1e14')\n    assert current_report >= baseline_report\n    c = dict(\n        full_profile_square_integral=J, mixed_profile_integral=cross,\n        entire_omitted_profile_tail_upper=tail,\n        actual_trial_Hmu_norm_lower=Hlower, actual_trial_Hmu_norm_upper=Hupper,\n        relative_Hmu_norm_bracket_width=Hupper/Hlower-1,\n        scalar_source_uniform_upper=Ks, induced_source_uniform_upper=Kg,\n        complete_source_dual_upper=g_upper, nonzero_trial_coefficient=coefficient,\n        complete_trial_energy_upper=trial_norm, complete_first_residual_upper=residual_upper,\n        first_residual_to_original_bolt_multiplier=Kfirst,\n        first_scalar_residual_to_original_bolt_multiplier=Kscalar,\n        complete_quartic_variational_B_lower=B_lower,\n        complete_quartic_energy_upper=vcap,\n        actual_uniform_source_operator_norm_lower=Cfloor,\n        zero_trial_source_report=baseline_report,\n        nonzero_trial_first_error_report=current_report,\n        trial_addition_to_error_report=Kfirst*trial_norm,\n        current_report_improvement_required=current_report/bolt,\n        best_uniform_source_report_floor=report_floor,\n        best_uniform_source_report_over_allowance=report_floor/bolt,\n        conditional_uniform_source_constant_ceiling=conditional_C_ceiling,\n        conditional_first_residual_ceiling_all_other_debits_zero=bolt/Kfirst,\n        conditional_scalar_residual_ceiling_all_other_debits_zero=bolt/Kscalar,\n        retained_input_debit=dec(green['constants']['complete_input_debit']),\n        known_partial_subtotal_not_free_margin=dec(green['constants']['known_partial_subtotal_not_free_margin']),\n    )\n    assert all(x.is_finite() for x in c.values())\n    return {\n        'precision_bits': ctx.prec, 'constants': {k:enc(v) for k,v in c.items()},\n        'scope': {\n            'actual_input_norm_enclosed': True,\n            'complete_first_residual_finite_upper': True,\n            'uniform_source_estimator_class_rejected': True,\n            'actual_residual_lower_bound': False, 'actual_G_lower_bound': False,\n            'actual_scalar_source_evaluated': False, 'signed_quantum_action_evaluated': False,\n            'complete_Zr_certificate': False, 'full_bolt_or_coupled_admission': False,\n            'nonlinear_existence_or_matching_or_validity_or_stability': False,\n            'construction_obstruction': False, 'full_objective_complete': False,\n        },\n        'unknowns': ['actual_scalar_source_and_residual', 'complete_signed_quantum_applications',\n                     'Zr', 'subsequent_application_errors', 'e_other', 'other_coupled_entries'],\n        'argument_review': {\n            'type': 'author ordinary argument review; not independent or Lean verification',\n            'checks': ['paired form-core source extension', 'Legendre Wronskian endpoint constants',\n                       'cutoff and original z^-4 measure bounds', 'full quantum quartic energy',\n                       'full scalar variational lower bound', 'estimator floor is not actual error',\n                       'same physical prefactor and two retained F filters'],\n        },\n    }\n\n\nif __name__ == '__main__':\n    out = ROOT/'evidence'/(STEM+'.json')\n    if out.exists():\n        raise RuntimeError('Preserve immutable execution evidence; choose a fresh output.')\n    before = {p:digest(ROOT/p) for p in INPUTS}\n    protected = json.loads(BASELINE.read_bytes())\n    assert all(digest(Path(p)) == h for p,h in protected.items())\n    record = {'started_utc':datetime.now(timezone.utc).isoformat(),\n              'input_sha256_before':before, 'python_sha256':digest(Path(sys.executable)),\n              'ordinary_argument_utf8':(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n              'arithmetic_source_utf8':Path(__file__).read_text(encoding='utf-8')}\n    try:\n        record['result'] = execute()\n        after = {p:digest(ROOT/p) for p in INPUTS}\n        assert after == before\n        assert all(digest(Path(p)) == h for p,h in protected.items())\n        record.update(status='uniform_source_estimator_rejected_full_signed_response_unresolved',\n                      input_sha256_after=after, protected_paths_unchanged=len(protected))\n    except Exception:\n        import traceback\n        record.update(status='failed', traceback=traceback.format_exc())\n    record['finished_utc'] = datetime.now(timezone.utc).isoformat()\n    out.write_text(json.dumps(record,indent=2)+'\\n', encoding='utf-8')\n    constants = record.get('result',{}).get('constants',{})\n    keys = ['complete_first_residual_upper','nonzero_trial_first_error_report',\n            'current_report_improvement_required','actual_uniform_source_operator_norm_lower',\n            'best_uniform_source_report_floor','best_uniform_source_report_over_allowance',\n            'conditional_scalar_residual_ceiling_all_other_debits_zero']\n    print(json.dumps({'status':record['status'], 'error':record.get('traceback'),\n                      'constants':{k:constants[k]['ball'] for k in keys if k in constants}},indent=2))\n    if record['status']=='failed':\n        raise SystemExit(1)\n",
+  "result": {
+    "precision_bits": 512,
+    "constants": {
+      "full_profile_square_integral": {
+        "ball": "[0.2149777306021171185590159884 +/- 4.39e-29]",
+        "decimal_enclosure": {
+          "mid": "21497773060211711855901598839162440727466459462736958364656140274",
+          "rad": "3544307146222015247009586542110834689",
+          "exponent": "-65"
+        }
+      },
+      "mixed_profile_integral": {
+        "ball": "[1.502581771566431113020e-7 +/- 4.89e-29]",
+        "decimal_enclosure": {
+          "mid": "15025817715664311130203169272621203232445852191080694748598177058",
+          "rad": "1718411178270028279638024784003124672069633",
+          "exponent": "-71"
+        }
+      },
+      "entire_omitted_profile_tail_upper": {
+        "ball": "[4.79204672442354967182e-54 +/- 2.74e-75]",
+        "decimal_enclosure": {
+          "mid": "47920467244235496718215731262849893210990635411758832223029759963",
+          "rad": "11645637135122289666004873692828748415500289",
+          "exponent": "-118"
+        }
+      },
+      "actual_trial_Hmu_norm_lower": {
+        "ball": "[3.39682444517628205621e+48 +/- 3.97e+27]",
+        "decimal_enclosure": {
+          "mid": "33968244451762820562068414651745340548576433930240000000000000000",
+          "rad": "8029689389828925355425628645960647079624704",
+          "exponent": "-16"
+        }
+      },
+      "actual_trial_Hmu_norm_upper": {
+        "ball": "[3.39682444517628341494e+48 +/- 4.19e+27]",
+        "decimal_enclosure": {
+          "mid": "33968244451762834149366195356875380896841198469120000000000000000",
+          "rad": "8029689389828925355425628645960647079624704",
+          "exponent": "-16"
+        }
+      },
+      "relative_Hmu_norm_bracket_width": {
+        "ball": "[4.00000e-16 +/- 4.73e-22]",
+        "decimal_enclosure": {
+          "mid": "39999999999999939999343577385498736594002201424902231963187659857",
+          "rad": "47278345489169954802781894843767065375264073995983838511105",
+          "exponent": "-80"
+        }
+      },
+      "scalar_source_uniform_upper": {
+        "ball": "[4.64655071444274310798 +/- 6.22e-21]",
+        "decimal_enclosure": {
+          "mid": "46465507144427431079750587833840970465955797376348955268939022733",
+          "rad": "12743027020024069505503053193932869333942273",
+          "exponent": "-64"
+        }
+      },
+      "induced_source_uniform_upper": {
+        "ball": "[2.70140084718248873302 +/- 3.17e-21]",
+        "decimal_enclosure": {
+          "mid": "27014008471824887330224289610860106298510345981746000077220945523",
+          "rad": "7408624535686182237349393806462689334001665",
+          "exponent": "-64"
+        }
+      },
+      "complete_source_dual_upper": {
+        "ball": "[9.17618443392939927072e+48 +/- 6.36e+27]",
+        "decimal_enclosure": {
+          "mid": "9176184433929399270721671630360627606049673962982280046467869397",
+          "rad": "4685720691087360211376795316711972860329985",
+          "exponent": "-15"
+        }
+      },
+      "nonzero_trial_coefficient": {
+        "ball": "[6.68274819956089097017e+32 +/- 2.17e+11]",
+        "decimal_enclosure": {
+          "mid": "6682748199560890970168598090381608959999999999999999999999999998",
+          "rad": "767673029493501389558340588679640079400961",
+          "exponent": "-31"
+        }
+      },
+      "complete_trial_energy_upper": {
+        "ball": "[1.007226570062338704813e+33 +/- 4.47e+11]",
+        "decimal_enclosure": {
+          "mid": "10072265700623387048128069604003993665591044532849748233596924658",
+          "rad": "2537989779558253424541700944547014659538945",
+          "exponent": "-31"
+        }
+      },
+      "complete_first_residual_upper": {
+        "ball": "[9.17618443392940027795e+48 +/- 6.45e+27]",
+        "decimal_enclosure": {
+          "mid": "9176184433929400277948241692699332418856634363381646605572322681",
+          "rad": "4685720701471953928446450573772965518770177",
+          "exponent": "-15"
+        }
+      },
+      "first_residual_to_original_bolt_multiplier": {
+        "ball": "[3.200839809379214387583367651818073948871e-44 +/- 4.98e-84]",
+        "decimal_enclosure": {
+          "mid": "32008398093792143875833676518180739488714975491274511305457133215",
+          "rad": "25525907521",
+          "exponent": "-108"
+        }
+      },
+      "first_scalar_residual_to_original_bolt_multiplier": {
+        "ball": "[1.860896803703441997499986121834122735259e-44 +/- 4.90e-84]",
+        "decimal_enclosure": {
+          "mid": "18608968037034419974999861218341227352585100236589869608551047697",
+          "rad": "14840419457",
+          "exponent": "-108"
+        }
+      },
+      "complete_quartic_variational_B_lower": {
+        "ball": "[0.259726029048268612 +/- 7.99e-19]",
+        "decimal_enclosure": {
+          "mid": "25972602904826861159871798126381815049359592256252027286933525828",
+          "rad": "39701543114481083681839898848939080383071256577",
+          "exponent": "-65"
+        }
+      },
+      "complete_quartic_energy_upper": {
+        "ball": "[1.507204132169039975554 +/- 3.81e-22]",
+        "decimal_enclosure": {
+          "mid": "15072041321690399755541734768941077557111808242562397519999999999",
+          "rad": "2066439984797183437788680324213419636948993",
+          "exponent": "-64"
+        }
+      },
+      "actual_uniform_source_operator_norm_lower": {
+        "ball": "[0.385326077657593704 +/- 7.91e-19]",
+        "decimal_enclosure": {
+          "mid": "38532607765759370420178310102576180617661130885232001475060314987",
+          "rad": "58906862845884050866090379992310362698500014081",
+          "exponent": "-65"
+        }
+      },
+      "zero_trial_source_report": {
+        "ball": "[293714.964343270926416 +/- 6.11e-16]",
+        "decimal_enclosure": {
+          "mid": "29371496434327092641646063025080151410430467351723236250655181854",
+          "rad": "14998241407576423867158925145577861366677505",
+          "exponent": "-59"
+        }
+      },
+      "nonzero_trial_first_error_report": {
+        "ball": "[293714.964343270958656 +/- 3.20e-16]",
+        "decimal_enclosure": {
+          "mid": "29371496434327095865616965545096296340648601991609920841211896453",
+          "rad": "14998241449114798735437546173821832000438273",
+          "exponent": "-59"
+        }
+      },
+      "trial_addition_to_error_report": {
+        "ball": "[3.22397090252001614493e-11 +/- 1.04e-32]",
+        "decimal_enclosure": {
+          "mid": "32239709025200161449302181346398866845905567145986550432043076882",
+          "rad": "8123698780215970603795368973774157988757505",
+          "exponent": "-75"
+        }
+      },
+      "current_report_improvement_required": {
+        "ball": "[176193739857990.9769983 +/- 9.22e-8]",
+        "decimal_enclosure": {
+          "mid": "17619373985799097699830213284388769068300462095066905021667480468",
+          "rad": "8997282757090737427348565652876556960268289",
+          "exponent": "-50"
+        }
+      },
+      "best_uniform_source_report_floor": {
+        "ball": "[41895.3134177673229 +/- 8.65e-14]",
+        "decimal_enclosure": {
+          "mid": "41895313417767322877646460030135811921969656744478287198275457769",
+          "rad": "64057515416663895731495879375550134792644198401",
+          "exponent": "-60"
+        }
+      },
+      "best_uniform_source_report_over_allowance": {
+        "ball": "[25132161618336.7264 +/- 5.72e-5]",
+        "decimal_enclosure": {
+          "mid": "25132161618336726381311613636171387042850255966186523437500000000",
+          "rad": "38427410534471408011376602301800794900985282560",
+          "exponent": "-51"
+        }
+      },
+      "conditional_uniform_source_constant_ceiling": {
+        "ball": "[1.533199107618563056498e-14 +/- 6.78e-36]",
+        "decimal_enclosure": {
+          "mid": "15331991076185630564983149312373206082064279200609164327956997266",
+          "rad": "3624355896403529542234333534629320227553281",
+          "exponent": "-78"
+        }
+      },
+      "conditional_first_residual_ceiling_all_other_debits_zero": {
+        "ball": "[52080082080811962173528869689249180.76171 +/- 1.18e-6]",
+        "decimal_enclosure": {
+          "mid": "52080082080811962173528869689249180761708821743532766632282197113",
+          "rad": "41533214145",
+          "exponent": "-30"
+        }
+      },
+      "conditional_scalar_residual_ceiling_all_other_debits_zero": {
+        "ball": "[89580464466510956297613137582953351.26944 +/- 1.80e-6]",
+        "decimal_enclosure": {
+          "mid": "8958046446651095629761313758295335126943820347000317292294512042",
+          "rad": "7144039161",
+          "exponent": "-29"
+        }
+      },
+      "retained_input_debit": {
+        "ball": "[7.43196331807448351006e-12 +/- 7.97e-33]",
+        "decimal_enclosure": {
+          "mid": "7431963318074483510055633779867064437497324159213768990769666055",
+          "rad": "3595555741879919545548542402396064487309313",
+          "exponent": "-75"
+        }
+      },
+      "known_partial_subtotal_not_free_margin": {
+        "ball": "[7.19117797633619728642e-11 +/- 2.24e-32]",
+        "decimal_enclosure": {
+          "mid": "7191177976336197286419753646802694613570022988532786199076966604",
+          "rad": "1984305320210341896322285327669375465947137",
+          "exponent": "-74"
+        }
+      }
+    },
+    "scope": {
+      "actual_input_norm_enclosed": true,
+      "complete_first_residual_finite_upper": true,
+      "uniform_source_estimator_class_rejected": true,
+      "actual_residual_lower_bound": false,
+      "actual_G_lower_bound": false,
+      "actual_scalar_source_evaluated": false,
+      "signed_quantum_action_evaluated": false,
+      "complete_Zr_certificate": false,
+      "full_bolt_or_coupled_admission": false,
+      "nonlinear_existence_or_matching_or_validity_or_stability": false,
+      "construction_obstruction": false,
+      "full_objective_complete": false
+    },
+    "unknowns": [
+      "actual_scalar_source_and_residual",
+      "complete_signed_quantum_applications",
+      "Zr",
+      "subsequent_application_errors",
+      "e_other",
+      "other_coupled_entries"
+    ],
+    "argument_review": {
+      "type": "author ordinary argument review; not independent or Lean verification",
+      "checks": [
+        "paired form-core source extension",
+        "Legendre Wronskian endpoint constants",
+        "cutoff and original z^-4 measure bounds",
+        "full quantum quartic energy",
+        "full scalar variational lower bound",
+        "estimator floor is not actual error",
+        "same physical prefactor and two retained F filters"
+      ]
+    }
+  },
+  "status": "uniform_source_estimator_rejected_full_signed_response_unresolved",
+  "input_sha256_after": {
+    "notes/current-first-inverse-source-screen.md": "f8e52f5ce49c3f5013ccdbc62af98bc9e9cd37b5c32c15fc8f6e1d7150ebd83f",
+    "checks/current_first_inverse_source_screen.py": "f8243272680e05c02e092061e64c554e20f784f51da6943519d640144c4fe70c",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "notes/current-filtered-mixed-green-residual.md": "c0522cb8ade2af4ac600488aaf11eb584894cc9baae434df8ea5faf09783c307",
+    "notes/current-complete-bolt-energy-bound.md": "6b86ce1ba8384c56c8b5fdb913ab7d0e3d472c8311083f8fb75323f6fab2466d",
+    "notes/current-global-green-trial-enclosure.md": "e80c95263a198cf85db6e3e9054c84707e3837c2ce0f2242a38ae89767d84230",
+    "notes/current-signed-adjoint-trial-attempt.md": "d493b904db6a95368e6ab21c0b5564dafa7d8d7dac4785220dc0287e1878a993",
+    "notes/current-quartic-ritz-rank-test.md": "03faee79d37ba56677370cfc8308ef6b4b26883ddea6840d5ba126ae3cbd7db1",
+    "evidence/current-global-green-trial-enclosure.json": "193c1dd9d8fed29de5c1859271c0ca2bf68d319d8d63d70c69f1c58675a25e43",
+    "evidence/current-global-green-trial-enclosure-verification.json": "437fad154a3239883dad7567f253d46ef682c035a6b808d9ca5242eea652b00c",
+    "evidence/current-filtered-mixed-green-residual.json": "1bc12444d10af59fe43a75b99b157a4e9f73d28901150a6f4d41ff021a0ab750",
+    "evidence/current-signed-adjoint-trial-attempt.json": "06dd87ec2dbd98f5eb41046a112f7adf2e5e851fa2fa8065d22335b2e7f1f36f",
+    "evidence/current-quartic-ritz-rank-test-final.json": "45827993a7f8c9e6eae0f9e2e8b17ee5baefe4a6ee51f69223ade5595a5fb82c",
+    "evidence/current-quartic-ritz-rank-test-verification.json": "20990396bbfc479d84adddc0ead1ba5c263edca139397ba13fa21560da90c0de",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "protected_paths_unchanged": 21,
+  "finished_utc": "2026-10-29T00:40:42.284822+00:00"
+}
