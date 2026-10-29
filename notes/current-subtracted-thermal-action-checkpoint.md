@@ -1,3 +1,91 @@
+# Positive-time quantum contribution controlled; short-time first solve open
+
+2026-10-28 HST, E003/S169. The full stable semiclassical wormhole objective
+remains ACTIVE and incomplete. Preserve the closed audit, P32, original
+physical norms, the accepted scalar-source result and all prior evidence.
+This closes one quantified prerequisite of the first solve, not the full
+signed-quantum milestone or any complete physical-admission requirement.
+
+The [ordinary argument](current-positive-time-quantum-operator.md) extends
+the complete positive-time canonical massive heat Hessian to E_t x E_t.
+Weighted spectral Cauchy--Schwarz uses the accepted unvaried actual-domain
+heat diagonal and the original L2 shape comparison. The paired mass/log
+realization, complementary adjoint, common regulator, full angular and
+thermal sums, coincidence contacts, cutoffs and regular-bolt returns remain.
+The short-time ultraviolet logarithm is retained, not approximated away.
+
+Executed 512-bit enclosures at the fixed split t0=.001:
+
+- Raw positive-time operator norm <1.028453e-20 on E_t to E_t*.
+- Exact finite-contact reallocation is required. Its norm UPPER estimate
+  is <4.267072, not a small term that can be dropped. Complete angular tails
+  and coefficient errors give an additional operator error <6.131727e-22.
+- The total form perturbation is <1.089770e-20. Its effect on the actual
+  first inverse ell_t^-1, for the proved source bound, costs <3.200817e-15
+  in original bolt units, including the existing physical radius conversion.
+- The known partial subtotal becomes <9.142532e-11. This does NOT establish
+  an available remainder of the whole 1.667e-9 allowance: the signed center,
+  subsequent applications and other coupled contributions remain unknown.
+
+For an explicit numerical short-form trial x_hat, with all local contacts
+retained, the complete first-solve error is bounded by
+
+    [k Ghat + ||rho_short||E_t*]/(1-k),
+
+where k includes the raw positive-time bound and contact-coefficient errors.
+The existing sufficient first-error screen 1e33 would be met if the COMPLETE
+short residual were <=9.999e32 in E_t*. The sharper conditional ceiling is
+9.9990000072381351352e32. Neither is an attained residual or a physical
+allocation. The whole first-error screen costs <3.201e-11 in bolt units.
+Spatial application of the contact polynomial still needs its own errors.
+The present inverse estimate does not remove positive time from later
+filters or the independent correlated term without their own input bounds.
+
+The first unsupported implication is now the quantitative complete
+short-time quantum action on the actual localized trial range, uniformly
+against ALL original E_t tests. The older differentiated heat constants
+953 and 149 belong to the quartic direction; only their UNVARIED kernel
+bound transfers here. The admitted-family C5 theorem supplies no numerical
+energy-dual remainder on the new range. No numerical first quantum trial,
+short-time column, full first residual or signed Z_r/G_t has been obtained.
+
+Decision: retain the construction and the source-specific, coupled residual
+method. Use the proved positive-time enclosure for this first solve and
+stop refining its threshold, angular tail or quadrature. Keep the exact
+logarithmic principal operator. The geodesic reference has a coercivity
+bound but lacks an implemented complete inverse; a conforming localized
+Galerkin trial avoids that primitive but must still certify its entire
+complementary residual. Neither a finite matrix nor a quartic-only uniform
+range resolves this obstacle. Choose between implementations by the first
+attained full-dual column/residual bound, not their finite matrix accuracy.
+
+The ONE next calculation is the complete commonly subtracted short-time
+quantum column for an explicit source-adapted admissible trial, with its
+local terms, boundary returns and numerical errors in E_t*. First prove
+that trial's original outer jets and regular-bolt matching; then retain
+the full principal logarithm and move excess derivatives off the test
+field before taking norms. Its error must be propagated with the actual
+trial coefficient into the 9.999e32 conditional first-residual screen,
+together with the exact complementary residual and source/solve errors.
+A column alone does not certify the first solve. This calculation is
+PROPOSED; the positive-time enclosure above is EXECUTED. If no quantitative
+full-dual extension is obtained, report that missing implication rather
+than repeat component optimization or claim a construction obstruction.
+
+The supporting author verification checks the ordinary argument, frozen
+inputs, runtime and numerical guards. The older heat-bound provenance is
+the accepted assembly receipt, which cites the original column receipt;
+their M and CLt values agree. This is not independent or Lean review.
+No new physical or stability claim is established.
+
+Remaining to-do list: complete signed first quantum solve and later
+applications; Z_r/G_t; every coupled/source/graph/physical/boundary/mass
+requirement; nonlinear admission/contraction and existence; exact
+compatibility; physical matching/opening; semiclassical validity/noise;
+all-sector stability; the full stable semiclassical wormhole objective.
+
+---
+
 # First quantum application remains unresolved after the scalar-source result
 
 2026-10-28 HST, E003/S169. The preceding turn was PROGRESS at 5967b97.
