@@ -1,3 +1,79 @@
+# Weighted paired propagation corrected; complete quantum remainder unresolved
+
+2026-10-28 HST, E003/S169. Preserve the closed audit, P32, accepted source,
+positive-time and trial-regularity results, original physical norms and
+the full stable semiclassical wormhole objective. The preceding turn made
+supporting domain/regularity progress. This turn attempted its complete
+localized propagation but did NOT obtain a quantum column or first residual.
+The full quantum-feasibility milestone remains UNRESOLVED.
+
+The [executed domain and propagation test](current-weighted-paired-propagation-test.md)
+uses W=[gamma/(gamma+L-z)]^3 on the actual paired spinor space. It rules
+out the shortcut that freezes the square domain: W preserves the
+first-order domain but not the square's Neumann condition.
+At the seam its logarithmic normal derivative is enclosed near
+1.2247448713791221. A nonzero Neumann trace therefore acquires an order-one
+relative Robin term. Freezing the square domain would be incorrect even
+though W(0) is about 1.294e-100. This concerns an estimator's computational
+similarity, not a change to the physical boundary or a construction obstacle.
+
+The correct similarity W^-1 L W has domain W^-1 Dom L. Its closed form
+on the preserved first-order domain gives, for t<=.001,
+
+    ||W^-1 exp(-t L)W||Hspin->Hspin <1.009041,
+    ||W^-1 t partial_t exp(-t L)W||Hspin->Hspin <2.027184.
+
+The inverse-weight direction has the same bounds. Each angular mass
+squared m_n supplies exp(-m_n t), or exp(-m_n t/2) for the derivative
+bound. All thermal/radial modes, original boundaries and regular bolt are
+included by the actual operator's form and spectral calculus. No finite
+mode or auxiliary smooth domain is substituted. The former trivial
+similarity estimate was about 7.729e99 in this SAME Hspin norm. Avoiding
+it is a proved form estimate, not a change to a physical admission target.
+
+These are SPINOR L2 operator bounds. They are NOT a metric E_t estimate,
+a Schur kernel bound, a diagonal quantum trace bound or regulator removal.
+The original-volume weight norm is <1.005764e-17. A complete pointwise
+remainder D_W W t^3 would have conditional ceiling D_W<7.159850e18 with
+ALL OTHER unknown contributions zero. That density estimate has not been
+proved; inserting 1.009041 or 2.027184 for D_W would be invalid.
+
+The first unsupported implication is now specifically the localized
+metric/time-varied kernel defect through P*F and the coincident-endpoint
+observation, with both weighted Schur directions and the complete paired
+boundary remainder. The full angular/common-regulator integral needs
+this cancellation-preserving kernel estimate, not just (bounded) heat
+evolution. The exact UV logarithm, coincidence contacts, physical cutoffs
+and finite returns remain in the required calculation. No source/action
+application errors or signed centers were computed. The original known
+partial subtotal <9.142532e-11 and all unproved coupled budgets are unchanged.
+
+The checked Sobolev heat-trace theorem for scalar potential perturbations
+does not provide the paired metric-response theorem or numerical constant.
+The specified alternative, a complete localized first-order resolvent
+column evaluator, avoids heat-diagonal propagation but still requires a
+commonly restored all-angular trace remainder on this new trial. Its
+available quartic implementation does not supply that map. Neither route
+has a complete retained signed certificate.
+
+Decision: reject frozen-square-domain conjugation, retain the corrected
+form method and the construction, and stop refining these modest spinor
+propagation factors. The ONE next calculation is the full weighted varied
+kernel remainder, diagonal observation and joint boundary/bulk error in
+E_t*. It remains PROPOSED. The domain correction and spinor propagation
+bounds are EXECUTED support, not completion of the requested milestone.
+No task-owned calculation remains running. Verification is author review
+of the ordinary argument and frozen arithmetic; it is not independent
+or Lean verification. All 21 protected inputs remain unchanged.
+
+Remaining to-do list: complete signed quantum column/first residual and
+later applications; G_t/Z_r and every coupled/source/graph/physical/boundary/
+mass requirement; nonlinear admission/contraction and existence; exact
+compatibility; physical matching/opening; semiclassical validity/noise;
+all-sector stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Explicit localized trial tested; complete short-time response still unresolved
 
 2026-10-28 HST, E003/S169. The preceding positive-time bound was PROGRESS

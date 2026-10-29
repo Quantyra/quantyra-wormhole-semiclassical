@@ -1,0 +1,137 @@
+{
+  "started_utc": "2026-10-29T03:10:45.476469+00:00",
+  "input_sha256_before": {
+    "notes/current-weighted-paired-propagation-test.md": "a71e4e7c93dd46b41e8eb15e41d83ee08c87a37aac1194aa59c4bdf4a59e48ca",
+    "checks/current_weighted_paired_propagation_test.py": "658b26a62ddaf824bac3276a64517c5aae23da71ce4835ae3e509c0718851b08",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+    "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+    "notes/current-disk-heat-propagation.md": "f11709526e22bbe5742465573bd27c95b5eee37d6f8f49cdd322fad88c6a3df1",
+    "evidence/current-global-green-trial-enclosure.json": "193c1dd9d8fed29de5c1859271c0ca2bf68d319d8d63d70c69f1c58675a25e43",
+    "evidence/current-localized-short-time-trial.json": "9087c4953b031a026fe337e890452ab620f0a64f089088e1b783259a3a52d40d",
+    "evidence/current-localized-covariant-jet-test.json": "355951610b1eccc1e26397c5b31ffd2ba827d0933fb1a6e956170878012e9908",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Weighted propagation on the paired domain: square-domain correction and limit\n\n2026-10-28 HST, E003/S169. Ordinary argument before numerical execution.\nThe preceding trial/regularity calculation is accepted supporting progress,\nnot a complete quantum certificate. Preserve P32, the closed audit, original\nphysical norms and the full stable semiclassical wormhole objective.\nThis attempts the proposed localized propagation. The complete differentiated\nheat remainder remains the target; an undifferentiated operator estimate\nmust not be substituted for its diagonal or common-regulator limit.\n\n## Spaces and the first unsupported domain step\n\nLet Hspin be the original L2 spinor space of the finite orbit geometry,\nwith the physical paired copies, thermal spin structure and regular bolt.\nUse the accepted self-adjoint A=iJD0, L=A^2 on its composed domain. This\nis NOT the metric energy space E_t. The original paired square has\ncomplementary Dirichlet/Neumann data at the geodesic outer seam in the\nfixed half-density frame. Keep both original field equations and their\nYork reconstruction in the source; no gravitational inverse is applied here.\n\nFor the accepted localized trial introduce the computational weight\n\n    w=gamma/(gamma+Lbolt-z), W=w^3, f=log W.\n\nW and W^-1 are bounded on this fixed finite geometry and identical on\nboth copies. They preserve the FIRST-ORDER domain by the weak product\nrule and the scalar boundary projector, as in the accepted rough-domain\nargument. They do not in general preserve Dom(A^2). At the seam, with\ninward proper coordinate y,\n\n    (partial_y log W)(0)=3 sqrt(beta)/(gamma+Lbolt)>0.  (1)\n\nA smooth core field in the Neumann sector with nonzero boundary trace\nand zero normal derivative is admissible for L, but W times that field\nhas normal derivative W' times its nonzero trace. A cutoff away from\nthe bolt retains the original regular-bolt condition. This is a domain\ntest, not a finite-mode approximation of the quantum trace.\n\nThus the proposed shortcut W^-1 L W on the UNCHANGED square domain is\nundefined as that similarity. Its actual domain is W^-1 Dom L, with\nNeumann sector condition partial_y u+(partial_y log W)u=0. The numerical\nsize of (1) is reported; the tiny value W(0) does not make this relative\nRobin term disappear. This changes no physical boundary condition: it\nis the exact computational similarity of the original operator.\n\n## Correct form construction and complete propagation bound\n\nUse the fixed form domain Dom A, which the scalar multipliers preserve.\nFor C_f=[A,f], ||C_f||<=alpha=||df||infinity, the exact form of\nL_f=W^-1 L W is\n\n    q_f(u,v)=<A W u,A W^-1 v>\n            =<(A+C_f)u,(A-C_f)v>.                    (2)\n\nIn particular Re q_f(u,u)>=||Au||^2-alpha^2||u||^2 and\n|Im q_f(u,u)|<=2alpha||Au|| ||u||. This includes the transformed boundary\ncondition through the form domain; no integration-by-parts boundary term\nis discarded. The similarity is defined already because W is bounded and\ninvertible. The following energy calculation gives a bound independent\nof its large condition number.\n\nFor zeta=x+iy with x>0, completion of the square gives\n\n    Re[zeta q_f(u,u)]>=-alpha^2 |zeta|^2/x ||u||^2.\n\nApply the differential inequality to W^-1 exp(-s zeta L)W, first on\nits generator domain and then by density. Gronwall yields\n\n ||W^-1 exp(-zeta L)W||Hspin->Hspin\n                  <=exp(alpha^2 |zeta|^2/Re zeta).    (3)\n\nThis is an ordinary proof, not an import of a scalar positivity theorem\nto the paired matrix operator. The original common angular mass squared\nm_n=n(n+qang)/C commutes with the similarity. For every n and all thermal\nand radial modes, (3) gains exp(-m_n Re zeta). No sector is omitted.\n\nOn |zeta-t|=t/2 one has |zeta|^2/Re zeta<=3t/2 and Re zeta>=t/2.\nCauchy's derivative formula therefore gives, for D_t=t partial_t,\n\n ||W^-1 exp[-t(L+m_n)] W||<=exp[(alpha^2-m_n)t],\n ||W^-1 D_t exp[-t(L+m_n)] W||\n                     <=2exp(3alpha^2 t/2-m_n t/2).   (4)\n\nThe adjoint is the inverse-weight conjugation, so the identical bounds\nhold with W and W^-1 exchanged. For products whose positive time lengths\nsum to t, the undifferentiated factors in (4) multiply to exp(alpha^2 t),\nnot an independent penalty for each subdivision. These are Hspin operator\nnorms in both directions, NOT pointwise, Schur or diagonal-density bounds.\nNo norm-to-diagonal implication is asserted.\n\n## Actual geometric constants, without a new physical normalization\n\nWrite delta=1-Lbolt=h/(1+h). The accepted exact finite geometry obeys\n\n Q=(1-z)^2 Pseed(z)-tau z^3,\n Pseed=beta+2beta z+(3beta+u)z^2+epsilon_seed z^4.\n\nPseed'>=2beta-4|epsilon_seed|>0 and Pseed(1)=1, so\n0<=Q<=(1-z)^2 on the original interval. Consequently\n\n |df|=3sqrt(Q)/(gamma+Lbolt-z)\n     <=3 max(1,delta/gamma)=alpha_upper.              (5)\n\nThis is finite at the bolt in its regular chart. The weight is an analysis\nmultiplier, not a small admitted metric perturbation; no small-b theorem\nis applied to its large logarithmic value. All parameters retain their\naccepted correlated definitions and outward enclosures.\n\nThe exact original-volume norm is\n\n ||W||L2(dz)^2=gamma(1-w0^5)/5,\n w0=gamma/(gamma+Lbolt).                              (6)\n\nCompute (1), (3)-(6) at t0=.001. Also display the crude similarity bound\n||W||infinity ||W^-1||infinity=1/W(0) in the SAME Hspin norm. Its large\nvalue is not compared directly with a physical-output ceiling. Correct\nform control, not a normalization change, avoids that particular estimate.\n\nFor sensitivity only, a COMPLETE pointwise quantum remainder bound\n|r_v(t,z)|<=D_W W(z)t^3 would give D_v<=D_W ||W||2. Thus its conditional\nD_W ceiling follows from the preceding actual-trial D_v ceiling divided\nby (6), with ALL OTHER unknown errors zero. Neither D_W nor such a complete\nkernel estimate is attained here. It includes more than propagation (4).\nIn particular the Hspin constants cannot be inserted in place of D_W.\n\n## What the full attempt did not establish\n\nThe differentiated parametrix defect is an operator kernel, not a scalar\nsource density. Its first correction is P*F and the quantum observation\nrestricts it to coincident endpoints after metric/time differentiation.\nEquations (3)-(4) neither bound the diagonal trace of that kernel nor\nits complete subtracted t^(11/4)/t^3 remainder. The necessary additional\nestimate must retain localization through the varied transport amplitudes,\nthe coincidence vertex, the paired boundary part and both weighted Schur\ndirections before restriction to the diagonal. The corresponding weighted\nkernel/trace constants remain UNKNOWN. Summing the bare angular operator\nbounds or taking norms before common subtraction does not establish it.\nThe exact ultraviolet logarithm and all finite returns remain obligations.\n\nThe source review rechecks [Smith, theorem 1.1](https://arxiv.org/pdf/1809.05614)\nand its trace-class argument in section 2. It treats scalar potential\nperturbations of a fixed Laplacian on a complete smooth manifold. It does\nnot furnish the paired metric-Hessian remainder or its numerical constant.\nIts explicit distinction between operator and trace norms supports keeping\nthat gap open. This assessment does not adopt a new theorem for our domain.\n\nDecision: reject the frozen-square-domain shortcut and use the corrected\nform similarity if continuing weighted propagation. Keep the construction.\nThe modest bounds (4) alone supply no new coupled margin. The specified\nalternative is a complete localized resolvent column evaluator on the\noriginal paired first-order domain; it avoids this heat-diagonal propagation\nstep but still needs the commonly restored, all-angular trace remainder.\nThe existing quartic evaluator does not cover this localized trial. Neither\nmethod currently has an attained complete column error.\n\nThe ONE next calculation remains the full weighted differentiated kernel\nremainder for the explicit trial, including its diagonal observation,\nboundary and numerical errors in E_t*. This is still PROPOSED. Domain\ncorrection and whole-spectrum Hspin propagation are EXECUTED supporting\nresults; the requested complete quantum-feasibility milestone is UNRESOLVED.\nNo physical budget or existence/stability requirement is promoted.\n\nRemaining to-do list: complete signed quantum column/first residual and\nlater applications; G_t and every coupled/source/graph/physical/boundary/mass\nbudget; nonlinear admission/contraction and existence; exact compatibility;\nphysical matching; semiclassical validity/noise; all-sector stability;\nthe full stable semiclassical wormhole objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Paired-domain weight and Hspin propagation; quantum trace bound unknown.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nfrom current_quartic_ritz_rank_test import arb,ctx,dec,enc\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-weighted-paired-propagation-test'\nINPUTS=['notes/'+STEM+'.md','checks/current_weighted_paired_propagation_test.py',\n 'checks/current_quartic_ritz_rank_test.py','notes/current-rough-paired-variation.md',\n 'notes/stationary-massive-boundary-layer.md','notes/current-disk-heat-propagation.md',\n 'evidence/current-global-green-trial-enclosure.json',\n 'evidence/current-localized-short-time-trial.json',\n 'evidence/current-localized-covariant-jet-test.json',\n 'evidence/current-coupled-mass-adjoint-runtime.json']\nBASELINE=Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\ndef result(name):\n d=json.loads((ROOT/'evidence'/(name+'.json')).read_bytes())\n r=d.get('runs',[d])[-1];assert r['status']!='failed'\n return r['result']\ndef execute():\n ctx.prec=512\n p={k:dec(v) for k,v in result('current-global-green-trial-enclosure')['trial_parameters'].items()}\n h,L,gamma,beta,ep=[p[k] for k in ['h','L','gamma','beta','epsilon_seed']]\n delta=h/(1+h);B=gamma+L;w0=gamma/B\n assert 0<w0<1 and 2*beta-4*abs(ep)>0\n assert (6*beta+p['u']+ep).contains(1)\n ratio=delta/gamma\n alpha=3*arb(max(arb(1).upper(),ratio.upper()))\n t0=arb('.001');base=(alpha**2*t0).exp();time=2*(arb(3)/2*alpha**2*t0).exp()\n robin=3*beta.sqrt()/B\n Wnorm=(gamma*(1-w0**5)/5).sqrt()\n trial=result('current-localized-short-time-trial')['constants']\n Dabs=dec(trial['conditional_bulk_absolute_ceiling_OTHER_ZERO'])\n Wceiling=Dabs/Wnorm\n constants=dict(alpha_upper=alpha,original_boundary_relative_Robin_term=robin,\n  W_boundary_value=w0**3,original_W_L2=Wnorm,\n  crude_Hspin_similarity_bound=w0**-3,\n  correct_Hspin_real_time_bound=base,correct_Hspin_Dt_bound=time,\n  Hspin_bound_improvement_over_crude=w0**-3/base,\n  conditional_complete_weighted_density_ceiling_OTHER_ZERO=Wceiling,\n  norm_ratio_H8_over_W=dec(result('current-localized-covariant-jet-test')['constants']['actual_full_H8_L2'])/Wnorm)\n assert robin>1 and base<arb('1.01') and time<arb('2.03')\n assert all(v.is_finite() for v in constants.values())\n return dict(precision_bits=ctx.prec,t0='0.001',constants={k:enc(v) for k,v in constants.items()},\n  ordinary_domain_test='W preserves Dom A but does not preserve the original Neumann part of Dom A squared',\n  operator_space='original orbit L2 spinors, not metric E_t or a diagonal-density space',\n  complete_weighted_kernel_constant=None,complete_quantum_remainder=None,complete_signed_first_residual=None,\n  scope=dict(correct_form_similarity_defined=True,all_thermal_and_radial_modes=True,\n   uniform_mass_parameter_estimate=True,both_weight_directions_bounded=True,\n   weighted_diagonal_or_Schur_estimate=False,angular_quantum_trace_evaluated=False,\n   complete_quantum_certificate=False,new_physical_admission_margin=False,\n   nonlinear_existence_matching_validity_stability=False,construction_obstruction=False,goal_complete=False))\nif __name__=='__main__':\n out=ROOT/'evidence'/(STEM+'.json');assert not out.exists()\n before={p:digest(ROOT/p) for p in INPUTS};protected=json.loads(BASELINE.read_bytes())\n assert all(digest(Path(p))==h for p,h in protected.items())\n rt=json.loads((ROOT/INPUTS[-1]).read_bytes());pkg=rt['packages']['flint']\n assert digest(Path(sys.executable))==rt['python_sha256']\n assert all(digest(Path(pkg['root'])/p)==h for p,h in pkg['files'].items())\n rec=dict(started_utc=datetime.now(timezone.utc).isoformat(),input_sha256_before=before,\n  ordinary_argument_utf8=(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n  arithmetic_source_utf8=Path(__file__).read_text(encoding='utf-8'),python_sha256=rt['python_sha256'])\n try:\n  rec['result']=execute()\n  after={p:digest(ROOT/p) for p in INPUTS};assert before==after\n  assert all(digest(Path(p))==h for p,h in protected.items())\n  rec.update(status='weighted_form_propagation_bounded_complete_quantum_trace_unresolved',\n   input_sha256_after=after,protected_paths_unchanged=len(protected))\n except Exception:\n  import traceback\n  rec.update(status='failed',traceback=traceback.format_exc())\n rec['finished_utc']=datetime.now(timezone.utc).isoformat()\n out.write_bytes((json.dumps(rec,indent=2)+'\\n').encode('utf-8'))\n print(json.dumps(dict(status=rec['status'],error=rec.get('traceback'),\n  constants={k:v['ball'] for k,v in rec.get('result',{}).get('constants',{}).items()}),indent=2))\n if rec['status']=='failed':raise SystemExit(1)\n",
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "result": {
+    "precision_bits": 512,
+    "t0": "0.001",
+    "constants": {
+      "alpha_upper": {
+        "ball": "[3.000000000000000000000486032784892834846 +/- 1.29e-40]",
+        "decimal_enclosure": {
+          "mid": "30000000000000000000004860327848928348461288405588274817790538778",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "original_boundary_relative_Robin_term": {
+        "ball": "[1.224744871379122102909470189740 +/- 8.18e-31]",
+        "decimal_enclosure": {
+          "mid": "12247448713791221029094701897395809758841582334118070805923836848",
+          "rad": "3987276173966860248945173303656449",
+          "exponent": "-64"
+        }
+      },
+      "W_boundary_value": {
+        "ball": "[1.293852615594358411392e-100 +/- 4.90e-122]",
+        "decimal_enclosure": {
+          "mid": "12938526155943584113918247440956310489882988410099399530830052486",
+          "rad": "3144274025983171673095214289178616817254401",
+          "exponent": "-164"
+        }
+      },
+      "original_W_L2": {
+        "ball": "[1.0057633344705492261467e-17 +/- 5.69e-40]",
+        "decimal_enclosure": {
+          "mid": "10057633344705492261466839295031289556841641409616318070555131462",
+          "rad": "407361636406570647942437564616409767477249",
+          "exponent": "-81"
+        }
+      },
+      "crude_Hspin_similarity_bound": {
+        "ball": "[7.72885557402246289014e+99 +/- 2.61e+78]",
+        "decimal_enclosure": {
+          "mid": "77288555740224628901392754234710949745051553400805227815836674624",
+          "rad": "18782673100557325131466004160587456971800577",
+          "exponent": "35"
+        }
+      },
+      "correct_Hspin_real_time_bound": {
+        "ball": "[1.009040621773867814062573423872815098561 +/- 4.68e-40]",
+        "decimal_enclosure": {
+          "mid": "10090406217738678140625734238728150985614674733283440523014881549",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "correct_Hspin_Dt_bound": {
+        "ball": "[2.027183072900412111671876311036139773748 +/- 2.62e-40]",
+        "decimal_enclosure": {
+          "mid": "20271830729004121116718763110361397737477390137468686996835656804",
+          "rad": "2",
+          "exponent": "-64"
+        }
+      },
+      "Hspin_bound_improvement_over_crude": {
+        "ball": "[7.65960795556013480353e+99 +/- 5.80e+78]",
+        "decimal_enclosure": {
+          "mid": "76596079555601348035260682158556303721294736863669667657165940355",
+          "rad": "18614671683401445536339344788530829784514561",
+          "exponent": "35"
+        }
+      },
+      "conditional_complete_weighted_density_ceiling_OTHER_ZERO": {
+        "ball": "[7159849035721603289.34 +/- 8.00e-3]",
+        "decimal_enclosure": {
+          "mid": "71598490357216032893429888176760869100689888000488281250000000000",
+          "rad": "50100473468000298362934905814987942781779968",
+          "exponent": "-46"
+        }
+      },
+      "norm_ratio_H8_over_W": {
+        "ball": "[1157887.728520598283311 +/- 1.81e-16]",
+        "decimal_enclosure": {
+          "mid": "11578877285205982833110864365925391366953959649058192304948988748",
+          "rad": "937966678260850423334805154757111321722881",
+          "exponent": "-58"
+        }
+      }
+    },
+    "ordinary_domain_test": "W preserves Dom A but does not preserve the original Neumann part of Dom A squared",
+    "operator_space": "original orbit L2 spinors, not metric E_t or a diagonal-density space",
+    "complete_weighted_kernel_constant": null,
+    "complete_quantum_remainder": null,
+    "complete_signed_first_residual": null,
+    "scope": {
+      "correct_form_similarity_defined": true,
+      "all_thermal_and_radial_modes": true,
+      "uniform_mass_parameter_estimate": true,
+      "both_weight_directions_bounded": true,
+      "weighted_diagonal_or_Schur_estimate": false,
+      "angular_quantum_trace_evaluated": false,
+      "complete_quantum_certificate": false,
+      "new_physical_admission_margin": false,
+      "nonlinear_existence_matching_validity_stability": false,
+      "construction_obstruction": false,
+      "goal_complete": false
+    }
+  },
+  "status": "weighted_form_propagation_bounded_complete_quantum_trace_unresolved",
+  "input_sha256_after": {
+    "notes/current-weighted-paired-propagation-test.md": "a71e4e7c93dd46b41e8eb15e41d83ee08c87a37aac1194aa59c4bdf4a59e48ca",
+    "checks/current_weighted_paired_propagation_test.py": "658b26a62ddaf824bac3276a64517c5aae23da71ce4835ae3e509c0718851b08",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "notes/current-rough-paired-variation.md": "2bdfb8a3608fd7d08eea0d5d52ee63ee400a9bf03f4edb3d8fb6058206567a3d",
+    "notes/stationary-massive-boundary-layer.md": "dd7693a2ffdfa3d0f70713c496b9272b3feb0af6ecc4856f0c7652ef04421e50",
+    "notes/current-disk-heat-propagation.md": "f11709526e22bbe5742465573bd27c95b5eee37d6f8f49cdd322fad88c6a3df1",
+    "evidence/current-global-green-trial-enclosure.json": "193c1dd9d8fed29de5c1859271c0ca2bf68d319d8d63d70c69f1c58675a25e43",
+    "evidence/current-localized-short-time-trial.json": "9087c4953b031a026fe337e890452ab620f0a64f089088e1b783259a3a52d40d",
+    "evidence/current-localized-covariant-jet-test.json": "355951610b1eccc1e26397c5b31ffd2ba827d0933fb1a6e956170878012e9908",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "protected_paths_unchanged": 21,
+  "finished_utc": "2026-10-29T03:10:45.569000+00:00"
+}
