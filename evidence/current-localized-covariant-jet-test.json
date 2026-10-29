@@ -1,0 +1,156 @@
+{
+  "started_utc": "2026-10-29T02:39:26.893600+00:00",
+  "input_sha256_before": {
+    "notes/current-localized-covariant-jet-test.md": "2da05379721fa05382902570d79156ad64a32e60d40b1e76dbe021c205c798e4",
+    "checks/current_localized_covariant_jet_test.py": "e77642a32e80ec2d6d38fa512d03985a8453f0c863d795c16554de28ae39fb65",
+    "notes/current-localized-short-time-trial.md": "9758319e2892e8189b578b44b0418d26e307c3587316e7e82eba8d4c9ef3a7aa",
+    "checks/current_localized_short_time_trial.py": "d7f72d8c8a0b30b6dbd5985d5e1aa4444e09d072c1990c02eb75589fc02cbe57",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "evidence/current-localized-short-time-trial.json": "9087c4953b031a026fe337e890452ab620f0a64f089088e1b783259a3a52d40d",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# Full covariant regularity of the actual localized quantum trial\n\n2026-10-28 HST, E003/S169. This completes the regularity comparison in\ncurrent-localized-short-time-trial.md before interpreting a proposed\nshort-time heat estimate. It does not supply that heat estimate or a signed\nquantum residual. Preserve the accepted results and full objective.\n\nThe preceding whole-domain execution proved\n||Delta^4 v||2/||v||2<304093 on the actual paired-domain trial. Contracted\nderivatives do not by themselves control every tensor jet of a parametrix.\nNo unspecified elliptic constant is inserted. Instead use the exact orbit\nmetric g=dz^2/Q+Q d tau^2, with the accepted fixed thermal identification.\nIt has the tensor identity Hess z=(Q'/2)g, including at the regular bolt.\nChanging the constant normalization of tau does not change this identity.\n\nKeep w=gamma/(gamma+L-z), Q=gamma^2 q(w), the complete exact trial v from\nthe preceding receipt, and D=w^2 partial_w. Define the smooth covector\ntheta=dz/gamma. Then\n\n |theta|^2=q,   nabla theta=h g,   h=Dq/2,\n nabla f=(Df)theta,   nabla g=0.                       (1)\n\nThese are identities for the dimensionless ORBIT metric. They do not\nassert the original four-dimensional physical norm equals this norm;\nthe existing output multiplier retains all radius/action conversions.\nThe apparent polar connection singularity has disappeared by a tensor\nidentity on the same disk, not by imposing an inner wall or changing Q.\n\nRepresent nabla^m v as a sum over partial pairings of its m ordered tensor\nslots. A pair denotes a g factor and an unpaired slot a theta factor.\nStart with coefficient v at m=0. On adding derivative slot m, apply D to\nevery coefficient and leave the new slot unpaired; also, for each old\nunpaired slot i, add its old coefficient times h with the new pair (i,m).\nThis is the exact covariant product rule, retaining the order of tensor\nderivatives. No symmetry or flat-space commutation is assumed.\n\nIn an orthonormal radial/tangential frame, a pairing contributes only if\nevery unpaired slot is radial and each paired pair has equal frame indices.\nFor a term with p pairs the value is its coefficient times\nq^((m-2p)/2). For odd m factor out sqrt(q) before squaring. Summing the\nsquares of ALL 2^m frame components gives |nabla^m v|^2. Integrate each\nresult over the ENTIRE original interval with dz=gamma w^-2 dw, using\nthe same exact Laurent/log moments and 512-bit parameter enclosures.\nAll finite-geometry terms are retained. This component sum concerns\ntensor indices, not a selection of physical angular or thermal modes.\n\nCompute m=0,...,8 and define\n\n H8(v)=sum_(m=0)^8 ||nabla^m v||L2(dz),\n Hrel=H8(v)/||v||2.                                  (2)\n\nThis is the finite regularity of the particular admissible trial, not\na bounded map from arbitrary E_t inputs into H8 or geometric admission.\nThe original mass/log core, both York rows and all endpoint matching\nconditions were established for this trial in the preceding ordinary\nargument. Closure and metric variation for the COMPLETE quantum form\nstill require the full boundary/heat argument.\n\nFor quantitative sensitivity only, if the complete bulk remainder had\nL2 density bound Cbulk H8(v) t^3, its contribution to the conditional\ncolumn screen would be the existing bulk budget coefficient times\nCbulk Hrel. Thus report the conditional ceiling\n\n Cbulk <= (existing Drel ceiling with OTHER errors zero)/Hrel. (3)\n\nIt is not an established heat constant or an available complete budget.\nBoundary remainders, numerical applications, trial coefficients and the\nexact complementary residual still have to be paid. In particular this\ncalculation does not establish an L2-density representation or a common\nregulator limit for that remainder. The first unsupported continuum step\nis its localization-preserving differentiated propagation on the actual\npaired domain, with both Schur directions, all contacts and finite returns.\n\nThe comparison method is now explicit: global pointwise control loses\nthe trial's small original dz volume, while (1)-(2) retain it. A theorem\npropagating that L2 norm could avoid this loss; its quantitative constant\nmust be executed and compared with (3) before any feasibility claim.\n\nRemaining to-do list: complete quantum short-time remainder and signed\nfirst residual; later applications and G_t; all coupled/admission budgets;\nnonlinear existence/contraction, exact compatibility, physical matching,\nsemiclassical validity/noise and all-sector stability; the full objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Exact tensor recurrence on the actual trial; no quantum heat certificate.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime,timezone\nimport json,sys\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nfrom current_localized_short_time_trial import arb,ctx,dec,enc,mono,add,mul,scale,diff,power,moment\nROOT=Path(__file__).resolve().parents[1]\nSTEM='current-localized-covariant-jet-test'\nINPUTS=['notes/'+STEM+'.md','checks/current_localized_covariant_jet_test.py',\n 'notes/current-localized-short-time-trial.md','checks/current_localized_short_time_trial.py',\n 'checks/current_quartic_ritz_rank_test.py','evidence/current-localized-short-time-trial.json',\n 'evidence/current-coupled-mass-adjoint-runtime.json']\nBASELINE=Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\ndef digest(p):return sha256(p.read_bytes()).hexdigest()\ndef read(items):return {(x['power'],x['log_power']):dec(x['coefficient']) for x in items}\ndef execute():\n ctx.prec=512\n old=json.loads((ROOT/INPUTS[5]).read_bytes())\n assert old['status']=='trial_regularity_enclosed_complete_short_time_response_unresolved'\n assert all(digest(ROOT/k)==v for k,v in old['input_sha256_after'].items())\n r=old['result'];q=read(r['exact_trial']['Q_over_gamma_squared']);v=read(r['exact_trial']['Vpsi'])\n w0=dec(r['exact_trial']['w0']);gamma=dec(r['constants']['physical_measure_gamma'])\n D=lambda f:mul(mono(2),diff(f));h=scale(D(q),arb(1)/2)\n tensors={():v};norms=[];sizes=[]\n qpowers=[power(q,i) for i in range(5)]\n for m in range(9):\n  density={}\n  for mask in range(2**m):\n   if mask.bit_count()%2:continue\n   component={}\n   for pairs,coeff in tensors.items():\n    paired={i for pair in pairs for i in pair}\n    if any((mask>>i)&1 for i in range(m) if i not in paired):continue\n    if any(((mask>>i)&1)!=((mask>>j)&1) for i,j in pairs):continue\n    component=add(component,mul(coeff,qpowers[(m-2*len(pairs))//2]))\n   density=add(density,mul(component,component))\n  if m%2:density=mul(q,density)\n  integral=gamma*sum((c*moment(n-2,k,w0) for (n,k),c in density.items()),arb(0))\n  assert integral>0,(m,integral)\n  norms.append(integral.sqrt());sizes.append(len(tensors))\n  if m==8:break\n  new={}\n  for pairs,coeff in tensors.items():\n   new[pairs]=add(new.get(pairs,{}),D(coeff))\n   paired={i for pair in pairs for i in pair}\n   for i in range(m):\n    if i in paired:continue\n    key=tuple(sorted(pairs+((i,m),)))\n    new[key]=add(new.get(key,{}),mul(h,coeff))\n  tensors=new\n assert norms[0].overlaps(dec(r['constants']['original_v_L2']))\n H8=sum(norms,arb(0));Hrel=H8/norms[0]\n bulk=dec(r['constants']['conditional_bulk_relative_ceiling_OTHER_ZERO'])\n constants=dict(actual_full_H8_L2=H8,actual_full_H8_over_v_L2=Hrel,\n  conditional_complete_bulk_H8_constant_ceiling_OTHER_ZERO=bulk/Hrel,\n  global_pointwise_to_normalized_density_cost=1/norms[0])\n for i,x in enumerate(norms):constants['covariant_'+str(i)+'_L2']=x\n return dict(precision_bits=ctx.prec,tensor_pairing_counts=sizes,\n  constants={k:enc(v) for k,v in constants.items()},\n  quantum_remainder_constant=None,complete_signed_first_residual=None,\n  scope=dict(full_actual_trial_covariant_regularities_enclosed=True,\n   arbitrary_energy_to_H8_comparison=False,full_physical_admission=False,\n   complete_quantum_heat_remainder_certified=False,goal_complete=False))\nif __name__=='__main__':\n out=ROOT/'evidence'/(STEM+'.json');assert not out.exists()\n before={p:digest(ROOT/p) for p in INPUTS}\n protected=json.loads(BASELINE.read_bytes());assert all(digest(Path(p))==h for p,h in protected.items())\n rt=json.loads((ROOT/INPUTS[-1]).read_bytes());pkg=rt['packages']['flint']\n assert digest(Path(sys.executable))==rt['python_sha256']\n assert all(digest(Path(pkg['root'])/p)==h for p,h in pkg['files'].items())\n rec=dict(started_utc=datetime.now(timezone.utc).isoformat(),input_sha256_before=before,\n  ordinary_argument_utf8=(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n  arithmetic_source_utf8=Path(__file__).read_text(encoding='utf-8'),python_sha256=rt['python_sha256'])\n try:\n  rec['result']=execute()\n  after={p:digest(ROOT/p) for p in INPUTS};assert before==after\n  assert all(digest(Path(p))==h for p,h in protected.items())\n  rec.update(status='full_trial_tensor_regularity_enclosed_heat_remainder_unknown',\n   input_sha256_after=after,protected_paths_unchanged=len(protected))\n except Exception:\n  import traceback\n  rec.update(status='failed',traceback=traceback.format_exc())\n rec['finished_utc']=datetime.now(timezone.utc).isoformat()\n out.write_bytes((json.dumps(rec,indent=2)+'\\n').encode('utf-8'))\n keys=['actual_full_H8_L2','actual_full_H8_over_v_L2',\n  'conditional_complete_bulk_H8_constant_ceiling_OTHER_ZERO']\n print(json.dumps(dict(status=rec['status'],error=rec.get('traceback'),\n  constants={k:rec['result']['constants'][k]['ball'] for k in keys if 'result' in rec}),indent=2))\n if rec['status']=='failed':raise SystemExit(1)\n",
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "result": {
+    "precision_bits": 512,
+    "tensor_pairing_counts": [
+      1,
+      1,
+      2,
+      4,
+      10,
+      26,
+      76,
+      232,
+      764
+    ],
+    "constants": {
+      "actual_full_H8_L2": {
+        "ball": "[1.1645610227794069917177e-11 +/- 9.12e-34]",
+        "decimal_enclosure": {
+          "mid": "11645610227794069917177440228413060619288681688185421105370920791",
+          "rad": "471679047255806601534031083545030339592193",
+          "exponent": "-75"
+        }
+      },
+      "actual_full_H8_over_v_L2": {
+        "ball": "[496237.5979373992642762 +/- 6.03e-17]",
+        "decimal_enclosure": {
+          "mid": "49623759793739926427617990139677294499043566254267711990166844771",
+          "rad": "4019857177340489585725741179691166414667777",
+          "exponent": "-59"
+        }
+      },
+      "conditional_complete_bulk_H8_constant_ceiling_OTHER_ZERO": {
+        "ball": "[6183543412166.17610113 +/- 8.12e-9]",
+        "decimal_enclosure": {
+          "mid": "61835434121661761011337877683644026483023026230512186884880065917",
+          "rad": "43268928863616401314272870849885077866807297",
+          "exponent": "-52"
+        }
+      },
+      "global_pointwise_to_normalized_density_cost": {
+        "ball": "[42611558194954064.02369 +/- 2.93e-6]",
+        "decimal_enclosure": {
+          "mid": "42611558194954064023691203806553318145233788527548313140869140625",
+          "rad": "1725910918871753838327605161574809355681792",
+          "exponent": "-48"
+        }
+      },
+      "covariant_0_L2": {
+        "ball": "[2.346781113764614861009e-17 +/- 1.66e-39]",
+        "decimal_enclosure": {
+          "mid": "23467811137646148610089291688405429995609451819657526194847852373",
+          "rad": "950510496414987074463431997109802184474625",
+          "exponent": "-81"
+        }
+      },
+      "covariant_1_L2": {
+        "ball": "[6.219686669556718930491e-17 +/- 7.05e-39]",
+        "decimal_enclosure": {
+          "mid": "6219686669556718930490547294086187171446769167968855963447753832",
+          "rad": "251914309715125207784014628933148763750401",
+          "exponent": "-80"
+        }
+      },
+      "covariant_2_L2": {
+        "ball": "[2.218359081172319658281e-16 +/- 1.65e-38]",
+        "decimal_enclosure": {
+          "mid": "22183590811723196582810749792435286825484271852290295914941571685",
+          "rad": "898496059030104634020915933461641600958465",
+          "exponent": "-80"
+        }
+      },
+      "covariant_3_L2": {
+        "ball": "[9.620098818836177047150e-16 +/- 7.83e-38]",
+        "decimal_enclosure": {
+          "mid": "9620098818836177047150392791682102544008779281054938174559406072",
+          "rad": "389640296074610130037297209461803604508673",
+          "exponent": "-79"
+        }
+      },
+      "covariant_4_L2": {
+        "ball": "[4.867852328536641709419e-15 +/- 6.23e-37]",
+        "decimal_enclosure": {
+          "mid": "48678523285366417094194257506411053685859408851286081487096490932",
+          "rad": "1971613249000151929527794868320244546404353",
+          "exponent": "-79"
+        }
+      },
+      "covariant_5_L2": {
+        "ball": "[2.805499449788724738927e-14 +/- 5.65e-36]",
+        "decimal_enclosure": {
+          "mid": "28054994497887247389265489854112136732264685917684176974639540494",
+          "rad": "1136303957409149856243049424089550524776449",
+          "exponent": "-78"
+        }
+      },
+      "covariant_6_L2": {
+        "ball": "[1.811359749643329345737e-13 +/- 2.31e-35]",
+        "decimal_enclosure": {
+          "mid": "18113597496433293457368430226679211819633617179508000059484167166",
+          "rad": "733650204472808351136098963846262387900417",
+          "exponent": "-77"
+        }
+      },
+      "covariant_7_L2": {
+        "ball": "[1.294204671428209712858e-12 +/- 4.99e-34]",
+        "decimal_enclosure": {
+          "mid": "12942046714282097128584462073382316762454595962213938686040022823",
+          "rad": "524188265098709898869804353851522717581313",
+          "exponent": "-76"
+        }
+      },
+      "covariant_8_L2": {
+        "ball": "[1.0136077224107269317638e-11 +/- 5.78e-34]",
+        "decimal_enclosure": {
+          "mid": "10136077224107269317638166661661561752321669495576006708186292966",
+          "rad": "410538834008089260177301146503237519540225",
+          "exponent": "-75"
+        }
+      }
+    },
+    "quantum_remainder_constant": null,
+    "complete_signed_first_residual": null,
+    "scope": {
+      "full_actual_trial_covariant_regularities_enclosed": true,
+      "arbitrary_energy_to_H8_comparison": false,
+      "full_physical_admission": false,
+      "complete_quantum_heat_remainder_certified": false,
+      "goal_complete": false
+    }
+  },
+  "status": "full_trial_tensor_regularity_enclosed_heat_remainder_unknown",
+  "input_sha256_after": {
+    "notes/current-localized-covariant-jet-test.md": "2da05379721fa05382902570d79156ad64a32e60d40b1e76dbe021c205c798e4",
+    "checks/current_localized_covariant_jet_test.py": "e77642a32e80ec2d6d38fa512d03985a8453f0c863d795c16554de28ae39fb65",
+    "notes/current-localized-short-time-trial.md": "9758319e2892e8189b578b44b0418d26e307c3587316e7e82eba8d4c9ef3a7aa",
+    "checks/current_localized_short_time_trial.py": "d7f72d8c8a0b30b6dbd5985d5e1aa4444e09d072c1990c02eb75589fc02cbe57",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "evidence/current-localized-short-time-trial.json": "9087c4953b031a026fe337e890452ab620f0a64f089088e1b783259a3a52d40d",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "protected_paths_unchanged": 21,
+  "finished_utc": "2026-10-29T02:39:52.523931+00:00"
+}

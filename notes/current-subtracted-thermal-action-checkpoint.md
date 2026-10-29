@@ -1,3 +1,86 @@
+# Explicit localized trial tested; complete short-time response still unresolved
+
+2026-10-28 HST, E003/S169. The preceding positive-time bound was PROGRESS
+and remains accepted. Preserve P32, the closed audit, original physical
+norms, all accepted results and the full stable semiclassical wormhole goal.
+This turn attempted the next short-time column. It closes the domain and
+regularity checks for one explicit trial; it does NOT attain the missing
+complete quantum column, first residual or a new admission margin.
+
+The [actual-domain trial](current-localized-short-time-trial.md) is
+
+    J=z^5 gamma^3/(gamma+L-z)^4,
+    psi=(QJ)'-z^4 int_0^z (Q'/r^4)' J dr,
+    Upsi=psi/2+QJ/z, Vpsi=-psi-(QJ)'/2.
+
+The exact York identity and both original endpoint conditions hold. All
+three fields start at outer order four and are analytic at the regular
+disk bolt. The actual finite Q, mass/log realization, physical cutoffs,
+temperature and radius conventions are unchanged. The trial is adapted
+to the source's bolt scale; no approximation error to its actual quantum
+solution has been established, and no numerical Ritz coefficient exists.
+
+Whole-interval 512-bit Laurent/log integration retains dz=gamma w^-2 dw,
+w=gamma/(gamma+L-z). Executed:
+
+- ||Vpsi||2 is enclosed near 2.346781114e-17, giving the original seed
+  energy lower bound ||psi||E_t>1.0442516665e-18.
+- ||Delta^4 Vpsi||2/||Vpsi||2<304093. The
+  [full covariant tensor calculation](current-localized-covariant-jet-test.md)
+  additionally gives sum_(m=0)^8 ||nabla^m Vpsi||2<1.164562e-11 and its
+  ratio to ||Vpsi||2<496238. The identity Hess z=(Q'/2)g avoids an unknown
+  elliptic comparison and the polar-coordinate connection singularity.
+- The leading common UV coefficient has relative-column upper report
+  <4.133457e-31, or <3.793316e-15 of the CONDITIONAL 1.0896685958e-16
+  column screen. Its corresponding exact one-dimensional coefficient
+  envelope would charge <1.214059e-25 in original first-error units.
+  This is not the complete heat remainder or an attained Ritz residual.
+
+The first unsupported continuum implication is the complete localized
+weak heat-remainder estimate on this trial, including its paired boundary
+part, full thermal/angular sums, coincidence contacts, cutoff transitions
+and finite-domain/bolt returns, uniformly over ALL E_t tests. The old
+quartic differentiated constants do not apply. Neither qualitative C5
+regularity nor the now quantified H8 trial norm supplies this transfer.
+The common regulator and exact UV logarithm remain in the requested form;
+no signed quantum value or numerical application error has been obtained.
+
+The new regularity test quantifies the missing theorem. If the bulk density
+remainder were bounded by Cbulk H8(Vpsi) t^3, its conditional ceiling is
+Cbulk<6.183544e12 with ALL OTHER unknown contributions set to zero. In
+terms of D_v/||Vpsi||2 the ceiling is 3.068507e18; the boundary t^(11/4)
+coefficient has its separate conditional ceiling 4.774580e17, also with
+the other errors zero. These individual ceilings cannot be spent together
+in full. They are requirements, not proved constants or available margins.
+The complete residual, actual coefficients and complementary tests remain
+unknown. The accepted partial physical subtotal <9.142532e-11 is unchanged.
+
+Decision: retain the construction; use an L2 heat estimate that preserves
+this trial's localization. A global pointwise-to-normalized-density step
+would introduce the explicit factor 1/||Vpsi||2>4.2611558e16. This is a
+loss of the chosen estimator, not evidence that the actual response is
+large. The alternative must carry the covariant L2 jets through the
+differentiated actual parametrix and BOTH Schur propagations, including
+the paired boundary remainder. No such constant is certified yet.
+Do not refine the affordable leading coefficient, scalar or positive-time
+pieces, or treat this regularity calculation as the complete milestone.
+
+The ONE next calculation is that complete localization-preserving
+short-time weak-remainder bound for this explicit trial, tested in the
+joint boundary/bulk budget above and with numerical application errors.
+It is PROPOSED. Domain membership, whole-interval norms and their budget
+sensitivity are EXECUTED. No obstruction to the construction is proved.
+Author verification checks frozen sources, interval guards and 21 protected
+inputs; it is not independent or Lean review.
+
+Remaining to-do list: complete signed first quantum residual and later
+applications; G_t/Z_r and every coupled/source/graph/physical/boundary/mass
+requirement; nonlinear admission/contraction and existence; exact
+compatibility; physical matching/opening; semiclassical validity/noise;
+all-sector stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Positive-time quantum contribution controlled; short-time first solve open
 
 2026-10-28 HST, E003/S169. The full stable semiclassical wormhole objective
