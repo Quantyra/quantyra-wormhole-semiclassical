@@ -1,3 +1,133 @@
+# Complete actual-response upper estimator tested; signed evaluation remains open
+
+2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS, a plan/status
+restatement. This turn executes a COMPLETE upper estimator for the
+actual-minus-reference action on the SAME analytic trial accepted in
+f384d0f. Outcome: VERIFIED FAILURE OF THIS SUFFICIENT ESTIMATOR, with
+a quantitative improvement in its actual-domain global return argument.
+The signed evaluation and full stable semiclassical wormhole objective
+remain ACTIVE/INCOMPLETE. Preserve P32, the closed audit, every accepted
+result and original physical norms.
+
+The [ordinary argument](current-source-adapted-complete-response-test.md),
+[frozen execution](../evidence/current-source-adapted-complete-response-test.json)
+and [author review](../evidence/current-source-adapted-complete-response-test-verification.json)
+keep both York equations, the full Volterra return, paired mass/log phase,
+regular bolt and cutoff data. The existing bounded-form extension defines
+the actual response on this Et trial, despite its rho^4 log(rho) term.
+The spatially analytic localized-source theorem does not apply to it.
+Bounded mass perturbation gives a finite-mass fixed-domain resolvent;
+that fact alone does NOT establish a regulator-uniform differentiated
+trace estimate or nonlinear-neighborhood control.
+
+New ordinary argument: sum the complete cap Born kernel series with an
+exponential weight, then apply the original two-buffer actual resolvent
+identity. This avoids the old large graph-to-point evaluation constants.
+The actual global inverse retains ALL thermal and boundary/bolt returns.
+The full angular counting function, not a finite mode selection, bounds
+both real and holomorphic mass sums. Cauchy is applied to the actual
+holomorphic gluing identity, retaining the constant probe's tadpole.
+The exact UV logarithm and fourth finite part cancel against the SAME
+reference before the lower-order comparison; no contact is reset.
+
+Executed global coefficients, each multiplying C:
+
+    row-subtracted gluing       <5.837040e13  (old 6e24),
+    constant-contact gluing     <7.236787e13  (old 3.3e24).
+
+The respective improvement factors exceed 1.027918e11 and 4.560034e10.
+These are bounds for actual global returns, not a smooth surrogate or
+an operator-domain replacement. They do not evaluate the signed center.
+
+The full original Et* ledger on this particular trial is:
+
+| Entry | Executed upper expression |
+| --- | ---: |
+| Local gain-two remainder | 8.530807e39 |
+| Finite second contact | 2.417101e36 |
+| Complete row-subtracted global gluing | 6.347257e34 |
+| Actual cap constant contact, including finite restoration | 1.669764e44 |
+| Actual constant-contact global gluing | 7.869357e34 |
+| Known curvature polynomial | 2.431400e23 |
+| Shared vacuum uncertainty | 9.289310e27 |
+| Retained energy comparison | 1.127628e-25 |
+
+Their jointly computed sum is <1.669849e44. Adding the accepted reference
+residual still gives <1.669849e44, approximately 1.669849e11 times the
+sufficient actual first-residual screen 1e33. This improves the preceding
+complete coarse upper expression by a factor >121, but certifies no
+actual first solution. An upper report above a target is NOT a lower
+bound on the actual response, failure of the inverse, or nonexistence.
+
+The cap constant-contact envelope accounts for >99.9948% of this report.
+However, deleting it hypothetically leaves <8.533366e39, still about
+1.980544e7 times the CONDITIONAL remaining residual allocation
+4.308597e32. Isolated contact optimization cannot close this estimator.
+The respective single-entry overruns of that account are about
+3.875423e11 (cap contact), 1.979950e7 (gain-two), 5609.95 (second contact),
+147.317 (global gluing), and 182.644 (contact gluing). These describe
+required improvements of the reports, not measured physical errors.
+They cannot all spend the same account independently.
+
+Decision: CHANGE the estimation method while retaining the construction,
+trial and accepted reconstruction. Stop treating the cap diagonal and
+local off-diagonal remainder as separate positive majorants. The specified
+alternative is the COMPLETE commonly subtracted heat/resolvent action on
+this fixed trial, with the unvaried actual paired operator and signed
+subtractions retained together. The present kernel argument is available
+for its finite returns; further isolated return optimization is not selected.
+
+The ONE decisive next calculation is to prove or refute the following
+quantitative mixed trace bound on the actual paired domain, for all unit
+Et tests and 0<t<=.001:
+
+    |h_sub(t)[V x_hat,V eta]| <=Kheat M_u CV t^(5/4),
+    M_u=the accepted ||V x_hat||2 upper plus its order-9/2 flow upper,
+    CV<2.916127.
+
+Here h_sub is the full time-reduced heat Hessian with the common a0/t
+and t*a2 subtractions, including the paired boundary representative.
+The complete angular bound Theta(t)<=4C/t gives an integrated debit
+<=1.406029e28*Kheat in Et*. A provisional allocation of HALF the remaining
+residual account therefore requires Kheat<1.532186e4. The other half
+must cover all retained reallocations, positive-time/reference contributions
+and actual numerical application errors. Neither half is an established
+physical margin, and those remaining contributions have NOT been certified
+under this proposed assembly. The exponent 5/4 and Kheat are NOT proved.
+This is a calculated research contract, not an attained quantum bound.
+
+The precise missing implication is the complete mixed energy-dual
+short-time trace estimate after common angular renormalization. Finite-mass
+resolvent analyticity, qualitative smoothing, or a small unvaried heat
+defect does not imply it. The new evidence shows that large global graph
+constants can be removed, while the complete separated estimator still
+fails. The proposed joint heat estimate must now confront the remaining
+contact/local cancellation on the actual mass/log input.
+
+Parameter and bound-arithmetic errors are enclosed for the exact analytic
+trial. A nonzero signed center and implemented quantum application were
+NOT computed; their errors remain UNKNOWN. No original P32 defect, mass
+column target, graph/physical/boundary comparison or nonlinear admission
+closes. The radius conversion cost remains. The quantum-fast estimate
+keeps its original limited scope, with no independent phase or neighborhood
+transfer. A reference residual pass is not a bolt or full coupled pass.
+
+Author review checks 19 frozen inputs and 21 protected paths, the full
+ledger, kernel/holomorphic guards, original half/time normalization and
+the prospective heat allocation. This supports the ordinary argument;
+no independent specialist or Lean review is claimed. No checker result
+replaces the missing trace theorem.
+
+Remaining to-do list: complete matched weak heat estimate and signed
+action with actual application errors; full first inverse and later
+filters; signed G_t/Z_r and every original coupled/source/graph/physical/
+boundary/mass budget; nonlinear admission/contraction and existence;
+exact compatibility, physical matching/opening, semiclassical validity/
+noise and all-sector stability; the full stable semiclassical wormhole
+objective.
+
+---
+
 # Actual fractional map bounded; exact first-reference trial passes its screen
 
 2026-10-28 HST, E003/S169. Previous turn: PROGRESS, 1b04eae bounded the
