@@ -1,3 +1,63 @@
+# First quantum application remains unresolved after the scalar-source result
+
+2026-10-28 HST, E003/S169. The preceding turn was PROGRESS at 5967b97.
+The full stable semiclassical wormhole objective remains ACTIVE and
+incomplete. Preserve that source result, P32, original physical norms,
+the closed audit and all accepted evidence.
+
+The [current attempt](current-first-quantum-solve-attempt.md) distinguishes
+the first inverse ell_t^-1 from the later (ell_t+B)^-1 filters. Its
+geodesic reference must therefore be A0=ell0/N, not the existing
+L0=(ell0+B)/N. The accepted complete form comparison makes A0 positive
+and invertible on the actual E_t; no numerical application follows from
+that seed theorem. The fixed mass/log realization, common regulator,
+full spectra, contacts, original cutoffs and bolt return stay unchanged.
+
+The source-specific arithmetic was executed at 512 bits, retaining
+delta=1e-38 and 12 iterations. The proved source upper is <9.176185e48.
+The analytic error with EXACT applications is <2.430742e19 in E_t*,
+costing <7.780415e-25 in the original first-error budget. If every complete
+iteration output error were <=9.97e32 in E_t, their propagated total plus
+that analytic error would meet the proposed 1e33 residual screen. The
+conditional ceiling divided by the source UPPER bound is about 1.0874e-16;
+this is not an attained relative error on the unknown true vector.
+
+NO first geodesic application, quantum-remainder application, numerical
+trial field, complete stage error or signed residual was obtained.
+The application estimates are UNKNOWN. The conditional arithmetic is not
+a new signed feasibility bound or a completed quantum milestone. No
+physical margin or admission requirement closes. The accepted scalar
+source debit <1.951034e-11 and known partial subtotal <9.142212e-11 are
+unchanged; no further scalar optimization is selected.
+
+The first unsupported numerical implication is the complete A0^-1 g_hat
+application and its E_t residual. The implemented orbit periods and scalar
+angular weights do not supply the inverse of the compressed flow operator
+or the commonly restored actual orbit trace. The existing selected-direction
+thermal evaluator does not cover this source or the generated range.
+
+A conforming Galerkin alternative avoids a global geodesic inverse as a
+primitive but still needs complete quantum columns against ALL E_t and
+a complementary residual bound. Those are also missing. Its finite matrix
+would not replace them. The previously rejected local-only positive inverse
+remains rejected; no construction obstruction follows.
+
+Decision: provisionally retain the complete geodesic method with the
+correct first inverse and unchanged cutoff/iteration contract. The ONE
+next calculation remains a complete paired first weak solve on g_hat,
+with an explicit field and certified E_t* residual including numerical
+applications. It is PROPOSED. This is the first turn without a new signed
+feasibility bound after the scalar-source result; historical blocked runs
+do not count. No task-owned calculation is waiting for output.
+
+Remaining to-do list: complete signed quantum solve, later applications
+and Z_r/G_t; every coupled/source/graph/physical/boundary/mass requirement;
+nonlinear admission/contraction and existence; exact compatibility;
+physical matching/opening; semiclassical validity/noise; all-sector stability;
+the full stable semiclassical wormhole objective.
+
+---
+
 # Actual scalar source now has an affordable complete residual
 
 2026-10-28 HST, E003/S169. Second turn of the NEW execution goal. The

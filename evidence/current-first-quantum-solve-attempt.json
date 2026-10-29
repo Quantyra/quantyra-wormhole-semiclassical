@@ -1,0 +1,177 @@
+{
+  "started_utc": "2026-10-29T01:44:50.703511+00:00",
+  "input_sha256_before": {
+    "notes/current-first-quantum-solve-attempt.md": "ccc6a5847771a4be5e78a0becc7c0633ce491cb14108dda5b53bfc192708979a",
+    "checks/current_first_quantum_solve_contract.py": "32ecbccbdb4de25b04e0fdb4fe4e9cab252029fe114e6988a33bcbc7b98f9d48",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-first-inverse-source-screen.json": "1e80af6d722c9adf6eea8f0d54c9028ec15723f1ed62cb694b92db134a5dc27d",
+    "evidence/current-scalar-green-source-residual.json": "0b2384fe8d674208af4cd5572bb7d08a97705dbe70a3c4bb3c98d45d4322fa94",
+    "evidence/current-scalar-green-source-residual-verification.json": "e7ad64ec1227c53584898e7c0a837e6953e24c92880b4c8598d238cea4f74ed0",
+    "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+    "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+    "notes/current-local-reference-range-test.md": "2f6a9347ea5a6a8021194e8e675c5caabd8a09763c05ef5651c125ec60d0a043",
+    "operators/radial_geodesic_return.py": "b6084bd8251cbb9c6661312927d48a8deba26802203a5e4e82e5fc0e2fd99d76",
+    "operators/angular_resummed_response.py": "f2f6ca154f5c998b37eadc0fb8b4f60c7f0c89708b84dabbd7cfd356e4683c8b",
+    "checks/current_subtracted_thermal_action.py": "d14c90bdc2ac7c475c44a3f22ea4fd13327933c6036cfb6d626028daad052da2",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "ordinary_argument_utf8": "# First quantum solve: correct reference, unresolved application\n\n2026-10-28 HST, E003/S169. The preceding turn was PROGRESS: 5967b97\ncertified the complete scalar source approximation and its original-output\nerror. Preserve that result, the closed audit, P32 and all physical norms.\nThe full stable semiclassical wormhole goal remains active and incomplete.\n\nThis attempt supplies NO signed quantum center or new feasibility bound.\nIt identifies the correct first inverse and tests the numerical accuracy\ncontract on the actual source. That conditional contract is not completion\nof the requested quantum milestone or a substitute for its missing action.\n\n## First inverse and actual domain\n\nUse the original paired E_t, norm squared e_t=ell_t/N, and scalar E_s.\nThe source is g_hat(v)=b(y_hat,v)/N with the analytic y_hat of 5967b97.\nIts E_s domain and complete source error were established there. The fixed\nmass/log phase, complementary matter adjoint, composed squares, common\nregulator, full angular/thermal sums, coincidence/density contacts, cutoff\ntransitions and regular-bolt returns stay unchanged. No nonlinear metric\nneighborhood or independent boundary-phase comparison is inferred.\n\nThe desired first solution is e_t(x,v)=g_hat(v), for every v in E_t.\nIt uses ell_t^-1, NOT (ell_t+B)^-1. The latter appears in the existing\nF_t algorithm and remains correct for the LATER filters. Substituting it\nhere would calculate a different vector; another F_t factor cannot silently\nrepair that change. No previous accepted result is contradicted.\n\nLet A0 be the E_t Riesz operator of ell0/N, the COMPLETE geodesic\ncomparison including the logarithm, all retained local terms and contacts.\nChoose the computational constant coefficient c0*=0 inside its accepted\ninterval; the physical vacuum-coefficient uncertainty stays in the complete\ncomparison error. The physical coefficient is not asserted to vanish.\nThus A0 is NOT the existing L0=(ell0+B)/N. The accepted comparison gives\n||A0-I||<=e0=(.0022+epsilon)/(1-epsilon)<1. It follows that A0 is\npositive and invertible on E_t. This is a seed form theorem; it does not\nsupply an implemented inverse, strong-source output or nonlinear transfer.\n\nKeep the already accepted spatial cutoff delta=1e-38 and its bound eta.\nOnly the second-moment-subtracted actual-minus-geodesic remainder is cut.\nThe exact ultraviolet principal term and all matched local contacts remain.\nLet Adelta=I-Qdelta, ||Qdelta||<=eta, and\n\n    K=A0^-1(Adelta-A0), r=(e0+eta)/(1-e0),\n    x_m=sum_(j=0)^(m-1)(-K)^j A0^-1 g_hat, m=12.       (1)\n\nAll expressions mean Riesz maps on E_t; g_hat is identified with its Riesz\nvector only for this argument. Formula (1) is an abstract candidate, not\nan explicit numerical field or executed operator application. Retain m=12\nand delta; this attempt does not refine degree, transport error or tails.\n\nSince x_delta=Adelta^-1 g_hat,\nx_delta-x_m=(-K)^m x_delta and ||x_delta||<=||g_hat||/(1-eta).\nAlso ||x-x_delta||<=eta ||g_hat||/(1-eta). Therefore\n\n    ||g_hat-e_t(x_m,.)||E_t*\n       <= [(eta+r^12)/(1-eta)] G_hat = E_analytic.     (2)\n\nNo commutation of the spatial remainder and geodesic comparison is used.\nThis addresses the operator-definition issue before numerical interpretation.\nEvery application of A0^-1 and Adelta-A0 in (1) is still uncomputed.\n\n## Actual source scale and application contract\n\nThe previous complete source bound and new scalar residual give\n\n    G_hat=G_original_upper+sqrt(q/(1-epsilon))*rho_s_upper,\n    ||g_hat||E_t*<=G_hat.\n\nThe original scalar-source debit is charged once separately. For numerical\niterations x_(j+1)=A0^-1 g_hat-K x_j, suppose the COMPLETE output of stage\nj has E_t error a_j, including source evaluation, geodesic inversion, the\nactual paired quantum remainder, all spectra/contacts/returns and rounding.\nThen\n\n    ||x_hat_m-x_m||E_t<=sum_(j=1)^m r^(m-j) a_j.       (3)\n\nFor the proposed first-residual screen Rstar=1e33, a common sufficient\nstage allowance would be\n\n    a_stage<=(Rstar-E_analytic)(1-r)/(1-r^12).         (4)\n\nThis is conditional on complete energy-norm application errors. It is not\na tolerance on finite matrix entries, a source normalization improvement,\nan available physical margin, or an established a_j. Report a_stage/G_hat\nonly as a scale relative to a PROVED UPPER BOUND; it is not the relative\nerror of the unknown true vector. The original physical transfer remains\nK_first approximately 3.2008398094e-44, so Rstar costs at most 3.201e-11.\n\n## Attempted implementation and first remaining unsupported implication\n\nThe available radial_geodesic_return.py supplies orbit periods, implicit\nturning points and the trapped family. The exact compression is\nJ* A(iX) J, not a scalar radial-Laplacian multiplier; its inverse is not\nobtained by inverting A pointwise and compressing. No numerical realization\nof the complete A0^-1 on this source exists in that implementation.\n\nThe angular_resummed_response.py scalar weights are also insufficient:\ntheir common finite part cannot be inserted into an ordinary unregulated\norbit trace. The actual paired contact cancellation remains necessary.\ncurrent_subtracted_thermal_action.py encloses a different compact direction\nfamily and angular levels 1,2, with a complete thermal sum for that scope.\nIt cannot be applied to y_hat or the evolving x_j with its present tail proof.\n\nThus the next unsupported NUMERICAL implication is a complete bound for\nA0^-1 g_hat and its original-energy residual, followed by certified\n(Adelta-A0) applications on the generated range. The seed form operators\nare defined. The application errors and signed centers are UNKNOWN, not\nknown finite upper bounds that have been found excessive. Equations (2)-(4)\ndo not establish these missing estimates.\n\nOne alternative is a conforming Galerkin solve on localized gravitational\ntrial fields, retaining the actual paired realization and complete matter\nsums. It avoids requiring a global geodesic inverse as a primitive. But\nit still needs full functionals e_t(psi_j,.) on ALL E_t and a certified\ncomplementary residual. A finite matrix or qualitative density theorem\nwould not meet (4). The current quartic-column proof does not furnish\nthose localized columns or their errors. The local-only positive inverse\nis already ruled out by the accepted actual-domain high-frequency test.\n\nDecision: retain the complete geodesic method provisionally, with the\ncorrect ell0 first inverse and its known coercivity. Neither alternative\ncurrently closes the same application obstacle. Do not optimize the now\naffordable scalar source or claim the conditional arithmetic as progress\non the signed quantum value. The ONE decisive next calculation remains\nthe first complete paired weak solve on g_hat with an explicit field and\na certified E_t* residual, including actual numerical applications.\nThat calculation is still PROPOSED. No research process is awaiting output.\n\nRemaining to-do list: complete signed quantum solve and later applications;\nZ_r/G_t and every coupled/source/graph/physical/boundary/mass requirement;\nnonlinear admission/contraction and existence; exact compatibility;\nmatching/opening; semiclassical validity/noise; all-sector stability;\nthe full stable semiclassical wormhole objective.\n",
+  "arithmetic_source_utf8": "\"\"\"Conditional first-quantum application contract; DOES NOT apply the inverse.\"\"\"\nfrom pathlib import Path\nfrom hashlib import sha256\nfrom datetime import datetime, timezone\nimport json\nimport sys\n\nsys.path.insert(0, str(Path(__file__).resolve().parent))\nfrom current_quartic_ritz_rank_test import arb, ctx, dec, enc\n\nROOT = Path(__file__).resolve().parents[1]\nSTEM = 'current-first-quantum-solve-attempt'\nBASELINE = Path('C:/Users/dfred/AppData/Local/Temp/s169-weak-response-execution-baseline.json')\nINPUTS = ['notes/'+STEM+'.md', 'checks/current_first_quantum_solve_contract.py',\n          'checks/current_quartic_ritz_rank_test.py',\n          'evidence/current-spatial-inverse-output-test.json',\n          'evidence/current-first-inverse-source-screen.json',\n          'evidence/current-scalar-green-source-residual.json',\n          'evidence/current-scalar-green-source-residual-verification.json',\n          'notes/current-geodesic-two-sided-remainder.md',\n          'notes/current-global-geodesic-return.md',\n          'notes/current-local-reference-range-test.md',\n          'operators/radial_geodesic_return.py',\n          'operators/angular_resummed_response.py',\n          'checks/current_subtracted_thermal_action.py',\n          'evidence/current-coupled-mass-adjoint-runtime.json']\n\n\ndef digest(p):\n    return sha256(p.read_bytes()).hexdigest()\n\n\ndef result(name):\n    d = json.loads((ROOT/'evidence'/(name+'.json')).read_bytes())\n    run = d.get('runs',[d])[-1]\n    assert run['status'] != 'failed'\n    return run['result']\n\n\ndef execute():\n    ctx.prec = 512\n    spatial = result('current-spatial-inverse-output-test')\n    c = {k:dec(v) for k,v in spatial['constants'].items()}\n    first = {k:dec(v) for k,v in result('current-first-inverse-source-screen')['constants'].items()}\n    source = {k:dec(v) for k,v in result('current-scalar-green-source-residual')['constants'].items()}\n    eps,eta,e0 = c['epsilon'],c['alternative_eta'],c['geodesic_Et_comparison_error']\n    assert c['alternative_delta'].contains(arb('1e-38'))\n    assert spatial['internal_Neumann_terms'] == 12\n    r = (e0+eta)/(1-e0)\n    assert r.overlaps(c['Neumann_contraction_upper']) and r < 1\n    q = arb('.338')\n    source_error = (q/(1-eps)).sqrt()*source['full_scalar_residual_Es_dual_upper']\n    Ghat = first['complete_source_dual_upper']+source_error\n    analytic_relative = (eta+r**12)/(1-eta)\n    analytic = analytic_relative*Ghat\n    screen = arb('1e33')\n    stage_sum = (1-r**12)/(1-r)\n    conditional_stage = (screen-analytic)/stage_sum\n    assert analytic < screen and conditional_stage > 0\n    Kfirst = first['first_residual_to_original_bolt_multiplier']\n    constants = dict(\n        proved_source_dual_upper=Ghat,\n        scalar_source_dual_replacement_error=source_error,\n        retained_spatial_cutoff_eta=eta,complete_geodesic_form_error=e0,\n        first_inverse_contraction_upper=r,\n        exact_application_analytic_relative_error=analytic_relative,\n        exact_application_first_residual_error=analytic,\n        exact_application_analytic_physical_debit=Kfirst*analytic,\n        proposed_residual_screen=screen,\n        conditional_common_stage_output_error_ceiling=conditional_stage,\n        conditional_stage_ceiling_over_source_upper=conditional_stage/Ghat,\n        stage_error_amplification_sum=stage_sum,\n        physical_debit_if_complete_screen_attained=Kfirst*screen,\n        partial_subtotal_if_screen_attained_NOT_margin=\n            source['known_partial_subtotal_not_free_margin']+Kfirst*screen)\n    return dict(precision_bits=ctx.prec,internal_iterations_unchanged=12,\n                constants={k:enc(v) for k,v in constants.items()},\n                actual_first_geodesic_application=None,\n                actual_quantum_remainder_application=None,\n                actual_stage_errors=None,actual_signed_residual=None,\n                complete_signed_response=None,\n                scope=dict(seed_form_first_inverse_defined=True,\n                           correct_reference_is_ell0_not_ell0_plus_B=True,\n                           conditional_application_contract_only=True,\n                           actual_quantum_application_executed=False,\n                           proposed_screen_certified=False,\n                           new_signed_feasibility_bound=False,\n                           full_bolt_or_coupled_admission=False,\n                           nonlinear_existence_matching_validity_stability=False,\n                           construction_obstruction=False,full_goal_complete=False))\n\n\nif __name__ == '__main__':\n    path = ROOT/'evidence'/(STEM+'.json')\n    if path.exists():\n        raise RuntimeError('Preserve immutable attempt receipt.')\n    before = {p:digest(ROOT/p) for p in INPUTS}\n    protected = json.loads(BASELINE.read_bytes())\n    assert all(digest(Path(p)) == h for p,h in protected.items())\n    runtime = json.loads((ROOT/INPUTS[-1]).read_bytes())\n    assert digest(Path(sys.executable)) == runtime['python_sha256']\n    pkg = runtime['packages']['flint']\n    assert all(digest(Path(pkg['root'])/p) == h for p,h in pkg['files'].items())\n    rec = dict(started_utc=datetime.now(timezone.utc).isoformat(),input_sha256_before=before,\n               ordinary_argument_utf8=(ROOT/INPUTS[0]).read_text(encoding='utf-8'),\n               arithmetic_source_utf8=Path(__file__).read_text(encoding='utf-8'),\n               python_sha256=digest(Path(sys.executable)))\n    try:\n        rec['result'] = execute()\n        after = {p:digest(ROOT/p) for p in INPUTS}\n        assert after == before\n        assert all(digest(Path(p)) == h for p,h in protected.items())\n        rec.update(status='first_quantum_application_unresolved_contract_only',\n                   input_sha256_after=after,protected_paths_unchanged=len(protected),\n                   pinned_flint_files_unchanged=len(pkg['files']))\n    except Exception:\n        import traceback\n        rec.update(status='failed',traceback=traceback.format_exc())\n    rec['finished_utc'] = datetime.now(timezone.utc).isoformat()\n    path.write_bytes((json.dumps(rec,indent=2)+'\\n').encode('utf-8'))\n    cs = rec.get('result',{}).get('constants',{})\n    print(json.dumps(dict(status=rec['status'],error=rec.get('traceback'),\n                         constants={k:v['ball'] for k,v in cs.items()}),indent=2))\n    if rec['status']=='failed':\n        raise SystemExit(1)\n",
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "result": {
+    "precision_bits": 512,
+    "internal_iterations_unchanged": 12,
+    "constants": {
+      "proved_source_dual_upper": {
+        "ball": "[9.17618443392939988026e+48 +/- 5.00e+27]",
+        "decimal_enclosure": {
+          "mid": "9176184433929399880259695237407950521033078861345232727405116200",
+          "rad": "4685720743010328796725071602016936152530945",
+          "exponent": "-15"
+        }
+      },
+      "scalar_source_dual_replacement_error": {
+        "ball": "[6.09538023607047322915e+32 +/- 2.61e+11]",
+        "decimal_enclosure": {
+          "mid": "60953802360704732291498340489836295268093724680337941987669909095",
+          "rad": "24419866640042101193962265480792506409943041",
+          "exponent": "-32"
+        }
+      },
+      "retained_spatial_cutoff_eta": {
+        "ball": "[2.635768383998769547418e-30 +/- 7.77e-52]",
+        "decimal_enclosure": {
+          "mid": "26357683839987695474182781465106736697053347466188993017420551939",
+          "rad": "4982010170184459753025711760224238721564673",
+          "exponent": "-94"
+        }
+      },
+      "complete_geodesic_form_error": {
+        "ball": "[0.002200000000000000000000000000000000000000 +/- 3e-47]",
+        "decimal_enclosure": {
+          "mid": "21999999999999999999999999999999999999999999999999999999999999999",
+          "rad": "3",
+          "exponent": "-67"
+        }
+      },
+      "first_inverse_contraction_upper": {
+        "ball": "[0.002204850671477249949889757469067717362196 +/- 4.01e-43]",
+        "decimal_enclosure": {
+          "mid": "22048506714772499498897574690677173621955998671259552480552316996",
+          "rad": "4993070995079169",
+          "exponent": "-67"
+        }
+      },
+      "exact_application_analytic_relative_error": {
+        "ball": "[2.648967661958179276811e-30 +/- 5.54e-52]",
+        "decimal_enclosure": {
+          "mid": "26489676619581792768110549991935291960742009406496609337922008169",
+          "rad": "4982086226948843571180814474934469137530881",
+          "exponent": "-94"
+        }
+      },
+      "exact_application_first_residual_error": {
+        "ball": "[24307415825643001204.7 +/- 0.0496]",
+        "decimal_enclosure": {
+          "mid": "24307415825643001204732537436651384451546504998531225802505972203",
+          "rad": "16983977042013941064645800326275302598639617",
+          "exponent": "-45"
+        }
+      },
+      "exact_application_analytic_physical_debit": {
+        "ball": "[7.78041442378524430844e-25 +/- 5.61e-46]",
+        "decimal_enclosure": {
+          "mid": "77804144237852443084398334699480324519208284301093650338046766081",
+          "rad": "54362990131145030445558275160395483369701377",
+          "exponent": "-89"
+        }
+      },
+      "proposed_residual_screen": {
+        "ball": "1000000000000000000000000000000000.000000",
+        "decimal_enclosure": {
+          "mid": "10000000000000000000000000000000000000000000000000000000000000000",
+          "rad": "0",
+          "exponent": "-31"
+        }
+      },
+      "conditional_common_stage_output_error_ceiling": {
+        "ball": "[997795149328498496228506704575443.9 +/- 0.0347]",
+        "decimal_enclosure": {
+          "mid": "9977951493284984962285067045754439177218538243323564529418945312",
+          "rad": "169467886656956991971581231105",
+          "exponent": "-31"
+        }
+      },
+      "conditional_stage_ceiling_over_source_upper": {
+        "ball": "[1.087374775989790633242e-16 +/- 7.42e-38]",
+        "decimal_enclosure": {
+          "mid": "10873747759897906332418136455944796442057464238907231801691710593",
+          "rad": "5552648112235704234701250128337333693448193",
+          "exponent": "-80"
+        }
+      },
+      "stage_error_amplification_sum": {
+        "ball": "[1.002209722780233025311370028126384514325 +/- 7.80e-41]",
+        "decimal_enclosure": {
+          "mid": "10022097227802330253113700281263845143249220676865603118234750305",
+          "rad": "5015238549505",
+          "exponent": "-64"
+        }
+      },
+      "physical_debit_if_complete_screen_attained": {
+        "ball": "[3.200839809379214387583367651818073948871e-11 +/- 4.98e-51]",
+        "decimal_enclosure": {
+          "mid": "32008398093792143875833676518180739488714975491274511305457133214",
+          "rad": "25525907873",
+          "exponent": "-75"
+        }
+      },
+      "partial_subtotal_if_screen_attained_NOT_margin": {
+        "ball": "[1.234305135700717610647e-10 +/- 5.57e-32]",
+        "decimal_enclosure": {
+          "mid": "12343051357007176106467200848558483707091450896436727220244681762",
+          "rad": "2765946186425214264695343018502972994748417",
+          "exponent": "-74"
+        }
+      }
+    },
+    "actual_first_geodesic_application": null,
+    "actual_quantum_remainder_application": null,
+    "actual_stage_errors": null,
+    "actual_signed_residual": null,
+    "complete_signed_response": null,
+    "scope": {
+      "seed_form_first_inverse_defined": true,
+      "correct_reference_is_ell0_not_ell0_plus_B": true,
+      "conditional_application_contract_only": true,
+      "actual_quantum_application_executed": false,
+      "proposed_screen_certified": false,
+      "new_signed_feasibility_bound": false,
+      "full_bolt_or_coupled_admission": false,
+      "nonlinear_existence_matching_validity_stability": false,
+      "construction_obstruction": false,
+      "full_goal_complete": false
+    }
+  },
+  "status": "first_quantum_application_unresolved_contract_only",
+  "input_sha256_after": {
+    "notes/current-first-quantum-solve-attempt.md": "ccc6a5847771a4be5e78a0becc7c0633ce491cb14108dda5b53bfc192708979a",
+    "checks/current_first_quantum_solve_contract.py": "32ecbccbdb4de25b04e0fdb4fe4e9cab252029fe114e6988a33bcbc7b98f9d48",
+    "checks/current_quartic_ritz_rank_test.py": "3ca92dd73a9cd74884f57f61413e3f29dba1a8261190922e2734b2b03061995e",
+    "evidence/current-spatial-inverse-output-test.json": "bbbc0b5cf1afbaa1e9571c363735a3d1bc3d0ba6edf4d73e6f3f23ebd2c9f9f3",
+    "evidence/current-first-inverse-source-screen.json": "1e80af6d722c9adf6eea8f0d54c9028ec15723f1ed62cb694b92db134a5dc27d",
+    "evidence/current-scalar-green-source-residual.json": "0b2384fe8d674208af4cd5572bb7d08a97705dbe70a3c4bb3c98d45d4322fa94",
+    "evidence/current-scalar-green-source-residual-verification.json": "e7ad64ec1227c53584898e7c0a837e6953e24c92880b4c8598d238cea4f74ed0",
+    "notes/current-geodesic-two-sided-remainder.md": "f2451000efd4d67bb89849379fa027bc62eea3d102387eaa60ae1b63994a58de",
+    "notes/current-global-geodesic-return.md": "bef5e05bf9591fd17c513e13cb7c652d8f6fb3c5ecc5696d53499af09f854062",
+    "notes/current-local-reference-range-test.md": "2f6a9347ea5a6a8021194e8e675c5caabd8a09763c05ef5651c125ec60d0a043",
+    "operators/radial_geodesic_return.py": "b6084bd8251cbb9c6661312927d48a8deba26802203a5e4e82e5fc0e2fd99d76",
+    "operators/angular_resummed_response.py": "f2f6ca154f5c998b37eadc0fb8b4f60c7f0c89708b84dabbd7cfd356e4683c8b",
+    "checks/current_subtracted_thermal_action.py": "d14c90bdc2ac7c475c44a3f22ea4fd13327933c6036cfb6d626028daad052da2",
+    "evidence/current-coupled-mass-adjoint-runtime.json": "88d31ad3f5437ee4ee8fce2c6e7df09d7fe668dce919848f41641102efa69863"
+  },
+  "protected_paths_unchanged": 21,
+  "pinned_flint_files_unchanged": 63,
+  "finished_utc": "2026-10-29T01:44:50.782197+00:00"
+}
