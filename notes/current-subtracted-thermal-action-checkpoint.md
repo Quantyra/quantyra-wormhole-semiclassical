@@ -1,3 +1,110 @@
+# Actual localized quantum column bounded; complete first residual remains open
+
+2026-10-28 HST, E003/S169. Previous turn: progress, the localized return
+map was bounded but its actual source constants were unknown. This turn
+EXECUTES those source bounds and the complete canonical massive short-time
+column for the actual localized trial. Preserve the closed audit, P32,
+all accepted results, original physical norms and full stable semiclassical
+wormhole objective. No full correction, G_t or admission result is claimed.
+
+The [ordinary source argument and execution](current-localized-quantum-source-test.md)
+use both original York rows, actual paired mass/log domain and composed
+squares, full angular/thermal sums, coincidence contacts, exact UV
+logarithm, cutoff transitions and regular-bolt returns. The physical-half
+trial is unchanged. The outer test ranges over ALL E_t, not selected modes.
+The fixed-seed smooth v family is used only for this column; no independent
+boundary-phase or nonlinear-neighborhood estimate is inferred.
+
+The earliest missing source implication is now closed for this trial:
+normalized geodesic coordinates X=(z(r)-z0)/(gamma+L-z0) and the exact
+Laurent/log source give full analytic balls on every one of 64 interval
+cells. Their largest ball radius is .924<1 and smallest contraction-ball
+slack exceeds 2.5071e-5. The source stays away from its complex rational
+pole. All analytic tails are included; this is not a spatial sampling or
+finite physical-mode argument. Cauchy radii .650 through .640 and 144
+retained coefficients give the complete varied transport/defect bounds.
+
+All eight source inputs to the accepted return map are now bounded for
+0<t<=eta=1e-4. In its original input order their outward upper reports are
+
+    A_delta <7.720972e12,       B_delta <5.185789e13,
+    A_deltaD <2.399663e13,      B_deltaD <1.817622e14,
+    a_delta <6.684519e7,        b_delta <1.334823e9,
+    a_deltaD <1.893947e8,       b_deltaD <5.152341e9.
+
+These are actual source-kernel bounds in the specified pointwise/BOTH
+Schur norms, not conditional ceilings. They include the full cap variation,
+distance-cutoff variation and distant commutators. They are evaluated in
+the complete coupled vector inequality, rather than compared individually
+with an old simultaneous ceiling. The entire Volterra return is retained.
+
+Splitting at eta does NOT change the physical regulator or target. The
+entire interval [eta,.001] is paid using the actual heat diagonal, exact
+paired spectral Hessian inequality and both retained local contacts.
+The smooth-cap comparison uses cutoff P3 columns supported in the analytic
+germ and the EXACT cap propagator, so no high-order transport theorem is
+applied across the merely C3 auxiliary cap joins. Complete crossing paths,
+all cap excursions and thermal images bound the boundary response. The
+known fifth-jet layer is retained with a conservative double charge.
+
+Executed relative E_t* charges for this canonical massive column:
+
+    complete propagation             <2.893409e-17
+    complete extra time window       <1.671814e-19
+    leading common coefficient       <4.133457e-32
+    smooth cap comparison            <2.065966e-105
+    entire boundary response         <2.227157e-109
+    explicit-layer double charge     <9.683168e-117
+
+Their unrounded total is
+
+    ||Qshort[psi,.]||E_t* / ||psi||E_t <2.910127e-17,
+
+using the proved energy lower bound. This is below the existing
+CONDITIONAL first-column screen near 1.0896685958e-16, using <.267066 of
+that screen and leaving >7.98655e-17 in that column's screening account.
+This remaining amount is NOT a full physical/admission margin. The exact
+one-dimensional coefficient envelope converts the column bound to an
+original bolt first-error allowance <8.547479e-12. No actual coefficient
+or full residual has been computed.
+
+This closes this trial's canonical massive COLUMN application screen and
+common-regulator removal against the entire energy dual. It is a complete
+zero-centered norm enclosure: the actual sign is not resolved. Parameter,
+arithmetic, Taylor, angular/thermal and auxiliary-return errors are all
+included; there is no unbounded internal numerical quadrature. Subsequent
+coefficient solves and caller errors remain obligations. The unchanged
+local/LLL/classical rows must still enter the actual complete first solve.
+
+The dominant upper allowance comes from cap-source metric kernel bounds
+propagated by a global weight estimate. It is now affordable in this
+specified screening account. Do NOT optimize it, the scalar source,
+positive-time bound or P32 transport error before the full residual test.
+
+Decision: retain the localized source-specific correction method. The ONE
+next calculation is an explicit first affine correction for
+g_hat(v)=b(y_hat,v)/N, with its ENTIRE signed residual against E_t, including
+the local/geodesic logarithmic row, this quantum-column error, coefficient
+and caller errors, and the full complement outside the trial range. The
+first inverse is ell_t^-1; do not substitute the later (ell_t+B)^-1 filter.
+That calculation is PROPOSED. A zero finite Ritz residual is not sufficient.
+
+No full G_t/Z_r, original-space P32 defect, mass-column target, complete
+graph/physical output, nonlinear admission/contraction or solution is
+certified. The old physical partial subtotal is not promoted to a complete
+budget. Exact compatibility, physical matching/opening, semiclassical
+validity/noise and all-sector stability remain unproved. Verification is
+author ordinary-argument and frozen-arithmetic/provenance review, not
+independent or Lean verification.
+
+Remaining to-do list: actual complete first correction and residual;
+later applications and G_t/Z_r; every coupled/source/graph/physical/
+boundary/mass and nonlinear admission/contraction requirement; existence,
+exact compatibility, matching, semiclassical validity/noise and all-sector
+stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Complete localized return map bounded; actual quantum source still unresolved
 
 2026-10-28 HST, E003/S169. Previous turn: progress, an invalid density
