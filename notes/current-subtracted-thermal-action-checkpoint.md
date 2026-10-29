@@ -1,3 +1,119 @@
+# Complete implemented last filter passes; correlated signed output is next
+
+2026-10-29 HST, E003/S169. Previous goal turn: PROGRESS, 83b8144 closed
+the first filter's numerical representation. This turn executes the last
+coupled filter on that implemented input, including the new output's
+numerical representation. The full stable semiclassical wormhole goal
+remains ACTIVE/INCOMPLETE. Preserve P32, the closed audit, every accepted
+result and all original physical norms.
+
+The [ordinary argument](current-coupled-last-filter-test.md),
+[complete executed calculation](../evidence/current-coupled-last-filter-test.json)
+and [author review](../evidence/current-coupled-last-filter-test-verification.json)
+retain both original equations on Es/Et, the actual paired mass/log
+realization, complementary matter adjoint and squares, fixed clock,
+period/spin/scale, physical cutoffs and regular bolt. The original York
+conditions and full finite-Q/Volterra return remain. Full quantum action
+comparisons retain the exact UV logarithm, common regulator, all angular
+and thermal sums, coincidence contacts and boundary returns.
+
+The first needed domain implication is established through the accepted
+quantitative reconstruction theorem: the new f3=Fref(H)f2 remains in the
+order-9/2 auxiliary space since 0<=Fref<=.251 on the whole spectrum.
+Its complete rational profile is O(p^-5), with its bolt logarithm kept;
+the cutoff scalar belongs to the original Es. This is a fixed-seed
+energy-domain result, not physical C5 or nonlinear-neighborhood admission.
+No commutation of Fref with the actual physical Hessian is assumed.
+
+The calculation recomputes the entire correlated difference source,
+scalar cutoff residual, both TT rows, all local/quantum returns and the
+new field's energy. It does not scale the preceding physical residual.
+For B=b* a^-1 b, the actual target is (ell_t+B)z=B y_num. If e_y is
+the established input error and e_z the newly computed output error,
+
+    ||Ft y_num-z_num||Et <= Rt+sqrt(qt) Rs+ft e_y+e_z.
+
+Executed bounds in original energy units:
+
+| Entry | Upper bound |
+| --- | ---: |
+| Complete scalar residual Rs | 3.410e31 |
+| Complete TT residual Rt | 4.234e31 |
+| TT source comparison | 2.323e31 |
+| Full actual-minus-reference quantum comparison | 1.905e31 |
+| Local two-row plus York-adjoint return | 5.939e28 |
+| Inherited implemented-input debit ft e_y | 8.952e26 |
+| NEW complete output representation error e_z | 7.980e26 |
+| COMPLETE implemented last-filter error | 6.216e31 |
+| Selected complete stage screen | 6.38147649147267076e31 |
+| Remaining account within this stage | >1.65e30 |
+
+The last filter PASSES, using less than 97.42 percent of its selected
+account. No further filter damps this error: the original bolt multiplier
+is 5.01582950851010318e-43. Its complete stage error debit is <3.118e-11.
+That is a sufficient estimator pass, not a necessary existence condition.
+
+The new numerical field stores exact rational resolvent products and
+conjugate coefficients, preserving endpoint moments within each product.
+Its parameter error, full-spectrum contour quadrature and node/weight
+rounding are charged. Its endpoint/interior evaluator retains the full
+finite-domain return. No sampled interpolant or finite matter-mode
+selection replaces this field. Subsequent applications must propagate
+the returned evaluation intervals.
+
+The generic parameter-output composition would report <3.102e30 for
+the numerical error, approximately 1.87 times its remaining allowance.
+The direct complete structured-error output gives <7.980e26, improving
+that report by >3886.8. This is the same input-specific method selected
+before execution, not a changed norm or an assumed comparison ceiling.
+The dominant accepted residual costs are the scalar cutoff/source and
+TT source/quantum comparisons; the already sufficient numerical error
+does not merit further optimization.
+
+Composition retains correlation: with e2=Ft xhat-yhat, e3=Ft yhat-zhat
+and d3=z_num-zhat, Ft^2 xhat-z_num=Ft e2+e3-d3. The intermediate
+representation error cancels in this identity; conservatively retain
+its already paid debit ONCE in the subtotal and add Klast(R3+e_z).
+The known cumulative error subtotal is <1.802e-10. It is NOT a full bolt
+pass or available physical margin: the correlated signed center, other
+applications and coupled outputs remain unknown.
+
+Author review checks 65 frozen inputs and 21 protected paths, both
+reference equations, 601 whole reconstruction cells, 152 whole local
+cells, complete spectral intervals, product moments and composed error
+accounting. No independent specialist or Lean verification is claimed.
+The ordinary argument, not the count of checks, supports the result.
+
+Decision: RETAIN the coupled structured-output method and stop refining
+these now sufficient filters. The ONE next calculation is the complete
+correlated signed assembly
+
+    Z_r=||Ft^2 Tt chi_r+Ft^3 j_r^#-alpha f^2 Tt psi||Et,
+
+using the implemented last-filter field for its first contribution,
+the SAME averaged observation for j_r, and the retained quartic term.
+Bound this joint expression BEFORE taking separate component norms,
+including its actual Riesz/quantum applications and every new numerical
+error. Its signed center and complete enclosure are PROPOSED/UNKNOWN.
+The present result supplies one complete application and its error;
+it does not evaluate Z_r or the full G_t=J0 Ft^3+J1 Ft^2.
+
+Original P32 defect, actual kappa_m, graph/physical/boundary comparisons,
+radius conversion and nonlinear-neighborhood admission/contraction are
+unresolved. Preserve the quantum-fast screen's limited scope and keep
+all conditional ceilings conditional. Nonlinear existence, exact
+compatibility, physical matching/opening, semiclassical validity/noise
+and all-sector stability remain unproved. No construction obstruction
+or need for new physics has been established.
+
+Remaining to-do list: complete correlated signed response and remaining
+application errors; every original coupled/source/graph/physical/boundary/
+mass budget; nonlinear admission/contraction/existence; exact compatibility,
+physical matching/opening, semiclassical validity/noise and all-sector
+stability; the full stable semiclassical wormhole objective.
+
+---
+
 # Implemented first filter passes its original-energy error allowance
 
 2026-10-29 HST, E003/S169. The full stable semiclassical wormhole objective
