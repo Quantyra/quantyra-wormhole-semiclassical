@@ -1,3 +1,125 @@
+# Complete coupled analytic filter passes; numerical caller remains open
+
+2026-10-29 HST, E003/S169. Previous goal turn: NO PROGRESS (status/plan
+restatement). This turn executes the COMPLETE two-equation residual for
+the first remaining filter on the accepted 2d8ef11 analytic input. The
+full stable semiclassical wormhole objective remains ACTIVE/INCOMPLETE.
+Preserve P32, the closed audit, original norms and every accepted result.
+
+The [ordinary argument and specified estimator](current-coupled-first-filter-test.md),
+[first complete execution](../evidence/current-coupled-first-filter-test.json),
+[sharper complete assembly](../evidence/current-coupled-first-filter-test-attempt2.json)
+and [author review](../evidence/current-coupled-first-filter-test-attempt2-verification.json)
+retain the actual Es/Et paired mass/log form domains, complementary matter
+adjoint and squares, fixed period/spin/scale, physical cutoffs and regular
+bolt. Both original mixed equations, full finite-Q reconstruction and its
+Volterra/York return are included. The exact ultraviolet logarithm, common
+regulator, complete angular/thermal sums, coincidence contacts and global
+boundary returns are unchanged. No seed bound is extended to a nonlinear
+neighborhood or independent phase directions.
+
+The actual filter is (ell_t+B)y=B xhat, B=b* a^-1 b. A joint trial uses
+sigmahat=chi_S sigma0 and yhat=T f2. Both residuals are bounded on ALL
+original energy tests, giving
+
+    ||F_t xhat-yhat||Et <= Rt+sqrt(qt) Rs.
+
+The new rational multiplier has 0<=Fref<=.251 on the whole spectrum.
+The accepted finite-Q endpoint theorem therefore places yhat in Et.
+The scalar profile is in Es, with its full cutoff commutator retained.
+The two close poles are kept in one contour; neither a smooth surrogate
+nor a finite matter-mode selection supplies the domain argument. The
+common-regulator form theorem applies to these fixed trials. It supplies
+no original physical C5 or nonlinear-neighborhood conclusion.
+
+The complete first estimator was FINITE BUT EXCESSIVE: <4.681e32,
+approximately 1.853 times the chosen screen. Its scalar mixed remainder
+used the coarse ||xi0(fdiff)||2<=||f1||2 comparison. Keeping the exact
+cancellation of (p+muT)(p+muS) in fdiff and integrating its FULL rational
+spectrum gives
+
+    actual correlated xi Hmu norm upper <3.381979e47
+           (previous upper 2.837410e48).
+
+The completed ledger required about a 5.44-fold comparison improvement;
+the executed improvement is >8.38979. This changes one source norm in
+the SAME coupled trial. Every other full-map entry is reused from the
+immutable executed receipt, not replaced by a conditional ceiling.
+
+Final complete analytic ledger in original energy-dual units:
+
+| Entry | Upper bound |
+| --- | ---: |
+| Full scalar residual Rs | 7.538529e31 |
+| TT source comparison, including all mixed remainders | 1.156167e32 |
+| Classical rational-symbol remainder | 1.63e28 |
+| Complete local two-row and York-adjoint return | 1.916281e29 |
+| Full geodesic nonlocal remainder | 1.881218e26 |
+| Actual-minus-reference quantum response (all ten entries) | 7.588220e31 |
+| Complete TT residual Rt | 1.9173e32 |
+| Rt+sqrt(qt) Rs | 2.356e32 |
+
+Only ONE exact filter remains after this application. Its error-to-bolt
+coefficient is Kfilter=pref_t*ft=1.267078008e-43, rather than Kfirst
+with two ft factors. Giving this stage the SAME selected physical error
+amount as the preceding 1e33 first-solve screen therefore requires
+
+    Rfilter <= ft*1e33 = 2.52615844544095665e32.
+
+The analytic trial PASSES. Its original bolt error component is <2.985e-11
+against the selected 3.200839810e-11 amount. This is an error allocation,
+not a free physical margin. The earlier 9.97795e32 account belonged to a
+different inner-iteration algorithm and was NOT reused as this target.
+The inherited first-solve and initial scalar/input errors are charged once;
+the known cumulative error subtotal is <1.49014e-10. The actual signed
+correlated output, last filter, numerical callers and other outputs remain
+unknown, so subtracting that subtotal from 1.667e-9 is not a bolt pass.
+
+The remaining caller threshold is >1.70e31 in Et (about 4.10e-17 of the
+proved trial-energy upper 4.149534e47). No numerical caller has attained
+it. Parameter and bound arithmetic are enclosed for the exact analytic
+trial, but a sampled or truncated implementation has not been certified.
+In particular an arbitrary finite sum of individual Green profiles can
+destroy the high-frequency moment cancellations and leave an inadmissible
+bolt logarithm. The implemented representation must preserve the product
+resolvents or enforce those moments exactly; pointwise accuracy alone
+does not establish its Et error.
+
+Decision: RETAIN the coupled, source-specific weak-form method. The
+complete excessive report was corrected by a measured structured-source
+comparison, not a normalization change or deletion of a physical term.
+Do not optimize the now sufficient analytic filter. The ONE next
+calculation is to enclose ||y_num-yhat||Et for a concrete implementation
+of this SAME paired analytic filter, with a sufficient target <=1.70e31.
+Include coefficient/rounding, full-profile evaluation and endpoint/tail
+errors while preserving the cancellations. That calculation is PROPOSED,
+not executed; the further filter and correlated j_r/quartic assembly
+remain necessary for signed G_t/Z_r.
+
+Verification is an author ordinary-argument and accounting review, not
+independent specialist or Lean certification. It checks 54 frozen inputs,
+21 protected paths, 601 whole reconstruction cells, both cold-split
+touching cells, 152 complete local-row cells and 512 whole spectral cells
+including the infinite endpoint. Five independent two-equation fixtures
+and sixteen canonical-to-TT fixtures supplement the ordinary argument.
+The excessive first estimator and its source/argument snapshots are kept.
+No accepted scientific source was changed to manufacture the final pass.
+
+No original P32 defect, actual mass-column target, graph/physical/boundary
+comparison, radius conversion, nonlinear admission/contraction/existence,
+exact compatibility, physical matching, validity/noise or all-sector
+stability requirement closes. The quantum-fast screen retains its limited
+scope. This is not an obstruction to the construction or evidence that
+new physics is required.
+
+Remaining to-do list: implemented filter/caller certificate and last
+filter; complete signed G_t/Z_r and every original coupled/source/graph/
+physical/boundary/mass budget; nonlinear admission/contraction/existence;
+exact compatibility, physical matching/opening, semiclassical validity/
+noise and all-sector stability; the full stable-wormhole objective.
+
+---
+
 # Complete quantum comparison bounded; exact first actual residual passes
 
 2026-10-29 HST, E003/S169. Previous turn: PROGRESS, 0452b11 tested the
